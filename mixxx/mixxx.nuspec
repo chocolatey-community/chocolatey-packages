@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>{{PackageName}}</id>
+        <version>{{PackageVersion}}</version>
+        <title>Mixxx</title>
+        <authors>Mixxx Development Team</authors>
+        <owners>purity</owners>
+        <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+        <projectUrl>http://mixxx.org/</projectUrl>
+        <iconUrl>https://launchpadlibrarian.net/11573185/icon64.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Mixxx is open source DJ software that gives you everything you need to perform live DJ mixes.</description>
+        <summary>Open Source DJ software</summary>
+        <releaseNotes>http://mixxxblog.blogspot.it/</releaseNotes>
+        <copyright />
+        <tags>DJ audio mixing party</tags>
+    </metadata>
+</package>

@@ -1,0 +1,1 @@
+﻿Install-ChocolateyPackage 'mixxx' 'exe' '/S' '{{DownloadUrl}}' '{{DownloadUrlx64}}'
