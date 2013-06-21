@@ -1,6 +1,2 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+*.nupkg
+Thumbs.db
