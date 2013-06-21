@@ -1,1 +1,1 @@
-﻿Install-ChocolateyPackage 'mixxx' 'exe' '/S' '{{DownloadUrl}}' '{{DownloadUrlx64}}'
+﻿Install-ChocolateyPackage '{{PackageName}}' 'exe' '/S' '{{DownloadUrl}}' '{{DownloadUrlx64}}'

@@ -1,4 +1,4 @@
-﻿$packageName = 'tightvnc'
+﻿$packageName = '{{PackageName}}'
 $fileType = 'msi'
 $silentArgs = '/quiet /norestart'
 $url = '{{DownloadUrl}}'

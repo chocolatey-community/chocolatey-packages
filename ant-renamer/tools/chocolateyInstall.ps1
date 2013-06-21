@@ -1,1 +1,1 @@
-﻿Install-ChocolateyPackage 'ant-renamer' 'exe' '/verysilent' '{{DownloadUrl}}'
+﻿Install-ChocolateyPackage '{{PackageName}}' 'exe' '/verysilent' '{{DownloadUrl}}'

@@ -1,1 +1,0 @@
-﻿Install-ChocolateyPackage 'ant-renamer' 'exe' '/verysilent' 'http://update.antp.be/renamer/antrenamer2_install.exe'
