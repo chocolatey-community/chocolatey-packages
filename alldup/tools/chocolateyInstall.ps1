@@ -1,1 +1,1 @@
-﻿Install-ChocolateyPackage '{{PackageName}}' 'exe' '/verysilent' 'http://www.allsync.de/download/alldup.exe'
+﻿Install-ChocolateyPackage '{{PackageName}}' 'exe' '/verysilent' '{{DownloadUrl}}'
