@@ -8,12 +8,12 @@
     <owners>micahlmartin</owners>
     <summary></summary>
     <description>Installs a utility `cyg-get` that allows you to enter a comma seperated list of cygwin packages to install. `cyg-get openssh` or `cyg-get git,gitk,git-completion`.</description>
-    <projectUrl>https://github.com/micahlmartin/nugetpackages/tree/master/cyg-get</projectUrl>
+    <projectUrl>https://github.com/chocolatey/chocolatey-communitypackages/tree/master/cyg-get</projectUrl>
     <tags>cygwin</tags>
     <copyright></copyright>
     <licenseUrl>http://cygwin.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://github.com/micahlmartin/nugetpackages/raw/master/cyg-get/content/Cygwin.png</iconUrl>
+    <iconUrl>https://raw.github.com/chocolatey/chocolatey-communitypackages/master/cyg-get/content/Cygwin.png</iconUrl>
     <!--<dependencies>
       <dependency id="" version="" />
     </dependencies>-->
