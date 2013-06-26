@@ -3,32 +3,42 @@ $fileType = 'exe'
 $version = '{{PackageVersion}}'
 $silentArgs = '-ms'
 $language = (Get-Culture).Name # Get language and country code separated by hyphen
-$url = "http://download.mozilla.org/?product=$packageName-$version&os=win&lang=$language"
+#$language = 'xx-XX' # Language override for testing purposes
 
-$req = [system.Net.WebRequest]::Create($url)
+$urlFile = 'https://www.mozilla.org/en-US/thunderbird/all.html'
+$filePath = "$env:TEMP\chocolatey\$packageName"
+$fileFullPath = "$filePath\downloadLinks.html"
+
 try {
-$res = $req.GetResponse()
-} catch [System.Net.WebException] {
-$res = $_.Exception.Response
-}
-$statusCode = $res.StatusCode
 
-if ($statusCode -eq "NotFound") {
-    $language = "$language" -replace '-[a-z]{2}', ''
-    $url = "http://download.mozilla.org/?product=$packageName-$version&os=win&lang=$language"
-
-    $req = [system.Net.WebRequest]::Create($url)
-    try {
-    $res = $req.GetResponse()
-    } catch [System.Net.WebException] {
-    $res = $_.Exception.Response
+    if (-not (Test-Path $filePath)) {
+        New-Item -ItemType directory -Path $filePath
     }
-    $statusCode = $res.StatusCode
 
-    if ($statusCode -eq "NotFound") {
-            $language = "en-US"
-            $url = "http://download.mozilla.org/?product=$packageName-$version&os=win&lang=$language"
-        }
+    Get-ChocolateyWebFile $packageName $fileFullPath $urlFile
+
+    # The $out variable contains a value when Thunderbird supports the user language.
+    # Otherwise it will download the en-US installer.
+
+    $out = Select-String -Path $fileFullPath -Pattern "os=win&amp;lang=$language`""
+    if ($out -eq $null) {
+        $out = Select-String -Path $fileFullPath -Pattern "os=win&amp;lang=$language`""
+    }
+
+    if ($out -eq $null) {
+        $language = "$language" -replace '-[a-z]{2}', '' # Remove country code and hyphen
+        $out = Select-String -Path $fileFullPath -Pattern "os=win&amp;lang=$language`""
+    }
+
+    if ($out -eq $null) {
+        $language = 'en-US' # Fallback language if others fail
+    }
+
+    $url = "http://download.mozilla.org/?product=thunderbird-$version&os=win&lang=$language"
+
+    Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+
+} catch {
+  Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
+  throw
 }
-
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
