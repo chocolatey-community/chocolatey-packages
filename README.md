@@ -1,4 +1,6 @@
 chocolatey-communitypackages
 ============================
 
-This is the packages that are handled by the official chocolatey group. To get a package added here, the official chocolatey account has to have push access to the package on chocolatey.org
+These packages that are managed by the chocolatey core team. To get a package added here, the official [Chocolatey Account] (http://chocolatey.org/profiles/chocolatey) has to have push access to the package on chocolatey.org.
+
+

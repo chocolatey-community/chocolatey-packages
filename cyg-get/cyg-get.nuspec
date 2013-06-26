@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>cyg-get</id>
+    <title>cyg-get</title>
+    <version>1.0.6</version>
+    <authors>Redhat</authors>
+    <owners>micahlmartin</owners>
+    <summary></summary>
+    <description>Installs a utility `cyg-get` that allows you to enter a comma seperated list of cygwin packages to install. `cyg-get openssh` or `cyg-get git,gitk,git-completion`.</description>
+    <projectUrl>https://github.com/micahlmartin/nugetpackages/tree/master/cyg-get</projectUrl>
+    <tags>cygwin</tags>
+    <copyright></copyright>
+    <licenseUrl>http://cygwin.com/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://github.com/micahlmartin/nugetpackages/raw/master/cyg-get/content/Cygwin.png</iconUrl>
+    <!--<dependencies>
+      <dependency id="" version="" />
+    </dependencies>-->
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
