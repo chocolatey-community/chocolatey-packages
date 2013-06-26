@@ -1,0 +1,4 @@
+
+*.nupkg
+*.log
+*.log.full
