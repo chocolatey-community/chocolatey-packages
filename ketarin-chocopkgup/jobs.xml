@@ -221,8 +221,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>2638858</LastFileSize>
-    <LastFileDate>2013-06-23T20:54:58.8627854</LastFileDate>
+    <LastFileSize>2637267</LastFileSize>
+    <LastFileDate>2013-06-27T01:28:20.3861281</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -271,11 +271,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\AutoHotkey111100_Install.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\AutoHotkey111101_Install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-23T20:54:58.8627854</LastUpdated>
+    <LastUpdated>2013-06-27T01:28:20.3861281</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://l.autohotkey.net/v/AutoHotkey{versionWithoutDots}_Install.exe</FixedDownloadUrl>
     <Name>autohotkey_l</Name>
@@ -999,6 +999,69 @@
     <FixedDownloadUrl>http://surfnet.dl.sourceforge.net/project/ext2fsd/Ext2fsd/{version}/Ext2Fsd-{version}.exe</FixedDownloadUrl>
     <Name>ext2fsd</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="6413360e-9f9d-41ac-8327-26dfd23279a0">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>4700665</LastFileSize>
+    <LastFileDate>2013-06-26T22:23:23.2875536</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://ffdshow-tryout.sourceforge.net/download.php</Url>
+            <StartText>The latest stable and recommended version is &lt;strong&gt;</StartText>
+            <EndText>&lt;/strong&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://switch.dl.sourceforge.net/project/ffdshow-tryout/Official releases/64-bit/ffdshow_rev4500_20130106_x64.exe</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\ffdshow_rev4500_20130106.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-26T22:23:23.2875536</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://dfn.dl.sourceforge.net/project/ffdshow-tryout/Official releases/generic build (stable)/ffdshow_rev4500_20130106.exe</FixedDownloadUrl>
+    <Name>ffdshow</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="40f32915-297e-4979-ae06-0ec22de43bfc">
     <WebsiteUrl />
     <UserAgent />
@@ -1249,7 +1312,7 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
+            <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.gimp.org/downloads/</Url>
             <StartText>class="sourceforge_accelerator_link"&gt;Download GIMP </StartText>
@@ -1518,6 +1581,55 @@
     <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/win32/?path=&amp;download=mkvtoolnix-unicode-{version}-setup.exe</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="9c6f9214-35cd-4aec-808f-8bb38dd5e4de">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>38678632</LastFileSize>
+    <LastFileDate>2013-06-26T23:58:28.4166809</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://musescore.org/</Url>
+            <StartText>&lt;h5 id="download-button-version"&gt;MuseScore </StartText>
+            <EndText>&lt;/h5&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\MuseScore-1.3.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-26T23:58:28.4166809</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/mscore/mscore/MuseScore-{version}/MuseScore-{version}.exe</FixedDownloadUrl>
+    <Name>musescore</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1f2e5c7b-c4fa-4489-8e6e-3b650ef2b378">
     <WebsiteUrl />
     <UserAgent />
@@ -1581,6 +1693,217 @@
     <FixedDownloadUrl>http://www.noip.com/client/DUCSetup_v{version_underscore}.exe</FixedDownloadUrl>
     <Name>no-ip-duc</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="3b6913a2-16c4-45f7-bbbb-401c043f3eab">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>9608676</LastFileSize>
+    <LastFileDate>2013-06-27T00:06:04.8293739</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.nomacs.org/download/</Url>
+            <StartText>http://sourceforge.net/projects/nomacs/files/nomacs-</StartText>
+            <EndText>/nomacs-setup-</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://freefr.dl.sourceforge.net/project/nomacs/nomacs-{version}/nomacs-setup-{version}-x64.exe</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\nomacs-setup-1.2.0-x86.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-27T00:06:04.8293739</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/nomacs/nomacs-{version}/nomacs-setup-{version}-x86.exe</FixedDownloadUrl>
+    <Name>nomacs</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="5e31e9c0-dca4-42f7-8757-31855b70c577">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>11339744</LastFileSize>
+    <LastFileDate>2013-06-27T00:11:55.1529272</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://owncloud.org/sync-clients/#windows</Url>
+            <StartText>&lt;h1 id="windows"&gt;Windows Client &lt;small&gt;version </StartText>
+            <EndText>&lt;/small&gt;&lt;/h1&gt;
+</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\owncloud-1.3.0-setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-27T00:11:55.1529272</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://download.owncloud.com/download/owncloud-{version}-setup.exe</FixedDownloadUrl>
+    <Name>owncloud-client</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="4acb758a-e875-4851-8601-7c38accc242f">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>8790287</LastFileSize>
+    <LastFileDate>2013-06-25T20:52:41.5337975</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://musicbrainz.org/doc/MusicBrainz_Picard</Url>
+            <StartText>http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-</StartText>
+            <EndText>.exe</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\picard-setup-1.2.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-25T20:52:41.5337975</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-{version}.exe</FixedDownloadUrl>
+    <Name>picard</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="dee59ff8-fcaa-4075-a89a-8acce6480c14">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>5779317</LastFileSize>
+    <LastFileDate>2013-06-26T23:49:50.3365246</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://preyproject.com/</Url>
+            <StartText>/prey-</StartText>
+            <EndText>-win.exe</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\prey-0.6.0-win.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-26T23:49:50.3365246</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://preyproject.com/releases/{version}/prey-{version}-win.exe</FixedDownloadUrl>
+    <Name>prey</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="8ee716fa-6e9b-43f0-ac03-e95cc9461440">
     <WebsiteUrl />
     <UserAgent />
@@ -1643,6 +1966,55 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>quicktime</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0d9f9cbc-0870-41f4-9303-15fd4e496ba1">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>24083257</LastFileSize>
+    <LastFileDate>2013-06-23T21:19:57.1671142</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://bluegriffon.org/pages/Download</Url>
+            <StartText>Most recent stable version: v </StartText>
+            <EndText> </EndText>
+            <TextualContent>2013.02.03</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-23T21:19:57.1671142</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/sauerbraten/sauerbraten/2013_01_04/sauerbraten_2013_02_03_collect_edition_windows.exe</FixedDownloadUrl>
+    <Name>sauerbraten</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="66274ad7-463e-4166-9aa3-5986c922c8c4">
     <WebsiteUrl />
@@ -1859,8 +2231,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>19677152</LastFileSize>
-    <LastFileDate>2013-06-22T22:15:35.0330139</LastFileDate>
+    <LastFileSize>19678576</LastFileSize>
+    <LastFileDate>2013-06-27T01:19:30.2735609</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1896,11 +2268,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Thunderbird Setup 17.0.6.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Thunderbird Setup 17.0.7.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-22T22:15:35.0330139</LastUpdated>
+    <LastUpdated>2013-06-27T01:19:30.2735609</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://download.mozilla.org/?product=thunderbird-{version}&amp;os=win&amp;lang=de</FixedDownloadUrl>
     <Name>thunderbird</Name>
@@ -1968,6 +2340,288 @@
     <FixedDownloadUrl>http://www.tightvnc.com/download/{version}/tightvnc-{version}-setup-32bit.msi</FixedDownloadUrl>
     <Name>tightvnc</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="82b28a19-f126-4fb9-9f27-f51a749ae273">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>6022</LastFileSize>
+    <LastFileDate>2013-06-27T01:06:47.3240301</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.tipp10.com/en/download/</Url>
+            <StartText>TIPP10 for Windows&lt;/a&gt;&lt;div id="small" style="margin-top:4px;"&gt;Version </StartText>
+            <EndText>&lt;br /&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\download_win.png</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-27T01:06:47.3240301</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://www.tipp10.com/img/download_win.png</FixedDownloadUrl>
+    <Name>tipp10</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="9df6f56a-a09c-48ed-aaa1-59c6255ad00a">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>28110931</LastFileSize>
+    <LastFileDate>2013-06-27T11:46:19.4875821</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://bluefish.openoffice.nl/download.html</Url>
+            <StartText>&lt;p&gt;The latest stable version is &lt;b&gt;Bluefish </StartText>
+            <EndText>&lt;/b&gt;.&lt;/p&gt;</EndText>
+            <TextualContent>{realVersion:replace:-:.}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>realVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://www.torproject.org/download/download-easy.html.en</Url>
+            <StartText>var wintbb = '../dist/torbrowser/tor-browser-</StartText>
+            <EndText>_'+lang+'.exe';
+</EndText>
+            <Name>realVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\tor-browser-2.3.25-10_de.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-27T11:46:19.4875821</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>https://www.torproject.org/dist/torbrowser/tor-browser-{realVersion}_de.exe</FixedDownloadUrl>
+    <Name>tor-browser</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="ecfe3c39-e6ed-41d8-a2a3-b3d34be1c684">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>6992570</LastFileSize>
+    <LastFileDate>2013-06-26T23:40:30.2025131</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.tvbrowser.org/en/downloads-mainmenu-5/tv-browser-mainmenu-6.html</Url>
+            <StartText>&lt;p&gt;
+Version </StartText>
+            <EndText>
+,</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\tvbrowser_3.3a_win32.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-26T23:40:30.2025131</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/tvbrowser/TV-Browser Releases (Java 6 and higher)/{version}/tvbrowser_{version}a_win32.exe</FixedDownloadUrl>
+    <Name>tv-browser</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="87e771aa-b1c9-4bbe-a702-bae3bd7d5c2c">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>5556306</LastFileSize>
+    <LastFileDate>2013-06-25T20:56:55.3367366</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://legroom.net/software/uniextract/</Url>
+            <StartText>Current Version: </StartText>
+            <EndText>, Released: </EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>versionWithoutDots</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://legroom.net/software/uniextract/</Url>
+            <StartText>&lt;p&gt;&lt;a href="/scripts/download.php?file=uniextract</StartText>
+            <EndText>"&gt;</EndText>
+            <TextualContent>161</TextualContent>
+            <Name>versionWithoutDots</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\uniextract161.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-25T20:56:55.3367366</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://www.legroom.net/files/software/uniextract{versionWithoutDots}.exe</FixedDownloadUrl>
+    <Name>universal-extractor</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="8ab6237c-1e00-46bd-b5f1-79fac78aa752">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>547806</LastFileSize>
+    <LastFileDate>2013-06-27T00:18:59.2441838</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.optimasc.com/products/vp8vfw/</Url>
+            <StartText>&lt;p&gt;The current version is version </StartText>
+            <EndText>, list of changes:</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\vp8vfw-setup-1.2.0.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-27T00:18:59.2441838</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://www.optimasc.com/products/vp8vfw/vp8vfw-setup-{version}.exe</FixedDownloadUrl>
+    <Name>vp8-vfw</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="bf5fdece-df92-439e-ae99-f7b7b0a9264d">
     <WebsiteUrl />
     <UserAgent />
@@ -2029,6 +2683,55 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/wesnoth/wesnoth-{version_short}/wesnoth-{version}/wesnoth-{version}-win32.exe</FixedDownloadUrl>
     <Name>wesnoth</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="a056d33a-f6ed-45ca-94ed-8c5029509f11">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>831496</LastFileSize>
+    <LastFileDate>2013-06-26T23:51:02.0088136</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://wincdemu.sysprogs.org/download/</Url>
+            <StartText>http://wincdemu.sysprogs.org/download/WinCDEmu-</StartText>
+            <EndText>.exe</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\WinCDEmu-3.6.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-26T23:51:02.0088136</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://wincdemu.sysprogs.org/download/WinCDEmu-{version}.exe</FixedDownloadUrl>
+    <Name>wincdemu</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b1b50138-5e64-4dbc-af37-03dfa7e2e641">
     <WebsiteUrl />
@@ -2092,6 +2795,55 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://winff.googlecode.com/files/WinFF-{version}-setup.exe</FixedDownloadUrl>
     <Name>winff</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="59656e9b-2a6c-48f2-be18-0d489dc261b3">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>42475008</LastFileSize>
+    <LastFileDate>2013-06-26T23:30:08.0736675</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://xmoto.tuxfamily.org/</Url>
+            <StartText>&lt;/span&gt; - XMoto </StartText>
+            <EndText> released</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\xmoto-0.5.10-win32-setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-26T23:30:08.0736675</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://download.tuxfamily.org/xmoto/xmoto/{version}/xmoto-{version}-win32-setup.exe</FixedDownloadUrl>
+    <Name>x-moto</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="31dc0b68-7de5-400e-b377-3a73ea050b8f">
     <WebsiteUrl />

@@ -8,4 +8,6 @@ Annotations:
 * librecad too
 * wesnoth too
 * sauerbraten too
+* SMC too
 * freeciv download link must be handled with regex
+* supertuxkart package is not complete yet
