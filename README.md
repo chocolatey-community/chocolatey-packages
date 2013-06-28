@@ -9,5 +9,7 @@ Annotations:
 * wesnoth too
 * sauerbraten too
 * SMC too
+* iTunes too
+* Haali Media Splitter
 * freeciv download link must be handled with regex
 * supertuxkart package is not complete yet
