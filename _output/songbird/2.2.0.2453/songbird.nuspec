@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://www.getsongbird.com/about/eula.php</licenseUrl>
         <projectUrl>http://www.getsongbird.com/</projectUrl>
-        <iconUrl>https://raw.github.com/TomOne/nugetpackages/master/songbird/songbird.png</iconUrl>
+        <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/songbird/songbird.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Songbird is an open-source customizable music player that's under active development.
 It is integrated with these Web 2.0 services: mashTape, SHOUTcast Radio, Last.fm Scrobbling, and Songkick concert tickets. You can enhance Songbird with community-contributed plugins like Media Flow.

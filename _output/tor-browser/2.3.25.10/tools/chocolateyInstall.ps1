@@ -1,55 +1,46 @@
 ﻿$packageName = 'tor-browser'
 $version = '2.3.25.10'
 
-$langcode = (Get-Culture).Name -replace '-[a-z]{2}', '' # get language code
+$installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$tempDir = "$env:TEMP\chocolatey\$packageName"
 
-# add country code to language code when required
-if ($langcode -eq "en") {$langcode = "en-US"}
-if ($langcode -eq "es") {$langcode = "es-ES"}
-if ($langcode -eq "pt") {$langcode = "pt-PT"}
-if ($langcode -eq "zh") {$langcode = "zh-CN"}
-
-
-$downloadFile = "$packageName-$version`_$langcode.exe"
-$url = "https://www.torproject.org/dist/torbrowser/$downloadFile"
-$fileFullPath = Join-Path "$env:TEMP" "$downloadFile"
-
-# Webrequest if url is valid
-$req = [system.Net.WebRequest]::Create($url)
 try {
-$res = $req.GetResponse()
-} catch [System.Net.WebException] {
-$res = $_.Exception.Response
+
+    $language = (Get-Culture).Name -replace '-[a-z]{2}', '' # get language code
+    #$language = 'xx' # Language override for testing
+
+    $table = @{
+    'en' = 'en-US';
+    'ar' = 'ar';
+    'de' = 'de';
+    'es' = 'es-ES';
+    'fa' = 'fa';
+    'fr' = 'fr';
+    'it' = 'it';
+    'nl' = 'nl';
+    'pl' = 'pl';
+    'pt' = 'pt-PT';
+    'ru' = 'ru';
+    'vi' = 'vi';
+    'zh' = 'zh-CN';
+    }
+
+    $langcode = $table[$language]
+    # English = fallback language
+    if ($langcode -eq $null) {$langcode = 'en-US'}
+
+    $url = "https://www.torproject.org/dist/torbrowser/tor-browser-2.3.25-10_${langcode}.exe"
+
+    if (-not (Test-Path $tempDir)) {New-Item $tempDir -ItemType directory}
+    $file = "$tempDir\${packageName}.exe"
+
+    Get-ChocolateyWebFile $packageName $file $url
+    Start-Process "7za" -ArgumentList "x -o`"$installDir`" -y `"$file`"" -Wait
+
+    $targetFilePath = "$installDir\Tor Browser\Start Tor Browser.exe"
+    Install-ChocolateyDesktopLink $targetFilePath
+
+} catch {
+  Write-ChocolateyFailure $packageName "$($_.Exception.Message)"
+  throw
 }
-$statusCode = $res.StatusCode
-
-# Fallback to en-US if user language not available
-if ($statusCode -eq "NotFound") {
-    $langcode = "en-US"
-    $downloadFile = "$packageName-$version`_$langcode.exe"
-    $url = "https://www.torproject.org/dist/torbrowser/$downloadFile"
-    $fileFullPath = Join-Path "$env:TEMP" "$downloadFile"
-}
-
-Get-ChocolateyWebFile $packageName "$fileFullPath" $url
-
-$binRoot = "$env:systemdrive\tools"
-# Check create tools folder ($binRoot) if not already exists
-if (-not (Test-Path "$binRoot")) {md -Path "$binRoot"}
-
-# Move Tor Browser files from old to new directory
-if (Test-Path "$env:systemdrive\Tor Browser") {
-    Move-Item -Path "$env:systemdrive\Tor Browser" -Destination $binRoot
-}
-
-`7za x -o"$binRoot" -y "$fileFullPath"
-Remove-Item "$fileFullPath"
-
-$desktop = "$([Environment]::GetFolderPath("Desktop"))"
-$startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
-
-Install-ChocolateyDesktopLink "$binRoot\Tor Browser\Start Tor Browser.exe"
-
-if (Test-Path "$desktop\Tor Browser.lnk") {Remove-Item "$desktop\Tor Browser.lnk"}
-Rename-Item -Path "$desktop\Start Tor Browser.exe.lnk" -NewName "Tor Browser.lnk"
-Copy-Item "$desktop\Tor Browser.lnk" -Destination "$startMenu"
