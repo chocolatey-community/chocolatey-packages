@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>3503200</LastFileSize>
-    <LastFileDate>2013-06-27T22:17:01.1644412</LastFileDate>
+    <LastFileDate>2013-06-30T21:57:48.345322</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -44,7 +44,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T22:17:01.1644412</LastUpdated>
+    <LastUpdated>2013-06-30T21:57:48.345322</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.allsync.de/download/alldup.exe</FixedDownloadUrl>
     <Name>alldup</Name>
@@ -124,31 +124,10 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>Download aptana </Url>
-            <StartText>&lt;h1&gt;Download Aptana Studio </StartText>
-            <EndText>&lt;/h1&gt;</EndText>
+            <Url>http://www.aptana.org/products/studio3/download</Url>
+            <StartText>&lt;title&gt;Aptana  | Download Aptana Studio </StartText>
+            <EndText> &lt;/title&gt;</EndText>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url>http://www.aptana.com/downloads/start</Url>
-            <StartText>    "studio_system_human": "Microsoft Windows",
-    "studio_architecture_human": "x86 (x64 Compatible)",
-    "systemRequirements": "Windows XP or newer",
-    "downloadUrl": "</StartText>
-            <EndText>"
-  },</EndText>
-            <TextualContent>http://download.aptana.com/studio3/standalone/{version}/win/Aptana_Studio_3_Setup_{version}.exe</TextualContent>
-            <Name>url</Name>
           </UrlVariable>
         </value>
       </item>
@@ -159,13 +138,14 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\Aptana_Studio_3_Setup_3.4.1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-22T00:02:44.5534699</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl />
-    <Name>aptana-studio (not working)</Name>
+    <FixedDownloadUrl>http://download.aptana.com/studio3/standalone/{version}/win/Aptana_Studio_3_Setup_{version}.exe</FixedDownloadUrl>
+    <Name>aptana-studio</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="a8d364f5-813c-4368-a8d1-ed04adfb613e">
     <WebsiteUrl />
@@ -530,7 +510,7 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\ClassicShellSetup_3_6_7.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ClassicShellSetup_3_6_8.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -1180,7 +1160,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>209736</LastFileSize>
-    <LastFileDate>2013-06-27T22:26:09.5258512</LastFileDate>
+    <LastFileDate>2013-06-30T21:58:15.2748623</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1219,7 +1199,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T22:26:09.5258512</LastUpdated>
+    <LastUpdated>2013-06-30T21:58:15.2748623</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.freevirtualkeyboard.com/FreeVK.exe</FixedDownloadUrl>
     <Name>free-virtual-keyboard</Name>
@@ -1474,7 +1454,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>982</LastFileSize>
-    <LastFileDate>2013-06-27T23:17:55.2219599</LastFileDate>
+    <LastFileDate>2013-06-30T21:58:20.4601589</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1514,7 +1494,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:17:55.2219599</LastUpdated>
+    <LastUpdated>2013-06-30T21:58:20.4601589</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.videohelp.com/images/win.gif</FixedDownloadUrl>
     <Name>h264tscutter</Name>
@@ -1524,7 +1504,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>1361419</LastFileSize>
-    <LastFileDate>2013-06-27T23:08:44.0220629</LastFileDate>
+    <LastFileDate>2013-06-30T21:58:31.8728117</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1564,7 +1544,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:08:44.0220629</LastUpdated>
+    <LastUpdated>2013-06-30T21:58:31.8728117</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://haali.su/mkv/MatroskaSplitter.exe</FixedDownloadUrl>
     <Name>haali-media-splitter</Name>
@@ -1574,7 +1554,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>89111376</LastFileSize>
-    <LastFileDate>2013-06-27T22:52:24.74388</LastFileDate>
+    <LastFileDate>2013-06-30T22:03:32.0604341</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1642,17 +1622,17 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T22:52:24.74388</LastUpdated>
+    <LastUpdated>2013-06-30T22:03:32.0604341</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>iTunes</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="8e65069f-0383-4a33-b825-095da67d4717">
     <WebsiteUrl />
-    <UserAgent />
+    <UserAgent>Windows NT 6.1</UserAgent>
     <UserNotes />
     <LastFileSize>449409</LastFileSize>
-    <LastFileDate>2013-06-27T23:39:48.0695496</LastFileDate>
+    <LastFileDate>2013-03-03T13:57:11+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1691,7 +1671,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:39:48.0695496</LastUpdated>
+    <LastUpdated>2013-07-01T19:05:19.796864+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.magicaljellybean.com/downloads/keyfinder.zip</FixedDownloadUrl>
     <Name>keyfinder</Name>
@@ -1845,8 +1825,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>11269276</LastFileSize>
-    <LastFileDate>2013-06-28T17:10:01.4467719</LastFileDate>
+    <LastFileSize>9706630</LastFileSize>
+    <LastFileDate>2013-06-30T21:58:59.9098518</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1881,11 +1861,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\mkvtoolnix-unicode-6.3.0-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mkvtoolnix-unicode-6.3.0-1-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-28T17:10:01.4467719</LastUpdated>
+    <LastUpdated>2013-06-30T21:58:59.9098518</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/win32/?path=&amp;download=mkvtoolnix-unicode-{version}-setup.exe</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
@@ -1895,7 +1875,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>7473312</LastFileSize>
-    <LastFileDate>2013-06-27T22:58:23.3347748</LastFileDate>
+    <LastFileDate>2013-06-30T21:59:18.5674846</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1948,7 +1928,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T22:58:23.3347748</LastUpdated>
+    <LastUpdated>2013-06-30T21:59:18.5674846</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/mpc-hc/MPC HomeCinema - Win32/MPC-HC_v{version}_x86/MPC-HC.{version}.x86.exe</FixedDownloadUrl>
     <Name>mpc-hc</Name>
@@ -2007,7 +1987,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>2665796</LastFileSize>
-    <LastFileDate>2013-06-27T23:02:29.4202862</LastFileDate>
+    <LastFileDate>2013-06-30T21:59:35.1035137</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2046,7 +2026,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:02:29.4202862</LastUpdated>
+    <LastUpdated>2013-06-30T21:59:35.1035137</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://nliteos.pcrpg.org/nlite/nLite-{version}.installer.exe</FixedDownloadUrl>
     <Name>nlite</Name>
@@ -2589,7 +2569,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>575510184</LastFileSize>
-    <LastFileDate>2013-06-27T23:57:45.2758553</LastFileDate>
+    <LastFileDate>2013-06-30T22:21:19.3236401</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2629,7 +2609,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:57:45.2758553</LastUpdated>
+    <LastUpdated>2013-06-30T22:21:19.3236401</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/sauerbraten/sauerbraten/2013_01_04/sauerbraten_2013_02_03_collect_edition_windows.exe</FixedDownloadUrl>
     <Name>sauerbraten</Name>
@@ -2865,7 +2845,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>15783080</LastFileSize>
-    <LastFileDate>2013-06-27T22:37:07.905509</LastFileDate>
+    <LastFileDate>2013-06-30T22:06:51.7724995</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2905,7 +2885,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T22:37:07.905509</LastUpdated>
+    <LastUpdated>2013-06-30T22:06:51.7724995</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.getsongbird.com/desktop/index.php?download=GSB_windows</FixedDownloadUrl>
     <Name>songbird</Name>
@@ -3273,7 +3253,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>28110931</LastFileSize>
-    <LastFileDate>2013-06-28T00:00:12.4682609</LastFileDate>
+    <LastFileDate>2013-06-30T22:30:24.3516732</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3330,7 +3310,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-28T00:00:12.4682609</LastUpdated>
+    <LastUpdated>2013-06-30T22:30:24.3516732</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.torproject.org/dist/torbrowser/tor-browser-{realVersion}_de.exe</FixedDownloadUrl>
     <Name>tor-browser</Name>
@@ -3389,7 +3369,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>6992570</LastFileSize>
-    <LastFileDate>2013-06-27T23:58:55.4952728</LastFileDate>
+    <LastFileDate>2013-04-17T10:54:22+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3430,9 +3410,9 @@ Version </StartText>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:58:55.4952728</LastUpdated>
+    <LastUpdated>2013-07-01T19:01:07.2608095+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/tvbrowser/TV-Browser Releases (Java 6 and higher)/{version}/tvbrowser_{version}a_win32.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/tvbrowser/TV-Browser Releases (Java 6 and higher)/{version}/tvbrowser_{version}a_win32.exe</FixedDownloadUrl>
     <Name>tv-browser</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="87e771aa-b1c9-4bbe-a702-bae3bd7d5c2c">
@@ -3634,7 +3614,7 @@ Version </StartText>
     <UserAgent />
     <UserNotes />
     <LastFileSize>317371517</LastFileSize>
-    <LastFileDate>2013-06-28T00:05:45.8498633</LastFileDate>
+    <LastFileDate>2013-06-30T22:21:00.1980065</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3687,7 +3667,7 @@ Version </StartText>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-28T00:05:45.8498633</LastUpdated>
+    <LastUpdated>2013-06-30T22:21:00.1980065</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/wesnoth/wesnoth-{version_short}/wesnoth-{version}/wesnoth-{version}-win32.exe</FixedDownloadUrl>
     <Name>wesnoth</Name>
@@ -3857,8 +3837,8 @@ Version </StartText>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4308673</LastFileSize>
-    <LastFileDate>2013-06-28T00:01:54.3097452</LastFileDate>
+    <LastFileSize>4315090</LastFileSize>
+    <LastFileDate>2013-06-30T22:21:32.2092627</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3897,7 +3877,7 @@ Version </StartText>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-28T00:01:54.3097452</LastUpdated>
+    <LastUpdated>2013-06-30T22:21:32.2092627</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://youtube-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
