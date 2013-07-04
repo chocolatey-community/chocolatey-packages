@@ -102,8 +102,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>3466720</LastFileSize>
-    <LastFileDate>2013-06-22T00:02:44.5534699</LastFileDate>
+    <LastFileSize>153063408</LastFileSize>
+    <LastFileDate>2013-07-03T13:13:21.9186318</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -142,7 +142,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-22T00:02:44.5534699</LastUpdated>
+    <LastUpdated>2013-07-03T13:13:21.9186318</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.aptana.com/studio3/standalone/{version}/win/Aptana_Studio_3_Setup_{version}.exe</FixedDownloadUrl>
     <Name>aptana-studio</Name>
@@ -460,8 +460,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>8771072</LastFileSize>
-    <LastFileDate>2013-06-27T23:21:28.8599752</LastFileDate>
+    <LastFileSize>8437760</LastFileSize>
+    <LastFileDate>2013-07-03T13:03:11.1700048</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -514,7 +514,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:21:28.8599752</LastUpdated>
+    <LastUpdated>2013-07-03T13:03:11.1700048</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/classicshell/Version {version} general release/ClassicShellSetup_{versionWithUnderscore}.exe</FixedDownloadUrl>
     <Name>classic-shell</Name>
@@ -1111,7 +1111,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>740601866</LastFileSize>
-    <LastFileDate>2013-06-27T23:42:55.4533731</LastFileDate>
+    <LastFileDate>2013-07-03T13:24:38.603336</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1150,7 +1150,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:42:55.4533731</LastUpdated>
+    <LastUpdated>2013-07-03T13:24:38.603336</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://ftp.igh.cnrs.fr/pub/flightgear/ftp/Windows/Setup FlightGear {version}.exe</FixedDownloadUrl>
     <Name>flightgear</Name>
@@ -1414,7 +1414,7 @@
     <FileHippoId />
     <LastUpdated>2013-06-27T23:39:07.2776197</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/gnucash/gnucash (stable)/{version}/gnucash-{version}-setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/gnucash/gnucash%20%28stable%29/{version}/gnucash-{version}-setup.exe</FixedDownloadUrl>
     <Name>gnucash</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="f465cbc3-9295-4e16-a3b5-d2eef6353af7">
@@ -1632,7 +1632,7 @@
     <UserAgent>Windows NT 6.1</UserAgent>
     <UserNotes />
     <LastFileSize>449409</LastFileSize>
-    <LastFileDate>2013-03-03T13:57:11+01:00</LastFileDate>
+    <LastFileDate>2013-07-01T19:05:19.796864</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1671,7 +1671,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-01T19:05:19.796864+02:00</LastUpdated>
+    <LastUpdated>2013-07-01T19:05:19.796864</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.magicaljellybean.com/downloads/keyfinder.zip</FixedDownloadUrl>
     <Name>keyfinder</Name>
@@ -3368,8 +3368,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>6992570</LastFileSize>
-    <LastFileDate>2013-04-17T10:54:22+02:00</LastFileDate>
+    <LastFileSize>7050248</LastFileSize>
+    <LastFileDate>2013-07-03T22:50:14+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3390,11 +3390,9 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://www.tvbrowser.org/en/downloads-mainmenu-5/tv-browser-mainmenu-6.html</Url>
-            <StartText>&lt;p&gt;
-Version </StartText>
-            <EndText>
-,</EndText>
+            <Url>http://www.tvbrowser.org/index.php?id=download</Url>
+            <StartText>&lt;h1 class="page-title"&gt; Download &lt;/h1&gt;&lt;h2&gt;TV-Browser </StartText>
+            <EndText>&lt;/h2&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -3406,13 +3404,13 @@ Version </StartText>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\tvbrowser_3.3a_win32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\tvbrowser_3.3.1_win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-01T19:01:07.2608095+02:00</LastUpdated>
+    <LastUpdated>2013-07-04T22:52:30.8716098+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/tvbrowser/TV-Browser Releases (Java 6 and higher)/{version}/tvbrowser_{version}a_win32.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/tvbrowser/TV-Browser Releases (Java 6 and higher)/{version}/tvbrowser_{version}_win32.exe</FixedDownloadUrl>
     <Name>tv-browser</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="87e771aa-b1c9-4bbe-a702-bae3bd7d5c2c">
@@ -3837,8 +3835,8 @@ Version </StartText>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4315090</LastFileSize>
-    <LastFileDate>2013-06-30T22:21:32.2092627</LastFileDate>
+    <LastFileSize>4320812</LastFileSize>
+    <LastFileDate>2013-07-04T18:11:32+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3877,7 +3875,7 @@ Version </StartText>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-30T22:21:32.2092627</LastUpdated>
+    <LastUpdated>2013-07-04T22:48:20.8147764+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://youtube-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
@@ -3886,8 +3884,8 @@ Version </StartText>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1190589</LastFileSize>
-    <LastFileDate>2013-06-28T00:02:01.7667747</LastFileDate>
+    <LastFileSize>1191053</LastFileSize>
+    <LastFileDate>2013-07-01T23:05:40+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3922,11 +3920,11 @@ Version </StartText>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\YUMI-0.0.9.8.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\YUMI-0.0.9.9.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-28T00:02:01.7667747</LastUpdated>
+    <LastUpdated>2013-07-04T22:48:32.7007323+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{version}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
