@@ -1,8 +1,8 @@
 ﻿try {
-    $packageName = '{{PackageName}}'
+    $packageName = 'mp3tag'
     $fileType = 'exe'
     $silentArgs = '/S'
-    $url = '{{DownloadUrl}}'
+    $url = 'http://download.mp3tag.de/mp3tagv257setup.exe'
 
     $iniFile = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\Mp3tagSetup.ini"
     $chocoTempDir = "$env:TEMP\chocolatey\$packageName\"
