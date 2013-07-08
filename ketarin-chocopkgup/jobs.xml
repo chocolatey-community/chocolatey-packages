@@ -1870,6 +1870,71 @@
     <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/win32/?path=&amp;download=mkvtoolnix-unicode-{version}-setup.exe</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="02daa473-08f6-49b7-8d80-b1ee19ebe3f5">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>2635200</LastFileSize>
+    <LastFileDate>2013-07-07T22:22:01.239155</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://mp3tag.de/download.html</Url>
+            <StartText>&lt;h2&gt;Mp3tag v</StartText>
+            <EndText>&lt;/h2&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url-version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://mp3tag.de/download.html</Url>
+            <StartText>&lt;a href="http://download.mp3tag.de/mp3tagv</StartText>
+            <EndText>setup.exe</EndText>
+            <Name>url-version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\mp3tagv257setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-07T22:22:01.239155</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://download.mp3tag.de/mp3tagv{url-version}setup.exe</FixedDownloadUrl>
+    <Name>mp3tag</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1e0cec11-33ea-4845-9314-49f00f363332">
     <WebsiteUrl />
     <UserAgent />
@@ -2745,8 +2810,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>8586736</LastFileSize>
-    <LastFileDate>2013-06-27T23:49:09.1515873</LastFileDate>
+    <LastFileSize>8586798</LastFileSize>
+    <LastFileDate>2013-07-07T01:05:29.7773587</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2781,11 +2846,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\seafile-1.7.2-en.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\seafile-1.7.3-en.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:49:09.1515873</LastUpdated>
+    <LastUpdated>2013-07-07T01:05:29.7773587</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://seafile.googlecode.com/files/seafile-{version}-en.msi</FixedDownloadUrl>
     <Name>seafile-client</Name>
@@ -2844,8 +2909,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>15783080</LastFileSize>
-    <LastFileDate>2013-06-30T22:06:51.7724995</LastFileDate>
+    <LastFileSize>15508443</LastFileSize>
+    <LastFileDate>2013-07-07T22:23:21.7072595</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2881,11 +2946,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Songbird_2.2.0-2453_windows-i686-msvc8.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Songbird_2.2.0-2453_windows-i686-msvc8.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-30T22:06:51.7724995</LastUpdated>
+    <LastUpdated>2013-07-07T22:23:21.7072595</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.getsongbird.com/desktop/index.php?download=GSB_windows</FixedDownloadUrl>
     <Name>songbird</Name>
@@ -3369,7 +3434,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>7050248</LastFileSize>
-    <LastFileDate>2013-07-03T22:50:14+02:00</LastFileDate>
+    <LastFileDate>2013-07-04T22:52:30.8716098</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3408,7 +3473,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-04T22:52:30.8716098+02:00</LastUpdated>
+    <LastUpdated>2013-07-04T22:52:30.8716098</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/tvbrowser/TV-Browser Releases (Java 6 and higher)/{version}/tvbrowser_{version}_win32.exe</FixedDownloadUrl>
     <Name>tv-browser</Name>
@@ -3835,8 +3900,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4320812</LastFileSize>
-    <LastFileDate>2013-07-04T18:11:32+02:00</LastFileDate>
+    <LastFileSize>4327366</LastFileSize>
+    <LastFileDate>2013-07-08T13:25:24.1767492</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3875,7 +3940,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-04T22:48:20.8147764+02:00</LastUpdated>
+    <LastUpdated>2013-07-08T13:25:24.1767492</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://youtube-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
@@ -3885,7 +3950,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>1191053</LastFileSize>
-    <LastFileDate>2013-07-01T23:05:40+02:00</LastFileDate>
+    <LastFileDate>2013-07-04T22:48:32.7007323</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3924,7 +3989,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-04T22:48:32.7007323+02:00</LastUpdated>
+    <LastUpdated>2013-07-04T22:48:32.7007323</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{version}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
