@@ -1,5 +1,54 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="daad11de-ea9b-4864-ad79-87f151a3587c">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>29403457</LastFileSize>
+    <LastFileDate>2013-07-09T10:58:50.5390042</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.srware.net/software_srware_iron_download.php</Url>
+            <StartText>Version: &lt;strong&gt;</StartText>
+            <EndText>&lt;/strong&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\srware_iron.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-09T10:58:50.5390042</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://www.srware.net/downloads/srware_iron.exe</FixedDownloadUrl>
+    <Name>SRWareIron</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="74683212-bd2d-47e0-86bb-35b85765b02f">
     <WebsiteUrl />
     <UserAgent />
@@ -572,8 +621,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>16248192</LastFileSize>
-    <LastFileDate>2013-06-27T23:21:56.518479</LastFileDate>
+    <LastFileSize>16249808</LastFileSize>
+    <LastFileDate>2013-07-09T10:36:42.7572239</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -608,11 +657,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\clipgrab-3.2.1.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\clipgrab-3.2.1.1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:21:56.518479</LastUpdated>
+    <LastUpdated>2013-07-09T10:36:42.7572239</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://clipgrab.de/download/clipgrab-{version}.exe</FixedDownloadUrl>
     <Name>clipgrab</Name>
@@ -1940,7 +1989,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>7473312</LastFileSize>
-    <LastFileDate>2013-06-30T21:59:18.5674846</LastFileDate>
+    <LastFileDate>2013-06-15T08:14:23+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1993,7 +2042,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-30T21:59:18.5674846</LastUpdated>
+    <LastUpdated>2013-07-09T15:55:17.9121301+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/mpc-hc/MPC HomeCinema - Win32/MPC-HC_v{version}_x86/MPC-HC.{version}.x86.exe</FixedDownloadUrl>
     <Name>mpc-hc</Name>
@@ -2046,6 +2095,70 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/mscore/mscore/MuseScore-{version}/MuseScore-{version}.exe</FixedDownloadUrl>
     <Name>musescore</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2bbd8fc6-87d0-4b0b-bd85-0e3d378aeb7d">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>118993</LastFileSize>
+    <LastFileDate>2012-10-31T20:31:10+01:00</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.nirsoft.net/utils/nircmd.html</Url>
+            <StartText>&lt;td&gt;NirCmd v</StartText>
+            <EndText>
+</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://www.nirsoft.net/utils/nircmd-x64.zip</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\nircmd.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-09T15:59:20.6261487+02:00</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://www.nirsoft.net/utils/nircmd.zip</FixedDownloadUrl>
+    <Name>nircmd</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="856035f0-54b4-4744-ac32-ee798447703a">
     <WebsiteUrl />
@@ -2909,8 +3022,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>15508443</LastFileSize>
-    <LastFileDate>2013-07-07T22:23:21.7072595</LastFileDate>
+    <LastFileSize>15783080</LastFileSize>
+    <LastFileDate>2013-07-09T10:37:37.9747307</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2946,11 +3059,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Songbird_2.2.0-2453_windows-i686-msvc8.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Songbird_2.2.0-2453_windows-i686-msvc8.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-07T22:23:21.7072595</LastUpdated>
+    <LastUpdated>2013-07-09T10:37:37.9747307</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.getsongbird.com/desktop/index.php?download=GSB_windows</FixedDownloadUrl>
     <Name>songbird</Name>
@@ -3949,8 +4062,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1191053</LastFileSize>
-    <LastFileDate>2013-07-04T22:48:32.7007323</LastFileDate>
+    <LastFileSize>1196610</LastFileSize>
+    <LastFileDate>2013-07-09T10:37:53.6163457</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3985,11 +4098,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\YUMI-0.0.9.9.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\YUMI-0.1.0.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-04T22:48:32.7007323</LastUpdated>
+    <LastUpdated>2013-07-09T10:37:53.6163457</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{version}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
