@@ -29,7 +29,6 @@ Updated to support REMnux. Added Clonezilla and DRBL amd64 support. Correct a fe
     </metadata>
     <files>
         <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
-        <file src="tools\YUMI-0.0.9.8.exe.gui" target="tools\YUMI-0.0.9.8.exe.gui" />
+        <file src="tools\yumi.exe.gui" target="tools\yumi.exe.gui" />
     </files>
 </package>

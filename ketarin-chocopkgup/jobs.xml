@@ -358,6 +358,56 @@
     <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/avidemux/avidemux/{version}/avidemux_{version}_win32.exe</FixedDownloadUrl>
     <Name>avidemux</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="3c665412-4465-4f92-9d6e-e17532df6c27">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>4071672</LastFileSize>
+    <LastFileDate>2013-07-09T17:11:51.9941445</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://bluegriffon.org/pages/Download</Url>
+            <StartText>Most recent stable version: v </StartText>
+            <EndText> </EndText>
+            <TextualContent>2.0.1.9</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\BDUSBImmunizerLauncher.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-09T17:11:51.9941445</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://labs.bitdefender.com/wp-content/updates/immunizer/BDUSBImmunizerLauncher.exe</FixedDownloadUrl>
+    <Name>bitdefender-usb-immunizer</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e53c4389-bc7e-400b-9f45-e70026b9dcb9">
     <WebsiteUrl />
     <UserAgent />
@@ -762,7 +812,7 @@
     <FileHippoId />
     <LastUpdated>2013-06-27T23:27:18.8967607</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/codelite/Releases/codelite-5.1/codelite-5.1.0-mingw4.7.1-wx2.9.4.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/codelite/Releases/codelite-5.1/codelite-5.1.0-mingw4.7.1-wx2.9.4.exe</FixedDownloadUrl>
     <Name>codelite</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2dba50da-942e-4abd-8bd1-33b9309da3c5">
@@ -1470,8 +1520,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>33573216</LastFileSize>
-    <LastFileDate>2013-06-22T22:12:37.426702</LastFileDate>
+    <LastFileSize>33686880</LastFileSize>
+    <LastFileDate>2013-07-03T18:30:00+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1489,11 +1539,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FileHippo</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\27.0.1453.116_chrome_installer.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\28.0.1500.71_chrome_installer.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId>google_chrome</FileHippoId>
-    <LastUpdated>2013-06-22T22:12:37.426702</LastUpdated>
+    <LastUpdated>2013-07-10T13:04:14.4196281+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl />
     <Name>googlechrome</Name>
@@ -1989,7 +2039,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>7473312</LastFileSize>
-    <LastFileDate>2013-06-15T08:14:23+02:00</LastFileDate>
+    <LastFileDate>2013-07-09T15:55:17.9121301</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2042,7 +2092,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T15:55:17.9121301+02:00</LastUpdated>
+    <LastUpdated>2013-07-09T15:55:17.9121301</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/mpc-hc/MPC HomeCinema - Win32/MPC-HC_v{version}_x86/MPC-HC.{version}.x86.exe</FixedDownloadUrl>
     <Name>mpc-hc</Name>
@@ -2101,7 +2151,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>118993</LastFileSize>
-    <LastFileDate>2012-10-31T20:31:10+01:00</LastFileDate>
+    <LastFileDate>2013-07-09T15:59:20.6261487</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2155,7 +2205,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T15:59:20.6261487+02:00</LastUpdated>
+    <LastUpdated>2013-07-09T15:59:20.6261487</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.nirsoft.net/utils/nircmd.zip</FixedDownloadUrl>
     <Name>nircmd</Name>
@@ -3022,8 +3072,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>15783080</LastFileSize>
-    <LastFileDate>2013-07-09T10:37:37.9747307</LastFileDate>
+    <LastFileSize>15508443</LastFileSize>
+    <LastFileDate>2013-07-09T23:58:18.3418277</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3059,11 +3109,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Songbird_2.2.0-2453_windows-i686-msvc8.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Songbird_2.2.0-2453_windows-i686-msvc8.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T10:37:37.9747307</LastUpdated>
+    <LastUpdated>2013-07-09T23:58:18.3418277</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.getsongbird.com/desktop/index.php?download=GSB_windows</FixedDownloadUrl>
     <Name>songbird</Name>
@@ -3212,7 +3262,7 @@
     <FileHippoId />
     <LastUpdated>2013-06-27T23:58:29.1830835</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://surfnet.dl.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-{version}/SweetHome3D-{version}-windows.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/sweethome3d/SweetHome3D/SweetHome3D-{version}/SweetHome3D-{version}-windows.exe</FixedDownloadUrl>
     <Name>sweet-home-3d</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="bf8c80a5-a124-44ef-a6e9-1f382e025908">
@@ -3341,8 +3391,8 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.tightvnc.com/download.php</Url>
-            <StartText>&lt;h3&gt;Download TightVNC Version </StartText>
-            <EndText> for Windows</EndText>
+            <StartText>&lt;font color="red"&gt;TightVNC </StartText>
+            <EndText>&lt;/font&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -4013,8 +4063,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4327366</LastFileSize>
-    <LastFileDate>2013-07-08T13:25:24.1767492</LastFileDate>
+    <LastFileSize>4330589</LastFileSize>
+    <LastFileDate>2013-07-10T11:41:24+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4053,7 +4103,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-08T13:25:24.1767492</LastUpdated>
+    <LastUpdated>2013-07-10T13:04:39.5643896+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://youtube-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
@@ -4063,7 +4113,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>1196610</LastFileSize>
-    <LastFileDate>2013-07-09T10:37:53.6163457</LastFileDate>
+    <LastFileDate>2013-07-09T23:55:07.1218035</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4102,7 +4152,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T10:37:53.6163457</LastUpdated>
+    <LastUpdated>2013-07-09T23:55:07.1218035</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{version}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
