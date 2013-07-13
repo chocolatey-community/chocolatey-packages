@@ -1521,7 +1521,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>33686880</LastFileSize>
-    <LastFileDate>2013-07-03T18:30:00+02:00</LastFileDate>
+    <LastFileDate>2013-07-10T13:04:14.4196281</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1543,7 +1543,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId>google_chrome</FileHippoId>
-    <LastUpdated>2013-07-10T13:04:14.4196281+02:00</LastUpdated>
+    <LastUpdated>2013-07-10T13:04:14.4196281</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl />
     <Name>googlechrome</Name>
@@ -2326,8 +2326,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>9608676</LastFileSize>
-    <LastFileDate>2013-06-27T23:43:12.0958953</LastFileDate>
+    <LastFileSize>143399</LastFileSize>
+    <LastFileDate>2013-07-11T19:34:38.349821</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2349,23 +2349,9 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.nomacs.org/download/</Url>
-            <StartText>http://sourceforge.net/projects/nomacs/files/nomacs-</StartText>
-            <EndText>/nomacs-setup-</EndText>
+            <StartText>target="_blank"&gt; (x</StartText>
+            <EndText> |&lt;/a&gt;&lt;</EndText>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://freefr.dl.sourceforge.net/project/nomacs/nomacs-{version}/nomacs-setup-{version}-x64.exe</TextualContent>
-            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -2376,13 +2362,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\nomacs-setup-1.2.0-x86.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\home1.png</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:43:12.0958953</LastUpdated>
+    <LastUpdated>2013-07-11T19:34:38.349821</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/nomacs/nomacs-{version}/nomacs-setup-{version}-x86.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.nomacs.org/wp-content/uploads/2011/08/home1.png</FixedDownloadUrl>
     <Name>nomacs</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e2c0ed4b-7b8b-45ab-abf4-cea75be77a0f">
@@ -2658,8 +2644,8 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://preyproject.com/</Url>
-            <StartText>/prey-</StartText>
-            <EndText>-win.exe</EndText>
+            <StartText>'/releases/</StartText>
+            <EndText>/prey-</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -2911,7 +2897,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>70094500</LastFileSize>
-    <LastFileDate>2013-06-27T23:48:47.2743762</LastFileDate>
+    <LastFileDate>2013-07-11T19:13:33.899743</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2964,7 +2950,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:48:47.2743762</LastUpdated>
+    <LastUpdated>2013-07-11T19:13:33.899743</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/scribus/scribus/{version}/scribus-{version}-windows.exe</FixedDownloadUrl>
     <Name>scribus</Name>
@@ -3073,12 +3059,12 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>15508443</LastFileSize>
-    <LastFileDate>2013-07-09T23:58:18.3418277</LastFileDate>
+    <LastFileDate>2013-07-11T18:49:45.9110749</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <CheckForUpdatesOnly>true</CheckForUpdatesOnly>
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -3113,7 +3099,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T23:58:18.3418277</LastUpdated>
+    <LastUpdated>2013-07-11T18:49:45.9110749</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.getsongbird.com/desktop/index.php?download=GSB_windows</FixedDownloadUrl>
     <Name>songbird</Name>
@@ -3903,7 +3889,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>831496</LastFileSize>
-    <LastFileDate>2013-06-28T00:00:15.5723352</LastFileDate>
+    <LastFileDate>2013-07-11T19:25:45.1830612</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3942,7 +3928,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-28T00:00:15.5723352</LastUpdated>
+    <LastUpdated>2013-07-11T19:25:45.1830612</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://wincdemu.sysprogs.org/download/WinCDEmu-{version}.exe</FixedDownloadUrl>
     <Name>wincdemu</Name>
@@ -4063,8 +4049,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4330589</LastFileSize>
-    <LastFileDate>2013-07-10T11:41:24+02:00</LastFileDate>
+    <LastFileSize>4333769</LastFileSize>
+    <LastFileDate>2013-07-12T19:46:06.0925638</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4103,7 +4089,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-10T13:04:39.5643896+02:00</LastUpdated>
+    <LastUpdated>2013-07-12T19:46:06.0925638</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://youtube-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>

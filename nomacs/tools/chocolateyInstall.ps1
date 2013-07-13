@@ -1,8 +1,8 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/S'
-$url = '{{DownloadUrl}}'
-$url64bit = '{{DownloadUrlx64}}'
+$url = 'http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup.{{PackageVersion}}-x86.exe/download'
+$url64bit = 'http://sourceforge.net/projects/nomacs/files/nomacs-{{PackageVersion}}/nomacs-setup-{{PackageVersion}}-x64.exe/download'
 
 # If Windows 2000/XP, download matching version
 $WinVersion = [System.Environment]::OSVersion.Version.Major
