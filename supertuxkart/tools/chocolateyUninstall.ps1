@@ -6,4 +6,4 @@ if (Test-Path "${Env:ProgramFiles(x86)}\$unfile") {
 else {
     $unpath = "${Env:ProgramFiles}\$unfile"
 }
-Uninstall-ChocolateyPackage '{{PackageName}}' 'exe' '/S' "$unpath"
+Uninstall-ChocolateyPackage 'supertuxkart' 'exe' '/S' "$unpath"

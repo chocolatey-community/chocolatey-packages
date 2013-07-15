@@ -363,7 +363,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>4071672</LastFileSize>
-    <LastFileDate>2013-07-09T17:11:51.9941445</LastFileDate>
+    <LastFileDate>2013-07-13T17:57:36.6806169</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -403,7 +403,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T17:11:51.9941445</LastUpdated>
+    <LastUpdated>2013-07-13T17:57:36.6806169</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://labs.bitdefender.com/wp-content/updates/immunizer/BDUSBImmunizerLauncher.exe</FixedDownloadUrl>
     <Name>bitdefender-usb-immunizer</Name>
@@ -554,6 +554,118 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://online.cameyo.com/packager.aspx?op=Retrieve&amp;pkgId=1</FixedDownloadUrl>
     <Name>cameyo</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2b9eaec4-39ad-4d8e-ac64-11f67524d0a4">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>6218584</LastFileSize>
+    <LastFileDate>2013-07-13T18:36:02.6888131</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://cdrtfe.sourceforge.net/cdrtfe/download_en.html</Url>
+            <StartText>Version </StartText>
+            <EndText>, </EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>long-version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://cdrtfe.sourceforge.net/cdrtfe/download_en.html</Url>
+            <StartText>&lt;a href="http://sourceforge.net/projects/cdrtfe/files/cdrtfe/cdrtfe%20</StartText>
+            <EndText>/cdrtfe-</EndText>
+            <Name>long-version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\cdrtfe-1.5.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-13T18:36:02.6888131</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://netcologne.dl.sourceforge.net/project/cdrtfe/cdrtfe/cdrtfe {long-version}/cdrtfe-{version}.exe</FixedDownloadUrl>
+    <Name>cdrtfe</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="a93e4c5e-1d66-4364-b516-54c882ea01b5">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>72874850</LastFileSize>
+    <LastFileDate>2013-07-15T14:37:05.3292894</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>30.0.1566.0</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\chrome-win32.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-15T14:37:05.3292894</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>https://download-chromium.appspot.com/dl/Win</FixedDownloadUrl>
+    <Name>chromium</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="d2e238a0-e4c4-4874-84e2-ed47bbcc7f5b">
     <WebsiteUrl />
@@ -3158,7 +3270,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>147872140</LastFileSize>
-    <LastFileDate>2013-06-27T23:57:43.1401231</LastFileDate>
+    <LastFileDate>2012-12-11T02:37:54+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3197,7 +3309,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:57:43.1401231</LastUpdated>
+    <LastUpdated>2013-07-15T17:14:37.7429107+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/supertuxkart/SuperTuxKart/{version}/supertuxkart-{version}-win.exe</FixedDownloadUrl>
     <Name>supertuxkart</Name>

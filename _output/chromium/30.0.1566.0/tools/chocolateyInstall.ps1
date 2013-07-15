@@ -1,6 +1,6 @@
 ﻿try {
     $packageName = 'chromium'
-    $url = '{{DownloadUrl}}'
+    $url = 'https://download-chromium.appspot.com/dl/Win'
     $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
     Install-ChocolateyZipPackage $packageName $url $unzipLocation
