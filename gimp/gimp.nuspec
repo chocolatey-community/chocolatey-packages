@@ -8,7 +8,7 @@
         <owners>anatooly, purity</owners>
         <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://gimp.org</projectUrl>
-        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/The_GIMP_icon_-_gnome.svg/200px-The_GIMP_icon_-_gnome.svg.png</iconUrl>
+        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/4/45/The_GIMP_icon_-_gnome.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>GIMP is a multi-platform photo manipulation tool. GIMP is an acronym for GNU Image Manipulation Program. The GIMP is suitable for a variety of image manipulation tasks, including photo retouching, image composition, and image construction.
 GIMP has many capabilities. It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc.

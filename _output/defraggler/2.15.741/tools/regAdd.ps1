@@ -8,8 +8,8 @@ $regDir64 = 'HKLM:\SOFTWARE\Wow6432Node\Google\No Chrome Offer Until'
 
 if ($is64bit) {
     if (-not(Test-Path $regDir64)) {New-Item $regDir64 -ItemType directory -Force}
-    New-ItemProperty -Name "Piriform Ltd" -Path $regDir64 -PropertyType DWORD -Value 20991231
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDir64 -PropertyType DWORD -Value 20991231 -Force
 } else {
     if (-not(Test-Path $regDir)) {New-Item $regDir -ItemType directory -Force}
-    New-ItemProperty -Name "Piriform Ltd" -Path $regDir -PropertyType DWORD -Value 20991231
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDir -PropertyType DWORD -Value 20991231 -Force
 }

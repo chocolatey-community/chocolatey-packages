@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>chromium</id>
-        <version>{{PackageVersion}}</version>
+        <version>30.0.1572.0</version>
         <title>Chromium raw build</title>
         <authors>Chromium team</authors>
         <owners>purity</owners>
