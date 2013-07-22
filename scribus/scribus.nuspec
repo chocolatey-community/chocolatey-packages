@@ -8,13 +8,13 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://scribus.net/canvas/Scribus</projectUrl>
-        <iconUrl>http://www.scribus.net/wiki/skins/scribus/scribus-logo-web.png</iconUrl>
+        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/8/85/Scribus_logo.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Scribus is an Open Source program that brings professional page layout to Linux/UNIX, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows desktops with a combination of press-ready output and new approaches to page design.
 
 Underneath a modern and user-friendly interface, Scribus supports professional publishing features, such as color separations, CMYK and spot colors, ICC color management, and versatile PDF creation.</description>
         <summary>Open Source Desktop Publishing</summary>
-        <releaseNotes>http://wiki.scribus.net/canvas/1.4.2_Release</releaseNotes>
+        <releaseNotes></releaseNotes>
         <tags>desktop publishing</tags>
         <dependencies>
             <dependency id="Ghostscript.app" version="9.07" />
