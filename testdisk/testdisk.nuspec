@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.cgsecurity.org/wiki/TestDisk</projectUrl>
-        <iconUrl>http://www.dna-et.com/resources/test%20disk%20l.png</iconUrl>
+        <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/testdisk/testdisk.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>TestDisk is powerful free data recovery software! It was primarily designed to help recover lost partitions and/or make non-booting disks bootable again when these symptoms are caused by faulty software, certain types of viruses or human error (such as accidentally deleting a Partition Table). Partition table recovery using TestDisk is really easy.
 TestDisk can
