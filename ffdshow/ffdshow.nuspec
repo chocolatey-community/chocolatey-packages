@@ -8,6 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
         <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>
+		<iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/ffdshow/ffdshow.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>ffdshow tryouts is a DirectShow and Video for Windows codec with support for a wide range of audio and video formats, such as Xvid, DivX, and H.264. It includes a powerful filter set that can enhance the video quality - with filters for resizing, deinterlacing, and displaying subtitles - as well as audio quality through normalization, down-/upmixing, and resampling.
 

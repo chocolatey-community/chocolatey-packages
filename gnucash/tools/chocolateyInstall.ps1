@@ -1,6 +1,6 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/VERYSILENT'
-$url = '{{DownloadUrl}}'
+$url = 'http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-{{PackageVersion}}-setup.exe'
 
 Install-ChocolateyPackage $packageName $fileType $silentArgs $url

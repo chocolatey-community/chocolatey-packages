@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.tvbrowser.org/index.php</projectUrl>
-        <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/tv-browser/tv-browser.png</iconUrl>
+        <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/tv-browser/tv-browser.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>TV-Browser is a digital TV guide.
 TV-Browser gets the daily TV program from the internet and shows it clearly aranged – like a printed TV guide. An internet connection is only necessary during the data update.

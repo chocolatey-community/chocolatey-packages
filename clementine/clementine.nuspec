@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.clementine-player.org/</projectUrl>
-        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/e/e4/Clementine-Logo.png</iconUrl>
+        <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/clementine/clementine.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Clementine is a modern music player and library organizer
 Clementine is a multiplatform music player. It is inspired by Amarok 1.4, focusing on a fast and easy-to-use interface for searching and playing your music.</description>

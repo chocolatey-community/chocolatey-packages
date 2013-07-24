@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>gnucash</id>
-        <version>2.4.13</version>
+        <version>2.4.13.20130724</version>
         <title>GnuCash</title>
         <authors>The GnuCash Project</authors>
         <owners>purity</owners>
         <licenseUrl>http://svn.gnucash.org/trac/browser/gnucash/trunk/LICENSE</licenseUrl>
         <projectUrl>http://www.gnucash.org/</projectUrl>
-        <iconUrl>http://www.gnucash.org/images/gnc-download.png</iconUrl>
+        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/1/18/GnuCash_logo.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.
 
