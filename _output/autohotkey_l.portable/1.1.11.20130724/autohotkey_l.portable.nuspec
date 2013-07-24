@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey_l.portable</id>
-    <version>{{PackageVersion}}</version>
+    <version>1.1.11.20130724</version>
     <title>AutoHotKey_L (Portable)</title>
     <authors>Lexikos</authors>
     <owners>Anthony Mastrean</owners>
@@ -13,7 +13,7 @@
     <description>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 AutoHotkey_L is a fork of AutoHotkey which adds a long list of new features and fixes some bugs. Anything that can be done with AutoHotkey can also be done with AutoHotkey_L. Scripts written for AutoHotkey will also run on AutoHotkey_L, with some exceptions</description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
-    <releaseNotes>The real version of AutoHotkey_L in this package is {{PackageVersion}}.</releaseNotes>
+    <releaseNotes>The real version of AutoHotkey_L in this package is 1.1.11.01.</releaseNotes>
     <tags>automation hotkeys scripting windows</tags>
   </metadata>
   <files>

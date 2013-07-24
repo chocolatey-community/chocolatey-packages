@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>autohotkey_l.portable</id>
+    <id>autohotkey_l.install</id>
     <version>{{PackageVersion}}</version>
-    <title>AutoHotKey_L (Portable)</title>
+    <title>AutoHotKey_L (Install)</title>
     <authors>Lexikos</authors>
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
