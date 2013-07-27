@@ -1,16 +1,11 @@
 chocolateyautomaticpackages
 ===========================
-Annotations:
-* codelite package has static version in Ketarin
-* compact-timer too
-* encfs4win too
-* ffmpeg too
-* librecad too
-* wesnoth too
-* sauerbraten too
-* SMC too
-* iTunes too
-* chromium too
+Not entirely automatic:
+
+* iTunes
+* chromium
 * Haali Media Splitter
 * freeciv download link must be handled with regex
-* supertuxkart package is not complete yet
+* sauerbraten
+* compact-timer
+* encfs4win

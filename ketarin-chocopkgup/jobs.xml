@@ -295,7 +295,8 @@
       </item>
     </Variables>
     <ExecuteCommand />
-    <ExecutePreCommand />
+    <ExecutePreCommand>chocopkgup /p autohotkey_l /v {version} /u "{preupdate-url}" /u64 "{url64}" /pp "{file}" /disablepush
+REM /disablepush</ExecutePreCommand>
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
@@ -1123,8 +1124,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>83327079</LastFileSize>
-    <LastFileDate>2013-06-27T23:27:18.8967607</LastFileDate>
+    <LastFileSize>35042735</LastFileSize>
+    <LastFileDate>2013-07-11T05:55:28+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1138,18 +1139,47 @@
     <Variables>
       <item>
         <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://sourceforge.net/projects/codelite/files/Releases/codelite-{version}/codelite-{version}-mingw[-\d\.]+.exe/download</Regex>
+            <Url>http://sourceforge.net/projects/codelite/files/Releases/codelite-{version}/</Url>
+            <TextualContent>http://sourceforge.net/projects/codelite/files/Releases/codelite-5.2/codelite-5.2-mingw4.7.1.exe/download</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
           <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://sourceforge.net/projects/codelite/files/Releases/</Url>
+            <StartText>&lt;tr title="codelite-</StartText>
+            <EndText>" class="folder warn"&gt;</EndText>
+            <TextualContent>5.2</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url-ketarin</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <Url>http://sourceforge.net/projects/codelite/files/Releases/</Url>
-            <StartText>&lt;p&gt;The latest stable version is &lt;b&gt;Bluefish </StartText>
-            <EndText>&lt;/b&gt;.&lt;/p&gt;</EndText>
-            <TextualContent>5.1.0</TextualContent>
-            <Name>version</Name>
+            <TextualContent>{url64:multireplace:,:sourceforge.net,/projects/,/download,/files:heanet.dl.sourceforge.net,/project/,,}</TextualContent>
+            <Name>url-ketarin</Name>
           </UrlVariable>
         </value>
       </item>
@@ -1160,13 +1190,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\codelite-5.1.0-mingw4.7.1-wx2.9.4.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\codelite-5.2-mingw4.7.1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:27:18.8967607</LastUpdated>
+    <LastUpdated>2013-07-27T22:36:19.9442441+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/codelite/Releases/codelite-5.1/codelite-5.1.0-mingw4.7.1-wx2.9.4.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>{url-ketarin}</FixedDownloadUrl>
     <Name>codelite</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2dba50da-942e-4abd-8bd1-33b9309da3c5">
@@ -1500,7 +1530,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>8562107</LastFileSize>
-    <LastFileDate>2013-06-27T23:24:49.6232943</LastFileDate>
+    <LastFileDate>2013-03-28T05:44:21+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1520,11 +1550,11 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
-            <Regex />
-            <Url>http://www.ext2fsd.com/</Url>
-            <StartText>!"&gt;Ext2Fsd </StartText>
-            <EndText> was released</EndText>
-            <TextualContent>1.2</TextualContent>
+            <Regex>ffmpeg-1.2-</Regex>
+            <Url>http://ffmpeg.zeranoe.com/builds/win32/static/</Url>
+            <StartText>ffmpeg-</StartText>
+            <EndText>-win32-static.7z</EndText>
+            <TextualContent>{url-with-version:regexreplace:ffmpeg-([\d\.]+)-win32-static.7z:$1}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -1543,6 +1573,20 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>url-with-version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ffmpeg-[\d\.]+-win32-static.7z</Regex>
+            <Url>http://ffmpeg.zeranoe.com/builds/win32/static/</Url>
+            <Name>url-with-version</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -1554,7 +1598,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:24:49.6232943</LastUpdated>
+    <LastUpdated>2013-07-27T22:45:42.3859682+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-{version}-win32-static.7z</FixedDownloadUrl>
     <Name>ffmpeg</Name>
@@ -2297,7 +2341,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>12710272</LastFileSize>
-    <LastFileDate>2013-06-27T23:40:59.1012131</LastFileDate>
+    <LastFileDate>2013-05-08T02:07:18+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2317,12 +2361,26 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
-            <Regex />
+            <Regex>&lt;tr title="[\d\.]+" class="folder warn"&gt;</Regex>
             <Url>http://sourceforge.net/projects/librecad/files/Windows/</Url>
             <StartText>&lt;p&gt;The latest stable version is &lt;b&gt;Bluefish </StartText>
             <EndText>&lt;/b&gt;.&lt;/p&gt;</EndText>
-            <TextualContent>1.0.3</TextualContent>
+            <TextualContent>{version-regex:regexreplace:&lt;tr title="([\d\.]+)" class="folder warn"&gt;:$1}</TextualContent>
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version-regex</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;tr title="[\d\.]+" class="folder warn"&gt;</Regex>
+            <Url>http://sourceforge.net/projects/librecad/files/Windows/</Url>
+            <Name>version-regex</Name>
           </UrlVariable>
         </value>
       </item>
@@ -2337,7 +2395,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:40:59.1012131</LastUpdated>
+    <LastUpdated>2013-07-27T22:57:57.5514704+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/librecad/Windows/{version}/LibreCAD-Installer_v{version}.exe</FixedDownloadUrl>
     <Name>librecad</Name>
@@ -3906,11 +3964,11 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
+            <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://www.secretmaryo.org/</Url>
-            <StartText>&lt;p&gt;&lt;b&gt;&lt;a href="index.php?page=game_downloads&amp;amp;sid=?sid=2b72f9f1c15b049037d99aa2af366a21"&gt;SMC </StartText>
-            <EndText>&lt;/a&gt; Released</EndText>
+            <Url>http://sourceforge.net/projects/smclone/files/Secret%20Maryo%20Chronicles/</Url>
+            <StartText>&lt;tr title="</StartText>
+            <EndText>" class="folder warn"&gt;</EndText>
             <TextualContent>1.9</TextualContent>
             <Name>version</Name>
           </UrlVariable>
@@ -4739,8 +4797,11 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
+            <VariableType>StartEnd</VariableType>
             <Regex />
+            <Url>http://www.wesnoth.org/</Url>
+            <StartText>http://sourceforge.net/projects/wesnoth/files/wesnoth-</StartText>
+            <EndText>/wesnoth-</EndText>
             <TextualContent>1.10</TextualContent>
             <Name>version_short</Name>
           </UrlVariable>
