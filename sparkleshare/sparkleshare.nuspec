@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://github.com/hbons/SparkleShare#license</licenseUrl>
         <projectUrl>http://sparkleshare.org/</projectUrl>
-		<iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/sparkleshare/sparkleshare.png</iconUrl>
+		<iconUrl>https://bitbucket.org/oxymix/svg-icons/raw/66b82a0e582c981618bcd444dfbfed7b4914f5df/sparkleshare.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way. It allows you to instantly sync with Git repositories and is available for Linux distributions, Mac and Windows.</description>
         <summary>SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way.</summary>

@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://musescore.org/en</projectUrl>
-        <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/musescore/musescore.svg</iconUrl>
+        <iconUrl>https://bitbucket.org/oxymix/svg-icons/raw/66b82a0e582c981618bcd444dfbfed7b4914f5df/musescore.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Create beautiful sheet music for free using MuseScore, the free and open source notation program!
 
