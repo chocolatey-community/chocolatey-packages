@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>29403457</LastFileSize>
-    <LastFileDate>2013-07-09T10:58:50.5390042</LastFileDate>
+    <LastFileSize>29742428</LastFileSize>
+    <LastFileDate>2013-07-24T01:34:50.2932972</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -44,7 +44,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T10:58:50.5390042</LastUpdated>
+    <LastUpdated>2013-07-24T01:34:50.2932972</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.srware.net/downloads/srware_iron.exe</FixedDownloadUrl>
     <Name>SRWareIron</Name>
@@ -251,7 +251,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>2637267</LastFileSize>
-    <LastFileDate>2013-06-27T23:20:28.8730093</LastFileDate>
+    <LastFileDate>2013-07-27T13:10:39.1561643</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -304,10 +304,87 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:20:28.8730093</LastUpdated>
+    <LastUpdated>2013-07-27T13:10:39.1561643</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://l.autohotkey.net/v/AutoHotkey{versionWithoutDots}_Install.exe</FixedDownloadUrl>
-    <Name>autohotkey_l</Name>
+    <Name>autohotkey_l.install</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0bd99fa5-ca87-4f47-9903-a47da5200cc8">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>421044</LastFileSize>
+    <LastFileDate>2013-07-27T13:10:42.4532327</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex>Last update:</Regex>
+            <Url>http://l.autohotkey.net/docs/</Url>
+            <StartText>v&lt;!--ver--&gt;</StartText>
+            <EndText>&lt;!--/ver--&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>versionWithoutDots</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{version:replace:.:}</TextualContent>
+            <Name>versionWithoutDots</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>"http://l.autohotkey.net/v/AutoHotkey{versionWithoutDots}_x64.zip"</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\AutoHotkey111101.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-27T13:10:42.4532327</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://l.autohotkey.net/v/AutoHotkey{versionWithoutDots}.zip</FixedDownloadUrl>
+    <Name>autohotkey_l.portable</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1d3c00bf-8a93-4810-869f-e7f9f0f50ceb">
     <WebsiteUrl />
@@ -407,6 +484,171 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://labs.bitdefender.com/wp-content/updates/immunizer/BDUSBImmunizerLauncher.exe</FixedDownloadUrl>
     <Name>bitdefender-usb-immunizer</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="382b9940-a4cf-4877-9052-9019278855fc">
+    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://www.blender.org/download/get-blender/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://ftp.nluug.nl/pub/graphics/blender/release/Blender2.68/blender-2.68a-windows32.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="blender" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>41676340</LastFileSize>
+    <LastFileDate>2013-07-26T13:01:54.1883561</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://www.blender.org/download/get-blender/</Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent>{real-version:multireplace:,:a,b,c,d,e,f:.1,.2,.3,.4,.5,.6}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>"http://ftp.nluug.nl/pub/graphics/blender/release/Blender{url-folder-version}/blender-{real-version}-windows64.exe"</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>real-version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.blender.org/download/get-blender/</Url>
+            <StartText>&lt;h1 class="csc-firstHeader"&gt;Blender </StartText>
+            <EndText>&lt;/h1&gt;</EndText>
+            <Name>real-version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url-folder-version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.blender.org/download/get-blender/</Url>
+            <StartText>/pub/graphics/blender/release//Blender</StartText>
+            <EndText>/blender-</EndText>
+            <Name>url-folder-version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\blender-2.68a-windows32.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-26T13:01:54.1883561</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://ftp.nluug.nl/pub/graphics/blender/release/Blender{url-folder-version}/blender-{real-version}-windows32.exe</FixedDownloadUrl>
+    <Name>blender</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e53c4389-bc7e-400b-9f45-e70026b9dcb9">
     <WebsiteUrl />
@@ -624,8 +866,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>72874850</LastFileSize>
-    <LastFileDate>2013-07-15T14:37:05.3292894</LastFileDate>
+    <LastFileSize>81179563</LastFileSize>
+    <LastFileDate>2013-07-27T13:12:11.562505</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -646,7 +888,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>30.0.1566.0</TextualContent>
+            <TextualContent>30.0.1572.0</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -662,7 +904,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-15T14:37:05.3292894</LastUpdated>
+    <LastUpdated>2013-07-27T13:12:11.562505</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://download-chromium.appspot.com/dl/Win</FixedDownloadUrl>
     <Name>chromium</Name>
@@ -783,8 +1025,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>16249808</LastFileSize>
-    <LastFileDate>2013-07-09T10:36:42.7572239</LastFileDate>
+    <LastFileSize>16249112</LastFileSize>
+    <LastFileDate>2013-07-20T23:52:49.0170893</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -819,11 +1061,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\clipgrab-3.2.1.1.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\clipgrab-3.2.1.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T10:36:42.7572239</LastUpdated>
+    <LastUpdated>2013-07-20T23:52:49.0170893</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://clipgrab.de/download/clipgrab-{version}.exe</FixedDownloadUrl>
     <Name>clipgrab</Name>
@@ -981,8 +1223,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>3839648</LastFileSize>
-    <LastFileDate>2013-06-27T23:24:05.3639092</LastFileDate>
+    <LastFileSize>4100432</LastFileSize>
+    <LastFileDate>2013-07-21T19:00:44.0284627</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1033,11 +1275,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\dfsetup214.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\dfsetup215.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:24:05.3639092</LastUpdated>
+    <LastUpdated>2013-07-21T19:00:44.0284627</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.piriform.com/dfsetup{shortVersion}.exe</FixedDownloadUrl>
     <Name>defraggler</Name>
@@ -1584,7 +1826,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>106655345</LastFileSize>
-    <LastFileDate>2013-06-27T23:39:07.2776197</LastFileDate>
+    <LastFileDate>2013-07-24T11:47:58.8566461</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1623,7 +1865,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:39:07.2776197</LastUpdated>
+    <LastUpdated>2013-07-24T11:47:58.8566461</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/gnucash/gnucash%20%28stable%29/{version}/gnucash-{version}-setup.exe</FixedDownloadUrl>
     <Name>gnucash</Name>
@@ -1632,8 +1874,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>33686880</LastFileSize>
-    <LastFileDate>2013-07-10T13:04:14.4196281</LastFileDate>
+    <LastFileSize>33822560</LastFileSize>
+    <LastFileDate>2013-07-21T18:36:14.4429164</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1651,11 +1893,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FileHippo</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\28.0.1500.71_chrome_installer.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\28.0.1500.72_chrome_installer.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId>google_chrome</FileHippoId>
-    <LastUpdated>2013-07-10T13:04:14.4196281</LastUpdated>
+    <LastUpdated>2013-07-21T18:36:14.4429164</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl />
     <Name>googlechrome</Name>
@@ -1837,6 +2079,137 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>iTunes</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="381fa2c2-b8c2-48f2-9ab9-674c3d956e69">
+    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="https://download.jitsi.org/jitsi/msi/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="https://download.jitsi.org/jitsi/msi/jitsi-{version}-x86.msi" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="jitsi" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>48979968</LastFileSize>
+    <LastFileDate>2013-07-26T13:00:35.205018</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://download.jitsi.org/jitsi/msi/</Url>
+            <StartText>&lt;a href="jitsi-</StartText>
+            <EndText>-x86.msi"&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>"https://download.jitsi.org/jitsi/msi/jitsi-{version}-x64.msi"</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\jitsi-2.2.4603.9615-x86.msi</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-26T13:00:35.205018</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>https://download.jitsi.org/jitsi/msi/jitsi-{version}-x86.msi</FixedDownloadUrl>
+    <Name>jitsi</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="8e65069f-0383-4a33-b825-095da67d4717">
     <WebsiteUrl />
@@ -2209,6 +2582,137 @@
     <FixedDownloadUrl>http://garr.dl.sourceforge.net/project/mpc-hc/MPC HomeCinema - Win32/MPC-HC_v{version}_x86/MPC-HC.{version}.x86.exe</FixedDownloadUrl>
     <Name>mpc-hc</Name>
   </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="71216b71-63d5-42c7-8c07-df53fa0ac545">
+    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://sourceforge.net/projects/mumble/files/Mumble/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://c.fsdn.com/allura/p/mumble/icon" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="mumble" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>15657984</LastFileSize>
+    <LastFileDate>2013-07-26T13:02:36.1200539</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://sourceforge.net/projects/mumble/files/Mumble/</Url>
+            <StartText>&lt;a href="/projects/mumble/files/latest/download?source=files" title="/Mumble/</StartText>
+            <EndText>/mumble-</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\mumble-1.2.4.msi</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-26T13:02:36.1200539</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://kent.dl.sourceforge.net/project/mumble/Mumble/{version}/mumble-{version}.msi</FixedDownloadUrl>
+    <Name>mumble</Name>
+  </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="9c6f9214-35cd-4aec-808f-8bb38dd5e4de">
     <WebsiteUrl />
     <UserAgent />
@@ -2438,8 +2942,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>143399</LastFileSize>
-    <LastFileDate>2013-07-11T19:34:38.349821</LastFileDate>
+    <LastFileSize>9812429</LastFileSize>
+    <LastFileDate>2013-07-26T15:01:08.3861706</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2461,8 +2965,8 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.nomacs.org/download/</Url>
-            <StartText>target="_blank"&gt; (x</StartText>
-            <EndText> |&lt;/a&gt;&lt;</EndText>
+            <StartText>&lt;a href="http://sourceforge.net/projects/nomacs/files/nomacs-</StartText>
+            <EndText>/nomacs-setup-</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -2474,13 +2978,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\home1.png</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\nomacs-setup-1.4.0-x86.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-11T19:34:38.349821</LastUpdated>
+    <LastUpdated>2013-07-26T15:01:08.3861706</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://www.nomacs.org/wp-content/uploads/2011/08/home1.png</FixedDownloadUrl>
+    <FixedDownloadUrl>http://switch.dl.sourceforge.net/project/nomacs/nomacs-{version}/nomacs-setup-{version}-x86.exe</FixedDownloadUrl>
     <Name>nomacs</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e2c0ed4b-7b8b-45ab-abf4-cea75be77a0f">
@@ -2777,6 +3281,268 @@
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://preyproject.com/releases/{version}/prey-{version}-win.exe</FixedDownloadUrl>
     <Name>prey</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e8e21e6a-99bb-4e07-a244-ffda2599fd05">
+    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/{version}/PyHoca-GUI_{version}_win32-setup.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="pyhoca-gui" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>23465572</LastFileSize>
+    <LastFileDate>2013-07-26T13:02:25.3620921</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/?C=M;O=D</Url>
+            <StartText>&lt;tr&gt;&lt;td valign="top"&gt;&lt;img src="/icons/folder.gif" alt="[DIR]"&gt;&lt;/td&gt;&lt;td&gt;&lt;a href="</StartText>
+            <EndText>/"&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\PyHoca-GUI_0.4.0.4_win32-setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-26T13:02:25.3620921</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/{version}/PyHoca-GUI_{version}_win32-setup.exe</FixedDownloadUrl>
+    <Name>pyhoca-gui</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="49590141-9e38-46f2-9fb3-016eeddbac4a">
+    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://www.qbittorrent.org/download.php" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.qbittorrent.org/img/winlogo.png" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="qbittorrent" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>13132049</LastFileSize>
+    <LastFileDate>2013-07-26T13:06:01.967498</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.qbittorrent.org/download.php</Url>
+            <StartText>&lt;a href="http://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-</StartText>
+            <EndText>/qbittorrent</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\qbittorrent_3.0.10_setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-26T13:06:01.967498</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://freefr.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-{version}/qbittorrent_{version}_setup.exe</FixedDownloadUrl>
+    <Name>qbittorrent</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="8ee716fa-6e9b-43f0-ac03-e95cc9461440">
     <WebsiteUrl />
@@ -3270,7 +4036,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>147872140</LastFileSize>
-    <LastFileDate>2012-12-11T02:37:54+01:00</LastFileDate>
+    <LastFileDate>2013-07-15T17:14:37.7429107</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3309,7 +4075,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-15T17:14:37.7429107+02:00</LastUpdated>
+    <LastUpdated>2013-07-15T17:14:37.7429107</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://heanet.dl.sourceforge.net/project/supertuxkart/SuperTuxKart/{version}/supertuxkart-{version}-win.exe</FixedDownloadUrl>
     <Name>supertuxkart</Name>
@@ -3466,8 +4232,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>2076672</LastFileSize>
-    <LastFileDate>2013-06-22T22:15:44.9078313</LastFileDate>
+    <LastFileSize>2105344</LastFileSize>
+    <LastFileDate>2013-07-24T18:41:21.366487</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3516,11 +4282,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\tightvnc-2.7.7-setup-32bit.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\tightvnc-2.7.10-setup-32bit.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-22T22:15:44.9078313</LastUpdated>
+    <LastUpdated>2013-07-24T18:41:21.366487</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tightvnc.com/download/{version}/tightvnc-{version}-setup-32bit.msi</FixedDownloadUrl>
     <Name>tightvnc</Name>
@@ -4161,8 +4927,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4333769</LastFileSize>
-    <LastFileDate>2013-07-12T19:46:06.0925638</LastFileDate>
+    <LastFileSize>4353285</LastFileSize>
+    <LastFileDate>2013-07-26T12:58:51.9963357</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4201,7 +4967,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-12T19:46:06.0925638</LastUpdated>
+    <LastUpdated>2013-07-26T12:58:51.9963357</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://youtube-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
@@ -4210,8 +4976,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1196610</LastFileSize>
-    <LastFileDate>2013-07-09T23:55:07.1218035</LastFileDate>
+    <LastFileSize>1225890</LastFileSize>
+    <LastFileDate>2013-07-26T23:49:26.6739332</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4246,13 +5012,144 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\YUMI-0.1.0.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\YUMI-0.1.0.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-07-09T23:55:07.1218035</LastUpdated>
+    <LastUpdated>2013-07-26T23:49:26.6739332</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{version}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="17473f73-8dc6-4256-8762-044d8afaa4cd">
+    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="https://www.zotero.org/download/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.zotero.org/standalone/{version}/Zotero-{version}_setup.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="zotero-standalone" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>23771624</LastFileSize>
+    <LastFileDate>2013-07-27T13:12:55.1298168</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://www.zotero.org/download/</Url>
+            <StartText>href="http://download.zotero.org/standalone/</StartText>
+            <EndText>/Zotero-</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\Zotero-4.0.9.1_setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-07-27T13:12:55.1298168</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://download.zotero.org/standalone/{version}/Zotero-{version}_setup.exe</FixedDownloadUrl>
+    <Name>zotero-standalone</Name>
   </ApplicationJob>
 </Jobs>
