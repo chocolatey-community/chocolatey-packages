@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>photorec</id>
+        <version>6.14</version>
+        <title>PhotoRec</title>
+        <authors>CGSecurity</authors>
+        <owners>purity</owners>
+        <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+        <projectUrl>http://www.cgsecurity.org/wiki/PhotoRec</projectUrl>
+        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/a/ac/PhotoRec-logo.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>PhotoRec is file data recovery software designed to recover lost files including video, documents and archives from hard disks, CD-ROMs, and lost pictures (thus the Photo Recovery name) from digital camera memory. PhotoRec ignores the file system and goes after the underlying data, so it will still work even if your media's file system has been severely damaged or reformatted.
+PhotoRec is free - this open source multi-platform application is distributed under GNU General Public License (GPLV v2+). PhotoRec is a companion program to TestDisk, an application for recovering lost partitions on a wide variety of file systems and making non-bootable disks bootable again. You can download them from this link.
+For more safety, PhotoRec uses read-only access to handle the drive or memory card you are about to recover lost data from. Important: As soon as a picture or file is accidentally deleted, or you discover any missing, do NOT save any more pictures or files to that memory device or hard disk drive; otherwise you may overwrite your lost data. This means that while using PhotoRec, you must not choose to write the recovered files to the same partition they were stored on.</description>
+        <summary>Data recovery software</summary>
+        <releaseNotes>http://www.cgsecurity.org/wiki/TestDisk_6.13_Release</releaseNotes>
+        <copyright />
+        <tags>data recovery</tags>
+    </metadata>
+</package>
