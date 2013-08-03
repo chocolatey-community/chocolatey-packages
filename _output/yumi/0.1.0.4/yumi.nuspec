@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>yumi</id>
+        <version>0.1.0.4</version>
         <title>YUMI</title>
         <authors>Pendrivelinux</authors>
         <owners>purity</owners>
