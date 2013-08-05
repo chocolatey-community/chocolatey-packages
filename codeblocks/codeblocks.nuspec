@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://www.codeblocks.org/license</licenseUrl>
         <projectUrl>http://www.codeblocks.org/</projectUrl>
-        <iconUrl>http://xoomer.virgilio.it/infomain/prg/codeblocks_icon.png</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/codeblocks.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable. Finally, an IDE with all the features you need, having a consistent look, feel and operation across platforms. Built around a plugin framework, Code::Blocks can be extended with plugins. Any kind of functionality can be added by installing/coding a plugin. For instance, compiling and debugging functionality is already provided by plugins!
 Note: This package downloads the installer with the included GCC compiler.</description>

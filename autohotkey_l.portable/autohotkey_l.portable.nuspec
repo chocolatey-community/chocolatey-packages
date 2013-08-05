@@ -8,7 +8,7 @@
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
     <projectUrl>http://www.l.autohotkey.net/</projectUrl>
-    <iconUrl>https://raw.github.com/TomOne/chocolateyautomaticpackages/master/autohotkey_l/autohotkey_l.png</iconUrl>
+    <iconUrl>http://tomone.github.io/icons/autohotkey_l.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 AutoHotkey_L is a fork of AutoHotkey which adds a long list of new features and fixes some bugs. Anything that can be done with AutoHotkey can also be done with AutoHotkey_L. Scripts written for AutoHotkey will also run on AutoHotkey_L, with some exceptions</description>

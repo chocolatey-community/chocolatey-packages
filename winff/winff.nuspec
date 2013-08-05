@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://winff.org/html_new/</projectUrl>
-        <iconUrl>http://i.udm4.com/win/48/3572/3572537.png</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/winff.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>WinFF is a GUI for the command line video converter, FFMPEG. It will convert most any video file that FFmpeg will convert. For example: you can convert your camera, phone, and internet videos into videos for multiple phones, websites, and media players.</description>
         <summary>WinFF is a GUI for the command line video converter, FFMPEG.</summary>

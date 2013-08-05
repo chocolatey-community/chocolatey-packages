@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/agpl.html</licenseUrl>
         <projectUrl>http://owncloud.org/sync-clients/#windows</projectUrl>
-        <iconUrl>https://daniel.molkentin.net/wp-content/uploads/sites/2/2013/04/owncloud-icon-2561.png</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/owncloud.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>ownCloud gives you universal access to your files through a web interface or WebDAV. It also provides a platform to easily view &amp; sync your contacts, calendars and bookmarks across all your devices and enables basic editing right on the web. Installation has minimal server requirements, doesn’t need special permissions and is quick. ownCloud is extendable via a simple but powerful API for applications and plugins.
 This package installs the ownCloud Sync Client on your computer.</description>

@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
         <projectUrl>http://www.ffmpeg.org/</projectUrl>
-        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/7/76/FFmpeg_icon.svg</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/ffmpeg.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.
 Note: This package installs the latest stable and static build of ffmpeg.</description>

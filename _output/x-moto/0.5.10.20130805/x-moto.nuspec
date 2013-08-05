@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>x-moto</id>
+        <version>0.5.10.20130805</version>
         <title>X-Moto</title>
         <authors>authors</authors>
         <owners>purity</owners>

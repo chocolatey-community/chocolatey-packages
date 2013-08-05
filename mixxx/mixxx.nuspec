@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://mixxx.org/</projectUrl>
-        <iconUrl>https://bitbucket.org/oxymix/svg-icons/raw/66b82a0e582c981618bcd444dfbfed7b4914f5df/mixxx.svg</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/mixxx.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Mixxx is open source DJ software that gives you everything you need to perform live DJ mixes.</description>
         <summary>Open Source DJ software</summary>

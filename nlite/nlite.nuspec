@@ -7,7 +7,7 @@
         <authors>Dino Nuhagic (nuhi)</authors>
         <owners>purity</owners>
         <projectUrl>http://www.nliteos.com/index.html</projectUrl>
-        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/5/5f/NLite_Logo.png</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/nlite.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Deployment Tool for the Bootable Unattended Windows ISO 
 (Remove components, integrate hotfixes, drivers and themes. Tweaks, patches …)

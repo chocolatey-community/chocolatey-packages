@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://sourceforge.net/apps/trac/codelite/browser/trunk/LICENSE</licenseUrl>
         <projectUrl>http://www.codelite.org/</projectUrl>
-        <iconUrl>http://c.fsdn.com/allura/p/codelite/icon</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/codelite.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>CodeLite is an open-source, cross platform IDE for the C/C++ programming languages.
 This package downloads the installer which includes CodeLite, the MinGW suite and the wxWidgets SDK.</description>

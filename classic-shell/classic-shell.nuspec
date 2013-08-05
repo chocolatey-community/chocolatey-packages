@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
         <projectUrl>http://www.classicshell.net/</projectUrl>
-        <iconUrl>http://c.fsdn.com/allura/p/classicshell/icon</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/classic-shell.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Classic Shell is a collection of usability enhancements for Windows. The main features are:
 Highly customizable start menu with multiple styles and skins

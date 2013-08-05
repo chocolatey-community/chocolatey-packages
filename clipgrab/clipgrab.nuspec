@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://clipgrab.de/</projectUrl>
-        <iconUrl>https://osx.wdfiles.com/local--files/icon:clipgrab/clipgrab.png</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/clipgrab.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>ClipGrab is a free software for downloading and converting online videos from many sites like YouTube or Vimeo.
 ClipGrab can download from the following sites: YouTube, Clipfish, Collegehumor, Dailymotion, MyVideo, MySpass, Sevenload, Tudou, Vimeo.

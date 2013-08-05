@@ -8,7 +8,7 @@
         <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://musicbrainz.org/doc/MusicBrainz_Picard</projectUrl>
-        <iconUrl>https://upload.wikimedia.org/wikipedia/commons/0/07/MusicBrainz_Picard.svg</iconUrl>
+        <iconUrl>http://tomone.github.io/icons/picard.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>MusicBrainz Picard is a cross-platform (Linux/Mac OS X/Windows) application written in Python and is the official MusicBrainz tagger.
 
