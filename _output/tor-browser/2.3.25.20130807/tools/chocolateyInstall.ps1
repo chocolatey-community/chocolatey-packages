@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'tor-browser'
 
 $installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $tempDir = "$env:TEMP\chocolatey\$packageName"
@@ -29,7 +29,7 @@ try {
     if ($langcode -eq $null) {$langcode = 'en-US'}
 
     # DownloadUrlx64 gets “misused” here as variable for the real version with hyphen
-    $url = "https://www.torproject.org/dist/torbrowser/tor-browser-{{DownloadUrlx64}}_${langcode}.exe"
+    $url = "https://www.torproject.org/dist/torbrowser/tor-browser-2.3.25-10_${langcode}.exe"
 
     if (-not (Test-Path $tempDir)) {New-Item $tempDir -ItemType directory}
     $file = "$tempDir\${packageName}.exe"
