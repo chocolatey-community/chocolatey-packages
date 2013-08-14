@@ -10,7 +10,7 @@ import-module "$module"
 $contentDir = split-path -parent $MyInvocation.MyCommand.Definition
 $installer = join-path $contentDir 'CygwinInstaller.exe'
 
-Get-ChocolateyWebFile 'cyg-get' $installer 'http://www.cygwin.com/setup.exe'
+Get-ChocolateyWebFile 'cyg-get' $installer 'http://www.cygwin.com/setup_x86.exe'
 
 $binRoot = "$env:systemdrive\"
 if($env:chocolatey_bin_root -ne $null){$binRoot = join-path $env:systemdrive $env:chocolatey_bin_root}
