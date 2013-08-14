@@ -3,7 +3,7 @@
   <metadata>
     <id>cyg-get</id>
     <title>cyg-get</title>
-    <version>1.0.7</version>
+    <version>1.1.0</version>
     <authors>Red Hat, Inc.</authors>
     <owners>micahlmartin</owners>
     <summary>A utility to install Cygwin packages.</summary>
@@ -23,10 +23,12 @@
     <copyright>Red Hat, Inc.</copyright>
     <licenseUrl>http://cygwin.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/chocolatey/chocolatey-communitypackages/master/cyg-get/content/Cygwin.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="" />
-    </dependencies>-->
-    <releaseNotes>Now downloads the cygwin installer with each call.</releaseNotes>
+    <iconUrl>https://raw.github.com/chocolatey/chocolatey-communitypackages/master/cyg-get/Cygwin.png</iconUrl>
+    <dependencies>
+      <dependency id="cygwin" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -1,4 +1,3 @@
-
-$path = Join-Path $(Split-Path -parent $(Split-Path -parent $MyInvocation.MyCommand.Definition)) 'content\cyg-get.ps1'
+$path = Join-Path $(Split-Path -parent $MyInvocation.MyCommand.Definition) 'cyg-get.ps1'
 
 Install-ChocolateyPowershellCommand 'cyg-get' $path
