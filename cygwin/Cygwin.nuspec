@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>cygwin</id>
-    <version>1.7.23</version>
+    <version>1.7.23.20130814</version>
     <title>Cygwin</title>
     <authors>Red Hat, Inc.</authors>
     <owners>H. Alan Stevens</owners>

@@ -1,6 +1,6 @@
 $packageName = 'cygwin' 
 $installerType = 'exe'
-$url = 'http://www.cygwin.com/setup_x86.exe' 
+$url = 'http://www.cygwin.com/setup-x86.exe' 
 $url64 = 'http://cygwin.com/setup-x86_64.exe'
 
 $binRoot = "$env:systemdrive\"
