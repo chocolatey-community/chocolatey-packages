@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>autohotkey_l</id>
+    <version>1.1.12.00</version>
+    <title>AutoHotKey_L</title>
+    <authors>Lexikos</authors>
+    <owners>Anthony Mastrean</owners>
+    <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
+    <projectUrl>http://www.l.autohotkey.net/</projectUrl>
+    <iconUrl>http://tomone.github.io/icons/autohotkey_l.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
+AutoHotkey_L is a fork of AutoHotkey which adds a long list of new features and fixes some bugs. Anything that can be done with AutoHotkey can also be done with AutoHotkey_L. Scripts written for AutoHotkey will also run on AutoHotkey_L, with some exceptions</description>
+    <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
+    <releaseNotes></releaseNotes>
+    <tags>automation hotkeys scripting windows</tags>
+    <dependencies>
+      <dependency id="autohotkey_l.install" version="1.1.12.00" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>
