@@ -1,4 +1,4 @@
-chocolateyautomaticpackages
+﻿chocolateyautomaticpackages
 ===========================
 Not entirely automatic:
 
