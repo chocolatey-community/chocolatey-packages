@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>scite4autohotkey</id>
     <title>SciTE4AutoHotkey</title>
-    <version>{{PackageVersion}}</version>
+    <version>3.0.04.20130824</version>
     <authors>fincs</authors>
     <owners>Anthony Mastrean</owners>
     <summary>SciTE distribution designed for AutoHotkey</summary>
