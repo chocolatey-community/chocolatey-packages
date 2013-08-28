@@ -1,7 +1,11 @@
-﻿$packageName = 'yumi'
-$fileFullPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\yumi.exe"
-$url = 'http://www.pendrivelinux.com/downloads/YUMI/YUMI-0.1.0.5.exe'
+﻿try {
 
-Get-ChocolateyWebFile $packageName $fileFullPath $url
+  $packageName = 'yumi'
+  $fileFullPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\yumi.exe"
+  Install-ChocolateyDesktopLink $fileFullPath
 
-Install-ChocolateyDesktopLink $fileFullPath
+  Write-ChocolateySuccess $packageName
+} catch {
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw 
+}

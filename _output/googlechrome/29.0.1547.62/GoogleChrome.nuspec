@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>googlechrome</id>
+        <version>29.0.1547.62</version>
         <title>Google Chrome</title>
         <authors>Google.com</authors>
         <owners>MarkJohnson</owners>

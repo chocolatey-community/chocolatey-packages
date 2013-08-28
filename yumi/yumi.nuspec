@@ -11,7 +11,6 @@
         <iconUrl>http://tomone.github.io/icons/yumi.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>YUMI (Your Universal Multiboot Installer), is the successor to MultibootISOs. It can be used to create a Multiboot USB Flash Drive containing multiple operating systems, antivirus utilities, disc cloning, diagnostic tools, and more. Contrary to MultiBootISO's which used grub to boot ISO files directly from USB, YUMI uses syslinux to boot extracted distributions stored on the USB device, and reverts to using grub to Boot Multiple ISO files from USB, if necessary.
-
 Aside from a few distributions, all files are stored within the Multiboot folder, making for a nicely organized Multiboot Drive that can still be used for other storage purposes.</description>
         <summary>YUMI – Multiboot USB Creator for Windows</summary>
         <releaseNotes></releaseNotes>
@@ -19,7 +18,6 @@ Aside from a few distributions, all files are stored within the Multiboot folder
         <tags>usb flash drive multiboot linux iso</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\yumi.exe.gui" target="tools\yumi.exe.gui" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>
