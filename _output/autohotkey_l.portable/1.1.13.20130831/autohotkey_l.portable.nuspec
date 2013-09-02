@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey_l.portable</id>
-    <version>{{PackageVersion}}</version>
+    <version>1.1.13.20130831</version>
     <title>AutoHotKey_L (Portable)</title>
     <authors>Lexikos</authors>
     <owners>Anthony Mastrean</owners>
