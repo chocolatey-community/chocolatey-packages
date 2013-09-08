@@ -1,4 +1,4 @@
-﻿$packageName = 'opera'
+﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/install /silent /launchopera 0 /quicklaunchshortcut 0 /setdefaultbrowser 0'
 $url = '{{DownloadUrl}}'

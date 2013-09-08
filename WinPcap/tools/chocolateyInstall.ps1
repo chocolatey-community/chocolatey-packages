@@ -1,5 +1,5 @@
 ﻿try {
-    $packageName = 'winpcap'
+    $packageName = '{{PackageName}}'
     $url = '{{DownloadUrl}}'
     $filePath = "$env:TEMP\chocolatey\winpcap"
     $fileFullPath = "$filePath\winpcapInstall.exe"
