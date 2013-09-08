@@ -17,7 +17,7 @@ Underneath a modern and user-friendly interface, Scribus supports professional p
         <releaseNotes></releaseNotes>
         <tags>desktop publishing</tags>
         <dependencies>
-            <dependency id="Ghostscript.app" version="9.07" />
+            <dependency id="Ghostscript.app" />
         </dependencies>
     </metadata>
 </package>
