@@ -3,7 +3,7 @@
   <metadata>
     <id>autohotkey_l.install</id>
     <version>{{PackageVersion}}</version>
-    <title>AutoHotKey_L (Install)</title>
+    <title>AutoHotkey_L (Install)</title>
     <authors>Lexikos</authors>
     <owners>Anthony Mastrean</owners>
     <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
