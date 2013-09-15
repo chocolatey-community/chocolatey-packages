@@ -1,12 +1,12 @@
 ﻿try {
 
-    $packageName = '{{PackageName}}'
+    $packageName = 'freeciv'
     $fileType = 'exe'
     $silentArgs = '/S'
     $validExitCodes = @(0)
     
-    $unfile = "${Env:ProgramFiles}\Freeciv-{{PackageVersion}}-gtk2\uninstall.exe"
-    $unfilex86 = "${Env:ProgramFiles(x86)}\Freeciv-{{PackageVersion}}-gtk2\uninstall.exe"
+    $unfile = "${Env:ProgramFiles}\Freeciv-2.3.4-gtk2\uninstall.exe"
+    $unfilex86 = "${Env:ProgramFiles(x86)}\Freeciv-2.3.4-gtk2\uninstall.exe"
     
     if (Test-Path "$unfile") {$file = "$unfile"}
     if (Test-Path "$unfilex86") {$file = "$unfilex86"}
