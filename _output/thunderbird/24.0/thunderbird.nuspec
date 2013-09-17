@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>thunderbird</id>
+        <version>24.0</version>
         <title>Mozilla Thunderbird</title>
         <authors>Mozilla</authors>
         <owners>sissbruecker,purity</owners>
@@ -14,7 +14,7 @@
 
 This package automatically chooses the system language as language for Thunderbird</description>
         <summary>A free email client from Mozilla</summary>
-        <releaseNotes></releaseNotes>
+        <releaseNotes>2013-05-15: updated to v17.0.6, added uninstall-script</releaseNotes>
         <copyright>2005–2012 Mozilla. All rights reserved.</copyright>
         <tags>mozilla thunderbird email</tags>
     </metadata>
