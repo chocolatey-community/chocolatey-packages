@@ -11,7 +11,6 @@
         <iconUrl>http://tomone.github.io/icons/thunderbird.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Thunderbird is a free email application that's easy to set up and customize – and it’s loaded with great features!
-
 This package automatically chooses the system language as language for Thunderbird</description>
         <summary>A free email client from Mozilla</summary>
         <releaseNotes></releaseNotes>
