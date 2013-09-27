@@ -3,7 +3,7 @@
     <metadata>
         <id>{{PackageName}}</id>
         <version>{{PackageVersion}}</version>
-        <title>PDFXChangeViewer</title>
+        <title>PDF-XChange Viewer</title>
         <authors>Tracker Software</authors>
         <owners>calwell</owners>
         <licenseUrl>http://www.tracker-software.com/PDFVLicense.pdf‎</licenseUrl>
