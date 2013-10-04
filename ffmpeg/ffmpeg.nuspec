@@ -21,4 +21,7 @@ Note: This package installs the latest stable and static build of ffmpeg.</descr
             <dependency id="7zip.commandline" />
         </dependencies>
     </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>

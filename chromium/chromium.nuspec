@@ -3,15 +3,14 @@
     <metadata>
         <id>chromium</id>
         <version>{{PackageVersion}}</version>
-        <title>Chromium raw build</title>
+        <title>Chromium continuous build</title>
         <authors>Chromium team</authors>
         <owners>purity</owners>
-        <projectUrl>https://download-chromium.appspot.com/</projectUrl>
+        <projectUrl>http://www.chromium.org/Home</projectUrl>
         <iconUrl>http://tomone.github.io/icons/chromium.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>This is the raw build of Chromium for Windows, right off the trunk. It can contain bugs.
-Note: This package always installs the latest Chromium build, regardless of the version specified in the package. If you update this package, the older Chromium versions are kept. Delete them if you don’t need the older versions to save disk space.</description>
-        <summary>This is the raw build of Chromium for Windows, right off the trunk.</summary>
+        <description>This package installs the Chromium continuous builds into %localappdata%\Chromium. They can be unstable.</description>
+        <summary>Chromium continuous build (unstable)</summary>
         <releaseNotes />
         <copyright />
         <tags>chromium google chrome browser</tags>

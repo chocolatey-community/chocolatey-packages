@@ -1,16 +1,18 @@
-﻿try {
-    $packageName = 'chromium'
-    $url = '{{DownloadUrl}}'
-    $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+﻿$packageName = '{{PackageName}}'
+$url = '{{DownloadUrl}}'
+$filePath = "$env:TEMP\chocolatey\$packageName"
+$fileFullPath = "$filePath\${packageName}Install.exe"
 
-    Install-ChocolateyZipPackage $packageName $url $unzipLocation
+try {
+    if (!(Test-Path $filePath)) {
+        New-Item -ItemType directory -Path $filePath
+    }
 
-    $targetFilePath = "$unzipLocation\chrome-win32\chrome.exe"
-
-    Install-ChocolateyDesktopLink $targetFilePath
+    Get-ChocolateyWebFile $packageName $fileFullPath $url
+    Start-Process $fileFullPath
 
     Write-ChocolateySuccess $packageName
-}   catch {
+} catch {
     Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw 
+    throw
 }

@@ -10,10 +10,13 @@
         <projectUrl>http://www.antp.be/software/renamer</projectUrl>
         <iconUrl>http://tomone.github.io/icons/ant-renamer.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Ant Renamer is a free (really free, i.e. the source code is available) program that makes easier the renaming of lots of files and folders by using specified settings. It supports Unicode names.</description>
+        <description>Ant Renamer is a free (really free, i. e. the source code is available) program that makes easier the renaming of lots of files and folders by using specified settings. It supports Unicode names.</description>
         <summary>Rename multiple files easily</summary>
         <releaseNotes>http://www.antp.be/software/renamer/history</releaseNotes>
         <copyright>2000–2008 Antoine Potten</copyright>
         <tags>renamer regex</tags>
     </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>
