@@ -1,7 +1,10 @@
-﻿if (Test-Path "${Env:ProgramFiles(x86)}\AssaultCube_v{{PackageVersion}}\Uninstall.exe") {
-    $unpath = "${Env:ProgramFiles(x86)}\AssaultCube_v{{PackageVersion}}\Uninstall.exe"
+﻿$uninstaller = "$env:ProgramFiles\AssaultCube\Uninstall.exe"
+$uninstallerx86 = "${env:ProgramFiles(x86)}\AssaultCube\Uninstall.exe"
+
+if (Test-Path $uninstaller) {
+    $unpath = $uninstaller
 }
 else {
-    $unpath = "${Env:ProgramFiles}\AssaultCube_v{{PackageVersion}}\Uninstall.exe"
+    $unpath = $uninstallerx86
 }
-Uninstall-ChocolateyPackage 'assaultcube' 'exe' '/S' "$unpath"
+Uninstall-ChocolateyPackage 'assaultcube' 'exe' '/S' $unpath

@@ -1,11 +1,12 @@
 ﻿$packageName = '{{PackageName}}'
 $url = '{{DownloadUrl}}'
 $zipPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\assaultcube.zip"
-$assaultcubePath = 
-if (Test-Path "$env:ProgramFiles\AssaultCube_v{{PackageVersion}}") {
-    $unzipLocation = "$env:ProgramFiles\AssaultCube_v{{PackageVersion}}"
+$folder = "$env:ProgramFiles\AssaultCube"
+$folderx86 = "${env:ProgramFiles(x86)}\AssaultCube"
+if (Test-Path $folder) {
+    $unzipLocation = $folder
 } else {
-    $unzipLocation = "${env:ProgramFiles(x86)}\AssaultCube_v{{PackageVersion}}"
+    $unzipLocation = $folderx86
 }
 
 Install-ChocolateyPackage $packageName 'exe' '/S' $url
