@@ -1,6 +1,6 @@
-﻿$packageName = '{{PackageName}}'
+$packageName = '{{PackageName}}'
 $downloadFile = "ruKernelTool.zip"
-$url = "http://rukerneltool.rainerullrich.de/download2/$downloadFile"
+$url = "http://rukerneltool.rainerullrich.de/download2/ruKernelTool.zip"
 
 cd "$env:TEMP"
 
