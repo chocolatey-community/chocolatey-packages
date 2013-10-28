@@ -1,5 +1,5 @@
-$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
+$packageName = 'youtube-dl'
+$url = 'http://youtube-dl.org/downloads/2013.10.28/youtube-dl.exe'
 
 try {
   $installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"

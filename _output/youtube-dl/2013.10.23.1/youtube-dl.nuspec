@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>youtube-dl</id>
+        <version>2013.10.23.1</version>
         <title>youtube-dl</title>
         <authors>Ricardo Garcia and others</authors>
         <owners>purity</owners>
@@ -16,7 +16,7 @@
         <language>en-US</language>
         <tags>youtube-dl ffmpeg youtube download</tags>
         <dependencies>
-            <dependency id="ffmpeg" version="2.0.2" />
+            <dependency id="ffmpeg" version="2.0.1.20130930" />
         </dependencies>
     </metadata>
 </package>
