@@ -1,11 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>{{PackageName}}</id>
         <version>{{PackageVersion}}</version>
         <title>GIMP</title>
         <authors>The GIMP Team</authors>
-        <owners>anatooly, purity</owners>
         <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://gimp.org</projectUrl>
         <iconUrl>http://tomone.github.io/icons/gimp.svg</iconUrl>
@@ -14,8 +13,7 @@
 GIMP has many capabilities. It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc.
 GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted.</description>
         <summary>GIMP</summary>
-        <releaseNotes>http://www.gimp.org/release-notes/gimp-2.8.html
-https://git.gnome.org/browse/gimp/plain/NEWS?h=gimp-2-8</releaseNotes>
+        <releaseNotes></releaseNotes>
         <copyright>GPL</copyright>
         <tags>gimp editor images graphics photo art png</tags>
     </metadata>

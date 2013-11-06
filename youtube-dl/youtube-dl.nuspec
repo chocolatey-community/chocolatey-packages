@@ -16,7 +16,7 @@
         <language>en-US</language>
         <tags>youtube-dl ffmpeg youtube download</tags>
         <dependencies>
-            <dependency id="ffmpeg" version="2.0.2" />
+            <dependency id="ffmpeg" version="2.1" />
         </dependencies>
     </metadata>
 </package>
