@@ -6,15 +6,15 @@ try {
   $exeDir = "$installDir\youtube-dl.exe"
 
     # Copy 32-bit ffmpeg.exe and ffprobe.exe to tools folder of youtube-dl package
-  if (Test-Path "$env:ChocolateyInstall\lib\ffmpeg.2.1\tools\ffmpeg-2.1-win32-static\bin") {
-    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1\tools\ffmpeg-2.1-win32-static\bin\ffmpeg.exe" "$installDir"
-    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1\tools\ffmpeg-2.1-win32-static\bin\ffprobe.exe" "$installDir"
+  if (Test-Path "$env:ChocolateyInstall\lib\ffmpeg.2.1.1\tools\ffmpeg-2.1.1-win32-static\bin") {
+    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1.1\tools\ffmpeg-2.1.1-win32-static\bin\ffmpeg.exe" "$installDir"
+    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1.1\tools\ffmpeg-2.1.1-win32-static\bin\ffprobe.exe" "$installDir"
   }
 
   # Copy 64-bit ffmpeg.exe and ffprobe.exe to tools folder of youtube-dl package
-  if (Test-Path "$env:ChocolateyInstall\lib\ffmpeg.2.1\tools\ffmpeg-2.1-win64-static\bin") {
-    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1\tools\ffmpeg-2.1-win64-static\bin\ffmpeg.exe" "$installDir"
-    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1\tools\ffmpeg-2.1-win64-static\bin\ffprobe.exe" "$installDir"
+  if (Test-Path "$env:ChocolateyInstall\lib\ffmpeg.2.1.1\tools\ffmpeg-2.1.1-win64-static\bin") {
+    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1.1\tools\ffmpeg-2.1.1-win64-static\bin\ffmpeg.exe" "$installDir"
+    Copy-Item "$env:ChocolateyInstall\lib\ffmpeg.2.1.1\tools\ffmpeg-2.1.1-win64-static\bin\ffprobe.exe" "$installDir"
   }
 
   Get-ChocolateyWebFile $packageName $exeDir $url
