@@ -3,7 +3,7 @@
 $url    = '{{DownloadUrl}}'
 $url64  = '{{DownloadUrlx64}}'
 $type   = 'exe'
-$silent = '/s REBOOT=Suppress'
+$silent = "/s REBOOT=Suppress JAVAUPDATE=0"
 $java   = Join-Path $env:ProgramFiles 'Java\jre7'
 $bin    = Join-Path $java 'bin'
 
