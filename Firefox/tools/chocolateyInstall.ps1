@@ -1,5 +1,20 @@
 ﻿# ---------------- Function definitions ------------------
 
+
+function GetUninstallPath () {
+    $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
+    $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
+
+    $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
+
+    if (Test-Path $regUninstallDirWow64) {
+        $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
+    }
+    
+    $uninstallPath = $uninstallPaths -match "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
+    return $uninstallPath
+}
+
 function GetLocale($installArguments) {
 
     $availableLocales = Get-Content "$env:TEMP\chocolatey\Firefox\availableLocales.html"
@@ -13,13 +28,10 @@ function GetLocale($installArguments) {
 
     # --- Get already installed locale if available
 
-    $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
-    $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
-
-    $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name + $(Get-ChildItem $regUninstallDirWow64).Name
-    $uninstallPath = $uninstallPaths -match "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
+    $uninstallPath = GetUninstallPath($null)
 
     $alreadyInstalledLocale = $uninstallPath -replace ".+\s([a-zA-Z\-]+)\)", '$1'
+
 
     # ---
 
