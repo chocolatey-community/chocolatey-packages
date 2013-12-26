@@ -1,7 +1,6 @@
 ﻿$packageName = '{{PackageName}}'
-
-$installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$tempDir = "$env:TEMP\chocolatey\$packageName"
+$installerType = 'exe'
+$silentArgs = '/S'
 
 try {
 
@@ -28,19 +27,12 @@ try {
     # English = fallback language
     if ($langcode -eq $null) {$langcode = 'en-US'}
 
-    # DownloadUrlx64 gets “misused” here as variable for the real version with hyphen
-    $url = "https://www.torproject.org/dist/torbrowser/tor-browser-{{DownloadUrlx64}}_${langcode}.exe"
-
-    if (-not (Test-Path $tempDir)) {New-Item $tempDir -ItemType directory}
-    $file = "$tempDir\${packageName}.exe"
-
-    Get-ChocolateyWebFile $packageName $file $url
-    Start-Process "7za" -ArgumentList "x -o`"$installDir`" -y `"$file`"" -Wait
-
-    $targetFilePath = "$installDir\Tor Browser\Start Tor Browser.exe"
-    Install-ChocolateyDesktopLink $targetFilePath
+    # DownloadUrlx64 gets “misused” here as variable for the real version with  hyphen
+    $url = "https://www.torproject.org/dist/torbrowser/{{DownloadUrlx64}}/torbrowser-install-{{DownloadUrlx64}}_${langcode}.exe"
 
 } catch {
   Write-ChocolateyFailure $packageName $($_.Exception.Message)
   throw
 }
+
+Install-ChocolateyPackage $packageName $installerType $silentArgs $url
