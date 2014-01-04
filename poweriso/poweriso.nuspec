@@ -13,7 +13,7 @@
     <copyright>Copyright 2004-2012 Power Software Ltd. All rights reserved.</copyright>
     <licenseUrl>http://www.poweriso.com/order.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/gep13/ChocolateyAutomaticPackages/master/poweriso/poweriso.png</iconUrl>
+    <iconUrl>https://raw.github.com/chocolatey/chocolatey-coreteampackages/master/poweriso/PowerISO.png</iconUrl>
     <releaseNotes>
 		Up to date release notes for this application can be found here:
 		
