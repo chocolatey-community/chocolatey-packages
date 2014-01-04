@@ -2,3 +2,4 @@
 *.nupkg
 *.log
 *.log.full
+_output

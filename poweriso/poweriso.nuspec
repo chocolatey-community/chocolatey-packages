@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>PowerISO</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Power Software Ltd</authors>
+    <owners>gep13, chocolatey</owners>
+    <summary>PowerISO - All in one solution</summary>
+    <description>PowerISO is a powerful CD / DVD / BD image file processing tool, which allows you to open, extract, burn, create, edit, compress, encrypt, split and convert ISO files, and mount ISO files with internal virtual drive. It can process almost all CD / DVD / BD image files including ISO and BIN files. PowerISO provides an all-in-one solution. You can do every thing with your ISO files and disc image files.</description>
+    <projectUrl>http://www.poweriso.com/index.htm</projectUrl>
+    <tags>PowerISO cd dvd bluray iso</tags>
+    <copyright>Copyright 2004-2012 Power Software Ltd. All rights reserved.</copyright>
+    <licenseUrl>http://www.poweriso.com/order.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.github.com/gep13/ChocolateyAutomaticPackages/master/poweriso/poweriso.png</iconUrl>
+    <releaseNotes>
+		Up to date release notes for this application can be found here:
+		
+		http://www.poweriso.com/download.htm
+    </releaseNotes>
+  </metadata>
+</package>
