@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>kingsoft-office-free</id>
+        <version>9.1.0.20140105</version>
         <title>Kingsoft Office Suite Free 2013</title>
         <authors>Kingsoft</authors>
         <owners>purity</owners>
