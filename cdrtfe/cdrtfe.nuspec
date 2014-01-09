@@ -17,6 +17,6 @@ Note: This package installs cdrtfe into C:\cdrtfe, not into %ProgramFiles%\cdrtf
         <tags>burning fontend</tags>
     </metadata>
     <files>
-		<file src="tools\**" target="tools" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

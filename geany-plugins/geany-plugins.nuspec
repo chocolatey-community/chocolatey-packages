@@ -14,9 +14,9 @@
         <releaseNotes />
         <copyright></copyright>
         <tags>geany plugins ide admin</tags>
-		<dependencies>
-			<dependency id="geany" version="1.23.1" />
-		</dependencies>
+        <dependencies>
+            <dependency id="geany" version="1.23.1" />
+        </dependencies>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />

@@ -19,10 +19,10 @@ Note: Don’t close the empty appearing PowerShell window. Otherwise the silent 
         <tags>supertuxkart racing game</tags>
         <dependencies>
             <dependency id="openal" />
-			<dependency id="vcredist2005" />
+            <dependency id="vcredist2005" />
         </dependencies>
     </metadata>
     <files>
-		<file src="tools\**" target="tools" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

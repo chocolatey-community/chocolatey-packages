@@ -3,7 +3,7 @@
     <metadata>
         <id>{{PackageName}}</id>
         <version>{{PackageVersion}}</version>
-		<title>Maxima</title>
+        <title>Maxima</title>
         <authors>Macsyma group at Project MAC and volunteer contributors</authors>
         <iconUrl>http://tomone.github.io/icons/maxima.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
