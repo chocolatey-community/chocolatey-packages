@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>TIPP10</title>
         <authors>Tom Thielicke IT Solutions</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.tipp10.com/en/license/</licenseUrl>
         <projectUrl>https://www.tipp10.com/en/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/tipp10.png</iconUrl>

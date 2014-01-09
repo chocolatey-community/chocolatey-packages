@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Quicktime</title>
         <authors>Apple</authors>
-        <owners>Elliando Dias,purity</owners>
         <licenseUrl>http://www.apple.com/legal/terms/site.html</licenseUrl>
         <projectUrl>http://support.apple.com/kb/DL837</projectUrl>
         <iconUrl>http://tomone.github.io/icons/quicktime.png</iconUrl>

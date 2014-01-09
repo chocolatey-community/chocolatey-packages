@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Clementine</title>
         <authors>David Sansome,John Maguire and Arnaud Bienner</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.clementine-player.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/clementine.svg</iconUrl>

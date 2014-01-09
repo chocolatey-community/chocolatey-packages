@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Dokan Library</title>
         <authors>Hiroki Asakawa</authors>
-        <owners>purity</owners>
         <licenseUrl>https://dokan.googlecode.com/svn/trunk/dokan/readme.txt</licenseUrl>
         <projectUrl>http://dokan-dev.net/en/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

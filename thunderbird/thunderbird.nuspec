@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Mozilla Thunderbird</title>
         <authors>Mozilla</authors>
-        <owners>sissbruecker,purity</owners>
         <licenseUrl>http://www.mozilla.org/en-US/legal/eula/thunderbird.html</licenseUrl>
         <projectUrl>https://www.mozilla.org/en/thunderbird/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/thunderbird.png</iconUrl>

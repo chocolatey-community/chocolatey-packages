@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Avidemux</title>
         <authors>“Mean”,“Gruntster” and “Fahr”</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://avidemux.sourceforge.net/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/avidemux.png</iconUrl>

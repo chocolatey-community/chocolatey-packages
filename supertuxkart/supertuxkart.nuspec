@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>SuperTuxKart</title>
         <authors>SuperTuxKart developers</authors>
-        <owners>purity</owners>
         <licenseUrl>http://supertuxkart.sourceforge.net/Licensing</licenseUrl>
         <projectUrl>http://supertuxkart.sourceforge.net/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/supertuxkart.png</iconUrl>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>BeCyIconGrabber</title>
         <authors>Benjamin Bentmann</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.becyhome.de/becyicongrabber/description_eng.htm</licenseUrl>
         <projectUrl>http://www.becyhome.de/download_eng.htm#becyicongrabber</projectUrl>
         <iconUrl>http://tomone.github.io/icons/becyicongrabber.png</iconUrl>

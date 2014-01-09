@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>AllDup</title>
         <authors>Michael Thummerer Software Design</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.alldup.de/alldup_help/alldup.htm</licenseUrl>
         <projectUrl>https://www.alldup.de/en_index.htm</projectUrl>
 		<iconUrl>http://tomone.github.io/icons/alldup.png</iconUrl>

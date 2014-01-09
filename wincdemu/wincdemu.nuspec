@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>WinCDEmu</title>
         <authors>Sysprogs OÜ</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
         <projectUrl>http://wincdemu.sysprogs.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/wincdemu.png</iconUrl>

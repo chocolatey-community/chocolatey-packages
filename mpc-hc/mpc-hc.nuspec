@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>MPC-HC</title>
         <authors>MPC-HC Team</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html and http://mpc-hc.org/about/#third-party-libraries</licenseUrl>
         <projectUrl>http://mpc-hc.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/mpc-hc.png</iconUrl>

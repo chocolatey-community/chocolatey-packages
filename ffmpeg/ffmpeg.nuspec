@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>FFmpeg</title>
         <authors>authors</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
         <projectUrl>http://www.ffmpeg.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/ffmpeg.svg</iconUrl>

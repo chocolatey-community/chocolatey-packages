@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>LibreCAD</title>
         <authors>LibreCAD community</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://librecad.org/cms/home.html</projectUrl>
         <iconUrl>http://tomone.github.io/icons/librecad.svg</iconUrl>

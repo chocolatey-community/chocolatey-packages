@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>nLite</title>
         <authors>Dino Nuhagic (nuhi)</authors>
-        <owners>purity</owners>
         <projectUrl>http://www.nliteos.com/index.html</projectUrl>
         <iconUrl>http://tomone.github.io/icons/nlite.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

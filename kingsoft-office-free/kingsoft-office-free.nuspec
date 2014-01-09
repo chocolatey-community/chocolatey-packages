@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Kingsoft Office Suite Free 2013</title>
         <authors>Kingsoft</authors>
-        <owners>purity</owners>
         <projectUrl>http://www.kingsoftstore.com/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/kingsoft-office-free.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

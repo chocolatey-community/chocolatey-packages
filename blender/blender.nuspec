@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Blender</title>
         <authors>Blender Foundation</authors>
-        <owners>nconrads</owners>
         <licenseUrl>http://download.blender.org/release/GPL-license.txt</licenseUrl>
         <projectUrl>http://www.blender.org</projectUrl>
         <iconUrl>https://upload.wikimedia.org/wikipedia/en/a/a5/Blender.svg</iconUrl>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>MuseScore</title>
         <authors>MuseScore developers</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://musescore.org/en</projectUrl>
         <iconUrl>http://tomone.github.io/icons/musescore.svg</iconUrl>

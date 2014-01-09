@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>ownCloud Windows Client</title>
         <authors>ownCloud developers</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/agpl.html</licenseUrl>
         <projectUrl>http://owncloud.org/sync-clients/#windows</projectUrl>
         <iconUrl>http://tomone.github.io/icons/owncloud.png</iconUrl>

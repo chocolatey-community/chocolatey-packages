@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Opera</title>
         <authors>Opera</authors>
-        <owners>Matthew Manela</owners>
         <projectUrl>http://www.opera.com/browser/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/opera.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

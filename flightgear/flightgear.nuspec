@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>FlightGear</title>
         <authors>FlightGear Team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://wiki.flightgear.org/GNU_General_Public_License</licenseUrl>
         <projectUrl>http://www.flightgear.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/flightgear.png</iconUrl>

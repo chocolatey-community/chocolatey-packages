@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Mp3tag</title>
         <authors>Florian Heidenreich</authors>
-        <owners>H. Alan Stevens</owners>
         <licenseUrl>http://help.mp3tag.de/misc_license.html</licenseUrl>
         <projectUrl>http://www.mp3tag.de/en/index.html</projectUrl>
         <iconUrl>http://tomone.github.io/icons/mp3tag.png</iconUrl>

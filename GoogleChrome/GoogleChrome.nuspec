@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Google Chrome</title>
         <authors>Google.com</authors>
-        <owners>MarkJohnson</owners>
         <projectUrl>https://www.google.com/chrome/intl/en/make/features.html?brand=CHLI</projectUrl>
         <iconUrl>http://tomone.github.io/icons/chrome.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

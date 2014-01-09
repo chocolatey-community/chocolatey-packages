@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>No-IP DUC (Dynamic Update Client)</title>
         <authors>authors</authors>
-        <owners>purity</owners>
         <projectUrl>http://www.noip.com/downloads.php?page=win</projectUrl>
         <iconUrl>http://tomone.github.io/icons/no-ip-duc.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Code::Blocks</title>
         <authors>The Code::Blocks Team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.codeblocks.org/license</licenseUrl>
         <projectUrl>http://www.codeblocks.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/codeblocks.png</iconUrl>

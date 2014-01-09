@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Ext2Fsd</title>
         <authors>Matt</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.ext2fsd.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

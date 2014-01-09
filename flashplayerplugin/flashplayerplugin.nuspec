@@ -3,7 +3,6 @@
     <metadata>
         <version>{{PackageVersion}}</version>
         <authors>Adobe Systems Incorporated</authors>
-        <owners>William Jackson</owners>
         <projectUrl>http://www.adobe.com/software/flash/about/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/flashplayer.png</iconUrl>
         <licenseUrl>http://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>MusicBrainz Picard</title>
         <authors>MusicBrainz</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://musicbrainz.org/doc/MusicBrainz_Picard</projectUrl>
         <iconUrl>http://tomone.github.io/icons/picard.svg</iconUrl>

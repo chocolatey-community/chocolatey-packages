@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>TightVNC</title>
         <authors>TightVNC Developers</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.tightvnc.com/download.php</licenseUrl>
         <projectUrl>http://www.tightvnc.com/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/tightvnc.png</iconUrl>

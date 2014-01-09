@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Hedgewars</title>
         <authors>Hedgewars Team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.hedgewars.org/about.html</licenseUrl>
         <projectUrl>http://www.hedgewars.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/hedgewars.png</iconUrl>

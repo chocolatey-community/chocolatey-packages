@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Cameyo</title>
         <authors>Cameyo developers</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.cameyo.com/doc/index.html?license.htm</licenseUrl>
         <projectUrl>http://www.cameyo.com/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/cameyo.svg</iconUrl>

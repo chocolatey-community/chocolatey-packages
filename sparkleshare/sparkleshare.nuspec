@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>SparkleShare</title>
         <authors>Linux Community</authors>
-        <owners>purity</owners>
         <licenseUrl>https://github.com/hbons/SparkleShare#license</licenseUrl>
         <projectUrl>http://sparkleshare.org/</projectUrl>
 		<iconUrl>http://tomone.github.io/icons/sparkleshare.png</iconUrl>

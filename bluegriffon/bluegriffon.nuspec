@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>BlueGriffon</title>
         <authors>Daniel Glazman</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.bluegriffon.org/</licenseUrl>
         <projectUrl>http://bluegriffon.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/bluegriffon.svg</iconUrl>

@@ -5,7 +5,6 @@
     <version>{{PackageVersion}}</version>
     <title>AutoHotkey_L (Install)</title>
     <authors>Lexikos</authors>
-    <owners>Anthony Mastrean</owners>
     <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
     <projectUrl>http://www.l.autohotkey.net/</projectUrl>
     <iconUrl>http://tomone.github.io/icons/autohotkey_l.png</iconUrl>

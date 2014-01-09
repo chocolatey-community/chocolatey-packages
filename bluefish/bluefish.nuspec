@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Bluefish</title>
         <authors>Bluefish Dev Team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://bluefish.openoffice.nl/development.html</licenseUrl>
         <projectUrl>http://bluefish.openoffice.nl/index.html</projectUrl>
         <iconUrl>http://tomone.github.io/icons/bluefish.svg</iconUrl>

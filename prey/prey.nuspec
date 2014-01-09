@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Prey</title>
         <authors>Fork Ltd</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://preyproject.com/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/prey.png</iconUrl>

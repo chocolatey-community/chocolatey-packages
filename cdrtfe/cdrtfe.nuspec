@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>cdrtfe</title>
         <authors>cdrtfe team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</licenseUrl>
         <projectUrl>http://cdrtfe.sourceforge.net/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

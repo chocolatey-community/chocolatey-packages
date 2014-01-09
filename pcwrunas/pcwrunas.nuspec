@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>pcwRunAs</title>
         <authors>PC-Welt</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://www.pcwelt.de/downloads/pcwRunAs-1215998.html</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

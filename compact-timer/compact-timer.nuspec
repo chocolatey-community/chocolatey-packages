@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Compact Timer</title>
         <authors>Compact Timer Team</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.compacttimerpro.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

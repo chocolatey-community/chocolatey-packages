@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>youtube-dl</title>
         <authors>Ricardo Garcia and others</authors>
-        <owners>purity</owners>
         <licenseUrl>http://rg3.github.io/youtube-dl/</licenseUrl>
         <projectUrl>http://rg3.github.io/youtube-dl/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

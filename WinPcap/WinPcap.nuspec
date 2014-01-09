@@ -4,7 +4,6 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <authors>NetGroup, CACE Technologies</authors>
-    <owners>zippy1981 ferventcoder</owners>
     <licenseUrl>http://www.winpcap.org/misc/copyright.htm</licenseUrl>
     <projectUrl>http://www.winpcap.org/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

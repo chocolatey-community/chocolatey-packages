@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>The Magical Jelly Bean Keyfinder</title>
         <authors>Magical Jelly Bean</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.magicaljellybean.com/tos/</licenseUrl>
         <projectUrl>http://www.magicaljellybean.com/keyfinder/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/keyfinder.png</iconUrl>

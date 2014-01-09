@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>NirCmd</title>
         <authors>Nir Sofer</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.nirsoft.net/utils/nircmd.html</licenseUrl>
         <projectUrl>http://www.nirsoft.net/utils/nircmd.html</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

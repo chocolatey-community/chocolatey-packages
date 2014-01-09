@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>SRWare Iron</title>
         <authors>SRWare</authors>
-        <owners>gbiamby</owners>
         <licenseUrl>http://www.srware.net/en/software_srware_iron.php</licenseUrl>
         <projectUrl>http://www.srware.net/en/software_srware_iron.php</projectUrl>
         <iconUrl>http://tomone.github.io/icons/srwareiron.png</iconUrl>

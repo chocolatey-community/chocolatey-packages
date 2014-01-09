@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>VP8 Video for Windows codec</title>
         <authors>Optima SC Inc</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://www.optimasc.com/products/vp8vfw/index.html</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>ffdshow tryouts</title>
         <authors>http://ffdshow-tryout.sourceforge.net/wiki/credits</authors>
-        <owners>purity</owners>
         <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
         <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/ffdshow.svg</iconUrl>

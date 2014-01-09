@@ -5,7 +5,6 @@
     <version>{{PackageVersion}}</version>
     <title>SQLite</title>
     <authors>D. Richard Hipp, SQLite contributors</authors>
-    <owners>H. Alan Stevens</owners>
     <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
     <projectUrl>http://www.sqlite.org</projectUrl>
     <iconUrl>http://tomone.github.io/icons/sqlite.svg</iconUrl>

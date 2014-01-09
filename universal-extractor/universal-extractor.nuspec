@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Universal Extractor</title>
         <authors>Jared Breland</authors>
-        <owners>purity</owners>
         <projectUrl>http://legroom.net/software/uniextract</projectUrl>
         <iconUrl>http://tomone.github.io/icons/universal-extractor.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>IETester</title>
         <authors>Core Services</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.my-debugbar.com/wiki/IETester/HomePage</licenseUrl>
         <projectUrl>http://my-debugbar.com/wiki/IETester/HomePage</projectUrl>
         <iconUrl>http://tomone.github.io/icons/ietester.png</iconUrl>

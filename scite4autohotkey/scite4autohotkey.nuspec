@@ -5,7 +5,6 @@
     <title>SciTE4AutoHotkey</title>
     <version>{{PackageVersion}}</version>
     <authors>fincs</authors>
-    <owners>Anthony Mastrean</owners>
     <summary>SciTE distribution designed for AutoHotkey</summary>
     <description>SciTE4AutoHotkey is a SciTE-based AutoHotkey script editor. It offers:
 * Syntax highlighting

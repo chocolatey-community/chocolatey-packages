@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>TestDisk and PhotoRec</title>
         <authors>CGSecurity</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.cgsecurity.org/wiki/TestDisk</projectUrl>
         <iconUrl>http://tomone.github.io/icons/testdisk.svg</iconUrl>

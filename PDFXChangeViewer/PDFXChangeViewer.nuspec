@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>PDF-XChange Viewer</title>
         <authors>Tracker Software</authors>
-        <owners>calwell</owners>
         <licenseUrl>http://www.tracker-software.com/PDFVLicense.pdf‎</licenseUrl>
         <projectUrl>http://www.tracker-software.com/product/pdf-xchange-viewer</projectUrl>
         <iconUrl>http://tomone.github.io/icons/PDFXChangeViewer.png</iconUrl>

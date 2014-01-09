@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>ruKernelTool</title>
         <authors>Rainer Ullrich</authors>
-        <owners>purity</owners>
         <projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</description>

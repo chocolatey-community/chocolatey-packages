@@ -5,7 +5,6 @@
     <title>Speccy</title>
     <version>{{PackageVersion}}</version>
     <authors>Piriform LTD</authors>
-    <owners>Thomas (TJ) Biddle</owners>
     <summary>Speccy will give you detailed statistics on every piece of hardware in your computer.</summary>
     <description>Speccy will give you detailed statistics on every piece of hardware in your computer. Including CPU, Motherboard, RAM, Graphics Cards, Hard Disks, Optical Drives, Audio support. Additionally Speccy adds the temperatures of your different components, so you can easily see if there's a problem!
 * Processor brand and model

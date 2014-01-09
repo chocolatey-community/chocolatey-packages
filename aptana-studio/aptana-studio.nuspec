@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Aptana Studio</title>
         <authors>Aptana Inc.</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.aptana.com/legal</licenseUrl>
         <projectUrl>http://www.aptana.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/aptana-studio.png</iconUrl>

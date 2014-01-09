@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Ant Renamer</title>
         <authors>Antoine Potten</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0</licenseUrl>
         <projectUrl>http://www.antp.be/software/renamer</projectUrl>
         <iconUrl>http://tomone.github.io/icons/ant-renamer.png</iconUrl>

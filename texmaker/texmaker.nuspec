@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Texmaker</title>
         <authors>Pascal Brachet,Joël Amblard</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://www.xm1math.net/texmaker/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/texmaker.svg</iconUrl>

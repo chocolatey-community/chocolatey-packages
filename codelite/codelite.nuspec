@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>CodeLite</title>
         <authors>Eran Ifrah,CodeLite team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://sourceforge.net/apps/trac/codelite/browser/trunk/LICENSE</licenseUrl>
         <projectUrl>http://www.codelite.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/codelite.png</iconUrl>

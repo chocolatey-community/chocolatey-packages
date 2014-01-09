@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Classic Shell</title>
         <authors>Ivo Beltchev</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>
         <projectUrl>http://www.classicshell.net/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/classic-shell.png</iconUrl>

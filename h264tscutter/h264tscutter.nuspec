@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>H.264 TS Cutter</title>
         <authors>tobiasm767</authors>
-        <owners>purity</owners>
         <projectUrl>http://www.h264tscutter.de/show_artikel.php?id=5</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>You can cut HDTV-Transportstreams (AVC / H.264) with the H264TS_Cutter. The source material won't be encoded, so you can only cut on I-Frames (the program will look for it by itself). If you want to use the video playback function, a ts-splitter and an avc-codec have to be installed. Requires .Net Framework 2.0.

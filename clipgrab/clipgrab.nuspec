@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Clipgrab</title>
         <authors>Philipp Schmieder Medien</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://clipgrab.de/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/clipgrab.png</iconUrl>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Mixxx</title>
         <authors>Mixxx Development Team</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://mixxx.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/mixxx.svg</iconUrl>

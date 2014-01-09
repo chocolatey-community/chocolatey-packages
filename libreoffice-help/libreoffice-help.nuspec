@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>LibreOffice Help Pack</title>
         <authors>LibreOffice community</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
         <projectUrl>https://www.libreoffice.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/libreoffice.svg</iconUrl>

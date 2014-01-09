@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Free Virtual Keyboard</title>
         <authors>Comfort Software Group</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
         <projectUrl>http://freevirtualkeyboard.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>The Battle for Wesnoth</title>
         <authors>authors</authors>
-        <owners>purity</owners>
         <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
         <projectUrl>http://www.wesnoth.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/wesnoth.png</iconUrl>

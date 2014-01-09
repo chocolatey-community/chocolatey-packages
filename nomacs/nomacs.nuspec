@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>nomacs Image Lounge</title>
         <authors>Markus Diem,Stefan Fiel,Florian Kleber</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.nomacs.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/nomacs.svg</iconUrl>

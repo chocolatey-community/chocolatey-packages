@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>encfs4win</title>
         <authors>freddy77</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://members.ferrara.linux.it/freddy77/encfs.html</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

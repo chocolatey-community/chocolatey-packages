@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>TV-Browser</title>
         <authors>TV-Browser Developers</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://www.tvbrowser.org/index.php</projectUrl>
         <iconUrl>http://tomone.github.io/icons/tv-browser.svg</iconUrl>

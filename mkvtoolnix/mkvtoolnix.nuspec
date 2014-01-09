@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>MKVToolNix</title>
         <authors>Moritz Bunkus</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>https://www.bunkus.org/videotools/mkvtoolnix/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/mkvtoolnix.png</iconUrl>

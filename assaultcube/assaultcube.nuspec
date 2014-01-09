@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>AssaultCube</title>
         <authors>AssaultCube developers</authors>
-        <owners>purity</owners>
         <licenseUrl>http://assault.cubers.net/docs/license.html</licenseUrl>
         <projectUrl>http://assault.cubers.net/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/assaultcube.png</iconUrl>

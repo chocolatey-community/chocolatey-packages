@@ -5,7 +5,6 @@
     <version>{{PackageVersion}}</version>
     <title>Defraggler</title>
     <authors>Piriform</authors>
-    <owners>devious</owners>
     <licenseUrl>http://www.piriform.com/legal/software-license/defraggler</licenseUrl>
     <projectUrl>http://www.piriform.com/defraggler</projectUrl>
     <iconUrl>http://tomone.github.io/icons/defraggler.png</iconUrl>

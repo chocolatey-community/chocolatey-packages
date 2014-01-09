@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>X-Moto</title>
         <authors>authors</authors>
-        <owners>purity</owners>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://xmoto.tuxfamily.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/x-moto.png</iconUrl>

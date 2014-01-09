@@ -5,7 +5,6 @@
     <version>{{PackageVersion}}</version>
     <title>OnTopReplica</title>
     <authors>Lck</authors>
-    <owners>purity</owners>
     <licenseUrl>https://ontopreplica.codeplex.com/SourceControl/latest</licenseUrl>
     <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

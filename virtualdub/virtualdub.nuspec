@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>VirtualDub</title>
         <authors>Avery Lee</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.virtualdub.org/gpl.html</licenseUrl>
         <projectUrl>http://www.virtualdub.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/virtualdub.png</iconUrl>

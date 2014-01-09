@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Cube 2: Sauerbraten</title>
         <authors>Cube 2: Sauerbraten development team</authors>
-        <owners>purity</owners>
         <licenseUrl>http://sauerbraten.org/README.html#license</licenseUrl>
         <projectUrl>http://sauerbraten.org/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/sauerbraten.png</iconUrl>

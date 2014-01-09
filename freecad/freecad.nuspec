@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>FreeCAD</title>
         <authors>authors</authors>
-        <owners>purity</owners>
         <licenseUrl>http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=FAQ#Licensing.2C_copying_and_reuse</licenseUrl>
         <projectUrl>http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=Main_Page</projectUrl>
         <iconUrl>http://tomone.github.io/icons/freecad.svg</iconUrl>

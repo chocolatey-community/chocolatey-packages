@@ -3,7 +3,6 @@
   <metadata>
     <version>{{PackageVersion}}</version>
     <authors>Mozilla</authors>
-    <owners>Matt Wrock</owners>
     <projectUrl>http://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <iconUrl>http://tomone.github.io/icons/firefox.png</iconUrl>
     <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>

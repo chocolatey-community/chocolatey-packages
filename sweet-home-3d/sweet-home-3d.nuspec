@@ -5,7 +5,6 @@
         <version>{{PackageVersion}}</version>
         <title>Sweet Home 3D</title>
         <authors>Emmanuel Puybaret</authors>
-        <owners>purity</owners>
         <licenseUrl>http://www.sweethome3d.com/license.jsp</licenseUrl>
         <projectUrl>http://www.sweethome3d.com/</projectUrl>
         <iconUrl>http://tomone.github.io/icons/sweet-home-3d.png</iconUrl>
