@@ -17,7 +17,6 @@ Build up a great army, gradually turning raw recruits into hardened veterans. In
         <tags>game strategy turn-based</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

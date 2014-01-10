@@ -20,7 +20,6 @@ Note: Download link on official site does not work. Use this one instead: http:/
         </dependencies>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

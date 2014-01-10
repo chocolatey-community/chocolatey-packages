@@ -18,8 +18,6 @@ https://www.tipp10.com/en/news/</releaseNotes>
         <tags>typing keyboard 10-finger</tags>
     </metadata>
     <files>
-        <file src="tools\Get-FilenameFromRegex.ps1" target="tools\Get-FilenameFromRegex.ps1" />
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

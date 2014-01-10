@@ -13,6 +13,6 @@ A modern web browser with an MSI and admin tools designed for organizations that
         <releaseNotes>Now uses the administrative installer that installs for all users.</releaseNotes>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

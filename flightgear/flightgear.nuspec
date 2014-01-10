@@ -18,7 +18,6 @@ Note: The Installer installs the OpenAL-library which hasn’t a silent switch.<
         <tags>flightgear flight simulator game</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

@@ -17,7 +17,6 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
         <tags>game turn-based strategy artillery</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

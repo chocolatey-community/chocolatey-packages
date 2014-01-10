@@ -17,7 +17,6 @@ This package downloads the installer which includes CodeLite, the MinGW suite an
         <tags>C C++ IDE programming</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

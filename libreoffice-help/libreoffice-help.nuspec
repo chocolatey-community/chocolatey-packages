@@ -20,6 +20,6 @@ It detects the current system language and installs the help pack with the same 
         </dependencies>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

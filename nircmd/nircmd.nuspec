@@ -15,6 +15,6 @@
         <tags>nircmd commandline utility</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

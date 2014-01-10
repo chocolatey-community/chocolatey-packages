@@ -18,7 +18,6 @@ Because Gecko lives inside BlueGriffon, the document you edit will look exactly 
         <tags>bluegriffon WYSIWYG gecko firefox html</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

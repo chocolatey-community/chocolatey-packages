@@ -23,7 +23,6 @@ Note: Installer doesn’t work silently if Dokan Library is already installed. T
         <tags>dokan file system fuse</tags>
     </metadata>
     <files>
-        <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-        <file src="tools\chocolateyUninstall.ps1" target="tools\chocolateyUninstall.ps1" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>
