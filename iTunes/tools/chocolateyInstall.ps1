@@ -13,7 +13,7 @@ try {
 
     Get-ChocolateyWebFile $packageName $fileFullPath $url $url64
 
-    7za x -o"$filePath" -y "$fileFullPath"
+    & 7za x "-o$filePath" -y "$fileFullPath"
 
     $packageName = 'appleapplicationsupport'
     $file = "$filePath\AppleApplicationSupport.msi"
