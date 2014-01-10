@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>zotero-standalone</id>
+    <id>{{PackageName}}</id>
     <title>Zotero Standalone</title>
     <version>{{PackageVersion}}</version>
     <authors>Center for History and New Media, et. al.</authors>

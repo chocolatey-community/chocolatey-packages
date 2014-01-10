@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>autohotkey_l.portable</id>
+    <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>AutoHotkey_L (Portable)</title>
     <authors>Lexikos</authors>
