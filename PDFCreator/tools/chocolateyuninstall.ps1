@@ -1,4 +1,4 @@
-$packageName = '{{PackageName}}'
+﻿$packageName = '{{PackageName}}'
 $installerType = 'exe'
 
 

@@ -1,4 +1,4 @@
-. (Join-Path (Split-Path -parent $MyInvocation.MyCommand.Definition) chocolateyInclude.ps1)
+﻿. (Join-Path (Split-Path -parent $MyInvocation.MyCommand.Definition) chocolateyInclude.ps1)
 
 try {
   if (Test-Path $uninstallRegKey) {

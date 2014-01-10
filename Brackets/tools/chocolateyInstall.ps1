@@ -1,4 +1,4 @@
-$package = '{{PackageName}}'
+﻿$package = '{{PackageName}}'
 
 try {
   $params = @{
