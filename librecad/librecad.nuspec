@@ -7,7 +7,7 @@
         <authors>LibreCAD community</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://librecad.org/cms/home.html</projectUrl>
-        <iconUrl>http://tomone.github.io/icons/librecad.svg</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/librecad.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>LibreCAD is a free Open Source CAD application for Windows, Apple and Linux. Support and documentation is free from our large, dedicated community of users, contributors and developers.</description>
         <summary>Open Source CAD application</summary>

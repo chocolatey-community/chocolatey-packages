@@ -7,7 +7,7 @@
         <authors>Antoine Potten</authors>
         <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0</licenseUrl>
         <projectUrl>http://www.antp.be/software/renamer</projectUrl>
-        <iconUrl>http://tomone.github.io/icons/ant-renamer.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/ant-renamer.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Ant Renamer is a free (really free, i. e. the source code is available) program that makes easier the renaming of lots of files and folders by using specified settings. It supports Unicode names.</description>
         <summary>Rename multiple files easily</summary>

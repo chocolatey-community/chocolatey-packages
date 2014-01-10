@@ -4,7 +4,7 @@
         <version>{{PackageVersion}}</version>
         <authors>Adobe Systems Incorporated</authors>
         <projectUrl>http://www.adobe.com/software/flash/about/</projectUrl>
-        <iconUrl>http://tomone.github.io/icons/flashplayer.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/flashplayer.png</iconUrl>
         <licenseUrl>http://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
         <id>{{PackageName}}</id>
         <title>Flash Player ActiveX</title>

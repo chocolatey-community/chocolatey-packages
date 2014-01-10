@@ -7,7 +7,7 @@
         <authors>SuperTuxKart developers</authors>
         <licenseUrl>http://supertuxkart.sourceforge.net/Licensing</licenseUrl>
         <projectUrl>http://supertuxkart.sourceforge.net/</projectUrl>
-        <iconUrl>http://tomone.github.io/icons/supertuxkart.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/supertuxkart.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>SuperTuxKart is a Free 3D kart racing game; we want to make the game fun more than we want to make it realistic. You can play with up to 4 friends on one PC, racing against each other or just try to beat the computer (a network multiplayer feature is planned).
 See the great lighthouse or drive through the sand and visit the pyramids. Race underground or in space, watching the stars passing by. Have some rest under the palms on the beach (watching the other karts overtaking you :) ). But don't eat the bananas! Watch for bowling balls, plungers, bubble gum and cakes thrown by opponents.
