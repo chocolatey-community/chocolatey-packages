@@ -92,9 +92,9 @@ try {
 
         Get-ChocolateyWebFile 'locales list for Firefox' "$env:TEMP\chocolatey\$packageName\availableLocales.html" $urlFile
 
-        $locale = GetLocale($installArguments)
+        $locale = GetLocale($installArguments)
 
-        $url = "http://download.mozilla.org/?product=firefox-$version&os=win&lang=$locale"
+        $url = "http://download.mozilla.org/?product=firefox-$version&os=win&lang=$locale"
 
         Install-ChocolateyPackage $packageName $fileType '-ms' $url
     }
