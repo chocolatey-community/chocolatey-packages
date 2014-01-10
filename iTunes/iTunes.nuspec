@@ -10,7 +10,7 @@
     <iconUrl>http://tomone.github.io/icons/itunes.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>iTunes is a free app that lets you organize and play digital music and video on your computer. It’s also a store that has everything you need to be entertained. That makes it the perfect place to listen, watch, read, play, explore, and shop.
-Note: This package installs iTunes, the required Apple Application Support component, Apple Mobile Device Support and Bonjour, but not the Apple Software Update component. The latter is intrusive and thus probably undesirable for many user because it recommends unnecessary additional software from Apple.</description>
+    Note: This package installs iTunes, the required Apple Application Support component, Apple Mobile Device Support and Bonjour, but not the Apple Software Update component. The latter is intrusive and thus probably undesirable for many user because it recommends unnecessary additional software from Apple.</description>
     <summary>iTunes</summary>
     <releaseNotes>2013-12-26: 7za in the package now gets called directly without “Start-Process”</releaseNotes>
     <copyright>Copyright 2013 Apple Inc. All rights reserved.</copyright>
