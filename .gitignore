@@ -3,3 +3,7 @@ yumi.exe
 Brackets-extract-version/node_modules/*
 Brackets-extract-version/output-brackets/*
 _output/**/*.nupkg
+_output/*/*/*.png
+_output/*/*/*.gif
+_output/*/*/*.jpg
+_output/*/*/*.svg
