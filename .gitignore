@@ -2,3 +2,4 @@ Thumbs.db
 yumi.exe
 Brackets-extract-version/node_modules/*
 Brackets-extract-version/output-brackets/*
+_output/**/*.nupkg
