@@ -4,22 +4,22 @@ $silentArgs = '/install /silent /launchopera 0 /quicklaunchshortcut 0 /setdefaul
 $url = '{{DownloadUrl}}'
 
 try {
-	$tempDir = "$env:TEMP\chocolatey\$packageName"
-	if (!(Test-Path $tempDir)) {New-Item $tempDir -ItemType directory -Force}
-	$fileFullPath = "$tempDir\${packageName}Install.exe"
+  $tempDir = "$env:TEMP\chocolatey\$packageName"
+  if (!(Test-Path $tempDir)) {New-Item $tempDir -ItemType directory -Force}
+  $fileFullPath = "$tempDir\${packageName}Install.exe"
 
-	Get-ChocolateyWebFile $packageName $fileFullPath $url
+  Get-ChocolateyWebFile $packageName $fileFullPath $url
 
-	$extractDir = "$tempDir\${packageName}Install"
+  $extractDir = "$tempDir\${packageName}Install"
 
-	Start-Process '7za' -ArgumentList "x -o`"$extractDir`" -y `"$fileFullPath`"" -Wait
+  Start-Process '7za' -ArgumentList "x -o`"$extractDir`" -y `"$fileFullPath`"" -Wait
 
-	$file = "$extractDir\launcher.exe"
+  $file = "$extractDir\launcher.exe"
 
-	Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
+  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
 
-	Remove-Item $extractDir -Force -Recurse
-}	catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw 
+  Remove-Item $extractDir -Force -Recurse
+}  catch {
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw 
 }

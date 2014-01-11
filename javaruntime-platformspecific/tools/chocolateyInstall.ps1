@@ -8,16 +8,16 @@ $bin    = Join-Path $java "bin"
 $url    = "{{DownloadUrl}}"
 $url64  = "{{DownloadUrlx64}}"
 
-try {	
+try {  
   Install-ChocolateyPackage $name $type $silent $url $url64
   Install-ChocolateyPath $bin "Machine"
   Start-ChocolateyProcessAsAdmin @"
 [Environment]::SetEnvironmentVariable("JAVA_HOME", "$java", "Machine")
 "@
-	
+  
   Write-ChocolateySuccess $name
 }
 catch {
-	Write-ChocolateyFailure $name $_.Exception.Message
-	return
+  Write-ChocolateyFailure $name $_.Exception.Message
+  return
 }
