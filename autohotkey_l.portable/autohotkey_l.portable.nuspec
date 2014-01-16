@@ -5,8 +5,8 @@
     <version>{{PackageVersion}}</version>
     <title>AutoHotkey_L (Portable)</title>
     <authors>Lexikos</authors>
-    <licenseUrl>http://l.autohotkey.net/docs/license.htm</licenseUrl>
-    <projectUrl>http://www.l.autohotkey.net/</projectUrl>
+    <licenseUrl>http://ahkscript.org/docs/license.htm</licenseUrl>
+    <projectUrl>http://ahkscript.org/</projectUrl>
     <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/autohotkey_l.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
