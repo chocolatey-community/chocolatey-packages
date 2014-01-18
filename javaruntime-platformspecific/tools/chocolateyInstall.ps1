@@ -1,6 +1,6 @@
 ﻿$name   = "{{PackageName}}"
 $type   = "exe"
-$silent = "/s REBOOT=Suppress JAVAUPDATE=0"
+$silent = "/s REBOOT=Suppress"
 $java   = Join-Path $ENV:PROGRAMFILES "Java\jre7"
 $bin    = Join-Path $java "bin"
 
