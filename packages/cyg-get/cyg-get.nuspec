@@ -18,12 +18,12 @@
 
       For a default installation of Cygwin, call 'cyg-get default'
     </description>
-    <projectUrl>https://github.com/chocolatey/chocolatey-communitypackages/tree/master/cyg-get</projectUrl>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/packages/cyg-get</projectUrl>
     <tags>cygwin</tags>
     <copyright>Red Hat, Inc.</copyright>
     <licenseUrl>http://cygwin.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/chocolatey/chocolatey-communitypackages/master/cyg-get/Cygwin.png</iconUrl>
+    <iconUrl>http://chocolatey.github.io/chocolatey-coreteampackages/Cygwin.png</iconUrl>
     <dependencies>
       <dependency id="cygwin" />
     </dependencies>
