@@ -13,7 +13,7 @@
     <copyright>2002-2012 Canneverbe Limitied</copyright>
     <licenseUrl>http://cdburnerxp.se/help/intro/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/chocolatey/chocolatey-coreteampackages/master/cdburnerxp/CDBurnerXP.png</iconUrl>
+    <iconUrl>http://chocolatey.github.io/chocolatey-coreteampackages/CDBurnerXP.png</iconUrl>
     <releaseNotes>
 		Up to date release notes for this application can be found here:
 		

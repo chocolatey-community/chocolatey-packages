@@ -12,7 +12,7 @@
     <tags>feeddemon RSS Reader admin</tags>
     <copyright>2003-2011 by NewsGator Technologies, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/chocolatey/chocolatey-coreteampackages/master/feeddemon/feeddemon.png</iconUrl>
+    <iconUrl>http://chocolatey.github.io/chocolatey-coreteampackages/feeddemon.png</iconUrl>
     <releaseNotes>
 		Up to date release notes for this application can be found here:
 		
