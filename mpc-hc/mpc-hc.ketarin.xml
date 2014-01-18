@@ -42,7 +42,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>@('http://sourceforge.net/projects/mpc-hc/files/MPC%20HomeCinema%20-%20Win32/MPC-HC_v{version}_x86/MPC-HC.{version}.x86.exe/download', 'http://sourceforge.net/projects/mpc-hc/files/MPC%20HomeCinema%20-%20x64/MPC-HC_v{version}_x64/MPC-HC.{version}.x64.exe/download')</TextualContent>
+            <TextualContent>http://sourceforge.net/projects/mpc-hc/files/MPC%20HomeCinema%20-%20x64/MPC-HC_v{version}_x64/MPC-HC.{version}.x64.exe/download</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
@@ -72,7 +72,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-01-18T21:31:31.717528+01:00</LastUpdated>
+    <LastUpdated>2014-01-18T22:20:21.1499969+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url32Mirror}</FixedDownloadUrl>
     <Name>mpc-hc</Name>
