@@ -8,7 +8,7 @@
     <owners>H. Alan Stevens</owners>
     <licenseUrl>http://cygwin.com/license.html</licenseUrl>
     <projectUrl>http://cygwin.com/</projectUrl>
-    <iconUrl>https://raw.github.com/chocolatey/chocolatey-communitypackages/master/cygwin/Cygwin.png</iconUrl>
+    <iconUrl>http://chocolatey.github.io/chocolatey-coreteampackages/Cygwin.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       Cygwin is a collection of tools which provide a Linux look and feel environment for Windows.
