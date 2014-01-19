@@ -1,4 +1,4 @@
-﻿$name   = 'autohotkey_l.install'
+﻿$name   = 'autohotkey.install'
 $url = '{{DownloadUrl}}'
 $silent = '/S'
 

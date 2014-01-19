@@ -1,4 +1,4 @@
-﻿$packageName = 'autohotkey_l.portable'
+﻿$packageName = 'autohotkey.portable'
 $url = '{{DownloadUrl}}'
 $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $url64 = '{{DownloadUrlx64}}'
