@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>classic-shell</id>
+        <version>4.0.4.20140119</version>
         <title>Classic Shell</title>
         <authors>Ivo Beltchev</authors>
         <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>

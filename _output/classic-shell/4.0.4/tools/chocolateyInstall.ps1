@@ -1,6 +1,6 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'classic-shell'
 $installerType = 'exe'
-$installArguments = '/passive'
+$silentArgs = '/passive'
 
 $language = (Get-Culture).TwoLetterISOLanguageName
 if ($language -eq 'ru') {
@@ -9,4 +9,4 @@ if ($language -eq 'ru') {
     $url = 'http://www.classicshell.net/downloads/latest'
 }
 
-Install-ChocolateyPackage $packageName $installerType $installArguments $url
+Install-ChocolateyPackage $packageName $installerType $silentArgs $url

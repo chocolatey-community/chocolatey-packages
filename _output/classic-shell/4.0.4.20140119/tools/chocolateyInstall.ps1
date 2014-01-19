@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'classic-shell'
 $installerType = 'exe'
 $installArguments = '/passive'
 
