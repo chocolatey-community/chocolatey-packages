@@ -1,6 +1,6 @@
 ﻿try {
 
-    $packageName = '{{PackageName}}'
+    $packageName = 'ontopreplica'
     $silentArgs = '/S'
     $uninstaller = Join-Path $env:LOCALAPPDATA 'OnTopReplica\OnTopReplica-Uninstall.exe'
 
