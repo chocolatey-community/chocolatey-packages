@@ -1,8 +1,8 @@
-﻿$name   = '{{PackageName}}'
+﻿$name   = 'javaruntime-platformspecific'
 # Find download URLs at http://www.java.com/en/download/manual.jsp
-$url    = '{{DownloadUrl}}'
-$url64  = '{{DownloadUrlx64}}'
-$version = '{{PackageVersion}}'
+$url    = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=83383'
+$url64  = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=83385'
+$version = '7.0.51'
 $type   = 'exe'
 $silent = "/s REBOOT=Suppress"
 $java   = Join-Path $env:ProgramFiles 'Java\jre7'
