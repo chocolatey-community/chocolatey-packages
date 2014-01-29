@@ -1,5 +1,5 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
+﻿$packageName = 'flashplayeractivex'
+$version = '12.0.0.38'
 $registryUninstallRoot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
 $registryUninstallRootWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
 
@@ -26,7 +26,7 @@ try {
     if ($alreadyInstalled -or $alreadyInstalledWow6432) {
         Write-Output "Adobe Flash Player Plugin (ActiveX for IE) $version is already installed."
     } else {
-        Install-ChocolateyPackage $packageName 'msi' '/quiet /norestart REMOVE_PREVIOUS=YES' '{{DownloadUrl}}'
+        Install-ChocolateyPackage $packageName 'msi' '/quiet /norestart REMOVE_PREVIOUS=YES' 'http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_12_active_x.msi'
     }
 
 
