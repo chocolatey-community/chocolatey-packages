@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>thunderbird</id>
+        <version>24.2.0.20140131</version>
         <title>Mozilla Thunderbird</title>
         <authors>Mozilla</authors>
         <licenseUrl>http://www.mozilla.org/en-US/legal/eula/thunderbird.html</licenseUrl>

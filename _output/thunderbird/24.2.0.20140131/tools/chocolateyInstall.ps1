@@ -71,9 +71,9 @@ function AlreadyInstalled($version) {
 
 
 
-$packageName = '{{PackageName}}'
+$packageName = 'thunderbird'
 $fileType = 'exe'
-$version = '{{PackageVersion}}'
+$version = '24.2.0'
 
 $urlFile = 'https://www.mozilla.org/en-US/thunderbird/all.html'
 $filePath = "$env:TEMP\chocolatey\$packageName"
