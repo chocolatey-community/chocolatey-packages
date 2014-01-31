@@ -1,7 +1,7 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+﻿$packageName = 'iTunes'
+$version = '11.1.4'
+$url = 'https://secure-appldnld.apple.com/iTunes11/031-0758.20140122.Ccfr4/iTunesSetup.exe'
+$url64 = 'https://secure-appldnld.apple.com/iTunes11/031-0759.20140122.T7Gtr/iTunes64Setup.exe'
 $fileType = 'msi'
 $silentArgs = '/quiet /norestart'
 $filePath = "$env:TEMP\chocolatey\$packageName"
