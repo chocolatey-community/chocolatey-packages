@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>qbittorrent</id>
     <title>qBittorrent</title>
-    <version>{{PackageVersion}}</version>
+    <version>3.1.8</version>
     <authors>Christophe Dumez</authors>
     <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/qbittorrent.png</iconUrl>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>

@@ -26,7 +26,7 @@ Note: This package uses an AutoHotkey-script for unattended installation.</descr
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="autohotkey_l.install" />
+      <dependency id="autohotkey.install" />
     </dependencies>
   </metadata>
   <files>

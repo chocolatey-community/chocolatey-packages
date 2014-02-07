@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'qbittorrent'
 $unfile = 'qBittorrent\uninst.exe'
 
 if (Test-Path "${Env:ProgramFiles(x86)}\$unfile") {
