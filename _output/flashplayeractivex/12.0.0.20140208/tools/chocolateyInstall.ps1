@@ -1,5 +1,5 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{DownloadUrlx64}}' # This is the real version of Flash Player ActiveX (is not always the same as the package version)
+﻿$packageName = 'flashplayeractivex'
+$version = '12.0.0.44' # This is the real version of Flash Player ActiveX (is not always the same as the package version)
 $registryUninstallRoot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
 $registryUninstallRootWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
 
@@ -43,7 +43,7 @@ try {
     }
 
     if ($allRight) {
-        Install-ChocolateyPackage $packageName 'msi' '/quiet /norestart REMOVE_PREVIOUS=YES' '{{DownloadUrl}}'
+        Install-ChocolateyPackage $packageName 'msi' '/quiet /norestart REMOVE_PREVIOUS=YES' 'http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_12_active_x.msi'
     }
 
 
