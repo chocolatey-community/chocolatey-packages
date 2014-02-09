@@ -12,7 +12,7 @@
         <description>MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.</description>
         <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>
         <releaseNotes>http://mpc-hc.org/changelog/</releaseNotes>
-        <copyright>2012–2013 MPC-HC Team</copyright>
+        <copyright>MPC-HC Team</copyright>
         <tags>media player</tags>
     </metadata>
 </package>
