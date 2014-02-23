@@ -1,5 +1,6 @@
 ﻿$packageName = '{{PackageName}}'
-$url = 'http://sourceforge.net/projects/actiongame/files/AssaultCube Version {{PackageVersion}}/AssaultCube_v{{PackageVersion}}.exe/download'
+# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
+$url = '{{DownloadUrlx64}}'
 $zipPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\assaultcube.zip"
 $folder = "$env:ProgramFiles\AssaultCube"
 $folderx86 = "${env:ProgramFiles(x86)}\AssaultCube"

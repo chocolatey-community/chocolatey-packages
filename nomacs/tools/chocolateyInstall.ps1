@@ -1,6 +1,7 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/S'
+# {\{DownloadUrlx64}\} gets “misused” here as 32- and 64-bit link array due to limitations of Ketarin/chocopkgup
 $urlsArray = {{DownloadUrlx64}}
 $urlWinXp = 'http://sourceforge.net/projects/nomacs/files/nomacs-1.6.2/nomacs-setup-1.6.3-WinXP-x86.exe/download'
 $url = $urlsArray[0]
