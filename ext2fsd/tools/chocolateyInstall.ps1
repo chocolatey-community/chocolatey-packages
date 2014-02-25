@@ -1,7 +1,8 @@
 ﻿$packageName = '{{PackageName}}'
-$fileType = "exe"
-$silentArgs = "/VERYSILENT"
-$url = '{{DownloadUrl}}'
+$fileType = 'exe'
+$silentArgs = '/VERYSILENT'
+# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
+$url = '{{DownloadUrlx64}}'
 
 # Set compatibility mode to Windows 7 if operating system is Windows 8 or higher.
 $WindowsVersion = (Get-WmiObject -class Win32_OperatingSystem).Version

@@ -1,6 +1,7 @@
 ﻿try {
     $packageName = 'supertuxkart'
-    $url = 'http://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/{{PackageVersion}}/supertuxkart-{{PackageVersion}}-win.exe/download'
+    # {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
+    $url = '{{DownloadUrlx64}}'
     $silentArgs = '/S'
 
     $tempDir = "$env:TEMP\chocolatey\$packageName"

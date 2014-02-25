@@ -1,4 +1,4 @@
-﻿$versionUnderscore = '{{PackageVersion}}' -replace '\.', '_'
-# DownloadUrlx64 gets “misused” here to retrieve the correct folder from sourceforge
+﻿# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
+$url = '{{DownloadUrlx64}}'
 
-Install-ChocolateyPackage '{{PackageName}}' 'exe' '/S' "http://sourceforge.net/projects/sauerbraten/files/sauerbraten/{{DownloadUrlx64}}/sauerbraten_${versionUnderscore}_collect_edition_windows.exe/download"
+Install-ChocolateyPackage '{{PackageName}}' 'exe' '/S' $url
