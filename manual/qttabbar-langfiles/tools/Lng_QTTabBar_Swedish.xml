@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<root>
+
+<Author>
+Åke Engelbrektson
+</Author>
+
+<Language>
+Swedish
+</Language>
+
+<Country>
+Sweden
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0b2
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0b2
+</Version_LangFile>
+
+<DateModified>
+2011/10/22
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Separator
+Tillbaka
+Framåt
+Grupper
+Nyligen stängda
+Program
+Nytt fönster
+Klona flik
+Lås
+Kopieringsverktyg
+Överst
+Stäng
+Stäng alla utom aktuell
+Stäng fönster
+Stäng vänster
+Stäng höger
+Upp en nivå
+Uppatera
+Sök
+Opacitet
+Sökfält
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Sökväg
+Namn
+Aktuell mappsökväg
+Aktuellt mappnamn
+MD5
+ objekt
+Sökvägar för alla öppna flikar
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Lägg till
+&amp;Ta bort
+&amp;Stäng
+&amp;Återställ
+&amp;Upp
+&amp;Ner
+&amp;Browse image...
+Liten ikon
+Stor ikon
+&amp;Anpassa...
+&amp;Lås menyer
+Åter&amp;ställ bild
+Visa ikontext
+Selektiv text
+Ingen ikontext
+Lås sökfältets storlek
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Avbryt
+&amp;Verkställ
+&amp;Standard
+</DialogButtons>
+
+<DragDropToolTip>
+Kopiera till:
+Flytta till:
+Skapa genväg i:
+</DragDropToolTip>
+
+<Misc_Strings>
+Desktop Search
+Bildfilen är ogiltig.\r\n\r\nSpecificera en bildfil på 432x40 pixel.
+Sökresultat i
+genväg
+</Misc_Strings>
+
+<TabBar_Menu>
+Stäng
+Stäng höger
+Stäng vänster
+Stäng alla utom aktuell
+Lägg till i grupp
+Skapa ny grupp
+Lås
+Klona flik
+Öppna i nytt fönster
+Kopiera sökväg
+Egenskaper
+Flikhistorik
+Grupper
+Ångra stängning
+Senast aktiverad
+Nyligen öpnnade filer
+Bläddra efter mapp
+Stäng alla utom aktuell
+Stäng fönster
+Alternativ
+Lås upp
+Lägg till i programmeny: 
+objekt
+Avbryt
+Grenar
+Ta bort objekt från meny
+Ö&amp;ppna målmapp
+Flikettikett
+Sortera efter...
+Namn
+Sökväg
+Aktiv
+Lås verktygsfält
+Koppla flikar i andra fönster
+Invertera
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar kunde inte öppna\r\n\r\n "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Skapa ny grupp
+Gruppnamn:
+Lägg till alla flikar
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Aktivera ny flik
+Använd befintlig flik
+Stäng alla flikar när grupp öppnas
+Visa tipsrutor
+Läs in X1/X2-musknappar
+Visa navigationsknappar
+Flikhistorik
+Senaste öppnade filer
+Tillåt 'Dra &amp;&amp; släpp' för filer till flikar
+Språkfil:
+Plats för ny flik:
+När aktuell flik stängs, aktivera:
+När flik dubbelklickas:
+När bakgrunden dubbelklickas:
+Sökväg/Grupp:
+Multipla flikrader
+Byt automatiskt namn på tvetydiga flikar
+Vid mushjulsklick på mapp:
+Upp en nivå vid dubbelklick på flik
+Ingen storleksändring på fönster
+Spara fönstertransparens
+Läs in nya Explorer-processer
+Visa mappträd när ny process läses in
+Fånga inte in fönster som ny flik, när de öppnas från utsidan
+Horisontell skrollning med [Shift]+[Mushjul]
+Byt visningsläge med [Ctrl]+[Mushjul] (XP)
+Förhindra att fönster stängs när det finns flikar
+Förhindra att fönster stängs när flikar är låsta
+Återställ flikar
+Återställ låsta flikar
+Använd flikbild
+Markeringsfärg
+Flikstorlek:
+Bredd
+Höjd
+Max
+Min
+Teckensnitt
+Fet text på aktiv flik
+Fliktextfärg
+Aktiv
+Inaktiv
+Standard
+Verktygsfältets bakgrundsfärg
+Mappikon
+Sökväg
+Argument
+Plats
+Tilläggsspråkfil:
+Dölj menyfält
+XP-kompatibel BS-nyckel (Vista)
+Helradsmarkering i detaljerad vy
+Stödlinjer i detaljerad vy
+Alternativ radfärg i detaljerad vy
+Visa förhandsgranskningsrutor
+med [Shift] nedtryckt
+Aktivera mappmenyer
+Visa dolda objekt
+Visa filer
+Undanta filformat vid namnbyte (XP)
+Visa systemfiler
+Minimera till meddelandefältet med stäng-knappen
+Max-bredd
+Max-höjd
+Bakgrundsbild för verktygsfält
+Använd F2 för filnamnsbyte
+Visa stäng-knapp på flikar
+Vid mushjulsklick:
+Aktivera mappmenyer på flikar
+Öppna nytt fönster i...
+Med [Alt] nertryckt
+Vid 'Mus över'
+Exportera inställningar...
+Pekar-loop
+Nätwerkets max-timeout (sekunder, 0 för systemvärde)
+Minimera till meddelandefältet
+Textjustering
+Menyrenderare
+</TabBar_Option>
+
+<TabBar_Option2>
+Öppna en ny flik med mushjulsklick eller [shift]+klick (XP), i mappträdet
+Visa flikbytare med [Ctrl]+[Tab]
+Textskugga
+Sök automatiskt efter uppdateringar
+Ta bort originalfliken när nytt fönster skapas
+Visa enhetsbokstav
+Ljud
+Installera ett tillägg
+Alternativ
+Avaktivera
+Aktivera
+Avinstallera
+Om {0}
+Om du intsallerar detta tillägg, måste du också avinstallera \r\n\r\n{0}\r\n\r\nVill du verkligen göra detta?
+Visa filinformation under bilder
+Använd gammal listvykontroll (Win7)
+Visa kolumnrubrik i alla vyer (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Vänster
+Höger
+Längst till höger
+Längst till vänster
+Senast aktiverad
+Upp en nivå
+Stäng
+Lås
+Visa meny
+Nytt fönster
+Klona
+Kopiera sökväg
+Egenskaper
+ - 
+Bläddra efter mapp
+Stäng alla utom aktuell
+Lås alla
+Återställ senast stängd
+Alternativ
+Stäng fönster
+Stäng aktuell
+multipel
+Ny flik
+Auto
+Fixerad
+Begränsa flikbredd
+Sträck ut
+Sida vid sida
+Verklig storlek
+Vänster
+Centrerat
+Vista
+XP
+Stretch on each band
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Allmänt
+Flik
+Fönster
+Utseende
+Grupper
+Program
+Tillägg
+Genvägar
+Diverse
+Sökväg
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Rensa
+Upp
+Ner
+Lägg till separator
+Uppstart
+Tilläggsalternativ
+Bakgrundsfärg
+Textfärg
+Standard
+Ställ in
+Ta bort
+Sök nu
+Kopiera till urklipp
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Aktivitetsfält
+Skrivbord
+Lås objekt
+Rita titelbakgrund
+Meny med enkelklick
+Aktivera programmets snabbgenvägar
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Grupper
+Ångra stängning
+Program
+Nyligen öppnade filer
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Tillbaka ( Alt + Left )
+Framåt ( Alt + Right )
+Tillbaka till start
+Framåt till slutet
+Nästa flik
+Föregående flik
+Första fliken
+Sista fliken
+Stäng aktuell flik
+Stäng alla utom aktuell flik
+Stäng åt vänster
+Stäng åt höger
+Stäng fönster ( Alt + F4 )
+Ångra stängning
+Klona aktuell flik
+Öppna aktuell mapp i nytt fönster
+Lås/Lås upp aktuell flik
+Lås/Lås upp alla
+Bläddra efter mapp
+Skapa ny grupp
+Öppna Alternativ
+Visa verktygsfältets meny
+Visa flikmeny
+Visa Grupper (knappfält)
+Visa Nyligen stängda (knappfält)
+Visa Program (knappfält)
+Visa/Dölj menyrad
+Kopiera filsökväg
+Kopiera filnamn
+Kopiera mappsökväg
+Kopiera mappnamn
+Kontrollera MD5 för markerade filer
+Placera fönster överst
+Transparens +
+Transparens -
+Fokus fillista
+Fokus sökfält (Vista)
+Fokus sökfält (knappfält)
+Visa undermeny för markerad mapp
+Minimera fönster till meddelandefältet
+Fokus flikfält
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" är redan reserverad för "{1}".\r\n\r\nVill du ändra tangentreservation?
+Bekräfta reservationsändring
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Tillägg
+Kommandon
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Ny version hittad.\r\n\r\n{0}\r\n\r\nTryck OK, för att besöka webbsidan.
+Din version av QTTabBar uppdaterad.
+Ny utvecklingsversion hittad: 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>

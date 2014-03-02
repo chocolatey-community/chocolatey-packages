@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>qttabbar-langfiles</id>
+        <version>1.5.0.20130713</version>
+        <title>QTTabBar language files</title>
+        <authors>QTTabBar translation team</authors>
+        <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+        <projectUrl>http://qttabbar.sourceforge.net/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>This package downloads all available language files for QTTabBar and automatically sets the user’s Windows language as language for QTTabBar.
+QTTabBar is extension for Windows Explorer that brings tabbed browsing to Microsoft’s file browser, along with a host of other great features. Under new management! Now in public beta!</description>
+        <summary>Language files for QTTabBar</summary>
+        <releaseNotes />
+        <copyright />
+        <tags>productivity windows explorer i18n</tags>
+        <dependencies>
+            <dependency id="QTTabBar" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>

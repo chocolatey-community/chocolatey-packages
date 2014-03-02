@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+<Author>
+Cédric SEGURA
+</Author>
+
+<Language>
+French
+</Language>
+
+<Country>
+France
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0a5
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0a5
+</Version_LangFile>
+
+<DateModified>
+28/02/2011
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Séparateur
+Précédent
+Suivant
+Groupes
+Fermés récemments
+Applications
+Nouvelle fenêtre
+Dupliquer 
+Verrouiller
+Outil de copie
+Toujours Au-Dessus
+Fermer
+Fermer les autres fenêtres
+Fermer la fenêtre
+Fermer à gauche
+Fermer à droite
+Monter d'un niveau
+Recharger 
+Chercher
+Opacité
+Boîte de recherche
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Chemin
+Nom
+Chemin du répertoire courant
+Nom du répertoire courant
+MD5
+Eléments 
+Chemins de tous les onglets ouverts
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Ajouter
+&amp;Supprimer
+&amp;Fermer
+&amp;Réinitialiser
+&amp;Monter
+&amp;Descendre
+&amp;Parcourir images...
+Petite icone
+Grande icone
+&amp;Personnaliser...
+&amp;Verrouiller menu
+Ré&amp;initialiser l'image
+Afficher info-bulle 
+Texte sélectionné 
+Masquer info-bulle
+Verrouiller la taille de la boîte de recherche
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Annuler
+&amp;Appliquer
+&amp;Par défaut
+</DialogButtons>
+
+<DragDropToolTip>
+Copier vers :
+Déplacer vers :
+Créer raccourci dans:
+</DragDropToolTip>
+
+<Misc_Strings>
+Recherche sur le bureau
+Type d'image invalide.\r\n\r\nVeuillez spécifié 432 x 40 px.
+Chercher résultat dans
+Raccourci
+</Misc_Strings>
+
+<TabBar_Menu>
+Fermer
+Fermer à droite
+Fermer à gauche
+Fermer les autres fenêtres
+Ajouter au groupe
+Créer un nouveau groupe
+Verrouiller
+Dupliquer 
+Nouvelle fenêtre
+Copier chemin
+Propriétés
+Historique des onglets
+Groupes
+Annuler fermer
+Dernier actif
+Fichiers récemments ouverts
+Parcourir le répertoire
+Fermer les autres fenêtres
+Fermer la fenêtre
+Options
+Déverrouiller
+Ajouter au menu :
+Eléments
+Annuler
+Branches
+Supprimer cet élément du menu
+O&amp;uvrir le répertoire conteneur
+Titre onglet
+Ordre onglet
+Nom
+Chemin
+Active
+Verrouiller les barres d'outils
+Fusionner les onglets des autres fenêtres
+Inverser
+</TabBar_Menu>
+
+<TabBar_Message>
+l'Ouverture de QTTabBar à echoué\r\n\r\n "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Créer nouveau groupe
+Nom du groupe :
+Ajouter tous les onglets
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Activer nouvel onglet
+Réutiliser onglet existant
+Fermer tous les onglets quand groupe ouvert
+Montrer les info-bulles
+Capture les boutons X1/X2 de la souris
+Afficher les boutons de navigation
+Historique des onglets
+Fichiers récents
+Utiliser le glisser-déposer sur les onglets
+Ficher langue :
+Nouvel position d'onglet :
+Après fermeture de l'onglet, activer :
+Quand double-clic sur onglet : 
+Quand double-clic sur l'arrière plan : 
+Chemin du groupe :
+Onglets à rangées multiples
+Renommer les onglets ambigus automatiquement 
+Au clique sur le répertoire :
+Niveau parent au double-clic dans la marge 
+Fénêtre non redimensionnée
+Conserver la transparence des fenêtres
+Capturer nouveaux processus de l'explorateur
+Afficher l'arborescence quand processus capturé
+Ne pas capturer nouveaux processus à l'ouverture de l'extérieur
+Défilement horizontal Shift+Molette
+Changer vue avec Ctrl+Molette (XP)
+Empêcher la fermeture de fenêtre quand les onglets existent
+Empêcher la fermeture de fenêtre quand onglets verrouillés
+Restaurer les onglets
+Restaurer les onglets verrouillés
+Employer l'image d'onglet
+Coul. surbrillance
+Taille d'onglet :
+Largeur
+Hauteur
+Max
+Min
+Police
+Titre gras de l'onglet actif
+Couleur de titre de l'onglet
+Actif
+Inactif
+Défaut
+Coul. de fond de la barre d'outils
+Icone du dossier
+Chemin
+Arguments
+Répertoire de trav
+Fichier langue plugin :
+Masquer la barre des menus
+XP-compatible BS key (Vista)
+Sélection de rangée complète dans la vue détaillée
+Lignes de grille pour la vue détaillée
+Couleurs alternées des rangées dans la vue détaillée
+Afficher prévisualisation info-bulle
+Avec touche Shift appuyée
+Activer 'astuce sous-répertoire'
+Montrer les fichiers cachés
+Montrer les fichiers
+Eliminer de la sélection les extension de fichier lors du renommage (XP)
+Montrer les fichiers systèmes
+Envoyer dans la barre des tâches à la fermeture
+Largeur Max
+Hauteur Max
+Image de fond de la barre d'outils
+Changer de sélection avec F2 lors du renommage de fichiers
+Afficher un bouton de fermeture sur les onglets
+Lorsque clic-milieu sur l'onglet :
+Activer 'sous-répertoire' sur les onglets
+Ouvre une nouvelle fenêtre à ...
+Avec la touche Alt enfoncée
+Au survole de la souris 
+Exporter paramètres ......
+Curseur en boucle
+Pause max du réseau (en secondes, 0 pour la valeur du système)
+Envoyer fenêtre minimisée dans la barre des tâches
+Alignement du texte
+Menu de rendu
+</TabBar_Option>
+
+<TabBar_Option2>
+Sur l'arborescence, ouvrez un onglet avec clic Molette ou Shift+Clic (XP)
+Affiche bascule d'onglets Ctrl+Tab
+Ombres Texte 
+Vérification auto des mises à jour 
+Retirez l'onglet d'origine lors de la création  d'une nouvelle fenêtre
+Afficher la lettre du lecteur
+Sons
+Installer un plugin
+Options
+Désactiver
+Activer
+Désinstaller
+A propos de {0}
+Si vous désinstallez ce plugin, vous devez également désinstaller \r\n\r\n{0}\r\n\r\nÊtes-vous sûr ?
+Afficher le fichier ci-dessous les informations images
+Utilisez l'ancien contrôle ListView (Win7)
+Afficher colonnes dans toutes les vues (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Gauche
+Droite
+Plus à droite
+Plus à gauche
+Dernière activée
+Niveau parent
+Fermer
+Verrouiller
+Afficher menu
+Nouvelle fenêtre
+Dupliquer
+Copier le chemin
+Propriétés
+ - 
+Parcourir le répertoire
+Fermer les autres
+Tout verrouiller
+Restaurer le dernier fermé
+Options
+Fermer fenêtre
+Dupliquer celle-ci
+Multiples
+Nouvel onglet
+Auto
+Fixe
+Larg. limite d'onglet
+Etirer
+Carreau
+Taille réelle
+Gauche
+Centre
+Vista
+XP
+Etirer sur chaque bande
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Général
+Onglets
+Fenêtre
+Apparence
+Groupes
+Applications
+Plugins
+Raccourcis clavier
+Divers
+Chemin
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Effacer
+Monter
+Desc
+Ajouter séparateur
+Démarrage
+Options plugins
+Couleur de fond
+Couleur de texte
+Défaut
+Définir
+Supprimer
+Vérifier maintenant
+Copier dans presse-papiers
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Barre des tâches
+Bureau
+Verrouiller eléments
+Tirage de fond du titre
+Menu en un seul clic
+Activer les touches de raccourci d'application
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Groupes
+Annuler fermé
+Applications
+Fichiers récemment ouverts
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Précédent (Alt+Gauche)
+Suivant  (Alt+Droit)
+Retourner au début
+Retourner à la fin
+Selectionner onglet suivant
+Selectionner onglet précédent
+Selectionner premier onglet
+Selectionner dernier onglet
+Fermer onglet actif
+Fermer les autres onglets
+Fermer gauche
+Fermer droite
+Fermer fenêtre (Alt+F4) 
+Annuler fermer
+Dupliquer onglet courant
+Ouvrir répertoire dans une nouvelle fenêtre
+Verrouiller/déverrouiller 
+Verrouiller/déverrouiller tout
+Parcourir le répertoire
+Créer un nouveau groupe
+Ouvrir boîte d'options
+Afficher barre des menus
+Afficher menu onglet courant
+Afficher menu groupe (barre de boutons)
+Afficher menu répertoire récent (barre de boutons)
+Afficher menu application utilisateur (barre de boutons)
+Afficher/cacher barre des menus
+Copier chemin du fichier sélectionné
+Copier nom du fichier sélectionné
+Copier chemin du répertoire actif
+Copier nom du répertoire actif
+Vérifier MD5 du fichier sélectionné
+Placer la fenêtre plus haut
+Transparence +
+Transparence -
+Regrouper liste de fichier
+Regrouper barre de recherche (Vista)
+Regrouper zone de recherche (barre de boutons)
+Afficher menu astuce des sous-répertoire du répertoire sélectionné
+Envoyer fenêtre dans barre des tâches
+Regrouper la barre d'onglets
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" est déjà assigné pour "{1}".\r\n\r\nVoulez-vous le réassigner ?
+Confirmation de la réassignation
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugin
+Commandes utilisateur
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Nouvelle version trouvée.\r\n\r\n{0}\r\n\r\nCliquez sur OK pour aller sur le site web.
+Votre version de QTTabBar est à jour.
+Nouvelle version de développement trouvée : 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>

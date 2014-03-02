@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<root>
+
+<Author>
+Paul Accisano
+</Author>
+
+<Language>
+English
+</Language>
+
+<Country>
+USA
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0a4
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0a4
+</Version_LangFile>
+
+<DateModified>
+2010/11/18
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Separator
+Go back
+Go forward
+Groups
+Recently Closed
+Applications
+New window
+Clone this
+Lock
+Copy Tool
+TopMost
+Close
+Close all but current
+Close window
+Close left
+Close right
+Up one level
+Reload
+Search
+Opacity
+Search Box
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Path
+Name
+Current folder path
+Current folder name
+MD5
+ items
+Paths of all open tabs
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Add
+&amp;Remove
+&amp;Close
+&amp;Reset
+&amp;Up
+&amp;Down
+&amp;Browse image...
+Small icon
+Large icon
+&amp;Customize...
+&amp;Lock menus
+Re&amp;set image
+Show text labels
+Selective text
+No text labels
+Lock the size of the search box
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Cancel
+&amp;Apply
+&amp;Default
+</DialogButtons>
+
+<DragDropToolTip>
+Copy to:
+Move to:
+Create shortcut in:
+</DragDropToolTip>
+
+<Misc_Strings>
+Desktop Search
+Image file is invalid.\r\n\r\nPlease specify 432 x 40 px image file.
+Search Results in
+shortcut
+</Misc_Strings>
+
+<TabBar_Menu>
+Close
+Close right
+Close left
+Close all but this
+Add to Group
+Create new Group
+Lock
+Clone this
+New window
+Copy path
+Properties
+Tab history
+Groups
+Undo closed
+Last activated
+Recently opened files
+Browse folder
+Close all but current
+Close Window
+Options
+Unlock
+Add to Application menu : 
+items
+Cancel
+Branches
+Remove this item from menu
+O&amp;pen containing folder
+Tab label
+Tab order
+Name
+Path
+Active
+Lock the Toolbars
+Merge tabs of other windows
+Invert
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar failed to open\r\n\r\n "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Create New Group
+Group name:
+Add all tabs
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Activate new tab
+Reuse existing tab
+Close all tabs when group opened
+Show tooltips
+Capture mouse X1/X2 buttons
+Show navigation buttons
+Tab history
+Recent files
+Use file Drag &amp;&amp; Drop onto tabs
+Language file:
+New tab location:
+After current tab closed, activate:
+When tab double-clicked:
+When background double-clicked:
+Path/Group name:
+Multiple rows of tab
+Rename ambiguous tabs automatically
+When mouse wheel clicked on folder:
+Up one level when dbl clicked on folder margin
+No window resizing
+Save window transparency
+Capture new Explorer processes
+Show folder tree when new process captured
+Do not capture window as a new tab when opened from outside
+Horizontal scroll with Shift + Wheel
+Change view mode with Ctrl + Wheel (XP)
+Prevent window closing when tabs exist
+Prevent window closing when tabs locked
+Restore tabs
+Restore locked tabs
+Use tab image
+Highlight color
+Tab size:
+Width
+Height
+Max
+Min
+Font
+Bold active tab title
+Tab title color
+Active
+Inactive
+Default
+Toolbar background color
+Folder icon
+Path
+Arguments
+Working directory
+Plugin language file:
+Hide menu bar
+XP-compatibile BS key(Vista)
+Full row selection in details view
+Grid lines for details view
+Alternate row color in details view
+Show preview tooltip
+with Shift key down
+Enable 'Sub folder tip'
+Show hidden objects
+Show files
+Eliminate file extension from selection when renaming(XP)
+Show system objects
+Send window to Task Tray by clicking Close button
+Max Width
+Max Height
+Toolbar background image
+Change selection by F2 when renaming files
+Show close button on tabs
+When tab wheel-clicked:
+Enable 'Sub folder tip' on Tabs
+Open new window at...
+With Alt key down
+On mouse hover
+Export settings...
+Cursor loop
+Network max timeout (seconds, 0 for system value)
+Send window to Task Tray on minimized
+Text alignment
+Menu renderer
+</TabBar_Option>
+
+<TabBar_Option2>
+On Folder Tree, open a new tab by wheel-click or click with shift key down (XP)
+Show tab switcher by Ctrl+Tab
+Text shadow
+Check for updates periodically
+Remove original tab when creating new window
+Indicate drive letter
+Sound
+Install a plugin
+Options
+Disable
+Enable
+Uninstall
+About {0}
+If you uninstall this plugin, you must also uninstall \r\n\r\n{0}\r\n\r\nAre you sure you want to do this?
+Display file information below images
+Use old ListView control (Win7)
+Display column headers in all views (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Left
+Right
+Most right
+Most left
+Last activated
+Up One Level
+Close
+Lock
+Show menu
+New window
+Clone
+Copy path
+Properties
+ - 
+Browse folder
+Close all but current
+Lock all
+Restore last closed
+Options
+Close window
+Clone current
+multiple
+New tab
+Auto
+Fixed
+Limit tab width
+Stretch
+Tile
+Real size
+Left
+Center
+Vista
+XP
+Stretch on each band
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+General
+Tab
+Window
+Appearance
+Groups
+Applications
+Plugins
+Shortcut Keys
+Misc.
+Path
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Clear
+Up
+Down
+Add separator
+Start Up
+Plugin Option
+Bg color
+Txt color
+Default
+Set
+Delete
+Check now
+Copy to clipboard
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Taskbar
+Desktop
+Lock items
+Draw title background
+Menu by one click
+Enable application shortcut keys
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Groups
+Undo closed
+Applications
+Recently opened files
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Go back ( Alt + Left )
+Go forward ( Alt + Right )
+Go back to start
+Go forward to end
+Select next tab
+Select previous tab
+Select first tab
+Select last tab
+Close current tab
+Close all but current
+Close left
+Close right
+Close window ( Alt + F4 )
+Undo close
+Clone current tab
+Open current folder in new window
+Lock / unlock current
+Lock / unlock all
+Browse folder
+Create new group
+Open option dialog
+Show toolbar menu
+Show current tab menu
+Show group menu ( button bar )
+Show recent folder menu ( button bar )
+Show user application menu ( button bar )
+Show / hide menu bar
+Copy selected files path
+Copy selected files name
+Copy current folder path
+Copy current folder name
+Check MD5 of selected files
+Bring window to topmost
+Transparency +
+Transparency -
+Focus file list
+Focus search bar (Vista)
+Focus search box ( button bar )
+Show Subfolder Tip Menu for selected folder
+Send window to Task Tray
+Focus the Tab Bar
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" is already assigned for "{1}".\r\n\r\nDo you want to reassign?
+Confirmation of reassignment
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugin
+User commands
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+New version found.\r\n\r\n{0}\r\n\r\nPress OK to go to the web site.
+Your version of QTTabBar is up to date.
+New development version found: 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>
