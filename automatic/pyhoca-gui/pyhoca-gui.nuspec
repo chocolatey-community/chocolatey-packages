@@ -13,7 +13,7 @@
     <licenseUrl>http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=blob_plain;f=LICENSE.txt;hb=HEAD</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Please refer to http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=history;f=debian/changelog for changelogs.</releaseNotes>
-    <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/pyhoca-gui.svg</iconUrl>
+    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/pyhoca-gui.svg</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

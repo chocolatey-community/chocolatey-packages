@@ -17,7 +17,7 @@ NOTE: This package will install Speccy without bundled adware. To achieve this, 
     <tags>piriform ccleaner speccy</tags>
     <copyright>Piriform LTD</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/speccy.png</iconUrl>
+    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/speccy.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

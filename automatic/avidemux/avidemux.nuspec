@@ -7,7 +7,7 @@
         <authors>“Mean”,“Gruntster” and “Fahr”</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://avidemux.sourceforge.net/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/avidemux.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/avidemux.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Avidemux is a free video editor designed for simple cutting, filtering and encoding tasks. It supports many file types, including AVI, DVD compatible MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated using projects, job queue and powerful scripting capabilities.
 Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the GNU GPL license. The program was written from scratch by Mean, but code from other people and projects has been used as well. Patches, translations and even bug reports are always welcome.</description>

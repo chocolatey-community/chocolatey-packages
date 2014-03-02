@@ -7,7 +7,7 @@
         <authors>MPC-HC Team</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html and http://mpc-hc.org/about/#third-party-libraries</licenseUrl>
         <projectUrl>http://mpc-hc.org/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/mpc-hc.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/mpc-hc.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.</description>
         <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>

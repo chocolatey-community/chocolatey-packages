@@ -7,7 +7,7 @@
     <authors>Lck</authors>
     <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
     <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
-    <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/ontopreplica.png</iconUrl>
+    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/ontopreplica.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A real-time, always on top, "replica" of a window of your choice, based on DWM Thumbnails.
 Completely written in C# for .NET 4.0/4.5, makes use of the Windows Forms Aero library.

@@ -6,7 +6,7 @@
         <title>Kingsoft Office Suite Free 2013</title>
         <authors>Kingsoft</authors>
         <projectUrl>http://www.kingsoftstore.com/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/kingsoft-office-free.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/kingsoft-office-free.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Kingsoft Office Suite Free 2013 is a free office suite, which includes free word processor, spreadsheet program and presentation maker. These three programs help you deal with office tasks with ease:
 Writer - Efficient word processor;

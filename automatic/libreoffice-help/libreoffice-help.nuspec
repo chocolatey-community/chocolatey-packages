@@ -7,7 +7,7 @@
         <authors>LibreOffice community</authors>
         <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
         <projectUrl>https://www.libreoffice.org/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/libreoffice.svg</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/libreoffice.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This installs the help pack for LibreOffice, the free and open source office suite.
 It detects the current system language and installs the help pack with the same language. If the LibreOffice help pack is not available for your language, it will install with en-US.</description>

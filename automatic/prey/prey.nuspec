@@ -7,7 +7,7 @@
         <authors>Fork Ltd</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://preyproject.com/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/prey.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/prey.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Rest safe.
 Prey lets you keep track of your laptop, phone and tablet whenever stolen or missing -- easily and all in one place. It's lightweight, open source software that gives you full and remote control, 24/7.</description>

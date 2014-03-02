@@ -5,7 +5,7 @@
         <version>{{PackageVersion}}</version>
         <title>Maxima</title>
         <authors>Macsyma group at Project MAC and volunteer contributors</authors>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/maxima.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/maxima.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Maxima is a computer algebra system based on a 1982 version of Macsyma. It is written in Common Lisp and runs on all POSIX platforms such as Mac OS X, Unix, BSD, and GNU/Linux as well as under Microsoft Windows and Android. It is free software released under the terms of the GNU General Public License.
 (from Wikipedia, the free encyclopedia)</description>

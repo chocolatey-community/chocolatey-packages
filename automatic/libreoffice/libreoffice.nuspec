@@ -13,7 +13,7 @@
     <copyright></copyright>
     <licenseUrl>http://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/libreoffice.svg</iconUrl>
+    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/libreoffice.svg</iconUrl>
     <releaseNotes>Fixed uninstaller</releaseNotes>
   </metadata>
 </package>

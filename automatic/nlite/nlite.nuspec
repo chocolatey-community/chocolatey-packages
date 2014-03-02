@@ -6,7 +6,7 @@
         <title>nLite</title>
         <authors>Dino Nuhagic (nuhi)</authors>
         <projectUrl>http://www.nliteos.com/index.html</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolateyautomaticpackages/nlite.png</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/nlite.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Deployment Tool for the Bootable Unattended Windows ISO 
 (Remove components, integrate hotfixes, drivers and themes. Tweaks, patches …)
