@@ -21,9 +21,8 @@ try {
   $packageName = '{{PackageName}}'
   $file = "$filePath\QuickTime.msi"
   Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
-  
-    Write-ChocolateySuccess "$packageName"
+
 } catch {
-    Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
     throw
 }

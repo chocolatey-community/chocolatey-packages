@@ -1,28 +1,21 @@
-﻿$packageName = '{{PackageName}}'
-$downloadFile = "ruKernelTool.zip"
-$url = "http://rukerneltool.rainerullrich.de/download2/ruKernelTool.zip"
+﻿try {
 
-cd "$env:TEMP"
+    $packageName = 'rukerneltool'
+    $file = Join-Path $env:TEMP "\t t\${packageName}.zip"
+    $url = 'http://rukerneltool.rainerullrich.de/download2/ruKernelTool.zip'
 
-if (Test-Path "$downloadFile") {Remove-Item "$downloadFile"}
+    if (Test-Path $file) {
+        Remove-Item $file
+    }
 
-wget --user="ruKernelTool2" --password="Bommelchen_2010" $url
+    Start-Process 'wget' -NoNewWindow -Wait -ArgumentList $url, "-O `"$file`"", '--user=ruKernelTool2', '--password=Bommelchen_2010'
 
-`7za x -o"$env:HOMEDRIVE" -y "$downloadFile"
-Remove-Item "$downloadFile"
+    & 7za x -o"$env:HOMEDRIVE" -y "$file"
+    Remove-Item $file
 
-$processor = Get-WmiObject Win32_Processor
-$is64bit = $processor.AddressWidth -eq 64
+    Write-ChocolateySuccess $packageName
 
-$desktop = "$([Environment]::GetFolderPath("Desktop"))"
-$startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
-
-if ($is64bit) {
-    Install-ChocolateyDesktopLink "$env:HOMEDRIVE\ruKernelTool\ruKernelTool_x64.exe"
-    Rename-Item -Path "$desktop\ruKernelTool_x64.exe.lnk" -NewName "ruKernelTool.lnk"
-} else {
-    Install-ChocolateyDesktopLink "$env:HOMEDRIVE\ruKernelTool\ruKernelTool.exe"
-    Rename-Item -Path "$desktop\ruKernelTool.exe.lnk" -NewName "ruKernelTool.lnk"
+} catch {
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
 }
-
-Copy-Item "$desktop\ruKernelTool.lnk" -Destination "$startMenu"
