@@ -5,6 +5,7 @@ automatic/Brackets-extract-version/output-brackets/*
 universal-usb-installer.exe
 universal-usb-installer-src.zip
 automatic/_output/**/*.nupkg
+manual/**/*nupkg
 automatic/_output/*/*/*.png
 automatic/_output/*/*/*.gif
 automatic/_output/*/*/*.jpg
