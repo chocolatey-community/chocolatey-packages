@@ -1,6 +1,6 @@
 ﻿$packageName = 'ffmpeg'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+$url = 'http://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-2.1.4-win32-shared.7z'
+$url64 = 'http://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-2.1.4-win64-shared.7z'
 
 try {
     $destinationFolder = "$env:SystemDrive\tools\ffmpeg"
