@@ -47,6 +47,8 @@ $version = '{{PackageVersion}}'
         }
     }
 
+    $downUrl = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
+
 
     $uroot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
     $uroot64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
@@ -58,11 +60,9 @@ $version = '{{PackageVersion}}'
     if ($msid -ne $null) {
         Write-Host "LibreOffice $version is already installed!"
     } else {
-
-     $downUrl = '{{DownloadUrl}}'
-     # installer, will assert administrative rights
-     Install-ChocolateyPackage $packageName 'MSI' '/passive' $downUrl -validExitCodes @(0)
-     # the following is all part of error handling
+        # installer, will assert administrative rights
+        Install-ChocolateyPackage $packageName 'MSI' '/passive' $downUrl -validExitCodes @(0)
+        # the following is all part of error handling
     }
 #} catch {
 #  Write-ChocolateyFailure $packageName $($_.Exception.Message)
