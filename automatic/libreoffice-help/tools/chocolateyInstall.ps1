@@ -5,11 +5,44 @@ $silentArgs = '/passive'
 $language = (Get-Culture).Name # Get language and country code separated by hyphen
 #$language = 'xx-XX' # Language override for testing purposes
 
-$urlFile = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
-$filePath = "$env:TEMP\chocolatey\$packageName"
-$fileFullPath = "$filePath\downloadLinks.html"
-
 try {
+
+
+
+    $versionsHtmlFile = "$env:TEMP\libreoffice-versions.html"
+    $versionsHtmlUrl = 'http://download.documentfoundation.org/libreoffice/stable/'
+
+    Get-ChocolateyWebFile 'libreoffice-versions-html' $versionsHtmlFile $versionsHtmlUrl
+
+    $matchArray = (Get-Content $versionsHtmlFile) -match 'href="([\d\.]+)\/"'
+
+    Remove-Item $versionsHtmlFile
+
+    $downloadableVersions = @()
+
+    for ($i = 0; $i -lt $matchArray.Length; $i += 1) {
+        $matchArray[$i] -match '[\d\.]+'
+        $downloadableVersions += $Matches[0]
+    }
+
+    if (-not($downloadableVersions -match $version)) {
+
+        Write-Output 'The version of the Help-Pack for LibreOffice specified in the package is no longer available to download. This package will download the latest available version instead.'
+
+        if ([System.Version]$downloadableVersions[0] -gt [System.Version]$downloadableVersions[1]) {
+            $version = $downloadableVersions[0]
+        } else {
+            $version = $downloadableVersions[1]
+        }
+    }
+
+
+
+    $urlFile = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
+    $filePath = "$env:TEMP\chocolatey\$packageName"
+    $fileFullPath = "$filePath\downloadLinks.html"
+
+
 
     if (-not (Test-Path $filePath)) {
         New-Item -ItemType directory -Path $filePath
