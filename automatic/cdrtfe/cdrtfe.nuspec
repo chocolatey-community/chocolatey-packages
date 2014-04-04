@@ -7,6 +7,7 @@
         <authors>cdrtfe team</authors>
         <licenseUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</licenseUrl>
         <projectUrl>http://cdrtfe.sourceforge.net/</projectUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/cdrtfe.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>cdrtfe is an open source CD/DVD/BD burning application for Microsoft Windows. You can burn data discs, Audio CDs, XCDs, (S)VCDs and DVD-Video discs. It supports creation and writing of ISO images and bootable discs. Disc images and Audio CDs can be written simultaneously to multiple writers.
 cdrtfe is a win32 frontend for the cdrtools (cdrecord, mkisofs, readcd, cdda2wav), Mode2CDMaker, VCDImager and other well-known tools.
@@ -19,4 +20,4 @@ Note: This package installs cdrtfe into C:\cdrtfe, not into %ProgramFiles%\cdrtf
     <files>
         <file src="tools\**" target="tools" />
     </files>
-</package>
+</package>fdssapp

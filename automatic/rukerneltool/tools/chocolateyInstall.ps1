@@ -1,7 +1,7 @@
 ﻿try {
 
-    $packageName = 'rukerneltool'
-    $file = Join-Path $env:TEMP "\t t\${packageName}.zip"
+    $packageName = '{{PackageName}}'
+    $file = Join-Path $env:TEMP "${packageName}.zip"
     $url = 'http://rukerneltool.rainerullrich.de/download2/ruKernelTool.zip'
 
     if (Test-Path $file) {

@@ -7,6 +7,7 @@
         <authors>Various (see http://www.truecrypt.org/localizations)</authors>
         <projectUrl>http://www.truecrypt.org/localizations</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/truecrypt.png</iconUrl>
         <description>This package contains all available language files for TrueCrypt, the free open-source disk encryption software. The language files get extracted into the TrueCrypt program folder. Then the desired language can be selected in the TrueCrypt settings.
 Note: The language files are public domain, so they can be distributed and modified freely.</description>
         <summary>Language files for TrueCrypt, the free open-source disk encryption software</summary>
