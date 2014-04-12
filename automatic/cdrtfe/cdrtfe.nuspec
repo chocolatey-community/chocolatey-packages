@@ -20,4 +20,4 @@ Note: This package installs cdrtfe into C:\cdrtfe, not into %ProgramFiles%\cdrtf
     <files>
         <file src="tools\**" target="tools" />
     </files>
-</package>fdssapp
+</package>
