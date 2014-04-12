@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>keepassx-langfiles</id>
-        <version>1.27</version>
+        <version>1.27.0.20140412</version>
         <title>KeePass 1.x language files</title>
         <authors>KeePass Team</authors>
         <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
@@ -19,6 +19,7 @@
         </dependencies>
     </metadata>
     <files>
+        <file src="tools\keepass_1.x_langfiles.zip" target="tools\keepass_1.x_langfiles.zip" />
         <file src="tools\**" target="tools" />
     </files>
 </package>
