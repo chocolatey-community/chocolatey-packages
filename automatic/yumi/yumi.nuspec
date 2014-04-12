@@ -17,6 +17,7 @@ Aside from a few distributions, all files are stored within the Multiboot folder
         <tags>usb flash drive multiboot linux iso</tags>
     </metadata>
     <files>
+        <file src="tools\yumi.exe" target="tools\yumi.exe" />
         <file src="tools\**" target="tools" />
     </files>
 </package>

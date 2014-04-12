@@ -19,6 +19,7 @@
         </dependencies>
     </metadata>
     <files>
+        <file src="tools\keepass_2.x_langfiles.zip" target="tools\keepass_2.x_langfiles.zip" />
         <file src="tools\**" target="tools" />
     </files>
 </package>
