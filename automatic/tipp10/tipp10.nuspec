@@ -7,7 +7,7 @@
         <authors>Tom Thielicke IT Solutions</authors>
         <licenseUrl>https://www.tipp10.com/en/license/</licenseUrl>
         <projectUrl>https://www.tipp10.com/en/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/tipp10.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/tipp10.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>TIPP10 is a free 10-finger touch typing tutor. TIPP10 is easy to use and features a clear user interface. Beginners and even children will find their way around right away so they can start practicing without a hitch. You will be able to learn touch typing quickly and efficiently with the program’s intelligent practice lessons, useful support functions and an extensive progress tracker. You can also play a typing game and expand the program with open lessons or make your own to meet your specific needs.</description>
         <summary>10-finger touch typing tutor</summary>

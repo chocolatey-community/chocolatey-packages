@@ -6,9 +6,9 @@
         <title>nLite</title>
         <authors>Dino Nuhagic (nuhi)</authors>
         <projectUrl>http://www.nliteos.com/index.html</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/nlite.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/nlite.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Deployment Tool for the Bootable Unattended Windows ISO 
+        <description>Deployment Tool for the Bootable Unattended Windows ISO
 (Remove components, integrate hotfixes, drivers and themes. Tweaks, patches …)
 Have you ever wanted to remove Windows components like Media Player, Internet Explorer, Outlook Express, MSN Explorer, Messenger …
 How about not even to install them with Windows ?
@@ -24,13 +24,13 @@ Tweaks
 Services Configuration
 Patches ***
 Bootable ISO creation
-* - Textmode (CD Boot) and normal PnP 
+* - Textmode (CD Boot) and normal PnP
 ** - hotfixes with white icons, *KB*.exe, including update packs
-and Internet Explorer 7 
-***- supports generic SFC, Uxtheme, TcpIp and Usb Polling patching. 
-nLite supports Windows 2000, XP x86/x64 and 2003 x86/x64 in all languages. 
+and Internet Explorer 7
+***- supports generic SFC, Uxtheme, TcpIp and Usb Polling patching.
+nLite supports Windows 2000, XP x86/x64 and 2003 x86/x64 in all languages.
 It needs .NET Framework 2.0 in order to run …</description>
-        <summary>Deployment Tool for the Bootable Unattended Windows ISO 
+        <summary>Deployment Tool for the Bootable Unattended Windows ISO
 (Remove components, integrate hotfixes, drivers and themes. Tweaks, patches …)</summary>
         <releaseNotes />
         <copyright>2004–2008 Dino Nuhagic (nuhi), all rights reserved.</copyright>

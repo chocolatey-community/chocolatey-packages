@@ -7,7 +7,7 @@
     <authors>D. Richard Hipp, SQLite contributors</authors>
     <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
     <projectUrl>http://www.sqlite.org</projectUrl>
-    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/sqlite.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sqlite.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This package installs the DLL for the SQLite SQL database engine in your user path. SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.</description>
     <summary>A DLL for the SQLite SQL database engine installed in your user path.</summary>

@@ -7,7 +7,7 @@
         <authors>Philipp Schmieder Medien</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
         <projectUrl>http://clipgrab.de/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/clipgrab.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/clipgrab.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>ClipGrab is a free software for downloading and converting online videos from many sites like YouTube or Vimeo.
 ClipGrab can download from the following sites: YouTube, Clipfish, Collegehumor, Dailymotion, MyVideo, MySpass, Sevenload, Tudou, Vimeo.

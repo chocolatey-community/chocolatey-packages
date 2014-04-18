@@ -19,7 +19,7 @@
 * A toolbar that enables easy access to the tools
 * Some AutoHotkey scripting facilities
 Note: This package uses an AutoHotkey-script for unattended installation.</description>
-    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/scite4autohotkey.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/scite4autohotkey.png</iconUrl>
     <projectUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/</projectUrl>
     <tags>autohotkey debugging ide</tags>
     <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>

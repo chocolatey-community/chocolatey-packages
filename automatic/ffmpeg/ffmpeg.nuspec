@@ -7,7 +7,7 @@
         <authors>authors</authors>
         <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
         <projectUrl>http://www.ffmpeg.org/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/ffmpeg.svg</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffmpeg.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.
 Note: This package is for the shared and stable ffmpeg versions. The package places the ffmpeg binaries into $env:SystemDrive\tools\ffmpeg\bin and adds that folder to the Path environment variable.</description>

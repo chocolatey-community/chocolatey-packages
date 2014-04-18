@@ -7,7 +7,7 @@
         <authors>Core Services</authors>
         <licenseUrl>http://www.my-debugbar.com/wiki/IETester/HomePage</licenseUrl>
         <projectUrl>http://my-debugbar.com/wiki/IETester/HomePage</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/ietester.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ietester.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>IETester is a free (both for personal and professional usage) WebBrowser that allows you to have the rendering and javascript engines of IE10, IE9, IE8, IE7 IE 6 and IE5.5 on Windows 8 desktop, Windows 7, Vista and XP, as well as the installed IE in the same process.</description>
         <summary>Browser Compatibility Check for Internet Explorer Versions from 5.5 to 10</summary>

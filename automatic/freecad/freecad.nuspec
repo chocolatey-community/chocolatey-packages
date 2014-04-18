@@ -7,7 +7,7 @@
         <authors>authors</authors>
         <licenseUrl>http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=FAQ#Licensing.2C_copying_and_reuse</licenseUrl>
         <projectUrl>http://sourceforge.net/apps/mediawiki/free-cad/index.php?title=Main_Page</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/freecad.svg</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD, CAx, CAE and PLM, aimed directly at mechanical engineering and product design but also fits a wider range of uses in engineering, such as architecture or other engineering specialties. It is 100% Open Source and extremely modular, allowing for very advanced extension and customization.
 FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant 3D scene representation model provided by the Coin 3D library, and a broad Python API. The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX and Linux platforms.</description>

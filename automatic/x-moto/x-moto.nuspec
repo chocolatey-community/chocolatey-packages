@@ -7,7 +7,7 @@
         <authors>authors</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://xmoto.tuxfamily.org/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/x-moto.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/x-moto.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>X-Moto is a free and open source 2D motocross platform game developed for Linux, FreeBSD, Mac OS X and Microsoft Windows, where physics play an all important role in the gameplay. The basic gameplay clones that of Elasto Mania, but the simulated physics are subtly different.</description>
         <summary>Free and open source 2D motocross platform game</summary>

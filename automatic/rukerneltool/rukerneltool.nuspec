@@ -9,7 +9,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</description>
         <summary>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</summary>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/rukerneltool.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/rukerneltool.png</iconUrl>
         <releaseNotes>http://rukerneltool.rainerullrich.de/ChangeLog_Long.txt</releaseNotes>
         <copyright>2013 Rainer Ullrich</copyright>
         <tags>avm fritz!box flash firmware</tags>

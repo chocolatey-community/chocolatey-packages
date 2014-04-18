@@ -6,7 +6,7 @@
     <title>Python</title>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
-    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/python.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</description>
     <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>

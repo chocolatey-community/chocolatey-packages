@@ -7,7 +7,7 @@
         <authors>Mozilla</authors>
         <licenseUrl>http://www.mozilla.org/en-US/legal/eula/thunderbird.html</licenseUrl>
         <projectUrl>https://www.mozilla.org/en/thunderbird/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/thunderbird.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Thunderbird is a free email application that’s easy to set up and customize – and it’s loaded with great features!
 This package installs Thunderbird in the first language which matches this list:

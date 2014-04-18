@@ -7,7 +7,7 @@
         <authors>Pendrivelinux</authors>
         <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
         <projectUrl>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</projectUrl>
-        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/universal-usb-installer.png</iconUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/universal-usb-installer.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to choose from a selection of Linux Distributions to put on your USB Flash Drive. The Universal USB Installer is easy to use. Simply choose a Live Linux Distribution, the ISO file, your Flash Drive and, Click Install. Upon completion, you should have a ready to run bootable USB Flash Drive with your select operating system installed. Other features include; Persistence (if available) – note that casper persistence will only work with fat16 or fat32 formatted drives.</description>
         <summary>Universal USB Installer is a Live Linux USB Creator that allows you to choose from a selection of Linux Distributions to put on your USB Flash Drive. </summary>

@@ -7,7 +7,7 @@
     <authors>Artifex</authors>
     <licenseUrl>http://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
     <projectUrl>http://ghostscript.com/</projectUrl>
-    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/ghostscript.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ghostscript.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Ghostscript is a package of software that provides:
  * An interpreter for the PostScript (TM) language, with the ability to convert PostScript language files to many raster formats, view them on displays, and print them on printers that don't have PostScript language capability built in;

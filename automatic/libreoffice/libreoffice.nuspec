@@ -13,7 +13,7 @@
     <copyright></copyright>
     <licenseUrl>http://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/libreoffice.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
     <releaseNotes></releaseNotes>
   </metadata>
 </package>

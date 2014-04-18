@@ -4,7 +4,7 @@
     <version>{{PackageVersion}}</version>
     <authors>Mozilla</authors>
     <projectUrl>http://www.mozilla.org/en-US/firefox/new/</projectUrl>
-    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/firefox.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/firefox.png</iconUrl>
     <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>
     <id>{{PackageName}}</id>
     <title>Mozilla Firefox</title>
