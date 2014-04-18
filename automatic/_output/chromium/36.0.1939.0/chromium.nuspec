@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
+        <id>chromium</id>
+        <version>36.0.1939.0</version>
         <title>Chromium continuous build</title>
         <authors>Chromium team</authors>
         <projectUrl>http://www.chromium.org/Home</projectUrl>
-        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chromium.svg</iconUrl>
+        <iconUrl>http://tomone.github.io/chocolatey-packages/icons/chromium.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This package installs the Chromium continuous builds into %localappdata%\Chromium. They can be unstable.</description>
         <summary>Chromium continuous build (unstable)</summary>

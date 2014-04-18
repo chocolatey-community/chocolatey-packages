@@ -1,13 +1,28 @@
-﻿$packageName = 'libreoffice-help'
+﻿$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$matchLanguagePath = Join-Path $scriptDir 'matchLanguage.ps1'
+
+Import-Module $matchLanguagePath
+
+function getInstallLanguageOverride($installArguments) {
+    $argumentMap = ConvertFrom-StringData $installArguments
+    $langFromInstallArgs = $argumentMap.Item('l')
+    return $langFromInstallArgs
+}
+
+function getLangOfExistentInstall() {
+    
+}
+
+$packageName = 'libreoffice-help'
 $fileType = 'msi'
 $version = '{{PackageVersion}}'
 $silentArgs = '/passive'
-$language = (Get-Culture).Name # Get language and country code separated by hyphen
-#$language = 'xx-XX' # Language override for testing purposes
 
 try {
 
 
+    # Version selection (downloads the next version if the current package version is outdated)
+    # This prevents 404 errors, because older LibreOffice versions are no longer available to download
 
     $versionsHtmlFile = "$env:TEMP\libreoffice-versions.html"
     $versionsHtmlUrl = 'http://download.documentfoundation.org/libreoffice/stable/'
@@ -37,36 +52,40 @@ try {
     }
 
 
+    # Language detection
 
-    $urlFile = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
-    $filePath = "$env:TEMP\chocolatey\$packageName"
-    $fileFullPath = "$filePath\downloadLinks.html"
+    $urlDownloadLinks = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
+    $htmlDownloadLinks = "$env:TEMP\libreoffice-help-download-links.html"
 
+    Get-ChocolateyWebFile 'libreoffice-help-download-links' $htmlDownloadLinks $urlDownloadLinks
 
+    $htmlLinksContent = Get-Content $htmlDownloadLinks
+    Remove-Item $htmlDownloadLinks
 
-    if (-not (Test-Path $filePath)) {
-        New-Item -ItemType directory -Path $filePath
+    $regex = '(?<=helppack_)[\-a-zA-Z]{2,}(?=\.msi">)'
+
+    $matchObject = [regex]::Matches($htmlLinksContent, $regex)
+
+    # Language matching with matchLanguage function
+    $availableLangs = @()
+
+    foreach ($singleMatch in $matchObject) {
+        $availableLangs += $singleMatch.Value
     }
 
-    Get-ChocolateyWebFile $packageName $fileFullPath $urlFile
+    $installOverride = getInstallLanguageOverride $installArguments
+    $ofExistentInstall = $null
+    $fallback = 'en-US'
 
-    # The $out variable contains a value when there is a LibreOffice help pack with the same language as system currently has.
-    # Otherwise it will download the en-US help pack.
+    $language = matchLanguage $availableLangs $installOverride $ofExistentInstall $fallback
 
-    $out = Select-String -Path $fileFullPath -Pattern "helppack_${language}.msi"
-    if ($out -eq $null) {
-        $out = Select-String -Path $fileFullPath -Pattern "helppack_${language}.msi"
-    }
+    Write-Host '---'
+    Write-Host $language
+    Write-Host '---'
 
-    if ($out -eq $null) {
-        $language = $language -replace '\-[a-zA-Z]{2}', '' # Remove country code and hyphen
-        $out = Select-String -Path $fileFullPath -Pattern "helppack_${language}.msi"
-    }
 
-    if ($out -eq $null) {
-        $language = 'en-US' # Fallback language if others fail
-    }
 
+    # Download of libreoffice-help with the right version and language
     $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${language}.msi"
 
     Install-ChocolateyPackage $packageName $fileType $silentArgs $url
