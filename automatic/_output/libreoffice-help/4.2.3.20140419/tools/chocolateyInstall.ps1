@@ -3,11 +3,6 @@ $matchLanguagePath = Join-Path $scriptDir 'matchLanguage.ps1'
 
 Import-Module $matchLanguagePath
 
-$packageName = 'libreoffice-help'
-$fileType = 'msi'
-$version = '{{PackageVersion}}'
-$silentArgs = '/passive'
-
 function getInstallLanguageOverride($installArguments) {
     $argumentMap = ConvertFrom-StringData $installArguments
     $langFromInstallArgs = $argumentMap.Item('l')
@@ -15,9 +10,8 @@ function getInstallLanguageOverride($installArguments) {
 }
 
 function getLangOfExistentInstall() {
-    $majorVersion = $version -replace '(^\d).+', '$1'
-    $helpInstallPath32 = "$env:ProgramFiles\LibreOffice $majorVersion\help"
-    $helpInstallPath64 = "${env:ProgramFiles(x86)}\LibreOffice $majorVersion\help"
+    $helpInstallPath32 = "$env:ProgramFiles\LibreOffice 4\help"
+    $helpInstallPath64 = "${env:ProgramFiles(x86)}\LibreOffice 4\help"
 
     if (Test-Path $helpInstallPath32) {
         return (Get-ChildItem $helpInstallPath32).Name
@@ -29,6 +23,11 @@ function getLangOfExistentInstall() {
 
     return $null
 }
+
+$packageName = 'libreoffice-help'
+$fileType = 'msi'
+$version = '4.2.3'
+$silentArgs = '/passive'
 
 try {
 
@@ -71,7 +70,7 @@ try {
 
     Get-ChocolateyWebFile 'libreoffice-help-download-links' $htmlDownloadLinks $urlDownloadLinks
 
-    $htmlLinksContent = Get-Content $htmlDownloadLinks
+    $htmlLinksContent = Get-Content $htmlDownloadLinksf
     Remove-Item $htmlDownloadLinks
 
     $regex = '(?<=helppack_)[\-a-zA-Z]{2,}(?=\.msi">)'
@@ -91,23 +90,10 @@ try {
 
     $language = matchLanguage $availableLangs $installOverride $ofExistentInstall $fallback
 
+    # Download of libreoffice-help with the right version and language
+    $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${language}.msi"
 
-    # if multiple language packs in different are already install,
-    # update all of them, otherwise update/install only the matched language
-    if (($ofExistentInstall -is [System.Array]) -and ($installOverride -eq $null)) {
-        foreach ($existentLang in $ofExistentInstall) {
-            $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${existentLang}.msi"
-
-            Install-ChocolateyPackage "$packageName $existentLang" $fileType $silentArgs $url
-        }
-
-    } else {
-
-        # Download of libreoffice-help with the right version and language
-        $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${language}.msi"
-
-        Install-ChocolateyPackage $packageName $fileType $silentArgs $url
-    }
+    Install-ChocolateyPackage $packageName $fileType $silentArgs $url
 
 }   catch {
     Write-ChocolateyFailure $packageName $($_.Exception.Message)

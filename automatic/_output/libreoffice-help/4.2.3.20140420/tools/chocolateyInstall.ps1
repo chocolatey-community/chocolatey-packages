@@ -5,7 +5,7 @@ Import-Module $matchLanguagePath
 
 $packageName = 'libreoffice-help'
 $fileType = 'msi'
-$version = '{{PackageVersion}}'
+$version = '4.2.3'
 $silentArgs = '/passive'
 
 function getInstallLanguageOverride($installArguments) {
