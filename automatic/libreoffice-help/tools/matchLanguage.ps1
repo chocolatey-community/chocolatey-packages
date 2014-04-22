@@ -12,7 +12,7 @@
 
     # Get get language override for user account if present. Overriding the language is possible from the control panel
     if (Get-WinUILanguageOverride) {
-        $detectedLangs.winUiOverride = Get-WinUILanguageOverride.Name
+        $detectedLangs.winUiOverride = (Get-WinUILanguageOverride).Name
     }
 
     # Get the first language from the user account language list. If the language override is not set, this is the
