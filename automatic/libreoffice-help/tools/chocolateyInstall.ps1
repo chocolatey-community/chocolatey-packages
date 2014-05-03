@@ -1,7 +1,9 @@
 ﻿$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $matchLanguagePath = Join-Path $scriptDir 'matchLanguage.ps1'
+$loHelpIsAlreadyInstalled = Join-Path $scriptDir 'loHelpIsAlreadyInstalled.ps1'
 
 Import-Module $matchLanguagePath
+Import-Module $loHelpIsAlreadyInstalled
 
 $packageName = 'libreoffice-help'
 $fileType = 'msi'
@@ -98,7 +100,13 @@ try {
         foreach ($existentLang in $ofExistentInstall) {
             $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${existentLang}.msi"
 
-            Install-ChocolateyPackage "$packageName $existentLang" $fileType $silentArgs $url
+            # If LibreOffice Help Pack with the same version as the package version is not already installed,
+            # download and install the Help Pack of the existent language
+            if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $existentLang)) {
+                Install-ChocolateyPackage "$packageName $existentLang" $fileType $silentArgs $url
+            } else {
+                Write-Host "LibreOffice Help Pack $version ($existentLang) is already installed."
+            }
         }
 
     } else {
@@ -106,7 +114,13 @@ try {
         # Download of libreoffice-help with the right version and language
         $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${language}.msi"
 
-        Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+        # If LibreOffice Help Pack with the same version as the package version is not already installed,
+        # download and install the Help Pack of the matched
+        if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $language)) {
+            Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+        } else {
+            Write-Host "LibreOffice Help Pack $version ($language) is already installed."
+        }
     }
 
 }   catch {
