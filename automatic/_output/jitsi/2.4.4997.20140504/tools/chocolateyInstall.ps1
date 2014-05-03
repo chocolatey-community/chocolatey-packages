@@ -1,9 +1,9 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
+﻿$packageName = 'jitsi'
+$version = '2.4.4997'
 
 $installerType = 'msi'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+$url = 'https://download.jitsi.org/jitsi/msi/jitsi-2.4.4997-x86.msi'
+$url64 = 'https://download.jitsi.org/jitsi/msi/jitsi-2.4.4997-x64.msi'
 
 $silentArgs = '/passive'
 $validExitCodes = @(0)
