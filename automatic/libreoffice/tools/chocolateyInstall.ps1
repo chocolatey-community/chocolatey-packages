@@ -1,24 +1,7 @@
-﻿function Find-CID {
-    param([String]$croot, [string]$cdname, [string]$ver)
-
-    if (Test-Path $croot) {
-        Get-ChildItem -Force -Path $croot | foreach {
-            $CurrentKey = (Get-ItemProperty -Path $_.PsPath)
-            if ($CurrentKey -match $cdname -and $CurrentKey -like "*${ver}*") {
-                return $CurrentKey.PsChildName
-            }
-        }
-    }
-    return $null
-}
-
-$packageName = '{{PackageName}}'
+﻿$packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
 
-
-#try {
-# Example: $clsid='{F1EE568A-171F-4C06-9BE6-2395BED067A3}'
-
+try {
 
     $versionsHtmlFile = "$env:TEMP\libreoffice-versions.html"
     $versionsHtmlUrl = 'http://download.documentfoundation.org/libreoffice/stable/'
@@ -50,21 +33,16 @@ $version = '{{PackageVersion}}'
     $downUrl = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
 
 
-    $uroot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
-    $uroot64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
-    $msid = Find-CID $uroot "LibreOffice" "$version"
-    if ($msid -eq $null) {
-        # try 64bit registry
-        $msid = Find-CID $uroot64 'LibreOffice' $version
-    }
-    if ($msid -ne $null) {
-        Write-Host "LibreOffice $version is already installed!"
+    # Check if LibreOffice in the same version is already installed
+    $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {($_.Name -match '^LibreOffice [\d\.]+$') -and ($_.Version -match "^$version")}
+
+    if ($alreadyInstalled) {
+        Write-Host "LibreOffice $version is already installed on the computer. Skipping download."
     } else {
-        # installer, will assert administrative rights
-        Install-ChocolateyPackage $packageName 'MSI' '/passive' $downUrl -validExitCodes @(0)
-        # the following is all part of error handling
+        Install-ChocolateyPackage $packageName 'msi' '/passive' $downUrl -validExitCodes @(0)
     }
-#} catch {
-#  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-#  throw
-#}
+
+} catch {
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
+}
