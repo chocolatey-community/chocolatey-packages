@@ -1,13 +1,4 @@
-﻿$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
-$binRoot = "$env:systemdrive\tools"
-$unzipLocation = "$binRoot\Compact Timer"
+﻿$packageName = 'compact-timer'
+$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 
-Install-ChocolateyZipPackage $packageName $url $unzipLocation
-
-$desktop = "$([Environment]::GetFolderPath("Desktop"))"
-$startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
-
-Install-ChocolateyDesktopLink "$unzipLocation\CompactTimer.exe"
-Rename-Item -Path "$desktop\CompactTimer.exe.lnk" -NewName "Compact Timer.lnk"
-Copy-Item "$desktop\Compact Timer.lnk" -Destination "$startMenu"
+Install-ChocolateyDesktopLink "$scriptDir\CompactTimer.exe"
