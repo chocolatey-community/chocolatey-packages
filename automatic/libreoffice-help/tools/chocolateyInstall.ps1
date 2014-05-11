@@ -34,38 +34,6 @@ function getLangOfExistentInstall() {
 
 try {
 
-
-    # Version selection (downloads the next version if the current package version is outdated)
-    # This prevents 404 errors, because older LibreOffice versions are no longer available to download
-
-    $versionsHtmlFile = "$env:TEMP\libreoffice-versions.html"
-    $versionsHtmlUrl = 'http://download.documentfoundation.org/libreoffice/stable/'
-
-    Get-ChocolateyWebFile 'libreoffice-versions-html' $versionsHtmlFile $versionsHtmlUrl
-
-    $matchArray = (Get-Content $versionsHtmlFile) -match 'href="([\d\.]+)\/"'
-
-    Remove-Item $versionsHtmlFile
-
-    $downloadableVersions = @()
-
-    for ($i = 0; $i -lt $matchArray.Length; $i += 1) {
-        $matchArray[$i] -match '[\d\.]+'
-        $downloadableVersions += $Matches[0]
-    }
-
-    if (-not($downloadableVersions -match $version)) {
-
-        Write-Output 'The version of the Help-Pack for LibreOffice specified in the package is no longer available to download. This package will download the latest available version instead.'
-
-        if ([System.Version]$downloadableVersions[0] -gt [System.Version]$downloadableVersions[1]) {
-            $version = $downloadableVersions[0]
-        } else {
-            $version = $downloadableVersions[1]
-        }
-    }
-
-
     # Language detection
 
     $urlDownloadLinks = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
