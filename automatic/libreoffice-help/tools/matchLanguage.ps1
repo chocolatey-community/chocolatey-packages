@@ -11,7 +11,7 @@
     $detectedLangsOrder = @('installOverride', 'ofExistentInstall', 'winUiOverride', 'listFirst', 'fallback')
 
     # Get get language override for user account if present. Overriding the language is possible from the control panel
-    if (Get-WinUILanguageOverride) {
+    if (Get-Command Get-WinUILanguageOverride -ErrorAction SilentlyContinue) {
         $detectedLangs.winUiOverride = (Get-WinUILanguageOverride).Name
     }
 
