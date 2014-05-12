@@ -7,16 +7,23 @@ $silentArgs = '/passive'
 
 try {
 
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit
+    $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Python $version"}
 
-    $pythonFolder = 'Python' + $version -replace '(\d)\.(\d)\.\d+', '$1$2'
-
-    $pythonPath = Join-Path $env:systemdrive "$pythonFolder\"
-
-    if (Test-Path $pythonPath) {
-        Install-ChocolateyPath $pythonPath 'Machine'
+    if ($alreadyInstalled) {
+        Write-Output "Python $version is already installed. Skipping download and installation."   
     } else {
-        Write-Host "Folder for Python path couldn’t be determined. Please add it manually to your Path environment variable"
+    
+        Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit
+
+        $pythonFolder = 'Python' + $version -replace '(\d)\.(\d+)\.\d+', '$1$2'
+
+        $pythonPath = Join-Path $env:systemdrive "$pythonFolder\"
+
+        if (Test-Path $pythonPath) {
+            Install-ChocolateyPath $pythonPath 'Machine'
+        } else {
+            Write-Output "Folder for Python path couldn’t be determined. Please add it manually to your Path environment variable"
+        }
     }
 
 } catch {
