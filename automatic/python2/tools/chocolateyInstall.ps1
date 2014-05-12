@@ -10,9 +10,9 @@ try {
     $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Python $version"}
 
     if ($alreadyInstalled) {
-        Write-Output "Python $version is already installed. Skipping download and installation."   
+        Write-Output "Python $version is already installed. Skipping download and installation."
     } else {
-    
+
         Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit
 
         $pythonFolder = 'Python' + $version -replace '(\d)\.(\d+)\.\d+', '$1$2'
@@ -28,5 +28,5 @@ try {
 
 } catch {
     Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw 
+    throw
 }
