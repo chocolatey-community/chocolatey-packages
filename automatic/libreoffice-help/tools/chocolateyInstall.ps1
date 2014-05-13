@@ -8,6 +8,11 @@ Import-Module $loHelpIsAlreadyInstalled
 $packageName = 'libreoffice-help'
 $fileType = 'msi'
 $version = '{{PackageVersion}}'
+
+
+$version = '4.2.4'
+
+
 $silentArgs = '/passive'
 
 function getInstallLanguageOverride($installArguments) {
@@ -22,11 +27,11 @@ function getLangOfExistentInstall() {
     $helpInstallPath64 = "${env:ProgramFiles(x86)}\LibreOffice $majorVersion\help"
 
     if (Test-Path $helpInstallPath32) {
-        return (Get-ChildItem $helpInstallPath32).Name
+        return (Get-ChildItem $helpInstallPath32 | ?{ $_.PSIsContainer }).Name
     }
 
     if (Test-Path $helpInstallPath64) {
-        return (Get-ChildItem $helpInstallPath64).Name
+        return (Get-ChildItem $helpInstallPath64 | ?{ $_.PSIsContainer }).Name
     }
 
     return $null

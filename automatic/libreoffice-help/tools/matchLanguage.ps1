@@ -34,11 +34,11 @@
 
         foreach ($availableLang in $availableLangs) {
 
-            if ($availableLang -ieq $detectedLangs[$key]) {
+            if ($detectedLangs[$key] -contains $availableLang) {
                 return $availableLang
             }
 
-            if ($availableLang -ieq $langTwoLetter) {
+            if ($langTwoLetter -contains $availableLang) {
                 return $availableLang
             }
         }
