@@ -8,11 +8,6 @@ Import-Module $loHelpIsAlreadyInstalled
 $packageName = 'libreoffice-help'
 $fileType = 'msi'
 $version = '{{PackageVersion}}'
-
-
-$version = '4.2.4'
-
-
 $silentArgs = '/passive'
 
 function getInstallLanguageOverride($installArguments) {
