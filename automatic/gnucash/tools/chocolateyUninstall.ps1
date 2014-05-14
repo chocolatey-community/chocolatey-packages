@@ -1,9 +1,6 @@
 ﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
 $fileType = 'exe'
 $silentArgs = '/SILENT'
-# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-$url = '{{DownloadUrlx64}}'
 
 $registryPath32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
 $registryPathWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
@@ -19,14 +16,11 @@ try {
     }
 
     if ($registryPath) {
-        $displayName = (Get-ItemProperty -Path $registryPath -Name 'DisplayName').DisplayName
-        $installedVersion = $displayName -replace '.+?([\d\.]+)', '$1'
+        $uninstallString = (Get-ItemProperty -Path $registryPath -Name 'UninstallString').UninstallString
     }
 
-    if ($version -eq $installedVersion) {
-        Write-Output "GnuCash $installedVersion is already installed. Skipping download and installation."
-    } else {
-        Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+    if ($uninstallString) {
+        Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $uninstallString
     }
 
 } catch {
