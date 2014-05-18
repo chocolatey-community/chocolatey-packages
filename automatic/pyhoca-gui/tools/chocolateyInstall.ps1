@@ -1,7 +1,7 @@
-﻿$packageName = 'pyhoca-gui' 
-$installerType = 'EXE' 
+﻿$packageName = '{{PackageName}}'
+$installerType = 'exe'
 $url = '{{DownloadUrl}}'
-$silentArgs = '/S' 
-$validExitCodes = @(0) 
+$silentArgs = '/S'
+$validExitCodes = @(0)
 
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
+Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes

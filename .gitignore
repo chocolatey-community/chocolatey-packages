@@ -2,6 +2,7 @@ Thumbs.db
 yumi.exe
 automatic/Brackets-extract-version/node_modules/*
 automatic/Brackets-extract-version/output-brackets/*
+automatic/Brackets-extract-version/brackets-version.txt
 universal-usb-installer.exe
 universal-usb-installer-src.zip
 manual/**/*nupkg
