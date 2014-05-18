@@ -1,6 +1,26 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/S'
-$url = '{{DownloadUrl}}'
+$url32 = '{{DownloadUrl}}'
+$url64 = '{{DownloadUrlx64}}'
+$referer = 'http://www.fosshub.com/MKVToolNix.html'
+$downloadFile = 'mkvtoolnixInstall.exe'
+$downloadFileFullPath = "$env:TEMP\$downloadFile"
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+try {
+
+    if (Get-ProcessorBits -eq 64) {
+        $url = $url64
+    } else {
+        $url = $url32
+    }
+
+    cd $env:TEMP
+    Start-Process 'wget' -ArgumentList "-O $downloadFile", "--referer $referer", $url -Wait
+    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $downloadFileFullPath
+    Remove-Item $downloadFileFullPath
+
+} catch {
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
+}

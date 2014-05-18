@@ -13,5 +13,8 @@
         <summary>Tools for Matroska files</summary>
         <releaseNotes>https://www.bunkus.org/videotools/mkvtoolnix/doc/ChangeLog</releaseNotes>
         <tags>multimedia mkv container muxing demuxing</tags>
+        <dependencies>
+            <dependency id="wget" />
+        </dependencies>
     </metadata>
 </package>
