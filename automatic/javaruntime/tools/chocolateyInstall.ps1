@@ -23,13 +23,13 @@
     # Checks if JRE 32/64-bit in the same version is already installed,
     # otherwise it downloads and installs it.
     # This is to avoid unnecessary downloads and 1603 errors.
-    if ($thisJreInstalledHash.bit32) {
+    if ($thisJreInstalledHash.x86_32) {
         Write-Output "Java Runtime Environment $version (32-bit) is already installed. Skipping download and installation"
     } else {
         Install-ChocolateyPackage $packageName $installerType $installArgs $url
     }
 
-    if ($thisJreInstalledHash.bit64) {
+    if ($thisJreInstalledHash.x86_64) {
         Write-Output "Java Runtime Environment $version (64-bit) is already installed. Skipping download and installation"
     } else {
         # Here $url64 is used twice to obtain the correct message from Chocolatey
@@ -40,7 +40,7 @@
 
     # Only set the entry for the PATH variable and the JAVA_HOME env variable
     # if the same version of JRE was not already installed (32- or 64-bit separately)
-    if (!($thisJreInstalledHash.bit32) -or !($thisJreInstalledHash.bit64)) {
+    if (!($thisJreInstalledHash.x86_32) -or !($thisJreInstalledHash.x86_64)) {
 
         Install-ChocolateyPath $jreForPathVariable 'Machine'
         Start-ChocolateyProcessAsAdmin @"
