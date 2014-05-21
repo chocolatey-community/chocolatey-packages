@@ -1,62 +1,54 @@
-﻿$name   = '{{PackageName}}'
-# Find download URLs at http://www.java.com/en/download/manual.jsp
-$url    = '{{DownloadUrl}}'
-$url64  = '{{DownloadUrlx64}}'
-$version = '{{PackageVersion}}'
-$type   = 'exe'
-$silent = "/s REBOOT=Suppress"
-$java   = Join-Path $env:ProgramFiles 'Java\jre7'
-$bin    = Join-Path $java 'bin'
-$uroot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
-$uroot6432node = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
+﻿try {
 
-function Find-CID {
-    param([String]$croot, [string]$cdname, [string]$ver)
+    $scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+    # Import function to test if JRE in the same version is already installed
+    Import-Module (Join-Path $scriptDir 'thisJreInstalled.ps1')
 
-    if (Test-Path $croot) {
-        Get-ChildItem -Force -Path $croot | foreach {
-            $CurrentKey = (Get-ItemProperty -Path $_.PsPath)
-            if ($CurrentKey -match $cdname -and $CurrentKey -match $ver -and $CurrentKey -match 'jre') {
-                return $CurrentKey.PsChildName
-            }
-        }
+    $packageName = '{{PackageName}}'
+    # Find download URLs at http://www.java.com/en/download/manual.jsp
+    $url = '{{DownloadUrl}}'
+    $url64 = '{{DownloadUrlx64}}'
+    $version = '{{PackageVersion}}'
+    $versionMajor = $version -replace '^(\d+)\..*', '$1'
+    $installerType = 'exe'
+    $installArgs = '/s REBOOT=Suppress'
+
+    # If both 32- and 64-bit versions are installed, it adds only the folder
+    # of the 64-bit version to the env variables
+    $javaHome = Join-Path $env:ProgramFiles "Java\jre$versionMajor"
+    $jreForPathVariable = Join-Path $javaHome 'bin'
+
+    $thisJreInstalledHash = thisJreInstalled($version)
+
+    # Checks if JRE 32/64-bit in the same version is already installed,
+    # otherwise it downloads and installs it.
+    # This is to avoid unnecessary downloads and 1603 errors.
+    if ($thisJreInstalledHash.bit32) {
+        Write-Output "Java Runtime Environment $version (32-bit) is already installed. Skipping download and installation"
+    } else {
+        Install-ChocolateyPackage $packageName $installerType $installArgs $url
     }
 
-    return $null
-}
-
-try {
-
-    $msid = Find-CID $uroot 'Java \d Update \d{1,2}' $version
-    $msid6432node = Find-CID $uroot6432node 'Java \d Update \d{1,2}' $version
-
-    if ($msid) {
-        Write-Output "Java Runtime Environment $version is already installed."
+    if ($thisJreInstalledHash.bit64) {
+        Write-Output "Java Runtime Environment $version (64-bit) is already installed. Skipping download and installation"
     } else {
-        Install-ChocolateyPackage $name $type $silent $url
+        # Here $url64 is used twice to obtain the correct message from Chocolatey
+        # that it installed the 64-bit version, otherwise it would display 32-bit,
+        # regardless of the actual bitness of the software.
+        Install-ChocolateyPackage $packageName $installerType $installArgs $url64 $url64
     }
 
-    if ($msid6432node) {
-        Write-Output "Java Runtime Environment (32-bit) $version is already installed."
-    } else {
-        $is64bit = (Get-WmiObject Win32_Processor).AddressWidth -eq 64
-        if($is64bit) { 
-            Install-ChocolateyPackage $name $type $silent $url64
-        }
-    }
+    # Only set the entry for the PATH variable and the JAVA_HOME env variable
+    # if the same version of JRE was not already installed (32- or 64-bit separately)
+    if (!($thisJreInstalledHash.bit32) -or !($thisJreInstalledHash.bit64)) {
 
-    if ($msid -or $msid6432node) {
-        # No need to add a Java environment variable
-    } else {
-
-        Install-ChocolateyPath $bin 'Machine'
+        Install-ChocolateyPath $jreForPathVariable 'Machine'
         Start-ChocolateyProcessAsAdmin @"
-[Environment]::SetEnvironmentVariable('JAVA_HOME', '$java', 'Machine')
+[Environment]::SetEnvironmentVariable('JAVA_HOME', '$javaHome', 'Machine')
 "@
-
     }
 
 } catch {
-    Write-ChocolateyFailure $name $($_.Exception.Message)
-    return
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
 }
