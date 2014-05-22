@@ -29,13 +29,16 @@
         Install-ChocolateyPackage $packageName $installerType $installArgs $url
     }
 
-    if ($thisJreInstalledHash.x86_64) {
-        Write-Output "Java Runtime Environment $version (64-bit) is already installed. Skipping download and installation"
-    } else {
-        # Here $url64 is used twice to obtain the correct message from Chocolatey
-        # that it installed the 64-bit version, otherwise it would display 32-bit,
-        # regardless of the actual bitness of the software.
-        Install-ChocolateyPackage $packageName $installerType $installArgs $url64 $url64
+    # Only check for the 64-bit version if the system is 64-bit
+    if (Get-ProcessorBits -eq 64) {
+        if ($thisJreInstalledHash.x86_64) {
+            Write-Output "Java Runtime Environment $version (64-bit) is already installed. Skipping download and installation"
+        } else {
+            # Here $url64 is used twice to obtain the correct message from Chocolatey
+            # that it installed the 64-bit version, otherwise it would display 32-bit,
+            # regardless of the actual bitness of the software.
+            Install-ChocolateyPackage $packageName $installerType $installArgs $url64 $url64
+        }
     }
 
     # Only set the entry for the PATH variable and the JAVA_HOME env variable
