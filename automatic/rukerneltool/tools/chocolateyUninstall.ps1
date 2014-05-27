@@ -1,14 +1,26 @@
-﻿if (Test-Path "$env:HOMEDRIVE\ruKernelTool") {
-    Remove-Item "$env:HOMEDRIVE\ruKernelTool" -Recurse -Force
-}
+﻿try {
+    
+    $packageName = '{{PackageName}}'
 
-$desktop = "$([Environment]::GetFolderPath("Desktop"))"
-$startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
+    $desktop = "$([Environment]::GetFolderPath("Desktop"))"
+    $startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
 
-if (Test-Path "$desktop\ruKernelTool.lnk") {
-    Remove-Item "$desktop\ruKernelTool.lnk"
-}
+    $installDir1 = Join-Path $env:SystemDrive 'ruKernelTool'
+    $installDir2 = Join-Path $env:SystemDrive 'tools\ruKernelTool'
+    $installDir3 = Join-Path $env:ChocolateyBinRoot 'ruKernelTool'
+    $shortcut1 = Join-Path $desktop 'ruKernelTool.lnk'
+    $shortcut2 = Join-Path $startMenu 'ruKernelTool.lnk'
+    $possibleItemsToRemove = @($installDir1, $installDir2, $installDir3, $shortcut1, $shortcut2)
 
-if (Test-Path "$startMenu\ruKernelTool.lnk") {
-    Remove-Item "$startMenu\ruKernelTool.lnk"
+    foreach ($itemToRemove in $possibleItemsToRemove) {
+        if (Test-Path $itemToRemove) {
+            Remove-Item -Recurse -Force $itemToRemove
+        }
+    }
+
+    Write-ChocolateySuccess $packageName
+
+} catch {
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
 }

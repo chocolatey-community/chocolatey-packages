@@ -7,15 +7,16 @@
         <authors>Rainer Ullrich</authors>
         <projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</description>
+        <description>Universal flash-, upload- and recovery-tool for AVM Fritz!Box.
+Note: The actual version of ruKernelTool is {{DownloadUrlx64}}.
+This package puts the ruKernelTool files into $env:ChocolateyBinRoot\ruKernelTool if that env variable is set, otherwise it fallbacks to $env:SystemDrive\tools\ruKernelTool.</description>
         <summary>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</summary>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/rukerneltool.png</iconUrl>
-        <releaseNotes>http://rukerneltool.rainerullrich.de/ChangeLog_Long.txt</releaseNotes>
+        <releaseNotes></releaseNotes>
         <copyright>2013 Rainer Ullrich</copyright>
         <tags>avm fritz!box flash firmware</tags>
         <dependencies>
             <dependency id="wget" />
-            <dependency id="7zip.commandline" />
         </dependencies>
     </metadata>
 </package>
