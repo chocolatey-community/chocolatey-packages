@@ -1,78 +1,47 @@
-﻿$packageName = 'ffmpeg'
+﻿$packageName = '{{PackageName}}'
 $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
 
 try {
-    $destinationFolder = "$env:SystemDrive\tools\ffmpeg"
 
-    if (-not(Test-Path $destinationFolder)) {
-        New-Item -ItemType directory -Path $destinationFolder -Force
-    }
-
-    $downloadFile = Join-Path $env:TEMP "$packageName.7z"
-    Get-ChocolateyWebFile $packageName $downloadFile $url $url64
-
-    Start-Process "7za" -ArgumentList "x -o`"$destinationFolder`" -y `"$downloadFile`"" -Wait
-
-    $content = (Get-ChildItem $destinationFolder).Name
-    $hasMatched = $content -match '^ffmpeg-[\d\.]+-win[36][24]-shared$'
-
-    if ($hasMatched -match '^ffmpeg-[\d\.]+-win[36][24]-shared$') {
-        $subFolder = $hasMatched
-    } else {
-        $subFolder = $Matches[0]
-    }
-
-    Copy-Item "$destinationFolder\$subFolder\*" $destinationFolder -Recurse -Force
-    Remove-Item "$destinationFolder\$subFolder" -Recurse -Force
-    Remove-Item $downloadFile
-
+    $deprecatedDestinationFolder = Join-Path $env:SystemDrive 'tools\ffmpeg'
     
-
-
-    function pathEnvMatch($userOrMachine) {
-        $pathEnv = [environment]::GetEnvironmentVariable("Path",$userOrMachine)
-        $alreadyInPath = $env:Path -match "$env:SystemDrive\\tools\\ffmpeg\\bin"
-        if ($alreadyInPath) {
-            Write-Host "No need to add ffmpeg\bin to Path, because it’s already there"
-        }
-        return $alreadyInPath
+    if ($env:ChocolateyBinRoot) {
+        $destinationFolder = Join-Path $env:ChocolateyBinRoot 'ffmpeg'
+    } else {
+        $destinationFolder = $deprecatedDestinationFolder
     }
 
-    if (-not($alreadyInPath)) {
-        $isAdmin = ([Security.Principal.WindowsPrincipal]`
-        [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
-        [Security.Principal.WindowsBuiltInRole] “Administrator”)
+    if ((Test-Path $deprecatedDestinationFolder) -and ($deprecatedDestinationFolder -ne $destinationFolder)) {
 
-        if ($isAdmin) {
-            if (-not(pathEnvMatch 'Machine')) {
-                Write-Host 'Adding ffmpeg\bin to Admin path'
-                Install-ChocolateyPath "$destinationFolder\bin" 'Machine'
-            }
-        } else {
-            if (-not(pathEnvMatch 'User')) {
-                Write-Host 'Adding ffmpeg\bin to User path'
-                Install-ChocolateyPath "$destinationFolder\bin"
-            }
-        }
+        $destinationFolder = $deprecatedDestinationFolder
+
+        Write-Output @"
+Warning: Deprecated installation folder detected: %SystemDrive%\tools\ffmpeg.
+This package will continue to install ffmpeg there unless you remove the deprecated installation folder.
+After you did that, reinstall this package again with the “-force” parameter. Then it will use %ChocolateyBinRoot%\ffmpeg.
+"@
+
     }
 
-    # Remove previous and now obsolete links from the Chocolatey\bin folder
-    $oldLinkFiles = @('ffmpeg', 'ffplay', 'ffprobe')
-    $chocoBinPath = Join-Path $env:ChocolateyInstall '/bin'
+    $subFolder = $url -replace '.+\/(.+)\..+', '$1'
 
-    foreach ($name in $oldLinkFiles) {
-        $filePath = Join-Path $chocoBinPath $name
-        if (Test-Path $filePath) {
-            Remove-Item $filePath
-        }
+    Install-ChocolateyZipPackage $packageName $url $destinationFolder $url64
 
-        if (Test-Path "${filePath}.bat") {
-            Remove-Item "${filePath}.bat"
-        }
+    if ((Get-ChildItem $destinationFolder).Name -contains $subFolder) {
+        # do nothing
+    } else {
+        $subFolder = $url64 -replace '.+\/(.+)\..+', '$1'
     }
 
-    Write-ChocolateySuccess $packageName
+    $subFolderPath = Join-Path $destinationFolder $subFolder
+
+    Copy-Item -Force -Recurse -Path "$subFolderPath\*" -Destination $destinationFolder
+    Remove-Item -Recurse $subFolderPath
+
+    # Should this package really add the ffmpeg\bin folder to PATH?
+    # Install-ChocolateyPath "$destinationFolder\bin"
+
 } catch {
     Write-ChocolateyFailure $packageName $($_.Exception.Message)
     throw
