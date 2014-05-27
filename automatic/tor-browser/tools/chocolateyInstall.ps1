@@ -1,8 +1,31 @@
 ﻿$packageName = '{{PackageName}}'
 $installerType = 'exe'
-$silentArgs = '/S'
+$installArgs = '/S'
 
 try {
+
+    $pathDownloadedInstaller = Join-Path $env:TEMP 'tor-browserInstall.exe'
+
+    if ($env:ChocolateyBinRoot) {
+        $destinationFolder = Join-Path $env:ChocolateyBinRoot 'tor-browser'
+    } else {
+        $destinationFolder = Join-Path $env:SystemDrive 'tools\tor-browser'
+        Write-Output 'Warning: no $env:ChocolateyBinRoot set. {{PackageName}} will be extracted to $env:SystemDrive\tools\tor-browser'
+    }
+
+    $desktopPath = $([Environment]::GetFolderPath('Desktop'))
+    $deprecatedDestinationFolder = Join-Path $desktopPath 'Tor Browser'
+
+    if (Test-Path $deprecatedDestinationFolder) {
+        $destinationFolder = $deprecatedDestinationFolder
+
+        Write-Output @"
+Warning: Deprecated installation folder detected: Desktop/Tor Browser.
+This package will continue to install {{PackageName}} there unless you remove the deprecated installation folder.
+After you did that, reinstall this package again with the “-force” parameter. Then it will use %ChocolateyBinRoot%\tor-browser.
+"@
+    }
+
 
     $language = (Get-Culture).Name -replace '-[a-z]{2}', '' # get language code
     #$language = 'xx' # Language override for testing
@@ -30,9 +53,14 @@ try {
     # DownloadUrlx64 gets “misused” here as variable for the real version with  hyphen
     $url = "https://www.torproject.org/dist/torbrowser/{{DownloadUrlx64}}/torbrowser-install-{{DownloadUrlx64}}_${langcode}.exe"
 
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
-}
+    Get-ChocolateyWebFile $packageName $pathDownloadedInstaller $url
 
-Install-ChocolateyPackage $packageName $installerType $silentArgs $url
+    Start-Process -Wait $pathDownloadedInstaller -ArgumentList '/S', "/D=$destinationFolder"
+
+    Remove-Item $pathDownloadedInstaller
+    
+
+} catch {
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
+}
