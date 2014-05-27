@@ -30,7 +30,9 @@
     }
 
     # Only check for the 64-bit version if the system is 64-bit
-    if (Get-ProcessorBits -eq 64) {
+
+    $osBitness = Get-ProcessorBits
+    if ($osBitness -eq 64) {
         if ($thisJreInstalledHash.x86_64) {
             Write-Output "Java Runtime Environment $version (64-bit) is already installed. Skipping download and installation"
         } else {
