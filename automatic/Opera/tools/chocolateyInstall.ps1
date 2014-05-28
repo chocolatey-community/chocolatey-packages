@@ -1,25 +1,28 @@
 ﻿$packageName = '{{PackageName}}'
+$version = '{{PackageVersion}}'
 $fileType = 'exe'
-$silentArgs = '/install /silent /launchopera 0 /quicklaunchshortcut 0 /setdefaultbrowser 0'
+$installArgs = '/install /silent /launchopera 0 /setdefaultbrowser 0'
 $url = '{{DownloadUrl}}'
 
 try {
-  $tempDir = "$env:TEMP\chocolatey\$packageName"
-  if (!(Test-Path $tempDir)) {New-Item $tempDir -ItemType directory -Force}
-  $fileFullPath = "$tempDir\${packageName}Install.exe"
 
-  Get-ChocolateyWebFile $packageName $fileFullPath $url
+    $regPathModifierArray = @('Wow6432Node\', '')
+    $alreadyInstalled = $null
 
-  $extractDir = "$tempDir\${packageName}Install"
+    foreach ($regPathModifier in $regPathModifierArray) {
+        $regPath = "HKLM:\SOFTWARE\${regPathModifier}Microsoft\Windows\CurrentVersion\Uninstall\Opera $version"
+        if (Test-Path $regPath) {
+            $alreadyInstalled = $true
+        }
+    }
 
-  Start-Process '7za' -ArgumentList "x -o`"$extractDir`" -y `"$fileFullPath`"" -Wait
+    if ($alreadyInstalled) {
+        Write-Output "Opera $version is already installed. Skipping download and installation."
+    } else {
+        Install-ChocolateyPackage $packageName $fileType $installArgs $url
+    }
 
-  $file = "$extractDir\launcher.exe"
-
-  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
-
-  Remove-Item $extractDir -Force -Recurse
-}  catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw 
+} catch {
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
 }
