@@ -1,0 +1,138 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="5dea97b6-878e-4432-bbec-ca644e8fb391">
+    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://cdburnerxp.se/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.cdburnerxp.se/cdbxp_setup_{version}.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="cdburnerxp" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserNotes />
+    <LastFileSize>8962048</LastFileSize>
+    <LastFileDate>2014-05-30T17:43:16+02:00</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=Version )[\d\.]+(?=\n\s+&lt;br /&gt;Multi-language)</Regex>
+            <Url>http://cdburnerxp.se/</Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>true</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex>http://download.cdburnerxp.se/minimal/[A-Fa-f0-9]{32}/[A-Fa-f0-9]{8}/cdbxp_setup_[\d\.]+_x64_minimal.exe</Regex>
+            <Url>https://cdburnerxp.se/en/download</Url>
+            <TextualContent>"http://download.cdburnerxp.se/msi/cdbxp_setup_x64_{version}.msi"</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\cdbxp_setup_4.5.4.4852.msi</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-06-04T00:16:07.9624202+02:00</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://download.cdburnerxp.se/msi/cdbxp_setup_{version}.msi</FixedDownloadUrl>
+    <Name>cdburnerxp</Name>
+  </ApplicationJob>
+</Jobs>
