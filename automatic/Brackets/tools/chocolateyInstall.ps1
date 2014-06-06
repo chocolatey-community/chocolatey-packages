@@ -1,13 +1,10 @@
-﻿$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$isAlreadyInstalled = Join-Path $scriptDir 'isAlreadyInstalled.ps1'
-
-Import-Module $isAlreadyInstalled
-
-$packageName = '{{PackageName}}'
+﻿$packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
-$bracketsRegistryVersion = $version -replace '(\d\.\d+)\..+', '$1'
 
 try {
+
+    $bracketsRegistryVersion = $version -replace '^(\d+\.\d+)\..+', '$1'
+
     $params = @{
         PackageName = $packageName;
         FileType = 'msi';
@@ -15,16 +12,17 @@ try {
         Url = '{{DownloadUrl}}';
     }
 
-    $alreadyInstalled = isAlreadyInstalled 'Brackets' $bracketsRegistryVersion
+    $alreadyInstalled = Get-WmiObject -Class Win32_Product |
+        Where-Object {($_.Name -eq 'Brackets') -and
+        ($_.Version -match $bracketsRegistryVersion)}
 
-    if (-not($alreadyInstalled)) {
-        Install-ChocolateyPackage @params
+    if ($alreadyInstalled) {
+        Write-Host "Brackets $version is already installed. Skipping installation."
     } else {
-        Write-Output "Brackets $version is already installed. Skipping installation."
+        Install-ChocolateyPackage @params
     }
 
-    Write-ChocolateySuccess $packageName
 } catch {
-    Write-ChocolateyFailure $packageName "$($_.Exception.Message)"
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
     throw
 }
