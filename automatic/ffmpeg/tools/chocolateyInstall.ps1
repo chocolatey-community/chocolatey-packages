@@ -4,17 +4,14 @@ $url64 = '{{DownloadUrlx64}}'
 
 try {
 
-    $deprecatedDestinationFolder = Join-Path $env:SystemDrive 'tools\ffmpeg'
-    
-    if ($env:ChocolateyBinRoot) {
-        $destinationFolder = Join-Path $env:ChocolateyBinRoot 'ffmpeg'
-    } else {
-        $destinationFolder = $deprecatedDestinationFolder
-    }
+    $oldDestinationFolder = Join-Path $env:SystemDrive 'tools\ffmpeg'
 
-    if ((Test-Path $deprecatedDestinationFolder) -and ($deprecatedDestinationFolder -ne $destinationFolder)) {
+    $binRoot = Get-BinRoot
+    $destinationFolder = Join-Path $binRoot 'ffmpeg'
 
-        $destinationFolder = $deprecatedDestinationFolder
+    if ((Test-Path $oldDestinationFolder) -and ($oldDestinationFolder -ne $destinationFolder)) {
+
+        $destinationFolder = $oldDestinationFolder
 
         Write-Output @"
 Warning: Deprecated installation folder detected: %SystemDrive%\tools\ffmpeg.
