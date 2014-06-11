@@ -23,12 +23,14 @@ try {
 
     $uninstallerPathLastPart = 'PDFCreator\unins000.exe'
     $uninstallerPath = Join-Path $env:ProgramFiles $uninstallerPathLastPart
-    $uninstallerPathx86 = Join-Path ${env:ProgramFiles(x86)} $uninstallerPathLastPart
 
-    if (Test-Path $uninstallerPathx86) {
-        $uninstallerPath = $uninstallerPathx86
+    if (${env:ProgramFiles(x86)}) {
+        $uninstallerPathx86 = Join-Path ${env:ProgramFiles(x86)} $uninstallerPathLastPart
+        if (Test-Path $uninstallerPathx86) {
+            $uninstallerPath = $uninstallerPathx86
+        }
     }
-
+    
     # Uninstall PDFCreator if older version is installed, otherwise the installation
     # of the new version will fail.
     if (Test-Path $uninstallerPath) {
