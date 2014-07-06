@@ -4,20 +4,16 @@ $installArgs = '/S'
 
 try {
 
+    $binRoot = Get-BinRoot
+    $destinationFolder = Join-Path $binRoot 'tor-browser'
+
     $pathDownloadedInstaller = Join-Path $env:TEMP 'tor-browserInstall.exe'
 
-    if ($env:ChocolateyBinRoot) {
-        $destinationFolder = Join-Path $env:ChocolateyBinRoot 'tor-browser'
-    } else {
-        $destinationFolder = Join-Path $env:SystemDrive 'tools\tor-browser'
-        Write-Output 'Warning: no $env:ChocolateyBinRoot set. {{PackageName}} will be extracted to $env:SystemDrive\tools\tor-browser'
-    }
-
     $desktopPath = $([Environment]::GetFolderPath('Desktop'))
-    $deprecatedDestinationFolder = Join-Path $desktopPath 'Tor Browser'
+    $oldDestinationFolder = Join-Path $desktopPath 'Tor Browser'
 
-    if (Test-Path $deprecatedDestinationFolder) {
-        $destinationFolder = $deprecatedDestinationFolder
+    if ((Test-Path $oldDestinationFolder) -and ($oldDestinationFolder -ne $destinationFolder)) {
+        $destinationFolder = $oldDestinationFolder
 
         Write-Output @"
 Warning: Deprecated installation folder detected: Desktop/Tor Browser.
@@ -58,7 +54,6 @@ After you did that, reinstall this package again with the “-force” parameter
     Start-Process -Wait $pathDownloadedInstaller -ArgumentList '/S', "/D=$destinationFolder"
 
     Remove-Item $pathDownloadedInstaller
-    
 
 } catch {
     Write-ChocolateyFailure $packageName $($_.Exception.Message)

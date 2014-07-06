@@ -5,27 +5,20 @@
     $zipFilePath = Join-Path $env:TEMP $zipFile
     $url = 'http://rukerneltool.rainerullrich.de/download2/ruKernelTool.zip'
 
-    $deprecatedDestinationFolder = Join-Path $env:SystemDrive 'ruKernelTool'
+    $oldDestinationFolder = Join-Path $env:SystemDrive 'ruKernelTool'
 
-    if (Test-Path $deprecatedDestinationFolder) {
+    $binRoot = Get-BinRoot
+    $destinationFolder = Join-Path $binRoot 'ruKernelTool'
 
-        $destinationFolder = $deprecatedDestinationFolder
+    if ((Test-Path $oldDestinationFolder) -and ($oldDestinationFolder -ne $destinationFolder)) {
+
+        $destinationFolder = $oldDestinationFolder
 
         Write-Output @"
 Warning: Deprecated installation folder detected: %SystemDrive%\ruKernelTool.
 This package will continue to install {{PackageName}} there unless you remove the deprecated installation folder.
 After you did that, reinstall this package again with the “-force” parameter. Then it will use %ChocolateyBinRoot%\ruKernelTool.
 "@
-    } else {
-    
-        if ($env:ChocolateyBinRoot) {
-            $destinationFolder = $env:ChocolateyBinRoot
-        } else {
-
-            Write-Output 'No $env:ChocolateyBinRoot detected. Will use $env:SystemDrive\tools\ruKernelTool as installation folder'
-            $destinationFolder = Join-Path $env:SystemDrive 'tools'
-        }
-    
     }
 
     cd $env:TEMP

@@ -8,3 +8,13 @@ universal-usb-installer-src.zip
 manual/**/*nupkg
 
 automatic/_output/*
+
+
+# Ignored symlinks
+
+automatic/python2/tools/chocolateyInstall.ps1
+automatic/python3/tools/chocolateyInstall.ps1
+automatic/libreoffice-oldstable/tools/chocolateyInstall.ps1
+automatic/python-x86_32/tools/chocolateyInstall.ps1
+automatic/python2-x86_32/tools/chocolateyInstall.ps1
+automatic/python3-x86_32/tools/chocolateyInstall.ps1
