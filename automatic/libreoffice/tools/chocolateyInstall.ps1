@@ -39,7 +39,7 @@ try {
     if ($alreadyInstalled) {
         Write-Host "LibreOffice $version is already installed on the computer. Skipping download."
     } else {
-        Install-ChocolateyPackage $packageName 'msi' '/passive' $downUrl -validExitCodes @(0)
+        Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' $downUrl -validExitCodes @(0)
     }
 
 } catch {

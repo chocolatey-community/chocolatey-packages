@@ -8,7 +8,7 @@ Import-Module $loHelpIsAlreadyInstalled
 $packageName = 'libreoffice-help'
 $fileType = 'msi'
 $version = '{{PackageVersion}}'
-$silentArgs = '/passive'
+$silentArgs = '/passive /norestart'
 
 function getInstallLanguageOverride($installArguments) {
     $argumentMap = ConvertFrom-StringData $installArguments
@@ -93,5 +93,5 @@ try {
 
 }   catch {
     Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw 
+    throw
 }
