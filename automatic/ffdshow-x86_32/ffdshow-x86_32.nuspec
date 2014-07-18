@@ -3,7 +3,7 @@
     <metadata>
         <id>{{PackageName}}</id>
         <version>{{PackageVersion}}</version>
-        <title>ffdshow tryouts</title>
+        <title>ffdshow tryouts (forced 32-bit)</title>
         <authors>http://ffdshow-tryout.sourceforge.net/wiki/credits</authors>
         <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
         <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>
@@ -17,7 +17,7 @@ The ffdshow tryouts project is a fork of the original ffdshow project. This fork
 
 ### Note
 
-This package installs the 32-bit version on a 32-bit system and the 64-bit version on a 64-bit system. If you want to install the 32-bit version on a 64-bit system, install [ffdshow-x86_32](./ffdshow-x86_32).</description>
+This package always installs the 32-bit version, even on a 64-bit OS. If you want to install the 64-bit version on 64-bit systems, install [ffdshow](./ffdshow).</description>
         <summary>The all-in-one codec solution</summary>
         <copyright />
         <tags>ffdshow DirectShow codec video audio subtitles</tags>
