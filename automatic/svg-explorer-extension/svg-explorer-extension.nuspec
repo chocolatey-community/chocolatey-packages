@@ -8,7 +8,9 @@
         <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
         <projectUrl>http://code.google.com/p/svg-explorer-extension/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Extension module for Windows Explorer to render SVG thumbnails, so that you can have an overview of your SVG files.</description>
+        <description>
+Extension module for Windows Explorer to render SVG thumbnails, so that you can have an overview of your SVG files.
+        </description>
         <summary>SVG Viewer Extension for Windows Explorer</summary>
         <tags>SVG thumbnail preview explorer extension</tags>
     </metadata>

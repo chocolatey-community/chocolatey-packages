@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>Java Runtime (JRE)</title>
-    <authors>Oracle</authors>
-    <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
-    <projectUrl>http://www.java.com</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/java.svg</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Java allows you to play online games, chat with people around the world, calculate your mortgage interest, and view images in 3D, just to name a few. It's also integral to the intranet applications and other e-business solutions that are the foundation of corporate computing.
+    <metadata>
+        <id>{{PackageName}}</id>
+        <version>{{PackageVersion}}</version>
+        <title>Java Runtime (JRE)</title>
+        <authors>Oracle</authors>
+        <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
+        <projectUrl>http://www.java.com</projectUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/java.svg</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
+Java allows you to play online games, chat with people around the world, calculate your mortgage interest, and view images in 3D, just to name a few. It's also integral to the intranet applications and other e-business solutions that are the foundation of corporate computing.
 
-===== NOTE =====
-This package installs -ONLY- the runtime for your platform, as a workaround for bugs in certain apps when both the 32- and 64-bit packages are present.</description>
-    <releaseNotes />
-    <tags>java runtime environment</tags>
-  </metadata>
+### Note
+
+This only installs the Java Runtime with the bitness specific to your OS (either 32- or 64-bit). If you want both 32-bit and 64-bit JREs on your 64-bit OS, install [javaruntime](./javaruntime) instead.
+        </description>
+        <releaseNotes />
+        <tags>java runtime environment</tags>
+    </metadata>
 </package>

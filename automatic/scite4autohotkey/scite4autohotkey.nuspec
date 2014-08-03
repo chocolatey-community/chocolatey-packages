@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <metadata>
-    <id>{{PackageName}}</id>
-    <title>SciTE4AutoHotkey</title>
-    <version>{{PackageVersion}}</version>
-    <authors>fincs</authors>
-    <summary>SciTE distribution designed for AutoHotkey</summary>
-    <description>SciTE4AutoHotkey is a SciTE-based AutoHotkey script editor. It offers:
+    <metadata>
+        <id>{{PackageName}}</id>
+        <title>SciTE4AutoHotkey</title>
+        <version>{{PackageVersion}}</version>
+        <authors>fincs</authors>
+        <summary>SciTE distribution designed for AutoHotkey</summary>
+        <description>
+SciTE4AutoHotkey is a SciTE-based AutoHotkey script editor. It offers:
+
 * Syntax highlighting
 * Code folding
 * Calltips (also known as IntelliSense)
@@ -18,18 +20,22 @@
 * Tools for AutoHotkey scripting
 * A toolbar that enables easy access to the tools
 * Some AutoHotkey scripting facilities
-Note: This package uses an AutoHotkey-script for unattended installation.</description>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/scite4autohotkey.png</iconUrl>
-    <projectUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/</projectUrl>
-    <tags>autohotkey debugging ide</tags>
-    <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="autohotkey.install" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+
+### Note
+
+This package uses an AutoHotkey-script for unattended installation.
+        </description>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/scite4autohotkey.png</iconUrl>
+        <projectUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/</projectUrl>
+        <tags>autohotkey debugging ide</tags>
+        <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <releaseNotes></releaseNotes>
+        <dependencies>
+            <dependency id="autohotkey.install" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>

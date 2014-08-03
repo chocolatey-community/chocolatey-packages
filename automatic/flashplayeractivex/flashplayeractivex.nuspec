@@ -9,9 +9,17 @@
         <id>{{PackageName}}</id>
         <title>Flash Player ActiveX</title>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.
-Note: This package is only for Windows XP to Windows 7, because Windows ≥ 8 already contains an integrated Flash Player for Internet Explorer.
-Warning: The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.</description>
+        <description>
+The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.
+
+### Note
+
+This package is only for Windows XP to Windows 7, because Windows ≥ 8 already contains an integrated Flash Player for Internet Explorer.
+
+### Warning
+
+The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
+        </description>
         <summary>Adobe Flash Player ActiveX for Internet Explorer</summary>
         <tags>adobe flash player activex</tags>
         <releaseNotes></releaseNotes>

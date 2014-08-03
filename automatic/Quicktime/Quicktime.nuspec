@@ -9,9 +9,15 @@
         <projectUrl>http://support.apple.com/kb/DL837</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/quicktime.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>What is Quicktime 7?
+        <description>
+What is Quicktime 7?
+
 A powerful multimedia technology with a built-in media player, QuickTime lets you view Internet video, HD movie trailers, and personal media in a wide range of file formats.
-Note: This package installs QuickTime and the required Apple Application Support component, but not the Apple Software Update component. The latter is intrusive and thus probably undesirable for many user because it recommends unnecessary additional software from Apple.</description>
+
+### Note
+
+This package installs QuickTime and the required Apple Application Support component, but not the Apple Software Update component. The latter is intrusive and thus probably undesirable for many user because it recommends unnecessary additional software from Apple.
+        </description>
         <summary>Quicktime</summary>
         <copyright>Apple Inc. All rights reserved</copyright>
         <tags>Quicktime chocolatey admin</tags>

@@ -8,7 +8,9 @@
         <projectUrl>http://www.chromium.org/Home</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chromium.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>This package installs the Chromium continuous builds into %localappdata%\Chromium. They can be unstable.</description>
+        <description>
+This package installs the Chromium continuous builds into `%localappdata%\Chromium`. They can be unstable.
+        </description>
         <summary>Chromium continuous build (unstable)</summary>
         <releaseNotes />
         <copyright />

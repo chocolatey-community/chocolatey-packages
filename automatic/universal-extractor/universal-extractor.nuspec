@@ -8,7 +8,9 @@
         <projectUrl>http://legroom.net/software/uniextract</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/universal-extractor.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Universal Extractor is a program designed to decompress and extract files from any type of archive or installer, such as ZIP or RAR files, self-extracting EXE files, application installers, etc.  The full list of supported formats can be found in the table below.  It's able to support so many varied file formats by utilizing the many backend utilities listed in the credits at the bottom of the page.</description>
+        <description>
+Universal Extractor is a program designed to decompress and extract files from any type of archive or installer, such as ZIP or RAR files, self-extracting EXE files, application installers, etc. It's able to support so many varied file formats by utilizing many backend utilities.
+        </description>
         <summary>decompress and extract files from installers or archives</summary>
         <releaseNotes>http://www.legroom.net/files/software/uniextract_changelog.txt</releaseNotes>
         <copyright />

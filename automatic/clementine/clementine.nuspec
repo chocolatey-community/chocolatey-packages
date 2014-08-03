@@ -9,8 +9,9 @@
         <projectUrl>http://www.clementine-player.org/</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/clementine.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Clementine is a modern music player and library organizer
-Clementine is a multiplatform music player. It is inspired by Amarok 1.4, focusing on a fast and easy-to-use interface for searching and playing your music.</description>
+        <description>
+Clementine is a modern music player and library organizer. It is inspired by Amarok 1.4, focusing on a fast and easy-to-use interface for searching and playing your music.
+        </description>
         <summary>Multiplatform music player</summary>
         <releaseNotes>https://code.google.com/p/clementine-player/source/browse/Changelog</releaseNotes>
         <copyright />

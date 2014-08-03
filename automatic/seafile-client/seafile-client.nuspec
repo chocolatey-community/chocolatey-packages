@@ -9,7 +9,9 @@
         <projectUrl>http://seafile.com/en/home/</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/seafile-client.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>File Syncing and Collaboration for Teams</description>
+        <description>
+File Syncing and Collaboration for Teams
+        </description>
         <summary>File Syncing and Collaboration for Teams</summary>
         <releaseNotes />
         <copyright />

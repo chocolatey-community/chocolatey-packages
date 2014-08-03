@@ -8,8 +8,9 @@
         <projectUrl>http://www.noip.com/downloads.php?page=win</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/no-ip-duc.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Keep your current IP address in sync with your No-IP host
-or domain with the Dynamic Update Client (DUC). The dynamic DNS update client continually checks for IP address changes in the background and automatically updates the DNS at No-IP whenever it changes.</description>
+        <description>
+Keep your current IP address in sync with your No-IP host or domain with the Dynamic Update Client (DUC). The dynamic DNS update client continually checks for IP address changes in the background and automatically updates the DNS at No-IP whenever it changes.
+        </description>
         <summary>Keep your current IP address in sync with your No-IP host</summary>
         <releaseNotes />
         <copyright />

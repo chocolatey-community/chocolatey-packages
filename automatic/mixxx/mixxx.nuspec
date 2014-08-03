@@ -9,7 +9,9 @@
         <projectUrl>http://mixxx.org/</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/mixxx.svg</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Mixxx is open source DJ software that gives you everything you need to perform live DJ mixes.</description>
+        <description>
+Mixxx is open source DJ software that gives you everything you need to perform live DJ mixes.
+        </description>
         <summary>Open Source DJ software</summary>
         <releaseNotes>http://mixxxblog.blogspot.it/</releaseNotes>
         <copyright />

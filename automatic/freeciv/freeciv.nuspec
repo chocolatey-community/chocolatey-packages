@@ -9,7 +9,9 @@
         <projectUrl>http://freeciv.wikia.com/wiki/Main_Page</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization. The game commences in prehistory and your mission is to lead your tribe from the Stone Age to the Space Age …</description>
+        <description>
+Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization. The game commences in prehistory and your mission is to lead your tribe from the Stone Age to the Space Age …
+        </description>
         <summary>Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.</summary>
         <releaseNotes />
         <copyright />

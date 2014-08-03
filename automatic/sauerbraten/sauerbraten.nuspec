@@ -9,10 +9,13 @@
         <projectUrl>http://sauerbraten.org/</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sauerbraten.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter, the successor of the Cube FPS.
+        <description>
+Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter, the successor of the Cube FPS.
+
 Much like the original Cube, the aim of this game is fun, old school deathmatch gameplay and also to allow map/geometry editing to be done cooperatively in-game.
 
-The engine supporting the game is entirely original in code &amp; design, and its code is Open Source.</description>
+The engine supporting the game is entirely original in code &amp; design, and its code is Open Source.
+        </description>
         <summary>Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter</summary>
         <releaseNotes />
         <copyright />

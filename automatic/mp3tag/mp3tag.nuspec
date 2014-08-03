@@ -9,7 +9,9 @@
         <projectUrl>http://www.mp3tag.de/en/index.html</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/mp3tag.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio formats where it supports ID3v1, ID3v2.3, ID3v2.4, iTunes MP4, WMA, Vorbis Comments and APE Tags.</description>
+        <description>
+Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio formats where it supports ID3v1, ID3v2.3, ID3v2.4, iTunes MP4, WMA, Vorbis Comments and APE Tags.
+        </description>
         <summary>Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio formats.</summary>
         <tags>mp3 tag</tags>
     </metadata>

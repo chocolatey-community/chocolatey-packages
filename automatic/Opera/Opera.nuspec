@@ -8,7 +8,9 @@
         <projectUrl>http://www.opera.com/browser/</projectUrl>
         <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/opera.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.</description>
+        <description>
+The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.
+        </description>
         <summary>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.</summary>
         <releaseNotes></releaseNotes>
         <tags>browser opera</tags>
