@@ -25,7 +25,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png</iconUrl>
     <dependencies>
-      <dependency id="cygwin" />
+      <dependency id="Cygwin" />
     </dependencies>
   </metadata>
   <files>
