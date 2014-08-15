@@ -1,3 +1,4 @@
 *.nupkg
 *.log
 *.log.full
+Thumbs.db
