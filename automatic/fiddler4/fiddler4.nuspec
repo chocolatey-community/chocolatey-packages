@@ -17,10 +17,10 @@
     <copyright></copyright>
     <licenseUrl>http://www.fiddler2.com/Fiddler/help/license.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://chocolatey.github.io/chocolatey-coreteampackages/fiddler4.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/fiddler4.png</iconUrl>
     <releaseNotes>
 		Up to date release notes for this application can be found here:
-		
+
 		http://www.telerik.com/support/whats-new/fiddler
 	</releaseNotes>
   </metadata>
