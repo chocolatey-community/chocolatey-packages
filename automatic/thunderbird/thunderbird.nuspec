@@ -25,3 +25,4 @@ This package installs Thunderbird in the first language which matches this list:
         <tags>mozilla thunderbird email</tags>
     </metadata>
 </package>
+<!-- “UTF-8” test -->

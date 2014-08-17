@@ -22,3 +22,4 @@ qBittorrent aims to have a small foot-print, to be powerful, intuitive and visua
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

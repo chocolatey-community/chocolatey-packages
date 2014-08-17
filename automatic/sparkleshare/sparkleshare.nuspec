@@ -21,3 +21,4 @@ SparkleShare is an Open Source collaboration and sharing tool that is designed t
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

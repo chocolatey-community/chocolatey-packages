@@ -21,3 +21,4 @@ File Syncing and Collaboration for Teams
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

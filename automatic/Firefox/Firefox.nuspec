@@ -26,3 +26,4 @@ This package installs Firefox in the first language which matches this list:
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

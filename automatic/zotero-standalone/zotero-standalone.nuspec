@@ -21,3 +21,4 @@ Zotero is free and open-source reference management software to manage bibliogra
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

@@ -23,3 +23,4 @@ https://www.tipp10.com/en/news/</releaseNotes>
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

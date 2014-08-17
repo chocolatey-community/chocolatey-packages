@@ -23,3 +23,4 @@ Build up a great army, gradually turning raw recruits into hardened veterans. In
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

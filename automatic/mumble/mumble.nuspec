@@ -26,3 +26,4 @@ Mumble is free and open-source software, is cross-platform, and is released unde
         <!--<file src="content\**" target="content" />-->
     </files>
 </package>
+<!-- “UTF-8” test -->

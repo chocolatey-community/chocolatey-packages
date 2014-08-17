@@ -27,3 +27,4 @@ Texmaker is released under the GPL license.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

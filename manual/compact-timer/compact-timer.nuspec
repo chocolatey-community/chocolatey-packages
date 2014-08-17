@@ -24,3 +24,4 @@ Compact Timer is a completely free countdown timer, countup timer, stop Watch, r
         <file src="tools\CompactTimer.exe" target="tools\CompactTimer.exe" />
     </files>
 </package>
+<!-- “UTF-8” test -->

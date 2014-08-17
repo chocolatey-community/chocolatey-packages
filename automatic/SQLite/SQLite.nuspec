@@ -20,3 +20,4 @@ This package installs the DLL (either 32- or 64-bit, depending on your OS bitnes
         <tags>sqlite db database embedded chocolatey</tags>
     </metadata>
 </package>
+<!-- “UTF-8” test -->

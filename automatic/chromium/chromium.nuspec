@@ -20,3 +20,4 @@ This package installs the Chromium continuous builds into `%localappdata%\Chromi
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

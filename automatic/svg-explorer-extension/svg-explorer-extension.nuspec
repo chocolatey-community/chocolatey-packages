@@ -15,3 +15,4 @@ Extension module for Windows Explorer to render SVG thumbnails, so that you can 
         <tags>SVG thumbnail preview explorer extension</tags>
     </metadata>
 </package>
+<!-- “UTF-8” test -->

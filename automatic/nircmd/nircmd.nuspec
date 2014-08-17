@@ -20,3 +20,4 @@ NirCmd is a small command-line utility that allows you to do some useful tasks w
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

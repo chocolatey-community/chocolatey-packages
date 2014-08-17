@@ -26,3 +26,4 @@ This package is for the stable ffmpeg version with shared libraries. It installs
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

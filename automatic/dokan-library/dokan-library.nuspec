@@ -24,3 +24,4 @@ Installer doesn’t work silently if Dokan Library is already installed. The uni
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

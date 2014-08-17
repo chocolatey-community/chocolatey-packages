@@ -27,3 +27,4 @@ You can not use TV-Browser to watch TV.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

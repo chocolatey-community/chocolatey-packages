@@ -28,3 +28,4 @@ Download link on official site does not work. This package uses this one instead
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

@@ -28,3 +28,4 @@ The installation of Flash Player ActiveX fails with a 1603 error when Internet E
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

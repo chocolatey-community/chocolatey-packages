@@ -21,3 +21,4 @@ IETester is a free (both for personal and professional usage) WebBrowser that al
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

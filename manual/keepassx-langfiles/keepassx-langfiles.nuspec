@@ -27,3 +27,4 @@ This package extracts a ZIP with all language files into the KeePass program fol
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

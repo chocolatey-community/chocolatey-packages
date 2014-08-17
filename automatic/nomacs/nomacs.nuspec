@@ -21,3 +21,4 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

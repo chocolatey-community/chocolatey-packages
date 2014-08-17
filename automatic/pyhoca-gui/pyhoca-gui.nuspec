@@ -21,3 +21,4 @@ PyHoca-GUI is designed as a very minimal GUI that behaves very similar to GNOME'
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

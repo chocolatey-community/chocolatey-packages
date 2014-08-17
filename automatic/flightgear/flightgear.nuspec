@@ -27,3 +27,4 @@ The FlightGear also installs the OpenAL library which hasn’t a silent switch.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

@@ -39,3 +39,4 @@ This package uses an AutoHotkey-script for unattended installation.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

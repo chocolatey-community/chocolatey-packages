@@ -25,3 +25,4 @@ While ClipGrab itself is free software, its artwork and name are not.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

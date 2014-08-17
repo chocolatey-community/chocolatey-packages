@@ -28,3 +28,4 @@ This package installs the 32-bit version on a 32-bit system and the 64-bit versi
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

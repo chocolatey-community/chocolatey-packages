@@ -31,3 +31,4 @@ If you want to install only specific components, e.g. only the Start Menu, use
         </dependencies>
     </metadata>
 </package>
+<!-- “UTF-8” test -->

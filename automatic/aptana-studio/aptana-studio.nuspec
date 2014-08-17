@@ -25,3 +25,4 @@ This package installs the standalone version of Aptana Studio.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

@@ -25,3 +25,4 @@ Although it is a free suite, Kingsoft Office comes with many innovative features
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

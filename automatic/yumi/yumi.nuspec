@@ -24,3 +24,4 @@ Aside from a few distributions, all files are stored within the Multiboot folder
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

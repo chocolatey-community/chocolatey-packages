@@ -32,3 +32,4 @@ The browser is your design view. Brackets hooks up directly to the browser, allo
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

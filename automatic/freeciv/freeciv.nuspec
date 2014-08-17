@@ -21,3 +21,4 @@ Freeciv is a Free and Open Source empire-building strategy game inspired by the 
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

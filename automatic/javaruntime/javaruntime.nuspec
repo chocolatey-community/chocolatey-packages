@@ -20,3 +20,4 @@ This package installs both 32 and 64-bit versions on 64-bit systems. If you only
         <releaseNotes></releaseNotes>
     </metadata>
 </package>
+<!-- “UTF-8” test -->

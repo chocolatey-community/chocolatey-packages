@@ -21,3 +21,4 @@ BeCyIconGrabber is a small utility to view icons and cursors of any sizes that a
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

@@ -33,3 +33,4 @@ Don’t close the empty appearing PowerShell window. Otherwise the silent instal
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

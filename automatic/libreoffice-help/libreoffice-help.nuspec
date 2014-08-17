@@ -30,3 +30,4 @@ It is also possible to install multiple Help Packs. To achieve that, install the
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

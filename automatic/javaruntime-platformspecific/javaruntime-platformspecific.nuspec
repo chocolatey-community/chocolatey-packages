@@ -20,3 +20,4 @@ This only installs the Java Runtime with the bitness specific to your OS (either
         <tags>java runtime environment</tags>
     </metadata>
 </package>
+<!-- “UTF-8” test -->

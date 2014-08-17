@@ -19,3 +19,4 @@ A modern web browser with an MSI and admin tools designed for organizations that
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

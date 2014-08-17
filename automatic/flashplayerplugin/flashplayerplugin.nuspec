@@ -19,3 +19,4 @@ The Adobe Flash Player is freeware software for viewing multimedia, executing Ri
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

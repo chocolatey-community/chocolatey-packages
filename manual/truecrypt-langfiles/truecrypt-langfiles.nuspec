@@ -27,3 +27,4 @@ The language files are public domain, so they can be distributed and modified fr
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

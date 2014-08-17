@@ -27,3 +27,4 @@ Bitdefender USB Immunizer is a response to this growing issue.
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->

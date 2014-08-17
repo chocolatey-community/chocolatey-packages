@@ -21,3 +21,4 @@ AllDup is a freeware tool for searching and removing file duplicates on your com
         <file src="tools\**" target="tools" />
     </files>
 </package>
+<!-- “UTF-8” test -->
