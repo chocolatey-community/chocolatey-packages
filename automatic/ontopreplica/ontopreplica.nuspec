@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<version>{{PackageVersion}}</version>
-		<title>OnTopReplica</title>
-		<authors>Lck</authors>
-		<licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
-		<projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
-		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ontopreplica.png</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>OnTopReplica</title>
+    <authors>Lck</authors>
+    <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
+    <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ontopreplica.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 A real-time, always on top, “replica” of a window of your choice, based on DWM Thumbnails.
 
 Completely written in C# for .NET 4.0/4.5, makes use of the Windows Forms Aero library.
@@ -27,11 +27,11 @@ Completely written in C# for .NET 4.0/4.5, makes use of the Windows Forms Aero l
 * “Click-through” allows to click through the cloned thumbnail (especially useful with partial opacity),
 * “Group switch” mode automatically switches through a group of windows while you use them,
 * Non invasive installation: doesn’t require administrator elevation.
-		</description>
-		<summary>A real-time, always on top, "replica" of a window of your choice</summary>
-		<releaseNotes></releaseNotes>
-		<copyright />
-		<tags>ontopreplica replica window on-top</tags>
-	</metadata>
+    </description>
+    <summary>A real-time, always on top, "replica" of a window of your choice</summary>
+    <releaseNotes></releaseNotes>
+    <copyright />
+    <tags>ontopreplica replica window on-top</tags>
+  </metadata>
 </package>
 <!-- “UTF-8” test -->

@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<version>{{PackageVersion}}</version>
-		<title>Python</title>
-		<authors>Python Software Foundation</authors>
-		<projectUrl>http://www.python.org/</projectUrl>
-		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>Python</title>
+    <authors>Python Software Foundation</authors>
+    <projectUrl>http://www.python.org/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
 
 ### Note
@@ -16,9 +16,9 @@ Python is a programming language that lets you work more quickly and integrate y
 This package installs the latest stable version of Python. It will install to Python to `$env:ChocolateyBinRoot\{{PackageName}}`, but only if Python is not already installed where the installer puts it by default, which is `$env:SystemDrive\PythonXX` (XX stands for the major/minor version digits).
 
 This package is not intended to use with Chocolatey’s `-x86` parameter. If you want a 32-bit Python on 64-bit systems, install the [{{PackageName}}-x86_32](./{{PackageName}}-x86_32) package instead. You can also install both packages. In this case you must manually adapt your PATH environment variable so that it picks the Python version that you want when invoking `python.exe`.
-		</description>
-		<summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
-		<tags>python</tags>
-	</metadata>
+    </description>
+    <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
+    <tags>python</tags>
+  </metadata>
 </package>
 <!-- “UTF-8” test -->

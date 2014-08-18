@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<version>{{PackageVersion}}</version>
-		<title>BlueGriffon</title>
-		<authors>Daniel Glazman</authors>
-		<licenseUrl>http://www.bluegriffon.org/</licenseUrl>
-		<projectUrl>http://bluegriffon.org/</projectUrl>
-		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluegriffon.svg</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>BlueGriffon</title>
+    <authors>Daniel Glazman</authors>
+    <licenseUrl>http://www.bluegriffon.org/</licenseUrl>
+    <projectUrl>http://bluegriffon.org/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluegriffon.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 BlueGriffon is a WYSIWYG content editor for the World Wide Web. Powered by Gecko, the rendering engine of Firefox, it's a modern and robust solution to edit Web pages in conformance to the latest Web Standards.
 
 BlueGriffon is an intuitive application that provides Web authors (beginners or more advanced) with a simple User Interface allowing to create attractive Web sites without requiring extensive technical knowledge about Web Standards.
 
 Because Gecko lives inside BlueGriffon, the document you edit will look exactly the same in Firefox. Advanced users can always use the Source View to hard-code their page.
-		</description>
-		<summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
-		<releaseNotes />
-		<copyright />
-		<tags>bluegriffon WYSIWYG gecko firefox html</tags>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    </description>
+    <summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>bluegriffon WYSIWYG gecko firefox html</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

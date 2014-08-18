@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<version>{{PackageVersion}}</version>
-		<title>nLite</title>
-		<authors>Dino Nuhagic (nuhi)</authors>
-		<projectUrl>http://www.nliteos.com/index.html</projectUrl>
-		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/nlite.png</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>nLite</title>
+    <authors>Dino Nuhagic (nuhi)</authors>
+    <projectUrl>http://www.nliteos.com/index.html</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/nlite.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 Deployment Tool for the Bootable Unattended Windows ISO
 (Remove components, integrate hotfixes, drivers and themes. Tweaks, patches …)
 
@@ -42,18 +42,18 @@ and Internet Explorer 7
 nLite supports Windows 2000, XP x86/x64 and 2003 x86/x64 in all languages.
 
 It needs .NET Framework 2.0 in order to run …
-		</description>
-		<summary>Deployment Tool for the Bootable Unattended Windows ISO
+    </description>
+    <summary>Deployment Tool for the Bootable Unattended Windows ISO
 (Remove components, integrate hotfixes, drivers and themes. Tweaks, patches …)</summary>
-		<releaseNotes />
-		<copyright>2004–2008 Dino Nuhagic (nuhi), all rights reserved.</copyright>
-		<tags>nlite unattended windows</tags>
-		<dependencies>
-			<dependency id="wget" />
-		</dependencies>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    <releaseNotes />
+    <copyright>2004–2008 Dino Nuhagic (nuhi), all rights reserved.</copyright>
+    <tags>nlite unattended windows</tags>
+    <dependencies>
+      <dependency id="wget" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

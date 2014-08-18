@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<version>{{PackageVersion}}</version>
-		<title>svg-explorer-extension</title>
-		<authors>Tibold Kandrai</authors>
-		<licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
-		<projectUrl>http://code.google.com/p/svg-explorer-extension/</projectUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>svg-explorer-extension</title>
+    <authors>Tibold Kandrai</authors>
+    <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <projectUrl>http://code.google.com/p/svg-explorer-extension/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 Extension module for Windows Explorer to render SVG thumbnails, so that you can have an overview of your SVG files.
-		</description>
-		<summary>SVG Viewer Extension for Windows Explorer</summary>
-		<tags>SVG thumbnail preview explorer extension</tags>
-	</metadata>
+    </description>
+    <summary>SVG Viewer Extension for Windows Explorer</summary>
+    <tags>SVG thumbnail preview explorer extension</tags>
+  </metadata>
 </package>
 <!-- “UTF-8” test -->

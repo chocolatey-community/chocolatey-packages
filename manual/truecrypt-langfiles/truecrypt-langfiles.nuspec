@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>truecrypt-langfiles</id>
-		<version>7.1.1</version>
-		<title>TrueCrypt language files</title>
-		<authors>Various (see http://www.truecrypt.org/localizations)</authors>
-		<projectUrl>http://www.truecrypt.org/localizations</projectUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/truecrypt.png</iconUrl>
-		<description>
+  <metadata>
+    <id>truecrypt-langfiles</id>
+    <version>7.1.1</version>
+    <title>TrueCrypt language files</title>
+    <authors>Various (see http://www.truecrypt.org/localizations)</authors>
+    <projectUrl>http://www.truecrypt.org/localizations</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/truecrypt.png</iconUrl>
+    <description>
 This package contains all available language files for TrueCrypt, the free open-source disk encryption software. The language files get extracted into the TrueCrypt program folder. Then the desired language can be selected in the TrueCrypt settings.
 
 ### Note
 
 The language files are public domain, so they can be distributed and modified freely.
-		</description>
-		<summary>Language files for TrueCrypt, the free open-source disk encryption software</summary>
-		<releaseNotes />
-		<copyright />
-		<tags>truecrypt language localization i18n</tags>
-		<dependencies>
-			<dependency id="truecrypt" />
-		</dependencies>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    </description>
+    <summary>Language files for TrueCrypt, the free open-source disk encryption software</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>truecrypt language localization i18n</tags>
+    <dependencies>
+      <dependency id="truecrypt" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>keepassx-langfiles</id>
-		<version>1.27.0.20140422</version>
-		<title>KeePass 1.x language files</title>
-		<authors>KeePass Team</authors>
-		<licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
-		<projectUrl>http://keepass.info/</projectUrl>
-		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>
+  <metadata>
+    <id>keepassx-langfiles</id>
+    <version>1.27.0.20140422</version>
+    <title>KeePass 1.x language files</title>
+    <authors>KeePass Team</authors>
+    <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
+    <projectUrl>http://keepass.info/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
 KeePass is a free, open source, light-weight and easy-to-use password manager.
 
 This package extracts a ZIP with all language files into the KeePass program folder. The language, however, must then be manually selected in the KeePass settings. Credits of the translation files: http://keepass.info/translations.html
-		</description>
-		<summary>Language files for KeePass 1.x.</summary>
-		<releaseNotes />
-		<copyright />
-		<tags>keepass password safe encryption language-file</tags>
-		<dependencies>
-			<dependency id="keepassx" />
-		</dependencies>
-	</metadata>
-	<files>
-		<file src="tools\keepass_1.x_langfiles.zip" target="tools\keepass_1.x_langfiles.zip" />
-		<file src="tools\**" target="tools" />
-	</files>
+    </description>
+    <summary>Language files for KeePass 1.x.</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>keepass password safe encryption language-file</tags>
+    <dependencies>
+      <dependency id="keepassx" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\keepass_1.x_langfiles.zip" target="tools\keepass_1.x_langfiles.zip" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->
