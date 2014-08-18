@@ -2,8 +2,8 @@
 $file = '.\tools\universal-usb-installer.exe'
 
 $srcUrl = $( '' +
-	'http://www.pendrivelinux.com/downloads/Universal-USB-Installer/' +
-	'Universal-USB-Installer-{{PackageVersion}}-src.zip'
+  'http://www.pendrivelinux.com/downloads/Universal-USB-Installer/' +
+  'Universal-USB-Installer-{{PackageVersion}}-src.zip'
 )
 
 $srcFile = '.\tools\universal-usb-installer-src.zip'

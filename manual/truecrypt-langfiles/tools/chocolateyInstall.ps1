@@ -7,7 +7,7 @@
   $destination = "$env:ProgramFiles\TrueCrypt"
   Get-ChocolateyUnzip $fileFullPath $destination
 
-	Write-ChocolateySuccess $name
+  Write-ChocolateySuccess $name
 } catch {
   Write-ChocolateyFailure $name $($_.Exception.Message)
   throw

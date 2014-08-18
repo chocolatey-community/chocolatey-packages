@@ -9,18 +9,18 @@ $downloadFileFullPath = "$env:TEMP\$downloadFile"
 
 try {
 
-	if (Get-ProcessorBits -eq 64) {
-		$url = $url64
-	} else {
-		$url = $url32
-	}
+  if (Get-ProcessorBits -eq 64) {
+    $url = $url64
+  } else {
+    $url = $url32
+  }
 
-	cd $env:TEMP
-	Start-Process 'wget' -ArgumentList "-O $downloadFile", "--referer $referer", $url -Wait
-	Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $downloadFileFullPath
-	Remove-Item $downloadFileFullPath
+  cd $env:TEMP
+  Start-Process 'wget' -ArgumentList "-O $downloadFile", "--referer $referer", $url -Wait
+  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $downloadFileFullPath
+  Remove-Item $downloadFileFullPath
 
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }

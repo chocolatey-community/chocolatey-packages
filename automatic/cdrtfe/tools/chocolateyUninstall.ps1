@@ -7,21 +7,21 @@ $regPath64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninst
 
 try {
 
-	if (Test-Path $regPath32) {
-		$regPath = $regPath32
-	}
+  if (Test-Path $regPath32) {
+    $regPath = $regPath32
+  }
 
-	if (Test-Path $regPath64) {
-		$regPath = $regPath64
-	}
+  if (Test-Path $regPath64) {
+    $regPath = $regPath64
+  }
 
-	if ($regPath) {
-		$unfile = (Get-ItemProperty -Path $regPath -Name 'UninstallString').UninstallString
-		Uninstall-ChocolateyPackage $packageName $fileType $installArgs $unfile -validExitCodes $validExitCodes
-	}
+  if ($regPath) {
+    $unfile = (Get-ItemProperty -Path $regPath -Name 'UninstallString').UninstallString
+    Uninstall-ChocolateyPackage $packageName $fileType $installArgs $unfile -validExitCodes $validExitCodes
+  }
 
-	Write-ChocolateySuccess $packageName
+  Write-ChocolateySuccess $packageName
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }
