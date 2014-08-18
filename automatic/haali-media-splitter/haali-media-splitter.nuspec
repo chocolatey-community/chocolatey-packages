@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
-        <title>Haali Media Splitter</title>
-        <authors>Mike Matsnev</authors>
-        <projectUrl>http://haali.su/mkv/</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/haali-media-splitter.svg</iconUrl>
-        <description>
+	<metadata>
+		<id>{{PackageName}}</id>
+		<version>{{PackageVersion}}</version>
+		<title>Haali Media Splitter</title>
+		<authors>Mike Matsnev</authors>
+		<projectUrl>http://haali.su/mkv/</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/haali-media-splitter.svg</iconUrl>
+		<description>
 Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter. mkv2vfr included, convert mkvs with variable framerate to constant framerate. GDSMux/DS Mux included also, a simple mkv/m2ts multiplexer and cutter.
-        </description>
-        <summary>Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter.</summary>
-        <releaseNotes />
-        <copyright>2004–2009 Mike Matsnev</copyright>
-        <tags>haali media splitter matroska ts</tags>
-    </metadata>
-    <files>
-        <file src="tools\**" target="tools" />
-    </files>
+		</description>
+		<summary>Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter.</summary>
+		<releaseNotes />
+		<copyright>2004–2009 Mike Matsnev</copyright>
+		<tags>haali media splitter matroska ts</tags>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
 </package>
 <!-- “UTF-8” test -->

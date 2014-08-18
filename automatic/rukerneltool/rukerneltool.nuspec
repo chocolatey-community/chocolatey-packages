@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
-        <title>ruKernelTool</title>
-        <authors>Rainer Ullrich</authors>
-        <projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>
+	<metadata>
+		<id>{{PackageName}}</id>
+		<version>{{PackageVersion}}</version>
+		<title>ruKernelTool</title>
+		<authors>Rainer Ullrich</authors>
+		<projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
 Universal flash-, upload- and recovery-tool for AVM Fritz!Box.
 
 ### Note
@@ -15,15 +15,15 @@ Universal flash-, upload- and recovery-tool for AVM Fritz!Box.
 The actual version of ruKernelTool is {{DownloadUrlx64}}.
 
 This package puts the ruKernelTool files into `$env:ChocolateyBinRoot\ruKernelTool`.
-        </description>
-        <summary>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</summary>
-        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/rukerneltool.png</iconUrl>
-        <releaseNotes></releaseNotes>
-        <copyright>2013 Rainer Ullrich</copyright>
-        <tags>avm fritz!box flash firmware</tags>
-        <dependencies>
-            <dependency id="wget" />
-        </dependencies>
-    </metadata>
+		</description>
+		<summary>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</summary>
+		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/rukerneltool.png</iconUrl>
+		<releaseNotes></releaseNotes>
+		<copyright>2013 Rainer Ullrich</copyright>
+		<tags>avm fritz!box flash firmware</tags>
+		<dependencies>
+			<dependency id="wget" />
+		</dependencies>
+	</metadata>
 </package>
 <!-- “UTF-8” test -->

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-    <metadata>
-        <id>{{PackageName}}</id>
-        <version>{{PackageVersion}}</version>
-        <title>WinCDEmu</title>
-        <authors>Sysprogs OÜ</authors>
-        <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
-        <projectUrl>http://wincdemu.sysprogs.org/</projectUrl>
-        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/wincdemu.png</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>
+	<metadata>
+		<id>{{PackageName}}</id>
+		<version>{{PackageVersion}}</version>
+		<title>WinCDEmu</title>
+		<authors>Sysprogs OÜ</authors>
+		<licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
+		<projectUrl>http://wincdemu.sysprogs.org/</projectUrl>
+		<iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/wincdemu.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
 WinCDEmu is an open-source CD/DVD/BD emulator – a tool that allows you to mount optical disc mages by simply clicking on them in Windows Explorer. If you have downloaded an ISO image and want to use it without burning it to a blank disc, WinCDEmu is the easiest way to do it.
 
 ### Features
@@ -26,11 +26,11 @@ WinCDEmu is an open-source CD/DVD/BD emulator – a tool that allows you to moun
 Supports data, DVD-video and BD-video images.
 
 WinCDEmu is free for any kind of use – it is licensed under LGPL.
-        </description>
-        <summary>WinCDEmu is an open-source CD/DVD/BD emulator</summary>
-        <releaseNotes>http://www.digital-digest.com/software/WinCDEmu_history.html#4</releaseNotes>
-        <copyright>2013 Sysprogs OÜ</copyright>
-        <tags>emulator virtual drive CD DVD BD</tags>
-    </metadata>
+		</description>
+		<summary>WinCDEmu is an open-source CD/DVD/BD emulator</summary>
+		<releaseNotes>http://www.digital-digest.com/software/WinCDEmu_history.html#4</releaseNotes>
+		<copyright>2013 Sysprogs OÜ</copyright>
+		<tags>emulator virtual drive CD DVD BD</tags>
+	</metadata>
 </package>
 <!-- “UTF-8” test -->
