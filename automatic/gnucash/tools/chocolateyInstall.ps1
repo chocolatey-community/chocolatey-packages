@@ -10,26 +10,26 @@ $registryPathWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVers
 
 try {
 
-    if (Test-Path $registryPath32) {
-        $registryPath = $registryPath32
-    }
+	if (Test-Path $registryPath32) {
+		$registryPath = $registryPath32
+	}
 
-    if (Test-Path $registryPathWow6432) {
-        $registryPath = $registryPathWow6432
-    }
+	if (Test-Path $registryPathWow6432) {
+		$registryPath = $registryPathWow6432
+	}
 
-    if ($registryPath) {
-        $displayName = (Get-ItemProperty -Path $registryPath -Name 'DisplayName').DisplayName
-        $installedVersion = $displayName -replace '.+?([\d\.]+)', '$1'
-    }
+	if ($registryPath) {
+		$displayName = (Get-ItemProperty -Path $registryPath -Name 'DisplayName').DisplayName
+		$installedVersion = $displayName -replace '.+?([\d\.]+)', '$1'
+	}
 
-    if ($version -eq $installedVersion) {
-        Write-Output "GnuCash $installedVersion is already installed. Skipping download and installation."
-    } else {
-        Install-ChocolateyPackage $packageName $fileType $silentArgs $url
-    }
+	if ($version -eq $installedVersion) {
+		Write-Output "GnuCash $installedVersion is already installed. Skipping download and installation."
+	} else {
+		Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+	}
 
 } catch {
-    Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw 
+	Write-ChocolateyFailure $packageName $($_.Exception.Message)
+	throw
 }

@@ -4,15 +4,15 @@ $filePath = "$env:TEMP\chocolatey\$packageName"
 $fileFullPath = "$filePath\${packageName}Install.exe"
 
 try {
-    if (!(Test-Path $filePath)) {
-        New-Item -ItemType directory -Path $filePath
-    }
+	if (!(Test-Path $filePath)) {
+		New-Item -ItemType directory -Path $filePath
+	}
 
-    Get-ChocolateyWebFile $packageName $fileFullPath $url
-    Start-Process $fileFullPath
+	Get-ChocolateyWebFile $packageName $fileFullPath $url
+	Start-Process $fileFullPath
 
-    Write-ChocolateySuccess $packageName
+	Write-ChocolateySuccess $packageName
 } catch {
-    Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw
+	Write-ChocolateyFailure $packageName $($_.Exception.Message)
+	throw
 }

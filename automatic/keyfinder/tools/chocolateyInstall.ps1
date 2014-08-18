@@ -11,7 +11,7 @@ Install-ChocolateyDesktopLink "$exePath"
 $desktop = [Environment]::GetFolderPath("Desktop")
 
 if (Test-Path "$desktop\$exeFileLink") {Remove-Item "$desktop\$exeFileLink"}
-    
+
 Rename-Item "$desktop\$exeFile.lnk" "$exeFileLink"
 
 

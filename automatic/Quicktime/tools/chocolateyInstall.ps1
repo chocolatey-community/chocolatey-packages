@@ -7,7 +7,7 @@ $fileFullPath = "$filePath\$packageName`Install.exe"
 
 try {
   if (-not (Test-Path $filePath)) {
-    New-Item -ItemType directory -Path $filePath
+	New-Item -ItemType directory -Path $filePath
   }
 
   Get-ChocolateyWebFile $packageName $fileFullPath $url
@@ -23,6 +23,6 @@ try {
   Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
 
 } catch {
-    Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw
+	Write-ChocolateyFailure $packageName $($_.Exception.Message)
+	throw
 }

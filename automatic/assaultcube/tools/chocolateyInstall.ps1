@@ -5,9 +5,9 @@ $zipPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\assaultcube
 $folder = "$env:ProgramFiles\AssaultCube"
 $folderx86 = "${env:ProgramFiles(x86)}\AssaultCube"
 if (Test-Path $folder) {
-    $unzipLocation = $folder
+	$unzipLocation = $folder
 } else {
-    $unzipLocation = $folderx86
+	$unzipLocation = $folderx86
 }
 
 # Uninstalling of old 1.1.0.4 version if necessary
@@ -16,11 +16,11 @@ $oldUninstall = "$env:ProgramFiles\AssaultCube_v1.1.0.4\Uninstall.exe"
 $oldUninstallx86 = "${env:ProgramFiles(x86)}\AssaultCube_v1.1.0.4\Uninstall.exe"
 
 if (Test-Path $oldUninstall) {
-    Start-ChocolateyProcessAsAdmin '/S' $oldUninstall
+	Start-ChocolateyProcessAsAdmin '/S' $oldUninstall
 }
 
 if (Test-Path $oldUninstallx86) {
-    Start-ChocolateyProcessAsAdmin '/S' $oldUninstallx86
+	Start-ChocolateyProcessAsAdmin '/S' $oldUninstallx86
 }
 
 # Installation of new version

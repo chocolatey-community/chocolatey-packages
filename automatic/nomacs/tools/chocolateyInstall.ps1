@@ -9,19 +9,19 @@ $url64bit = $urlsArray[1]
 
 try {
 
-    # If Windows 2000/XP, download matching version
-    $WinVersion = [System.Environment]::OSVersion.Version.Major
-    if ($WinVersion -eq 5) {
-        Write-Host 'You have Windows 2000/XP. There is no newer version than Nomacs 1.6.3 available for these operating systems.'
-        $url = $urlWinXp
-        $url64bit =$urlWinXp
-    }
+	# If Windows 2000/XP, download matching version
+	$WinVersion = [System.Environment]::OSVersion.Version.Major
+	if ($WinVersion -eq 5) {
+		Write-Host 'You have Windows 2000/XP. There is no newer version than Nomacs 1.6.3 available for these operating systems.'
+		$url = $urlWinXp
+		$url64bit =$urlWinXp
+	}
 
 
-    # Else download the version for Windows Vista/7/8 or later
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit
+	# Else download the version for Windows Vista/7/8 or later
+	Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit
 
 } catch {
-    Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw
+	Write-ChocolateyFailure $packageName $($_.Exception.Message)
+	throw
 }

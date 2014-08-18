@@ -8,21 +8,21 @@ $installerType = 'exe'
 $installArgs = '/S'
 
 try {
-    if (Test-Path $regPath64) {
-        $installedVersion = (Get-ItemProperty -Path $regPath64 -Name 'DisplayVersion').DisplayVersion
-    }
+	if (Test-Path $regPath64) {
+		$installedVersion = (Get-ItemProperty -Path $regPath64 -Name 'DisplayVersion').DisplayVersion
+	}
 
-    if (Test-Path $regPath) {
-        $installedVersion = (Get-ItemProperty -Path $regPath -Name 'DisplayVersion').DisplayVersion
-    }
+	if (Test-Path $regPath) {
+		$installedVersion = (Get-ItemProperty -Path $regPath -Name 'DisplayVersion').DisplayVersion
+	}
 
-    if ($installedVersion -and ($packageVersion -match $('^' + [Regex]::Escape($installedVersion)))) {
-        Write-Host "Inkscape $installedVersion is already installed. Skipping download and installation."
-    } else {
-        Install-ChocolateyPackage $packageName $installerType $installArgs $url
-    }
+	if ($installedVersion -and ($packageVersion -match $('^' + [Regex]::Escape($installedVersion)))) {
+		Write-Host "Inkscape $installedVersion is already installed. Skipping download and installation."
+	} else {
+		Install-ChocolateyPackage $packageName $installerType $installArgs $url
+	}
 
 } catch {
-    Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw
+	Write-ChocolateyFailure $packageName $($_.Exception.Message)
+	throw
 }

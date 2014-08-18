@@ -8,5 +8,5 @@ if (Test-Path "$startMenu\Programs\$exeFileLink") {Remove-Item "$startMenu\Progr
 $binRoot = "$env:systemdrive\tools"
 
 if (Test-Path "$binRoot\VirtualDub") {
-    Remove-Item "$binRoot\VirtualDub" -recurse
+	Remove-Item "$binRoot\VirtualDub" -recurse
 }

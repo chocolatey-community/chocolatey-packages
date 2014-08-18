@@ -9,13 +9,13 @@ $url = '{{DownloadUrl}}'
 $regAdd = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\regAdd.ps1"
 
 try {
-    # This adds a registry key which prevents Google Chrome from getting installed together with Piriform software products.
-    Start-ChocolateyProcessAsAdmin "& `'$regAdd`'"
+	# This adds a registry key which prevents Google Chrome from getting installed together with Piriform software products.
+	Start-ChocolateyProcessAsAdmin "& `'$regAdd`'"
 
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+	Install-ChocolateyPackage $packageName $fileType $silentArgs $url
 
-    Write-ChocolateySuccess "$packageName"
+	Write-ChocolateySuccess "$packageName"
 } catch {
-    Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
-    throw 
+	Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
+	throw
 }

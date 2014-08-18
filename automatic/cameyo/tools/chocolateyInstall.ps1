@@ -9,7 +9,7 @@ Install-ChocolateyDesktopLink "$exePath"
 $desktop = [Environment]::GetFolderPath("Desktop")
 
 if (Test-Path "$desktop\Cameyo.lnk") {Remove-Item "$desktop\Cameyo.lnk"}
-    
+
 Rename-Item "$desktop\Cameyo.exe.lnk" "Cameyo.lnk"
 
 
