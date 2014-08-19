@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+
+<Author>
+vfede
+</Author>
+
+<Language>
+Italian - Italiano
+</Language>
+
+<Country>
+Italy - Italia
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0b1
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0b1
+</Version_LangFile>
+
+<DateModified>
+2011/03/30
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Separatore
+Indietro
+Avanti
+Gruppi
+Chiuse di recente
+Applicazioni
+Nuova finestra
+Duplica
+Blocca
+Tool Copia
+Radice
+Chiudi
+Chiudi le altre schede
+Chiudi finestra
+Chiudi schede a sinistra
+Chiudi schede a destra
+Cartella superiore
+Ricarica
+Cerca
+Opacita'
+Ricerca
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Percorso
+Nome
+Percorso cartella corrente
+Nome cartella corrente
+MD5
+Elementi
+Percorsi di tutte le tab
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+Aggiungi
+Rimuovi
+Chiudi
+Resetta
+Su
+Giu'
+Apri immagine...
+Icone piccole
+Icone grandi
+Personalizza...
+Blocca menu
+Ripristina immagine
+Mostra etichette
+Testo selettivo
+Nascondi etichette
+Blocca dimensione searchbox
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Annulla
+Applica
+Default
+</DialogButtons>
+
+<DragDropToolTip>
+Copia in:
+Sposta in:
+Crea collegamento in:
+</DragDropToolTip>
+
+<Misc_Strings>
+Ricerca desktop
+File immagine non valido.\r\n\r\nPer favore inserisici un'immagine di 432x40px.
+Risultati ricerca in collegamento
+</Misc_Strings>
+
+<TabBar_Menu>
+Chiudi
+Chiudi schede a destra
+Chiudi schede a sinistra
+Chiudi le altre schede
+Aggiungi a un Gruppo
+Crea nuovo Gruppo
+Blocca
+Duplica
+Nuova finestra
+Copia percorso
+Proprieta'
+Cronologia schede
+Gruppi
+Riapri schede chiuse
+Ultima scheda attiva
+File recenti
+Sfoglia
+Chiudi le altre schede
+Chiudi finestra
+Opzioni
+Sblocca
+Aggiungi al menu Applicazioni: 
+Elementi
+Annulla
+Albero cartelle
+Rimuovi dal menu
+Apri percorso file
+Etichetta scheda
+Ordina schede per
+Nome
+Percorso
+Ultima scheda attiva
+Blocca le toolbar
+Unisci schede di altre finestre
+Inverti
+</TabBar_Menu>
+
+<TabBar_Message>
+Errore durante l'avvio di QTTabBar\r\n\r\n "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Crea Nuovo Gruppo
+Nome gruppo:
+Aggiungi tutte le schede
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Passa a nuova scheda
+Riusa scheda esistente
+Chiudi tutte le schede quando apri un gruppo
+Mostra tooltip
+Cattura i pulsanti X1/X2 del mouse
+Mostra pulsanti di navigazione
+Cronologia schede
+File recenti
+Usa Drag and Drop dei file sulle schede
+File di lingua:
+Posizione nuova scheda:
+Alla chiusura della scheda, attiva:
+Doppio click sulla scheda:
+Doppio click sullo sfondo della barra:
+Nome percorso/gruppo:
+Schede su multiple righe
+Rinomina schede ambigue automaticamente
+Click centrale su una cartella:
+Su di un livello con doppio click ai margini
+Non ridimensionare la finestra
+Salva la trasparenza della finestra
+Cattura nuovi processi di Explorer
+Mostra l'albero delle cartelle quando si cattura un nuovo processo
+Non convertire finestre in nuove schede quando aperte dall'esterno
+Scroll orizzontale con Maiusc + Rotella
+Cambia visualizzazione con Ctrl + Rotella (XP)
+Non chiudere la finestra se ha piu' schede
+Non chiudere la finestra se ha schede bloccate
+Ripristina schede
+Ripristina schede bloccate
+Usa immagine per le schede
+Colore selezione
+Misure delle schede:
+Larghezza
+Altezza
+Massima
+Minima
+Carattere
+Titolo in grassetto sulla scheda attiva
+Colore titolo della scheda
+Attiva
+Inattiva
+Default
+Colore sfondo della toolbar
+Icona cartella
+Percorso
+Argomenti
+Working directory
+File di lingua dei Plugin:
+Nascondi la barra del menu di Explorer
+Compatibilita' XP per tasto Indietro (Vista)
+Selezione intera riga in vista dettagli
+Griglia in vista dettagli
+Alterna i colori delle righe in vista dettagli
+Mostra anteprima dei file
+Tenendo premuto Maiusc
+Abilita 'icona sottocartelle'
+Mostra file nascosti
+Mostra i file
+Non selezionare l'estensione quando rinomini i file (XP)
+Mostra file di sistema
+Minimizza nel tray cliccando Chiudi
+Larghezza Massima
+Altezza Massima
+Immagine di sfondo della toolbar
+Cambia la selezione con F2 quanto rinomini
+Mostra la X di chiusura sulle schede
+Click centrale sulla scheda:
+Abilita 'icona sottocartelle' sulle schede
+Apri nuova finestra in...
+Premendo tasto Alt
+Al passaggio del mouse
+Esporta configurazione...
+Loop del cursore
+Massimo timeout della rete (in secondi, 0 per valore di sistema)
+Minimizza nel tray cliccando Minimizza
+Allineamento testo
+Rendering del Menu
+</TabBar_Option>
+
+<TabBar_Option2>
+Sull'albero delle cartelle, apri nuova scheda con Click Centrale o Maiusc+Click (XP)
+Scorri tra le schede con Ctrl+Tab
+Ombra del testo
+Controlla aggiornamenti periodicamente
+Rimuovi la scheda originaria quando crei una nuova finestra 
+Mostra lettera dell'unita'
+Suoni
+Installa un plugin
+Opzioni
+Disabilita
+Abilita
+Disinstalla
+About {0}
+Se disinstalli questo plugin, devi disinstallare anche \r\n\r\n{0}\r\n\r\nSei sicuro?
+Mostra informazioni file sotto le immagini
+Usa il vecchio ListView control (Win7)
+Mostra intestazione delle colonne in tutte le viste (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Sinistra
+Destra
+Piu' a destra
+Piu' a sinistra
+Ultima scheda attiva
+Su di un livello
+Chiudi
+Blocca
+Mostra menu
+Nuova finestra
+Duplica
+Copia percorso
+Proprieta'
+ - 
+Sfoglia cartella
+Chiudi le altre schede
+Blocca tutte
+Riapri scheda chiusa
+Opzioni
+Chiudi finestra
+Duplica la scheda corrente
+Multipla
+Nuova scheda
+Automatica
+Fisso
+Limita larghezza schede
+Allarga
+Affianca
+Dimensioni reali
+Sinistra
+Centro
+Vista
+XP
+Allarga su ogni fascia
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Generale
+Scheda
+Finestra
+Aspetto
+Gruppi
+Applicazioni
+Plugins
+Shortcut da tastiera
+Misc.
+Percorso
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Pulisci
+Su
+Giu'
+Aggiungi separatore
+Start Up
+Opzioni Plugin
+Colore sfondo
+Colore testo
+Default
+Salva
+Elimina
+Controlla ora
+Copia negli appunti
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Taskbar
+Desktop
+Blocca elementi
+Disegna sfondo del titolo
+Menu con un click
+Abilita shortcut applicazione
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Gruppi
+Riapri chiusa
+Applicazioni
+File recenti
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Indietro (Alt + Sinista)
+Avanti (Alt + Destra)
+Torna all'inizio
+Vai alla fine
+Seleziona prossima scheda
+Seleziona scheda precedente
+Seleziona prima scheda
+Seleziona ultima scheda
+Chiudi scheda corrente
+Chiudi le altre schede
+Chiudi schede a sinistra
+Chiudi schede a destra 
+Chiudi finestra (Alt + F4)
+Riapri scheda chiusa
+Duplica scheda
+Apri cartella corrente in una nuova finestra
+Blocca/sblocca scheda corrente
+Blocca/sblocca tutte le schede
+Sfoglia cartella
+Crea nuovo gruppo
+Apri menu opzioni
+Mostra menu toolbar
+Mostra menu scheda corrente
+Mostra menu gruppi (barra pulsanti)
+Mostra menu cartelle recenti (barra pulsanti)
+Mostra menu applicazioni utente (barra pulsanti)
+Mostra/nascondi barra del menu di Explorer
+Copia percorso file selezionati
+Copia nome file selezionati
+Copia percorso cartella corrente
+Copia nome cartella corrente
+Controlla MD5 dei file selezionati
+Porta finestra in primo piano
+Aumenta trasparenza
+Diminusici trasparenza
+Focus su lista file
+Focus sulla barra di ricerca (Vista)
+Focus sulla casella di ricerca (barra pulsanti)
+Mostra sottocartelle della cartella selezionata
+Minimizza finestra nel tray
+Focus sulla barra delle schede
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" e' gia' assegnato a "{1}".\r\n\r\nVuoi riassegnarlo?
+Conferma di riassegnamento
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugin
+Comandi utente
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Trovata nuova versione.\r\n\r\n{0}\r\n\r\nClicca OK per aprire il sito web.
+La tua versione di QTTabBar e' aggiornata.
+Trovata nuova versione: 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>

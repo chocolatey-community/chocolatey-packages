@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<root>
+
+<Author>
+Buchtič
+</Author>
+
+<Language>
+Czech
+</Language>
+
+<Country>
+CZE
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0a4
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0a4
+</Version_LangFile>
+
+<DateModified>
+2011/06/22
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Oddělovač
+Zpět
+Vpřed
+Skupiny
+Poslední zavřené
+Aplikace
+Nové okno
+Klonovat
+Zamknout
+Kopírovat
+Navrchu
+Zavřít
+Zavřít vše, kromě aktuální
+Zavřít okno
+Zavřít vše vlevo
+Zavřít vše vpravo
+Nahoru
+Obnovit
+Hledat
+Průhlednost
+Vyhledávací pole
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Cestu
+Název
+Cestu aktuální složky
+Název aktuální složky
+MD5
+ položek
+Cesty všech otevřených záložek
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Přidat
+&amp;Odebrat
+&amp;Zavřít
+&amp;Resetovat
+&amp;Nahoru
+&amp;Dolů
+&amp;Procházet obrázek...
+Malá ikona
+Velká ikona
+&amp;Přizpůsobit...
+&amp;Zamknout mabídky
+Re&amp;setovat obrázek
+Zobrazit textové popisky
+Výběr textu
+Žádné textové popisky
+Ozamknout velikost vyhledávacího pole
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Zrušit
+&amp;Použít
+&amp;Výchozí
+</DialogButtons>
+
+<DragDropToolTip>
+Kopírovat do:
+Přesunout do:
+Vytvořit zástupce v:
+</DragDropToolTip>
+
+<Misc_Strings>
+Prohledat Plochu
+Neplatný obrázek.\r\n\r\nProsím, vyberte obrázek o velikosti 432 x 40 px.
+Výsledky hledání v
+zástupce
+</Misc_Strings>
+
+<TabBar_Menu>
+Zavřít
+Zavřít vše vpravo
+Zavřít vše vlevo
+Zavřít vše, kromě této
+Přidat do skupiny
+Vytvořit novou skupinu
+Zamknout
+Klonovat
+Nové okno
+Kopírovat cestu
+Vlastnosti
+Historie záložek
+Záložky
+Vrátit zavřené
+Poslední aktivované
+Naposledy otevřené soubory
+Procházet složku
+Zavřít vše, kromě aktuální
+Zavřít okno
+Možnosti
+Odemknout
+Přidat do menu Aplikace: 
+položek
+Zrušit
+Branches
+Odebrat tuto položku z menu
+O&amp;tevřít obsahující složku
+Štítek záložky
+Pořadí záložek
+Název
+Cesta
+Aktivní
+Zamknout Panely nástrojů
+Sloučit záložky ostatních oken
+Obrátit
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar neotevřel\r\n\r\n "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Vytvořit novou skupinu
+Název skupiny:
+Přidat všechny záložky
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Aktivovat novou záložku
+Znovu použít tuto záložku
+Zavřít všechny záložky při otevření skupiny
+Zobrazit bublinové nápovědy
+Snímat X1/X2 tlačítka myši
+Zobrazit navigační tlačítka
+Historie záložek
+Poslední soubory
+Použít Drag &amp;&amp; Drop (Táhni &amp;&amp; Pusť) v záložkách
+Jazykový soubor:
+Nové umístění záložky:
+Po zavření aktuální záložky, aktivovat:
+Při dvokliku na záložku:
+Při dvojkliku na pozadí:
+Cesta/skupina:
+Více řádků záložek
+Automaticky přejmenovat nejednoznačné záložky
+Při kliku kolem myši na složku:
+Nahoru při dvojkliku na okraj složky
+Neměnit velikost okna
+Uložit průhlednost okna
+Zachytit nové procesy Průzkumníka
+Zobrazit strom při zachycení nových procesů
+Nezachytávat okna jako novou záložku při otevření externě
+Vodorovné rolování pomocí Shift + Kolečko myši
+Změnit režim prohlížení pomocí Ctrl + Kolečko myši (XP)
+Zabránit zavření okna při ukončení záložky
+Zabránit zavření okna při uzamčené záložce
+Obnovit záložky
+Obnovit uzamčené záložky
+Použít obrázek pro záložku
+Barva zvýraznění
+Velikost záložky:
+Šířka
+Výška
+Max
+Min
+Písmo
+Tučně na aktivní záložce
+Barva textu
+Aktivní
+Neaktivní
+Výchozí
+Barva pozadí Panelu nástrojů
+Ikona složky
+Cesta
+Argumenty
+Pracovní adresář
+Jazykový soubor pluginu:
+Skrýt panel menu
+XP-kompatibilní BS klíč(Vista)
+Výběr celého řádku při zobrazení detailů
+Výběr mřížky při zobrazení detailů
+Alternativní barva řádku při zobrazení detailů
+Zobrazit náhled bublinové nápovědy
+pomocí klávesy Shift
+Zapnout zobrazení podsložek
+Zobrazit skryté objekty
+Zobrazit soubory
+Skrýt přípony souborů při výběru (XP)
+Zobrazit systémové objekty
+Skrýt do systray při kliknutí na Zavřít
+Max šířka
+Max výška
+Pozadí Panelu nástrojů
+Změnit výběr pomocí F2 při přejmenování souborů
+Zobrazit tlačítko pro zavření na záložkách
+Při kliknutí kolečkem na záložku:
+Zapnout zobrazení podsložek na záložkách
+Otevřít nové okno...
+Pomocí klávesy Alt
+Při přejetí myši
+Nastavení exportu...
+Smyčka kurzoru
+Timeout sítě (sekund, 0 pro hodnotu systému)
+Skrýt do systray při minimalizaci
+Zarovnání textu
+Vykreslení menu
+</TabBar_Option>
+
+<TabBar_Option2>
+Při zobrazení stromu, otevřít novou složku kliknutím kolečka nebo kliknutím a Shift (XP)
+Zobrazit přepínač záložek pomocí Ctrl+Tab
+Stín textu
+Pravidelně kontrolovat aktualizace
+Odebrat původní záložku při otevření nového okna
+Zobrazit písmena jednotek
+Zvuk
+Instalovat plugin
+Možnosti
+Vypnout
+Zapnout
+Odinstalovat
+O pluginu {0}
+Pokud odinstalujte tento plugin, musíte odinstalovat také \r\n\r\n{0}\r\n\r\nJste si jistý, že chcete pokračovat?
+Zobrazit informace o souboru pod obrázky
+Použít staré ovládání zobrazení seznamu (Win7)
+Zobrazit názvy sloupců ve všech režimech zobrazení (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Vlevo
+Vpravo
+Úplně vpravo
+Úplně vlevo
+Poslední aktivovaný
+Nahoru
+Zavřít
+Zamknout
+Zobrazit menu
+Nové okno
+Klonovat
+Kopírovat cestu
+Vlasnosti
+ - 
+Procházet složku
+Zavřít všechny, kromě aktuální
+Zamknout vše
+Obnovit poslední zavřenou
+Možnosti
+Zavřít okno
+Klonovat
+ 
+Nová záložka
+Automaticky
+Fixní
+Limit šířky záložky
+Stretch
+Titulek
+Skutečná velikost
+Vlevo
+Na střed
+Vista
+XP
+Stretch on each band
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Hlavní
+Záložka
+Okno
+Vzhled
+Skupiny
+Aplikace
+Pluginy
+Kláv. zkratky
+Různé
+Cesta
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Vymazat
+Nahoru
+Dolů
+Přidat oddělovač
+Po spuštění
+Možnosti pluginu
+Barva pozadí
+Barva textu
+Výchozí
+Nastavit
+Vymazat
+Zkontrolovat
+Zkopírovat do schránky
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Panel nástrojů
+Plocha
+Zamknuté položky
+Vykreslit pozadí textu
+Menu jedním klikem
+Zapnout klávesové zkratky pro aplikace
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Skupiny
+Vrátit zavřené
+Aplikace
+Naposledy otevřené soubory
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Přejít zpět ( Alt + Left )
+Přejít vpřed ( Alt + Right )
+Přejít na začátek
+Přejít na konec
+Vybrat následující záložku
+Vybrat předchozí záložku
+Vybrat první záložku
+Vybrat poslední záložku
+Zavřít aktuální záložku
+Zavřít vše, kromě aktuální
+Zavřít vše vlevo
+Zavřít vše vpravo
+Zavřít okno ( Alt + F4 )
+Vrátit zavřené
+Klonovat aktuální
+Otevřít aktuální složku v novém okně
+Zamknout / odemknout aktuální
+Zamknout / odemknout vše
+Procházet složku
+Vytvořit novou skupinu
+Otevřít dialog možnosti
+Zobrazit menu Panelu nástrojů
+Zobrazit menu aktuální záložky
+Zobrazit menu skupiny ( tlačítko )
+Zobrazit menu aktuální složky ( tlačítko )
+Zobrazit menu uživatelské aplikace ( tlačítko )
+Zobrazit / skrýt menu
+Kopírovat cestu vybraných souborů
+Kopírovat názvy vybraných souborů
+Kopírovat cestu aktuální složky
+Kopírovat název aktuální složky
+Ověřit MD5 vybraných souborů
+Přesunout okno nahoru
+Průhlednost +
+Průhlednost -
+Zvýraznit seznam souborů
+Zvýraznit vyhledávací pole (Vista)
+Zvýraznit vyhledávací pole ( tlačítko )
+Zobrazit menu podsložek pro aktuální složku
+Skrýt okno do systray
+Zvýraznit Panel nástrojů
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" je již přiřazena "{1}".\r\n\r\nChcete změnit přiřazení?
+Potvrzení změny přiřazení
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugin
+Uživatelské příkazy
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Nalezena nová verze.\r\n\r\n{0}\r\n\r\nKlikněte na OK pro otevření webu.
+Používáte nejnovější verzi QTTabBar.
+Nalezena nová vývojová verze: 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>

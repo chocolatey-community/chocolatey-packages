@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<root>
+
+<Author>
+Jan Ripper (www.jan-ripper.de) E-Mail: jan DOT ripper AT gmail DOT com
+</Author>
+
+<Language>
+German / Deutsch
+</Language>
+
+<Country>
+Germany / Deutschland
+</Country>
+
+<Version_QTTabBar>
+1.2.3 Beta5
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.2.3 Beta
+</Version_LangFile>
+
+<DateModified>
+2009/02/19
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Trennzeichen 
+Zurück
+Vorwärts
+Gruppen
+Geschlossene Tabs
+Anwendungen
+Neues Fenster
+Duplizieren
+Sperren
+Kopieren
+Immer im Vordergrund
+Schließen
+Alle inaktiven Tabs schließen
+Fenster schließen
+Linken Tab schließen
+Rechten Tab schließen
+Aufwärts
+Neu laden
+Suchen
+Deckkraft
+Suchfeld
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Pfad
+Name
+Aktuellen Verzeichnisspfad
+Aktuellen Ordnernamen
+MD5-Prüfsumme
+ Elemente
+Pfade aller offenen Tabs
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Hinzufügen
+&amp;Entfernen
+&amp;Schließen
+S&amp;tandard
+Nach &amp;oben
+Nach &amp;unten
+&amp;Bilddatei wählen ...
+Kleine Symbole
+Große Symbole
+&amp;Anpassen ...
+&amp;Menü sperren
+B&amp;ilddatei wiederherstellen
+Alle Symboltitel anzeigen
+Nur bestimmte Symboltitel
+Keine Symboltitel anzeigen
+Feste Größe der Suchbox
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Abbrechen
+&amp;Übernehmen
+&amp;Standard
+</DialogButtons>
+
+<DragDropToolTip>
+Hierher kopieren:
+Hierher verschieben:
+Verknüpfung hier erstelllen:
+</DragDropToolTip>
+
+<Misc_Strings>
+Desktopsuche
+Die gewählte Bilddatei ist ungültig.\r\n\r\nBitte wählen Sie eine 432 x 40 Pixel große Bilddatei.
+Ergebnisse hier suchen
+Verknüpfung
+</Misc_Strings>
+
+<TabBar_Menu>
+Schließen
+Rechten Tab schließen
+Linken Tab schließen
+Alle inaktiven Tabs schließen
+Zu Gruppe hinzufügen
+Neue Gruppe erstellen
+Sperren
+Duplizieren
+Neues Fenster
+Pfad kopieren
+Eigenschaften
+Tabverlauf
+Gruppen
+Zuletzt geöffnete Ordner
+Letzten aktiven Tab öffnen
+Zuletzt geöffnete Dateien
+Ordner suchen
+Alle inaktiven Tabs schließen
+Fenster schließen
+QTTabBar Optionen
+Entsperren
+&amp;Zu Anwendungen hinzufügen : 
+Elemente
+&amp;Abbrechen
+Zweige
+Vom Menü entfernen
+O&amp;rdner öffnen der das Element enthält
+Tabbezeichnung
+Tabreihenfolge
+Name
+Pfad
+Aktiv
+Symbolleisten fixieren
+Tabs aller Fenster hier anzeigen
+Umkehren
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar konnte\r\n\r\n  "{0}" \r\n\r\nnicht öffnen.
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Neue Gruppe erstellen
+Gruppenname:
+Alle Tabs hinzufügen
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Neuen Tab aktivieren
+Existierenden Tab wiederbenutzen
+Alle offenen Tabs schließen wenn eine Gruppe geöffnet wird
+Hinweise auf Tabs anzeigen
+Vor- und Zurücktasten der Maus verwenden (falls vorhanden)
+Navigationspfeile auf der Tableiste anzeigen
+Liste zuletzt geöffneter Ordner speichern
+Liste zuletzt geöffneter Dateien speichern
+Drag &amp;&amp; Drop bei Tabs aktivieren
+Sprachdatei:
+Platzierung neuer Tabs:
+Aktivieren, wenn aktueller Tab geschlossen wird:
+Doppelklick auf Tab:
+Doppelklick auf Hintergrund:
+Standardpfad:
+Mehrere Tabreihen
+Identische Tabbezeichnungen automatisch ändern (z.B.: "Programme @ C:\")
+Mausradklick auf Ordner:
+Bei Doppelklick auf den Fensterhintergrund zu übergeordnetem Ordner wechseln 
+Fenstergröße kann nicht verändert werden
+Fenstertransparenz beibehalten
+Neue Explorerinstanzen aufnehmen
+Verzeichnissbaum anzeigen wenn neue Instanz aufgenommen wurde
+Neues Fenster nicht als Tab aufnehmen wenn es von außerhalb geöffnet wurde
+Mit Shift + Mausrad zwischen Tabs wechseln
+Anzeigemodus mit Strg + Mausrad ändern (XP)
+Fenster lässt sich bei offenen Tabs nicht schließen
+Fenster lässt sich bei gesperrten Tabs nicht schließen
+Tabs wiederherstellen
+Gesperrte Tabs wiederherstellen
+Tabbild verwenden
+Markierungsfarbe
+Tabgröße:
+Breite
+Höhe
+Max
+Min
+Schriftart
+Titel bei aktivem Tab "Fett" darstellen
+Tabtitelfarbe
+Aktiver Tab
+Inaktive Tabs
+Standard
+Farbe der Werkzeugleiste
+Ordnersymbol anzeigen
+Pfad
+Parameter
+Ausführen in
+Sprachdatei für Plugins:
+Menüleiste ausblenden
+Rückschritttaste wie in XP (Vista)
+Zeilenauswahl in Detailansicht erleichtern
+Rastergitter in Detailansicht anzeigen
+Abwechselnde Zeilenfarben in Detailansicht verwenden
+Dateivorschau anzeigen
+Bei gedrückter Shift-Taste
+Unterordnerhinweis anzeigen
+Versteckte Dateien anzeigen
+Dateien anzeigen
+Dateiname beim Umbenennen ohne Erweiterung auswählen (XP)
+Systemdateien anzeigen
+Fenster beim Schließen in den Infobereich minimieren
+Maximale Breite
+Maximale Höhe
+Hintergrundbild der Werkzeugleiste
+Textauswahl beim Umbennenen durch F2 verändern
+Schließen-Schaltfäche auf den Tabs zeigen
+Mausradklick auf Tab
+Unterordnerinfo auf Tabs zeigen
+Neues Fenster wird hier geöffnet
+Wenn Alt gedrückt wird
+Wenn der Mauszeiger über dem Tab ist
+Einstellungen exportieren ...
+Am Ende einer Zeile das Element der nächsten Zeile markieren
+Max. Netzwerkzeitüberschreitung in Sekunden (0 für Windows-Wert)
+Fenster beim Minimieren in den Infobereich schicken
+Textdarstellung
+Menüdarstellung
+</TabBar_Option>
+
+<TabBar_Option2>
+Ordner im Verzeichnisbaum durch Mausradklick oder gedrückter Shift-Taste als neuen Tab öffnen (XP)
+Mit Strg+TAB zwischen Tabs wechseln
+Schlagschatten
+Regelmäßig nach neuer Version suchen
+Originaltab schließen wenn der Inhalt in einem neuen Fenster geöffnet wird
+Laufwerksbuchstabe anzeigen
+Sounds abspielen
+Plugin hinzufügen
+QTTabBar Optionen
+Deaktiveren
+Aktivieren
+Deinstallieren
+Über {0}
+Wenn Sie dieses Plugin deinstallieren, wird auch folgendes Plugin deinstalliert: \r\n\r\n{0}\r\n\r\nSind Sie sicher, dass Sie diese Plugins deinstallieren möchten?
+Dateiinformationen unter Bildern anzeigen
+Alte Listen-Darstellung verwenden (Windows 7)
+Alle Spaltenüberschriften anzeigen (Windows 7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Links
+Rechts
+Ganz rechts
+Ganz links
+Voriger Tab
+Aufwärts
+Schließen
+Sperren
+Menü anzeigen
+Neues Fenster
+Duplizieren
+Pfad kopieren
+Eigenschaften
+ -
+Ordner suchen 
+Alle inaktiven Tabs schließen
+Alle sperren
+Gerade geschlossenen Tab wiederherstellen
+QTTabBar Optionen
+Fenster schließen
+Duplizieren
+Untereinander 
+Neuer Tab
+Automatisch
+Fest
+Begrenzen
+Gestreckt
+Nebeneinander
+Originalgröße
+Linksbündig
+Zentriert
+Vista
+XP
+Auf jeder Leiste gestreckt
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Allgemein
+Tabs
+Fenster
+Darstellung
+Gruppen
+Anwendungen
+Plugins
+Tastenkürzel
+Sonstiges
+Pfad
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Liste leeren
+Hoch
+Runter
+Trennzeichen
+Immer öffnen
+Pluginoptionen
+Hintergrund
+Textfarbe
+Standard
+Übernehmen
+Löschen
+Jetzt suchen
+In die Zwischenablage kopieren
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Auf der &amp;Taskleiste
+Auf dem &amp;Desktop
+&amp;Elemente sperren
+&amp;Menükategorien farbig darstellen
+Menü durch einfachen &amp;Klick öffnen
+&amp;Anwendungskürzel aktivieren
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Gruppen
+Zuletzt geöffnete Ordner
+Anwendungen
+Zuletzt geöffnete Dateien
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Zurück (Alt + Nach links)
+Vorwärts (Alt + Nach rechts)
+Rücklauf
+Vorlauf
+Nächsten Tab auswählen
+Vorigen Tab auswählen
+Ersten Tab auswählen
+Letzten Tab auswählen
+Aktiven Tab schließen
+Alle inaktiven Tabs schließen
+Linken Tab schließen
+Rechten Tab schließen
+Fenster schließen (Alt + F4)
+Zuletzt geöffnete Ordner
+Duplizieren
+Aktuellen Ordner in neuem Fenster öffnen
+Sperren / Entsperren
+Alle sperren / entsperren
+Ordner suchen
+Neue Gruppe erstellen
+Optionen anzeigen
+Werkzeugleistenmenü anzeigen
+Aktuelles Tabmenü anzeigen
+Gruppenmenü anzeigen (Werkzeugleiste)
+Zuletzt geöffnete Ordner anzeigen  (Werkzeugleiste)
+Benutzeranwendungsmenü anezgeigen (Werkzeugleiste)
+Menüleiste ein- / ausblenden (Vista)
+Pfad ausgewählter Dateien kopieren
+Name ausgewählter Dateien kopieren
+Aktuellen Ordnerpfad kopieren
+Aktuellen Ordnernamen kopieren
+MD5-Prüfsumme ausgewählter Dateien kontrollieren
+Fenster im Vordergrund halten
+Transparenz verringern
+Transparenz erhöhen
+Zur Dateiliste wechseln
+Zum Vista-Suchfeld wechseln
+Zum QTTabBar-Suchfeld wechseln
+Unterordnerhinweis für ausgewählten Ordner anzeigen
+Fenster in den Infobereich minimieren
+Tableiste auswählen
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+Das Kürzel "{0}" wurde bereits "{1}" zugewiesen.\r\n\r\nMöchten Sie diese Zuweisung ändern?
+Kürzel ist bereits vergeben
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugins
+Benutzerbefehle
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Neue Version gefunden.\r\n\r\n{0}\r\n\r\nKlicken Sie OK um die Homepage von QTTabBar aufzurufen.
+Sie verfügen bereits über die aktuellste Version von QTTabBar.
+Neue Betaversion verfügbar : 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>

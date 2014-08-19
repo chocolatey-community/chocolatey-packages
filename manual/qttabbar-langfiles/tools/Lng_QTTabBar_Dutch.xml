@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<root>
+
+<Author>
+By Jan Van der Borght, Ported and Completed by Just Someone
+</Author>
+
+<Language>
+Dutch - Nederlands
+</Language>
+
+<Country>
+Netherlands\Belgium
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0a4
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0a4
+</Version_LangFile>
+
+<DateModified>
+6/3/2011
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Scheidingsteken
+Ga terug
+Ga vooruit
+Groepen
+Recent Gesloten
+Toepassingen
+Nieuw venster
+Kloon deze tab
+Fixeer
+Kopieer
+Bovenop
+Sluit
+Sluit alle andere
+Venster Sluiten
+Links Sluiten
+Rechts Sluiten
+Niveau Hoger
+Herlaad
+Zoek
+Transparantie
+Zoekbalk
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Pad
+Naam
+Current folder path
+Current folder name
+MD5
+ items
+paden van alle open tabbladen 
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Voeg toe
+&amp;Verwijder
+&amp;Sluit
+&amp;Herstellen
+&amp;Omhoog
+&amp;Omlaag
+&amp;Zoek afbeelding...
+Kleine iconen
+Grote iconen
+&amp;Pas aan...
+&amp;Fixeer menu
+&amp;herstel afbeelding
+Toon tekstlabels
+Selectieve tekst
+Geen tekstlabels
+Fixeer de grote van de zoekbox
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Annuleer
+&amp;Toepassen
+&amp;Standaard
+</DialogButtons>
+
+<DragDropToolTip>
+Kopieer Hier:
+Verplaats naar Hier:
+Maak Hier Snelkoppeling:
+</DragDropToolTip>
+
+<Misc_Strings>
+Bureaublad zoekopdracht
+Afbeelding is ongeldig.\r\n\r\nKies een afbeelding van 432 bij 40 pixels.
+Zoekresultaten in
+Snelkoppeling
+</Misc_Strings>
+
+<TabBar_Menu>
+Sluit
+Rechts sluiten
+Links sluiten
+Sluit alle andere
+Voeg toe aan Groep
+Maak nieuwe Groep
+Fixeer
+Kloon deze tab
+Nieuw venster
+Kopieer pad
+Eigenschappen
+Tabgeschiedenis
+Groepen
+Sluiten ongedaan maken
+Laast geactiveerde
+Recent geopende bestanden
+Blader in folder
+Sluit alle andere
+Venster sluiten
+Opties
+Maak los
+Voeg toe aan Toepassingenmenu :
+items
+Annuleer
+Branches
+Verwijder dit item uit menu
+O&am;pen deze map
+Tab label
+Tab volgorde
+Naam
+Pad
+Actief
+Fixeer de werkbalken
+Voeg de tabs van andere vensters toe
+Omkeren
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar faalde bij het opstarten\r\n\r\n  "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Maak Nieuwe Groep
+Groepsnaam :
+Voeg alle tabs toe
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Activeer nieuwe tab
+Hergebruik bestaande tab
+Sluit alle tabs wanneer Groep wordt geopend
+Toon Tooltips
+Vang muisknoppen X1/X2
+Toon navigatieknoppen
+Tabgeschiedenis
+Recente bestanden
+Sleep bestanden op tabs d.m.v. Drag &amp;&amp; Drop
+Taalbestand :
+Nieuwe tablocatie :
+De huidige tab sluiten, activeert :
+Dubbelklikken op een tab :
+Dubbelklikken op de achtergrond :
+Pad/Groepsnaam :
+Meerdere tab-rijen
+Hernoem dubbelzinnige tabs automatisch
+Met muiswiel klikken op een Map :
+Ga één niveau hoger met dubbelklik op map marge
+Venstergrootte niet wijzigen
+Onthou venstertransparantie
+Vang nieuwe Verkenner-processen
+Toon mappenstructuur wanneer nieuw proces wordt gevangen
+Vang geen vensters in een nieuwe tab bij openen van buitenaf
+Horizontaal schuiven met Shift + Muiswiel
+Verander beeldwijze met Ctrl + Muiswiel (XP)
+Verhinder dat venster gesloten wordt als er tabs zijn
+Verhinder dat venster gesloten wordt als tabs gefixeerd zijn
+Herstel tabs
+Herstel gefixeerde tabs
+Gebruik tabafbeelding
+Accentueringskleur
+Tabgrootte :
+Breedte
+Hoogte
+Max
+Min
+Lettertype
+Maak actieve tab vet
+Kleur van de tabtitel
+Actief
+Inactief
+Standaard
+Achtergrondkleur taakbalk
+Mapicoon
+Pad
+Argumenten
+Werkmap
+Taalbestand plugin :
+Verberg menubalk
+XP-compatibele BS toets (Vista)
+Volledige rijselectie in detailzicht
+Toon rasterlijnen in detailzicht
+Alternerende rijkleuren in detailzicht
+Toon voorbeeld-tooltip
+als Shift wordt ingedrukt
+Activeer 'Submap-tip'
+Toon verborgen bestanden
+Toon bestanden
+Selecteer bestandsnaam zonder extensie bij hernoemen (XP)
+Toon systeembestanden
+Stuur venster naar het Systeembalk bij klikken op Sluit-knop
+Max Breedte
+Max Hoogte
+Werkbalk achtergrond afbeelding
+Verander Selectie met F2 Bij hernoemen van Bestanden
+Toon sluitknop op de tabs
+Scrollwiel-klik op tab:
+Enable 'submap tip' op tabs
+Open een nieuwe venster bij openen van...
+Met Alt toets ingedrukt
+Bij Muis 
+Exporteer instellingen...
+Aan het einde van een regel item op de volgende regel markeren
+Max netwerk time-out in seconden (0 voor Windows-waarde)
+Bij minimaliseren stuur venster naar systeembalk
+Tekstweergave
+Menu renderer
+</TabBar_Option>
+
+<TabBar_Option2>
+Bij navigatiedeelvenster, open nieuw tabblad met wielknop of klik met shift-toets ingedrukt (XP)
+Toon tabblad wisselaar met Ctrl + Tab
+Text Schaduw
+Periodiek controleren op updates
+Verwijder origineel tab bij het aanmaken van een nieuw venster
+Vermeld stationsletter
+Geluid
+Installeer een plugin
+Opties
+Uitschakelen
+Enable
+Verwijderen
+Info {0}
+Als u deze plugin verwijderd, moet u ook de volgende verwijderen, \r\n\r\n{0}\r\n\r\nWeet u zeker dat u dit wilt doen?
+Toon bestandsinformatie onder afbeeldingen
+Gebruik het oude ListView besturing (Win7)
+Toon kolomkoppen in alle weergaven (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Linkse tab
+Rechtse tab
+Meest rechtse tab
+Meest linkse tab
+Laatst geactiveerde
+Eén niveau hoger
+Sluiten
+Fixeer
+Toon menu
+Nieuw venster
+Kloon
+Kopieer pad
+Eigenschappen
+ - 
+Blader in folder
+Alle andere sluiten
+Alle tabs fixeren
+Herstel laatst gesloten
+Opties
+Venster sluiten
+Kloon huidige tab
+meerdere
+Nieuwe tab
+Auto
+Vast
+Beperk tabbreedte
+Rekken
+Tegel
+Ware grootte
+Links
+Midden
+Vista
+XP
+Rek op elke punt
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Algemeen
+Tab
+Venster
+Uiterlijk
+Groepen
+Toepassingen
+Plugins
+Sneltoetsen
+Diverse
+Pad
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Wis
+Omhoog
+Omlaag
+Plaats scheidingsteken
+Opstarten
+Pluginopties
+Achtergrondkleur
+Tekstkleur
+Standaard
+Activeer
+Wissen
+Nu controleren
+Kopiëren naar het klembord
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Taakbalk
+Bureaublad
+Fixeer items
+Toon titel achtergrond
+Menu door een klik
+Activeer toepassing sneltoetsen
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Groepen
+Sluiten ongedaan maken
+Toepassingen
+Recente locaties
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Ga terug ( Alt + Left )
+Ga vooruit ( Alt + Right )
+Ga terug naar start
+Ga naar einde
+Selecteer volgende tab
+Selecteer vorige tab
+Select eerste tab
+Select laatste tab
+Sluit huidige tab
+Alle andere tabs sluiten
+Linker tab sluiten
+Rechter tab sluiten
+Venster sluiten ( Alt + F4 )
+Sluiten ongedaan maken
+Kloon huidige tab
+Open huidige folder in nieuw venster
+Fixeren / losmaken van huidige tab
+Fixeren / losmaken van alle tabs
+Blader in folder
+Maak nieuwe Groep
+Open dialoogvenster van opties
+Toon taakbalk-menu
+Toon menu van huidige tab
+Toon menu van Groep ( knoppenbalk )
+Toon menu met recente mappen ( knoppenbalk )
+Toon menu met gebruikerstoepassingen ( knoppenbalk )
+Toon / Verberg menubalk (Vista)
+Kopieer pad geselecteerde bestanden
+Kopieer naam geselecteerde bestanden
+Kopieer huidig folderpad
+Kopieer huidige foldernaam
+Controleer MD5 van geselecteerde bestanden
+Breng venster naar voorgrond
+Transparantie +
+Transparantie -
+Focus bestandenlijst
+Focus zoekbalk (Vista)
+Focus zoekbalk ( knoppenbalk )
+Toon 'Subfolder Tip' voor geselecteerde folder
+Zend venster naar Systeembalk
+focus de tab
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" is reeds toegewezen aan "{1}".\r\n\r\nWil je opnieuw toewijzen?
+Bevestiging van opnieuw toewijzen
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugins
+Gebruikerscommando's
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Nieuwe versie gevonden.\r\n\r\n{0}\r\n\r\nKlik OK om naar de website te gaan.
+U heeft de laaste versie van QTTabBar.
+Nieuwe ontwikkelings versie van QTTabBar gevonden:
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>

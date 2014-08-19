@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>Classic Shell</title>
+    <authors>Ivo Beltchev</authors>
+    <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>
+    <projectUrl>http://www.classicshell.net/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Classic Shell is a collection of usability enhancements for Windows. The main features are:
+
+* Highly customizable start menu with multiple styles and skins
+* Start button for Windows 7 and Windows 8
+* Toolbar and status bar for Windows Explorer
+* Caption and status bar for Internet Explorer
+
+### Note
+
+If you want to install only specific components, e.g. only the Start Menu, use
+`choco install classic-shell -installArgs ADDLOCAL=ClassicStartMenu`. If Classic Shell gets updated, you won’t have to specify the `-installArgs` again. It remembers your previous selection and will only install the component you have specified. To look for other possible installer arguments, go to http://www.classicshell.net/faq/#install_commands
+    </description>
+    <summary>Usability enhancements for Windows</summary>
+    <releaseNotes></releaseNotes>
+    <copyright>Classic Shell</copyright>
+    <tags>classic shell start menu windows 8</tags>
+    <dependencies>
+      <dependency id="wget" />
+    </dependencies>
+  </metadata>
+</package>
+<!-- “UTF-8” test -->

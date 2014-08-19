@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<root>
+<!--##############################################################
+             !!!! Please use editors that accepts UTF-8 encode !!!!
+
+                * 1 line for 1 data. 
+                * New Line character must be CR-LF ("\r\n") in each line end.
+                * QTTabBar ignores empty lines.
+                * '&' (Alt-key mnemonic indicator) must be replaced to "&amp;" so use "&amp;&amp;" for literal '&'.
+                * Literal "\r\n" can be used for new line.
+                * {0} is used as a placeholder for folder path in some resources.
+                * These comments can be removed on distributing.
+				
+    ##############################################################
+	
+			This file translate four Plugins:
+				* Change FolderViewMode
+				* FolderMemo
+				* QTFileTools
+				* FolderTreeButton 
+				
+####################################################################-->
+####################################################################-->
+
+<Author>
+Tomasz Zenger % Jacek Kloska (poprawki i dodatki)
+</Author>
+
+<Language>
+Polski/Polish
+</Language>
+
+<Country>
+Polska/Poland
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0a4
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0a4
+</Version_LangFile>
+
+<DateModified>
+13-12-2010
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Separator
+Wstecz
+Dalej
+Grupy
+Ostatnio zamknięte
+Aplikacje
+Nowe okno
+Klonuj
+Zablokuj
+Narzędzie do kopiowania
+Zawsze na wierzchu
+Zamknij
+Zamknij wszystkie oprócz bieżącego
+Zamknij okno
+Zamknij lewy
+Zamknij prawy
+W górę
+Odśwież
+Wyszukaj
+Przezroczystość
+Pole wyszukiwania
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Ścieżka
+Nazwa
+Ścieżka bieżącego folderu
+Nazwa bieżącego folderu
+MD5
+ elementów
+Ścieżki wszystkich otwartych kart
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+Dod&amp;aj
+U&amp;suń
+Zamkni&amp;j
+&amp;Resetuj
+&amp;W górę
+W &amp;dół
+Prze&amp;glądaj obrazy...
+Małe ikony
+Duże ikony
+D&amp;ostosuj...
+Zab&amp;lokuj menu
+Re&amp;setuj obraz
+Ikony i tekst
+Selektywny tekst
+Tylko ikony
+Zablokuj rozmiar pola wyszukiwania
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Anuluj
+Z&amp;astosuj
+&amp;Domyślne
+</DialogButtons>
+
+<DragDropToolTip>
+&amp;Kopiuj do:
+&amp;Przenieś do:
+Utwórz &amp;skrót w:
+</DragDropToolTip>
+
+<Misc_Strings>
+Wyszukaj z Pulpitu
+Plik obrazu jest nieprawidłowy.\r\n\r\nWybierz obraz o rozmiarach 432 x 40 px.
+Wyszukaj w
+skrót
+</Misc_Strings>
+
+<TabBar_Menu>
+Zamknij
+Zamknij lewy
+Zamknij prawy
+Zamknij wszystkie oprócz tego
+Dodaj do grupy
+Utwórz nową grupę
+Zablokuj
+Klonuj
+Nowe okno
+Kopiuj ścieżkę
+Właściwości
+Historia kart
+Grupy
+Cofnij zamknięcie
+Ostatnio aktywowana
+Ostatnio otwarte pliki
+Przeglądaj folder
+Zamknij wszystkie oprócz bieżącego
+Zamknij okno
+Opcje
+Odblokuj
+Dod&amp;aj do menu Aplikacje: 
+elementy
+&amp;Anuluj
+Gałęzie
+Usuń ten element z menu
+O&amp;twórz folder zawierający
+Nazwa karty
+Układ kart
+Nazwa
+Ścieżka
+Aktywne
+Zablokuj paski narzędzi
+Połącz wszystkie okna
+Odwróć
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar nie może otworzyć\r\n\r\n  "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Utwórz nową grupę
+Nazwa grupy:
+Dodaj wszystkie karty
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Aktywuj nową kartę
+Użyj istniejącej karty
+Zamknij wszystkie karty przy otwarciu grupy
+Pokaż podpowiedzi
+Przechwyć przyciski X1/X2 myszy
+Pokaż przyciski nawigacyjne
+Historia ostatnio używanych kart
+Historia ostatnio używanych plików
+Używaj przeciągnij i upuść plików na karty
+Plik językowy:
+Położenie nowej karty:
+Po zamknięciu bieżącej karty aktywuj:
+Podwójne kliknięcie karty:
+Podwójne kliknięcie tła:
+Nazwa Ścieżki/Grupy:
+Karty w wielu rzędach
+Automatycznie zmień nazwy niejednoznacznych kart
+Kliknięcie kółkiem myszy folderu:
+Poziom wyżej po podwójnym kliknięciu marginesu folderu
+Bez zmiany rozmiaru okna
+Zachowaj przezroczystość okna
+Przechwyć nowe procesy Eksploratora
+Pokaż drzewo folderów po przechwyceniu nowego procesu
+Nie przechwytuj okna jako nowej karty gdy otwarte z zewnątrz
+Shift + kółko - poziome przewijanie
+Ctrl + kółko - Zmień widok (XP)
+Nie zamykaj okna jeśli są otwarte karty
+Nie zamykaj okna jeśli są zablokowane karty
+Przywróć karty
+Przywróć zablokowane karty
+Uzyj obrazu jako tła karty
+Kolor podświetlenia
+Rozmiar karty:
+Szerokość
+Wysokość
+Maks.
+Min.
+Czcionka
+Pogrubiony tytuł aktywnej karty
+Kolor tytułu karty
+Aktywna
+Nieaktywna
+Domyślne
+Kolor tła paska narzędzi
+Ikona folderu
+Ścieżka
+Argumenty
+Folder roboczy
+Plik językowy wtyczki / wtyczek (jeden do wszystkich wtyczek):
+Ukryj pasek menu (Vista)
+Kompatybilny z XP klawisz BS (Vista)
+Wybór całego rzędu w widoku szczegółów
+Siatka w widoku szczegółów
+Zróżnicowane kolory rzędów w widoku szczegółów
+Pokazuj podgląd
+z przyciśniętym klawiszem Shift
+Włącz podgląd podfolderów
+Pokaż obiekty ukryte
+Pokaż pliki
+Zaznaczanie nazwy plików bez rozszerzenia (XP)
+Pokaż obiekty systemowe
+Zminimalizuj okno do zasobnika po kliknięciu Zamknij
+Maks. szerokość
+Maks. wysokość
+Obraz tła paska narzędziowego
+Przełącz zaznaczenie przy zmianie nazw plików używając F2
+Pokazuj przyciski zamknięcia na kartach
+Gdy karta kliknięta kółkiem myszy:
+Włącz podgląd podfolderów na kartach
+Otwórz nowe okno w...
+Z wciśniętym przyciskiem Alt
+Gdy pod kursorem myszy
+Eksportuj ustawienia...
+Pętla kursora
+Maksymalny czas oczekiwania sieci (sekundy, 0 dla wartości systemowej)
+Przy minimalizacji wyślij okno do zasobnika 
+Ustawienie tekstu
+Generator menu
+</TabBar_Option>
+
+<TabBar_Option2>
+W drzewie folderów otwórz nową kartę przez kliknięcie kółkiem lub z wciśniętym klawiszem shift (XP)
+Pokaż przełączanie kart na Ctrl+Tab
+Cień tekstu
+Regularnie poszukuj aktualizacji
+Usuń oryginalną kartę przy tworzeniu nowego okna
+Pokazuj literę dysku
+Dźwięki
+Zainstaluj wtyczkę
+Opcje
+Wyłącz
+Włącz
+Odinstaluj
+Informacje {0}
+Jeśli odinstalujesz tą wtyczkę, musisz także odinstalować \r\n\r\n{0}\r\n\r\nCzy kontynuować?
+Wyświetl informacje o pliku poniżej obrazów
+Użyj starego widoku listy (Win7)
+Wyświetl nagłówki kolumn we wszystkich widokach (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+Z lewej
+Z prawej
+Ostatnia z prawej
+Ostatnia z lewej
+Ostatnio aktywna
+W górę
+Zamknij
+Zablokuj
+Pokaż menu
+Nowe okno
+Klonuj
+Kopiuj ścieżkę
+Właściwości
+ - 
+Przeglądaj folder
+Zamknij wszystkie oprócz ostatniej
+Zablokuj wszystkie
+Przywróć ostatnio zamkniętą
+Opcje
+Zamknij okno
+Sklonuj bieżącą
+wielokrotne
+Nowa karta
+Auto
+Ustalona
+Ogranicz szer. karty
+Rozciągnij
+Kafelki
+Rozmiar rzeczywisty
+Lewo
+Środek
+Vista
+XP
+Rozciągnij na każdy pasek
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Ogólne
+Karta
+Okno
+Wygląd
+Grupy
+Aplikacje
+Wtyczki
+Klawisze skrótu
+Różne
+Ścieżka
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Wyczyść
+W górę
+W dół
+Dodaj separator
+Uruchom
+Opcje wtyczki
+Kolor tła
+Kolor tekstu
+Domyślne
+Ustaw
+Usuń
+Sprawdź teraz
+Skopiuj skróty do schowka
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+&amp;Pasek narzędzi
+P&amp;ulpit
+&amp;Zablokuj elementy
+Pokazuj tło t&amp;ytułu
+Menu po &amp;jednym kliknięciu
+Włącz skróty klawiaturowe &amp;aplikacji
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Grupy
+Cofnij zamknięcie
+Aplikacje
+Ostatnio otwarte pliki
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Wstecz (Alt + Left)
+Dalej (Alt + Right)
+Wstecz do początku
+Dalej do końca
+Wybierz następną kartę
+Wybierz poprzednią kartę
+Wybierz pierwszą kartę
+Wybierz ostatnią
+Zamknij bieżącą kartę
+Zamknij wszystkie oprócz bieżącej
+Zamknij lewą
+Zamknij prawa
+Zamknij okno (Alt + F4)
+Cofnij zamknięcie
+Klonuj bieżącą kartę
+Otwórz bieżący folder w nowym oknie
+Zablokuj/ odblokuj bieżącą
+Zablokuj/ odblokuj wszystkie
+Przeglądaj folder
+Utwórz nową grupę
+Otwórz okno opcji
+Pokaż menu paska narzędziowego
+Pokaż menu bieżącej karty
+Pokaż menu grup (pasek przycisków)
+Pokaż menu ostatnich folderów (pasek przycisków)
+Pokaż menu aplikacji użytkownika (pasek przycisków)
+Pokaż/ ukryj pasek menu (Vista)
+Kopiuj ścieżki wybranych plików
+Kopiuj nazwy wybranych plików
+Kopiuj ścieżkę bieżącego folderu
+Kopiuj nazwę bieżącego folderu
+Sprawdź sumę MD5 wybranych plików
+Przesuń okno na wierzch
+Przezroczystość +
+Przezroczystość -
+Wybierz listę plików
+Wybierz pasek wyszukiwania (Vista)
+Wybierz okienko wyszukiwania (pasek przycisków)
+Pokaż menu podglądu podfolderu dla wybranego folderu
+Wyślij okna do zasobnika systemowego
+Wybierz pasek zakładek (QTTabBar)
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" już przypisany do "{1}".\r\n\r\nCzy chcesz zmienić przypisanie?
+Potwierdzenie zmiany przypisania
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Wtyczki
+Polecenia użytkownika
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Znaleziono nową wersję.\r\n\r\n{0}\r\n\r\nNaciśnij OK, aby przejść na stronę.
+Twoja wersja QTTabBar jest aktualna.
+Znaleziono nową wersję beta: 
+</UpdateCheck>
+
+
+
+
+<QuizoPlugins.ViewModeButton>
+Przezrocze
+Miniatury
+Kafelki
+Ikony
+Lista
+Szczegóły
+Widok
+</QuizoPlugins.ViewModeButton>
+
+<QuizoPlugins.Memo>
+Pokaż / ukryj "Folder Memo"
+Pokazuj jeśli istnieje
+Pokazuj zawsze
+Zatrzymaj
+</QuizoPlugins.Memo>
+
+<QuizoPlugins.CopyButton>
+Kopiuj
+</QuizoPlugins.CopyButton>
+
+<QuizoPlugins.CutButton>
+Wytnij
+</QuizoPlugins.CutButton>
+
+<QuizoPlugins.PasteButton>
+Wklej
+</QuizoPlugins.PasteButton>
+
+<QuizoPlugins.DeleteButton>
+Usuń
+</QuizoPlugins.DeleteButton>
+
+<QuizoPlugins.CopyToButton>
+Kopiuj do folderu
+</QuizoPlugins.CopyToButton>
+
+<QuizoPlugins.MoveToButton>
+Przenieś do folderu
+</QuizoPlugins.MoveToButton>
+
+<QuizoPlugins.UndoButton>
+Cofnij
+</QuizoPlugins.UndoButton>
+
+<QuizoPlugins.SendToParentButton>
+Przenieś do katalogu wyżej
+</QuizoPlugins.SendToParentButton>
+
+<QuizoPlugins.PropertiesButton>
+Właściwości
+</QuizoPlugins.PropertiesButton>
+
+<QuizoPlugins.QTFolderTreeButton>
+Pokaż lub ukryj drzewo folderów
+Foldery
+Przejdź do drzewa folderów
+</QuizoPlugins.QTFolderTreeButton>
+
+
+<!-- data end -->
+
+</root>

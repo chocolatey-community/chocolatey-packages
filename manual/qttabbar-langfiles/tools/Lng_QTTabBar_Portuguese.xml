@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<root>
+
+<Author>
+Arthur Assuncao
+</Author>
+
+<Language>
+Portuguese
+</Language>
+
+<Country>
+Brazil
+</Country>
+
+<Version_QTTabBar>
+1.5.0.0b2
+</Version_QTTabBar>
+
+<Version_LangFile>
+1.5.0.0b2
+</Version_LangFile>
+
+<DateModified>
+2011/11/12
+</DateModified>
+
+<!-- data start -->
+
+<ButtonBar_BtnName>
+Separador
+Voltar
+Avançar
+Grupos
+Recentemente fechadas
+Aplicações
+Nova janela
+Clonar esta aba
+Bloquear
+Ferramenta Copiar
+TopMost
+Fechar
+Fechar todas menos esta
+Fechar janela
+Fechar abas à esquerda
+Fechar abas à direita
+Acima
+Recarregar
+Pesquisar
+Opacidade
+Caixa de Pesquisa
+</ButtonBar_BtnName>
+
+<ButtonBar_Misc>
+Endereco
+Nome
+Endereco da pasta atual
+Nome da pasta atual
+MD5
+ itens
+Endereços de todas abas abertas
+</ButtonBar_Misc>
+
+<ButtonBar_Option>
+&amp;Adicionar
+Re&amp;mover
+Fec&amp;har
+&amp;Resetar
+&amp;Acima
+&amp;Abaixo
+&amp;Procurar Imagem...
+Ícone pequeno
+Ícone grande
+&amp;Personalizar...
+&amp;Bloquear menus
+Re&amp;escolher imagem
+Mostrar rótulos de texto
+Texto seletivo
+Sem rótulo de texto
+Bloquear o tamanho da caixa Pesquisar
+</ButtonBar_Option>
+
+<DialogButtons>
+OK
+Cancelar
+&amp;Aplicar
+&amp;Padrão
+</DialogButtons>
+
+<DragDropToolTip>
+Copiar para:
+Mover para:
+Criar atalho em:
+</DragDropToolTip>
+
+<Misc_Strings>
+Pesquisa na Área de Trabalho
+Arquico de imagem inválido.\r\n\r\nPor favor especifique uma imagem de 432 x 40 px.
+Resultados da Pesquisa em
+Atalho
+</Misc_Strings>
+
+<TabBar_Menu>
+Fechar
+Fechar direita
+Fechar esquerda
+Fechar todas menos esta
+Adicionar ao Grupo
+Criar novo Grupo
+Bloquear
+Clonar esta aba
+Nova janela
+Copiar endereço
+Propriedades
+Histórico da aba
+Grupos
+Reabrir
+Ultima ativada
+Arquivos recentemente abertos
+Procurar pasta
+Fechar todas menos esta
+Fechar janela
+Opções
+Desbloquear
+Adicionar ao menu aplicação :
+itens
+Cancelar
+Ramos
+Remover este item do menu
+A&amp;bir contendo pasta
+Rótulo da aba
+Ordem das abas
+Nome
+Endereço
+Ativo
+Bloquear barras de ferramentas
+Mesclar abas de outras janelas
+Inverter
+</TabBar_Menu>
+
+<TabBar_Message>
+QTTabBar falhou ao abrir\r\n\r\n "{0}".
+</TabBar_Message>
+
+<TabBar_NewGroup>
+Criar um novo Grupo
+Nome do Grupo:
+Adicionar todas abas
+</TabBar_NewGroup>
+
+<TabBar_Option>
+Ativar nova aba
+Reutilizar aba existente
+Fechar todas as abas quando grupo é aberto
+Mostrar dicas de ferramentas
+Captura de botões do mouse X1/X2
+Mostrar botões de navegação
+Histórico das abas
+Arquivos recentes
+Use arquivo Drag &amp;&amp; Drop nas abas
+Arquivo de idioma:
+Localização da nova aba:
+Depois de fechar a aba atual, ativar:
+Quando der duplo-clique na aba:
+Quando der duplo-clique no fundo:
+Caminho/Grupo:
+Múltiplas linhas de abas
+Renomear automaticamente abas ambíguas
+Quando a roda do mouse clicar na pasta:
+Um nível acima quando der duplo-clique na margem da pasta
+Sem redimensionamento de janela
+Salvar a transparência da janela
+Capturar novos processos Explorer
+Mostrar árvore de pastas quando novo processo capturado
+Não capture janela como uma nova aba quando aberto do exterior
+Scroll horizontal com Shift + Roda
+Mudar o modo de visualização com Ctrl + Roda (XP)
+Impedir o fechamento da janela quando existir abas
+Impedir o fechamento da janela quando abas bloqueadas
+Restaurar abas
+Restaurar abas bloqueadas
+Usar imagem na aba
+Realçar cor
+Tamanho da aba:
+Largura
+Altura
+Máximo
+Mínimo
+Fonte
+Título da aba ativa em negrito
+Cor do título da aba
+Ativa
+Inativa
+Padrão
+Cor de fundo da barra de ferramentas
+Icone da pasta
+Endereço
+Argumentos
+Diretório de trabalho
+Arquivo de idioma do Plugin:
+Esconder barra de menu
+XP-compatibile BS key(Vista)
+Seleção de linha completa em visualização em detalhes
+Linhas de grade em visualização em detalhes
+Alterar cor da linha na visualização em detalhes
+Mostrar previsão do arquivo
+Com a tecla Shift pressionada
+Ativar 'dica de sub-pasta'
+Mostrar objetos ocultos
+Mostrar arquivos
+Eliminar extensão do arquivo selecionado quando renomear(XP)
+Mostrar objetos do sistema
+Enviar janela para Barra de Tarefas, clicando no botão Fechar
+Largura Máxima
+Altura Máxima
+Imagem de fundo da barra de ferramentas
+Seleção de mudança por F2 ao renomear arquivos
+Mostrar botão fechar nas abas
+Quando clicar com a roda na aba:
+Ativar 'dica de sub-pasta' nas abas
+Abrir nova janela em...
+Com a tecla Alt pressionada
+Ao foco do mouse
+Exportar configurações...
+loop de cursor
+Tempo limite de rede máximo (segundos, 0 para valor do sistema)
+Enviar janela para Barra de Tarefas ao minimizar
+Alinhamento do texto
+Menu render
+</TabBar_Option>
+
+<TabBar_Option2>
+Na árvore de pastas, abrir uma nova aba com clique na roda ou clique com shift pressionado (XP)
+Mostrar troca de aba com Ctrl+Tab
+Sombra no texto
+Verificar por atualizações periodicamente
+Remover aba original quando criar nova janela
+Indicar letra do drive
+Som
+Instalar um plugin
+Opções
+Desativar
+Ativar
+Desinstalar
+Sobre {0}
+Se você desinstalar este plugin, você deverá desinstalar \r\n\r\n{0}\r\n\r\nVocê tem certeza de que quer fazer isso?
+Exibir informações do arquivo abaixo imagens
+Usar velho controle visualização de lista (Win7)
+Exibir cabeçalho de coluna em todas as visualizações (Win7)
+</TabBar_Option2>
+
+<TabBar_Option_DropDown>
+À esquerda
+À direita
+Máximo à direita
+Máximo à esquerda
+Última ativada
+Acima
+Fechar
+Bloquear
+Mostrar menu
+Nova janela
+Fechar
+Copiar endereço
+Propriedades
+ - 
+Procurar pasta
+Fechar todas menos esta
+Bloquear tudo
+Restaurar última fechada
+Opções
+Fechar janela
+Fechar esta
+Múltiplo
+Nova aba
+Auto
+Fixo
+Limite de tabulação
+Esticar
+Tile
+Tamanho real
+Esquerdo
+Centro
+Vista
+XP
+Esticar em cada banda
+</TabBar_Option_DropDown>
+
+<TabBar_Option_Genre>
+Geral
+Aba
+Janela
+Aparência
+Grupos
+Aplicações
+Plugins
+Teclas de atalho
+Misc.
+Caminho
+</TabBar_Option_Genre>
+
+<TabBar_Option_Buttons>
+Limpar
+Acima
+Abaixo
+Adicionar separador
+Abrir ao iniciar
+Plugin Opção
+Cor de fundo
+Cor do texto
+Padrão
+Setar
+Deletar
+Verificar agora
+Copiar para área de transferência
+</TabBar_Option_Buttons>
+
+<TaskBar_Menu>
+Barra de tarefas
+Área de trabalho
+Bloquear itens
+Desenhe fundo título
+Menu por um clique
+Ativar teclas de atalho da aplicação
+</TaskBar_Menu>
+
+<TaskBar_Titles>
+Grupos
+Desfazer fechado
+Aplicações
+Arquivos recentemente abertos
+</TaskBar_Titles>
+
+<ShortcutKeys_ActionNames>
+Voltar ( Alt+Left )
+Avançar ( Alt+Right )
+Voltar ao início
+Avançar ao fim
+Selecionar próxima aba
+Selecionar aba anterior
+Selecionar primeira aba
+Selecionar última aba
+Fechar aba atual
+Fechar todas menos esta
+Fechar abas à esquerda
+Fechar abas à direita
+Fechar janela ( Alt+F4 )
+Desfazer fechar
+Clonar aba atual
+Abrir pasta atual em nova janela
+Bloquear / Desbloquear atual
+Bloquear / Desbloquear todas
+Procurar pasta
+Criar novo grupo
+Abrir diálogo Opções
+Mostrar menu barra de ferramentas
+Mostrar menu aba atual
+Mostrar menu grupo (barra de botões)
+Mostrar menu da pasta recente (barra de botões)
+Mostrar menu da aplicação do usuário (barra de botões)
+Mostrar / esconder barra de menu
+Copiar endereço do arquivo / pasta selecionado
+Copiar nome do arquivo / pasta selecionado
+Copiar endereço da pasta atual
+Copiar nome da pasta atual
+Checar MD5 do arquivo selecionado
+Trazer janela para nível superior
+Transparência +
+Transparência -
+Foco na lista de arquivos
+Foco na barra de pesquisa (Vista)
+Foco na caixa de pesquisa (barra de botões)
+Mostrar menu Dica de Subpasta da pasta selecionada
+Enviar janela para Barra de Tarefas
+Foco na barra de aba
+</ShortcutKeys_ActionNames>
+
+<ShortcutKeys_MsgReassign>
+"{0}" já está atribuído à "{1}".\r\n\r\nVocê quer transferir?
+Confirmação de transferência
+</ShortcutKeys_MsgReassign>
+
+<ShortcutKeys_Groups>
+QTTabBar
+Plugin
+Comandos do usuário
+</ShortcutKeys_Groups>
+
+<UpdateCheck>
+Nova versão encontrada.\r\n\r\n{0}\r\n\r\nPressione OK para ir para o site.
+Sua versão do QTTabBar está atualizada.
+Nova versão de desenvolvimento encontrada: 
+</UpdateCheck>
+
+<!-- data end -->
+
+</root>
