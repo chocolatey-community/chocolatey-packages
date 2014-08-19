@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>40640512</LastFileSize>
-    <LastFileDate>2014-07-05T15:53:17.1123313</LastFileDate>
+    <LastFileSize>41009152</LastFileSize>
+    <LastFileDate>2014-08-01T21:23:42.3375974</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -96,24 +96,8 @@
             <Url />
             <StartText>&lt;span class="version"&gt;Sprint </StartText>
             <EndText>, WIN</EndText>
-            <TextualContent>{realVersion:replace:-:.}</TextualContent>
+            <TextualContent>{release}</TextualContent>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>realVersion</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>file:///C:/Chocolatey/chocolatey-packages/automatic/Brackets-extract-version/brackets-version.txt</Url>
-            <StartText>&lt;version&gt;</StartText>
-            <EndText>&lt;/version&gt;</EndText>
-            <Name>realVersion</Name>
           </UrlVariable>
         </value>
       </item>
@@ -138,11 +122,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Brackets.Release.0.41.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Brackets.Release.0.42.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-05T15:53:17.1123313</LastUpdated>
+    <LastUpdated>2014-08-01T21:23:42.3375974</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://github.com/adobe/brackets/releases/download/release-{release}/Brackets.Release.{release}.msi</FixedDownloadUrl>
     <Name>Brackets</Name>
@@ -151,8 +135,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>29677544</LastFileSize>
-    <LastFileDate>2014-07-06T02:07:05.9325434</LastFileDate>
+    <LastFileSize>32047680</LastFileSize>
+    <LastFileDate>2014-07-22T19:22:32.9348472</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -188,11 +172,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Firefox Setup 30.0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Firefox Setup 31.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-06T02:07:05.9325434</LastUpdated>
+    <LastUpdated>2014-07-22T19:22:32.9348472</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://download.mozilla.org/?product=firefox-{version}&amp;os=win&amp;lang=de</FixedDownloadUrl>
     <Name>Firefox</Name>
@@ -334,7 +318,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\gs914w32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\gs914w32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -347,8 +331,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>40933040</LastFileSize>
-    <LastFileDate>2014-06-10T18:34:03.0921155</LastFileDate>
+    <LastFileSize>41578672</LastFileSize>
+    <LastFileDate>2014-08-12T23:01:55.6865399</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -368,7 +352,7 @@ REM /disablepush</ExecutePreCommand>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>[\d\.]+(?= for Windows)|(?&lt;=Windows, Mac, and Linux\. Chrome )[\d\.]+</Regex>
+            <Regex>[\d\.]+(?= for Windows)|(?&lt;=Windows, Mac, and Linux\. Chrome )|(?&lt;=Windows and Mac\. Chrome )[\d\.]+</Regex>
             <Url>http://googlechromereleases.blogspot.it/search/label/Stable%20updates</Url>
             <StartText>Chrome has been updated to </StartText>
             <EndText />
@@ -383,14 +367,105 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\GoogleChromeStandaloneEnterprise.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\GoogleChromeStandaloneEnterprise.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-10T18:34:03.0921155</LastUpdated>
+    <LastUpdated>2014-08-12T23:01:55.6865399</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B00000000-0000-0000-0000-000000000000%7D%26lang%3Den%26browser%3D3%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi</FixedDownloadUrl>
     <Name>GoogleChrome</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="df052f18-6e7d-49ba-bc65-6ad952ebded0">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>34573304</LastFileSize>
+    <LastFileDate>2014-07-07T21:57:27.3041113</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=&lt;tr title=")[\d\.]+(?=" class="folder)</Regex>
+            <Url>http://sourceforge.net/projects/inkscape/files/inkscape/</Url>
+            <StartText>&lt;tr title="</StartText>
+            <EndText>" class="folder</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlGeneral</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://sourceforge.net/projects/inkscape/files/inkscape/{version}/Inkscape-{version}-1-win32.exe/download</TextualContent>
+            <Name>urlGeneral</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{urlGeneral}</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlMirror</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
+            <Url>{urlGeneral}</Url>
+            <Name>urlMirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Inkscape-0.48.5-1-win32.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-07-07T21:57:27.3041113</LastUpdated>
+    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <Name>InkScape</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b7ff53c3-91c6-4e46-b888-78c06916bd6d">
     <SourceTemplate><![CDATA[<Jobs>
@@ -463,8 +538,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>27641968</LastFileSize>
-    <LastFileDate>2014-06-18T20:31:23.595635</LastFileDate>
+    <LastFileSize>27955200</LastFileSize>
+    <LastFileDate>2014-08-18T18:54:37.4420313</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -502,11 +577,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Opera_22.0.1471.70_Setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Opera_23.0.1522.77_Setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-18T20:31:23.595635</LastUpdated>
+    <LastUpdated>2014-08-18T18:54:37.4420313</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://get.geo.opera.com/pub/opera/desktop/{version}/win/Opera_{version}_Setup.exe</FixedDownloadUrl>
     <Name>Opera</Name>
@@ -583,7 +658,7 @@ REM /disablepush</ExecutePreCommand>
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>27843432</LastFileSize>
-    <LastFileDate>2014-06-20T20:21:20.4202704</LastFileDate>
+    <LastFileDate>2014-08-13T02:49:34.8193991</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -602,9 +677,9 @@ REM /disablepush</ExecutePreCommand>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.pdfforge.org/download</Url>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=Stable Release )[\d\.]+(?= published on)</Regex>
+            <Url>http://download.pdfforge.org/download/pdfcreator</Url>
             <StartText>&lt;h2 style="color:#d00"&gt;PDFCreator </StartText>
             <EndText>&lt;/h2&gt;</EndText>
             <TextualContent />
@@ -626,6 +701,20 @@ REM /disablepush</ExecutePreCommand>
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>/download/pdfcreator/[\d\.]+/PDFCreator-{versionUnderscore}_setup.exe\?file=[^"]+</Regex>
+            <Url>http://download.pdfforge.org/download/pdfcreator/list</Url>
+            <Name>urlPart</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -633,13 +722,13 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\PDFCreator-1_7_3_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\PDFCreator-1_7_3_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-20T20:21:20.4202704</LastUpdated>
+    <LastUpdated>2014-08-13T02:49:34.8193991</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
-    <FixedDownloadUrl>http://azure.download.pdfforge.org/pdfcreator/{version}/PDFCreator-{versionUnderscore}_setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://download.pdfforge.org{urlPart}&amp;download</FixedDownloadUrl>
     <Name>PDFCreator</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="6fec5c43-95f8-4480-8b1d-2c56d7bda6f3">
@@ -713,8 +802,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>17903864</LastFileSize>
-    <LastFileDate>2014-06-20T20:11:38.6891417</LastFileDate>
+    <LastFileSize>18080656</LastFileSize>
+    <LastFileDate>2014-08-06T18:35:22.6726102</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -750,11 +839,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\PDFXVwer.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\PDFXVwer.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-20T20:11:38.6891417</LastUpdated>
+    <LastUpdated>2014-08-06T18:35:22.6726102</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tracker-software.com/downloads/PDFXVwer.exe</FixedDownloadUrl>
     <Name>PDFXChangeViewer</Name>
@@ -813,7 +902,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\QuickTimeInstaller.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\QuickTimeInstaller.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -893,8 +982,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>334192</LastFileSize>
-    <LastFileDate>2014-06-04T21:23:23.2440183</LastFileDate>
+    <LastFileSize>339460</LastFileSize>
+    <LastFileDate>2014-08-15T16:49:01.6846604</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -937,6 +1026,34 @@ REM /disablepush</ExecutePreCommand>
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>urlPart64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>20\d{2}/sqlite-dll-win64-x64-\d+\.zip</Regex>
+            <Url>https://www.sqlite.org/download.html</Url>
+            <Name>urlPart64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://www.sqlite.org/{urlPart64}</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -944,11 +1061,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\sqlite-dll-win32-x86-3080500.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\sqlite-dll-win32-x86-3080600.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-04T21:23:23.2440183</LastUpdated>
+    <LastUpdated>2014-08-15T16:49:01.6846604</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://www.sqlite.org/{urlpart}</FixedDownloadUrl>
     <Name>SQLite</Name>
@@ -957,8 +1074,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>42483303</LastFileSize>
-    <LastFileDate>2014-06-30T21:55:58.8746226</LastFileDate>
+    <LastFileSize>42019725</LastFileSize>
+    <LastFileDate>2014-08-02T16:02:27.0914275</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -993,11 +1110,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\srware_iron.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\srware_iron.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-30T21:55:58.8746226</LastUpdated>
+    <LastUpdated>2014-08-02T16:02:27.0914275</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.srware.net/downloads/srware_iron.exe</FixedDownloadUrl>
     <Name>SRWareIron</Name>
@@ -1138,7 +1255,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\WinPcap_4_1_3.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\WinPcap_4_1_3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -1146,315 +1263,6 @@ REM /disablepush</ExecutePreCommand>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.winpcap.org/install/bin/WinPcap_{versionUnderscore}.exe</FixedDownloadUrl>
     <Name>WinPcap</Name>
-  </ApplicationJob>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="5ce0a44a-f21f-4aa2-a9e7-e573e565083a">
-    <SourceTemplate><![CDATA[<Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
-    <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
-    <UserNotes />
-    <LastFileSize>384846</LastFileSize>
-    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>false</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url><placeholder name="Url with version information" value="http://brackets.io/" /></Url>
-            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
-  &lt;TR&gt;
-    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
-            <EndText>&lt;BR&gt;</EndText>
-            <TextualContent />
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>""</TextualContent>
-            <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand />
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.brackets.io/file.cfm?platform=WIN&amp;build=35" /></FixedDownloadUrl>
-    <Name><placeholder name="Name" value="Brackets" /></Name>
-  </ApplicationJob>
-</Jobs>]]></SourceTemplate>
-    <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
-    <UserNotes />
-    <LastFileSize>37657090</LastFileSize>
-    <LastFileDate>2014-07-05T15:50:53.58516</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>true</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url />
-            <StartText>&lt;span class="version"&gt;Sprint </StartText>
-            <EndText>, WIN</EndText>
-            <TextualContent>{release}</TextualContent>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>release</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Brackets\.Release\.)[\d\.]+(?=\.msi)</Regex>
-            <Url>https://github.com/adobe/brackets/releases</Url>
-            <Name>release</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand>node "{startuppath}\..\Brackets-extract-version\extractVersionFromDeb.js"</ExecuteCommand>
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\brackets.deb</PreviousLocation>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2014-07-05T15:50:53.58516</LastUpdated>
-    <TargetPath>{startuppath}..\_work\brackets.deb</TargetPath>
-    <FixedDownloadUrl>https://github.com/adobe/brackets/releases/download/release-{release}/Brackets.Release.{release}.64-bit.deb</FixedDownloadUrl>
-    <Name>a-Brackets</Name>
-  </ApplicationJob>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b44e0670-eac3-439a-8b02-b952600c38be">
-    <WebsiteUrl />
-    <UserAgent />
-    <UserNotes />
-    <LastFileSize>1220739</LastFileSize>
-    <LastFileDate>2014-05-30T21:21:00.0635748</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>true</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url />
-            <StartText>&gt;YUMI-</StartText>
-            <EndText>.exe</EndText>
-            <TextualContent>{realVersion:regexreplace:0\.1\.0\..+:0.1.0.{yyyy}{MM}{dd}}</TextualContent>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>realVersion</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.pendrivelinux.com/yumi-multiboot-usb-creator/</Url>
-            <StartText>"&gt;YUMI-</StartText>
-            <EndText>.exe</EndText>
-            <Name>realVersion</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{realVersion}</TextualContent>
-            <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand />
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\chocolatey-packages\automatic\yumi\tools\yumi.exe</PreviousLocation>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2014-05-30T21:21:00.0635748</LastUpdated>
-    <TargetPath>{startuppath}..\chocolatey-packages\automatic\yumi\tools\yumi.exe</TargetPath>
-    <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{realVersion}.exe</FixedDownloadUrl>
-    <Name>a-yumi</Name>
-  </ApplicationJob>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="63805e35-2f6c-4ab0-a8ed-f65ee561ac26">
-    <WebsiteUrl />
-    <UserAgent />
-    <UserNotes />
-    <LastFileSize>1095446</LastFileSize>
-    <LastFileDate>2014-06-30T21:15:13.8349608</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>true</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</Url>
-            <StartText>Universal-USB-Installer-</StartText>
-            <EndText>.exe</EndText>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand />
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\chocolatey-packages\automatic\universal-usb-installer\tools\universal-usb-installer.exe</PreviousLocation>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2014-06-30T21:15:13.8349608</LastUpdated>
-    <TargetPath>{startuppath}..\chocolatey-packages\automatic\universal-usb-installer\tools\universal-usb-installer.exe</TargetPath>
-    <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-{version}.exe</FixedDownloadUrl>
-    <Name>a_universal-usb-installer-bin</Name>
-  </ApplicationJob>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="72600db6-1a66-4684-9bc9-cbeaa8aca8bf">
-    <WebsiteUrl />
-    <UserAgent />
-    <UserNotes />
-    <LastFileSize>1159970</LastFileSize>
-    <LastFileDate>2014-06-30T21:15:17.9987991</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>true</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</Url>
-            <StartText>Universal-USB-Installer-</StartText>
-            <EndText>.exe</EndText>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand />
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\chocolatey-packages\automatic\universal-usb-installer\tools\universal-usb-installer-src.zip</PreviousLocation>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2014-06-30T21:15:17.9987991</LastUpdated>
-    <TargetPath>{startuppath}..\chocolatey-packages\automatic\universal-usb-installer\tools\universal-usb-installer-src.zip</TargetPath>
-    <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-{version}-src.zip</FixedDownloadUrl>
-    <Name>a_universal-usb-installer-src</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="74683212-bd2d-47e0-86bb-35b85765b02f">
     <WebsiteUrl />
@@ -1496,7 +1304,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\alldup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\alldup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -1545,7 +1353,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\antrenamer2_install.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\antrenamer2_install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -1558,8 +1366,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>153145968</LastFileSize>
-    <LastFileDate>2014-01-13T18:52:08.1601072</LastFileDate>
+    <LastFileSize>137826416</LastFileSize>
+    <LastFileDate>2014-07-31T19:39:11.9304365</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1594,11 +1402,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Aptana_Studio_3_Setup_3.4.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Aptana_Studio_3_Setup_3.6.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-01-13T18:52:08.1601072</LastUpdated>
+    <LastUpdated>2014-07-31T19:39:11.9304365</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://download.aptana.com/studio3/standalone/{version}/win/Aptana_Studio_3_Setup_{version}.exe</FixedDownloadUrl>
     <Name>aptana-studio</Name>
@@ -1685,7 +1493,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\AssaultCube_v1.2.0.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\AssaultCube_v1.2.0.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -1698,8 +1506,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>2701226</LastFileSize>
-    <LastFileDate>2014-06-30T21:52:27.9419517</LastFileDate>
+    <LastFileSize>2703056</LastFileSize>
+    <LastFileDate>2014-08-12T22:58:16.8816461</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1766,11 +1574,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\AutoHotkey111501_Install.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\AutoHotkey111504_Install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-30T21:52:27.9419517</LastUpdated>
+    <LastUpdated>2014-08-12T22:58:16.8816461</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://ahkscript.org/download/1.1/AutoHotkey{versionWithoutDots}_Install.exe</FixedDownloadUrl>
     <Name>autohotkey.install</Name>
@@ -1779,8 +1587,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>423071</LastFileSize>
-    <LastFileDate>2014-06-30T21:52:37.9107304</LastFileDate>
+    <LastFileSize>423129</LastFileSize>
+    <LastFileDate>2014-08-13T16:18:53.7428005</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -1860,11 +1668,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\AutoHotkey111501.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\AutoHotkey111504.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-30T21:52:37.9107304</LastUpdated>
+    <LastUpdated>2014-08-13T16:18:53.7428005</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://ahkscript.org/download/1.1/AutoHotkey{versionWithoutDots}.zip</FixedDownloadUrl>
     <Name>autohotkey.portable</Name>
@@ -1951,7 +1759,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\avidemux_2.6.8_win32_v2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\avidemux_2.6.8_win32_v2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2099,7 +1907,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\BeCyIGrab230Eng.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\BeCyIGrab230Eng.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2149,7 +1957,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\BDUSBImmunizerLauncher.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\BDUSBImmunizerLauncher.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2230,7 +2038,7 @@ REM /disablepush</ExecutePreCommand>
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>49537879</LastFileSize>
-    <LastFileDate>2014-06-26T23:06:18.9515542</LastFileDate>
+    <LastFileDate>2014-08-09T15:38:11.2411611</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2270,7 +2078,7 @@ REM /disablepush</ExecutePreCommand>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>"http://ftp.nluug.nl/pub/graphics/blender/release/Blender{url-folder-version}/blender-{real-version}-windows64.exe"</TextualContent>
+            <TextualContent>{baseUrl}64.exe</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
@@ -2307,6 +2115,20 @@ REM /disablepush</ExecutePreCommand>
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>baseUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://mirror.cs.umn.edu/blender.org/release/Blender{url-folder-version}/blender-{real-version}-windows</TextualContent>
+            <Name>baseUrl</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -2314,13 +2136,13 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\blender-2.71-windows32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\blender-2.71-windows32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-26T23:06:18.9515542</LastUpdated>
+    <LastUpdated>2014-08-09T15:38:11.2411611</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
-    <FixedDownloadUrl>http://ftp.nluug.nl/pub/graphics/blender/release/Blender{url-folder-version}/blender-{real-version}-windows32.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>{baseUrl}32.exe</FixedDownloadUrl>
     <Name>blender</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e53c4389-bc7e-400b-9f45-e70026b9dcb9">
@@ -2364,7 +2186,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Bluefish-2.2.5-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Bluefish-2.2.5-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2397,11 +2219,11 @@ REM /disablepush</ExecutePreCommand>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=/bluegriffon-)[\d\.]+?(?=\.exe)</Regex>
             <Url>http://bluegriffon.org/pages/Download</Url>
             <StartText>Most recent stable version: v </StartText>
-            <EndText />
+            <EndText> </EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -2413,7 +2235,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\bluegriffon-1.7.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\bluegriffon-1.7.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2462,7 +2284,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Cameyo.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Cameyo.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2475,8 +2297,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>6465904</LastFileSize>
-    <LastFileDate>2014-03-01T23:30:30.1009937</LastFileDate>
+    <LastFileSize>6470992</LastFileSize>
+    <LastFileDate>2014-08-04T18:34:00.6383386</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2553,11 +2375,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\cdrtfe-1.5.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\cdrtfe-1.5.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-03-01T23:30:30.1009937</LastUpdated>
+    <LastUpdated>2014-08-04T18:34:00.6383386</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>cdrtfe</Name>
@@ -2566,8 +2388,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>34154496</LastFileSize>
-    <LastFileDate>2014-07-03T21:26:45.112642</LastFileDate>
+    <LastFileSize>35118080</LastFileSize>
+    <LastFileDate>2014-08-18T21:31:28.455323</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2617,11 +2439,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\mini_installer.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mini_installer.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-03T21:26:45.112642</LastUpdated>
+    <LastUpdated>2014-08-18T21:31:28.455323</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>chromium</Name>
@@ -2681,7 +2503,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\ClassicShellSetup_4_1_0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ClassicShellSetup_4_1_0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2730,7 +2552,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\ClementineSetup-1.2.3.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ClementineSetup-1.2.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2743,8 +2565,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>16617992</LastFileSize>
-    <LastFileDate>2014-06-19T19:09:58.0273329</LastFileDate>
+    <LastFileSize>16563008</LastFileSize>
+    <LastFileDate>2014-07-30T18:56:39.0552635</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -2779,11 +2601,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\clipgrab-3.4.4.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\clipgrab-3.4.4.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-19T19:09:58.0273329</LastUpdated>
+    <LastUpdated>2014-07-30T18:56:39.0552635</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://clipgrab.de/download/clipgrab-{version}.exe</FixedDownloadUrl>
     <Name>clipgrab</Name>
@@ -2870,7 +2692,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\codeblocks-13.12mingw-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\codeblocks-13.12mingw-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -2994,7 +2816,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\codelite-5.4-mingw4.8.1.exe.7z</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\codelite-5.4-mingw4.8.1.exe.7z</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3059,7 +2881,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\dfsetup218.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\dfsetup218.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3108,7 +2930,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\DokanInstall_0.6.0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\DokanInstall_0.6.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3158,7 +2980,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\encfs.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\encfs.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3249,7 +3071,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Ext2Fsd-0.52.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Ext2Fsd-0.52.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3262,8 +3084,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4700665</LastFileSize>
-    <LastFileDate>2014-02-25T01:09:20.5871109</LastFileDate>
+    <LastFileSize>4767824</LastFileSize>
+    <LastFileDate>2014-07-18T22:41:56.0806937</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3275,6 +3097,94 @@ REM /disablepush</ExecutePreCommand>
     <HttpReferer />
     <SetupInstructions />
     <Variables>
+      <item>
+        <key>
+          <string>file32</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/generic%20build%20%28stable%29/</Url>
+            <StartText>&lt;a href="http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/</StartText>
+            <EndText>/download"</EndText>
+            <Name>file32</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>file64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/64-bit/</Url>
+            <StartText>&lt;a href="http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/</StartText>
+            <EndText>/download"</EndText>
+            <Name>file64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlPart1</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases</TextualContent>
+            <Name>urlPart1</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlFromMirror</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
+            <Url>{urlPart1}/{file32}</Url>
+            <Name>urlFromMirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{urlHashTable}</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlHashTable</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>@{'url32' = '{urlPart1}/{file32}'; 'url64' = '{urlPart1}/{file64}'}</TextualContent>
+            <Name>urlHashTable</Name>
+          </UrlVariable>
+        </value>
+      </item>
       <item>
         <key>
           <string>version</string>
@@ -3291,78 +3201,20 @@ REM /disablepush</ExecutePreCommand>
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>fileRevision</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://ffdshow-tryout.sourceforge.net/</Url>
-            <StartText>/ffdshow_</StartText>
-            <EndText>.exe/download"&gt;</EndText>
-            <Name>fileRevision</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlMirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/generic%20build%20%28stable%29/ffdshow_{fileRevision}.exe/download</Url>
-            <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlArray</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>@('http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/generic%20build%20%28stable%29/ffdshow_{fileRevision}.exe/download', 'http://sourceforge.net/projects/ffdshow-tryout/files/Official%20releases/64-bit/ffdshow_{fileRevision}_x64.exe/download')</TextualContent>
-            <Name>urlArray</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{urlArray}</TextualContent>
-            <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
     <ExecuteCommand />
-    <ExecutePreCommand />
+    <ExecutePreCommand>chocopkgup /p "ffdshow-x86_32" /v "{version}" /u "{preupdate-url}" /u64 "{url64}" /pp "{file}"</ExecutePreCommand>
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\ffdshow_rev4500_20130106.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ffdshow_rev4531_20140628.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-02-25T01:09:20.5871109</LastUpdated>
+    <LastUpdated>2014-07-18T22:41:56.0806937</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>{urlFromMirror}</FixedDownloadUrl>
     <Name>ffdshow</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="40f32915-297e-4979-ae06-0ec22de43bfc">
@@ -3434,7 +3286,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\ffmpeg-2.2.3-win32-shared.7z</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ffmpeg-2.2.3-win32-shared.7z</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3514,8 +3366,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; Trident/7.0; rv:11.0) like Gecko</UserAgent>
     <UserNotes />
-    <LastFileSize>19683328</LastFileSize>
-    <LastFileDate>2014-06-10T18:33:10.4486522</LastFileDate>
+    <LastFileSize>19708928</LastFileSize>
+    <LastFileDate>2014-08-12T23:01:19.7781253</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3595,11 +3447,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\install_flash_player_14_active_x.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\install_flash_player_14_active_x.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-10T18:33:10.4486522</LastUpdated>
+    <LastUpdated>2014-08-12T23:01:19.7781253</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_{majorVersion}_active_x.msi</FixedDownloadUrl>
     <Name>flashplayeractivex</Name>
@@ -3675,8 +3527,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0</UserAgent>
     <UserNotes />
-    <LastFileSize>20274688</LastFileSize>
-    <LastFileDate>2014-06-10T18:33:28.3023657</LastFileDate>
+    <LastFileSize>20288000</LastFileSize>
+    <LastFileDate>2014-08-12T23:01:21.3328125</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3726,11 +3578,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\install_flash_player_14_plugin.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\install_flash_player_14_plugin.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-10T18:33:28.3023657</LastUpdated>
+    <LastUpdated>2014-08-12T23:01:21.3328125</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_{majorVersion}_plugin.msi</FixedDownloadUrl>
     <Name>flashplayerplugin</Name>
@@ -3775,7 +3627,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Setup FlightGear 3.0.0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Setup FlightGear 3.0.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3824,7 +3676,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\FreeVK.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\FreeVK.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -3837,8 +3689,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0</UserAgent>
     <UserNotes />
-    <LastFileSize>106101248</LastFileSize>
-    <LastFileDate>2013-06-27T23:31:12.9888738</LastFileDate>
+    <LastFileSize>127388815</LastFileSize>
+    <LastFileDate>2014-07-15T21:26:46.5832852</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -3858,7 +3710,7 @@ REM /disablepush</ExecutePreCommand>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=&lt;tr title="FreeCAD_)[\d\.]+(?=_x86_setup\.msi)</Regex>
+            <Regex>[\d\.]+(?=_x86_setup.exe)</Regex>
             <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/</Url>
             <StartText>&lt;tr title="FreeCAD_</StartText>
             <EndText>_source.7z</EndText>
@@ -3876,7 +3728,7 @@ REM /disablepush</ExecutePreCommand>
             <VariableType>Textual</VariableType>
             <Regex />
             <Url />
-            <TextualContent>http://{mirror}.dl.sourceforge.net/project/free-cad/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD_{version}_x86_setup.msi</TextualContent>
+            <TextualContent>http://{mirror}.dl.sourceforge.net/project/free-cad/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD%20{version}_x86_setup.exe</TextualContent>
             <Name>urlMirror</Name>
           </UrlVariable>
         </value>
@@ -3890,7 +3742,7 @@ REM /disablepush</ExecutePreCommand>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD_{version}_x86_setup.msi/download</TextualContent>
+            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD%20{version}_x86_setup.exe/download</TextualContent>
             <Name>urlGeneral</Name>
           </UrlVariable>
         </value>
@@ -3902,9 +3754,9 @@ REM /disablepush</ExecutePreCommand>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.freecadweb.org/</Url>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=Windows/FreeCAD%20)[\d\.]+(?=/)</Regex>
+            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/</Url>
             <StartText>&lt;small&gt;Latest stable version: &lt;b&gt;</StartText>
             <EndText>&lt;/b&gt;&lt;/small&gt;</EndText>
             <Name>versionMajor</Name>
@@ -3936,8 +3788,36 @@ REM /disablepush</ExecutePreCommand>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{urlGeneral}</TextualContent>
+            <TextualContent>@('{urlGeneral}', '{realUrl64}')</TextualContent>
             <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>realUrl64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD-{version}_x64_setup.exe/download</TextualContent>
+            <Name>realUrl64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[\d\.]+(?=_x64_setup.exe)</Regex>
+            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/</Url>
+            <Name>version64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -3948,11 +3828,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\FreeCAD_0.13.1828_x86_setup.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\FreeCAD 0.14.3700_x86_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:31:12.9888738</LastUpdated>
+    <LastUpdated>2014-07-15T21:26:46.5832852</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>freecad</Name>
@@ -3961,8 +3841,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>28215140</LastFileSize>
-    <LastFileDate>2014-02-09T14:28:46.4250045</LastFileDate>
+    <LastFileSize>28244941</LastFileSize>
+    <LastFileDate>2014-08-17T17:27:32.1341491</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4056,11 +3936,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Freeciv-2.4.2-win32-gtk2-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Freeciv-2.4.3-win32-gtk2-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-02-09T14:28:46.4250045</LastUpdated>
+    <LastUpdated>2014-08-17T17:27:32.1341491</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>freeciv</Name>
@@ -4121,7 +4001,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\gimp-2.8.10-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\gimp-2.8.10-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -4129,97 +4009,6 @@ REM /disablepush</ExecutePreCommand>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://gimp.mirrors.hoobly.com/gimp/{urlPart}</FixedDownloadUrl>
     <Name>gimp</Name>
-  </ApplicationJob>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="df052f18-6e7d-49ba-bc65-6ad952ebded0">
-    <WebsiteUrl />
-    <UserAgent />
-    <UserNotes />
-    <LastFileSize>74962642</LastFileSize>
-    <LastFileDate>2014-05-14T22:27:53.4936976</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>false</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/</Url>
-            <StartText>&lt;tr title="</StartText>
-            <EndText>" class="folder</EndText>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneral</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/{version}/gnucash-{version}-setup.exe/download</TextualContent>
-            <Name>urlGeneral</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{urlGeneral}</TextualContent>
-            <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlMirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>{urlGeneral}</Url>
-            <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand />
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\gnucash-2.6.3-setup.exe</PreviousLocation>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2014-05-14T22:27:53.4936976</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
-    <Name>gnucash</Name>
   </ApplicationJob>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2a397f9c-c912-4128-870f-aec8ba18fda7">
     <WebsiteUrl />
@@ -4262,7 +4051,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\h264ts_cutter_v111.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\h264ts_cutter_v111.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -4312,7 +4101,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\MatroskaSplitter.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\MatroskaSplitter.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -4429,7 +4218,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\hedgewars-win32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\hedgewars-win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -4442,8 +4231,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>111107408</LastFileSize>
-    <LastFileDate>2014-06-30T21:17:58.0788838</LastFileDate>
+    <LastFileSize>111978832</LastFileSize>
+    <LastFileDate>2014-08-08T19:23:20.8939482</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4509,11 +4298,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\iTunesSetup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\iTunesSetup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-30T21:17:58.0788838</LastUpdated>
+    <LastUpdated>2014-08-08T19:23:20.8939482</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>iTunes</Name>
@@ -4640,7 +4429,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\install-ietester-v0.5.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\install-ietester-v0.5.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -4720,8 +4509,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>29405096</LastFileSize>
-    <LastFileDate>2014-05-29T18:34:05.1351007</LastFileDate>
+    <LastFileSize>29421992</LastFileSize>
+    <LastFileDate>2014-08-05T18:22:23.9316816</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -4809,11 +4598,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\jre-7u60-windows-i586.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\jre-7u67-windows-i586.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-29T18:34:05.1351007</LastUpdated>
+    <LastUpdated>2014-08-05T18:22:23.9316816</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>javaruntime</Name>
@@ -4940,7 +4729,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\jitsi-2.4.4997-x86.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\jitsi-2.4.4997-x86.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -4989,7 +4778,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\keyfinder.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\keyfinder.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -5055,7 +4844,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\office_free_2013.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\office_free_2013.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -5068,8 +4857,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>28349016</LastFileSize>
-    <LastFileDate>2014-06-02T23:46:36.9140419</LastFileDate>
+    <LastFileSize>29666539</LastFileSize>
+    <LastFileDate>2014-08-17T21:13:52.9028306</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5147,11 +4936,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\LibreCAD-Installer-2.0.4.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\LibreCAD-Installer-2.0.5.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-02T23:46:36.9140419</LastUpdated>
+    <LastUpdated>2014-08-17T21:13:52.9028306</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>librecad</Name>
@@ -5227,8 +5016,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>219574272</LastFileSize>
-    <LastFileDate>2014-06-20T20:14:16.5893702</LastFileDate>
+    <LastFileSize>223113216</LastFileSize>
+    <LastFileDate>2014-07-31T00:20:04.5426485</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5265,11 +5054,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\LibreOffice_4.2.5_Win_x86.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\LibreOffice_4.3.0_Win_x86.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-20T20:14:16.5893702</LastUpdated>
+    <LastUpdated>2014-07-31T00:20:04.5426485</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
     <Name>libreoffice</Name>
@@ -5278,8 +5067,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>5558272</LastFileSize>
-    <LastFileDate>2014-06-20T20:10:36.814439</LastFileDate>
+    <LastFileSize>5541888</LastFileSize>
+    <LastFileDate>2014-07-30T18:56:13.9601058</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5314,11 +5103,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\LibreOffice_4.2.5_Win_x86_helppack_en-US.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\LibreOffice_4.3.0_Win_x86_helppack_en-US.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-20T20:10:36.814439</LastUpdated>
+    <LastUpdated>2014-07-30T18:56:13.9601058</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86_helppack_en-US.msi</FixedDownloadUrl>
     <Name>libreoffice-help</Name>
@@ -5394,8 +5183,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>216256512</LastFileSize>
-    <LastFileDate>2014-06-14T20:09:06.6012621</LastFileDate>
+    <LastFileSize>220463104</LastFileSize>
+    <LastFileDate>2014-08-02T16:04:18.7483702</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5432,11 +5221,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\LibreOffice_4.1.6_Win_x86_oldstable.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\LibreOffice_4.1.6_Win_x86_oldstable.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-14T20:09:06.6012621</LastUpdated>
+    <LastUpdated>2014-08-02T16:04:18.7483702</LastUpdated>
     <TargetPath>{startuppath}..\_work\LibreOffice_4.1.6_Win_x86_oldstable.msi</TargetPath>
     <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
     <Name>libreoffice-oldstable</Name>
@@ -5620,7 +5409,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\maxima-5.31.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\maxima-5.31.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -5683,7 +5472,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\mixxx-1.11.0-win32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mixxx-1.11.0-win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -5696,8 +5485,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>11491310</LastFileSize>
-    <LastFileDate>2014-06-09T23:25:29.1864859</LastFileDate>
+    <LastFileSize>11489953</LastFileSize>
+    <LastFileDate>2014-07-28T22:29:52.6518536</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5763,11 +5552,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\mkvtoolnix-7.0.0-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mkvtoolnix-7.1.0-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-09T23:25:29.1864859</LastUpdated>
+    <LastUpdated>2014-07-28T22:29:52.6518536</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.fosshub.com/download/mkvtoolnix-{version}-setup.exe</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
@@ -5776,8 +5565,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>2672432</LastFileSize>
-    <LastFileDate>2014-07-06T02:07:28.6067011</LastFileDate>
+    <LastFileSize>2692912</LastFileSize>
+    <LastFileDate>2014-08-11T15:17:27.3486101</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5828,11 +5617,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\mp3tagv261asetup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mp3tagv262setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-06T02:07:28.6067011</LastUpdated>
+    <LastUpdated>2014-08-11T15:17:27.3486101</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://download.mp3tag.de/mp3tagv{url-version}setup.exe</FixedDownloadUrl>
     <Name>mp3tag</Name>
@@ -5842,7 +5631,7 @@ rem /disablepush</ExecutePreCommand>
     <UserAgent />
     <UserNotes />
     <LastFileSize>10837824</LastFileSize>
-    <LastFileDate>2014-07-06T02:07:50.7589128</LastFileDate>
+    <LastFileDate>2014-07-06T02:56:37.9347854</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -5920,11 +5709,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\MPC-HC.1.7.6.x86.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\MPC-HC.1.7.6.x86.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-06T02:07:50.7589128</LastUpdated>
+    <LastUpdated>2014-07-06T02:56:37.9347854</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>mpc-hc</Name>
@@ -6000,8 +5789,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0</UserAgent>
     <UserNotes />
-    <LastFileSize>16232960</LastFileSize>
-    <LastFileDate>2014-06-14T14:36:28.0115544</LastFileDate>
+    <LastFileSize>16995328</LastFileSize>
+    <LastFileDate>2014-08-09T15:09:24.6891161</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -6095,11 +5884,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\mumble-1.2.7.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mumble-1.2.8.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-14T14:36:28.0115544</LastUpdated>
+    <LastUpdated>2014-08-09T15:09:24.6891161</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>mumble</Name>
@@ -6144,7 +5933,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\MuseScore-1.3.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\MuseScore-1.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6181,7 +5970,8 @@ rem /disablepush</ExecutePreCommand>
             <Regex />
             <Url>http://www.nirsoft.net/utils/nircmd.html</Url>
             <StartText>&lt;td&gt;NirCmd v</StartText>
-            <EndText />
+            <EndText>
+</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -6207,7 +5997,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\nircmd.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\nircmd.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6257,7 +6047,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\nLite-1.4.9.3.setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\nLite-1.4.9.3.setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6320,7 +6110,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\DUCSetup_v4_1_0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\DUCSetup_v4_1_0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6333,8 +6123,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>10159289</LastFileSize>
-    <LastFileDate>2014-05-15T23:16:41.7748177</LastFileDate>
+    <LastFileSize>11165716</LastFileSize>
+    <LastFileDate>2014-07-30T19:03:03.7618835</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -6411,11 +6201,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\nomacs-setup-1.6.4-x86.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\nomacs-setup-2.0.2-x86.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-15T23:16:41.7748177</LastUpdated>
+    <LastUpdated>2014-07-30T19:03:03.7618835</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>nomacs</Name>
@@ -6474,7 +6264,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\OnTopReplica-3_5_1-Setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\OnTopReplica-3_5_1-Setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6487,8 +6277,8 @@ rem /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>30310520</LastFileSize>
-    <LastFileDate>2014-06-27T20:26:40.8107925</LastFileDate>
+    <LastFileSize>30526000</LastFileSize>
+    <LastFileDate>2014-07-28T22:30:27.7333253</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -6524,11 +6314,11 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\ownCloud-1.6.1.3267-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ownCloud-1.6.2.3463-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-27T20:26:40.8107925</LastUpdated>
+    <LastUpdated>2014-07-28T22:30:27.7333253</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://download.owncloud.com/desktop/stable/ownCloud-{version}-setup.exe</FixedDownloadUrl>
     <Name>owncloud-client</Name>
@@ -6573,7 +6363,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\pcwRunAs4.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\pcwRunAs4.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6622,7 +6412,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\picard-setup-1.2.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\picard-setup-1.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6685,7 +6475,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\prey-0.6.3-win.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\prey-0.6.3-win.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6829,7 +6619,7 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\PyHoca-GUI_0.4.0.8_win32-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\PyHoca-GUI_0.4.0.8_win32-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -6963,7 +6753,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\python-3.4.1.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\python-3.4.1.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7097,7 +6887,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\python-2.7.8.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\python-2.7.8.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7231,7 +7021,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\python-3.4.1.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\python-3.4.1.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7390,7 +7180,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\qbittorrent_3.1.9.2_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\qbittorrent_3.1.9.2_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7403,8 +7193,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>46456</LastFileSize>
-    <LastFileDate>2014-06-22T21:37:38.9301334</LastFileDate>
+    <LastFileSize>46632</LastFileSize>
+    <LastFileDate>2014-07-23T18:16:12.0918162</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -7470,11 +7260,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\ChangeLog_Long.txt</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ChangeLog_Long.txt</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-22T21:37:38.9301334</LastUpdated>
+    <LastUpdated>2014-07-23T18:16:12.0918162</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://rukerneltool.rainerullrich.de/ChangeLog_Long.txt</FixedDownloadUrl>
     <Name>rukerneltool</Name>
@@ -7589,7 +7379,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\sauerbraten_2013_02_03_collect_edition_windows.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\sauerbraten_2013_02_03_collect_edition_windows.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7602,8 +7392,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1884751</LastFileSize>
-    <LastFileDate>2014-04-08T19:47:33.977087</LastFileDate>
+    <LastFileSize>1938737</LastFileSize>
+    <LastFileDate>2014-08-18T18:54:29.5862967</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -7669,11 +7459,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\SciTE4AHK300501_Install.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\SciTE4AHK3006_Install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-04-08T19:47:33.977087</LastUpdated>
+    <LastUpdated>2014-08-18T18:54:29.5862967</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://fincs.ahk4.net/scite4ahk/dl/SciTE4AHK{versionWithoutDots}_Install.exe</FixedDownloadUrl>
     <Name>scite4autohotkey</Name>
@@ -7704,9 +7494,9 @@ REM /disablepush</ExecutePreCommand>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://wiki.scribus.net/canvas/Download</Url>
-            <StartText>&lt;p&gt;The current stable release is </StartText>
-            <EndText />
+            <Url>http://sourceforge.net/projects/scribus/files/scribus/</Url>
+            <StartText>&lt;tr title="</StartText>
+            <EndText>" class="folder "&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -7761,7 +7551,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\scribus-1.4.4-windows.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\scribus-1.4.4-windows.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7774,8 +7564,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>12716032</LastFileSize>
-    <LastFileDate>2014-05-12T20:31:58.3245012</LastFileDate>
+    <LastFileSize>13893120</LastFileSize>
+    <LastFileDate>2014-08-14T17:48:34.8888749</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -7811,11 +7601,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\seafile-3.0.4-en.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\seafile-3.1.5-en.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-12T20:31:58.3245012</LastUpdated>
+    <LastUpdated>2014-08-14T17:48:34.8888749</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://bitbucket.org/haiwen/seafile/downloads/seafile-{version}-en.msi</FixedDownloadUrl>
     <Name>seafile-client</Name>
@@ -7903,7 +7693,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\SMC_1.9_win32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\SMC_1.9_win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -7952,7 +7742,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\sparkleshare-windows-1.4.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\sparkleshare-windows-1.4.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8017,7 +7807,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\spsetup126.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\spsetup126.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8108,7 +7898,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\supertuxkart-0.8.1-win.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\supertuxkart-0.8.1-win.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8255,7 +8045,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\dssee_setup_i386_v011_signed.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\dssee_setup_i386_v011_signed.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8348,7 +8138,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\SweetHome3D-4.4-windows.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\SweetHome3D-4.4-windows.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8397,7 +8187,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\testdisk-6.14.win.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\testdisk-6.14.win.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8477,8 +8267,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>56458453</LastFileSize>
-    <LastFileDate>2014-05-01T15:34:14.8721859</LastFileDate>
+    <LastFileSize>56484761</LastFileSize>
+    <LastFileDate>2014-08-01T21:18:33.804115</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -8528,11 +8318,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\texmakerwin32_install.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\texmakerwin32_install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-01T15:34:14.8721859</LastUpdated>
+    <LastUpdated>2014-08-01T21:18:33.804115</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.xm1math.net/texmaker/texmakerwin32_install.exe</FixedDownloadUrl>
     <Name>texmaker</Name>
@@ -8541,8 +8331,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>21991496</LastFileSize>
-    <LastFileDate>2014-07-06T02:10:00.5790815</LastFileDate>
+    <LastFileSize>26310952</LastFileSize>
+    <LastFileDate>2014-07-22T19:24:54.0621942</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -8578,11 +8368,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Thunderbird Setup 24.6.0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Thunderbird Setup 31.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-06T02:10:00.5790815</LastUpdated>
+    <LastUpdated>2014-07-22T19:24:54.0621942</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://download.mozilla.org/?product=thunderbird-{version}&amp;os=win&amp;lang=de</FixedDownloadUrl>
     <Name>thunderbird</Name>
@@ -8641,7 +8431,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\tightvnc-2.7.10-setup-32bit.msi</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\tightvnc-2.7.10-setup-32bit.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8655,7 +8445,7 @@ REM /disablepush</ExecutePreCommand>
     <UserAgent />
     <UserNotes />
     <LastFileSize>6022</LastFileSize>
-    <LastFileDate>2013-06-27T23:58:31.7523806</LastFileDate>
+    <LastFileDate>2014-08-04T18:35:07.7302347</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -8690,11 +8480,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\download_win.png</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\download_win.png</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:58:31.7523806</LastUpdated>
+    <LastUpdated>2014-08-04T18:35:07.7302347</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tipp10.com/img/download_win.png</FixedDownloadUrl>
     <Name>tipp10</Name>
@@ -8703,8 +8493,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>27167987</LastFileSize>
-    <LastFileDate>2014-06-10T18:59:56.3054691</LastFileDate>
+    <LastFileSize>27281991</LastFileSize>
+    <LastFileDate>2014-08-12T23:02:50.8581484</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -8785,11 +8575,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\torbrowser-install-3.6.2_en-US.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\torbrowser-install-3.6.4_en-US.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-10T18:59:56.3054691</LastUpdated>
+    <LastUpdated>2014-08-12T23:02:50.8581484</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://www.torproject.org/dist/torbrowser/{realVersion}/torbrowser-install-{realVersion}_en-US.exe</FixedDownloadUrl>
     <Name>tor-browser</Name>
@@ -8876,7 +8666,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\tvbrowser_3.4_win32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\tvbrowser_3.4_win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8942,7 +8732,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\uniextract161.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\uniextract161.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -8955,8 +8745,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1095446</LastFileSize>
-    <LastFileDate>2014-06-30T21:53:27.2152258</LastFileDate>
+    <LastFileSize>1095532</LastFileSize>
+    <LastFileDate>2014-08-16T22:05:19.2188668</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -8991,11 +8781,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Universal-USB-Installer-1.9.5.4.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Universal-USB-Installer-1.9.5.5.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-30T21:53:27.2152258</LastUpdated>
+    <LastUpdated>2014-08-16T22:05:19.2188668</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-{version}.exe</FixedDownloadUrl>
     <Name>universal-usb-installer</Name>
@@ -9098,7 +8888,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\VirtualDub-1.10.4.zip</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\VirtualDub-1.10.4.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -9147,7 +8937,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\vp8vfw-setup-1.2.0.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\vp8vfw-setup-1.2.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -9254,7 +9044,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\wesnoth-1.10.7-win32.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\wesnoth-1.10.7-win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -9345,7 +9135,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\WinCDEmu-3.6.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\WinCDEmu-3.6.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -9449,7 +9239,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\WinFF-1.5.4-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\WinFF-1.5.4-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -9498,7 +9288,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\xmoto-0.5.11-win32-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\xmoto-0.5.11-win32-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -9511,8 +9301,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>4957320</LastFileSize>
-    <LastFileDate>2014-06-26T23:07:08.1702229</LastFileDate>
+    <LastFileSize>5341539</LastFileSize>
+    <LastFileDate>2014-08-11T15:17:26.1727291</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -9547,11 +9337,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\youtube-dl.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\youtube-dl.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-26T23:07:08.1702229</LastUpdated>
+    <LastUpdated>2014-08-11T15:17:26.1727291</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>https://yt-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
@@ -9560,8 +9350,8 @@ REM /disablepush</ExecutePreCommand>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1220739</LastFileSize>
-    <LastFileDate>2014-05-30T21:22:54.0835953</LastFileDate>
+    <LastFileSize>1305180</LastFileSize>
+    <LastFileDate>2014-08-17T01:51:00.7665618</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -9627,11 +9417,11 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\YUMI-2.0.0.5.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\YUMI-2.0.0.8.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-30T21:22:54.0835953</LastUpdated>
+    <LastUpdated>2014-08-17T01:51:00.7665618</LastUpdated>
     <TargetPath>{startuppath}..\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{realVersion}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
@@ -9758,7 +9548,7 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>{startuppath}..\_work\Zotero-4.0.21.2_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Zotero-4.0.21.2_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
