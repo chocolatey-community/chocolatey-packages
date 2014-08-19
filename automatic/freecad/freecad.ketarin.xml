@@ -1,0 +1,155 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="d5a64112-b327-4ccd-b94a-a80c565062ad">
+    <WebsiteUrl />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0</UserAgent>
+    <UserNotes />
+    <LastFileSize>127388815</LastFileSize>
+    <LastFileDate>2014-07-15T21:26:46.5832852</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[\d\.]+(?=_x86_setup.exe)</Regex>
+            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/</Url>
+            <StartText>&lt;tr title="FreeCAD_</StartText>
+            <EndText>_source.7z</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlMirror</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
+            <TextualContent>http://{mirror}.dl.sourceforge.net/project/free-cad/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD%20{version}_x86_setup.exe</TextualContent>
+            <Name>urlMirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlGeneral</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD%20{version}_x86_setup.exe/download</TextualContent>
+            <Name>urlGeneral</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>versionMajor</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=Windows/FreeCAD%20)[\d\.]+(?=/)</Regex>
+            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/</Url>
+            <StartText>&lt;small&gt;Latest stable version: &lt;b&gt;</StartText>
+            <EndText>&lt;/b&gt;&lt;/small&gt;</EndText>
+            <Name>versionMajor</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>mirror</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>{urlGeneral}</Url>
+            <StartText>use_mirror=</StartText>
+            <EndText>"&gt;</EndText>
+            <Name>mirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>@('{urlGeneral}', '{realUrl64}')</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>realUrl64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD-{version}_x64_setup.exe/download</TextualContent>
+            <Name>realUrl64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>[\d\.]+(?=_x64_setup.exe)</Regex>
+            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/</Url>
+            <Name>version64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\FreeCAD 0.14.3700_x86_setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-07-15T21:26:46.5832852</LastUpdated>
+    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <Name>freecad</Name>
+  </ApplicationJob>
+</Jobs>

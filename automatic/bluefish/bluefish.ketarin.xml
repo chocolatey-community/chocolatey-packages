@@ -1,0 +1,53 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e53c4389-bc7e-400b-9f45-e70026b9dcb9">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>4478760</LastFileSize>
+    <LastFileDate>2014-05-13T20:10:58.2092162</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://bluefish.openoffice.nl/download.html</Url>
+            <StartText>&lt;p&gt;The latest stable version is &lt;b&gt;Bluefish </StartText>
+            <EndText>&lt;/b&gt;.&lt;/p&gt;</EndText>
+            <TextualContent>2.2.6</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Bluefish-2.2.5-setup.exe</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-05-13T20:10:58.2092162</LastUpdated>
+    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <FixedDownloadUrl>http://www.bennewitz.com/bluefish/stable/binaries/win32/Bluefish-{version}-setup.exe</FixedDownloadUrl>
+    <Name>bluefish</Name>
+  </ApplicationJob>
+</Jobs>

@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="40f32915-297e-4979-ae06-0ec22de43bfc">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>9610521</LastFileSize>
+    <LastFileDate>2014-06-20T20:10:09.6721355</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex>ffmpeg-1.2-</Regex>
+            <Url>http://ffmpeg.zeranoe.com/builds/win32/static/</Url>
+            <StartText>ffmpeg-</StartText>
+            <EndText>-win32-static.7z</EndText>
+            <TextualContent>{url-with-version:regexreplace:ffmpeg-([\d\.]+)-win32-shared.7z:$1}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-{version}-win64-shared.7z</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url-with-version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ffmpeg-[\d\.]+-win32-shared.7z</Regex>
+            <Url>http://ffmpeg.zeranoe.com/builds/win32/shared/</Url>
+            <Name>url-with-version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ffmpeg-2.2.3-win32-shared.7z</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2014-06-20T20:10:09.6721355</LastUpdated>
+    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <FixedDownloadUrl>http://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-{version}-win32-shared.7z</FixedDownloadUrl>
+    <Name>ffmpeg</Name>
+  </ApplicationJob>
+</Jobs>

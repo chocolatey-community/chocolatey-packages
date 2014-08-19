@@ -1,0 +1,53 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="74412e3e-96da-4f68-9ba9-0fd9a691b2c5">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>1066417</LastFileSize>
+    <LastFileDate>2013-06-27T23:24:20.0688575</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://bluefish.openoffice.nl/download.html</Url>
+            <StartText>&lt;p&gt;The latest stable version is &lt;b&gt;Bluefish </StartText>
+            <EndText>&lt;/b&gt;.&lt;/p&gt;</EndText>
+            <TextualContent>1.7.4</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\encfs.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2013-06-27T23:24:20.0688575</LastUpdated>
+    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <FixedDownloadUrl>http://members.ferrara.linux.it/freddy77/encfs.zip</FixedDownloadUrl>
+    <Name>encfs4win</Name>
+  </ApplicationJob>
+</Jobs>
