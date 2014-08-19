@@ -71,12 +71,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mkvtoolnix-7.1.0-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mkvtoolnix-7.1.0-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-28T22:29:52.6518536</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.fosshub.com/download/mkvtoolnix-{version}-setup.exe</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>

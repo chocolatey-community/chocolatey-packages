@@ -83,12 +83,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\scribus-1.4.4-windows.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\scribus-1.4.4-windows.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-29T18:37:00.3439358</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>scribus</Name>
   </ApplicationJob>

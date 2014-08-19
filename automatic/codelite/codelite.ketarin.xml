@@ -115,12 +115,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\codelite-5.4-mingw4.8.1.exe.7z</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\codelite-5.4-mingw4.8.1.exe.7z</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-24T23:05:48.8291931</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>codelite</Name>
   </ApplicationJob>

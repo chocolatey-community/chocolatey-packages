@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\clipgrab-3.4.4.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\clipgrab-3.4.4.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-30T18:56:39.0552635</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://clipgrab.de/download/clipgrab-{version}.exe</FixedDownloadUrl>
     <Name>clipgrab</Name>
   </ApplicationJob>

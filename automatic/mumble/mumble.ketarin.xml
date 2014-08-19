@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://c.fsdn.com/allura/p/mumble/icon" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="mumble" /></Name>
   </ApplicationJob>
@@ -166,12 +166,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mumble-1.2.8.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mumble-1.2.8.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-09T15:09:24.6891161</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>mumble</Name>
   </ApplicationJob>

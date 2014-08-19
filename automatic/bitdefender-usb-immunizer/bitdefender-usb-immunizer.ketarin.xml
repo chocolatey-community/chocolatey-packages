@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\BDUSBImmunizerLauncher.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\BDUSBImmunizerLauncher.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-07-31T19:50:59.8626133</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://labs.bitdefender.com/wp-content/updates/immunizer/BDUSBImmunizerLauncher.exe</FixedDownloadUrl>
     <Name>bitdefender-usb-immunizer</Name>
   </ApplicationJob>

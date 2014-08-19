@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\pcwRunAs4.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\pcwRunAs4.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-27T23:43:25.5587822</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.pcwelt.de/area_release/files/A1/59/A159789BD5C889445B1D33BBF89685BC/pcwRunAs4.exe</FixedDownloadUrl>
     <Name>pcwrunas</Name>
   </ApplicationJob>

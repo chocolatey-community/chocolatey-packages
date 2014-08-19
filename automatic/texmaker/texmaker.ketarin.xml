@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.xm1math.net/texmaker/texmakerwin32_install.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="texmaker" /></Name>
   </ApplicationJob>
@@ -122,12 +122,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\texmakerwin32_install.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\texmakerwin32_install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-01T21:18:33.804115</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.xm1math.net/texmaker/texmakerwin32_install.exe</FixedDownloadUrl>
     <Name>texmaker</Name>
   </ApplicationJob>

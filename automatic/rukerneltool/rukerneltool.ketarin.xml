@@ -71,12 +71,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ChangeLog_Long.txt</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ChangeLog_Long.txt</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-23T18:16:12.0918162</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://rukerneltool.rainerullrich.de/ChangeLog_Long.txt</FixedDownloadUrl>
     <Name>rukerneltool</Name>
   </ApplicationJob>

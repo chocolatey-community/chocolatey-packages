@@ -84,12 +84,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\SweetHome3D-4.4-windows.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\SweetHome3D-4.4-windows.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-13T18:32:32.7928172</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlForMirror}</FixedDownloadUrl>
     <Name>sweet-home-3d</Name>
   </ApplicationJob>

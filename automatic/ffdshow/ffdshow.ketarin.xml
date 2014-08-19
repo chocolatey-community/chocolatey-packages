@@ -128,12 +128,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ffdshow_rev4531_20140628.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ffdshow_rev4531_20140628.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-18T22:41:56.0806937</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlFromMirror}</FixedDownloadUrl>
     <Name>ffdshow</Name>
   </ApplicationJob>

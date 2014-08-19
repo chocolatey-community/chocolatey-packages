@@ -55,12 +55,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\nircmd.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\nircmd.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-08-12T15:11:14.7301335</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.nirsoft.net/utils/nircmd.zip</FixedDownloadUrl>
     <Name>nircmd</Name>
   </ApplicationJob>

@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.winpcap.org/install/bin/WinPcap_{versionUnderscore}.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="WinPcap" /></Name>
   </ApplicationJob>
@@ -136,12 +136,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\WinPcap_4_1_3.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\WinPcap_4_1_3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-08-15T22:26:05.1079281</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.winpcap.org/install/bin/WinPcap_{versionUnderscore}.exe</FixedDownloadUrl>
     <Name>WinPcap</Name>
   </ApplicationJob>

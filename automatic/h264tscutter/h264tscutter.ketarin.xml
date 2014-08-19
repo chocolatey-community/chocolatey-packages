@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\h264ts_cutter_v111.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\h264ts_cutter_v111.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-08-03T12:55:39.3128485</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.videohelp.com/download/h264ts_cutter_v111.zip</FixedDownloadUrl>
     <Name>h264tscutter</Name>
   </ApplicationJob>

@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Bluefish-2.2.5-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Bluefish-2.2.5-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-13T20:10:58.2092162</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.bennewitz.com/bluefish/stable/binaries/win32/Bluefish-{version}-setup.exe</FixedDownloadUrl>
     <Name>bluefish</Name>
   </ApplicationJob>

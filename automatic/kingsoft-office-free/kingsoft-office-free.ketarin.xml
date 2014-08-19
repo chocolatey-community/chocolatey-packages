@@ -57,12 +57,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\office_free_2013.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\office_free_2013.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-04-02T19:16:28.6470938</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.ksosoft.com/download/office_free_2013.exe</FixedDownloadUrl>
     <Name>kingsoft-office-free</Name>
   </ApplicationJob>

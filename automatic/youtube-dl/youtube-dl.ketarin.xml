@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\youtube-dl.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\youtube-dl.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-11T15:17:26.1727291</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://yt-dl.org/downloads/{version}/youtube-dl.exe</FixedDownloadUrl>
     <Name>youtube-dl</Name>
   </ApplicationJob>

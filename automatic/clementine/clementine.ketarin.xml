@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ClementineSetup-1.2.3.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ClementineSetup-1.2.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-04-23T22:44:42.9166746</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://github.com/clementine-player/Clementine/releases/download/{version}/ClementineSetup-{version}.exe</FixedDownloadUrl>
     <Name>clementine</Name>
   </ApplicationJob>

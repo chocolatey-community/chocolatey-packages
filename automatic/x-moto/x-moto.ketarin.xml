@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\xmoto-0.5.11-win32-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\xmoto-0.5.11-win32-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-03-30T14:15:30.1290274</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.tuxfamily.org/xmoto/xmoto/{version}/xmoto-{version}-win32-setup.exe</FixedDownloadUrl>
     <Name>x-moto</Name>
   </ApplicationJob>

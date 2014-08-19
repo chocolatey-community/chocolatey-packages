@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.brackets.io/file.cfm?platform=WIN&amp;build=35" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="Brackets" /></Name>
   </ApplicationJob>
@@ -122,12 +122,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Brackets.Release.0.42.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Brackets.Release.0.42.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-01T21:23:42.3375974</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://github.com/adobe/brackets/releases/download/release-{release}/Brackets.Release.{release}.msi</FixedDownloadUrl>
     <Name>Brackets</Name>
   </ApplicationJob>

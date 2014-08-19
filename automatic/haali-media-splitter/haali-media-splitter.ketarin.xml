@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\MatroskaSplitter.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\MatroskaSplitter.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-30T21:58:31.8728117</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://haali.su/mkv/MatroskaSplitter.exe</FixedDownloadUrl>
     <Name>haali-media-splitter</Name>
   </ApplicationJob>

@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Aptana_Studio_3_Setup_3.6.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Aptana_Studio_3_Setup_3.6.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-31T19:39:11.9304365</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.aptana.com/studio3/standalone/{version}/win/Aptana_Studio_3_Setup_{version}.exe</FixedDownloadUrl>
     <Name>aptana-studio</Name>
   </ApplicationJob>

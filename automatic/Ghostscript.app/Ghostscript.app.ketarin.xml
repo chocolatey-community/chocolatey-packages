@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://downloads.ghostscript.com/public/gs{versionWithoutDots}w32.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="ghostscript" /></Name>
   </ApplicationJob>
@@ -137,12 +137,12 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\gs914w32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\gs914w32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-15T22:58:57.7749528</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://downloads.ghostscript.com/public/gs{versionWithoutDots}w32.exe</FixedDownloadUrl>
     <Name>Ghostscript.app</Name>
   </ApplicationJob>

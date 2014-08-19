@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ownCloud-1.6.2.3463-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ownCloud-1.6.2.3463-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-28T22:30:27.7333253</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://download.owncloud.com/desktop/stable/ownCloud-{version}-setup.exe</FixedDownloadUrl>
     <Name>owncloud-client</Name>
   </ApplicationJob>

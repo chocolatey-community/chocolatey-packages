@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.python.org/ftp/python/{version}/python-{version}.msi" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="python3" /></Name>
   </ApplicationJob>
@@ -125,12 +125,12 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\python-3.4.1.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\python-3.4.1.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-10T19:05:05.5390547</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.python.org/ftp/python/{version}/python-{version}.msi</FixedDownloadUrl>
     <Name>python</Name>
   </ApplicationJob>

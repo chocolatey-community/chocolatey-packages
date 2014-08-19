@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/{version}/PyHoca-GUI_{version}_win32-setup.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="pyhoca-gui" /></Name>
   </ApplicationJob>
@@ -135,12 +135,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\PyHoca-GUI_0.4.0.8_win32-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\PyHoca-GUI_0.4.0.8_win32-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-14T22:40:14.6911798</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/{real-version}/PyHoca-GUI_{real-version}_win32-setup.exe</FixedDownloadUrl>
     <Name>pyhoca-gui</Name>
   </ApplicationJob>

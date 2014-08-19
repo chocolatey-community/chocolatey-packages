@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Cameyo.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Cameyo.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-03T21:26:43.2543777</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://online.cameyo.com/packager.aspx?op=Retrieve&amp;pkgId=1</FixedDownloadUrl>
     <Name>cameyo</Name>
   </ApplicationJob>

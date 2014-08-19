@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.becyhome.de/download/BeCyIGrab{versionWithoutDots}Eng.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="becyicongrabber.install" /></Name>
   </ApplicationJob>
@@ -139,12 +139,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\BeCyIGrab230Eng.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\BeCyIGrab230Eng.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-08-10T17:41:45.0400585</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.becyhome.de/download/BeCyIGrab{versionWithoutDots}Eng.zip</FixedDownloadUrl>
     <Name>becyicongrabber</Name>
   </ApplicationJob>

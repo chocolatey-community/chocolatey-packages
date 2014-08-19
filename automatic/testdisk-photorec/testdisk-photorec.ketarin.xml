@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\testdisk-6.14.win.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\testdisk-6.14.win.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-10-12T15:11:32.9848274</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.cgsecurity.org/testdisk-{version}.win.zip</FixedDownloadUrl>
     <Name>testdisk-photorec</Name>
   </ApplicationJob>

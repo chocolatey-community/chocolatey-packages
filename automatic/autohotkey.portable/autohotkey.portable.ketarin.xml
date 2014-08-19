@@ -85,12 +85,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\AutoHotkey111504.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\AutoHotkey111504.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-13T16:18:53.7428005</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://ahkscript.org/download/1.1/AutoHotkey{versionWithoutDots}.zip</FixedDownloadUrl>
     <Name>autohotkey.portable</Name>
   </ApplicationJob>

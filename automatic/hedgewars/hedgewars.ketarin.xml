@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.gna.org/hedgewars/hedgewars-win32.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="hedgewars" /></Name>
   </ApplicationJob>
@@ -108,12 +108,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\hedgewars-win32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\hedgewars-win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-12-26T15:12:15.2227127</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.gna.org/hedgewars/hedgewars-win32.exe</FixedDownloadUrl>
     <Name>hedgewars</Name>
   </ApplicationJob>

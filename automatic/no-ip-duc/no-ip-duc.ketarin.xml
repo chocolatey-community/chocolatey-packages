@@ -54,12 +54,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\DUCSetup_v4_1_0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\DUCSetup_v4_1_0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-04T02:32:38.3050924</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.noip.com/client/DUCSetup_v{version_underscore}_0.exe</FixedDownloadUrl>
     <Name>no-ip-duc</Name>
   </ApplicationJob>

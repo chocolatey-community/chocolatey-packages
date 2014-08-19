@@ -86,12 +86,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\torbrowser-install-3.6.4_en-US.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\torbrowser-install-3.6.4_en-US.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-12T23:02:50.8581484</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.torproject.org/dist/torbrowser/{realVersion}/torbrowser-install-{realVersion}_en-US.exe</FixedDownloadUrl>
     <Name>tor-browser</Name>
   </ApplicationJob>

@@ -56,12 +56,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\spsetup126.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\spsetup126.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-04-29T18:51:55.7620657</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.piriform.com/spsetup{shortVersion}.exe</FixedDownloadUrl>
     <Name>speccy</Name>
   </ApplicationJob>

@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://white.download.pdfforge.org/pdfcreator/1.7.1/PDFCreator-1_7_1_setup.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="PDFCreator" /></Name>
   </ApplicationJob>
@@ -136,12 +136,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\PDFCreator-1_7_3_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\PDFCreator-1_7_3_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-13T02:49:34.8193991</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.pdfforge.org{urlPart}&amp;download</FixedDownloadUrl>
     <Name>PDFCreator</Name>
   </ApplicationJob>

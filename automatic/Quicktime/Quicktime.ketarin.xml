@@ -54,12 +54,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\QuickTimeInstaller.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\QuickTimeInstaller.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-03-01T23:43:17.0781426</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://secure-appldnld.apple.com/QuickTime/{stringCode}/QuickTimeInstaller.exe</FixedDownloadUrl>
     <Name>Quicktime</Name>
   </ApplicationJob>

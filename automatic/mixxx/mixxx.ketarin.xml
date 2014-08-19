@@ -54,12 +54,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\mixxx-1.11.0-win32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mixxx-1.11.0-win32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-22T22:14:17.5476778</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://downloads.mixxx.org/mixxx-{version}/mixxx-{version}-win32.exe</FixedDownloadUrl>
     <Name>mixxx</Name>
   </ApplicationJob>

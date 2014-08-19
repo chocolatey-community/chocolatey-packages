@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.tracker-software.com/downloads/PDFXVwer.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="PDFXChangeViewer" /></Name>
   </ApplicationJob>
@@ -108,12 +108,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\PDFXVwer.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\PDFXVwer.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-06T18:35:22.6726102</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tracker-software.com/downloads/PDFXVwer.exe</FixedDownloadUrl>
     <Name>PDFXChangeViewer</Name>
   </ApplicationJob>

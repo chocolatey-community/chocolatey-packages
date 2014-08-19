@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="https://download.jitsi.org/jitsi/msi/jitsi-{version}-x86.msi" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="jitsi" /></Name>
   </ApplicationJob>
@@ -122,12 +122,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\jitsi-2.4.4997-x86.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\jitsi-2.4.4997-x86.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-04T00:44:30.0458055</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://download.jitsi.org/jitsi/msi/jitsi-{version}-x86.msi</FixedDownloadUrl>
     <Name>jitsi</Name>
   </ApplicationJob>

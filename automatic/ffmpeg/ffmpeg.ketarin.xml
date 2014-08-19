@@ -69,12 +69,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ffmpeg-2.2.3-win32-shared.7z</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ffmpeg-2.2.3-win32-shared.7z</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-20T20:10:09.6721355</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-{version}-win32-shared.7z</FixedDownloadUrl>
     <Name>ffmpeg</Name>
   </ApplicationJob>

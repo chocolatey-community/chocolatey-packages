@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\LibreOffice_4.3.0_Win_x86_helppack_en-US.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\LibreOffice_4.3.0_Win_x86_helppack_en-US.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-30T18:56:13.9601058</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86_helppack_en-US.msi</FixedDownloadUrl>
     <Name>libreoffice-help</Name>
   </ApplicationJob>

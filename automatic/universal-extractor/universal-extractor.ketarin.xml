@@ -57,12 +57,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\uniextract161.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\uniextract161.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-27T23:59:04.5782359</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.legroom.net/files/software/uniextract{versionWithoutDots}.exe</FixedDownloadUrl>
     <Name>universal-extractor</Name>
   </ApplicationJob>

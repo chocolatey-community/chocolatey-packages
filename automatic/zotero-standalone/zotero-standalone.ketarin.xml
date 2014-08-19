@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.zotero.org/standalone/{version}/Zotero-{version}_setup.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="zotero-standalone" /></Name>
   </ApplicationJob>
@@ -122,12 +122,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Zotero-4.0.21.2_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Zotero-4.0.21.2_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-22T21:38:30.6371491</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.zotero.org/standalone/{version}/Zotero-{version}_setup.exe</FixedDownloadUrl>
     <Name>zotero-standalone</Name>
   </ApplicationJob>

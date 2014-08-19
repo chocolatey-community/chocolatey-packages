@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Universal-USB-Installer-1.9.5.5.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Universal-USB-Installer-1.9.5.5.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-16T22:05:19.2188668</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-{version}.exe</FixedDownloadUrl>
     <Name>universal-usb-installer</Name>
   </ApplicationJob>

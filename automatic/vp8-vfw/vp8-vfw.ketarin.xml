@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\vp8vfw-setup-1.2.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\vp8vfw-setup-1.2.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-27T23:59:25.9021006</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.optimasc.com/products/vp8vfw/vp8vfw-setup-{version}.exe</FixedDownloadUrl>
     <Name>vp8-vfw</Name>
   </ApplicationJob>

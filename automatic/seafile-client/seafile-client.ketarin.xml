@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\seafile-3.1.5-en.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\seafile-3.1.5-en.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-14T17:48:34.8888749</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://bitbucket.org/haiwen/seafile/downloads/seafile-{version}-en.msi</FixedDownloadUrl>
     <Name>seafile-client</Name>
   </ApplicationJob>

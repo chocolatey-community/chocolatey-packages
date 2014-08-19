@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://get.geo.opera.com/pub/opera/desktop/16.0.1196.73/win/Opera_16.0.1196.73_Setup.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="opera" /></Name>
   </ApplicationJob>
@@ -110,12 +110,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Opera_23.0.1522.77_Setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Opera_23.0.1522.77_Setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-18T18:54:37.4420313</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://get.geo.opera.com/pub/opera/desktop/{version}/win/Opera_{version}_Setup.exe</FixedDownloadUrl>
     <Name>Opera</Name>
   </ApplicationJob>

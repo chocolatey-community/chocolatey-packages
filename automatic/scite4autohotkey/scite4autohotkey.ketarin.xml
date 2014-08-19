@@ -71,12 +71,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\SciTE4AHK3006_Install.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\SciTE4AHK3006_Install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-18T18:54:29.5862967</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://fincs.ahk4.net/scite4ahk/dl/SciTE4AHK{versionWithoutDots}_Install.exe</FixedDownloadUrl>
     <Name>scite4autohotkey</Name>
   </ApplicationJob>

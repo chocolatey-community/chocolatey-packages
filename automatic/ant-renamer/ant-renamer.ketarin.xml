@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\antrenamer2_install.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\antrenamer2_install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-22T22:07:43.7707861</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://update.antp.be/renamer/antrenamer2_install.exe</FixedDownloadUrl>
     <Name>ant-renamer</Name>
   </ApplicationJob>

@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Setup FlightGear 3.0.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Setup FlightGear 3.0.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-02-20T20:58:45.5090253</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://fgfs.physra.net/ftp/Windows/Setup FlightGear {version}.exe</FixedDownloadUrl>
     <Name>flightgear</Name>
   </ApplicationJob>

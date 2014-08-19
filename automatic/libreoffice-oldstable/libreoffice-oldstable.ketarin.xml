@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="libreoffice" /></Name>
   </ApplicationJob>
@@ -109,12 +109,12 @@ rem /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\LibreOffice_4.1.6_Win_x86_oldstable.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\LibreOffice_4.1.6_Win_x86_oldstable.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-02T16:04:18.7483702</LastUpdated>
-    <TargetPath>{startuppath}..\_work\LibreOffice_4.1.6_Win_x86_oldstable.msi</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
     <Name>libreoffice-oldstable</Name>
   </ApplicationJob>

@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\Firefox Setup 31.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Firefox Setup 31.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-07-22T19:22:32.9348472</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://download.mozilla.org/?product=firefox-{version}&amp;os=win&amp;lang=de</FixedDownloadUrl>
     <Name>Firefox</Name>
   </ApplicationJob>

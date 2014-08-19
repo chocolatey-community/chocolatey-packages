@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\picard-setup-1.2.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\picard-setup-1.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-06-27T23:43:48.0896913</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-{version}.exe</FixedDownloadUrl>
     <Name>picard</Name>
   </ApplicationJob>

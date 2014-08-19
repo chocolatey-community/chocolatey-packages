@@ -40,12 +40,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\keyfinder.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\keyfinder.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-20T20:10:25.3901078</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.magicaljellybean.com/downloads/keyfinder.zip</FixedDownloadUrl>
     <Name>keyfinder</Name>
   </ApplicationJob>

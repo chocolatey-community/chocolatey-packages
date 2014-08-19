@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.my-debugbar.com/ietester/install-ietester-v{version}.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="ietester" /></Name>
   </ApplicationJob>
@@ -122,12 +122,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\install-ietester-v0.5.2.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\install-ietester-v0.5.2.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-01-02T13:14:56.5983734</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.my-debugbar.com/ietester/install-ietester-v{version}.exe</FixedDownloadUrl>
     <Name>ietester</Name>
   </ApplicationJob>

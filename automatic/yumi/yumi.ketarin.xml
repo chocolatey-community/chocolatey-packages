@@ -71,12 +71,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\YUMI-2.0.0.8.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\YUMI-2.0.0.8.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-17T01:51:00.7665618</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/YUMI/YUMI-{realVersion}.exe</FixedDownloadUrl>
     <Name>yumi</Name>
   </ApplicationJob>

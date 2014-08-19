@@ -56,12 +56,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\gimp-2.8.10-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\gimp-2.8.10-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-05-14T21:37:21.0069067</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://gimp.mirrors.hoobly.com/gimp/{urlPart}</FixedDownloadUrl>
     <Name>gimp</Name>
   </ApplicationJob>

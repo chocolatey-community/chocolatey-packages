@@ -55,12 +55,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\ClassicShellSetup_4_1_0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ClassicShellSetup_4_1_0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-06-24T21:02:34.413662</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.fosshub.com/download/ClassicShellSetup_{versionUnderscore}.exe</FixedDownloadUrl>
     <Name>classic-shell</Name>
   </ApplicationJob>

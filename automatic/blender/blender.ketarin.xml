@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://ftp.nluug.nl/pub/graphics/blender/release/Blender2.68/blender-2.68a-windows32.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="blender" /></Name>
   </ApplicationJob>
@@ -170,12 +170,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\blender-2.71-windows32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\blender-2.71-windows32.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-09T15:38:11.2411611</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{baseUrl}32.exe</FixedDownloadUrl>
     <Name>blender</Name>
   </ApplicationJob>

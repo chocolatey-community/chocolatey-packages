@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://svg-explorer-extension.googlecode.com/files/dssee_setup_i386_v{versionWithoutDots}_signed.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="svg-explorer-extension" /></Name>
   </ApplicationJob>
@@ -138,12 +138,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\dssee_setup_i386_v011_signed.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\dssee_setup_i386_v011_signed.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-08-29T17:15:55.2793872</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://svg-explorer-extension.googlecode.com/files/dssee_setup_i386_v{versionWithoutDots}_signed.exe</FixedDownloadUrl>
     <Name>svg-explorer-extension</Name>
   </ApplicationJob>

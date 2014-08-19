@@ -63,7 +63,7 @@
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://nowhere.com/nothing{version}.zip" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="flashplayerplugin" /></Name>
   </ApplicationJob>
@@ -152,12 +152,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\install_flash_player_14_active_x.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\install_flash_player_14_active_x.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-08-12T23:01:19.7781253</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_{majorVersion}_active_x.msi</FixedDownloadUrl>
     <Name>flashplayeractivex</Name>
   </ApplicationJob>

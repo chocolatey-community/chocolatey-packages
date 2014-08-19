@@ -56,12 +56,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\dfsetup218.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\dfsetup218.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-04-16T18:57:57.8716406</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.piriform.com/dfsetup{shortVersion}.exe</FixedDownloadUrl>
     <Name>defraggler</Name>
   </ApplicationJob>

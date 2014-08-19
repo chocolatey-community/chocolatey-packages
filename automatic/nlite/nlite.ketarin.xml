@@ -41,12 +41,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\ProgramData\chocolatey\ketarin-chocopkgup\..\_work\nLite-1.4.9.3.setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\nLite-1.4.9.3.setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2013-08-29T23:52:11.8125599</LastUpdated>
-    <TargetPath>{startuppath}..\_work\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://nliteos.pcrpg.org/nlite/nLite-{version}.setup.exe</FixedDownloadUrl>
     <Name>nlite</Name>
   </ApplicationJob>
