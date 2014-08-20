@@ -5,7 +5,7 @@
     <title>qBittorrent</title>
     <version>{{PackageVersion}}</version>
     <authors>Christophe Dumez</authors>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/qbittorrent.png</iconUrl>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
     <description>
 qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4. The program uses libtorrent-rasterbar library for the torrent back-end (network communication) functionality. It is developed by Christophe Dumez, from the University of Technology of Belfort-Montbeliard in France. It was started in March 2006 and has been in active development ever since.

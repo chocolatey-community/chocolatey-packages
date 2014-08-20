@@ -7,7 +7,7 @@
     <authors>Lck</authors>
     <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
     <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ontopreplica.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/ontopreplica.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 A real-time, always on top, “replica” of a window of your choice, based on DWM Thumbnails.

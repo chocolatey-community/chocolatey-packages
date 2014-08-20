@@ -18,7 +18,7 @@ This package is for the older stable version LibreOffice which still recieves up
     <copyright></copyright>
     <licenseUrl>http://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/libreoffice.svg</iconUrl>
     <releaseNotes></releaseNotes>
   </metadata>
 </package>

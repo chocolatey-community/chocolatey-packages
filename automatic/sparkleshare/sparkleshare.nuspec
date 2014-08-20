@@ -7,7 +7,7 @@
     <authors>Linux Community</authors>
     <licenseUrl>https://github.com/hbons/SparkleShare#license</licenseUrl>
     <projectUrl>http://sparkleshare.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/sparkleshare.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way. It allows you to instantly sync with Git repositories and is available for Linux distributions, Mac and Windows.

@@ -7,7 +7,7 @@
     <authors>Tracker Software</authors>
     <licenseUrl>http://www.tracker-software.com/PDFVLicense.pdf‎</licenseUrl>
     <projectUrl>http://www.tracker-software.com/product/pdf-xchange-viewer</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/PDFXChangeViewer.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/PDFXChangeViewer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 A free PDF reader alternative to the Adobe Reader! The PDF-XChange Viewer is smaller, faster and more feature rich than any other free PDF Reader / PDF Viewer / PDF Editor available.

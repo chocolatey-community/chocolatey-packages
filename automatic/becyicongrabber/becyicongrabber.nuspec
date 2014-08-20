@@ -7,7 +7,7 @@
     <authors>Benjamin Bentmann</authors>
     <licenseUrl>http://www.becyhome.de/becyicongrabber/description_eng.htm</licenseUrl>
     <projectUrl>http://www.becyhome.de/download_eng.htm#becyicongrabber</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/becyicongrabber.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/becyicongrabber.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 BeCyIconGrabber is a small utility to view icons and cursors of any sizes that are contained in EXE, DLL, ICL, OCX, CPL, SRC, ICO and CUR files. The icons/cursors can be saved either individually as an icon, cursor, bitmap, png file or collectively within resource libraries.

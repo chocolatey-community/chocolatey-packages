@@ -7,7 +7,7 @@
     <authors>Apple Inc.</authors>
     <licenseUrl>http://www.apple.com/legal/terms/site.html</licenseUrl>
     <projectUrl>http://www.apple.com/itunes</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/itunes.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/itunes.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 iTunes is a free app that lets you organize and play digital music and video on your computer. It’s also a store that has everything you need to be entertained. That makes it the perfect place to listen, watch, read, play, explore, and shop.

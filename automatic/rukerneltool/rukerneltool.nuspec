@@ -17,7 +17,7 @@ The actual version of ruKernelTool is {{DownloadUrlx64}}.
 This package puts the ruKernelTool files into `$env:ChocolateyBinRoot\ruKernelTool`.
     </description>
     <summary>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</summary>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/rukerneltool.png</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/rukerneltool.png</iconUrl>
     <releaseNotes></releaseNotes>
     <copyright>2013 Rainer Ullrich</copyright>
     <tags>avm fritz!box flash firmware</tags>

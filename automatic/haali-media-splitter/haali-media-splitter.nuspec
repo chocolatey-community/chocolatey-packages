@@ -7,7 +7,7 @@
     <authors>Mike Matsnev</authors>
     <projectUrl>http://haali.su/mkv/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/haali-media-splitter.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/haali-media-splitter.svg</iconUrl>
     <description>
 Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter. mkv2vfr included, convert mkvs with variable framerate to constant framerate. GDSMux/DS Mux included also, a simple mkv/m2ts multiplexer and cutter.
     </description>

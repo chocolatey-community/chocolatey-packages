@@ -7,7 +7,7 @@
     <authors>KeePass Team</authors>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <projectUrl>http://keepass.info/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/keepass.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 KeePass is a free, open source, light-weight and easy-to-use password manager.
