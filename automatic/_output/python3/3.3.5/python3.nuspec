@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>python3</id>
+    <version>3.3.5</version>
+    <title>Python</title>
+    <authors>Python Software Foundation</authors>
+    <projectUrl>http://www.python.org/</projectUrl>
+    <iconUrl>http://tomone.github.io/chocolatey-packages/icons/python.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</description>
+    <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
+    <tags>python</tags>
+  </metadata>
+</package>

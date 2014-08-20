@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>InkScape</id>
+        <version>0.91-pre1</version>
+        <title>Inkscape</title>
+        <authors>Inkscape developers</authors>
+        <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+        <projectUrl>http://inkscape.org/</projectUrl>
+        <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Inkscape supports many advanced SVG features (markers, clones, alpha blending, etc.) and great care is taken in designing a streamlined interface. It is very easy to edit nodes, perform complex path operations, trace bitmaps and much more. We also aim to maintain a thriving user and developer community by using open, community-oriented development.</description>
+        <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
+        <releaseNotes>Stable release</releaseNotes>
+        <copyright>inkscape.org</copyright>
+        <tags>inkscape, svg editor, compliant, svg, vector graphics, linux, unix, gnome, hig, icons, adobe illustrator, graphics open source png export, to png, text, paths, outlines, drawing, art</tags>
+    </metadata>
+</package>
