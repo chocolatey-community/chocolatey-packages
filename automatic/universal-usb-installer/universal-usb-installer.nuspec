@@ -19,8 +19,8 @@ Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to c
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="tools\universal-usb-installer-src.zip" target="tools\universal-usb-installer-src.zip" />
-    <file src="tools\universal-usb-installer.exe" target="tools\universal-usb-installer.exe" />
+    <file src="C:\Chocolatey\_work\universal-usb-installer-src.zip" target="tools\universal-usb-installer-src.zip" />
+    <file src="C:\Chocolatey\_work\universal-usb-installer.exe" target="tools\universal-usb-installer.exe" />
   </files>
 </package>
 <!-- “UTF-8” test -->

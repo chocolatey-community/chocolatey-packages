@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>libreoffice</id>
+    <title>LibreOffice</title>
+    <version>4.2.5</version>
+    <authors>LibreOffice Developer</authors>
+    <owners>Yoshimov</owners>
+    <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
+    <description>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</description>
+    <projectUrl>http://www.libreoffice.org/</projectUrl>
+    <tags>libreoffice office admin</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.libreoffice.org/download/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
