@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>120569</LastFileSize>
-    <LastFileDate>2013-08-12T15:11:14.7301335</LastFileDate>
+    <LastFileDate>2013-08-12T05:25:11+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -28,8 +28,7 @@
             <Regex />
             <Url>http://www.nirsoft.net/utils/nircmd.html</Url>
             <StartText>&lt;td&gt;NirCmd v</StartText>
-            <EndText>
-</EndText>
+            <EndText>&lt;br&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -59,7 +58,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-08-12T15:11:14.7301335</LastUpdated>
+    <LastUpdated>2014-08-20T20:22:58.8360043+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.nirsoft.net/utils/nircmd.zip</FixedDownloadUrl>
     <Name>nircmd</Name>

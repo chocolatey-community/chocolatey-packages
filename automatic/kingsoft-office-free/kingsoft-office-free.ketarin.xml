@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>47755504</LastFileSize>
-    <LastFileDate>2014-04-02T19:16:28.6470938</LastFileDate>
+    <LastFileDate>2014-04-02T03:00:14+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -44,7 +44,7 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.ksosoft.com/product/office-free.html</Url>
-            <StartText>&lt;a title="new features in office free 2013" href="/what-is-new-in-kingsoft-office-free-2013.html"&gt;</StartText>
+            <StartText>The latest version: &lt;a href="http://www.ksosoft.com/what-is-new-in-kingsoft-office-free-2013.html"&gt;</StartText>
             <EndText>&lt;/a&gt;</EndText>
             <Name>realVersion</Name>
           </UrlVariable>
@@ -61,7 +61,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-04-02T19:16:28.6470938</LastUpdated>
+    <LastUpdated>2014-08-20T20:18:47.8185416+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.ksosoft.com/download/office_free_2013.exe</FixedDownloadUrl>
     <Name>kingsoft-office-free</Name>

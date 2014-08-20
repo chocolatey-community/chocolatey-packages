@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>15801141</LastFileSize>
-    <LastFileDate>2014-07-03T21:26:43.2543777</LastFileDate>
+    <LastFileDate>2014-08-20T20:27:16.6490568+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -27,8 +27,8 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.cameyo.com/</Url>
-            <StartText>&lt;span&gt;VERSION </StartText>
-            <EndText>&lt;/span&gt;</EndText>
+            <StartText>&lt;span style="color: #808080"&gt; </StartText>
+            <EndText> &lt;/span&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -44,7 +44,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-03T21:26:43.2543777</LastUpdated>
+    <LastUpdated>2014-08-20T20:27:16.711417+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://online.cameyo.com/packager.aspx?op=Retrieve&amp;pkgId=1</FixedDownloadUrl>
     <Name>cameyo</Name>

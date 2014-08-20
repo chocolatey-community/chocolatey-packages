@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>882528</LastFileSize>
-    <LastFileDate>2013-06-27T23:43:25.5587822</LastFileDate>
+    <LastFileDate>2010-11-02T09:17:04+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -27,8 +27,8 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.pcwelt.de/downloads/pcwRunAs-1215998.html</Url>
-            <StartText>&lt;td class="col-2" itemprop="softwareVersion"&gt;</StartText>
-            <EndText>&lt;/td&gt;</EndText>
+            <StartText>&lt;dd itemprop="softwareVersion"&gt;</StartText>
+            <EndText>&lt;/dd&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -44,7 +44,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:43:25.5587822</LastUpdated>
+    <LastUpdated>2014-08-20T20:29:40.6848427+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.pcwelt.de/area_release/files/A1/59/A159789BD5C889445B1D33BBF89685BC/pcwRunAs4.exe</FixedDownloadUrl>
     <Name>pcwrunas</Name>
