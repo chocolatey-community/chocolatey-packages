@@ -24,28 +24,13 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
+            <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url />
-            <StartText>windows/gimp-</StartText>
-            <EndText>-setup.exe</EndText>
-            <TextualContent>{urlPart:regexreplace:v[\d\.]+/windows/gimp-([\d\.]+)-setup\.exe:$1}</TextualContent>
+            <Url>http://gimper.net/downloads/pub/gimp/stable/</Url>
+            <StartText>_LATEST-IS-</StartText>
+            <EndText>"&gt;</EndText>
+            <TextualContent />
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlPart</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>v[\d\.]+/windows/gimp-[\d\.]+-setup\.exe</Regex>
-            <Url>http://www.gimp.org/downloads/</Url>
-            <TextualContent>v2.8/windows/gimp-2.8.10-setup.exe</TextualContent>
-            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -62,7 +47,7 @@
     <FileHippoId />
     <LastUpdated>2014-05-14T21:37:21.0069067</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://gimp.mirrors.hoobly.com/gimp/{urlPart}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://gimper.net/downloads/pub/gimp/stable/windows/gimp-{version}-setup.exe</FixedDownloadUrl>
     <Name>gimp</Name>
   </ApplicationJob>
 </Jobs>
