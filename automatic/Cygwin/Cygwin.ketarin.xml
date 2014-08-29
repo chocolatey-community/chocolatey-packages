@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>742400</LastFileSize>
-    <LastFileDate>2014-08-11T13:18:21.522732</LastFileDate>
+    <LastFileSize>3701</LastFileSize>
+    <LastFileDate>2014-08-29T19:08:58.2588331+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -91,14 +91,14 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=&lt;p&gt;The most recent version of the Cygwin DLL is.*?&lt;a href=".+?"&gt;)[\d\.]+(?=&lt;/a&gt;)</Regex>
-            <Url>https://cygwin.com/</Url>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
-            <TextualContent />
+            <TextualContent>{aTagForVersion:regexreplace:.+?&gt;([\d\.]+).+:$1}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -118,6 +118,48 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>aTagForVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=&lt;p&gt;The most recent version of the Cygwin DLL is.*?)&lt;a href=".+?"&gt;[\d\.]+&lt;/a&gt;</Regex>
+            <Url>https://cygwin.com/</Url>
+            <Name>aTagForVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>messageUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{aTagForVersion:regexreplace:.+?href="(.+?)".+:$1}</TextualContent>
+            <Name>messageUrl</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>rawMessage</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=&lt;a href=")[^\r\n]+?(?="&gt;Raw text&lt;/a&gt;)</Regex>
+            <Url>{messageUrl}</Url>
+            <Name>rawMessage</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -125,13 +167,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\setup-x86.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\cygwin-raw-message.txt</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-11T13:18:21.522732</LastUpdated>
-    <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://cygwin.com/setup-x86.exe</FixedDownloadUrl>
+    <LastUpdated>2014-08-29T19:08:58.2598335+02:00</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\cygwin-raw-message.txt</TargetPath>
+    <FixedDownloadUrl>https://cygwin.com/{rawMessage}</FixedDownloadUrl>
     <Name>Cygwin</Name>
   </ApplicationJob>
 </Jobs>
