@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>343</LastFileSize>
-    <LastFileDate>2014-08-29T18:42:10.4715278+02:00</LastFileDate>
+    <LastFileSize>895120</LastFileSize>
+    <LastFileDate>2014-08-27T19:35:51.7333458</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -40,13 +40,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\google-chrome-x64-version.csv\all</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\ChromeSetup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-29T18:42:10.4735284+02:00</LastUpdated>
-    <TargetPath>C:\Chocolatey\_work\google-chrome-x64-version.csv</TargetPath>
-    <FixedDownloadUrl>http://omahaproxy.appspot.com/all?os=win&amp;channel=stable</FixedDownloadUrl>
+    <LastUpdated>2014-08-27T19:35:51.7333458</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B00000000-0000-0000-0000-000000000000%7D%26lang%3Den%26browser%3D4%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-stable/update2/installers/ChromeSetup.exe</FixedDownloadUrl>
     <Name>google-chrome-x64</Name>
   </ApplicationJob>
 </Jobs>
