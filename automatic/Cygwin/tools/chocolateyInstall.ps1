@@ -1,6 +1,6 @@
 $packageName = '{{PackageName}}'
 $installerType = 'exe'
-$url = 'http://cygwin.com/setup-x86.exe'
+$url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
 
 $binRoot = Get-BinRoot
