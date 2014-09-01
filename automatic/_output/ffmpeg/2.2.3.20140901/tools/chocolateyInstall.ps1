@@ -1,6 +1,6 @@
-﻿$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+﻿$packageName = 'ffmpeg'
+$url = 'http://ffmpeg.zeranoe.com/builds/win32/shared/ffmpeg-2.2.3-win32-shared.7z'
+$url64 = 'http://ffmpeg.zeranoe.com/builds/win64/shared/ffmpeg-2.2.3-win64-shared.7z'
 
 try {
   $destinationFolder = Split-Path $script:MyInvocation.MyCommand.Path
