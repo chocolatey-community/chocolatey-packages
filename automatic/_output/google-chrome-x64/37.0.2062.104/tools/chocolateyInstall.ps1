@@ -1,8 +1,8 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'google-chrome-x64'
 $fileType = 'msi'
 $silentArgs = '/quiet /norestart'
-$url = '{{DownloadUrl}}'
-$version = '{{PackageVersion}}'
+$url = 'https://dl.google.com/tag/s/appguid={00000000-0000-0000-0000-000000000000}&iid={00000000-0000-0000-0000-000000000000}&lang=en&browser=4&usagestats=0&appname=Google Chrome&needsadmin=true/dl/chrome/install/googlechromestandaloneenterprise64.msi'
+$version = '37.0.2062.103'
 
 function Find-CID {
   param([String]$croot, [string]$cdname, [string]$ver)

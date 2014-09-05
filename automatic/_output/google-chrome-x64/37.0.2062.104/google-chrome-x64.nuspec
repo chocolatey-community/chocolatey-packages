@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>google-chrome-x64</id>
+    <version>37.0.2062.104</version>
     <title>Google Chrome (64-bit)</title>
     <authors>Google Inc.</authors>
     <projectUrl>https://www.google.com/chrome/browser/</projectUrl>
@@ -17,7 +17,11 @@ This package installs Chrome for all users on the machine (using the MSI install
 
 If you switch from the 32-bit to the 64-bit version, remember to uninstall all versions of the `GoogleChrome` package.
     </description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+Starting from package version 37.0.2062.104 this package uses Chrome’s administrative MSI installer.
+
+Note that the real version of Chrome in this package is 37.0.2062.103.
+    </releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
