@@ -9,6 +9,10 @@
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
     <description>
 LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
+
+### Notes
+
+This package installs the latest stable version of LibreOffice (officially called [LibreOffice Fresh](https://www.libreoffice.org/download/libreoffice-fresh/)). For more conservative users it is recommended to install [libreoffice-oldstable](./libreoffice-oldstable) instead.
     </description>
     <projectUrl>http://www.libreoffice.org/</projectUrl>
     <tags>libreoffice office admin</tags>
