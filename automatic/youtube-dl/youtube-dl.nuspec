@@ -14,6 +14,7 @@ youtube-dl is a small command-line program to download videos from YouTube.com a
 Optional dependency package: [ffmpeg](./ffmpeg) (for stream extraction and conversion support)
     </description>
     <summary>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites.</summary>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8f7f438a71acf79fd5ae7691ef4c6b0398d08c30/icons/youtube-dl.svg</iconUrl>
     <releaseNotes />
     <copyright />
     <language>en-US</language>
