@@ -1,0 +1,5 @@
+﻿$url = 'http://downloads.ghostscript.com/public/gs914w32.exe'
+$url64 = 'http://downloads.ghostscript.com/public/gs914w64.exe'
+$uninstallRegKey = 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GPL Ghostscript 9.14'
+$version = [Version] '9.14'
+$package = 'Ghostscript.app'
