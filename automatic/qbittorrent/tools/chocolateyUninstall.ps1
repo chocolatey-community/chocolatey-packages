@@ -1,10 +1,16 @@
-﻿$packageName = '{{PackageName}}'
-$unfile = 'qBittorrent\uninst.exe'
+﻿try {
 
-if (Test-Path "${Env:ProgramFiles(x86)}\$unfile") {
-  $unpath = "${Env:ProgramFiles(x86)}\$unfile"
+  $scriptPath = Split-Path $script:MyInvocation.MyCommand.Path
+
+  Import-Module (Join-Path $scriptPath 'getUninstallString.ps1')
+
+
+  $uninstallString = getUninstallString 'qbittorrent' 'UninstallString'
+  if ($uninstallString) {
+    Uninstall-ChocolateyPackage $packageName 'exe' '/S' $uninstallString
+  }
+
+} catch {
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }
-else {
-  $unpath = "${Env:ProgramFiles}\$unfile"
-}
-Uninstall-ChocolateyPackage $packageName 'exe' '/S' $unpath
