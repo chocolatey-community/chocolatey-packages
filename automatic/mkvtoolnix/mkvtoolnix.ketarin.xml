@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>11489953</LastFileSize>
-    <LastFileDate>2014-07-28T22:29:52.6518536</LastFileDate>
+    <LastFileSize>18059592</LastFileSize>
+    <LastFileDate>2014-09-13T17:26:01+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -24,29 +24,27 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=http://app.fosshub.com/download/mkvtoolnix-amd64-)[\d\.]+?(?=-setup\.exe)</Regex>
+            <Url>http://www.fosshub.com/MKVToolNix.html</Url>
             <StartText>&lt;td&gt;mkvtoolnix-unicode-</StartText>
             <EndText>-setup.exe&lt;/td&gt;</EndText>
-            <TextualContent>{realVersion:replace:-:.}</TextualContent>
+            <TextualContent />
             <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>realVersion</string>
+          <string>token</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>https://www.bunkus.org/videotools/mkvtoolnix/downloads.html#windows</Url>
-            <StartText>&lt;a href="http://www.fosshub.com/MKVToolNix.html"&gt;mkvtoolnix-</StartText>
-            <EndText>-setup.exe&lt;/a&gt;</EndText>
-            <Name>realVersion</Name>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?&lt;=token = ")[\da-f]+</Regex>
+            <Url>http://www.fosshub.com/MKVToolNix.html</Url>
+            <Name>token</Name>
           </UrlVariable>
         </value>
       </item>
@@ -59,8 +57,22 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://www.fosshub.com/download/mkvtoolnix-amd64-{version}-setup.exe</TextualContent>
+            <TextualContent>{partialUrls}</TextualContent>
             <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>partialUrls</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>@{'url32' = 'http://app.fosshub.com/download/mkvtoolnix-{version}-setup.exe'; 'url64' = 'http://app.fosshub.com/download/mkvtoolnix-amd64-{version}-setup.exe'}</TextualContent>
+            <Name>partialUrls</Name>
           </UrlVariable>
         </value>
       </item>
@@ -71,13 +83,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\mkvtoolnix-7.1.0-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mkvtoolnix-7.2.0-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-28T22:29:52.6518536</LastUpdated>
+    <LastUpdated>2014-09-30T23:30:41.403419+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://www.fosshub.com/download/mkvtoolnix-{version}-setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://app.fosshub.com/download/mkvtoolnix-{version}-setup.exe/{token}</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>
 </Jobs>

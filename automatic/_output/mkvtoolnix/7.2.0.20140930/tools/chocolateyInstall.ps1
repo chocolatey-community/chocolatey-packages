@@ -1,11 +1,11 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'mkvtoolnix'
 
 # TODO remove hardcoded name
 $packageName = 'mkvtoolnix'
 
 $fileType = 'exe'
 $silentArgs = '/S'
-$partialUrls = {{DownloadUrlx64}}
+$partialUrls = @{'url32' = 'http://app.fosshub.com/download/mkvtoolnix-7.2.0-setup.exe'; 'url64' = 'http://app.fosshub.com/download/mkvtoolnix-amd64-7.2.0-setup.exe'}
 
 # TODO remove hardcoded url
 $partialUrls = @{'url32' = 'http://app.fosshub.com/download/mkvtoolnix-7.2.0-setup.exe'; 'url64' = 'http://app.fosshub.com/download/mkvtoolnix-amd64-7.2.0-setup.exe'}
