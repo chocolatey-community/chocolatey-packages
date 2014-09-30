@@ -11,7 +11,7 @@
   $version = '{{PackageVersion}}'
   $versionMajor = $version -replace '^(\d+)\..*', '$1'
   $installerType = 'exe'
-  $installArgs = '/s REBOOT=Suppress'
+  $installArgs = '/s REBOOT=Suppress SPONSORS=0'
 
   # If both 32- and 64-bit versions are installed, it adds only the folder
   # of the 64-bit version to the env variables

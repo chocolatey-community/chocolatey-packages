@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>javaruntime</id>
+    <version>7.0.67.20140930</version>
     <title>Java Runtime (JRE)</title>
     <authors>Oracle</authors>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
@@ -21,7 +21,7 @@ If you want Java 8, install the [jre8](./jre8) package instead.
 This package installs both 32 and 64-bit versions on 64-bit systems. If you only want the version specific to your OS bitness, install [javaruntime-platformspecific](./javaruntime-platformspecific) instead.
     </description>
     <tags>java runtime environment</tags>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>7.0.67.20140930: Add `SPONSORS=0` to the install arguments</releaseNotes>
   </metadata>
 </package>
 <!-- “UTF-8” test -->
