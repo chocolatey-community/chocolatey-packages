@@ -1,8 +1,8 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'classic-shell'
 $fileType = 'exe'
 $silentArgs = '/passive'
 $referer = 'http://www.fosshub.com/Classic-Shell.html'
-$partialUrl = '{{DownloadUrlx64}}'
+$partialUrl = 'http://app.fosshub.com/download/ClassicShellSetup_4_1_0.exe'
 $downloadFile = "${packageName}Install.exe"
 
 try {
