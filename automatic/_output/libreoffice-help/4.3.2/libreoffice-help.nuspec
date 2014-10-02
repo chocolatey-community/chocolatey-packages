@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>libreoffice-help</id>
+    <version>4.3.2</version>
+    <title>LibreOffice Help Pack</title>
+    <authors>LibreOffice community</authors>
+    <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
+    <projectUrl>https://www.libreoffice.org/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/libreoffice.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+This package installs the help pack for LibreOffice, the free and open source office suite.
+
+It installs the LibreOffice Help Pack in the first language which matches this list:
+
+1. Install arguments override parameter if present, e.g. `choco install libreoffice-help -installArgs l=es`
+To get a list of all available locales have a look at this folder: http://download.documentfoundation.org/libreoffice/stable/4.3.2/win/x86/
+2. If libreoffice-help is already installed: the same language as the already installed libreoffice-help. If more than one LibreOffice Help Packs are already installed, this package updates all of them.
+3. The Windows language of the current user account.
+4. If libreoffice-help is not available in one of the previous languages, it defaults to “en-US”.
+It is also possible to install multiple Help Packs. To achieve that, install them like this: `choco install libreoffice-help -force -installArgs l=&lt;languageCode&gt;`
+    </description>
+    <summary>Help Pack for LibreOffice</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>libreoffice office help admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

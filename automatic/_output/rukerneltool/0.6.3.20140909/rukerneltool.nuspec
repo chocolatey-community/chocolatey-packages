@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>rukerneltool</id>
+    <version>0.6.3.20140909</version>
+    <title>ruKernelTool</title>
+    <authors>Rainer Ullrich</authors>
+    <projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Universal flash-, upload- and recovery-tool for AVM Fritz!Box.
+
+### Note
+
+The actual version of ruKernelTool is 0.6.3.12.
+
+This package puts the ruKernelTool files into `$env:ChocolateyBinRoot\ruKernelTool`.
+    </description>
+    <summary>Universal flash-, upload- and recovery-tool for AVM Fritz!Box</summary>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/rukerneltool.png</iconUrl>
+    <releaseNotes></releaseNotes>
+    <copyright>2013 Rainer Ullrich</copyright>
+    <tags>avm fritz!box flash firmware</tags>
+    <dependencies>
+      <dependency id="wget" />
+    </dependencies>
+  </metadata>
+</package>
+<!-- “UTF-8” test -->
