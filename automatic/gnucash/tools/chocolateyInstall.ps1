@@ -2,8 +2,7 @@
 $version = '{{PackageVersion}}'
 $fileType = 'exe'
 $silentArgs = '/SILENT'
-# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-$url = '{{DownloadUrlx64}}'
+$url = "http://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/${version}/gnucash-${version}-setup.exe/download"
 
 $registryPath32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
 $registryPathWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'

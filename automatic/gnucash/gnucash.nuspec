@@ -16,7 +16,7 @@ Designed to be easy to use, yet powerful and flexible, GnuCash allows you to tra
     </description>
     <summary>financial-accounting software</summary>
     <releaseNotes>http://www.gnucash.org/#newscontainer</releaseNotes>
-    <copyright>2001-2012 The GnuCash Project</copyright>
+    <copyright>The GnuCash Project</copyright>
     <tags>financial accounting</tags>
   </metadata>
 </package>
