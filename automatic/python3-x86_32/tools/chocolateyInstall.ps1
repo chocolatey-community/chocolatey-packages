@@ -1,4 +1,6 @@
-﻿$packageName = '{{PackageName}}'
+﻿# This file should be identical for all python* packages
+
+$packageName = '{{PackageName}}'
 $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
 $version = '{{PackageVersion}}'
@@ -74,6 +76,7 @@ folder and reinstall this package with the -force parameter.
 
 
     Install-ChocolateyPath $installPath 'Machine'
+    $env:Path = "$($env:Path);$installPath"
   }
 
 } catch {
