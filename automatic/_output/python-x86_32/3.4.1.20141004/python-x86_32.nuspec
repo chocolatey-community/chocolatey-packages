@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>python-x86_32</id>
+    <version>3.4.1.20141004</version>
+    <title>Python (32-bit)</title>
+    <authors>Python Software Foundation</authors>
+    <projectUrl>http://www.python.org/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/python.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
+
+### Note
+
+This package installs the latest stable version of Python 32-bit, even on 64-bit systems. Do not install this package on 32-bit systems. On 32-bit systems you should install [python](./python) instead.
+
+This package will install to Python to `$env:ChocolateyBinRoot\python-x86_32`, but only if Python is not already installed where the installer puts it by default, which is `$env:SystemDrive\PythonXX` (XX stands for the major/minor version digits).
+
+If you want a 64-bit Python on 64-bit systems, install the [python](./python) package instead. You can also install both packages. In this case you must manually adapt your PATH environment variable so that it picks the Python version (32- or 64-bit) that you want when invoking `python.exe`.
+    </description>
+    <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
+    <tags>python</tags>
+    <releaseNotes>2014-10-04: Add uninstall script</releaseNotes>
+  </metadata>
+</package>
+<!-- “UTF-8” test -->
