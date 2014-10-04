@@ -143,7 +143,7 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://www.blender.org/download/</Url>
-            <StartText>http://ftp.nluug.nl/pub/graphics/blender/release/Blender</StartText>
+            <StartText>http://download.blender.org/release/Blender</StartText>
             <EndText>/blender-</EndText>
             <Name>url-folder-version</Name>
           </UrlVariable>
@@ -158,7 +158,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://mirror.cs.umn.edu/blender.org/release/Blender{url-folder-version}/blender-{real-version}-windows</TextualContent>
+            <TextualContent>http://download.blender.org/release/Blender{url-folder-version}/blender-{real-version}-windows</TextualContent>
             <Name>baseUrl</Name>
           </UrlVariable>
         </value>

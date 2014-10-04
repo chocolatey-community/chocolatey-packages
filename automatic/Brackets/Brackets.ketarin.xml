@@ -109,7 +109,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Brackets\.Release\.)[\d\.]+(?=\.msi)</Regex>
+            <Regex>(?&lt;=release-[\d\.]+/Brackets\.Release\.)[\d\.]+(?=\.msi)</Regex>
             <Url>https://github.com/adobe/brackets/releases</Url>
             <Name>release</Name>
           </UrlVariable>
