@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>WinPcap</id>
+    <version>4.1.3.20141005</version>
     <authors>NetGroup, CACE Technologies</authors>
     <licenseUrl>http://www.winpcap.org/misc/copyright.htm</licenseUrl>
     <projectUrl>http://www.winpcap.org/</projectUrl>
@@ -14,7 +14,7 @@ WinPcap is the industry-standard tool for link-layer network access in Windows e
 
 This package uses an Autohotkey script for unattended installation.
     </description>
-    <releaseNotes>Added an uninstaller.</releaseNotes>
+    <releaseNotes>2014-10-05: fix dependency</releaseNotes>
     <copyright>NetGroup, Politecnico di Torino (Italy). CACE Technologies, Davis (California).</copyright>
     <tags>chocolatey driver packetcapture network</tags>
     <dependencies>
