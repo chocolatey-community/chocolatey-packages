@@ -1,6 +1,6 @@
 ﻿try {
 
-  $name = "keepassx-langfiles"
+  $name = 'keepass-classic-langfiles'
   $scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
   $fileFullPath = "$scriptPath\keepass_1.x_langfiles.zip"
 
@@ -9,7 +9,7 @@
   if (Test-Path "$keepasspath") {$destination = "$keepasspath"}
   if (Test-Path "$keepasspathx86") {$destination = "$keepasspathx86"}
 
-  $extractPath = "$scriptPath\keepassx-langfiles"
+  $extractPath = "$scriptPath\keepass-classic-langfiles"
   if (-not (Test-Path $extractPath)) {
     mkdir $extractPath
   }

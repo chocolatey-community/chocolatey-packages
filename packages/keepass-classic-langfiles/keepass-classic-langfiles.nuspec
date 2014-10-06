@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>keepassx-langfiles</id>
+    <id>keepass-classic-langfiles</id>
     <version>1.28</version>
-    <title>KeePass 1.x language files</title>
+    <title>KeePass Classic (1.x) language files</title>
     <authors>KeePass Team</authors>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <projectUrl>http://keepass.info/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/keepass.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-KeePass is a free, open source, light-weight and easy-to-use password manager.
+KeePass Classic (1.x) is a free, open source, light-weight and easy-to-use password manager.
 
 This package extracts a ZIP with all language files into the KeePass program folder. The language, however, must then be manually selected in the KeePass settings. Credits of the translation files: http://keepass.info/translations.html
     </description>
-    <summary>Language files for KeePass 1.x.</summary>
+    <summary>Language files for KeePass Classic (1.x.)</summary>
     <releaseNotes />
     <copyright />
     <tags>keepass password safe encryption language-file</tags>
     <dependencies>
-      <dependency id="keepassx" />
+      <dependency id="keepass-classic" />
     </dependencies>
   </metadata>
   <files>
