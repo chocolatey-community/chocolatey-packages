@@ -73,7 +73,7 @@
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>10794993</LastFileSize>
-    <LastFileDate>2014-10-11T16:19:39.186642+02:00</LastFileDate>
+    <LastFileDate>2014-10-11T17:04:09.8619666</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -113,9 +113,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-10-11T16:19:39.7121502+02:00</LastUpdated>
+    <LastUpdated>2014-10-11T17:04:09.8619666</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-win-{version}.zip</FixedDownloadUrl>
+    <FixedDownloadUrl>http://ctan.mirror.garr.it/mirrors/CTAN/support/xpdf/xpdfbin-win-{version}.zip</FixedDownloadUrl>
     <Name>xpdf-utils</Name>
   </ApplicationJob>
 </Jobs>
