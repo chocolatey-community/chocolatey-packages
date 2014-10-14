@@ -2,7 +2,7 @@
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0f6caffe-497c-480e-98be-191b9b4ce786">
     <WebsiteUrl />
-    <UserAgent />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>1062570539</LastFileSize>
     <LastFileDate>2014-02-20T20:58:45.5090253</LastFileDate>
@@ -46,7 +46,7 @@
     <FileHippoId />
     <LastUpdated>2014-02-20T20:58:45.5090253</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://fgfs.physra.net/ftp/Windows/Setup FlightGear {version}.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://ftp.icm.edu.pl/packages/flightgear/Windows/Setup FlightGear {version}.exe</FixedDownloadUrl>
     <Name>flightgear</Name>
   </ApplicationJob>
 </Jobs>
