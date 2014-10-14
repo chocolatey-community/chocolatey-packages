@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>40821959</LastFileSize>
-    <LastFileDate>2014-01-02T13:14:56.5983734</LastFileDate>
+    <LastFileSize>58447196</LastFileSize>
+    <LastFileDate>2014-09-26T04:38:35+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -92,7 +92,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Download IETester v)0.5.2</Regex>
+            <Regex>http://www.my-debugbar.com/ietester/install-ietester-v([\d\.]+)\.exe</Regex>
             <Url>http://www.my-debugbar.com/wiki/IETester/HomePage</Url>
             <StartText>Download IETester v</StartText>
             <EndText>&lt;BR&gt;</EndText>
@@ -122,11 +122,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\install-ietester-v0.5.2.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\install-ietester-v0.5.4.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-01-02T13:14:56.5983734</LastUpdated>
+    <LastUpdated>2014-10-14T20:27:27.2039289+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.my-debugbar.com/ietester/install-ietester-v{version}.exe</FixedDownloadUrl>
     <Name>ietester</Name>
