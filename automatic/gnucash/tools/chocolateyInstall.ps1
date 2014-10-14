@@ -2,7 +2,8 @@
 $version = '{{PackageVersion}}'
 $fileType = 'exe'
 $silentArgs = '/SILENT'
-$url = "http://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/${version}/gnucash-${version}-setup.exe/download"
+# \{\{DownloadUrlx64\}\} is the required variable here (it’s not a typo)
+$url = "{{DownloadUrlx64}}"
 
 $registryPath32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
 $registryPathWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'

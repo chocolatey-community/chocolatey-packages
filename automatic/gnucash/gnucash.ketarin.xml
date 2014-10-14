@@ -1,8 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="e9930ae1-6729-4ccb-9dcc-a35779fd0f95">
-    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Jobs>
+    <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -74,7 +73,7 @@
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>79676435</LastFileSize>
-    <LastFileDate>2014-09-28T23:31:58+02:00</LastFileDate>
+    <LastFileDate>2014-10-02T23:22:01.0821655</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,12 +92,12 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>http://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/</Url>
+            <Url />
             <StartText>&lt;tr title="</StartText>
             <EndText>" class="folder "&gt;</EndText>
-            <TextualContent />
+            <TextualContent>{realVersion:replace:-:.}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -112,10 +111,68 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/{version}/gnucash-{version}-setup.exe/download</Url>
+            <Url>{generalUrl}</Url>
             <StartText>;use_mirror=</StartText>
             <EndText>"&gt;</EndText>
             <Name>mirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>realVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://downloads\.sourceforge.net/sourceforge/gnucash/gnucash-([\d\.\-]+)-setup\.exe</Regex>
+            <Url>http://www.gnucash.org/</Url>
+            <Name>realVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>{generalUrl}</Url>
+            <StartText>&lt;meta http-equiv="refresh" content="5; url=http://downloads.sourceforge.net/project/</StartText>
+            <EndText>?r=&amp;amp;ts=</EndText>
+            <Name>urlPart</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>generalUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://downloads.sourceforge.net/sourceforge/gnucash/gnucash-{realVersion}-setup.exe</TextualContent>
+            <Name>generalUrl</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{generalUrl}</TextualContent>
+            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -130,9 +187,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-10-02T23:22:01.0821655+02:00</LastUpdated>
+    <LastUpdated>2014-10-02T23:22:01.0821655</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://{mirror}.dl.sourceforge.net/project/gnucash/gnucash%20%28stable%29/{version}/gnucash-{version}-setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://{mirror}.dl.sourceforge.net/project/{urlPart}</FixedDownloadUrl>
     <Name>gnucash</Name>
   </ApplicationJob>
 </Jobs>
