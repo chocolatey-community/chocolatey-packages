@@ -71,13 +71,13 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>18080656</LastFileSize>
-    <LastFileDate>2014-08-06T18:35:22.6726102</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <LastFileSize>16864480</LastFileSize>
+    <LastFileDate>2014-10-15T08:36:24+02:00</LastFileDate>
+    <IgnoreFileInformation>true</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -112,7 +112,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-06T18:35:22.6726102</LastUpdated>
+    <LastUpdated>2014-10-15T21:37:37.5094982+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tracker-software.com/downloads/PDFXVwer.exe</FixedDownloadUrl>
     <Name>PDFXChangeViewer</Name>
