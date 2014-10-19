@@ -33,6 +33,20 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;a href="([^\r\n"]+?{version}\.exe)"&gt;\[Mirror 3\]</Regex>
+            <Url>http://www.flightgear.org/download/</Url>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -46,7 +60,7 @@
     <FileHippoId />
     <LastUpdated>2014-02-20T20:58:45.5090253</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://ftp.icm.edu.pl/packages/flightgear/Windows/Setup FlightGear {version}.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>flightgear</Name>
   </ApplicationJob>
 </Jobs>
