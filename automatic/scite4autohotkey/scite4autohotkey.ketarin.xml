@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1938737</LastFileSize>
-    <LastFileDate>2014-08-18T18:54:29.5862967</LastFileDate>
+    <LastFileSize>1924681</LastFileSize>
+    <LastFileDate>2014-10-12T22:34:18+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -29,7 +29,7 @@
             <Url />
             <StartText> - v</StartText>
             <EndText>&lt;/span&gt;</EndText>
-            <TextualContent>{realVersion:regexreplace:(3\.0\.04\.)[\d]+:$1{yyyy}{MM}{dd}}</TextualContent>
+            <TextualContent>{realVersion:regexreplace:(3\.0\.06\.)[\d]+:$1{yyyy}{MM}{dd}}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -71,11 +71,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\SciTE4AHK3006_Install.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\SciTE4AHK300601_Install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-18T18:54:29.5862967</LastUpdated>
+    <LastUpdated>2014-10-22T19:54:12.9658754+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://fincs.ahk4.net/scite4ahk/dl/SciTE4AHK{versionWithoutDots}_Install.exe</FixedDownloadUrl>
     <Name>scite4autohotkey</Name>
