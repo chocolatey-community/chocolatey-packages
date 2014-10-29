@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>8790287</LastFileSize>
-    <LastFileDate>2013-06-27T23:43:48.0896913</LastFileDate>
+    <LastFileSize>9163088</LastFileSize>
+    <LastFileDate>2014-10-20T21:31:49+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -26,7 +26,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>https://musicbrainz.org/doc/MusicBrainz_Picard</Url>
+            <Url>http://picard.musicbrainz.org/</Url>
             <StartText>http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-</StartText>
             <EndText>.exe</EndText>
             <Name>version</Name>
@@ -40,11 +40,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\picard-setup-1.2.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\picard-setup-1.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-06-27T23:43:48.0896913</LastUpdated>
+    <LastUpdated>2014-10-29T21:51:57.154005+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-{version}.exe</FixedDownloadUrl>
     <Name>picard</Name>
