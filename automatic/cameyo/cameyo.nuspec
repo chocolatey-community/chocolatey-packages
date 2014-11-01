@@ -22,7 +22,7 @@ The idea of Cameyo was born by thinking about how Windows applications should be
     <tags>application virtualization portable</tags>
   </metadata>
   <files>
-    <file src="tools**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

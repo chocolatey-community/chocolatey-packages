@@ -21,7 +21,7 @@ Optional dependency package: [ffmpeg](./ffmpeg) (for stream extraction and conve
     <tags>youtube-dl ffmpeg youtube download</tags>
   </metadata>
   <files>
-    <file src="tools**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

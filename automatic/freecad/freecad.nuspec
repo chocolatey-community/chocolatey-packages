@@ -20,7 +20,7 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
     <tags>3D CAD modeling engineering</tags>
   </metadata>
   <files>
-    <file src="tools**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

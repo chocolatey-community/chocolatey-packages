@@ -20,7 +20,7 @@ MuseScore runs on Windows, MacOS, and Linux, and is available in over 40 differe
     <tags>music composition notation sheet</tags>
   </metadata>
   <files>
-    <file src="tools**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

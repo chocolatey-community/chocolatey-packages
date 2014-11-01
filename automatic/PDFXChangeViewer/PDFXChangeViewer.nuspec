@@ -18,7 +18,7 @@ A free PDF reader alternative to the Adobe Reader! The PDF-XChange Viewer is sma
     <tags>PDFXChangeViewer pdf reader viewer</tags>
   </metadata>
   <files>
-    <file src="tools**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->
