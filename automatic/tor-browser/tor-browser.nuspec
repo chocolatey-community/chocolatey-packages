@@ -23,5 +23,8 @@ This package puts the Tor Browser Bundle into `$env:ChocolateyBinRoot\tor-browse
     <tags>tor browser privacy anonymity security relay network</tags>
     <dependencies></dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

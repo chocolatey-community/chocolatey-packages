@@ -20,4 +20,7 @@
 		http://www.poweriso.com/download.htm
     </releaseNotes>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>

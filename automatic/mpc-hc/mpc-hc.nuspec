@@ -17,5 +17,8 @@ MPC-HC is an extremely light-weight, open source media player for Windows. It su
     <copyright>MPC-HC Team</copyright>
     <tags>media player</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

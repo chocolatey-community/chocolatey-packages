@@ -19,5 +19,8 @@ MKVToolNix is a set of tools to create, alter, split, join and inspect Matroska 
       <dependency id="wget" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

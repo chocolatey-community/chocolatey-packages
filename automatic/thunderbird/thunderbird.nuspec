@@ -24,5 +24,8 @@ This package installs Thunderbird in the first language which matches this list:
     <copyright>Mozilla. All rights reserved.</copyright>
     <tags>mozilla thunderbird email</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

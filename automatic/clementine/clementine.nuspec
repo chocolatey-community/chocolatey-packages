@@ -17,5 +17,8 @@ Clementine is a modern music player and library organizer. It is inspired by Ama
     <copyright />
     <tags>music player</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

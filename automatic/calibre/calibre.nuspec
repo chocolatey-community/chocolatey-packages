@@ -20,4 +20,7 @@
 		http://calibre-ebook.com/whats-new
     </releaseNotes>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>

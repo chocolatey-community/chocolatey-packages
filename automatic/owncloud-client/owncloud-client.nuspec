@@ -19,5 +19,8 @@ This package installs the ownCloud Sync Client on your computer.
     <copyright />
     <tags>owncloud cloud sync webdav caldav carddav</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

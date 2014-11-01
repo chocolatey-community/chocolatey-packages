@@ -21,5 +21,8 @@ The idea of Cameyo was born by thinking about how Windows applications should be
     <copyright>Cameyo, all rights resreved</copyright>
     <tags>application virtualization portable</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

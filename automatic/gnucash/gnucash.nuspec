@@ -19,5 +19,8 @@ Designed to be easy to use, yet powerful and flexible, GnuCash allows you to tra
     <copyright>The GnuCash Project</copyright>
     <tags>financial accounting</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

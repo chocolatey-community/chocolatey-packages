@@ -26,5 +26,8 @@ Ghostscript is written entirely in C, with special care taken to make it run pro
       <dependency id="{{PackageName}}.app" version="{{PackageVersion}}" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

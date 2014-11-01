@@ -16,5 +16,8 @@ Universal Extractor is a program designed to decompress and extract files from a
     <copyright />
     <tags>extract archive files</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

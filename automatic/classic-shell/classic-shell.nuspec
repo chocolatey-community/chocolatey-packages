@@ -30,5 +30,8 @@ If you want to install only specific components, e.g. only the Start Menu, use
       <dependency id="wget" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

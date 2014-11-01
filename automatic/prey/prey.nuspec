@@ -19,5 +19,8 @@ Prey lets you keep track of your laptop, phone and tablet whenever stolen or mis
     <copyright />
     <tags>prey anti-theft lockdown tracking</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

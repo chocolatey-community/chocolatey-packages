@@ -19,5 +19,8 @@ VirtualDub is a video capture/processing utility for 32-bit and 64-bit Windows p
     <tags>virtualdub video audio cutting capture</tags>
     <dependencies />
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

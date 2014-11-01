@@ -19,5 +19,8 @@ This package installs the DLL (either 32- or 64-bit, depending on your OS bitnes
     <summary>A DLL for the SQLite SQL database engine installed in your user path.</summary>
     <tags>sqlite db database embedded chocolatey</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

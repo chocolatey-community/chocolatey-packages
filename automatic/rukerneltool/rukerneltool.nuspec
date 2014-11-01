@@ -25,5 +25,8 @@ This package puts the ruKernelTool files into `$env:ChocolateyBinRoot\ruKernelTo
       <dependency id="wget" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

@@ -15,5 +15,8 @@ Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio f
     <summary>Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio formats.</summary>
     <tags>mp3 tag</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

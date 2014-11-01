@@ -24,4 +24,7 @@ Up to date release notes for this application can be found here:
 http://www.telerik.com/support/whats-new/fiddler
     </releaseNotes>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>

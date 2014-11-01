@@ -34,5 +34,8 @@ The settings are stored in the FreeVK.ini file located in the program installati
     <language />
     <tags>on-screen keyboard</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

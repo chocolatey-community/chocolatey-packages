@@ -33,5 +33,8 @@ Completely written in C# for .NET 4.0/4.5, makes use of the Windows Forms Aero l
     <copyright />
     <tags>ontopreplica replica window on-top</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

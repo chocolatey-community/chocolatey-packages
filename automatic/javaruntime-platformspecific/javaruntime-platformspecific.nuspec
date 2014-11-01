@@ -23,5 +23,8 @@ This only installs the Java Runtime with the bitness specific to your OS (either
     <releaseNotes />
     <tags>java runtime environment</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

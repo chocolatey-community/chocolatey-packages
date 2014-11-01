@@ -21,5 +21,8 @@ Underneath a modern and user-friendly interface, Scribus supports professional p
       <dependency id="Ghostscript.app" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

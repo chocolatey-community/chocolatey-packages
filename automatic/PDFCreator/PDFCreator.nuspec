@@ -15,5 +15,8 @@ PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it l
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
     <tags>pdf chocolatey</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

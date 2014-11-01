@@ -19,5 +19,8 @@ This is an experimental project of porting EncFS to the Windows world. EncFS pro
       <dependency id="dokan-library" version="0.6.0" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->

@@ -21,5 +21,8 @@ PcwRunAs is intended exclusively for use on your home PC.
     <language>de-DE</language>
     <tags>pcwrunas runas PC-Welt</tags>
   </metadata>
+  <files>
+    <file src="tools**" target="tools" />
+  </files>
 </package>
 <!-- “UTF-8” test -->
