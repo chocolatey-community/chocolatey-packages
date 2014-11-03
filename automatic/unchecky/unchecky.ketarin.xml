@@ -70,15 +70,15 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>875920</LastFileSize>
-    <LastFileDate>2014-10-31T14:29:54.3804175</LastFileDate>
+    <LastFileDate>2014-10-22T09:07:25+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -104,49 +104,20 @@
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>url</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://unchecky.com/files/unchecky_setup.exe</TextualContent>
-            <Name>url</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>unchecky</TextualContent>
-            <Name>packageId</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{url}"
-REM /disablepush -force</ExecuteCommand>
+    <ExecuteCommand />
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>System Tools</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\unchecky_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\unchecky_setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-10-31T14:29:54.3804175</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
-    <Name>Unchecky</Name>
+    <LastUpdated>2014-11-03T23:37:55.9433865+01:00</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://unchecky.com/files/unchecky_setup.exe</FixedDownloadUrl>
+    <Name>unchecky</Name>
   </ApplicationJob>
 </Jobs>
