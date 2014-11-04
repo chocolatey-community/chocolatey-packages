@@ -2,7 +2,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>{{PackageName}}</id>
-    <title>Brackets Code Editor</title>
+    <title>Brackets</title>
     <version>{{PackageVersion}}</version>
     <authors>Adobe</authors>
     <summary>Brackets open-source code editor built with the web for the web.</summary>
