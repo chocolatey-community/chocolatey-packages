@@ -1,7 +1,7 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
+﻿$packageName = 'flashplayerplugin'
+$version = '15.0.0.189'
 $installArgs = '/quiet /norestart REMOVE_PREVIOUS=YES'
-$url = '{{DownloadUrl}}'
+$url = 'http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_15_plugin.msi'
 
 $majorVersion = ([version] $version).Major
 
