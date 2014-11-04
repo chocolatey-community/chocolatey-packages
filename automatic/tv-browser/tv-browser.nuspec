@@ -24,7 +24,7 @@ You can not use TV-Browser to watch TV.
     <tags>tv-browser tv television guide</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

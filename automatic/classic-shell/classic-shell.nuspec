@@ -31,7 +31,7 @@ If you want to install only specific components, e.g. only the Start Menu, use
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

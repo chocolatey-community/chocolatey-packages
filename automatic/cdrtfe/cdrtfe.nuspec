@@ -25,7 +25,7 @@ In cdrtfe, go to `Extras > Settings > cdrtfe` and activate „Save on exit“. T
     <tags>burning fontend</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

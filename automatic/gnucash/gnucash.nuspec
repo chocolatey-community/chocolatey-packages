@@ -20,7 +20,7 @@ Designed to be easy to use, yet powerful and flexible, GnuCash allows you to tra
     <tags>financial accounting</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

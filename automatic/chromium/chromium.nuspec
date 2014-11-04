@@ -17,7 +17,7 @@ This package installs the Chromium continuous builds into `%localappdata%\Chromi
     <tags>chromium google chrome browser</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -21,7 +21,7 @@ Aside from a few distributions, all files are stored within the Multiboot folder
   </metadata>
   <files>
     <file src="C:\Chocolatey\_work\yumi.exe" target="tools\yumi.exe" />
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

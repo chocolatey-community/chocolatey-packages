@@ -24,7 +24,7 @@ This package extracts a ZIP with all language files into the KeePass program fol
   </metadata>
   <files>
     <file src="tools\keepass_1.x_langfiles.zip" target="tools\keepass_1.x_langfiles.zip" />
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -22,7 +22,7 @@ Although it is a free suite, Kingsoft Office comes with many innovative features
     <tags>kingsoft office suite</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

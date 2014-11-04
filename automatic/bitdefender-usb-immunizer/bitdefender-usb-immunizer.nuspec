@@ -24,7 +24,7 @@ Bitdefender USB Immunizer is a response to this growing issue.
     <tags>bitdefender usb autorun immunizer anti-virus</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

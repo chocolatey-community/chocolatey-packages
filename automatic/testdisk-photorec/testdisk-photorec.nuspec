@@ -20,7 +20,7 @@ PhotoRec is file data recovery software designed to recover lost files including
     <tags>data recovery</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -25,6 +25,6 @@ http://www.telerik.com/support/whats-new/fiddler
     </releaseNotes>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>

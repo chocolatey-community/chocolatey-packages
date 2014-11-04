@@ -21,7 +21,7 @@ From Wikipedia on 2013-04-18: Blender is a free and open-source 3D computer grap
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

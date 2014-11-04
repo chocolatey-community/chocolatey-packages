@@ -18,7 +18,7 @@ Sweet Home 3D is a free interior design application that helps you draw the plan
     <tags>home design house 3d</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

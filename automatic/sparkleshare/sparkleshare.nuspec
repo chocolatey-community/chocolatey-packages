@@ -18,7 +18,7 @@ SparkleShare is an Open Source collaboration and sharing tool that is designed t
     <tags>sparkleshare git collaboration sync files</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

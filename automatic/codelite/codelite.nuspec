@@ -22,7 +22,7 @@ This package downloads the installer which includes CodeLite, the MinGW suite an
     <tags>C C++ IDE programming</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

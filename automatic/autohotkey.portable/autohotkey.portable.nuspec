@@ -19,7 +19,7 @@ AutoHotkey_L is a fork of AutoHotkey which adds a long list of new features and 
     <tags>automation hotkeys scripting windows</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

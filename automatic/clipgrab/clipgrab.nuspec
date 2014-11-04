@@ -22,7 +22,7 @@ While ClipGrab itself is free software, its artwork and name are not.
     <tags>youtube vimeo video convert music</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

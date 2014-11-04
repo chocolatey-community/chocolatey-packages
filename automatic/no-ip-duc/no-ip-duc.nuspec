@@ -18,7 +18,7 @@ Keep your current IP address in sync with your No-IP host or domain with the Dyn
     <tags>no-ip dns dyndns dynamic-dns</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

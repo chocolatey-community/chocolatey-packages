@@ -20,7 +20,7 @@ If you switch from the 32-bit to the 64-bit version, remember to uninstall all v
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

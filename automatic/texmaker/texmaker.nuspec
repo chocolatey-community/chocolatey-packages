@@ -24,7 +24,7 @@ Texmaker is released under the GPL license.
     <tags>texmaker tex latex admin</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

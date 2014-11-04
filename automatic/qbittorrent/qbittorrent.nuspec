@@ -19,7 +19,7 @@ qBittorrent aims to have a small foot-print, to be powerful, intuitive and visua
     <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -18,7 +18,7 @@ Ant Renamer is a free (really free, i. e. the source code is available) program 
     <tags>renamer regex</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

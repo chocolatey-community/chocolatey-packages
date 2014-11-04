@@ -20,7 +20,7 @@ https://www.tipp10.com/en/news/</releaseNotes>
     <tags>typing keyboard 10-finger</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

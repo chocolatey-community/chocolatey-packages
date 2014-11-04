@@ -21,7 +21,7 @@ Installer doesn’t work silently if Dokan Library is already installed. The uni
     <tags>dokan file system fuse</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

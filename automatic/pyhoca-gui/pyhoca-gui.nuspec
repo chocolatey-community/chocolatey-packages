@@ -18,7 +18,7 @@ PyHoca-GUI is designed as a very minimal GUI that behaves very similar to GNOME'
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/pyhoca-gui.svg</iconUrl>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

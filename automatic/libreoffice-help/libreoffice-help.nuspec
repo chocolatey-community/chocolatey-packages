@@ -27,7 +27,7 @@ It is also possible to install multiple Help Packs. To achieve that, install the
     <tags>libreoffice office help admin</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -18,7 +18,7 @@ Zotero is free and open-source reference management software to manage bibliogra
     <releaseNotes>https://www.zotero.org/support/4.0_changelog</releaseNotes>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

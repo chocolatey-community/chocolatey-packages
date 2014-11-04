@@ -20,7 +20,7 @@ Compact Timer is a completely free countdown timer, countup timer, stop Watch, r
     <tags>compact-timer timer countdown stopwatch alarm-clock</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
     <file src="tools\CompactTimer.exe" target="tools\CompactTimer.exe" />
   </files>
 </package>

@@ -16,7 +16,7 @@ The Opera web browser makes the Web fast and fun, giving you a better web browse
     <tags>browser opera</tags>
   </metadata>
   <files>
-    <file src="tools\**" target="tools" />
+    <file src="tools/**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->
