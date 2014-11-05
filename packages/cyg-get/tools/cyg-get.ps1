@@ -10,9 +10,8 @@ elseif ($package -eq '-help' -or $package -eq '/?') {
 }
 else {
   try {
-    Set-Location -Path (Get-ItemProperty HKLM:\SOFTWARE\Cygwin\setup -Name rootdir).rootdir
-    $cygwinsetup = Get-Command cygwinsetup.exe
-    $cygRoot = Split-Path -parent $cygwinsetup.Path
+    $cygRoot = (Get-ItemProperty HKLM:\SOFTWARE\Cygwin\setup -Name rootdir).rootdir
+    $cygwinsetup = Get-Command $cygRoot"\cygwinsetup.exe"
     $cygPackages = join-path $cygRoot packages
 
     Write-Host "Attempting to install `'$package`' to `'$cygPackages`'"
