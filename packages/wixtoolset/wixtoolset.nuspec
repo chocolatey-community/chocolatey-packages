@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wixtoolset</id>
+    <title>WiX Toolset</title>
+    <version>3.9.1006.0</version>
+    <authors>Rob Mensching</authors>
+    <owners>Gary Ewan Park</owners>
+    <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
+    <description>The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages. The WiX toolset CodePlex project stores the stable releases and Mercurial repository.</description>
+    <projectUrl>http://wixtoolset.org/</projectUrl>
+    <tags>wix toolset msi xml admin</tags>
+    <copyright>2009 - 2013 RobMensching.com LLC.</copyright>
+    <licenseUrl>http://wix.codeplex.com/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8d9b19f28a26f92affd02b8ef8ddd53d873739d4/icons/wixtoolset.png</iconUrl>
+    <releaseNotes>
+Information on this release can be found in the following blog posts:
+* [http://www.joyofsetup.com/2014/10/31/wix-v3-9-released/](http://www.joyofsetup.com/2014/10/31/wix-v3-9-released/)
+* [http://robmensching.com/blog/posts/2014/10/31/wix-toolset-v3.9-released/](http://robmensching.com/blog/posts/2014/10/31/wix-toolset-v3.9-released/)
+	</releaseNotes>
+  </metadata>
+</package>
