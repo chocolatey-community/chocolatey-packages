@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>unchecky</id>
     <title>Unchecky</title>
-    <version>{{PackageVersion}}</version>
+    <version>0.3.3.20141113</version>
     <authors>RaMMicHaeL</authors>
     <owners>Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
@@ -19,7 +19,7 @@ __Unchecky aims to keep potentially unwanted programs out of your computer.__
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/400df127014e0d9856ed420fe89c728668d310d2/icons/unchecky.png</iconUrl>
     <dependencies></dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>0.3.3.20141113: package icon with higher resolution</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
