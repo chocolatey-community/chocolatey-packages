@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>javaruntime-platformspecific</id>
+    <version>7.0.71</version>
+    <title>Java Runtime (JRE)</title>
+    <authors>Oracle</authors>
+    <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
+    <projectUrl>http://www.java.com</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/java.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Java allows you to play online games, chat with people around the world, calculate your mortgage interest, and view images in 3D, just to name a few. It's also integral to the intranet applications and other e-business solutions that are the foundation of corporate computing.
+
+### Note
+
+This package installs the Java version offered at https://www.java.com (currently Java 7). It also sets `SPONSORS=0` ([see docs](http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jre-installer-options.html#running)).
+
+If you want Java 8, install the [jre8](./jre8) package instead.
+
+This only installs the Java Runtime with the bitness specific to your OS (either 32- or 64-bit). If you want both 32-bit and 64-bit JREs on your 64-bit OS, install [javaruntime](./javaruntime) instead.
+    </description>
+    <releaseNotes />
+    <tags>java runtime environment</tags>
+  </metadata>
+</package>
+<!-- “UTF-8” test -->

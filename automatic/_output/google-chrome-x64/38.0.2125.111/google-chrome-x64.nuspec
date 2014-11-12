@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>google-chrome-x64</id>
+    <version>38.0.2125.111</version>
+    <title>Google Chrome (64-bit)</title>
+    <authors>Google Inc.</authors>
+    <projectUrl>https://www.google.com/chrome/browser/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/chrome.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Chrome is a fast, simple, and secure web browser, built for the modern web.
+
+### Note
+
+This package installs Chrome for all users on the machine (using the MSI installer) and is for the 64-bit version only. If you want the 32-bit version, install the [GoogleChrome](./GoogleChrome) package instead.
+
+If you switch from the 32-bit to the 64-bit version, remember to uninstall all versions of the `GoogleChrome` package.
+    </description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

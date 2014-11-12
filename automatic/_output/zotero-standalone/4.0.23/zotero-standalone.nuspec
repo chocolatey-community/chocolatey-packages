@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>zotero-standalone</id>
+    <title>Zotero Standalone</title>
+    <version>4.0.23</version>
+    <authors>Center for History and New Media, et. al.</authors>
+    <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
+    <description>
+Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice. It is produced by the Center for History and New Media of George Mason University (GMU). *(from Wikipedia, 2013-04-18)*
+    </description>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/zotero-standalone.png</iconUrl>
+    <projectUrl>https://www.zotero.org/</projectUrl>
+    <tags>references manager bibliography</tags>
+    <copyright>2006-2011, Center for History and New Media, George Mason University, Fairfax, Virginia, USA</copyright>
+    <licenseUrl>https://github.com/zotero/zotero/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://www.zotero.org/support/4.0_changelog</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

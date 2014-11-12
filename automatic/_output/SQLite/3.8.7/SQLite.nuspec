@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SQLite</id>
+    <version>3.8.7</version>
+    <title>SQLite</title>
+    <authors>D. Richard Hipp, SQLite contributors</authors>
+    <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
+    <projectUrl>http://www.sqlite.org</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/sqlite.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+
+### Note
+
+This package installs the DLL (either 32- or 64-bit, depending on your OS bitness) for the SQLite SQL database engine in your system PATH. This package is only needed if you have software that expects the SQLite DLL in the PATH. If you just want to create or manage SQLite databases, install the [SQLite Shell](./sqlite.shell) instead. A (proprietary, but free for non-commercial use) GUI tool to manage SQLite databases is [SQLite Administrator](./sqliteadmin).
+    </description>
+    <summary>A DLL for the SQLite SQL database engine installed in your user path.</summary>
+    <tags>sqlite db database embedded chocolatey</tags>
+  </metadata>
+</package>
+<!-- “UTF-8” test -->
