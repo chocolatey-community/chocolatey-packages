@@ -1,5 +1,5 @@
 ﻿$packageName = 'chromium'
-$url = 'https://storage.googleapis.com/chromium-browser-continuous/Win/303684/mini_installer.exe'
+$url = 'https://storage.googleapis.com/chromium-browser-continuous/Win/303827/mini_installer.exe'
 $filePath = "$env:TEMP\chocolatey\$packageName"
 $fileFullPath = "$filePath\${packageName}Install.exe"
 
