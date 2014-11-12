@@ -18,7 +18,7 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
     <tags>bluefish editor html</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

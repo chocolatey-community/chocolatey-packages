@@ -33,7 +33,7 @@ WinCDEmu is free for any kind of use – it is licensed under LGPL.
     <tags>emulator virtual drive CD DVD BD</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

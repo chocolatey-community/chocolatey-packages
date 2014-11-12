@@ -23,7 +23,7 @@ This package installs Firefox in the first language which matches this list:
     <tags>browser mozilla firefox</tags>
   </metadata>
     <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

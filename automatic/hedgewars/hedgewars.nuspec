@@ -20,7 +20,7 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
     <tags>game turn-based strategy artillery</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

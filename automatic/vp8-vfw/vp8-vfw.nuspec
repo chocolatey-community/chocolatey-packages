@@ -19,7 +19,7 @@ Even though the Video for Windows driver framework is now several years old, sev
     <tags>vp8 vfw video-for-windows codec</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

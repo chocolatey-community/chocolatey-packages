@@ -23,6 +23,6 @@ NOTE: For better functionality, it is recommended you install the [cyg-get packa
     <tags>Cygwin linux</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>

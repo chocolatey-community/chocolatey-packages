@@ -22,7 +22,7 @@ This package installs the standalone version of Aptana Studio.
     <tags>aptana ide ajax web</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

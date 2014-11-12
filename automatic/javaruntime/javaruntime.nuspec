@@ -24,7 +24,7 @@ This package installs both 32 and 64-bit versions on 64-bit systems. If you only
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

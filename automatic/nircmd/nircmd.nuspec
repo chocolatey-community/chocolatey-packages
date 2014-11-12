@@ -17,7 +17,7 @@ NirCmd is a small command-line utility that allows you to do some useful tasks w
     <tags>nircmd commandline utility</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

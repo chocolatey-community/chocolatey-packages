@@ -24,7 +24,7 @@ Ghostscript is written entirely in C, with special care taken to make it run pro
     <tags>ghostscript postscript</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

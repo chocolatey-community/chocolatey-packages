@@ -22,7 +22,7 @@ QTTabBar is extension for Windows Explorer that brings tabbed browsing to Micros
     </dependencies>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

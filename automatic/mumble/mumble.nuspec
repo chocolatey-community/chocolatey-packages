@@ -22,7 +22,7 @@ Mumble is free and open-source software, is cross-platform, and is released unde
     <releaseNotes>http://mumble.sourceforge.net/{{PackageVersion}}</releaseNotes>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
     <!--<file src="content\**" target="content" />-->
   </files>
 </package>

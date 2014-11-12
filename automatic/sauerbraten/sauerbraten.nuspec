@@ -22,7 +22,7 @@ The engine supporting the game is entirely original in code &amp; design, and it
     <tags>game cube sauerbraten</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

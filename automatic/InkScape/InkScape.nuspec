@@ -18,7 +18,7 @@ Inkscape supports many advanced SVG features (markers, clones, alpha blending, e
     <tags>inkscape, svg editor, compliant, svg, vector graphics, linux, unix, gnome, hig, icons, adobe illustrator, graphics open source png export, to png, text, paths, outlines, drawing, art</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

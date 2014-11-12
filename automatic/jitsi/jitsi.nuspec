@@ -18,7 +18,7 @@ Jitsi (formerly SIP Communicator) is a free and open source multiplatform voice 
     <tags>voip messaging desktop-sharing softphone</tags>
   </metadata>
    <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -21,7 +21,7 @@ This package is not intended to use with Chocolatey’s `-x86` parameter. If you
     <tags>python</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

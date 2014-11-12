@@ -23,7 +23,7 @@ This package is for the stable ffmpeg version with shared libraries.
     <tags>ffmpeg libavcodec audio video convert</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

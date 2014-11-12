@@ -16,7 +16,7 @@ Maxima is a computer algebra system based on a 1982 version of Macsyma. It is wr
     <tags>maxima cas mathematics admin</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

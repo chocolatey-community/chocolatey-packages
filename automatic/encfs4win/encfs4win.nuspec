@@ -20,7 +20,7 @@ This is an experimental project of porting EncFS to the Windows world. EncFS pro
     </dependencies>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

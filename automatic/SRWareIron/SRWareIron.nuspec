@@ -20,7 +20,7 @@ Iron is issued by SRWare under an “all rights reserved” license, indicating 
     <tags>SRWareIron browser privacy</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

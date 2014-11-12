@@ -20,7 +20,7 @@ TsRemux is a transport Stream Re-muxer with blu-ray/Sat/OTA and now MPG/VOB/EVOB
     </dependencies>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

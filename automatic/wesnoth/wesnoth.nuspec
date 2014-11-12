@@ -20,7 +20,7 @@ Build up a great army, gradually turning raw recruits into hardened veterans. In
     <tags>game strategy turn-based</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

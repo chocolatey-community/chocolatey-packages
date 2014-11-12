@@ -22,7 +22,7 @@ This package downloads the installer with the included GCC compiler.
     <tags>codeblocks C++ IDE</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

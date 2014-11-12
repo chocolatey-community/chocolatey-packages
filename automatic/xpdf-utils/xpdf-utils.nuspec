@@ -30,7 +30,7 @@ This package is not for the Xpdf viewer itself. It only installs the Xpdf utilit
     <tags>pdf xpdf pdf-utilities</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

@@ -21,7 +21,7 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
     <tags>video editor cutting filtering encoding</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

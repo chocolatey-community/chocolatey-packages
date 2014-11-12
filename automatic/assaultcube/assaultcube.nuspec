@@ -18,7 +18,7 @@ AssaultCube is a free, multiplayer, first-person shooter game, based on the CUBE
     <tags>first-person shooter game</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->

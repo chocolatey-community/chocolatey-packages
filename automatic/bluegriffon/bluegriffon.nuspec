@@ -22,7 +22,7 @@ Because Gecko lives inside BlueGriffon, the document you edit will look exactly 
     <tags>bluegriffon WYSIWYG gecko firefox html</tags>
   </metadata>
   <files>
-    <file src="tools/**" target="tools" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
 <!-- “UTF-8” test -->
