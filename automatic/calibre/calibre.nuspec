@@ -15,9 +15,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/calibre.png</iconUrl>
     <releaseNotes>
-		Up to date release notes for this application can be found here:
+Up to date release notes for this application can be found here:
 
-		http://calibre-ebook.com/whats-new
+http://calibre-ebook.com/whats-new
     </releaseNotes>
   </metadata>
   <files>
