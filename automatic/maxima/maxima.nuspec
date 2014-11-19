@@ -10,7 +10,13 @@
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/maxima.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-Maxima is a computer algebra system based on a 1982 version of Macsyma. It is written in Common Lisp and runs on all POSIX platforms such as Mac OS X, Unix, BSD, and GNU/Linux as well as under Microsoft Windows and Android. It is free software released under the terms of the GNU General Public License.
+Maxima, a Computer Algebra System
+
+Maxima is a system for the manipulation of symbolic and numerical expressions, including differentiation, integration, Taylor series, Laplace transforms, ordinary differential equations, systems of linear equations, polynomials, sets, lists, vectors, matrices and tensors. Maxima yields high precision numerical results by using exact fractions, arbitrary-precision integers and variable-precision floating-point numbers. Maxima can plot functions and data in two and three dimensions.
+
+The Maxima source code can be compiled on many systems, including Windows, Linux, and MacOS X. The source code for all systems and precompiled binaries for Windows and Linux are available at the SourceForge file manager.
+
+Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.
     </description>
     <summary>Maxima is a computer algebra system based on a 1982 version of Macsyma</summary>
     <releaseNotes />
