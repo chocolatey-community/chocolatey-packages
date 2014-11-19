@@ -6,6 +6,7 @@
     <title>Google Chrome (32-bit)</title>
     <authors>Google Inc.</authors>
     <projectUrl>https://www.google.com/chrome/browser/</projectUrl>
+    <licenseUrl>https://www.google.it/intl/en/chrome/browser/privacy/eula_text.html</licenseUrl>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/chrome.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
