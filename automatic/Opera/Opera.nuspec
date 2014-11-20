@@ -6,6 +6,7 @@
     <title>Opera</title>
     <authors>Opera</authors>
     <projectUrl>http://www.opera.com/browser/</projectUrl>
+    <licenseUrl>http://www.operasoftware.com/eula/browser/</licenseUrl>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/opera.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
