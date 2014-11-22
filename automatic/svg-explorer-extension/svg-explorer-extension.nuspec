@@ -6,7 +6,7 @@
     <title>svg-explorer-extension</title>
     <authors>Tibold Kandrai</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
-    <projectUrl>http://code.google.com/p/svg-explorer-extension/</projectUrl>
+    <projectUrl>https://svgextension.codeplex.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Extension module for Windows Explorer to render SVG thumbnails, so that you can have an overview of your SVG files.
