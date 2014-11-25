@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>palemoon</id>
+		<title>Pale Moon browser</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Moonchild Productions</authors>
+		<owners>Redsandro</owners>
+		<summary>A Firefox-based web browser optimized for modern hardware.</summary>
+		<description>
+Pale Moon is an Open Source, Firefox-based web browser optimized for mordern hardware. Firefox maintains compatibility with old hardware, compromising on speed. Pale Moon is on average 25% faster.
+		</description>
+		<projectUrl>http://www.palemoon.org/</projectUrl>
+		<tags>Internet Browser Firefox Optimized</tags>
+		<copyright></copyright>
+		<licenseUrl>https://en.wikipedia.org/wiki/Mozilla_Public_License</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://i.imgur.com/OhMAHcQ.png</iconUrl>
+		<dependencies>
+			<dependency id="autoit.commandline" version="3.3.12.0" />
+		</dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+		<!--<file src="content\**" target="content" />-->
+	</files>
+</package>
