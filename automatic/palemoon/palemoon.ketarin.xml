@@ -187,7 +187,7 @@ REM /disablepush -force</ExecuteCommand>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-10-31T14:27:13.93464</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{mirror32}</FixedDownloadUrl>
     <Name>Pale Moon</Name>
   </ApplicationJob>
