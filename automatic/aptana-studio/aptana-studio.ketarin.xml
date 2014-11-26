@@ -26,10 +26,66 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://www.aptana.org/products/studio3/download</Url>
-            <StartText>&lt;title&gt;Aptana  | Download Aptana Studio </StartText>
-            <EndText> &lt;/title&gt;</EndText>
+            <Url>http://sourceforge.net/projects/aptana.mirror/files/</Url>
+            <StartText>&lt;tr title="Aptana Studio </StartText>
+            <EndText>" class="folder "&gt;</EndText>
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlMirror</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ResponseUri: ([^\r\n]+)</Regex>
+            <Url>{generalUrl}</Url>
+            <Name>urlMirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>majorVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{version:regexreplace:^(\d)[\d\.]+:$1}</TextualContent>
+            <Name>majorVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>generalUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://sourceforge.net/projects/aptana.mirror/files/Aptana Studio {version}/Aptana_Studio_{majorVersion}_Setup_{version}.exe/download</TextualContent>
+            <Name>generalUrl</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{generalUrl}</TextualContent>
+            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -46,7 +102,7 @@
     <FileHippoId />
     <LastUpdated>2014-07-31T19:39:11.9304365</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.aptana.com/studio3/standalone/{version}/win/Aptana_Studio_3_Setup_{version}.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>aptana-studio</Name>
   </ApplicationJob>
 </Jobs>

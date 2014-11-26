@@ -1,6 +1,6 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/passive /norestart'
-$url = '{{DownloadUrl}}'
+$url = '{{DownloadUrlx64}}'
 
 Install-ChocolateyPackage $packageName $fileType $silentArgs $url
