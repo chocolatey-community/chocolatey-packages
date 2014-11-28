@@ -70,10 +70,10 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
-    <LastFileSize>21394440</LastFileSize>
-    <LastFileDate>2014-10-31T14:27:13.93464</LastFileDate>
+    <LastFileSize>21400032</LastFileSize>
+    <LastFileDate>2014-11-10T20:35:00+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,42 +93,14 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Release\snotes.*?&lt;h3&gt;)[0-9.]{3,}</Regex>
-            <Url>http://www.palemoon.org/releasenotes-ng.shtml</Url>
+            <Regex>http://relmirror\.palemoon\.org/release/palemoon-([\d\.]+?)\.win32\.installer\.exe</Regex>
+            <Url>http://www.palemoon.org/download-ng.shtml</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
             <TextualContent />
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://www.fosshub.com/download/palemoon-{version}.win32.installer.exe</TextualContent>
-            <Name>url</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>palemoon</TextualContent>
-            <Name>packageId</Name>
           </UrlVariable>
         </value>
       </item>
@@ -141,54 +113,25 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://www.fosshub.com/download/palemoon-{version}.win64.installer.exe</TextualContent>
+            <TextualContent>http://relmirror.palemoon.org/release/palemoon-{version}.win64.installer.exe</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>mirror32</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://relmirror.palemoon.org/release/palemoon-{version}.win32.installer.exe</TextualContent>
-            <Name>mirror32</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>mirror64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://relmirror.palemoon.org/release/palemoon-{version}.win64.installer.exe</TextualContent>
-            <Name>mirror64</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{mirror32}"  /u64 "{mirror64}"
-REM /disablepush -force</ExecuteCommand>
+    <ExecuteCommand />
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>Browsers</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\palemoon-25.0.2.win32.installer.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\palemoon-25.1.0.win32.installer.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-10-31T14:27:13.93464</LastUpdated>
+    <LastUpdated>2014-11-28T20:48:17.0644096+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{mirror32}</FixedDownloadUrl>
-    <Name>Pale Moon</Name>
+    <FixedDownloadUrl>http://relmirror.palemoon.org/release/palemoon-{version}.win32.installer.exe</FixedDownloadUrl>
+    <Name>palemoon</Name>
   </ApplicationJob>
 </Jobs>
