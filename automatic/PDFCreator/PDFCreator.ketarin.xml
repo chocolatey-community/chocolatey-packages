@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>27843432</LastFileSize>
-    <LastFileDate>2014-08-13T02:49:34.8193991</LastFileDate>
+    <LastFileSize>27276128</LastFileSize>
+    <LastFileDate>2014-11-27T17:32:22+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -123,7 +123,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>/download/pdfcreator/[\d\.]+/PDFCreator-{versionUnderscore}_setup.exe\?file=[^"]+</Regex>
+            <Regex>/download/pdfcreator/[\d\.]+/PDFCreator-{versionUnderscore}[\-_]setup.exe\?file=[^"]+</Regex>
             <Url>http://download.pdfforge.org/download/pdfcreator/list</Url>
             <Name>urlPart</Name>
           </UrlVariable>
@@ -136,11 +136,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\PDFCreator-1_7_3_setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\PDFCreator-2_0_0-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-13T02:49:34.8193991</LastUpdated>
+    <LastUpdated>2014-11-30T15:50:04.9771951+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://download.pdfforge.org{urlPart}&amp;download</FixedDownloadUrl>
     <Name>PDFCreator</Name>
