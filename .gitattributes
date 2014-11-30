@@ -1,0 +1,3 @@
+*.nuspec eol=lf
+*.ps1 eol=crlf
+*.ketarin.xml eol=crlf
