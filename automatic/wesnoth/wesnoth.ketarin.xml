@@ -24,28 +24,13 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>wesnoth-([\d\.]+?)-win32\.exe/download</Regex>
             <Url>http://www.wesnoth.org/</Url>
             <StartText>&lt;p class="download"&gt;Download Wesnoth </StartText>
             <EndText> (&lt;a href="http://wiki.wesnoth.org/Download#Stable</EndText>
+            <TextualContent />
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>versionMajor</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.wesnoth.org/</Url>
-            <StartText>http://sourceforge.net/projects/wesnoth/files/wesnoth-</StartText>
-            <EndText>/wesnoth-</EndText>
-            <Name>versionMajor</Name>
           </UrlVariable>
         </value>
       </item>
@@ -58,7 +43,8 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://sourceforge.net/projects/wesnoth/files/wesnoth-{versionMajor}/wesnoth-{version}/wesnoth-{version}-win32.exe/download</TextualContent>
+            <Url />
+            <TextualContent>http://sourceforge.net/projects/wesnoth/files/{urlPart}</TextualContent>
             <Name>urlGeneric</Name>
           </UrlVariable>
         </value>
@@ -85,9 +71,23 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
-            <Regex />
+            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
             <TextualContent>{urlGeneric}</TextualContent>
             <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>projects/wesnoth/files([^\r\n]+?-1\.12-win32\.exe/download)</Regex>
+            <Url>http://www.wesnoth.org/</Url>
+            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>

@@ -4,7 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>The Battle for Wesnoth</title>
-    <authors>authors</authors>
+    <authors>David White and others</authors>
     <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
     <projectUrl>http://www.wesnoth.org/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/wesnoth.png</iconUrl>
