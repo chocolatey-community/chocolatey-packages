@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>339460</LastFileSize>
-    <LastFileDate>2014-08-15T16:49:01.6846604</LastFileDate>
+    <LastFileSize>343492</LastFileSize>
+    <LastFileDate>2014-11-19T22:48:50+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -91,12 +91,12 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>https://www.sqlite.org/download.html</Url>
+            <Url />
             <StartText>This ZIP archive contains a DLL for the SQLite library version </StartText>
             <EndText> for</EndText>
-            <TextualContent />
+            <TextualContent>{realVersion:regexreplace:3\.8\.7\..*:3.8.7.{yyyy}{MM}{dd}}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -143,6 +143,22 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>realVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://www.sqlite.org/download.html</Url>
+            <StartText>This ZIP archive contains a DLL for the SQLite library version </StartText>
+            <EndText> for</EndText>
+            <Name>realVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -150,11 +166,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\sqlite-dll-win32-x86-3080600.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\sqlite-dll-win32-x86-3080702.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-15T16:49:01.6846604</LastUpdated>
+    <LastUpdated>2014-12-04T20:20:42.3108178+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.sqlite.org/{urlpart}</FixedDownloadUrl>
     <Name>SQLite</Name>
