@@ -69,15 +69,15 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
-    <LastFileSize>343492</LastFileSize>
-    <LastFileDate>2014-11-19T22:48:50+01:00</LastFileDate>
+    <LastFileSize>343578</LastFileSize>
+    <LastFileDate>2014-12-09T20:53:21+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator>version</VariableChangeIndicator>
+    <VariableChangeIndicator />
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -166,11 +166,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\sqlite-dll-win32-x86-3080702.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\sqlite-dll-win32-x86-3080704.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-12-04T20:20:42.3108178+01:00</LastUpdated>
+    <LastUpdated>2014-12-10T02:13:07.8889531+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.sqlite.org/{urlpart}</FixedDownloadUrl>
     <Name>SQLite</Name>
