@@ -12,6 +12,8 @@ Universal flash-, upload- and recovery-tool for AVM Fritz!Box.
 
 ### Note
 
+This software is available in German language only.
+
 The actual version of ruKernelTool is {{DownloadUrlx64}}.
 
 This package puts the ruKernelTool files into `$env:ChocolateyBinRoot\ruKernelTool`.
