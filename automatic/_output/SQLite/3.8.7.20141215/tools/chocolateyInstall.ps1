@@ -1,5 +1,5 @@
-﻿$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
+﻿$packageName = 'SQLite'
+$url = 'https://www.sqlite.org/2014/sqlite-dll-win32-x86-3080704.zip'
 
 try {
 
