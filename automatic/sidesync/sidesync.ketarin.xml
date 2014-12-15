@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1f5b4c1d-745c-48f1-bdf8-08594c0c2ec7">
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1f0c8a53-c1d0-47d0-88c4-f09761149a8c">
     <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
@@ -28,7 +28,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url><placeholder name="Url with version information" value="" /></Url>
+            <Url><placeholder name="Url with version information" value="http://www.tixati.com/download/" /></Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -65,15 +65,15 @@
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="" /></FixedDownloadUrl>
-    <Name><placeholder name="Name" value="Palemoon" /></Name>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download1.tixati.com/download/tixati-{version}-1.win32-install.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="Tixati" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>21400032</LastFileSize>
-    <LastFileDate>2014-11-10T20:35:00+01:00</LastFileDate>
+    <LastFileSize>44238288</LastFileSize>
+    <LastFileDate>2014-11-18T11:40:17-08:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,45 +93,61 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>http://relmirror\.palemoon\.org/release/palemoon-([\d\.]+?)\.win32\.installer\.exe</Regex>
-            <Url>http://www.palemoon.org/download-ng.shtml</Url>
+            <Regex>(?&lt;=SideSync_)[0-9.]{5,10}(?=.exe)</Regex>
+            <Url>https://www.samsung.com/us/sidesync/</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
-            <TextualContent />
+            <TextualContent>12.0</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>url64</string>
+          <string>url</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://relmirror.palemoon.org/release/palemoon-{version}.win64.installer.exe</TextualContent>
-            <Name>url64</Name>
+            <TextualContent>https://www.samsung.com/us/sidesync/SideSync_{version}.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packageId</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>sidesync</TextualContent>
+            <Name>packageId</Name>
           </UrlVariable>
         </value>
       </item>
     </Variables>
-    <ExecuteCommand />
+    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{url}" /disablepush -force
+REM /disablepush -force
+REM cinst {packageId} -source '%cd%' -force -debug </ExecuteCommand>
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
+    <Category>Smartphone</Category>
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\palemoon-25.1.0.win32.installer.exe</PreviousLocation>
+    <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\SideSync_3.1.4.801.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-11-28T20:48:17.0644096+01:00</LastUpdated>
-    <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://relmirror.palemoon.org/release/palemoon-{version}.win32.installer.exe</FixedDownloadUrl>
-    <Name>palemoon</Name>
+    <LastUpdated>2014-12-02T07:11:34.4061093-08:00</LastUpdated>
+    <TargetPath>%temp%\Ketarin\</TargetPath>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>SideSync</Name>
   </ApplicationJob>
 </Jobs>
