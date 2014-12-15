@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>Samsung SideSync</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Samsung</authors>
+		<owners>Redsandro</owners>
+		<summary>Samsung SideSync enables the screens, windows, and data to be shared easily between your Samsung PC and Galaxy phone or tablet.</summary>
+		<description>
+Your Samsung Galaxy phone or tablet becomes an extension of your PC when the devices are connected through a USB cable or Wi-Fi. You can use your mouse and keyboard to work on both devices simultaneously. Share files between your mobile and PC by dragging-and-dropping, or copying-and-pasting with the shared Clipboard.
+		</description>
+		<projectUrl>https://www.samsung.com/us/sidesync/</projectUrl>
+		<tags>Samsung Galaxy Smartphone KVM remote</tags>
+		<copyright>Copyright (C) 1995-2014 SAMSUNG All Rights reserved.</copyright>
+		<licenseUrl>https://www.samsung.com/us/common/legal.html</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://i.imgur.com/4k1law7.jpg</iconUrl>
+		<dependencies>
+			<dependency id="directx" version="9.0.0.0" />
+		</dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
