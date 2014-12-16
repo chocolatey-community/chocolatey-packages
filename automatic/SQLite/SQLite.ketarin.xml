@@ -72,12 +72,12 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>343578</LastFileSize>
-    <LastFileDate>2014-12-09T20:53:21+01:00</LastFileDate>
+    <LastFileDate>2014-12-10T02:13:07.8889531</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>realVersion</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -170,7 +170,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-12-10T02:13:07.8889531+01:00</LastUpdated>
+    <LastUpdated>2014-12-10T02:13:07.8889531</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.sqlite.org/{urlpart}</FixedDownloadUrl>
     <Name>SQLite</Name>
