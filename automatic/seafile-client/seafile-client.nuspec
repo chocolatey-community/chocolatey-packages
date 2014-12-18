@@ -5,12 +5,16 @@
     <version>{{PackageVersion}}</version>
     <title>Seafile (Windows Client)</title>
     <authors>Seafile Ltd.</authors>
-    <licenseUrl>https://github.com/haiwen/seafile#licence-</licenseUrl>
+    <licenseUrl>https://github.com/haiwen/seafile/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>http://seafile.com/en/home/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/seafile-client.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-File Syncing and Collaboration for Teams
+Seafile is a next-generation open source cloud storage system with advanced support for file syncing, privacy protection and teamwork.
+
+Collections of files are called libraries, and each library can be synced separately. A library can be encrypted with a user chosen password. This password is not stored on the server, so even the server admin cannot view a file's contents.
+
+Seafile allows users to create groups with file syncing, wiki, and discussion to enable easy collaboration around documents within a team.
     </description>
     <summary>File Syncing and Collaboration for Teams</summary>
     <releaseNotes />
