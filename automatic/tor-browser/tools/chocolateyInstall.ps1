@@ -34,10 +34,12 @@ After you did that, reinstall this package again with the “-force” parameter
   'fa' = 'fa';
   'fr' = 'fr';
   'it' = 'it';
+  'ko' = 'ko';
   'nl' = 'nl';
   'pl' = 'pl';
   'pt' = 'pt-PT';
   'ru' = 'ru';
+  'tr' = 'tr';
   'vi' = 'vi';
   'zh' = 'zh-CN';
   }
