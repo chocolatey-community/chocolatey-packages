@@ -1,5 +1,7 @@
-﻿$packageName = '{{PackageName}}'
+$packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
+$validExitCodes = @(0,3010)
+
 
 try {
 
@@ -39,7 +41,7 @@ try {
   if ($alreadyInstalled) {
     Write-Host "LibreOffice $version is already installed on the computer. Skipping download."
   } else {
-    Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' $downUrl -validExitCodes @(0)
+    Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' $downUrl -validExitCodes $validExitCodes
   }
 
 } catch {
