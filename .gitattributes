@@ -1,3 +1,12 @@
-*.nuspec eol=lf
-*.ps1 eol=crlf
-*.ketarin.xml eol=crlf
+# Generally disable end of line conversion,
+# which overrides the settings of core.autocrlf
+
+* -text
+
+
+# Only enable end of line conversion for specific files
+# according to the contributing guidelines of this repository
+
+*.nuspec text eol=lf
+*.ps1 text eol=crlf
+*.ketarin.xml text eol=crlf
