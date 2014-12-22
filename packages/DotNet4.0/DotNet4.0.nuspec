@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <version>4.0.30319.20130222</version>
+    <authors>Microsoft</authors>
+    <owners>Gary Ewan Park</owners>
+    <iconUrl>https://github.com/gep13/ChocolateyPackages/raw/master/DotNet4.0/dotnet.png</iconUrl>
+    <projectUrl>http://www.microsoft.com/net/download</projectUrl>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <id>DotNet4.0</id>
+    <title>Dot Net 4.0 Framework Full Redistributable</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+	NOTE: This package has been created solely as a dependency for chocolatey itself, please do not attempt to install.  Any attempt to install this package will likely result in an error message.
+	
+	Please see here:
+	
+	https://groups.google.com/forum/?fromgroups=#!topic/chocolatey/WjvYgK33eHA
+	
+	For more information.
+	
+	The .NET Framework is Microsoft's comprehensive and consistent programming model for building applications that have visually stunning user experiences, seamless and secure communication, and the ability to model a range of business processes.  The .NET Framework 4 works side by side with older Framework versions. Applications that are based on earlier versions of the Framework will continue to run on the version targeted by default.</description>
+    <summary>The Microsoft .NET Framework 4.0</summary>
+    <tags>Microsoft .net Framework 4.0 Redistributable</tags>
+  </metadata>
+</package>
