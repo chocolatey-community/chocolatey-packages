@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>{{PackageVersion}}</version>
+    <version>34.0.5</version>
     <authors>Mozilla</authors>
     <projectUrl>http://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/7184710f19dd128a7d3e26337e5ba05d50f5f620/icons/firefox.svg</iconUrl>
     <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>
-    <id>{{PackageName}}</id>
+    <id>Firefox</id>
     <title>Mozilla Firefox</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -21,6 +21,7 @@ This package installs Firefox in the first language which matches this list:
 
 Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
     </description>
+    <releaseNotes>34.0.5.20141222: Add note and link for the firefox-dev package</releaseNotes>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox</tags>
   </metadata>
