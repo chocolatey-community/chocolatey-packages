@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>34.0.5</version>
+    <version>34.0.5.20141222</version>
     <authors>Mozilla</authors>
     <projectUrl>http://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/7184710f19dd128a7d3e26337e5ba05d50f5f620/icons/firefox.svg</iconUrl>
