@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PDFCreator</id>
+    <version>2.0.1</version>
+    <title>PDF Creator</title>
+    <authors>pdfforge</authors>
+    <licenseUrl>http://www.pdfforge.org/content/aladdin-free-public-license</licenseUrl>
+    <projectUrl>http://www.pdfforge.org/</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/PDFCreator.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
+    </description>
+    <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
+    <tags>pdf chocolatey</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

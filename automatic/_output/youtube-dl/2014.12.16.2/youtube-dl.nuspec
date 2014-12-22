@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>youtube-dl</id>
+    <version>2014.12.16.2</version>
+    <title>youtube-dl</title>
+    <authors>Ricardo Garcia and others</authors>
+    <licenseUrl>http://rg3.github.io/youtube-dl/</licenseUrl>
+    <projectUrl>http://rg3.github.io/youtube-dl/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it’s not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
+
+Optional dependency package: [ffmpeg](./ffmpeg) (for stream extraction and conversion support)
+    </description>
+    <summary>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites.</summary>
+    <iconUrl>http://cdn.rawgit.com/TomOne/61731d9b97322e40e69f/raw/ce93bd4af30345337c4c2e4a999fba347a0c0e33/youtube-dl.svg</iconUrl>
+    <releaseNotes />
+    <copyright />
+    <language>en-US</language>
+    <tags>youtube-dl ffmpeg youtube download</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
