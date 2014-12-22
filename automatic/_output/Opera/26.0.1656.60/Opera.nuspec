@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Opera</id>
+    <version>26.0.1656.60</version>
+    <title>Opera</title>
+    <authors>Opera</authors>
+    <projectUrl>http://www.opera.com/browser/</projectUrl>
+    <licenseUrl>http://www.operasoftware.com/eula/browser/</licenseUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/opera.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.
+    </description>
+    <summary>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.</summary>
+    <releaseNotes></releaseNotes>
+    <tags>browser opera</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
