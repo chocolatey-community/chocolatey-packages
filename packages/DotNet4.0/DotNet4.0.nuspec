@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>4.0.30319.20130222</version>
+    <version>4.0.30319.20141222</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ec2c867f6b43819719a477d59908a06fc176716a/icons/dotnet.png</iconUrl>
