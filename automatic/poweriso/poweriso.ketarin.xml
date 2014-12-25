@@ -1,8 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="a76d4641-2c00-45c4-a47b-4b89d81e9fed">
-    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Jobs>
+    <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -72,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>2905808</LastFileSize>
-    <LastFileDate>2014-03-19T08:00:11.2857036</LastFileDate>
+    <LastFileSize>2962832</LastFileSize>
+    <LastFileDate>2014-11-22T08:08:09+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -112,7 +111,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>http://192.155.93.226/PowerISO.-x64\.exe</Regex>
+            <Regex>http://www.poweriso.net/dl/PowerISO.-x64\.exe</Regex>
             <Url>http://www.poweriso.com/download.htm</Url>
             <TextualContent>""</TextualContent>
             <Name>url64</Name>
@@ -127,7 +126,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>http://192.155.93.226/PowerISO.\.exe</Regex>
+            <Regex>http://www.poweriso.net/dl/PowerISO.\.exe</Regex>
             <Url>http://www.poweriso.com/download.htm</Url>
             <Name>url</Name>
           </UrlVariable>
@@ -140,11 +139,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\PowerISO5.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\PowerISO6.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-03-19T08:00:11.2857036</LastUpdated>
+    <LastUpdated>2014-12-25T20:54:43.6400225+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>poweriso</Name>
