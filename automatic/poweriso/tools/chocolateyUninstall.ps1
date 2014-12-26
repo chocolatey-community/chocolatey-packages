@@ -4,6 +4,8 @@ $silentArgs = '/S'
 $validExitCodes = @(0)
 
 try {
+  $osBitness = Get-ProcessorBits
+
 	$regKey = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\PowerISO";
   
   if ($osBitness -eq 64) {
