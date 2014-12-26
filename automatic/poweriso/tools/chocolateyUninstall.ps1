@@ -4,8 +4,13 @@ $silentArgs = '/S'
 $validExitCodes = @(0)
 
 try {
-	# HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\PowerISO
-	$file = (Get-ItemProperty -Path "hklm:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\PowerISO").UninstallString
+	$regKey = "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\PowerISO";
+  
+  if ($osBitness -eq 64) {
+    $regKey = "hklm:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\PowerISO";
+  }
+  
+	$file = (Get-ItemProperty -Path $regKey).UninstallString
 	Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $file
   
 	Write-ChocolateySuccess $package
