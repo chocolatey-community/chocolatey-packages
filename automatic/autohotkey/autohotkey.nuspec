@@ -3,7 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
-    <title>AutoHotkey (Install)</title>
+    <title>AutoHotkey</title>
     <authors>Lexikos</authors>
     <licenseUrl>http://ahkscript.org/docs/license.htm</licenseUrl>
     <projectUrl>http://ahkscript.org/</projectUrl>
