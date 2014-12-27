@@ -16,7 +16,7 @@ SciTE4AutoHotkey is a SciTE-based AutoHotkey script editor. It offers:
 * AutoIndent
 * AutoHotkey help integration
 * Abbreviations
-* AutoHotkey_L debugging support
+* AutoHotkey\_L debugging support
 * Tools for AutoHotkey scripting
 * A toolbar that enables easy access to the tools
 * Some AutoHotkey scripting facilities
