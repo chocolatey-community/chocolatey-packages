@@ -2,10 +2,10 @@
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="d2e238a0-e4c4-4874-84e2-ed47bbcc7f5b">
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>6791360</LastFileSize>
-    <LastFileDate>2014-04-20T20:12:33+02:00</LastFileDate>
+    <LastFileDate>2014-12-27T21:07:27.415232+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -14,7 +14,7 @@
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
-    <HttpReferer>http://www.fosshub.com/Classic-Shell.html</HttpReferer>
+    <HttpReferer />
     <SetupInstructions />
     <Variables>
       <item>
@@ -50,45 +50,15 @@
       </item>
       <item>
         <key>
-          <string>token</string>
+          <string>mediafireHash</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.fosshub.com/Classic-Shell.html</Url>
-            <StartText>token = "</StartText>
-            <EndText>";</EndText>
-            <Name>token</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>partialUrl</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://app.fosshub.com/download/ClassicShellSetup_{versionUnderscore}.exe</TextualContent>
-            <Name>partialUrl</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{partialUrl}</TextualContent>
-            <Name>url64</Name>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://www\.mediafire\.com/download/(.+?)/ClassicShellSetup_{versionUnderscore}\.exe</Regex>
+            <Url>http://www.classicshell.net/downloads/</Url>
+            <Name>mediafireHash</Name>
           </UrlVariable>
         </value>
       </item>
@@ -103,9 +73,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-10-02T23:10:39.6316448+02:00</LastUpdated>
+    <LastUpdated>2014-12-27T21:07:27.4402581+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{partialUrl}/{token}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.mediafire.com/download/{mediafireHash}/ClassicShellSetup_{versionUnderscore}.exe</FixedDownloadUrl>
     <Name>classic-shell</Name>
   </ApplicationJob>
 </Jobs>
