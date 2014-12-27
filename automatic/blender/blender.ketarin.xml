@@ -140,8 +140,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>blender/release/Blender(.+?)/blender-</Regex>
             <Url>http://www.blender.org/download/</Url>
             <StartText>http://download.blender.org/release/Blender</StartText>
             <EndText>/blender-</EndText>
