@@ -1,41 +1,22 @@
-﻿$packageName = '{{PackageName}}'
+﻿try {
 
-$fileType = 'exe'
-$silentArgs = '/S'
-$partialUrls = {{DownloadUrlx64}}
+  # Note: fosshub uses special links that expire. The Get-FosshubLinks function
+  # takes care of generating these links.
 
-$referer = 'http://www.fosshub.com/MKVToolNix.html'
-$downloadFile = 'mkvtoolnixInstall.exe'
-$downloadFileFullPath = "$env:TEMP\$downloadFile"
+  $PSScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
+  Import-Module (Join-Path $PSScriptRoot 'get-fosshublinks.ps1')
 
-$versionHtmlFile = "$env:TEMP\mkvtoolnix-version.html"
+  $packageName = '{{PackageName}}'
+  $fileType = 'exe'
+  $fileArgs = '/S'
 
-Write-Host 'Getting the needed token for the URL …'
-Get-ChocolateyWebFile 'get-url' $versionHtmlFile $referer
+  # In case you see \{\{DownloadUrlx64\}\} (without backslashes)
+  # after the commented lines, it’s intended.
+  $genLinkUrlArray = {{DownloadUrlx64}}
+  $url = Get-FosshubLinks $genLinkUrlArray[0]
+  $url64 = Get-FosshubLinks $genLinkUrlArray[1]
 
-$versionHtmlContent = Get-Content $versionHtmlFile -Encoding UTF8
-
-Remove-Item $versionHtmlFile
-
-
-# Get valid token from HTML to allow to download file
-$token = [regex]::Matches($versionHtmlContent, 'token = "([a-f\d]+)"') | % {$_.Groups[1].Value}
-
-$url32 = $($partialUrls.url32 + '/' + $token)
-$url64 = $($partialUrls.url64 + '/' + $token)
-
-try {
-
-  if (Get-ProcessorBits -eq 64) {
-    $url = $url64
-  } else {
-    $url = $url32
-  }
-
-  cd $env:TEMP
-  Start-Process 'wget' -ArgumentList "-O $downloadFile", "--referer $referer", $url -Wait -NoNewWindow
-  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $downloadFileFullPath
-  Remove-Item $downloadFileFullPath
+  Install-ChocolateyPackage $packageName $fileType $fileArgs $url $url64
 
 } catch {
   Write-ChocolateyFailure $packageName $($_.Exception.Message)
