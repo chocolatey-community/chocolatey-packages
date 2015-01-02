@@ -16,9 +16,9 @@ Java allows you to play online games, chat with people around the world, calcula
 
 This package installs the Java version offered at https://www.java.com (currently Java 7). It also sets `SPONSORS=0` ([see docs](http://docs.oracle.com/javase/7/docs/webnotes/install/windows/jre-installer-options.html#running)).
 
-If you want Java 8, install the [jre8](./jre8) package instead.
+If you want Java 8, install the [jre8](/packages/jre8) package instead.
 
-This only installs the Java Runtime with the bitness specific to your OS (either 32- or 64-bit). If you want both 32-bit and 64-bit JREs on your 64-bit OS, install [javaruntime](./javaruntime) instead.
+This only installs the Java Runtime with the bitness specific to your OS (either 32- or 64-bit). If you want both 32-bit and 64-bit JREs on your 64-bit OS, install [javaruntime](/packages/javaruntime) instead.
     </description>
     <releaseNotes />
     <tags>java runtime environment</tags>

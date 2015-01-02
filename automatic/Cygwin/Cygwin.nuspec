@@ -15,7 +15,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
 
 Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
-NOTE: For better functionality, it is recommended you install the [cyg-get package](./cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
+NOTE: For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <summary>A Linux environment for Windows.</summary>
     <releaseNotes>This package is now a wrapper calling "cyg-get default"</releaseNotes>

@@ -11,7 +11,7 @@
     <description>
 youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it’s not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
 
-Optional dependency package: [ffmpeg](./ffmpeg) (for stream extraction and conversion support)
+Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction and conversion support)
     </description>
     <summary>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites.</summary>
     <iconUrl>http://cdn.rawgit.com/TomOne/61731d9b97322e40e69f/raw/ce93bd4af30345337c4c2e4a999fba347a0c0e33/youtube-dl.svg</iconUrl>

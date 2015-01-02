@@ -18,7 +18,7 @@ The ffdshow tryouts project is a fork of the original ffdshow project. This fork
 
 ### Note
 
-This package installs the 32-bit version on a 32-bit system and the 64-bit version on a 64-bit system. If you want to install the 32-bit version on a 64-bit system, install [ffdshow-x86_32](./ffdshow-x86_32).
+This package installs the 32-bit version on a 32-bit system and the 64-bit version on a 64-bit system. If you want to install the 32-bit version on a 64-bit system, install [ffdshow-x86_32](/packages/ffdshow-x86_32).
     </description>
     <summary>The all-in-one codec solution</summary>
     <copyright />

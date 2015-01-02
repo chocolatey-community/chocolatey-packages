@@ -12,7 +12,7 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 
 ### Notes
 
-This package installs the latest stable version of LibreOffice (officially called [LibreOffice Fresh](https://www.libreoffice.org/download/libreoffice-fresh/)). For more conservative users it is recommended to install [libreoffice-oldstable](./libreoffice-oldstable) instead.
+This package installs the latest stable version of LibreOffice (officially called [LibreOffice Fresh](https://www.libreoffice.org/download/libreoffice-fresh/)). For more conservative users it is recommended to install [libreoffice-oldstable](/packages/libreoffice-oldstable) instead.
     </description>
     <projectUrl>http://www.libreoffice.org/</projectUrl>
     <tags>libreoffice office admin</tags>
