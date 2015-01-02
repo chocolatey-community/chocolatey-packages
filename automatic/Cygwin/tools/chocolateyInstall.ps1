@@ -1,4 +1,4 @@
-$packageName = '{{PackageName}}'
+﻿$packageName = '{{PackageName}}'
 $installerType = 'exe'
 $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
@@ -8,7 +8,7 @@ $cygRoot = join-path $binRoot "cygwin"
 $cygPackages = join-path $cygRoot packages
 
 # https://cygwin.com/faq/faq.html#faq.setup.cli
-$silentArgs = "-q -R $cygRoot -l $cygPackages -s ftp://mirrors.kernel.org/sourceware/cygwin"
+$silentArgs = "-q -R $cygRoot -l $cygPackages -s http://mirrors.kernel.org/sourceware/cygwin/"
 $validExitCodes = @(0)
 
 Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"  -validExitCodes $validExitCodes
