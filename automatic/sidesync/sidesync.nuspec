@@ -25,3 +25,4 @@ Your Samsung Galaxy phone or tablet becomes an extension of your PC when the dev
 		<file src="tools\**" target="tools" />
 	</files>
 </package>
+<!-- “UTF-8” test -->
