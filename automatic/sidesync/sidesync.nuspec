@@ -5,7 +5,7 @@
     <title>Samsung SideSync</title>
     <version>{{PackageVersion}}</version>
     <authors>Samsung</authors>
-    <owners>Redsandro</owners>
+    <owners>Redsandro chocolatey</owners>
     <summary>Samsung SideSync enables the screens, windows, and data to be shared easily between your Samsung PC and Galaxy phone or tablet.</summary>
     <description>
 Your Samsung Galaxy phone or tablet becomes an extension of your PC when the devices are connected through a USB cable or Wi-Fi. You can use your mouse and keyboard to work on both devices simultaneously. Share files between your mobile and PC by dragging-and-dropping, or copying-and-pasting with the shared Clipboard.
