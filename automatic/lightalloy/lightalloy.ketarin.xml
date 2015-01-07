@@ -148,9 +148,7 @@
         </value>
       </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} --pf {coreRoot} /v {version} /u "{url}" /disablepush -force
-REM /disablepush -force
-REM cinst {packageId} -source '%cd%' -force -debug </ExecuteCommand>
+    <ExecuteCommand />
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
