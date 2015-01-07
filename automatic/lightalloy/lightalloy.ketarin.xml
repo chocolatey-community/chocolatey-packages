@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0f457605-9466-4671-8167-ec46a8604d78">
     <SourceTemplate><![CDATA[<Jobs>
@@ -70,7 +70,7 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>1240624</LastFileSize>
     <LastFileDate>2014-11-13T05:49:57.6303792</LastFileDate>
@@ -154,14 +154,14 @@ REM cinst {packageId} -source '%cd%' -force -debug </ExecuteCommand>
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>Media</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
-    <Name>Light Alloy Video Player</Name>
+    <Name>lightalloy</Name>
   </ApplicationJob>
 </Jobs>
