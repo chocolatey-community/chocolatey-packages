@@ -70,10 +70,10 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>44381984</LastFileSize>
-    <LastFileDate>2014-12-18T07:12:01-08:00</LastFileDate>
+    <LastFileDate>2015-01-06T17:46:33.3764576</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -104,48 +104,20 @@
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>url</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>https://www.samsung.com/us/sidesync/SideSync_{version}.exe</TextualContent>
-            <Name>url</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>sidesync</TextualContent>
-            <Name>packageId</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>Smartphone</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
     <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\SideSync_3.1.4.827.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-06T08:46:33.3764576-08:00</LastUpdated>
+    <LastUpdated>2015-01-06T17:46:33.3764576</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
-    <Name>SideSync</Name>
+    <FixedDownloadUrl>https://www.samsung.com/us/sidesync/SideSync_{version}.exe</FixedDownloadUrl>
+    <Name>sidesync</Name>
   </ApplicationJob>
 </Jobs>
