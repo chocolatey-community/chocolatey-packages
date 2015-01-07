@@ -8,4 +8,4 @@ All packages in this repo should be in conformity with the [contributing guideli
 Reminders
 ---------
 
-* Get the production url (for **icons**) by pasting the raw url [here](https://rawgit.com/) and usoing the right (CDN) result.
+* Get the production url (for **icons**) by pasting the raw url [here](https://rawgit.com/) and using the right (CDN) result.
