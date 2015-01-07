@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Clover</id>
+    <title>Clover</title>
+    <version>3.0.4060.20150107</version>
+    <authors>EJIE Technology</authors>
+    <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
+    <description>
+Brings Chrome-Style Tabs to Windows Explorer.
+
+Clover is an extension of the Windows Explorer, to add multi-tab functionality similar to Google Chrome browser.
+
+After Clover is installed, you will be able to open multiple folders within the same window, and you can also be able to add folder bookmarks.
+    </description>
+    <projectUrl>http://ejie.me/</projectUrl>
+    <tags>admin windows-explorer filemanager tab tabbed-browsing tabbed-file-manager</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.scribd.com/doc/164355290/License</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf2b66066fc04a6517bbd7bfef76fe2653b5ff7c/icons/Clover.png</iconUrl>
+    <releaseNotes>
+3.0.4060.20150107: Fix Clover package to make it work again. Note that the real version of Clover in this package is v3.0.406.
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
