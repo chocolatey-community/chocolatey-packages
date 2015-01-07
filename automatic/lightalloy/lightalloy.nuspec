@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>Light Alloy Video Player</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Vortex Group, LLC.</authors>
+		<owners>Redsandro</owners>
+		<summary>Video Player with built-in codecs.</summary>
+		<description>
+Complete video player with built-in codecs.
+
+_The installer is not silent. I've used AutoIt to automate the installation. Be careful when doing something else while installing._
+		</description>
+		<projectUrl>http://www.light-alloy.ru/</projectUrl>
+		<tags>Media Video Player</tags>
+		<copyright></copyright>
+		<licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>http://i.imgur.com/3EtOCEA.png</iconUrl>
+		<dependencies>
+			<dependency id="autoit.commandline" version="3.3.12.0" />
+		</dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
