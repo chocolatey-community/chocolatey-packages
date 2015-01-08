@@ -1,1 +1,0 @@
-﻿Install-ChocolateyPackage 'classic-shell' 'exe' '/qn' 'http://heanet.dl.sourceforge.net/project/classicshell/Version 3.6.8 general release/ClassicShellSetup_3_6_8.exe'

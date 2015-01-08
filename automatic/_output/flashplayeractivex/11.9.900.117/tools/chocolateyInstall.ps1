@@ -1,1 +1,0 @@
-﻿Install-ChocolateyPackage 'flashplayeractivex' 'msi' '/quiet /norestart REMOVE_PREVIOUS=YES' 'http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_11_active_x.msi'
