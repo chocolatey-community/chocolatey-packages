@@ -113,7 +113,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://relmirror.palemoon.org/release/palemoon-{version}.win64.installer.exe</TextualContent>
+            <TextualContent>http://www.fosshub.com/genLink/Pale-Moon/palemoon-{version}.win64.installer.exe</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
