@@ -4,4 +4,4 @@
 *.log.full
 Thumbs.db
 
-automatic/_output/**/*.ketarin.xml
+automatic/_output/
