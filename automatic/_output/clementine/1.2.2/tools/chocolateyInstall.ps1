@@ -1,1 +1,0 @@
-﻿Install-ChocolateyPackage 'clementine' 'exe' '/S' 'https://github.com/clementine-player/Clementine/releases/download/1.2.2/ClementineSetup-1.2.2.exe'
