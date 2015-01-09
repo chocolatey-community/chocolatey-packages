@@ -1,7 +1,8 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1f0c8a53-c1d0-47d0-88c4-f09761149a8c">
-    <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b2b215d9-8d7c-41f6-8fa6-f7f1a344d117">
+    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -28,7 +29,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url><placeholder name="Url with version information" value="http://www.tixati.com/download/" /></Url>
+            <Url><placeholder name="Url with version information" value="http://ejie.me/" /></Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -65,15 +66,15 @@
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://download1.tixati.com/download/tixati-{version}-1.win32-install.exe" /></FixedDownloadUrl>
-    <Name><placeholder name="Name" value="Tixati" /></Name>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://ejie.me/uploads/Clover_Setup_{realVersion}.zip" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="Clover" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>44381984</LastFileSize>
-    <LastFileDate>2015-01-06T17:46:33.3764576</LastFileDate>
+    <LastFileSize>2627477</LastFileSize>
+    <LastFileDate>2014-05-17T12:11:42+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -87,20 +88,43 @@
     <Variables>
       <item>
         <key>
-          <string>version</string>
+          <string>realVersion</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=SideSync_)[0-9.]{5,10}(?=.exe)</Regex>
-            <Url>https://www.samsung.com/us/sidesync/</Url>
-            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
-  &lt;TR&gt;
-    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
-            <EndText>&lt;BR&gt;</EndText>
-            <TextualContent>12.0</TextualContent>
+            <Regex>Version:.+?&lt;small&gt;([\d\.]{3,})</Regex>
+            <Url>http://ejie.me/</Url>
+            <Name>realVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{realVersion}{versionFixNotation}</TextualContent>
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>versionFixNotation</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{realVersion:regexreplace:^3\.0\.(.+)$:0.{yyyy}{MM}{dd}}</TextualContent>
+            <Name>versionFixNotation</Name>
           </UrlVariable>
         </value>
       </item>
@@ -111,13 +135,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\SideSync_3.1.4.827.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Clover_Setup_3.0.406.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-06T17:46:33.3764576</LastUpdated>
+    <LastUpdated>2015-01-07T06:29:42.6354579+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.samsung.com/us/sidesync/SideSync_{version}.exe</FixedDownloadUrl>
-    <Name>sidesync</Name>
+    <FixedDownloadUrl>http://ejie.me/uploads/Clover_Setup_{realVersion}.zip</FixedDownloadUrl>
+    <Name>Clover</Name>
   </ApplicationJob>
 </Jobs>

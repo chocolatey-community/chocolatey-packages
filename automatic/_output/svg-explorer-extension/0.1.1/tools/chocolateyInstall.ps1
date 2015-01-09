@@ -1,1 +1,0 @@
-﻿Install-ChocolateyPackage 'svg-explorer-extension' 'exe' '/VERYSILENT' 'http://svg-explorer-extension.googlecode.com/files/dssee_setup_i386_v011_signed.exe' 'http://svg-explorer-extension.googlecode.com/files/dssee_setup_x64_v011_signed.exe'

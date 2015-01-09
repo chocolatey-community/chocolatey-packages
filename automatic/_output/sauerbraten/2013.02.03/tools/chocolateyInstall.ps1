@@ -1,1 +1,0 @@
-﻿Install-ChocolateyPackage 'sauerbraten' 'exe' '/S' 'http://netcologne.dl.sourceforge.net/project/sauerbraten/sauerbraten/2013_01_04/sauerbraten_2013_02_03_collect_edition_windows.exe

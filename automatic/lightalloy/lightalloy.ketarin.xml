@@ -1,6 +1,6 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="1f0c8a53-c1d0-47d0-88c4-f09761149a8c">
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0f457605-9466-4671-8167-ec46a8604d78">
     <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
@@ -72,8 +72,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>44381984</LastFileSize>
-    <LastFileDate>2015-01-06T17:46:33.3764576</LastFileDate>
+    <LastFileSize>1240624</LastFileSize>
+    <LastFileDate>2014-11-13T05:49:57.6303792</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,14 +93,57 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=SideSync_)[0-9.]{5,10}(?=.exe)</Regex>
-            <Url>https://www.samsung.com/us/sidesync/</Url>
+            <Regex>(?&lt;=Light-Alloy/LA_Setup_v)[0-9.]{3,}(?=.exe)</Regex>
+            <Url>http://www.fosshub.com/Light-Alloy.html</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
-            <TextualContent>12.0</TextualContent>
+            <TextualContent />
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
+            <TextualContent>http://www.fosshub.com/genLink/Light-Alloy/LA_Setup_v{version}.exe</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packageId</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>lightalloy</TextualContent>
+            <Name>packageId</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>referer</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://www.fosshub.com/Light-Alloy.html</TextualContent>
+            <Name>referer</Name>
           </UrlVariable>
         </value>
       </item>
@@ -111,13 +154,12 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\SideSync_3.1.4.827.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-06T17:46:33.3764576</LastUpdated>
+    <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.samsung.com/us/sidesync/SideSync_{version}.exe</FixedDownloadUrl>
-    <Name>sidesync</Name>
+    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <Name>lightalloy</Name>
   </ApplicationJob>
 </Jobs>
