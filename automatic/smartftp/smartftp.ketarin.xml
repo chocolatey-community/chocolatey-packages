@@ -69,7 +69,7 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>20582400</LastFileSize>
     <LastFileDate>2014-12-06T03:45:10.5205019</LastFileDate>
