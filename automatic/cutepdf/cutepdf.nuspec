@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CutePDF</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Acro Software Inc.</authors>
+    <owners>Redsandro</owners>
+    <summary>Free PDF printer driver with no watermarks.</summary>
+    <description>
+CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert
+to professional quality PDF documents. No watermarks!
+    </description>
+    <projectUrl>http://www.cutepdf.com/</projectUrl>
+    <tags>PDF Printer Converter Office</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.cutepdf.com/Info/legal.asp</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://i.imgur.com/IcV5OaQ.png</iconUrl>
+    <dependencies>
+      <dependency id="Ghostscript.app" version="8.15" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
