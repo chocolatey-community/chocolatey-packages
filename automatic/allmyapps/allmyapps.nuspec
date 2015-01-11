@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>allmyapps</id>
+    <title>Allmyapps</title>
+    <version>2.0.0.30</version>
+    <authors>Allmyapps</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Allmyapps is the next generation Application Store, providing you with a unique 1 click application installation technology to install all your favorite applications
+	</summary>
+    <description>
+	Allmyapps is the next generation Application Store, providing you with a unique 1 click application installation technology to install all your favorite applications on both Windows and Linux ( http://ubuntu.allmyapps.com/ ) operating systems, in English or French.
+	</description>
+    <projectUrl>http://allmyapps.com/</projectUrl>
+    <tags>notUninstallable update-notifier app-store software-installer batch-installer automatic-updates</tags>
+    <dependencies>
+    <dependency id="autohotkey.portable" />
+    </dependencies>	
+	<copyright></copyright>
+    <licenseUrl>http://allmyapps.com/about/terms-of-service</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>QtBinPatcher x64</title>
+    <version>{{PackageVersion}}</version>
+    <authors>qt-x64</authors>
+    <owners>tonigellida</owners>
+    <summary>
+QtBinPatcher - it is a command line program for change paths into a binary files of library Qt. When porting applications made on the basis of Qt, edit paths is not necessary, but if you want to transfer to a different location the library itself, the difficulties arise.
+	</summary>
+    <description>
+QtBinPatcher - it is a command line program for change paths into a binary files of library Qt. When porting applications made on the basis of Qt, edit paths is not necessary, but if you want to transfer to a different location the library itself, the difficulties arise.
+Qt installer contains the patcher for rewriting the path in files. However, the patcher is integrated into the installer, and depends on the library Qt, which, in many cases, it is inconvenient. QtBinPatcher independent of Qt and uses only standard C++ libraries.
+	</description>
+    <projectUrl>http://tver-soft.org/</projectUrl>
+    <tags>framework path qt x64</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

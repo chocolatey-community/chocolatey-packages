@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CCleaner</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Piriform</authors>
+    <owners>maartenba, tonigellida</owners>
+    <summary>
+	The number-one tool for cleaning your Windows PC.
+	</summary>
+    <description>
+	The number-one tool for cleaning your Windows PC.
+	
+	It protects your privacy online and makes your computer faster and more secure.
+	
+	### Notes
+	
+	This package installs CCleaner without additional adware.
+	</description>
+    <projectUrl>http://www.piriform.com/ccleaner</projectUrl>
+    <tags>ccleaner system cleanup registry</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

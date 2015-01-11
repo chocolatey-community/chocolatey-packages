@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Mipony</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Mipony</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free download manager specially designed to optimize and automate the downloads.
+	</summary>
+    <description>
+	A free download manager specially designed to optimize and automate the downloads.
+	</description>
+    <projectUrl>http://www.mipony.net/en/</projectUrl>
+    <tags>notSilent download-manager file-hosting-downloader</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Free_license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

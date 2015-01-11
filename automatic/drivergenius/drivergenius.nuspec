@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Driver Genius</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Driver-Soft Inc.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A professional driver management tool that features both driver management and hardware diagnostics.
+	</summary>
+    <description>
+	A professional driver management tool that features both driver management and hardware diagnostics.
+	</description>
+    <projectUrl>http://www.driver-soft.com/product.html</projectUrl>
+    <tags>trial-version driver-update driver-backup driver-download driver-restore</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.driver-soft.com/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

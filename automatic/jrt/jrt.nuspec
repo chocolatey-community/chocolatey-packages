@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Junkware Removal Tool</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Thisisu</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A security utility that searches for and removes common adware, toolbars, and potentially unwanted programs (PUPs) from your computer.
+	</summary>
+    <description>
+	A security utility that searches for and removes common adware, toolbars, and potentially unwanted programs (PUPs) from your computer.
+	
+	A common tactics among freeware publishers is to offer their products for free, but bundle them with PUPs in order to earn revenue.
+	</description>
+    <projectUrl>http://thisisudax.org/?p=1</projectUrl>
+    <tags>malware-scanner malware-remover toolbar-remover</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

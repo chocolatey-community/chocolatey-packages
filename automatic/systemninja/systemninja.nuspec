@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>System Ninja</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SingularLabs</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A fast, powerful and effective system optimization solution.
+	</summary>
+    <description>
+	A fast, powerful and effective system optimization solution.
+	
+	It’s designed to quickly remove junk files, improve system speed and help fix problems.
+	</description>
+    <projectUrl>http://singularlabs.com/software/system-ninja/</projectUrl>
+    <tags>cleaner</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

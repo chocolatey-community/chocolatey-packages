@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>EasyBCD</title>
+    <version>{{PackageVersion}}</version>
+    <authors>NeoSmart Technologies</authors>
+    <owners>tonigellida</owners>
+    <summary>
+EasyBCD is the answer to tweaking the Windows bootloader. With EasyBCD, almost anything is possible, e.g. to boot a Win7-VHD-image.
+	</summary>
+    <description>
+EasyBCD is the answer to tweaking the Windows bootloader. With EasyBCD, almost anything is possible, e.g. to boot a Win7-VHD-image.
+Setting up and configuring Windows boot entries is simple, and there is no easier way to quickly boot right into Linux, Mac OS X, or BSD straight from the Windows bootloader - on the fly, no expert knowledge needed!
+EasyBCD is geared for users of all kinds. Whether you just want to add an entry to your old XP partition or want to create a duplicate for testing purposes; if youre interested in debugging the Windows Kernel or septuple-booting your seven test operating systems, EasyBCD is the key.
+	</description>
+    <projectUrl>https://neosmart.net/EasyBCD/</projectUrl>
+    <tags>operating-system boot bootloader boot-manager mbr boot-menu bcd grub</tags>
+    <copyright></copyright>
+    <licenseUrl>https://neosmart.net/EasyBCD/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

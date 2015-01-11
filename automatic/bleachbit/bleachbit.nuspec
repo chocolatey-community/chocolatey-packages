@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>BleachBit</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Andrew Ziem</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Deletes unnecessary files to free valuable disk space, maintain privacy, and remove junk.
+	</summary>
+    <description>
+	Deletes unnecessary files to free valuable disk space, maintain privacy, and remove junk.
+	
+	Rid your system of old clutter including cache, cookies, Internet history, localizations, logs, temporary files, and broken shortcuts.
+	</description>
+    <projectUrl>http://bleachbit.sourceforge.net/</projectUrl>
+    <tags>privacy cleaner disk-space cache temporary-files junk-finder browser-cache</tags>
+    <copyright></copyright>
+    <licenseUrl>https://gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

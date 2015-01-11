@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>LINE</title>
+    <version>{{PackageVersion}}</version>
+    <authors>LINE Corporation</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Free SMS, Free Voice call messenger application.
+	</summary>
+    <description>
+	Free SMS, Free Voice call messenger application.
+	</description>
+    <projectUrl>http://line.naver.jp/en/#</projectUrl>
+    <tags>messenger communication messaging voice-chat video-call voice-call</tags>
+    <copyright></copyright>
+    <licenseUrl>http://line.naver.jp/terms_pc/en/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

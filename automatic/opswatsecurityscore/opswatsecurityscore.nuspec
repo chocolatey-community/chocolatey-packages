@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>OPSWAT Security Score</title>
+    <version>{{PackageVersion}}</version>
+    <authors>OPSWAT</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free tool that scans your computer for the status of your installed security applications and provides a score along with recommendations on how to improve both the score and the security of your device.
+	</summary>
+    <description>
+	A free tool that scans your computer for the status of your installed security applications and provides a score along with recommendations on how to improve both the score and the security of your device.
+	</description>
+    <projectUrl>http://www.opswat.com/products/security-score</projectUrl>
+    <tags>notUninstallable security vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.opswat.com/legal</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

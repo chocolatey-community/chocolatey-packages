@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SmartFTP</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SmartSoft</authors>
+    <owners>SmartSoft tonigellida</owners>
+    <summary>
+	FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Telnet, Terminal client.
+	</summary>
+    <description>
+	FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Telnet, Terminal client.
+	</description>
+    <projectUrl>http://www.smartftp.com/</projectUrl>
+    <tags>notUninstallable trial-version ftp sftp sftp ssh webdav s3 amazon secure client</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

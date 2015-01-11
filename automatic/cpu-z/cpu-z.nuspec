@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CPU-Z</title>
+    <version>{{PackageVersion}}</version>
+    <authors>CPUID</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A freeware system profiler (system monitor) application that detects the central processing unit, RAM, motherboard chipset, and other hardware features of a modern personal computer, and presents the information in one window.
+	</summary>
+    <description>
+	A freeware system profiler (system monitor) application that detects the central processing unit, RAM, motherboard chipset, and other hardware features of a modern personal computer, and presents the information in one window.	</description>
+    <projectUrl>http://www.cpuid.com/softwares/cpu-z.html</projectUrl>
+    <tags>system-information hardware-info intel amd processor</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.cpuid.com/softwares/hwmonitor-pro/eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

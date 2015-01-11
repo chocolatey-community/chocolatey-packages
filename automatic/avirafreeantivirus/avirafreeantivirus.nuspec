@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Avira Free Antivirus</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Avira</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Avira Free Antivirus offers basic protection for your computer against dangerous viruses, worms, spy-ware, trojans and costly dialers.
+	</summary>
+    <description>
+Avira Free Antivirus offers basic protection for your computer against dangerous viruses, worms, spy-ware, trojans and costly dialers.
+	</description>
+    <projectUrl>http://www.avira.com/en/avira-free-antivirus</projectUrl>
+    <tags>notSilent notUninstallable security antivirus vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.avira.com/en/license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

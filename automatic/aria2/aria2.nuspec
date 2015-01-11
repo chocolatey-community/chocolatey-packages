@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Aria2</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Tatsuhiro Tsujikawa</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A multi-protocol and multi-source, cross platform download utility. The supported protocols are HTTP(S), FTP, BitTorrent (DHT, PEX, MSE/PE), and Metalink.
+	</summary>
+    <description>
+	A multi-protocol and multi-source, cross platform download utility. The supported protocols are HTTP(S), FTP, BitTorrent (DHT, PEX, MSE/PE), and Metalink.
+	</description>
+    <projectUrl>http://aria2.sourceforge.net/</projectUrl>
+    <tags>ftp command-line download-manager bittorrent metalink</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

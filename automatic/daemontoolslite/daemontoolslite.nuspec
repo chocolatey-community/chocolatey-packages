@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>DAEMON Tools Lite</title>
+    <version>{{PackageVersion}}</version>
+    <authors>DT Soft Ltd</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An advanced application for Microsoft Windows which provides one of the best optical media emulation in the industry.
+	</summary>
+    <description>
+	An advanced application for Microsoft Windows which provides one of the best optical media emulation in the industry.
+	</description>
+    <projectUrl>http://www.disc-tools.com/download/daemon</projectUrl>
+    <tags>iso emulation virtual-disk mount-imaged isc-image cd-emulator dvd-emulator</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.daemon-help.com/en/legal_info/license_agreement.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

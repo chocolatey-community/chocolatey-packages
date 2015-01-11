@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>HDD Low Level Format Tool</title>
+    <version>{{PackageVersion}}</version>
+    <authors>HDDGURU</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Will erase, Low-Level Format and re-certify a SATA, IDE or SCSI hard disk drive with any size of up to 281 474 976 710 655 bytes.
+	</summary>
+    <description>
+	Will erase, Low-Level Format and re-certify a SATA, IDE or SCSI hard disk drive with any size of up to 281 474 976 710 655 bytes.	</description>
+    <projectUrl>http://hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/</projectUrl>
+    <tags>hdd format hard-disk low-level</tags>
+    <copyright></copyright>
+    <licenseUrl>http://hddguru.com/software/HDD-LLF-Low-Level-Format-Tool/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

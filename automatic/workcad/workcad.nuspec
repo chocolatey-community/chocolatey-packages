@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>WorkCAD Designer</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Equipson S.A.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+WorkCAD Designer is the sofware of WORK® designed to manage audio through TCP/IP and USB. It is suitable for many devices like the Digiline series and allows the independent control of each unit.
+	</summary>
+    <description>
+WorkCAD Designer is the sofware of WORK® designed to manage audio through TCP/IP and USB. It is suitable for many devices like the Digiline series and allows the independent control of each unit.
+
+WorkCAD Designer in action. 
+The exclusive design of WorkCAD Designer provides great benefits for users. Units connected through Ethernet are visualized in a unique computer: users can create a schematic visualization of the installation which is very useful to have a general view and understanding of the installation design. User can group devices in projects (each one with different zones) and name inputs and outputs, taking advantage of an intuitive management and visualization of the overall installation. It is also possible to select a device and edit its parameters (e.g. IP address, name, preset, filters, etc.). Programming operations can be done online and offline. Changes are instantaneously saved when WorkCAD Designer is connected. On the other hand, user can use the offline mode to prepare and save a show without affecting current process.
+
+The software for digital processing and audio control. 
+WorkCAD Designer is the ultimate software designed by WORK to control devices of the brand connected by Ethernet. It creates a virtual version of each unit and it generates an interface for the control of its specific parameters. Using it with Digiline units, users can edit all the following parameters: 
+- Control of presets (both visualization and execution). 
+- Control of the input matrix (8x8) with balance of each input. It is possible to edit the input level to be sent at each output. 
+- Control of output channel volume (36 dB to -109 dB) as well as Master volume. 
+- Crossover and equalization with seven BIQUAD filters independently configurable. 
+- Bessel, Linkwitz-Riley and Butterworth types. 
+- Adjustment of limitation and compression for the outputs. 
+- Name edition for inputs and outputs.
+	</description>
+    <projectUrl>http://www.equipson.es/prodDetail.asp?idproducto=1851</projectUrl>
+    <tags>remote-control music-production midi open-sound-control music-osc-open-sound-control osc</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

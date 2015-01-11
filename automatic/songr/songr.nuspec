@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Songr</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Xamasoft</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Songr is a cloud music player that streams and downloads music from multiple web services, including Grooveshark, Prostopleer, MusicSearch, YouTube and many others (including the music already on your computer).
+	</summary>
+    <description>
+Songr is a cloud music player that streams and downloads music from multiple web services, including Grooveshark, Prostopleer, MusicSearch, YouTube and many others (including the music already on your computer).
+	</description>
+    <projectUrl>https://sites.google.com/site/getsongr/</projectUrl>
+    <tags>checksIfIsInstalled notSilent mp3 music player</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.xamasoft.com/songr/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

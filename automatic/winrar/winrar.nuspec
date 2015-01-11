@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>WinRAR</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Rarlab</authors>
+    <owners>maartenba tonigellida</owners>
+    <summary>
+	A powerful archive manager.
+	</summary>
+    <description>
+	A powerful archive manager.
+	
+	###Notes
+	
+	Now supports a lot of languages. Some of them aren't supported by having an old version in its traduction.
+	</description>
+    <projectUrl>http://www.rarlab.com</projectUrl>
+    <tags>trial-version winrar rar system compression zip</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.win-rar.com/winrarlicense.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

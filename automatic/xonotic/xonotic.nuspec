@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Xonotic</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Team Xonotic</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free (GPL), fast-paced first-person shooter.
+	</summary>
+    <description>
+	A free (GPL), fast-paced first-person shooter.
+	
+	###Notes
+	
+	Previous version isn't removed. All your user data remains if you remove it manually from /lib because is stored in others folders.
+	</description>
+    <projectUrl>http://www.xonotic.org/</projectUrl>
+    <tags>game first-person-shooter opengl quake</tags>
+    <copyright></copyright>
+    <licenseUrl>http://dev.xonotic.org/projects/3/wiki/Legal</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

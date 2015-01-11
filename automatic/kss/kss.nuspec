@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Kaspersky Security Scan</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Kaspersky Lab</authors>
+    <owners>tonigellida</owners>
+    <summary>
+A ‘second opinion’ of the security on your PC.
+Kaspersky Security Scan won't fix, modify or delete any threats or security problems. However, it will provide you with a detailed report on the threats and where they were found.
+	</summary>
+    <description>
+Kaspersky Security Scan is a handy and reliable antivirus solution designed to scan your PC for malware threats.
+Kaspersky Security Scan performs in-depth scans of you computer and detects viruses that are residing on your system via the cloud-based database.
+Kaspersky Security Scan also checks for security issues, such as the presence of an antivirus system or firewall.
+	</description>
+    <projectUrl>http://free.kaspersky.com/</projectUrl>
+    <tags>notSilent notUninstallable free-version no-fix-infections no-real-time-protection security antivirus vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.kaspersky.com/other/eulawin8-en?cid=acq_pad</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

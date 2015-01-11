@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Telegram Desktop</title>
+    <version>{{PackageVersion}}</version>
+    <authors>telegramdesktop</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An official Windows desktop client for the secure Telegram Messenger.
+	</summary>
+    <description>
+	An official Windows desktop client for the secure Telegram Messenger.
+	</description>
+    <projectUrl>http://tdesktop.com/</projectUrl>
+    <tags>instant-messenger smartphone-messaging telegram android</tags>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/telegramdesktop/tdesktop/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

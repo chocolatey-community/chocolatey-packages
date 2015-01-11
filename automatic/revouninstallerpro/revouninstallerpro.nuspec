@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Revo Uninstaller Pro</title>
+    <version>{{PackageVersion}}</version>
+    <authors>VS Revo Group</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Helps you to uninstall software and remove unwanted programs installed on your computer easily! Even if you have problems uninstalling and cannot uninstall them from "Windows Programs and Features (Add or Remove Programs)" control panel applet.
+	</summary>
+    <description>
+	Helps you to uninstall software and remove unwanted programs installed on your computer easily! Even if you have problems uninstalling and cannot uninstall them from "Windows Programs and Features (Add or Remove Programs)" control panel applet.
+	</description>
+    <projectUrl>http://www.revouninstaller.com/</projectUrl>
+    <tags>trial-version cleaner remove-programs registry</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.revouninstaller.com/revo_uninstaller_free_download.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

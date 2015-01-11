@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SpiderOak</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SpiderOak</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Provides an easy, secure and consolidated free online backup, storage, access, sharing and sync tool.
+	</summary>
+    <description>
+	Provides an easy, secure and consolidated free online backup, storage, access, sharing and sync tool.
+	</description>
+    <projectUrl>https://spideroak.com/opendownload/</projectUrl>
+    <tags>notSilent notUninstallable backup online-storage online-backup folder-sync selective-sync</tags>
+    <copyright></copyright>
+    <licenseUrl>https://spideroak.com/terms_of_use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Driver Booster</title>
+    <version>{{PackageVersion}}</version>
+    <authors>IObit</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Scans and identifies outdated drivers automatically, and downloads and installs the right update for you with just ONE click, saving you loads of time.
+	</summary>
+    <description>
+	Scans and identifies outdated drivers automatically, and downloads and installs the right update for you with just ONE click, saving you loads of time.
+	</description>
+    <projectUrl>http://www.iobit.com/driver-booster.php</projectUrl>
+    <tags>driver-update driver-download</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.iobit.com/legal.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

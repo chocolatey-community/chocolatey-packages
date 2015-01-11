@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Minetest</title>
+    <version>{{PackageVersion}}</version>
+    <authors>c55.me/blog</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An infinite-world block sandbox game and a game engine, inspired by InfiniMiner, Minecraft and the like.
+	</summary>
+    <description>
+	An infinite-world block sandbox game and a game engine, inspired by InfiniMiner, Minecraft and the like.
+	</description>
+    <projectUrl>http://minetest.net/</projectUrl>
+    <tags>game minecraft mmorpg crafting survival</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl-2.1.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

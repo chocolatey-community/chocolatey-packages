@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CrystalDiskInfo</title>
+    <version>{{PackageVersion}}</version>
+    <authors>hiyohiyo</authors>
+    <owners>tonigellida</owners>
+    <summary>
+CrystalDiskInfo is a HDD/SSD utility software which shows the health status much more clearly than similar tools.
+	</summary>
+    <description>
+CrystalDiskInfo is a HDD/SSD utility software which shows the health status much more clearly than similar tools.
+The "Function / Graph" is especially interesting for the "Reallocated Sectors Count".
+If it increases over time or is very high already, the hard drive may need to be replaced.
+	</description>
+    <projectUrl>http://crystalmark.info/software/CrystalDiskInfo/index-e.html</projectUrl>
+    <tags>disk diagnostic hdd ssd</tags>
+    <copyright></copyright>
+    <licenseUrl>http://crystalmark.info/software/CrystalDiskInfo/manual-en/License.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

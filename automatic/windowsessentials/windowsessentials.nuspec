@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+	<version>{{PackageVersion}}</version>
+    <title>Windows Essentials</title>
+    <authors>Microsoft</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A suite of free software by Microsoft, that helps you do more with photos, movies, instant messaging, email, blogging, and family safety.
+	</summary>
+    <description>
+	A suite of free software by Microsoft, that helps you do more with photos, movies, instant messaging, email, blogging, and family safety.
+	</description>
+    <projectUrl>http://windows.microsoft.com/en-us/windows-live/essentials</projectUrl>
+    <tags>notSilent messenger software-collection suite photo-gallery movie-maker windows-live live-mesh</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.microsoftstore.com/store/msusa/en_US/DisplayHelpEULAPage/ThemeID.33363200/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

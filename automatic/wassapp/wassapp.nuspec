@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Wassapp</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Lowlevel Studios</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A PC application developed as a non-official client for WhatsApp Messenger.
+	</summary>
+    <description>
+	A PC application developed as a non-official client for WhatsApp Messenger.
+	</description>
+    <projectUrl>http://lowlevel-studios.com/wassapp/</projectUrl>
+    <tags>notSilent notUninstallable whatsapp chat messenger</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Free_software_license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,36 @@
+Chocolatey Package Updater
+Copyright (C) 2012 RealDimensions Software, LLC ("RDS")
+===================================================================
+Grant of License
+===================================================================
+You may use Chocolatey Package Updater with this notice and the provided license.xml file if you use it only to keep packages up to date on (and only on) the feed(s) for http://chocolatey.org. 
+
+The use of feeds other than chocolatey.org ("proprietary feeds") is strictly prohibited.
+
+You can use other means to copy said packages from chocolatey.org to proprietary feeds provided the following criteria are met:
+ 1. The packages on chocolatey.org are not hidden or otherwise unusable from the site and client(s) that would connect to chocolatey.org. 
+ 2. Packages are updated first on chocolatey.org prior to being copied to proprietary feeds.
+ 3. Packages must remain available on chocolatey.org indefinitely or until the package is no longer usable. 
+ 4. The package must be removed from proprietary feeds at the same time as the package is hidden on chocolatey.org.
+ 3. This is the only grant of private/proprietary use and subject to change at any time with or without notice.
+
+If you would like to use this for private, proprietary, or other feeds that are not chocolatey.org, you must obtain a personal or commercial license to do so. To do that you must contact RDS at ferventcoder.com.
+
+This software is not free to distribute and should only be packaged on authorized sources, such as but not limited to chocolatey.org. If you would like to distribute this software, you must receive written permission from the software owner.
+
+===================================================================
+End-User License Agreement
+===================================================================
+EULA – Chocolatey Package Updater 
+
+IMPORTANT- READ CAREFULLY: This RealDimensions Software ("RDS") End-User License Agreement ("EULA") is a legal agreement between you("End User") and RDS for all RDS products, controls, source code, demos, intermediate files, media, printed materials, and "online" or electronic documentation ("SOFTWARE PRODUCT(S)") contained with this distribution. 
+
+RDS grants to you as an individual, a personal, nonexclusive license to install and use the SOFTWARE PRODUCT(S) for the sole purposes of keeping packages up to date on the feed(s) of http://chocolatey.org ("chocolatey.org"). By installing, copying, or otherwise using the SOFTWARE PRODUCT(S), you agree to be bound by the terms of this EULA. If you do not agree to any part of the terms of this EULA, DO NOT INSTALL, USE, OR EVALUATE, ANY PART, FILE OR PORTION OF THE SOFTWARE PRODUCT(S). 
+
+ALL SOFTWARE PRODUCT(S) are licensed not sold. If you are an individual, you must acquire an individual license for the SOFTWARE PRODUCT(S) from RDS or its authorized resellers. If you are an entity, you must acquire an individual license for each Developer End User and each Build Machine Running the SOFTWARE PRODUCT(S) within your organization from RDS or its authorized resellers. Both Virtual and Physical Build Machines running the SOFTWARE PRODUCT(S) must be counted in the SOFTWARE PRODUCT(S) licenses quantity of the organization.
+
+===================================================================
+Commercial / Personal Licensing
+===================================================================
+Chocolatey Package Updater is also offered under personal and commercial licenses.
+You can learn more about this option by contacting RDS at http://ferventcoder.com

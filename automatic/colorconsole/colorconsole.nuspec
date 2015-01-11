@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>ColorConsole</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Nenad Hrg</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Brings a little color to your black and white world of Windows console.
+	</summary>
+    <description>
+	Brings a little color to your black and white world of Windows console.
+	</description>
+    <projectUrl>http://www.softwareok.com/?seite=Freeware/ColorConsole</projectUrl>
+    <tags>console command cmd-replacement prompt cmd</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.softwareok.com/?seite=Freeware/ColorConsole/Eula</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

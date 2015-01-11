@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Trillian</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Cerulean Studios</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Trillian is a proprietary multiprotocol instant messaging application.
+	</summary>
+    <description>
+Trillian is a proprietary multiprotocol instant messaging application.
+It can connect to multiple IM services, such as AIM, ICQ, Windows Live Messenger, Yahoo! Messenger, IRC, Novell GroupWise Messenger, Bonjour, XMPP, and Skype networks; as well as social networking sites, such as Facebook, Twitter and MySpace; and email services, such as POP3, IMAP, Gmail, Hotmail and Yahoo! Mail.
+Trillian connects to multiple instant messaging services without the need of running multiple clients. 
+	</description>
+    <projectUrl>https://www.trillian.im/download/</projectUrl>
+    <tags>notSilent chat twitter messenger gmail yahoo facebook skype irc</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.trillian.im/eula/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

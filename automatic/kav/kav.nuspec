@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Kaspersky Anti-Virus</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Kaspersky Lab</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Kaspersky Anti-Virus offers protection from a range of IT threats and provides the basic tools needed to keep your PC secure.
+	</summary>
+    <description>
+Kaspersky Anti-Virus offers protection from a range of IT threats and provides the basic tools needed to keep your PC secure.
+Kaspersky lets you surf the web safely and keeps your PC free of viruses, Internet and email worms, and Trojans.
+	</description>
+	<releaseNotes>
+If you want to change to english language on the fly in other language version press Shift+F12 with the program opened. To return Shift+F5.
+You cannot change language in the interface of Japanese, Vietnamese, Chinese, and English versions.
+Only en-us, es-mx, pt-br, nl-nl, fr-be languages supported. Similar languages like es-es, pt-pt, en-gb use them.
+	</releaseNotes>
+    <projectUrl>http://www.kaspersky.com/sp/anti-virus-trial</projectUrl>
+    <tags>notSilent trial-version security antivirus vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://support.kaspersky.com/11189</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

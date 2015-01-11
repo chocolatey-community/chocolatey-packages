@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>WinContig</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Marco D'Amato</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An easy-to-use stand-alone defragmentation tool that doesn't create any installation directories or Registry entries on your computer.
+	</summary>
+    <description>
+	An easy-to-use stand-alone defragmentation tool that doesn't create any installation directories or Registry entries on your computer.
+	</description>
+    <projectUrl>http://wincontig.mdtzone.it/en/index.htm</projectUrl>
+    <tags>defragmentation defrag usb</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

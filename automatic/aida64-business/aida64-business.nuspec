@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>AIDA64 Business Edition</title>
+    <version>{{PackageVersion}}</version>
+    <authors>FinalWire</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An advanced system diagnostics utility that gathers important information on the computer's hardware and software configuration.
+	</summary>
+    <description>
+	An advanced system diagnostics utility that gathers important information on the computer's hardware and software configuration.
+	</description>
+    <projectUrl>http://www.aida64.com/</projectUrl>
+    <tags>trial-version benchmark</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.aida64.com/licensing-aida64</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

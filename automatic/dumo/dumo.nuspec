@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>DUMo</title>
+    <version>{{PackageVersion}}</version>
+    <authors>KC Softwares</authors>
+    <owners>tonigellida</owners>
+    <summary>
+DUMo (Drivers Update Monitor) keeps your PC up-to-date and safe by using the most recent version of required hardware drivers!
+	</summary>
+    <description>
+DUMo (Drivers Update Monitor) keeps your PC up-to-date and safe by using the most recent version of required hardware drivers!
+
+Features
+
+Automatic detection of installed hardware
+Detects required drivers according to your version of Microsoft Windows
+More compatibility and less false positive than others Drivers Monitors (according to users feedback ;-)
+Internationalization support
+	</description>
+    <projectUrl>http://www.kcsoftwares.com/?dumo</projectUrl>
+    <tags>update-drivers driver update</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.kcsoftwares.com/legal/ToU.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

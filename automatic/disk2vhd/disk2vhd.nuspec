@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Disk2vhd</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Sysinternals</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Disk2vhd is a utility that creates VHD versions of physical disks for use in virtual machines (VMs).
+	</summary>
+    <description>
+Disk2vhd is a utility that creates VHD (Virtual Hard Disk - Microsoft's Virtual Machine disk format) versions of physical disks for use in Microsoft Virtual PC or Microsoft Hyper-V virtual machines (VMs).
+The difference between Disk2vhd and other physical-to-virtual tools is that you can run Disk2vhd on a system that’s online.
+Disk2vhd uses Windows' Volume Snapshot capability, introduced in Windows XP, to create consistent point-in-time snapshots of the volumes you want to include in a conversion.
+You can even have Disk2vhd create the VHDs on local volumes, even ones being converted (though performance is better when the VHD is on a disk different than ones being converted).
+	</description>
+    <projectUrl>http://technet.microsoft.com/en-us/sysinternals/ee656415.aspx</projectUrl>
+    <tags>vhd vhdx converter virtualbox vmware</tags>
+    <copyright></copyright>
+    <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

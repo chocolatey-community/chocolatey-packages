@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Download App</title>
+    <version>{{PackageVersion}}</version>
+    <authors>CNET</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Helps keep the software on your Windows computer up-to-date.
+	</summary>
+    <description>
+CNET TechTracker was discontinued and replaced with the Download App.
+The Download App is a free application from CNET Download.com.
+It helps keep the software on your Windows computer up-to-date, as well as clean up the junk that accumulates in your system over time.
+The Download App scans your computer and notifies you when updates are available for the software you have installed.
+Software updates contain new features and patches that make your computer more secure.
+You can also use the Download App to remove unwanted software from your computer using the Uninstall feature.
+Using the software catalog that powers Download.com, the Download App provides secure, spyware-free software updates, and makes it easy to keep track of all your software updates in one place.
+Using the Utilities features, you can scan your computer for junk files that might be slowing your computer down and get rid of them with a few clicks.
+	</description>
+    <projectUrl>http://download.cnet.com/Download-App/3000-18513_4-75864009.html</projectUrl>
+    <tags>software-updates update-notifier software-downloads</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.cnet.com/downloadapp/app-eula/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

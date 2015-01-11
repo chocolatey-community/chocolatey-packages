@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Ace Stream</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Ace Stream</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Ace Stream is an innovative multimedia platform of a new generation, which includes different products and solutions for ordinary Internet users as well as for professional members of the multimedia market.
+	</summary>
+    <description>
+	Ace Stream is an innovative multimedia platform of a new generation, which includes different products and solutions for ordinary Internet users as well as for professional members of the multimedia market.
+	
+	###Notes
+	
+	By now the instructions are:
+	First uninstall manually your current version and then runs package installation.
+	Later the package will be improved for silent update.	
+	</description>
+    <projectUrl>http://www.acestream.org/</projectUrl>
+    <tags>notUninstallable multimedia media player p2p live-broadcasting live-streaming vlc</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.acestream.org/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

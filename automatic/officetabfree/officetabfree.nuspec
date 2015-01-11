@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Office Tab Free Edition</title>
+    <version>{{PackageVersion}}</version>
+    <authors>ExtendOffice</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Adding Tabbed Interface for Office.
+	</summary>
+    <description>
+	Adding Tabbed Interface for Office.
+	</description>
+    <projectUrl>http://www.extendoffice.com/download/office-tab-free-edition.html</projectUrl>
+    <tags>notSilent free-version office-addon tabs</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.extendoffice.com/support/end-user-license-agreement.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

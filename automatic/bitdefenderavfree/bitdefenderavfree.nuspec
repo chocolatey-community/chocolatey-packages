@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Bitdefender Antivirus Free Edition</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Bitdefender</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Bitdefender Antivirus Free Edition offers baseline protection against viruses and all other types of malware.
+	</summary>
+    <description>
+Bitdefender Antivirus Free Edition offers baseline protection against viruses and all other types of malware.
+Using #1 ranked antivirus technology, it will detect and clean e-threats without causing slowdown or requiring configurations.
+	</description>
+    <projectUrl>http://www.bitdefender.com/solutions/free.html</projectUrl>
+    <tags>notSilent notUninstallable antivirus virus-scanner virus-removal</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.bitdefender.com/site/view/legal_terms.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

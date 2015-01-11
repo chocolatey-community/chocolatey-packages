@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Andy</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Andy Inc</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Another "special" Android emulator.
+	</summary>
+    <description>
+	Another "special" Android emulator.
+	It breaks down the barrier between desktop and mobile computing, while keeping a user up to date with the latest Android OS feature upgrades.
+	
+	It also provides users with unlimited storage capacity, PC and Mac compatibility, and the freedom to play the most popular mobile games on a desktop.
+
+	With phone as a joystick, you will never have to sacrifice the multi-touch or gyro elements of gaming, and thanks to seamless connection between desktop and mobile, you can receive a SnapChat phone picture on the street and see it on your desktop at home.
+	
+	###Notes
+	
+	Bonjour dependency is installed silently (not chocolatey package).
+	</description>
+    <projectUrl>http://www.andyroid.net/</projectUrl>
+    <tags>notSilent testing software-testing android-emulator virtualbox virtualization VM</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.andyroid.net/terms-conditions</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+	<dependencies>
+		<dependency id="virtualbox" />
+    </dependencies>
+  </metadata>
+</package>

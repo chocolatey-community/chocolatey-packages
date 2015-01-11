@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Geany</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Enrico Tröger, Frank Lanitz, Nick Treleaven and Dominic Hopf</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A small and lightweight Integrated Development Environment.
+	</summary>
+    <description>
+	A small and lightweight Integrated Development Environment.
+	</description>
+    <projectUrl>http://www.geany.org/</projectUrl>
+    <tags>php text-editor javascript html ide python java css sql xml ruby latex perl c++ xml-editor pascal abc haskell assembler vala ada docbook caml</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.geany.org/manual/#gnu-general-public-license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

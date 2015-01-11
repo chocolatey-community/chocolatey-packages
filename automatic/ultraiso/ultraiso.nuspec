@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>UltraISO</title>
+    <version>{{PackageVersion}}</version>
+    <authors>EZB Systems, Inc.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Make a CD image or edit an ISO image file.	
+	</summary>
+    <description>
+	Make a CD image or edit an ISO image file.
+	</description>
+    <projectUrl>http://www.ezbsystems.com/ultraiso/</projectUrl>
+    <tags>trial-version iso-creator bootable-usb convert-to-iso extract-iso edit-iso create-bootable-cd</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.software112.com/products/ultraiso-premium+eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

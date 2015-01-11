@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Start Menu 8</title>
+    <version>{{PackageVersion}}</version>
+    <authors>IObit</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	It offers a perfect solution for users who work with Windows Start Menu all the time and are not accustomed to the new Metro start screen in Windows 8.
+	</summary>
+    <description>
+	It offers a perfect solution for users who work with Windows Start Menu all the time and are not accustomed to the new Metro start screen in Windows 8.
+	</description>
+    <projectUrl>http://www.iobit.com/iobitstartmenu8.php#none</projectUrl>
+    <tags>start-menu windows-8 skip-metro-ui</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.iobit.com/legal.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

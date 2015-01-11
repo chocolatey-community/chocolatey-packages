@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>cuevanastorm</id>
+    <title>Cuevana Storm</title>
+    <version>0.3-beta</version>
+    <authors>Cuevana</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Cuevana Storm hits torrents streaming directly, providing maximum speed and reliability in the downloads.
+	</summary>
+    <description>
+Cuevana Storm hits torrents streaming directly, providing maximum speed and reliability in the downloads.
+	</description>
+    <projectUrl>http://www.cuevana.tv/</projectUrl>
+    <tags>peer-to-peer movie-catalog torrent-movies popcorntime</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://raw.github.com/adgellida/chocolateyautomaticpackagesbeta/master/icons/cuevanastorm.jpg</iconUrl>
+  </metadata>
+</package>

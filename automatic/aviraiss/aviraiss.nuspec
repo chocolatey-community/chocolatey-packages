@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Avira Internet Security Suite</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Avira</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Equipped with the award-winning protection Avira is famous for, this versatile suite packs easy-to-use tune-up tools to accelerate your PC and prevents hard disk failures.
+	</summary>
+    <description>
+This is where security meets speed.
+Equipped with the award-winning protection Avira is famous for, this versatile suite packs easy-to-use tune-up tools to accelerate your PC and prevents hard disk failures.
+	</description>
+    <projectUrl>http://www.avira.com/en/avira-internet-security-suite</projectUrl>
+    <tags>trial-version notSilent notUninstallable security antivirus vulnerability firewall</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.avira.com/en/license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

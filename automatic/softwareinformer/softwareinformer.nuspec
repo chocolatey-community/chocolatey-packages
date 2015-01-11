@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Software Informer</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Informer Technologies, Inc.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Get the up-to-date information about the software you actually use.
+	</summary>
+    <description>
+	Get the up-to-date information about the software you actually use.	</description>
+    <projectUrl>http://software.informer.com/landing/</projectUrl>
+    <tags>software-updates rating update-notifier</tags>
+    <copyright></copyright>
+    <licenseUrl>http://software.informer.com/privacy.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

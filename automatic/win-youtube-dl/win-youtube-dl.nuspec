@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <version>{{PackageVersion}}</version>
+    <title>win-youtube-dl</title>
+    <authors>fredyw</authors>
+	<owners>tonigellida</owners>
+	<summary>
+	A very simple GUI wrapper for youtube-dl (http://rg3.github.io/youtube-dl/download.html) Python script.
+	</summary>
+ 	<description>
+	A very simple GUI wrapper for youtube-dl (http://rg3.github.io/youtube-dl/download.html) Python script.
+
+	This application only works on 64-bit Windows (I'm lazy to make it work on 32-bit Windows).
+    </description>
+	<projectUrl>https://github.com/fredyw/win-youtube-dl</projectUrl>	
+    <copyright></copyright>
+	<licenseUrl>https://github.com/fredyw/win-youtube-dl/</licenseUrl>
+    <tags>youtube-dl gui ffmpeg youtube downloader converter mp3</tags>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

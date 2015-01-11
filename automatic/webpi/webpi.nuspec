@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>WebPI (Platform Installer)</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Microsoft</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free tool that makes getting the latest components of the Microsoft Web Platform.
+	</summary>
+    <description>
+	A free tool that makes getting the latest components of the Microsoft Web Platform.
+	</description>
+    <projectUrl>http://www.microsoft.com/web/downloads/platform.aspx</projectUrl>
+    <tags>notSilent notUninstallable webpi web pi platform installer microsoft tools wordpress asp.net drupal umbraco</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.microsoft.com/web/webpi/eula/webpi_45_en.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

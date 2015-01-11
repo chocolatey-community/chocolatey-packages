@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Razer Cortex: Game Booster</title>
+    <version>{{PackageVersion}}</version>
+    <authors>IObit Razer</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Designed to help optimize your PC for smoother, more responsive game play in the latest PC games.
+	</summary>
+    <description>
+	Designed to help optimize your PC for smoother, more responsive game play in the latest PC games.
+	
+	###Notes
+	
+	IObit Game Booster - Razer Game Booster - Razer Cortex: Game Booster
+	</description>
+    <projectUrl>http://www.razerzone.com/gamebooster/</projectUrl>
+    <tags>gaming game-boosting game-performance pc-optimization</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.razerzone.com/terms-conditions</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

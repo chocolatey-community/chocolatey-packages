@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+	<title>MiniTool Partition Wizard Home Edition</title>
+    <version>{{PackageVersion}}</version>
+    <authors>MT Solution Ltd.</authors>
+    <owners>Redsandro tonigellida</owners>
+    <summary>
+	A free partition manager software.
+	</summary>
+    <description>
+	A free partition manager software.
+	</description>
+    <projectUrl>http://www.partitionwizard.com/free-partition-manager.html</projectUrl>
+    <tags>storage partition disk drive hard-drive system-utilities filesystem-tools partitioning disk-tools</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.partitionwizard.com/comparison.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

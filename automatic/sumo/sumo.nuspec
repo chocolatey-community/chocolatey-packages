@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SUMo</title>
+    <version>{{PackageVersion}}</version>
+    <authors>KC Softwares</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Keep your PC up-to-date by using the most recent version of your favorite software.
+	</summary>
+    <description>
+	Keep your PC up-to-date by using the most recent version of your favorite software.
+	</description>
+    <projectUrl>http://www.kcsoftwares.com/?sumo</projectUrl>
+    <tags>update-notifier</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.kcsoftwares.com/legal/ToU.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

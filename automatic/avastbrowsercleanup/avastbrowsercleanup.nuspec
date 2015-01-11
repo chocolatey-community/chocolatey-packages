@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>avast! Browser Cleanup</title>
+    <version>{{PackageVersion}}</version>
+    <authors>ALWIL Software</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	This new tool serves to delete pesky and unwanted toolbars and plug-ins from your browser(s).
+	</summary>
+    <description>
+	This new tool serves to delete pesky and unwanted toolbars and plug-ins from your browser(s).
+	
+	Simply download and run the Browser Cleanup utility without the need to install anything.
+	
+	Once you run the utility, you will see a list of toolbars and plug-ins and be able to disable them with one simple click.
+	</description>
+    <projectUrl>http://www.avast.com/en-us/store</projectUrl>
+    <tags>security clean-browser ask-toolbar babylon-toolbar</tags>
+    <copyright></copyright>
+    <licenseUrl>http://files.avast.com/files/legal/eula-avast-free.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

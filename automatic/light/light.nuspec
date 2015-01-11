@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Light</title>
+    <version>{{PackageVersion}}</version>
+    <authors>cstkingkey</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A light Firefox edition.
+	</summary>
+    <description>
+	A light Firefox edition.
+	</description>
+    <projectUrl>http://sourceforge.net/projects/lightfirefox/</projectUrl>
+    <tags>browser mozilla firefox</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

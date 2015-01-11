@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<license id="ff93791f-e0bd-4ed0-a2e7-af96cc708ab8" expiration="2014-06-30T00:00:00.0000000" type="Standard">
+  <name>Chocolatey.org Updates Only - Bound By Licensing Agreement in License.txt file</name>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>J8U056n9BIlv7RHF2cdfh0Q3Ocw=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>MkGRnY38t+W8dW0rg8rSPXaDAQ6fAUqNoAXKqo9L/1xgOI0SiKY1AIhX/XghmEnXcYBj1ewABF6cjzcytg1L84Xi31N9ugj8JqLdQHhOp0iIvh8bIfBA0LO/ygbfApPY1hz+9KVrix0ANhh27YB5AtBQ6JdWFBr3khne6Lky9CQ=</SignatureValue>
+  </Signature>
+</license>

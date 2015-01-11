@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Genymotion</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Genymobile</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	The fastest Android emulator for app testing and presentation.
+	</summary>
+    <description>
+	The fastest Android emulator for app testing and presentation.
+	
+	Genymotion is the evolution of AndroVM open source project, already trusted by 300 000 developers!
+	</description>
+    <projectUrl>https://cloud.genymotion.com/page/customer/login/?next=/page/launchpad/download/</projectUrl>
+    <tags>testing software-testing android-emulator androvm virtualbox virtualization VM</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+	<dependencies>
+		<dependency id="virtualbox" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>HD Tune</title>
+    <version>{{PackageVersion}}</version>
+    <authors>EFD Software</authors>
+    <owners>tonigellida</owners>
+    <summary>
+HD Tune is a Hard Disk utility.
+	</summary>
+    <description>
+HD Tune is a Hard Disk utility which has the following functions:
+-Benchmark: measures the performance,
+-Info: shows detailed information,
+-Health: checks the health status by using SMART,
+-Error Scan: scans the surface for errors,
+-Temperature display,
+HD Tune may also work with other storage devices such as memory cards, USB sticks, iPods, etc.
+	</description>
+    <projectUrl>http://www.hdtune.com/index.html</projectUrl>
+    <tags>benchmark hardware-info smart performance-testing hard-disk harddisk-diagnostic temperature-monitor s.m.a.r.t. scan-harddisk</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.hdtune.com/buy.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Qt for Windows 64-bit (MinGW) SJLJ</title>
+    <version>{{PackageVersion}}</version>
+    <authors>qt-x64</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Qt is cross-platform application and UI framework which allows you to develop applications and user interfaces once, and deploy them across Windows, Mac, Linux/X11, embedded Linux, Windows CE, Symbian, Maemo, MeeGo, iOS and Android without rewriting the source code.
+	</summary>
+    <description>
+Qt is cross-platform application and UI framework which allows you to develop applications and user interfaces once, and deploy them across Windows, Mac, Linux/X11, embedded Linux, Windows CE, Symbian, Maemo, MeeGo, iOS and Android without rewriting the source code.
+	</description>
+    <projectUrl>http://tver-soft.org/qt64</projectUrl>
+    <tags>notUninstallable sdk framework qt qt-creator ide dev development mingw sjlj x64</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>RMPrepUSB</title>
+    <version>{{PackageVersion}}</version>
+    <authors>RM Education</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Allows user to easily and quickly 'roll their own' multiboot USB drive.
+	</summary>
+    <description>
+	Allows user to easily and quickly 'roll their own' multiboot USB drive.
+	</description>
+    <projectUrl>http://www.rmprepusb.com/documents/release-2-0</projectUrl>
+    <tags>usb flash drive multiboot linux iso</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.rmprepusb.com/home/licensing</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>EAGLE</title>
+    <version>{{PackageVersion}}</version>
+    <authors>CadSoft</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The EAGLE Layout Editor is an easy to use, yet powerful tool for designing printed circuit boards (PCBs).
+	</summary>
+    <description>
+The EAGLE Layout Editor is an easy to use, yet powerful tool for designing printed circuit boards (PCBs).
+The program consists of three main modules: Layout Editor, Schematic Editor, and Autorouter.
+	</description>
+    <projectUrl>http://www.cadsoftusa.com/download-eagle/?language=en</projectUrl>
+    <tags>notSilent notUninstallable ide cad layout pcb eda</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.cadsoftusa.com/shop/eagle-hobbyist-and-education/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>
