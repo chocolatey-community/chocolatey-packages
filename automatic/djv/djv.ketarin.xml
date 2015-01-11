@@ -70,7 +70,7 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>1240624</LastFileSize>
     <LastFileDate>2014-11-13T05:49:57.6303792</LastFileDate>
@@ -147,9 +147,7 @@
         </value>
       </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{url}" /u64 "{url64}"
-REM /disablepush -force
-REM cinst {packageId} -source '%cd%' -force -debug </ExecuteCommand>
+    <ExecuteCommand />
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
@@ -159,7 +157,7 @@ REM cinst {packageId} -source '%cd%' -force -debug </ExecuteCommand>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>DJV</Name>
   </ApplicationJob>
