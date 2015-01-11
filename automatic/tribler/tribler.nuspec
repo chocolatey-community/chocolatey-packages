@@ -1,29 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<title>Tribler</title>
-		<version>{{PackageVersion}}</version>
-		<authors>The Tribler Team</authors>
-		<owners>Redsandro</owners>
-		<summary>Tribler is an open source anonymous decentralized BitTorrent client.</summary>
-		<description>
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Tribler</title>
+    <version>{{PackageVersion}}</version>
+    <authors>The Tribler Team</authors>
+    <owners>Redsandro</owners>
+    <summary>Tribler is an open source anonymous decentralized BitTorrent client.</summary>
+    <description>
 Tribler is an open source anonymous peer-to-peer decentralized BitTorrent client. Tribler is based on the BitTorrent protocol and uses an overlay network for content searching, which makes the program operate independent of external websites and renders it immune to limiting external action, for example, government restraint.
 
 **Note:** This installer does not support silent installation. The installation is automated using AutoIt3. Be careful that multitasking might confuse the automation script.
-		</description>
-		<projectUrl>http://www.tribler.org/</projectUrl>
-		<tags>BitTorrent</tags>
-		<copyright></copyright>
-		<licenseUrl>http://www.gnu.org/copyleft/lesser.html</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>http://i.imgur.com/79Z6PMK.png</iconUrl>
-		<dependencies>
-			<dependency id="autoit.commandline" version="3.3.12.0" />
-		</dependencies>
-		<releaseNotes></releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    </description>
+    <projectUrl>http://www.tribler.org/</projectUrl>
+    <tags>BitTorrent</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/lesser.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://i.imgur.com/79Z6PMK.png</iconUrl>
+    <dependencies>
+      <dependency id="autoit.commandline" version="3.3.12.0" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -1,10 +1,10 @@
-$packageName	= '{{PackageName}}'
-$installerType	= 'EXE'
-$url			= '{{DownloadUrl}}'
-$silentArgs		= '/silent /passive'
+$packageName = '{{PackageName}}'
+$installerType = 'EXE'
+$url = '{{DownloadUrl}}'
+$silentArgs = '/silent /passive'
 $validExitCodes	= @(0)
-$pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
-$au3			= Join-Path $pwd 'tribler.au3'
+$pwd = "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+$au3 = Join-Path $pwd 'tribler.au3'
 
 
 
@@ -15,11 +15,10 @@ $au3			= Join-Path $pwd 'tribler.au3'
 
 # Not silent installer, autoit
 
-$chocTempDir	= Join-Path $env:TEMP "chocolatey"
-$tempDir		= Join-Path $chocTempDir "$packageName"
+$chocTempDir = Join-Path $env:TEMP "chocolatey"
+$tempDir = Join-Path $chocTempDir "$packageName"
 	if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-$tempFile		= Join-Path $tempDir "$packageName.installer.exe"
-
+$tempFile = Join-Path $tempDir "$packageName.installer.exe"
 
 Get-ChocolateyWebFile "$packageName" "$tempFile" "$url"
 
