@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jobs>
+   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   Guid="e14382a3-ca89-444a-9aa4-b677654722f2">
+      <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://www.cpuid.com/softwares/cpu-z/versions-history.html" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="ftp://ftp.cpuid.com/cpu-z/cpu-z_{version}-setup-en.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="cpu-z" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+      <WebsiteUrl/>
+      <UserAgent/>
+      <UserNotes/>
+      <LastFileSize>136639</LastFileSize>
+      <LastFileDate>2014-07-05T13:40:32.7089631</LastFileDate>
+      <IgnoreFileInformation>false</IgnoreFileInformation>
+      <DownloadBeta>Avoid</DownloadBeta>
+      <DownloadDate xsi:nil="true"/>
+      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+      <VariableChangeIndicator/>
+      <CanBeShared>true</CanBeShared>
+      <ShareApplication>false</ShareApplication>
+      <ExclusiveDownload>false</ExclusiveDownload>
+      <HttpReferer/>
+      <SetupInstructions/>
+      <Variables>
+         <item>
+            <key>
+               <string>version</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>StartEnd</VariableType>
+                  <Regex/>
+                  <Url>http://mt-naka.com/hotswap/index_enu.htm#download</Url>
+                  <StartText>The latest version &lt;a href="#download"&gt;</StartText>
+                  <EndText>&lt;/a&gt;&lt;b&gt;&lt;font color="#FF0000"&gt;</EndText>
+                  <TextualContent>5.0.0.0</TextualContent>
+                  <Name>version</Name>
+               </UrlVariable>
+            </value>
+         </item>
+      </Variables>
+      <ExecuteCommand/>
+      <ExecutePreCommand/>
+      <ExecuteCommandType>Batch</ExecuteCommandType>
+      <ExecutePreCommandType>Batch</ExecutePreCommandType>
+      <Category/>
+      <SourceType>FixedUrl</SourceType>
+      <PreviousLocation>C:\Chocolatey\_work\HotSwap! 6.1.0.0.ZIP</PreviousLocation>
+      <DeletePreviousFile>true</DeletePreviousFile>
+      <Enabled>true</Enabled>
+      <FileHippoId/>
+      <LastUpdated>2014-07-05T13:40:32.7089631</LastUpdated>
+      <TargetPath>C:\Chocolatey\_work\</TargetPath>
+      <FixedDownloadUrl>http://mt-naka.com/hotswap/file/HotSwap! {version}.ZIP</FixedDownloadUrl>
+      <Name>hotswap</Name>
+  </ApplicationJob>
+</Jobs>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jobs>
+   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   Guid="6b4aa517-0c7f-4edc-a982-3185cbe0ce15">
+      <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://software-files-a.cnet.com/s/software/12/69/36/90/CNET_TechTracker_2_1_0_73_Setup.exe?lop=link&amp;ptype=3001&amp;ontid=18513&amp;siteId=4&amp;edId=3&amp;spi=ff05602f73371299b6d8963e6e02593b&amp;pid=12693690&amp;psid=10912909&amp;token=1375435914_ec5e5ebd4244ede3b0ede9f9f7a6131d&amp;fileName=CNET_TechTracker_2_1_0_73_Setup.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="cnettechtracker		" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+      <WebsiteUrl/>
+      <UserAgent/>
+      <UserNotes/>
+      <LastFileSize>35751777</LastFileSize>
+      <LastFileDate>2014-12-01T16:22:40.1864495</LastFileDate>
+      <IgnoreFileInformation>false</IgnoreFileInformation>
+      <DownloadBeta>Avoid</DownloadBeta>
+      <DownloadDate xsi:nil="true"/>
+      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+      <VariableChangeIndicator/>
+      <CanBeShared>true</CanBeShared>
+      <ShareApplication>false</ShareApplication>
+      <ExclusiveDownload>false</ExclusiveDownload>
+      <HttpReferer/>
+      <SetupInstructions/>
+      <Variables>
+         <item>
+            <key>
+               <string>version</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>Textual</VariableType>
+                  <Regex/>
+                  <Url/>
+                  <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+                  <EndText>&lt;BR&gt;</EndText>
+                  <TextualContent>1.1.0</TextualContent>
+                  <Name>version</Name>
+               </UrlVariable>
+            </value>
+         </item>
+      </Variables>
+      <ExecuteCommand/>
+      <ExecutePreCommand/>
+      <ExecuteCommandType>Batch</ExecuteCommandType>
+      <ExecutePreCommandType>Batch</ExecutePreCommandType>
+      <Category/>
+      <SourceType>FixedUrl</SourceType>
+      <PreviousLocation>C:\Chocolatey\_work\win-youtube-dl.zip</PreviousLocation>
+      <DeletePreviousFile>true</DeletePreviousFile>
+      <Enabled>false</Enabled>
+      <FileHippoId/>
+      <LastUpdated>2014-12-01T16:22:40.1864495</LastUpdated>
+      <TargetPath>C:\Chocolatey\_work\</TargetPath>
+      <FixedDownloadUrl>https://github.com/fredyw/win-youtube-dl/releases/download/1.1.0/win-youtube-dl.zip</FixedDownloadUrl>
+      <Name>win-youtube-dl</Name>
+  </ApplicationJob>
+</Jobs>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jobs>
+   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   Guid="5b394685-2ada-4e22-a863-2e68f063aa07">
+      <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://www.disc-tools.com/download/daemon" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="{url}" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="daemontoolslite" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+      <WebsiteUrl/>
+      <UserAgent/>
+      <UserNotes/>
+      <LastFileSize>13429504</LastFileSize>
+      <LastFileDate>2014-07-05T13:38:37.8943245</LastFileDate>
+      <IgnoreFileInformation>false</IgnoreFileInformation>
+      <DownloadBeta>Avoid</DownloadBeta>
+      <DownloadDate xsi:nil="true"/>
+      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+      <VariableChangeIndicator/>
+      <CanBeShared>true</CanBeShared>
+      <ShareApplication>false</ShareApplication>
+      <ExclusiveDownload>false</ExclusiveDownload>
+      <HttpReferer/>
+      <SetupInstructions/>
+      <Variables>
+         <item>
+            <key>
+               <string>version</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>StartEnd</VariableType>
+                  <Regex>(?&lt;=product.*?DAEMON Tools Lite v)[0-9.]{2,}</Regex>
+                  <Url>http://www.slo.ru/files/cd_virtual/daemon_tools</Url>
+                  <StartText>&lt;img border="0" src="http://www.slo.ru/img/32/daemon_tools.gif" align="absmiddle" width="32" height="32" alt="daemon_tools" /&gt;&amp;nbsp;
+DAEMON Tools Lite </StartText>
+                  <EndText>
+&lt;/h2&gt;
+</EndText>
+                  <TextualContent>4.49.1.20140507</TextualContent>
+                  <Name>version</Name>
+               </UrlVariable>
+            </value>
+         </item>
+         <item>
+            <key>
+               <string>url</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>StartEnd</VariableType>
+                  <Regex/>
+                  <Url>http://www.slo.ru/files/cd_virtual/daemon_tools</Url>
+                  <StartText>&lt;img border="0" src="http://www.slo.ru/img/16/daemon_tools.gif" width="16" height="16" align="absmiddle"&gt;&amp;nbsp; &lt;a title="Ñêà÷àòü DAEMON Tools" href="</StartText>
+                  <EndText>"&gt;</EndText>
+                  <Name>url</Name>
+               </UrlVariable>
+            </value>
+         </item>
+      </Variables>
+      <ExecuteCommand/>
+      <ExecutePreCommand/>
+      <ExecuteCommandType>Batch</ExecuteCommandType>
+      <ExecutePreCommandType>Batch</ExecutePreCommandType>
+      <Category/>
+      <SourceType>FixedUrl</SourceType>
+      <PreviousLocation>C:\Chocolatey\_work\DTLite4491-0356.exe</PreviousLocation>
+      <DeletePreviousFile>true</DeletePreviousFile>
+      <Enabled>true</Enabled>
+      <FileHippoId/>
+      <LastUpdated>2014-07-05T13:38:37.8943245</LastUpdated>
+      <TargetPath>C:\Chocolatey\_work\</TargetPath>
+      <FixedDownloadUrl>{url}</FixedDownloadUrl>
+      <Name>daemontoolslite</Name>
+  </ApplicationJob>
+</Jobs>

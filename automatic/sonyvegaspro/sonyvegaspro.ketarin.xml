@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jobs>
+   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   Guid="9921c7b4-de83-4776-95b1-57b84aa6afa2">
+      <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="sonyvegaspro" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+      <WebsiteUrl/>
+      <UserAgent/>
+      <UserNotes/>
+      <LastFileSize>411058696</LastFileSize>
+      <LastFileDate>2014-08-16T16:53:10.6220058</LastFileDate>
+      <IgnoreFileInformation>false</IgnoreFileInformation>
+      <DownloadBeta>Avoid</DownloadBeta>
+      <DownloadDate xsi:nil="true"/>
+      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+      <VariableChangeIndicator/>
+      <CanBeShared>true</CanBeShared>
+      <ShareApplication>false</ShareApplication>
+      <ExclusiveDownload>false</ExclusiveDownload>
+      <HttpReferer/>
+      <SetupInstructions/>
+      <Variables>
+         <item>
+            <key>
+               <string>version</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>Textual</VariableType>
+                  <Regex/>
+                  <Url/>
+                  <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+                  <EndText>&lt;BR&gt;</EndText>
+                  <TextualContent>13.0.428</TextualContent>
+                  <Name>version</Name>
+               </UrlVariable>
+            </value>
+         </item>
+      </Variables>
+      <ExecuteCommand/>
+      <ExecutePreCommand/>
+      <ExecuteCommandType>Batch</ExecuteCommandType>
+      <ExecutePreCommandType>Batch</ExecutePreCommandType>
+      <Category/>
+      <SourceType>FixedUrl</SourceType>
+      <PreviousLocation>C:\ProgramData\chocolatey\_work\vegaspro13.0.373_64bit.exe</PreviousLocation>
+      <DeletePreviousFile>true</DeletePreviousFile>
+      <Enabled>false</Enabled>
+      <FileHippoId/>
+      <LastUpdated>2014-08-16T16:53:10.6220058</LastUpdated>
+      <TargetPath>C:\Chocolatey\_work\</TargetPath>
+      <FixedDownloadUrl>http://dspcdn.sonycreativesoftware.com/secure/vegaspro13.0.428.exe?e=1417415042&amp;h=cf518c4bf28d44ee221260cc52b93390&amp;file=.exe</FixedDownloadUrl>
+      <Name>sonyvegaspro</Name>
+  </ApplicationJob>
+</Jobs>

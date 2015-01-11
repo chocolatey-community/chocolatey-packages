@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jobs>
+   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   Guid="865dbb4d-8eab-43b1-ad7c-f2530d2307db">
+      <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>384846</LastFileSize>
+    <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url><placeholder name="Url with version information" value="http://www.filehippo.com/download_avg_antivirus_64/" /></Url>
+            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+  &lt;TR&gt;
+    &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
+            <EndText>&lt;BR&gt;</EndText>
+            <TextualContent />
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>""</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://aa-download.avg.com/filedir/inst/{anchor1}.exe" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="avgfreeantivirus" /></Name>
+  </ApplicationJob>
+</Jobs>]]></SourceTemplate>
+      <WebsiteUrl/>
+      <UserAgent/>
+      <UserNotes>antivirus AUTO CHANGEABLE title</UserNotes>
+      <LastFileSize>167687120</LastFileSize>
+      <LastFileDate>2014-10-22T23:45:21.7379316</LastFileDate>
+      <IgnoreFileInformation>false</IgnoreFileInformation>
+      <DownloadBeta>Avoid</DownloadBeta>
+      <DownloadDate xsi:nil="true"/>
+      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+      <VariableChangeIndicator/>
+      <CanBeShared>true</CanBeShared>
+      <ShareApplication>false</ShareApplication>
+      <ExclusiveDownload>false</ExclusiveDownload>
+      <HttpReferer/>
+      <SetupInstructions/>
+      <Variables>
+         <item>
+            <key>
+               <string>version</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>StartEnd</VariableType>
+                  <Regex/>
+                  <Url>http://www.comss.ru/page.php?id=956</Url>
+                  <StartText>&lt;td&gt;&lt;span itemprop="softwareVersion"&gt;</StartText>
+                  <EndText> </EndText>
+                  <TextualContent/>
+                  <Name>version</Name>
+               </UrlVariable>
+            </value>
+         </item>
+         <item>
+            <key>
+               <string>url64</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>Textual</VariableType>
+                  <Regex/>
+                  <Url>http://www.comss.ru/download/AVG+Anti-Virus+Free+2013.html</Url>
+                  <StartText>&lt;td width="23" height="23"&gt;&lt;a href="http://external.comss.ru/url.php?url=http://aa-download.avg.com/filedir/inst/</StartText>
+                  <EndText>.exe</EndText>
+                  <TextualContent>"http://download.avg.com/filedir/inst/{anchor64}.exe"</TextualContent>
+                  <Name>url64</Name>
+               </UrlVariable>
+            </value>
+         </item>
+         <item>
+            <key>
+               <string>anchor32</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>StartEnd</VariableType>
+                  <Regex/>
+                  <Url>http://www.comss.ru/download/AVG+Internet+Security.html</Url>
+                  <StartText>&lt;table&gt;&lt;tr&gt;&lt;td width="110" height="38"&gt;&lt;a href="http://external.comss.ru/url.php?url=http://download.avg.com/filedir/inst/</StartText>
+                  <EndText>.exe"&gt;</EndText>
+                  <Name>anchor32</Name>
+               </UrlVariable>
+            </value>
+         </item>
+         <item>
+            <key>
+               <string>anchor64</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>StartEnd</VariableType>
+                  <Regex/>
+                  <Url>http://www.comss.ru/download/AVG+Internet+Security.html</Url>
+                  <StartText>&lt;table&gt;&lt;tr&gt;&lt;td width="110" height="38"&gt;&lt;a href="http://external.comss.ru/url.php?url=http://download.avg.com/filedir/inst/</StartText>
+                  <EndText>.exe"&gt;</EndText>
+                  <Name>anchor64</Name>
+               </UrlVariable>
+            </value>
+         </item>
+      </Variables>
+      <ExecuteCommand/>
+      <ExecutePreCommand/>
+      <ExecuteCommandType>Batch</ExecuteCommandType>
+      <ExecutePreCommandType>Batch</ExecutePreCommandType>
+      <Category/>
+      <SourceType>FixedUrl</SourceType>
+      <PreviousLocation>C:\Chocolatey\_work\avg_isct_x86_all_2015_5557a8402.exe</PreviousLocation>
+      <DeletePreviousFile>true</DeletePreviousFile>
+      <Enabled>true</Enabled>
+      <FileHippoId/>
+      <LastUpdated>2014-10-22T23:45:21.7379316</LastUpdated>
+      <TargetPath>C:\Chocolatey\_work\</TargetPath>
+      <FixedDownloadUrl>http://download.avg.com/filedir/inst/{anchor32}.exe</FixedDownloadUrl>
+      <Name>avginternetsecurity</Name>
+  </ApplicationJob>
+</Jobs>
