@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>Patch my PC</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Patch My PC</authors>
+		<owners>Redsandro</owners>
+		<summary>Patch My PC creates software to patch third party applications to fix security vulnerabilities.</summary>
+		<description>
+Patch My PC helps to simplify the process of keeping your software up to date.
+
+_Link to start menu is no longer working. Looking for a package writer who can fix this._
+		</description>
+		<releaseNotes></releaseNotes>
+		<projectUrl>http://patchmypc.net/</projectUrl>
+		<tags>Admin Software Update Updates</tags>
+		<copyright></copyright>
+		<licenseUrl>https://patchmypc.net/about</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>http://i.imgur.com/hCXOK5O.png</iconUrl>
+		<dependencies>
+			<!-- <dependency id="DotNet4.5" version="4.5.0" /> -->
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+		<!--<file src="content\**" target="content" />-->
+	</files>
+</package>
