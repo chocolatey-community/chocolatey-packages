@@ -151,7 +151,7 @@
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>Video</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
