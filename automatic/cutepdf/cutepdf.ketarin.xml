@@ -137,7 +137,7 @@
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>Office</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
