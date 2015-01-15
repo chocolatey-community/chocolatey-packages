@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SmartFTP</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SmartSoft</authors>
+    <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, OneDrive, Telnet, Terminal client.</summary>
+    <description>SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, OneDrive, Telnet, Terminal client with lots of features and a modern user interface.</description>
+    <projectUrl>https://www.smartftp.com/</projectUrl>
+    <tags>trial-version ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client</tags>
+    <copyright>SmartSoft Ltd</copyright>
+    <releaseNotes>https://www.smartftp.com/changelog/1</releaseNotes>
+    <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/902e5ef38ce03246ded5756cb368ee103605d7f8/icons/smartftp.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
