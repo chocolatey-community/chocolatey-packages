@@ -15,7 +15,7 @@ else {
     $cygPackages = join-path $cygRoot packages
 
     Write-Host "Attempting to install `'$package`' to `'$cygPackages`'"
-    & $cygwinsetup -q -N -R $cygRoot -l $cygPackages -s ftp://mirrors.kernel.org/sourceware/cygwin -P $package
+    & $cygwinsetup -q -N -R $cygRoot -l $cygPackages -s http://mirrors.kernel.org/sourceware/cygwin -P $package
   }
   catch {
     Write-Error "Please ensure you have cygwin installed (with chocolatey). To install please call 'cinst cygwin'. ERROR: $($_.Exception.Message)"
