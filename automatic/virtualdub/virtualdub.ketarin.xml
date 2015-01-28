@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>1908225</LastFileSize>
-    <LastFileDate>2014-02-25T01:01:25.170474</LastFileDate>
+    <LastFileDate>2013-10-28T00:14:58+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -68,8 +68,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>/VirtualDub-([\d\.]+?)\.zip</Regex>
             <Url>http://sourceforge.net/projects/virtualdub/files/virtualdub-win/{version}/</Url>
             <StartText>/VirtualDub-</StartText>
             <EndText>-AMD64.zip</EndText>
@@ -102,7 +102,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-02-25T01:01:25.170474</LastUpdated>
+    <LastUpdated>2015-01-29T00:21:47.2293874+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>virtualdub</Name>
