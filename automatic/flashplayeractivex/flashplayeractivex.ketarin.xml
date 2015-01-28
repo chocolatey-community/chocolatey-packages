@@ -77,7 +77,7 @@
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>realVersion</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
