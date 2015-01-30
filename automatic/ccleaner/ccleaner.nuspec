@@ -25,4 +25,7 @@ This package installs CCleaner without additional adware.
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png</iconUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
