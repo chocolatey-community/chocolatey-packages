@@ -10,21 +10,21 @@ $regDir64Toolbar = 'HKLM:\SOFTWARE\Wow6432Node\Google\No Toolbar Offer Until'
 
 try {
 
-	if ($is64bit) {
-		if (-not(Test-Path $regDir64Chrome)) {New-Item $regDir64Chrome -ItemType directory -Force}
-		New-ItemProperty -Name "Piriform Ltd" -Path $regDir64Chrome -PropertyType DWORD -Value 20991231 -Force
-		if (-not(Test-Path $regDir64Toolbar)) {New-Item $regDir64Toolbar -ItemType directory -Force}
-		New-ItemProperty -Name "Piriform Ltd" -Path $regDir64Toolbar -PropertyType DWORD -Value 20991231 -Force
-	} else {
-		if (-not(Test-Path $regDirChrome)) {New-Item $regDirChrome -ItemType directory -Force}
-		New-ItemProperty -Name "Piriform Ltd" -Path $regDirChrome -PropertyType DWORD -Value 20991231 -Force
-		if (-not(Test-Path $regDirToolbar)) {New-Item $regDirToolbar -ItemType directory -Force}
-		New-ItemProperty -Name "Piriform Ltd" -Path $regDirToolbar -PropertyType DWORD -Value 20991231 -Force
-	}
+  if ($is64bit) {
+    if (-not(Test-Path $regDir64Chrome)) {New-Item $regDir64Chrome -ItemType directory -Force}
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDir64Chrome -PropertyType DWORD -Value 20991231 -Force
+    if (-not(Test-Path $regDir64Toolbar)) {New-Item $regDir64Toolbar -ItemType directory -Force}
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDir64Toolbar -PropertyType DWORD -Value 20991231 -Force
+  } else {
+    if (-not(Test-Path $regDirChrome)) {New-Item $regDirChrome -ItemType directory -Force}
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDirChrome -PropertyType DWORD -Value 20991231 -Force
+    if (-not(Test-Path $regDirToolbar)) {New-Item $regDirToolbar -ItemType directory -Force}
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDirToolbar -PropertyType DWORD -Value 20991231 -Force
+  }
 
-	Write-ChocolateySuccess $packageName
+  Write-ChocolateySuccess $packageName
 
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }
