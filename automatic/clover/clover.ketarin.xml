@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
-   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-                   Guid="2c8524b9-90d3-4bb8-a81a-a5eabf414a22">
-      <SourceTemplate><![CDATA[<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b2b215d9-8d7c-41f6-8fa6-f7f1a344d117">
+    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
-    <UserAgent />
+    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
     <LastFileSize>384846</LastFileSize>
     <LastFileDate>2012-05-23T02:09:37.7748325</LastFileDate>
@@ -30,7 +29,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url><placeholder name="Url with version information" value="http://www.kcsoftwares.com/sumo/start/searchsumo.php?query=atube+catcher" /></Url>
+            <Url><placeholder name="Url with version information" value="http://ejie.me/" /></Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -61,63 +60,88 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://get.atube.me/aTubeCatcher.exe" /></FixedDownloadUrl>
-    <Name><placeholder name="Name" value="atubecatcher" /></Name>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://ejie.me/uploads/Clover_Setup_{realVersion}.zip" /></FixedDownloadUrl>
+    <Name><placeholder name="Name" value="Clover" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
-      <WebsiteUrl/>
-      <UserAgent/>
-      <UserNotes/>
-      <LastFileSize>2627477</LastFileSize>
-      <LastFileDate>2014-11-30T23:33:45.7874046</LastFileDate>
-      <IgnoreFileInformation>false</IgnoreFileInformation>
-      <DownloadBeta>Avoid</DownloadBeta>
-      <DownloadDate xsi:nil="true"/>
-      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-      <VariableChangeIndicator/>
-      <CanBeShared>true</CanBeShared>
-      <ShareApplication>false</ShareApplication>
-      <ExclusiveDownload>false</ExclusiveDownload>
-      <HttpReferer/>
-      <SetupInstructions/>
-      <Variables>
-         <item>
-            <key>
-               <string>version</string>
-            </key>
-            <value>
-               <UrlVariable>
-                  <RegexRightToLeft>false</RegexRightToLeft>
-                  <VariableType>StartEnd</VariableType>
-                  <Regex/>
-                  <Url>http://ejie.me/</Url>
-                  <StartText>Version:&lt;br&gt;
-				&lt;small&gt;</StartText>
-                  <EndText>&lt;br&gt;&lt;/small&gt;</EndText>
-                  <TextualContent>3.0.4060</TextualContent>
-                  <Name>version</Name>
-               </UrlVariable>
-            </value>
-         </item>
-      </Variables>
-      <ExecuteCommand/>
-      <ExecutePreCommand/>
-      <ExecuteCommandType>Batch</ExecuteCommandType>
-      <ExecutePreCommandType>Batch</ExecutePreCommandType>
-      <Category/>
-      <SourceType>FixedUrl</SourceType>
-      <PreviousLocation>C:\Chocolatey\_work\Clover_Setup_3.0.406.zip</PreviousLocation>
-      <DeletePreviousFile>true</DeletePreviousFile>
-      <Enabled>true</Enabled>
-      <FileHippoId/>
-      <LastUpdated>2014-11-30T23:33:45.7874046</LastUpdated>
-      <TargetPath>C:\Chocolatey\_work\</TargetPath>
-      <FixedDownloadUrl>http://ejie.me/uploads/Clover_Setup_{version}.zip</FixedDownloadUrl>
-      <Name>clover</Name>
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>2627477</LastFileSize>
+    <LastFileDate>2014-05-17T12:11:42+02:00</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>realVersion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>Version:.+?&lt;small&gt;([\d\.]{3,})</Regex>
+            <Url>http://ejie.me/</Url>
+            <Name>realVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{realVersion}{versionFixNotation}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>versionFixNotation</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{realVersion:regexreplace:^3\.0\.(.+)$:0.{yyyy}{MM}{dd}}</TextualContent>
+            <Name>versionFixNotation</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand />
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\Clover_Setup_3.0.406.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2015-01-07T06:29:42.6354579+01:00</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>http://ejie.me/uploads/Clover_Setup_{realVersion}.zip</FixedDownloadUrl>
+    <Name>Clover</Name>
   </ApplicationJob>
 </Jobs>

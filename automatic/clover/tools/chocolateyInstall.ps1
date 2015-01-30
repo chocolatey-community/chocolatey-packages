@@ -1,16 +1,27 @@
 ﻿$packageName = '{{PackageName}}'
-$installerType = 'EXE'
+$installerType = 'exe'
 $url = '{{DownloadUrl}}'
 $silentArgs = '/S'
-$validExitCodes = @(0) #please insert other valid exit codes here, exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
+$validExitCodes = @(0)
 
 try {
 
-	Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
-	
-	Write-ChocolateySuccess $packageName
-	
+  $PSScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+  # Download and unzip the installer
+  Install-ChocolateyZipPackage 'clover-zipped-setup' $url $PSScriptRoot
+
+  # Get the path to the installer. Also takes into account that the installer
+  # .exe could be named differently in a future release.
+  $pathToInstaller = (Get-ChildItem -Path $PSScriptRoot -Filter '*.exe')[0].FullName
+
+  # Run the extracted installer
+  Install-ChocolateyInstallPackage $packageName $installerType $silentArgs $pathToInstaller -validExitCodes $validExitCodes
+
+  # No reason to keep the installer, also prevents from generating shim
+  Remove-Item $pathToInstaller
+
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw 
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }
