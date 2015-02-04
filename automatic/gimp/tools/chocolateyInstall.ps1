@@ -4,7 +4,7 @@ $url = '{{DownloadUrl}}'
 $url64bit = $url
 $installerType = 'exe'
 $installArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$gimpRegistryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\gimp*'
+$gimpRegistryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GIMP-2_is1'
 
 try {
 
