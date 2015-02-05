@@ -1,8 +1,7 @@
 ﻿$packageName = '{{PackageName}}'
 $installerType = 'exe'
-$installArgs = 'SP- /SILENT /NORESTART'
+$installArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $gimpRegistryPath = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GIMP-2_is1'
-
 
 try {
 
