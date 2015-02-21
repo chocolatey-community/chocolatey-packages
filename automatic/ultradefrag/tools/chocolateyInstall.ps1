@@ -9,10 +9,10 @@ $url64 = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${ver
 # Manually uncomment this if you want to run with the beta/prerelease/releasecandidate versions.
 # Take care, they keep using different names, this will probably only survive a couple of times.
 #
-#$version_beta = '{{PackageVersion}}' # e.g. 7.0.0%20beta1
-#$version2_beta = $version_beta -replace "%20", '-'
-#$url = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version}.bin.i386.exe/download"
-#$url64 = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version}.bin.amd64.exe/download"
+#$version = '{{PackageVersion}}' # e.g. 7.0.0%20beta1
+#$version2 = $version -replace "%20", '-'
+#$url = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version2}.bin.i386.exe/download"
+#$url64 = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version2}.bin.amd64.exe/download"
 
 Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"
 

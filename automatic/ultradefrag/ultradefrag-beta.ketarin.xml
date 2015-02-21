@@ -133,7 +133,7 @@
         </value>
       </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{url}" /u64 "{url64}" /disablepush -force
+    <ExecuteCommand>chocopkgup /p {packageId} /v {version} /u "{url}" /u64 "{url64}" /disablepush -force
 </ExecuteCommand>
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
