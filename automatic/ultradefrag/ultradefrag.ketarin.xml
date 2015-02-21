@@ -1,7 +1,9 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2fe318a0-b6e8-45a7-a084-2368e16c42a7">
-    <SourceTemplate><![CDATA[<Jobs>
+   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                   Guid="2fe318a0-b6e8-45a7-a084-2368e16c42a7">
+      <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -69,83 +71,83 @@
     <Name><placeholder name="Name" value="Tixati" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
-    <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
-    <UserNotes />
-    <LastFileSize>1240624</LastFileSize>
-    <LastFileDate>2014-11-13T05:49:57.6303792</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
-    <DownloadBeta>Default</DownloadBeta>
-    <DownloadDate xsi:nil="true" />
-    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
-    <CanBeShared>true</CanBeShared>
-    <ShareApplication>false</ShareApplication>
-    <ExclusiveDownload>false</ExclusiveDownload>
-    <HttpReferer />
-    <SetupInstructions />
-    <Variables>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=stable-release/)[0-9.]{3,}</Regex>
-            <Url>http://sourceforge.net/projects/ultradefrag/files/stable-release/</Url>
-            <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
+      <WebsiteUrl/>
+      <UserAgent/>
+      <UserNotes/>
+      <LastFileSize>1240624</LastFileSize>
+      <LastFileDate>2014-11-13T05:49:57.6303792</LastFileDate>
+      <IgnoreFileInformation>false</IgnoreFileInformation>
+      <DownloadBeta>Default</DownloadBeta>
+      <DownloadDate xsi:nil="true"/>
+      <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+      <VariableChangeIndicator/>
+      <CanBeShared>true</CanBeShared>
+      <ShareApplication>false</ShareApplication>
+      <ExclusiveDownload>false</ExclusiveDownload>
+      <HttpReferer/>
+      <SetupInstructions/>
+      <Variables>
+         <item>
+            <key>
+               <string>version</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>RegularExpression</VariableType>
+                  <Regex>(?&lt;=stable-release/)[0-9.]{3,}</Regex>
+                  <Url>http://sourceforge.net/projects/ultradefrag/files/stable-release/</Url>
+                  <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
-            <EndText>&lt;BR&gt;</EndText>
-            <TextualContent>12.0</TextualContent>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>mirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/ultradefrag/files/ultradefrag/{version}/ultradefrag-{version}.bin.i386.exe/download</TextualContent>
-            <Name>mirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>ultradefrag</TextualContent>
-            <Name>packageId</Name>
-          </UrlVariable>
-        </value>
-      </item>
-    </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} /v {version} /u "{url}" /u64 "{url64}"
-</ExecuteCommand>
-    <ExecutePreCommand />
-    <ExecuteCommandType>Batch</ExecuteCommandType>
-    <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
-    <SourceType>FixedUrl</SourceType>
-    <DeletePreviousFile>true</DeletePreviousFile>
-    <Enabled>true</Enabled>
-    <FileHippoId />
-    <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
-    <FixedDownloadUrl>{mirror}</FixedDownloadUrl>
-    <Name>ultradefrag</Name>
-  </ApplicationJob>
+                  <EndText>&lt;BR&gt;</EndText>
+                  <TextualContent>12.0</TextualContent>
+                  <Name>version</Name>
+               </UrlVariable>
+            </value>
+         </item>
+         <item>
+            <key>
+               <string>mirror</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>Textual</VariableType>
+                  <Regex/>
+                  <TextualContent>http://sourceforge.net/projects/ultradefrag/files/ultradefrag/{version}/ultradefrag-{version}.bin.i386.exe/download</TextualContent>
+                  <Name>mirror</Name>
+               </UrlVariable>
+            </value>
+         </item>
+         <item>
+            <key>
+               <string>packageId</string>
+            </key>
+            <value>
+               <UrlVariable>
+                  <RegexRightToLeft>false</RegexRightToLeft>
+                  <VariableType>Textual</VariableType>
+                  <Regex/>
+                  <TextualContent>ultradefrag</TextualContent>
+                  <Name>packageId</Name>
+               </UrlVariable>
+            </value>
+         </item>
+      </Variables>
+      <ExecuteCommand/>
+      <ExecutePreCommand/>
+      <ExecuteCommandType>Batch</ExecuteCommandType>
+      <ExecutePreCommandType>Batch</ExecutePreCommandType>
+      <Category/>
+      <SourceType>FixedUrl</SourceType>
+      <PreviousLocation/>
+      <DeletePreviousFile>true</DeletePreviousFile>
+      <Enabled>true</Enabled>
+      <FileHippoId/>
+      <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
+      <TargetPath>C:\Chocolatey\_work\</TargetPath>
+      <FixedDownloadUrl>{mirror}</FixedDownloadUrl>
+      <Name>ultradefrag</Name>
+   </ApplicationJob>
 </Jobs>
