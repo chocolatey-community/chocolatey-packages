@@ -1,12 +1,19 @@
-﻿try {
-  $version = '{{PackageVersion}}'
-  $downUrl = "http://sourceforge.net/projects/audacity/files/audacity/${version}/audacity-win-${version}.exe/download"
-  # installer, will assert administrative rights
-  Install-ChocolateyPackage '{{PackageName}}' 'EXE' '/VERYSILENT' "$downUrl" -validExitCodes @(0)
+﻿$packageName = '{{PackageName}}'
+$version = '{{PackageVersion}}'
+$installerType = 'EXE' 
+$silentArgs = '/S /FULL=1'
+$url = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${version}/ultradefrag-${version}.bin.i386.exe/download"
+$url64 = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${version}/ultradefrag-${version}.bin.amd64.exe/download"
 
-  # the following is all part of error handling
-  Write-ChocolateySuccess '{{PackageName}}'
-} catch {
-  Write-ChocolateyFailure '{{PackageName}}' "$($_.Exception.Message)"
-  throw
-}
+
+# Manually uncomment this if you want to run with the beta/prerelease/releasecandidate versions.
+# Take care, they keep using different names, this will probably only survive a couple of times.
+#
+#$version_beta = '{{PackageVersion}}' # e.g. 7.0.0%20beta1
+#$version2_beta = $version_beta -replace "%20", '-'
+#$url = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version}.bin.i386.exe/download"
+#$url64 = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version}.bin.amd64.exe/download"
+
+Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"
+
+#TODO: Rename the ugly default context-menuitem "------UltraDefrag---------" to "Ultra Defragmenter"

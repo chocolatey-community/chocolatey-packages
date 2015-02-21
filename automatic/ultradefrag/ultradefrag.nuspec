@@ -12,7 +12,7 @@
     <copyright></copyright>
     <licenseUrl>http://ultradefrag.sourceforge.net/handbook/Credits.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.github.com/Redsandro/chocolatey/master/ultradefrag/img/ultradefrag.128x128.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/UltraDefrag/icons/ultradefrag.png</iconUrl>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>

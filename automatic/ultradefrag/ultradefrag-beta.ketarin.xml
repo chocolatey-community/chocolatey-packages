@@ -1,6 +1,6 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
-  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="2fe318a0-b6e8-45a7-a084-2368e16c42a7">
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="cd248aec-7d46-4840-8853-12a1404fd676">
     <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
@@ -93,8 +93,8 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=stable-release/)[0-9.]{3,}</Regex>
-            <Url>http://sourceforge.net/projects/ultradefrag/files/stable-release/</Url>
+            <Regex>(?&lt;=latest-release-candidates/)[0-9a-z%.]{3,}</Regex>
+            <Url>http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -133,7 +133,7 @@
         </value>
       </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{url}" /u64 "{url64}"
+    <ExecuteCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{url}" /u64 "{url64}" /disablepush -force
 </ExecuteCommand>
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
@@ -146,6 +146,6 @@
     <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
     <TargetPath>%temp%\Ketarin\</TargetPath>
     <FixedDownloadUrl>{mirror}</FixedDownloadUrl>
-    <Name>ultradefrag</Name>
+    <Name>ultradefrag-beta</Name>
   </ApplicationJob>
 </Jobs>
