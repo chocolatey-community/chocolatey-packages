@@ -1,4 +1,1 @@
-@echo off
-rem I cannot execute posh scripts. We need a wrapper.
-
-powershell.exe -File "ketarin-filter-settings.ps1" "%*"
+@%~dp0transform-xml.bat "%~1" "%~dp0ketarin-template.xsl"
