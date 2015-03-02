@@ -23,9 +23,6 @@ This package puts the ruKernelTool files into `$env:ChocolateyBinRoot\ruKernelTo
     <releaseNotes></releaseNotes>
     <copyright>2013 Rainer Ullrich</copyright>
     <tags>avm fritz!box flash firmware</tags>
-    <dependencies>
-      <dependency id="wget" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

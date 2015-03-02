@@ -21,8 +21,13 @@ After you did that, reinstall this package again with the “-force” parameter
 "@
   }
 
-  cd $env:TEMP
-  Start-Process 'wget' -NoNewWindow -Wait -ArgumentList $url, "-O $zipFile", '--user=ruKernelTool2', '--password=Bommelchen_2010'
+  $username = 'ruKernelTool2'
+  $password = 'Bommelchen_2010'
+
+  $webClient = New-Object System.Net.WebClient
+  $webClient.Credentials = New-Object System.Net.Networkcredential($username, $password)
+  Write-Host $('Downloading' + $url + '…')
+  $webClient.DownloadFile($url, $zipFilePath)
 
   Get-ChocolateyUnzip $zipFilePath $destinationFolder
   Remove-Item $zipFilePath
