@@ -6,16 +6,17 @@ if ($package -eq "" -or $package -eq $null) {
   Write-Warning 'Please specify a package or list of packages. Run -help or /? for more information.'
 }
 elseif ($package -eq '-help' -or $package -eq '/?') {
-  Write-Host "To run please specify `'cyg-get packageName`'. At the current time it doesn't appear that passing a list of packages works, but it would be done like this: `'cyg-get package1,package2,packageN`'. Note the commas and no spaces."
+  Write-Host "To run please specify `'cyg-get packageName`'. You can also specify a list of packages like this: `'cyg-get package1,package2,packageN`'. Note the commas and no spaces."
 }
 else {
   try {
     $cygRoot = (Get-ItemProperty HKLM:\SOFTWARE\Cygwin\setup -Name rootdir).rootdir
     $cygwinsetup = Get-Command $cygRoot"\cygwinsetup.exe"
-    $cygPackages = join-path $cygRoot packages
+    $cygLocalPackagesDir = join-path $cygRoot packages
+    $cygInstallPackageList = $package  -replace(" ",",")
 
-    Write-Host "Attempting to install `'$package`' to `'$cygPackages`'"
-    & $cygwinsetup -q -N -R $cygRoot -l $cygPackages -P $package
+    Write-Host "Attempting to install cygwin packages: $cygInstallPackageList"
+    & $cygwinsetup -q -N -R $cygRoot -l $cygLocalPackagesDir -P $cygInstallPackageList
   }
   catch {
     Write-Error "Please ensure you have cygwin installed (with chocolatey). To install please call 'cinst cygwin'. ERROR: $($_.Exception.Message)"
