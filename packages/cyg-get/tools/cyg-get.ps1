@@ -5,7 +5,7 @@ param(
 if ($package -eq "" -or $package -eq $null) {
   Write-Warning 'Please specify a package or list of packages. Run -help or /? for more information.'
 }
-elseif ($package -eq '-help' -or $package -eq '/?') {
+elseif ($package -eq '-help' -or $package -eq '--help' -or $package -eq '-h' -or $package -eq '/?') {
   Write-Host "To run please specify `'cyg-get packageName`'. You can also specify a list of packages like this: `'cyg-get package1,package2,packageN`'. Note the commas and no spaces."
 }
 else {
