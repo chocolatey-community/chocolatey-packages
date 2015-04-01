@@ -2,68 +2,71 @@
 
 
 function GetUninstallPath () {
-  $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
-  $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
+    $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
+    $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
 
-  $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
+    $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
 
-  if (Test-Path $regUninstallDirWow64) {
-    $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
-  }
+    if (Test-Path $regUninstallDirWow64) {
+        $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
+    }
 
-  $uninstallPath = $uninstallPaths -match "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
-  return $uninstallPath
+    $uninstallPath = $uninstallPaths -match "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
+    return $uninstallPath
 }
 
-function GetLocale($installArguments) {
+function GetLocale() {
 
-  $availableLocales = Get-Content "$env:TEMP\chocolatey\Firefox\availableLocales.html"
+    $availableLocales = Get-Content "$env:TEMP\chocolatey\Firefox\availableLocales.html"
 
-  # --- Get locale from installArgs if specified
+    # --- Get locale from installArgs if specified
 
-  $argumentMap = ConvertFrom-StringData $installArguments
-  $localeFromInstallArgs = $argumentMap.Item('l')
+    $packageParameters = $env:chocolateyPackageParameters
 
-  # ---
+    $packageParameters = if ($packageParameters -ne $null) { $packageParameters } else { "" }
+    $argumentMap = ConvertFrom-StringData $packageParameters
+    $localeFromPackageParameters = $argumentMap.Item('l')
 
-  # --- Get already installed locale if available
+    # ---
 
-  $uninstallPath = GetUninstallPath($null)
+    # --- Get already installed locale if available
 
-  $alreadyInstalledLocale = $uninstallPath -replace ".+\s([a-zA-Z\-]+)\)", '$1'
+    $uninstallPath = GetUninstallPath($null)
+
+    $alreadyInstalledLocale = $uninstallPath -replace ".+\s([a-zA-Z\-]+)\)", '$1'
 
 
-  # ---
+    # ---
 
-  # --- Other locales
+    # --- Other locales
 
-  $systemLocaleAndCountry = (Get-Culture).Name
-  $systemLocaleTwoLetter = (Get-Culture).TwoLetterISOLanguageName
-  $fallbackLocale = 'en-US'
+    $systemLocaleAndCountry = (Get-Culture).Name
+    $systemLocaleTwoLetter = (Get-Culture).TwoLetterISOLanguageName
+    $fallbackLocale = 'en-US'
 
-  # ---
+    # ---
 
-  $locales = $localeFromInstallArgs, $alreadyInstalledLocale, $systemLocaleAndCountry, $systemLocaleTwoLetter, $fallbackLocale
+    $locales = $localeFromPackageParameters, $alreadyInstalledLocale, $systemLocaleAndCountry, $systemLocaleTwoLetter, $fallbackLocale
 
-  foreach ($locale in $locales) {
-    $localeMatch = $availableLocales -match "os=win&amp;lang=$locale`"" | Select -First 1
-    if ($localeMatch -and $locale -ne $null) {
-      break
+    foreach ($locale in $locales) {
+        $localeMatch = $availableLocales -match "os=win&amp;lang=$locale`"" | Select -First 1
+        if ($localeMatch -and $locale -ne $null) {
+            break
+        }
     }
-  }
 
-  return $locale
+    return $locale
 }
 
 function AlreadyInstalled($version) {
-  $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Firefox ${version}*"
-  $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Firefox ${version}*"
+    $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Firefox ${version}*"
+    $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Firefox ${version}*"
 
-  if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
-    return $true
-  } else {
-    return $false
-  }
+    if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
+        return $true
+    } else {
+        return $false
+    }
 }
 
 # ----------------------------------
@@ -79,29 +82,29 @@ $urlFile = 'https://www.mozilla.org/en-US/firefox/all/'
 $filePath = "$env:TEMP\chocolatey\$packageName"
 
 try {
-    $alreadyInstalled = AlreadyInstalled($version)
+        $alreadyInstalled = AlreadyInstalled($version)
 
-  if ($alreadyInstalled) {
-    Write-Host "Firefox $version is already installed."
-  } else {
+    if ($alreadyInstalled) {
+        Write-Host "Firefox $version is already installed."
+    } else {
 
 
-    if (-not (Test-Path $filePath)) {
-      New-Item -ItemType directory -Path $filePath
+        if (-not (Test-Path $filePath)) {
+            New-Item -ItemType directory -Path $filePath
+        }
+
+        Get-ChocolateyWebFile 'locales list for Firefox' "$env:TEMP\chocolatey\$packageName\availableLocales.html" $urlFile
+
+        $locale = GetLocale
+
+
+        $url = "http://download.mozilla.org/?product=firefox-$version&os=win&lang=$locale"
+
+
+        Install-ChocolateyPackage $packageName $fileType '-ms' $url
     }
 
-    Get-ChocolateyWebFile 'locales list for Firefox' "$env:TEMP\chocolatey\$packageName\availableLocales.html" $urlFile
-
-    $locale = GetLocale($installArguments)
-
-
-    $url = "http://download.mozilla.org/?product=firefox-$version&os=win&lang=$locale"
-
-
-    Install-ChocolateyPackage $packageName $fileType '-ms' $url
-  }
-
 } catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+    Write-ChocolateyFailure $packageName $($_.Exception.Message)
+    throw
 }
