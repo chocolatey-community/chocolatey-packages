@@ -7,7 +7,7 @@
     <authors>MPC-HC Team</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html and http://mpc-hc.org/about/#third-party-libraries</licenseUrl>
     <projectUrl>http://mpc-hc.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/mpc-hc.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/mpc-hc.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.

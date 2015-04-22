@@ -7,7 +7,7 @@
     <authors>David White and others</authors>
     <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
     <projectUrl>http://www.wesnoth.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/wesnoth.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/wesnoth.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 The Battle for Wesnoth is a turn-based tactical strategy game with a high fantasy theme.
