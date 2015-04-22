@@ -7,7 +7,7 @@
     <authors>Pendrivelinux</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.pendrivelinux.com/yumi-multiboot-usb-creator/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/yumi.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/yumi.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 YUMI (Your Universal Multiboot Installer), is the successor to MultibootISOs. It can be used to create a Multiboot USB Flash Drive containing multiple operating systems, antivirus utilities, disc cloning, diagnostic tools, and more. Contrary to MultiBootISO's which used grub to boot ISO files directly from USB, YUMI uses syslinux to boot extracted distributions stored on the USB device, and reverts to using grub to Boot Multiple ISO files from USB, if necessary.

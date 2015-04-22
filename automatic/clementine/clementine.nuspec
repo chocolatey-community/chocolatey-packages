@@ -7,7 +7,7 @@
     <authors>David Sansome,John Maguire and Arnaud Bienner</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://www.clementine-player.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/clementine.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/clementine.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Clementine is a modern music player and library organizer. It is inspired by Amarok 1.4, focusing on a fast and easy-to-use interface for searching and playing your music.

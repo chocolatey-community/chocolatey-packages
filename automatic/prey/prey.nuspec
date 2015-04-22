@@ -7,7 +7,7 @@
     <authors>Fork Ltd</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://preyproject.com/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Rest safe.

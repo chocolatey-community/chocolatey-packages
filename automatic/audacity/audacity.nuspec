@@ -12,7 +12,7 @@
     <copyright></copyright>
     <licenseUrl>http://audacity.sourceforge.net/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg</iconUrl>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>

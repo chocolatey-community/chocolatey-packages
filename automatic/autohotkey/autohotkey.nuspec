@@ -7,7 +7,7 @@
     <authors>Lexikos</authors>
     <licenseUrl>http://ahkscript.org/docs/license.htm</licenseUrl>
     <projectUrl>http://ahkscript.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/autohotkey.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/autohotkey.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
 AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
