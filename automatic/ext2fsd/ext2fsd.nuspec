@@ -15,7 +15,7 @@ Open source ext3/4 file system driver for Windows
 The uninstaller doesn’t work silently.
     </description>
     <summary>Open source ext3/4 file system driver for Windows</summary>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/ext2fsd.jpg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/ext2fsd.jpg</iconUrl>
     <releaseNotes></releaseNotes>
     <copyright />
     <language>en-US</language>

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -22,7 +22,7 @@ DJV Imaging provides professional movie playback software for film production, V
     <copyright>Copyright (c) 2004-2014 Darby Johnston</copyright>
     <licenseUrl>http://djv.sourceforge.net/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bc25e12f73c987360f223464cb2a5f1c66779668/icons/djv.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bc25e12f73c987360f223464cb2a5f1c66779668/icons/djv.png</iconUrl>
     <dependencies>
     </dependencies>
     <releaseNotes></releaseNotes>

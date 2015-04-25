@@ -7,7 +7,7 @@
     <authors>cdrtfe team</authors>
     <licenseUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</licenseUrl>
     <projectUrl>http://cdrtfe.sourceforge.net/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/cdrtfe.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/cdrtfe.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 cdrtfe is an open source CD/DVD/BD burning application for Microsoft Windows. You can burn data discs, Audio CDs, XCDs, (S)VCDs and DVD-Video discs. It supports creation and writing of ISO images and bootable discs. Disc images and Audio CDs can be written simultaneously to multiple writers.
