@@ -1,4 +1,4 @@
-# Get the resolved URL form a FossHub download link.
+﻿# Get the resolved URL form a FossHub download link.
 #
 # Takes a FossHub URL in the “genLink” format and returns the generated expiring download link for the file which can
 # be used for downloading with Ketarin/Chocolatey.
@@ -10,7 +10,15 @@
 Function Get-UrlFromFosshub($genLinkUrl) {
 
   $fosshubAppName = $genLinkUrl -match 'genLink/(.+?)/'
-  $fosshubAppName = $Matches[1]
+
+  # If there’s no match, it means that it’s not a FossHub genLink-URL.
+  # Then this function simply returns the input URL.
+  if (!$Matches) {
+    return $genLinkUrl
+  } else {
+    # Get the actual FossHub appname from the matches array
+    $fosshubAppName = $Matches[1]
+  }
 
   $referer = "http://www.fosshub.com/${fosshubAppName}.html"
 
