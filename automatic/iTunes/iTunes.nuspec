@@ -20,9 +20,6 @@ This package installs iTunes, the required Apple Application Support component, 
     <releaseNotes></releaseNotes>
     <copyright>Apple Inc. All rights reserved.</copyright>
     <tags>iTunes admin</tags>
-    <dependencies>
-      <dependency id="7zip.commandline" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
