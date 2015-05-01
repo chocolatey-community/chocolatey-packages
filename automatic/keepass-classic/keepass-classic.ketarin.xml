@@ -70,10 +70,10 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>1952568</LastFileSize>
-    <LastFileDate>2015-04-03T04:02:42-07:00</LastFileDate>
+    <LastFileDate>2015-04-03T13:02:42+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -106,62 +106,32 @@
       </item>
       <item>
         <key>
-          <string>url</string>
+          <string>mirrorUrl</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex>(?&lt;=Installer\sversion.*?ownload:.*?)http://.*?HostsMan.*?installer.zip</Regex>
-            <Url>http://www.abelhadigital.com/hostsman</Url>
-            <TextualContent>http://cznic.dl.sourceforge.net/project/keepass/KeePass%201.x/{version}/KeePass-{version}-Setup.exe</TextualContent>
-            <Name>url</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>keepass-classic</TextualContent>
-            <Name>packageId</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>downloadUrl</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/keepass/files/KeePass%201.x/{version}/KeePass-{version}-Setup.exe/download</TextualContent>
-            <Name>downloadUrl</Name>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ResponseUri: ([^\r\n]+)</Regex>
+            <Url>http://sourceforge.net/projects/keepass/files/KeePass 1.x/1.29/KeePass-1.29-Setup.exe/download</Url>
+            <Name>mirrorUrl</Name>
           </UrlVariable>
         </value>
       </item>
     </Variables>
     <ExecuteCommand />
-    <ExecutePreCommand>chocopkgup /p {packageId} --pf {packageRoot} /v {version} /u "{downloadUrl}"  /disablepush -force
-REM /disablepush -force</ExecutePreCommand>
+    <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category>System Tools</Category>
+    <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Users\IEUser\AppData\Local\Temp\Ketarin\KeePass-1.29-Setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\KeePass-1.29-Setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-04-03T07:28:57.186375-07:00</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
-    <Name>KeePass Classic</Name>
+    <LastUpdated>2015-05-02T00:45:06.0567033+02:00</LastUpdated>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
+    <FixedDownloadUrl>{mirrorUrl}</FixedDownloadUrl>
+    <Name>keepass-classic</Name>
   </ApplicationJob>
 </Jobs>
