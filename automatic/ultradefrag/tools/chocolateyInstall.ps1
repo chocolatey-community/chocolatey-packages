@@ -1,6 +1,6 @@
 ﻿$packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
-$installerType = 'EXE' 
+$installerType = 'EXE'
 $silentArgs = '/S /FULL=1'
 $url = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${version}/ultradefrag-${version}.bin.i386.exe/download"
 $url64 = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${version}/ultradefrag-${version}.bin.amd64.exe/download"
