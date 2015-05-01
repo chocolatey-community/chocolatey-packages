@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>KeePass Classic Password Safe</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Dominik Reichl</authors>
+    <summary>This version of the popular KeePass password manager is compatible with KeePassX for Linux and OS X.</summary>
+    <description>
+KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish).
+
+Note: This is the classic version of KeePass. If you’re looking for the 2.x version (also known as *KeePass Professional Edition*), install [keepass](/packages/keepass) instead.
+    </description>
+    <projectUrl>http://keepass.info/index.html</projectUrl>
+    <tags>multiplatform password safe</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/keepass.svg</iconUrl>
+    <dependencies></dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
