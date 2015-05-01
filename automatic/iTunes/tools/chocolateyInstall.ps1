@@ -23,44 +23,38 @@ function findMsid {
   return $null
 }
 
-try {
 
-  $registryUninstallRoot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
-  $alreadyInstalled = findMsid $registryUninstallRoot 'iTunes' $version
-  if ($alreadyInstalled) {
-    Write-Output "iTunes $version is already installed."
-  } else {
+$registryUninstallRoot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
+$alreadyInstalled = findMsid $registryUninstallRoot 'iTunes' $version
+if ($alreadyInstalled) {
+  Write-Output "iTunes $version is already installed."
+} else {
 
-    if (-not (Test-Path $filePath)) {
-      New-Item -ItemType directory -Path $filePath
-    }
-
-    Get-ChocolateyWebFile $packageName $fileFullPath $url $url64
-
-    & 7za x "-o$filePath" -y "$fileFullPath"
-
-    $packageName = 'appleapplicationsupport'
-    $file = "$filePath\AppleApplicationSupport.msi"
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-    $processor = Get-WmiObject Win32_Processor
-    $is64bit = $processor.AddressWidth -eq 64
-
-    $packageName = 'applemobiledevicesupport'
-    if ($is64bit) {$file = "$filePath\AppleMobileDeviceSupport64.msi"} else {$file = "$filePath\AppleMobileDeviceSupport.msi"}
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-    $packageName = 'bonjour'
-    if ($is64bit) {$file = "$filePath\Bonjour64.msi"} else {$file = "$filePath\Bonjour.msi"}
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-    $packageName = 'itunes'
-    if ($is64bit) {$file = "$filePath\iTunes64.msi"} else {$file = "$filePath\iTunes.msi"}
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
+  if (-not (Test-Path $filePath)) {
+    New-Item -ItemType directory -Path $filePath
   }
 
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+  Get-ChocolateyWebFile $packageName $fileFullPath $url $url64
+
+  & 7za x "-o$filePath" -y "$fileFullPath"
+
+  $packageName = 'appleapplicationsupport'
+  if ($is64bit) {$file = "$filePath\AppleApplicationSupport64.msi"} else {$file = "$filePath\AppleApplicationSupport.msi"}
+  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
+
+  $processor = Get-WmiObject Win32_Processor
+  $is64bit = $processor.AddressWidth -eq 64
+
+  $packageName = 'applemobiledevicesupport'
+  if ($is64bit) {$file = "$filePath\AppleMobileDeviceSupport6464.msi"} else {$file = "$filePath\AppleMobileDeviceSupport.msi"}
+  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
+
+  $packageName = 'bonjour'
+  if ($is64bit) {$file = "$filePath\Bonjour64.msi"} else {$file = "$filePath\Bonjour.msi"}
+  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
+
+  $packageName = 'itunes'
+  if ($is64bit) {$file = "$filePath\iTunes6464.msi"} else {$file = "$filePath\iTunes.msi"}
+  Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
+
 }
