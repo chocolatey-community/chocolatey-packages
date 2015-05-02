@@ -1,4 +1,4 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="6faf0d1c-9b29-4cca-a559-68cb07a0ef3a">
     <SourceTemplate><![CDATA[<Jobs>
@@ -113,7 +113,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>ResponseUri: ([^\r\n]+)</Regex>
-            <Url>http://sourceforge.net/projects/keepass/files/KeePass 1.x/1.29/KeePass-1.29-Setup.exe/download</Url>
+            <Url>http://sourceforge.net/projects/keepass/files/KeePass 1.x/{version}/KeePass-{version}-Setup.exe/download</Url>
             <Name>mirrorUrl</Name>
           </UrlVariable>
         </value>
