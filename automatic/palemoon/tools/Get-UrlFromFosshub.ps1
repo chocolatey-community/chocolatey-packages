@@ -15,10 +15,11 @@ Function Get-UrlFromFosshub($genLinkUrl) {
   # Then this function simply returns the input URL.
   if (!$Matches) {
     return $genLinkUrl
-  } else {
-    # Get the actual FossHub appname from the matches array
-    $fosshubAppName = $Matches[1]
   }
+
+  # Get the actual FossHub appname from the matches array
+  $fosshubAppName = $Matches[1]
+
 
   $referer = "http://www.fosshub.com/${fosshubAppName}.html"
 
