@@ -1,18 +1,13 @@
 ﻿$packageName = '{{PackageName}}'
 $url = '{{DownloadUrl}}'
+$url64bit = '{{DownloadUrlx64}}'
 $filePath = "$env:TEMP\chocolatey\$packageName"
 $fileFullPath = "$filePath\${packageName}Install.exe"
 
-try {
-  if (!(Test-Path $filePath)) {
-    New-Item -ItemType directory -Path $filePath
-  }
-
-  Get-ChocolateyWebFile $packageName $fileFullPath $url
-  Start-Process $fileFullPath
-
-  Write-ChocolateySuccess $packageName
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+if (!(Test-Path $filePath)) {
+  New-Item -ItemType directory -Path $filePath -Force
 }
+
+Get-ChocolateyWebFile -packageName $packageName -fileFullPath `
+  $fileFullPath -url $url -url64bit $url64bit
+Start-Process $fileFullPath
