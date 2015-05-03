@@ -7,7 +7,7 @@
     <authors>Emil Ivov and others</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl-2.1.html</licenseUrl>
     <projectUrl>https://jitsi.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/jitsi.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/jitsi.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Jitsi (formerly SIP Communicator) is a free and open source multiplatform voice (VoIP), videoconferencing and instant messaging application for Windows, Linux and Mac OS X. It supports several popular instant messaging and telephony protocols, including open recognised encryption protocols for chat (OTR) and voice/video/streaming and voice/video conferencing (SIP/RTP/SRTP/ZRTP), as well as built-in IPv6, NAT traversal and DNSSEC. Jitsi and its source code are released under the terms of the LGPL.

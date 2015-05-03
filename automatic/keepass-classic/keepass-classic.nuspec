@@ -16,7 +16,7 @@ Note: This is the classic version of KeePass. If you’re looking for the 2.x ve
     <copyright></copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/keepass.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/keepass.svg</iconUrl>
     <dependencies></dependencies>
     <releaseNotes></releaseNotes>
   </metadata>

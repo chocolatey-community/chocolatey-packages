@@ -7,7 +7,7 @@
     <authors>Ivo Beltchev</authors>
     <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>
     <projectUrl>http://www.classicshell.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/classic-shell.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/classic-shell.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Classic Shell is a collection of usability enhancements for Windows. The main features are:

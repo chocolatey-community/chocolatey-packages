@@ -7,7 +7,7 @@
     <authors>Glyph &amp; Cog, LLC</authors>
     <licenseUrl>http://www.foolabs.com/xpdf/about.html</licenseUrl>
     <projectUrl>http://www.foolabs.com/xpdf/home.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/59e7035aefcc1b405cd28d707c56c8a60d93e7aa/icons/xpdf-utils.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/xpdf-utils.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Xpdf is an open source viewer for Portable Document Format (PDF) files. The Xpdf project also includes a PDF text extractor, PDF-to-PostScript converter, and various other utilities.

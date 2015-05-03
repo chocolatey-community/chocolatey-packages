@@ -17,7 +17,7 @@ Fiddler is freeware and can debug traffic from virtually any application, includ
     <copyright></copyright>
     <licenseUrl>http://www.fiddler2.com/Fiddler/help/license.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/fiddler.svg</iconUrl>
     <releaseNotes>
 Up to date release notes for this application can be found here:
 

@@ -4,7 +4,7 @@
     <version>{{PackageVersion}}</version>
     <authors>Mozilla</authors>
     <projectUrl>http://www.mozilla.org/en-US/firefox/new/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a9e674e28612ffeadab7fe73a4125a40dc9066ef/icons/firefox.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/firefox.png</iconUrl>
     <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>
     <id>{{PackageName}}</id>
     <title>Mozilla Firefox</title>

@@ -7,7 +7,7 @@
     <authors>Various (see http://www.truecrypt.org/localizations)</authors>
     <projectUrl>http://www.truecrypt.org/localizations</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/truecrypt.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/truecrypt.png</iconUrl>
     <description>
 This package contains all available language files for TrueCrypt, the free open-source disk encryption software. The language files get extracted into the TrueCrypt program folder. Then the desired language can be selected in the TrueCrypt settings.
 

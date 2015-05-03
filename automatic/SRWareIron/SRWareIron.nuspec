@@ -7,7 +7,7 @@
     <authors>SRWare</authors>
     <licenseUrl>http://www.srware.net/en/software_srware_iron.php</licenseUrl>
     <projectUrl>http://www.srware.net/en/software_srware_iron.php</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/srwareiron.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/srwareiron.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 SRWare Iron is a freeware web browser implementation of the Chromium source code by SRWare of Germany.

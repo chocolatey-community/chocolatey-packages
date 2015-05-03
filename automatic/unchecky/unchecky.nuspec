@@ -17,7 +17,7 @@ __Unchecky aims to keep potentially unwanted programs out of your computer.__
     <copyright></copyright>
     <licenseUrl>http://rammichael.com/introducing-unchecky</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/400df127014e0d9856ed420fe89c728668d310d2/icons/unchecky.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/unchecky.png</iconUrl>
     <dependencies></dependencies>
     <releaseNotes></releaseNotes>
   </metadata>

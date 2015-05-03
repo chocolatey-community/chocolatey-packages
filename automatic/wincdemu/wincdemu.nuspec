@@ -7,7 +7,7 @@
     <authors>Sysprogs OÜ</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
     <projectUrl>http://wincdemu.sysprogs.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/wincdemu.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/wincdemu.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 WinCDEmu is an open-source CD/DVD/BD emulator – a tool that allows you to mount optical disc mages by simply clicking on them in Windows Explorer. If you have downloaded an ISO image and want to use it without burning it to a blank disc, WinCDEmu is the easiest way to do it.

@@ -6,7 +6,7 @@
     <title>nLite</title>
     <authors>Dino Nuhagic (nuhi)</authors>
     <projectUrl>http://www.nliteos.com/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/nlite.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/nlite.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Deployment Tool for the Bootable Unattended Windows ISO

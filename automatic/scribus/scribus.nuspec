@@ -7,7 +7,7 @@
     <authors>The Scribus Team</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://scribus.net/canvas/Scribus</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c60e11994d4e9da90e4e5a974f54e284b8d92823/icons/scribus.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/scribus.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Scribus is an Open Source program that brings professional page layout to Linux/UNIX, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows desktops with a combination of press-ready output and new approaches to page design.

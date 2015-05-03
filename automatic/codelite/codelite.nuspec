@@ -7,7 +7,7 @@
     <authors>Eran Ifrah,CodeLite team</authors>
     <licenseUrl>http://sourceforge.net/apps/trac/codelite/browser/trunk/LICENSE</licenseUrl>
     <projectUrl>http://www.codelite.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/codelite.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/codelite.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 CodeLite is an open-source, cross platform IDE for the C/C++ programming languages.

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -16,7 +16,7 @@ to professional quality PDF documents. No watermarks!
     <copyright></copyright>
     <licenseUrl>http://www.cutepdf.com/Info/legal.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f5c1e4da40598a029269040ecb56fa8d90cf2985/icons/cutepdf.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/cutepdf.png</iconUrl>
     <dependencies>
       <dependency id="Ghostscript.app" version="8.15" />
     </dependencies>
