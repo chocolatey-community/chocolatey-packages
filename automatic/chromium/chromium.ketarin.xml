@@ -5,12 +5,12 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>36698624</LastFileSize>
-    <LastFileDate>2015-05-03T14:09:12+02:00</LastFileDate>
+    <LastFileDate>2015-05-03T16:03:31.2884139</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -87,7 +87,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-05-03T16:03:31.2884139+02:00</LastUpdated>
+    <LastUpdated>2015-05-03T16:03:31.2884139</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://storage.googleapis.com/chromium-browser-continuous/Win/{revision32}/mini_installer.exe</FixedDownloadUrl>
     <Name>chromium</Name>
