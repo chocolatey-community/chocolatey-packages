@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>renamemaster</id>
+		<title>Rename Master</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Joe Joe Soft</authors>
+		<owners>Redsandro</owners>
+		<summary>Rename Master is a freeware utility designed to rename multiple files with a just few clicks.</summary>
+		<description>Rename Master is a freeware utility designed to rename multiple files with a just few clicks. Anyone that has worked with websites, file archives, or collections of music, videos, or pictures has probably spent way too much time renaming hundreds of files. This utility will add, remove, or replace parts of the filename with ease and also supports renaming via file properties, MP3 tags, JPEG JFIF and EXIF tags, Video tags, and text files. Batch renaming that's simple to use, yet still very powerful.</description>
+		<projectUrl>http://www.joejoesoft.com/vcms/108</projectUrl>
+		<tags>batch rename files</tags>
+		<copyright></copyright>
+		<licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/renamemaster/img/renamemaster.128x128.png</iconUrl>
+		<dependencies>
+		</dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
