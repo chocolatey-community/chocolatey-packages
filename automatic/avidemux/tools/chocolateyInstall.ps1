@@ -1,10 +1,12 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/S'
-# {\{DownloadUrlx64}\} gets “misused” here as 32- and 64-bit link array due to limitations of Ketarin/chocopkgup
-$urlsArray = {{DownloadUrlx64}}
-$url = $urlsArray[0]
-$url64bit = $urlsArray[1]
+# {\{DownloadUrlx64}\} gets “misused” here as hashtable for the download links
+# due to limitations of Ketarin/chocopkgup
+$urlsHashTable = {{DownloadUrlx64}}
+$url = $urlsHashTable.url
+$url64bit = $urlsHashTable.url64
 $validExitCodes = @(0,1223)
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit -validExitCodes $validExitCodes
+Install-ChocolateyPackage $packageName $fileType $silentArgs `
+  $url $url64bit -validExitCodes $validExitCodes
