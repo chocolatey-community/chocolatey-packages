@@ -126,7 +126,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://www.blender.org/download/</Url>
+            <Url>https://www.blender.org/download/</Url>
             <StartText>&lt;h1&gt;Download Blender </StartText>
             <EndText> &lt;small&gt;for&lt;/small&gt; Windows&lt;/h1&gt;</EndText>
             <Name>real-version</Name>
@@ -142,7 +142,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>blender/release/Blender(.+?)/blender-</Regex>
-            <Url>http://www.blender.org/download/</Url>
+            <Url>https://www.blender.org/download/</Url>
             <StartText>http://download.blender.org/release/Blender</StartText>
             <EndText>/blender-</EndText>
             <Name>url-folder-version</Name>
