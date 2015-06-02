@@ -24,7 +24,7 @@ if ($PSBoundParameters['Debug']) {
   $DebugPreference = "Continue";
 }
 
-if ($help -or $packageNames.Contains('/?')) {
+if ($help -or $packageNames -join '|' -eq '/?') {
   Write-Host "To run please specify `'cyg-get packageName`'."
   Write-Host "You can also specify a list of packages like this: `'cyg-get package1 package2 packageN`'."
   Write-Host "Optional params: -upgrade"
