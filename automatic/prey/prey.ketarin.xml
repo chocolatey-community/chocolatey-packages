@@ -2,10 +2,10 @@
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="dee59ff8-fcaa-4075-a89a-8acce6480c14">
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>6667112</LastFileSize>
-    <LastFileDate>2015-05-12T21:39:10+02:00</LastFileDate>
+    <LastFileDate>2015-06-02T17:35:16.5590483</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -58,7 +58,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-06-02T17:35:16.5590483+02:00</LastUpdated>
+    <LastUpdated>2015-06-02T17:35:16.5590483</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://s3.amazonaws.com/prey-releases/node-client/{version}/prey-windows-{version}-x86.exe</FixedDownloadUrl>
     <Name>prey</Name>
