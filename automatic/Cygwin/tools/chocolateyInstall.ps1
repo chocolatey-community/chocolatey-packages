@@ -16,7 +16,7 @@ if (!(Test-Path($cygRoot))) {
 Get-ChocolateyWebFile $packageName $cygWinSetupFile $url $url64 
 
 # https://cygwin.com/faq/faq.html#faq.setup.cli
-$silentArgs = "--quiet-mode --root $cygRoot --local-package-dir $cygPackages -s http://mirrors.kernel.org/sourceware/cygwin/ --download --packages default"
+$silentArgs = "--quiet-mode --root $cygRoot --local-package-dir $cygPackages -s http://mirrors.kernel.org/sourceware/cygwin/ --packages default"
 
 Install-ChocolateyInstallPackage $packageName $installerType $silentArgs $cygWinSetupFile -validExitCodes $validExitCodes
 
