@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>85669201</LastFileSize>
-    <LastFileDate>2015-01-30T23:31:30+01:00</LastFileDate>
+    <LastFileDate>2015-01-31T15:28:32.7960505</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -55,7 +55,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>&lt;strong&gt;32bit Windows&lt;/strong&gt;: &lt;a href="{urlPart1}((\d+)/download/)"&gt;installer \(msi\)</Regex>
+            <Regex>https://inkscape.org/en/gallery/item/([\d\.]+/inkscape-[\d\.]+\.msi)</Regex>
             <Url>https://inkscape.org/en/download/windows/</Url>
             <Name>urlPart2_32</Name>
           </UrlVariable>
@@ -69,7 +69,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>&lt;strong&gt;64bit Windows&lt;/strong&gt;: &lt;a href="{urlPart1}((\d+)/download/)"&gt;installer \(msi\)</Regex>
+            <Regex>https://inkscape.org/en/gallery/item/([\d\.]+/inkscape-[\d\.]+-x64\.msi)</Regex>
             <Url>https://inkscape.org/en/download/windows/</Url>
             <Name>urlPart2_64</Name>
           </UrlVariable>
@@ -100,7 +100,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-31T15:28:32.7960505+01:00</LastUpdated>
+    <LastUpdated>2015-01-31T15:28:32.7960505</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlPart1}{urlPart2_32}</FixedDownloadUrl>
     <Name>InkScape</Name>
