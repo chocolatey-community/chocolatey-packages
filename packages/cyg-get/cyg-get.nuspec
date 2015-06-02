@@ -3,7 +3,7 @@
   <metadata>
     <id>cyg-get</id>
     <title>cyg-get</title>
-    <version>1.1.2</version>
+    <version>1.2.0</version>
     <authors>Red Hat, Inc.</authors>
     <owners>micahlmartin</owners>
     <summary>A utility to install Cygwin packages.</summary>
@@ -14,7 +14,7 @@
 
       You may provide a single package name or a comma separated list of package names to install.
 
-      e.g. `cyg-get openssh` or `cyg-get git,gitk,git-completion`
+      e.g. `cyg-get openssh` or `cyg-get git gitk git-completion`
 
       For a default installation of Cygwin, call 'cyg-get default'
     </description>

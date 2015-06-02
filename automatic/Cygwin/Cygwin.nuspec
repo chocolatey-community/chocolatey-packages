@@ -5,7 +5,7 @@
     <version>{{PackageVersion}}</version>
     <title>Cygwin</title>
     <authors>Red Hat, Inc.</authors>
-    <owners>H. Alan Stevens</owners>
+    <owners>Chocolatey</owners>
     <licenseUrl>http://cygwin.com/license.html</licenseUrl>
     <projectUrl>http://cygwin.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Cygwin.png</iconUrl>
@@ -18,7 +18,7 @@ Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing sub
 NOTE: For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <summary>A Linux environment for Windows.</summary>
-    <releaseNotes>This package is now a wrapper calling "cyg-get default"</releaseNotes>
+    <releaseNotes></releaseNotes>
     <copyright>Red Hat, Inc.</copyright>
     <tags>Cygwin linux</tags>
   </metadata>
