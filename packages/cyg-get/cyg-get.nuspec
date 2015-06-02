@@ -3,7 +3,7 @@
   <metadata>
     <id>cyg-get</id>
     <title>cyg-get</title>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <authors>Red Hat, Inc.</authors>
     <owners>micahlmartin</owners>
     <summary>A utility to install Cygwin packages.</summary>
@@ -16,7 +16,9 @@
 
       e.g. `cyg-get openssh` or `cyg-get git gitk git-completion`
 
-      For a default installation of Cygwin, call 'cyg-get default'
+      For a default installation of Cygwin, call `cyg-get default`.
+
+      For all options you can use, call `cyg-get -help`.
     </description>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/packages/cyg-get</projectUrl>
     <tags>cygwin</tags>

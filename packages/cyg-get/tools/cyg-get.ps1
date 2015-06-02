@@ -2,6 +2,8 @@ param(
   [parameter(Position=0, ValueFromRemainingArguments=$true)]
   [string[]]$packageNames = @(),
   [Parameter(Mandatory=$False)]
+  [string]$site = $null,
+  [Parameter(Mandatory=$False)]
   [switch]$upgrade = $false,
   [Parameter(Mandatory=$False)]
   [alias("?","h")][switch]$help = $false,
@@ -27,6 +29,7 @@ if ($PSBoundParameters['Debug']) {
 if ($help -or $packageNames -join '|' -eq '/?') {
   Write-Host "To run please specify `'cyg-get packageName`'."
   Write-Host "You can also specify a list of packages like this: `'cyg-get package1 package2 packageN`'."
+  Write-Host "Optional params: -site http://somewhere"
   Write-Host "Optional params: -upgrade"
   Write-Host "Optional params: -proxy host:port"
   Write-Host "Optional params: -arch x86_64 or x86"
@@ -41,17 +44,24 @@ if ($help -or $packageNames -join '|' -eq '/?') {
   $local_key6432 =  'HKLM:\SOFTWARE\Wow6432Node\Cygwin\setup'
 
   try {
+    $useDefaultMirror = $false
 
     $cygRoot = @($local_key, $local_key6432) | ?{Test-Path $_} | Get-ItemProperty | Select-Object -ExpandProperty rootdir
     if ($cygRoot -eq $null) {
-      throw "Cygwin install not found"
+      $useDefaultMirror = $true
+      Write-Debug "Registry value not found for install"
+      $cygRoot = 'c:\tools\cygwin'
+      Write-Debug "Looking for cygwin in '$cygRoot'"
+      if (!(Test-Path $cygRoot)) {
+        throw "Cygwin install not found"
+      }
     }
 
     $cygwinsetup = "$cygRoot\cygwinsetup.exe"
     $cygLocalPackagesDir = join-path $cygRoot packages
     $cygInstallPackageList = $packageNames -join ','
 
-    $cygArgs = "--root $cygRoot --local-package-dir $cygLocalPackagesDir --download"
+    $cygArgs = "--root $cygRoot --local-package-dir $cygLocalPackagesDir"
 
     $windowStyle = 'Minimized'
     if (!$notSilent) {
@@ -59,7 +69,13 @@ if ($help -or $packageNames -join '|' -eq '/?') {
     } else {
       $cygArgs +=" --package-manager"
       $windowStyle = 'Normal'
-    }       
+    }
+
+    if ($site -ne $null -and $site -ne '') {
+      $cygArgs +=" --site $site"
+    } elseif ($useDefaultMirror) {
+      $cygArgs +=" --site http://mirrors.kernel.org/sourceware/cygwin/"
+    }
 
     if ($upgrade) {
       $cygArgs +=" --upgrade-also"
@@ -98,10 +114,10 @@ if ($help -or $packageNames -join '|' -eq '/?') {
 
     Write-Host "Attempting to install cygwin packages: $cygInstallPackageList"
     Write-Debug "$cygwinsetup $cygArgs"
-    
+
     Start-Process -FilePath $cygwinsetup -ArgumentList $cygArgs -Wait -WindowStyle $windowStyle
   }
-  catch {
-    Write-Error "Please ensure you have Cygwin installed. To install please `ncall 'choco install cygwin' (optionally add -y to autoconfirm). `nERROR: $($_.Exception.Message)"
+   catch {
+    Write-Error "Please ensure you have Cygwin installed. `nTo install please call 'choco install cygwin' (optionally add -y to autoconfirm). `nERROR: $($_.Exception.Message)"
   }
 }
