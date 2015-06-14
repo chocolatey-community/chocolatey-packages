@@ -5,7 +5,7 @@
     <version>{{PackageVersion}}</version>
     <title>MPC-HC</title>
     <authors>MPC-HC Team</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html and http://mpc-hc.org/about/#third-party-libraries</licenseUrl>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://mpc-hc.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/18bc5fef22a657d3632d88b1366126201b3b39bc/icons/mpc-hc.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
