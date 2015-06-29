@@ -4,7 +4,8 @@
     <id>absolute-uninstaller</id>
     <title>Absolute Uninstaller</title>
     <version>{{PackageVersion}}</version>
-    <authors>Redsandro</authors>
+    <authors>GlarySoft</authors>
+    <owners>Redsandro</owners>
     <summary>Absolute Uninstaller is a complete program uninstaller that helps you remove programs.</summary>
     <description>
 GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you remove programs thoroughly without leaving any invalid remnant to burden your system gradually.
