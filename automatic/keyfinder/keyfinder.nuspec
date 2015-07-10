@@ -7,7 +7,7 @@
     <authors>Magical Jelly Bean</authors>
     <licenseUrl>http://www.magicaljellybean.com/tos/</licenseUrl>
     <projectUrl>http://www.magicaljellybean.com/keyfinder/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/keyfinder.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/keyfinder.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 The Magical Jelly Bean Keyfinder is a freeware utility that retrieves your Product Key (cd key) used to install windows from your registry. It also has a community-updated configuration file that retrieves product keys for many other applications. Another feature is the ability to retrieve product keys from unbootable Windows installations.

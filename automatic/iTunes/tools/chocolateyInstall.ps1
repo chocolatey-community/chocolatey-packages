@@ -1,66 +1,37 @@
 ﻿$packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
 $url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+$url64bit = '{{DownloadUrlx64}}'
 $fileType = 'msi'
-$silentArgs = '/quiet /norestart'
-$filePath = "$env:TEMP\chocolatey\$packageName"
-$fileFullPath = "$filePath\${packageName}Install.exe"
+$silentArgs = '/qn /norestart'
 $validExitCodes = @(0, 3010)
 
-function findMsid {
-  param([String]$registryUninstallRoot, [string]$keyContentMatch, [string]$version)
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$downloadTempDir = Join-Path $toolsDir 'download-temp'
 
-  if (Test-Path $registryUninstallRoot) {
-    Get-ChildItem -Force -Path $registryUninstallRoot | foreach {
-      $currentKey = (Get-ItemProperty -Path $_.PsPath)
-      if ($currentKey -match $keyContentMatch -and $currentKey -match $version) {
-        return $currentKey.PsChildName
-      }
-    }
+$app = Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match 'iTunes'}
+
+# Check if the same version of iTunes is already installed
+if ($app -and ([version]$app.Version -ge [version]$version)) {
+  Write-Host $(
+    'iTunes ' + $version + ' or higher is already installed. ' +
+    'No need to download and install again.'
+  )
+} else {
+
+  Install-ChocolateyZipPackage -packageName $packageName -url $url `
+    -url64bit $url64bit -unzipLocation $downloadTempDir
+
+  $msiFilesList = (Get-ChildItem -Path $downloadTempDir -Filter '*.msi' | Where-Object {
+    $_.Name -notmatch 'AppleSoftwareUpdate*.msi'
+  }).Name
+
+  # Loop over each file and install it. iTunes requires all of them to be installed
+  foreach ($msiFileName in $msiFilesList) {
+    Install-ChocolateyInstallPackage -packageName $msiFileName -fileType $fileType `
+      -silentArgs $silentArgs -file (Join-Path $downloadTempDir $msiFileName) `
+      -validExitCodes $validExitCodes
   }
 
-  return $null
-}
-
-try {
-
-  $registryUninstallRoot = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall'
-  $alreadyInstalled = findMsid $registryUninstallRoot 'iTunes' $version
-  if ($alreadyInstalled) {
-    Write-Output "iTunes $version is already installed."
-  } else {
-
-    if (-not (Test-Path $filePath)) {
-      New-Item -ItemType directory -Path $filePath
-    }
-
-    Get-ChocolateyWebFile $packageName $fileFullPath $url $url64
-
-    & 7za x "-o$filePath" -y "$fileFullPath"
-
-    $packageName = 'appleapplicationsupport'
-    $file = "$filePath\AppleApplicationSupport.msi"
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-    $processor = Get-WmiObject Win32_Processor
-    $is64bit = $processor.AddressWidth -eq 64
-
-    $packageName = 'applemobiledevicesupport'
-    if ($is64bit) {$file = "$filePath\AppleMobileDeviceSupport64.msi"} else {$file = "$filePath\AppleMobileDeviceSupport.msi"}
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-    $packageName = 'bonjour'
-    if ($is64bit) {$file = "$filePath\Bonjour64.msi"} else {$file = "$filePath\Bonjour.msi"}
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-    $packageName = 'itunes'
-    if ($is64bit) {$file = "$filePath\iTunes64.msi"} else {$file = "$filePath\iTunes.msi"}
-    Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-
-  }
-
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+  Remove-Item $downloadTempDir -Recurse
 }

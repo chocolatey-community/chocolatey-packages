@@ -7,7 +7,7 @@
     <authors>Emmanuel Puybaret</authors>
     <licenseUrl>http://www.sweethome3d.com/license.jsp</licenseUrl>
     <projectUrl>http://www.sweethome3d.com/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/sweet-home-3d.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/sweet-home-3d.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Sweet Home 3D is a free interior design application that helps you draw the plan of your house, arrange furniture on it and visit the results in 3D.

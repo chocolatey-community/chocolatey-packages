@@ -57,7 +57,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Show:6:win:64bit:radio:binaryUrl' value=')https:\/\/secure-appldnld\.apple\.com.+?iTunes64Setup\.exe</Regex>
+            <Regex>https://secure-appldnld\.apple\.com/itunes[^\r\n'"]+?64Setup.exe</Regex>
             <Url>https://swdlp.apple.com/iframes/82/en_us/82_en_us.html</Url>
             <TextualContent />
             <Name>url64</Name>

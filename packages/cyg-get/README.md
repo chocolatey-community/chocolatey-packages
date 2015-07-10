@@ -10,4 +10,4 @@ Install all default packages
 `cyg-get default`
 
 Install multiple packages
-`cyg-get git,gitk,openssh`
+`cyg-get git gitk openssh`

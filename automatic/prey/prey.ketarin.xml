@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>6407584</LastFileSize>
-    <LastFileDate>2014-12-02T23:46:13+01:00</LastFileDate>
+    <LastFileSize>6667112</LastFileSize>
+    <LastFileDate>2015-06-02T17:35:16.5590483</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -24,8 +24,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>prey-windows-([\d\.]+)-x86\.exe</Regex>
             <Url>https://preyproject.com/download</Url>
             <StartText>for Windows&lt;/h2&gt;&lt;p&gt;&lt;a class="download" data-gtm-event="Prey </StartText>
             <EndText> for Windows</EndText>
@@ -54,11 +54,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\prey-windows-1.3.3-x86.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\prey-windows-1.3.10-x86.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-12-05T22:21:48.1743628+01:00</LastUpdated>
+    <LastUpdated>2015-06-02T17:35:16.5590483</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://s3.amazonaws.com/prey-releases/node-client/{version}/prey-windows-{version}-x86.exe</FixedDownloadUrl>
     <Name>prey</Name>

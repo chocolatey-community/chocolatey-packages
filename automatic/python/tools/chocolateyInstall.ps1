@@ -5,9 +5,9 @@ $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
 $version = '{{PackageVersion}}'
 $fileType = 'msi'
-$partialInstallArgs = '/passive ALLUSERS=1 TARGETDIR='
+$partialInstallArgs = '/qn /norestart ALLUSERS=1 TARGETDIR='
 
-try {
+
 
   $binRoot = Get-BinRoot
   $installPath = Join-Path $binRoot $packageName
@@ -79,7 +79,4 @@ folder and reinstall this package with the -force parameter.
     $env:Path = "$($env:Path);$installPath"
   }
 
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
-}
+

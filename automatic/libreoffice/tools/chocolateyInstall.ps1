@@ -1,50 +1,45 @@
+﻿# Important: The contents of this file – the `libreoffice` and
+# `libreoffice-oldstable` install scripts – **must** be identical.
+
 $packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
 $validExitCodes = @(0,3010)
 
+$versionsHtmlFile = "$env:TEMP\libreoffice-versions.html"
+$versionsHtmlUrl = 'http://download.documentfoundation.org/libreoffice/stable/'
 
-try {
+Get-ChocolateyWebFile 'libreoffice-versions-html' $versionsHtmlFile $versionsHtmlUrl
 
-  $versionsHtmlFile = "$env:TEMP\libreoffice-versions.html"
-  $versionsHtmlUrl = 'http://download.documentfoundation.org/libreoffice/stable/'
+$matchArray = (Get-Content $versionsHtmlFile) -match 'href="([\d\.]+)\/"'
 
-  Get-ChocolateyWebFile 'libreoffice-versions-html' $versionsHtmlFile $versionsHtmlUrl
+Remove-Item $versionsHtmlFile
 
-  $matchArray = (Get-Content $versionsHtmlFile) -match 'href="([\d\.]+)\/"'
+$downloadableVersions = @()
 
-  Remove-Item $versionsHtmlFile
+for ($i = 0; $i -lt $matchArray.Length; $i += 1) {
+  $matchArray[$i] -match '[\d\.]+'
+  $downloadableVersions += $Matches[0]
+}
 
-  $downloadableVersions = @()
+if (-not($downloadableVersions -match $version)) {
 
-  for ($i = 0; $i -lt $matchArray.Length; $i += 1) {
-    $matchArray[$i] -match '[\d\.]+'
-    $downloadableVersions += $Matches[0]
-  }
+  Write-Output 'The version of LibreOffice specified in the package is no longer available to download. This package will download the latest available version instead.'
 
-  if (-not($downloadableVersions -match $version)) {
-
-    Write-Output 'The version of LibreOffice specified in the package is no longer available to download. This package will download the latest available version instead.'
-
-    if ([System.Version]$downloadableVersions[0] -gt [System.Version]$downloadableVersions[1]) {
-      $version = $downloadableVersions[0]
-    } else {
-      $version = $downloadableVersions[1]
-    }
-  }
-
-  $downUrl = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
-
-
-  # Check if LibreOffice in the same version is already installed
-  $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {($_.Name -match '^LibreOffice [\d\.]+$') -and ($_.Version -match "^$version")}
-
-  if ($alreadyInstalled) {
-    Write-Host "LibreOffice $version is already installed on the computer. Skipping download."
+  if ([System.Version]$downloadableVersions[0] -gt [System.Version]$downloadableVersions[1]) {
+    $version = $downloadableVersions[0]
   } else {
-    Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' $downUrl -validExitCodes $validExitCodes
+    $version = $downloadableVersions[1]
   }
+}
 
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+$downUrl = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
+
+
+# Check if LibreOffice in the same version is already installed
+$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {($_.Name -match '^LibreOffice [\d\.]+$') -and ($_.Version -match "^$version")}
+
+if ($alreadyInstalled) {
+  Write-Host "LibreOffice $version is already installed on the computer. Skipping download."
+} else {
+  Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' $downUrl -validExitCodes $validExitCodes
 }

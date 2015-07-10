@@ -69,7 +69,7 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>49537879</LastFileSize>
     <LastFileDate>2014-08-09T15:38:11.2411611</LastFileDate>
@@ -98,7 +98,7 @@
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
-            <TextualContent>{real-version:multireplace:,:a,b,c,d,e,f:.1,.2,.3,.4,.5,.6}</TextualContent>
+            <TextualContent>{realVersion:multireplace:,:a,b,c,d,e,f:.1,.2,.3,.4,.5,.6}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -112,54 +112,36 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{baseUrl}64.exe</TextualContent>
+            <TextualContent>{urlPart}64.msi</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>real-version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://www.blender.org/download/</Url>
-            <StartText>&lt;h1&gt;Download Blender </StartText>
-            <EndText> &lt;small&gt;for&lt;/small&gt; Windows&lt;/h1&gt;</EndText>
-            <Name>real-version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url-folder-version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>blender/release/Blender(.+?)/blender-</Regex>
-            <Url>http://www.blender.org/download/</Url>
-            <StartText>http://download.blender.org/release/Blender</StartText>
-            <EndText>/blender-</EndText>
-            <Name>url-folder-version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>baseUrl</string>
+          <string>realVersion</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://download.blender.org/release/Blender{url-folder-version}/blender-{real-version}-windows</TextualContent>
-            <Name>baseUrl</Name>
+            <TextualContent>{urlPart:regex:(?&lt;=-)([\d\.a-f]+):$2}</TextualContent>
+            <Name>realVersion</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>"(http://[^\r\n"]+?/release/Blender[^\r\n"]+?-windows)32\.msi"</Regex>
+            <Url>https://www.blender.org/download/</Url>
+            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -176,7 +158,7 @@
     <FileHippoId />
     <LastUpdated>2014-08-09T15:38:11.2411611</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{baseUrl}32.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>{urlPart}32.msi</FixedDownloadUrl>
     <Name>blender</Name>
   </ApplicationJob>
 </Jobs>

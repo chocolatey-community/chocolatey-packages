@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>OpenSSL – The Open Source SSL and TLS toolkit</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Shining Light Productions</authors>
+    <summary>Open Source SSL v2/v3 and TLS v1 toolkit</summary>
+    <description>
+The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well as a full-strength general purpose cryptography library. The project is managed by a worldwide community of volunteers that use the Internet to communicate, plan, and develop the OpenSSL toolkit and its related documentation.
+
+The Win32 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL. It is easy to set up and easy to use through the simple, effective installer. No need to compile anything or jump through any hoops, just click a few times and it is installed, leaving you to doing real work. Download it today! Note that these are default builds of OpenSSL and subject to local and state laws. More information can be found in the legal agreement of the installation.
+    </description>
+    <projectUrl>https://slproweb.com/products/Win32OpenSSL.html</projectUrl>
+    <tags>openssl SSL TLS pfx pem key RSA</tags>
+    <licenseUrl>https://www.openssl.org/source/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/openssl.png</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

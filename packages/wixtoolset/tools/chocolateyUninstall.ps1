@@ -1,4 +1,15 @@
 $packageName = 'wixtoolset'
+$silentArgs = '/uninstall /quiet'
 
-$msiArgs = $('/x{7B9D7DD6-3490-417D-843C-7982B1DB1859} /q REBOOT=ReallySuppress')
-Start-ChocolateyProcessAsAdmin $msiArgs 'msiexec'
+$osBitness = Get-ProcessorBits
+
+# Remove not needed folder with binaries
+if ($osBitness -eq 64) {
+  $uninstallRegKey = 'HKLM:SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{0f7c49f2-f5d2-4eaa-9de5-a274bdcbe6af}'
+} else {
+  $uninstallRegKey = 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{0f7c49f2-f5d2-4eaa-9de5-a274bdcbe6af}'
+}
+
+$uninstallPath = (Get-ItemProperty $uninstallRegKey).BundleCachePath
+
+Start-ChocolateyProcessAsAdmin -exeToRun $uninstallPath -statements $silentArgs

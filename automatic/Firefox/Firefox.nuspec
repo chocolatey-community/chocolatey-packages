@@ -4,7 +4,7 @@
     <version>{{PackageVersion}}</version>
     <authors>Mozilla</authors>
     <projectUrl>http://www.mozilla.org/en-US/firefox/new/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a9e674e28612ffeadab7fe73a4125a40dc9066ef/icons/firefox.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/firefox.png</iconUrl>
     <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>
     <id>{{PackageName}}</id>
     <title>Mozilla Firefox</title>
@@ -14,7 +14,7 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 This package installs Firefox in the first language which matches this list:
 
-1. Install arguments override parameter if present, e.g. `choco install Firefox -installArgs l=en-GB`. To get a list of all available locales have a look at this folder: http://releases.mozilla.org/pub/mozilla.org/firefox/releases/latest/win32/.
+1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`. To get a list of all available locales have a look at this folder: http://releases.mozilla.org/pub/mozilla.org/firefox/releases/latest/win32/.
 2. If Firefox is already installed: the same language as the already installed Firefox.
 3. The Windows system language where the Firefox package gets installed.
 4. If Firefox does not support the system language, it will fallback to “en-US”
@@ -23,6 +23,9 @@ Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firef
     </description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox</tags>
+    <releaseNotes>
+**37.0.0.20150401**: Use packageParameters for locale override. Fix package vor Chocolatey ≥ 0.9.x.
+    </releaseNotes>
   </metadata>
     <files>
     <file src="tools\**" target="tools" />

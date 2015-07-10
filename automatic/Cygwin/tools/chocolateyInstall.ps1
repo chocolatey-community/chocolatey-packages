@@ -2,24 +2,22 @@
 $installerType = 'exe'
 $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
-
-$binRoot = Get-BinRoot
-$cygRoot = join-path $binRoot "cygwin"
-$cygPackages = join-path $cygRoot packages
-
-# https://cygwin.com/faq/faq.html#faq.setup.cli
-$silentArgs = "-q -R $cygRoot -l $cygPackages -s http://mirrors.kernel.org/sourceware/cygwin/"
 $validExitCodes = @(0)
 
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"  -validExitCodes $validExitCodes
-$installerFile = join-path $env:Temp 'chocolatey\cygwin\cygwinInstall.exe'
+$binRoot = Get-BinRoot
+$cygRoot = join-path $binRoot 'cygwin'
+$cygWinSetupFile = "$cygRoot\cygwinsetup.exe"
+$cygPackages = join-path $cygRoot packages
 
-try {
-  Install-ChocolateyPath $cygRoot
-  Copy-Item "$installerFile" "$cygRoot\cygwinsetup.exe" -Force
-
-  Write-ChocolateySuccess "$packageName"
-} catch {
-  Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
-  throw
+if (!(Test-Path($cygRoot))) {
+  [System.IO.Directory]::CreateDirectory($cygRoot) | Out-Null  
 }
+
+Get-ChocolateyWebFile $packageName $cygWinSetupFile $url $url64 
+
+# https://cygwin.com/faq/faq.html#faq.setup.cli
+$silentArgs = "--quiet-mode --root $cygRoot --local-package-dir $cygPackages -s http://mirrors.kernel.org/sourceware/cygwin/ --packages default"
+
+Install-ChocolateyInstallPackage $packageName $installerType $silentArgs $cygWinSetupFile -validExitCodes $validExitCodes
+
+Install-ChocolateyPath $cygRoot

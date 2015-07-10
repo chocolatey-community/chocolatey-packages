@@ -4,13 +4,13 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>35118080</LastFileSize>
-    <LastFileDate>2014-08-18T21:31:28.455323</LastFileDate>
+    <LastFileSize>36698624</LastFileSize>
+    <LastFileDate>2015-05-03T16:03:31.2884139</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -24,11 +24,11 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://chromium.woolyss.com/</Url>
-            <StartText>Version: </StartText>
-            <EndText> (</EndText>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>"version":"([\d\.]+)",</Regex>
+            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=json</Url>
+            <StartText>"version":"</StartText>
+            <EndText>",</EndText>
             <TextualContent />
             <Name>version</Name>
           </UrlVariable>
@@ -36,15 +36,43 @@
       </item>
       <item>
         <key>
-          <string>url</string>
+          <string>revision64</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>https://storage.googleapis.com/chromium-browser-continuous/Win/\d+/mini_installer.exe</Regex>
-            <Url>http://chromium.woolyss.com/</Url>
-            <Name>url</Name>
+            <Regex>\d+</Regex>
+            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=revision</Url>
+            <Name>revision64</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>revision32</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>\d+</Regex>
+            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=32&amp;out=revision</Url>
+            <Name>revision32</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://storage.googleapis.com/chromium-browser-continuous/Win_x64/{revision64}/mini_installer.exe</TextualContent>
+            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -59,9 +87,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-18T21:31:28.455323</LastUpdated>
+    <LastUpdated>2015-05-03T16:03:31.2884139</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <FixedDownloadUrl>https://storage.googleapis.com/chromium-browser-continuous/Win/{revision32}/mini_installer.exe</FixedDownloadUrl>
     <Name>chromium</Name>
   </ApplicationJob>
 </Jobs>
