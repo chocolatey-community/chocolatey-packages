@@ -4,13 +4,13 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>14489063</LastFileSize>
-    <LastFileDate>2015-05-16T09:23:25+02:00</LastFileDate>
+    <LastFileSize>2784</LastFileSize>
+    <LastFileDate>2013-11-18T01:41:02+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -19,32 +19,30 @@
     <Variables>
       <item>
         <key>
-          <string>version</string>
+          <string>urlPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
+            <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url />
-            <StartText>&lt;p&gt; win32 &lt;b&gt;</StartText>
-            <EndText>&lt;/b&gt;</EndText>
-            <TextualContent>{realVersion:regexreplace:\s+.+:.{yyyy}{MM}{dd}}</TextualContent>
-            <Name>version</Name>
+            <Url>http://www.fosshub.com/Avidemux.html</Url>
+            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>majorVersion</string>
+          <string>genLinkPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{realVersion:regex:^[^ ]+}</TextualContent>
-            <Name>majorVersion</Name>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(Avidemux/avidemux_[\d\.]+_win)32\.exe</Regex>
+            <Url>http://www.fosshub.com/Avidemux.html</Url>
+            <TextualContent />
+            <Name>genLinkPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -57,65 +55,36 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{urlsHashTable}</TextualContent>
+            <TextualContent>{genLinkMorePart}</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>urlMirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>ResponseUri: ([^\r\n]+)</Regex>
-            <Url>http://sourceforge.net/projects/avidemux/files/avidemux/{majorVersion}/avidemux_{versionUnderscore}_win32.exe/download</Url>
-            <TextualContent />
-            <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>versionUnderscore</string>
+          <string>genLinkMorePart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{realVersion:regexreplace: :_}</TextualContent>
-            <Name>versionUnderscore</Name>
+            <TextualContent>http://www.fosshub.com/genLink/{genLinkPart}</TextualContent>
+            <Name>genLinkMorePart</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>urlsHashTable</string>
+          <string>version</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>@{'url' = 'http://sourceforge.net/projects/avidemux/files/avidemux/{majorVersion}/avidemux_{versionUnderscore}_win32.exe/download'; 'url64' = 'http://sourceforge.net/projects/avidemux/files/avidemux/{majorVersion}/avidemux_{versionUnderscore}_win64.exe/download'}</TextualContent>
-            <Name>urlsHashTable</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>realVersion</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>&lt;p&gt; win32 &lt;b&gt;(.+?)&lt;/b&gt;</Regex>
-            <Url>http://avidemux.sourceforge.net/download.html</Url>
-            <Name>realVersion</Name>
+            <TextualContent>{genLinkPart:regex:(?&lt;=_)([\d\.]+)(?=_win):$1}</TextualContent>
+            <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
@@ -126,13 +95,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\avidemux_2.6.9_v2_win32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\logo.png</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-05-17T12:12:36.4189795+02:00</LastUpdated>
+    <LastUpdated>2015-07-12T01:29:49.1205911+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.fosshub.com/media/v2/img/logo.png</FixedDownloadUrl>
     <Name>avidemux</Name>
   </ApplicationJob>
 </Jobs>
