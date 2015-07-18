@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>AOMEI Partition Assistant Lite Server</title>
+		<version>{{PackageVersion}}</version>
+		<authors>AOMEI Technology</authors>
+		<owners>Redsandro</owners>
+		<summary>Easy-to-use partition manager for latest Windows 8 and 8.1, Windows 7, XP, Vista, 2000. SERVER ONLY.</summary>
+		<description>This is the free server edition functioned with extending and reducing partition, supported with all Windows Server Edition OS.</description>
+		<projectUrl>http://www.disk-partition.com/partition-assistant-lite.html</projectUrl>
+		<tags>storage partition disk drive manager wizard</tags>
+		<copyright></copyright>
+		<licenseUrl>http://www.disk-partition.com/license-agreement.html</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/partitionassistantlite/img/passistant.64x64.png</iconUrl>
+			<dependencies></dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
