@@ -25,7 +25,7 @@ SciTE4AutoHotkey is a SciTE-based AutoHotkey script editor. It offers:
 
 This package uses an AutoHotkey-script for unattended installation.
     </description>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/scite4autohotkey.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/scite4autohotkey.png</iconUrl>
     <projectUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/</projectUrl>
     <tags>autohotkey debugging ide</tags>
     <licenseUrl>http://www.autohotkey.net/~fincs/SciTE4AutoHotkey_3/web/license.htm</licenseUrl>

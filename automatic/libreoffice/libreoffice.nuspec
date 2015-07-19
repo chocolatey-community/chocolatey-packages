@@ -19,7 +19,7 @@ This package installs the latest stable version of LibreOffice (officially calle
     <copyright></copyright>
     <licenseUrl>http://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/libreoffice.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/libreoffice.svg</iconUrl>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>

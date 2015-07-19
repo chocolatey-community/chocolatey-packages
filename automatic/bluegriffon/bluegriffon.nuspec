@@ -7,7 +7,7 @@
     <authors>Daniel Glazman</authors>
     <licenseUrl>http://www.bluegriffon.org/</licenseUrl>
     <projectUrl>http://bluegriffon.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/bluegriffon.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/bluegriffon.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 BlueGriffon is a WYSIWYG content editor for the World Wide Web. Powered by Gecko, the rendering engine of Firefox, it's a modern and robust solution to edit Web pages in conformance to the latest Web Standards.

@@ -7,7 +7,7 @@
     <authors>authors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
     <projectUrl>http://www.ffmpeg.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/ffmpeg.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/ffmpeg.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.
