@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>36415</LastFileSize>
-    <LastFileDate>2014-12-12T17:36:18+01:00</LastFileDate>
+    <LastFileSize>41471</LastFileSize>
+    <LastFileDate>2015-07-18T19:16:29+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -40,7 +40,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>@('http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-{version}-setup.exe', 'http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-amd64-{version}-setup.exe')</TextualContent>
+            <TextualContent>@('http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-32bit-{version}-setup.exe', 'http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-64bit-{version}-setup.exe')</TextualContent>
             <Name>genLinkArray</Name>
           </UrlVariable>
         </value>
@@ -52,8 +52,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>mkvtoolnix-64bit-([\d\.]+)-setup\.exe</Regex>
             <Url>http://www.fosshub.com/MKVToolNix.html</Url>
             <StartText>data="MKVToolNix/mkvtoolnix-amd64-</StartText>
             <EndText>-setup.exe"&gt;</EndText>
@@ -72,7 +72,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-12-27T01:59:03.8845817+01:00</LastUpdated>
+    <LastUpdated>2015-07-19T20:35:46.9539921+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/win32/sha512sums.txt</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
