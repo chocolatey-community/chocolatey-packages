@@ -17,6 +17,8 @@ Chrome is a fast, simple, and secure web browser, built for the modern web.
 This package installs Chrome for all users on the machine (using the MSI installer) and is for the 64-bit version only. If you want the 32-bit version, install the [GoogleChrome](/packages/GoogleChrome) package instead.
 
 If you switch from the 32-bit to the 64-bit version, remember to uninstall all versions of the `GoogleChrome` package.
+
+This package always installs the latest version of Google Chrome, regardless of the version specified in the package. Google does not officially offer older versions of Chrome for download.
     </description>
     <releaseNotes></releaseNotes>
   </metadata>
