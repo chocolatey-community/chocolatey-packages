@@ -1,12 +1,14 @@
-﻿try {
-  $version = '{{PackageVersion}}'
-  $downUrl = "http://sourceforge.net/projects/audacity/files/audacity/${version}/audacity-win-${version}.exe/download"
-  # installer, will assert administrative rights
-  Install-ChocolateyPackage '{{PackageName}}' 'EXE' '/VERYSILENT' "$downUrl" -validExitCodes @(0)
+﻿# Note: fosshub uses special links that expire. The Get-FosshubLinks function
+# takes care of generating these links.
 
-  # the following is all part of error handling
-  Write-ChocolateySuccess '{{PackageName}}'
-} catch {
-  Write-ChocolateyFailure '{{PackageName}}' "$($_.Exception.Message)"
-  throw
-}
+$PSScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
+Import-Module (Join-Path $PSScriptRoot 'get-fosshublinks.ps1')
+
+$packageName = '{{PackageName}}'
+$fileType = 'exe'
+$fileArgs = '/VERYSILENT'
+$version = '{{PackageVersion}}'
+
+$url = Get-FosshubLinks "http://www.fosshub.com/genLink/Audacity/audacity-win-${version}.exe"
+
+Install-ChocolateyPackage $packageName $fileType $fileArgs $url
