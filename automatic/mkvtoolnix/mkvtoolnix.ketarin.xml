@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>41471</LastFileSize>
-    <LastFileDate>2015-07-18T19:16:29+02:00</LastFileDate>
+    <LastFileSize>638</LastFileSize>
+    <LastFileDate>2015-09-19T18:20:57+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -47,16 +47,28 @@
       </item>
       <item>
         <key>
-          <string>version</string>
+          <string>shasumsUrlPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>mkvtoolnix-64bit-([\d\.]+)-setup\.exe</Regex>
-            <Url>http://www.fosshub.com/MKVToolNix.html</Url>
-            <StartText>data="MKVToolNix/mkvtoolnix-amd64-</StartText>
-            <EndText>-setup.exe"&gt;</EndText>
+            <Regex>&lt;a href="windows/releases/([\d\.]+/sha512sums.txt)"&gt;</Regex>
+            <Url>https://www.bunkus.org/videotools/mkvtoolnix/downloads.html</Url>
+            <Name>shasumsUrlPart</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{shasumsUrlPart:regex:^([\d\.]+)/:1}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -72,9 +84,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-07-19T20:35:46.9539921+02:00</LastUpdated>
+    <LastUpdated>2015-10-06T23:20:05.0461606+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/win32/sha512sums.txt</FixedDownloadUrl>
+    <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/windows/releases/{shasumsUrlPart}</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>
 </Jobs>
