@@ -24,71 +24,10 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://freeciv.wikia.com/wiki/Main_Page</Url>
-            <StartText>http://prdownloads.sourceforge.net/freeciv/Freeciv-</StartText>
-            <EndText>-win32-gtk2-setup.exe</EndText>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>majorVersion</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url>http://sourceforge.net/projects/freeciv/files/</Url>
-            <StartText>&lt;tr title="Freeciv </StartText>
-            <EndText>" class="folder</EndText>
-            <TextualContent>{version:regexreplace:(.+)\.\d+:$1}</TextualContent>
-            <Name>majorVersion</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{urlGeneral}</TextualContent>
-            <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneral</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/freeciv/files/Freeciv%20{majorVersion}/{version}/Freeciv-{version}-win32-gtk2-setup.exe/download</TextualContent>
-            <Name>urlGeneral</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlMirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>{urlGeneral}</Url>
-            <Name>urlMirror</Name>
+            <Regex>http://download\.gna\.org/freeciv/packages/windows/Freeciv-([\d\.]+)-win32-gtk2-setup\.exe</Regex>
+            <Url>http://www.freeciv.org/download.html</Url>
+            <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
@@ -105,7 +44,7 @@
     <FileHippoId />
     <LastUpdated>2014-08-17T17:27:32.1341491</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://download.gna.org/freeciv/packages/windows/Freeciv-{version}-win32-gtk2-setup.exe</FixedDownloadUrl>
     <Name>freeciv</Name>
   </ApplicationJob>
 </Jobs>
