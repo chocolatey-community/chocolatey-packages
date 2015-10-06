@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>239648</LastFileSize>
-    <LastFileDate>2014-05-04T02:32:38.3050924</LastFileDate>
+    <LastFileSize>241720</LastFileSize>
+    <LastFileDate>2015-08-04T00:24:51+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -54,13 +54,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\DUCSetup_v4_1_0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\DUCSetup_v4_1_1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-04T02:32:38.3050924</LastUpdated>
+    <LastUpdated>2015-10-06T23:06:51.3460971+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://www.noip.com/client/DUCSetup_v{version_underscore}_0.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.noip.com/client/DUCSetup_v{version_underscore}.exe</FixedDownloadUrl>
     <Name>no-ip-duc</Name>
   </ApplicationJob>
 </Jobs>
