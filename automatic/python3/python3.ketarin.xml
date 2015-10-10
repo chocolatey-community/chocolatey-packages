@@ -69,10 +69,10 @@
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
+    <UserAgent />
     <UserNotes />
-    <LastFileSize>24408064</LastFileSize>
-    <LastFileDate>2014-06-10T19:05:05.7494267</LastFileDate>
+    <LastFileSize>28620792</LastFileSize>
+    <LastFileDate>2015-09-13T05:00:55+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -92,8 +92,8 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=\.msi"&gt;Download Python )3\.[\d\.]+?(?=&lt;\/a&gt;)</Regex>
-            <Url>http://www.python.org/downloads/</Url>
+            <Regex>Download Python (3[\d\.]+)</Regex>
+            <Url>https://www.python.org/downloads/</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -112,7 +112,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>https://www.python.org/ftp/python/{version}/python-{version}.amd64.msi</TextualContent>
+            <TextualContent>https://www.python.org/ftp/python/{version}/python-{version}-amd64.exe</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
@@ -125,13 +125,13 @@ REM /disablepush</ExecutePreCommand>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\python-3.4.1.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\python-3.5.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-06-10T19:05:05.7494267</LastUpdated>
+    <LastUpdated>2015-10-10T22:38:15.883803+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.python.org/ftp/python/{version}/python-{version}.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://www.python.org/ftp/python/{version}/python-{version}.exe</FixedDownloadUrl>
     <Name>python3</Name>
   </ApplicationJob>
 </Jobs>
