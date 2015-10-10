@@ -4,7 +4,6 @@ Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$tools\sy
 $packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/UNATTENDED'
-# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-$url = '{{DownloadUrlx64}}'
+$url = '{{DownloadUrl}}'
 
 Install-ChocolateyPackage $packageName $fileType $silentArgs $url
