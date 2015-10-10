@@ -2,7 +2,9 @@
 $fileType = 'exe'
 $silentArgs = '/VERYSILENT'
 
-$url = 'http://sourceforge.net/projects/codelite/files/Releases/codelite-{{PackageVersion}}/codelite-x86-{{PackageVersion}}.exe/download'
-$url64 = 'http://sourceforge.net/projects/codelite/files/Releases/codelite-{{PackageVersion}}/codelite-amd64-{{PackageVersion}}.exe/download'
+# Version-specific download links would be better, but they are only available on SourceForge,
+# plus they are inconsistently named and thus not easily fetchable for auto-packages.
+$url = '{{DownloadUrl}}'
+$url64 = '{{DownloadUrlx64}}'
 
 Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64

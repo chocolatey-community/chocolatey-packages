@@ -5,12 +5,12 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>28079866</LastFileSize>
-    <LastFileDate>2015-05-10T18:20:47+02:00</LastFileDate>
+    <LastFileDate>2015-05-16T22:05:25.1549653</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -36,15 +36,15 @@
       </item>
       <item>
         <key>
-          <string>urlMirror</string>
+          <string>url64</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>ResponseUri: ([^\n\r]+)</Regex>
-            <Url>http://sourceforge.net/projects/codelite/files/Releases/codelite-{version}/codelite-x86-{version}.exe/download</Url>
-            <Name>urlMirror</Name>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>http://downloads.codelite.org/downloads.php?windows_64</TextualContent>
+            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -59,9 +59,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-05-16T22:05:25.1549653+02:00</LastUpdated>
+    <LastUpdated>2015-05-16T22:05:25.1549653</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://downloads.codelite.org/downloads.php?windows</FixedDownloadUrl>
     <Name>codelite</Name>
   </ApplicationJob>
 </Jobs>
