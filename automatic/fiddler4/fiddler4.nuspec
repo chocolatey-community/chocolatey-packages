@@ -5,17 +5,18 @@
     <title>Fiddler</title>
     <version>{{PackageVersion}}</version>
     <authors>Telerik</authors>
-    <owners>gep13, chocolatey</owners>
     <summary>Fiddler Web Debugging Proxy</summary>
     <description>
 Fiddler is a Web Debugging Proxy which logs all HTTP(S) traffic between your computer and the Internet. Fiddler allows you to inspect all HTTP(S) traffic, set breakpoints, and "fiddle" with incoming or outgoing data. Fiddler includes a powerful event-based scripting subsystem, and can be extended using any .NET language.
 
 Fiddler is freeware and can debug traffic from virtually any application, including Internet Explorer, Mozilla Firefox, Opera, and thousands more.
+
+Note: This will always install the latest version of Fiddler 4, regardless of the version specified in the package.
     </description>
-    <projectUrl>http://www.fiddler2.com/fiddler2/</projectUrl>
-    <tags>fiddler fiddler2 web debugging proxy admin</tags>
+    <projectUrl>http://www.telerik.com/fiddler</projectUrl>
+    <tags>fiddler fiddler4 web debugging proxy admin</tags>
     <copyright></copyright>
-    <licenseUrl>http://www.fiddler2.com/Fiddler/help/license.asp</licenseUrl>
+    <licenseUrl>http://www.telerik.com/purchase/license-agreement/fiddler</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/fiddler.svg</iconUrl>
     <releaseNotes>
