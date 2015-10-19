@@ -116,7 +116,7 @@
             <VariableType>Textual</VariableType>
             <Regex>(?&lt;=tr\stitle=.*?64bits-Setup.exe.*?href=")http://sourceforge.net/projects/pspp4windows.*?64bits.*?(?=")</Regex>
             <Url>http://sourceforge.net/projects/pspp4windows/files/{date}/</Url>
-            <TextualContent>http://www.disk-partition.com/download-lite.html</TextualContent>
+            <TextualContent>http://www.aomeisoftware.com/download/pa/PAssist_Lite.exe</TextualContent>
             <Name>url</Name>
           </UrlVariable>
         </value>

@@ -72,8 +72,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes>AOMEI Partition Assistant Standard</UserNotes>
-    <LastFileSize>30577992</LastFileSize>
-    <LastFileDate>2014-10-07T06:30:14.816789</LastFileDate>
+    <LastFileSize>8751744</LastFileSize>
+    <LastFileDate>2015-09-24T23:27:21-07:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -116,7 +116,7 @@
             <VariableType>Textual</VariableType>
             <Regex>(?&lt;=tr\stitle=.*?64bits-Setup.exe.*?href=")http://sourceforge.net/projects/pspp4windows.*?64bits.*?(?=")</Regex>
             <Url>http://sourceforge.net/projects/pspp4windows/files/{date}/</Url>
-            <TextualContent>http://software-files-a.cnet.com/s/software/13/80/74/47/PAssist_Std.exe?token=1412726025_7615c374db138f7dd08759ada8a03d55&amp;fileName=PAssist_Std.exe</TextualContent>
+            <TextualContent>http://www.aomeisoftware.com/download/pa/PAssist_Std.exe</TextualContent>
             <Name>url</Name>
           </UrlVariable>
         </value>
@@ -128,11 +128,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation />
+    <PreviousLocation>C:\Chocolatey\_work\PAssist_Std.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-10-07T06:30:14.816789</LastUpdated>
+    <LastUpdated>2015-10-19T05:16:14.8081016-07:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>partitionassistant</Name>
