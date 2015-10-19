@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>absolute-uninstaller</id>
+    <title>Absolute Uninstaller</title>
+    <version>{{PackageVersion}}</version>
+    <authors>GlarySoft</authors>
+    <owners>Redsandro</owners>
+    <summary>Absolute Uninstaller is a complete program uninstaller that helps you remove programs.</summary>
+    <description>
+GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you remove programs thoroughly without leaving any invalid remnant to burden your system gradually.
+    </description>
+    <projectUrl>http://www.glarysoft.com/absolute-uninstaller/</projectUrl>
+    <tags>GlarySoft sysadmin batch remove software uninstall absolute uninstaller</tags>
+    <copyright>GlarySoft</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/AbsoluteUninstaller/icons/absolute-uninstaller.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
