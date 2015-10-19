@@ -7,7 +7,13 @@
 		<authors>AOMEI Technology</authors>
 		<owners>Redsandro</owners>
 		<summary>Easy-to-use partition manager for latest Windows 8 and 8.1, Windows 7, XP, Vista, 2000. SERVER ONLY.</summary>
-		<description>This is the free server edition functioned with extending and reducing partition, supported with all Windows Server Edition OS.</description>
+		<description>
+This is the free server edition functioned with extending and reducing partition, supported with all Windows Server Edition OS.
+
+---
+
+The installation of this package is __not silent.__
+		</description>
 		<projectUrl>http://www.disk-partition.com/partition-assistant-lite.html</projectUrl>
 		<tags>storage partition disk drive manager wizard</tags>
 		<copyright></copyright>

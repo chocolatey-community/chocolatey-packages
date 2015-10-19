@@ -7,7 +7,13 @@
 		<authors>AOMEI Technology</authors>
 		<owners>Redsandro</owners>
 		<summary>Easy-to-use partition manager for latest Windows 8 and 8.1, Windows 7, XP, Vista, 2000. This is NOT for Windows Server editions.</summary>
-		<description>Offers various free partition management features for both all home users and commercial users.</description>
+		<description>
+Offers various free partition management features for both all home users and commercial users.
+
+---
+
+The installation of this package is __not silent.__
+		</description>
 		<projectUrl>http://www.disk-partition.com/free-partition-manager.html</projectUrl>
 		<tags>storage partition disk drive manager wizard</tags>
 		<copyright></copyright>
