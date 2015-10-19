@@ -11,6 +11,8 @@
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -19,21 +21,7 @@
     <Variables>
       <item>
         <key>
-          <string>PackageName</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>Resource Hacker</TextualContent>
-            <Name>PackageName</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>PackageVersion</string>
+          <string>version</string>
         </key>
         <value>
           <UrlVariable>
@@ -41,7 +29,7 @@
             <VariableType>RegularExpression</VariableType>
             <Regex>(?&lt;=Version )[0-9.]{3,10}</Regex>
             <Url>http://www.angusj.com/resourcehacker/</Url>
-            <Name>PackageVersion</Name>
+            <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
@@ -73,6 +61,6 @@
     <LastUpdated xsi:nil="true" />
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{DownloadUrl}</FixedDownloadUrl>
-    <Name>Resource Hacker</Name>
+    <Name>reshack</Name>
   </ApplicationJob>
 </Jobs>
