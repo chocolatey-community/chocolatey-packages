@@ -79,6 +79,8 @@
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -118,34 +120,20 @@
           </UrlVariable>
         </value>
       </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>ultradefrag</TextualContent>
-            <Name>packageId</Name>
-          </UrlVariable>
-        </value>
-      </item>
     </Variables>
-    <ExecuteCommand>chocopkgup /p {packageId} /v {version} /u "{url}" /u64 "{url64}" /disablepush -force
-</ExecuteCommand>
+    <ExecuteCommand />
     <ExecutePreCommand />
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
-    <Category />
+    <Category>prerelease</Category>
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
-    <TargetPath>%temp%\Ketarin\</TargetPath>
+    <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{mirror}</FixedDownloadUrl>
-    <Name>ultradefrag-beta</Name>
+    <Name>ultradefrag</Name>
   </ApplicationJob>
 </Jobs>
