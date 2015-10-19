@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>0</LastFileSize>
-    <LastFileDate xsi:nil="true" />
+    <LastFileSize>12915824</LastFileSize>
+    <LastFileDate>2015-10-15T14:47:12-07:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -27,7 +29,7 @@
             <VariableType>Textual</VariableType>
             <Regex />
             <Url />
-            <TextualContent>{version:regex:([0-9.]+)-([0-9]+):$1.$2}</TextualContent>
+            <TextualContent>{realVersion:replace:-:.}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -82,11 +84,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation />
+    <PreviousLocation>C:\Chocolatey\_work\tixati-2.23-1.win32-install.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated xsi:nil="true" />
+    <LastUpdated>2015-10-19T05:58:29.316572-07:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>Tixati</Name>
