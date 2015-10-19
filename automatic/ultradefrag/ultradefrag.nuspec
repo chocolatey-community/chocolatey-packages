@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ultradefrag</id>
+    <title>UltraDefrag</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Dmitri Arkhangelski et al.</authors>
+    <summary>UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform.</summary>
+    <description>UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform. It can defragment any system files including registry hives and paging file. Also one of the main goals of UltraDefrag is doing the job as fast and reliable as possible.</description>
+    <projectUrl>http://ultradefrag.sourceforge.net/en/index.html</projectUrl>
+    <tags>defrag defragment defragmenter ntfs registry hive paging files</tags>
+    <copyright></copyright>
+    <licenseUrl>http://ultradefrag.sourceforge.net/handbook/Credits.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2874dccce862f882aad9a52c2d8d1f9da3e46e80/icons/ultradefrag.png</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
