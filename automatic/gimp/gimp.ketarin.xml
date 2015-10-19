@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>90396104</LastFileSize>
-    <LastFileDate>2014-05-14T21:37:21.0069067</LastFileDate>
+    <LastFileSize>91931728</LastFileSize>
+    <LastFileDate>2014-09-02T23:33:26+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -24,13 +24,27 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>http://gimper.net/downloads/pub/gimp/stable/</Url>
+            <Url />
             <StartText>_LATEST-IS-</StartText>
             <EndText>"&gt;</EndText>
-            <TextualContent />
+            <TextualContent>{downloadUrlPart:regex:/gimp-([\d\.]+)-:1}</TextualContent>
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>downloadUrlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://download.gimp.org/(pub/gimp/v[\d\.]+/windows/gimp-[\d\.]+-setup[^"]+?\.exe)</Regex>
+            <Url>http://www.gimp.org/downloads/</Url>
+            <Name>downloadUrlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -41,13 +55,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\gimp-2.8.10-setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\gimp-2.8.14-setup-1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-05-14T21:37:21.0069067</LastUpdated>
+    <LastUpdated>2015-10-06T22:27:08.6714686+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://gimper.net/downloads/pub/gimp/stable/windows/gimp-{version}-setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://download.gimp.org/{downloadUrlPart}</FixedDownloadUrl>
     <Name>gimp</Name>
   </ApplicationJob>
 </Jobs>

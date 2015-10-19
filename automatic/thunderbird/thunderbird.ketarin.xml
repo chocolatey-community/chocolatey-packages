@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>26310952</LastFileSize>
-    <LastFileDate>2014-07-22T19:24:54.0621942</LastFileDate>
+    <LastFileSize>28909160</LastFileSize>
+    <LastFileDate>2015-05-07T22:36:10+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -24,9 +24,9 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>https://www.mozilla.org/en-US/thunderbird/all.html</Url>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>https://download\.mozilla\.org/\?product=thunderbird-([\d\.+]+)&amp;amp;os=win&amp;amp;lang=en-US</Regex>
+            <Url>https://www.mozilla.org/en-US/thunderbird/all/</Url>
             <StartText>&lt;td class="second" lang="en-US"&gt;English (US)&lt;/td&gt;
                         &lt;td class="curVersion" &gt;</StartText>
             <EndText>&lt;/td&gt;</EndText>
@@ -41,13 +41,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Thunderbird Setup 31.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Thunderbird Setup 31.7.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-22T19:24:54.0621942</LastUpdated>
+    <LastUpdated>2015-06-02T13:40:14.1129639+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://download.mozilla.org/?product=thunderbird-{version}&amp;os=win&amp;lang=de</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.mozilla.org/?product=thunderbird-{version}&amp;os=win&amp;lang=en-US</FixedDownloadUrl>
     <Name>thunderbird</Name>
   </ApplicationJob>
 </Jobs>

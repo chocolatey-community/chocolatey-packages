@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0</UserAgent>
     <UserNotes />
-    <LastFileSize>16995328</LastFileSize>
-    <LastFileDate>2014-08-09T15:09:24.6891161</LastFileDate>
+    <LastFileSize>16722432</LastFileSize>
+    <LastFileDate>2015-07-10T08:17:58+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -86,76 +86,29 @@
     <Variables>
       <item>
         <key>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>mumble-voip/mumble/releases/download/[\d\.]+/mumble-[\d\.]+\.msi</Regex>
+            <Url>https://github.com/mumble-voip/mumble/releases</Url>
+            <Name>urlPart</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
           <string>version</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>http://sourceforge.net/projects/mumble/files/Mumble/</Url>
-            <StartText>&lt;tr title="</StartText>
-            <EndText>" class="folder</EndText>
-            <TextualContent />
+            <TextualContent>{urlPart:regex:[\d\.]+(?=\.msi$):$0}</TextualContent>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>mirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>{urlGeneric}</Url>
-            <StartText>use_mirror=</StartText>
-            <EndText>"&gt;</EndText>
-            <Name>mirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneric</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/mumble/files/Mumble/{version}/mumble-{version}.msi/download</TextualContent>
-            <Name>urlGeneric</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlMirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://{mirror}.dl.sourceforge.net/project/mumble/Mumble/{version}/mumble-{version}.msi</TextualContent>
-            <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{urlGeneric}</TextualContent>
-            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -166,13 +119,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\mumble-1.2.8.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mumble-1.2.10.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-09T15:09:24.6891161</LastUpdated>
+    <LastUpdated>2015-07-12T00:18:58.1652633+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>https://github.com/{urlPart}</FixedDownloadUrl>
     <Name>mumble</Name>
   </ApplicationJob>
 </Jobs>

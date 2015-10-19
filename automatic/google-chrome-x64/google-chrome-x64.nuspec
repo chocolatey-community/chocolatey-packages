@@ -7,7 +7,7 @@
     <authors>Google Inc.</authors>
     <projectUrl>https://www.google.com/chrome/browser/</projectUrl>
     <licenseUrl>https://www.google.it/intl/en/chrome/browser/privacy/eula_text.html</licenseUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/chrome.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/chrome.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Chrome is a fast, simple, and secure web browser, built for the modern web.
@@ -17,6 +17,8 @@ Chrome is a fast, simple, and secure web browser, built for the modern web.
 This package installs Chrome for all users on the machine (using the MSI installer) and is for the 64-bit version only. If you want the 32-bit version, install the [GoogleChrome](/packages/GoogleChrome) package instead.
 
 If you switch from the 32-bit to the 64-bit version, remember to uninstall all versions of the `GoogleChrome` package.
+
+This package always installs the latest version of Google Chrome, regardless of the version specified in the package. Google does not officially offer older versions of Chrome for download.
     </description>
     <releaseNotes></releaseNotes>
   </metadata>

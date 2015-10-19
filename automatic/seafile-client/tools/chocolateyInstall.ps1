@@ -2,5 +2,17 @@
 $fileType = 'msi'
 $silentArgs = '/passive'
 $url = '{{DownloadUrl}}'
+$version = '{{PackageVersion}}'
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+$app = Get-WmiObject -Class Win32_Product | Where-Object {
+  $_.Name -match "^Seafile ${version}$"
+}
+
+if (!$app) {
+  Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+} else {
+  Write-Host $(
+    "$packageName $version is already installed. " +
+    'No need to download an re-install.'
+  )
+}

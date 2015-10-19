@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>34573304</LastFileSize>
-    <LastFileDate>2014-07-07T21:57:27.3041113</LastFileDate>
+    <LastFileSize>85669201</LastFileSize>
+    <LastFileDate>2015-01-31T15:28:32.7960505</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -24,26 +24,54 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=&lt;tr title=")[\d\.]+(?=" class="folder)</Regex>
-            <Url>http://sourceforge.net/projects/inkscape/files/inkscape/</Url>
-            <StartText>&lt;tr title="</StartText>
-            <EndText>" class="folder</EndText>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>https://inkscape.org/en/download/windows/</Url>
+            <StartText>&lt;h2&gt;Latest stable version (</StartText>
+            <EndText>)&lt;/h2&gt;</EndText>
             <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>urlGeneral</string>
+          <string>urlPart1</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://sourceforge.net/projects/inkscape/files/inkscape/{version}/Inkscape-{version}-1-win32.exe/download</TextualContent>
-            <Name>urlGeneral</Name>
+            <TextualContent>https://inkscape.org/en/gallery/item/</TextualContent>
+            <Name>urlPart1</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlPart2_32</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>https://inkscape.org/en/gallery/item/([\d\.]+/inkscape-[\d\.]+\.msi)</Regex>
+            <Url>https://inkscape.org/en/download/windows/</Url>
+            <Name>urlPart2_32</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>urlPart2_64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>https://inkscape.org/en/gallery/item/([\d\.]+/inkscape-[\d\.]+-x64\.msi)</Regex>
+            <Url>https://inkscape.org/en/download/windows/</Url>
+            <Name>urlPart2_64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -56,22 +84,8 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{urlGeneral}</TextualContent>
+            <TextualContent>{urlPart1}{urlPart2_64}</TextualContent>
             <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlMirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>{urlGeneral}</Url>
-            <Name>urlMirror</Name>
           </UrlVariable>
         </value>
       </item>
@@ -82,13 +96,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Inkscape-0.48.5-1-win32.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\inkscape-0.91.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-07T21:57:27.3041113</LastUpdated>
+    <LastUpdated>2015-01-31T15:28:32.7960505</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>{urlPart1}{urlPart2_32}</FixedDownloadUrl>
     <Name>InkScape</Name>
   </ApplicationJob>
 </Jobs>

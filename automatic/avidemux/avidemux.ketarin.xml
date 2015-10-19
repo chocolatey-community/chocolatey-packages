@@ -4,13 +4,13 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>18549283</LastFileSize>
-    <LastFileDate>2014-03-14T03:54:09.7124204</LastFileDate>
+    <LastFileSize>2784</LastFileSize>
+    <LastFileDate>2013-11-18T01:41:02+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -19,17 +19,30 @@
     <Variables>
       <item>
         <key>
-          <string>version</string>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>StartEnd</VariableType>
+            <Regex />
+            <Url>http://www.fosshub.com/Avidemux.html</Url>
+            <Name>urlPart</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>genLinkPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=&lt;p&gt; win32 &lt;b&gt;)[\d\.]+</Regex>
-            <Url>http://avidemux.sourceforge.net/download.html</Url>
-            <StartText>&lt;p&gt; win32 &lt;b&gt;</StartText>
-            <EndText>&lt;/b&gt;</EndText>
-            <Name>version</Name>
+            <Regex>(Avidemux/avidemux_[\d\.]+_win)32\.exe</Regex>
+            <Url>http://www.fosshub.com/Avidemux.html</Url>
+            <TextualContent />
+            <Name>genLinkPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -42,36 +55,36 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{urlsArray}</TextualContent>
+            <TextualContent>{genLinkMorePart}</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>urlsArray</string>
+          <string>genLinkMorePart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>@('http://sourceforge.net/projects/avidemux/files/avidemux/{version}/avidemux_{version}_win32.exe/download', 'http://sourceforge.net/projects/avidemux/files/avidemux/{version}/avidemux_{version}_win64.exe/download')</TextualContent>
-            <Name>urlsArray</Name>
+            <TextualContent>http://www.fosshub.com/genLink/{genLinkPart}</TextualContent>
+            <Name>genLinkMorePart</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>urlMirror</string>
+          <string>version</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>http://sourceforge.net/projects/avidemux/files/avidemux/{version}/avidemux_2.6.8_win32_v2.exe</Url>
-            <Name>urlMirror</Name>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{genLinkPart:regex:(?&lt;=_)([\d\.]+)(?=_win):$1}</TextualContent>
+            <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
@@ -82,13 +95,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\avidemux_2.6.8_win32_v2.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\logo.png</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-03-14T03:54:09.7124204</LastUpdated>
+    <LastUpdated>2015-07-12T01:29:49.1205911+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.fosshub.com/media/v2/img/logo.png</FixedDownloadUrl>
     <Name>avidemux</Name>
   </ApplicationJob>
 </Jobs>

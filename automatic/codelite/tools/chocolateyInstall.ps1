@@ -1,6 +1,10 @@
 ﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/VERYSILENT'
-$url = '{{DownloadUrlx64}}' # This variable is actually not the 64-bit installer, it is only a workaround to get the automatic package working
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+# Version-specific download links would be better, but they are only available on SourceForge,
+# plus they are inconsistently named and thus not easily fetchable for auto-packages.
+$url = '{{DownloadUrl}}'
+$url64 = '{{DownloadUrlx64}}'
+
+Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64

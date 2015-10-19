@@ -93,7 +93,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>https://www.libreoffice.org/download/libreoffice-stable/</Url>
+            <Url>https://www.libreoffice.org/download/libreoffice-still/</Url>
             <StartText>http://download.documentfoundation.org/libreoffice/stable/</StartText>
             <EndText>/win/x86/LibreOffice_</EndText>
             <TextualContent />

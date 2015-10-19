@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>831496</LastFileSize>
-    <LastFileDate>2014-02-25T00:55:28.2572747</LastFileDate>
+    <LastFileSize>1697808</LastFileSize>
+    <LastFileDate>2015-09-28T20:14:44+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -19,59 +19,29 @@
     <Variables>
       <item>
         <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://sourceforge.net/projects/wincdemu/files/wincdemu/</Url>
-            <StartText>&lt;tr title="</StartText>
-            <EndText>" class="folder "&gt;</EndText>
-            <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneric</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/wincdemu/files/wincdemu/{version}/WinCDEmu-{version}.exe/download</TextualContent>
-            <Name>urlGeneric</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlMirror</string>
+          <string>urlPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>{urlGeneric}</Url>
-            <Name>urlMirror</Name>
+            <Regex>http://sysprogs\.com/(files/WinCDEmu/WinCDEmu-[\d\.]+\.exe)</Regex>
+            <Url>http://wincdemu.sysprogs.org/download/</Url>
+            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>url64</string>
+          <string>version</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>{urlGeneric}</TextualContent>
-            <Name>url64</Name>
+            <TextualContent>{urlPart:regex:WinCDEmu-([\d\.]+)\.exe:1}</TextualContent>
+            <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
@@ -82,13 +52,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\WinCDEmu-3.6.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\WinCDEmu-4.1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-02-25T00:55:28.2572747</LastUpdated>
+    <LastUpdated>2015-10-10T21:34:03.6692062+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://sysprogs.com/{urlPart}</FixedDownloadUrl>
     <Name>wincdemu</Name>
   </ApplicationJob>
 </Jobs>

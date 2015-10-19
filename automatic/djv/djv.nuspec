@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>DJV</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Darby Johnston</authors>
+    <owners>Redsandro</owners>
+    <summary>DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.</summary>
+    <description>
+DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.
+
+===Features
+
+* Support for Linux, Apple OS X, and Microsoft Windows
+* Plays both image sequences and movies
+* Works with industry standard file formats including Cineon, DPX, OpenEXR, and QuickTime
+* Includes command line utilities for batch processing
+    </description>
+    <projectUrl>http://djv.sourceforge.net/index.html</projectUrl>
+    <tags>Video Movie Player Cineon DPX OpenEXR QuickTime</tags>
+    <copyright>Copyright (c) 2004-2014 Darby Johnston</copyright>
+    <licenseUrl>http://djv.sourceforge.net/legal.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/djv.png</iconUrl>
+    <dependencies>
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

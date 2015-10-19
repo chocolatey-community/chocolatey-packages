@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -17,7 +17,7 @@ _The installer is not silent. I've used AutoIt to automate the installation. Be 
     <copyright></copyright>
     <licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d7bfe343c5b5698b26d587defcd9009301d09f55/icons/lightalloy.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/lightalloy.png</iconUrl>
     <dependencies>
       <dependency id="autoit.commandline" version="3.3.12.0" />
     </dependencies>

@@ -101,6 +101,20 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://download.documentfoundation.org/libreoffice/stable/{version}/win/x86_64/LibreOffice_{version}_Win_x64.msi</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand>{startuppath}..\bin\chocopkgup.bat /p {appname} /v {version} /u "{preupdate-url}" /u64 "{url64}" /pp "{file}"
@@ -115,7 +129,7 @@ rem /disablepush</ExecutePreCommand>
     <FileHippoId />
     <LastUpdated>2014-07-31T00:20:04.5426485</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
     <Name>libreoffice</Name>
   </ApplicationJob>
 </Jobs>

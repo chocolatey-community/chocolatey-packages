@@ -5,7 +5,7 @@
     <title>Mumble</title>
     <version>{{PackageVersion}}</version>
     <authors>Natvig, et. al.</authors>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/mumble.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/mumble.svg</iconUrl>
     <summary>Mumble is an open source, low-latency, high quality voice chat software primarily intended for use while gaming.</summary>
     <description>
 Mumble is a voice over IP (VOIP) application primarily designed for use by gamers, similar to programs such as TeamSpeak and Ventrilo.
@@ -14,12 +14,12 @@ Mumble uses a client–server architecture which allows users to talk to each ot
 
 Mumble is free and open-source software, is cross-platform, and is released under the terms of the new BSD license. *(from Wikipedia, 2013-04-18)*
     </description>
-    <projectUrl>http://mumble.sourceforge.net</projectUrl>
+    <projectUrl>http://www.mumble.info/</projectUrl>
     <tags>voice chat voip</tags>
     <copyright>Natvig, et. al.  See License for more information.</copyright>
     <licenseUrl>https://github.com/mumble-voip/mumble/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>http://mumble.sourceforge.net/{{PackageVersion}}</releaseNotes>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

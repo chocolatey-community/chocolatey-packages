@@ -3,7 +3,7 @@
   <metadata>
     <id>wixtoolset</id>
     <title>WiX Toolset</title>
-    <version>3.9.1006.0</version>
+    <version>3.9.1208.0</version>
     <authors>Rob Mensching</authors>
     <owners>Gary Ewan Park</owners>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
@@ -13,11 +13,11 @@
     <copyright>2009 - 2013 RobMensching.com LLC.</copyright>
     <licenseUrl>http://wix.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8d9b19f28a26f92affd02b8ef8ddd53d873739d4/icons/wixtoolset.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/wixtoolset.png</iconUrl>
     <releaseNotes>
 Information on this release can be found in the following blog posts:
-* [http://www.joyofsetup.com/2014/10/31/wix-v3-9-released/](http://www.joyofsetup.com/2014/10/31/wix-v3-9-released/)
-* [http://robmensching.com/blog/posts/2014/10/31/wix-toolset-v3.9-released/](http://robmensching.com/blog/posts/2014/10/31/wix-toolset-v3.9-released/)
+* [http://www.joyofsetup.com/2015/01/21/wix-toolset-v3-9-r2-maintenance-release-is-available/](http://www.joyofsetup.com/2015/01/21/wix-toolset-v3-9-r2-maintenance-release-is-available/)
+* [http://robmensching.com/blog/posts/2015/1/21/wix-toolset-v3.9-r2-released/](http://robmensching.com/blog/posts/2015/1/21/wix-toolset-v3.9-r2-released/)
 	</releaseNotes>
   </metadata>
 </package>

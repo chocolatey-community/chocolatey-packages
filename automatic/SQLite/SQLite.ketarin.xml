@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>343578</LastFileSize>
-    <LastFileDate>2014-12-10T02:13:07.8889531</LastFileDate>
+    <LastFileSize>347586</LastFileSize>
+    <LastFileDate>2015-04-10T16:09:23+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -110,36 +110,8 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>20\d{2}/sqlite-dll-win32-x86-\d+\.zip</Regex>
-            <Url>https://www.sqlite.org/download.html</Url>
+            <Url>http://www.sqlite.org/download.html</Url>
             <Name>urlpart</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlPart64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>20\d{2}/sqlite-dll-win64-x64-\d+\.zip</Regex>
-            <Url>https://www.sqlite.org/download.html</Url>
-            <Name>urlPart64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>https://www.sqlite.org/{urlPart64}</TextualContent>
-            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -152,9 +124,9 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>https://www.sqlite.org/download.html</Url>
-            <StartText>This ZIP archive contains a DLL for the SQLite library version </StartText>
-            <EndText> for</EndText>
+            <Url>http://www.sqlite.org/download.html</Url>
+            <StartText>32-bit DLL (x86) for SQLite verison </StartText>
+            <EndText>.&lt;br&gt;(sha1:</EndText>
             <Name>realVersion</Name>
           </UrlVariable>
         </value>
@@ -166,13 +138,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\sqlite-dll-win32-x86-3080704.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\sqlite-dll-win32-x86-3080900.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-12-10T02:13:07.8889531</LastUpdated>
+    <LastUpdated>2015-04-11T16:25:41.7007065+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.sqlite.org/{urlpart}</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.sqlite.org/{urlpart}</FixedDownloadUrl>
     <Name>SQLite</Name>
   </ApplicationJob>
 </Jobs>

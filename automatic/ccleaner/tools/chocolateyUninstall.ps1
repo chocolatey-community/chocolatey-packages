@@ -1,4 +1,4 @@
-$packageName = '{{PackageName}}'
+﻿$packageName = '{{PackageName}}'
 $installerType = 'EXE'
 $silentArgs = '/S'
 $unpath = "$Env:ProgramFiles\CCleaner\uninst.exe"
@@ -6,11 +6,11 @@ $validExitCodes = @(0) #please insert other valid exit codes here, exit codes fo
 
 try {
 
-	Uninstall-ChocolateyPackage $packageName $installerType $silentArgs $unpath -validExitCodes $validExitCodes
-  
-	Write-ChocolateySuccess $packageName
-	
+  Uninstall-ChocolateyPackage $packageName $installerType $silentArgs $unpath -validExitCodes $validExitCodes
+
+  Write-ChocolateySuccess $packageName
+
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw 
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }

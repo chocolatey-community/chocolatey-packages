@@ -1,8 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="21be0db5-ef2e-466a-81ed-c57eb1511527">
-    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Jobs>
+    <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -72,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>1129720</LastFileSize>
-    <LastFileDate>2014-07-17T03:00:13.0583502</LastFileDate>
+    <LastFileSize>1262112</LastFileSize>
+    <LastFileDate>2015-10-14T22:30:05+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,7 +92,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Download Fiddler4.*&lt;strong&gt;)[\d\.]+</Regex>
+            <Regex>Version (4\.[\d\.]+)</Regex>
             <Url>http://www.telerik.com/download/fiddler</Url>
             <StartText>Download Fiddler4&lt;/a&gt; &lt;p class="Label u-mt1 u-mb3 u-tac"&gt;Version &lt;strong&gt;</StartText>
             <EndText>&lt;/strong&gt;</EndText>
@@ -127,7 +126,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-17T03:00:13.0583502</LastUpdated>
+    <LastUpdated>2015-10-15T21:44:06.85072+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://fiddler2.com/dl/fiddler4setup.exe</FixedDownloadUrl>
     <Name>fiddler4</Name>

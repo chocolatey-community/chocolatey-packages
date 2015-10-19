@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>36415</LastFileSize>
-    <LastFileDate>2014-12-12T17:36:18+01:00</LastFileDate>
+    <LastFileSize>638</LastFileSize>
+    <LastFileDate>2015-09-19T18:20:57+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -40,8 +40,22 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>@('http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-{version}-setup.exe', 'http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-amd64-{version}-setup.exe')</TextualContent>
+            <TextualContent>@('http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-32bit-{version}-setup.exe', 'http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-64bit-{version}-setup.exe')</TextualContent>
             <Name>genLinkArray</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>shasumsUrlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;a href="windows/releases/([\d\.]+/sha512sums.txt)"&gt;</Regex>
+            <Url>https://www.bunkus.org/videotools/mkvtoolnix/downloads.html</Url>
+            <Name>shasumsUrlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -52,11 +66,9 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>http://www.fosshub.com/MKVToolNix.html</Url>
-            <StartText>data="MKVToolNix/mkvtoolnix-amd64-</StartText>
-            <EndText>-setup.exe"&gt;</EndText>
+            <TextualContent>{shasumsUrlPart:regex:^([\d\.]+)/:1}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -72,9 +84,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-12-27T01:59:03.8845817+01:00</LastUpdated>
+    <LastUpdated>2015-10-06T23:20:05.0461606+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/win32/sha512sums.txt</FixedDownloadUrl>
+    <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/windows/releases/{shasumsUrlPart}</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>
 </Jobs>

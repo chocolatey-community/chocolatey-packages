@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>11165716</LastFileSize>
-    <LastFileDate>2014-07-30T19:03:03.7618835</LastFileDate>
+    <LastFileSize>11498880</LastFileSize>
+    <LastFileDate>2015-03-02T14:33:22+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -42,7 +42,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>@('http://sourceforge.net/projects/nomacs/files/nomacs-{version}/nomacs-setup-{version}-x86.exe/download', 'http://sourceforge.net/projects/nomacs/files/nomacs-{version}/nomacs-setup-{version}-x64.exe/download')</TextualContent>
+            <TextualContent>@('http://sourceforge.net/projects/nomacs/files/nomacs-{version}/nomacs-setup-{version}-x86.exe/download', 'http://sourceforge.net/projects/nomacs/files/nomacs-{version}/nomacs-setup-{version}-x64.exe/download', 'http://sourceforge.net/projects/nomacs/files/nomacs-{version}/nomacs-setup-{version}-WinXP-x86.exe/download')</TextualContent>
             <Name>urlsArray</Name>
           </UrlVariable>
         </value>
@@ -82,11 +82,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\nomacs-setup-2.0.2-x86.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\nomacs-setup-2.4.2-x86.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-07-30T19:03:03.7618835</LastUpdated>
+    <LastUpdated>2015-03-02T22:57:05.5674836+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>nomacs</Name>

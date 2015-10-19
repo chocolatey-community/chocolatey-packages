@@ -24,13 +24,27 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>http://seafile.com/en/download/</Url>
+            <Url />
             <StartText>https://bitbucket.org/haiwen/seafile/downloads/seafile-</StartText>
             <EndText>-en.msi</EndText>
-            <TextualContent>2.1.0</TextualContent>
+            <TextualContent>{downloadUrlPart:regex:seafile-([\d\.]+)-:1}</TextualContent>
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>downloadUrlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>https://bintray.com/artifact/download/seafile-org/seafile/(seafile-[\d\.]+-en.msi)</Regex>
+            <Url>https://www.seafile.com/en/download/</Url>
+            <Name>downloadUrlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -47,7 +61,7 @@
     <FileHippoId />
     <LastUpdated>2014-08-14T17:48:34.8888749</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://bitbucket.org/haiwen/seafile/downloads/seafile-{version}-en.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://bintray.com/artifact/download/seafile-org/seafile/{downloadUrlPart}</FixedDownloadUrl>
     <Name>seafile-client</Name>
   </ApplicationJob>
 </Jobs>

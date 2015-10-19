@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>keepass-langfiles</id>
-    <version>2.28</version>
+    <version>2.29</version>
     <title>KeePass 2.x language files</title>
     <authors>KeePass Team</authors>
     <licenseUrl>http://keepass.info/help/v2/license.html</licenseUrl>
     <projectUrl>http://keepass.info/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/keepass.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/keepass.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 KeePass is a free, open source, light-weight and easy-to-use password manager.

@@ -1,17 +1,24 @@
-$packageName = '{{PackageName}}'
-$installerType = 'msi'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+﻿$packageName = '{{PackageName}}'
+$installerType = 'MSI'
+$32BitUrl  = '{{DownloadUrl}}'
+$64BitUrl  = '{{DownloadUrlx64}}'
 $silentArgs = '/quiet'
-$validExitCodes = @(0,3010) #please insert other valid exit codes here, exit codes for ms http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
+$validExitCodes = @(0)
+
+$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
+  $_.Name -eq "SmartFTP Client" -and
+  $_.Version -eq $version
+}
 
 try {
+  if ($alreadyInstalled) {
+    Write-Output $('SmartFTP ' +
+      $version + ' is already installed.')
+  } else {
+    Install-ChocolateyPackage $packageName $installerType $silentArgs $32BitUrl $64BitUrl -validExitCodes $validExitCodes
+  }
 
-	Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64 -validExitCodes $validExitCodes
-	
-	Write-ChocolateySuccess $packageName
-	
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw 
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }

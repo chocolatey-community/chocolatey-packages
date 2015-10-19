@@ -2,7 +2,7 @@
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="d5a64112-b327-4ccd-b94a-a80c565062ad">
     <WebsiteUrl />
-    <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0</UserAgent>
+    <UserAgent />
     <UserNotes />
     <LastFileSize>127388815</LastFileSize>
     <LastFileDate>2014-07-15T21:26:46.5832852</LastFileDate>
@@ -40,10 +40,10 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url />
-            <TextualContent>http://{mirror}.dl.sourceforge.net/project/free-cad/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD%20{version}_x86_setup.exe</TextualContent>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ResponseUri: ([^\r\n]+)</Regex>
+            <Url>{urlGeneral}</Url>
+            <TextualContent />
             <Name>urlMirror</Name>
           </UrlVariable>
         </value>
@@ -57,7 +57,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD%20{version}_x86_setup.exe/download</TextualContent>
+            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD Windows/FreeCAD {versionMajor}/FreeCAD-{version}_x86_setup.exe/download</TextualContent>
             <Name>urlGeneral</Name>
           </UrlVariable>
         </value>
@@ -85,8 +85,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ResponseUri: ([^\r\n]+)</Regex>
             <Url>{urlGeneral}</Url>
             <StartText>use_mirror=</StartText>
             <EndText>"&gt;</EndText>
@@ -117,22 +117,8 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/FreeCAD-{version}_x64_setup.exe/download</TextualContent>
+            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD Windows/FreeCAD {versionMajor}/FreeCAD-{version}_x64_setup.exe/download</TextualContent>
             <Name>realUrl64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>version64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>[\d\.]+(?=_x64_setup.exe)</Regex>
-            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/</Url>
-            <Name>version64</Name>
           </UrlVariable>
         </value>
       </item>

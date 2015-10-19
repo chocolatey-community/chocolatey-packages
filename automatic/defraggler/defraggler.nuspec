@@ -7,7 +7,7 @@
     <authors>Piriform</authors>
     <licenseUrl>http://www.piriform.com/legal/software-license/defraggler</licenseUrl>
     <projectUrl>http://www.piriform.com/defraggler</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/defraggler.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/defraggler.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Use Defraggler to defrag your entire hard drive, or individual files – unique in the industry. This compact and portable Windows application supports NTFS and FAT32 file systems.

@@ -2,6 +2,10 @@
 $installerType = 'EXE'
 $LCID = (Get-Culture).LCID
 $url = '{{DownloadUrl}}'
+
+# The installer contains the 64-bit version too.
+# Therefore $url64 is identical to $url
+$url64 = $url
 $silentArgs = '/S /L=$LCID'
 
 # Please test every new version of CCleaner for possible adware/spyware/crapware which installs silently together with Piriform software products.
@@ -12,21 +16,14 @@ $validExitCodes = @(0) #please insert other valid exit codes here, exit codes fo
 
 try {
 
-	# This adds a registry key which prevents Google Chrome from getting installed together with Piriform software products.
-	Start-ChocolateyProcessAsAdmin "& `'$regAdd`'"
+  # This adds a registry key which prevents Google Chrome from getting installed together with Piriform software products.
+  Start-ChocolateyProcessAsAdmin "& `'$regAdd`'"
 
-	Install-ChocolateyPackage $packageName $installerType $silentArgs $url -validExitCodes $validExitCodes
-			
-	Write-ChocolateySuccess $packageName
-	
+  Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64 -validExitCodes $validExitCodes
+
+  Write-ChocolateySuccess $packageName
+
 } catch {
-	Write-ChocolateyFailure $packageName $($_.Exception.Message)
-	throw 
+  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  throw
 }
-
-
-
-
-
-
-

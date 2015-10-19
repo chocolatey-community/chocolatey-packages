@@ -1,4 +1,30 @@
-﻿# ---------------- Function definitions ------------------
+﻿# This is the general install script for Mozilla products (Firefox and Thunderbird).
+# This file must be identical for all Choco packages for Mozilla products in this repository.
+
+$packageName = '{{PackageName}}'
+$fileType = 'exe'
+$version = '{{PackageVersion}}'
+
+$softwareNameLowerCase = $packageName.ToLower()
+
+$softwareNameTitleCase = $packageName.Substring(0, 1).ToUpper() +
+  $packageName.Substring(1).ToLower()
+
+$allLocalesListURL = Switch ($softwareNameLowerCase) {
+  'firefox' {
+    'https://www.mozilla.org/en-US/firefox/all/'
+    break
+  }
+
+  'thunderbird' {
+    'https://www.mozilla.org/en-US/thunderbird/all.html'
+    break
+  }
+}
+
+
+
+# ---------------- Function definitions ------------------
 
 
 function GetUninstallPath () {
@@ -11,18 +37,21 @@ function GetUninstallPath () {
     $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
   }
 
-  $uninstallPath = $uninstallPaths -match "Mozilla Thunderbird [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
+  $uninstallPath = $uninstallPaths -match "Mozilla $softwareNameTitleCase [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
   return $uninstallPath
 }
 
-function GetLocale($installArguments) {
+function GetLocale() {
 
-  $availableLocales = Get-Content "$env:TEMP\chocolatey\Thunderbird\availableLocales.html"
+  $availableLocales = (New-Object System.Net.WebClient).DownloadString($allLocalesListURL)
 
   # --- Get locale from installArgs if specified
 
-  $argumentMap = ConvertFrom-StringData $installArguments
-  $localeFromInstallArgs = $argumentMap.Item('l')
+  $packageParameters = $env:chocolateyPackageParameters
+
+  $packageParameters = if ($packageParameters -ne $null) { $packageParameters } else { "" }
+  $argumentMap = ConvertFrom-StringData $packageParameters
+  $localeFromPackageParameters = $argumentMap.Item('l')
 
   # ---
 
@@ -43,7 +72,8 @@ function GetLocale($installArguments) {
 
   # ---
 
-  $locales = $localeFromInstallArgs, $alreadyInstalledLocale, $systemLocaleAndCountry, $systemLocaleTwoLetter, $fallbackLocale
+  $locales = $localeFromPackageParameters, $alreadyInstalledLocale, `
+    $systemLocaleAndCountry, $systemLocaleTwoLetter, $fallbackLocale
 
   foreach ($locale in $locales) {
     $localeMatch = $availableLocales -match "os=win&amp;lang=$locale`"" | Select -First 1
@@ -55,9 +85,10 @@ function GetLocale($installArguments) {
   return $locale
 }
 
+
 function AlreadyInstalled($version) {
-  $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Thunderbird ${version}*"
-  $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla Thunderbird ${version}*"
+  $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla $softwareNameTitleCase ${version}*"
+  $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla $softwareNameTitleCase ${version}*"
 
   if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
     return $true
@@ -68,40 +99,19 @@ function AlreadyInstalled($version) {
 
 # ----------------------------------
 
+$alreadyInstalled = AlreadyInstalled($version)
 
+if ($alreadyInstalled) {
+  Write-Host $(
+    "$softwareNameTitleCase $version is already installed. "
+    'No need to download an re-install again.'
+  )
+} else {
 
+  $locale = GetLocale
 
-$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$version = '{{PackageVersion}}'
+  $url = "https://download.mozilla.org/?product=${softwareNameLowerCase}-${version}&os=win&lang=${locale}"
+  $silentArgs = '-ms'
 
-$urlFile = 'https://www.mozilla.org/en-US/thunderbird/all.html'
-$filePath = "$env:TEMP\chocolatey\$packageName"
-
-try {
-    $alreadyInstalled = AlreadyInstalled($version)
-
-  if ($alreadyInstalled) {
-    Write-Host "Thunderbird $version is already installed."
-  } else {
-
-
-    if (-not (Test-Path $filePath)) {
-      New-Item -ItemType directory -Path $filePath
-    }
-
-    Get-ChocolateyWebFile 'locales list for Thunderbird' "$env:TEMP\chocolatey\$packageName\availableLocales.html" $urlFile
-
-    $locale = GetLocale($installArguments)
-
-
-    $url = "http://download.mozilla.org/?product=thunderbird-$version&os=win&lang=$locale"
-
-
-    Install-ChocolateyPackage $packageName $fileType '-ms' $url
-  }
-
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+  Install-ChocolateyPackage $packageName $fileType $silentArgs $url
 }
