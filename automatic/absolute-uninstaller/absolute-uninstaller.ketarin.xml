@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>0</LastFileSize>
-    <LastFileDate xsi:nil="true" />
+    <LastFileSize>4737952</LastFileSize>
+    <LastFileDate>2015-03-30T02:45:44-07:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -19,21 +21,7 @@
     <Variables>
       <item>
         <key>
-          <string>PackageName</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>Absolute Uninstaller</TextualContent>
-            <Name>PackageName</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>PackageVersion</string>
+          <string>version</string>
         </key>
         <value>
           <UrlVariable>
@@ -41,7 +29,7 @@
             <VariableType>RegularExpression</VariableType>
             <Regex>(?&lt;=&lt;span class="au_index_ver"&gt;)[0-9.]{3,10}</Regex>
             <Url>http://www.glarysoft.com/absolute-uninstaller/</Url>
-            <Name>PackageVersion</Name>
+            <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
@@ -66,13 +54,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation />
+    <PreviousLocation>C:\Chocolatey\_work\ausetup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated xsi:nil="true" />
+    <LastUpdated>2015-10-19T04:03:56.5757079-07:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{DownloadUrl}</FixedDownloadUrl>
-    <Name>Absolute Uninstaller</Name>
+    <Name>absolute-uninstaller</Name>
   </ApplicationJob>
 </Jobs>
