@@ -7,7 +7,7 @@
     <authors>Opera</authors>
     <projectUrl>http://www.opera.com/browser/</projectUrl>
     <licenseUrl>http://www.operasoftware.com/eula/browser/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/opera.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b7466aa44fbbc7e8022c05be2d866e63cd915c8d/icons/opera.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.
