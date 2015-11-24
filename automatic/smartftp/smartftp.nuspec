@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/smartftp.svg</iconUrl>
     <dependencies>
-      <dependency id="vcredist2013" />
+      <dependency id="vcredist2015" />
     </dependencies>
   </metadata>
   <files>
