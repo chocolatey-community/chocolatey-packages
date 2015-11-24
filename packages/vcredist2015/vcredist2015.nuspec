@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>vcredist2015</id>
+    <version>14.0.22816.0</version>
+    <title>Visual C++ Redistributable Packages for Visual Studio 2015 RC</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=46881</projectUrl>
+    <iconUrl>https://i.microsoft.com/global/ImageStore/PublishingImages/logos/56x56/microsoft_logo_56x56.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Visual C++ Redistributable Packages install run-time components of Visual C++ libraries that are required to run applications that are developed by using Visual Studio 2015 RC on a computer that does not have Visual Studio 2015 RC installed. These packages install run-time components of these libraries: C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP.</description>
+    <summary>The Visual C++ Redistributable Packages install run-time components that are required to run C++ applications that are built by using Visual Studio 2015 RC.</summary>
+    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <tags>visual c++ redistributable 2015 studio redist</tags>
+  </metadata>
+</package>
