@@ -13,7 +13,7 @@
     <releaseNotes>https://www.smartftp.com/changelog/1</releaseNotes>
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/smartftp.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/97d1e867fd5feaee1b89b24ffe6d40c22c819dc3/icons/smartftp.svg</iconUrl>
     <dependencies>
       <dependency id="vcredist2015" />
     </dependencies>
