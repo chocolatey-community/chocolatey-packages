@@ -128,7 +128,7 @@
     <FileHippoId />
     <LastUpdated>2014-12-06T03:45:10.5205019</LastUpdated>
     <TargetPath>C:\chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.smartftp.com/get/SmartFTP.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://www.smartftp.com/get/SmartFTP86.msi</FixedDownloadUrl>
     <Name>smartftp</Name>
   </ApplicationJob>
 </Jobs>
