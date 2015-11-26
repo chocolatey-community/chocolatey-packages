@@ -5,7 +5,7 @@
     <UserAgent />
     <UserNotes />
     <LastFileSize>91931728</LastFileSize>
-    <LastFileDate>2014-09-02T23:33:26+02:00</LastFileDate>
+    <LastFileDate>2015-10-06T22:27:08.6714686</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -19,6 +19,20 @@
     <Variables>
       <item>
         <key>
+          <string>urlPart</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>download\.gimp\.org/mirror/pub/gimp/(v[\d\.]+/windows/gimp-[\d\.]+-setup\.exe)</Regex>
+            <Url>https://www.gimp.org/downloads/</Url>
+            <Name>urlPart</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
           <string>version</string>
         </key>
         <value>
@@ -27,24 +41,8 @@
             <VariableType>Textual</VariableType>
             <Regex />
             <Url />
-            <StartText>_LATEST-IS-</StartText>
-            <EndText>"&gt;</EndText>
-            <TextualContent>{downloadUrlPart:regex:/gimp-([\d\.]+)-:1}</TextualContent>
+            <TextualContent>{urlPart:regex:gimp-([\d\.]+)-setup\.exe:1}</TextualContent>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>downloadUrlPart</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>http://download.gimp.org/(pub/gimp/v[\d\.]+/windows/gimp-[\d\.]+-setup[^"]+?\.exe)</Regex>
-            <Url>http://www.gimp.org/downloads/</Url>
-            <Name>downloadUrlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -59,9 +57,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-10-06T22:27:08.6714686+02:00</LastUpdated>
+    <LastUpdated>2015-10-06T22:27:08.6714686</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.gimp.org/{downloadUrlPart}</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.gimp.org/mirror/pub/gimp/{urlPart}</FixedDownloadUrl>
     <Name>gimp</Name>
   </ApplicationJob>
 </Jobs>

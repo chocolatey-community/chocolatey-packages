@@ -5,8 +5,8 @@
     <version>{{PackageVersion}}</version>
     <title>GIMP</title>
     <authors>GIMP Team</authors>
-    <licenseUrl>https://git.gnome.org/browse/gimp/plain/LICENSE</licenseUrl>
-    <projectUrl>http://gimp.org</projectUrl>
+    <licenseUrl>https://www.gimp.org/about/</licenseUrl>
+    <projectUrl>https://www.gimp.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/gimp.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<summary>GNU Image Manipulation Program</summary>
@@ -17,8 +17,8 @@ GIMP has many capabilities. It can be used as a simple paint program, an expert 
 
 GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted.
     </description>
-    <releaseNotes>http://www.gimp.org/release-notes/</releaseNotes>
-    <copyright>© 2002-2014 GIMP Team</copyright>
+    <releaseNotes></releaseNotes>
+    <copyright>GIMP Team</copyright>
     <tags>gimp editor images graphics photo art png</tags>
   </metadata>
   <files>
