@@ -10,17 +10,17 @@
     <description>
 DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.
 
-===Features
+Features:
 
 * Support for Linux, Apple OS X, and Microsoft Windows
 * Plays both image sequences and movies
 * Works with industry standard file formats including Cineon, DPX, OpenEXR, and QuickTime
 * Includes command line utilities for batch processing
     </description>
-    <projectUrl>http://djv.sourceforge.net/index.html</projectUrl>
+    <projectUrl>http://djv.sourceforge.net/</projectUrl>
     <tags>Video Movie Player Cineon DPX OpenEXR QuickTime</tags>
-    <copyright>Copyright (c) 2004-2014 Darby Johnston</copyright>
-    <licenseUrl>http://djv.sourceforge.net/legal.html</licenseUrl>
+    <copyright>2004–2014 Darby Johnston</copyright>
+    <licenseUrl>http://djv.sourceforge.net/djvLegal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/djv.png</iconUrl>
     <dependencies>

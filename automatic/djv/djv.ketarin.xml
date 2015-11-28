@@ -72,8 +72,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1240624</LastFileSize>
-    <LastFileDate>2014-11-13T05:49:57.6303792</LastFileDate>
+    <LastFileSize>21804997</LastFileSize>
+    <LastFileDate>2015-06-11T23:18:29+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,8 +93,8 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=djv-)[0-9.]{3,}(?=-Win)</Regex>
-            <Url>http://djv.sourceforge.net/djvDownloads.html</Url>
+            <Regex>/djv-stable/([\d\.]+)/djv-</Regex>
+            <Url>http://djv.sourceforge.net/</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -106,43 +106,15 @@
       </item>
       <item>
         <key>
-          <string>url</string>
+          <string>mirrorUrl</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/djv/files/djv-stable/{version}/djv-{version}-Windows-32.exe/download</TextualContent>
-            <Name>url</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>djv</TextualContent>
-            <Name>packageId</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/djv/files/djv-stable/{version}/djv-{version}-Windows-64.exe/download</TextualContent>
-            <Name>url64</Name>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ResponseUri: ([^\r\n]+)</Regex>
+            <Url>http://sourceforge.net/projects/djv/files/djv-stable/{version}/djv-{version}-Windows-64.exe/download</Url>
+            <Name>mirrorUrl</Name>
           </UrlVariable>
         </value>
       </item>
@@ -153,12 +125,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\Chocolatey\_work\djv-1.1.0-Windows-64.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
+    <LastUpdated>2015-11-28T11:34:36.4522839+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
-    <Name>DJV</Name>
+    <FixedDownloadUrl>{mirrorUrl}</FixedDownloadUrl>
+    <Name>djv</Name>
   </ApplicationJob>
 </Jobs>
