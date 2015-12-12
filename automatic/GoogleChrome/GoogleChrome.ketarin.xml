@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>41742000</LastFileSize>
-    <LastFileDate>2014-08-26T18:29:18.0607759</LastFileDate>
+    <LastFileSize>45617152</LastFileSize>
+    <LastFileDate>2015-12-08T19:49:00+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -33,6 +33,20 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>url64</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://dl.google.com/tag/s/appguid={00000000-0000-0000-0000-000000000000}&amp;iid={00000000-0000-0000-0000-000000000000}&amp;lang=en&amp;browser=4&amp;usagestats=0&amp;appname=Google Chrome&amp;needsadmin=true/dl/chrome/install/googlechromestandaloneenterprise64.msi</TextualContent>
+            <Name>url64</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -44,9 +58,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-26T18:29:18.0607759</LastUpdated>
+    <LastUpdated>2015-12-12T20:18:57.0878184+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B00000000-0000-0000-0000-000000000000%7D%26lang%3Den%26browser%3D3%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://dl.google.com/tag/s/appguid={8A69D345-D564-463C-AFF1-A69D9E530F96}&amp;iid={00000000-0000-0000-0000-000000000000}&amp;lang=en&amp;browser=3&amp;usagestats=0&amp;appname=Google Chrome&amp;needsadmin=prefers/edgedl/chrome/install/GoogleChromeStandaloneEnterprise.msi</FixedDownloadUrl>
     <Name>GoogleChrome</Name>
   </ApplicationJob>
 </Jobs>
