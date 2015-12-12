@@ -1,23 +1,18 @@
-﻿try {
-  $packageName = 'supertuxkart'
-  # {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-  $url = '{{DownloadUrlx64}}'
-  $silentArgs = '/S'
+﻿$packageName = '{{PackageName}}'
+$url = 'http://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/{{PackageVersion}}/supertuxkart-{{PackageVersion}}.exe/download'
+$silentArgs = '/S'
 
-  $tempDir = "$env:TEMP\chocolatey\$packageName"
-  if (!(Test-Path $tempDir)) {New-Item $tempDir -ItemType directory -Force}
-  $fileFullPath = "$tempDir\${packageName}Install.exe"
-
-  Get-ChocolateyWebFile $packageName $fileFullPath $url
-
-  Start-Process $fileFullPath -Verb Runas -ArgumentList $silentArgs
-
-  $silentScript = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\silent.ps1"
-
-  Start-ChocolateyProcessAsAdmin "& `'$silentScript`'"
-
-  Write-ChocolateySuccess $packageName
-}   catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+# Create the package temp folder if it doesn’t already exist
+$tempDir = "$env:TEMP\chocolatey\$packageName"
+if (!(Test-Path $tempDir)) {
+  New-Item $tempDir -ItemType directory -Force
 }
+
+# Download the installer, run it and also start the silent installation script
+# which handles closing the appearing non-silent windows
+# for installing the VC++ Runtime and OpenAL
+$fileFullPath = Join-Path $tempDir ${packageName}Install.exe
+Get-ChocolateyWebFile $packageName $fileFullPath $url
+Start-Process $fileFullPath -Verb Runas -ArgumentList $silentArgs
+$silentScript =  Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) 'silent.ps1'
+Start-ChocolateyProcessAsAdmin "& `'$silentScript`'"

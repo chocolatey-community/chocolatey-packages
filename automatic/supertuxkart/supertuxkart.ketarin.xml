@@ -24,26 +24,12 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://supertuxkart.sourceforge.net/</Url>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;tr title="([^"]+)" class="folder</Regex>
+            <Url>http://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/</Url>
             <StartText>&lt;h2&gt; &lt;span class="mw-headline" id="Last_Release:_</StartText>
             <EndText>"&gt;</EndText>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneric</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/{version}/supertuxkart-{version}-win.exe/download</TextualContent>
-            <Name>urlGeneric</Name>
           </UrlVariable>
         </value>
       </item>
@@ -56,22 +42,8 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>{urlGeneric}</Url>
+            <Url>http://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/{version}/supertuxkart-{version}.exe/download</Url>
             <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{urlGeneric}</TextualContent>
-            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>

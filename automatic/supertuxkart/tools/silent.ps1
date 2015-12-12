@@ -1,17 +1,23 @@
-﻿$process = ''
+﻿# This script closes the appearing windows of the
+# VC++ and the OpenAL installer during the installation
+# of this package, thus making the installation silent.
+#
+# Every 0.5 seconds it checks if the process exists
+# and closes it if applicable.
 
-while (!($process)) {
-Start-Sleep -Milliseconds 500
-$process = Get-Process | Where-Object {$_.ProcessName -eq 'vcredist_x86'}
-#Start-Sleep -Milliseconds 500
-if ($process) {Stop-Process -ProcessName 'vcredist_x86'}
+function Close-ProcessByName ($processName) {
+  $process = $false
+  while (!$process) {
+    Start-Sleep -Milliseconds 500
+    $process = Get-Process | Where-Object {
+      $_.ProcessName -eq $processName
+    }
+
+    if ($process) {
+      Stop-Process -ProcessName $processName
+    }
+  }
 }
 
-$process = ''
-
-while (!($process)) {
-Start-Sleep -Milliseconds 500
-$process = Get-Process | Where-Object {$_.ProcessName -eq 'oalinst'}
-#Start-Sleep -Milliseconds 500
-if ($process) {Stop-Process -ProcessName 'oalinst'}
-}
+Close-ProcessByName 'vcredist_x86'
+Close-ProcessByName 'oalinst'

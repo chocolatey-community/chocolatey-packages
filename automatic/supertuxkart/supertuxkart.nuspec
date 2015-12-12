@@ -26,7 +26,7 @@ Don’t close the empty appearing PowerShell window. Otherwise the silent instal
     <tags>supertuxkart racing game</tags>
     <dependencies>
       <dependency id="openal" />
-      <dependency id="vcredist2005" />
+      <dependency id="vcredist2013" />
     </dependencies>
   </metadata>
   <files>
