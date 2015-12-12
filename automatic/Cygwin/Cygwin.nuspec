@@ -6,16 +6,17 @@
     <title>Cygwin</title>
     <authors>Red Hat, Inc.</authors>
     <owners>Chocolatey</owners>
-    <licenseUrl>http://cygwin.com/license.html</licenseUrl>
-    <projectUrl>http://cygwin.com/</projectUrl>
+    <licenseUrl>https://cygwin.com/license.html</licenseUrl>
+    <projectUrl>https://cygwin.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Cygwin.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-Cygwin is a collection of tools which provide a Linux look and feel environment for Windows.
+Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
-Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
+### Notes:
 
-NOTE: For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
+* This package installs Cygwin to `$PSScriptRoot\cygwin`. If Cygwin is already installed, it uses the installation folder of the already installed Cygwin version.
+* For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <summary>A Linux environment for Windows.</summary>
     <releaseNotes></releaseNotes>

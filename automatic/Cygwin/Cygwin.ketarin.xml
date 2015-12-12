@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>742400</LastFileSize>
-    <LastFileDate>2014-08-11T13:18:21.522732</LastFileDate>
+    <LastFileSize>853504</LastFileSize>
+    <LastFileDate>2015-10-18T21:32:44+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -113,7 +113,7 @@
             <VariableType>Textual</VariableType>
             <Regex>http://download.cdburnerxp.se/minimal/[A-Fa-f0-9]{32}/[A-Fa-f0-9]{8}/cdbxp_setup_[\d\.]+_x64_minimal.exe</Regex>
             <Url>https://cdburnerxp.se/en/download</Url>
-            <TextualContent>http://cygwin.com/setup-x86_64.exe</TextualContent>
+            <TextualContent>https://cygwin.com/setup-x86_64.exe</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
@@ -129,9 +129,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-11T13:18:21.522732</LastUpdated>
+    <LastUpdated>2015-12-12T22:40:36.0801979+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://cygwin.com/setup-x86.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>https://cygwin.com/setup-x86.exe</FixedDownloadUrl>
     <Name>Cygwin</Name>
   </ApplicationJob>
 </Jobs>
