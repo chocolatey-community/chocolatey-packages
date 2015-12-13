@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.3; WOW64; rv:26.0) Gecko/20100101 Firefox/26.0</UserAgent>
     <UserNotes />
-    <LastFileSize>20288000</LastFileSize>
-    <LastFileDate>2014-08-12T23:01:21.3328125</LastFileDate>
+    <LastFileSize>20050944</LastFileSize>
+    <LastFileDate>2015-12-03T07:46:43+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -93,7 +93,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://get.adobe.com/de/flashplayer/</Url>
+            <Url>https://get.adobe.com/de/flashplayer/</Url>
             <StartText>version"&gt;&lt;strong&gt;Version </StartText>
             <EndText>&lt;/strong&gt;</EndText>
             <TextualContent />
@@ -122,13 +122,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\install_flash_player_14_plugin.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\install_flash_player_20_plugin.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-12T23:01:21.3328125</LastUpdated>
+    <LastUpdated>2015-12-13T19:53:28.7031165+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_{majorVersion}_plugin.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_{majorVersion}_plugin.msi</FixedDownloadUrl>
     <Name>flashplayerplugin</Name>
   </ApplicationJob>
 </Jobs>

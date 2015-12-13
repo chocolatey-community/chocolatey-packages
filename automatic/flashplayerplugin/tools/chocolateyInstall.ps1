@@ -1,24 +1,33 @@
-﻿$packageName = '{{PackageName}}'
+﻿### functions
+
+function Check-SoftwareInstalled ($displayName) {
+  $registryPaths = @(
+    'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*',
+    'HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
+  )
+
+  return Get-ItemProperty $registryPaths -ErrorAction SilentlyContinue | Where-Object {
+    $_.DisplayName -eq $displayName
+  }
+}
+
+### end functions
+
+$packageName = '{{PackageName}}'
 $version = '{{PackageVersion}}'
 $installArgs = '/quiet /norestart REMOVE_PREVIOUS=YES'
 $url = '{{DownloadUrl}}'
 
 $majorVersion = ([version] $version).Major
 
-$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
-  $_.Name -eq "Adobe Flash Player $majorVersion Plugin" -and
-  $_.Version -eq $version
+$alreadyInstalled = Check-SoftwareInstalled "Adobe Flash Player $majorVersion NPAPI"
+
+if ($alreadyInstalled) {
+  Write-Host $(
+    "Adobe Flash Player NPAPI (for non-IE browsers) v$version " +
+    "is already installed. No need to download and install it again."
+  )
+} else {
+  Install-ChocolateyPackage $packageName 'msi' $installArgs $url
 }
 
-try {
-  if ($alreadyInstalled) {
-    Write-Output $('Adobe Flash Player Plugin (for non-IE browsers) ' +
-      $version + ' is already installed.')
-  } else {
-    Install-ChocolateyPackage $packageName 'msi' $installArgs $url
-  }
-
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
-}
