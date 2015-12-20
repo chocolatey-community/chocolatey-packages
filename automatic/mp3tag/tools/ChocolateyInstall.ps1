@@ -1,25 +1,33 @@
-﻿try {
-  $packageName = '{{PackageName}}'
-  $fileType = 'exe'
-  $silentArgs = '/S'
-  $url = '{{DownloadUrl}}'
+﻿$packageName = '{{PackageName}}'
+$fileType = 'exe'
+$version = '{{PackageVersion}}'
+$silentArgs = '/S'
+$url = '{{DownloadUrl}}'
+$installerPath = Join-Path $PSScriptRoot "${packageName}.exe"
 
-  $iniFile = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\Mp3tagSetup.ini"
-  $chocoTempDir = "$env:TEMP\chocolatey\$packageName\"
+$PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
+$iniFile = Join-Path $PSScriptRoot 'Mp3tagSetup.ini'
 
-  # Automatic language selection
-  $iniContent = Get-Content $iniFile
-  $LCID = (Get-Culture).LCID
-  $iniContent = $iniContent -replace 'language=.+', "language=$LCID"
-  $iniContent > $iniFile
+# Automatic language selection
+$iniContent = Get-Content $iniFile
+$LCID = (Get-Culture).LCID
+$iniContent = @"
+[shortcuts]
+startmenu=1
+desktop=1
+explorer=1
 
-  if (-not (Test-Path $chocoTempDir)) {New-Item $chocoTempDir -ItemType directory}
-  Copy-Item $iniFile $chocoTempDir -Force
+[language]
+language=$LCID
+"@
 
-  Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+# Create the ini file for the installer
+New-Item $iniFile -type file -force -value $iniContent
 
-  Write-ChocolateySuccess $packageName
-  } catch {
-    Write-ChocolateyFailure $packageName "$($_.Exception.Message)"
-    throw
-}
+Get-ChocolateyWebFile $packageName $installerPath $url
+
+# Download the file to $PSScriptRoot.
+# Using Chocolatey’s Installer-ChocolateyPackage function isn’t a good idea here
+# because the path where the installer is downloaded could change and
+# the ini file needs to be in the same folder to work.
+Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $installerPath
