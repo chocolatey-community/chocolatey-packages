@@ -25,8 +25,8 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=download\.mozilla\.org\/\?product=firefox-)[\d\.]+</Regex>
-            <Url>https://www.mozilla.org/en-US/firefox/all.html</Url>
+            <Regex>download\.mozilla\.org\/\?product=firefox-([\d\.]+)</Regex>
+            <Url>https://www.mozilla.org/en-US/firefox/all/</Url>
             <StartText>&lt;td lang="en-US"&gt;English (US)&lt;/td&gt;
           &lt;td class="download win"&gt;&lt;a href="https://download.mozilla.org/?product=firefox-</StartText>
             <EndText>&amp;amp;os=win&amp;amp;lang=en-US"</EndText>
@@ -47,7 +47,7 @@
     <FileHippoId />
     <LastUpdated>2014-07-22T19:22:32.9348472</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://download.mozilla.org/?product=firefox-{version}&amp;os=win&amp;lang=de</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.mozilla.org/?product=firefox-{version}-SSL&amp;os=win&amp;lang=en-US</FixedDownloadUrl>
     <Name>Firefox</Name>
   </ApplicationJob>
 </Jobs>

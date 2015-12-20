@@ -5,22 +5,7 @@ $packageName = '{{PackageName}}'
 $fileType = 'exe'
 $version = '{{PackageVersion}}'
 
-$softwareNameLowerCase = $packageName.ToLower()
-
-$softwareNameTitleCase = $packageName.Substring(0, 1).ToUpper() +
-  $packageName.Substring(1).ToLower()
-
-$allLocalesListURL = Switch ($softwareNameLowerCase) {
-  'firefox' {
-    'https://www.mozilla.org/en-US/firefox/all/'
-    break
-  }
-
-  'thunderbird' {
-    'https://www.mozilla.org/en-US/thunderbird/all.html'
-    break
-  }
-}
+$allLocalesListURL = 'https://www.mozilla.org/en-US/firefox/all/'
 
 
 
@@ -37,7 +22,8 @@ function GetUninstallPath () {
     $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
   }
 
-  $uninstallPath = $uninstallPaths -match "Mozilla $softwareNameTitleCase [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
+  $uninstallPath = $uninstallPaths -match
+    "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
   return $uninstallPath
 }
 
@@ -87,13 +73,40 @@ function GetLocale() {
 
 
 function AlreadyInstalled($version) {
-  $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla $softwareNameTitleCase ${version}*"
-  $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla $softwareNameTitleCase ${version}*"
+  $uninstallEntry = $(
+    "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla " +
+    "Firefox ${version}*"
+  )
+  $uninstallEntryWow64 = $(
+    "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla " +
+    "Firefox ${version}*"
+  )
 
   if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
     return $true
-  } else {
-    return $false
+  }
+
+  return $false
+}
+
+function Get-32bitOnlyInstalled {
+  $registryPaths = @(
+    'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall',
+    'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
+  )
+
+  $installedVersions = Get-ChildItem $registryPaths | Where-Object {
+    $_.Name -match 'Mozilla Firefox [\d\.]+ \(x(64|86)'
+  }
+
+  $systemIs64bit = Get-ProcessorBits 64
+
+  if (
+    $installedVersions -match 'x86' `
+    -and $installedVersions -notmatch 'x64' `
+    -and $systemIs64bit
+  ) {
+    return $true
   }
 }
 
@@ -101,17 +114,31 @@ function AlreadyInstalled($version) {
 
 $alreadyInstalled = AlreadyInstalled($version)
 
+if (Get-32bitOnlyInstalled) {
+  Write-Host $(
+    'Detected the 32-bit version of Firefox on a 64-bit system. ' +
+    'This package will continue to install the 32-bit version of Firefox ' +
+    'unless the 32-bit version is uninstalled.'
+  )
+}
+
 if ($alreadyInstalled) {
   Write-Host $(
-    "$softwareNameTitleCase $version is already installed. "
+    "Firefox $version is already installed. " +
     'No need to download an re-install again.'
   )
 } else {
 
   $locale = GetLocale
 
-  $url = "https://download.mozilla.org/?product=${softwareNameLowerCase}-${version}&os=win&lang=${locale}"
+  $url = "https://download.mozilla.org/?product=firefox-${version}&os=win&lang=${locale}"
+  $url64 = "https://download.mozilla.org/?product=firefox-${version}-SSL&os=win64&lang=${locale}"
   $silentArgs = '-ms'
 
-  Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+  if (Get-32bitOnlyInstalled) {
+    Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+  } else {
+    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64
+  }
+
 }
