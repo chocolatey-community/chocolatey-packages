@@ -3,9 +3,9 @@ $fileType = 'exe'
 $version = '{{PackageVersion}}'
 $silentArgs = '/S'
 $url = '{{DownloadUrl}}'
-$installerPath = Join-Path $PSScriptRoot "${packageName}.exe"
-
 $PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
+
+$installerPath = Join-Path $PSScriptRoot "${packageName}.exe"
 $iniFile = Join-Path $PSScriptRoot 'Mp3tagSetup.ini'
 
 # Automatic language selection
