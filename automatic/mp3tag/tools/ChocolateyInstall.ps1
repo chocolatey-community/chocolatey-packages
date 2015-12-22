@@ -9,7 +9,6 @@ $installerPath = Join-Path $PSScriptRoot "${packageName}.exe"
 $iniFile = Join-Path $PSScriptRoot 'Mp3tagSetup.ini'
 
 # Automatic language selection
-$iniContent = Get-Content $iniFile
 $LCID = (Get-Culture).LCID
 $iniContent = @"
 [shortcuts]
