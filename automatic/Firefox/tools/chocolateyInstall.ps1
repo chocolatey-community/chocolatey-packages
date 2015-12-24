@@ -90,6 +90,12 @@ function AlreadyInstalled($version) {
 }
 
 function Get-32bitOnlyInstalled {
+  $systemIs64bit = Get-ProcessorBits 64
+  
+  if (-Not $systemIs64bit) {
+    return $false
+  }
+
   $registryPaths = @(
     'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall',
     'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
@@ -98,8 +104,6 @@ function Get-32bitOnlyInstalled {
   $installedVersions = Get-ChildItem $registryPaths | Where-Object {
     $_.Name -match 'Mozilla Firefox [\d\.]+ \(x(64|86)'
   }
-
-  $systemIs64bit = Get-ProcessorBits 64
 
   if (
     $installedVersions -match 'x86' `
@@ -135,7 +139,7 @@ if ($alreadyInstalled) {
   $url64 = "https://download.mozilla.org/?product=firefox-${version}-SSL&os=win64&lang=${locale}"
   $silentArgs = '-ms'
 
-  if (Get-32bitOnlyInstalled) {
+  if ((Get-32bitOnlyInstalled) -or (Get-ProcessorBits 32)) {
     Install-ChocolateyPackage $packageName $fileType $silentArgs $url
   } else {
     Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64
