@@ -71,13 +71,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>32738719</LastFileSize>
-    <LastFileDate>2013-10-08T23:43:42.549724</LastFileDate>
+    <LastFileSize>59401613</LastFileSize>
+    <LastFileDate>2015-11-14T17:55:16+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -86,44 +88,15 @@
     <Variables>
       <item>
         <key>
-          <string>versionShort</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://sourceforge.net/projects/maxima/files/Maxima-Windows/</Url>
-            <StartText>&lt;tr title="</StartText>
-            <EndText>-Windows" class="folder</EndText>
-            <Name>versionShort</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneric</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/maxima/files/Maxima-Windows/{versionShort}-Windows/maxima-{versionReal}.exe/download</TextualContent>
-            <Name>urlGeneric</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
           <string>version</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{versionReal:replace:-:.}</TextualContent>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;tr title="([\d\.]+)-Windows" class="folder</Regex>
+            <Url>http://sourceforge.net/projects/maxima/files/Maxima-Windows/</Url>
+            <TextualContent />
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -137,38 +110,8 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>{urlGeneric}</Url>
+            <Url>http://sourceforge.net/projects/maxima/files/Maxima-Windows/{version}-Windows/maxima-clisp-{version}.exe/download</Url>
             <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>versionReal</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://sourceforge.net/projects/maxima/files/Maxima-Windows/{versionShort}-Windows/</Url>
-            <StartText>&lt;tr title="maxima-</StartText>
-            <EndText>.exe</EndText>
-            <Name>versionReal</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{urlGeneric}</TextualContent>
-            <Name>url64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -179,11 +122,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\maxima-5.31.2.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\maxima-clisp-5.37.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2013-10-08T23:43:42.549724</LastUpdated>
+    <LastUpdated>2015-12-24T11:17:59.5958582+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>maxima</Name>

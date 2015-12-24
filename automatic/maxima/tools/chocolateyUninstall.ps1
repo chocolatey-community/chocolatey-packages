@@ -1,22 +1,8 @@
-﻿try {
+﻿$PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
+Import-Module (Join-Path $PSScriptRoot 'functions.ps1')
 
-  $packageName = '{{PackageName}}'
-  $fileType = 'exe'
-  $silentArgs = '/VERYSILENT'
-  $validExitCodes = @(0)
+$uninstallerPath = (Get-InstallProperties).UninstallString
 
-  $unfile = "${Env:ProgramFiles}\Maxima-{{PackageVersion}}\uninst\unins000.exe"
-  $unfilex86 = "${Env:ProgramFiles(x86)}\Maxima-{{PackageVersion}}\uninst\unins000.exe"
-
-  if (Test-Path "$unfile") {$file = "$unfile"}
-  if (Test-Path "$unfilex86") {$file = "$unfilex86"}
-
-  if ((Test-Path "$unfile") -or (Test-Path "$unfilex86")) {
-    Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
-  }
-
-  Write-ChocolateySuccess $packageName
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+if ($uninstallerPath -and (Test-Path $uninstallerPath)) {
+  Uninstall-ChocolateyPackage '{{PackageName}}' 'exe' '/S' $uninstallerPath
 }
