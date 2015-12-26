@@ -20,6 +20,7 @@ The engine supporting the game is entirely original in code &amp; design, and it
     <releaseNotes />
     <copyright />
     <tags>game cube sauerbraten</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -34,6 +34,7 @@ This package uses an AutoHotkey-script for unattended installation.
     <dependencies>
       <dependency id="autohotkey.install" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

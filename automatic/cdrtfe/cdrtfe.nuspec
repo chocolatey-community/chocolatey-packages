@@ -23,6 +23,7 @@ In cdrtfe, go to `Extras > Settings > cdrtfe` and activate „Save on exit“. T
     <releaseNotes />
     <copyright />
     <tags>burning fontend</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

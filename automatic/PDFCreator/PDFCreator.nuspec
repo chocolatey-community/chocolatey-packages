@@ -14,6 +14,7 @@ PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it l
     </description>
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
     <tags>pdf chocolatey</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

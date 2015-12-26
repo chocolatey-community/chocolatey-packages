@@ -18,6 +18,7 @@ Iron is issued by SRWare under an “all rights reserved” license, indicating 
     <releaseNotes />
     <copyright />
     <tags>SRWareIron browser privacy</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

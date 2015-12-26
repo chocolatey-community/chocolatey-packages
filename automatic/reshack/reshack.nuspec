@@ -1,23 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>reshack</id>
-		<title>Resource Hacker</title>
-		<version>{{PackageVersion}}</version>
-		<authors>Angus Johnson</authors>
-		<owners>Redsandro</owners>
-		<summary>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files.</summary>
-		<description>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files (*.res). It incorporates an internal resource script compiler and decompiler and works on all (Win95 - Win7) Windows operating systems.</description>
-		<projectUrl>http://www.angusj.com/resourcehacker/</projectUrl>
-		<tags>hacking resource executables</tags>
-		<copyright></copyright>
-		<licenseUrl>http://www.angusj.com/resourcehacker/</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/reshack/img/reshack.128x128.png</iconUrl>
-		<dependencies></dependencies>
-		<releaseNotes></releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    <metadata>
+        <id>reshack</id>
+        <title>Resource Hacker</title>
+        <version>{{PackageVersion}}</version>
+        <authors>Angus Johnson</authors>
+        <owners>Redsandro</owners>
+        <summary>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files.</summary>
+        <description>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files (*.res). It incorporates an internal resource script compiler and decompiler and works on all (Win95 - Win7) Windows operating systems.</description>
+        <projectUrl>http://www.angusj.com/resourcehacker/</projectUrl>
+        <tags>hacking resource executables</tags>
+        <copyright></copyright>
+        <licenseUrl>http://www.angusj.com/resourcehacker/</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://raw.github.com/Redsandro/chocolatey/master/reshack/img/reshack.128x128.png</iconUrl>
+        <dependencies></dependencies>
+        <releaseNotes></releaseNotes>
+      <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>

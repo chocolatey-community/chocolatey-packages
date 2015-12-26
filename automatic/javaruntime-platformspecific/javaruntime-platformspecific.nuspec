@@ -22,6 +22,7 @@ This only installs the Java Runtime with the bitness specific to your OS (either
     </description>
     <releaseNotes />
     <tags>java runtime environment</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

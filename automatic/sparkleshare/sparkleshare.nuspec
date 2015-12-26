@@ -16,6 +16,7 @@ SparkleShare is an Open Source collaboration and sharing tool that is designed t
     <releaseNotes />
     <copyright />
     <tags>sparkleshare git collaboration sync files</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

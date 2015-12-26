@@ -51,6 +51,7 @@ It needs .NET Framework 2.0 in order to run …
     <dependencies>
       <dependency id="wget" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

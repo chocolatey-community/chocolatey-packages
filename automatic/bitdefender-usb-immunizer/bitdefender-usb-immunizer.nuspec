@@ -22,6 +22,7 @@ Bitdefender USB Immunizer is a response to this growing issue.
     <releaseNotes />
     <copyright />
     <tags>bitdefender usb autorun immunizer anti-virus</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

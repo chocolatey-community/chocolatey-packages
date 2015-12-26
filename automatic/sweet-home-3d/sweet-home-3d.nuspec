@@ -16,6 +16,7 @@ Sweet Home 3D is a free interior design application that helps you draw the plan
     <releaseNotes />
     <copyright>2005–2013 Emmanuel Puybaret</copyright>
     <tags>home design house 3d</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

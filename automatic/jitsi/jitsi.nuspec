@@ -16,6 +16,7 @@ Jitsi (formerly SIP Communicator) is a free and open source multiplatform voice 
     <releaseNotes>https://jitsi.org/Main/News</releaseNotes>
     <copyright>2004–2012 Emil Ivov</copyright>
     <tags>voip messaging desktop-sharing softphone</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
    <files>
     <file src="tools\**" target="tools" />

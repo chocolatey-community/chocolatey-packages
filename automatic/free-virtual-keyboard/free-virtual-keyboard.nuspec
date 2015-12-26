@@ -33,6 +33,7 @@ The settings are stored in the FreeVK.ini file located in the program installati
     <copyright>Comfort Software Group. All rights reserved.</copyright>
     <language />
     <tags>on-screen keyboard</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

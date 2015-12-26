@@ -19,6 +19,7 @@ Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction a
     <copyright />
     <language>en-US</language>
     <tags>youtube-dl ffmpeg youtube download</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

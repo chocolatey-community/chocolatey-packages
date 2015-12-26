@@ -11,5 +11,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>
     <tags>remote desktop rdp connect</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
 </package>

@@ -18,6 +18,7 @@ Build up a great army, gradually turning raw recruits into hardened veterans. In
     <releaseNotes />
     <copyright />
     <tags>game strategy turn-based</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -22,6 +22,7 @@ _The installer is not silent. I've used AutoIt to automate the installation. Be 
       <dependency id="autoit.commandline" version="3.3.12.0" />
     </dependencies>
     <releaseNotes></releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

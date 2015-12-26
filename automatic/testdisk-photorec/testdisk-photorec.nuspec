@@ -18,6 +18,7 @@ PhotoRec is file data recovery software designed to recover lost files including
     <releaseNotes>http://www.cgsecurity.org/wiki/TestDisk_{{PackageVersion}}_Release</releaseNotes>
     <copyright />
     <tags>data recovery</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

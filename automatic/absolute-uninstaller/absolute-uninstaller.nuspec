@@ -15,6 +15,7 @@ GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you 
     <copyright>GlarySoft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/AbsoluteUninstaller/icons/absolute-uninstaller.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

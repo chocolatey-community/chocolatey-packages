@@ -20,6 +20,7 @@ This package installs the standalone version of Aptana Studio.
     <releaseNotes>http://www.aptana.org/products/studio3/releasenotes</releaseNotes>
     <copyright />
     <tags>aptana ide ajax web</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

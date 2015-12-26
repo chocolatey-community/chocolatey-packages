@@ -19,6 +19,7 @@ This package uses Chrome’s administrative MSI installer and installs the 32-bi
 This package always installs the latest version of Google Chrome, regardless of the version specified in the package. Google does not officially offer older versions of Chrome for download.
     </description>
     <releaseNotes></releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

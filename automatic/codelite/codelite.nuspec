@@ -20,6 +20,7 @@ This package downloads the installer which includes CodeLite, the MinGW suite an
     <releaseNotes />
     <copyright />
     <tags>C C++ IDE programming</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

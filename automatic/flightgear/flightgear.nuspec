@@ -22,6 +22,7 @@ The FlightGear also installs the OpenAL library which hasn’t a silent switch.
     <releaseNotes />
     <copyright />
     <tags>flightgear flight simulator game</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

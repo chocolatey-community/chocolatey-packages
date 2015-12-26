@@ -22,6 +22,7 @@ Ghostscript is written entirely in C, with special care taken to make it run pro
     <releaseNotes />
     <copyright>Artifex Software, Inc</copyright>
     <tags>ghostscript postscript</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

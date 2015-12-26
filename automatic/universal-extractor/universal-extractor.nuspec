@@ -15,6 +15,7 @@ Universal Extractor is a program designed to decompress and extract files from a
     <releaseNotes>http://www.legroom.net/files/software/uniextract_changelog.txt</releaseNotes>
     <copyright />
     <tags>extract archive files</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

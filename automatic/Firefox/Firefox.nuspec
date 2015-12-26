@@ -24,6 +24,7 @@ Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firef
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox</tags>
     <releaseNotes></releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
     <files>
     <file src="tools\**" target="tools" />

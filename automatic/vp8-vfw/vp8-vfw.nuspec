@@ -17,6 +17,7 @@ Even though the Video for Windows driver framework is now several years old, sev
     <releaseNotes />
     <copyright>2009–2011 Optima SC Inc</copyright>
     <tags>vp8 vfw video-for-windows codec</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

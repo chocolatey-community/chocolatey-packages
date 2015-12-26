@@ -20,6 +20,7 @@ This package installs iTunes, the required Apple Application Support component, 
     <releaseNotes></releaseNotes>
     <copyright>Apple Inc. All rights reserved.</copyright>
     <tags>iTunes admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

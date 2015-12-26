@@ -15,6 +15,7 @@ NirCmd is a small command-line utility that allows you to do some useful tasks w
     <releaseNotes />
     <copyright>2003–2012 Nir Sofer</copyright>
     <tags>nircmd commandline utility</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

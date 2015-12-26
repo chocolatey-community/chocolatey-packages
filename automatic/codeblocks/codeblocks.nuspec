@@ -20,6 +20,7 @@ This package downloads the installer with the included GCC compiler.
     <releaseNotes>http://www.codeblocks.org/downloads/31</releaseNotes>
     <copyright />
     <tags>codeblocks C++ IDE</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

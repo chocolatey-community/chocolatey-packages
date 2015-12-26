@@ -19,6 +19,7 @@
 
 		http://www.poweriso.com/download.htm
     </releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

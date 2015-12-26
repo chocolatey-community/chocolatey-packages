@@ -16,6 +16,7 @@ Keep your current IP address in sync with your No-IP host or domain with the Dyn
     <copyright />
     <language>en-US</language>
     <tags>no-ip dns dyndns dynamic-dns</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

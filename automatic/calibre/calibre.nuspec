@@ -19,6 +19,7 @@ Up to date release notes for this application can be found here:
 
 http://calibre-ebook.com/whats-new
     </releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

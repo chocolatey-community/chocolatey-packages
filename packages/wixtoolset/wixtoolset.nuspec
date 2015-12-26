@@ -19,5 +19,6 @@ Information on this release can be found in the following blog posts:
 * [http://www.joyofsetup.com/2015/10/31/wix-toolset-v3-10-1-released/](http://www.joyofsetup.com/2015/10/31/wix-toolset-v3-10-1-released/)
 * [http://robmensching.com/blog/posts/2015/10/31/wix-toolset-v3.10.1-released/](http://robmensching.com/blog/posts/2015/10/31/wix-toolset-v3.10.1-released/)
 	</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
 </package>

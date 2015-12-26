@@ -25,6 +25,7 @@ It is also possible to install multiple Help Packs. To achieve that, install the
     <releaseNotes />
     <copyright />
     <tags>libreoffice office help admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

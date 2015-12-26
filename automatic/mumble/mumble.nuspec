@@ -20,6 +20,7 @@ Mumble is free and open-source software, is cross-platform, and is released unde
     <licenseUrl>https://github.com/mumble-voip/mumble/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes></releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

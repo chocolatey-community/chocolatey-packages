@@ -20,6 +20,7 @@ AutoHotkey\_L is a fork of AutoHotkey which adds a long list of new features and
     <dependencies>
       <dependency id="{{PackageName}}.install" version="{{PackageVersion}}" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

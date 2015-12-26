@@ -16,6 +16,7 @@ Mixxx is open source DJ software that gives you everything you need to perform l
     <releaseNotes>http://mixxxblog.blogspot.it/</releaseNotes>
     <copyright />
     <tags>DJ audio mixing party</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

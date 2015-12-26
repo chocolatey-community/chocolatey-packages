@@ -28,6 +28,7 @@ Don’t close the empty appearing PowerShell window. Otherwise the silent instal
       <dependency id="openal" />
       <dependency id="vcredist2013" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

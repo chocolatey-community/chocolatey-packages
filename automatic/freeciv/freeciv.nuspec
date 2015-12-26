@@ -16,6 +16,7 @@ Freeciv is a Free and Open Source empire-building strategy game inspired by the 
     <releaseNotes />
     <copyright />
     <tags>game strategy civilization</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

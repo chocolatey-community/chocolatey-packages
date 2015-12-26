@@ -16,6 +16,7 @@ WinFF is a GUI for the command line video converter, FFMPEG. It will convert mos
     <releaseNotes />
     <copyright>2008–2013 WinFF.org</copyright>
     <tags>converter encoder audio video ffmpeg</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

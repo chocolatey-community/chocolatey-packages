@@ -16,6 +16,7 @@ Zotero is free and open-source reference management software to manage bibliogra
     <licenseUrl>https://github.com/zotero/zotero/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://www.zotero.org/support/4.0_changelog</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

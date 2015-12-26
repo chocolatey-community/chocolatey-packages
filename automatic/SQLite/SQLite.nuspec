@@ -16,6 +16,7 @@ This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLi
     </description>
     <summary>A DLL for the SQLite SQL database engine installed in your user path.</summary>
     <tags>sqlite db database embedded chocolatey</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -18,6 +18,7 @@ MuseScore runs on Windows, MacOS, and Linux, and is available in over 40 differe
     <releaseNotes>http://musescore.org/en/developers-handbook/release-notes/release-notes-musescore-{{PackageVersion}}</releaseNotes>
     <copyright />
     <tags>music composition notation sheet</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

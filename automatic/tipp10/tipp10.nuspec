@@ -18,6 +18,7 @@ TIPP10 is a free 10-finger touch typing tutor. TIPP10 is easy to use and feature
 https://www.tipp10.com/en/news/</releaseNotes>
     <copyright>2006-2013 Tom Thielicke IT Solutions</copyright>
     <tags>typing keyboard 10-finger</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

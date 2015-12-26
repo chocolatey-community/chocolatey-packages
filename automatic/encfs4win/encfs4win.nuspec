@@ -18,6 +18,7 @@ This is an experimental project of porting EncFS to the Windows world. EncFS pro
     <dependencies>
       <dependency id="dokan-library" version="0.6.0" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

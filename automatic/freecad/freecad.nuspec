@@ -18,6 +18,7 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
     <releaseNotes />
     <copyright />
     <tags>3D CAD modeling engineering</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

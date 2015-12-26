@@ -18,6 +18,7 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
     <releaseNotes />
     <copyright />
     <tags>game turn-based strategy artillery</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

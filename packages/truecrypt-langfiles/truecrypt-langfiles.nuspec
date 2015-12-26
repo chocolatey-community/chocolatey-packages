@@ -22,6 +22,7 @@ The language files are public domain, so they can be distributed and modified fr
     <dependencies>
       <dependency id="truecrypt" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

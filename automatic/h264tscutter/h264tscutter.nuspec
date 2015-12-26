@@ -23,6 +23,7 @@ Download link on official site does not work. This package uses this one instead
       <dependency id="haali-media-splitter" />
       <dependency id="wget" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

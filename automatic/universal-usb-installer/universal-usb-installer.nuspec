@@ -16,6 +16,7 @@ Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to c
     <releaseNotes></releaseNotes>
     <copyright>Lance www.pendrivelinux.com</copyright>
     <tags>usb flash drive linux iso</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

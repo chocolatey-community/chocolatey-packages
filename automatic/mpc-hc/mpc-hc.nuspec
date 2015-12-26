@@ -16,6 +16,7 @@ MPC-HC is an extremely light-weight, open source media player for Windows. It su
     <releaseNotes></releaseNotes>
     <copyright>MPC-HC Team</copyright>
     <tags>media player</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

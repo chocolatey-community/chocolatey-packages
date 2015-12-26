@@ -26,6 +26,7 @@ This package extracts a ZIP with all language files into the KeePass program fol
     <dependencies>
       <dependency id="keepass.install" version="2.30" />
     </dependencies>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\keepass_2.x_langfiles.zip" target="tools\keepass_2.x_langfiles.zip" />

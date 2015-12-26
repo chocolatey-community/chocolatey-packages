@@ -28,6 +28,7 @@ This package is not for the Xpdf viewer itself. It only installs the Xpdf utilit
     <releaseNotes></releaseNotes>
     <copyright>Glyph &amp; Cog, LLC</copyright>
     <tags>pdf xpdf pdf-utilities</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

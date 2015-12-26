@@ -16,6 +16,7 @@ PyHoca-GUI is designed as a very minimal GUI that behaves very similar to GNOME'
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Please refer to http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=history;f=debian/changelog for changelogs.</releaseNotes>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/pyhoca-gui.svg</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

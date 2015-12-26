@@ -20,6 +20,7 @@ The uninstaller doesn’t work silently.
     <copyright />
     <language>en-US</language>
     <tags>ext3 ext4 file system driver</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

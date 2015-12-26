@@ -22,6 +22,7 @@ You can not use TV-Browser to watch TV.
     <releaseNotes />
     <copyright />
     <tags>tv-browser tv television guide</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

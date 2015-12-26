@@ -18,6 +18,7 @@ Compact Timer is a completely free countdown timer, countup timer, stop Watch, r
     <copyright>Compact Timer Team</copyright>
     <language />
     <tags>compact-timer timer countdown stopwatch alarm-clock</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -26,6 +26,7 @@ With TightVNC, you can:
     <releaseNotes>http://www.tightvnc.com/whatsnew.php</releaseNotes>
     <copyright />
     <tags>remote control vnc</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

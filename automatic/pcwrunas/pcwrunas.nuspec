@@ -20,6 +20,7 @@ PcwRunAs is intended exclusively for use on your home PC.
     <copyright />
     <language>de-DE</language>
     <tags>pcwrunas runas PC-Welt</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

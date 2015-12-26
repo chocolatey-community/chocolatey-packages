@@ -20,6 +20,7 @@ GIMP is expandable and extensible. It is designed to be augmented with plug-ins 
     <releaseNotes></releaseNotes>
     <copyright>GIMP Team</copyright>
     <tags>gimp editor images graphics photo art png</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

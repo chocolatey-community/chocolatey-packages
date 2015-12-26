@@ -22,6 +22,7 @@ Texmaker is released under the GPL license.
     <releaseNotes />
     <copyright />
     <tags>texmaker tex latex admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

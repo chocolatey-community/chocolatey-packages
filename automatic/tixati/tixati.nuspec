@@ -2,17 +2,17 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>tixati</id>
-		<title>Tixati</title>
-		<version>{{PackageVersion}}</version>
-		<authors>Kevin Hearn</authors>
-		<owners>Redsandro</owners>
-		<summary>Tixati is a cross-platform BitTorrent client written in C++ that has been designed to be light on system resources.</summary>
-		<description>
+    <metadata>
+        <id>tixati</id>
+        <title>Tixati</title>
+        <version>{{PackageVersion}}</version>
+        <authors>Kevin Hearn</authors>
+        <owners>Redsandro</owners>
+        <summary>Tixati is a cross-platform BitTorrent client written in C++ that has been designed to be light on system resources.</summary>
+        <description>
 __Tixati__ is one of the most advanced and flexible BitTorrent clients available.  And unlike many other clients, Tixati contains _NO SPYWARE, NO ADS,_ and _NO GIMMICKS._
 
-__Tixati__ has the following features:  
+__Tixati__ has the following features:
 
 * detailed views of all aspects of the swarm, including peers, pieces, files, and trackers
 * support for magnet links, so no need to download .torrent files if a simple magnet-link is available
@@ -26,20 +26,21 @@ __Tixati__ has the following features:
 * expert local file management functions which allow you to move files to a different partition even while downloading is still in progress
 * 100% compatible with the BitTorrent protocol
 * Windows and Linux-GTK native versions available
-		</description>
-		<projectUrl>http://www.tixati.com/</projectUrl>
-		<tags>Internet Network Download Torrent BitTorrent</tags>
-		<copyright></copyright>
-		<licenseUrl>http://www.tixati.com/tixati_eula.txt</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://i.imgur.com/fGvaQfg.png</iconUrl>
-		<dependencies>
-			<dependency id="upx" version="3.0" />
-			<dependency id="autoit.commandline" version="3.3.12.0" />
-		</dependencies>
-		<releaseNotes></releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+        </description>
+        <projectUrl>http://www.tixati.com/</projectUrl>
+        <tags>Internet Network Download Torrent BitTorrent</tags>
+        <copyright></copyright>
+        <licenseUrl>http://www.tixati.com/tixati_eula.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://i.imgur.com/fGvaQfg.png</iconUrl>
+        <dependencies>
+            <dependency id="upx" version="3.0" />
+            <dependency id="autoit.commandline" version="3.3.12.0" />
+        </dependencies>
+        <releaseNotes></releaseNotes>
+      <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>

@@ -31,6 +31,7 @@ WinCDEmu is free for any kind of use – it is licensed under LGPL.
     <releaseNotes>http://www.digital-digest.com/software/WinCDEmu_history.html#4</releaseNotes>
     <copyright>2013 Sysprogs OÜ</copyright>
     <tags>emulator virtual drive CD DVD BD</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

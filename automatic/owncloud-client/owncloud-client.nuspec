@@ -18,6 +18,7 @@ This package installs the ownCloud Sync Client on your computer.
     <releaseNotes>http://owncloud.org/sync-clients/releases/</releaseNotes>
     <copyright />
     <tags>owncloud cloud sync webdav caldav carddav</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

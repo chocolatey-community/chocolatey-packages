@@ -26,6 +26,7 @@ If you want to install only specific components, e.g. only the Start Menu, use
     <releaseNotes></releaseNotes>
     <copyright>Classic Shell</copyright>
     <tags>classic shell start menu windows 8</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

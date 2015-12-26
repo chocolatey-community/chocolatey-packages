@@ -24,6 +24,7 @@ Up to date release notes for this application can be found here:
 
 http://www.telerik.com/support/whats-new/fiddler
     </releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -20,6 +20,7 @@ Because Gecko lives inside BlueGriffon, the document you edit will look exactly 
     <releaseNotes />
     <copyright />
     <tags>bluegriffon WYSIWYG gecko firefox html</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
