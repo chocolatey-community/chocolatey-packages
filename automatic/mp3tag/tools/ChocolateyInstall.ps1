@@ -5,7 +5,10 @@ $silentArgs = '/S'
 $url = '{{DownloadUrl}}'
 $PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-$installerPath = Join-Path $PSScriptRoot "${packageName}.exe"
+# The installer doesn’t like being renamed. The installation wouldn’t be
+# silent if it is renamed. Therefore the original filename is parsed
+# from the URL
+$installerPath = Join-Path $PSScriptRoot $url.Split('/')[-1]
 $iniFile = Join-Path $PSScriptRoot 'Mp3tagSetup.ini'
 
 # Automatic language selection
