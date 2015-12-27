@@ -71,13 +71,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>28620792</LastFileSize>
-    <LastFileDate>2015-09-13T05:00:55+02:00</LastFileDate>
+    <LastFileSize>28743504</LastFileSize>
+    <LastFileDate>2015-12-07T23:00:22+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -120,16 +122,18 @@
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand>chocopkgup /p "python3-x86_32" /v {version} /u "{preupdate-url}" /u64 "{url64}" /pp "{file}"
+chocopkgup /p "python" /v {version} /u "{preupdate-url}" /u64 "{url64}" /pp "{file}"
+chocopkgup /p "python-x86_32" /v {version} /u "{preupdate-url}" /u64 "{url64}" /pp "{file}"
 REM /disablepush</ExecutePreCommand>
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\python-3.5.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\python-3.5.1.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-10-10T22:38:15.883803+02:00</LastUpdated>
+    <LastUpdated>2015-12-27T13:20:24.5126019+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://www.python.org/ftp/python/{version}/python-{version}.exe</FixedDownloadUrl>
     <Name>python3</Name>
