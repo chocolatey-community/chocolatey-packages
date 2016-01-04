@@ -1,24 +1,13 @@
-﻿try {
+﻿$PSScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
+Import-Module (Join-Path $PSScriptRoot 'functions.ps1')
 
-  $name = 'keepass-classic-langfiles'
-  $scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-  $fileFullPath = "$scriptPath\keepass_1.x_langfiles.zip"
+$fileFullPath = Join-Path $PSScriptRoot 'keepass_1.x_langfiles.zip'
+$keepassInstallPath = (Get-InstallProperties).InstallLocation
 
-  $keepasspath = "$env:ProgramFiles\KeePass Password Safe"
-  $keepasspathx86 = "${env:ProgramFiles(x86)}\KeePass Password Safe"
-  if (Test-Path "$keepasspath") {$destination = "$keepasspath"}
-  if (Test-Path "$keepasspathx86") {$destination = "$keepasspathx86"}
-
-  $extractPath = "$scriptPath\keepass-classic-langfiles"
-  if (-not (Test-Path $extractPath)) {
-    mkdir $extractPath
-  }
-
-  Get-ChocolateyUnzip $fileFullPath $extractPath
-  Start-ChocolateyProcessAsAdmin "Copy-Item -Force '$extractPath\*.lng' '$destination'"
-
-  Write-ChocolateySuccess $name
-} catch {
-  Write-ChocolateyFailure $name $($_.Exception.Message)
-  throw
+$extractPath = Join-Path $PSScriptRoot 'keepass-classic-langfiles'
+if (-not (Test-Path $extractPath)) {
+  mkdir $extractPath
 }
+
+Get-ChocolateyUnzip $fileFullPath $extractPath
+Start-ChocolateyProcessAsAdmin "Copy-Item -Force '$extractPath\*.lng' '$keepassInstallPath'"
