@@ -78,6 +78,8 @@
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -91,8 +93,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>download\.documentfoundation\.org/libreoffice/stable/([\d\.]+)/win/x86/</Regex>
             <Url>https://www.libreoffice.org/download/libreoffice-still/</Url>
             <StartText>http://download.documentfoundation.org/libreoffice/stable/</StartText>
             <EndText>/win/x86/LibreOffice_</EndText>
@@ -115,7 +117,7 @@ rem /disablepush</ExecutePreCommand>
     <FileHippoId />
     <LastUpdated>2014-08-02T16:04:18.7483702</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.documentfoundation.org/libreoffice/stable/{version}/win/x86/LibreOffice_{version}_Win_x86.msi</FixedDownloadUrl>
     <Name>libreoffice-oldstable</Name>
   </ApplicationJob>
 </Jobs>
