@@ -13,11 +13,13 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 ### Notes
 
 This package installs the latest stable version of LibreOffice (officially called [LibreOffice Fresh](https://www.libreoffice.org/download/libreoffice-fresh/)). For more conservative users it is recommended to install [libreoffice-oldstable](/packages/libreoffice-oldstable) instead.
+
+Warning: Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
     </description>
-    <projectUrl>http://www.libreoffice.org/</projectUrl>
+    <projectUrl>https://www.libreoffice.org/</projectUrl>
     <tags>libreoffice office admin</tags>
     <copyright></copyright>
-    <licenseUrl>http://www.libreoffice.org/download/license/</licenseUrl>
+    <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/libreoffice.svg</iconUrl>
     <releaseNotes></releaseNotes>
