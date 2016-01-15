@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>hostsman</id>
-        <version>{{PackageVersion}}</version>
-        <title>HostsMan</title>
-        <authors>abelhadigital.com</authors>
-        <owners>Redsandro</owners>
-        <licenseUrl>http://hostsman.it-mate.co.uk/licenses/hostsman_4.txt</licenseUrl>
-        <projectUrl>http://www.abelhadigital.com/hostsman</projectUrl>
-        <iconUrl>https://i.imgur.com/gnIXWoE.png</iconUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>__HostsMan__ is a freeware application that lets you manage your Hosts file with ease. No Spyware! No Adware! No Viruses! 100% Freeware! Clean and simple.</description>
-        <summary>HostsMan is a freeware application that lets you manage your Hosts file with ease.</summary>
-        <releaseNotes />
-        <copyright />
-        <tags>Security Hosts hostsfile</tags>
-    </metadata>
+  <metadata>
+    <id>hostsman</id>
+    <version>{{PackageVersion}}</version>
+    <title>HostsMan</title>
+    <authors>abelhadigital.com</authors>
+    <owners>Redsandro</owners>
+    <licenseUrl>http://hostsman.it-mate.co.uk/licenses/hostsman_4.txt</licenseUrl>
+    <projectUrl>http://www.abelhadigital.com/hostsman</projectUrl>
+    <iconUrl>https://i.imgur.com/gnIXWoE.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>__HostsMan__ is a freeware application that lets you manage your Hosts file with ease. No Spyware! No Adware! No Viruses! 100% Freeware! Clean and simple.</description>
+    <summary>HostsMan is a freeware application that lets you manage your Hosts file with ease.</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>Security Hosts hostsfile</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
