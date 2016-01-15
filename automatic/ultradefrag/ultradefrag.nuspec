@@ -6,7 +6,19 @@
     <version>{{PackageVersion}}</version>
     <authors>Dmitri Arkhangelski et al.</authors>
     <summary>UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform.</summary>
-    <description>UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform. It can defragment any system files including registry hives and paging file. Also one of the main goals of UltraDefrag is doing the job as fast and reliable as possible.</description>
+    <description>
+UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform. It can defragment any system files including registry hives and paging file. Also one of the main goals of UltraDefrag is doing the job as fast and reliable as possible.
+
+#### Package Parameters
+The following package parameters can be set:
+
+* `/NoShellExtension` - install __without__ the Explorer's context menu handler.
+* `/DisableUsageTracking` - disable the usage tracking. SEE: https://sourceforge.net/p/ultradefrag/discussion/709672/thread/657b0ebe/#0e65
+* `/NoBootInterface` - install __without__ the boot time interface.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: `-params '"/NoShellExtension /DisableUsageTracking /NoBootInterface"'`.
+    </description>
     <projectUrl>http://ultradefrag.sourceforge.net/en/index.html</projectUrl>
     <tags>defrag defragment defragmenter ntfs registry hive paging files</tags>
     <copyright></copyright>
