@@ -14,8 +14,9 @@
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/97d1e867fd5feaee1b89b24ffe6d40c22c819dc3/icons/smartftp.svg</iconUrl>
+    <bugTrackerUrl>https://www.smartftp.com/forums/index.php?/forum/14-support/</bugTrackerUrl>
     <dependencies>
-      <dependency id="vcredist2015" />
+      <dependency id="vcredist2015" version="(14.0.23506.0,)"/>
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
