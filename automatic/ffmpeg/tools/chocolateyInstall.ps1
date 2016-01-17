@@ -23,6 +23,7 @@ which is a better choice.
     }
   }
 
+  Remove-Item $(Join-Path "$destinationFolder" "$(Get-ChildItem -Directory $destinationFolder)") -Recurse
   Install-ChocolateyZipPackage $packageName $url $destinationFolder $url64
 
 } catch {
