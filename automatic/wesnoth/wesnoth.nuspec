@@ -17,7 +17,7 @@ Build up a great army, gradually turning raw recruits into hardened veterans. In
     <summary>The Battle for Wesnoth is a turn-based tactical strategy game with a high fantasy theme.</summary>
     <releaseNotes />
     <copyright />
-    <tags>game strategy turn-based</tags>
+    <tags>game strategy turn-based admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

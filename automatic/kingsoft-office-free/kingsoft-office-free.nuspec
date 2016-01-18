@@ -19,7 +19,7 @@ Although it is a free suite, Kingsoft Office comes with many innovative features
     </description>
     <summary>Kingsoft Office Suite Free 2013 is a free office suite, which includes free word processor, spreadsheet program and presentation maker.</summary>
     <language>en-US</language>
-    <tags>kingsoft office suite</tags>
+    <tags>kingsoft office suite admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

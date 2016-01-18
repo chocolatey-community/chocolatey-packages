@@ -19,7 +19,7 @@ This package downloads the installer with the included GCC compiler.
     <summary>Code::Blocks is a free C++ IDE.</summary>
     <releaseNotes>http://www.codeblocks.org/downloads/31</releaseNotes>
     <copyright />
-    <tags>codeblocks C++ IDE</tags>
+    <tags>codeblocks C++ IDE admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

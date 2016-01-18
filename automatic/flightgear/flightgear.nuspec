@@ -21,7 +21,7 @@ The FlightGear also installs the OpenAL library which hasn’t a silent switch.
     <summary>FlightGear is an open-source flight simulator.  It supports a variety of popular platforms (Windows, Mac, Linux, etc.) and is developed by skilled volunteers from around the world.</summary>
     <releaseNotes />
     <copyright />
-    <tags>flightgear flight simulator game</tags>
+    <tags>flightgear flight simulator game admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

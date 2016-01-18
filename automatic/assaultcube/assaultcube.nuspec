@@ -15,7 +15,7 @@ AssaultCube is a free, multiplayer, first-person shooter game, based on the CUBE
     <summary>AssaultCube is an Open Source, multiplayer, first-person shooter game, based on the CUBE engine.</summary>
     <releaseNotes>http://assault.cubers.net/docs/history.html</releaseNotes>
     <copyright />
-    <tags>first-person shooter game</tags>
+    <tags>first-person shooter game admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

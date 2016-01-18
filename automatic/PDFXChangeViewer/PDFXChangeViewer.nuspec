@@ -15,7 +15,7 @@ A free PDF reader alternative to the Adobe Reader! The PDF-XChange Viewer is sma
     <summary>PDF-XChange Viewer – PDF Reader</summary>
     <releaseNotes />
     <copyright>Tracker Software Products</copyright>
-    <tags>PDFXChangeViewer pdf reader viewer</tags>
+    <tags>PDFXChangeViewer pdf reader viewer admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -19,7 +19,7 @@ Seafile allows users to create groups with file syncing, wiki, and discussion to
     <summary>File Syncing and Collaboration for Teams</summary>
     <releaseNotes />
     <copyright />
-    <tags>seafile syncing sharing</tags>
+    <tags>seafile syncing sharing admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -17,7 +17,7 @@ Prey lets you keep track of your laptop, phone and tablet whenever stolen or mis
     <summary>Prey is a lightweight application to track a laptop or mobile if it gets stolen or missing.</summary>
     <releaseNotes />
     <copyright />
-    <tags>prey anti-theft lockdown tracking</tags>
+    <tags>prey anti-theft lockdown tracking admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

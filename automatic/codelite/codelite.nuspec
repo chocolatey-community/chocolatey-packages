@@ -19,7 +19,7 @@ This package downloads the installer which includes CodeLite, the MinGW suite an
     <summary>CodeLite is an open-source, cross platform IDE for the C/C++ programming languages.</summary>
     <releaseNotes />
     <copyright />
-    <tags>C C++ IDE programming</tags>
+    <tags>C C++ IDE programming admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -22,7 +22,7 @@ Installer doesn’t work silently if Dokan Library is already installed. The uni
 **0.6.0.20150602**: Include installer directly into the package as the official download location is no longer available.
     </releaseNotes>
     <copyright>Hiroki Asakawa</copyright>
-    <tags>dokan file system fuse</tags>
+    <tags>dokan file system fuse admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

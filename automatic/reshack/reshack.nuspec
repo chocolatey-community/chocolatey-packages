@@ -9,7 +9,7 @@
         <summary>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files.</summary>
         <description>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files (*.res). It incorporates an internal resource script compiler and decompiler and works on all (Win95 - Win7) Windows operating systems.</description>
         <projectUrl>http://www.angusj.com/resourcehacker/</projectUrl>
-        <tags>hacking resource executables</tags>
+        <tags>hacking resource executables admin</tags>
         <copyright></copyright>
         <licenseUrl>http://www.angusj.com/resourcehacker/</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

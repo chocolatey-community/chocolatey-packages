@@ -14,7 +14,7 @@
     <summary>HostsMan is a freeware application that lets you manage your Hosts file with ease.</summary>
     <releaseNotes />
     <copyright />
-    <tags>Security Hosts hostsfile</tags>
+    <tags>Security Hosts hostsfile admin</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

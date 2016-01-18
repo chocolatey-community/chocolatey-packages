@@ -22,7 +22,7 @@ This package installs Thunderbird in the first language which matches this list:
     <summary>A free email client from Mozilla</summary>
     <releaseNotes></releaseNotes>
     <copyright>Mozilla. All rights reserved.</copyright>
-    <tags>mozilla thunderbird email</tags>
+    <tags>mozilla thunderbird email admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

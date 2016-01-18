@@ -12,7 +12,7 @@ KeePass is a free open source password manager, which helps you to manage your p
 Note: This is the classic version of KeePass. If you’re looking for the 2.x version (also known as *KeePass Professional Edition*), install [keepass](/packages/keepass) instead.
     </description>
     <projectUrl>http://keepass.info/index.html</projectUrl>
-    <tags>multiplatform password safe</tags>
+    <tags>multiplatform password safe admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -15,7 +15,7 @@ Mumble uses a client–server architecture which allows users to talk to each ot
 Mumble is free and open-source software, is cross-platform, and is released under the terms of the new BSD license. *(from Wikipedia, 2013-04-18)*
     </description>
     <projectUrl>http://www.mumble.info/</projectUrl>
-    <tags>voice chat voip</tags>
+    <tags>voice chat voip admin</tags>
     <copyright>Natvig, et. al.  See License for more information.</copyright>
     <licenseUrl>https://github.com/mumble-voip/mumble/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

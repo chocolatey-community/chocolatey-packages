@@ -20,6 +20,7 @@ This package always installs the latest version of Google Chrome, regardless of 
     </description>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>Google Chrome Web Browser admin</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

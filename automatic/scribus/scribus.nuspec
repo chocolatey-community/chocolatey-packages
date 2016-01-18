@@ -16,7 +16,7 @@ Underneath a modern and user-friendly interface, Scribus supports professional p
     </description>
     <summary>Open Source Desktop Publishing</summary>
     <releaseNotes></releaseNotes>
-    <tags>desktop publishing</tags>
+    <tags>desktop publishing admin</tags>
     <dependencies>
       <dependency id="Ghostscript.app" />
     </dependencies>

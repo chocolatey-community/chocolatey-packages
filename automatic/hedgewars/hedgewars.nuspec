@@ -17,7 +17,7 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
     <summary>Hedgewars is a turn based strategy, artillery, action and comedy game.</summary>
     <releaseNotes />
     <copyright />
-    <tags>game turn-based strategy artillery</tags>
+    <tags>game turn-based strategy artillery admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

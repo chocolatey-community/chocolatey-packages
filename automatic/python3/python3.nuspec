@@ -18,7 +18,7 @@ This package installs the latest stable version of Python 3.x. It will install t
 This package is not intended to use with Chocolatey’s `-x86` parameter. If you want a 32-bit Python 3.x on 64-bit systems, install the [{{PackageName}}-x86_32](/packages/{{PackageName}}-x86_32) package instead. You can also install both. In that case you must manually adapt your .exe shims so that it picks the desired version when you invoke `python.exe`.
     </description>
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
-    <tags>python</tags>
+    <tags>python admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -13,7 +13,7 @@
 Use Defraggler to defrag your entire hard drive, or individual files – unique in the industry. This compact and portable Windows application supports NTFS and FAT32 file systems.
     </description>
     <summary>Use Defraggler to defrag your entire hard drive, or individual files - unique in the industry.</summary>
-    <tags>defragment defrag</tags>
+    <tags>defragment defrag admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

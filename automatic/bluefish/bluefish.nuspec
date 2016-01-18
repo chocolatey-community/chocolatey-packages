@@ -15,7 +15,7 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
     <summary>Bluefish is a powerful editor targeted towards programmers and webdevelopers.</summary>
     <releaseNotes />
     <copyright />
-    <tags>bluefish editor html</tags>
+    <tags>bluefish editor html admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

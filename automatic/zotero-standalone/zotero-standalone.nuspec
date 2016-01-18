@@ -11,7 +11,7 @@ Zotero is free and open-source reference management software to manage bibliogra
     </description>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/zotero-standalone.png</iconUrl>
     <projectUrl>https://www.zotero.org/</projectUrl>
-    <tags>references manager bibliography</tags>
+    <tags>references manager bibliography admin</tags>
     <copyright>2006-2011, Center for History and New Media, George Mason University, Fairfax, Virginia, USA</copyright>
     <licenseUrl>https://github.com/zotero/zotero/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

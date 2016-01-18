@@ -22,7 +22,7 @@ This package always installs the 32-bit version, even on a 64-bit OS. If you wan
     </description>
     <summary>The all-in-one codec solution</summary>
     <copyright />
-    <tags>ffdshow DirectShow codec video audio subtitles</tags>
+    <tags>ffdshow DirectShow codec video audio subtitles admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

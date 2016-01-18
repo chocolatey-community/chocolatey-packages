@@ -13,7 +13,7 @@ Have you ever felt, while installing software, that the installer tries to push 
 __Unchecky aims to keep potentially unwanted programs out of your computer.__
     </description>
     <projectUrl>http://unchecky.com/</projectUrl>
-    <tags>Installer Prevent System Unwanted Toolbar Installers Uncheck Warn Update</tags>
+    <tags>Installer Prevent System Unwanted Toolbar Installers Uncheck Warn Update admin</tags>
     <copyright></copyright>
     <licenseUrl>http://rammichael.com/introducing-unchecky</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

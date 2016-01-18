@@ -17,7 +17,7 @@ Note: The Windows installer of Clipgrab contains the OpenCandy Adware which is r
     <summary>Download and convert online videos</summary>
     <releaseNotes />
     <copyright />
-    <tags>youtube vimeo video convert music</tags>
+    <tags>youtube vimeo video convert music admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -19,7 +19,7 @@
 * Known issues: http://go.microsoft.com/fwlink/?LinkId=691930
 	</releaseNotes>
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
-    <tags>visual c++ redistributable 2015 studio</tags>
+    <tags>visual c++ redistributable 2015 studio admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
 </package>

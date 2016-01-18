@@ -21,7 +21,7 @@ You can not use TV-Browser to watch TV.
     <summary>TV-Browser is a digital TV guide.</summary>
     <releaseNotes />
     <copyright />
-    <tags>tv-browser tv television guide</tags>
+    <tags>tv-browser tv television guide admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

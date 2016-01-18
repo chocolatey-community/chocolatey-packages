@@ -19,7 +19,7 @@ It protects your privacy online and makes your computer faster and more secure.
 This package installs CCleaner without additional adware.
   </description>
     <projectUrl>http://www.piriform.com/ccleaner</projectUrl>
-    <tags>ccleaner system cleanup registry</tags>
+    <tags>ccleaner system cleanup registry admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
