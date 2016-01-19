@@ -11,7 +11,7 @@ $app = Get-WmiObject -Class Win32_Product | Where-Object {
 if (!$app) {
   Install-ChocolateyPackage $packageName $fileType $silentArgs $url
 } else {
-  Write-Host $(
+  Write-Output $(
     "$packageName $version is already installed. " +
     'No need to download an re-install.'
   )

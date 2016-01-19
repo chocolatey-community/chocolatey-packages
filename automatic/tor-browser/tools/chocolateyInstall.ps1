@@ -12,7 +12,7 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 if (!(Test-Path $destinationFolder)) {
   $destinationFolder =  Join-Path $toolsDir 'tor-browser'
 } else {
-  Write-Host $(
+  Write-Output $(
     'Deprecated installation folder detected (binRoot). ' +
     'This package will continue to install tor-browser there ' +
     'unless you manuall remove if from "' + $destinationFolder + '".'

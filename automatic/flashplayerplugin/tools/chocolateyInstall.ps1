@@ -23,7 +23,7 @@ $majorVersion = ([version] $version).Major
 $alreadyInstalled = Check-SoftwareInstalled "Adobe Flash Player $majorVersion NPAPI"
 
 if ($alreadyInstalled) {
-  Write-Host $(
+  Write-Output $(
     "Adobe Flash Player NPAPI (for non-IE browsers) v$version " +
     "is already installed. No need to download and install it again."
   )

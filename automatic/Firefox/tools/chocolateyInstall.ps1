@@ -119,7 +119,7 @@ function Get-32bitOnlyInstalled {
 $alreadyInstalled = AlreadyInstalled($version)
 
 if (Get-32bitOnlyInstalled) {
-  Write-Host $(
+  Write-Output $(
     'Detected the 32-bit version of Firefox on a 64-bit system. ' +
     'This package will continue to install the 32-bit version of Firefox ' +
     'unless the 32-bit version is uninstalled.'
@@ -127,7 +127,7 @@ if (Get-32bitOnlyInstalled) {
 }
 
 if ($alreadyInstalled) {
-  Write-Host $(
+  Write-Output $(
     "Firefox $version is already installed. " +
     'No need to download an re-install again.'
   )

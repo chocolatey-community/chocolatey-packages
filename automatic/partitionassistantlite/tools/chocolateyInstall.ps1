@@ -3,16 +3,13 @@ $id		= '{{PackageName}}'
 $url	= '{{DownloadUrl}}'
 $pwd	= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
 
-
-
-Write-Host
-Write-Host "The installation is unattended." -ForegroundColor "White"
-Write-Host "However, AOMEI PA Lite Server will open after installing." -ForegroundColor "White"
-Write-Host "Sorry!" -ForegroundColor "White"
-Write-Host
+Write-Output
+Write-Output "The installation is unattended." -ForegroundColor "White"
+Write-Output "However, AOMEI PA Lite Server will open after installing." -ForegroundColor "White"
+Write-Output "Sorry!" -ForegroundColor "White"
+Write-Output
 
 Install-ChocolateyPackage "$id" 'EXE' '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' "$url"
-
 
 # We can use this for other packages or CNET helper
 #$url	= 'http://www.disk-partition.com/download-lite.html'

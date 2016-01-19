@@ -11,24 +11,16 @@ $binRoot		= Get-BinRoot;
 # Override. I thought Get-BinRoot was supposed to do this but guess not: https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/chocolatey/5R7OtVM9RUI/ERcFFKZcFnQJ
 $binRoot		= Join-Path $env:ChocolateyInstall "bin"
 
-try {
+$chocTempDir	= Join-Path $env:TEMP "chocolatey"
+$tempDir		= Join-Path $chocTempDir "$packageName"
+if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
 
-	$chocTempDir	= Join-Path $env:TEMP "chocolatey"
-	$tempDir		= Join-Path $chocTempDir "$packageName"
-		if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-	$tempFile		= Join-Path $tempDir "$packageName.installer.exe"
+$tempFile		= Join-Path $tempDir "$packageName.installer.exe"
 
-
-	Get-ChocolateyWebFile "$packageName" "$tempFile" "$url" "$url64"
+Get-ChocolateyWebFile "$packageName" "$tempFile" "$url" "$url64"
 	
-	Write-Host "Running `'upx.exe -d `"$tempFile`"`'"
-	upx.exe -d "$tempFile"
+Write-Output "Running `'upx.exe -d `"$tempFile`"`'"
+upx.exe -d "$tempFile"
 	
-	Write-Host "Running AutoIt3 using `'$au3`'"
-	Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'
-
-	Write-ChocolateySuccess "$packageName"
-} catch {
-	Write-ChocolateyFailure "$packageName" "$($_.Exception.Message)"
-	throw
-}
+Write-Output "Running AutoIt3 using `'$au3`'"
+Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'

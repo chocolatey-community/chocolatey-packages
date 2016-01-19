@@ -27,16 +27,16 @@ if ($PSBoundParameters['Debug']) {
 }
 
 if ($help -or $packageNames -join '|' -eq '/?') {
-  Write-Host "To run please specify `'cyg-get packageName`'."
-  Write-Host "You can also specify a list of packages like this: `'cyg-get package1 package2 packageN`'."
-  Write-Host "Optional params: -site http://somewhere"
-  Write-Host "Optional params: -upgrade"
-  Write-Host "Optional params: -proxy host:port"
-  Write-Host "Optional params: -arch x86_64 or x86"
-  Write-Host "Optional params: -noadmin"
-  Write-Host "Optional params: -desktop"
-  Write-Host "Optional params: -startmenu"
-  Write-Host "Optional params: -debug"
+  Write-Output "To run please specify `'cyg-get packageName`'."
+  Write-Output "You can also specify a list of packages like this: `'cyg-get package1 package2 packageN`'."
+  Write-Output "Optional params: -site http://somewhere"
+  Write-Output "Optional params: -upgrade"
+  Write-Output "Optional params: -proxy host:port"
+  Write-Output "Optional params: -arch x86_64 or x86"
+  Write-Output "Optional params: -noadmin"
+  Write-Output "Optional params: -desktop"
+  Write-Output "Optional params: -startmenu"
+  Write-Output "Optional params: -debug"
 } elseif ($packageNames -eq $null -or $packageNames -eq '' -or $packageNames.Count -eq 0 ) {
   Write-Warning 'Please specify a package or list of packages. Run -help or /? for more information.'
 } else {
@@ -112,7 +112,7 @@ if ($help -or $packageNames -join '|' -eq '/?') {
 
     $cygArgs +=" --packages $cygInstallPackageList"
 
-    Write-Host "Attempting to install cygwin packages: $cygInstallPackageList"
+    Write-Output "Attempting to install cygwin packages: $cygInstallPackageList"
     Write-Debug "$cygwinsetup $cygArgs"
 
     Start-Process -FilePath $cygwinsetup -ArgumentList $cygArgs -Wait -WindowStyle $windowStyle

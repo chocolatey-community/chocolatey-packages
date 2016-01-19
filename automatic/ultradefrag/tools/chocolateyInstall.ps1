@@ -44,18 +44,14 @@ if ($packageParameters) {
     }
 
     if ($arguments.ContainsKey("NoShellExtension")) {
-        #Write-Host "You want Git on the command line"
         $noShellExtension = $true
     }
 
     if ($arguments.ContainsKey("DisableUsageTracking")) {
-        #Write-Host "You want Git and Unix Tools on the command line"
         $disableUsageTracking = $true
     }
 
     if ($arguments.ContainsKey("NoBootInterface")) {
-        #Write-Host "Ensuring core.autocrlf is false on first time install only"
-        #Write-Host " This setting will not adjust an already existing .gitconfig setting."
         $noBootInterface = $true
     }
 } else {

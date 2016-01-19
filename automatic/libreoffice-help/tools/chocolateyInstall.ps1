@@ -32,66 +32,55 @@ function getLangOfExistentInstall() {
   return $null
 }
 
-try {
+# Language detection
+$urlDownloadLinks = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
+$htmlDownloadLinks = "$env:TEMP\libreoffice-help-download-links.html"
 
-  # Language detection
+Get-ChocolateyWebFile 'libreoffice-help-download-links' $htmlDownloadLinks $urlDownloadLinks
 
-  $urlDownloadLinks = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
-  $htmlDownloadLinks = "$env:TEMP\libreoffice-help-download-links.html"
+$htmlLinksContent = Get-Content $htmlDownloadLinks
+Remove-Item $htmlDownloadLinks
 
-  Get-ChocolateyWebFile 'libreoffice-help-download-links' $htmlDownloadLinks $urlDownloadLinks
+$regex = '(?<=helppack_)[\-a-zA-Z]{2,}(?=\.msi">)'
 
-  $htmlLinksContent = Get-Content $htmlDownloadLinks
-  Remove-Item $htmlDownloadLinks
+$matchObject = [regex]::Matches($htmlLinksContent, $regex)
 
-  $regex = '(?<=helppack_)[\-a-zA-Z]{2,}(?=\.msi">)'
+# Language matching with matchLanguage function
+$availableLangs = @()
 
-  $matchObject = [regex]::Matches($htmlLinksContent, $regex)
+foreach ($singleMatch in $matchObject) {
+  $availableLangs += $singleMatch.Value
+}
 
-  # Language matching with matchLanguage function
-  $availableLangs = @()
+$installOverride = getInstallLanguageOverride $installArguments
+$ofExistentInstall = getLangOfExistentInstall
+$fallback = 'en-US'
 
-  foreach ($singleMatch in $matchObject) {
-    $availableLangs += $singleMatch.Value
-  }
+$language = matchLanguage $availableLangs $installOverride $ofExistentInstall $fallback
 
-  $installOverride = getInstallLanguageOverride $installArguments
-  $ofExistentInstall = getLangOfExistentInstall
-  $fallback = 'en-US'
-
-  $language = matchLanguage $availableLangs $installOverride $ofExistentInstall $fallback
-
-
-  # if multiple language packs in different are already install,
-  # update all of them, otherwise update/install only the matched language
-  if (($ofExistentInstall -is [System.Array]) -and ($installOverride -eq $null)) {
-    foreach ($existentLang in $ofExistentInstall) {
-      $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${existentLang}.msi"
-
-      # If LibreOffice Help Pack with the same version as the package version is not already installed,
-      # download and install the Help Pack of the existent language
-      if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $existentLang)) {
-        Install-ChocolateyPackage "$packageName $existentLang" $fileType $silentArgs $url
-      } else {
-        Write-Host "LibreOffice Help Pack $version ($existentLang) is already installed."
-      }
-    }
-
-  } else {
-
-    # Download of libreoffice-help with the right version and language
-    $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${language}.msi"
+# if multiple language packs in different are already install,
+# update all of them, otherwise update/install only the matched language
+if (($ofExistentInstall -is [System.Array]) -and ($installOverride -eq $null)) {
+  foreach ($existentLang in $ofExistentInstall) {
+    $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${existentLang}.msi"
 
     # If LibreOffice Help Pack with the same version as the package version is not already installed,
-    # download and install the Help Pack of the matched
-    if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $language)) {
-      Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+    # download and install the Help Pack of the existent language
+    if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $existentLang)) {
+      Install-ChocolateyPackage "$packageName $existentLang" $fileType $silentArgs $url
     } else {
-      Write-Host "LibreOffice Help Pack $version ($language) is already installed."
+      Write-Output "LibreOffice Help Pack $version ($existentLang) is already installed."
     }
   }
+} else {
+  # Download of libreoffice-help with the right version and language
+  $url = "http://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86_helppack_${language}.msi"
 
-}   catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+  # If LibreOffice Help Pack with the same version as the package version is not already installed,
+  # download and install the Help Pack of the matched
+  if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $language)) {
+    Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+  } else {
+    Write-Output "LibreOffice Help Pack $version ($language) is already installed."
+  }
 }

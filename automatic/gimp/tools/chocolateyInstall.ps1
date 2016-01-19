@@ -15,7 +15,7 @@ if (Test-Path $gimpRegistryPath) {
 }
 
 if ($installedVersion -eq $version) {
-  Write-Host $(
+  Write-Output $(
     "GIMP $installedVersion is already installed. " +
     "Skipping download and installation."
   )

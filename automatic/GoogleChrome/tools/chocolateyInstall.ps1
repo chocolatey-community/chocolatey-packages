@@ -46,7 +46,7 @@ if ($msid -eq $null) {
   $msid = Find-CID $uroot64 "Google Chrome binaries" "$version"
 }
 if ($msid -ne $null) {
-   Write-Host "Google Chrome $version is already installed."
+   Write-Output "Google Chrome $version is already installed."
 } else {
 
   # If Chrome 32-bit is already installed on a 64-bit system,

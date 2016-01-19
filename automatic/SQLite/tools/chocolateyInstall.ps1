@@ -15,7 +15,7 @@ foreach ($file in $sqliteFiles) {
   }
 }
 if ($usesOldPath) {
-  Write-Host $(
+  Write-Output $(
     "Old installation directory for $packageName detected ($oldInstDir). " +
     "If you want to use the new installation directory (ChocolateyBinRoot\$packageName), " +
     "remove the sqlite*.dll sqlite*.def files from your old installation " +

@@ -15,6 +15,6 @@
   Start-ChocolateyProcessAsAdmin $ahkScript 'AutoHotkey'
 
 }   catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
+  Write-Output $packageName $($_.Exception.Message)
   throw
 }
