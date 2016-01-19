@@ -17,40 +17,35 @@ function Get-UrlFromCnet {
 	)
 
 	try {
-
 		# $srcUrl	= 'http://www.disk-partition.com/download-home.html'
 		# $regex	= '(?ms).*href="(http://download.cnet.com/.+?)".*'
 		
 		$wc = New-Object system.Net.WebClient; 
 
-		Write-Host "Searching for CNET link...";
+		Write-Output "Searching for CNET link...";
 		$html = $wc.downloadString($srcUrl);
 		$url = $html -replace $regex, '$1';
 		$html = $wc.downloadString($url);
 		
-		Write-Host "Searching through CNET html for links, this might take a few seconds...";
+		Write-Output "Searching through CNET html for links, this might take a few seconds...";
 
 		$html -match "(?ms)data-dl-url=['`\`"](.+?)['`\`" ]+data-nodlm-url"
 
 		# The regex misses the last quote. Seriously?
 		# Also, the quotes seem to switch from single to double.
 		
-		Write-Host "Found link.";
+		Write-Output "Found link.";
 		$url = $matches[1] -replace "'","" -replace '"',''
-
-
 
 #		Secondary follow seems unnecessary
 #		$html = $wc.downloadString($url);
-#		Write-Host "Searching through CNET html for links (2)...";
+#		Write-Output "Searching through CNET html for links (2)...";
 #		
 #		$url = $html -match '(?ms)HTTP-EQUIV="Refresh" CONTENT="0; URL=(http.*?)"/>', '$1';
-#
 
 		Remove-Variable matches
 		
-		return [string]$url
-		
+		return [string]$url		
 	} catch {
 		$errorMessage = "Could not resolve CNET host. Wrong regex, or source page changed, or CNET changed."
 		Write-Error $errorMessage

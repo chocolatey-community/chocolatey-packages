@@ -15,18 +15,18 @@ function Install-ChocolateyPinnedItem {
 
 	# Pin (to start)
 	$verbPin = @{}
-	$verbPin['da-DK'] = "Fastgør"
+	$verbPin['da-DK'] = "Fastgï¿½r"
 	$verbPin['en-US'] = "Pin" 
-	$verbPin['fi-FI'] = "Kiinnitä"
+	$verbPin['fi-FI'] = "Kiinnitï¿½"
 	$verbPin['nb-NO'] = "Fest"
 	$verbPin['nl-NL'] = "Vastmaken" 
-	$verbPin['sv-SE'] = "Fäst"
+	$verbPin['sv-SE'] = "Fï¿½st"
 
 	# (Pin to) Start
 	$verbStart = @{}
 	$verbStart['da-DK'] = "Start"
 	$verbStart['en-US'] = "Start" 
-	$verbStart['fi-FI'] = "Käynnistä"
+	$verbStart['fi-FI'] = "Kï¿½ynnistï¿½"
 	$verbStart['nb-NO'] = "Start"
 	$verbStart['nl-NL'] = "Start" 
 	$verbStart['sv-SE'] = "Start"
@@ -35,10 +35,10 @@ function Install-ChocolateyPinnedItem {
 	$verbTask = @{}
 	$verbTask['da-DK'] = "Proceslinje"
 	$verbTask['en-US'] = "Task" 
-	$verbTask['fi-FI'] = "Tehtäväpalkkiin"
+	$verbTask['fi-FI'] = "Tehtï¿½vï¿½palkkiin"
 	$verbTask['nb-NO'] = "Oppgavelinjen"
 	$verbTask['nl-NL'] = "Taak" 
-	$verbTask['sv-SE'] = "Aktivitetsfältet"
+	$verbTask['sv-SE'] = "Aktivitetsfï¿½ltet"
 
 	# Get Locale
 	$locale = (get-culture).Name
@@ -46,8 +46,8 @@ function Install-ChocolateyPinnedItem {
 	
 	# Usage
 	if ($target -eq "") { 
-		write-host "usage: Install-ChocolateyPinnedItem <file to pin> [-taskbar true]" 
-		write-host "       -taskbar true (executable only) pins target to desktop TaskBar in stead of Start"
+		Write-Output "usage: Install-ChocolateyPinnedItem <file to pin> [-taskbar true]" 
+		Write-Output "       -taskbar true (executable only) pins target to desktop TaskBar in stead of Start"
 	} 
 	else { 
 		# Switch for Taskbar instead of Start
@@ -59,7 +59,7 @@ function Install-ChocolateyPinnedItem {
 
 		# Path exists?
 		if (-not (test-path "$target")) {
-			write-host "No such file: '$target'";
+			Write-Output "No such file: '$target'";
 			exit
 		}
 
@@ -86,9 +86,9 @@ function Install-ChocolateyPinnedItem {
 					# Second, match action (either Start or Task(bar))
 					foreach ($vAction in $verbAction.values) {
 						if ($oName -imatch $vAction) {
-							# write-host "Locale detected: $($vAction.key)" # Don't know key in values-foreach
-							write-host "Command detected: $oName"
-							write-host "Executing '$oName' for '$target'"
+							# Write-Output "Locale detected: $($vAction.key)" # Don't know key in values-foreach
+							Write-Output "Command detected: $oName"
+							Write-Output "Executing '$oName' for '$target'"
 							$option.DoIt()
 							$pinned = $true
 							break
@@ -98,7 +98,7 @@ function Install-ChocolateyPinnedItem {
 				}
 			}
 		}
-		if ($pinned) { write-host "Succesfully Pinned '$file'" }
-		else { write-host "Could not pin '$file'" }
+		if ($pinned) { Write-Output "Succesfully Pinned '$file'" }
+		else { Write-Output "Could not pin '$file'" }
 	}
 }

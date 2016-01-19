@@ -39,7 +39,7 @@ $partialInstallArgs = '/qn /norestart ALLUSERS=1 TARGETDIR='
 
   if (Test-Path $oldInstallPath) {
     $installPath = $oldInstallPath
-    Write-Host @"
+    Write-Output @"
 Warning: Old installation path “$oldInstallPath” detected.
 This package will continue to install $packageName there unless you uninstall
 $packageName from there and remove the “$oldInstallPath” folder. If you decide
@@ -55,7 +55,7 @@ install to the Chocolatey bin root.
   # This prevents 1603 errors during the installation and an
   # unnecessary download of the Python installer.
   if ($sameVersionAlreadyInstalled) {
-    Write-Host @"
+    Write-Output @"
 $packageName v$version is already installed. Skipping unnecessary download
 and installation. If you have installed $packageName in “$oldInstallPath”
 and you want to use the Chocolatey bin root as installation path instead,

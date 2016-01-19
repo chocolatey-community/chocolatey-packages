@@ -17,7 +17,7 @@ function Check-SameVersionInstalled() {
 
 if (Check-SameVersionInstalled) {
 
-  Write-Host $(
+  Write-Output $(
     "LibreOffice $version is already installed on the computer. " +
     "Skipping download."
   )

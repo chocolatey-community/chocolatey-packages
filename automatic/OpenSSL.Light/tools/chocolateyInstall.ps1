@@ -24,6 +24,6 @@ if (!$Env:OPENSSL_CONF)
     [Environment]::SetEnvironmentVariable(
       'OPENSSL_CONF', $configPath, 'User')
 
-    Write-Host "Configured OPENSSL_CONF variable as $configPath"
+    Write-Output "Configured OPENSSL_CONF variable as $configPath"
   }
 }

@@ -9,7 +9,7 @@ $silentArgs = '/S' # NSIS package
 $validExitCodes = @(0)
 
 if (Get-ProcessorBits 32) {
-  Write-Host $("You’re using a 32 bit OS. " +
+  Write-Output $("You’re using a 32 bit OS. " +
     "DJV v1.0.5 is the latest version available for 32 bit OSes."
   )
 }

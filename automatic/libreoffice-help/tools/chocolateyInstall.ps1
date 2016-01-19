@@ -69,7 +69,7 @@ if (($ofExistentInstall -is [System.Array]) -and ($installOverride -eq $null)) {
     if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $existentLang)) {
       Install-ChocolateyPackage "$packageName $existentLang" $fileType $silentArgs $url
     } else {
-      Write-Host "LibreOffice Help Pack $version ($existentLang) is already installed."
+      Write-Output "LibreOffice Help Pack $version ($existentLang) is already installed."
     }
   }
 } else {
@@ -81,6 +81,6 @@ if (($ofExistentInstall -is [System.Array]) -and ($installOverride -eq $null)) {
   if (-not(loHelpIsAlreadyInstalled 'LibreOffice' $version $language)) {
     Install-ChocolateyPackage $packageName $fileType $silentArgs $url
   } else {
-    Write-Host "LibreOffice Help Pack $version ($language) is already installed."
+    Write-Output "LibreOffice Help Pack $version ($language) is already installed."
   }
 }

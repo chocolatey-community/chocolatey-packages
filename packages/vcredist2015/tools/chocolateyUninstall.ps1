@@ -14,7 +14,7 @@ Get-ItemProperty -Path @( 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentV
     $unString = $matches[1]
   } else {
     Write-Error "No valid UninstallString found."
-    Write-Host "Continuing with default UninstallString."
+    Write-Output "Continuing with default UninstallString."
   }
   Uninstall-ChocolateyPackage -PackageName "$packageName" `
                               -FileType "$installerType" `

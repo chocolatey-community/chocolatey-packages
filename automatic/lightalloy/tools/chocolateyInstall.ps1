@@ -24,5 +24,5 @@ $tempFile		= Join-Path $tempDir "$packageName.installer.exe"
 
 Get-ChocolateyWebFile "$packageName" "$tempFile" "$url"
 	
-Write-Host "Running AutoIt3 using `'$au3`'"
+Write-Output "Running AutoIt3 using `'$au3`'"
 Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'

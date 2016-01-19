@@ -15,7 +15,7 @@ $tempDir = Join-Path $chocTempDir "$id"
 # Calculate $binRoot, which should always be set in $env:ChocolateyBinRoot as a full path (not relative)
 $binRoot = Get-BinRoot;
 
-Write-Host "Downloading to: $nugetExePath";
+Write-Output "Downloading to: $nugetExePath";
 $tempFile = Join-Path $nugetExePath "PatchMyPC.exe"
 
 Get-ChocolateyWebFile $id "$tempFile" "$url"

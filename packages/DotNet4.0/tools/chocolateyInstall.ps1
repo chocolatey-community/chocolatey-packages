@@ -4,5 +4,5 @@ if(!(Test-Path "hklm:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319\SKUs\.NETFrame
     .$env:temp\WebpiCmdLine.exe /products: NetFramework4 /accepteula
 }
 else {
-     Write-Host "Microsoft .Net 4.0 Framework is already installed on your machine."
+     Write-Output "Microsoft .Net 4.0 Framework is already installed on your machine."
 } 

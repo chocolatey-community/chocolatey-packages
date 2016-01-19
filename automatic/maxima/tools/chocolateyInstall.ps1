@@ -9,7 +9,7 @@ $version = '{{PackageVersion}}'
 $installedVersion = (Get-InstallProperties).DisplayVersion
 
 if ($version -eq $installedVersion) {
-  Write-Host "Maxima v$version is already installed. No need to install again."
+  Write-Output "Maxima v$version is already installed. No need to install again."
 } else {
   Install-ChocolateyPackage $packageName $fileType $silentArgs $url
 }

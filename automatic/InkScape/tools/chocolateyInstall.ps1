@@ -11,7 +11,7 @@ $app = Get-WmiObject -Class Win32_Product | Where-Object {
 }
 
 if ($app.Version -eq $packageVersion) {
-  Write-Host $(
+  Write-Output $(
     'Inkscape ' + $app.Version + ' is already installed. ' +
     'No need to download and install again.'
   )

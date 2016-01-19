@@ -18,7 +18,7 @@ $alreadyInstalled = Get-WmiObject -Class Win32_Product |
   ($_.Version -match $bracketsRegistryVersion)}
 
 if ($alreadyInstalled) {
-  Write-Host "Brackets $version is already installed. Skipping installation."
+  Write-Output "Brackets $version is already installed. Skipping installation."
 } else {
   Install-ChocolateyPackage @params
 }

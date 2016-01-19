@@ -21,7 +21,7 @@ if (Test-Path $unpathx86) {
 # Uninstalling previous Dokan Library first, otherwise the installer won’t work.
 if ($installed) {
   Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $file  -validExitCodes $validExitCodes
-  Write-Host The system must be rebooted for the changes to be completed.
+  Write-Output The system must be rebooted for the changes to be completed.
 }
 
 # Set compatibility mode to Windows 7 if operating system is Windows 8 or higher.

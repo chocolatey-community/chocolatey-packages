@@ -14,14 +14,14 @@ $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
 
 if ($alreadyInstalled) {
 
-  Write-Host $(
+  Write-Output $(
     "LibreOffice $version is already installed on the computer. " +
     "Skipping download."
   )
 
   if ((Get-ProcessorBits 64) -and $url64) {
 
-    Write-Host $(
+    Write-Output $(
       "Do you already have LibreOffice $version 32-bit installed " +
       "and want to switch to 64-bit? " +
       "In that case you have to manually uninstall the 32-bit version " +

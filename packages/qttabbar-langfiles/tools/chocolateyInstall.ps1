@@ -7,5 +7,5 @@ $fileFullPath = "$scriptPath\Lng_QTTabBar_$language.xml"
 if (Test-Path $fileFullPath) {
   Set-ItemProperty -Name LanguageFile -Path HKCU:\Software\Quizo\QTTabBar -Value $fileFullPath -Force
 } else {
-  Write-Host 'No language file available for your language.'
+  Write-Output 'No language file available for your language.'
 }

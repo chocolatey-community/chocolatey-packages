@@ -13,7 +13,7 @@ $app = Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match 'iTunes
 
 # Check if the same version of iTunes is already installed
 if ($app -and ([version]$app.Version -ge [version]$version)) {
-  Write-Host $(
+  Write-Output $(
     'iTunes ' + $version + ' or higher is already installed. ' +
     'No need to download and install again.'
   )

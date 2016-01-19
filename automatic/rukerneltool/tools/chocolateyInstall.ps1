@@ -24,7 +24,7 @@ $password = 'Bommelchen_2010'
 
 $webClient = New-Object System.Net.WebClient
 $webClient.Credentials = New-Object System.Net.Networkcredential($username, $password)
-Write-Host $('Downloading' + $url + '…')
+Write-Output $('Downloading' + $url + '…')
 $webClient.DownloadFile($url, $zipFilePath)
 
 Get-ChocolateyUnzip $zipFilePath $destinationFolder

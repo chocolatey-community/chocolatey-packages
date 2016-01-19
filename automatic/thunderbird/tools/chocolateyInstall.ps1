@@ -102,7 +102,7 @@ function AlreadyInstalled($version) {
 $alreadyInstalled = AlreadyInstalled($version)
 
 if ($alreadyInstalled) {
-  Write-Host $(
+  Write-Output $(
     "$softwareNameTitleCase $version is already installed. "
     'No need to download an re-install again.'
   )

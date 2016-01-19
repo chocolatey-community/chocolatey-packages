@@ -45,8 +45,8 @@ function Install-ChocolateyPinnedItem {
 	
 	# Usage
 	if ($target -eq "") { 
-		write-host "usage: Install-ChocolateyPinnedItem <file to pin> [-taskbar true]" 
-		write-host "       -taskbar true (executable only) pins target to desktop TaskBar in stead of Start"
+		Write-Output "usage: Install-ChocolateyPinnedItem <file to pin> [-taskbar true]" 
+		Write-Output "       -taskbar true (executable only) pins target to desktop TaskBar in stead of Start"
 	} 
 	else { 
 		# Switch for Taskbar instead of Start
@@ -58,7 +58,7 @@ function Install-ChocolateyPinnedItem {
 
 		# Path exists?
 		if (-not (test-path "$target")) {
-			write-host "No such file: '$target'";
+			Write-Output "No such file: '$target'";
 			exit
 		}
 
@@ -85,9 +85,9 @@ function Install-ChocolateyPinnedItem {
 					# Second, match action (either Start or Task(bar))
 					foreach ($vAction in $verbAction.values) {
 						if ($oName -imatch $vAction) {
-							# write-host "Locale detected: $($vAction.key)" # Don't know key in values-foreach
-							write-host "Command detected: $oName"
-							write-host "Executing '$oName' for '$target'"
+							# Write-Output "Locale detected: $($vAction.key)" # Don't know key in values-foreach
+							Write-Output "Command detected: $oName"
+							Write-Output "Executing '$oName' for '$target'"
 							$option.DoIt()
 							$pinned = $true
 							break
@@ -97,7 +97,7 @@ function Install-ChocolateyPinnedItem {
 				}
 			}
 		}
-		if ($pinned) { write-host "Succesfully Pinned '$file'" }
-		else { write-host "Could not pin '$file'" }
+		if ($pinned) { Write-Output "Succesfully Pinned '$file'" }
+		else { Write-Output "Could not pin '$file'" }
 	}
 }
