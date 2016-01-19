@@ -20,7 +20,7 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
 This package will install Speccy without bundled adware. To achieve this, a key to opt-out the adware gets added to the registry.
     </description>
     <projectUrl>http://www.piriform.com/speccy</projectUrl>
-    <tags>piriform ccleaner speccy</tags>
+    <tags>piriform ccleaner speccy admin</tags>
     <copyright>Piriform LTD</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>

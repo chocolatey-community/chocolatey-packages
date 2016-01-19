@@ -15,7 +15,7 @@ IETester is a free (both for personal and professional usage) WebBrowser that al
     <summary>Browser Compatibility Check for Internet Explorer Versions from 5.5 to 10</summary>
     <releaseNotes />
     <copyright>2008–2013 Core Services</copyright>
-    <tags>ietester internet explorer tester</tags>
+    <tags>ietester internet explorer tester admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

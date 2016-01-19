@@ -16,7 +16,7 @@ AutoHotkey\_L is a fork of AutoHotkey which adds a long list of new features and
     </description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes></releaseNotes>
-    <tags>automation hotkeys scripting windows</tags>
+    <tags>automation hotkeys scripting windows admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

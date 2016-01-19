@@ -19,7 +19,7 @@ Because Gecko lives inside BlueGriffon, the document you edit will look exactly 
     <summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
     <releaseNotes />
     <copyright />
-    <tags>bluegriffon WYSIWYG gecko firefox html</tags>
+    <tags>bluegriffon WYSIWYG gecko firefox html admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

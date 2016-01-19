@@ -25,7 +25,7 @@ With TightVNC, you can:
     <summary>Remote control software</summary>
     <releaseNotes>http://www.tightvnc.com/whatsnew.php</releaseNotes>
     <copyright />
-    <tags>remote control vnc</tags>
+    <tags>remote control vnc admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -23,7 +23,7 @@ Don’t close the empty appearing PowerShell window. Otherwise the silent instal
     <summary>Open Source 3D kart racing game</summary>
     <releaseNotes />
     <copyright />
-    <tags>supertuxkart racing game</tags>
+    <tags>supertuxkart racing game admin</tags>
     <dependencies>
       <dependency id="openal" />
       <dependency id="vcredist2013" />

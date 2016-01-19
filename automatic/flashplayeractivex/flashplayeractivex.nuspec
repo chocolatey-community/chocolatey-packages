@@ -21,7 +21,7 @@ This package is only for Windows XP to Windows 7, because Windows ≥ 8 already 
 The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
     </description>
     <summary>Adobe Flash Player ActiveX for Internet Explorer</summary>
-    <tags>adobe flash player activex</tags>
+    <tags>adobe flash player activex admin</tags>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>

@@ -18,7 +18,7 @@ Features:
 * Includes command line utilities for batch processing
     </description>
     <projectUrl>http://djv.sourceforge.net/</projectUrl>
-    <tags>Video Movie Player Cineon DPX OpenEXR QuickTime</tags>
+    <tags>Video Movie Player Cineon DPX OpenEXR QuickTime admin</tags>
     <copyright>2004–2014 Darby Johnston</copyright>
     <licenseUrl>http://djv.sourceforge.net/djvLegal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

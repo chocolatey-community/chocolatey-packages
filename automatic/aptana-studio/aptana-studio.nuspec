@@ -19,7 +19,7 @@ This package installs the standalone version of Aptana Studio.
     <summary>Aptana Studio is an open source integrated development environment (IDE) for building Ajax web applications.</summary>
     <releaseNotes>http://www.aptana.org/products/studio3/releasenotes</releaseNotes>
     <copyright />
-    <tags>aptana ide ajax web</tags>
+    <tags>aptana ide ajax web admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

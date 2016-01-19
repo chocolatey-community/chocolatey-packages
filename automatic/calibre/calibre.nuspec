@@ -9,7 +9,7 @@
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
     <description>calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
     <projectUrl>http://calibre-ebook.com/</projectUrl>
-    <tags>ebook library management</tags>
+    <tags>ebook library management admin</tags>
     <copyright>Kovid Goyal</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

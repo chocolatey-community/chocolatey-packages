@@ -15,7 +15,7 @@ Ant Renamer is a free (really free, i. e. the source code is available) program 
     <summary>Rename multiple files easily</summary>
     <releaseNotes>http://www.antp.be/software/renamer/history</releaseNotes>
     <copyright>Antoine Potten</copyright>
-    <tags>renamer regex</tags>
+    <tags>renamer regex admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -13,7 +13,7 @@ qBittorrent is a free software cross-platform BitTorrent client GUI written with
 qBittorrent aims to have a small foot-print, to be powerful, intuitive and visually attractive going beyond the current functions widely provided by other applications. qBittorrent is an attempt to provide a μTorrent equivalent that is open-source and multi-platform adding a streaming-like function to let users download-and-play video files. qBittorrent is currently offering functionality comparable to more popular BitTorrent clients such as Vuze but without requiring the Java Virtual Machine. qBittorrent requires Python only for the search engine while other clients such as Deluge and BitTornado require it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
     </description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
-    <tags>qbittorrent torrent sharing p2p</tags>
+    <tags>qbittorrent torrent sharing p2p admin</tags>
     <licenseUrl>https://github.com/qbittorrent/qBittorrent/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>

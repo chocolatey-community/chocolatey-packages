@@ -12,7 +12,7 @@ The OpenSSL Project is a collaborative effort to develop a robust, commercial-gr
 The Win32 OpenSSL Installation Project is dedicated to providing a simple installation of OpenSSL. It is easy to set up and easy to use through the simple, effective installer. No need to compile anything or jump through any hoops, just click a few times and it is installed, leaving you to doing real work. Download it today! Note that these are default builds of OpenSSL and subject to local and state laws. More information can be found in the legal agreement of the installation.
     </description>
     <projectUrl>https://slproweb.com/products/Win32OpenSSL.html</projectUrl>
-    <tags>openssl SSL TLS pfx pem key RSA</tags>
+    <tags>openssl SSL TLS pfx pem key RSA admin</tags>
     <licenseUrl>https://www.openssl.org/source/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/openssl.png</iconUrl>

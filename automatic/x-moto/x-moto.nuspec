@@ -15,7 +15,7 @@ X-Moto is a free and open source 2D motocross platform game developed for Linux,
     <summary>Free and open source 2D motocross platform game</summary>
     <releaseNotes />
     <copyright />
-    <tags>x-moto motocross physics game</tags>
+    <tags>x-moto motocross physics game admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

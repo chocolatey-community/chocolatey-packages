@@ -17,7 +17,7 @@ Iron is issued by SRWare under an “all rights reserved” license, indicating 
     <summary>SRWare Iron is a freeware web browser implementation of the Chromium source code by SRWare of Germany.</summary>
     <releaseNotes />
     <copyright />
-    <tags>SRWareIron browser privacy</tags>
+    <tags>SRWareIron browser privacy admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

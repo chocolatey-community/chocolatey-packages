@@ -17,7 +17,7 @@ Designed to be easy to use, yet powerful and flexible, GnuCash allows you to tra
     <summary>financial-accounting software</summary>
     <releaseNotes>http://www.gnucash.org/#newscontainer</releaseNotes>
     <copyright>The GnuCash Project</copyright>
-    <tags>financial accounting</tags>
+    <tags>financial accounting admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -19,7 +19,7 @@ The engine supporting the game is entirely original in code &amp; design, and it
     <summary>Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter</summary>
     <releaseNotes />
     <copyright />
-    <tags>game cube sauerbraten</tags>
+    <tags>game cube sauerbraten admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

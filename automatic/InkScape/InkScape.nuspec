@@ -15,7 +15,7 @@ Inkscape supports many advanced SVG features (markers, clones, alpha blending, e
     <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
     <releaseNotes>Stable release</releaseNotes>
     <copyright>inkscape.org</copyright>
-    <tags>inkscape svg-editor compliant svg vector-graphics linux unix gnome hig icons adobe-illustrator graphics open-source png-export to-png text paths outlines drawing art</tags>
+    <tags>inkscape svg-editor compliant svg vector-graphics linux unix gnome hig icons adobe-illustrator graphics open-source png-export to-png text paths outlines drawing art admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -11,7 +11,7 @@
 Pale Moon is an Open Source, Firefox-based web browser optimized for modern hardware. Firefox maintains compatibility with old hardware, compromising on speed. Pale Moon is on average 25 % faster.
     </description>
     <projectUrl>http://www.palemoon.org/</projectUrl>
-    <tags>Internet Browser Firefox Optimized</tags>
+    <tags>Internet Browser Firefox Optimized admin</tags>
     <copyright></copyright>
     <licenseUrl>https://en.wikipedia.org/wiki/Mozilla_Public_License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

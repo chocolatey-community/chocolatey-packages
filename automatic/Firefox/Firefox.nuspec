@@ -22,7 +22,7 @@ This package installs Firefox in the first language which matches this list:
 Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
     </description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
-    <tags>browser mozilla firefox</tags>
+    <tags>browser mozilla firefox admin</tags>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
