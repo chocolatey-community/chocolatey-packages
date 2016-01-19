@@ -10,34 +10,26 @@ $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
   $_.Version -eq $version
 }
 
-try {
+$allRight = $true
 
-  $allRight = $true
+if ([System.Environment]::OSVersion.Version -ge '6.2') {
+  $allRight = $false
+  Write-Output $packageName $('Your Windows version is not ' +
+    'suitable for this package. This package is only for Windows XP to Windows 7')
+}
 
+if (Get-Process iexplore -ErrorAction SilentlyContinue) {
+  $allRight = $false
+  Write-Output $packageName 'Internet Explorer is running. ' +
+    'The installation will fail an 1603 error. ' +
+    'Close Internet Explorer and reinstall this package.'
+}
 
-  if ([System.Environment]::OSVersion.Version -ge '6.2') {
-    $allRight = $false
-    Write-ChocolateyFailure $packageName $('Your Windows version is not ' +
-      'suitable for this package. This package is only for Windows XP to Windows 7')
-  }
+if ($alreadyInstalled) {
+  $allRight = $false
+  Write-Output "Adobe Flash Player ActiveX for IE $version is already installed."
+}
 
-  if (Get-Process iexplore -ErrorAction SilentlyContinue) {
-    $allRight = $false
-    Write-ChocolateyFailure $packageName 'Internet Explorer is running. ' +
-      'The installation will fail an 1603 error. ' +
-      'Close Internet Explorer and reinstall this package.'
-  }
-
-  if ($alreadyInstalled) {
-    $allRight = $false
-    Write-Output "Adobe Flash Player ActiveX for IE $version is already installed."
-  }
-
-  if ($allRight) {
-    Install-ChocolateyPackage $packageName 'msi' $installArgs $url
-  }
-
-} catch {
-  Write-ChocolateyFailure $packageName $($_.Exception.Message)
-  throw
+if ($allRight) {
+  Install-ChocolateyPackage $packageName 'msi' $installArgs $url
 }
