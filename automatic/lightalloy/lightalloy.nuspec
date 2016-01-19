@@ -13,7 +13,7 @@ Complete video player with built-in codecs.
 _The installer is not silent. I've used AutoIt to automate the installation. Be careful when doing something else while installing._
     </description>
     <projectUrl>http://www.light-alloy.ru/</projectUrl>
-    <tags>Media Video Player</tags>
+    <tags>Media Video Player admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

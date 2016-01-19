@@ -13,7 +13,7 @@ Tribler is an open source anonymous peer-to-peer decentralized BitTorrent client
 **Note:** This installer does not support silent installation. The installation is automated using AutoIt3. Be careful that multitasking might confuse the automation script.
     </description>
     <projectUrl>http://www.tribler.org/</projectUrl>
-    <tags>BitTorrent</tags>
+    <tags>BitTorrent admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.gnu.org/copyleft/lesser.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
