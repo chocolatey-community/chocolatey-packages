@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>flashplayerppapi</id>
+    <title>Flash Player PPAPI</title>
+    <version>20.0.0.286</version>
+    <authors>Adobe Systems Incorporated</authors>
+    <owners>Adobe Systems Incorporated</owners>
+    <summary>Adobe Flash Player PPAPI Plugin for Opera and Chromium based browsers</summary>
+    <description>The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.</description>
+    <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/flashplayer.png</iconUrl>
+    <tags>adobe flash player ppapi plugin admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
