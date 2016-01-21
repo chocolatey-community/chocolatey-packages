@@ -1,13 +1,16 @@
-﻿$registryPaths = @(
-  'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall',
-  'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
-)
+﻿$packageName = 'flashplayerppapi'
+$programName = 'Adobe Flash Player PPAPI'
+$fileType = 'EXE'
+$silentArgs = '-uninstall pepperplugin'
 
-$uninstallString = (Get-ChildItem -Path $registryPaths |
-    Get-ItemProperty |
-    Where-Object {$_.DisplayName -match 'Mp3tag' } |
-    Select-Object -Property DisplayName, UninstallString).uninstallString -replace "maintain","uninstall"
+$key32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
+$key64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
+$key = @{64=$key64;32=$key32}[(Get-ProcessorBits)]
 
-if ($uninstString) {
-    Uninstall-ChocolateyPackage 'flashplayerppapi' 'exe' '' $uninstString
+$uninstaller = Get-ChildItem $key | %{ Get-ItemProperty $_.PSPath } | ?{ $_.PSChildName -match $programName }
+
+$uninstallString = $uninstaller.uninstallString -replace " -maintain pepperplugin",""
+
+if ($uninstallString) {
+    Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $uninstallString
 }
