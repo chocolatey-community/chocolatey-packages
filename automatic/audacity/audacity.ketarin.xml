@@ -114,7 +114,7 @@
     <FileHippoId />
     <LastUpdated>2015-08-23T16:10:58.0505628+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://audacityteam.org/images/Audacity-logo-r_50pct.jpg</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.audacity.audio/wp-content/uploads/2015/11/small-audacity.png</FixedDownloadUrl>
     <Name>audacity</Name>
   </ApplicationJob>
 </Jobs>
