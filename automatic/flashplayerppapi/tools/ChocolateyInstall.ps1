@@ -1,7 +1,7 @@
-﻿$packageName = 'flashpluginppapi'
-$version = '20.0.0.286'
+﻿$packageName = '{{PackageName}}'
+$version = '{{PackageVersion}}'
 $installerType = 'exe'
-$url = 'https://fpdownload.adobe.com/pub/flashplayer/pdc/20.0.0.286/install_flash_player_ppapi.exe'
+$url = '{{DownloadUrl}}'
 $silentArgs = '-install'
 $validExitCodes = @(0)
 

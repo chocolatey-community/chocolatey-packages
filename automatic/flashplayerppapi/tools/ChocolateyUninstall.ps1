@@ -1,4 +1,4 @@
-﻿$packageName = 'flashplayerppapi'
+﻿$packageName = '{{PackageName}}'
 $programName = 'Adobe Flash Player PPAPI'
 $fileType = 'EXE'
 $silentArgs = '-uninstall pepperplugin'

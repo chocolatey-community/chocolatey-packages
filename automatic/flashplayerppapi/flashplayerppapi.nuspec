@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>flashplayerppapi</id>
+    <id>{{PackageName}}</id>
     <title>Flash Player PPAPI</title>
-    <version>20.0.0.286</version>
+    <version>{{PackageVersion}}</version>
     <authors>Adobe Systems Incorporated</authors>
     <owners>Adobe Systems Incorporated</owners>
     <summary>Adobe Flash Player PPAPI Plugin for Opera and Chromium based browsers</summary>
