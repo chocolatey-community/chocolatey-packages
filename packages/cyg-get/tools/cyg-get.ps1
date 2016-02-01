@@ -57,8 +57,9 @@ if ($help -or $packageNames -join '|' -eq '/?') {
       }
     }
 
-    $cygwinsetup = "$cygRoot\cygwinsetup.exe"
-    $cygLocalPackagesDir = join-path $cygRoot packages
+    $cygwinsetupDir = "${Env:ChocolateyInstall}\lib\Cygwin\tools\cygwin"
+    $cygwinsetup = "$cygwinsetupDir\cygwinsetup.exe"
+    $cygLocalPackagesDir = join-path $cygwinsetupDir packages
     $cygInstallPackageList = $packageNames -join ','
 
     $cygArgs = "--root $cygRoot --local-package-dir $cygLocalPackagesDir"
