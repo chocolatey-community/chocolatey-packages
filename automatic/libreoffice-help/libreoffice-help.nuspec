@@ -5,6 +5,7 @@
     <version>{{PackageVersion}}</version>
     <title>LibreOffice Help Pack</title>
     <authors>LibreOffice community</authors>
+    <owners>chocolatey</owners>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/libreoffice.svg</iconUrl>

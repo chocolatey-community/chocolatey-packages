@@ -5,6 +5,7 @@
     <title>LibreOffice (oldstable)</title>
     <version>{{PackageVersion}}</version>
     <authors>LibreOffice developers</authors>
+    <owners>chocolatey purity</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
     <description>
 LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
