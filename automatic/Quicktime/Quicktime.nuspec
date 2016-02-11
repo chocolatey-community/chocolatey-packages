@@ -20,7 +20,7 @@ This package installs QuickTime and the required Apple Application Support compo
     </description>
     <summary>Quicktime</summary>
     <copyright>Apple Inc. All rights reserved</copyright>
-    <tags>Quicktime chocolatey admin</tags>
+    <tags>Quicktime admin</tags>
     <dependencies>
       <dependency id="7zip.commandline" />
     </dependencies>
