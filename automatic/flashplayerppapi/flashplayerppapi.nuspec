@@ -5,7 +5,7 @@
     <title>Flash Player PPAPI</title>
     <version>{{PackageVersion}}</version>
     <authors>Adobe Systems Incorporated</authors>
-    <owners>Adobe Systems Incorporated</owners>
+    <owners>chocolatey</owners>
     <summary>Adobe Flash Player PPAPI Plugin for Opera and Chromium based browsers</summary>
     <description>The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.</description>
     <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
