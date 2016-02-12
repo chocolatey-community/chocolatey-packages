@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>X-Moto</title>
+    <owners>chocolatey</owners>
     <authors>authors</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://xmoto.tuxfamily.org/</projectUrl>

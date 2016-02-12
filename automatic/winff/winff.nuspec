@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>WinFF</title>
+    <owners>chocolatey</owners>
     <authors>Matthew Weatherford,Ian Stoffberg</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://winff.org/html_new/</projectUrl>

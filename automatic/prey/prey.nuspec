@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Prey</title>
+    <owners>chocolatey</owners>
     <authors>Fork Ltd</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://preyproject.com/</projectUrl>

@@ -4,6 +4,7 @@
     <id>truecrypt-langfiles</id>
     <version>7.1.1</version>
     <title>TrueCrypt language files</title>
+    <owners>chocolatey</owners>
     <authors>Various (see http://www.truecrypt.org/localizations)</authors>
     <projectUrl>http://www.truecrypt.org/localizations</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

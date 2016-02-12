@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>IETester</title>
+    <owners>chocolatey</owners>
     <authors>Core Services</authors>
     <licenseUrl>http://www.my-debugbar.com/wiki/IETester/HomePage</licenseUrl>
     <projectUrl>http://my-debugbar.com/wiki/IETester/HomePage</projectUrl>

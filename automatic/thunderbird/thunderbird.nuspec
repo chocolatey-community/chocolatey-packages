@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Mozilla Thunderbird</title>
+    <owners>chocolatey</owners>
     <authors>Mozilla</authors>
     <licenseUrl>http://www.mozilla.org/en-US/legal/eula/thunderbird.html</licenseUrl>
     <projectUrl>https://www.mozilla.org/en/thunderbird/</projectUrl>

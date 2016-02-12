@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>No-IP DUC (Dynamic Update Client)</title>
+    <owners>chocolatey</owners>
     <authors>authors</authors>
     <projectUrl>http://www.noip.com/downloads.php?page=win</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/no-ip-duc.png</iconUrl>

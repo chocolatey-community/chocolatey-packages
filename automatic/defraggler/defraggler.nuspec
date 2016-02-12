@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Defraggler</title>
+    <owners>chocolatey</owners>
     <authors>Piriform</authors>
     <licenseUrl>http://www.piriform.com/legal/software-license/defraggler</licenseUrl>
     <projectUrl>http://www.piriform.com/defraggler</projectUrl>

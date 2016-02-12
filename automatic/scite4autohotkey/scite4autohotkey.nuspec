@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>SciTE4AutoHotkey</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>fincs</authors>
     <summary>SciTE distribution designed for AutoHotkey</summary>

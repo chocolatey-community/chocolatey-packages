@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>ruKernelTool</title>
+    <owners>chocolatey</owners>
     <authors>Rainer Ullrich</authors>
     <projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

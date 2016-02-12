@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>PDF Creator</title>
+    <owners>chocolatey</owners>
     <authors>pdfforge</authors>
     <licenseUrl>http://www.pdfforge.org/content/aladdin-free-public-license</licenseUrl>
     <projectUrl>http://www.pdfforge.org/</projectUrl>

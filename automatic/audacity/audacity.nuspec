@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Audacity</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>

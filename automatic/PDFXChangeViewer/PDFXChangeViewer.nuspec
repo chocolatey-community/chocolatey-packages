@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>PDF-XChange Viewer</title>
+    <owners>chocolatey</owners>
     <authors>Tracker Software</authors>
     <licenseUrl>http://www.tracker-software.com/PDFVLicense.pdf‎</licenseUrl>
     <projectUrl>http://www.tracker-software.com/product/pdf-xchange-viewer</projectUrl>

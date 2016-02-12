@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Xpdf utils</title>
+    <owners>chocolatey</owners>
     <authors>Glyph &amp; Cog, LLC</authors>
     <licenseUrl>http://www.foolabs.com/xpdf/about.html</licenseUrl>
     <projectUrl>http://www.foolabs.com/xpdf/home.html</projectUrl>

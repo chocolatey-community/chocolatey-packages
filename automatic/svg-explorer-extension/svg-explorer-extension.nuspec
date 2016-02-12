@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>svg-explorer-extension</title>
+    <owners>chocolatey</owners>
     <authors>Tibold Kandrai</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
     <projectUrl>https://svgextension.codeplex.com/</projectUrl>

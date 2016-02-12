@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>CodeLite</title>
+    <owners>chocolatey</owners>
     <authors>Eran Ifrah,CodeLite team</authors>
     <licenseUrl>http://sourceforge.net/apps/trac/codelite/browser/trunk/LICENSE</licenseUrl>
     <projectUrl>http://www.codelite.org/</projectUrl>

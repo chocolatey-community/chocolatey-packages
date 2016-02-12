@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Bitdefender USB Immunizer</title>
+    <owners>chocolatey</owners>
     <authors>Bitdefender SRL</authors>
     <licenseUrl>http://labs.bitdefender.com/projects/usb-immunizer/overview/</licenseUrl>
     <projectUrl>http://labs.bitdefender.com/projects/usb-immunizer/overview/</projectUrl>

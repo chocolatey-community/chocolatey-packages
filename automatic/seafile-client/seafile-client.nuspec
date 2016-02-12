@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Seafile (Windows Client)</title>
+    <owners>chocolatey</owners>
     <authors>Seafile Ltd.</authors>
     <licenseUrl>https://github.com/haiwen/seafile/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>http://seafile.com/en/home/</projectUrl>

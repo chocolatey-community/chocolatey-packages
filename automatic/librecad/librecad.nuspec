@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>LibreCAD</title>
+    <owners>chocolatey</owners>
     <authors>LibreCAD community</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://librecad.org/cms/home.html</projectUrl>

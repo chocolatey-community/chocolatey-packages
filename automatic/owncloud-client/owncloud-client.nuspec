@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>ownCloud Windows Client</title>
+    <owners>chocolatey</owners>
     <authors>ownCloud developers</authors>
     <licenseUrl>https://www.gnu.org/licenses/agpl.html</licenseUrl>
     <projectUrl>http://owncloud.org/sync-clients/#windows</projectUrl>

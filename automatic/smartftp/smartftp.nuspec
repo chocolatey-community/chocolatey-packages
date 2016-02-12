@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>SmartFTP</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>SmartSoft</authors>
     <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, OneDrive, Telnet, Terminal client.</summary>

@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Clover</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>EJIE Technology</authors>
     <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
