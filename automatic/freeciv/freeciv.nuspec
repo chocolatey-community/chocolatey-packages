@@ -4,8 +4,8 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Freeciv</title>
-    <owners>chocolatey</owners>
-    <authors>authors</authors>
+    <owners>chocolatey purity</owners>
+    <authors>Freeciv Contributors</authors>
     <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
     <projectUrl>http://www.freeciv.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/freeciv.png</iconUrl>

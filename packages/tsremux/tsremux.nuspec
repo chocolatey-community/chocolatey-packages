@@ -4,8 +4,8 @@
     <id>tsremux</id>
     <version>0.23.2</version>
     <title>TsRemux</title>
-    <owners>chocolatey</owners>
-    <authors>authors</authors>
+    <owners>chocolatey purity</owners>
+    <authors>TsRemux Contributors</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.videohelp.com/tools/TsRemux</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
