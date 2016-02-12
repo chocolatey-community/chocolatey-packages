@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>SQLite</title>
+    <owners>chocolatey</owners>
     <authors>D. Richard Hipp, SQLite contributors</authors>
     <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
     <projectUrl>http://www.sqlite.org</projectUrl>

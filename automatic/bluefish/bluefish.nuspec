@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Bluefish</title>
+    <owners>chocolatey</owners>
     <authors>Bluefish Dev Team</authors>
     <licenseUrl>http://bluefish.openoffice.nl/development.html</licenseUrl>
     <projectUrl>http://bluefish.openoffice.nl/index.html</projectUrl>

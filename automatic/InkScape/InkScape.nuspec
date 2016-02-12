@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Inkscape</title>
+    <owners>chocolatey</owners>
     <authors>Inkscape developers</authors>
     <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://inkscape.org/</projectUrl>

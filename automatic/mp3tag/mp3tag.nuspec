@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Mp3tag</title>
+    <owners>chocolatey</owners>
     <authors>Florian Heidenreich</authors>
     <licenseUrl>http://help.mp3tag.de/misc_license.html</licenseUrl>
     <projectUrl>http://www.mp3tag.de/en/index.html</projectUrl>

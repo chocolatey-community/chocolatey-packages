@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>ffdshow tryouts (forced 32-bit)</title>
+    <owners>chocolatey</owners>
     <authors>http://ffdshow-tryout.sourceforge.net/wiki/credits</authors>
     <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
     <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>

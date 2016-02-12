@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Texmaker</title>
+    <owners>chocolatey</owners>
     <authors>Pascal Brachet,Joël Amblard</authors>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.xm1math.net/texmaker/</projectUrl>

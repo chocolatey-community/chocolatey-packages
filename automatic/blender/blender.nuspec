@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Blender</title>
+    <owners>chocolatey</owners>
     <authors>Blender Foundation</authors>
     <licenseUrl>http://download.blender.org/release/GPL-license.txt</licenseUrl>
     <projectUrl>http://www.blender.org</projectUrl>

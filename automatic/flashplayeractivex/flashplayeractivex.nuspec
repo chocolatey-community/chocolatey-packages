@@ -8,6 +8,7 @@
     <licenseUrl>http://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
     <id>{{PackageName}}</id>
     <title>Flash Player ActiveX</title>
+    <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.

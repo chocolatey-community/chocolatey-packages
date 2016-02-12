@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Haali Media Splitter</title>
+    <owners>chocolatey</owners>
     <authors>Mike Matsnev</authors>
     <projectUrl>http://haali.su/mkv/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

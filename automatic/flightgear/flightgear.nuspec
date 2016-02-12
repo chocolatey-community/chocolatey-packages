@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>FlightGear</title>
+    <owners>chocolatey</owners>
     <authors>FlightGear Team</authors>
     <licenseUrl>http://wiki.flightgear.org/GNU_General_Public_License</licenseUrl>
     <projectUrl>http://www.flightgear.org/</projectUrl>

@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Brackets</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Adobe</authors>
     <summary>Brackets open-source code editor built with the web for the web.</summary>

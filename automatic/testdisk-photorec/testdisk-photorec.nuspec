@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>TestDisk and PhotoRec</title>
+    <owners>chocolatey</owners>
     <authors>CGSecurity</authors>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://www.cgsecurity.org/wiki/TestDisk</projectUrl>

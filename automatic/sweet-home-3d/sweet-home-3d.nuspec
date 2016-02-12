@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Sweet Home 3D</title>
+    <owners>chocolatey</owners>
     <authors>Emmanuel Puybaret</authors>
     <licenseUrl>http://www.sweethome3d.com/license.jsp</licenseUrl>
     <projectUrl>http://www.sweethome3d.com/</projectUrl>

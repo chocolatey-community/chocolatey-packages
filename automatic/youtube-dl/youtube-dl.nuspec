@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>youtube-dl</title>
+    <owners>chocolatey</owners>
     <authors>Ricardo Garcia and others</authors>
     <licenseUrl>http://rg3.github.io/youtube-dl/</licenseUrl>
     <projectUrl>http://rg3.github.io/youtube-dl/</projectUrl>

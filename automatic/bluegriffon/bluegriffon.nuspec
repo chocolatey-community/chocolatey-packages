@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>BlueGriffon</title>
+    <owners>chocolatey</owners>
     <authors>Daniel Glazman</authors>
     <licenseUrl>http://www.bluegriffon.org/</licenseUrl>
     <projectUrl>http://bluegriffon.org/</projectUrl>

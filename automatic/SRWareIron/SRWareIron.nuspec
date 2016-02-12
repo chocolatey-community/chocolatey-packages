@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>SRWare Iron</title>
+    <owners>chocolatey</owners>
     <authors>SRWare</authors>
     <licenseUrl>http://www.srware.net/en/software_srware_iron.php</licenseUrl>
     <projectUrl>http://www.srware.net/en/software_srware_iron.php</projectUrl>

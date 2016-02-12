@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Universal USB Installer</title>
+    <owners>chocolatey</owners>
     <authors>Pendrivelinux</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</projectUrl>

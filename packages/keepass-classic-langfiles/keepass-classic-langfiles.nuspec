@@ -4,6 +4,7 @@
     <id>keepass-classic-langfiles</id>
     <version>1.30</version>
     <title>KeePass Classic (1.x) language files</title>
+    <owners>chocolatey</owners>
     <authors>KeePass Team</authors>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <projectUrl>http://keepass.info/</projectUrl>

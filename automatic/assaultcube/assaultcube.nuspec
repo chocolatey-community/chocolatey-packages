@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>AssaultCube</title>
+    <owners>chocolatey</owners>
     <authors>AssaultCube developers</authors>
     <licenseUrl>http://assault.cubers.net/docs/license.html</licenseUrl>
     <projectUrl>http://assault.cubers.net/</projectUrl>

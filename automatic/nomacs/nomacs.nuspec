@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>nomacs Image Lounge</title>
+    <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://nomacs.org/</projectUrl>

@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>OpenSSL – The Open Source SSL and TLS toolkit</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Shining Light Productions</authors>
     <summary>Open Source SSL v2/v3 and TLS v1 toolkit</summary>

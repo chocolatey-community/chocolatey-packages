@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>VP8 Video for Windows codec</title>
+    <owners>chocolatey</owners>
     <authors>Optima SC Inc</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.optimasc.com/products/vp8vfw/index.html</projectUrl>

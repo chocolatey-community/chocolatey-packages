@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>cdrtfe</title>
+    <owners>chocolatey</owners>
     <authors>cdrtfe team</authors>
     <licenseUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</licenseUrl>
     <projectUrl>http://cdrtfe.sourceforge.net/</projectUrl>

@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Jitsi</title>
+    <owners>chocolatey</owners>
     <authors>Emil Ivov and others</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl-2.1.html</licenseUrl>
     <projectUrl>https://jitsi.org/</projectUrl>

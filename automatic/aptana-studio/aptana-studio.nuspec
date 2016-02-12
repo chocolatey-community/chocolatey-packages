@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Aptana Studio</title>
+    <owners>chocolatey</owners>
     <authors>Aptana Inc.</authors>
     <licenseUrl>http://www.aptana.com/legal</licenseUrl>
     <projectUrl>http://www.aptana.org/</projectUrl>
