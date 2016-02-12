@@ -2,6 +2,8 @@
 <package >
   <metadata>
     <id>{{PackageName}}</id>
+    <title>WinPcap</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>NetGroup, CACE Technologies</authors>
     <licenseUrl>http://www.winpcap.org/misc/copyright.htm</licenseUrl>
