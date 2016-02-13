@@ -15,6 +15,7 @@
     <releaseNotes />
     <copyright />
     <tags>Security Hosts hostsfile admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
