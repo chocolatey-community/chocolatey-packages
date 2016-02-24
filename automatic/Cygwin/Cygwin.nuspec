@@ -13,7 +13,6 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
 
 ### Notes:
 
-* This package installs Cygwin to `$PSScriptRoot\cygwin`. If Cygwin is already installed, it uses the installation folder of the already installed Cygwin version.
 * For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <projectUrl>https://cygwin.com/</projectUrl>
