@@ -76,7 +76,7 @@ folder and reinstall this package with the -force parameter.
 
 
     Install-ChocolateyPath $installPath 'Machine'
-    $env:Path = "$($env:Path);$installPath;$installPath/Scripts"
+    $env:Path = "$($env:Path);$installPath;$installPath\Scripts"
   }
 
 
