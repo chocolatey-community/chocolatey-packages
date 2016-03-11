@@ -1,28 +1,29 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
     <title>Cygwin</title>
+    <version>{{PackageVersion}}</version>
     <authors>Red Hat, Inc.</authors>
     <owners>Chocolatey</owners>
-    <licenseUrl>https://cygwin.com/license.html</licenseUrl>
-    <projectUrl>https://cygwin.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Cygwin.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>A Linux environment for Windows.</summary>
     <description>
 Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
 ### Notes:
 
-* This package installs Cygwin to `$PSScriptRoot\cygwin`. If Cygwin is already installed, it uses the installation folder of the already installed Cygwin version.
 * For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
-    <summary>A Linux environment for Windows.</summary>
-    <releaseNotes></releaseNotes>
-    <copyright>Red Hat, Inc.</copyright>
+    <projectUrl>https://cygwin.com/</projectUrl>
+    <docsUrl>http://cygwin.com/docs.html</docsUrl>
     <tags>Cygwin linux admin</tags>
+    <copyright>Red Hat, Inc.</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <licenseUrl>https://cygwin.com/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Cygwin.png</iconUrl>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
