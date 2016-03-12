@@ -3,21 +3,20 @@
   <metadata>
     <id>wixtoolset</id>
     <title>WiX Toolset</title>
-    <version>3.10.1.2213</version>
+    <version>3.10.2.2516</version>
     <authors>Rob Mensching, Bob Arnson</authors>
     <owners>Gary Ewan Park</owners>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
     <description>The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages. The WiX toolset CodePlex project stores the stable releases and Mercurial repository.</description>
     <projectUrl>http://wixtoolset.org/</projectUrl>
     <tags>wix toolset msi xml admin</tags>
-    <copyright>2009 - 2015 Outercurve Foundation</copyright>
+    <copyright>2009 - 2016 Outercurve Foundation</copyright>
     <licenseUrl>http://wix.codeplex.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/wixtoolset.png</iconUrl>
     <releaseNotes>
-Information on this release can be found in the following blog posts:
-* [http://www.joyofsetup.com/2015/10/31/wix-toolset-v3-10-1-released/](http://www.joyofsetup.com/2015/10/31/wix-toolset-v3-10-1-released/)
-* [http://robmensching.com/blog/posts/2015/10/31/wix-toolset-v3.10.1-released/](http://robmensching.com/blog/posts/2015/10/31/wix-toolset-v3.10.1-released/)
+Information on this release can be found in the following blog post:
+* [https://www.firegiant.com/blog/2016/1/20/wix-v3.10.2-released/](https://www.firegiant.com/blog/2016/1/20/wix-v3.10.2-released/)
 	</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
