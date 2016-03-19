@@ -1,13 +1,13 @@
 ﻿### functions
 
-function Check-SoftwareInstalled ($displayName) {
+function Check-SoftwareInstalled ($displayName, $displayVersion) {
   $registryPaths = @(
     'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*',
     'HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
   )
 
   return Get-ItemProperty $registryPaths -ErrorAction SilentlyContinue | Where-Object {
-    $_.DisplayName -eq $displayName
+    $_.DisplayName -eq $displayName -and $_.DisplayVersion -eq $displayVersion
   }
 }
 
@@ -20,7 +20,7 @@ $url = '{{DownloadUrl}}'
 
 $majorVersion = ([version] $version).Major
 
-$alreadyInstalled = Check-SoftwareInstalled "Adobe Flash Player $majorVersion NPAPI"
+$alreadyInstalled = Check-SoftwareInstalled "Adobe Flash Player $majorVersion NPAPI" $version
 
 if ($alreadyInstalled) {
   Write-Output $(
