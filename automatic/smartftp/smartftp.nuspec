@@ -6,8 +6,8 @@
     <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>SmartSoft</authors>
-    <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Microsoft OneDrive, Telnet, Terminal client.</summary>
-    <description>SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.</description>
+    <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
+    <description>SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.</description>
     <projectUrl>https://www.smartftp.com/</projectUrl>
     <tags>trial-version ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client admin</tags>
     <copyright>SmartSoft Ltd</copyright>
