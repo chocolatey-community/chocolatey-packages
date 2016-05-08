@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>28909160</LastFileSize>
-    <LastFileDate>2015-05-07T22:36:10+02:00</LastFileDate>
+    <LastFileSize>34098512</LastFileSize>
+    <LastFileDate>2015-12-23T01:22:47+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -25,7 +27,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>https://download\.mozilla\.org/\?product=thunderbird-([\d\.+]+)&amp;amp;os=win&amp;amp;lang=en-US</Regex>
+            <Regex>https://download\.mozilla\.org/\?product=thunderbird-([\d\.]+)-SSL(?:&amp;amp;|&amp;)os=win(?:&amp;amp;|&amp;)lang=en-US</Regex>
             <Url>https://www.mozilla.org/en-US/thunderbird/all/</Url>
             <StartText>&lt;td class="second" lang="en-US"&gt;English (US)&lt;/td&gt;
                         &lt;td class="curVersion" &gt;</StartText>
@@ -41,13 +43,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Thunderbird Setup 31.7.0.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Thunderbird Setup 38.5.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-06-02T13:40:14.1129639+02:00</LastUpdated>
+    <LastUpdated>2016-05-08T14:34:36.7496752+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://download.mozilla.org/?product=thunderbird-{version}&amp;os=win&amp;lang=en-US</FixedDownloadUrl>
+    <FixedDownloadUrl>https://download.mozilla.org/?product=thunderbird-{version}-SSL&amp;os=win&amp;lang=en-US</FixedDownloadUrl>
     <Name>thunderbird</Name>
   </ApplicationJob>
 </Jobs>

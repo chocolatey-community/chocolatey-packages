@@ -17,7 +17,7 @@ $allLocalesListURL = Switch ($softwareNameLowerCase) {
   }
 
   'thunderbird' {
-    'https://www.mozilla.org/en-US/thunderbird/all.html'
+    'https://www.mozilla.org/en-US/thunderbird/all/'
     break
   }
 }
