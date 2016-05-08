@@ -15,7 +15,7 @@ Thunderbird is a free email application that’s easy to set up and customize �
 
 This package installs Thunderbird in the first language which matches this list:
 
-1. Install arguments override parameter if present, e.g. `choco install Thunderbird -packageParameters "l=en-GB"`. To get a list of all available locales have a look at this folder: http://releases.mozilla.org/pub/mozilla.org/thunderbird/releases/latest/win32/
+1. Install arguments override parameter if present, e.g. `choco install Thunderbird -packageParameters "l=en-GB"`. To get a list of all available locales have a look at http://releases.mozilla.org/pub/thunderbird/releases/latest/README.txt.
 2. If Thunderbird is already installed: the same language as the already installed Thunderbird.
 3. The Windows system language where the Thunderbird package gets installed.
 4. If Thunderbird does not support the system language, it will fallback to “en-US”
