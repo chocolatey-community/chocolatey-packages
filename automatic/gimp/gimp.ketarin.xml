@@ -11,6 +11,8 @@
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -25,7 +27,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>download\.gimp\.org/mirror/pub/gimp/(v[\d\.]+/windows/gimp-[\d\.]+-setup\.exe)</Regex>
+            <Regex>//download\.gimp\.org/mirror/pub/gimp/v[\d\.]+/windows/gimp-[\d\.]+-setup.+?\.exe</Regex>
             <Url>https://www.gimp.org/downloads/</Url>
             <Name>urlPart</Name>
           </UrlVariable>
@@ -41,7 +43,7 @@
             <VariableType>Textual</VariableType>
             <Regex />
             <Url />
-            <TextualContent>{urlPart:regex:gimp-([\d\.]+)-setup\.exe:1}</TextualContent>
+            <TextualContent>{urlPart:regex:windows/gimp-([\d\.]+):1}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -59,7 +61,7 @@
     <FileHippoId />
     <LastUpdated>2015-10-06T22:27:08.6714686</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://download.gimp.org/mirror/pub/gimp/{urlPart}</FixedDownloadUrl>
+    <FixedDownloadUrl>https:{urlPart}</FixedDownloadUrl>
     <Name>gimp</Name>
   </ApplicationJob>
 </Jobs>
