@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>keepass-classic-langfiles</id>
-    <version>1.30</version>
+    <version>1.31</version>
     <title>KeePass Classic (1.x) language files</title>
     <owners>chocolatey</owners>
     <authors>KeePass Team</authors>
