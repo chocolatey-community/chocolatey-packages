@@ -79,6 +79,8 @@
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -94,42 +96,13 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>(?&lt;=Tribler )[0-9.]{3,}(?= for Windows)</Regex>
-            <Url>http://www.tribler.org/download.html</Url>
+            <Url>https://www.tribler.org/download.html</Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
             <EndText>&lt;BR&gt;</EndText>
             <TextualContent />
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>url</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <Url />
-            <TextualContent>https://github.com/Tribler/tribler/releases/download/v{version}/Tribler_{version}.exe</TextualContent>
-            <Name>url</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>packageId</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>tribler</TextualContent>
-            <Name>packageId</Name>
           </UrlVariable>
         </value>
       </item>
@@ -140,12 +113,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
     <LastUpdated>2014-11-13T05:49:57.6303792</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
-    <Name>Tribler</Name>
+    <FixedDownloadUrl>https://github.com/Tribler/tribler/releases/download/v{version}/Tribler_{version}.exe</FixedDownloadUrl>
+    <Name>tribler</Name>
   </ApplicationJob>
 </Jobs>
