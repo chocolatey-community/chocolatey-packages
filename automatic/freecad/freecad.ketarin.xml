@@ -11,6 +11,8 @@
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -24,73 +26,25 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>[\d\.]+(?=_x86_setup.exe)</Regex>
-            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/FreeCAD%20{versionMajor}/</Url>
-            <StartText>&lt;tr title="FreeCAD_</StartText>
-            <EndText>_source.7z</EndText>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
+            <TextualContent>{urlPart:regex:^(.+)?/:1}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
       </item>
       <item>
         <key>
-          <string>urlMirror</string>
+          <string>urlPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>ResponseUri: ([^\r\n]+)</Regex>
-            <Url>{urlGeneral}</Url>
-            <TextualContent />
-            <Name>urlMirror</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>urlGeneral</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD Windows/FreeCAD {versionMajor}/FreeCAD-{version}_x86_setup.exe/download</TextualContent>
-            <Name>urlGeneral</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>versionMajor</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Windows/FreeCAD%20)[\d\.]+(?=/)</Regex>
-            <Url>http://sourceforge.net/projects/free-cad/files/FreeCAD%20Windows/</Url>
-            <StartText>&lt;small&gt;Latest stable version: &lt;b&gt;</StartText>
-            <EndText>&lt;/b&gt;&lt;/small&gt;</EndText>
-            <Name>versionMajor</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>mirror</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>ResponseUri: ([^\r\n]+)</Regex>
-            <Url>{urlGeneral}</Url>
-            <StartText>use_mirror=</StartText>
-            <EndText>"&gt;</EndText>
-            <Name>mirror</Name>
+            <Regex>https://github\.com/FreeCAD/FreeCAD/releases/download/([^"]+-x86[^"]+\.exe)</Regex>
+            <Url>http://www.freecadweb.org/wiki/?title=Download</Url>
+            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -101,24 +55,10 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>@('{urlGeneral}', '{realUrl64}')</TextualContent>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>https://github\.com/FreeCAD/FreeCAD/releases/download/[^"]+-x64[^"]+\.exe</Regex>
+            <Url>http://www.freecadweb.org/wiki/?title=Download</Url>
             <Name>url64</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>realUrl64</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>http://sourceforge.net/projects/free-cad/files/FreeCAD Windows/FreeCAD {versionMajor}/FreeCAD-{version}_x64_setup.exe/download</TextualContent>
-            <Name>realUrl64</Name>
           </UrlVariable>
         </value>
       </item>
@@ -135,7 +75,7 @@
     <FileHippoId />
     <LastUpdated>2014-07-15T21:26:46.5832852</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>https://github.com/FreeCAD/FreeCAD/releases/download/{urlPart}</FixedDownloadUrl>
     <Name>freecad</Name>
   </ApplicationJob>
 </Jobs>
