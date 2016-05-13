@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>winff</id>
+    <version>1.5.4</version>
     <title>WinFF</title>
     <owners>chocolatey</owners>
     <authors>Matthew Weatherford,Ian Stoffberg</authors>
