@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>120569</LastFileSize>
-    <LastFileDate>2013-08-12T05:25:11+00:00</LastFileDate>
+    <LastFileSize>121598</LastFileSize>
+    <LastFileDate>2016-01-31T09:38:46+01:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -24,8 +26,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>NirCmd v([\d\.]+)</Regex>
             <Url>http://www.nirsoft.net/utils/nircmd.html</Url>
             <StartText>&lt;td&gt;NirCmd v</StartText>
             <EndText>&lt;br&gt;</EndText>
@@ -58,7 +60,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-20T20:22:58.8360043+00:00</LastUpdated>
+    <LastUpdated>2016-05-13T21:44:51.6382093+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.nirsoft.net/utils/nircmd.zip</FixedDownloadUrl>
     <Name>nircmd</Name>

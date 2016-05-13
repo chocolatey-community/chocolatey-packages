@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>638</LastFileSize>
-    <LastFileDate>2015-09-19T18:20:57+02:00</LastFileDate>
+    <LastFileSize>13828936</LastFileSize>
+    <LastFileDate>2016-04-23T16:40:13+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator>version</VariableChangeIndicator>
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -47,29 +49,30 @@
       </item>
       <item>
         <key>
-          <string>shasumsUrlPart</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
-            <Regex>&lt;a href="windows/releases/([\d\.]+/sha512sums.txt)"&gt;</Regex>
-            <Url>https://www.bunkus.org/videotools/mkvtoolnix/downloads.html</Url>
-            <Name>shasumsUrlPart</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
           <string>version</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{shasumsUrlPart:regex:^([\d\.]+)/:1}</TextualContent>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>/mkvtoolnix-32bit-([\d\.]+)-setup\.exe</Regex>
+            <Url>http://www.fosshub.com/MKVToolNix.html</Url>
+            <TextualContent />
             <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>downloadUrl</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>.+</Regex>
+            <Url>http://www.fosshub.com/genLink/MKVToolNix/mkvtoolnix-32bit-{version}-setup.exe</Url>
+            <Name>downloadUrl</Name>
           </UrlVariable>
         </value>
       </item>
@@ -80,13 +83,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\sha512sums.txt</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mkvtoolnix-32bit-9.1.0-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-10-06T23:20:05.0461606+02:00</LastUpdated>
+    <LastUpdated>2016-05-13T21:55:10.1957803+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://www.bunkus.org/videotools/mkvtoolnix/windows/releases/{shasumsUrlPart}</FixedDownloadUrl>
+    <FixedDownloadUrl>{downloadUrl}</FixedDownloadUrl>
     <Name>mkvtoolnix</Name>
   </ApplicationJob>
 </Jobs>
