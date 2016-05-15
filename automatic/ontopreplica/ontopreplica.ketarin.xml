@@ -5,12 +5,14 @@
     <UserAgent>chocolatey command line</UserAgent>
     <UserNotes />
     <LastFileSize>600638</LastFileSize>
-    <LastFileDate>2014-01-21T22:29:21.2308741</LastFileDate>
+    <LastFileDate>2016-05-15T17:30:09.8862098+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -35,15 +37,15 @@
       </item>
       <item>
         <key>
-          <string>url</string>
+          <string>urlPart</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>http://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=ontopreplica&amp;DownloadId=780725&amp;FileTime=130345325848130000&amp;Build=20859</Url>
-            <Name>url</Name>
+            <Regex>downloads/get/\d+</Regex>
+            <Url>https://ontopreplica.codeplex.com/</Url>
+            <Name>urlPart</Name>
           </UrlVariable>
         </value>
       </item>
@@ -58,9 +60,9 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-01-21T22:29:21.2308741</LastUpdated>
+    <LastUpdated>2016-05-15T17:30:09.8933215+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{url}</FixedDownloadUrl>
+    <FixedDownloadUrl>https://ontopreplica.codeplex.com/{urlPart}</FixedDownloadUrl>
     <Name>ontopreplica</Name>
   </ApplicationJob>
 </Jobs>
