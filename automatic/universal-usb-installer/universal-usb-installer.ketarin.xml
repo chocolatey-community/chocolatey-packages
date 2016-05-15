@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>1095532</LastFileSize>
-    <LastFileDate>2014-08-16T22:05:19.2188668</LastFileDate>
+    <LastFileSize>1088875</LastFileSize>
+    <LastFileDate>2016-04-05T22:22:07+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -24,8 +26,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>/Universal-USB-Installer-([\d\.]+)\.exe</Regex>
             <Url>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</Url>
             <StartText>Universal-USB-Installer-</StartText>
             <EndText>.exe</EndText>
@@ -40,11 +42,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Universal-USB-Installer-1.9.5.5.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Universal-USB-Installer-1.9.6.4.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-16T22:05:19.2188668</LastUpdated>
+    <LastUpdated>2016-05-12T20:51:04.2558158+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-{version}.exe</FixedDownloadUrl>
     <Name>universal-usb-installer</Name>
