@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-uninstall.extension</id>
+    <version>0.1.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>chocolatey-uninstall.extension (Install)</title>
+    <authors>dtgm ferventcoder</authors>
+    <copyright>© 2016-Present Chocolatey Core Team Package Contributors</copyright>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
+    <licenseUrl>https://github.com/chocolatey/choco/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
+    <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/wiki</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/chocolatey</mailingListUrl>
+    <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
+    <tags>uninstall extension admin</tags>
+    <summary>Helper Function for retrieving registry keys during uninstall of packages</summary>
+    <description>
+Provides a helper function to help with retrieving registry keys during uninstall of Chocolatey packages.
+    </description>
+    <releaseNotes>
+* 0.1.0 - Initial release of extension package
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="extensions\**" target="extensions" />
+  </files>
+</package>
