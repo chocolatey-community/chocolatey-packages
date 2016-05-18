@@ -22,7 +22,7 @@ function Get-UninstallRegistryKey {
   Accepts [string]
 
 .OUTPUTS
-  This script searches registry objects and returns PSCustomObject of the
+  This function searches registry objects and returns PSCustomObject of the
   matched key's properties.
   
   Retrieve properties with dot notation, for example: $key.UninstallString
@@ -33,7 +33,7 @@ function Get-UninstallRegistryKey {
   failing when handling wrongly encoded registry keys.
   
   Using this function in a package requires adding the extension as a
-  dependency. Add the following the nuspec:
+  dependency. Add the following to the nuspec:
   
   <dependencies>
     <dependency id="chocolatey-uninstall.extension" />
@@ -61,7 +61,7 @@ function Get-UninstallRegistryKey {
                                -ErrorAction SilentlyContinue
 
   Write-Debug "Error handling check: Get-ItemProperty will fail if a registry key is written incorrectly."
-  Write-Debug "If such a key is found, loop to try to bypass all badKeys"
+  Write-Debug "If such a key is found, loop up to 10 times to try to bypass all badKeys"
   [int]$maxAttempts = 10
   for ([int]$attempt = 1; $attempt -le $maxAttempts; $attempt++) {
     [bool]$success = $FALSE
