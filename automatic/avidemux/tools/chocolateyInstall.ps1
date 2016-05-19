@@ -1,7 +1,5 @@
 ﻿$PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-Import-Module (Join-Path $PSScriptRoot 'Get-UrlFromFosshub.ps1')
-
 $packageName = '{{PackageName}}'
 $fileType = 'exe'
 $silentArgs = '/S'
