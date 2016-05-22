@@ -24,7 +24,7 @@ Provides a helper function to help with extracting the actual download URL for a
 These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
 
 &lt;`dependencies`&gt;
-  &lt;`dependency id="chocolatey-fosshub.extension" /`&gt;
+&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-fosshub.extension" /`&gt;
 &lt;`/dependencies`&gt;
 
 ### Functions
