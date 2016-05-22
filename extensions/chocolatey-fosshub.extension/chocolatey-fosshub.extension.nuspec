@@ -29,12 +29,10 @@ These functions may be used in Chocolatey install/uninstall scripts by declaring
 
 ### Functions
 
-`Get-UrlFromFosshub` --  Get the resolved URL form a FossHub download link.
+`Get-UrlFromFosshub` --  Get the resolved URL from a FossHub download link.
 
-Example:
+Example:  
 `Get-UrlFromFosshub http://www.fosshub.com/genLink/Data-Crow/FILE.zip`
-
-**NOTE:** The content of the FossHub Helper method in this package came originally from dtgm.
     </description>
     <releaseNotes>
 * 0.1.0 - Initial Release of extension package
