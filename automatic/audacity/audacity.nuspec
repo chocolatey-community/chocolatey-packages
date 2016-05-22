@@ -16,6 +16,9 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/audacity.svg</iconUrl>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-fosshub.extension" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
