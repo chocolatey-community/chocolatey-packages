@@ -71,7 +71,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>https://storage.googleapis.com/chromium-browser-continuous/Win_x64/{revision64}/mini_installer.exe</TextualContent>
+            <TextualContent>https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/{revision64}/mini_installer.exe</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
@@ -89,7 +89,7 @@
     <FileHippoId />
     <LastUpdated>2015-05-03T16:03:31.2884139</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://storage.googleapis.com/chromium-browser-continuous/Win/{revision32}/mini_installer.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>https://storage.googleapis.com/chromium-browser-snapshots/Win/{revision32}/mini_installer.exe</FixedDownloadUrl>
     <Name>chromium</Name>
   </ApplicationJob>
 </Jobs>
