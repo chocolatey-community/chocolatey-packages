@@ -154,6 +154,34 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://sourceforge.net/projects/pspp4windows/files/{DateStamp}/pspp-{VersionSec}%2B{DateStampSec}-snapshot-32bits-setup.exe/download</TextualContent>
+            <Name>url</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>mirror</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>ResponseUri: ([^\r\n]+)</Regex>
+            <Url>{url}</Url>
+            <Name>mirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -167,7 +195,7 @@
     <FileHippoId />
     <LastUpdated>2014-08-08T05:00:42.1223032</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://sourceforge.net/projects/pspp4windows/files/{DateStamp}/pspp-{VersionSec}%2B{DateStampSec}-snapshot-32bits-setup.exe/download</FixedDownloadUrl>
+    <FixedDownloadUrl>{mirror}</FixedDownloadUrl>
     <Name>pspp</Name>
   </ApplicationJob>
 </Jobs>
