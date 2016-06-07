@@ -92,7 +92,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>files/(\d{4}-\d{2}-\d{2})</Regex>
+            <Regex>files/(\d{4}-\d{2}-\d{2})/</Regex>
             <Url>https://sourceforge.net/projects/pspp4windows/files/</Url>
             <Name>DateStamp</Name>
           </UrlVariable>
@@ -149,7 +149,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>https://sourceforge.net/projects/pspp4windows/files/2016-04-01/pspp-{VersionSec}%2B{DateStampSec}-snapshot-64bits-setup.exe/download</TextualContent>
+            <TextualContent>https://sourceforge.net/projects/pspp4windows/files/{DateStamp}/pspp-{VersionSec}%2B{DateStampSec}-snapshot-64bits-setup.exe/download</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
@@ -167,7 +167,7 @@
     <FileHippoId />
     <LastUpdated>2014-08-08T05:00:42.1223032</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>https://sourceforge.net/projects/pspp4windows/files/2016-04-01/pspp-{VersionSec}%2B{DateStampSec}-snapshot-32bits-setup.exe/download</FixedDownloadUrl>
+    <FixedDownloadUrl>https://sourceforge.net/projects/pspp4windows/files/{DateStamp}/pspp-{VersionSec}%2B{DateStampSec}-snapshot-32bits-setup.exe/download</FixedDownloadUrl>
     <Name>pspp</Name>
   </ApplicationJob>
 </Jobs>
