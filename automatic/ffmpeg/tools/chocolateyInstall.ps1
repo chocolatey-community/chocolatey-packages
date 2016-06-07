@@ -22,5 +22,13 @@ which is a better choice.
   }
 }
 
-Remove-Item $(Join-Path "$destinationFolder" "$(Get-ChildItem -Directory $destinationFolder)") -Recurse
+if ($PSVersionTable.PSVersion.Major -eq 2)
+{
+    Remove-Item $(Join-Path "$destinationFolder" "$(Get-ChildItem -Path $destinationFolder)") -Recurse
+}
+else
+{
+  Remove-Item $(Join-Path "$destinationFolder" "$(Get-ChildItem -Directory $destinationFolder)") -Recurse
+}
+
 Install-ChocolateyZipPackage $packageName $url $destinationFolder $url64
