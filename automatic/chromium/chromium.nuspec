@@ -3,16 +3,16 @@
   <metadata>
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
-    <title>Chromium Snapshots build</title>
+    <title>Chromium snapshots build</title>
     <owners>chocolatey</owners>
     <authors>Chromium team</authors>
     <projectUrl>http://www.chromium.org/Home</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/chromium.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-This package installs the Chromium Snapshots builds into `%localappdata%\Chromium`. They can be unstable.
+This package installs the Chromium snapshots builds into `%localappdata%\Chromium`. They can be unstable.
     </description>
-    <summary>Chromium Snapshots build (unstable)</summary>
+    <summary>Chromium snapshots build (unstable)</summary>
     <releaseNotes />
     <copyright />
     <tags>chromium google chrome browser</tags>
