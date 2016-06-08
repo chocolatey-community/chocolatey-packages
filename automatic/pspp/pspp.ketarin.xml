@@ -73,11 +73,11 @@
     <UserNotes />
     <LastFileSize>56419840</LastFileSize>
     <LastFileDate>2014-08-08T05:00:42.1223032</LastFileDate>
-    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <IgnoreFileInformation>true</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
-    <VariableChangeIndicator />
+    <VariableChangeIndicator>version</VariableChangeIndicator>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -195,7 +195,7 @@
     <FileHippoId />
     <LastUpdated>2014-08-08T05:00:42.1223032</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>{mirror}</FixedDownloadUrl>
+    <FixedDownloadUrl>https://www.google-analytics.com/__utm.gif</FixedDownloadUrl>
     <Name>pspp</Name>
   </ApplicationJob>
 </Jobs>
