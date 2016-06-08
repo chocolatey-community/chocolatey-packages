@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>VSDC Free Video Editor</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Flash-Integro LLC</authors>
+		<owners>Redsandro</owners>
+		<summary>Simple video editor.</summary>
+		<description>
+The video editor is intended for editing video files and creating videos of any complexity involving various visual and audio effects. The program offers rich functionality and yet has a simple and intuitive interface, allowing you to create videos with a bare minimum of efforts.
+		</description>
+		<projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
+		<tags>NLE Video Editor</tags>
+		<copyright></copyright>
+		<licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://i.imgur.com/eWYMC0E.png</iconUrl>
+		<dependencies>
+		</dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
