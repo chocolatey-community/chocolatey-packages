@@ -59,6 +59,7 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation />
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
@@ -71,8 +72,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-		<LastFileSize>15</LastFileSize>
-    <LastFileDate>2000-01-00T00:00:00-01:00</LastFileDate>
+    <LastFileSize>875920</LastFileSize>
+    <LastFileDate>2014-10-31T14:29:54.3804175</LastFileDate>
     <IgnoreFileInformation>true</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -124,7 +125,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2000-01-00T00:00:00.0000000-01:00</LastUpdated>
+    <LastUpdated>2014-10-31T14:29:54.3804175</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>keepassx</Name>
