@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>35</LastFileSize>
-    <LastFileDate>1998-05-16T20:00:00-07:00</LastFileDate>
+		<LastFileSize>15</LastFileSize>
+    <LastFileDate>2000-01-00T00:00:00-01:00</LastFileDate>
     <IgnoreFileInformation>true</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -105,9 +105,10 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex />
-            <Url>https://www.keepassx.org/releases/{version}/KeePassX-{version}.zip</Url>
+            <Url />
+            <TextualContent>https://www.keepassx.org/releases/{version}/KeePassX-{version}.zip</TextualContent>
             <Name>url</Name>
           </UrlVariable>
         </value>
@@ -119,11 +120,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\__utm.gif</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\KeePassX-0.4.3.zip</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2016-06-08T02:25:11.6204462-07:00</LastUpdated>
+    <LastUpdated>2000-01-00T00:00:00.0000000-01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>keepassx</Name>
