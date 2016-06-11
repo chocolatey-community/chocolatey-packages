@@ -3,7 +3,7 @@
   <metadata>
     <id>wixtoolset</id>
     <title>WiX Toolset</title>
-    <version>3.10.2.2516</version>
+    <version>3.10.3.3007</version>
     <authors>Rob Mensching, Bob Arnson</authors>
     <owners>Gary Ewan Park</owners>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
@@ -11,12 +11,12 @@
     <projectUrl>http://wixtoolset.org/</projectUrl>
     <tags>wix toolset msi xml admin</tags>
     <copyright>2009 - 2016 Outercurve Foundation</copyright>
-    <licenseUrl>http://wix.codeplex.com/license</licenseUrl>
+    <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/wixtoolset.png</iconUrl>
     <releaseNotes>
 Information on this release can be found in the following blog post:
-* [https://www.firegiant.com/blog/2016/1/20/wix-v3.10.2-released/](https://www.firegiant.com/blog/2016/1/20/wix-v3.10.2-released/)
+* [http://wixtoolset.org/releases/v3-10-3-3007/](http://wixtoolset.org/releases/v3-10-3-3007/)
 	</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
