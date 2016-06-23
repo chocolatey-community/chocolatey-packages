@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>iTunes</title>
+    <owners>chocolatey</owners>
     <authors>Apple Inc.</authors>
     <licenseUrl>http://www.apple.com/legal/terms/site.html</licenseUrl>
     <projectUrl>http://www.apple.com/itunes</projectUrl>

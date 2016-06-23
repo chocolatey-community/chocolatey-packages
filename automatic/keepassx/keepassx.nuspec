@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>KeePassX Password Manager</title>
+		<version>{{PackageVersion}}</version>
+		<authors>KeePassX Team</authors>
+		<owners>chocolatey</owners>
+		<summary>KeePassX is an application for people with extremly high demands on secure personal data management. It has a light interface, is cross platform and published under the terms of the GNU General Public License.</summary>
+		<description>
+**KeePassX** saves many different information e.g. user names, passwords, urls, attachments and comments in one single database. For a better management user-defined titles and icons can be specified for each single entry. Furthermore the entries are sorted in groups, which are customizable as well.
+
+The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish).
+
+Originally KeePassX was called KeePass/L for Linux since it was a port of Windows password manager Keepass Password Safe. After KeePass/L became a cross platform application the name was not appropriate anymore and therefore, on 22 March 2006 it has been changed.
+		</description>
+		<projectUrl>http://www.keepassx.org/</projectUrl>
+		<tags>multiplatform password safe</tags>
+		<copyright></copyright>
+		<licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://i.imgur.com/AOOQAAp.png</iconUrl>
+		<dependencies></dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+		<!--<file src="content\**" target="content" />-->
+	</files>
+</package>

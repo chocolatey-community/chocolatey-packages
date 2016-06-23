@@ -4,7 +4,8 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>X-Moto</title>
-    <authors>authors</authors>
+    <owners>chocolatey purity</owners>
+    <authors>X-Moto Contributors</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://xmoto.tuxfamily.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/x-moto.png</iconUrl>

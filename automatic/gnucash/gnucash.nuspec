@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>GnuCash</title>
+    <owners>chocolatey</owners>
     <authors>The GnuCash Project</authors>
     <licenseUrl>http://svn.gnucash.org/trac/browser/gnucash/trunk/LICENSE</licenseUrl>
     <projectUrl>http://www.gnucash.org/</projectUrl>

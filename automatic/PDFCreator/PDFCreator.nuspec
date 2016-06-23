@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>PDF Creator</title>
+    <owners>chocolatey</owners>
     <authors>pdfforge</authors>
     <licenseUrl>http://www.pdfforge.org/content/aladdin-free-public-license</licenseUrl>
     <projectUrl>http://www.pdfforge.org/</projectUrl>
@@ -13,7 +14,7 @@
 PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
     </description>
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
-    <tags>pdf chocolatey admin</tags>
+    <tags>pdf admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

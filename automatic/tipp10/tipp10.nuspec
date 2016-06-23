@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>TIPP10</title>
+    <owners>chocolatey</owners>
     <authors>Tom Thielicke IT Solutions</authors>
     <licenseUrl>https://www.tipp10.com/en/license/</licenseUrl>
     <projectUrl>https://www.tipp10.com/en/</projectUrl>

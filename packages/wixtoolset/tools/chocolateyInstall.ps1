@@ -1,6 +1,6 @@
 ﻿$packageName = 'wixtoolset'
 $installerType = 'EXE'
-$32BitUrl = 'https://wix.codeplex.com/downloads/get/1504734'
+$32BitUrl = 'http://wixtoolset.org/downloads/v3.10.3.3007/wix310.exe'
 $silentArgs = '/q'
 $validExitCodes = @(0)
 

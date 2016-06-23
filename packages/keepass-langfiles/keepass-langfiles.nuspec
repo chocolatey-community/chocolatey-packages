@@ -2,8 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>keepass-langfiles</id>
-    <version>2.30</version>
+    <version>2.33</version>
     <title>KeePass 2.x language files</title>
+    <owners>chocolatey</owners>
     <authors>KeePass Team</authors>
     <licenseUrl>http://keepass.info/help/v2/license.html</licenseUrl>
     <projectUrl>http://keepass.info/</projectUrl>
@@ -15,12 +16,7 @@ KeePass is a free, open source, light-weight and easy-to-use password manager.
 This package extracts a ZIP with all language files into the KeePass program folder. The language, however, must then be manually selected in the KeePass settings. Credits of the translation files: http://keepass.info/translations.html
     </description>
     <summary>Language files for KeePass 2.x.</summary>
-    <releaseNotes>
-* Matches upstream v2.30
-* Detects the install path of KeePass from the registry instead of using a hardcoded path
-* Install script code cleanup
-* `keepass.install` is now the dependency
-    </releaseNotes>
+    <releaseNotes></releaseNotes>
     <copyright />
     <tags>keepass password safe encryption language-file admin</tags>
     <dependencies>

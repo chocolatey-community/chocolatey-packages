@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Maxima</title>
+    <owners>chocolatey</owners>
     <authors>Macsyma group at Project MAC and volunteer contributors</authors>
     <projectUrl>http://maxima.sourceforge.net/</projectUrl>
     <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>

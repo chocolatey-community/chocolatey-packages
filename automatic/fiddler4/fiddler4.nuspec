@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Fiddler</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Telerik</authors>
     <summary>Fiddler Web Debugging Proxy</summary>

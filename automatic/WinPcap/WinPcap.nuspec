@@ -2,6 +2,8 @@
 <package >
   <metadata>
     <id>{{PackageName}}</id>
+    <title>WinPcap</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>NetGroup, CACE Technologies</authors>
     <licenseUrl>http://www.winpcap.org/misc/copyright.htm</licenseUrl>
@@ -16,7 +18,7 @@ This package uses an Autohotkey script for unattended installation.
     </description>
     <releaseNotes>Added an uninstaller.</releaseNotes>
     <copyright>NetGroup, Politecnico di Torino (Italy). CACE Technologies, Davis (California).</copyright>
-    <tags>chocolatey driver packetcapture network admin</tags>
+    <tags>driver packetcapture network admin</tags>
     <dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>

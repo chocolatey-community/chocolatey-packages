@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>TightVNC</title>
+    <owners>chocolatey</owners>
     <authors>TightVNC Developers</authors>
     <licenseUrl>http://www.tightvnc.com/download.php</licenseUrl>
     <projectUrl>http://www.tightvnc.com/</projectUrl>

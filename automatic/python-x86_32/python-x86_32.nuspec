@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Python (32-bit)</title>
+    <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/python.svg</iconUrl>

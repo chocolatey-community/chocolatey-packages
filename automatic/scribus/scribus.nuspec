@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Scribus</title>
+    <owners>chocolatey</owners>
     <authors>The Scribus Team</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://scribus.net/canvas/Scribus</projectUrl>

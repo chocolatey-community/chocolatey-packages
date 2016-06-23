@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>The Magical Jelly Bean Keyfinder</title>
+    <owners>chocolatey</owners>
     <authors>Magical Jelly Bean</authors>
     <licenseUrl>http://www.magicaljellybean.com/tos/</licenseUrl>
     <projectUrl>http://www.magicaljellybean.com/keyfinder/</projectUrl>

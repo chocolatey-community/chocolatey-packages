@@ -3,10 +3,11 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>SmartFTP</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>SmartSoft</authors>
-    <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, OneDrive, Telnet, Terminal client.</summary>
-    <description>SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, OneDrive, Telnet, Terminal client with lots of features and a modern user interface.</description>
+    <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
+    <description>SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.</description>
     <projectUrl>https://www.smartftp.com/</projectUrl>
     <tags>trial-version ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client admin</tags>
     <copyright>SmartSoft Ltd</copyright>
@@ -16,7 +17,7 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/97d1e867fd5feaee1b89b24ffe6d40c22c819dc3/icons/smartftp.svg</iconUrl>
     <bugTrackerUrl>https://www.smartftp.com/forums/index.php?/forum/14-support/</bugTrackerUrl>
     <dependencies>
-      <dependency id="vcredist2015" version="[14.0.23506.0,]"/>
+      <dependency id="vcredist2015" version="[14.0.23918.0,]"/>
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>

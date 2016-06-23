@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Free Virtual Keyboard</title>
+    <owners>chocolatey</owners>
     <authors>Comfort Software Group</authors>
     <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
     <projectUrl>http://freevirtualkeyboard.com/</projectUrl>

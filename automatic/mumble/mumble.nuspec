@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Mumble</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Natvig, et. al.</authors>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/mumble.svg</iconUrl>

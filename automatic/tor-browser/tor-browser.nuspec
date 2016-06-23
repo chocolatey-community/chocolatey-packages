@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Tor Browser Bundle</title>
+    <owners>chocolatey</owners>
     <authors>Tor Project</authors>
     <licenseUrl>https://www.torproject.org/docs/faq.html.en#DistributingTor</licenseUrl>
     <projectUrl>https://www.torproject.org/</projectUrl>

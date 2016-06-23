@@ -5,6 +5,7 @@
     <version>{{PackageVersion}}</version>
     <title>Avidemux</title>
     <authors>Mean, Gruntster, Fahr</authors>
+    <owners>chocolatey purity</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://avidemux.sourceforge.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/avidemux.png</iconUrl>
@@ -20,6 +21,9 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
     <language />
     <tags>video editor cutting filtering encoding admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-fosshub.extension" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

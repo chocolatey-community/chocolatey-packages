@@ -4,13 +4,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>111978832</LastFileSize>
-    <LastFileDate>2014-08-08T19:23:20.8939482</LastFileDate>
+    <LastFileSize>118414152</LastFileSize>
+    <LastFileDate>2016-03-21T18:07:29+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -42,7 +44,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=Show:4:win:radio:binaryUrl' value=')https:\/\/secure-appldnld\.apple\.com.+?iTunesSetup\.exe</Regex>
+            <Regex>https://secure-appldnld\.apple\.com/itunes[^\r\n'"]+?iTunesSetup.exe</Regex>
             <Url>https://swdlp.apple.com/iframes/82/en_us/82_en_us.html</Url>
             <TextualContent />
             <Name>url</Name>
@@ -75,7 +77,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-08T19:23:20.8939482</LastUpdated>
+    <LastUpdated>2016-03-26T11:20:54.4293516+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{url}</FixedDownloadUrl>
     <Name>iTunes</Name>

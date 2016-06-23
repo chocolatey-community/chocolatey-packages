@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>59401613</LastFileSize>
-    <LastFileDate>2015-11-14T17:55:16+01:00</LastFileDate>
+    <LastFileSize>108914019</LastFileSize>
+    <LastFileDate>2016-04-03T12:31:34+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -110,8 +110,22 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>(?&lt;=ResponseUri: )[^\r\n]+</Regex>
-            <Url>http://sourceforge.net/projects/maxima/files/Maxima-Windows/{version}-Windows/maxima-clisp-{version}.exe/download</Url>
+            <Url>{url}</Url>
             <Name>urlMirror</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://sourceforge.net/projects/maxima/files/Maxima-Windows/{version}-Windows/maxima-clisp-sbcl-{version}.exe/download</TextualContent>
+            <Name>url</Name>
           </UrlVariable>
         </value>
       </item>
@@ -122,11 +136,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\maxima-clisp-5.37.3.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\maxima-clisp-sbcl-5.38.0.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-12-24T11:17:59.5958582+01:00</LastUpdated>
+    <LastUpdated>2016-05-08T15:18:33.7027873+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>{urlMirror}</FixedDownloadUrl>
     <Name>maxima</Name>

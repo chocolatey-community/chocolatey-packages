@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>gmer</id>
+		<title>GMER</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Avast</authors>
+		<owners>Redsandro</owners>
+		<summary>GMER is one of the most respected specialized antirootkit applications available.</summary>
+		<description>
+GMER is one of the most respected specialized antirootkit applications available. The author now works for Avast.
+		</description>
+		<projectUrl>http://www.gmer.net/</projectUrl>
+		<tags>Security Rootkit Scanner</tags>
+		<copyright></copyright>
+		<licenseUrl>http://www.gmer.net/#contact</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://i.imgur.com/isjxxp5.png</iconUrl>
+		<dependencies></dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+		<!--<file src="content\**" target="content" />-->
+	</files>
+</package>

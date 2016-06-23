@@ -71,13 +71,15 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>18080656</LastFileSize>
-    <LastFileDate>2014-08-06T18:35:22.6726102</LastFileDate>
+    <LastFileSize>17943608</LastFileSize>
+    <LastFileDate>2016-04-20T01:46:08+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator>version</VariableChangeIndicator>
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -91,8 +93,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>PDF-XChange Viewer:&lt;/span&gt;[\n\s]*([\d\.]+)</Regex>
             <Url>http://www.tracker-software.com/product/pdf-xchange-viewer</Url>
             <StartText>&lt;span class="versionname notranslate"&gt;</StartText>
             <EndText>&lt;/span&gt;</EndText>
@@ -112,7 +114,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-06T18:35:22.6726102</LastUpdated>
+    <LastUpdated>2016-05-13T22:01:26.9471461+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tracker-software.com/downloads/PDFXVwer.exe</FixedDownloadUrl>
     <Name>PDFXChangeViewer</Name>

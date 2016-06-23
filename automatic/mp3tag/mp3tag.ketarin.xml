@@ -1,16 +1,18 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="02daa473-08f6-49b7-8d80-b1ee19ebe3f5">
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>2692912</LastFileSize>
-    <LastFileDate>2014-08-11T15:17:27.3486101</LastFileDate>
+    <LastFileSize>3081072</LastFileSize>
+    <LastFileDate>2016-04-23T13:25:56+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -24,9 +26,9 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://mp3tag.de/download.html</Url>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;h2&gt;Mp3tag v([\d\.a-z]+)&lt;/h2&gt;</Regex>
+            <Url>http://www.mp3tag.de/en/download.html</Url>
             <StartText>&lt;h2&gt;Mp3tag v</StartText>
             <EndText>&lt;/h2&gt;</EndText>
             <Name>version</Name>
@@ -35,17 +37,15 @@
       </item>
       <item>
         <key>
-          <string>url-version</string>
+          <string>versionFromUrl</string>
         </key>
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
-            <Url>http://mp3tag.de/download.html</Url>
-            <StartText>&lt;a href="http://download.mp3tag.de/mp3tagv</StartText>
-            <EndText>setup.exe</EndText>
-            <Name>url-version</Name>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>http://download\.mp3tag\.de/mp3tagv([\da-z]+?)setup\.exe</Regex>
+            <Url>http://www.mp3tag.de/en/dodownload.html</Url>
+            <Name>versionFromUrl</Name>
           </UrlVariable>
         </value>
       </item>
@@ -56,13 +56,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\mp3tagv262setup.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\mp3tagv277setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-11T15:17:27.3486101</LastUpdated>
+    <LastUpdated>2016-04-28T22:14:37.6694395+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.mp3tag.de/mp3tagv{url-version}setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://download.mp3tag.de/mp3tagv{versionFromUrl}setup.exe</FixedDownloadUrl>
     <Name>mp3tag</Name>
   </ApplicationJob>
 </Jobs>

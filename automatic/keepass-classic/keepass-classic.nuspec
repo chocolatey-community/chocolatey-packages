@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>KeePass Classic Password Safe</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Dominik Reichl</authors>
     <summary>This version of the popular KeePass password manager is compatible with KeePassX for Linux and OS X.</summary>

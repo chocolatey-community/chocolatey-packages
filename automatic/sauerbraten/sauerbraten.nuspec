@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Cube 2: Sauerbraten</title>
+    <owners>chocolatey</owners>
     <authors>Cube 2: Sauerbraten development team</authors>
     <licenseUrl>http://sauerbraten.org/README.html#license</licenseUrl>
     <projectUrl>http://sauerbraten.org/</projectUrl>

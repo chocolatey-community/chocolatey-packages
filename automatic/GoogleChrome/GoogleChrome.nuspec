@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Google Chrome</title>
+    <owners>chocolatey</owners>
     <authors>Google Inc.</authors>
     <projectUrl>https://www.google.com/chrome/browser/</projectUrl>
     <licenseUrl>https://www.google.it/intl/en/chrome/browser/privacy/eula_text.html</licenseUrl>

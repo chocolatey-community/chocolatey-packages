@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Classic Shell</title>
+    <owners>chocolatey</owners>
     <authors>Ivo Beltchev</authors>
     <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>
     <projectUrl>http://www.classicshell.net/</projectUrl>

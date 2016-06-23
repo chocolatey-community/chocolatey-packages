@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>OnTopReplica</title>
+    <owners>chocolatey</owners>
     <authors>Lck</authors>
     <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
     <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>

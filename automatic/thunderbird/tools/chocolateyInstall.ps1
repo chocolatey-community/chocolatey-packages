@@ -1,7 +1,4 @@
-﻿# This is the general install script for Mozilla products (Firefox and Thunderbird).
-# This file must be identical for all Choco packages for Mozilla products in this repository.
-
-$packageName = '{{PackageName}}'
+﻿$packageName = '{{PackageName}}'
 $fileType = 'exe'
 $version = '{{PackageVersion}}'
 
@@ -17,7 +14,7 @@ $allLocalesListURL = Switch ($softwareNameLowerCase) {
   }
 
   'thunderbird' {
-    'https://www.mozilla.org/en-US/thunderbird/all.html'
+    'https://www.mozilla.org/en-US/thunderbird/all/'
     break
   }
 }

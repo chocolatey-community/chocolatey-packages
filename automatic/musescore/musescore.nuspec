@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>MuseScore</title>
+    <owners>chocolatey</owners>
     <authors>MuseScore developers</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://musescore.org/en</projectUrl>

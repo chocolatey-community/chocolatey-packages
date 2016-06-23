@@ -4,6 +4,7 @@
     <id>qttabbar-langfiles</id>
     <version>1.5.0.20130713</version>
     <title>QTTabBar language files</title>
+    <owners>chocolatey</owners>
     <authors>QTTabBar translation team</authors>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://qttabbar.sourceforge.net/</projectUrl>

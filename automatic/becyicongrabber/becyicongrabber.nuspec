@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>BeCyIconGrabber</title>
+    <owners>chocolatey</owners>
     <authors>Benjamin Bentmann</authors>
     <licenseUrl>http://www.becyhome.de/becyicongrabber/description_eng.htm</licenseUrl>
     <projectUrl>http://www.becyhome.de/download_eng.htm#becyicongrabber</projectUrl>

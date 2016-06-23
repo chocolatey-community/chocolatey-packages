@@ -8,6 +8,7 @@
     <licenseUrl>https://www.mozilla.org/en-US/MPL/2.0/</licenseUrl>
     <id>{{PackageName}}</id>
     <title>Mozilla Firefox</title>
+    <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Bringing together all kinds of awesomeness to make browsing better for you.

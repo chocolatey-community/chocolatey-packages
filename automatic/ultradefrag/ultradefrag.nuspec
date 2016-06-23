@@ -3,6 +3,7 @@
   <metadata>
     <id>ultradefrag</id>
     <title>UltraDefrag</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Dmitri Arkhangelski et al.</authors>
     <summary>UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform.</summary>

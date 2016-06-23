@@ -3,6 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Speccy</title>
+    <owners>chocolatey</owners>
     <version>{{PackageVersion}}</version>
     <authors>Piriform LTD</authors>
     <summary>Speccy will give you detailed statistics on every piece of hardware in your computer.</summary>

@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>The Battle for Wesnoth</title>
+    <owners>chocolatey</owners>
     <authors>David White and others</authors>
     <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
     <projectUrl>http://www.wesnoth.org/</projectUrl>

@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Opera</title>
+    <owners>chocolatey</owners>
     <authors>Opera</authors>
     <projectUrl>http://www.opera.com/browser/</projectUrl>
     <licenseUrl>http://www.operasoftware.com/eula/browser/</licenseUrl>

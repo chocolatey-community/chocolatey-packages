@@ -1,16 +1,18 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="8ee716fa-6e9b-43f0-ac03-e95cc9461440">
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>41945432</LastFileSize>
-    <LastFileDate>2014-03-01T23:43:17.0781426</LastFileDate>
+    <LastFileSize>41896256</LastFileSize>
+    <LastFileDate>2016-01-08T21:36:47+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -27,8 +29,16 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>https://support.apple.com/kb/DL837</Url>
-            <StartText>&lt;title&gt;QuickTime </StartText>
+            <StartText>&lt;html lang="en"&gt;
+	&lt;head&gt;
+	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+	 
+				&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+		&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;
+		&lt;meta name="format-detection" content="telephone=no" /&gt;
+		&lt;title&gt;Download QuickTime </StartText>
             <EndText> for Windows&lt;/title&gt;</EndText>
+            <TextualContent />
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -58,7 +68,7 @@
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-03-01T23:43:17.0781426</LastUpdated>
+    <LastUpdated>2016-02-09T08:48:12.550204+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://secure-appldnld.apple.com/QuickTime/{stringCode}/QuickTimeInstaller.exe</FixedDownloadUrl>
     <Name>Quicktime</Name>

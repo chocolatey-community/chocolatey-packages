@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Java Runtime (JRE)</title>
+    <owners>chocolatey</owners>
     <authors>Oracle</authors>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <projectUrl>http://www.java.com</projectUrl>

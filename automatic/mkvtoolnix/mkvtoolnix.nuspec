@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>MKVToolNix</title>
+    <owners>chocolatey</owners>
     <authors>Moritz Bunkus</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>https://www.bunkus.org/videotools/mkvtoolnix/</projectUrl>
@@ -18,6 +19,9 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
     <releaseNotes>https://www.bunkus.org/videotools/mkvtoolnix/doc/ChangeLog</releaseNotes>
     <tags>multimedia mkv container muxing demuxing admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-fosshub.extension" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

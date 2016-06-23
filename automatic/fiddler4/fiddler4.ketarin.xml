@@ -28,7 +28,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url><placeholder name="Url with version information" value="http://fiddler2.com/get-fiddler" /></Url>
+            <Url><placeholder name="Url with version information" value="https://fiddler2.com/get-fiddler" /></Url>
             <StartText>&lt;TABLE cellspacing ="1" cellpadding ="6" border = "0"&gt;
   &lt;TR&gt;
     &lt;TH class="Title" align="center" width=90&gt;7-Zip </StartText>
@@ -64,7 +64,7 @@
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://fiddler2.com/docs/default-source/public-downloads/fiddler4setup.exe?sfvrsn=18" /></FixedDownloadUrl>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="https://fiddler2.com/docs/default-source/public-downloads/fiddler4setup.exe?sfvrsn=18" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="fiddler4" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
@@ -93,7 +93,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>Version (4\.[\d\.]+)</Regex>
-            <Url>http://www.telerik.com/download/fiddler</Url>
+            <Url>https://www.telerik.com/download/fiddler</Url>
             <StartText>Download Fiddler4&lt;/a&gt; &lt;p class="Label u-mt1 u-mb3 u-tac"&gt;Version &lt;strong&gt;</StartText>
             <EndText>&lt;/strong&gt;</EndText>
             <TextualContent />
@@ -128,7 +128,7 @@
     <FileHippoId />
     <LastUpdated>2015-10-15T21:44:06.85072+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://fiddler2.com/dl/fiddler4setup.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>https://fiddler2.com/dl/fiddler4setup.exe</FixedDownloadUrl>
     <Name>fiddler4</Name>
   </ApplicationJob>
 </Jobs>

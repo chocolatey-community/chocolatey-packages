@@ -4,6 +4,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Ghostscript</title>
+    <owners>chocolatey</owners>
     <authors>Artifex</authors>
     <licenseUrl>http://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
     <projectUrl>http://ghostscript.com/</projectUrl>
