@@ -3,7 +3,7 @@
   <metadata>
     <id>{{PackageName}}</id>
     <title>Tuniac</title>
-    <version>{{PackageVersion}}</version>
+    <version>1.0.{{PackageVersion}}</version>
     <authors>Tony Million, Brett Hoyle, Blur, Mike Vierya, Daniel, Brice and RA</authors>
     <owners>chocolatey</owners>
     <summary>Tuniac is an iTunes style media player/manager for Windows.</summary>
