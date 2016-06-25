@@ -88,6 +88,7 @@ Uninstall-ChocolateyPackage
   Write-Verbose "Retrieving all uninstall registry keys"
   [array]$keys = Get-ChildItem -Path @($machine_key6432, $machine_key, $local_key) `
                                -ErrorAction SilentlyContinue
+  Write-Debug "Registry uninstall keys on system: $($keys.Count)"
 
   Write-Debug "Error handling check: Get-ItemProperty will fail if a registry key is written incorrectly."
   Write-Debug "If such a key is found, loop up to 10 times to try to bypass all badKeys"
@@ -110,5 +111,6 @@ Uninstall-ChocolateyPackage
     if ($success) {break;}
   }
   
+  Write-Debug "Found $($foundKey.Count) uninstall registry key(s) with SoftwareName:`'$softwareName`'";
   return $foundKey
 }
