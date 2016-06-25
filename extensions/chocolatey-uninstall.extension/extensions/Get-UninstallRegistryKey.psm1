@@ -73,10 +73,10 @@ Uninstall-ChocolateyPackage
 #>
   [CmdletBinding()]
   param(
-    [Parameter(Mandatory=$True,
-    ValueFromPipeline=$True)]
+    [Parameter(Mandatory=$true, Position=0, ValueFromPipeline=$true)]
     [ValidateNotNullOrEmpty()]
-    [string] $softwareName
+    [string] $softwareName,
+    [Parameter(ValueFromRemainingArguments = $true)][Object[]] $ignoredArguments
   )
   Write-Debug "Running 'Get-UninstallRegistryKey' for `'$env:ChocolateyPackageName`' with SoftwareName:`'$softwareName`'";
 
