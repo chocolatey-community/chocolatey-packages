@@ -90,25 +90,28 @@ Uninstall-ChocolateyPackage
                                -ErrorAction SilentlyContinue
   Write-Debug "Registry uninstall keys on system: $($keys.Count)"
 
-  Write-Debug "Error handling check: Get-ItemProperty will fail if a registry key is written incorrectly."
-  Write-Debug "If such a key is found, loop up to 10 times to try to bypass all badKeys"
-  [int]$maxAttempts = 10
+  Write-Debug "Error handling check: `'Get-ItemProperty`' fails if a registry key is encoded incorrectly."
+  [int]$maxAttempts = $keys.Count
   for ([int]$attempt = 1; $attempt -le $maxAttempts; $attempt++) {
     [bool]$success = $FALSE
     
     try {
       [array]$foundKey = Get-ItemProperty -Path $keys.PsPath `
                                           -ErrorAction SilentlyContinue `
-                         | Where-Object {$_.DisplayName -like $softwareName}
+                         | Where-Object { $_.DisplayName -like $softwareName }
       $success = $TRUE
     } catch {
       Write-Debug "Found bad key."
-      foreach ($key in $keys){try{Get-ItemProperty $key.PsPath > $null}catch{$badKey = $key.PsPath}}
+      foreach ($key in $keys){ try{ Get-ItemProperty $key.PsPath > $null }catch{ $badKey = $key.PsPath }}
       Write-Verbose "Skipping bad key: $badKey"
-      [array]$keys = $keys | Where-Object {$badKey -NotContains $_.PsPath}
+      [array]$keys = $keys | Where-Object { $badKey -NotContains $_.PsPath }
     }
     
-    if ($success) {break;}
+    if ($success) { break; }
+    if ($attempt -eq 10) {
+      Write-Warning "Found more than 10 bad registry keys. Run command again with `'--verbose --debug`' for more info."
+      Write-Debug "Each key searched should correspond to an installed program. It is very unlikely to have more than a few programs with incorrectly encoded keys, if any at all. This may be indicative of one or more corrupted registry branches."
+    }
   }
   
   Write-Debug "Found $($foundKey.Count) uninstall registry key(s) with SoftwareName:`'$softwareName`'";
