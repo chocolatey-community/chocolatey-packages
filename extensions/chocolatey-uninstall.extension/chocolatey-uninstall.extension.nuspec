@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-uninstall.extension</id>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Chocolatey Uninstall Extension</title>
@@ -37,7 +37,16 @@ This package provides helper functions installed as a Chocolatey extension. Thes
 2. The found registry key's properties are accessible by dot notation. For example, `$key.UninstallString`
     </description>
     <releaseNotes>
-* 1.0.1 - (nuspec) Fix markdown in description
+#### 1.1.0 
+
+##### Bug fixes
+* Not building array properly; fails if more than one bad key
+* Not reporting correct key
+
+##### Improvements
+* Try to remove all bad keys found.
+* (reporting) add warning if more than 10 bad keys are found
+* (reporting) no registry keys matched SoftwareName
     </releaseNotes>
   </metadata>
   <files>
