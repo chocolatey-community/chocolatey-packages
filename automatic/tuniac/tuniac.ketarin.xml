@@ -67,7 +67,7 @@
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl><placeholder name="Download Url - Optional" value="https://sourceforge.net/projects/tuniac/files/tuniac/160620/Tuniac_Setup_{version}%28inc%2064bit%29.exe/download" /></FixedDownloadUrl>
-    <Name><placeholder name="Name" value="Tuniac" /></Name>
+    <Name><placeholder name="Name" value="tuniac" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
     <WebsiteUrl />
@@ -131,6 +131,6 @@
     <LastUpdated>2016-06-23T14:11:19.2612539</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>http://www.tuniac.org/Release/{version}/Tuniac_Setup_{version}.exe</FixedDownloadUrl>
-    <Name>Tuniac</Name>
+    <Name>tuniac</Name>
   </ApplicationJob>
 </Jobs>
