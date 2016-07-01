@@ -8,7 +8,8 @@
     <owners>chocolatey</owners>
     <summary>Tuniac is an iTunes style media player/manager for Windows.</summary>
     <description>
-Tuniac is an iTunes style media player/manager for Windows. Supporting advanced playlist editing, search as you type and queue support.
+Tuniac is an iTunes style media player/manager for Windows.
+Supporting advanced playlist editing, search as you type and queue support.
 
 File formats supported:
  * MPEG-1 Audio (mp3, mp2, mp1)
@@ -37,6 +38,10 @@ File formats supported:
 	</description>
     <projectUrl>http://www.tuniac.org/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/leonghui/chocolatey-coreteampackages/a9d7e228c4fbe34895628f4b58e759165e93af87/icons/tuniac.png</iconUrl>
+    <dependencies>
+	    <dependency id="vcredist2010" />
+	    <dependency id="vcredist2015" />
+	  </dependencies>
     <tags>tuniac music player MP3 FLAC OGG WMA</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
