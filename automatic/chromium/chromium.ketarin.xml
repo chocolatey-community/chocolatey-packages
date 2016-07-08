@@ -42,8 +42,10 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>\d+</Regex>
+            <Regex>"revision":([\d\.]+),</Regex>
             <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=revision</Url>
+            <StartText>"revision":</StartText>
+            <EndText>,</EndText>
             <Name>revision64</Name>
           </UrlVariable>
         </value>
@@ -56,8 +58,10 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>\d+</Regex>
+            <Regex>"revision":([\d\.]+),</Regex>
             <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=32&amp;out=revision</Url>
+            <StartText>"revision":</StartText>
+            <EndText>,</EndText>
             <Name>revision32</Name>
           </UrlVariable>
         </value>
