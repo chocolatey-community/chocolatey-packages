@@ -1,8 +1,7 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="48990104-8c8d-401f-a9c2-60653fc81c65">
-    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Jobs>
+    <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -72,13 +71,15 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>56419840</LastFileSize>
-    <LastFileDate>2014-08-08T05:00:42.1223032</LastFileDate>
+    <LastFileSize>64118784</LastFileSize>
+    <LastFileDate>2016-07-08T05:05:51+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -94,9 +95,9 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://sourceforge.net/projects/calibre/files/</Url>
-            <StartText>&lt;tr title="</StartText>
-            <EndText>" class="folder "&gt;</EndText>
+            <Url>http://calibre-ebook.com/download_windows</Url>
+            <StartText>Version: </StartText>
+            <EndText> &lt;a target="_blank" href="/whats-new"&gt;What's new&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;</EndText>
             <TextualContent />
             <Name>version</Name>
           </UrlVariable>
@@ -123,13 +124,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\calibre-1.48.0.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\calibre-2.62.0.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2014-08-08T05:00:42.1223032</LastUpdated>
+    <LastUpdated>2016-07-11T14:25:39.2580603+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://download.calibre-ebook.com/{version}/calibre-{version}.msi</FixedDownloadUrl>
+    <FixedDownloadUrl>https://github.com/kovidgoyal/calibre/releases/download/v{version}/calibre-{version}.msi</FixedDownloadUrl>
     <Name>calibre</Name>
   </ApplicationJob>
 </Jobs>
