@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>eclipse</id>
+    <version>{{PackageVersion}}</version>
+    <title>Eclipse</title>
+    <authors>Eclipse Foundation</authors>
+    <owners>Utrecht Almere</owners>
+    <licenseUrl>http://www.eclipse.org/org/documents/epl-v10.php</licenseUrl>
+    <projectUrl>http://www.eclipse.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/030/chocolateyautomatic/master/icons/eclipse.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Eclipse IDE facilitates programming. One could develop Java code by creating it, compile it using javac and run it. Eclipse is able to validate code during development. E.g. if code cannot be compiled Eclipse will highlight the code that causes the issue. Eclipse supports native and custom shortcuts that could accelerate development.
+	
+### Suitable for developers of other languages than Java as well:
+	
+Although the Eclipse Foundation highlights that this package has been designed for Java EE Developers as it is called `Eclipse IDE for Java EE Developers`. Developers of other languages could use this package as well by installing additional software. E.g. Python, Ruby, Groovy, Go, Clojure, Haskell, Scala developers could use Eclipse as an IDE as well. In addition to programming, it is possible to create statistical reports by installing BIRT.
+
+### Optional installation commands:
+
+Issue `-packageparameters '"/InstallLocation=C:\Path\to\installationdirectory"'` to overwrite the default installation directory, e.g. `choco install {{PackageName}} -packageparameters '"/InstallLocation=C:\temp"'` extracts the package in `C:\temp`.
+	
+### Bugs and Features:
+
+Create an issue or comment to an existing one - https://github.com/030/chocolateyautomatic/issues
+	</description>
+    <summary>Eclipse IDE for Java EE Developers. Windows 32 and 64 bit. Default install location: `C:\Program Files\Eclipse Foundation`. This IDE can be made suitable for developers of other languages than Java as well by installing additional software.</summary>
+    <releaseNotes>http://www.eclipse.org</releaseNotes>
+    <tags>eclipse ide jdk8 jee java scala birt python ruby groovy clojure haskell go</tags>
+    <dependencies>
+      <dependency id="jdk8" />
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="..\..\..\common\Uninstall-ZipPackage.ps1" target="tools\Uninstall-ZipPackage.ps1" />
+	<file src="..\..\..\common\OverwriteParameters.ps1" target="tools\OverwriteParameters.ps1" />
+	<file src="..\..\..\common\Uninstall-DesktopLinkAndPinnedTaskBarItem.ps1" target="tools\Uninstall-DesktopLinkAndPinnedTaskBarItem.ps1" />	
+	<file src="tools\*" target="tools" />
+  </files>
+</package>
