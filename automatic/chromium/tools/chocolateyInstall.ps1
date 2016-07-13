@@ -7,8 +7,8 @@ $url64bit = '{{DownloadUrlx64}}'
 
 function GetLevel() {
 
-  $CurrentUser = 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium'
-  $LocalMachine = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium'
+  $CurrentUser = Get-ItemProperty -Path "hkcu:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
+  $LocalMachine = Get-ItemProperty -Path "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
   
   if (Test-Path $CurrentUser) {
     $level = ''
@@ -18,13 +18,6 @@ function GetLevel() {
   
   return $level
 }
-
-function Get-ProcessorBits () {
-
-  $bitness = Get-WmiObject -Class Win32_Processor -ComputerName $env:ComputerName| Select-Object AddressWidth
-
-}
-
 
 function Get-32bitOnlyInstalled {
   $systemIs64bit = Get-ProcessorBits 64
