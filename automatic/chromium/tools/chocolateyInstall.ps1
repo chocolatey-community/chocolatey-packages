@@ -7,10 +7,11 @@ $url64bit = '{{DownloadUrlx64}}'
 
 function GetLevel() {
 
-  $CurrentUser = Get-ItemProperty -Path "hkcu:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
-  $LocalMachine = Get-ItemProperty -Path "hklm:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
+	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
+	$hive = "hkcu"
+	$Chromium = $hive + ":\" + $chromium_string
   
-  if (Test-Path $CurrentUser) {
+  if (Test-Path $Chromium) {
     $level = ''
   } else {
     $level = '--system-level --do-not-launch-chrome'
