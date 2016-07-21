@@ -11,7 +11,7 @@ $validExitCodes = @(0)
 	if (Test-Path $Chromium) {
 	  $hk_level = "hkcu"
 	} else {
-	  $hk_level = "hkcu"
+	  $hk_level = "hklm"
 	}
 
 	$bitness = Get-ProcessorBits
