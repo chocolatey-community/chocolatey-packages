@@ -1,8 +1,8 @@
 $packageName = '{{PackageName}}'
 $fileType = 'exe'
 $version = '{{PackageVersion}}'
-$url = '{{DownloadUrl}}'
-$url64bit = '{{DownloadUrlx64}}'
+$systemIs64bit = Get-ProcessorBits
+$url = @{$true = "{{DownloadUrlx64}}"; $false = "{{DownloadUrl}}"}[$systemIs64bit -eq 64]
 
 	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 	$hive = "hkcu"
@@ -14,10 +14,4 @@ $url64bit = '{{DownloadUrlx64}}'
     $silentArgs = '--system-level --do-not-launch-chrome'
   }
   
-  $systemIs64bit = Get-ProcessorBits
-  
-  if ($systemIs64bit -eq "32") {
     Install-ChocolateyPackage $packageName $fileType $silentArgs $url
-  } else {
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64
-  }
