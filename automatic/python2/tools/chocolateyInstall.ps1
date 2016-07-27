@@ -5,7 +5,7 @@ $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
 $version = '{{PackageVersion}}'
 $fileType = 'msi'
-$partialInstallArgs = '/qn /norestart ALLUSERS=1 TARGETDIR='
+$partialInstallArgs = '/qn /norestart ALLUSERS=1 ADDLOCAL=ALL TARGETDIR='
 
 
 

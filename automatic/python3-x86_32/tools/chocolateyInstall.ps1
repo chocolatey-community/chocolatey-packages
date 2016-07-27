@@ -5,7 +5,7 @@ $url = '{{DownloadUrl}}'
 $url64 = '{{DownloadUrlx64}}'
 $version = '{{PackageVersion}}'
 $fileType = 'exe'
-$partialInstallArgs = '/quiet InstallAllUsers=1'
+$partialInstallArgs = '/quiet InstallAllUsers=1 PrependPath=1'
 
 $installPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
