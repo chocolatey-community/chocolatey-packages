@@ -1,8 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="f93da821-bc2b-4d83-9579-0176bc77bbea">
-    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Jobs>
+    <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -73,8 +72,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>3145242</LastFileSize>
-    <LastFileDate>2016-06-23T14:11:19.2612539</LastFileDate>
+    <LastFileSize>3147813</LastFileSize>
+    <LastFileDate>2016-07-10T01:14:24+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -95,10 +94,10 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>RegularExpression</VariableType>
+            <VariableType>Textual</VariableType>
             <Regex>(?:&lt;a href=")(\d+)(?:\/"&gt;)</Regex>
             <Url>http://www.tuniac.org/Release/?C=M;O=D</Url>
-            <TextualContent />
+            <TextualContent>1.0.{partialversion}</TextualContent>
             <Name>version</Name>
           </UrlVariable>
         </value>
@@ -117,6 +116,20 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>partialversion</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>(?:&lt;a href=")(\d+)(?:\/"&gt;)</Regex>
+            <Url>http://www.tuniac.org/Release/?C=M;O=D</Url>
+            <Name>partialversion</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
     <ExecutePreCommand />
@@ -124,13 +137,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Tuniac_Setup_160620.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\Tuniac_Setup_160710.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2016-06-23T14:11:19.2612539</LastUpdated>
+    <LastUpdated>2016-07-27T20:03:24.0866875+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://www.tuniac.org/Release/{version}/Tuniac_Setup_{version}.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://www.tuniac.org/Release/{partialversion}/Tuniac_Setup_{partialversion}.exe</FixedDownloadUrl>
     <Name>tuniac</Name>
   </ApplicationJob>
 </Jobs>
