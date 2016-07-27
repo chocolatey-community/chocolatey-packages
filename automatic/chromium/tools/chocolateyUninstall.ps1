@@ -1,7 +1,7 @@
 $packageName = '{{PackageName}}'
-$installerType = 'EXE'
-$validExitCodes = @(0)
-
+$installerType = 'exe'
+$bitness = Get-ProcessorBits
+$bitty = @{$true = "\WOW6432Node"; $false = ""}[$bitness -eq 64]
 	
 	$chromium_string = "\SOFTWARE" + $bitty +"\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 	$hive = "hkcu"
@@ -13,8 +13,6 @@ $validExitCodes = @(0)
 	  $hk_level = "hklm"
 	}
 
-	$bitness = Get-ProcessorBits
-	$bitty = @{$true = "\WOW6432Node"; $false = ""}[$bitness -eq "64"]
 
   if ( (Test-Path ( $hk_level + ":" +$chromium_string )) -eq $true ) {
     $chromium_key = ( $hk_level + ":" + $chromium_string )
