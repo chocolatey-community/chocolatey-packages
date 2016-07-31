@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>91931728</LastFileSize>
-    <LastFileDate>2015-10-06T22:27:08.6714686</LastFileDate>
+    <LastFileSize>77404656</LastFileSize>
+    <LastFileDate>2016-07-16T16:02:49+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -27,7 +27,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>//download\.gimp\.org/mirror/pub/gimp/v[\d\.]+/windows/gimp-[\d\.]+-setup.+?\.exe</Regex>
+            <Regex>//download\.gimp\.org/mirror/pub/gimp/v[\d\.]+/windows/gimp-[\d\.]+-setup[^"]*\.exe</Regex>
             <Url>https://www.gimp.org/downloads/</Url>
             <Name>urlPart</Name>
           </UrlVariable>
@@ -55,11 +55,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\gimp-2.8.14-setup-1.exe</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\gimp-2.8.18-setup.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-10-06T22:27:08.6714686</LastUpdated>
+    <LastUpdated>2016-07-31T14:00:32.3844388+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https:{urlPart}</FixedDownloadUrl>
     <Name>gimp</Name>
