@@ -20,6 +20,9 @@ Even though BCU was made with IT pros in mind, by default it is so straight-forw
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png</iconUrl>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="dotnet3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
