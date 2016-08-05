@@ -82,7 +82,7 @@
       </item>
       <item>
         <key>
-          <string>md5_32</string>
+          <string>Checksum</string>
         </key>
         <value>
           <UrlVariable>
@@ -98,7 +98,7 @@
       </item>
       <item>
         <key>
-          <string>md5_64</string>
+          <string>Checksumx64</string>
         </key>
         <value>
           <UrlVariable>
