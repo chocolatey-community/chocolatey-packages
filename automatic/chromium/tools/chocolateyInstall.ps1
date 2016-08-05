@@ -3,7 +3,7 @@ $fileType = 'exe'
 $version = '{{PackageVersion}}'
 $systemIs64bit = Get-ProcessorBits
 $url = @{$true = "{{DownloadUrlx64}}"; $false = "{{DownloadUrl}}"}[$systemIs64bit -eq 64]
-$checksum = @{$true = "{{md5_64}}"; $false = "{{md5_32}}"}[$systemIs64bit -eq 64]
+$checksum = @{$true = "{{Checksumx64}}"; $false = "{{Checksum}}"}[$systemIs64bit -eq 64]
 $checksumType = 'md5'
 $validExitCodes = @(0)
 
