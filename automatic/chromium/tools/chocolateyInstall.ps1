@@ -16,4 +16,4 @@ $checksumType = 'md5'
     $silentArgs = '--system-level'
   }
   
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $validExitCodes $checksum $checksumType
+    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $checksum $checksumType
