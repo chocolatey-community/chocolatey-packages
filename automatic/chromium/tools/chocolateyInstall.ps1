@@ -13,7 +13,7 @@ $checksumType = 'md5'
   if (Test-Path $Chromium) {
     $silentArgs = ''
   } else {
-    $silentArgs = '--system-level --do-not-launch-chrome'
+    $silentArgs = '--system-level'
   }
   
     Install-ChocolateyPackage $packageName $fileType $silentArgs $url $validExitCodes $checksum $checksumType
