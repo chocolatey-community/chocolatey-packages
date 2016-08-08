@@ -2,7 +2,7 @@
   packageName   = '{{PackageName}}'
   fileType      = 'exe'
   url           = '{{DownloadUrl}}'
-  url64bit      = '{{DownloadUrlx64'
+  url64bit      = '{{DownloadUrlx64}}'
   silentArgs    = $silentArgs
   validExitCodes= @(0)
   softwareName  = 'Chromium'
@@ -23,4 +23,4 @@ $version = '{{PackageVersion}}'
     $silentArgs = '--system-level'
   }
 
-    Install-ChocolateyPackage $packageArgs
+    Install-ChocolateyPackage @packageArgs
