@@ -1,11 +1,17 @@
-$packageName = '{{PackageName}}'
-$fileType = 'exe'
+  $packageArgs = @{
+  packageName   = '{{PackageName}}'
+  fileType      = 'exe'
+  url           = '{{DownloadUrl}}'
+  url64bit      = '{{DownloadUrlx64}}'
+  silentArgs    = $silentArgs
+  validExitCodes= @(0)
+  softwareName  = 'Chromium'
+  checksum      = '{{Checksum}}'
+  checksumType  = 'md5'
+  checksum64    = '{{Checksumx64}}'
+  checksumType64= 'md5'
+}
 $version = '{{PackageVersion}}'
-$systemIs64bit = Get-ProcessorBits
-$url = @{$true = "{{DownloadUrlx64}}"; $false = "{{DownloadUrl}}"}[$systemIs64bit -eq 64]
-$checksum = @{$true = "{{Checksumx64}}"; $false = "{{Checksum}}"}[$systemIs64bit -eq 64]
-$checksumType = 'md5'
-$validExitCodes = @(0)
 
 	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 	$hive = "hkcu"
@@ -14,7 +20,7 @@ $validExitCodes = @(0)
   if (Test-Path $Chromium) {
     $silentArgs = ''
   } else {
-    $silentArgs = '--system-level --do-not-launch-chrome'
+    $silentArgs = '--system-level'
   }
-  
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $validExitCodes $checksum $checksumType
+
+    Install-ChocolateyPackage @packageArgs
