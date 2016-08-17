@@ -71,8 +71,8 @@
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
     <UserNotes />
-    <LastFileSize>64118784</LastFileSize>
-    <LastFileDate>2016-07-08T05:05:51+00:00</LastFileDate>
+    <LastFileSize>64245760</LastFileSize>
+    <LastFileDate>2016-08-12T04:05:59+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -96,8 +96,8 @@
             <VariableType>StartEnd</VariableType>
             <Regex />
             <Url>http://calibre-ebook.com/download_windows</Url>
-            <StartText>Version: </StartText>
-            <EndText> &lt;a target="_blank" href="/whats-new"&gt;What's new&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;</EndText>
+            <StartText>&lt;br/&gt;Version: </StartText>
+            <EndText> &lt;a target="_blank" href="/whats-new"&gt;What's new&lt;/a&gt;</EndText>
             <TextualContent />
             <Name>version</Name>
           </UrlVariable>
@@ -124,11 +124,11 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\calibre-2.62.0.msi</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\calibre-2.64.0.msi</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2016-07-11T14:25:39.2580603+00:00</LastUpdated>
+    <LastUpdated>2016-08-17T06:30:09.4733045+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
     <FixedDownloadUrl>https://github.com/kovidgoyal/calibre/releases/download/v{version}/calibre-{version}.msi</FixedDownloadUrl>
     <Name>calibre</Name>
