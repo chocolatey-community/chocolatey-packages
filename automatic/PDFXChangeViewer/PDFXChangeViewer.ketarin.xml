@@ -64,7 +64,7 @@
     <FileHippoId />
     <LastUpdated>2012-05-23T02:09:37.7748325</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="http://www.tracker-software.com/downloads/PDFXVwer.exe" /></FixedDownloadUrl>
+    <FixedDownloadUrl><placeholder name="Download Url - Optional" value="https://www.tracker-software.com/downloads/PDFXVwer.exe" /></FixedDownloadUrl>
     <Name><placeholder name="Name" value="PDFXChangeViewer" /></Name>
   </ApplicationJob>
 </Jobs>]]></SourceTemplate>
@@ -95,7 +95,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
             <Regex>PDF-XChange Viewer:&lt;/span&gt;[\n\s]*([\d\.]+)</Regex>
-            <Url>http://www.tracker-software.com/product/pdf-xchange-viewer</Url>
+            <Url>https://www.tracker-software.com/product/pdf-xchange-viewer</Url>
             <StartText>&lt;span class="versionname notranslate"&gt;</StartText>
             <EndText>&lt;/span&gt;</EndText>
             <TextualContent />
@@ -116,7 +116,7 @@
     <FileHippoId />
     <LastUpdated>2016-05-13T22:01:26.9471461+02:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://www.tracker-software.com/downloads/PDFXVwer.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>https://www.tracker-software.com/downloads/PDFXVwer.exe</FixedDownloadUrl>
     <Name>PDFXChangeViewer</Name>
   </ApplicationJob>
 </Jobs>
