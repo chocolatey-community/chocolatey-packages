@@ -15,12 +15,12 @@ $version = '{{PackageVersion}}'
 
 	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 	$hive = "hkcu"
-	$Chromium = $hive + ":\" + $chromium_string
+	$Chromium = $hive + ":" + $chromium_string
   
   if (Test-Path $Chromium) {
     $silentArgs = ''
   } else {
-    $silentArgs = '--system-level'
+    $silentArgs = '--system-level --do-not-launch-chrome'
   }
 
     Install-ChocolateyPackage @packageArgs
