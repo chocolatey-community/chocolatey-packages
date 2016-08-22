@@ -11,6 +11,7 @@
 The video editor is intended for editing video files and creating videos of any complexity involving various visual and audio effects. The program offers rich functionality and yet has a simple and intuitive interface, allowing you to create videos with a bare minimum of efforts.
 		</description>
 		<projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
+		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
 		<tags>NLE Video Editor</tags>
 		<copyright></copyright>
 		<licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>

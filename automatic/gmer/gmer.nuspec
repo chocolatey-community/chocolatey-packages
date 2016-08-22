@@ -11,6 +11,7 @@
 GMER is one of the most respected specialized antirootkit applications available. The author now works for Avast.
 		</description>
 		<projectUrl>http://www.gmer.net/</projectUrl>
+		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
 		<tags>Security Rootkit Scanner</tags>
 		<copyright></copyright>
 		<licenseUrl>http://www.gmer.net/#contact</licenseUrl>

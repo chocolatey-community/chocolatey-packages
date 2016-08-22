@@ -14,6 +14,7 @@ Auslogics Disk Defrag Touch is a product of Auslogics, certified Microsoft® Gol
 Microsoft confirms Auslogics' high expertise in developing quality software that meets the growing demands of PC users.
 		</description>
 		<projectUrl>http://www.auslogics.com/en/software/disk-defrag-touch/</projectUrl>
+		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
 		<tags>System Admin Defragment</tags>
 		<copyright></copyright>
 		<licenseUrl>http://www.auslogics.com/en/legal/</licenseUrl>
