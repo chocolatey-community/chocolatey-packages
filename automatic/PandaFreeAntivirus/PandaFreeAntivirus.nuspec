@@ -19,6 +19,7 @@ __High security scores__
 Panda Free Antivirus scored an impressive 99.9 percent in real-world protection from AV-Comparatives, edging Bitdefender out of the top spot. Scanning in full mode took us about six minutes, which is fast for a free scanner.
 		</description>
 		<projectUrl>http://www.pandasecurity.com/</projectUrl>
+		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
 		<tags>Antivirus Security Protection NotSilent AutoIt</tags>
 		<copyright></copyright>
 		<licenseUrl>http://softwareula.wordpress.com/2010/07/20/panda-cloud-antivirus/</licenseUrl>
