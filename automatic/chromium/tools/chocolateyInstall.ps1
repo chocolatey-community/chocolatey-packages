@@ -1,4 +1,17 @@
-  $packageArgs = @{
+
+  $version = '{{PackageVersion}}'
+
+	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
+	$hive = "hkcu"
+	$Chromium = $hive + ":" + $chromium_string
+  
+  if (Test-Path $Chromium) {
+    $silentArgs = ''
+  } else {
+    $silentArgs = '--system-level --do-not-launch-chrome'
+  }
+  
+    $packageArgs = @{
   packageName   = '{{PackageName}}'
   fileType      = 'exe'
   url           = '{{DownloadUrl}}'
@@ -11,16 +24,5 @@
   checksum64    = '{{Checksumx64}}'
   checksumType64= 'md5'
 }
-$version = '{{PackageVersion}}'
-
-	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
-	$hive = "hkcu"
-	$Chromium = $hive + ":" + $chromium_string
-  
-  if (Test-Path $Chromium) {
-    $silentArgs = ''
-  } else {
-    $silentArgs = '--system-level --do-not-launch-chrome'
-  }
 
     Install-ChocolateyPackage @packageArgs
