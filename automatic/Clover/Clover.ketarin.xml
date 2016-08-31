@@ -141,7 +141,7 @@
     <FileHippoId />
     <LastUpdated>2015-01-07T06:29:42.6354579+01:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://ejie.me/uploads/Clover_Setup_{realVersion}.zip</FixedDownloadUrl>
+    <FixedDownloadUrl>http://ejie.me/uploads/setup_clover@{realVersion}.exe</FixedDownloadUrl>
     <Name>Clover</Name>
   </ApplicationJob>
 </Jobs>
