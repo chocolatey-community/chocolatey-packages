@@ -1,8 +1,7 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b2b215d9-8d7c-41f6-8fa6-f7f1a344d117">
-    <SourceTemplate><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Jobs>
+    <SourceTemplate><![CDATA[<Jobs>
   <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="0fb30714-8ed0-4611-8f1b-cb8fec9dae91">
     <WebsiteUrl />
     <UserAgent>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19</UserAgent>
@@ -73,13 +72,15 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>2627477</LastFileSize>
-    <LastFileDate>2014-05-17T12:11:42+02:00</LastFileDate>
+    <LastFileSize>4202496</LastFileSize>
+    <LastFileDate>2016-08-31T10:39:23+00:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
     <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
     <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
     <CanBeShared>true</CanBeShared>
     <ShareApplication>false</ShareApplication>
     <ExclusiveDownload>false</ExclusiveDownload>
@@ -88,7 +89,7 @@
     <Variables>
       <item>
         <key>
-          <string>realVersion</string>
+          <string>version</string>
         </key>
         <value>
           <UrlVariable>
@@ -96,35 +97,8 @@
             <VariableType>RegularExpression</VariableType>
             <Regex>Version:.+?&lt;small&gt;([\d\.]{3,})</Regex>
             <Url>http://ejie.me/</Url>
-            <Name>realVersion</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>version</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
             <TextualContent>{realVersion}{versionFixNotation}</TextualContent>
             <Name>version</Name>
-          </UrlVariable>
-        </value>
-      </item>
-      <item>
-        <key>
-          <string>versionFixNotation</string>
-        </key>
-        <value>
-          <UrlVariable>
-            <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>Textual</VariableType>
-            <Regex />
-            <TextualContent>{realVersion:regexreplace:^3\.0\.(.+)$:0.{yyyy}{MM}{dd}}</TextualContent>
-            <Name>versionFixNotation</Name>
           </UrlVariable>
         </value>
       </item>
@@ -135,13 +109,13 @@
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
-    <PreviousLocation>C:\Chocolatey\_work\Clover_Setup_3.0.406.zip</PreviousLocation>
+    <PreviousLocation>C:\Chocolatey\_work\setup_clover@3.1.3.exe</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-01-07T06:29:42.6354579+01:00</LastUpdated>
+    <LastUpdated>2016-09-01T06:47:56.0384738+00:00</LastUpdated>
     <TargetPath>C:\Chocolatey\_work\</TargetPath>
-    <FixedDownloadUrl>http://ejie.me/uploads/setup_clover@{realVersion}.exe</FixedDownloadUrl>
+    <FixedDownloadUrl>http://ejie.me/uploads/setup_clover@{version}.exe</FixedDownloadUrl>
     <Name>Clover</Name>
   </ApplicationJob>
 </Jobs>
