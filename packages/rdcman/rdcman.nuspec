@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>rdcman</id>
-    <version>2.7.1406.0</version>
+    <version>2.7.1406.20160916</version>
     <title>Remote Desktop Connection Manager</title>
     <authors>Julian Burger</authors>
     <owners>Anthony Mastrean</owners>
@@ -12,5 +12,8 @@
     <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>
     <tags>remote desktop rdp connect admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>
+2.7.1406.20160916: added checksum and switched to HTTPS
+    </releaseNotes>
   </metadata>
 </package>
