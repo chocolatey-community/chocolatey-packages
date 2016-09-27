@@ -1,7 +1,28 @@
-/jobs.db
+*~
+*.bak
+*.cache
 *.nupkg
-*.log
-*.log.full
+*.old
+*.orig
+*.swp
+*.swo
+*.suo
+*.test
+*.work
+*.handover
+*.new
+*.exist
+*-orig.*
 Thumbs.db
-
-automatic/_output/
+.DS_Store
+_ReSharper*
+*.resharper
+New folder*
+New Text Document*.txt
+obj
+*/working
+ketarin/soluto.xml
+*.stackdump
+update_vars.ps1
+update_info.xml
+Update-AUPackages.md
