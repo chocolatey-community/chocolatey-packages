@@ -1,60 +1,58 @@
+# AU Packages Template: https://github.com/majkinetor/au-packages-template
+
 param($Name = $null)
-cd $PSScriptRoot
 
-ls scripts\*.ps1 | % { . $_ }
+if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
-# used when running locally
-if (Test-Path update_vars.ps1) { . ./update_vars.ps1 }
+$Options = [ordered]@{
+    Timeout    = 100                                        #Connection timeout in seconds
+    Threads    = 10                                         #Number of background jobs to use
+    Push       = $Env:au_Push -eq 'true'                    #Push to chocolatey
+    PluginPath = ''                                         #Path to user plugins
 
-$options = @{
-    Timeout = $env:au_timeout
-    Push    = $true
-    Threads = $env:au_threads
-    Force   = $false
-
-    Mail = if ($env:mail_user) {
-            $enableSsl = $true
-            if ($env:mail_enablessl -eq 'false') {
-                $enableSsl = $false
-            }
-
-            @{
-                To        = $env:mail_user
-                Server    = $env:mail_server
-                UserName  = $env:mail_user
-                Password  = $env:mail_pass
-                Port      = $env:mail_port
-                EnableSsl = $enableSsl
-            }
-           } else {}
-
-    Gist_ID = $Env:Gist_ID
-
-    Script = {
-        param($Phase, $Info)
-
-        if ($Phase -ne 'END') { return }
-
-        Save-RunInfo
-        Save-Gist
-        Save-Git
+    Report = @{
+        Type = 'markdown'                                   #Report type: markdown or text
+        Path = "$PSScriptRoot\Update-AUPacakges.md"         #Path where to save the report
+        Params= @{                                          #Report parameters:
+            Github_UserRepo = $Env:github_UserRepo          #  Markdown: shows user info in upper right corner
+            NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
+            UserMessage = ''                                #  Markdown, Text: Custom user message to show
+        }
     }
+
+    Gist = @{
+        Id          = ''                                    #Your gist id or leave empty for anonymous
+        ApiKey      = ''                                    #Your github api key
+        Path        = "$PSScriptRoot\Update-AUPacakges.md"  #List of files to add to gist
+    }
+
+    #Git = @{
+        #User     = ''                                       #Git username, leave empty if github api key is used
+        #Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
+    #}
+
+    RunInfo = @{
+        Exclude = 'password', 'apikey'                      #Option keys which contain those words will be removed
+        Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
+    }
+
+    Mail = if ($Env:mail_user) {
+            @{
+                To          = $Env:mail_user
+                Server      = $Env:mail_server
+                UserName    = $Env:mail_user
+                Password    = $Env:mail_pass
+                Port        = $Env:mail_port
+                EnableSsl   = $Env:enable_ssl -eq 'true'
+                Attachments = "$PSScriptRoot\update_info.xml"
+                UserMessage = ''
+                SendAlways  = $false                        #Send notifications every time
+             }
+           } else {}
 }
 
-if ($env:au_push -eq 'false') {
-  $options.Push = $false
-}
-
-if ($env:au_force -eq 'true') {
-  $options.Force = $true
-}
-
-cd $PSScriptRoot/../automatic
-
-Update-AUPackages -Name $Name -Options $options | ft
-$global:updateall = Import-CliXML $PSScriptRoot\..\update_info.xml
+$global:au_Root = "$PSScriptRoot"                           #Path to the AU packages
+$info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
-#if ($updateall.error_count.total) { throw 'Errors during update' }
-
-cd $PSScriptRoot
+#if ($info.error_count.total) { throw 'Errors during update' }
