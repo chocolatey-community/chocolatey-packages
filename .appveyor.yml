@@ -8,6 +8,15 @@ branches:
 #build:
 #  verbosity: minimal
 
+environment:
+  au_push: true
+  github_user_repo: chocolatey/chocolatey-coreteampackages
+  gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
+  api_key:
+    secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
+  github_api_key:
+    secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
+    
 init:
 - git config --global user.email "gep13@gep13.co.uk"
 - git config --global user.name "Gary Ewan Park"
