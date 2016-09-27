@@ -19,7 +19,7 @@ environment:
   github_user: gep13
   github_pass:
     secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
-  github_user_repo: 'YOUR_GITHUB_USERNAME_HERE/chocolatey-packages' #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
+  github_user_repo: 'chocolatey/chocolatey-coreteampackages' #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
 
   # Email credentials - for error notifications
   mail_user:
@@ -31,7 +31,7 @@ environment:
   mail_enablessl: true
 
   # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
-  gist_id: YOUR_GIST_ID_CREATE_GIST_SAVE_ID_HERE
+  gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
 
   # Chocolatey API key - to push updated packages
   api_key:
