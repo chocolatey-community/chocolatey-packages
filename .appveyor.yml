@@ -18,8 +18,8 @@ environment:
   # Github credentials - used to save result to gist and to commit pushed packages to the git repository
   github_user: gep13
   github_pass:
-    secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
-  github_user_repo: 'chocolatey/chocolatey-coreteampackages' #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
+    secure: Gf3NBQaJpVPGm/2+0DPqnVd8QbnXEzRw0CQ+5orJ+kA=
+  github_user_repo: 'chocolatey/chocolatey-coreteampackages'
 
   # Email credentials - for error notifications
   mail_user:
