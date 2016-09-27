@@ -8,35 +8,6 @@ branches:
 #build:
 #  verbosity: minimal
 
-environment:
-  # au job parameters
-  au_timeout: 100
-  au_threads: 10
-  au_push: true
-  au_force: false
-
-  # Github credentials - used to save result to gist and to commit pushed packages to the git repository
-  github_user: gep13
-  github_pass:
-    secure: Gf3NBQaJpVPGm/2+0DPqnVd8QbnXEzRw0CQ+5orJ+kA=
-  github_user_repo: 'chocolatey/chocolatey-coreteampackages'
-
-  # Email credentials - for error notifications
-  mail_user:
-    secure: vlTAcQnLp0DuPXPdWOaX77wLjuujafbS6IUWZ1TLTvY=
-  mail_pass:
-    secure: aW9JL8Ogd8E5IE+d2P74eF5psfY8L5NXot0zszZnU88=
-  mail_server: smtp.gmail.com
-  mail_port: 587
-  mail_enablessl: true
-
-  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
-  gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
-
-  # Chocolatey API key - to push updated packages
-  api_key:
-    secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
-
 init:
 - git config --global user.email "gep13@gep13.co.uk"
 - git config --global user.name "Gary Ewan Park"
