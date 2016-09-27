@@ -1,0 +1,85 @@
+version: '{build}'
+max_jobs: 1
+image: WMF 5
+clone_depth: 5
+branches:
+  only:
+  - master
+#build:
+#  verbosity: minimal
+
+environment:
+  # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
+  au_version:
+  au_push: true
+
+  # Github token to commit pushed packages to repository
+  github_user_repo: {github_user}/{repository}
+  github_api_key:
+    secure: YOUR_GITHUB_API_KEY_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+
+
+  # Mail credentials - for error notifications
+  mail_user:
+    secure: YOUR_EMAIL_ACCOUNT_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+  mail_pass:
+    secure: YOUR_EMAIL_PASSWORD_HERE_ENCRYPTED_STRING #https://ci.appveyor.com/tools/encrypt
+  mail_server: smtp.gmail.com
+  mail_port: 587
+  mail_enablessl: true
+
+  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
+  # Optional, leave empty to create anonymous gist
+  gist_id:
+
+  # Chocolatey API key - to push updated packages
+  api_key:
+    secure: YOUR_CHOCO_API_KEY_HERE_ENCRYPTED_STRING # https://ci.appveyor.com/tools/encrypt
+
+init:
+- git config --global user.email "chocolatey@realdimensions.net"
+- git config --global user.name  "Chocolatey"
+- git config --global core.safecrlf false
+
+install:
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
+- ps: |
+    $x=$null; $is_branch = ($Env:au_version -ne $null) -and ([version]::TryParse($Env:au_version, [ref]$x) -eq $false)
+    if ($is_branch) {
+        pushd ..
+            git clone -q https://github.com/majkinetor/au.git
+            cd au
+            git fetch
+            git checkout -q $Env:au_version
+            ./build.ps1 -Install -NoChocoPackage
+        popd
+    } else {
+        Install-PackageProvider -Name NuGet -Force
+        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+        $params = @{ Name = 'au' }
+        if ( $Env:au_version -ne $null ) { $params.MinimumVersion = $Env:au_version }
+        Install-Module @params
+
+        Get-Module au -ListAvailable | select Name, Version
+    }
+
+build_script:
+- ps: |
+    ./au/update_all.ps1
+
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+artifacts:
+- path: au/update_info.xml
+- path: au/Update-AUPackages.md
+
+notifications:
+- provider: Email
+  to: $(mail_user)
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
+
