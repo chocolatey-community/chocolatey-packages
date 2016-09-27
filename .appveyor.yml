@@ -11,27 +11,38 @@ branches:
 init:
 - git config --global user.email "gep13@gep13.co.uk"
 - git config --global user.name "Gary Ewan Park"
+- git config --global core.safecrlf false
 
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
-- SET PATH=C:\Ruby21-x64\bin;%PATH%
-- ruby -v
-- gem install gist --no-ri --no-rdoc
-- "ruby -e \"require 'gist'; Gist.login! username: ENV['github_user'], password: ENV['github_pass'] if ENV['github_user'] \""
 - ps: |
-    "machine github.com", "login $Env:github_user", "password $Env:github_pass" | Out-File ~/_netrc -Encoding ascii
-    Install-PackageProvider -Name NuGet -Force
-    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-    Install-Module au -Scope CurrentUser
-    Get-Module au -ListAvailable | select Name, Version
+    $x=$null; $is_branch = ($Env:au_version -ne $null) -and ([version]::TryParse($Env:au_version, [ref]$x) -eq $false)
+    if ($is_branch) {
+        pushd ..
+            git clone -q https://github.com/majkinetor/au.git
+            cd au
+            git fetch
+            git checkout -q $Env:au_version
+            ./build.ps1 -Install -NoChocoPackage
+        popd
+    } else {
+        Install-PackageProvider -Name NuGet -Force
+        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+
+        $params = @{ Name = 'au' }
+        if ( $Env:au_version -ne $null ) { $params.MinimumVersion = $Env:au_version }
+        Install-Module @params
+
+        Get-Module au -ListAvailable | select Name, Version
+    }
 
 build_script:
-- ps: .\au\update_all.ps1
+- ps: ./au/update_all.ps1
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 artifacts:
-- path: automatic\update_info.xml
-- path: gist.md
+- path: au/update_info.xml
+- path: au/Update-AUPackages.md
