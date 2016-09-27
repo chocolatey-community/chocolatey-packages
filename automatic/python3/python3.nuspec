@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <version>3.5.1</version>
     <title>Python 3.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
