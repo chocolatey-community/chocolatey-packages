@@ -1,0 +1,73 @@
+version: '{build}'
+max_jobs: 1
+image: WMF 5
+clone_depth: 5
+branches:
+  only:
+  - master
+#build:
+#  verbosity: minimal
+
+environment:
+  # au job parameters
+  au_timeout: 100
+  au_threads: 10
+  au_push: true
+  au_force: false
+
+  # Github credentials - used to save result to gist and to commit pushed packages to the git repository
+  github_user: gep13
+  github_pass:
+    secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
+  github_user_repo: 'YOUR_GITHUB_USERNAME_HERE/chocolatey-packages' #https://github.com/chocolatey/chocolatey-packages-template is 'chocolatey/chocolatey-packages-template'
+
+  # Email credentials - for error notifications
+  mail_user:
+    secure: vlTAcQnLp0DuPXPdWOaX77wLjuujafbS6IUWZ1TLTvY=
+  mail_pass:
+    secure: aW9JL8Ogd8E5IE+d2P74eF5psfY8L5NXot0zszZnU88=
+  mail_server: smtp.gmail.com
+  mail_port: 587
+  mail_enablessl: true
+
+  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
+  gist_id: YOUR_GIST_ID_CREATE_GIST_SAVE_ID_HERE
+
+  # Chocolatey API key - to push updated packages
+  api_key:
+    secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
+
+init:
+- git config --global user.email "gep13@gep13.co.uk"
+- git config --global user.name "Gary Ewan Park"
+
+install:
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
+- SET PATH=C:\Ruby21-x64\bin;%PATH%
+- ruby -v
+- gem install gist --no-ri --no-rdoc
+- "ruby -e \"require 'gist'; Gist.login! username: ENV['github_user'], password: ENV['github_pass'] if ENV['github_user'] \""
+- ps: |
+    "machine github.com", "login $Env:github_user", "password $Env:github_pass" | Out-File ~/_netrc -Encoding ascii
+    Install-PackageProvider -Name NuGet -Force
+    Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
+    Install-Module au -Scope CurrentUser
+    Get-Module au -ListAvailable | select Name, Version
+
+build_script:
+- ps: .\au\update_all.ps1
+
+#on_finish:
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+artifacts:
+- path: automatic\update_info.xml
+- path: gist.md
+
+notifications:
+- provider: Email
+  to: $(mail_user)
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
