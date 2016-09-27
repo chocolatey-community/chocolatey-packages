@@ -1,4 +1,5 @@
 ﻿# This file should be identical for all python3* packages
+# https://docs.python.org/3/using/windows.html#installing-without-ui
 
 $packageName = '{{PackageName}}'
 $url32       = '{{DownloadUrl}}'
