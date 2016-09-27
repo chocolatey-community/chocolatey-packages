@@ -40,6 +40,12 @@ if ($packageName -match 32) {
 Write-Host "Installing to '$installDir'"
 Install-ChocolateyPackage @params
 
+if (gcm refreshenv -ea 0) { refreshenv }
+
+if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
+   Write-Warning "Environment variable PYTHONHOME points to different version: $Env:PYTHONHOME"
+}
+
 # Generate .ignore files for unwanted .exe files
 $exesLeftToPathInclude = @('python.exe', 'pythonw.exe', 'pip.exe', 'easy_install.exe');
 Get-ChildItem -Path $installDir -Recurse | Where {
