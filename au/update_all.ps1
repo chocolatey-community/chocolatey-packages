@@ -51,7 +51,7 @@ $Options = [ordered]@{
            } else {}
 }
 
-$global:au_Root = "$PSScriptRoot"                           #Path to the AU packages
+$global:au_Root = "$PSScriptRoot/../automatic"                           #Path to the AU packages
 $info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
