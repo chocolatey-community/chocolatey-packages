@@ -4,8 +4,8 @@
 $packageName = 'python3'
 $url32       = 'https://www.python.org/ftp/python/3.5.2/python-3.5.2.exe'
 $url64       = 'https://www.python.org/ftp/python/3.5.2/python-3.5.2-amd64.exe'
-$checksum32  = ''
-$checksum64  = ''
+$checksum32  = '529c46b9fd3dcf83029b8bfc95034e640ea2c69835b1aa4b75edeec8de764193'
+$checksum64  = '2cfcdc77a0ba403acf72ba217898fb7c06ce778a5cb85f5220fd32127e40f263'
 
 if ($Env:ChocolateyPackageParameters -match '/InstallDir:\s*(.+)') {
     $installDir = $Matches[1]
@@ -38,8 +38,6 @@ if ($packageName -match 32) {
 
 Write-Host "Installing to '$installDir'"
 Install-ChocolateyPackage @params
-
-if (gcm refreshenv -ea 0) { refreshenv }
 
 if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
    Write-Warning "Environment variable PYTHONHOME points to different version: $Env:PYTHONHOME"
