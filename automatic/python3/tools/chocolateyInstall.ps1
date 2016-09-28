@@ -1,9 +1,9 @@
 ﻿# This file should be identical for all python3* packages
 # https://docs.python.org/3/using/windows.html#installing-without-ui
 
-$packageName = '{{PackageName}}'
-$url32       = '{{DownloadUrl}}'
-$url64       = '{{DownloadUrlx64}}'
+$packageName = 'python3'
+$url32       = 'https://www.python.org/ftp/python/3.5.2/python-3.5.2.exe'
+$url64       = 'https://www.python.org/ftp/python/3.5.2/python-3.5.2-amd64.exe'
 $checksum32  = ''
 $checksum64  = ''
 
@@ -16,7 +16,6 @@ if ($Env:ChocolateyPackageParameters -match '/InstallDir:\s*(.+)') {
 
 $installDir   = '{0}\Python{1}' -f $Env:SystemDrive, ($Env:ChocolateyPackageVersion -replace '\.').Substring(0,2)
 $installArgs  = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
-Write-host $installArgs
 
 $params = @{
   packageName    = $packageName
