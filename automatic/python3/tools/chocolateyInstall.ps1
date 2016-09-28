@@ -7,15 +7,14 @@ $url64       = 'https://www.python.org/ftp/python/3.5.2/python-3.5.2-amd64.exe'
 $checksum32  = '529c46b9fd3dcf83029b8bfc95034e640ea2c69835b1aa4b75edeec8de764193'
 $checksum64  = '2cfcdc77a0ba403acf72ba217898fb7c06ce778a5cb85f5220fd32127e40f263'
 
+$installDir   = '{0}\Python{1}' -f $Env:SystemDrive, ($Env:ChocolateyPackageVersion -replace '\.').Substring(0,2)
+$installArgs  = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
 if ($Env:ChocolateyPackageParameters -match '/InstallDir:\s*(.+)') {
     $installDir = $Matches[1]
     if ($installDir.StartsWith("'") -or $installDir.StartsWith('"')){  $installDir = $installDir -replace '^.|.$' }
     $parent = Split-Path $installDir
     mkdir -force $parent -ea 0 | out-null
 }
-
-$installDir   = '{0}\Python{1}' -f $Env:SystemDrive, ($Env:ChocolateyPackageVersion -replace '\.').Substring(0,2)
-$installArgs  = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
 
 $params = @{
   packageName    = $packageName
@@ -45,8 +44,8 @@ if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
 
 # Generate .ignore files for unwanted .exe files
 $exesLeftToPathInclude = @('python.exe', 'pythonw.exe', 'pip.exe', 'easy_install.exe');
+Write-Host "Iterating $installDir"
 Get-ChildItem -Path $installDir -Recurse | Where {
-
   $_.Extension -eq '.exe'} | % {
   # Exclude .exe files that should en up in PATH
     if (!($exesLeftToPathInclude -contains $_.Name)) {
