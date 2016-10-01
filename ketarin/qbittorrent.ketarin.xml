@@ -139,7 +139,7 @@
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>RegularExpression</VariableType>
-            <Regex>(?&lt;=SHA-1\sChecksum:\s)\w+</Regex>
+            <Regex>(?&lt;=SHA-1\sChecksum:\s)(\w+)</Regex>
             <Url>http://www.qbittorrent.org/download.php</Url>
             <Name>checksum</Name>
           </UrlVariable>
