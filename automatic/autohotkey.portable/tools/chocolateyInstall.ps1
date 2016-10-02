@@ -1,6 +1,14 @@
-﻿$packageName = 'autohotkey.portable'
-$url = '{{DownloadUrl}}'
-$unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url64 = '{{DownloadUrlx64}}'
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyZipPackage $packageName $url $unzipLocation $url64
+$packageArgs = @{
+  packageName    = 'autohotkey.portable'
+  url            = '{{DownloadUrl}}'
+  url64Bit       = '{{DownloadUrlx64}}'
+  checksum       = '{{Checksum}}'
+  checksum64     = '{{Checksumx64}}'
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+  unzipLocation  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+}
+
+Install-ChocolateyZipPackage @packageArgs
