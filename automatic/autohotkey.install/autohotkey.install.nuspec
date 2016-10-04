@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>autohotkey.install</id>
+    <version>1.1.24.01</version>
     <title>AutoHotkey (Install)</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
@@ -19,6 +19,9 @@ AutoHotkey\_L is a fork of AutoHotkey which adds a long list of new features and
     <releaseNotes></releaseNotes>
     <tags>automation hotkeys scripting windows admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="mm-choco.extension" version="0.0.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
