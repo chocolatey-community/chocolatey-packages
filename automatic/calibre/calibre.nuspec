@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>calibre</id>
     <title>Calibre</title>
-    <version>{{PackageVersion}}</version>
+    <version>2.66.0</version>
     <authors>Kovid Goyal</authors>
     <owners>gep13, chocolatey</owners>
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
