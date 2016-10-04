@@ -17,4 +17,6 @@ function global:au_GetLatest {
     @{ URL_i = "${url}_Install.exe"; URL_p32= "$url.zip"; URL_p64= "${url}_x64.zip"; Version = $version }
 }
 
-update -ChecksumFor none -NoCheckUrl
+if ($MyInvocation.InvocationName -ne '.') {
+    update -ChecksumFor none -NoCheckUrl
+}
