@@ -6,6 +6,9 @@ $url64       = $url32
 $checksum32  = '78ea671c3305465933a5d00f39da7e86c116a8a5a1849835196a27799ac29f8f'
 $checksum64  = $checksum32
 
+$silent = '/S'
+if(Get-ProcessorBits 64) { $silent += ' /x64' }
+
 $packageArgs = @{
   packageName            = $packageName
   fileType               = 'EXE'
@@ -17,7 +20,7 @@ $packageArgs = @{
   checksumType64         = 'sha256'
   silentArgs             = $silent
   validExitCodes         = @(0)
-  registryUninstallerKey = $packageName
+  registryUninstallerKey = 'autohotkey'
 }
 Install-ChocolateyPackage @packageArgs
 
