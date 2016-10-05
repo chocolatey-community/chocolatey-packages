@@ -1,7 +1,7 @@
 ﻿$packageName = '{{PackageName}}'
 $installerType = 'exe'
 $version = '{{PackageVersion}}'
-$url = "http://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-${version}/qbittorrent_${version}_setup.exe/download"
+$url = '{{url}}'
 $checksum = '{{Checksum}}'
 $checksumType = 'SHA1'
 $silentArgs = '/S'
