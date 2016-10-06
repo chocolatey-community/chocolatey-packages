@@ -1,24 +1,28 @@
-$packageName	= '{{PackageName}}'
-$installerType	= 'EXE'
-$url			= '{{DownloadUrl}}'
-$silentArgs		= '/S /I'
-$validExitCodes	= @(0)
+﻿$ErrorActionPreference = 'Stop'
+
+$packageName = 'lightalloy'
+$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Light-Alloy.html/LA_Setup_v4.8.8.2.exe'
+$checksum32  = 'a8d6dbc9e313df47502df2c009488de2e0069b3dcf34dc2cb6b5af2cd08c75fa'
+
 $pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
 $au3			= Join-Path $pwd 'lightalloy.au3'
 
-$url = Get-UrlFromFosshub $url
-
-# Installer if the old silent mode would still work was easy
-#Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
-
 # Need some AutoIt3 wizardry because installer is not silent
 $chocTempDir	= Join-Path $env:TEMP "chocolatey"
-tempDir		= Join-Path $chocTempDir "$packageName"
+$tempDir		= Join-Path $chocTempDir "$packageName"
 if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
 
 $tempFile		= Join-Path $tempDir "$packageName.installer.exe"
 
-Get-ChocolateyWebFile "$packageName" "$tempFile" "$url"
+$packageArgs = @{
+  packageName    = $packageName
+  fileFullPath   = $tempFile
+  url            = $url32
+  checksum       = $checksum32
+  checksumType   = 'sha256'
+}
+
+Get-ChocolateyWebFile @packageArgs
 
 Write-Output "Running AutoIt3 using `'$au3`'"
 Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'
