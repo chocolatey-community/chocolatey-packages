@@ -1,12 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url = Get-UrlFromFosshub "https://www.fosshub.com/Audacity.html/audacity-win-2.1.2.exe"
+$packageName = 'audacity'
+$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Audacity.html/audacity-win-2.1.2.exe'
+$checksum32  = '22e0f0ada3e8d24690dd741ca9feb868dffc024d45d2cd3168f8c54c47eec3c9'
 
 $packageArgs = @{
-  packageName    = 'audacity'
+  packageName    = $packageName
   fileType       = 'exe'
-  url            = $url
-  checksum       = '22E0F0ADA3E8D24690DD741CA9FEB868DFFC024D45D2CD3168F8C54C47EEC3C9'
+  url            = $url32
+  checksum       = $checksum32
   checksumType   = 'sha256'
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0)
