@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-fosshub.extension</id>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Chocolatey FossHub Extension</title>
@@ -31,7 +31,7 @@ These functions may be used in Chocolatey install/uninstall scripts by declaring
 
 `Get-UrlFromFosshub` --  Get the resolved URL from a FossHub download link.
 
-Example:  
+Example:
 `Get-UrlFromFosshub http://www.fosshub.com/genLink/Data-Crow/FILE.zip`
     </description>
     <releaseNotes>
