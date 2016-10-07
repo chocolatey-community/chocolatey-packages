@@ -40,7 +40,7 @@ $Options = [ordered]@{
             @{
                 To          = $Env:mail_user
                 Server      = $Env:mail_server
-                UserName    = $Env:mail_user
+                UserName    = $Env:mail_user_name
                 Password    = $Env:mail_pass
                 Port        = $Env:mail_port
                 EnableSsl   = $Env:enable_ssl -eq 'true'
