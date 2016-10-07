@@ -1,11 +1,22 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$fileArgs = '/S'
+﻿$ErrorActionPreference = 'Stop'
 
-# In case you see \{\{DownloadUrlx64\}\} (without backslashes)
-# after the commented lines, it’s intended.
-$genLinkUrlArray = {{DownloadUrlx64}}
-$url = Get-UrlFromFosshub $genLinkUrlArray[0]
-$url64 = Get-UrlFromFosshub $genLinkUrlArray[1]
+$packageName = 'mkvtoolnix'
+$url32 = Get-UrlFromFosshub 'to_be_determined'
+$url64 = Get-UrlFromFosshub 'to_be_determined'
+$checksum32  = 'to_be_determined'
+$checksum64  = 'to_be_determined'
 
-Install-ChocolateyPackage $packageName $fileType $fileArgs $url $url64
+$packageArgs = @{
+  packageName    = $packageName
+  fileType       = 'exe'
+  url            = $url32
+  url64bit       = $url64
+  checksum       = $checksum32
+  checksum64     = $checksum64
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyPackage @packageArgs
