@@ -21,7 +21,7 @@ function global:au_GetLatest {
     $result = $download_page.Content -match "mkvtoolnix-64bit-([\d\.]+)-setup.exe"
 
     if (!$Matches) {
-      throw "Avidemux version not found on $releases"
+      throw "mkvtoolnix version not found on $releases"
     }
 
     $version = $Matches[1]
