@@ -26,3 +26,7 @@ ketarin/soluto.xml
 update_vars.ps1
 update_info.xml
 Update-AUPackages.md
+/jobs.db
+*.log
+*.log.full
+automatic/_output/

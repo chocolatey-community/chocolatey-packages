@@ -28,7 +28,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex>"version":"([\d\.]+)",</Regex>
-            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=xml</Url>
+            <Url>https://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=xml</Url>
             <StartText>&lt;version&gt;</StartText>
             <EndText>&lt;/version&gt;</EndText>
             <TextualContent />
@@ -45,7 +45,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex>"revision":([\d\.]+),</Regex>
-            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=xml</Url>
+            <Url>https://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=xml</Url>
             <StartText>&lt;revision&gt;</StartText>
             <EndText>&lt;/revision&gt;</EndText>
             <Name>revision64</Name>
@@ -61,7 +61,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex>"revision":([\d\.]+),</Regex>
-            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=32&amp;out=xml</Url>
+            <Url>https://chromium.woolyss.com/api/?os=windows&amp;bit=32&amp;out=xml</Url>
             <StartText>&lt;revision&gt;</StartText>
             <EndText>&lt;/revision&gt;</EndText>
             <Name>revision32</Name>
@@ -91,7 +91,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=32&amp;out=xml</Url>
+            <Url>https://chromium.woolyss.com/api/?os=windows&amp;bit=32&amp;out=xml</Url>
             <StartText>&lt;checksum_md5&gt;</StartText>
             <EndText>&lt;/checksum_md5&gt;</EndText>
             <Name>md5_32</Name>
@@ -107,7 +107,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>StartEnd</VariableType>
             <Regex />
-            <Url>http://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=xml</Url>
+            <Url>https://chromium.woolyss.com/api/?os=windows&amp;bit=64&amp;out=xml</Url>
             <StartText>&lt;checksum_md5&gt;</StartText>
             <EndText>&lt;/checksum_md5&gt;</EndText>
             <Name>md5_64</Name>
