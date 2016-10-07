@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>lightalloy</id>
     <title>Light Alloy Video Player</title>
-    <version>{{PackageVersion}}</version>
+    <version>4.8.8</version>
     <authors>Vortex Group, LLC.</authors>
     <owners>Redsandro</owners>
     <summary>Video Player with built-in codecs.</summary>
