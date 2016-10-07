@@ -10,16 +10,28 @@ branches:
 
 environment:
   au_push: true
+  
+  #Github token to commit pushed packages to repository
   github_user_repo: chocolatey/chocolatey-coreteampackages
-  gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
-  api_key:
-    secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
   github_api_key:
     secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
+  
+  #Gmail credentials - for error notifications
+  mail_user: gep316@gmail.com
+  mail_pass:
+    secure: aW9JL8Ogd8E5IE+d2P74eF5psfY8L5NXot0zszZnU88=
+    
+  #ID of the gist used to save run results
+  gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
+  
+  #Chocolatey API key - to push updated packages
+  api_key:
+    secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
+  
     
 init:
-- git config --global user.email "gep13@gep13.co.uk"
-- git config --global user.name "Gary Ewan Park"
+- git config --global user.email "chocolatey@realdimensions.net"
+- git config --global user.name "Chocolatey AU"
 - git config --global core.safecrlf false
 
 install:
@@ -55,3 +67,10 @@ build_script:
 artifacts:
 - path: au/update_info.xml
 - path: au/Update-AUPackages.md
+
+notifications:
+- provider: Email
+  to: $(mail_user)
+  on_build_success: false
+  on_build_failure: true
+  on_build_status_changed: true
