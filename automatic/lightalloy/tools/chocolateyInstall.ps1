@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'lightalloy'
-$url32 = Get-UrlFromFosshub 'to_be_determined'
-$checksum32  = 'to_be_determined'
+$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Light-Alloy.html/LA_Setup_v4.8.8.2.exe'
+$checksum32  = 'a8d6dbc9e313df47502df2c009488de2e0069b3dcf34dc2cb6b5af2cd08c75fa'
 
 $pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
 $au3			= Join-Path $pwd 'lightalloy.au3'
