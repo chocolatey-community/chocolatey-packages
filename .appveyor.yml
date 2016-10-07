@@ -19,7 +19,7 @@ environment:
   #Gmail credentials - for error notifications
   mail_user: gep316@gmail.com
   mail_pass:
-    secure: aW9JL8Ogd8E5IE+d2P74eF5psfY8L5NXot0zszZnU88=
+    secure: OP0vgofl+duDY9vLUWCUt4P76IGgAiVKND6MohgB1h0=
   mail_server: smtp.gmail.com
   mail_port: 587
   mail_enablessl: true
