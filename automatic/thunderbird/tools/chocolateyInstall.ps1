@@ -23,6 +23,7 @@ $allLocalesListURL = Switch ($softwareNameLowerCase) {
 
 # ---------------- Function definitions ------------------
 
+. $PSScriptRoot\Get-WebContent.ps1
 
 function GetUninstallPath () {
   $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
@@ -40,7 +41,7 @@ function GetUninstallPath () {
 
 function GetLocale() {
 
-  $availableLocales = (New-Object System.Net.WebClient).DownloadString($allLocalesListURL)
+  $availableLocales = Get-WebContent $allLocalesListURL
 
   # --- Get locale from installArgs if specified
 
