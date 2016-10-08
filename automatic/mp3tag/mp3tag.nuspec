@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>mp3tag</id>
+    <version>2.79</version>
     <title>Mp3tag</title>
     <owners>chocolatey</owners>
     <authors>Florian Heidenreich</authors>
