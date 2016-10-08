@@ -17,13 +17,12 @@ environment:
     secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
   
   #Gmail credentials - for error notifications
-  mail_user: gep13@gep13.co.uk
-  mail_user_name: gep13
+  mail_user: gep13choco@gmail.com
   mail_pass:
-    secure: qWDVAYGayg8alAP0QiZMeg4QLO5PMZTapabt3ecIU9g=
-  mail_server: smtp.sendgrid.net
+    secure: JuJVdA2yg59By5czxxm9ZwTsvsNK+WcgCs+jVQdHz+8=
+  mail_server: smtp.gmail.com
   mail_port: 587
-  mail_enablessl: false
+  mail_enablessl: true
 
   #ID of the gist used to save run results
   gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
