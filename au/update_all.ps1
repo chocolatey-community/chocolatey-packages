@@ -51,11 +51,6 @@ $Options = [ordered]@{
            } else {}
 }
 
-Write-Host $Env:mail_user
-Write-Host $Env:mail_server
-Write-Host $Env:mail_port
-Write-Host $Env:enable_ssl
-
 $global:au_Root = "$PSScriptRoot/../automatic"                           #Path to the AU packages
 $info = updateall -Name $Name -Options $Options
 
