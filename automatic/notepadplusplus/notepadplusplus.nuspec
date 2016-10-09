@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>notepadplusplus</id>
     <title>Notepad++</title>
-    <version>{{PackageVersion}}</version>
+    <version>1.0</version>
     <authors>Don Ho</authors>
     <owners>chocolatey</owners>
     <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>
@@ -38,7 +38,7 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
     <mailingListUrl>https://notepad-plus-plus.org/community/</mailingListUrl>
     <bugTrackerUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="notepadplusplus.install" version="[{{PackageVersion}}]" />
+      <dependency id="notepadplusplus.install" version="7.0" />
     </dependencies>
   </metadata>
   <files>

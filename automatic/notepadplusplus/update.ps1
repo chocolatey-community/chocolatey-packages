@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases'
+$releases = 'https://notepad-plus-plus.org/download'
 
 function global:au_SearchReplace {
   @{
@@ -11,10 +11,18 @@ function global:au_SearchReplace {
  }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest $releases
-    $version = $download_page.AllElements | ? class -eq 'release-title'
+    $root          = (Split-Path $releases -Parent).Replace(":\\", "://")
+    $download_page = Invoke-WebRequest $releases -UseBasicParsing
+    $url_i         = $download_page.Links | ? href -match '.exe$' | % href
+    $url_p         = $download_page.Links | ? href -match '.7z$' | % href
 
-    @{ URL_i = "${url}_Install.exe"; URL_p32= "$url.zip"; URL_p64= "${url}_x64.zip"; Version = $version }
+    @{
+        Version = Split-Path (Split-Path $url_i[0]) -Leaf
+        URL32_i = $root + ($url_i -notmatch 'x64')
+        URL64_i = $root + ($url_i -match 'x64')
+        URL32_p = $root + ($url_p -notmatch 'x64' -notmatch 'minimalist')
+        URL64_p = $root + ($url_p -match 'x64' -notmatch 'minimalist')
+    }
 }
 
 if ($MyInvocation.InvocationName -ne '.') {

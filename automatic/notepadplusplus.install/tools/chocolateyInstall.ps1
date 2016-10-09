@@ -2,9 +2,9 @@
 
 $packageName = 'notepadplusplus'
 $url32       = ''
-$url64       = $url32
+$url64       = ''
 $checksum32  = ''
-$checksum64  = $checksum32
+$checksum64  = ''
 
 $packageArgs = @{
   packageName            = $packageName
