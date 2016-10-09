@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $download_page.RawContent -match 'NirCmd v(.+)'
+    $download_page.RawContent -match 'NirCmd v(.+)' | Out-Null
 
     $version = $Matches[1]
     $url32   = 'http://www.nirsoft.net/utils/nircmd.zip'
