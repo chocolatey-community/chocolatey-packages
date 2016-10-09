@@ -17,7 +17,7 @@ $packageArgs = @{
   checksumType64         = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
-  registryUninstallerKey = 'notepad++'
+  registryUninstallerKey = 'notepad\+\+'
 }
 Install-ChocolateyPackage @packageArgs
 
