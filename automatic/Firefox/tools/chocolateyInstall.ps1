@@ -11,8 +11,6 @@ $allLocalesListURL = 'https://www.mozilla.org/en-US/firefox/all/'
 
 # ---------------- Function definitions ------------------
 
-. $PSScriptRoot\Get-WebContent.ps1
-
 function GetUninstallPath () {
   $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
   $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
