@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>notepadplusplus</id>
+    <title>Notepad++</title>
+    <version>7.0</version>
+    <authors>Don Ho</authors>
+    <owners>chocolatey</owners>
+    <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>
+    <description>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GPL License.
+
+Based on the powerful editing component Scintilla, Notepad++ is written in C++ and uses pure Win32 API and STL which ensures a higher execution speed and smaller program size. By optimizing as many routines as possible without losing user friendliness, Notepad++ is trying to reduce the world carbon dioxide emissions. When using less CPU power, the PC can throttle down and reduce power consumption, resulting in a greener environment.
+
+## Features
+
+
+* Syntax Highlighting and Syntax Folding
+* User Defined Syntax Highlighting and Folding: [screenshot 1](https://notepad-plus-plus.org/assets/images/scsh/ulds_folder.gif), [screenshot 2](https://notepad-plus-plus.org/assets/images/scsh/ulds_keywords.gif), [screenshot 3](https://notepad-plus-plus.org/assets/images/scsh/ulds_comment.gif) and [screenshot 4](https://notepad-plus-plus.org/assets/images/scsh/ulds_op.gif)
+* PCRE (Perl Compatible Regular Expression) Search/Replace
+* GUI entirely customizable: [minimalist](https://notepad-plus-plus.org/assets/images/scsh/scsh_gui_minimalist.png), [tab with close button](https://notepad-plus-plus.org/assets/images/scsh/scsh_gui_tabCloseButton.png), [multi-line tab](https://notepad-plus-plus.org/assets/images/scsh/scsh_gui_multiLineTab.png), [vertical tab](https://notepad-plus-plus.org/assets/images/scsh/scsh_gui_verticalTab.png) and [vertical document list](https://notepad-plus-plus.org/assets/images/scsh/scsh_gui_verticalDocList.png)
+* [Document Map](https://notepad-plus-plus.org/assets/images/docMap.png)
+* Auto-completion: Word completion, Function completion and Function parameters hint
+* Multi-Document (Tab interface)
+* Multi-View
+* WYSIWYG (Printing)
+* Zoom in and zoom out
+* Multi-Language environment supported
+* Bookmark
+* Macro recording and playback
+* Launch with different [arguments](https://notepad-plus-plus.org/assets/images/scsh/scsh_cmdlineArguments.png)
+</description>
+    <projectUrl>https://notepad-plus-plus.org/</projectUrl>
+    <tags>notepad notepadplusplus notepad-plus-plus editor</tags>
+    <releaseNotes>https://notepad-plus-plus.org/news</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/notepadplusplus/icon.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/notepadplusplus</packageSourceUrl>
+    <projectSourceUrl>https://github.com/notepad-plus-plus/notepad-plus-plus</projectSourceUrl>
+    <mailingListUrl>https://notepad-plus-plus.org/community/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="notepadplusplus.install" version="7.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
