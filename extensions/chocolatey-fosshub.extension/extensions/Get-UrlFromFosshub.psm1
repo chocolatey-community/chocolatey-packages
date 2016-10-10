@@ -3,14 +3,14 @@
 # Takes a FossHub URL and returns the generated
 # expiring download link for the file.
 #
-# Usage: Get-UrlFromFosshub genLink_url
+# Usage: Get-UrlFromFosshub url
 # Example:
 # Get-UrlFromFosshub https://www.fosshub.com/Audacity.html/audacity-win-2.1.2.exe
 
 Function Get-UrlFromFosshub($linkUrl) {
 
   $fosshubAppName = $linkUrl -match 'fosshub.com/(.*)/(.*)'
-  # If there’s no match, it means that it’s not a FossHub genLink URL.
+  # If there’s no match, it means that it’s not a FossHub URL.
   # Then this function simply returns the input URL.
   if (!$Matches) {
     return $linkUrl
