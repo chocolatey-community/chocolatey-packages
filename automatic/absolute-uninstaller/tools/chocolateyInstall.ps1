@@ -17,3 +17,10 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+# Remove MaiaGames Desktop Link¨
+$shortcut = "$env:PUBLIC/Desktop/Maiagames.lnk"
+$programdata = "$env:ProgramData/GlarySoft/Maiagames"
+
+If (Test-Path "$shortcut") { Remove-Item -Force "$shortcut"}
+If (Test-Path "$programdata") { Remove-Item -Force -Recurse "$programdata"}
