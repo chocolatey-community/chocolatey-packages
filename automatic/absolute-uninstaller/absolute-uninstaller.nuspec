@@ -3,7 +3,7 @@
   <metadata>
     <id>absolute-uninstaller</id>
     <title>Absolute Uninstaller</title>
-    <version>{{PackageVersion}}</version>
+    <version>5.3.1.21</version>
     <authors>GlarySoft</authors>
     <owners>Redsandro</owners>
     <summary>Absolute Uninstaller is a complete program uninstaller that helps you remove programs.</summary>
@@ -14,7 +14,7 @@ GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you 
     <tags>GlarySoft sysadmin batch remove software uninstall absolute uninstaller admin</tags>
     <copyright>GlarySoft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/AbsoluteUninstaller/icons/absolute-uninstaller.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/723b164cda892499cea29735439b8aaa81d760bf/icons/absolute-uninstaller.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
