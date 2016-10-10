@@ -3,7 +3,7 @@
   <metadata>
     <id>absolute-uninstaller</id>
     <title>Absolute Uninstaller</title>
-    <version>{{PackageVersion}}</version>
+    <version>5.3.1.21</version>
     <authors>GlarySoft</authors>
     <owners>Redsandro</owners>
     <summary>Absolute Uninstaller is a complete program uninstaller that helps you remove programs.</summary>
