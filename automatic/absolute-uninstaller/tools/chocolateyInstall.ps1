@@ -6,7 +6,7 @@ $checksumType = 'sha256'
 $packageArgs = @{
   packageName = $packageName
   fileType = 'exe'
-  softwareName = 'Absolute Uninstaller'
+  softwareName = 'Absolute Uninstaller*'
 
   checksum = $checksum
   checksumType = $checksumType
