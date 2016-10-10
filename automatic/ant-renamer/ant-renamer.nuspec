@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>ant-renamer</id>
+    <version>2.12.0</version>
     <title>Ant Renamer</title>
     <owners>chocolatey</owners>
     <authors>Antoine Potten</authors>
-    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0</licenseUrl>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.txt</licenseUrl>
     <projectUrl>http://www.antp.be/software/renamer</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ant-renamer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ant-renamer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Ant Renamer is a free (really free, i. e. the source code is available) program that makes easier the renaming of lots of files and folders by using specified settings. It supports Unicode names.
@@ -17,7 +17,7 @@ Ant Renamer is a free (really free, i. e. the source code is available) program 
     <releaseNotes>http://www.antp.be/software/renamer/history</releaseNotes>
     <copyright>Antoine Potten</copyright>
     <tags>renamer regex admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ant-renamer</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
