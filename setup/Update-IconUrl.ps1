@@ -35,6 +35,47 @@
 .NOTES
   Currently supports icons with the following extensions
   (png, svg, jpg, ico)
+
+.EXAMPLE
+  ps> .\Update-IconUrl.ps1
+  Updates all nuspec files with matching icons
+-    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/thunderbird.png</iconUrl>
++    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
+
+.EXAMPLE
+  ps> .\Update-IconUrl.ps1 -Name 'SQLite'
+  Updates only a single nuspec file with the specified name with its matching icon
+-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>
++    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/speccy.png</iconUrl>
+
+.EXAMPLE
+  ps> .\Updates-IconUrl.ps1 -Name 'youtube-dl' -IconName 'y-dl'
+  Updates only a single nuspec file with the specified name with the icon matching the specified IconName
+-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/y-dl.svg</iconUrl>
++    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a42da86c9cc480a5f3f23677e0d73d88416a3b3c/icons/y-dl.svg</iconUrl>
+
+.EXAMPLE
+  ps> .\Updates-IconUrl.ps1 -Name "thunderbird" -UseStopwatch
+  ps> .\Updates-IconUrl.ps1 -UseStopwatch
+  While also updating the nuspec file this will also output the time it took for the script to finish
+  output> "Time Used: 00:00:27.4720531"
+
+.EXAMPLE
+  Possible output for all calls
+
+  Output if found
+  output> Updated 1 icon url(s)
+
+  Output if already up to date
+  output> Congratulations, all found icon urls is up to date.
+  output> 1 icon url(s) was already up to date.
+
+  Output if not found
+  output> WARNING: 2 icon url(s) was not found!
+  output> Do you want to view the package names?
+  input< y
+  output> tuniac
+  output> youtube-dl
 #>
 
 param(
