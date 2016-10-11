@@ -1,6 +1,7 @@
 import-module au
 
-$releases = 'https://api.github.com/repos/rg3/youtube-dl/releases/latest'
+$domain   = 'https://github.com'
+$releases = "$domain/rg3/youtube-dl/releases/latest"
 
 function global:au_SearchReplace {
   @{
@@ -13,21 +14,15 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $headers = @{}
-  if (Test-Path Env:\github_api_key) {
-    $headers.Authorization = 'Basic ' `
-      + [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($env:github_api_key))
-  }
-  $download_page = Invoke-RestMethod -UseBasicParsing -Uri $releases -Headers $headers
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re    = '\.exe$'
-  $url   = $download_page.assets | ? browser_download_url -match $re | select -First 1 -expand browser_download_url
+  $url   = $domain + ($download_page.Links | ? href -match $re | select -First 1 -expand href)
   $filename = $url.Substring($url.LastIndexOf('/') + 1);
-  $version  = $download_page.tag_name;
+  $version  = $url -split '\/' | select -skip 1 -last 1;
 
-  $checksumAsset = $download_page.assets | ? browser_download_url -match "SHA2\-512SUMS$" `
-    | select -first 1 -expand browser_download_url
-  $checksum_page = Invoke-WebRequest -UseBasicParsing -Uri $checksumAsset -Headers $headers;
+  $checksumAsset = $domain + ($download_page.Links | ? href -match "SHA2\-512SUMS$" | select -first 1 -expand href)
+  $checksum_page = Invoke-WebRequest -UseBasicParsing -Uri $checksumAsset;
   $checksum = [regex]::Match($checksum_page, "([a-f\d]+)\s*$([regex]::Escape($filename))").Groups[1].Value;
 
   return @{
