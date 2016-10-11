@@ -15,7 +15,7 @@ $packageArgs = @{
   url            = $url
 
   silentArgs     = '/S'
-  validExitCodes = @(0)
+  validExitCodes = @(0, 1223)
 }
 
 Install-ChocolateyPackage @packageArgs
