@@ -1,3 +1,42 @@
+<#
+.SYNOPSIS
+  Updates Icon Url with correct hashes in the nuspec file
+
+.DESCRIPTION
+  Searches for icons matching the package name and
+  extracts the latest commit hash for that icon (committing it first if it has changed).
+  It then updates the package nuspec file with the correct rawgit url.
+
+.PARAMETER Name
+  If specified it only updates the package matching the specified name
+
+.PARAMETER IconName
+  If specified look for an icon matching the specified Icon Name.
+  Is ignored if no Name parameter is specified.
+
+.PARAMETER GithubRepository
+  The github user/repository to use in the rawgit url
+
+.PARAMETER RelativeIconDir
+  The relative path to where icons are located (relative to the location of this script)
+
+.PARAMETER PackagesDirectory
+  The relative path to where packages are located (relative to the location of this script)
+
+.PARAMETER UseStopwatch
+  Uses a stopwatch to time how long this script used to execute
+
+.OUTPUTS
+  The number of packages that was updates,
+  if some packages is already up to date, outputs how many.
+  Writes a warning of how many packages where icons was not found,
+  then optionally outputs which packages.
+
+.NOTES
+  Currently supports icons with the following extensions
+  (png, svg, jpg, ico)
+#>
+
 param(
   [string]$Name = $null,
   [string]$IconName = $null,
