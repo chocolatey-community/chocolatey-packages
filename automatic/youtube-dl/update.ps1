@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $headers.Authorization = 'Basic ' `
       + [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($env:github_api_key))
   }
-  $download_page = Invoke-RestMethod -UseBasicParsing -Uri $releases
+  $download_page = Invoke-RestMethod -UseBasicParsing -Uri $releases -Headers $headers
 
   $re    = '\.exe$'
   $url   = $download_page.assets | ? browser_download_url -match $re | select -First 1 -expand browser_download_url
@@ -27,7 +27,7 @@ function global:au_GetLatest {
 
   $checksumAsset = $download_page.assets | ? browser_download_url -match "SHA2\-512SUMS$" `
     | select -first 1 -expand browser_download_url
-  $checksum_page = Invoke-WebRequest -UseBasicParsing -Uri $checksumAsset;
+  $checksum_page = Invoke-WebRequest -UseBasicParsing -Uri $checksumAsset -Headers $headers;
   $checksum = [regex]::Match($checksum_page, "([a-f\d]+)\s*$([regex]::Escape($filename))").Groups[1].Value;
 
   return @{
