@@ -4,7 +4,7 @@
   <metadata>
     <id>qbittorrent</id>
     <title>qBittorrent</title>
-    <version>{{PackageVersion}}</version>
+    <version>3.3.7</version>
     <authors>Christophe Dumez</authors>
     <owners>nconrads, chocolatey</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
@@ -14,14 +14,19 @@ qBittorrent is a free software cross-platform BitTorrent client GUI written with
 qBittorrent aims to have a small foot-print, to be powerful, intuitive and visually attractive going beyond the current functions widely provided by other applications. qBittorrent is an attempt to provide a μTorrent equivalent that is open-source and multi-platform adding a streaming-like function to let users download-and-play video files. qBittorrent is currently offering functionality comparable to more popular BitTorrent clients such as Vuze but without requiring the Java Virtual Machine. qBittorrent requires Python only for the search engine while other clients such as Deluge and BitTornado require it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
     </description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qBittorrent</packageSourceUrl>
     <docsUrl>https://github.com/qbittorrent/qBittorrent/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/qbittorrent/qBittorrent/issues</bugTrackerUrl>
     <tags>qbittorrent torrent sharing p2p admin</tags>
     <licenseUrl>https://github.com/qbittorrent/qBittorrent/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/qbittorrent.png</iconUrl>
+    <copyright>Copyright ©2006-2016 The qBittorrent project</copyright>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
     <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fosshub.extension" version="0.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
