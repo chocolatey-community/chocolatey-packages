@@ -3,6 +3,10 @@ import-module au
 $domain   = 'https://github.com'
 $releases = "$domain/rg3/youtube-dl/releases/latest"
 
+function global:au_afterUpdate {
+  rm $PSScriptRoot/tools/*.exe -ea Ignore
+}
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
