@@ -30,3 +30,6 @@ Update-AUPackages.md
 *.log
 *.log.full
 automatic/_output/
+
+# Packages with files to explicitly ignore
+automatic/youtube-dl/tools/*.exe
