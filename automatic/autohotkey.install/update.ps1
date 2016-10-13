@@ -9,4 +9,4 @@ function global:au_SearchReplace {
     }
 }
 
-update -NoCheckUrl -ChecksumFor 32
+update  -ChecksumFor 32
