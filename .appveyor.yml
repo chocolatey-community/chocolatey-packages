@@ -62,7 +62,9 @@ install:
     }
 
 build_script:
-- ps: ./au/update_all.ps1
+- ps: |
+    ./au/update_all.ps1
+    7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 
 #on_finish:
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
@@ -70,6 +72,7 @@ build_script:
 artifacts:
 - path: au/update_info.xml
 - path: au/Update-AUPackages.md
+- path: au_temp.zip
 
 notifications:
 - provider: Email
