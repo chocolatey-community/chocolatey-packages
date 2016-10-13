@@ -1,4 +1,4 @@
-$packageName = '{{PackageName}}'
+$packageName = 'Chromium'
 $installerType = 'exe'
 $bitness = Get-ProcessorBits
 $bitty = @{$true = "\WOW6432Node"; $false = ""}[$bitness -eq 64]
