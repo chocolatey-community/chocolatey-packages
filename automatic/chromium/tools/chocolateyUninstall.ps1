@@ -22,7 +22,4 @@ $bitty = @{$true = "\WOW6432Node"; $false = ""}[$bitness -eq 64]
 
 	$file = (Get-ItemProperty -Path ( $chromium_key ) ).UninstallString
   
-
-return $file
-
 Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $file
