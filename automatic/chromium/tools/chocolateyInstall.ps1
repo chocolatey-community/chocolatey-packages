@@ -11,7 +11,7 @@
     $silentArgs = '--system-level --do-not-launch-chrome'
   }
   
-    $packageArgs = @{
+  $packageArgs = @{
   packageName   = 'Chromium'
   fileType      = 'exe'
   url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/425094/mini_installer.exe'
@@ -23,6 +23,6 @@
   checksumType  = 'md5'
   checksum64    = '0ffc77b8638e7f5c0d5bb8c6cf02aeff'
   checksumType64= 'md5'
-}
+  }
 
     Install-ChocolateyPackage @packageArgs
