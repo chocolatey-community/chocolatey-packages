@@ -17,7 +17,7 @@ $bitness = @{$true = "\WOW6432Node"; $false = ""}[ (Get-ProcessorBits) -eq 64]
   } else  {
     $chromium_key = ( "hkcu:" + "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium" )
   }
-
 	$file = (Get-ItemProperty -Path ( $chromium_key ) ).UninstallString
+  return $file
   
 Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $file
