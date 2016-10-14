@@ -47,8 +47,8 @@ function global:au_GetLatest {
         #Diabled until au/issues/36
         #Checksum32     = $checksum32
         #Checksum64     = $checksum64
-        ChecksumType32 = $hashtype
-        ChecksumType64 = $hashtype
+        ChecksumType32 = $hashtype32
+        ChecksumType64 = $hashtype64
     }
 }
 
