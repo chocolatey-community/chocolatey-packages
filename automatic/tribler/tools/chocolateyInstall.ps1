@@ -1,21 +1,21 @@
-$packageName = '{{PackageName}}'
-$installerType = 'EXE'
-$url = '{{DownloadUrl}}'
-$silentArgs = '/silent /passive'
-$validExitCodes	= @(0)
-$pwd = "$(split-path -parent $MyInvocation.MyCommand.Definition)"
-$au3 = Join-Path $pwd 'tribler.au3'
+﻿$ErrorActionPreference = 'Stop';
 
-# Original installer for silent version
-# Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
+$packageName  = 'tribler'
+$url          = 'https://github.com/Tribler/tribler/releases/download/v6.5.2/Tribler_6.5.2.exe'
+$checksum     = '077cbe7d16639f469c1a7dfc994d0e9c298e1e5663b75500ee41e38b28c48257'
+$checksumType = 'sha256'
 
-# Not silent installer, autoit
-$chocTempDir = Join-Path $env:TEMP "chocolatey"
-$tempDir = Join-Path $chocTempDir "$packageName"
-if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-$tempFile = Join-Path $tempDir "$packageName.installer.exe"
+$packageArgs = @{
+  packageName    = $packageName
+  fileType       = 'exe'
+  softwareName   = 'Tribler'
 
-Get-ChocolateyWebFile "$packageName" "$tempFile" "$url"
+  checksum       = $checksum
+  checksumType   = $checksumType
+  url            = $url
 
-Write-Output "Running AutoIt3 using `'$au3`'"
-Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'
+  silentArgs     = '/S'
+  validExitCodes = @(0, 1223)
+}
+
+Install-ChocolateyPackage @packageArgs
