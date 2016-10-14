@@ -19,6 +19,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+  $hashtype = 'md5'
   $download_page32 = Invoke-WebRequest -Uri $releases_x32
   $download_page64 = Invoke-WebRequest -Uri $releases_x64
 	$val32 = $download_page32 -split ";"
@@ -35,8 +36,8 @@ function global:au_GetLatest {
 
     return @{
     URL32 = $url32; URL64 = $url64; Version = $version;
-    Checksum32 = $checksum32; ChecksumType32 = 'md5';
-    Checksum64 = $checksum64; ChecksumType64 = 'md5';
+    Checksum32 = $checksum32; ChecksumType32 = $hashtype;
+    Checksum64 = $checksum64; ChecksumType64 = $hashtype;
     }
 }
 
