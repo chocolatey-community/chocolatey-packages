@@ -21,9 +21,9 @@ $Options = [ordered]@{
     }
 
     Gist = @{
-        Id          = $Env:gist_id                          #Your gist id or leave empty for anonymous
-        ApiKey      = $Env:github_api_key                   #Your github api key
-        Path        = "$PSScriptRoot\Update-AUPacakges.md"  #List of files to add to gist
+        Id     = $Env:gist_id                              #Your gist id or leave empty for anonymous
+        ApiKey = $Env:github_api_key                       #Your github api key
+        Path   = "$PSScriptRoot\Update-AUPacakges.md"      #List of files to add to gist
     }
 
     Git = @{
@@ -45,7 +45,7 @@ $Options = [ordered]@{
                 Port        = $Env:mail_port
                 EnableSsl   = $Env:enable_ssl -eq 'true'
                 Attachments = "$PSScriptRoot\update_info.xml"
-                UserMessage = ''
+                UserMessage = 'Update status: http://gep13.me/choco-au'
                 SendAlways  = $false                        #Send notifications every time
              }
            } else {}
