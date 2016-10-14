@@ -1,5 +1,5 @@
 
-  $version = '{{PackageVersion}}'
+  $version = '56.0.2890.0'
 
 	$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 	$hive = "hkcu"
@@ -12,7 +12,7 @@
   }
   
   $packageArgs = @{
-  packageName   = 'Chromium'
+  packageName   = 'chromium'
   fileType      = 'exe'
   url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/425094/mini_installer.exe'
   url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/425083/mini_installer.exe'
