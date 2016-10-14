@@ -1,4 +1,11 @@
-# Generally disable end of line conversion,
-# which overrides the settings of core.autocrlf
+* text eol=crlf whitespace=trailing-space,tab-in-indent,tabwidth=2
 
-* -text
+# Possibly have crlf for this as well (believe AU uses Windows Line Endings and utf-8-bom)
+*.nuspec text eol=lf
+
+*.png binary
+*.jpg binary
+*.exe binary
+*.dll binary
+*.zip binary
+*.cer binary
