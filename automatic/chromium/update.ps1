@@ -11,9 +11,9 @@ function global:au_SearchReplace {
             "(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
             "(^\s*url64Bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
             "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.Checksumtype32)'"
+            "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
             "(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-            "(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.Checksumtype64)'"
+            "(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
         }
     }
 }
