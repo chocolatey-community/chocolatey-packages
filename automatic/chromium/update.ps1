@@ -17,23 +17,23 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page32 = Invoke-WebRequest -Uri $releases_x32
-    $download_page64 = Invoke-WebRequest -Uri $releases_x64
-
+  $download_page32 = Invoke-WebRequest -Uri $releases_x32
+  $download_page64 = Invoke-WebRequest -Uri $releases_x64
 	$val32 = $download_page32 -split ";"
 	$val64 = $download_page64 -split ";" 
-	
 	$chromium32 = $val32 | out-string | ConvertFrom-StringData
 	$chromium64 = $val32 | out-string | ConvertFrom-StringData
-	
 	$version = $chromium64.version
-    $url32   = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/<revision>/mini_installer.exe'
-    $url64   = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/<revision>/mini_installer.exe'
+  $url32   = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/<revision>/mini_installer.exe'
+  $url64   = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/<revision>/mini_installer.exe'
+  $url32   = $url32 -replace '<revision>', $chromium32.revision
+  $url64   = $url64 -replace '<revision>', $chromium64.revision
 
-    $url32   = $url32 -replace '<revision>', $chromium32.revision
-    $url64   = $url64 -replace '<revision>', $chromium64.revision
-
-    return @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    return @{
+    URL32 = $url32; URL64 = $url64; Version = $version;
+    Checksum32 = $chromium32.checksum_md5; ChecksumType32 = 'md5';
+    Checksum64 = $chromium64.checksum_md5; ChecksumType64 = 'md5';
+    }
 }
 
 update
