@@ -2,28 +2,31 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>tribler</id>
     <title>Tribler</title>
-    <version>{{PackageVersion}}</version>
+    <version>6.5.2</version>
     <authors>The Tribler Team</authors>
     <owners>Redsandro</owners>
     <summary>Tribler is an open source anonymous decentralized BitTorrent client.</summary>
     <description>
 Tribler is an open source anonymous peer-to-peer decentralized BitTorrent client. Tribler is based on the BitTorrent protocol and uses an overlay network for content searching, which makes the program operate independent of external websites and renders it immune to limiting external action, for example, government restraint.
 
-**Note:** This installer does not support silent installation. The installation is automated using AutoIt3. Be careful that multitasking might confuse the automation script.
+**Note:** Upgrading from older version will not be completely silent since the downloaded installer uninstalls the previous version without passing silent arguments.
     </description>
     <projectUrl>http://www.tribler.org/</projectUrl>
+    <mailingListUrl>https://forum.tribler.org/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/Tribler/tribler/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/Tribler/tribler</projectSourceUrl>
     <tags>BitTorrent admin</tags>
     <copyright></copyright>
-    <licenseUrl>http://www.gnu.org/copyleft/lesser.html</licenseUrl>
+    <licenseUrl>https://github.com/Tribler/tribler/blob/master/Tribler/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://i.imgur.com/79Z6PMK.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/31eebb648daf450ee49dfdaa5cb613009d86d862/icons/tribler.png</iconUrl>
+    <releaseNotes>https://github.com/Tribler/tribler/releases/tag/v6.5.2</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tribler</packageSourceUrl>
     <dependencies>
-      <dependency id="autoit.commandline" version="3.3.12.0" />
+      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
     </dependencies>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
