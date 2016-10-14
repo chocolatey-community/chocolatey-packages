@@ -32,7 +32,8 @@ function global:au_GetLatest {
   return @{
     Version = $version
     URL32 = $url
-    #Checksum32 = $checksum  <-- doesn't work on AV
+    #Diabled until au/issues/36
+    #Checksum32 = $checksum
     ChecksumType32 = "sha512"
   }
 }
