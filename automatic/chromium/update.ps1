@@ -1,8 +1,8 @@
 
 import-module au
 
- $releases_x32 = 'https://chromium.woolyss.com/api/?os=windows&bit=32&out=string' # URL to for GetLatest 32bit
- $releases_x64 = 'https://chromium.woolyss.com/api/?os=windows&bit=64&out=string' # URL to for GetLatest 64bit
+ $releases_x32 = 'https://chromium.woolyss.com/api/v2/?os=windows&bit=32&out=string' # URL to for GetLatest 32bit
+ $releases_x64 = 'https://chromium.woolyss.com/api/v2/?os=windows&bit=64&out=string' # URL to for GetLatest 64bit
 
 function global:au_SearchReplace {
    @{
