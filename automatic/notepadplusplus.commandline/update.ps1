@@ -11,4 +11,4 @@ function global:au_SearchReplace {
     }
 }
 
-update -NoCheckUrl
+update
