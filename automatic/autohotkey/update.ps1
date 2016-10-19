@@ -12,9 +12,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | % Content
-    $url     = "$releases/AutoHotkey${v}" + ($version -replace '\.')
-
-    @{ URL_i = "${url}_Install.exe"; URL_p32= "$url.zip"; URL_p64= "${url}_x64.zip"; Version = $version }
+    $url     = "$releases/AutoHotkey_${version}"
+    @{ URL_i = "${url}_setup.exe"; URL_p= "${url}.zip"; Version = $version }
 }
 
 if ($MyInvocation.InvocationName -ne '.') {

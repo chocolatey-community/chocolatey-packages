@@ -1,9 +1,9 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName = 'autohotkey.install'
-$url32       = 'https://autohotkey.com/download/1.1/AutoHotkey112401_Install.exe'
+$url32       = 'https://autohotkey.com/download/1.1/AutoHotkey_1.1.24.02_setup.exe'
 $url64       = $url32
-$checksum32  = '78ea671c3305465933a5d00f39da7e86c116a8a5a1849835196a27799ac29f8f'
+$checksum32  = '1dc79c7157e9a98c807beeb3fb1961874142e0f41a8f71b80007935a4ae747ba'
 $checksum64  = $checksum32
 
 $silent = '/S'

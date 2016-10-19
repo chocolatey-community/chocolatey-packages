@@ -1,9 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
-$url32       = 'https://autohotkey.com/download/1.1/AutoHotkey112401.zip'
-$url64       = 'https://autohotkey.com/download/1.1/AutoHotkey112401_x64.zip'
-$checksum32  = '90ecf74c0bddd243d21b57db3864efc3c959cda7d64296b0a29ad4ac9847e46a'
-$checksum64  = '6e61a6cbbadbb37a114c90e885996de3a392d6e79af9d9df37acf2dcaa8e39e4'
+$url32       = 'https://autohotkey.com/download/1.1/AutoHotkey_1.1.24.02.zip'
+$url64       = $url32
+$checksum32  = '7f905a3d1cc5de0a8f599b0e090ada871b5af21147814bfcdce59eac8f58dd51'
+$checksum64  = $checksum32
+$toolsPath   = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'autohotkey.portable'
@@ -13,7 +14,19 @@ $packageArgs = @{
   checksum64     = $checksum64
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
-  unzipLocation  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+  unzipLocation  = $toolsPath
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
+Write-Host "Removing ANSI version"
+rm "$toolsPath/AutoHotkeyA32.exe" -ea 0
+if (Get-ProcessorBits 64) {
+    Write-Verbose "Removing x32 version"
+    rm "$toolsPath/AutoHotkeyU32.exe" -ea 0
+    mv "$toolsPath/AutoHotkeyU64.exe" "$toolsPath/AutoHotkey.exe"
+} else {
+    Write-Verbose "Removing x64 version"
+    rm "$toolsPath/AutoHotkeyU64.exe" -ea 0
+    mv "$toolsPath/AutoHotkeyU32.exe" "$toolsPath/AutoHotkey.exe"
+}
