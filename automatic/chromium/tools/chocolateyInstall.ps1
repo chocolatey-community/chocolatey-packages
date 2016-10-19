@@ -15,14 +15,14 @@ if (Test-Path $Chromium) {
 $packageArgs = @{
   packageName   = 'chromium'
   fileType      = 'exe'
-  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/425887/mini_installer.exe'
-  url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/425887/mini_installer.exe'
+  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/426133/mini_installer.exe'
+  url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/426133/mini_installer.exe'
   silentArgs    = $silentArgs
   validExitCodes= @(0)
   softwareName  = 'Chromium'
-  checksum      = '680a5c161de594d207a88711a09a5623'
+  checksum      = '156592117d9c532391b3dc7029d1fde7'
   checksumType  = 'md5'
-  checksum64    = 'caea4d540c99009a20d0184a91f74d98'
+  checksum64    = 'f498e6a711a330caf4b8b4366a9c0d15'
   checksumType64= 'md5'
 }
 
