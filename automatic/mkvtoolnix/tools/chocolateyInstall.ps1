@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'mkvtoolnix'
-$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/MKVToolNix.html/mkvtoolnix-32bit-9.4.2-setup.exe'
-$url64 = Get-UrlFromFosshub 'https://www.fosshub.com/MKVToolNix.html/mkvtoolnix-64bit-9.4.2-setup.exe'
-$checksum32  = '66ce6fd8cf9d5aed6a8084aa659e3cc009b5ff2fb9c982a95b8e7f653dc86846'
-$checksum64  = '40cb363f7c6160df1da4851a6ed409afcc9945871b234393173c6800b3ee9ac1'
+$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/MKVToolNix.html/mkvtoolnix-32bit-9.5.0-setup.exe'
+$url64 = Get-UrlFromFosshub 'https://www.fosshub.com/MKVToolNix.html/mkvtoolnix-64bit-9.5.0-setup.exe'
+$checksum32  = '3b6f0f8b69bb9a4f3cfd560ccf740869ebf159229213dd52c321f2abc2c1cbfc'
+$checksum64  = '001b06cfda2074afd5d3f563a0569a7cab58933f3590121f151d60c9282e7f0a'
 
 $packageArgs = @{
   packageName    = $packageName
