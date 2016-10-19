@@ -3,7 +3,7 @@ These functions may be used in Chocolatey install/uninstall scripts by declaring
 
 ```xml
 <dependencies>
-    <dependency id="chocolatey-common.extension" />
+    <dependency id="chocolatey-core.extension" />
 </dependencies>
 ```
 ## Functions
