@@ -1,23 +1,15 @@
-$packageName = 'Chromium'
-$installerType = 'exe'
-$bitness = @{$true = "\WOW6432Node"; $false = ""}[ (Get-ProcessorBits) -eq 64]
-	
-	$chromium_string = "\SOFTWARE" + $bitness +"\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
-	$hive = "hkcu"
-	$Chromium = $hive + ":" + $chromium_string
-
-	if ( (Test-Path $Chromium) -eq $true ) {
-	  $hk_level = "hkcu"
-	} else {
-	  $hk_level = "hklm"
+	$registry = Get-UninstallRegistryKey -SoftwareName $packageName
+	$file = $registry.UninstallString
+  $chromiumArgs = @{$true = "--uninstall --system-level"; $false = "--uninstall"}[ ($file -contains "system-level") ]
+	$myfile = $file -replace( $chromiumArgs )
+	# All arguments for the Uninstallation of this package
+	$packageArgs = @{
+	PackageName = 'Chromium'
+	FileType = 'exe'
+	SilentArgs = '--uninstall --system-level --force-uninstall'
+	validExitCodes =  @(0,19,21)
+	File = $myfile
 	}
-
-  if ( (Test-Path ( $hk_level + ":" +$chromium_string )) -eq $true ) {
-    $chromium_key = ( $hk_level + ":" + $chromium_string )
-  } else  {
-    $chromium_key = ( "hkcu:" + "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium" )
-  }
-	$file = (Get-ItemProperty -Path ( $chromium_key ) ).UninstallString
-  return $file
-  
-Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -validExitCodes $validExitCodes -File $file
+  # Now to Uninstall the Package
+  Uninstall-ChocolateyPackage @packageArgs
+  # This at the moment does not remove the libs\Chromium folder
