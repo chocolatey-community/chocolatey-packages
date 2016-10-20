@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>Brackets</id>
     <title>Brackets</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>1.7</version>
     <authors>Adobe</authors>
     <summary>Brackets open-source code editor built with the web for the web.</summary>
     <description>
@@ -23,12 +23,15 @@ Rather than clutter your workspace with floating panels, toolbars and icons, Bra
 The browser is your design view. Brackets hooks up directly to the browser, allowing you to design and develop in the same environment that you deploy.
     </description>
     <projectUrl>http://brackets.io/</projectUrl>
+    <projectSourceUrl>https://github.com/adobe/brackets</projectSourceUrl>
     <tags>editor web adobe javascript html css admin</tags>
     <licenseUrl>https://github.com/adobe/brackets/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Brackets.svg</iconUrl>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://github.com/adobe/brackets/releases</releaseNotes>
+    <bugTrackerUrl>https://github.com/adobe/brackets/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Brackets</packageSourceUrl>
+    <docsUrl>https://github.com/adobe/brackets/wiki</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
