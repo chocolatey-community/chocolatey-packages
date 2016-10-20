@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>speccy</id>
     <title>Speccy</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>2.21.993</version>
     <authors>Piriform LTD</authors>
     <summary>Speccy will give you detailed statistics on every piece of hardware in your computer.</summary>
     <description>
@@ -16,16 +16,16 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
 * Graphics card
 * Operating system
 
-### Note
+## Package Parameters
 
-This package will install Speccy without bundled adware. To achieve this, a key to opt-out the adware gets added to the registry.
-    </description>
+- `/UseSystemLocale` - use system locale for the interface, by default English locale is set.    </description>
     <projectUrl>http://www.piriform.com/speccy</projectUrl>
-    <tags>piriform ccleaner speccy admin</tags>
+    <tags>piriform system information speccy admin</tags>
     <copyright>Piriform LTD</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/speccy</packageSourceUrl>
+    <releaseNotes>https://www.piriform.com/speccy/version-history</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
