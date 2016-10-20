@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $version = '56.0.2890.0'
 
@@ -15,14 +15,14 @@ if (Test-Path $Chromium) {
 $packageArgs = @{
   packageName   = 'chromium'
   fileType      = 'exe'
-  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/426133/mini_installer.exe'
-  url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/426133/mini_installer.exe'
+  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/426400/mini_installer.exe'
+  url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/426400/mini_installer.exe'
   silentArgs    = $silentArgs
   validExitCodes= @(0)
   softwareName  = 'Chromium'
-  checksum      = '156592117d9c532391b3dc7029d1fde7'
+  checksum      = '1c9d711c8e7db31ea80e006e61d58eaa'
   checksumType  = 'md5'
-  checksum64    = 'f498e6a711a330caf4b8b4366a9c0d15'
+  checksum64    = 'e535345431719c73c157f42ae4029ed1'
   checksumType64= 'md5'
 }
 
