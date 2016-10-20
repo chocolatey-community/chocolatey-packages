@@ -17,7 +17,7 @@ function global:au_GetLatest {
     $re  = '\.exe$'
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $download_page = Invoke-WebRequest http://www.piriform.com/defraggler/download
+    $download_page = Invoke-WebRequest http://www.piriform.com/speccy/download
     $version = $download_page.AllElements | ? tagName -eq 'p' | ? InnerHtml -match 'Latest version'  | % innerHtml
     $version -match '([0-9]|\.)+' | Out-Null
     $version = $Matches[0]
