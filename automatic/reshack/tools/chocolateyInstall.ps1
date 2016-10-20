@@ -1,13 +1,17 @@
-﻿$packageName = '{{PackageName}}'
-$installerType = 'EXE'
-$url = '{{DownloadUrl}}'
-$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$validExitCodes = @(0)
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
+$ErrorActionPreference = 'Stop'
 
-# I need to add an 'open with resource hacker' context menu item for .exe only
-# "C:\Program Files (x86)\Resource Hacker\ResHacker.exe"
-# if 32 bit
-# %ProgramFiles%\Resource Hacker\ResHacker.exe
-# if 64 bit
-# %ProgramFiles(x86)%\Resource Hacker\ResHacker.exe
+$packageName = 'reshack'
+$url32       = 'http://www.angusj.com/resourcehacker/reshacker_setup.exe'
+$checksum32  = '2505464f8229c1eed63d0c7c316bf2777a4f670c825975bf03c0321fe783f894'
+
+$packageArgs = @{
+  packageName            = $packageName
+  fileType               = 'EXE'
+  url                    = $url32
+  checksum               = $checksum32
+  checksumType           = 'sha256'
+  silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
+  validExitCodes         = @(0)
+  registryUninstallerKey = $packageName
+}
+Install-ChocolateyPackage @packageArgs
