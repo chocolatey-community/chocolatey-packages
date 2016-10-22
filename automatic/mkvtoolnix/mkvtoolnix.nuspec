@@ -20,7 +20,7 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
     <tags>multimedia mkv container muxing demuxing admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-fosshub.extension" />
+      <dependency id="chocolatey-fosshub.extension" version="0.2.0" />
     </dependencies>
   </metadata>
   <files>
