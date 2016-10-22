@@ -36,7 +36,7 @@ function GetTempFileName () {
   PS C:\> $s = Get-WebContent "http://example.com"
   PS C:\> $s -match 'Example Domain'
   True
-  
+
   First command downloads html content from http://example.com and stores it in $s.
   Now you can parse and match it as a string.
 .EXAMPLE
@@ -63,5 +63,3 @@ function Get-WebContent ([string]$url, [hashtable]$options) {
 
   $fileContent
 }
-
-Export-ModuleMember -Function Get-WebContent
