@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>cdrtfe</id>
-    <version>0.0</version>
+    <version>1.5.6</version>
     <title>cdrtfe</title>
     <owners>chocolatey</owners>
     <authors>cdrtfe team</authors>
@@ -17,7 +17,7 @@ cdrtfe is a win32 frontend for the cdrtools (cdrecord, mkisofs, readcd, cdda2wav
 
 ### Recommended
 
-In cdrtfe, go to `Extras => Settings => cdrtfe` and activate „Save on exit“. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
+In cdrtfe, go to `Extras =&gt; Settings =&gt; cdrtfe` and activate „Save on exit“. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
 
     </description>
     <summary>cdrtfe is an open source CD/DVD/BD burning application.</summary>
