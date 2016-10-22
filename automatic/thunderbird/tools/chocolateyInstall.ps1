@@ -23,7 +23,6 @@ $allLocalesListURL = Switch ($softwareNameLowerCase) {
 
 # ---------------- Function definitions ------------------
 
-
 function GetUninstallPath () {
   $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
   $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
@@ -40,7 +39,7 @@ function GetUninstallPath () {
 
 function GetLocale() {
 
-  $availableLocales = (New-Object System.Net.WebClient).DownloadString($allLocalesListURL)
+  $availableLocales = Get-WebContent $allLocalesListURL
 
   # --- Get locale from installArgs if specified
 

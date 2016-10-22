@@ -7,7 +7,7 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Chocolatey FossHub Extension</title>
-    <authors>gep13 dtgm</authors>
+    <authors>gep13,dtgm,chocolatey</authors>
     <copyright>2016-Present: Chocolatey Core Team Package Contributors</copyright>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
     <licenseUrl>https://github.com/chocolatey/choco/blob/master/LICENSE</licenseUrl>

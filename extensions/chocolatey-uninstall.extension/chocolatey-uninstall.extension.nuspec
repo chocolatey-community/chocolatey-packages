@@ -7,7 +7,7 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Chocolatey Uninstall Extension</title>
-    <authors>dtgm,ferventcoder</authors>
+    <authors>dtgm,ferventcoder,chocolatey</authors>
     <copyright>© 2016 Chocolatey Core Team Package Contributors</copyright>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
     <licenseUrl>https://github.com/chocolatey/choco/blob/master/LICENSE</licenseUrl>
@@ -21,8 +21,8 @@
     <description>
 This package provides helper functions installed as a Chocolatey extension. These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
 
-&lt;`dependencies`&gt;  
-&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-uninstall.extension" /`&gt;  
+&lt;`dependencies`&gt;
+&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-uninstall.extension" /`&gt;
 &lt;`/dependencies`&gt;
 
 ### Functions
@@ -37,7 +37,7 @@ This package provides helper functions installed as a Chocolatey extension. Thes
 2. The found registry key's properties are accessible by dot notation. For example, `$key.UninstallString`
     </description>
     <releaseNotes>
-#### 1.1.0 
+#### 1.1.0
 
 ##### Bug fixes
 * Not building array properly; fails if more than one bad key
