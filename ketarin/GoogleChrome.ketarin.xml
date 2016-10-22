@@ -42,7 +42,7 @@
             <RegexRightToLeft>false</RegexRightToLeft>
             <VariableType>Textual</VariableType>
             <Regex />
-            <TextualContent>https://dl.google.com/tag/s/appguid={00000000-0000-0000-0000-000000000000}&amp;iid={00000000-0000-0000-0000-000000000000}&amp;lang=en&amp;browser=4&amp;usagestats=0&amp;appname=Google Chrome&amp;needsadmin=true/dl/chrome/install/googlechromestandaloneenterprise64.msi</TextualContent>
+            <TextualContent>https://dl.google.com/tag/s/appguid={00000000-0000-0000-0000-000000000000}&amp;iid={00000000-0000-0000-0000-000000000000}&amp;lang=en&amp;browser=4&amp;usagestats=0&amp;appname=Google Chrome&amp;needsadmin=prefers/dl/chrome/install/googlechromestandaloneenterprise64.msi</TextualContent>
             <Name>url64</Name>
           </UrlVariable>
         </value>
