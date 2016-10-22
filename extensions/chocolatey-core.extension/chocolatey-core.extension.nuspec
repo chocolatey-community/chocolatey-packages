@@ -27,7 +27,25 @@
     <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
     <tags>chocolatey core extension admin</tags>
     <summary>Helper functions extending core choco functionality</summary>
-    <description><![CDATA[__REPLACE__MarkDown_Okay ]]></description>
+    <description>
+This package provides helper functions installed as a Chocolatey extension.
+These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+
+&lt;`dependencies`&gt;
+&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-core.extension" /`&gt;
+&lt;`/dependencies`&gt;
+
+### Functions
+
+`Get-WebContent` --  Download file with choco internals.
+
+Example:
+  `$s = Get-WebContent "http://example.com"`
+
+Example:
+  `$opts = @{ Headers = @{ Referer = 'http://google.com' } }`
+  `$s = Get-WebContent -url "http://example.com" -options $opts`
+    </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
   </metadata>
   <files>
