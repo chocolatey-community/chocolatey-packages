@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>cdrtfe</id>
-    <version>0.0</version>
+    <version>1.5.6</version>
     <title>cdrtfe</title>
     <owners>chocolatey</owners>
     <authors>cdrtfe team</authors>
