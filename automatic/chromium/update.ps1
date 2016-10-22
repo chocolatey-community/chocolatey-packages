@@ -1,12 +1,13 @@
 
 import-module au
 
- $releases_x32 = 'https://chromium.woolyss.com/api/?os=windows&bit=32&out=string' # URL to for GetLatest 32bit
- $releases_x64 = 'https://chromium.woolyss.com/api/?os=windows&bit=64&out=string' # URL to for GetLatest 64bit
+ $releases_x32 = 'https://chromium.woolyss.com/api/v2/?os=windows&bit=32&out=string' # URL to for GetLatest 32bit
+ $releases_x64 = 'https://chromium.woolyss.com/api/v2/?os=windows&bit=64&out=string' # URL to for GetLatest 64bit
 
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
+            "(^[$]version\s*=\s*)('.*')"= "`$1'$($Latest.Version)'"
             "(^\s*packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
             "(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
             "(^\s*url64Bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
@@ -29,8 +30,10 @@ function global:au_GetLatest {
 
     $chromium32 = $val32 | out-string | ConvertFrom-StringData
     $chromium64 = $val64 | out-string | ConvertFrom-StringData
-    $checksum32 = $chromium32.checksum_md5
-    $checksum64 = $chromium64.checksum_md5
+    $checksum32 = @{$true = $chromium32.checksum_md5; $false = $chromium32.checksum }[ $chromium32.checksum -ne ""]
+    $checksum64 = @{$true = $chromium64.checksum_md5; $false = $chromium64.checksum }[ $chromium64.checksum -ne ""]
+    $hashtype32 = @{$true = $hashtype; $false = $chromium32.hashtype }[ $chromium32.hashtype -ne ""]
+    $hashtype64 = @{$true = $hashtype; $false = $chromium64.hashtype }[ $chromium64.hashtype -ne ""]
 
     $version = $chromium64.version
 
@@ -44,8 +47,8 @@ function global:au_GetLatest {
         #Diabled until au/issues/36
         #Checksum32     = $checksum32
         #Checksum64     = $checksum64
-        ChecksumType32 = $hashtype
-        ChecksumType64 = $hashtype
+        ChecksumType32 = $hashtype32
+        ChecksumType64 = $hashtype64
     }
 }
 
