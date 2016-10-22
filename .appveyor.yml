@@ -1,3 +1,5 @@
+# AU template: https://github.com/majkinetor/au-packages-template
+
 version: '{build}'
 max_jobs: 1
 image: WMF 5
@@ -9,22 +11,22 @@ branches:
 #  verbosity: minimal
 
 environment:
-  #Set au version to use or omit to use the latest. Specify branch name to use development version from Github
+  # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
   au_version: master
   au_push: true
 
-  #Github token to commit pushed packages to repository
+  # Github token to commit pushed packages to repository
   github_user_repo: chocolatey/chocolatey-coreteampackages
   github_api_key:
     secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
 
-  #Gmail credentials - for error notifications
+  # Mail credentials - for error notifications
   mail_user: gep13choco@gmail.com
   mail_pass:
     secure: JuJVdA2yg59By5czxxm9ZwTsvsNK+WcgCs+jVQdHz+8=
   mail_server: smtp.gmail.com
   mail_port: 587
-  enable_ssl: true
+  mail_enablessl: true
 
   #ID of the gist used to save run results
   gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
@@ -65,15 +67,18 @@ install:
 
 build_script:
 - ps: |
-    ./au/update_all.ps1
+    if ( ($Env:APPVEYOR_REPO_COMMIT_MESSAGE -match '\[AU (.+?)\]') -and
+         ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and
+         ($Env:APPVEYOR_FORCED_BUILD -ne 'true')
+    ) { $forced = $Matches[1] }
+
+    ./update_all.ps1 -ForcedPackages $forced
+
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 
-#on_finish:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
-
 artifacts:
-- path: au/update_info.xml
-- path: au/Update-AUPackages.md
+- path: update_info.xml
+- path: Update-AUPackages.md
 - path: au_temp.zip
 
 notifications:

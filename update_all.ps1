@@ -1,6 +1,6 @@
 # AU Packages Template: https://github.com/majkinetor/au-packages-template
 
-param($Name = $null)
+param([string] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
@@ -12,7 +12,7 @@ $Options = [ordered]@{
 
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
-        Path = "$PSScriptRoot\Update-AUPacakges.md"         #Path where to save the report
+        Path = "$PSScriptRoot\Update-AUPackages.md"         #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
             NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
@@ -21,9 +21,9 @@ $Options = [ordered]@{
     }
 
     Gist = @{
-        Id     = $Env:gist_id                              #Your gist id or leave empty for anonymous
-        ApiKey = $Env:github_api_key                       #Your github api key
-        Path   = "$PSScriptRoot\Update-AUPacakges.md"      #List of files to add to gist
+        Id     = $Env:gist_id                               #Your gist id or leave empty for anonymous
+        ApiKey = $Env:github_api_key                        #Your github api key
+        Path   = "$PSScriptRoot\Update-AUPackages.md"       #List of files to add to gist
     }
 
     Git = @{
@@ -38,20 +38,27 @@ $Options = [ordered]@{
 
     Mail = if ($Env:mail_user) {
             @{
-                To          = $Env:mail_user
-                Server      = $Env:mail_server
-                UserName    = $Env:mail_user
-                Password    = $Env:mail_pass
-                Port        = $Env:mail_port
-                EnableSsl   = $Env:enable_ssl -eq 'true'
-                Attachments = "$PSScriptRoot\update_info.xml"
+                To         = $Env:mail_user
+                Server     = $Env:mail_server
+                UserName   = $Env:mail_user
+                Password   = $Env:mail_pass
+                Port       = $Env:mail_port
+                EnableSsl  = $Env:mail_enablessl -eq 'true'
+                Attachment = "$PSScriptRoot\update_info.xml"
                 UserMessage = 'Update status: http://gep13.me/choco-au'
                 SendAlways  = $false                        #Send notifications every time
              }
            } else {}
+
+    ForcedPackages = $ForcedPackages -split ' '
+    BeforeEach = {
+        param($PackageName, $Options )
+        if ($Options.ForcedPackages -contains $PackageName) { $global:au_Force = $true }
+    }
 }
 
-$global:au_Root = "$PSScriptRoot/../automatic"                           #Path to the AU packages
+if ($ForcedPackages) { Write-Host "FORCED PACKAGES:  $ForcedPackages" }
+$global:au_Root = $Root                                    #Path to the AU packages
 $info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
