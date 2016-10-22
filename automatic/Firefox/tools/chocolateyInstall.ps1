@@ -29,7 +29,12 @@ function GetUninstallPath () {
 
 function GetLocale() {
 
-  $availableLocales = (New-Object System.Net.WebClient).DownloadString($allLocalesListURL)
+  $webclient = New-Object System.Net.WebClient
+  $proxy = [System.Net.WebRequest]::GetSystemWebProxy()
+  $proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
+  $webclient.Proxy = $proxy
+
+  $availableLocales = $webclient.DownloadString($allLocalesListURL)
 
   # --- Get locale from installArgs if specified
 
