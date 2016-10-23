@@ -17,7 +17,7 @@
     <releaseNotes>10/13/2015 18:34:00 - Revision: 3.0</releaseNotes>
     <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
     <dependencies>
-      <dependency id="kb2919355" version="1.0.20160915">
+      <dependency id="kb2919355" version="1.0.20160915" />
 	  </dependencies>
   </metadata>
 </package>
