@@ -63,3 +63,5 @@ function Get-WebContent ([string]$url, [hashtable]$options) {
 
   $fileContent
 }
+
+Export-ModuleMember -Function Get-WebContent

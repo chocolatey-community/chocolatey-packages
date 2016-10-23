@@ -99,3 +99,5 @@ param (
 
   return $downloader
 }
+
+Export-ModuleMember -Function Get-UrlFromFosshub
