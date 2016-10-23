@@ -20,8 +20,8 @@
 		$matching = "You are using $caption, and do qualify for the $kb.`n"
 		$fini_yes = "This $kb has been installed on your $caption.`n"
 		$fini_no = "This $kb does not Apply to your $caption.`n"
-	
-	Try {	
+
+	Try {
 		foreach ( $detected in $AppliesTo  ) {
 		   if ( $detected -eq $caption ) {
 				Write-Host $proceeding
@@ -36,7 +36,7 @@
 					switch -Exact($os.version) {
 						'6.3.9600' {
 							# Windows 8.1 & Windows Server 2012 R2
-							write-host $matching
+							Write-Host $matching
 							#32
 							$url = 'https://download.microsoft.com/download/E/4/6/E4694323-8290-4A08-82DB-81F2EB9452C2/Windows8.1-KB2999226-x86.msu'
 							$checksum = 'B83251219C5390536B02BEBAF5E43A6F13381CE1DB43E76483BCE07C4BCF877B'
@@ -47,7 +47,7 @@
 						}
 						'6.2.9200' {
 							# Windows 8.0 & Windows Server 2012
-							write-host $matching
+							Write-Host $matching
 							#32
 							$url = 'https://download.microsoft.com/download/1/E/8/1E8AFE90-5217-464D-9292-7D0B95A56CE4/Windows8-RT-KB2999226-x86.msu'
 							$checksum = '0F36750FBB06FEE23131F68B4D0943841EED24730EC1D5D77DEDC41D359BE88D'
@@ -58,7 +58,7 @@
 						}
 						'6.1.7601' {
 							# Windows 7 w/ SP1 & Windows Server 2008 R2 w/ SP1
-							write-host $matching
+							Write-Host $matching
 							#32
 							$url = 'https://download.microsoft.com/download/4/F/E/4FE73868-5EDD-4B47-8B33-CE1BB7B2B16A/Windows6.1-KB2999226-x86.msu'
 							$checksum = '909E76C81EF0EB176144B253DDFFE7A8FDFACEBFAA15E97DEF003D2262FBF084'
@@ -69,7 +69,7 @@
 						}
 						'6.0.6002' {
 							# Windows vista
-							write-host $matching
+							Write-Host $matching
 							#32
 							$url = 'https://download.microsoft.com/download/D/8/3/D838D576-232C-4C17-A402-75913F27113B/Windows6.0-KB2999226-x86.msu'
 							$checksum = 'AE380F63BF4E8700ADA686406B04B01230A339B09EDF7819814A4C0BF4AB72E1'
@@ -80,7 +80,7 @@
 						}
 						'6.0.6001' {
 							# Windows Server 2008
-							write-host $matching
+							Write-Host $matching
 							#32
 							$url = 'https://download.microsoft.com/download/B/5/7/B5757251-DAB0-4E23-AA46-ABC233FDB90E/Windows6.0-KB2999226-x86.msu'
 							$checksum = 'AE380F63BF4E8700ADA686406B04B01230A339B09EDF7819814A4C0BF4AB72E1'
@@ -89,13 +89,13 @@
 							$checksum64 = '10069DE7315CA3F405E2579846AF5DAB3089A8496AE4C1AB61763480F43A05A8'
 							return
 						}
-						default { throw "Something else happened"; return}
+						default { Write-Host "Running on unsupported Operating System.  No installation will take place."; return}
 					}
 				}
 			}
 
 		}
-	} 
+	}
 	Finally {
 		if ($proceed) {
 				$packageArgs = @{
