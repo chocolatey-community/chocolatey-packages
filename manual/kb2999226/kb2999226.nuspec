@@ -5,7 +5,7 @@
     <version>1.0.20160915</version>
     <title>Update for Universal C Runtime in Windows (KB2999226)</title>
     <authors>Microsoft</authors>
-    <owners>RB</owners>
+    <owners>RB chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://support.microsoft.com/en-us/kb/2999226</licenseUrl>
     <projectUrl>https://support.microsoft.com/en-us/kb/2999226</projectUrl>
