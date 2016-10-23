@@ -17,7 +17,7 @@
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-fosshub.extension" version="0.2.0" />
+      <dependency id="chocolatey-fosshub.extension" version="0.3.0" />
     </dependencies>
   </metadata>
   <files>
