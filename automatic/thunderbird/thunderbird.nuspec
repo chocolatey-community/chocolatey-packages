@@ -26,7 +26,7 @@ This package installs Thunderbird in the first language which matches this list:
     <tags>mozilla thunderbird email admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="0.1.0" />
+      <dependency id="chocolatey-core.extension" version="0.1.2" />
     </dependencies>
   </metadata>
   <files>
