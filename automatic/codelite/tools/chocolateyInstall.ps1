@@ -1,9 +1,9 @@
-﻿$packageName    = 'codelite'
-$url32          = 'https://github.com/eranif/codelite/releases/download/9.1/codelite-x86-9.1.0.gz'
-$url64          = 'https://github.com/eranif/codelite/releases/download/9.1/codelite-amd64-9.1.0.gz'
-$checksum32     = '7991ca32591d6d48b40650f1fb9365cbdb0b773f0d8a0afa25fa30924166da52'
+$packageName    = 'codelite'
+$url32          = 'https://github.com/eranif/codelite/releases/download/9.2/codelite-x86-9.2.0.7z'
+$url64          = 'https://github.com/eranif/codelite/releases/download/9.2/codelite-amd64-9.2.0.7z'
+$checksum32     = 'ae7cc02c67465ecf21332cbd36687180c14597b669c5c26e45adceee7a558c69'
 $checksumType32 = 'sha256'
-$checksum64     = '0dcf99a68da16abdc1fcb7d5d42a94dbac2e4d145cc176fbb8758f6b9a156e0b'
+$checksum64     = 'e368c00cc85be9f12a0c136ba2c80e10159aecc13721b18b41886bf1f960f725'
 $checksumType64 = 'sha256'
 
 $extractDir     = "$env:TEMP/$packageName/$env:chocolateyPackageVersion"
