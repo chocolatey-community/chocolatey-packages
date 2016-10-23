@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>KB2999226</id>
-    <version>1.0.20160915</version>
+    <version>1.0.20161023</version>
     <title>Update for Universal C Runtime in Windows (KB2999226)</title>
     <authors>Microsoft</authors>
     <owners>RB chocolatey</owners>
@@ -17,6 +17,7 @@
     <releaseNotes>10/13/2015 18:34:00 - Revision: 3.0</releaseNotes>
     <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
     <dependencies>
-	</dependencies>
+      <dependency id="kb2919355" version="1.0.20160915">
+	  </dependencies>
   </metadata>
 </package>
