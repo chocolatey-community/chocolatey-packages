@@ -1,30 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>codelite</id>
+    <version>9.1.0.20161023</version>
     <title>CodeLite</title>
     <owners>chocolatey</owners>
     <authors>Eran Ifrah,CodeLite team</authors>
-    <licenseUrl>http://sourceforge.net/apps/trac/codelite/browser/trunk/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/eranif/codelite/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://www.codelite.org/</projectUrl>
+    <projectSourceUrl>https://github.com/eranif/codelite</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/eranif/codelite/issues</bugTrackerUrl>
+    <docsUrl>http://codelite.org/LiteEditor/Documentation</docsUrl>
+    <mailingListUrl>http://forums.codelite.org/</mailingListUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/862ec640abb40d427c80ce00345c0e6937edfb74/icons/codelite.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-CodeLite is an open-source, cross platform IDE for the C/C++ programming languages.
+CodeLite is an open-source, cross plattform IDE specialized in C, C++, PHP and JavaScript (mainly for backend developers using Node.js)
+programming languages which runs best on all major Plattforms (OSC, Windows and Linux)
 
 ### Note
 
 This package downloads the installer which includes CodeLite, the MinGW suite and the wxWidgets SDK.
     </description>
-    <summary>CodeLite is an open-source, cross platform IDE for the C/C++ programming languages.</summary>
-    <releaseNotes />
-    <copyright />
+    <summary>CodeLite is an open-source, cross plattform IDE specialized in C, C++, PHP and JavaScript.</summary>
+    <releaseNotes>http://codelite.org/LiteEditor/ReleaseNotesCodeLite91</releaseNotes>
+    <copyright>© 2016 by SmartKoders, All rights reserved.</copyright>
     <tags>C C++ IDE programming admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/codelite</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->
