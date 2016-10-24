@@ -27,7 +27,7 @@ Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firef
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="0.1.2" />
+      <dependency id="chocolatey-core.extension" version="0.1.3" />
     </dependencies>
   </metadata>
     <files>
