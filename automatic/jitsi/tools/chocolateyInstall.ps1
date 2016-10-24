@@ -1,17 +1,24 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
+$ErrorActionPreference = 'Stop'
 
-$installerType = 'msi'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
-
-$silentArgs = '/passive'
-$validExitCodes = @(0)
-
-$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {($_.Name -match 'Jitsi') -and ($_.Version -match $version)}
-
-if ($alreadyInstalled) {
-  Write-Output "Jitsi $softwareVersion is already installed on the computer. Skipping download and installation."
-} else {
-  Install-ChocolateyPackage $packageName $installerType $silentArgs $url $url64 -validExitCodes $validExitCodes
+$packageArgs = @{
+  packageName            = 'jitsi'
+  fileType               = 'MSI'
+  url                    = 'https://download.jitsi.org/jitsi/msi/jitsi-2.8.5426-x86.msi'
+  url64bit               = 'https://download.jitsi.org/jitsi/msi/jitsi-2.8.5426-x64.msi'
+  checksum               = '015de91cf5c89335908b17020bddfae436e6cf8bcb490f3ddc8183fb20d195ee'
+  checksum64             = 'da8a85a039e62ef4563c3d576c4d2e12ed84db29bfd1bcec8b0e523776a5b358'
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = '/passive'
+  validExitCodes         = @(0)
+  registryUninstallerKey = $packageName
 }
+Install-ChocolateyPackage @packageArgs
+
+#$installLocation = Get-AppInstallLocation $packageArgs.registryUninstallerKey
+#if ($installLocation)  {
+    #Write-Host "$packageName installed to '$installLocation'"
+    #Register-Application "$installLocation\$packageName.exe"
+    #Write-Host "$packageName registered as $packageName"
+#}
+#else { Write-Warning "Can't find $PackageName install location" }
