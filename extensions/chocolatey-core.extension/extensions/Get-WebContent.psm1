@@ -58,7 +58,7 @@ function Get-WebContent ([string]$url, [hashtable]$options) {
   $filePath = GetTempFileName
   Get-WebFile -url $url -fileName $filePath -options $options
 
-  $fileContent = Get-Content $filePath -ReadCount 0 -Raw
+  $fileContent = Get-Content $filePath -ReadCount 0 | Out-String
   Remove-Item $filePath
 
   $fileContent
