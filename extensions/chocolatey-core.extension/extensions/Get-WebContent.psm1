@@ -31,7 +31,7 @@ function GetTempFileName () {
   Url to download.
 .PARAMETER options
   Additional options for http request.
-  For know only Headers property supported.
+  For now only Headers property supported.
 .EXAMPLE
   PS C:\> $s = Get-WebContent "http://example.com"
   PS C:\> $s -match 'Example Domain'
@@ -58,7 +58,7 @@ function Get-WebContent ([string]$url, [hashtable]$options) {
   $filePath = GetTempFileName
   Get-WebFile -url $url -fileName $filePath -options $options
 
-  $fileContent = Get-Content $filePath -ReadCount 0 -Raw
+  $fileContent = Get-Content $filePath -ReadCount 0 | Out-String
   Remove-Item $filePath
 
   $fileContent
