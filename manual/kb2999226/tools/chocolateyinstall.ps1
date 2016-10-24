@@ -89,7 +89,7 @@
 							$checksum64 = '10069DE7315CA3F405E2579846AF5DAB3089A8496AE4C1AB61763480F43A05A8'
 							return
 						}
-						default { Write-Host "Running on unsupported Operating System.  No installation will take place."; return}
+						default { Write-Warning "Running on unsupported Operating System.  No installation will take place."; return}
 					}
 				}
 			}
