@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>python2</id>
+    <version>2.7.12</version>
     <title>Python 2.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
@@ -19,8 +19,8 @@ This package installs the latest stable version of Python 2.x. It will install t
 This package is not intended to use with Chocolatey’s `-x86` parameter. If you want a 32-bit Python 2.x on 64-bit systems, install the [{{PackageName}}-x86_32](/packages/{{PackageName}}-x86_32) package instead. You can also install both packages. In this case you must manually adapt your PATH environment variable so that it picks the Python 2.x version that you want when invoking `python.exe`.
     </description>
     <summary>Python 2.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
-    <tags>python admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>python programming development cross-platform admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/python2</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
