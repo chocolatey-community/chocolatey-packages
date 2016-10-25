@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>Clover</id>
     <title>Clover</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>3.2.0</version>
     <authors>EJIE Technology</authors>
     <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
     <description>
