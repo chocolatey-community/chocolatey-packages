@@ -3,12 +3,22 @@
   <metadata>
     <id>absolute-uninstaller</id>
     <title>Absolute Uninstaller</title>
-    <version>5.3.1.22</version>
+    <version>5.3.1.21</version>
     <authors>GlarySoft</authors>
     <owners>Redsandro</owners>
     <summary>Absolute Uninstaller is a complete program uninstaller that helps you remove programs.</summary>
     <description>
 GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you remove programs thoroughly without leaving any invalid remnant to burden your system gradually.
+
+* Autofix invalid program entries.
+* List installed programs with appropriate icons.
+* Simple and user-friendly interface.
+* Batch uninstall programs.
+* Backup/restore uninstall information.
+
+### Notes
+
+* This package always installs the latest version of the application, regardless of the version specified in the package.
     </description>
     <projectUrl>http://www.glarysoft.com/absolute-uninstaller/</projectUrl>
     <tags>GlarySoft sysadmin batch remove software uninstall absolute uninstaller admin</tags>
