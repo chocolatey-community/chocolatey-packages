@@ -1,6 +1,6 @@
-$packageName = '{{PackageName}}'
+$packageName = 'feeddemon'
 $installerType = 'EXE'
-$32BitUrl  = '{{DownloadUrl}}'
+$32BitUrl  = 'http://bradsoft.com/download/FeedDemonInstall45.exe'
 $64BitUrl  = $32BitUrl
 $silentArgs = '/verysilent'
 $validExitCodes = @(0)

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>feeddemon</id>
+    <version>4.5.0.20140218</version>
+    <title>FeedDemon</title>
+    <authors>Nick Bradbury</authors>
+    <owners>gep13, chocolatey</owners>
+    <projectUrl>http://www.feeddemon.com</projectUrl>
+    <iconUrl>http://chocolatey.github.io/chocolatey-coreteampackages/feeddemon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>FeedDemon is the most popular RSS reader for Windows, with an easy-to-use interface that makes it a snap to stay informed with the latest news and information.</description>
+    <summary>FeedDemon - RSS reader for Windows.</summary>
+    <releaseNotes>Up to date release notes for this application can be found here:
+		
+		http://www.feeddemon.com/feeddemon/readme/</releaseNotes>
+    <copyright>2003-2011 by NewsGator Technologies, Inc.</copyright>
+    <tags>feeddemon RSS Reader admin</tags>
+  </metadata>
+</package>
