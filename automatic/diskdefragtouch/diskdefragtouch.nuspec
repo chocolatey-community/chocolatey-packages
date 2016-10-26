@@ -1,31 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<title>Auslogics Disk Defrag Touch</title>
-		<version>{{PackageVersion}}</version>
-		<authors>Auslogics Software</authors>
-		<owners>Redsandro</owners>
-		<summary>A compact and fast defragmenter for touch screens with achievements.</summary>
-		<description>
+    <metadata>
+        <id>diskdefragtouch</id>
+        <title>Auslogics Disk Defrag Touch</title>
+        <version>1.3.0.0</version>
+        <authors>Auslogics Software</authors>
+        <owners>Redsandro</owners>
+        <summary>A compact and fast defragmenter for touch screens with achievements.</summary>
+        <description>
 A compact and fast defragmenter with over 11,000,000 users worldwide now has a special version that's perfect for defragging your touch screen PC. Get your files in order and speed up your hard drive in minutes! This program is perfect for touch screens, although a mouse works fine too. If you think defragmenting is boring, try to unlock all the achievements!
 
 Auslogics Disk Defrag Touch is a product of Auslogics, certified Microsoft® Gold Application Developer.
-Microsoft confirms Auslogics' high expertise in developing quality software that meets the growing demands of PC users.
-		</description>
-		<projectUrl>http://www.auslogics.com/en/software/disk-defrag-touch/</projectUrl>
-		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-		<tags>System Admin Defragment</tags>
-		<copyright></copyright>
-		<licenseUrl>http://www.auslogics.com/en/legal/</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://i.imgur.com/aOrA3GL.png</iconUrl>
-		<dependencies></dependencies>
-		<releaseNotes></releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-		<!--<file src="content\**" target="content" />-->
-	</files>
+        </description>
+        <projectUrl>http://www.auslogics.com/en/software/disk-defrag-touch/</projectUrl>
+        <tags>system admin disk performance defragment</tags>
+        <copyright></copyright>
+        <licenseUrl>http://www.auslogics.com/en/legal/</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://i.imgur.com/aOrA3GL.png</iconUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/diskdefragtouch</packageSourceUrl>
+        <dependencies></dependencies>
+        <releaseNotes></releaseNotes>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+        <!--<file src="content\**" target="content" />-->
+    </files>
 </package>

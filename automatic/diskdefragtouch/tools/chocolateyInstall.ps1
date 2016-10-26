@@ -1,8 +1,24 @@
-$packageName	= 'DiskDefragTouch'
-$installerType	= 'EXE'
-$url			= '{{DownloadUrl}}'
-$silentArgs		= '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$validExitCodes	= @(0)
-$pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" -validExitCodes $validExitCodes
+$packageArgs = @{
+  packageName            = 'diskdefragtouch'
+  fileType               = 'EXE'
+  url                    = 'http://downloads.auslogics.com/en/disk-defrag-touch/disk-defrag-touch-setup.exe'
+  url64bit               = 'http://downloads.auslogics.com/en/disk-defrag-touch/disk-defrag-touch-setup.exe'
+  checksum               = '4861254f1ba99e333034705466cf3510c61093deb4d68de374a6fec95f71e27c'
+  checksum64             = '4861254f1ba99e333034705466cf3510c61093deb4d68de374a6fec95f71e27c'
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
+  validExitCodes         = @(0)
+  softwareName           = 'Disk Defrag Touch*'
+}
+Install-ChocolateyPackage @packageArgs
+
+#$installLocation = Get-AppInstallLocation $packageArgs.registryUninstallerKey
+#if ($installLocation)  {
+    #Write-Host "$packageName installed to '$installLocation'"
+    #Register-Application "$installLocation\$packageName.exe"
+    #Write-Host "$packageName registered as $packageName"
+#}
+#else { Write-Warning "Can't find $PackageName install location" }
