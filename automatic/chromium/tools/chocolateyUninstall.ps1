@@ -1,15 +1,17 @@
 	$registry = Get-UninstallRegistryKey -SoftwareName $packageName
 	$file = $registry.UninstallString
-  $chromiumArgs = @{$true = "--uninstall --system-level"; $false = "--uninstall"}[ ($file -contains "system-level") ]
+  $Arg_chk = ($file -match "--system-level")
+	$chromiumArgs = @{$true = "--uninstall --system-level"; $false = "--uninstall"}[ $Arg_chk ]
+	$silentArgs = @{$true = '--uninstall --system-level --force-uninstall'; $false = '--uninstall --force-uninstall'}[ $Arg_chk ]
 	$myfile = $file -replace( $chromiumArgs )
 	# All arguments for the Uninstallation of this package
 	$packageArgs = @{
-	PackageName = 'Chromium'
+	PackageName = '{{PackageName}}'
 	FileType = 'exe'
-	SilentArgs = '--uninstall --system-level --force-uninstall'
+	SilentArgs = $silentArgs
 	validExitCodes =  @(0,19,21)
 	File = $myfile
 	}
-  # Now to Uninstall the Package
-  Uninstall-ChocolateyPackage @packageArgs
-  # This at the moment does not remove the libs\Chromium folder
+	# Now to Uninstall the Package
+	Uninstall-ChocolateyPackage @packageArgs
+	# This at the moment does not remove the libs\Chromium folder
