@@ -7,7 +7,7 @@ $hive = "hkcu"
 $Chromium = $hive + ":" + $chromium_string
 
 if (Test-Path $Chromium) {
-  $silentArgs = ''
+  $silentArgs = '--do-not-launch-chrome'
 } else {
   $silentArgs = '--system-level --do-not-launch-chrome'
 }
