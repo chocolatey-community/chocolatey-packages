@@ -1,4 +1,4 @@
-﻿$language = (Get-Culture).Parent.Name
+$language = (Get-Culture).Parent.Name
 
 $packageArgs = @{
   packageName = 'becyicongrabber'
