@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>unchecky</id>
     <title>Unchecky</title>
-    <version>1.0.1</version>
+    <version>1.0.1.20161027</version>
     <authors>RaMMicHaeL</authors>
     <owners>Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
