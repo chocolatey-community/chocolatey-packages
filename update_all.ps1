@@ -54,9 +54,9 @@ $Options = [ordered]@{
     ForcedPackages = $ForcedPackages -split ' '
     BeforeEach = {
         param($PackageName, $Options )
-        $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))$" }
+        $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))*$" }
         if (!$p) { return }
-        
+
         $global:au_Force   = $true
         $global:au_Version = ($p -split ':')[1]
     }
@@ -64,7 +64,7 @@ $Options = [ordered]@{
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
 $global:au_Root = $Root                                    #Path to the AU packages
-$info = updateall -Name $Name -Options $Options
+$global:info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
-#if ($info.error_count.total) { throw 'Errors during update' }
+#if ($global:info.error_count.total) { throw 'Errors during update' }
