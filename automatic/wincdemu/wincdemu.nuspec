@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>wincdemu</id>
-    <version>0.0</version>
+    <version>4.1</version>
     <title>WinCDEmu</title>
     <owners>chocolatey</owners>
     <authors>Sysprogs OÜ</authors>
