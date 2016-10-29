@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>python</id>
+    <version>3.5.2</version>
     <title>Python</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
@@ -14,13 +14,13 @@ Python is a programming language that lets you work more quickly and integrate y
 
 ### Note
 
-This package depends on the python package the latest major version.
+This package depends on the the latest major version of python package.
     </description>
     <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
-    <tags>python</tags>
+    <tags>python development programming-language</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="python3" version="[{{PackageVersion}}]" />
+      <dependency id="python3" version="3.5.2" />
     </dependencies>
   </metadata>
 </package>

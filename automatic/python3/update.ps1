@@ -28,4 +28,6 @@ function global:au_GetLatest {
     return @{ URL32 = $url32; URL64 = $url64; Version = $version }
 }
 
-update
+if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced by the virtual package python
+    update
+}
