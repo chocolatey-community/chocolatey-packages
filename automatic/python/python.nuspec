@@ -23,5 +23,6 @@ This package depends on the the latest major version of python package.
       <dependency id="python3" version="3.5.2.20161029" />
     </dependencies>
   </metadata>
+  <files></files>
 </package>
 <!-- “UTF-8” test -->
