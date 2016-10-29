@@ -1,4 +1,4 @@
-﻿# This file should be identical for all python3* packages
+# This file should be identical for all python3* packages
 # https://docs.python.org/3/using/windows.html#installing-without-ui
 
 $packageName = 'python3'

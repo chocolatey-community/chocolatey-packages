@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python</id>
-    <version>3.5.2</version>
+    <version>3.5.2.20161029</version>
     <title>Python</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
@@ -20,7 +20,7 @@ This package depends on the the latest major version of python package.
     <tags>python development programming-language</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="python3" version="3.5.2" />
+      <dependency id="python3" version="3.5.2.20161029" />
     </dependencies>
   </metadata>
 </package>
