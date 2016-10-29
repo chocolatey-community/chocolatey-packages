@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>libreoffice</id>
     <title>LibreOffice</title>
-    <version>{{PackageVersion}}</version>
+    <version>5.2.2</version>
     <authors>LibreOffice Developer</authors>
     <owners>chocolatey</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
@@ -12,7 +12,7 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 
 ### Notes
 
-This package installs the latest stable version of LibreOffice (officially called [LibreOffice Fresh](https://www.libreoffice.org/download/libreoffice-fresh/)). For more conservative users it is recommended to install [libreoffice-oldstable](/packages/libreoffice-oldstable) instead.
+This package installs the latest stable version of LibreOffice Fresh with the most recent features. For more conservative users it is recommended to install [libreoffice-oldstable](/packages/libreoffice-oldstable) instead.
 
 Warning: Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
     </description>
@@ -22,8 +22,10 @@ Warning: Older versions of this package are likely broken because the LibreOffic
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/libreoffice.svg</iconUrl>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/libreoffice</packageSourceUrl>
+    <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
+    <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
