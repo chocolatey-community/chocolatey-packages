@@ -5,11 +5,11 @@ $releases = 'https://www.python.org/downloads'
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(^[$]packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
+            "(^\s*url\s*=\s*)('.*')"         = "`$1'$($Latest.URL32)'"
+            "(^\s*url64bit\s*=\s*)('.*')"    = "`$1'$($Latest.URL64)'"
+            "(^\s*checksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum32)'"
+            "(^\s*checksum64\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum64)'"
         }
     }
 }
