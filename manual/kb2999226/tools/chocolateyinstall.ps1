@@ -21,7 +21,6 @@
 		$fini_yes = "This $kb has been installed on your $caption.`n"
 		$fini_no = "This $kb does not Apply to your $caption.`n"
 
-	Try {
 		foreach ( $detected in $AppliesTo  ) {
 			if ( $detected -eq $caption ) {
 				Write-Host $proceeding
@@ -43,7 +42,6 @@
 							#64
 							$url64 = 'https://download.microsoft.com/download/D/1/3/D13E3150-3BB2-4B22-9D8A-47EE2D609FFF/Windows8.1-KB2999226-x64.msu'
 							$checksum64 = '9F707096C7D279ED4BC2A40BA695EFAC69C20406E0CA97E2B3E08443C6381D15'
-							return
 						}
 						'6.2.9200' {
 							# Windows 8.0 & Windows Server 2012
@@ -54,7 +52,6 @@
 							#64
 							$url64 = 'https://download.microsoft.com/download/9/3/E/93E0745A-EAE9-4B5A-B50C-012F2D3B6659/Windows8-RT-KB2999226-x64.msu'
 							$checksum64 = '50CAE25DA33FA950222D1A803E42567291EB7FEB087FA119B1C97FE9D41CD9F8'
-							return
 						}
 						'6.1.7601' {
 							# Windows 7 w/ SP1 & Windows Server 2008 R2 w/ SP1
@@ -65,7 +62,9 @@
 							#64
 							$url64 = 'https://download.microsoft.com/download/F/1/3/F13BEC9A-8FC6-4489-9D6A-F84BDC9496FE/Windows6.1-KB2999226-x64.msu'
 							$checksum64 = '43234D2986CA9B0DE75D5183977964D161A8395C3396279DDFC9B20698E5BC34'
-							return
+						}
+						'6.1.7600' {
+							throw "To install $kb on $caption, you must install Service Pack 1 first, for example using the KB976932 package."
 						}
 						'6.0.6002' {
 							# Windows Vista w/ SP2 & Windows Server 2008 w/ SP2
@@ -76,16 +75,19 @@
 							#64
 							$url64 = 'https://download.microsoft.com/download/5/4/E/54E27BE2-CFB2-4FC9-AB03-C39302CA68A0/Windows6.0-KB2999226-x64.msu'
 							$checksum64 = '10069DE7315CA3F405E2579846AF5DAB3089A8496AE4C1AB61763480F43A05A8'
-							return
 						}
-						default { Write-Warning "Running on unsupported Operating System.  No installation will take place."; return}
+						'6.0.6001' {
+							throw "To install $kb on $caption, you must install Service Pack 2 first."
+						}
+						'6.0.6000' {
+							throw "To install $kb on $caption, you must install Service Pack 2 first."
+						}
+						default { Write-Warning "Running on unsupported Operating System.  No installation will take place." }
 					}
 				}
 			}
 
 		}
-	}
-	Finally {
 		if ($proceed) {
 				$packageArgs = @{
 				packageName   = $packageName
@@ -105,4 +107,3 @@
 		} else {
 		Write-Host $fini_no
 		}
-	}
