@@ -4,8 +4,6 @@
 		$kb = "kb2999226"
 		$packageName = $kb
 		$proceed = $false
-		# Windows Systems That Qualify for KB2999226
-		$AppliesTo = @('Microsoft Windows Server 2012 R2 Datacenter','Microsoft Windows Server 2012 R2 Standard','Microsoft Windows Server 2012 R2 Essentials','Microsoft Windows Server 2012 R2 Foundation','Microsoft Windows 8.1 Enterprise','Microsoft Windows 8.1 Pro','Microsoft Windows 8.1','Microsoft Windows RT 8.1','Microsoft Windows Server 2012 Datacenter','Microsoft Windows Server 2012 Standard','Microsoft Windows Server 2012 Essentials','Microsoft Windows Server 2012 Foundation','Microsoft Windows 8 Enterprise','Microsoft Windows 8 Pro','Microsoft Windows 8','Microsoft Windows RT','Microsoft Windows Server 2008 R2 Datacenter Service Pack 1','Microsoft Windows Server 2008 R2 Enterprise Service Pack 1','Microsoft Windows Server 2008 R2 Standard Service Pack 1','Microsoft Windows 7 Service Pack 1','Microsoft Windows Server 2008 Service Pack 2','Microsoft Windows Vista Service Pack 2')
 		$silentArgs = "/quiet /norestart /log:`"$env:TEMP\$kb.Install.evt`""
 		# OS Information
 		$os = Get-WmiObject -Class Win32_OperatingSystem
@@ -15,23 +13,10 @@
 		$caption += "Service Pack $sp"
 		}
 		# Messages for the Consumer
-		$proceeding = "Proceding with installation because this hotfix applies to $caption.`n"
-		$skipping = "Skipping installation because hotfix $kb is already installed.`n"
+		$skippingNotApplies = "Skipping installation because hotfix $kb does not apply to $caption.`n"
+		$skippingAlreadyInstalled = "Skipping installation because hotfix $kb is already installed.`n"
 		$matching = "You are using $caption, and do qualify for the $kb.`n"
-		$fini_yes = "This $kb has been installed on your $caption.`n"
-		$fini_no = "This $kb does not Apply to your $caption.`n"
 
-		foreach ( $detected in $AppliesTo  ) {
-			if ( $detected -eq $caption ) {
-				Write-Host $proceeding
-				$proceed = $true
-				if (Get-HotFix -id $kb -ea SilentlyContinue) {
-					Write-Host $skipping
-					$proceed = $false
-					return
-				}
-
-				if ( $proceed ) {
 					switch -Exact($os.version) {
 						'6.3.9600' {
 							# Windows 8.1 & Windows Server 2012 R2
@@ -82,13 +67,15 @@
 						'6.0.6000' {
 							throw "To install $kb on $caption, you must install Service Pack 2 first."
 						}
-						default { Write-Warning "Running on unsupported Operating System.  No installation will take place." }
+						default {
+							Write-Host $skippingNotApplies
+						}
 					}
+				if (Get-HotFix -Id $kb -ErrorAction SilentlyContinue) {
+					Write-Host $skippingAlreadyInstalled
+					return
 				}
-			}
 
-		}
-		if ($proceed) {
 				$packageArgs = @{
 				packageName   = $packageName
 				fileType      = 'msu'
@@ -103,7 +90,3 @@
 				checksumType64= 'sha256'
 				}
 				Install-ChocolateyPackage @packageArgs
-		Write-Host $fini_yes
-		} else {
-		Write-Host $fini_no
-		}
