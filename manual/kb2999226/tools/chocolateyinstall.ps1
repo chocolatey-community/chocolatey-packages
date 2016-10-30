@@ -23,12 +23,12 @@
 
 	Try {
 		foreach ( $detected in $AppliesTo  ) {
-		   if ( $detected -eq $caption ) {
+			if ( $detected -eq $caption ) {
 				Write-Host $proceeding
 				$proceed = $true
 				if (Get-HotFix -id $kb -ea SilentlyContinue) {
 					Write-Host $skipping
-                    $proceed = $false
+					$proceed = $false
 					return
 				}
 
