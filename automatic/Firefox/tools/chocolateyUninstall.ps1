@@ -6,13 +6,13 @@ $silentArgs = '-ms'
   $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
   $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
   
+  $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
+  
   if ( Get-ProcessorBits 64 ) {
       if (Test-Path $regUninstallDirWow64) {
         $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
       }
   }
-  
-  $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
 
   $uninstallPath = $uninstallPaths -match
     "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
