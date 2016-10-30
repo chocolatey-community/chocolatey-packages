@@ -11,8 +11,8 @@
 		$os = Get-WmiObject -Class Win32_OperatingSystem
 		$caption = $os.Caption
 		$sp = $os.ServicePackMajorVersion
-		if ($sp -eq '1') {
-		$caption += "Service Pack 1"
+		if ($sp -gt 0) {
+		$caption += "Service Pack $sp"
 		}
 		# Messages for the Consumer
 		$proceeding = "Proceding with installation because this hotfix applies to $caption.`n"
