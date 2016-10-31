@@ -5,10 +5,10 @@ $proceed = $false
 $silentArgs = "/quiet /norestart /log:`"$env:TEMP\$kb.Install.evt`""
 # OS Information
 $os = Get-WmiObject -Class Win32_OperatingSystem
-$caption = $os.Caption
+$caption = $os.Caption.Trim()
 $sp = $os.ServicePackMajorVersion
 if ($sp -gt 0) {
-	$caption += "Service Pack $sp"
+	$caption += " Service Pack $sp"
 }
 # Messages for the Consumer
 $skippingNotApplies = "Skipping installation because hotfix $kb does not apply to $caption.`n"
