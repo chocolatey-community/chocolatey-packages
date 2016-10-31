@@ -30,3 +30,4 @@ Update-AUPackages.md
 *.log
 *.log.full
 automatic/_output/
+**/.vscode/launch.json
