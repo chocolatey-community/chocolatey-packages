@@ -1,7 +1,5 @@
 $ErrorActionPreference = 'Stop'
 
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-
 $packageArgs = @{
   packageName            = 'clover'
   fileType               = 'EXE'
@@ -10,6 +8,14 @@ $packageArgs = @{
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
-  softwareName           = ''
+  softwareName           = 'clover *'
 }
 Install-ChocolateyPackage @packageArgs
+
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if ($installLocation)  {
+    Write-Host "$packageName installed to '$installLocation'"
+    Register-Application "$installLocation\$packageName.exe"
+    Write-Host "$packageName registered as $packageName"
+}
+else { Write-Warning "Can't find $PackageName install location" }
