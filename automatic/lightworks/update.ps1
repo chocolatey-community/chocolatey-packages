@@ -15,6 +15,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     [System.Net.ServicePointManager]::SecurityProtocol = 'Ssl3,Tls,Tls11,Tls12' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/366
+    $download_page = Invoke-WebRequest $releases
+
     $version = $download_page.AllElements | ? class -eq 'release_table' | % InnerText | Select -First 1
     $version = ($version -split ":|\n" | select -Index 1).Trim()
     @{
