@@ -44,35 +44,31 @@ init:
 install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
+- git --version
 - ps: |
-    $x=$null; $is_branch = ($Env:au_version -ne $null) -and ([version]::TryParse($Env:au_version, [ref]$x) -eq $false)
-    if ($is_branch) {
-        pushd ..
-            git clone -q https://github.com/majkinetor/au.git
-            cd au
-            git fetch
-            git checkout -q $Env:au_version
-            ./build.ps1 -Install -NoChocoPackage
-        popd
-    } else {
-        Install-PackageProvider -Name NuGet -Force
-        Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-
-        $params = @{ Name = 'au' }
-        if ( $Env:au_version -ne $null ) { $params.MinimumVersion = $Env:au_version }
-        Install-Module @params
-
-        Get-Module au -ListAvailable | select Name, Version
-    }
+    git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
+    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
 
 build_script:
 - ps: |
-    if ( ($Env:APPVEYOR_REPO_COMMIT_MESSAGE -match '\[AU (.+?)\]') -and
-         ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and
-         ($Env:APPVEYOR_FORCED_BUILD -ne 'true')
-    ) { $forced = $Matches[1] }
+    if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
+        switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE) 
+        {
+            '\[AU (.+?)\]'   { $forced = $Matches[1] }
 
-    ./update_all.ps1 -ForcedPackages $forced
+            '\[PUSH (.+?)\]' {
+                $packages = $Matches[1] -split ' '
+                Write-Host "PUSHING PACKAGES: $packages"
+                foreach ($package in $packages) {
+                    Write-Host ("{0}`n{1}`n" -f ('-'*60), "PACKAGE: $package")
+                    $package_dir = ls -recurse | ? { $_.Name -eq "$package.nuspec"} | select -First 1 | % Directory
+                    if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
+                    pushd $package_dir; choco pack; Push-Package; popd
+                }
+                return
+            }
+        }
+    }
 
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 
