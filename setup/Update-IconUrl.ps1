@@ -112,8 +112,8 @@ function Test-Icon{
   $path = "$IconDir/$Name.$Extension"
   if (!(Test-Path $path)) { return $false; }
   if ((git status "$path" -s)) {
-    git add $path;
-    git commit -m "Added/Updated $Name icon" "$path";
+    git add $path | Out-Null;
+    git commit -m "Added/Updated $Name icon" "$path" | Out-Null;
   }
 
   return git log -1 --format="%H" "$path";
