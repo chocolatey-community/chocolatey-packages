@@ -41,7 +41,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
     <releaseNotes>https://atomisystems.com/updates/ActivePresenter/v6/releasenotes_v6.html</releaseNotes>
     <docsUrl>https://atomisystems.com/tutorials</docsUrl>
     <bugTrackerUrl>https://atomisystems.com/community</bugTrackerUrl>
-    <packageSourceUrl>https://github.com/majkinetor/chocolatey/tree/master/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
