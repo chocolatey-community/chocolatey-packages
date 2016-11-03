@@ -28,4 +28,4 @@ if (!$cert) {
     certutil -addstore 'TrustedPublisher' "$PSScriptRoot\tools\oracle.cer"
 }
 
-update -ChecksumFor 32 -Force
+update -ChecksumFor 32
