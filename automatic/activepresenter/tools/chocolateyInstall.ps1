@@ -8,6 +8,6 @@ $packageArgs = @{
   checksumType           = 'sha256'
   silentArgs             = '/VERYSILENT'
   validExitCodes         = @(0)
-  softwareName           = 'Active Presenter*'
+  softwareName           = 'ActivePresenter'
 }
 Install-ChocolateyPackage @packageArgs

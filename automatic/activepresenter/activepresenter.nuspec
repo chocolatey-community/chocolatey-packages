@@ -37,7 +37,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
     <tags>presentation recording screencast eLearning webcast</tags>
     <copyright>Atomi Systems, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/26d4ddbe05b2f8d77f1e66ef0f45e15ad091da43/icons/activepresenter.jpg</iconUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/1f8e9eae96f9f498c520385ccdbf05e2d8696ee2/icons/activepresenter.jpg</iconUrl>
     <releaseNotes>https://atomisystems.com/updates/ActivePresenter/v6/releasenotes_v6.html</releaseNotes>
     <docsUrl>https://atomisystems.com/tutorials</docsUrl>
     <bugTrackerUrl>https://atomisystems.com/community</bugTrackerUrl>
