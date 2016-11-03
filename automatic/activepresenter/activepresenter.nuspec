@@ -30,7 +30,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
 - Supported Operating Systems: Windows 7/8/10, Windows XP, Vista: All Editions (both 32-bit (x86) and 64-bit (x64) are supported).
     </description>
     <projectUrl>https://atomisystems.com/</projectUrl>
-    <tags>presentation recording screencast eLearning webcast</tags>
+    <tags>admin presentation recording screencast eLearning webcast</tags>
     <copyright>Atomi Systems, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/1f8e9eae96f9f498c520385ccdbf05e2d8696ee2/icons/activepresenter.jpg</iconUrl>
