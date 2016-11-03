@@ -24,7 +24,5 @@ Install-ChocolateyPackage @packageArgs
 $installLocation = Get-AppInstallLocation $packageArgs.registryUninstallerKey
 if ($installLocation)  {
     Write-Host "$packageName installed to '$installLocation'"
-    #Register-Application "$installLocation\$packageName.exe"
-    #Write-Host "$packageName registered as $packageName"
 }
 else { Write-Warning "Can't find $PackageName install location" }

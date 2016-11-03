@@ -15,6 +15,7 @@ $packageArgs = @{
 }
 Install-ChocolateyPackage @packageArgs
 
+$packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation)  {
     Write-Host "$packageName installed to '$installLocation'"
