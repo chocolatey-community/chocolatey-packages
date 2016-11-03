@@ -22,4 +22,10 @@ function global:au_GetLatest {
     @{ URL32 = $url; Version = $version }
 }
 
-update -ChecksumFor 32
+$cert = ls cert: -Recurse | ? { $_.Thumbprint -eq 'a88fd9bdaa06bc0f3c491ba51e231be35f8d1ad5' }
+if (!$cert) {
+    Write-Host "Adding oracle certificate"
+    certutil -addstore 'TrustedPublisher' "$PSScriptRoot\tools\oracle.cer"
+}
+
+update -ChecksumFor 32 -Force

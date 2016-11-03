@@ -1,7 +1,8 @@
-$ErrorActionPreference = 'Stop'
-
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$tools\oracle.cer'"
+$cert = ls cert: -Recurse | ? { $_.Thumbprint -eq 'a88fd9bdaa06bc0f3c491ba51e231be35f8d1ad5' }
+if (!$cert) {
+    $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+    Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$tools\oracle.cer'"
+}
 
 $packageArgs = @{
   packageName            = 'virtualbox'
