@@ -70,6 +70,7 @@ build_script:
         }
     }
 
+    ./update_all.ps1 -ForcedPackages $forced
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 
 artifacts:
