@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>virtualbox</id>
+    <title>VirtualBox</title>
+    <version>5.1.8</version>
+    <authors>Oracle Corporation</authors>
+    <owners>Rob Reynolds, Mike Dellanoce</owners>
+    <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
+    <description>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</description>
+    <projectUrl>https://www.virtualbox.org/</projectUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <tags>virtualbox virtualization admin</tags>
+    <copyright>Copyright (C) 2009-2016 Oracle Corporation</copyright>
+    <licenseUrl>https://www.virtualbox.org/wiki/VirtualBox_PUEL</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/ea1be546ac1b75346d8e8d898c2617320d6b46e3/icons/virtualbox.png</iconUrl>
+    <dependencies>
+      <dependency id="mm-choco.extension" version="0.0.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+    <file src="tools\oracle.cer" target="tools\oracle.cer" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
