@@ -18,9 +18,8 @@ function global:au_GetLatest {
     $version -match '((?:\d+\.)+)' | out-null
     $version = $Matches[0] -replace '\.$'
 
-    $version_txt = $version -replace '\.'
     $re  = '\-win\d\d\-.+\.zip'
-    $url = $download_page.links | ? href -match $re | ? href -match $version_txt | % href | select -First 1
+    $url = $download_page.links | ? href -match $re | % href | select -First 1
     $url = 'https://sqlite.org/' + $url
 
     @{ URL32 = $url; Version = $version }
