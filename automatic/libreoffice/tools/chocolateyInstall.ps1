@@ -1,41 +1,16 @@
-﻿# Important: The contents of this file – the `libreoffice` and
-# `libreoffice-oldstable` install scripts – **must** be identical.
+$ErrorActionPreference = 'Stop'
 
-$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$url32 = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
-$validExitCodes = @(0,3010)
-
-# Check if LibreOffice in the same version is already installed
-$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
-  ($_.Name -match '^LibreOffice [\d\.]+$') -and ($_.Version -match "^$version")
+$packageArgs = @{
+  packageName            = 'libreoffice'
+  fileType               = 'MSI'
+  url                    = 'http://download.documentfoundation.org/libreoffice/stable/5.2.2/win/x86/LibreOffice_5.2.2_Win_x86.msi'
+  url64bit               = 'http://download.documentfoundation.org/libreoffice/stable/5.2.2/win/x86_64/LibreOffice_5.2.2_Win_x64.msi'
+  checksum               = '97fbe09d2f89d4584af45244b1b5dce256af235729d2dc5684a0095aea3de20c'
+  checksum64             = '57879f1acf4cc9d70bef88d353f5afa7691a0b49e43437efdf5497eff9fd3ed2'
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = '/passive /norestart'
+  validExitCodes         = @(0,3010)
+  softwareName           = 'LibreOffice*'
 }
-
-if ($alreadyInstalled) {
-
-  Write-Output $(
-    "LibreOffice $version is already installed on the computer. " +
-    "Skipping download."
-  )
-
-  if ((Get-ProcessorBits 64) -and $url64) {
-
-    Write-Output $(
-      "Do you already have LibreOffice $version 32-bit installed " +
-      "and want to switch to 64-bit? " +
-      "In that case you have to manually uninstall the 32-bit version " +
-      "and reinstall this package."
-    )
-  }
-
-} else {
-
-  if ($url64) {
-    Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' `
-      $url32 $url64 -validExitCodes $validExitCodes
-  } else {
-    Install-ChocolateyPackage $packageName 'msi' '/passive /norestart' `
-      $url32 -validExitCodes $validExitCodes
-  }
-}
+Install-ChocolateyPackage @packageArgs
