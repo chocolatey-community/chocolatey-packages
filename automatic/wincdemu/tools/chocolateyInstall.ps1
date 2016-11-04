@@ -1,8 +1,11 @@
 $ErrorActionPreference = 'Stop'
 
-$tools = Split-Path -parent $MyInvocation.MyCommand.Definition
-Write-Host 'Adding program certificate: sysprogs.cer'
-Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$tools\sysprogs.cer'" | Out-Null
+$cert = ls cert: -Recurse | ? { $_.Thumbprint -eq '8880a2309be334678e3d912671f22049c5a49a78' }
+if (!$cert) {
+    Write-Host 'Adding program certificate: sysprogs.cer'
+    $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+    Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$tools\sysprogs.cer'"
+}
 
 $packageArgs = @{
   packageName            = 'wincdemu'

@@ -23,4 +23,9 @@ function global:au_GetLatest {
     @{ URL32 = $url; Version = $version }
 }
 
+$cert = ls cert: -Recurse | ? { $_.Thumbprint -eq '8880a2309be334678e3d912671f22049c5a49a78' }
+if (!$cert) {
+    Write-Host 'Adding program certificate: sysprogs.cer'
+    certutil -addstore 'TrustedPublisher' "$PSScriptRoot\tools\sysprogs.cer"
+}
 update -ChecksumFor 32
