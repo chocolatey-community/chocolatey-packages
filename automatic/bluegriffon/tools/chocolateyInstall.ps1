@@ -1,7 +1,16 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/VERYSILENT'
-#$url = "http://bluegriffon.org/freshmeat/1.7/bluegriffon-1.7.exe"
-$url = '{{DownloadUrl}}'
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+$packageArgs = @{
+  packageName    = 'bluegriffon'
+  fileType       = 'exe'
+  softwareName   = 'BlueGriffon*'
+
+  checksum       = ''
+  checksumType   = ''
+  url            = ''
+
+  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyPackage @packageArgs
