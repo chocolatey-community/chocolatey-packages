@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “O” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
@@ -7,7 +7,7 @@
     <title>Gobby</title>
     <version>0.5.0</version>
     <authors>aburgm</authors>
-    <owners>AdmiringWorm</owners>
+    <owners>AdmiringWorm,chocolatey</owners>
     <summary>Gobby is a multi-platform collaborative text editor. It allows multiple users to edit the same document together over the internet in real-time.</summary>
     <description>
 ## Synopsis
