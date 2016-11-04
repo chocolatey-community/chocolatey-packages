@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
-    <id>{{PackageName}}</id>
+    <id>qtox</id>
     <title>qTox</title>
-    <version>{{PackageVersion}}</version>
+    <version>1.4.1.1</version>
     <authors>qTox developers</authors>
     <owners>chocolatey</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
@@ -33,17 +33,17 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
 This package will always install the latest version of qTox, regardless of the package version.
     </description>
     <projectUrl>https://tox.chat/clients.html#qtox</projectUrl>
-    <projectSourceUrl>https://github.com/tux3/qTox</projectSourceUrl>
-    <docsUrl>https://github.com/tux3/qTox/wiki</docsUrl>
-    <bugTrackerUrl>https://github.com/tux3/qTox/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/qTox/qTox</projectSourceUrl>
+    <docsUrl>https://github.com/qTox/qTox/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/qTox/qTox/issues</bugTrackerUrl>
     <mailingListUrl>https://lists.tox.chat/listinfo</mailingListUrl>
     <tags>qtox tox chat voip admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qtox</packageSourceUrl>
     <copyright></copyright>
-    <licenseUrl>https://raw.githubusercontent.com/tux3/qTox/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/qTox/qTox/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/qTox/qTox/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
