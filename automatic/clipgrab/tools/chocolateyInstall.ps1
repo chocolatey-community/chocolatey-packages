@@ -1,7 +1,5 @@
 $ErrorActionPreference = 'Stop'
 
-$toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
-
 $packageArgs = @{
   packageName            = 'clipgrab'
   fileType               = 'exe'
