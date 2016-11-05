@@ -11,6 +11,6 @@ $packageArgs = @{
   checksumType64         = 'sha256'
   silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   validExitCodes         = @(0)
-  softwareName           = 'Maxima *'
+  softwareName           = 'maxima*'
 }
 Install-ChocolateyPackage @packageArgs
