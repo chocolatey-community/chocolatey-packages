@@ -15,10 +15,10 @@ ClipGrab is a free software for downloading and converting online videos from ma
 
 Note: The Windows installer of Clipgrab contains the OpenCandy Adware which is reported by some Antivirus tools. However, OpenCandy newer gets installed in silent mode, so this package doesn’t install any unwanted Adware.
     </description>
-    <summary>download convert online video media youtube vimeo dailymotion</summary>
+    <summary>Download and convert online videos</summary>
     <releaseNotes />
     <copyright />
-    <tags>youtube vimeo video convert music admin</tags>
+    <tags>download online vimeo dailymotion youtube vimeo video convert music admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clipgrab</packageSourceUrl>
   </metadata>
   <files>
