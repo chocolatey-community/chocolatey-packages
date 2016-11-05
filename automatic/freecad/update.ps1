@@ -24,13 +24,13 @@ function global:au_GetLatest {
   $re    = '\.exe$'
   $urls   = $download_page.links | ? href -match $re | select -First 2 -expand href
 
-  $version  = ($urls[0] -split '/' | select -Last 1 -Skip 1).TrimStart('v')
+  $version  = ($urls[0] -split '/' | select -Last 1 -Skip 1)
 
   $releaseNotesUrl = "http://www.freecadweb.org/wiki/index.php?title=Release_notes_" + $version
 
   @{
-    URL32 = $domain + ($urls -notmatch "64" | select -first 1)
-    URL64 = $domain + ($urls -match "64" | select -first 1)
+    URL32 = ($urls -notmatch "64" | select -first 1)
+    URL64 = ($urls -match "64" | select -first 1)
     Version = $version
     ReleaseNotes = $releaseNotesUrl
   }
