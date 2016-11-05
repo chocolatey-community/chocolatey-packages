@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>freecad</id>
+    <version>0.16</version>
     <title>FreeCAD</title>
     <owners>chocolatey purity</owners>
     <authors>Jürgen Riegel</authors>
     <licenseUrl>http://www.freecadweb.org/wiki/index.php?title=Licence</licenseUrl>
     <projectUrl>http://www.freecadweb.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/freecad.svg</iconUrl>
+    <projectSourceUrl>https://github.com/FreeCAD/FreeCAD/</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD, CAx, CAE and PLM, aimed directly at mechanical engineering and product design but also fits a wider range of uses in engineering, such as architecture or other engineering specialties. It is 100 % Open Source and extremely modular, allowing for very advanced extension and customization.
@@ -16,10 +17,10 @@ FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD,
 FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant 3D scene representation model provided by the Coin 3D library, and a broad Python API. The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX and Linux platforms.
     </description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes />
+    <releaseNotes>http://www.freecadweb.org/wiki/index.php?title=Release_notes_0.16</releaseNotes>
     <copyright />
     <tags>3D CAD modeling engineering admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freecad</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
