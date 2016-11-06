@@ -17,7 +17,9 @@ $Options = [ordered]@{
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
             NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
-            UserMessage = ''                                #  Markdown, Text: Custom user message to show
+            UserMessage = "**USING AU NEXT VERSION**"       #  Markdown, Text: Custom user message to show
+            NoIcons     = $false                            #  Markdown: don't show icon
+            IconSize    = 32                                #  Markdown: icon size
         }
     }
 
