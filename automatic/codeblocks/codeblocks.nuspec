@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>codeblocks</id>
+    <version>16.1.0</version>
     <title>Code::Blocks</title>
     <authors>The Code::Blocks Team</authors>
     <owners>chocolatey purity</owners>
     <licenseUrl>http://www.codeblocks.org/license</licenseUrl>
     <projectUrl>http://www.codeblocks.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/codeblocks.png</iconUrl>
+    <projectSourceUrl>http://svn.code.sf.net/p/codeblocks/code/</projectSourceUrl>
+    <docsUrl>http://wiki.codeblocks.org/index.php/Main_Page</docsUrl>
+    <mailingListUrl>http://forums.codeblocks.org/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/codeblocks/tickets/</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable. Finally, an IDE with all the features you need, having a consistent look, feel and operation across platforms. Built around a plugin framework, Code::Blocks can be extended with plugins. Any kind of functionality can be added by installing/coding a plugin. For instance, compiling and debugging functionality is already provided by plugins!
+Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.
+Finally, an IDE with all the features you need, having a consistent look, feel and operation across platforms.
+Built around a plugin framework, Code::Blocks can be extended with plugins. Any kind of functionality can be added by installing/coding a plugin.
+For instance, compiling and debugging functionality is already provided by plugins!
 
 ### Note
 
 This package downloads the installer with the included GCC compiler.
     </description>
     <summary>Code::Blocks is a free C++ IDE.</summary>
-    <releaseNotes>http://www.codeblocks.org/downloads/31</releaseNotes>
+    <releaseNotes>http://www.codeblocks.org/downloads/45</releaseNotes>
     <copyright />
     <tags>codeblocks C++ IDE admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/codeblocks</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-fosshub.extension" version="0.2.0" />
+      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
