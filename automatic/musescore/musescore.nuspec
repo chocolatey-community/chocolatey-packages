@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>musescore</id>
+    <version>2.0.3</version>
     <title>MuseScore</title>
     <owners>chocolatey</owners>
     <authors>MuseScore developers</authors>
@@ -16,10 +16,13 @@ Create beautiful sheet music for free using MuseScore, the free and open source 
 MuseScore runs on Windows, MacOS, and Linux, and is available in over 40 different languages. Whether you are an experienced user of other notation programs like Finale or Sibelius, or a newcomer to the world of music notation programs, MuseScore has the tools you need to make your music look as good as it sounds.
     </description>
     <summary>Free music composition &amp; notation software</summary>
-    <releaseNotes>http://musescore.org/en/developers-handbook/release-notes/release-notes-musescore-{{PackageVersion}}</releaseNotes>
-    <copyright />
-    <tags>music composition notation sheet admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://musescore.org/en/developers-handbook/release-notes/release-notes-musescore-2.0.3</releaseNotes>
+    <copyright>MuseScore BVBA</copyright>
+    <mailingListUrl>https://musescore.org/en/forum</mailingListUrl>
+    <docsUrl>https://musescore.org/en/handbook</docsUrl>
+    <tags>music cross-platform fos composition notation sheet admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/musescore</packageSourceUrl>
+    <projectSourceUrl>https://github.com/musescore/MuseScore</projectSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
