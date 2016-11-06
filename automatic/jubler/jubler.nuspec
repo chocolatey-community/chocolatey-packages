@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/p/jubler/code/ci/jubler/tree/</projectSourceUrl>
     <bugTrackerUrl>https://sourceforge.net/p/jubler/_list/tickets?source=navbar</bugTrackerUrl>
-    <tags>jubler admin SPACE_SEPARATED</tags>
+    <tags>jubler admin subtitle editor video</tags>
     <summary>Jubler is a tool to edit text-based subtitles.</summary>
     <description>
 Jubler is a tool to edit text-based subtitles.
