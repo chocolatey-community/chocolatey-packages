@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>tv-browser</id>
+    <version>3.4.4</version>
     <title>TV-Browser</title>
     <owners>chocolatey</owners>
     <authors>TV-Browser Developers</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://www.tvbrowser.org/index.php</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/tv-browser.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/tv-browser.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 TV-Browser is a digital TV guide.
@@ -23,7 +23,11 @@ You can not use TV-Browser to watch TV.
     <releaseNotes />
     <copyright />
     <tags>tv-browser tv television guide admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tv-browser</packageSourceUrl>
+    <dependencies>
+      <dependency id="javaruntime" version="6.0.30" />
+      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
