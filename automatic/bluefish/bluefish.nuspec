@@ -36,41 +36,7 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
 *   Site upload / download
 *   Full screen editing
 *   Many tools such as tabs to spaces, join lines, lines to columns, strip whitespace, etc. etc.
-*   Customizable programming language support:
-    *   In-line reference information (move your mouse over a function name or tag name) for various programming languages
-    *   Code block folding
-    *   Highlighting matching block start and end markers (both brackets and tags)
-    *   Auto-completion and auto-tag-closing for many programming languages, with reference information, and even for nested languages (e.g. css and javascript inside html code that is inside a php document)with included language definition files for:
-    *   Ada
-    *   ASP .NET and VBS
-    *   C/C++
-    *   CSS
-    *   CFML
-    *   Clojure
-    *   D
-    *   gettext PO
-    *   Google Go
-    *   HTML, XHTML and HTML5
-    *   Java and JSP
-    *   JavaScript and jQuery
-    *   Lua
-    *   Octave/MATLAB
-    *   MediaWiki
-    *   NSIS
-    *   Pascal
-    *   Perl
-    *   PHP
-    *   Python
-    *   R
-    *   Ruby
-    *   SASS
-    *   Shell
-    *   Scheme
-    *   SQL
-    *   SVG
-    *   Vala
-    *   Wordpress
-    *   XML
+*   Customizable programming language support
 *   Multiple encodings support. Bluefish works internally with UTF8, but can save your documents in any desired encoding.
 *   Bookmarks functionality
 *   HTML toolbar and tearable menu's
@@ -79,22 +45,6 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
     *   Thumbnail creation and automatically linking of the thumbnail with the original image, and multi-thumbnail creation
     *   User-customizable toolbar for quick access to often used functions
 *   ZenCoding support
-
-*[CFML]: ColdFusion Markup Language
-*[CSS]: Cascading Style Sheets
-*[FTP]: File Transfer Protocol
-*[HTML]: Hyper Text Markup Language
-*[HTTP]: Hypertext Transfer Protocol
-*[HTTPS]: Hyper Text Transfer Protocol Secure sockets
-*[JSP]: Java Server Pages
-*[MATLAB]: MATrix LABoratory
-*[PHP]: Hypertext Preprocessor (HTML-embedded scripting language)
-*[PO]: Portable Objects
-*[SFTP]: Secured File Transfer Protocol
-*[SQL]: Structured Query Language
-*[UTF8]: 8-bit Unicode Transformation Format
-*[WebDAV]: Web-based Distributed Authoring and Versioning
-*[XML]: eXtensible Markup Language
     </description>
     <summary>Bluefish is a powerful editor targeted towards programmers and webdevelopers.</summary>
     <copyright>Copyright © 1998-2015 Olivier Sessink and others</copyright>
