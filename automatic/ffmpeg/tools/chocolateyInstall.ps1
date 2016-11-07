@@ -4,10 +4,10 @@ $packageName = 'ffmpeg'
 
 $packageArgs = @{
   packageName    = $packageName
-  url            = 'https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-3.1.5-win32-static.zip'
-  url64Bit       = 'https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.1.5-win64-static.zip'
-  checksum       = '8f19d37cddcfde6e2a0c5791ac5228252f97be1a52268aaa37d2c5813b08186d'
-  checksum64     = '5c6a1263780509db438296e6e6555dc731212564088094ff3a16f0e69f95a633'
+  url            = 'https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-3.2-win32-static.zip'
+  url64Bit       = 'https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.2-win64-static.zip'
+  checksum       = 'd706d64dc9f81afd17c8d8f0a25e10741249223020f6894f7d2a90a237fa109b'
+  checksum64     = '9e1cbb9b73ac3291b3349e4531b39068b6df54fcb486d97e84383e551a40712b'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   unzipLocation  = Split-Path $MyInvocation.MyCommand.Definition
