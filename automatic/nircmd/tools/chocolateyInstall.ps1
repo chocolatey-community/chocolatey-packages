@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName = 'nirmcmd'
 $url32       = 'http://www.nirsoft.net/utils/nircmd.zip'
