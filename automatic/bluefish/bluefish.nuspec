@@ -1,23 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>bluefish</id>
+    <version>2.2.9</version>
     <title>Bluefish</title>
     <owners>chocolatey</owners>
     <authors>Bluefish Dev Team</authors>
     <licenseUrl>http://bluefish.openoffice.nl/development.html</licenseUrl>
     <projectUrl>http://bluefish.openoffice.nl/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/bluefish.svg</iconUrl>
+    <mailingListUrl>http://bluefish.openoffice.nl/development.html#list</mailingListUrl>
+    <bugTrackerUrl>https://bugzilla.gnome.org/buglist.cgi?product=bluefish</bugTrackerUrl>
+    <docsUrl>http://bfwiki.tellefsen.net/index.php/Main_Page</docsUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Bluefish is a powerful editor targeted towards programmers and webdevelopers, with many options to write websites, scripts and programming code. Bluefish supports many programming and markup languages.
+## Features
+
+### Bluefish Features
+
+*   Lightweight - Bluefish tries to be lean and clean, as far as possible given it is a GUI editor.
+*   Fast - Bluefish starts really quick (even on a netbook) and loads hundreds of files within seconds.
+*   Multiple document interface, easily opens 500+ documents (tested >10000 documents simultaneously)
+*   Project support, enables you to work efficiently on multiple projects, and automatically restores settings for each project.
+*   Multi-threaded support for remote files using gvfs, supporting <abbr title="File Transfer Protocol">FTP</abbr>, <abbr title="Secured File Transfer Protocol">SFTP</abbr>, <abbr title="Hypertext Transfer Protocol">HTTP</abbr>, <abbr title="Hyper Text Transfer Protocol Secure sockets">HTTPS</abbr>, <abbr title="Web-based Distributed Authoring and Versioning">WebDAV</abbr>, CIFS and more<sup>1</sup>
+*   Very powerful search and replace, with support for Perl Compatible regular expressions, sub-pattern replacing, and search and replace in files on disk.
+*   Open files recursively based on filename patterns and/or content patterns
+*   Snippets sidebar - specify custom dialogs, search and replace patterns or insert patterns and bind them to a shortkut key combination of your liking to speed up your development process
+*   Integrate external programs such as make, lint, weblint, xmllint, tidy, javac, or your own program or script to handle advanced text processing or error detection
+*   Integrate external filters of your liking, pipe your document (or just the current selected text) through sort, sed, awk or any custom script
+*   Unlimited undo/redo functionality
+*   In-line spell checker which is programing language aware (spell check comments and strings, but not code), requires libenchant during compilation<sup>2</sup>
+*   Auto-recovery of changes in modified documents after a crash, kill or shutdown
+*   Character map of all unicode characters (requires libgucharmap during compilation)<sup>3</sup>
+*   Site upload / download<sup>1</sup>
+*   Full screen editing
+*   Many tools such as tabs to spaces, join lines, lines to columns, strip whitespace, etc. etc.
+*   Customizable programming language support:
+    *   In-line reference information (move your mouse over a function name or tag name) for various programming languages
+    *   Code block folding
+    *   Highlighting matching block start and end markers (both brackets and tags)
+    *   Auto-completion and auto-tag-closing for many programming languages, with reference information, and even for nested languages (e.g. css and javascript inside html code that is inside a php document)with included language definition files for:
+    *   Ada
+    *   ASP .NET and VBS
+    *   C/C++
+    *   <abbr title="Cascading Style Sheets">CSS</abbr>
+    *   <abbr title="ColdFusion Markup Language">CFML</abbr>
+    *   Clojure
+    *   D
+    *   gettext <abbr title="Portable Objects">PO</abbr>
+    *   Google Go
+    *   <abbr title="Hyper Text Markup Language">HTML</abbr>, XHTML and HTML5
+    *   Java and <abbr title="Java Server Pages">JSP</abbr>
+    *   JavaScript and jQuery
+    *   Lua
+    *   Octave/<abbr title="MATrix LABoratory">MATLAB</abbr>
+    *   MediaWiki
+    *   NSIS
+    *   Pascal
+    *   Perl
+    *   <abbr title="Hypertext Preprocessor (HTML-embedded scripting language)">PHP</abbr>
+    *   Python
+    *   R
+    *   Ruby
+    *   SASS
+    *   Shell
+    *   Scheme
+    *   <abbr title="Structured Query Language">SQL</abbr>
+    *   SVG
+    *   Vala
+    *   Wordpress
+    *   <abbr title="eXtensible Markup Language">XML</abbr>
+*   Multiple encodings support. Bluefish works internally with <abbr title="8-bit Unicode Transformation Format">UTF8</abbr>, but can save your documents in any desired encoding.
+*   Bookmarks functionality
+*   HTML toolbar and tearable menu's
+    *   Dialogs and wizards for many HTML tags, with all their attributes
+    *   Fully featured image insert dialog
+    *   Thumbnail creation and automatically linking of the thumbnail with the original image, and multi-thumbnail creation
+    *   User-customizable toolbar for quick access to often used functions
+*   ZenCoding support<sup>1,4</sup>    
     </description>
     <summary>Bluefish is a powerful editor targeted towards programmers and webdevelopers.</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>bluefish editor html admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <copyright>Copyright © 1998-2015 Olivier Sessink and others</copyright>
+    <releaseNotes>https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish/ChangeLog</releaseNotes>
+    <tags>bluefish editor html cross-platform development admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluefish</packageSourceUrl>
+    <projectSourceUrl>https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish</projectSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
