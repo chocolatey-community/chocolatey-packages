@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mpc-hc</id>
-    <version>1.7.10</version>
+    <version>1.7.10.20161107</version>
     <title>MPC-HC</title>
     <owners>chocolatey</owners>
     <authors>MPC-HC Team</authors>
