@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>bluefish</id>
@@ -21,19 +21,19 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
 
 *   Lightweight - Bluefish tries to be lean and clean, as far as possible given it is a GUI editor.
 *   Fast - Bluefish starts really quick (even on a netbook) and loads hundreds of files within seconds.
-*   Multiple document interface, easily opens 500+ documents (tested >10000 documents simultaneously)
+*   Multiple document interface, easily opens 500+ documents (tested &gt;10000 documents simultaneously)
 *   Project support, enables you to work efficiently on multiple projects, and automatically restores settings for each project.
-*   Multi-threaded support for remote files using gvfs, supporting <abbr title="File Transfer Protocol">FTP</abbr>, <abbr title="Secured File Transfer Protocol">SFTP</abbr>, <abbr title="Hypertext Transfer Protocol">HTTP</abbr>, <abbr title="Hyper Text Transfer Protocol Secure sockets">HTTPS</abbr>, <abbr title="Web-based Distributed Authoring and Versioning">WebDAV</abbr>, CIFS and more<sup>1</sup>
+*   Multi-threaded support for remote files using gvfs, supporting FTP, SFTP, HTTP, HTTPS, WebDAV, CIFS and more
 *   Very powerful search and replace, with support for Perl Compatible regular expressions, sub-pattern replacing, and search and replace in files on disk.
 *   Open files recursively based on filename patterns and/or content patterns
 *   Snippets sidebar - specify custom dialogs, search and replace patterns or insert patterns and bind them to a shortkut key combination of your liking to speed up your development process
 *   Integrate external programs such as make, lint, weblint, xmllint, tidy, javac, or your own program or script to handle advanced text processing or error detection
 *   Integrate external filters of your liking, pipe your document (or just the current selected text) through sort, sed, awk or any custom script
 *   Unlimited undo/redo functionality
-*   In-line spell checker which is programing language aware (spell check comments and strings, but not code), requires libenchant during compilation<sup>2</sup>
+*   In-line spell checker which is programing language aware (spell check comments and strings, but not code), requires libenchant during compilation
 *   Auto-recovery of changes in modified documents after a crash, kill or shutdown
-*   Character map of all unicode characters (requires libgucharmap during compilation)<sup>3</sup>
-*   Site upload / download<sup>1</sup>
+*   Character map of all unicode characters (requires libgucharmap during compilation)
+*   Site upload / download
 *   Full screen editing
 *   Many tools such as tabs to spaces, join lines, lines to columns, strip whitespace, etc. etc.
 *   Customizable programming language support:
@@ -44,41 +44,57 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
     *   Ada
     *   ASP .NET and VBS
     *   C/C++
-    *   <abbr title="Cascading Style Sheets">CSS</abbr>
-    *   <abbr title="ColdFusion Markup Language">CFML</abbr>
+    *   CSS
+    *   CFML
     *   Clojure
     *   D
-    *   gettext <abbr title="Portable Objects">PO</abbr>
+    *   gettext PO
     *   Google Go
-    *   <abbr title="Hyper Text Markup Language">HTML</abbr>, XHTML and HTML5
-    *   Java and <abbr title="Java Server Pages">JSP</abbr>
+    *   HTML, XHTML and HTML5
+    *   Java and JSP
     *   JavaScript and jQuery
     *   Lua
-    *   Octave/<abbr title="MATrix LABoratory">MATLAB</abbr>
+    *   Octave/MATLAB
     *   MediaWiki
     *   NSIS
     *   Pascal
     *   Perl
-    *   <abbr title="Hypertext Preprocessor (HTML-embedded scripting language)">PHP</abbr>
+    *   PHP
     *   Python
     *   R
     *   Ruby
     *   SASS
     *   Shell
     *   Scheme
-    *   <abbr title="Structured Query Language">SQL</abbr>
+    *   SQL
     *   SVG
     *   Vala
     *   Wordpress
-    *   <abbr title="eXtensible Markup Language">XML</abbr>
-*   Multiple encodings support. Bluefish works internally with <abbr title="8-bit Unicode Transformation Format">UTF8</abbr>, but can save your documents in any desired encoding.
+    *   XML
+*   Multiple encodings support. Bluefish works internally with UTF8, but can save your documents in any desired encoding.
 *   Bookmarks functionality
 *   HTML toolbar and tearable menu's
     *   Dialogs and wizards for many HTML tags, with all their attributes
     *   Fully featured image insert dialog
     *   Thumbnail creation and automatically linking of the thumbnail with the original image, and multi-thumbnail creation
     *   User-customizable toolbar for quick access to often used functions
-*   ZenCoding support<sup>1,4</sup>    
+*   ZenCoding support
+
+*[CFML]: ColdFusion Markup Language
+*[CSS]: Cascading Style Sheets
+*[FTP]: File Transfer Protocol
+*[HTML]: Hyper Text Markup Language
+*[HTTP]: Hypertext Transfer Protocol
+*[HTTPS]: Hyper Text Transfer Protocol Secure sockets
+*[JSP]: Java Server Pages
+*[MATLAB]: MATrix LABoratory
+*[PHP]: Hypertext Preprocessor (HTML-embedded scripting language)
+*[PO]: Portable Objects
+*[SFTP]: Secured File Transfer Protocol
+*[SQL]: Structured Query Language
+*[UTF8]: 8-bit Unicode Transformation Format
+*[WebDAV]: Web-based Distributed Authoring and Versioning
+*[XML]: eXtensible Markup Language
     </description>
     <summary>Bluefish is a powerful editor targeted towards programmers and webdevelopers.</summary>
     <copyright>Copyright © 1998-2015 Olivier Sessink and others</copyright>
