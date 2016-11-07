@@ -1,5 +1,11 @@
-$name	= 'GMER'
-$url	= '{{DownloadUrl}}'
-$pwd	= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyZipPackage "$name" "$url" "$pwd"
+$packageArgs = @{
+  packageName  = 'GMER'
+  url          = ''
+  checksum     = ''
+  checksumType = ''
+  unzipLocation = "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+}
+
+Install-ChocolateyZipPackage @packageArgs
