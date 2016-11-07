@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>bluefish</id>
-    <version>2.2.9</version>
+    <version>2.2.9.20161107</version>
     <title>Bluefish</title>
     <owners>chocolatey</owners>
     <authors>Bluefish Dev Team</authors>
