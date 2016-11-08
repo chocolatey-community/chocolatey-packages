@@ -1,28 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<title>VSDC Free Video Editor</title>
-		<version>{{PackageVersion}}</version>
-		<authors>Flash-Integro LLC</authors>
-		<owners>Redsandro</owners>
-		<summary>Simple video editor.</summary>
-		<description>
-The video editor is intended for editing video files and creating videos of any complexity involving various visual and audio effects. The program offers rich functionality and yet has a simple and intuitive interface, allowing you to create videos with a bare minimum of efforts.
-		</description>
-		<projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
-		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-		<tags>NLE Video Editor</tags>
-		<copyright></copyright>
-		<licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://i.imgur.com/eWYMC0E.png</iconUrl>
-		<dependencies>
-		</dependencies>
-		<releaseNotes></releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+    <metadata>
+        <id>freevideoeditor</id>
+        <title>VSDC Free Video Editor</title>
+        <version>5.5.0</version>
+        <authors>Flash-Integro LLC</authors>
+        <owners>Redsandro</owners>
+        <summary>Simple video editor.</summary>
+        <description>
+Free video software that allows you to edit video files and create videos of all types. It supports the most popular video/audio formats and codecs, including DVD, HD and GoPro videos. Preconfigured profiles make the creation of videos for various multimedia and mobile devices a snap.
+
+The video editor offers a number of versatile features both for home and business use: text and audio overlay, an array of charts and diagrams as well as a slideshow maker.
+
+Non-linear editing system. It means that video files and images do not necessarily have to follow a specific sequence – they can be in various places at any point of time. Besides, all objects can change their properties, shape and position in time.
+
+Hardware acceleration, multi-color Chroma Key, adjustable parameters settings and enhanced resolution make VSDC a real time and effort saving tool allowing for creating large size HD videos in a few minutes instead of hours.
+
+## Features
+
+- Non-linear video editor
+- Visual and audio effects
+- Blending modes and Instagram-like filters
+- Masking
+- Subpixel accuracy
+- Support of popular formats
+- Creation of videos for specific multimedia devices
+- Working with charts
+- Video library
+- Built-in DVD burning tool
+- Video File Converter
+- Desktop video capture
+- Video capturing
+        </description>
+        <projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+        <tags>freeware NLE video editor audio media avi mkv dvd mp3 flac dsp record convert</tags>
+        <copyright>www.videosoftdev.com, Flash-Integro LLC</copyright>
+        <licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <docsUrl>http://www.videosoftdev.com/how-to-use-free-video-editor</docsUrl>
+        <iconUrl>https://i.imgur.com/eWYMC0E.png</iconUrl>
+        <dependencies>
+        </dependencies>
+        <releaseNotes>http://www.videosoftdev.com/free-video-editor#accordion10</releaseNotes>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>
