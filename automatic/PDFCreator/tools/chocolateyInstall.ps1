@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'pdfcreator'
 $installerType = 'exe'
 $baseInstallArgs = '/VERYSILENT /NORESTART'
 $fullInstallArgs = $('' +
@@ -17,7 +17,7 @@ $fullInstallArgs = $('' +
   'languages\swedish,languages\turkish,languages\valencian_avl"'
 )
 
-$url = '{{DownloadUrl}}'
+$url = 'http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download'
 
 $uninstallerPathLastPart = 'PDFCreator\unins000.exe'
 $uninstallerPath = Join-Path $env:ProgramFiles $uninstallerPathLastPart
@@ -35,4 +35,6 @@ if (Test-Path $uninstallerPath) {
   Uninstall-ChocolateyPackage $packageName $installerType $baseInstallArgs $uninstallerPath
 }
 
-Install-ChocolateyPackage $packageName $installerType $fullInstallArgs $url
+$checksum = 'C6A05C5A0A3035881EE7E1C7C14F9A15850A2C955A69E2F353DA0DCABF4438FF'
+
+Install-ChocolateyPackage $packageName $installerType $fullInstallArgs $url -checksum $checksum -checksumType 'SHA256'
