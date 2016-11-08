@@ -32,6 +32,11 @@ Hardware acceleration, multi-color Chroma Key, adjustable parameters settings an
 - Video File Converter
 - Desktop video capture
 - Video capturing
+
+
+## Notes
+
+- Only **the latest version** is avialable as vendor doesn't keep the record of older releases
         </description>
         <projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>

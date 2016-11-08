@@ -45,6 +45,7 @@ install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
+- ps: 'HKLM', 'HKCU' | % { sp "${_}:\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" A10 0 }   #prevent iwr cookie popup: https://github.com/chocolatey/chocolatey-coreteampackages/issues/382
 - ps: |
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
