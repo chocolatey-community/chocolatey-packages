@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>cutepdf</id>
     <title>CutePDF</title>
-    <version>{{PackageVersion}}</version>
+    <version>3.0</version>
     <authors>Acro Software Inc.</authors>
     <owners>Redsandro</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
@@ -24,7 +23,4 @@ to professional quality PDF documents. No watermarks!
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
