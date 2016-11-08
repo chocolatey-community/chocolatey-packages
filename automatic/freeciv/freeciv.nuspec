@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>freeciv</id>
+    <version>2.5.5</version>
     <title>Freeciv</title>
     <owners>chocolatey purity</owners>
     <authors>Freeciv Contributors</authors>
-    <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <licenseUrl>https://github.com/freeciv/freeciv-web/blob/develop/LICENSE.txt</licenseUrl>
     <projectUrl>http://www.freeciv.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/freeciv.png</iconUrl>
+    <docsUrl>http://www.freeciv.org/wiki/</docsUrl>
+    <bugTrackerUrl>http://gna.org/bugs/?group=freeciv</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/freeciv/freeciv-web</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization. The game commences in prehistory and your mission is to lead your tribe from the Stone Age to the Space Age …
+Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.
+The game commences in prehistory and your mission is to lead your tribe from the Stone Age to the Space Age.
+Your goal is to build cities, collect resources, organize your government,
+and build an army, with the ultimate goal of creating the best civilization.
+You can play online against other players (multiplayer) or play by yourself against the computer.
     </description>
     <summary>Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.</summary>
-    <releaseNotes />
+    <releaseNotes>http://www.freeciv.org/wiki/NEWS-2.5.5</releaseNotes>
     <copyright />
-    <tags>game strategy civilization admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>freeciv game strategy civilization admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freeciv</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
