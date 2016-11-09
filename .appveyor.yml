@@ -3,7 +3,8 @@
 version: '{build}'
 max_jobs: 1
 image: WMF 5
-clone_depth: 5
+# History plugin requires complete log
+#clone_depth: 5
 branches:
   only:
   - master
