@@ -6,11 +6,17 @@
     The function returns package cache directory within $Env:TEMP. It will not create the directory
     if it doesn't exist.
 
+    This function is useful when you have to obtain the file using `Get-ChocolateyWebFile` in order
+    to perform certain installation steps that other helpers can't do.
+
 .EXAMPLE
     Get-PackageCacheLocation
 
 .OUTPUTS
     [String]
+
+.LINKS
+    Get-ChocolateyWebFile
 #>
 function Get-PackageCacheLocation {
     [CmdletBinding()]
