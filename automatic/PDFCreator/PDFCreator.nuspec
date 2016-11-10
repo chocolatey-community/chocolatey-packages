@@ -14,7 +14,9 @@
 PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
     </description>
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
-    <tags>pdf admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>pdf editor printer admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/PDFCreator</packageSourceUrl>
+	<docsUrl>http://docs.pdfforge.org/pdfcreator/latest/en/</docsUrl>
+	<projectSourceUrl>https://github.com/pdfforge/PDFCreator</projectSourceUrl>
   </metadata>
 </package>
