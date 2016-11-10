@@ -1,6 +1,7 @@
 import-module au
 
 $url = 'http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download'
+$download_page_url = 'http://www.pdfforge.org/pdfcreator/download'
 
 function global:au_SearchReplace {
     @{
@@ -11,12 +12,21 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    Write-Host $url
+    Write-Host $download_page_url
 
-    $temp_file = $env:TEMP + '\PDFCreator.exe'
-    Invoke-WebRequest $url -OutFile $temp_file
+    $page = Invoke-WebRequest $download_page_url
+	$html = $page.parsedHTML
 
-    $version = (Get-Command $temp_file).Version
+    $current_item = $html.body.getElementsByTagName("div") | where {$_.className -like "*pdf-select-current*"}
+    $header = $current_item.getElementsByTagName("h2") | where {$_.innerText -like "PDFCreator *"}
+    $version = $header.innerText.Replace("PDFCreator ", "")
+    $version_segments = $version.Split('.')
+
+    if ($version_segments.length -eq 2) {
+        $version = $version + ".0"
+    }
+
+    Write-Host $version
 
     return @{ URL = $url; Version = $version }
 }
