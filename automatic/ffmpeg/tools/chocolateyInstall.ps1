@@ -15,7 +15,7 @@ $packageArgs = @{
 $is32bit = (Get-ProcessorBits 32) -or ($Env:chocolateyForceX86 -eq 'true')
 
 $url          = if ($is32bit) { $packageArgs.url } else { $packageArgs.url64Bit }
-$fileName     = Split-Path -Leaf $url
+$fileName     = $url -split '/' | select -last 1
 $download_dir = "$Env:TEMP\chocolatey\$packageName\$Env:ChocolateyPackageVersion"
 
 $file_path = "$download_dir\$fileName"

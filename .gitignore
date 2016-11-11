@@ -31,3 +31,4 @@ Update-AUPackages.md
 *.log.full
 automatic/_output/
 **/.vscode/launch.json
+/UpdateHistory.md

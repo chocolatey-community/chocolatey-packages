@@ -1,24 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>palemoon</id>
     <title>Pale Moon browser</title>
-    <version>{{PackageVersion}}</version>
+    <version>26.5.0</version>
     <authors>Moonchild Productions</authors>
-    <owners>Redsandro</owners>
+    <owners>Redsandro,chocolatey</owners>
     <summary>A Firefox-based web browser optimized for modern hardware.</summary>
     <description>
-Pale Moon is an Open Source, Firefox-based web browser optimized for modern hardware. Firefox maintains compatibility with old hardware, compromising on speed. Pale Moon is on average 25 % faster.
+Pale Moon is an Open Source, Firefox-based web browser optimized for modern hardware.
+Firefox maintains compatibility with old hardware, compromising on speed. Pale Moon is on average 25 % faster.
     </description>
     <projectUrl>http://www.palemoon.org/</projectUrl>
+    <projectSourceUrl>https://github.com/MoonchildProductions/Pale-Moon</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/MoonchildProductions/Pale-Moon/issues</bugTrackerUrl>
+    <mailingListUrl>https://forum.palemoon.org/</mailingListUrl>
     <tags>Internet Browser Firefox Optimized admin</tags>
-    <copyright></copyright>
-    <licenseUrl>https://en.wikipedia.org/wiki/Mozilla_Public_License</licenseUrl>
+    <copyright>2009-2016 Moonchild Productions</copyright>
+    <licenseUrl>https://github.com/MoonchildProductions/Pale-Moon/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/palemoon.png</iconUrl>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bceb375ac10f0c0a67e2735df00560519a078c8c/icons/palemoon.png</iconUrl>
+    <releaseNotes>https://www.palemoon.org/releasenotes.shtml</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/palemoon</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
