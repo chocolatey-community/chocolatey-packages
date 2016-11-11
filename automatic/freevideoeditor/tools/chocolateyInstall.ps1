@@ -8,6 +8,6 @@ $packageArgs = @{
   checksumType           = 'sha256'
   silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   validExitCodes         = @(0)
-  softwareName           = 'VSDC Free Video Editor*'
+  softwareName           = 'freevideoeditor*'
 }
 Install-ChocolateyPackage @packageArgs
