@@ -17,7 +17,8 @@ $fullInstallArgs = $('' +
   'languages\swedish,languages\turkish,languages\valencian_avl"'
 )
 
-$url = 'http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download'
+$url = 'http://orange.download.pdfforge.org/pdfcreator/2.4.0/PDFCreator-2_4_0-Setup.exe?file=AMIfv97pmlXptiTqMp-BHVoAI8s-Cm7VHxjpiPsVcuGxVnMs4_45c2BsnRUFjdrYS688IX5WWKCgalXMZwLUYaaB3JL2yQFOc
+C8Oqa1SzC3jXtG7uTkAbe9kIbxmkUDONXfgrLhlZPCeLOXyZxkZyI5uxoVDvvEZrNQpQ-jaolP7S4aOBoKBeHI&download'
 
 $uninstallerPathLastPart = 'PDFCreator\unins000.exe'
 $uninstallerPath = Join-Path $env:ProgramFiles $uninstallerPathLastPart
