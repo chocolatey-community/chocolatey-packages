@@ -1,5 +1,6 @@
 import-module au
-import-module "./../../extensions/chocolatey-fosshub.extension/extensions/Get-UrlFromFosshub.psm1"
+import-module "$PSScriptRoot/../../extensions/chocolatey-fosshub.extension/extensions/Get-UrlFromFosshub.psm1"
+import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/Get-WebContent.psm1"
 
 $releases = 'http://www.codeblocks.org/downloads/26'
 
@@ -37,4 +38,4 @@ function global:au_GetLatest {
   }
 }
 
-update -NoCheckUrl -ChecksumFor 32
+update -NoCheckUrl -ChecksumFor 32 -Force
