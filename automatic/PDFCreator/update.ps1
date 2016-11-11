@@ -1,7 +1,6 @@
 import-module au
 
-$url = 'http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download'
-$download_page_url = 'http://www.pdfforge.org/pdfcreator/download'
+$download_page_url = 'http://download.pdfforge.org/download/pdfcreator/list'
 
 function global:au_SearchReplace {
     @{
@@ -12,21 +11,15 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    Write-Host $download_page_url
-
     $page = Invoke-WebRequest $download_page_url
 	$html = $page.parsedHTML
 
-    $current_item = $html.body.getElementsByTagName("div") | where {$_.className -like "*pdf-select-current*"}
-    $header = $current_item.getElementsByTagName("h2") | where {$_.innerText -like "PDFCreator *"}
-    $version = $header.innerText.Replace("PDFCreator ", "")
-    $version_segments = $version.Split('.')
+    $newest_release = $html.body.getElementsByTagName("td") | where {$_.className -like "*colrelease*" -and $_.innerText -notlike "*nightly*"} | Select-Object -first 1
+    $version = $newest_release.innerText.Replace("PDFCreator ", "").Trim()
 
-    if ($version_segments.length -eq 2) {
-        $version = $version + ".0"
-    }
+    $newest_release_url = $html.body.getElementsByTagName("a") | where {$_.href -like "*/download/pdfcreator/$version*"}
 
-    Write-Host $version
+    $url = $newest_release_url.href.Replace("about:/download", "http://orange.download.pdfforge.org") + "&download"
 
     return @{ URL = $url; Version = $version }
 }
