@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://www.libreoffice.org/download/libreoffice-fresh'
+$releases = 'https://www.libreoffice.org/download/libreoffice-still'
 
 function global:au_SearchReplace {
    @{

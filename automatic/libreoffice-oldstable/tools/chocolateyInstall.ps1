@@ -1,27 +1,16 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$url = '{{DownloadUrl}}'
-$validExitCodes = @(0, 3010)
+$ErrorActionPreference = 'Stop'
 
-function Check-SameVersionInstalled() {
-  $registryPaths = @(
-    'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*',
-    'HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
-  )
-
-  return Get-ItemProperty $registryPaths -ErrorAction SilentlyContinue | Where-Object {
-    $_.DisplayName -match '^LibreOffice [\d\.]+$' -and
-    $_.DisplayVersion -like "${version}*"
-  }
+$packageArgs = @{
+  packageName            = 'libreoffice'
+  fileType               = 'MSI'
+  url                    = ''
+  url64bit               = ''
+  checksum               = ''
+  checksum64             = ''
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = '/passive /norestart'
+  validExitCodes         = @(0,3010)
+  softwareName           = 'LibreOffice*'
 }
-
-if (Check-SameVersionInstalled) {
-
-  Write-Output $(
-    "LibreOffice $version is already installed on the computer. " +
-    "Skipping download."
-  )
-} else {
-  Install-ChocolateyPackage $packageName 'msi' '/qn /norestart' `
-    $url -validExitCodes $validExitCodes
-}
+Install-ChocolateyPackage @packageArgs
