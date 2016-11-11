@@ -4,9 +4,9 @@
     <metadata>
         <id>freevideoeditor</id>
         <title>VSDC Free Video Editor</title>
-        <version>5.5.0</version>
+        <version>0.0</version>
         <authors>Flash-Integro LLC</authors>
-        <owners>Redsandro</owners>
+        <owners>chocolatey</owners>
         <summary>Simple video editor.</summary>
         <description>
 Free video software that allows you to edit video files and create videos of all types. It supports the most popular video/audio formats and codecs, including DVD, HD and GoPro videos. Preconfigured profiles make the creation of videos for various multimedia and mobile devices a snap.
