@@ -6,7 +6,7 @@ This is the Powershell module that extends Chocolatey with new functions.
 
 ## Installation
 
-Install via chocolatey: `cinst chocolatey-core.extension`. 
+Install via chocolatey: `choco install chocolatey-core.extension`.
 
 The module is usually automatically installed as a dependency.
 

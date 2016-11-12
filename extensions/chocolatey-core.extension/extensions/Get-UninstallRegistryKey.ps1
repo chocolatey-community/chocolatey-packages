@@ -16,7 +16,7 @@
     fuzzy search `"Launchy (*)"` (the wildcard `*`) so if Launchy auto-updates or is updated outside
     of chocolatey, the uninstall script will not fail.
 
-    Take care not to abuse fuzzy/glob pattern searches. Be conscientious of programs that may have shared
+    Take care not to abuse fuzzy/glob pattern searches. Be conscious of programs that may have shared
     or common root words to prevent overmatching. For example, "SketchUp*" would match two keys with software
     names "SketchUp 2016" and "SketchUp Viewer" that are different programs released by the same company.
 

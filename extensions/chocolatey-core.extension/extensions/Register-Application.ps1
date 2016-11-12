@@ -19,7 +19,7 @@
     Register application using explicit name.
 
 .LINK
-   Set-AppKeyALiases        - https://github.com/majkinetor/posh/blob/master/MM_Admin/Set-AppKeyAliases.ps1
+   Set-AppKeyAliases        - https://github.com/majkinetor/posh/blob/master/MM_Admin/Set-AppKeyAliases.ps1
    Application Registration - https://msdn.microsoft.com/en-us/library/windows/desktop/ee872121(v=vs.85).aspx
 
 #>
