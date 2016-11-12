@@ -2,15 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>ffdshow-x86_32</id>
-    <version>1.3.4531</version>
-    <title>ffdshow tryouts (forced 32-bit)</title>
+    <version>1.3.4531.20160211</version>
+    <title>[Deprecated] ffdshow tryouts (forced 32-bit)</title>
     <authors>http://ffdshow-tryout.sourceforge.net/wiki/credits</authors>
     <owners>http://ffdshow-tryout.sourceforge.net/wiki/credits</owners>
     <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
     <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffdshow.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>ffdshow tryouts is a DirectShow and Video for Windows codec with support for a wide range of audio and video formats, such as Xvid, DivX, and H.264. It includes a powerful filter set that can enhance the video quality – with filters for resizing, deinterlacing, and displaying subtitles – as well as audio quality through normalization, down-/upmixing, and resampling.
+    <description>
+**NOTE:** This package has been deprecated in favour of the ffdshow package
+
+ffdshow tryouts is a DirectShow and Video for Windows codec with support for a wide range of audio and video formats, such as Xvid, DivX, and H.264. It includes a powerful filter set that can enhance the video quality – with filters for resizing, deinterlacing, and displaying subtitles – as well as audio quality through normalization, down-/upmixing, and resampling.
 
 ffdshow + X = ffdshow tryouts
 
@@ -22,5 +25,8 @@ This package always installs the 32-bit version, even on a 64-bit OS. If you wan
     <summary>The all-in-one codec solution</summary>
     <copyright />
     <tags>ffdshow DirectShow codec video audio subtitles</tags>
+    <dependencies>
+      <dependency id="ffdshow" version="1.3.4531.20140718" />
+    </dependencies>
   </metadata>
 </package>
