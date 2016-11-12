@@ -1,6 +1,6 @@
 import-module au
 import-module "$PSScriptRoot/../../extensions/chocolatey-fosshub.extension/extensions/Get-UrlFromFosshub.psm1"
-import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/Get-WebContent.psm1"
+. "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/Get-WebContent.ps1"
 
 $releases = 'http://www.codeblocks.org/downloads/26'
 
