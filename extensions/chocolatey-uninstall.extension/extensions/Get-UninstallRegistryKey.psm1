@@ -1,29 +1,29 @@
 ﻿function Get-UninstallRegistryKey {
 <#
 .SYNOPSIS
-Retrieve registry key(s) for system-installed applications from an 
+Retrieve registry key(s) for system-installed applications from an
 exact or wildcard search.
 
 .DESCRIPTION
 This function will attempt to retrieve a matching registry key for an
-already installed application, usually to be used with a 
+already installed application, usually to be used with a
 chocolateyUninstall.ps1 automation script.
 
-The function also prevents `Get-ItemProperty` from failing when 
+The function also prevents `Get-ItemProperty` from failing when
 handling wrongly encoded registry keys.
 
 .PARAMETER SoftwareName
 Part or all of the Display Name as you see it in Programs and Features.
 It should be enough to be unique.
 
-If the display name contains a version number, such as "Launchy (2.5)", 
+If the display name contains a version number, such as "Launchy (2.5)",
 it is recommended you use a fuzzy search `"Launchy (*)"` (the wildcard `*`)
-so if Launchy auto-updates or is updated outside of chocolatey, the 
+so if Launchy auto-updates or is updated outside of chocolatey, the
 uninstall script will not fail.
 
-Take care not to abuse fuzzy/glob pattern searches. Be conscientious of
+Take care not to abuse fuzzy/glob pattern searches. Be conscious of
 programs that may have shared or common root words to prevent overmatching.
-"SketchUp*" would match two keys with software names "SketchUp 2016" and 
+"SketchUp*" would match two keys with software names "SketchUp 2016" and
 "SketchUp Viewer" that are different programs released by the same company.
 
 .INPUTS
@@ -38,7 +38,7 @@ matched key's properties.
 Retrieve properties with dot notation, for example: $key.UninstallString
 
 .NOTES
-This helper reduces the number of lines one would have to write to 
+This helper reduces the number of lines one would have to write to
 retrieve registry keys to 1 line. It also prevents Get-ItemProperty from
 failing when handling wrongly encoded registry keys.
 
@@ -94,7 +94,7 @@ Uninstall-ChocolateyPackage
   [int]$maxAttempts = $keys.Count
   for ([int]$attempt = 1; $attempt -le $maxAttempts; $attempt++) {
     [bool]$success = $FALSE
-    
+
     try {
       [array]$foundKey = Get-ItemProperty -Path $keys.PsPath `
                                           -ErrorAction SilentlyContinue `
@@ -106,14 +106,14 @@ Uninstall-ChocolateyPackage
       Write-Verbose "Skipping bad key: $badKey"
       [array]$keys = $keys | Where-Object { $badKey -NotContains $_.PsPath }
     }
-    
+
     if ($success) { break; }
     if ($attempt -eq 10) {
       Write-Warning "Found more than 10 bad registry keys. Run command again with `'--verbose --debug`' for more info."
       Write-Debug "Each key searched should correspond to an installed program. It is very unlikely to have more than a few programs with incorrectly encoded keys, if any at all. This may be indicative of one or more corrupted registry branches."
     }
   }
-  
+
   Write-Debug "Found $($foundKey.Count) uninstall registry key(s) with SoftwareName:`'$softwareName`'";
   return $foundKey
 }

@@ -2,55 +2,29 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
-    <!-- This section is about this package, although id and version have ties back to the software -->
     <id>chocolatey-core.extension</id>
-    <version>0.1.3</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <owners>ebugusey,chocolatey</owners>
-    <!-- ============================== -->
-
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
+    <version>1.0</version>
     <title>Chocolatey Core Extensions</title>
-    <authors>ebugusey</authors>
-    <!-- projectUrl is required for the community feed -->
+    <summary>Helper functions extending core choco functionality</summary>
+    <authors>chocolatey</authors>
+    <owners>chocolatey</owners>
+    <description>
+This package provides helper functions installed as a Chocolatey extension.
+These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+    </description>
+    <tags>chocolatey core extension admin</tags>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/chocolatey-common.extension.png</iconUrl>-->
+    <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
     <copyright>© 2016 Chocolatey Core Team Package Contributors</copyright>
     <licenseUrl>https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
-    <!--<mailingListUrl></mailingListUrl>-->
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/chocolatey-core.extension</packageSourceUrl>
+    <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
-    <tags>chocolatey core extension admin</tags>
-    <summary>Helper functions extending core choco functionality</summary>
-    <description>
-This package provides helper functions installed as a Chocolatey extension.
-These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
-
-&lt;`dependencies`&gt;
-&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-core.extension" /`&gt;
-&lt;`/dependencies`&gt;
-
-### Functions
-
-`Get-WebContent` --  Download file with choco internals.
-
-Example:
-  `$s = Get-WebContent "http://example.com"`
-
-Example:
-  `$opts = @{ Headers = @{ Referer = 'http://google.com' } }`
-  `$s = Get-WebContent -url "http://example.com" -options $opts`
-    </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-  </metadata>
-  <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <releaseNotes>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/chocolatey-core.extension/CHANGELOG.md</releaseNotes>
+    </metadata>
+    <files>
     <file src="extensions\**" target="extensions" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
