@@ -39,6 +39,9 @@ This package provides helper functions installed as a Chocolatey extension. Thes
 2. The found registry key's properties are accessible by dot notation. For example, `$key.UninstallString`
     </description>
     <releaseNotes>
+#### 1.2.0
+* Deprecated package in favour of chocolatey-core.extension.
+
 #### 1.1.0
 
 ##### Bug fixes
