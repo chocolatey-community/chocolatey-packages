@@ -2,14 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>dokan-library</id>
-    <version>0.6.0.20150602</version>
-    <title>Dokan Library</title>
+    <version>0.6.0.20160211</version>
+    <title>[Deprecated] Dokan Library</title>
     <authors>Hiroki Asakawa</authors>
     <owners>Hiroki Asakawa</owners>
     <licenseUrl>https://dokan.googlecode.com/svn/trunk/dokan/readme.txt</licenseUrl>
     <projectUrl>https://code.google.com/p/dokan/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>User mode file system for windows, FUSE for windows. When you want to create a new file system on Windows, for example to improve FAT or NTFS, you need to develope a file system driver. Developing a device driver that works in kernel mode on windows is extremley difficult. By using Dokan library, you can create your own file systems very easily without writing device driver. Dokan Library is similar to FUSE (Linux user mode file system) but works on Windows.
+    <description>
+**NOTE:** This package has been deprecated in favour of the dokany package.
+
+User mode file system for windows, FUSE for windows. When you want to create a new file system on Windows, for example to improve FAT or NTFS, you need to develope a file system driver. Developing a device driver that works in kernel mode on windows is extremley difficult. By using Dokan library, you can create your own file systems very easily without writing device driver. Dokan Library is similar to FUSE (Linux user mode file system) but works on Windows.
 
 ### Note
 
@@ -20,5 +23,8 @@ Installer doesn’t work silently if Dokan Library is already installed. The uni
     <releaseNotes>**0.6.0.20150602**: Include installer directly into the package as the official download location is no longer available.</releaseNotes>
     <copyright>Hiroki Asakawa</copyright>
     <tags>dokan file system fuse</tags>
+    <dependencies>
+      <dependency id="dokany" version="1.0.1.1000" />
+    </dependencies>
   </metadata>
 </package>
