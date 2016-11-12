@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-fosshub.extension</id>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Chocolatey FossHub Extension</title>
@@ -35,7 +35,7 @@ Example:
 `Get-UrlFromFosshub http://www.fosshub.com/genLink/Data-Crow/FILE.zip`
     </description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="0.1.3" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>

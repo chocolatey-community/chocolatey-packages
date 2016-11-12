@@ -52,7 +52,7 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluefish</packageSourceUrl>
     <projectSourceUrl>https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>

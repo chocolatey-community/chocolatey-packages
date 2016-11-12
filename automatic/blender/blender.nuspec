@@ -22,7 +22,7 @@ From Wikipedia on 2013-04-18: Blender is a free and open-source 3D computer grap
     <tags>3d rendering modeling animation admin</tags>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729.1" />
-      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/blender</packageSourceUrl>
   </metadata>

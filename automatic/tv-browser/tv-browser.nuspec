@@ -26,7 +26,7 @@ You can not use TV-Browser to watch TV.
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tv-browser</packageSourceUrl>
     <dependencies>
       <dependency id="javaruntime" version="6.0.30" />
-      <dependency id="chocolatey-uninstall.extension" version="1.1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>
