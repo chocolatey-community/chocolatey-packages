@@ -21,7 +21,7 @@ Maxima is a descendant of Macsyma, the legendary computer algebra system develop
     </description>
     <summary>Maxima is a computer algebra system based on a 1982 version of Macsyma</summary>
     <copyright />
-    <tags>maxima cas algebra fos cross-platform mathematics admin</tags>
+    <tags>maxima cas algebra foss cross-platform mathematics admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/maxima</packageSourceUrl>
     <mailingListUrl>http://maxima.sourceforge.net/maximalist.html</mailingListUrl>
     <projectSourceUrl>https://sourceforge.net/p/maxima/code/ci/master/tree</projectSourceUrl>

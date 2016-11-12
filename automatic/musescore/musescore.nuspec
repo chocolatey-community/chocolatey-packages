@@ -20,7 +20,7 @@ MuseScore runs on Windows, MacOS, and Linux, and is available in over 40 differe
     <copyright>MuseScore BVBA</copyright>
     <mailingListUrl>https://musescore.org/en/forum</mailingListUrl>
     <docsUrl>https://musescore.org/en/handbook</docsUrl>
-    <tags>music cross-platform fos composition notation sheet admin</tags>
+    <tags>music cross-platform foss composition notation sheet admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/musescore</packageSourceUrl>
     <projectSourceUrl>https://github.com/musescore/MuseScore</projectSourceUrl>
   </metadata>

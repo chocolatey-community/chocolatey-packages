@@ -41,7 +41,7 @@ These parameters can be passed to the installer with the use of `-params`.
 For example: `-params '"/NoShellExtension /DisableUsageTracking /NoBootInterface"'`.
     </description>
     <projectUrl>http://ultradefrag.sourceforge.net/en/index.html</projectUrl>
-    <tags>defrag disk defragment defragmenter ntfs registry hive paging files fos admin</tags>
+    <tags>defrag disk defragment defragmenter ntfs registry hive paging files foss admin</tags>
     <copyright>UltraDefrag Development Team</copyright>
     <docsUrl>http://ultradefrag.sourceforge.net/handbook</docsUrl>
     <licenseUrl>http://ultradefrag.sourceforge.net/handbook/Credits.html</licenseUrl>

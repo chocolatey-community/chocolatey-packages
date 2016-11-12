@@ -16,7 +16,7 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 - Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
     </description>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
-    <tags>libreoffice office cross-platform fos admin</tags>
+    <tags>libreoffice office cross-platform foss admin</tags>
     <copyright></copyright>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
