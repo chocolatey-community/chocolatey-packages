@@ -50,8 +50,8 @@ This package provides helper functions installed as a Chocolatey extension. Thes
 * (reporting) add warning if more than 10 bad keys are found
 * (reporting) no registry keys matched SoftwareName
     </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
-  <dependencies>
-    <dependency id="chocolatey-core.extension" version="1.0" />
-  </dependencies>
 </package>
