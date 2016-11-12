@@ -31,7 +31,6 @@ This package downloads the installer with the included GCC compiler.
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/codeblocks</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-fosshub.extension" version="0.2.0" />
-      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>
