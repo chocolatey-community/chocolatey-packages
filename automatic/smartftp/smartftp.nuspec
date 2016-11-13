@@ -1,16 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>smartftp</id>
     <title>SmartFTP</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>0.0</version>
     <authors>SmartSoft</authors>
     <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
-    <description>SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.</description>
+    <description>
+SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.
+
+## Features
+- Protocols
+- FTP and FTPS (Secure FTP)
+- SFTP over SSH, WebDAV, Amazon S3 (Enterprise Edition), Google Drive (Ultimate Edition), Google Cloud Storage (Enterprise Edition), Microsoft OneDrive (Ultimate Edition), Terminal Emulator (Ultimate Edition)
+- Integrated Editor
+- Modern Graphical User Interface (GUI)
+- High DPI support
+- File/Folder Synchronization
+- Multilingual (more than 20 languages)
+- Visual Compare
+- Advanced Schedule
+- Support for KeePass, LastPass, 1Password password manager
+- Auto reconnect and resume of broken transfers
+- Transfer Integrity
+- Verified Transfers (XCRC, XMD5, XSHA)
+- Remote Edit of files
+- Search for files and folders on the server
+- Local Browser
+- Bulk Rename
+- Software Development Kit (SDK)
+- UPnP (Universal Plug and Play), ICS, ICF
+- Transfer Queue
+- Scheduling (Enterprise Edition)
+- Uploads/Downloads/FXP
+- Unlimited simultaneous threads
+- International Domain Names (IDN)
+- Proxy / Firewall support
+- SOCKS5, SOCKS4, SOCKS4A, HTTP Proxy
+- Wingate, Winproxy, CSM, Checkpoint FW-1, Raptor
+- URL Watcher
+- FTP command line
+- Custom Commands
+
+## Notes
+
+- This is fully functional version available for testing.
+- Only latest version is available as vendor [doesn't maintain the old versions](https://www.smartftp.com/support/kb/where-can-i-find-an-older-build-of-smartftp-f175.html).
+</description>
     <projectUrl>https://www.smartftp.com/</projectUrl>
-    <tags>trial-version ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client admin</tags>
+    <tags>trial ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client admin</tags>
     <copyright>SmartSoft Ltd</copyright>
     <releaseNotes>https://www.smartftp.com/changelog/1</releaseNotes>
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
@@ -20,7 +60,8 @@
     <dependencies>
       <dependency id="vcredist2015" version="[14.0.24215.1,]"/>
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/smartftp</packageSourceUrl>
+    <docsUrl>https://www.smartftp.com/static/ftplib/documentation/html/frames.html</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
