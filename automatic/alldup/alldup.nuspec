@@ -16,7 +16,7 @@ AllDup is a freeware tool for searching and removing file duplicates on your com
     <summary>Tool for searching and removing file duplicates</summary>
     <releaseNotes>http://www.alldup.de/alldup_help/alldup_version.htm</releaseNotes>
     <copyright>Michael Thummerer Software Design</copyright>
-    <tags>find delete files duplicates admin</tags>
+    <tags>find delete files duplicates freeware admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/alldup</packageSourceUrl>
   </metadata>
   <files>

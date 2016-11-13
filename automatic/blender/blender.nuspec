@@ -15,11 +15,19 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 From Wikipedia on 2013-04-18: Blender is a free and open-source 3D computer graphics software product used for creating animated films, visual effects, interactive 3D applications or video games. Blender's features include 3D modeling, UV unwrapping, texturing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, animating, match moving, camera tracking, rendering, video editing and compositing. It also features a built-in game engine.
+
+## Features
+
+- Blender is a fully integrated 3D content creation suite, offering a broad range of essential tools, including Modeling, Rendering, Animation, Video Editing, VFX, Compositing, Texturing, Rigging, many types of Simulations, and Game Creation.
+- Cross platform, with an OpenGL GUI that is uniform on all major platforms (and customizable with Python scripts).
+- High-quality 3D architecture enabling fast and efficient creation work-flow.
+- Excellent community support from forums and IRC.
+- Small executable size, optionally portable.
     </description>
     <summary>Blender is 3D creation for everyone, free to use for any purpose.</summary>
     <releaseNotes>https://wiki.blender.org/index.php/Dev:Ref/Release_Notes</releaseNotes>
     <copyright>Blender Foundation</copyright>
-    <tags>3d rendering modeling animation admin</tags>
+    <tags>3d rendering foss cross-platform modeling animation admin</tags>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729.1" />
       <dependency id="chocolatey-core.extension" version="1.0" />

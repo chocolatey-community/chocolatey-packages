@@ -15,7 +15,7 @@ Clover is an extension of the Windows Explorer, to add multi-tab functionality s
 After Clover is installed, you will be able to open multiple folders within the same window, and you can also be able to add folder bookmarks.
     </description>
     <projectUrl>http://ejie.me/</projectUrl>
-    <tags>admin windows-explorer filemanager tab tabbed-browsing tabbed-file-manager</tags>
+    <tags>admin freeware windows-explorer file-system file-manager tab tabs </tags>
     <copyright></copyright>
     <licenseUrl>http://www.scribd.com/doc/164355290/License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

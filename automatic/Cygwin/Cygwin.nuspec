@@ -11,14 +11,14 @@
     <description>
 Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
-### Notes
+## Notes
 
 - Tnis package provides only the last version of Cygwin
 - For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <projectUrl>https://cygwin.com/</projectUrl>
     <docsUrl>http://cygwin.com/docs.html</docsUrl>
-    <tags>Cygwin linux admin</tags>
+    <tags>Cygwin foss linux admin</tags>
     <copyright>Red Hat, Inc.</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/Cygwin</packageSourceUrl>
     <licenseUrl>https://cygwin.com/license.html</licenseUrl>

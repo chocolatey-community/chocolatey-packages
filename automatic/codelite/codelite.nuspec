@@ -19,14 +19,14 @@
 CodeLite is an open-source, cross plattform IDE specialized in C, C++, PHP and JavaScript (mainly for backend developers using Node.js)
 programming languages which runs best on all major Plattforms (OSC, Windows and Linux)
 
-### Note
+## Notes
 
-This package downloads the installer which includes CodeLite, the MinGW suite and the wxWidgets SDK.
+- This package downloads the installer which includes CodeLite, the MinGW suite and the wxWidgets SDK.
     </description>
     <summary>CodeLite is an open-source, cross plattform IDE specialized in C, C++, PHP and JavaScript.</summary>
     <releaseNotes>http://codelite.org/LiteEditor/ReleaseNotesCodeLite92</releaseNotes>
     <copyright>© 2016 by SmartKoders, All rights reserved.</copyright>
-    <tags>C C++ IDE programming admin</tags>
+    <tags>C C++ foss cross-platform IDE development programming admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/codelite</packageSourceUrl>
   </metadata>
   <files>

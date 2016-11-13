@@ -25,7 +25,7 @@ Security is a high priority and code review is always done with security in mind
     <releaseNotes>http://git.videolan.org/?p=ffmpeg.git;a=shortlog;h=n{{PackageVersion}}</releaseNotes>
     <copyright />
     <language>en-US</language>
-    <tags>ffmpeg libavcodec audio video convert cross-platform audio video media</tags>
+    <tags>ffmpeg libavcodec foss cli audio video convert cross-platform audio video media</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
   </metadata>

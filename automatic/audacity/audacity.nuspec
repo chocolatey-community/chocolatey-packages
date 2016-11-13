@@ -7,9 +7,13 @@
     <version>2.1.2.20161006</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>
-    <description>Audacity is free, open source, cross-platform software for recording and editing sounds.</description>
+<description>
+Audacity is free, open source, cross-platform software for recording and editing sounds.
+See [full list of features](http://www.audacityteam.org/about/features).
+
+</description>
     <projectUrl>http://audacityteam.org/</projectUrl>
-    <tags>audacity admin</tags>
+    <tags>audacity admin audio dsp foss cross-platform</tags>
     <copyright></copyright>
     <licenseUrl>http://audacityteam.org/about/license#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,6 +23,8 @@
     <dependencies>
       <dependency id="chocolatey-fosshub.extension" version="0.4.0" />
     </dependencies>
+    <docsUrl>http://www.audacityteam.org/help/documentation</docsUrl>
+    <projectSourceUrl>https://github.com/audacity/audacity</projectSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

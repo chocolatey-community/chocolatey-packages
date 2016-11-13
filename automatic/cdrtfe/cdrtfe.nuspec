@@ -22,7 +22,7 @@ In cdrtfe, go to *Extras &gt; Settings &gt; cdrtfe* and activate „Save on exit
     </description>
     <summary>cdrtfe is an open source CD/DVD/BD burning application.</summary>
     <copyright />
-    <tags>burning fontend admin media cd dvd</tags>
+    <tags>burning fontend foss admin media cd dvd</tags>
     <releaseNotes>http://cdrtfe.sourceforge.net/cdrtfe/changes_en.html</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdrtfe</packageSourceUrl>
     <projectSourceUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</projectSourceUrl>

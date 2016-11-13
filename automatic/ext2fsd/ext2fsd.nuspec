@@ -28,16 +28,16 @@ Open source ext3/4 file system driver for Windows
 - 64k block-size, support compatible to Linux ext4 and e2fsprogs
 - OS: 2k, xp, vista, server 2003/2008, win7
 
-### Notes
+## Notes
 
-The uninstaller doesn’t work silently.
+- The uninstaller doesn’t work silently.
     </description>
     <summary>Open source ext3/4 file system driver for Windows</summary>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ext2fsd.jpg</iconUrl>
     <releaseNotes>http://www.ext2fsd.com/?cat=3</releaseNotes>
     <copyright />
     <language>en-US</language>
-    <tags>ext3 ext4 file-system linux driver admin</tags>
+    <tags>ext3 ext4 file-system foss linux driver admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ext2fsd</packageSourceUrl>
     <projectSourceUrl>https://sourceforge.net/p/ext2fsd/code/ci/master/tree/</projectSourceUrl>
   </metadata>

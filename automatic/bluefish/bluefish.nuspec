@@ -48,7 +48,7 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
     <summary>Bluefish is a powerful editor targeted towards programmers and webdevelopers.</summary>
     <copyright>Copyright © 1998-2015 Olivier Sessink and others</copyright>
     <releaseNotes>https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish/ChangeLog</releaseNotes>
-    <tags>bluefish editor html cross-platform development admin</tags>
+    <tags>bluefish foss editor html cross-platform development admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluefish</packageSourceUrl>
     <projectSourceUrl>https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish</projectSourceUrl>
     <dependencies>

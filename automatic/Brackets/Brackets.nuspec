@@ -24,7 +24,7 @@ The browser is your design view. Brackets hooks up directly to the browser, allo
     </description>
     <projectUrl>http://brackets.io/</projectUrl>
     <projectSourceUrl>https://github.com/adobe/brackets</projectSourceUrl>
-    <tags>editor web adobe javascript html css admin</tags>
+    <tags>editor web adobe javascript foss cross-platform html css admin</tags>
     <licenseUrl>https://github.com/adobe/brackets/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Brackets.svg</iconUrl>
