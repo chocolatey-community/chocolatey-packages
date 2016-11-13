@@ -19,8 +19,8 @@ NirCmd is a small command-line utility that allows you to do some useful tasks w
     <summary>NirCmd is a small command-line utility that allows you to do some useful tasks without displaying any user interface.</summary>
     <releaseNotes />
     <copyright>Nir Sofer</copyright>
-    <tags>nircmd commandline utility</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>nircmd commandline utility freeware cli</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nircmd</packageSourceUrl>
     <docsUrl>http://www.nirsoft.net/utils/nircmd2.html#using</docsUrl>
   </metadata>
   <files>
