@@ -31,7 +31,7 @@ function Get-PackageCacheLocation {
     $res = Join-Path $Env:TEMP $Name
 
     if (!$Version) { Write-Warning 'Environment variable $Env:ChocolateyPackageVersion is not set' }
-    $res = Join-Path $packageTemp $Version
+    $res = Join-Path $res $Version
 
     $res
 }

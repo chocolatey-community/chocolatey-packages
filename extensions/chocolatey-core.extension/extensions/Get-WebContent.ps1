@@ -58,7 +58,6 @@ function Get-WebContent {
 function get_temp_filepath() {
     $tempDir = Get-PackageCacheLocation
     $fileName = [System.IO.Path]::GetRandomFileName()
-    $tempFile = Join-Path $tempDir $fileName
-    $tempFile
+    Join-Path $tempDir $fileName
 }
 
