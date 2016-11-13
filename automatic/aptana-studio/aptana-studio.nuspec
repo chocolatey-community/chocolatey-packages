@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>aptana-studio</id>
-    <version>3.6.1</version>
+    <version>3.6.1.20161113</version>
     <title>Aptana Studio</title>
     <owners>chocolatey</owners>
     <authors>Aptana Inc.</authors>
