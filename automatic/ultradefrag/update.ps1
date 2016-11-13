@@ -1,4 +1,6 @@
 import-module au
+import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
+
 
 $releases = 'http://ultradefrag.sourceforge.net/en/index.html?download'
 
