@@ -20,12 +20,13 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
 
 - `/UseSystemLocale` - use system locale for the interface, by default English locale is set.    </description>
     <projectUrl>http://www.piriform.com/speccy</projectUrl>
-    <tags>piriform system information speccy admin</tags>
+    <tags>piriform freeware system information speccy admin</tags>
     <copyright>Piriform LTD</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/speccy</packageSourceUrl>
     <releaseNotes>https://www.piriform.com/speccy/version-history</releaseNotes>
+    <licenseUrl>https://www.piriform.com/legal/software-license/speccy</licenseUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

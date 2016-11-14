@@ -24,6 +24,7 @@ This package is not intended to use with Chocolatey’s `-x86` parameter. If you
     </description>
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
     <tags>python admin</tags>
+    <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>

@@ -15,6 +15,7 @@
     <summary>Chromium snapshots build (unstable)</summary>
     <releaseNotes />
     <copyright />
+    <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
     <tags>chromium google cross-platform foss chrome browser</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>

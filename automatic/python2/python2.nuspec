@@ -8,6 +8,7 @@
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/python.svg</iconUrl>
+    <licenseUrl>https://www.python.org/download/releases/2.7/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Python 2.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 2.x and see almost immediate gains in productivity and lower maintenance costs.

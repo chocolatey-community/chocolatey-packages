@@ -21,6 +21,7 @@ GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you 
 * This package always installs the latest version of the application, regardless of the version specified in the package.
     </description>
     <projectUrl>http://www.glarysoft.com/absolute-uninstaller/</projectUrl>
+    <licenseUrl>http://www.glarysoft.com/inf/termsofuse</licenseUrl>
     <tags>GlarySoft sysadmin batch remove software uninstall absolute uninstaller freeware admin</tags>
     <copyright>GlarySoft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

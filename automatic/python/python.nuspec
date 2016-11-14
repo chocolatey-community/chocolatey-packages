@@ -22,6 +22,7 @@ This package depends on the the latest major version of python package.
     <dependencies>
       <dependency id="python3" version="[3.5.2.20161029]" />
     </dependencies>
+    <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
   </metadata>
   <files></files>
 </package>

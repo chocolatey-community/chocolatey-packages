@@ -12,13 +12,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>The Visual C++ Redistributable Packages install run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015 and link dynamically to Visual C++ libraries. These package can be used to run such applications on a computer even if it does not have Visual Studio 2015 installed. These packages install run-time components of these libraries: C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP.
 
-	The installation on Windows 8.1 or Windows Server 2012 R2 fails when you do not install the update KB2919355</description>
+    The installation on Windows 8.1 or Windows Server 2012 R2 fails when you do not install the update KB2919355</description>
     <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2015</summary>
     <releaseNotes>#### Program
 * Date published by Microsoft: 11/17/2015
 * Supported Operating Systems: Windows 10 , Windows 7 Service Pack 1, Windows 8, Windows 8.1, Windows Server 2003 Service Pack 2, Windows Server 2008 R2 SP1, Windows Server 2008 Service Pack 2, Windows Server 2012, Windows Vista Service Pack 2, Windows XP Service Pack 3
 * Known issues: http://go.microsoft.com/fwlink/?LinkId=691930
-	</releaseNotes>
+    </releaseNotes>
+    <licenseUrl>https://msdn.microsoft.com/en-us/library/ms235299.aspx</licenseUrl>
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
     <tags>visual c++ redistributable 2015 studio admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
