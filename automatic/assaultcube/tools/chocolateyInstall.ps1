@@ -1,29 +1,23 @@
-﻿$packageName = '{{PackageName}}'
-# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-$url = '{{DownloadUrlx64}}'
-$zipPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\assaultcube.zip"
-$folder = "$env:ProgramFiles\AssaultCube"
-$folderx86 = "${env:ProgramFiles(x86)}\AssaultCube"
-if (Test-Path $folder) {
-  $unzipLocation = $folder
-} else {
-  $unzipLocation = $folderx86
+$ErrorActionPreference = 'Stop'
+
+$toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+  packageName            = 'assaultcube'
+  fileType               = 'exe'
+  url                    = 'https://github.com/assaultcube/AC/releases/download/v1.2.0.2/AssaultCube_v1.2.0.2.exe'
+  checksum               = 'f048f6f046b4954dfd9c3e41a6b48b94167f8f93847dbf2a7820fdef4b85ea7e'
+  checksumType           = 'sha256'
+  silentArgs             = '/S'
+  validExitCodes         = @(0)
+  softwareName           = 'assaultcube*'
 }
+Install-ChocolateyPackage @packageArgs
 
-# Uninstalling of old 1.1.0.4 version if necessary
-
-$oldUninstall = "$env:ProgramFiles\AssaultCube_v1.1.0.4\Uninstall.exe"
-$oldUninstallx86 = "${env:ProgramFiles(x86)}\AssaultCube_v1.1.0.4\Uninstall.exe"
-
-if (Test-Path $oldUninstall) {
-  Start-ChocolateyProcessAsAdmin '/S' $oldUninstall
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageName
+if ($installLocation)  {
+    Write-Host "$packageName installed to '$installLocation'"
 }
+else { Write-Warning "Can't find $PackageName install location" }
 
-if (Test-Path $oldUninstallx86) {
-  Start-ChocolateyProcessAsAdmin '/S' $oldUninstallx86
-}
-
-# Installation of new version
-
-Install-ChocolateyPackage $packageName 'exe' '/S' $url
-Install-ChocolateyZipPackage $packageName $zipPath $unzipLocation
