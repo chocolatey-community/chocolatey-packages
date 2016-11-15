@@ -9,14 +9,14 @@ $silentArgs += if ($pp.NoBootInterface)      { " /BOOT=0"; Write-Host 'Boot inte
 $packageArgs = @{
   packageName    = 'ultradefrag'
   fileType       = 'exe'
-  url            = 'http://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.1.bin.i386.exe'
-  url64bit       = 'http://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.1.bin.amd64.exe'
+  url            = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.1.bin.i386.exe'
+  url64bit       = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.1.bin.amd64.exe'
   checksum       = '0b86c593c60551e85ccba411ec1e8a70ecf9f244a51ce115015c6c4af773196f'
   checksum64     = '554beef1b969b4dec2fd5041d442bc1142c550e02d38c1fd9b3d552bad1f9e99'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = $silentArgs
   validExitCodes = @(0)
-  softwareName   = 'ultradefrag*'
+  softwareName   = 'Ultra Defragmenter'
 }
 Install-ChocolateyPackage @packageArgs

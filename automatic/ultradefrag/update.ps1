@@ -12,7 +12,6 @@ function global:au_SearchReplace {
             "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
             "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
             "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
             "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
         }
 
@@ -25,12 +24,16 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re      = '\.exe$'
-    $url     = $download_page.links | ? href -match $re | % href
+    $re    = '\.exe$'
+    $url   = $download_page.links | ? href -match $re | % href
+    $url32 = $url -match 'i386' | select -first 1
+    $url64 = $url -match 'amd64' | select -first 1
+    if (!$url32.StartsWith("https")) { $url32 = $url32 -replace "^http","https" }
+    if (!$url64.StartsWith("https")) { $url64 = $url64 -replace "^http","https" }
     @{
         Version = $url -split '-|\.bin' | select -Last 1 -Skip 1
-        URL32   = $url -match 'i386' | select -first 1
-        URL64   = $url -match 'amd64' | select -first 1
+        URL32   = $url32
+        URL64   = $url64
     }
 }
 

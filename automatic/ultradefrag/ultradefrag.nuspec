@@ -37,7 +37,7 @@ UltraDefrag is an open source disk defragmenter for Windows. It eliminates the f
 
     </description>
     <projectUrl>http://ultradefrag.sourceforge.net/en/index.html</projectUrl>
-    <tags>defrag foss disk defragment defragmenter ntfs registry hive paging files foss admin</tags>
+    <tags>file-system foss disk defragment defragmenter ntfs registry files admin</tags>
     <copyright>UltraDefrag Development Team</copyright>
     <docsUrl>http://ultradefrag.sourceforge.net/handbook</docsUrl>
     <licenseUrl>http://ultradefrag.sourceforge.net/handbook/Credits.html</licenseUrl>
@@ -48,7 +48,7 @@ UltraDefrag is an open source disk defragmenter for Windows. It eliminates the f
     <projectSourceUrl>https://sourceforge.net/p/ultradefrag/code/HEAD/tree</projectSourceUrl>
     <bugTrackerUrl>https://sourceforge.net/p/ultradefrag/bugs</bugTrackerUrl>
     <dependencies>
-      <dependency id="mm-choco.extension" version="0.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>
