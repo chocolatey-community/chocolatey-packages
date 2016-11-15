@@ -17,7 +17,7 @@ function global:au_GetLatest {
     $version = $version -replace 'Download Brackets '
 
     $download_page = Invoke-WebRequest https://github.com/adobe/brackets/releases
-    $url = $download_page.links | ? href -match '\.msi$' | ? href -match '1.7' | % href | select -First 1
+    $url = $download_page.links | ? href -match '\.msi$' | ? href -match $version | % href | select -First 1
     $url = 'https://github.com' + $url
 
     @{ URL32 = $url; Version = $version }
