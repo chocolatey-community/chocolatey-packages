@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks,
+you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>juju</id>
+    <version>2.0.2</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/juju</packageSourceUrl>
+    <owners>AdmiringWorm,chocolatey</owners>
+    <title>Juju</title>
+    <authors>Canonical Ltd.</authors>
+    <projectUrl>https://jujucharms.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png</iconUrl>
+    <copyright>2015 Juju Canonical Ltd.</copyright>
+    <licenseUrl>https://github.com/juju/juju/blob/staging/LICENCE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/juju/juju</projectSourceUrl>
+    <docsUrl>https://jujucharms.com/docs</docsUrl>
+    <bugTrackerUrl>https://bugs.launchpad.net/juju</bugTrackerUrl>
+    <tags>juju admin console cloud services foss cross-platform cli</tags>
+    <summary>Model-driven operations for hybrid cloud services commandline</summary>
+    <description>
+The Canonical Distribution of Kubernetes works across all major public clouds and private infrastructure,
+enabling your teams to operate Kubernetes clusters on demand, anywhere.
+
+Juju is an application and service modelling tool that enables you to quickly model, configure,
+deploy and manage applications in the cloud with only a few commands.
+Use it to deploy hundreds of preconfigured services, OpenStack, or your own code to any public or private cloud.
+
+Created by the people behind ![Ubuntu](https://jujucharms.com/static/img/home/ubuntu-logo.svg)
+    </description>
+    <releaseNotes>https://jujucharms.com/docs/stable/reference-release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
