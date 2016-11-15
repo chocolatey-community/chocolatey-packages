@@ -23,6 +23,7 @@ EncFS provides an encrypted filesystem in user-space, using the Dokan library fo
     <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/1.10.1-RC10</releaseNotes>
     <bugTrackerUrl>https://github.com/jetwhiz/encfs4win/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/jetwhiz/encfs4win</projectSourceUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/adfba62c6e358480c755fbfeb96614352d743fa1/icons/encfs4win.png</iconUrl>
 
   </metadata>
   <files>
