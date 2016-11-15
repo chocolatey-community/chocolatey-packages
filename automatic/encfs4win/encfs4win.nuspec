@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>encfs4win</id>
+    <version>1.10.1-RC10</version>
     <title>encfs4win</title>
     <owners>chocolatey</owners>
-    <authors>freddy77</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
-    <projectUrl>http://members.ferrara.linux.it/freddy77/encfs.html</projectUrl>
+    <authors>jetwhiz, freddy77</authors>
+    <licenseUrl>https://github.com/jetwhiz/encfs4win/blob/master/COPYING</licenseUrl>
+    <projectUrl>https://encfs.win</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-This is an experimental project of porting EncFS to the Windows world. EncFS provides an encrypted filesystem in user-space.
-    </description>
-    <summary>This is an experimental project of porting encfs to the Windows world.</summary>
-    <releaseNotes />
+EncFS encrypts individual files, by translating all requests for the virtual EncFS filesystem into the equivalent encrypted operations on the raw filesystem.
+
+A GUI for encfs4win is available through encfsw, providing a tray icon that makes mounting and unmounting encrypted partitions even easier!
+
+EncFS provides an encrypted filesystem in user-space, using the Dokan library for the filesystem interface. EncFS is open source software, licensed under the LGPL.
+
+## Notes
+
+- This package will require to be reinstalled after the restart of the OS if its dependency installation is required.
+</description>
+    <summary>Windows port of EncFS which provides an encrypted virtual filesystem</summary>
     <copyright />
-    <tags>encfs encryption filesystem</tags>
+    <tags>driver encfs encryption foss file-system</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/encfs4win</packageSourceUrl>
+    <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/1.10.1-RC10</releaseNotes>
+    <bugTrackerUrl>https://github.com/jetwhiz/encfs4win/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/jetwhiz/encfs4win</projectSourceUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/adfba62c6e358480c755fbfeb96614352d743fa1/icons/encfs4win.png</iconUrl>
     <dependencies>
-      <dependency id="dokan-library" version="0.6.0" />
+        <dependency id="kb2999226" />
+        <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
