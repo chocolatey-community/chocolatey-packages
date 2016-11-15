@@ -28,11 +28,8 @@ deploy and manage applications in the cloud with only a few commands.
 Use it to deploy hundreds of preconfigured services, OpenStack, or your own code to any public or private cloud.
 
 Created by the people behind ![Ubuntu](https://jujucharms.com/static/img/home/ubuntu-logo.svg)
-
-**Please Note**: This is an automatically updated package. If you find it is
-out of date by more than a day or two, please contact the maintainer(s) and
-let them know the package is no longer updating correctly.
     </description>
+    <releaseNotes>https://jujucharms.com/docs/stable/reference-release-notes</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
