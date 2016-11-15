@@ -28,7 +28,7 @@ function global:au_GetLatest {
     @{
         Version      = $version
         URL32        = 'https://github.com' + $url32
-        ReleaseNotes = "https://github.com/jetwhiz/encfs4win/releases/tag/${version}"
+        ReleaseNotes = "https://github.com/jetwhiz/encfs4win/releases/tag/v${version}"
     }
 }
 
