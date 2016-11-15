@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases
 
   $re    = '^/.+\.exe$'
   $url   = $download_page.links | ? href -match $re | select -first 1 -expand href
