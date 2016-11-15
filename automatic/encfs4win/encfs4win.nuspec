@@ -15,6 +15,10 @@ EncFS encrypts individual files, by translating all requests for the virtual Enc
 A GUI for encfs4win is available through encfsw, providing a tray icon that makes mounting and unmounting encrypted partitions even easier!
 
 EncFS provides an encrypted filesystem in user-space, using the Dokan library for the filesystem interface. EncFS is open source software, licensed under the LGPL.
+
+## Notes
+
+- This package will require to be reinstalled after the restart of the OS if its dependency installation is required.
 </description>
     <summary>Windows port of EncFS which provides an encrypted virtual filesystem</summary>
     <copyright />
