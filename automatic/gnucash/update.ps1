@@ -18,7 +18,7 @@ function global:au_GetLatest {
   $re    = '^/.+\.exe$'
   $url   = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-  $version  = $url -split '[-]' | select -Last 1 -Skip
+  $version  = $url -split '[-]' | select -Last 1 -Skip 1
 
   @{
     URL32 = 'https://github.com' + $url
