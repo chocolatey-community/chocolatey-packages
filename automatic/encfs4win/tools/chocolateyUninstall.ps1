@@ -16,7 +16,7 @@ if ($key.Count -eq 1) {
         $packageArgs.file = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
         if (ps encfsw -ea ignore) {
             Write-Host 'Killing runing encfsw'
-            kill encfsw
+            ps encfsw -ea ignore | kill
         }
         Uninstall-ChocolateyPackage @packageArgs
         Uninstall-BinFile encfs
