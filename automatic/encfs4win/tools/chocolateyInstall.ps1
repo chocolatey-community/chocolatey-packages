@@ -19,5 +19,10 @@ $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
 if ($installLocation)  {
     Write-Host "$packageName installed to '$installLocation'"
+    Register-Application "$installLocation\encfsw.exe" encfs
+    Write-Host "$packageName registered as encfs"
+    Install-BinFile encfs "$installLocation\encfs.exe"
+
+    Write-Host 'OS restart might be required'
 }
 else { Write-Warning "Can't find $PackageName install location" }
