@@ -11,6 +11,15 @@
     <description>
 Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
+## Package parameters
+
+- `InstallDir`  - Set install location
+- `DesktopIcon` - Set to true to install desktop icon
+- `Proxy`       - Set to "proxy:port". Otherwise system proxy or explicit chocolatey proxy will be used
+- `Pubkey`      - URL of extra public key file (gpg format)
+- `Site`        - Download site
+- `NoStartMenu` - Set to true to prevent installation of start menu items
+
 ## Notes
 
 - Tnis package provides only the last version of Cygwin
@@ -18,7 +27,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
     </description>
     <projectUrl>https://cygwin.com/</projectUrl>
     <docsUrl>http://cygwin.com/docs.html</docsUrl>
-    <tags>Cygwin foss linux admin</tags>
+    <tags>Cygwin foss cli unix posix linux admin</tags>
     <copyright>Red Hat, Inc.</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/Cygwin</packageSourceUrl>
     <licenseUrl>https://cygwin.com/license.html</licenseUrl>
@@ -27,6 +36,9 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
     <releaseNotes>https://cygwin.com/ml/cygwin-announce/2016-08/msg00114.html</releaseNotes>
     <mailingListUrl>https://cygwin.com/lists.html</mailingListUrl>
     <projectSourceUrl>https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git</projectSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
