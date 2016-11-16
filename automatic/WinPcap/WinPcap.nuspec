@@ -4,7 +4,7 @@
     <id>WinPcap</id>
     <title>WinPcap</title>
     <owners>chocolatey</owners>
-    <version>4.1.3</version>
+    <version>4.1.3.20161116</version>
     <authors>NetGroup, CACE Technologies</authors>
     <licenseUrl>http://www.winpcap.org/misc/copyright.htm</licenseUrl>
     <projectUrl>http://www.winpcap.org/</projectUrl>
