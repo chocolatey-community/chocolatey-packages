@@ -13,14 +13,14 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
     <projectUrl>https://www.virtualbox.org/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
     <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>
-    <tags>virtualbox virtualization virtual oracle admin cross-platform</tags>
+    <tags>virtualbox virtualization virtual oracle admin foss cross-platform</tags>
     <docsUrl>https://www.virtualbox.org/manual</docsUrl>
     <copyright>Copyright (C) 2009-2016 Oracle Corporation</copyright>
     <licenseUrl>https://www.virtualbox.org/wiki/VirtualBox_PUEL</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/c9f08adeb0cc2dcda323211894358e69d3af323c/icons/virtualbox.png</iconUrl>
     <dependencies>
-      <dependency id="mm-choco.extension" version="0.0.3" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>
