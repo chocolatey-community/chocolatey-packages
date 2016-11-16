@@ -17,9 +17,12 @@ if (!$pp.Proxy) {
     }
 }
 
+if (!$pp.Site) { $pp.Site = 'http://mirrors.kernel.org/sourceware/cygwin/' }
+Write-Host "Download site: $($pp.Site)"
+
 $silentArgs = @(
     '--quiet-mode'
-    '--site http://mirrors.kernel.org/sourceware/cygwin/'
+    "--site $($pp.Site)"
     '--packages default'
     "--root $cygwin_root"
     "--local-package-dir $cygwin_root"
@@ -28,7 +31,6 @@ $silentArgs = @(
     if ($pp.NoStartMenu)  { '--no-startmenu';        Write-Host 'No start menu items will be created' }
     if ($pp.Proxy)        { "--proxy $($pp.Proxy)";  Write-Host "Using proxy: $($pp.Proxy)" }
     if ($pp.Pubkey)       { "--pubkey $($pp.Pubkey)";Write-Host "URL of extra public key file is provided" }
-    if ($pp.Site)         { "--site $($pp.Site)";    Write-Host "Download site: $($pp.Site)" }
 )
 
 $packageArgs = @{
