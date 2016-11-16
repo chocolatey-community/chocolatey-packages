@@ -1,22 +1,27 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/SILENT'
+﻿$ErrorActionPreference = 'Stop';
 
-$registryPath32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
-$registryPathWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
+$packageName = 'gnucash'
 
-if (Test-Path $registryPath32) {
-  $registryPath = $registryPath32
-}
+$uninstalled = $false
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'GnuCash*'
 
-if (Test-Path $registryPathWow6432) {
-  $registryPath = $registryPathWow6432
-}
+if ($key.Count -eq 1) {
+  $key | % {
+    $packageArgs = @{
+      packageName = $packageName
+      fileType    = 'exe'
+      silentArgs  = '/VERYSILENT /SUPPRESSMSGBOXES /SP-'
+      validExitCodes= @(0)
+      file          = "$($_.UninstallString)"
+    }
 
-if ($registryPath) {
-  $uninstallString = (Get-ItemProperty -Path $registryPath -Name 'UninstallString').UninstallString
-}
-
-if ($uninstallString) {
-  Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $uninstallString
+    Uninstall-ChocolateyPackage @packageArgs
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$key.Count matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer the following keys were matched:"
+  $key | % {Write-Warning "- $_.DisplayName"}
 }
