@@ -1,6 +1,6 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'PDFXChangeViewer'
 $installerType = 'exe'
-$url = '{{DownloadUrl}}'
+$url = 'http://www.tracker-software.com/downloads/PDFXVwer.exe'
 $url64 = $url
 $silentArgs = '/VERYSILENT /NOINSTASK /NORESTART'
 $validExitCodes = @(0)
