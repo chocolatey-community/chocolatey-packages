@@ -1,9 +1,9 @@
 $ErrorActionPreference = 'Stop'
 
 $packageName = 'speccy'
-$url32       = 'http://download.piriform.com/spsetup129.exe'
+$url32       = 'http://download.piriform.com/spsetup130.exe'
 $url64       = $url32
-$checksum32  = 'e34abf7a68f5e8853bb4f3033f1969304dcabdf6e6a6d0fb4567a09bc632a7cf'
+$checksum32  = 'feb6dcb8ed56b9b1e7de71c51f0034734d68ed9aac494d62fec2806a1b3d9a70'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
