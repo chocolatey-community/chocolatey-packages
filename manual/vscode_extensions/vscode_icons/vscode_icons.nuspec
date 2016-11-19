@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vscode-icons</id>
+    <title>Visual Studio Code Icons Extension</title>
+    <version>1.0.0</version>
+    <authors>Roberto Huertas</authors>
+    <owners>gep13 chocolatey</owners>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons</projectUrl>
+    <projectSourceUrl>https://github.com/robertohuertasm/vscode-icons</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode_extensions/vscode-icons</packageSourceUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/932559dcf7cd36a4055adad2dc46859c595c1e4e/icons/vscode_icons.png</iconUrl>
+    <licenseUrl>https://marketplace.visualstudio.com/items/robertohuertasm.vscode-icons/license</licenseUrl>
+    <docsUrl>https://github.com/robertohuertasm/vscode-icons/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/robertohuertasm/vscode-icons/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code Icons Extension</summary>
+    <description>Bring icons to your VS Code.</description>
+    <tags>Microsoft VisualStudioCode vscode Icons Extension</tags>
+    <releaseNotes>https://github.com/robertohuertasm/vscode-icons/releases</releaseNotes>
+    <dependencies>
+      <dependency id="VisualStudioCode" version="1.2.0" />
+    </dependencies>
+  </metadata>
+</package>
