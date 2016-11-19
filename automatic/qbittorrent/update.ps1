@@ -1,5 +1,5 @@
 import-module au
-import-module "./../../extensions/chocolatey-fosshub.extension/extensions/Get-UrlFromFosshub.psm1"
+import-module "./../../extensions/extensions.psm1"
 
 $releases = 'https://www.fosshub.com/qBittorrent.html'
 
