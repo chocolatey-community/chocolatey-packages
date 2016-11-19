@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'pdfcreator'
 $installerType = 'exe'
 $baseInstallArgs = '/VERYSILENT /NORESTART'
 
