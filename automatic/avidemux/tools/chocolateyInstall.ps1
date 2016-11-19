@@ -1,10 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName = 'avidemux'
-$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Avidemux.html/avidemux_2.6.14_win32.exe'
-$url64 = Get-UrlFromFosshub 'https://www.fosshub.com/Avidemux.html/avidemux_2.6.14_win64.exe'
-$checksum32  = '627b177ae388b782326a2cf1142551d96769f906afb367034d9a6f3b28ed560f'
-$checksum64  = '36f6b5406e44c74cd8144ea126e231894e5f5cf4640ed96120b6d3c3f4a6a120'
+$url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Avidemux.html/avidemux_2.6.15_win32.exe'
+$url64 = Get-UrlFromFosshub 'https://www.fosshub.com/Avidemux.html/avidemux_2.6.15_win64.exe'
+$checksum32  = 'b4bbf5bf995dbaca3ea9ca8b87a0c69de5ccedf9de95cc3d7c942b5305fa0fe7'
+$checksum64  = '8ff161d5714f148f9a316e2bca1e01080bfb12222ba5991d8edab859b4072814'
 
 $packageArgs = @{
   packageName            = $packageName
