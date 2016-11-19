@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vscode-csharpextensions</id>
+    <title>Visual Studio Code C# Extensions Extension</title>
+    <version>1.0.0</version>
+    <authors>jchannon</authors>
+    <owners>gep13 chocolatey</owners>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=jchannon.csharpextensions</projectUrl>
+    <projectSourceUrl>https://github.com/jchannon/csharpextensions</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-csharpextensions</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/deb80d8be8c4990599cfd832061b780540426dd1/icons/vscode-csharpextensions.png</iconUrl>
+    <licenseUrl>https://github.com/jchannon/csharpextensions/blob/master/licence.txt</licenseUrl>
+    <docsUrl>https://github.com/jchannon/csharpextensions/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/jchannon/csharpextensions/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code C# Extensions Extension</summary>
+    <description>This VSCode extension provides extensions to the IDE that will hopefully speed up your development workflow.</description>
+    <tags>Microsoft VisualStudioCode vscode C# Extensions Extension</tags>
+    <releaseNotes>https://github.com/jchannon/csharpextensions/releases</releaseNotes>
+    <dependencies>
+      <dependency id="VisualStudioCode" version="1.2.0" />
+    </dependencies>
+  </metadata>
+</package>
