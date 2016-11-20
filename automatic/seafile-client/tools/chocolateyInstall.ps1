@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName = 'seafile-client'
   fileType    = 'msi'
-  softwareName = 'Seafile '
+  softwareName = 'Seafile 6.0.0'
 
   checksum     = '64f0e7192acbbbad4e6ac34d5b531ff27697172b9109f2c00cf61ebae923a642'
   checksumType = 'sha256'

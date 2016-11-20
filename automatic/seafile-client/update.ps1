@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.seafile.com/en/download/'
 
@@ -24,6 +24,7 @@ function global:au_GetLatest {
   @{
     URL32 = $url
     Version = $version
+    RemoteVersion = $version
   }
 }
 
