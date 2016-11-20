@@ -36,7 +36,7 @@ and is developed by skilled volunteers from around the world.
     <releaseNotes>http://wiki.flightgear.org/Changelog_2016.3</releaseNotes>
     <copyright />
     <tags>flightgear flight simulator game admin foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
       <dependency id="kb2999226" version="1.0.20161030" />
