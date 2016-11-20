@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>seafile-client</id>
+    <version>6.0.0</version>
     <title>Seafile (Windows Client)</title>
     <owners>chocolatey</owners>
     <authors>Seafile Ltd.</authors>
-    <licenseUrl>https://github.com/haiwen/seafile/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://seafile.com/en/home/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/seafile-client.png</iconUrl>
+    <licenseUrl>https://github.com/haiwen/seafile-client/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://www.seafile.com/en/home/</projectUrl>
+    <projectSourceUrl>https://github.com/haiwen/seafile-client</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/haiwen/seafile-client/issues</bugTrackerUrl>
+    <docsUrl>https://www.seafile.com/en/help/</docsUrl>
+    <mailingListUrl>https://forum.seafile.com/</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/seafile-client.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Seafile is a next-generation open source cloud storage system with advanced support for file syncing, privacy protection and teamwork.
 
-Collections of files are called libraries, and each library can be synced separately. A library can be encrypted with a user chosen password. This password is not stored on the server, so even the server admin cannot view a file's contents.
+Collections of files are called libraries, and each library can be synced separately. A library can be encrypted with a user chosen password.
+This password is not stored on the server, so even the server admin cannot view a file's contents.
 
 Seafile allows users to create groups with file syncing, wiki, and discussion to enable easy collaboration around documents within a team.
     </description>
     <summary>File Syncing and Collaboration for Teams</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>seafile syncing sharing admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://seacloud.cc/group/3/wiki/client-changelog</releaseNotes>
+    <copyright>Copyright ©2016 Seafile Ltd.</copyright>
+    <tags>seafile syncing sharing admin foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/seafile-client</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
