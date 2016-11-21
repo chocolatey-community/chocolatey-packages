@@ -1,7 +1,6 @@
 ﻿$checksum = 'C6A05C5A0A3035881EE7E1C7C14F9A15850A2C955A69E2F353DA0DCABF4438FF'
-$url = 'http://orange.download.pdfforge.org/pdfcreator/2.4.0/PDFCreator-2_4_0-Setup.exe?file=AMIfv97pmlXptiTqMp-BHVoAI8s-Cm7VHxjpiPsVcuGxVnMs4_45c2BsnRUFjdrYS688IX5WWKCgalXMZwLUYaaB3JL2yQFOc
-C8Oqa1SzC3jXtG7uTkAbe9kIbxmkUDONXfgrLhlZPCeLOXyZxkZyI5uxoVDvvEZrNQpQ-jaolP7S4aOBoKBeHI&download'
- 
+$url = ''
+
 $installArgs = $('' +
   '/VERYSILENT /NORESTART ' +
   '/COMPONENTS="program,ghostscript,comsamples,' +
