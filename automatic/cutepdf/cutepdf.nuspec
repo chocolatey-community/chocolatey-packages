@@ -9,18 +9,11 @@
     <owners>Redsandro</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
     <description>
-Portable Document Format (PDF) is the de facto standard for the secure and reliable distribution and exchange of electronic documents and forms around the world.  CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert
-to professional quality PDF documents - with just a push of a button!
- 
-FREE software for commercial and non-commercial use!  No watermarks!  No Popup Web Ads!
-##Features
+Portable Document Format (PDF) is the de facto standard for the secure and reliable distribution and exchange of electronic documents and forms around the world.  CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert to professional quality PDF documents - with just a push of a button!
 
-- Convert to professional quality PDF files easily from almost any printable document.
-- FREE software for personal, commercial, gov or edu use.
-- Selected as One of the "50 Best free downloads" by Computer Shopper.
-- No watermarks! No popup ads!
-- Users love it since 2004.
-- Windows 10 Ready
+## Notes
+
+- Free software for commercial and non-commercial use.
     </description>
     <projectUrl>http://www.cutepdf.com/</projectUrl>
     <tags>PDF Printer Converter Office freeware admin</tags>
@@ -32,6 +25,6 @@ FREE software for commercial and non-commercial use!  No watermarks!  No Popup W
       <dependency id="Ghostscript.app" version="8.15" />
     </dependencies>
     <releaseNotes>http://www.cutepdf.com/support/updates.asp</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/master/tree/automatic/cutepdf</packageSourceUrl>
   </metadata>
 </package>

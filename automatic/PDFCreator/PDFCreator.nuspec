@@ -13,13 +13,13 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
+
 ## Features
 
 - Convert your Documents to PDF, JPG, PNG, TIF and more
 - Merge multiple documents to one file
 - Profiles make frequently used settings available with one click
 - Use automatic saving to have a fully automated PDF printer
-- We take care of the complexity and make converting PDFs simple for you
     </description>
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
     <tags>pdf editor printer foss admin</tags>
