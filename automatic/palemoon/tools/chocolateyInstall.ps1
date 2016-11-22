@@ -3,14 +3,14 @@ $ErrorActionPreference = 'Stop';
 $packageArgs = @{
   packageName   = 'palemoon'
   fileType      = 'exe'
-  url           = 'http://relmirror.palemoon.org/release/palemoon-26.5.0.win32.installer.exe'
-  url64         = 'http://relmirror.palemoon.org/release/palemoon-26.5.0.win64.installer.exe'
+  url           = 'http://relmirror.palemoon.org/release/palemoon-27.0.0.win32.installer.exe'
+  url64         = 'http://relmirror.palemoon.org/release/palemoon-27.0.0.win64.installer.exe'
 
   softwareName  = 'Pale Moon*'
 
-  checksum      = 'ca051b6b52ccdbb3e20fe91e5bd5d7676a566e184db50daff8c6e885c2a59543'
+  checksum      = '11a97ed8117dd5b9f51595281221d53bd7bdb890f04de822d67ab960c8a3ba17'
   checksumType  = 'sha256'
-  checksum64    = '2cbec1713ef420b3f5245cf598403d2b05cf0b7532f8a731e7fbb39a128f00de'
+  checksum64    = '2db48606d38202212c2e9cef8b8cecacfdb27c36c2839ecd80b6b0890d3cd4c8'
   checksumType64= 'sha256'
 
   silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
