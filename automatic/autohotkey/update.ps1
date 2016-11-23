@@ -1,6 +1,7 @@
 import-module au
 
-$releases = 'https://autohotkey.com/download/1.1'
+#Virtual package uses dependency updater to get the version
+. $PSScriptRoot\..\autohotkey.install\update.ps1
 
 function global:au_SearchReplace {
   @{

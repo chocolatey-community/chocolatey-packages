@@ -24,4 +24,6 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor 32
+if ($MyInvocation.InvocationName -ne '.') {
+    update -ChecksumFor 32
+}
