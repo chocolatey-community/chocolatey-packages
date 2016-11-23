@@ -13,9 +13,9 @@ $params = @{
   fileType       = 'msi'
   silentArgs     = $installArgs
   url            = 'https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi'
-  url64Bit       = 'https://www.python.org/ftp/python/2.7.12/python-2.7.12.msi'
+  url64Bit       = 'https://www.python.org/ftp/python/2.7.12/python-2.7.12.amd64.msi'
   checksum       = '3ac291535bcf15fd5a15bcd29b066570e8d2a0cab4f3b92a2372f41aa09a4f48'
-  checksum64     = '3ac291535bcf15fd5a15bcd29b066570e8d2a0cab4f3b92a2372f41aa09a4f48'
+  checksum64     = '909fded3cca65feaf9e1db943e886586eb27f0f4396c977868ad6489063a3912'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }

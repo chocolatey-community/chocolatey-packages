@@ -12,13 +12,15 @@
     <description>
 Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
 
-### Note
+## Notes
 
-This package depends on the the latest major version of python package.
+- This package depends on the the latest major version of python package.
+
     </description>
     <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
-    <tags>python development programming-language</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>python programming development foss cross-platform admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/python</packageSourceUrl>
+    <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
       <dependency id="python3" version="[3.5.2.20161029]" />
     </dependencies>
