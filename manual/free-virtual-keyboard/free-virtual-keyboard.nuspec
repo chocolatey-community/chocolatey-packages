@@ -25,6 +25,7 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
     <releaseNotes />
     <copyright>Comfort Software Group. All rights reserved.</copyright>
     <tags>on-screen keyboard freeware admin</tags>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/723b164cda892499cea29735439b8aaa81d760bf/icons/free-virtual-keyboard.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
