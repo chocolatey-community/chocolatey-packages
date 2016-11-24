@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>flightgear</id>
-    <version>0.0</version>
+    <version>2016.4.1</version>
     <title>FlightGear</title>
     <owners>chocolatey</owners>
     <authors>FlightGear Team</authors>
@@ -33,7 +33,7 @@ and last but certainly not least as a fun, realistic, and challenging desktop fl
 FlightGear is an open-source flight simulator.  It supports a variety of popular platforms (Windows, Mac, Linux, etc.)
 and is developed by skilled volunteers from around the world.
     </summary>
-    <releaseNotes>http://wiki.flightgear.org/Changelog_2016.3</releaseNotes>
+    <releaseNotes>http://wiki.flightgear.org/Changelog_2016.4</releaseNotes>
     <copyright />
     <tags>flightgear flight simulator game admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
