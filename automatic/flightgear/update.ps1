@@ -32,12 +32,11 @@ function global:au_GetLatest {
   $releaseNotes = $changelog_page.links | ? href -match 'Changelog_[0-9\.]+$' | select -first 1 -expand href
 
   @{
-    URL32         = $url
-    Version       = $version
+    URL32 = $url
+    Version = $version
     RemoteVersion = $version
-    ReleaseNotes  = $releaseNotes
-    Checksum32    = Get-RemoteChecksum $url
+    ReleaseNotes = $releaseNotes
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor 32
