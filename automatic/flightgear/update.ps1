@@ -9,8 +9,8 @@ function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$(Get-RemoteChecksum -Url $Latest.URL32)'"
+      "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'sha256'"
       "(?i)(^[$]version\s*=\s*)('.*')"        = "`$1'$($Latest.RemoteVersion)'"
     }
     ".\$($Latest.PackageName).nuspec" = @{
@@ -39,4 +39,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
