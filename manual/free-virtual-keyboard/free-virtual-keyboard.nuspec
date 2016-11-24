@@ -19,13 +19,13 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
 - Run it from portable USB flash drive
 - Supports Microsoft Windows ® 2000/XP/Vista/7/8/8.1/10
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard/screenshot.png)
+![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/5aba809ba5b396201f3b08ec84c52ff2c1604369/manual/free-virtual-keyboard/screenshot.png)
     </description>
     <summary>A free, lightweight, multilingual and finger friendly virtual on-screen keyboard</summary>
     <releaseNotes />
     <copyright>Comfort Software Group. All rights reserved.</copyright>
     <tags>on-screen keyboard freeware admin</tags>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/723b164cda892499cea29735439b8aaa81d760bf/icons/free-virtual-keyboard.png</iconUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
