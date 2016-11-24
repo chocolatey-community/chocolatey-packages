@@ -1,22 +1,21 @@
-﻿$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
-$fileType = 'msi'
-$silentArgs = '/quiet'
-$filePath = "$env:TEMP\chocolatey\$packageName"
-$fileFullPath = "$filePath\$packageName`Install.exe"
+﻿$ErrorActionPreference = 'Stop'
 
-if (-not (Test-Path $filePath)) {
-  New-Item -ItemType directory -Path $filePath
-}
+$packageName = 'Quicktime'
+$fileType    = 'msi'
+$silentArgs  = '/quiet'
+$filePath    = Get-PackageCacheLocation
 
-Get-ChocolateyWebFile $packageName $fileFullPath $url
-
-Start-Process "7za" -ArgumentList "x -o`"$filePath`" -y `"$fileFullPath`"" -Wait
+Install-ChocolateyZipPackage `
+  -PackageName $packageName `
+  -Url '' `
+  -UnzipLocation $filePath `
+  -Checksum '' `
+  -ChecksumType ''
 
 $packageName = 'appleapplicationsupport'
 $file = "$filePath\AppleApplicationSupport.msi"
 Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
 
-$packageName = '{{PackageName}}'
+$packageName = 'Quicktime'
 $file = "$filePath\QuickTime.msi"
 Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $file
