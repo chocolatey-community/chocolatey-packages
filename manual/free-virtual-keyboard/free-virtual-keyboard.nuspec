@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>free-virtual-keyboard</id>
+    <version>3.0</version>
+    <title>Free Virtual Keyboard</title>
+    <owners>chocolatey</owners>
+    <authors>Comfort Software Group</authors>
+    <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
+    <projectUrl>http://freevirtualkeyboard.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen (Ultra-mobile PC, Tablet PC and Panel PC). If you spend a lot of time responding to e-mail or jotting down notes on your mobile computer and find your hardware keyboard awkward or too small, a screen software keyboard may be just the improvement you've been seeking. This handy keyboard has keys large enough to be typed with the fingertips.
+
+## Features
+
+- Change size, color and transparency of keyboard on the computer screen
+- Auto-repeat function
+- Run it from portable USB flash drive
+- Supports Microsoft Windows ® 2000/XP/Vista/7/8/8.1/10
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard/screenshot.png)
+    </description>
+    <summary>A free, lightweight, multilingual and finger friendly virtual on-screen keyboard</summary>
+    <releaseNotes />
+    <copyright>Comfort Software Group. All rights reserved.</copyright>
+    <tags>on-screen keyboard freeware admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
