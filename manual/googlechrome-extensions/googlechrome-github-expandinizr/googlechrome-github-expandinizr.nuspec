@@ -9,11 +9,13 @@
     <projectUrl>https://chrome.google.com/webstore/detail/githubexpandinizr/cbehdjjcilgnejbpnjhobkiiggkedfib</projectUrl>
     <iconUrl>https://lh6.googleusercontent.com/629YrRMzim_zZBoOhsXlz8xdA58BrD2t-04iabdDhB9YqCqeCbPdQimDDR6o17zdPnmRPMW1Vnc=s26-h26-e365-rw</iconUrl>
     <projectSourceUrl>https://github.com/thecodejunkie/github.expandinizr</projectSourceUrl>
+    <docsUrl>https://github.com/thecodejunkie/github.expandinizr/blob/master/readme.md</docsUrl>
+    <bugTrackerUrl>https://github.com/thecodejunkie/github.expandinizr/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/googlechrome-extensions/googlechrome-github-expandinizr</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<licenseUrl>https://github.com/thecodejunkie/github.expandinizr#license</licenseUrl>
+    <licenseUrl>https://github.com/thecodejunkie/github.expandinizr#license</licenseUrl>
     <description>
-Chrome extension that improves the GitHub experience.
+## Features
 
 Currently enhances the following: 
 * Removes the truncating of file and directory names in the repository browser
@@ -22,11 +24,16 @@ Currently enhances the following:
 * Removes truncation in notifications
 * Adds shrink/expand button for comment form
 * Adds possibility to collapse code previews
-	</description>
-    <summary></summary>
-    <tags>github expandinizr chrome extension</tags>
+    </description>
+    <summary>
+Chrome extension that improves the GitHub experience.
+    </summary>
+    <tags>foss github expandinizr chrome extension</tags>
+    <releaseNotes>
+https://github.com/thecodejunkie/github.expandinizr#changelog    
+    </releaseNotes>    
     <dependencies>
-      <dependency id="googlechrome" />
+      <dependency id="googlechrome" version="10.0.0" />
     </dependencies> 
   </metadata>
   <files>
