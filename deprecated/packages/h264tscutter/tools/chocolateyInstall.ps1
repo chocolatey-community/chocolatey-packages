@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'h264tscutter'
 $url = 'http://www.videohelp.com/download/h264ts_cutter_v111.zip'
 $referer = "http://www.videohelp.com/tools/H264TS-Cutter"
 $fileFullPath = "$env:TEMP\h264ts_cutter_v111.zip"

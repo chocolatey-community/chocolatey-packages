@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'h264tscutter'
 
 $exeFileLink = "H.264 TS Cutter.lnk"
 $desktop = [Environment]::GetFolderPath("Desktop")
