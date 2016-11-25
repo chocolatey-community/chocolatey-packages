@@ -2,11 +2,11 @@
 # Import function to test if JRE in the same version is already installed
 Import-Module (Join-Path $scriptDir 'thisJreInstalled.ps1')
 
-$packageName = '{{PackageName}}'
+$packageName = 'javaruntime-platformspecific'
 # Find download URLs at http://www.java.com/en/download/manual.jsp
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
-$version = '{{PackageVersion}}'
+$url = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=106367'
+$url64 = 'http://javadl.sun.com/webapps/download/AutoDL?BundleId=106369'
+$version = '7.0.79'
 $versionMajor = $version -replace '^(\d+)\..*', '$1'
 $installerType = 'exe'
 $installArgs = '/s REBOOT=Suppress SPONSORS=0'

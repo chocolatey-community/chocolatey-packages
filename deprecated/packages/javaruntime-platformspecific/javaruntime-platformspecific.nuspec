@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>javaruntime-platformspecific</id>
+    <version>7.0.79</version>
     <title>Java Runtime (JRE)</title>
     <owners>chocolatey</owners>
     <authors>Oracle</authors>
