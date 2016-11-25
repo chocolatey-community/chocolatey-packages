@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>h264tscutter</id>
+    <version>1.1.1.20161125</version>
     <title>H.264 TS Cutter</title>
     <owners>chocolatey</owners>
     <authors>tobiasm767</authors>
     <projectUrl>http://www.h264tscutter.de/show_artikel.php?id=5</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+**NOTE:** This package is no longer supported by application creator, and therefore no longer available.
+
 You can cut HDTV-Transportstreams (AVC / H.264) with the H264TS_Cutter. The source material won't be encoded, so you can only cut on I-Frames (the program will look for it by itself). If you want to use the video playback function, a ts-splitter and an avc-codec have to be installed. Requires .Net Framework 2.0.
 
 ### Note
@@ -19,15 +21,7 @@ Download link on official site does not work. This package uses this one instead
     <releaseNotes />
     <copyright />
     <tags>h264 ts cutter cut</tags>
-    <dependencies>
-      <dependency id="ffdshow" />
-      <dependency id="haali-media-splitter" />
-      <dependency id="wget" />
-    </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
 <!-- “UTF-8” test -->
