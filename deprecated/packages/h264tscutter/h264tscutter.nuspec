@@ -3,7 +3,7 @@
   <metadata>
     <id>h264tscutter</id>
     <version>1.1.1.20161125</version>
-    <title>H.264 TS Cutter</title>
+    <title>[Deprecated] H.264 TS Cutter</title>
     <owners>chocolatey</owners>
     <authors>tobiasm767</authors>
     <projectUrl>http://www.h264tscutter.de/show_artikel.php?id=5</projectUrl>
