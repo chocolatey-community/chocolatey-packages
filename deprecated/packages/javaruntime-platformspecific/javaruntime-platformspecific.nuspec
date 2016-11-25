@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>Java Runtime (JRE)</title>
+    <id>javaruntime-platformspecific</id>
+    <version>7.0.79.20161125</version>
+    <title>[Deprecated] Java Runtime (JRE)</title>
     <owners>chocolatey</owners>
     <authors>Oracle</authors>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <projectUrl>http://www.java.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/java.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+**NOTE:** This package has been deprecated in favour of the jre8 package
+
 Java allows you to play online games, chat with people around the world, calculate your mortgage interest, and view images in 3D, just to name a few. It's also integral to the intranet applications and other e-business solutions that are the foundation of corporate computing.
 
 ### Note
@@ -24,9 +25,9 @@ This only installs the Java Runtime with the bitness specific to your OS (either
     <releaseNotes />
     <tags>java runtime environment admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="jre8" version="8.0.111" />
+    </dependencies>    
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
 <!-- “UTF-8” test -->
