@@ -19,7 +19,7 @@ Chrome is a fast, simple, and secure web browser, built for the modern web.
 * This package always installs the latest version of Google Chrome, regardless of the version specified in the package. Google does not officially offer older versions of Chrome for download.
     </description>
     <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/GoogleChrome</packageSourceUrl>
     <tags>google chrome web internet browser admin</tags>
   </metadata>
   <files>

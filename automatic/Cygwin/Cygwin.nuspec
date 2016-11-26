@@ -29,7 +29,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
     <docsUrl>http://cygwin.com/docs.html</docsUrl>
     <tags>Cygwin foss cli unix posix linux admin</tags>
     <copyright>Red Hat, Inc.</copyright>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/Cygwin</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Cygwin</packageSourceUrl>
     <licenseUrl>https://cygwin.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Cygwin.png</iconUrl>

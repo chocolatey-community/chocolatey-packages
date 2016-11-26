@@ -31,7 +31,7 @@ Classic Shell is a collection of usability enhancements for Windows. The main fe
     <releaseNotes></releaseNotes>
     <copyright>Classic Shell</copyright>
     <tags>shell freeware start-menu admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/slassic-shell</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/classic-shell</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

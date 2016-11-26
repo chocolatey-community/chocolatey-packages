@@ -17,7 +17,7 @@
     <copyright />
     <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
     <tags>chromium google cross-platform foss chrome browser</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
