@@ -1,123 +1,17 @@
-﻿# This is the general install script for Mozilla products (Firefox and Thunderbird).
+$ErrorActionPreference = 'Stop'
+# This is the general install script for Mozilla products (Firefox and Thunderbird).
 # This file must be identical for all Choco packages for Mozilla products in this repository.
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
 
-$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$version = '{{PackageVersion}}'
+$packageName = 'Firefox'
+$softwareName = 'Mozilla Firefox'
 
 $allLocalesListURL = 'https://www.mozilla.org/en-US/firefox/all/'
 
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '50.0')
 
-
-# ---------------- Function definitions ------------------
-
-function GetUninstallPath () {
-  $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
-  $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
-
-  $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
-
-  if (Test-Path $regUninstallDirWow64) {
-    $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
-  }
-
-  $uninstallPath = $uninstallPaths -match
-    "Mozilla Firefox [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select -First 1
-  return $uninstallPath
-}
-
-function GetLocale() {
-
-  $availableLocales = Get-WebContent $allLocalesListURL
-
-  # --- Get locale from installArgs if specified
-
-  $packageParameters = $env:chocolateyPackageParameters
-
-  $packageParameters = if ($packageParameters -ne $null) { $packageParameters } else { "" }
-  $argumentMap = ConvertFrom-StringData $packageParameters
-  $localeFromPackageParameters = $argumentMap.Item('l')
-
-  # ---
-
-  # --- Get already installed locale if available
-
-  $uninstallPath = GetUninstallPath($null)
-
-  $alreadyInstalledLocale = $uninstallPath -replace ".+\s([a-zA-Z\-]+)\)", '$1'
-
-
-  # ---
-
-  # --- Other locales
-
-  $systemLocaleAndCountry = (Get-Culture).Name
-  $systemLocaleTwoLetter = (Get-Culture).TwoLetterISOLanguageName
-  $fallbackLocale = 'en-US'
-
-  # ---
-
-  $locales = $localeFromPackageParameters, $alreadyInstalledLocale, `
-    $systemLocaleAndCountry, $systemLocaleTwoLetter, $fallbackLocale
-
-  foreach ($locale in $locales) {
-    $localeMatch = $availableLocales -match "os=win&amp;lang=$locale`"" | Select -First 1
-    if ($localeMatch -and $locale -ne $null) {
-      break
-    }
-  }
-
-  return $locale
-}
-
-
-function AlreadyInstalled($version) {
-  $uninstallEntry = $(
-    "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla " +
-    "Firefox ${version}*"
-  )
-  $uninstallEntryWow64 = $(
-    "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Mozilla " +
-    "Firefox ${version}*"
-  )
-
-  if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
-    return $true
-  }
-
-  return $false
-}
-
-function Get-32bitOnlyInstalled {
-  $systemIs64bit = Get-ProcessorBits 64
-
-  if (-Not $systemIs64bit) {
-    return $false
-  }
-
-  $registryPaths = @(
-    'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall',
-    'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
-  )
-
-  $installedVersions = Get-ChildItem $registryPaths | Where-Object {
-    $_.Name -match 'Mozilla Firefox [\d\.]+ \(x(64|86)'
-  }
-
-  if (
-    $installedVersions -match 'x86' `
-    -and $installedVersions -notmatch 'x64' `
-    -and $systemIs64bit
-  ) {
-    return $true
-  }
-}
-
-# ----------------------------------
-
-$alreadyInstalled = AlreadyInstalled($version)
-
-if (Get-32bitOnlyInstalled) {
+if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
     'Detected the 32-bit version of Firefox on a 64-bit system. ' +
     'This package will continue to install the 32-bit version of Firefox ' +
@@ -127,21 +21,32 @@ if (Get-32bitOnlyInstalled) {
 
 if ($alreadyInstalled) {
   Write-Output $(
-    "Firefox $version is already installed. " +
+    "Firefox is already installed. " +
     'No need to download an re-install again.'
   )
 } else {
 
-  $locale = GetLocale
+  $locale = GetLocale -localeUrl $allLocalesListURL -product $softwareName
+  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums"
 
-  $url = "https://download.mozilla.org/?product=firefox-${version}&os=win&lang=${locale}"
-  $url64 = "https://download.mozilla.org/?product=firefox-${version}-SSL&os=win64&lang=${locale}"
-  $silentArgs = '-ms'
+  $packageArgs = @{
+    packageName = $packageName
+    fileType = 'exe'
+    softwareName = "$softwareName*"
 
-  if ((Get-32bitOnlyInstalled) -or (Get-ProcessorBits 32)) {
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url
-  } else {
-    Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64
+    Checksum = $checksums.Win32
+    ChecksumType = 'sha512'
+    Url = "https://download.mozilla.org/?product=firefox-50.0-SSL&amp;os=win&amp;lang=${locale}"
+
+    silentArgs = '-ms'
+    validExitCodes = @(0)
   }
 
+  if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-ProcessorBits 64)) {
+    $packageArgs.Checksum64 = $checksums.Win64
+    $packageArgs.ChecksumType64 = 'sha512'
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-50.0-SSL&amp;os=win64&amp;lang=${locale}"
+  }
+
+  Install-ChocolateyPackage @packageArgs
 }
