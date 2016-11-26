@@ -21,6 +21,9 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
     <copyright>© 2004-2015 Hedgewars Project</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/hedgewars</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/hedgewars.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
