@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>tightvnc</id>
+    <version>0.0</version>
     <title>TightVNC</title>
     <owners>chocolatey</owners>
     <authors>TightVNC Developers</authors>
-    <licenseUrl>http://www.tightvnc.com/download.php</licenseUrl>
+    <licenseUrl>http://www.tightvnc.com/licensing.php</licenseUrl>
     <projectUrl>http://www.tightvnc.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/tightvnc.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,12 +22,16 @@ With TightVNC, you can:
 * cut your expenses and save your time on traveling,
 * help your friends and family to solve problems with their computers remotely,
 * make sure nothing wrong is happening on your computers when you are away.
+
+[Screenshots](http://www.tightvnc.com/screenshots.php).
     </description>
     <summary>Remote control software</summary>
     <releaseNotes>http://www.tightvnc.com/whatsnew.php</releaseNotes>
     <copyright />
-    <tags>remote control vnc admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>remote control vnc foss cros-platform admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tightvnc</packageSourceUrl>
+    <projectSourceUrl>http://www.tightvnc.com/download/2.8.5/tightvnc-2.8.5-src-gpl.zip</projectSourceUrl>
+    <docsUrl>http://www.tightvnc.com/docs.php</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
