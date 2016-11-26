@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>tightvnc</id>
+    <version>2.8.5</version>
     <title>TightVNC</title>
     <owners>chocolatey</owners>
     <authors>TightVNC Developers</authors>
@@ -29,8 +29,4 @@ With TightVNC, you can:
     <tags>remote control vnc admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
-<!-- “UTF-8” test -->
