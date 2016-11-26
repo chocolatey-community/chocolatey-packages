@@ -16,7 +16,7 @@ Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio f
     <summary>Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio formats.</summary>
     <tags>mp3 tag admin</tags>
     <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mp3tag</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -38,7 +38,7 @@ __Tixati__ has the following features:
             <dependency id="autohotkey.portable" />
         </dependencies>
         <releaseNotes></releaseNotes>
-      <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tixiati</packageSourceUrl>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />

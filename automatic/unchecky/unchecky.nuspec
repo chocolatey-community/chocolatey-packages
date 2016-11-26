@@ -25,7 +25,7 @@ __Unchecky aims to keep potentially unwanted programs out of your computer.__
     <bugTrackerUrl>http://unchecky.userecho.com/</bugTrackerUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/400df127014e0d9856ed420fe89c728668d310d2/icons/unchecky.png</iconUrl>
     <releaseNotes>http://unchecky.com/changelog</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/unchecky</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
