@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>hedgewars</id>
+    <version>0.9.22</version>
     <title>Hedgewars</title>
     <owners>chocolatey</owners>
     <authors>Hedgewars Team</authors>
+    <tags>game foss cross-platform turn-based strategy artillery admin</tags>
     <licenseUrl>http://www.hedgewars.org/about.html</licenseUrl>
     <projectUrl>http://www.hedgewars.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/hedgewars.png</iconUrl>
+    <projectSourceUrl>http://hg.hedgewars.org/hedgewars</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Hedgewars is a turn based strategy, artillery, action and comedy game, featuring the antics of pink hedgehogs with attitude as they battle from the depths of hell to the depths of space.
@@ -16,10 +17,10 @@ Hedgewars is a turn based strategy, artillery, action and comedy game, featuring
 As commander, it's your job to assemble your crack team of hedgehog soldiers and bring the war to your enemy.
     </description>
     <summary>Hedgewars is a turn based strategy, artillery, action and comedy game.</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>game turn-based strategy artillery admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://hg.hedgewars.org/hedgewars/file/c680b7db1e2e/ChangeLog.txt</releaseNotes>
+    <copyright>© 2004-2015 Hedgewars Project</copyright>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/hedgewars</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/hedgewars.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
