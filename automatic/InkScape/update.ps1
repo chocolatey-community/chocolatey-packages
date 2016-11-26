@@ -34,4 +34,4 @@ function global:au_GetLatest {
     }
 }
 
-update -Force
+update
