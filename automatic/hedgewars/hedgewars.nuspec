@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>hedgewars</id>
-    <version>0.9.22.20161126</version>
+    <version>0.9.22.20161127</version>
     <title>Hedgewars</title>
     <owners>chocolatey</owners>
     <authors>Hedgewars Team</authors>
