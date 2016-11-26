@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>pcwrunas</id>
+    <version>0.4.0.20161126</version>
+    <title>pcwRunAs</title>
+    <owners>chocolatey</owners>
+    <authors>PC-Welt</authors>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <projectUrl>http://www.pcwelt.de/downloads/pcwRunAs-1215998.html</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+pcwRunAs works similar to the Microsoft tool `runas.exe` but it also takes on the command line additional parameter password, allowing the program to start without additional inputs.
+
+After installing pcwRunAs you find two more tools on your hard disk: `pcwRunAsGui` used for the easy creation of links that allow you to start programs in a restricted account or an Administrator and `pcwPrivilegien.DLL` is for the status display in IE and Windows Explorer.
+
+PcwRunAs is intended exclusively for use on your home PC.
+
+## Notes
+
+- The software is available only on German language.
+    </description>
+    <summary>Run files as other freeware user</summary>
+    <releaseNotes />
+    <copyright />
+    <language>de-DE</language>
+    <tags>pcwrunas runas cli admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/manual/pcwrunas</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
