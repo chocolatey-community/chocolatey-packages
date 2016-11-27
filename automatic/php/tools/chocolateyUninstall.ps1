@@ -1,6 +1,6 @@
 ﻿$packageName = 'php'
 
-$installLocation = Join-Path $(Get-ToolsPath) $packageName
+$installLocation = Join-Path $(Get-ToolsLocation) $packageName
 Write-Host "Deleting $installLocation"
 rm -Force -Recurse $installLocation
 
