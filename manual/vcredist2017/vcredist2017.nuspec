@@ -15,7 +15,7 @@
     <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
     <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
     <tags>Microsoft Visual C++ Redistributable 2017 admin</tags>
-    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio "15" Preview 5</summary>
+    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2017 RC</summary>
     <description>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2017 RC and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2017 RC installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
 
 [Supported Operating Systems](https://www.visualstudio.com/productinfo/visual-studio-15-system-requirements-vs): Windows 10 / Server 2016, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows Server 2003 SP2, Windows XP SP3
