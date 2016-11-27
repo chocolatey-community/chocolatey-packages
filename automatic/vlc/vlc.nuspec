@@ -5,7 +5,7 @@
     <title>VLC media player</title>
     <version>2.2.4</version>
     <authors>VideoLAN Organization</authors>
-    <owners>Rob Reynolds</owners>
+    <owners>chocolatey, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>
     <description>
 VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.
