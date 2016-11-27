@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.videolan.org/vlc/download-windows.html'
+$releases = 'https://www.videolan.org/vlc/download-windows.html'
 
 function global:au_SearchReplace {
    @{
