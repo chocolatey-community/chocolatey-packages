@@ -20,10 +20,11 @@ function CreateChecksumsFile() {
   param(
     [string]$ToolsDirectory,
     [string]$ExecutableName,
-    [string]$Version
+    [string]$Version,
+    [string]$Product
   )
 
-  $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/firefox/releases/$Version/SHA512SUMS"
+  $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/$Product/releases/$Version/SHA512SUMS"
 
   $reOpts = [System.Text.RegularExpressions.RegexOptions]::Multiline `
     -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase

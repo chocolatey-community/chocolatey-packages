@@ -10,7 +10,8 @@ function global:au_SearchReplace {
 
   CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" `
     -ExecutableName "Firefox Setup $version.exe" `
-    -Version $version
+    -Version $version `
+    -Product $product
 
   @{
     ".\tools\chocolateyInstall.ps1" = @{
