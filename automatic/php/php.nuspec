@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>php</id>
+    <title>PHP (Hypertext Preprocessor)</title>
+    <version>7.0.13</version>
+    <authors>PHP Authors</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
+    <description>PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.</description>
+    <projectUrl>http://www.php.net/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/php</packageSourceUrl>
+    <tags>php development programming foss cross-platform admin</tags>
+    <licenseUrl>http://us.php.net/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.0.13</releaseNotes>
+    <!--<iconUrl></iconUrl>-->
+    <bugTrackerUrl>https://bugs.php.net/</bugTrackerUrl>
+    <docsUrl>https://secure.php.net/docs.php</docsUrl>
+    <projectSourceUrl>http://git.php.net</projectSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="0.9.10" />
+      <dependency id="vcredist2015" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
