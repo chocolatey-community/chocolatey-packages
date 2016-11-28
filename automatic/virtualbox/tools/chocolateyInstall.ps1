@@ -54,7 +54,7 @@ if (!$pp.NoExtensionPack) {
     if (!(Test-Path $file_path_ep)) { Write-Warning "Can't download latest extension pack" }
     else {
         Set-Alias vboxmanage $installLocation\VBoxManage.exe
-        vboxmanage extpack install --replace $file_path_ep
+        vboxmanage extpack install --replace $file_path_ep 2>&1
         if ($LastExitCode -ne 0) { Write-Warning "Extension pack installation failed with exit code $LastExitCode" }
     }
 }
