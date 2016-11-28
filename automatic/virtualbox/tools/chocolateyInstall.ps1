@@ -9,11 +9,10 @@ if (!$cert) {
 
 $pp = Get-PackageParameters
 $silentArgs = @('-s -l -msiparams REBOOT=ReallySuppress')
-$silentArgs += if (!$pp.CurrentUser) { 'ALLUSERS=1' } else { 'ALLUSERS=2' Write-Host 'Param: Installing for current user' }
+$silentArgs += if (!$pp.CurrentUser) { 'ALLUSERS=1' } else { 'ALLUSERS=2'; Write-Host 'Param: Installing for current user' }
 $silentArgs += if ($pp.NoDesktopShortcut) { 'VBOX_INSTALLDESKTOPSHORTCUT=0';     Write-Host 'Param: No desktop shortcut' }
 $silentArgs += if ($pp.NoQuickLaunch)     { 'VBOX_INSTALLQUICKLAUNCHSHORTCUT=0'; Write-Host 'Param: No quick launch shortcut' }
 $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';     Write-Host 'Param: No registration for virtualbox file extensions' }
-
 
 $packageArgs = @{
   packageName            = 'virtualbox'
@@ -32,10 +31,23 @@ Install-ChocolateyPackage @packageArgs
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
-Install-ChocolateyPath $installLocation
-if ($installLocation)  {
-    Write-Host "$packageName installed to '$installLocation'"
-    Register-Application "$installLocation\$packageName.exe" vbox
-    Write-Host "$packageName registered as vbox"
+if (!$installLocation)  {
+    Write-Warning "Can't find $packageName install location"
+    return
 }
-else { Write-Warning "Can't find $packageName install location" }
+
+Write-Host "$packageName installed to '$installLocation'"
+
+if (!$pp.NoPath) { Install-ChocolateyPath $installLocation }
+
+Register-Application "$installLocation\$packageName.exe" vbox
+Write-Host "$packageName registered as vbox"
+
+Write-Host "Installing latest extension pack"
+$installer_path = "$(Get-PackageCacheLocation)/VirtualBox*.exe"
+& $installer_path --path (Split-Path $installer_path) --extract --silent
+$ep = gi "$installer_path\*.vbox-extpack$"
+if (!$ep) { Write-Warning "Can't find latest extension pack, it will not be installed"; return }
+
+Set-Alias vboxmanage $installLocation\VBoxManage.exe
+vboxmanage extpack install --replace $ep
