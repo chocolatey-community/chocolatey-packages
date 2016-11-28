@@ -5,7 +5,7 @@ if (!($installLocation -and (Test-Path $installLocation)) { return }
 
 Set-Alias vboxmanage $installLocation\VBoxManage.exe
 if (!(Test-Path vboxmanage)) {
-    Write-Warning "Existing installation of $pakcageName found but unable to find VBoxManage.exe"
+    Write-Warning "Existing installation of $packageName found but unable to find VBoxManage.exe"
     return
 }
 
