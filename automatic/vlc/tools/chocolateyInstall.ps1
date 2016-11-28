@@ -4,7 +4,7 @@ $pp = Get-PackageParameters
 $language_code = if ($pp.LanguageCode) { Write-Host "Using language code $($pp.LanguageCode)"; 'L=' + $pp.LanguageCode }
 
 $packageArgs = @{
-  packageName            = 'VLC'
+  packageName            = 'vlc'
   fileType               = 'exe'
   url                    = 'http://get.videolan.org/vlc/2.2.4/win32/vlc-2.2.4-win32.exe'
   url64bit               = 'http://get.videolan.org/vlc/2.2.4/win64/vlc-2.2.4-win64.exe'
@@ -14,7 +14,7 @@ $packageArgs = @{
   checksumType64         = 'sha256'
   silentArgs             = "/S $language_code"
   validExitCodes         = @(0)
-  softwareName           = 'VLC*'
+  softwareName           = 'vlc*'
 }
 Install-ChocolateyPackage @packageArgs
 
