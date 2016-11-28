@@ -41,7 +41,7 @@ if (!$pp.NoExtensionPack) {
 
     $url_ep       = 'http://download.virtualbox.org/virtualbox/5.1.10/Oracle_VM_VirtualBox_Extension_Pack-5.1.10.vbox-extpack'
     $checksum_ep  = '3982657fd4853bcbc79b9162e618545a479b65aca08e9ced43a904aeeba3ffa5'
-    $file_path_ep = (Get-PackageCacheLocation) + '\\' + ($url_ep -split '/' | select -Last 1)
+    $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | select -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
         -FileFullPath   $file_path_ep `
@@ -51,11 +51,12 @@ if (!$pp.NoExtensionPack) {
         -Checksum64     $checksum_ep `
         -ChecksumType   'sha256' `
         -ChecksumType64 'sha256'
-    if (!(Test-Path $file_path_ep)) { throw "Can't download latest extension pack" }
-
-    Set-Alias vboxmanage $installLocation\VBoxManage.exe
-    vboxmanage extpack install --replace $file_path_ep
-    if ($LastExitCode -ne 0) { throw "Extension pack installation failed with exit code $LastExitCode" }
+    if (!(Test-Path $file_path_ep)) { Write-Warning "Can't download latest extension pack" }
+    else {
+        Set-Alias vboxmanage $installLocation\VBoxManage.exe
+        vboxmanage extpack install --replace $file_path_ep
+        if ($LastExitCode -ne 0) { Write-Warning "Extension pack installation failed with exit code $LastExitCode" }
+    }
 }
 
 if (!$pp.NoPath) { Write-Host "Adding to PATH if needed"; Install-ChocolateyPath $installLocation }
