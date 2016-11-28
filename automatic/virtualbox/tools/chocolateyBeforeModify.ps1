@@ -5,7 +5,7 @@ if (!$installLocation) { $installLocation = Split-Path (gcm VBoxManage.exe -ea 0
 if (!($installLocation -and (Test-Path $installLocation))) { return }
 
 Set-Alias vboxmanage $installLocation\VBoxManage.exe
-if (!(Test-Path vboxmanage)) {
+if (!(Test-Path $installLocation\VBoxManage.exe)) {
     Write-Warning "Existing installation of $packageName found but unable to find VBoxManage.exe"
     return
 }
