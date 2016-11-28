@@ -36,8 +36,7 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-    <file src="tools\oracle.cer" target="tools\oracle.cer" />
+    <file src="tools\**" />
   </files>
 </package>
 <!-- character encoding: “UTF-8” -->
