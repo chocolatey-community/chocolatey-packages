@@ -1,7 +1,7 @@
 $packageName = 'virtualbox'
 
 $installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation -and (Test-Path $installLocation)) { return }
+if (!($installLocation -and (Test-Path $installLocation))) { return }
 
 Set-Alias vboxmanage $installLocation\VBoxManage.exe
 if (!(Test-Path vboxmanage)) {
