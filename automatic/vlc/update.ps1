@@ -1,4 +1,5 @@
 import-module au
+import-module $PSScriptRoot\..\..\extensions\extensions.psm1
 
 $releases = 'https://www.videolan.org/vlc/download-windows.html'
 
