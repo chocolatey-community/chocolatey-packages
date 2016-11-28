@@ -20,6 +20,7 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 | `NoQuickLaunch`     | Do not create quick launch icon            |
 | `NoRegister`        | Do not register virtualbox file extensions |
 | `NoPath`            | Do not add virtualbox install directory to the PATH|
+| `NoExtensionPack`   | Do not install extension pack |
 
 </description>
 <projectUrl>https://www.virtualbox.org/</projectUrl>
