@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>50.0</version>
+    <version>50.0.1</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <projectSourceUrl>https://dxr.mozilla.org/comm-central/source/</projectSourceUrl>
