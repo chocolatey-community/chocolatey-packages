@@ -34,3 +34,25 @@ function CreateChecksumsFile() {
 
   $checksumRows | Out-File "$ToolsDirectory\LanguageChecksums" -Encoding utf8
 }
+
+function SearchAndReplace() {
+  param(
+    [string]$PackageDirectory,
+    [hashtable]$Data
+  )
+
+  @{
+    "$PackageDirectory\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^[$]packageName\s*=\s*)('.*')"      = "`$1'$($Data.PackageName)'"
+      "(?i)(^[$]softwareName\s*=\s*)('.*')"     = "`$1'$($Data.SoftwareName)'"
+      "(?i)(^[$]allLocalesListURL\s*=\s*)('.*')"= "`$1'$($Data.LocaleURL)'"
+      "(?i)(-version\s*)('.*')"                 = "`$1'$($Data.RemoteVersion)'"
+      '(?i)(\s*Url\s*=\s*)(".*")'               = "`$1`"$($Data.Win32Format)`""
+      '(?i)(\.Url64\s*=\s*)(".*")'              = "`$1`"$($Data.Win64Format)`""
+    }
+    "$PackageDirectory\tools\chocolateyUninstall.ps1" = @{
+      "(?i)(^[$]packageName\s*=\s*)('.*')"      = "`$1'$($Data.PackageName)'"
+      "(?i)(-SoftwareName\s*)('.*')"            = "`$1'$($Data.SoftwareName)*'"
+    }
+  }
+}
