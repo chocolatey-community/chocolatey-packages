@@ -10,7 +10,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
-$packageArgs.unzipLocation = Join-Path $(Get-ToolsLocation) $packageArgs.packageName
+$installLocation = $packageArgs.unzipLocation = Join-Path $(Get-ToolsLocation) $packageArgs.packageName
 
 if (!(UrlExists($packageArgs.url))) {
     Write-Host "Using archive urls"
@@ -19,6 +19,15 @@ if (!(UrlExists($packageArgs.url))) {
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyPath $packageArgs.unzipLocation
+Install-ChocolateyPath $installLocation
 
-write-host 'Please make sure you have CGI installed in IIS for local hosting'
+$php_ini_path = $installLocation + '/php.ini'
+if (!(Test-Path $php_ini_path)) {
+  Write-Host 'Creating default php.ini'
+  cp $installLocation/php.ini-production $php_ini_path
+
+  Write-Host 'Configuring PHP extensions directory'
+  (gc $php_ini_path) -replace '; extension_dir = "ext"', 'extension_dir = "ext"' | sc $php_ini_path
+}
+
+Write-Host 'Please make sure you have CGI installed in IIS for local hosting'
