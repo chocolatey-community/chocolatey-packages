@@ -14,14 +14,14 @@
         <tags>Microsoft Windows Update KB2670838 admin</tags>
         <summary>This update improves the range and performance of the graphics and imaging components</summary>
         <description>This update improves the range and performance of the following graphics and imaging components:
-* Direct2D
-* DirectWrite
-* Direct3D
-* Windows Imaging Component (WIC)
-* Windows Advanced Rasterization Platform (WARP)
-* Windows Animation Manager (WAM)
-* XPS Document API
-* H.264 Video Decoder
+- Direct2D
+- DirectWrite
+- Direct3D
+- Windows Imaging Component (WIC)
+- Windows Advanced Rasterization Platform (WARP)
+- Windows Animation Manager (WAM)
+- XPS Document API
+- H.264 Video Decoder
 
 This package requires Service Pack 1 for Windows 7 or Windows Server 2008 R2 to be installed first. The [KB976932 package](https://chocolatey.org/packages/KB976932) may be used to install it.
 
