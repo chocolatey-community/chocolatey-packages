@@ -16,6 +16,29 @@ After installing pcwRunAs you find two more tools on your hard disk: `pcwRunAsGu
 
 PcwRunAs is intended exclusively for use on your home PC.
 
+```
+PcwRunAs v0.4 by  prx@pcwelt.de
+
+ Use: pcwRunAs4 [/?] [/d <domain>] [/profile /netonly]
+                     /u name /p password
+                     [/dir] [/app <app>] | [/arg <cmd>]
+                or [/e string]
+
+    /d       domain login
+    /u       user name
+    /p       password
+    /profile User profile
+    /netonly credentials only valid for remote access (domain)
+    /app     path to the application
+    /arg     Additional parameters for application
+    /dir     working directory
+    /e       encrypted string (as the only option)
+    /?       Shows this help
+
+Examples: pcwRunAs4 /u hugo /p secret /app notepad.exe
+PcwRunAs4 /u hugo /p secret /app notepad.exe /arg "C:\NewFile.txt"
+```
+
 ## Notes
 
 - The software is available only on German language.
