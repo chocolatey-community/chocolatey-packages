@@ -19,9 +19,9 @@ PcwRunAs is intended exclusively for use on your home PC.
 ```
 PcwRunAs v0.4 by  prx@pcwelt.de
 
- Use: pcwRunAs4 [/?] [/d <domain>] [/profile /netonly]
+ Use: pcwRunAs4 [/?] [/d &lt;domain&gt;] [/profile /netonly]
                      /u name /p password
-                     [/dir] [/app <app>] | [/arg <cmd>]
+                     [/dir] [/app &lt;app&gt;] | [/arg &lt;cmd&gt;]
                 or [/e string]
 
     /d       domain login
@@ -36,7 +36,7 @@ PcwRunAs v0.4 by  prx@pcwelt.de
     /?       Shows this help
 
 Examples: pcwRunAs4 /u hugo /p secret /app notepad.exe
-PcwRunAs4 /u hugo /p secret /app notepad.exe /arg "C:\NewFile.txt"
+PcwRunAs4 /u hugo /p secret /app notepad.exe /arg &quot;C:\NewFile.txt&quot;
 ```
 
 ## Notes
