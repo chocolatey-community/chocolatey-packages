@@ -30,7 +30,7 @@ Install-ChocolateyPackage @packageArgs
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation) { $installLocation = Split-Path (gcm VBoxManage.exe -ea 0).Path }
+if (!$installLocation) { $installLocation = gcm VBoxManage.exe -ea 0 | select -expand Path | Split-Path }
 if (!$installLocation)  {
     Write-Warning "Can't find $packageName install location, can't install extension pack"
     return
