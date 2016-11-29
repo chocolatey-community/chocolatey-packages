@@ -6,7 +6,7 @@ if (!$pvbox) {
 }
 
 $installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation) { $installLocation = Split-Path (gcm VBoxManage.exe -ea 0).Path }
+if (!$installLocation) { $installLocation = gcm VBoxManage.exe -ea 0 | select -expand Path | Split-Path }
 
 if (!($installLocation -and (Test-Path $installLocation))) {
     Write-Warning "Can not find existing installation of $packageName"
