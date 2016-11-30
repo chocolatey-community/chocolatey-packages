@@ -15,7 +15,6 @@ if (!$pvbox) {
 
 Write-Host "$packageName is running, trying to gracefully shutdown any running machines"
 
-$packageName = $packageArgs.packageName
 $installLocation = Get-VirtualBoxIntallLocation
 if (!$installLocation) { Write-Warning "Can not find existing installation location of $packageName"; return }
 if (!(Test-Path $installLocation\VBoxManage.exe)) { Write-Warning "Existing installation of $packageName found but unable to find VBoxManage.exe"; return }
