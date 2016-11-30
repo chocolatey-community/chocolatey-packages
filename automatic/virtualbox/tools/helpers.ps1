@@ -1,4 +1,6 @@
 function Get-VirtualBoxIntallLocation() {
+    Update-SessionEnvironment
+
     Write-Verbose 'Checking VBOX_MSI_INSTALL_PATH'
     if ( $installLocation = $Env:VBOX_MSI_INSTALL_PATH ) {
         if (Test-Path $installLocation) { return }
