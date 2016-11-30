@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>thunderbird</id>
-    <version>45.5.0.20161128</version>
+    <version>45.5.0.20161130</version>
     <title>Mozilla Thunderbird</title>
     <owners>chocolatey</owners>
     <authors>Mozilla</authors>
