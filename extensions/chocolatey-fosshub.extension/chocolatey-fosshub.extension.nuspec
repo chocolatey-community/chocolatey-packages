@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-fosshub.extension</id>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Chocolatey FossHub Extension</title>
