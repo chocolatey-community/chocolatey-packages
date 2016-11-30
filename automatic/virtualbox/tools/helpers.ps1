@@ -1,8 +1,9 @@
 function Get-VirtualBoxIntallLocation() {
-    Update-SessionEnvironment
+    $vbox_msi = gp 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment' VBOX_MSI_INSTALL_PATH -ea 0 | select -expand VBOX_MSI_INSTALL_PATH
+    if ($vbox_msi -and $vbox_msi.EndsWith('\')) { $vbox_msi = $vbox_msi -replace '.$' }
 
     Write-Verbose 'Checking VBOX_MSI_INSTALL_PATH'
-    if ( $installLocation = $Env:VBOX_MSI_INSTALL_PATH ) {
+    if ( $installLocation = $vbox_msi ) {
         if (Test-Path $installLocation) { return $installLocation }
     }
 
