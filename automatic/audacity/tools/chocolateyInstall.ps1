@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName = 'audacity'
 $url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Audacity.html/audacity-win-2.1.2.exe'
