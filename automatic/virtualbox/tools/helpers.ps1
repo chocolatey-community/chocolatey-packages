@@ -5,9 +5,8 @@ function Get-VirtualBoxIntallLocation() {
     }
 
     Write-Verbose 'Checking Get-AppInstallLocation'
-    if ( $installLocation = Get-AppInstallLocation $packageName) { return }
+    if ( $installLocation = Get-AppInstallLocation 'virtualbox') { return }
 }
-
 
 #http://stackoverflow.com/questions/40863475/starting-non-elevated-prompt-from-elevated-session
 function Start-ProcessNonElevated( [string] $Cmd, [switch]$UsePowerShell ) {
