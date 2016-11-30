@@ -23,7 +23,7 @@ $commands = "Set-Alias vboxmanage '$installLocation\VBoxManage.exe'`n"
 $commands += @'
 [string[]] $runningvms = vboxmanage list runningvms 2>&1
 if ($LastExitCode -ne 0) { Write-Error "Error running vboxmanage - can't get running vms" }
-if ($runningvms -and ($runningvms.Length -eq 0)) { "No running machines" }
+if ($runningvms -and ($runningvms.Length -eq 0)) { "No running machines"; return }
 
 'Number of machines running: ' + $runningvms.Length
 foreach ($vm in $runningvms) {
