@@ -90,7 +90,7 @@ function Get-32bitOnlyInstalled() {
     'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
   )
 
-  $installedVersions = Get-ChildItem $registryPaths | ? Name -match "$product [\d\.]+ \(x(64|86)"
+  $installedVersions = Get-ChildItem $registryPaths | ? { $_.Name -match "$product [\d\.]+ \(x(64|86)" }
 
   if (
     $installedVersions -match 'x86' `
