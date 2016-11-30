@@ -3,11 +3,11 @@ function Get-VirtualBoxIntallLocation() {
 
     Write-Verbose 'Checking VBOX_MSI_INSTALL_PATH'
     if ( $installLocation = $Env:VBOX_MSI_INSTALL_PATH ) {
-        if (Test-Path $installLocation) { return }
+        if (Test-Path $installLocation) { return $installLocation }
     }
 
     Write-Verbose 'Checking Get-AppInstallLocation'
-    if ( $installLocation = Get-AppInstallLocation 'virtualbox') { return }
+    if ( $installLocation = Get-AppInstallLocation 'virtualbox') { return $installLocation }
 }
 
 #http://stackoverflow.com/questions/40863475/starting-non-elevated-prompt-from-elevated-session
