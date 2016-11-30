@@ -1,5 +1,5 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-. $toolsPath\Start-ProcessNonElevated.ps1
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageName = 'virtualbox'
 
@@ -15,19 +15,10 @@ if (!$pvbox) {
 
 Write-Host "$packageName is running, trying to gracefully shutdown any running machines"
 
-$installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation) { $installLocation = gcm VBoxManage.exe -ea 0 | select -expand Path | Split-Path }
-
-
-if (!($installLocation -and (Test-Path $installLocation))) {
-    Write-Warning "Can not find existing installation location of $packageName"
-    return
-}
-
-if (!(Test-Path $installLocation\VBoxManage.exe)) {
-    Write-Warning "Existing installation of $packageName found but unable to find VBoxManage.exe"
-    return
-}
+$packageName = $packageArgs.packageName
+$installLocation = Get-VirtualBoxIntallLocation
+if (!$installLocation) { Write-Warning "Can not find existing installation location of $packageName"; return }
+if (!(Test-Path $installLocation\VBoxManage.exe)) { Write-Warning "Existing installation of $packageName found but unable to find VBoxManage.exe"; return }
 
 $commands = "Set-Alias vboxmanage '$installLocation\VBoxManage.exe'`n"
 $commands += @'

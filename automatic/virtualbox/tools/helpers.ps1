@@ -1,3 +1,15 @@
+function Get-VirtualBoxIntallLocation() {
+    Write-Verbose 'Checking VBOX_MSI_INSTALL_PATH'
+    if ( $installLocation = $Env:VBOX_MSI_INSTALL_PATH ) {
+        if (Test-Path $installLocation) { return }
+    }
+
+    Write-Verbose 'Checking Get-AppInstallLocation'
+    if ( $installLocation = Get-AppInstallLocation $packageName) { return }
+}
+
+
+#http://stackoverflow.com/questions/40863475/starting-non-elevated-prompt-from-elevated-session
 function Start-ProcessNonElevated( [string] $Cmd, [switch]$UsePowerShell ) {
     $svc = gsv Schedule -ea 0
     if ($svc -and $svc.Status -ne 'Running') { throw 'Start-ProcessNonElevated requires running Task Scheduler service' }
@@ -39,3 +51,4 @@ function Start-ProcessNonElevated( [string] $Cmd, [switch]$UsePowerShell ) {
 
     return $res
 }
+

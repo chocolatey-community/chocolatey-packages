@@ -1,5 +1,8 @@
 #https://www.virtualbox.org/manual/ch02.html#idm819
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
+
 $cert = ls cert: -Recurse | ? { $_.Thumbprint -eq 'a88fd9bdaa06bc0f3c491ba51e231be35f8d1ad5' }
 if (!$cert) {
     $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
@@ -29,12 +32,8 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 $packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
-if (!$installLocation) { $installLocation = gcm VBoxManage.exe -ea 0 | select -expand Path | Split-Path }
-if (!$installLocation)  {
-    Write-Warning "Can't find $packageName install location, can't install extension pack"
-    return
-}
+$installLocation = Get-VirtualBoxIntallLocation
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location, can't install extension pack"; return }
 
 if (!$pp.NoExtensionPack) {
     Write-Host "Installing extension pack"
