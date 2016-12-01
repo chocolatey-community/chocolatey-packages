@@ -67,6 +67,7 @@ switch -Exact ($os.Version) {
 	}
 	default {
 		Write-Host $skippingNotApplies
+		return;
 	}
 }
 if (Get-HotFix -Id $kb -ErrorAction SilentlyContinue) {

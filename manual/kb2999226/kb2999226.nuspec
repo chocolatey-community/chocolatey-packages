@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>KB2999226</id>
-    <version>1.0.20161030</version>
+    <version>1.0.20161201</version>
     <title>Update for Universal C Runtime in Windows (KB2999226)</title>
     <authors>Microsoft</authors>
     <owners>RB chocolatey</owners>
