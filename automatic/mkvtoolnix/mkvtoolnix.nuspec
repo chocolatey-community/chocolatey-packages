@@ -17,8 +17,10 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
     </description>
     <summary>Tools for Matroska files</summary>
     <releaseNotes>https://www.bunkus.org/videotools/mkvtoolnix/doc/ChangeLog</releaseNotes>
-    <tags>multimedia mkv container muxing demuxing admin</tags>
+    <tags>multimedia mkv container muxing demuxing cli foss cross-platform admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <projectSourceUrl>https://mkvtoolnix.download/source.html</projectSourceUrl>
+    <docsUrl>https://mkvtoolnix.download/docs.html</docsUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
