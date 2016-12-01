@@ -20,3 +20,11 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageName
+if (!$installLocation)  { Write-Warning "Can't find $PackageName install location"; return }
+Write-Host "$packageName installed to '$installLocation'"
+
+Write-Host 'Adding to PATH if needed'
+Install-ChocolateyPath "$installLocation"       #TODO: Uninstall-ChocolateyPath #310
