@@ -9,7 +9,7 @@ $softwareName = 'Mozilla Thunderbird'
 
 $allLocalesListURL = 'https://www.mozilla.org/en-US/thunderbird/all/'
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '45.5.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '45.5.1')
 
 if ($alreadyInstalled) {
   Write-Output $(
@@ -28,7 +28,7 @@ if ($alreadyInstalled) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=thunderbird-45.5.0-SSL&amp;os=win&amp;lang=${locale}"
+    Url = "https://download.mozilla.org/?product=thunderbird-45.5.1-SSL&amp;os=win&amp;lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
