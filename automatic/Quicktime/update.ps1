@@ -30,12 +30,4 @@ function global:au_GetLatest {
   }
 }
 
-try {
-  update -ChecksumFor 32
-} catch {
-  if ($_ -notmatch "Access Denied") {
-    throw $_
-  } else {
-    Write-Host "Access denied error while checking version ignored, package might have an update"
-  }
-}
+update -ChecksumFor 32

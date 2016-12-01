@@ -30,12 +30,4 @@ function global:au_GetLatest {
   }
 }
 
-try {
-  update
-} catch {
-  if ($_ -notmatch "Can't validate URL") {
-    throw $_
-  } else {
-    Write-Host "Can't validate URL while checking version ignored, package might have an update"
-  }
-}
+update
