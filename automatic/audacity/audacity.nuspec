@@ -21,7 +21,7 @@ See [full list of features](http://www.audacityteam.org/about/features).
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-fosshub.extension" version="0.5.0" />
+      <dependency id="chocolatey-fosshub.extension" version="0.6.0" />
     </dependencies>
     <docsUrl>http://www.audacityteam.org/help/documentation</docsUrl>
     <projectSourceUrl>https://github.com/audacity/audacity</projectSourceUrl>
