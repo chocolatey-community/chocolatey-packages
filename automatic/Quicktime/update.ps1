@@ -30,4 +30,8 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+try {
+  update -ChecksumFor 32
+} catch {
+  # Do nothing, we don't care
+}
