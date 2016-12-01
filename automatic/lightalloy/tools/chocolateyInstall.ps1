@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName = 'lightalloy'
 $url32 = Get-UrlFromFosshub 'https://www.fosshub.com/Light-Alloy.html/LA_Setup_v4.8.8.2.exe'
