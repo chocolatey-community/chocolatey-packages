@@ -6,9 +6,9 @@ $releases = 'https://support.apple.com/kb/DL837?locale=en_US'
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-        "(?i)(^\s*-Url\s+)('.*')"            = "`$1'$($Latest.URL32)'"
-        "(?i)(^\s*-Checksum\s+)('.*')"       = "`$1'$($Latest.Checksum32)'"
-        "(?i)(^\s*-ChecksumType\s+)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
+            "(?i)(^\s*-Url\s+)('.*')"            = "`$1'$($Latest.URL32)'"
+            "(?i)(^\s*-Checksum\s+)('.*')"       = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\s*-ChecksumType\s+)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
         }
     }
 }
