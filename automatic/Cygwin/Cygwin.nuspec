@@ -37,7 +37,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
     <mailingListUrl>https://cygwin.com/lists.html</mailingListUrl>
     <projectSourceUrl>https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0.1" />
     </dependencies>
   </metadata>
   <files>
