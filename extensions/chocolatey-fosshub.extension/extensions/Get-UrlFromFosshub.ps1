@@ -7,7 +7,7 @@
 # Example:
 # Get-UrlFromFosshub https://www.fosshub.com/Audacity.html/audacity-win-2.1.2.exe
 
-Function Get-UrlFromFosshub($linkUrl) {
+Function get-UrlFromFosshub($linkUrl) {
 
   $fosshubAppName = $linkUrl -match 'fosshub.com/(.*)/(.*)'
   # If there’s no match, it means that it’s not a FossHub URL.

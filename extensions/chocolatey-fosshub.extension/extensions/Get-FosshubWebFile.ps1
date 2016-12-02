@@ -72,7 +72,7 @@ Function Get-FosshubWebFile() {
     Write-Warning "Fosshub supports SSL, switching to HTTPS for download."
   }
 
-  $fileName = GetFosshubFileName $url
+  $fileName = getFosshubFileName $url
   $fileDirectory = Get-PackageCacheLocation
   $fileFullPath = Join-Path $fileDirectory $fileName
 
@@ -92,10 +92,10 @@ Function Get-FosshubWebFile() {
 
   if ($needsDownload) {
     if (!($options["Headers"].ContainsKey('Referer'))) {
-      $referer = GetFosshubReferer $url
+      $referer = getFosshubReferer $url
       $options["Headers"].Add('Referer', $referer)
     }
-    $downloadUrl = Get-UrlFromFosshub $url
+    $downloadUrl = get-UrlFromFosshub $url
     Get-WebFile -Url $downloadUrl -FileName $fileFullPath -Options $options
   }
 
@@ -115,7 +115,7 @@ Function Get-FosshubWebFile() {
 }
 
 
-function GetFosshubFileName() {
+function getFosshubFileName() {
   param([string]$linkUrl)
 
   $linkUrl -match 'fosshub.com/(.*)/(.*)' | Out-Null
@@ -126,7 +126,7 @@ function GetFosshubFileName() {
   }
 }
 
-function GetFosshubReferer() {
+function getFosshubReferer() {
   param([string]$linkUrl)
 
   $linkUrl -match 'fosshub.com/(.*)/' | Out-Null
