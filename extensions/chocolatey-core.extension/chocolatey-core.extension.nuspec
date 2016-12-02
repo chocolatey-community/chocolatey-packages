@@ -22,7 +22,7 @@ These functions may be used in Chocolatey install/uninstall scripts by declaring
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension</packageSourceUrl>
     <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
-    <releaseNotes>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/chocolatey-core.extension/CHANGELOG.md</releaseNotes>
+    <releaseNotes>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension/CHANGELOG.md</releaseNotes>
     </metadata>
     <files>
     <file src="extensions\**" target="extensions" />
