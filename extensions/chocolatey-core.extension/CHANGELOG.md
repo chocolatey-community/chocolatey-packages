@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.0.1
+
+- `Get-PackageParameters`: unaliased `sls` to work on PowerShell 2.
+
 ## Version 1.0
 
 - Merged `mm-choco.extension`.

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-core.extension</id>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <title>Chocolatey Core Extensions</title>
     <summary>Helper functions extending core choco functionality</summary>
     <authors>chocolatey</authors>
@@ -19,7 +19,7 @@ These functions may be used in Chocolatey install/uninstall scripts by declaring
     <licenseUrl>https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/chocolatey-core.extension</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension</packageSourceUrl>
     <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
     <releaseNotes>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/chocolatey-core.extension/CHANGELOG.md</releaseNotes>
