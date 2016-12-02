@@ -3,10 +3,10 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'php'
-  url            = 'http://windows.php.net//downloads/releases/php-7.0.13-nts-Win32-VC14-x86.zip'
-  url64Bit       = 'http://windows.php.net//downloads/releases/php-7.0.13-nts-Win32-VC14-x64.zip'
-  checksum       = '8a9a0f8a0c368ae75c398b93238b2ee14ca7746e5e265cac6d8a50ae5f9624db'
-  checksum64     = '1d117986b57cc57441a3056f578ba56a7fcbb53a7cd2d7ddca7c634a6012687f'
+  url            = 'http://windows.php.net//downloads/releases/php-7.1.0-nts-Win32-VC14-x86.zip'
+  url64Bit       = 'http://windows.php.net//downloads/releases/php-7.1.0-nts-Win32-VC14-x64.zip'
+  checksum       = '0bfb7ea5a20090830377fb5e8f0b202174ec849cbbce2d04c9b6536052ad6e70'
+  checksum64     = 'f51c45ac4c485db7a5b980c2dd00eed990bd50823fb5061f6a3cf730d8cadff3'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
