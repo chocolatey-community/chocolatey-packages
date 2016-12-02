@@ -33,7 +33,7 @@ Function Get-UrlFromFosshub($linkUrl) {
   $regexPattern = "<a href=`"$hrefText`"[^>]+=`"(https:\/\/download\.fosshub\.com\/[^`"]+)`""
 
   $opts = @{ Headers = @{ Referer = "https://www.fosshub.com/${fosshubAppName}" } }
-  $htmlPage = Get-WebContent -url $linkUrl -options $opts
+  $htmlPage = Get-WebContent -url $linkUrl -options $opts 2>$null
 
   $dataLink = $htmlPage -match $regexPattern
 
@@ -43,5 +43,3 @@ Function Get-UrlFromFosshub($linkUrl) {
 
   return $Matches[1]
 }
-
-Export-ModuleMember -Function Get-UrlFromFosshub
