@@ -1,31 +1,31 @@
-﻿$packageName = 'qBittorrent'
-$softwareName = 'qBittorrent*'
-$installerType = 'EXE' 
-$silentArgs = '/S' # NSIS
-$validExitCodes = @(0)
-$uninstalled = $false
-$local_key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
-$machine_key = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*'
-$machine_key6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
+﻿$ErrorActionPreference = 'Stop';
 
-[array]$key = Get-ItemProperty -Path @($machine_key6432,$machine_key, $local_key) `
-                        -ErrorAction SilentlyContinue `
-         | ? { $_.DisplayName -like "$softwareName" }
+$packageName = 'qbittorrent'
+
+$uninstalled = $false
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'qBittorrent*'
 
 if ($key.Count -eq 1) {
-  $key | % { 
-    $file = "$($_.UninstallString)"
-    Uninstall-ChocolateyPackage -PackageName $packageName `
-                                -FileType $installerType `
-                                -SilentArgs "$silentArgs" `
-                                -ValidExitCodes $validExitCodes `
-                                -File "$file"
+  $key | % {
+    $packageArgs = @{
+      packageName = $packageName
+      fileType    = 'exe'
+      silentArgs  = '/S'
+      validExitCodes= @(0)
+      file          = "$($_.UninstallString)"
+    }
+
+    Uninstall-ChocolateyPackage @packageArgs
+
+    $appPathKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\"
+    if (Test-Path "$appPathKey\qbittorrent.exe") { Remove-Item "$appPathKey\qbittorrent.exe" -Force }
+    if (Test-Path "$appPathKey\qbit.exe") { Remove-Item "$appPathKey\qbit.exe" -Force }
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
 } elseif ($key.Count -gt 1) {
-  Write-Warning "$key.Count matches found!"
+  Write-Warning "$($key.Count) matches found!"
   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
   Write-Warning "Please alert package maintainer the following keys were matched:"
-  $key | % {Write-Warning "- $_.DisplayName"}
+  $key | % {Write-Warning "- $($_.DisplayName)"}
 }
