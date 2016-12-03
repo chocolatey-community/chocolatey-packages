@@ -1,4 +1,17 @@
 Function Install-ChocolateyFosshub() {
+<#
+.SYNOPSIS
+**NOTE:** Administrative Access Required.
+
+Downloads from fosshub and install software into "Programs and Features"
+
+.DESCRIPTION
+This will download a native installer from the fosshub url and install it on your
+machine.
+
+.NOTES
+See Install-ChocolateyPackage for additional notes.
+#>
   param(
     [parameter(Mandatory=$true, Position=0)][string] $packageName,
     [parameter(Mandatory=$false, Position=1)]

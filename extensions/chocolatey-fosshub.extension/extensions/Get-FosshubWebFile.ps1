@@ -1,4 +1,19 @@
 Function Get-FosshubWebFile() {
+<#
+.SYNOPSIS
+Downloads a file from fosshub
+
+.DESCRIPTION
+This will download a file from fosshub from the specified url.
+
+.NOTES
+This is mostly a copy of the Official Get-ChocolateyWebFile with functionality not
+compatible with fosshub removed, and functionality needed for fosshub added.
+
+.EXAMPLE
+# Minimal Example
+Get-FosshubWebFile -PackageName 'mypackage' -Url 'https://www.fosshub.com/mypackage.html/mypackage_0.1.0.exe'
+#>
   param(
     [parameter(Mandatory=$true, Position=0)][string] $packageName,
     [parameter(Mandatory=$false, Position=2)][string] $url = '',
