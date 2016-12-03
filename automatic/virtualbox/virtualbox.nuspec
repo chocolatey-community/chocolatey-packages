@@ -13,14 +13,12 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 
 ## Package parameters
 
-| Parameter           | Description                                |
-| ---                 | ---                                        |
-| `CurrentUser`       | Install for current user only              |
-| `NoDesktopShortcut` | Do not create desktop shortcut             |
-| `NoQuickLaunch`     | Do not create quick launch icon            |
-| `NoRegister`        | Do not register virtualbox file extensions |
-| `NoPath`            | Do not add virtualbox install directory to the PATH|
-| `NoExtensionPack`   | Do not install extension pack |
+- `CurrentUser`       - Install for current user only
+- `NoDesktopShortcut` - Do not create desktop shortcut
+- `NoQuickLaunch`     - Do not create quick launch icon
+- `NoRegister`        - Do not register virtualbox file extensions
+- `NoPath`            - Do not add virtualbox install directory to the PATH
+- `NoExtensionPack`   - Do not install extension pack
 
 </description>
 <projectUrl>https://www.virtualbox.org/</projectUrl>
@@ -33,7 +31,7 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/c9f08adeb0cc2dcda323211894358e69d3af323c/icons/virtualbox.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0.1" />
     </dependencies>
   </metadata>
   <files>
