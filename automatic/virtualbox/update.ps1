@@ -1,4 +1,5 @@
 import-module au
+import-module .\..\..\extensions\extensions.psm1
 
 $releases = 'https://www.virtualbox.org/wiki/Downloads'
 
