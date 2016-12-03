@@ -29,8 +29,8 @@ function global:au_GetLatest {
     }
 }
 
-#try {
+try {
     update -ChecksumFor 32
-#} catch {
-    #if ($_ -match 'Access Denied') { Write-Host 'Access Denied error'; 'ignored' }  else { throw $_ }
-#}
+} catch {
+    if ($_ -match 'Access Denied') { Write-Host 'Access Denied error'; 'ignore' }  else { throw $_ }
+}
