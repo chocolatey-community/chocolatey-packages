@@ -5,13 +5,26 @@
     <title>VirtualBox</title>
     <version>5.1.10</version>
     <authors>Oracle Corporation</authors>
-    <owners>Rob Reynolds, Mike Dellanoce</owners>
+    <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
 <description>
+
 VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
+
+## Package parameters
+
+| Parameter           | Description                                |
+| ---                 | ---                                        |
+| `CurrentUser`       | Install for current user only              |
+| `NoDesktopShortcut` | Do not create desktop shortcut             |
+| `NoQuickLaunch`     | Do not create quick launch icon            |
+| `NoRegister`        | Do not register virtualbox file extensions |
+| `NoPath`            | Do not add virtualbox install directory to the PATH|
+| `NoExtensionPack`   | Do not install extension pack |
+
 </description>
-    <projectUrl>https://www.virtualbox.org/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
+<projectUrl>https://www.virtualbox.org/</projectUrl>
+<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
     <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>
     <tags>virtualbox virtualization virtual oracle admin foss cross-platform</tags>
     <docsUrl>https://www.virtualbox.org/manual</docsUrl>
@@ -24,8 +37,7 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-    <file src="tools\oracle.cer" target="tools\oracle.cer" />
+    <file src="tools\**" />
   </files>
 </package>
 <!-- character encoding: “UTF-8” -->
