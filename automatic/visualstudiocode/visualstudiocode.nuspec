@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id></id>
+    <title>Visual Studio Code</title>
+    <version></version>
+    <authors>Microsoft</authors>
+    <owners>chocolatey</owners>
+    <projectUrl>https://code.visualstudio.com</projectUrl>
+    <projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/visualstudiocode</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
+    <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
+    <docsUrl>https://code.visualstudio.com/docs</docsUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code</summary>
+    <description>
+Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
+
+## Features
+
+* **Meet IntelliSense:** Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.
+* **Print statement debugging is a thing of the past:** Debug code right from the editor. Launch or attach to your running apps and debug with break points, call stacks, and an interactive console.
+* **Git commands built-in:** Working with Git has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted Git service.
+* **Extensible and customizable:** Want even more features? Install extensions to add new languages, themes, debuggers, and to connect to additional services. Extensions run in separate processes, ensuring they won't slow down your editor.
+
+## Package parameters
+The following package parameters can be set:
+
+* `/NoDesktopIcon` - Don't add a desktop icon for Visual Studio Code.
+* `/NoQuicklaunchIcon` - Don't add an icon for Visual Studio Code to the QuickLaunch area.
+* `/NoContextMenuFiles` - Don't add an `Open with Code` entry to the context menu for files.
+* `/NoContextMenuFolders` - Dont't add an `Open with Code` entry to the context menu for folders.
+* `/DontAddToPath` - Don't add Visual Studio Code to the path.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: `-params '"/NoDesktopIcon /DontAddToPath"'`.
+
+## Notes
+The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
+    </description>
+    <tags>microsoft visualstudiocode vscode editor ide javascript typescript admin foss cross-platform</tags>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.1" />
+      <dependency id="DotNet4.5.2" />
+    </dependencies>
+    <releaseNotes>
+      https://code.visualstudio.com/Updates
+    </releaseNotes>
+  </metadata>
+</package>
