@@ -9,14 +9,15 @@ function GetVersionAndUrlFormats() {
 
   $re = "download.mozilla.*product=$Product.*&amp;os=win&amp;lang=en-US"
   $url = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $url = $url -replace 'en-US','${locale}' -replace '&amp;','&'
 
   $result = @{
-    Version = $url -split '[-&]' | select -last 1 -skip 4
-    Win32Format = $url -replace 'en-US','${locale}'
+    Version = $url -split '[-&]' | select -last 1 -skip 3
+    Win32Format = $url
   }
   if ($Supports64Bit) {
     $result += @{
-      Win64Format = $url -replace 'os=win','os=win64' -replace 'en-US','${locale}'
+      Win64Format = $url -replace 'os=win','os=win64'
     }
   }
   return $result
