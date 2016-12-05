@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>nomacs</id>
+    <version>3.4.0</version>
     <title>nomacs Image Lounge</title>
     <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
@@ -13,13 +13,56 @@
     <description>
 nomacs is a free image viewer for windows, linux, and mac systems, which is licensed under the GNU General Public License v3. nomacs is small, fast and able to handle the most common image formats including RAW images. Additionally it is possible to synchronize multiple viewers. A synchronization of viewers running on the same computer or via LAN is possible. It allows to compare images and spot the differences (e.g. schemes of architects to show the progress).
 
-Note: This package will always install the latest version, regardless of the version specified in the package. Version-specific downloads for nomacs are not available.
+## Features
+
+- Image Viewing
+  - supports the most common image formats including RAW (
+  - fast thumbnail preview
+  - zoomable grid preview of thumbnails
+  - display exif information
+  - framless view
+  - change transparency of windows
+  - display overview/histogram/file info
+  - file filtering/searching/sorting
+  - improved anti-aliasing
+  - hide menubar and toolbar
+- Image Editing
+  - crop images
+  - resize images
+  - pseudo color function
+  - color adjustments (brightness/contrast/saturation …)
+  - multi page TIFF export
+  - rotate images
+  - drag and drop images
+  - automatically save screenshots
+  - delete/rename images
+  - create mosaic image
+  - set wallpaper (windows only)
+- Viewer Synchronization
+  - synchronize multiple instances (Screenshot) (Howto)
+    - synchronized zooming
+    - synchronized panning
+    - synchronized next/previous file
+    - overlay of two or more instances (with changing opacity)
+    - arrange synchronized instances
+  - synchronize multiple instances in the LAN
+    - synchronized zooming
+    - synchronized panning
+    - images can be sent over LAN connection
+
+See detailed nomacs [features page](http://nomacs.org/features/).
+
+## Notes
+
+- This package will **always install the latest version**, regardless of the version specified in the package. Nomacs is using [online installer](https://www.nomacs.org/redmine/issues/573) for non-portable package exlusivelly.
     </description>
     <summary>Open source image viewer</summary>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.4.0</releaseNotes>
     <copyright>Markus Diem, Stefan Fiel, Florian Kleber</copyright>
-    <tags>admin image viewer jpg png svg</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>admin image editor viewer jpg png svg foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nomacs</packageSourceUrl>
+    <projectSourceUrl>https://github.com/nomacs/nomacs</projectSourceUrl>
+    <docsUrl>http://nomacs.org/documentation</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
