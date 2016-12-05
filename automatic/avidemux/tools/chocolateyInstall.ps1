@@ -11,6 +11,7 @@ $packageArgs = @{
   fileType               = 'EXE'
   url                    = $url32
   url64bit               = $url64
+  options                = @{ Headers = @{ Referer = 'https://www.fosshub.com/' } }
   checksum               = $checksum32
   checksum64             = $checksum64
   checksumType           = 'sha256'

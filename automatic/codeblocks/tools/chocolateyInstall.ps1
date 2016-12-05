@@ -10,6 +10,7 @@ $packageArgs = @{
   checksum       = '4d1b66c02ea6be91912b3f9cd67a1c3a7933b7e2dd062db00344faf39e3cae1c'
   checksumType   = 'sha256'
   url            = Get-UrlFromFosshub $fosshubUrl
+  options        = @{ Headers = @{ Referer = 'https://www.fosshub.com/' } }
 
   silentArgs     = '/S'
   validExitCodes = @(0)

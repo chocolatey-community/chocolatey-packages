@@ -13,6 +13,7 @@ $packageArgs = @{
   checksum       = $checksum
   checksumType   = $checksumType
   url            = $url
+  options        = @{ Headers = @{ Referer = 'https://www.fosshub.com/' } }
 
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
