@@ -22,7 +22,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
 
 ## Notes
 
-- Tnis package provides only the last version of Cygwin
+- This package provides only the last version of Cygwin.
 - For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <projectUrl>https://cygwin.com/</projectUrl>
