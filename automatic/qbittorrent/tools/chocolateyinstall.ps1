@@ -17,7 +17,6 @@ Install-ChocolateyInstallPackage @packageArgs
 # Lets remove the installer as there is no more need for it
 Remove-Item -Force $filePath
 
-
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {
   Write-Host "$($packageArgs.packageName) installed to '$installLocation'"

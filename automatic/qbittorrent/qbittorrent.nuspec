@@ -22,13 +22,37 @@ qBittorrent is currently offering functionality comparable to more popular BitTo
 without requiring the Java Virtual Machine.
 qBittorrent requires Python only for the search engine while other clients such as Deluge and BitTornado require
 it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
+
+
+## Features
+
+- Polished µTorrent-like User Interface
+- Well-integrated and extensible Search Engine
+- Simultaneous search in most famous BitTorrent search sites
+- Per-category-specific search requests (e.g. Books, Music, Movies)
+- All Bittorrent extensions
+- DHT, Peer Exchange, Full encryption, Magnet/BitComet URIs, ...
+- Remote control through a Web user interface
+- Nearly identical to the regular UI, all in Ajax
+- Advanced control over trackers, peers and torrents
+- Torrents queueing and prioritizing
+- Torrent content selection and prioritizing
+- UPnP / NAT-PMP port forwarding support
+- Available in ~41 languages (Unicode support)
+- Torrent creation tool
+- Advanced RSS support with download filters (inc. regex)
+- Bandwidth scheduler
+- IP Filtering (eMule and PeerGuardian compatible)
+- IPv6 compliant
+- Sequential downloading (aka "Download in order")
+- Available on most platforms: Linux, Mac OS X, Windows, OS/2, FreeBSD
     </description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
     <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qBittorrent</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>
     <docsUrl>https://github.com/qbittorrent/qBittorrent/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/qbittorrent/qBittorrent/issues</bugTrackerUrl>
-    <tags>qbittorrent torrent sharing p2p admin</tags>
+    <tags>qbittorrent torrent sharing p2p foss cross-platform admin</tags>
     <licenseUrl>https://github.com/qbittorrent/qBittorrent/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright ©2006-2016 The qBittorrent project</copyright>
