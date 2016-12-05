@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-fosshub.extension</id>
-    <version>0.6.0</version>
+    <version>0.6.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <owners>chocolatey</owners>
-    <title>Chocolatey FossHub Extension</title>
+    <title>[Deprecated] Chocolatey FossHub Extension</title>
     <authors>gep13,dtgm,chocolatey</authors>
     <copyright>2016-Present: Chocolatey Core Team Package Contributors</copyright>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
@@ -19,6 +19,8 @@
     <tags>chocolatey-fosshub.extension admin fosshub extension</tags>
     <summary>Helper Function for extracting download URL from FossHub</summary>
     <description>
+**NOTE:** This extension is no longer supported.  See here for additional [information](https://github.com/chocolatey/package-validator/wiki/ScriptsDoNotDownloadFromFossHub)
+
 Provides a helper function to help with extracting the actual download URL for an application whose binaries are housed on FossHub.
 
 These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
@@ -34,11 +36,5 @@ These functions may be used in Chocolatey install/uninstall scripts by declaring
 Example:
 `Get-UrlFromFosshub http://www.fosshub.com/genLink/Data-Crow/FILE.zip`
     </description>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
-    </dependencies>
   </metadata>
-  <files>
-    <file src="extensions\**" target="extensions" />
-  </files>
 </package>
