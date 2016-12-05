@@ -1,8 +1,6 @@
 # chocolatey-core.extension
 
-
 This is the Powershell module that extends Chocolatey with new functions.
-
 
 ## Installation
 
@@ -10,13 +8,12 @@ Install via chocolatey: `choco install chocolatey-core.extension`.
 
 The module is usually automatically installed as a dependency.
 
-
 ## Usage
 
-To create a package that uses a extension function add the following to the `nuspec` specification:
+To create a package that uses an extension function add the following to the `nuspec` specification:
 
     <dependencies>
-        <dependency id="chocolatey-core.extension" version="1.0" />
+        <dependency id="chocolatey-core.extension" version="SPECIFY_LATEST_VERSION" />
     </dependencies>
 
 **NOTE**: Make sure you use adequate _minimum_ version.
