@@ -20,7 +20,7 @@ This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLi
 - Only x32 DLL is available without tools.
     </description>
     <summary>A DLL for the SQLite SQL database engine installed in your user path.</summary>
-    <tags>sql sqlite db database embedded</tags>
+    <tags>sql sqlite db database embedded foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/SQLite</packageSourceUrl>
     <projectSourceUrl>http://www.sqlite.org/src</projectSourceUrl>
     <bugTrackerUrl>https://www.sqlite.org/src/rptview?rn=1</bugTrackerUrl>
