@@ -7,6 +7,7 @@ if ((Get-ProcessorBits 32) -or ($env:chocolateyForceX86 -eq 'true')) {
 $fileName  = 'nomacs-3.4.0.zip'
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $zip_path = "$toolsPath\$fileName"
+rm $toolsPath\* -Recurse -Force | ? { $_.PSIsContainer }
 
 $packageArgs = @{
     PackageName  = 'nomacs.portable'
