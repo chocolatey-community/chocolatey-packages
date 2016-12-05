@@ -17,6 +17,9 @@ if ($key.Count -eq 1) {
 
     Uninstall-ChocolateyPackage @packageArgs
     Wait-Process -Name "Au_" # This is added to prevent race condition with auto uninstaller
+
+    $appPathKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\"
+    if (Test-Path "$appPathKey\codeblocks.exe") { Remove-Item "$appPathKey\codeblocks.exe" -Force }
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
