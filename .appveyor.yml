@@ -16,7 +16,7 @@ environment:
   au_version: master
   au_push: true
   # Use 1 to test all, or N to split testing into N groups
-  au_test_groups: 4
+  au_test_groups: 1
 
   # Github token to commit pushed packages to repository
   github_user_repo: chocolatey/chocolatey-coreteampackages
