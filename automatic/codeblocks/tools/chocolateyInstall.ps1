@@ -1,18 +1,24 @@
 $ErrorActionPreference = 'Stop'
 
-$fosshubUrl = 'https://www.fosshub.com/Code-Blocks.html/codeblocks-16.01mingw-setup.exe'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName    = 'codeblocks'
   fileType       = 'exe'
   softwareName   = 'CodeBlocks'
-
-  checksum       = '4d1b66c02ea6be91912b3f9cd67a1c3a7933b7e2dd062db00344faf39e3cae1c'
-  checksumType   = 'sha256'
-  url            = Get-UrlFromFosshub $fosshubUrl
+  file           = "$toolsDir\codeblocks-16.01mingw-setup.exe"
 
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+# Lets remove the installer as there is no more need for it
+Remove-Item -Force $packageArgs.file
+
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if ($installLocation) {
+  Write-Host "$($packageArgs.packageName) installed to '$installLocation'"
+  Register-Application "$installLocation\codeblocks.exe"
+}
