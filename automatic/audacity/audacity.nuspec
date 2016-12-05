@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>audacity</id>
@@ -21,7 +21,7 @@ See [full list of features](http://www.audacityteam.org/about/features).
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-fosshub.extension" version="0.6.0" />
+      <dependency id="chocolatey-fosshub.extension" version="0.7.0" />
     </dependencies>
     <docsUrl>http://www.audacityteam.org/help/documentation</docsUrl>
     <projectSourceUrl>https://github.com/audacity/audacity</projectSourceUrl>

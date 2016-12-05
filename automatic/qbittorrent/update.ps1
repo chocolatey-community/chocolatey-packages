@@ -1,5 +1,5 @@
 import-module au
-import-module "./../../extensions/extensions.psm1"
+. "./../../extensions/au_fosshub.ps1"
 
 $releases = 'https://www.fosshub.com/qBittorrent.html'
 
@@ -25,4 +25,9 @@ function global:au_GetLatest {
     return @{ URL32 = $url; Version = $version }
 }
 
-update -ChecksumFor 32 -NoCheckUrl
+function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32 = Get-FosshubChecksum $Latest.URL32 $Latest.ChecksumType32
+}
+
+update -ChecksumFor none -NoCheckUrl -Force
