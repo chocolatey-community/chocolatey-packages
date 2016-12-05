@@ -5,7 +5,7 @@
     <metadata>
         <id>tixati</id>
         <title>Tixati</title>
-        <version>2.48</version>
+        <version>2.49</version>
         <authors>Kevin Hearn</authors>
         <owners>Redsandro</owners>
         <summary>Tixati is a cross-platform BitTorrent client written in C++ that has been designed to be light on system resources.</summary>
