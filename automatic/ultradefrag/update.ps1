@@ -37,4 +37,9 @@ function global:au_GetLatest {
     }
 }
 
-update
+try {
+    update
+} catch {
+    $ignore = "Unable to connect to the remote server"
+    if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }
+}
