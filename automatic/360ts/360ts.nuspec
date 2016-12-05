@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>360 Total Security</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Qihu 360 Software</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A feature-packed software solution that provides users with a powerful antivirus, a junk cleaner and a system booster within the same interface
+	</summary>
+    <description>
+	A feature-packed software solution that provides users with a powerful antivirus, a junk cleaner and a system booster within the same interface
+	</description>
+    <projectUrl>http://360safe.com/</projectUrl>
+    <tags>antivirus security privacy-protection internet-security anti-keylogger anti-phishing webcam-protection</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.360totalsecurity.com/en/about.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>
+

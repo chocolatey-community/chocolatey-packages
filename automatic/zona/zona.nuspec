@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+	<title>Zona</title>
+    <version>{{PackageVersion}}</version>
+    <authors>zona.ru</authors>
+    <owners>tonigellida</owners>
+	<summary>
+	Zona is a torrent streaming program in the vain of Popcorn Time.
+	</summary>
+	<description>
+	Zona is a torrent streaming program in the vain of Popcorn Time.
+	</description>
+    <projectUrl>http://zona.ru/</projectUrl>
+    <tags>notUninstallable popcorn-time movies video-streaming torrent-download video-on-demand tv-streaming watch-video peer-to-peer movie-catalog torrent-movies popcorntime</tags>
+    <copyright></copyright>
+	<licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+	<dependencies>
+		<dependency id="javaruntime" />
+		<dependency id="autohotkey.portable" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>StartIsBack+</title>
+    <version>{{PackageVersion}}</version>
+    <authors>D.I. Management Services Pty Limited</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	The all-new version of StartIsBack for Windows 8.1. It's a FREE upgrade for all StartIsBack users.
+	</summary>
+    <description>
+	The all-new version of StartIsBack for Windows 8.1. It's a FREE upgrade for all StartIsBack users.
+	</description>
+    <projectUrl>http://startisback.com/</projectUrl>
+    <tags>notSilent notUninstallable trial-version start-menu windows-8.1</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.startisback.com/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

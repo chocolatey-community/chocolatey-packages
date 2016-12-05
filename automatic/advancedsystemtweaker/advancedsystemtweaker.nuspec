@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Advanced System Tweaker</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Tweaking.com</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A central hub for any kind of tweak or anything else that can be done via registry files, commands and vbscript files.
+	</summary>
+    <description>
+	A central hub for any kind of tweak or anything else that can be done via registry files, commands and vbscript files.
+	</description>
+    <projectUrl>http://www.tweaking.com/content/page/advanced_system_tweaker.html</projectUrl>
+    <tags>performance increase-performance tune-up</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

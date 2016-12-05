@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Meld</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Kai Willadsen</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Meld is a visual diff and merge tool. You can compare two or three files and edit them in place (diffs update dynamically).
+	</summary>
+    <description>
+Meld is a visual diff and merge tool. You can compare two or three files and edit them in place (diffs update dynamically).
+You can compare two or three folders and launch file comparisons. You can browse and view a working copy from popular version control systems such such as CVS, Subversion, Bazaar-ng and Mercurial.
+Written with Python and GTK. While in theory meld could be compiled for Windows and OS X currently there is no download for these platforms so we do not list it as cross platform.
+	</description>
+    <projectUrl>http://meldmerge.org/</projectUrl>
+    <tags>checksIfIsInstalled file-compare diff folder-compare merging merge-folders</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

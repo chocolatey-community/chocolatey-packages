@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Rollback Rx</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Horizon DataSys</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A robust system restore utility that enables home users and IT professionals to easily restore a PC to a time before certain events occurred.
+	</summary>
+    <description>
+	A robust system restore utility that enables home users and IT professionals to easily restore a PC to a time before certain events occurred.
+	</description>
+    <projectUrl>http://www.horizondatasys.com/en/products_and_solutions.aspx?ProductId=1</projectUrl>
+    <tags>notSilent trial-version restore backup</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.horizondatasys.com/en/termsofuse.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

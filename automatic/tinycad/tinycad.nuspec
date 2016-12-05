@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>TinyCAD</title>
+    <version>{{PackageVersion}}</version>
+    <authors>beischer don_lucas mattpyne</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An open source schematic capture program for MS Windows.
+	</summary>
+    <description>
+	An open source schematic capture program for MS Windows.
+	
+	Use TinyCAD to produce professional circuit diagrams and export net list information to PCB applications.
+	</description>
+    <projectUrl>http://sourceforge.net/apps/mediawiki/tinycad/index.php?title=TinyCAD</projectUrl>
+    <tags>pcb circuit-diagram electronic schematic</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

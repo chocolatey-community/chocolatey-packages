@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CrystalDiskMark</title>
+    <version>{{PackageVersion}}</version>
+    <authors>hiyohiyo</authors>
+    <owners>tonigellida</owners>
+    <summary>
+CrystalDiskMark is a small HDD benchmark utility for your hard drive that enable you to rapidly measure sequential and random read/write speeds. 
+	</summary>
+    <description>
+CrystalDiskMark is a small HDD benchmark utility for your hard drive that enable you to rapidly measure sequential and random read/write speeds. 
+	</description>
+    <projectUrl>http://crystalmark.info/software/CrystalDiskMark/index-e.html</projectUrl>
+    <tags>flash test benchmark drive</tags>
+    <copyright></copyright>
+    <licenseUrl>http://crystalmark.info/software/CrystalDiskMark/manual-en/License.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>OneDrive</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Microsoft</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Delivers a satisfactory online file storage and sharing solution in a free and easy to use service.
+	</summary>
+    <description>
+	Delivers a satisfactory online file storage and sharing solution in a free and easy to use service.
+	</description>
+    <projectUrl>https://onedrive.live.com/about/</projectUrl>
+    <tags>notSilent notUninstallable backup webdav online-backup selective-sync</tags>
+    <copyright></copyright>
+    <licenseUrl>http://windows.microsoft.com/en-US/windows-live/microsoft-service-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

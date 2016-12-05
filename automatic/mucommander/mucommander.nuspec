@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>muCommander</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Maxence Bernard</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A cross-platform file manager that will run on any operating system which supports Java.
+	</summary>
+    <description>
+	A cross-platform file manager that will run on any operating system which supports Java.
+	</description>
+    <projectUrl>http://www.mucommander.com/index.php#download</projectUrl>
+    <tags>file-manager file-management dual-panel</tags>
+    <copyright></copyright>
+    <licenseUrl>http://trac.mucommander.com/wiki/License</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

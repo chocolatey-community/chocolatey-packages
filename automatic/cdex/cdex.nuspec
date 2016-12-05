@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CDex</title>
+    <version>{{PackageVersion}}</version>
+    <authors>arianepaola codingmaster</authors>
+    <owners>tonigellida</owners>
+    <summary>
+    A CD-Ripper, extracting digital audio data from an Audio CD.
+	</summary>
+    <description>
+	A CD-Ripper, extracting digital audio data from an Audio CD.
+	
+	###Notes
+	
+	Stable version has bugs, I recommend to use the beta.
+	</description>
+    <projectUrl>http://cdexos.sourceforge.net/</projectUrl>
+    <tags>audio-cd-ripper audio-cd ripping extract-tracks mp3</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

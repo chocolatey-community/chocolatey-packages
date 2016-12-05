@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>F-Secure Anti-Virus</title>
+    <version>{{PackageVersion}}</version>
+    <authors>F-Secure</authors>
+    <owners>tonigellida</owners>
+    <summary>
+F-Secure Anti-Virus provides real-time protection against viruses, spyware, infected e-mail attachments and other malware.
+	</summary>
+    <description>
+F-Secure Anti-Virus provides real-time protection against viruses, spyware, infected e-mail attachments and other malware.
+Automatic updates and advanced real-time response guarantee the fastest protection against all new threats, while DeepGuard 5 Exploit Protection elevates your protection to a new level.
+F-Secure Anti-Virus is a security solution that uses superior cloud-based technology to protect you against existing online threats and to respond to new threats effectively as they appear.
+Easy to install and does not slow down your computer.
+F-Secure Anti-Virus will protect you.
+	</description>
+    <projectUrl>http://www.f-secure.com/en/web/home_global/anti-virus</projectUrl>
+    <tags>trial-version notSilent antivirus anti-spyware malware-remover</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.f-secure.com/en/web/home_global/license-terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

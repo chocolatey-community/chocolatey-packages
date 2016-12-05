@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Visual Studio Add-in for Qt5</title>
+    <version>{{PackageVersion}}</version>
+    <authors>The Qt Company</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The Qt Visual Studio Add-in allows developers to use this standard development environment without having to worry about any Qt-related build steps or tools.
+	</summary>
+    <description>
+The Qt Visual Studio Add-in allows developers to use this standard development environment without having to worry about any Qt-related build steps or tools.
+The main features of the add-in are:
+-Wizards for creating new Qt projects and classes.
+-Automated build setup for the Meta-Object Compiler(moc), the User Interface Compiler (uic), and the Resource Compiler (rcc).
+-Import and export of Qt Project {.pro} and Project Include {.pri} files.
+-Integrated Qt resource management.
+-Integrated Qt documentation.
+-Debugging extensions for Qt data types.
+	</description>
+	<releaseNotes>
+Supports versions 2008, 2010, 2012 and 2013, does not work with the Express edition. Only Qt5, not Qt4.
+	</releaseNotes>
+    <projectUrl>http://www.qt.io/</projectUrl>
+    <tags>notSilent notUninstallable sdk framework qt qt-creator ide dev development msvs2008 msvs2010 msvs2012 msvs2013 qt5</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

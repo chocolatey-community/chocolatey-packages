@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Combined Community Codec Pack</title>
+    <version>{{PackageVersion}}</version>
+    <authors>CCCP Team</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The CCCP was created to replace the video playback packs provided in favor of a single reliable pack capable of decoding practically anything.
+	</summary>
+    <description>
+The CCCP was created to replace the video playback packs provided in favor of a single reliable pack capable of decoding practically anything.
+	</description>
+    <projectUrl>http://www.cccp-project.net/</projectUrl>
+    <tags>codec-pack audio-codecs codecs video-codecs</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.cccp-project.net/wiki/index.php?title=Main_Page</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

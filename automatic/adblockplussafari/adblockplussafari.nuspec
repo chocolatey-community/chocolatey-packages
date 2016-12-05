@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>adblockplussafari</id>
+    <title>Adblock Plus for Safari</title>
+    <version>1.7.4.1166-beta</version>
+    <authors>Wladimir Palant</authors>
+    <owners>tonigellida</owners>
+    <summary>No more ads on Safari!</summary>
+    <description>
+Adblock Plus blocks annoying ads on the web. It can block other things, like tracking, as well.
+With more than 50 million users, it is the world's most popular browser extension.
+Adblock Plus is an open source project created by Wladimir Palant in 2006.
+Eyeo was founded in 2011 by Wladimir Palant and Till Faida to make its development sustainable. 
+	</description>
+    <projectUrl>https://adblockplus.org/en/</projectUrl>
+    <tags>notSilent notUninstallable ad-blocker Chrome Firefox Opera Safari extension add-on</tags>
+    <copyright></copyright>
+    <licenseUrl>https://gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://raw.github.com/adgellida/chocolateyautomaticpackagesbeta/master/icons/adblockplussafari.png</iconUrl>
+  </metadata>
+</package>

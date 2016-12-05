@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>iReboot</title>
+    <version>{{PackageVersion}}</version>
+    <authors>NeoSmart Technologies</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A simple yet effective reboot helper tool.
+	</summary>
+    <description>
+	A simple yet effective reboot helper tool.
+	
+	iReboot sits in your taskbar at startup (only taking up 400KB of memory!) and lets you choose which operating system you want to reboot into. Instead of pressing restart, waiting for Windows to shut down, waiting for your BIOS to post, then selecting the operating system you want to boot into (within the bootloader time-limit!); you just right-click on the iReboot icon in the taskbar and select the entry you want to boot into from iReboot, and let it do the rest! If you liked EasyBCD, you'll just love iReboot!
+
+	You can also use iReboot to set up complicated recovery scenarios where the boot menu timeout is set to 0 but additional recovery and repair utilites are available from the iReboot menu.
+	</description>
+    <projectUrl>https://neosmart.net/iReboot/</projectUrl>
+    <tags>operating-system boot-manager reboot booting</tags>
+    <copyright></copyright>
+    <licenseUrl>https://neosmart.net/iReboot/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

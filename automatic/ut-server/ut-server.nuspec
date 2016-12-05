@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ut-server</id>
+    <title>Unreal Tournament 4 Server Pre Alpha Playable Build</title>
+    <version>2014.10.16-pre-alpha</version>
+    <authors>Epic Games</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The next Unreal Tournament game begins development with "a small team of UT veterans".
+The entire development is open source, which Epic characterizes as, "a collaboration between Epic, UT fans and UE4 developers." As that line infers, the game's being created using Unreal Engine 4.
+Best of all? When the game's ready to play, it will be free. As Epic puts it: "Not free to play, just free."
+	</summary>
+    <description>
+The next Unreal Tournament game begins development with "a small team of UT veterans".
+The entire development is open source, which Epic characterizes as, "a collaboration between Epic, UT fans and UE4 developers." As that line infers, the game's being created using Unreal Engine 4.
+Best of all? When the game's ready to play, it will be free. As Epic puts it: "Not free to play, just free."
+	</description>
+    <releaseNotes>
+Server Build 2330705. Only Win x64!
+	</releaseNotes>
+	<projectUrl>https://forums.unrealtournament.com/showthread.php?12011-Unreal-Tournament-Pre-Alpha-Playable-Build</projectUrl>
+    <tags>ut server game games first-person-shooter unrealengine udk x64</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+	<dependencies>
+	<dependency id="vcredist2013" />
+    </dependencies>
+  </metadata>
+</package>

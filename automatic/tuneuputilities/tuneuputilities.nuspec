@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>TuneUp Utilities</title>
+    <version>{{PackageVersion}}</version>
+    <authors>AVG</authors>
+    <owners>tonigellida</owners>
+    <summary>
+TuneUp Utilities is a computer optimization suite.
+	</summary>
+    <description>
+TuneUp Utilities is a computer optimization suite. 
+Increase performance, maintain your system, customize Windows, fix problems and speeds up your computer in real time.
+	</description>
+    <projectUrl>http://www.tune-up.com/</projectUrl>
+    <tags>notSilent notUninstallable trial-version cleaner startup-manager memory-optimization customization increase-performance process-manager fix-error pc-optimization</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.tune-up.com/products/tuneup-utilities/eula/tuu17082012/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>USB Image Tool</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Alexander Beug</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Create images of USB flash drives and MP3 players, that are mounted as USB drives.
+	</summary>
+    <description>
+	Create images of USB flash drives and MP3 players, that are mounted as USB drives.
+	
+	It allows you switch between images with different music styles on your MP3 Player or to make an exact backup image of your USB Stick.
+	</description>
+    <projectUrl>http://www.alexpage.de/usb-image-tool/</projectUrl>
+    <tags>usb disk-cloning copier imager</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

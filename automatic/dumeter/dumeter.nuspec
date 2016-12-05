@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>DU Meter</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Hagel Technologies Ltd.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A network bandwidth monitor for your computer.
+	</summary>
+    <description>
+	A network bandwidth monitor for your computer.
+	</description>
+    <projectUrl>http://www.hageltech.com/dumeter/about</projectUrl>
+    <tags>trial-version monitoring connection bandwidth isdn</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.hageltech.com/dumeter/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

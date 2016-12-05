@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>AVG AntiVirus Free Edition</title>
+    <version>{{PackageVersion}}</version>
+    <authors>AVG Technologies</authors>
+    <owners>tonigellida</owners>
+    <summary>
+AVG Free provides basic antivirus and antispyware protection for home users.
+	</summary>
+    <description>
+AVG Free provides basic antivirus and antispyware protection for home users.
+Virus database updated every day. Includes innovative LinkScanner for web-protection.
+	</description>
+    <projectUrl>http://www.avg.com/us-en/free-antivirus-download</projectUrl>
+    <tags>security antivirus vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.avg.com/eula</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

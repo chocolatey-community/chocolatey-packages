@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>HotSwap!</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Kazuyuki Nakayama</authors>
+    <owners>tonigellida</owners>
+    <summary>
+It does the same thing as you can remove device from Device Manager but it provides much friendly user interface as you remove the removable device from the "Safely Remove Hardware" icon in the notification area.
+	</summary>
+    <description>
+It does the same thing as you can remove device from Device Manager but it provides much friendly user interface as you remove the removable device from the "Safely Remove Hardware" icon in the notification area.
+It also ensures that all data are written and flushed to the disk before the device to be hot-swapped, so you can use SATA/eSATA drive as a removable device much alike USB/IEEE1394 drive.
+======= Notes =======
+You've to have a compatible hardware and OS to do this program work:
+-Windows Vista / 7 / Server 2008 / 8 (32-bit and 64-bit)
+-Silicon Image SATA Host Controller (SiI3112A, SiI3114, SiI3132, etc)
+-Silicon Image SATA-PATA (Parallel ATA) Bridge Controller (SiI3611)
+-SATA Host Controller (AHCI mode enabled in BIOS) (e.g. Intel Controller Hub (ICH), JMicron JMB363)
+-If Silicon Image controller is used, the driver will spin-down the drive upon device removable.
+Refer to http://mt-naka.com/hotswap/index_enu.htm
+
+-Does HotSwap! support Windows 2000?
+Windows 2000 is no longer supported as of Version 3.0.0.0. Please use Version 2.0.0.0.
+-Does HotSwap! support Windows XP and Server 2003?
+Windows XP and Server 2003 are no longer supported as of Version 6.0.0.0. Please use Version 5.0.0.0.
+-To uninstall right click on the notification icon and select Uninstall, then remove "chocolatey/lib/hotswap.x.x.x.x" folder.
+
+	</description>
+    <projectUrl>http://mt-naka.com/hotswap/index_enu.htm</projectUrl>
+    <tags>notUninstallable device-manager remove-device dafely-remove-hardware</tags>
+    <copyright></copyright>
+    <licenseUrl>http://mt-naka.com/hotswap/index_enu.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>KiCad</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Jean-Pierre Charras</authors>
+    <owners>tonigellida</owners>
+    <summary>
+KiCad is an open source software suite for electronic design automation (EDA) - designing schematics of electronic circuits and printed circuit boards (PCB).
+	</summary>
+    <description>
+KiCad is an open source software suite for electronic design automation (EDA) - designing schematics of electronic circuits and printed circuit boards (PCB).
+And features an integrated environment between schematic capture, bill of materials list, and PCB layout.
+	</description>
+    <projectUrl>http://www.kicad-pcb.org/display/KICAD/Download+Kicad</projectUrl>
+    <tags>modeling cad engineering electronics electronic-design-automation schematic-capture pcb-layout</tags>
+    <copyright></copyright>
+    <licenseUrl>https://gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Isoplex</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Isohunt</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A movie searching and streaming application.
+	</summary>
+    <description>
+	A movie searching and streaming application.
+	
+	It is digging the web to find a movie you want so you can stream it in any available quality without downloading.
+	
+	###Notes
+	
+	fbvlc dependency is installed silently (not chocolatey package).
+	
+	</description>
+    <projectUrl>http://isoplex.isohunt.to</projectUrl>
+	<tags>peer-to-peer movie-catalog torrent-movies isohunt popcorntime</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

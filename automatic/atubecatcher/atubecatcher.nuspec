@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>aTube Catcher</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Diego Uscanga</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Download videos from web sites like Youtube, Dailymotion, Google, Yahoo!, Metacafe, Spike, Megarotic, Yahoo!, CBS, Comedycentral, MyPlay, Globo, RTVE, etc.
+	</summary>
+    <description>
+	Download videos from web sites like Youtube, Dailymotion, Google, Yahoo!, Metacafe, Spike, Megarotic, Yahoo!, CBS, Comedycentral, MyPlay, Globo, RTVE, etc.
+	
+	Now has support for more than 100+ video sharing sites.
+	</description>
+    <projectUrl>http://atube-catcher.dsnetwb.com/video/download.html</projectUrl>
+    <tags>video-conversion youtube-downloader video-downloader record-screen</tags>
+    <copyright></copyright>
+    <licenseUrl>http://atube-catcher.dsnetwb.com/video/node/41?q=node/41</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

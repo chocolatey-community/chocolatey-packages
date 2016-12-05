@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Game Downloader</title>
+    <version>{{PackageVersion}}</version>
+    <authors>dev-fire</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A portable and open source download client, which interacts with a server side library for downloading numerous games.
+	</summary>
+    <description>
+	A portable and open source download client, which interacts with a server side library for downloading numerous games.
+	
+	###Notes
+	
+	This application requires the .NET Framework 3.5 to be installed.
+	</description>
+    <projectUrl>http://dev-fire-gd.sourceforge.net/</projectUrl>
+    <tags>game downloads digital-distribution content-delivery game-store</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

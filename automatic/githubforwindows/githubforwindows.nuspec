@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>GitHub for Windows</title>
+    <version>{{PackageVersion}}</version>
+    <authors>GitHub</authors>
+    <owners>Adam Wright tonigellida</owners>
+    <summary>
+	A git client for windows and GitHub.
+	</summary>
+    <description>
+	A git client for windows and GitHub.
+	
+	A 100% native application that will run on all Windows version.
+	
+	Included in the application is a complete installation of msysGit making this the single best way to start using Git on Windows.
+	</description>
+    <projectUrl>https://windows.github.com</projectUrl>
+    <tags>notUninstallable git client github distributed version control</tags>
+    <copyright></copyright>
+    <licenseUrl>https://help.github.com/articles/github-terms-of-service/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+    <dependencies>
+    <dependency id="autoit.commandline" />
+    </dependencies>
+  </metadata>
+</package>

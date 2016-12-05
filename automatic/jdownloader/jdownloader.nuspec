@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>JDownloader</title>
+    <version>{{PackageVersion}}</version>
+    <authors>AppWork UG</authors>
+    <owners>elliando tonigellida</owners>
+    <summary>
+JDownloader simplifies and improves the process of downloading files from "free" file hosting sites.
+	</summary>
+    <description>
+JDownloader simplifies and improves the process of downloading files from "free" file hosting sites like Rapidshare, MEGA, Mediafire, 4Shared, uploaded.to, Firedrive, Cyberlocker, etc.
+JDownloader offers downloading in multiple parallel streams, CAPTCHA recognition, and automatic file extraction.
+JDownloader can import CCF, RSDF and the new DLC files.
+	</description>
+    <projectUrl>http://jdownloader.org</projectUrl>
+    <tags>notSilent download-manager jdownloader java</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

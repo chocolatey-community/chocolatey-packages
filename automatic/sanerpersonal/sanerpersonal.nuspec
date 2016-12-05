@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SecPod Saner Personal</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SecPod</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Determine your system's vulnerabilities and repair them with just one push of a button.
+	</summary>
+    <description>
+SecPod Saner is a user-friendly and reliable software solution designed as a means of proactively protecting your computer against threats, virus attacks and malware.
+Generally, most risks to your system originate from outdated software, including files that are obsolete, which in turn become vulnerable to outside threats. Malware and viruses benefit from exactly those loopholes in your PC to attack and obtain your personal data that can be used in nefarious purposes.
+Similarly, they can threaten your computer's entire stability, causing system crashes and a wide array of different problems, which end up completely wrecking your machine.
+SecPod Saner is quite simple to understand and work with. Upon installation, you can launch the utility then press the 'Scan' button, and it will analyze all your system's status, determining all the outdated files and components, as well as identifying their possible fixes, if any exist.
+Subsequently, SecPod Saner enables you to repair the detected issues by clicking on the 'Remediate All' button, which will then start to bring your PC's software and all related files up to date, eliminating vulnerabilities as much as possible and lowering the risk of malware attacks.
+While most applications focus on eliminating the virus or cleaning the malware from your computer, they do not work on determining the cause of the infection or the manner in which your system became vulnerable in the first place.
+With SecPod Saner, you can identify the status of your PC and remediate the possible reasons why your system is at risk of being infected, thus working proactively in preventing your machine from being exposed to future attacks.
+To conclude, SecPod Saner is an efficient and useful program that can successfully help you keep your computer at bay from virus attacks and malware infections, by eliminating the commonly used loopholes and preventing their occurrence altogether.
+	</description>
+    <projectUrl>http://www.secpod.com/saner-personal.html</projectUrl>
+    <tags>notSilent vulnerability inspector security</tags>
+    <copyright></copyright>
+    <licenseUrl>http://saner.secpod.com/faq.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

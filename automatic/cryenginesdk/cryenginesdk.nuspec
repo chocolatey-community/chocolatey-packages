@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>CryENGINE SDK</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Crytek</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Free CryENGINE SDK for non-commercial use.
+	</summary>
+    <description>
+Free CryENGINE SDK for non-commercial use.
+Anyone can now download a full version of the best All-In-One Game Development Engine, for free and use it without charge for non-commercial game development.
+Try out the fastest toolset for creating game worlds and use the power of CryENGINE in your own games.
+	</description>
+    <projectUrl>http://mycryengine.com/</projectUrl>
+    <tags>non-commercial-version game game-engine game-development game-creation-platform videogames crysis </tags>
+    <copyright></copyright>
+    <licenseUrl>http://mycryengine.com/?conid=3</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

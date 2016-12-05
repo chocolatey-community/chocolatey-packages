@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Display Driver Uninstaller</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Wagnard</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Display Driver Uninstaller is a driver removal utility that can help you completely remove AMD/NVIDIA graphics card drivers and packages from your system, without leaving leftovers behind (including registry keys, folders and files, and the driver store).
+	</summary>
+    <description>
+Display Driver Uninstaller is a driver removal utility that can help you completely remove AMD/NVIDIA graphics card drivers and packages from your system, without leaving leftovers behind (including registry keys, folders and files, and the driver store).
+The AMD/NVIDIA video drivers can normally be uninstalled from the Windows Control panel, this driver uninstaller program was designed to be used in cases where the standard driver uninstall fails, or whenever you need to thoroughly delete NVIDIA and ATI video card drivers. 
+The current effect after you use this driver removal will be similar as if its the first time you install a new driver just like a fresh, clean install of Windows. As with any tool of this kind, we recommend creating a new system restore point before using it, so that you can revert your system at any time if you run into problems. 
+This tool acts similar to what other driver cleaner programs do + the extra mentioned above. 
+If you have problem installing older driver or newer one, give it a try as there are some reports that it fixes those problems.
+	</description>
+    <projectUrl>http://www.wagnardmobile.com/DDU/index.html</projectUrl>
+    <tags>notSilent notUninstallable driver uninstaller nvidia ati</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

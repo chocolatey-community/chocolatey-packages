@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Adblock Plus for Opera</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Wladimir Palant</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Adblock Plus blocks internet ads, allowing you to regain control of the internet and view the web the way you want to.
+	</summary>
+    <description>
+	Adblock Plus blocks internet ads, allowing you to regain control of the internet and view the web the way you want to.
+	
+	It is supported by over forty filter subscriptions which automatically configure it for purposes ranging from removing nearly all online advertising to blocking all known malware domains.
+	</description>
+    <projectUrl>https://adblockplus.org/en/</projectUrl>
+    <tags>notSilent notUninstallable autoUpdatable ad-blocker Chrome Firefox Opera extension add-on</tags>
+    <copyright></copyright>
+    <licenseUrl>https://gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

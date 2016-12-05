@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Little Registry Cleaner</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Little Apps</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An open source program that is designed to cleanup Microsoft Windows Registry.
+	</summary>
+    <description>
+	An open source program that is designed to cleanup Microsoft Windows Registry.
+	</description>
+    <projectUrl>http://www.little-apps.eu/little-registry-cleaner/index.html</projectUrl>
+    <tags>registry-cleaner registry-maintenance registry-optimization</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

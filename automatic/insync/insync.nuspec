@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Insync</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Insync</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The most powerful Google Drive client ever built.
+	</summary>
+    <description>
+The most powerful Google Drive client ever built.
+* Advanced sharing without browser.
+* Multiple Google Drive Account support.
+* Bidirectional sync of your Google Docs to one or more Mac, Windows or Linux desktops.
+* View and edit Google Drive documents offline in Office format. Changes get synced back too.
+* Sync any files outside your Insync directory (via symlink).
+	</description>
+    <projectUrl>https://www.insynchq.com/</projectUrl>
+    <tags>sync file-hosting online-backup dropbox gmail google google-drive</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.insynchq.com/terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

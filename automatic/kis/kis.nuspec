@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Kaspersky Internet Security</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Kaspersky Lab</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Kaspersky Internet Security combines antivirus protection with a personal firewall and an anti-spam filter.
+	</summary>
+    <description>
+Kaspersky Internet Security combines antivirus protection with a personal firewall and an anti-spam filter.
+Also keeps your PC free from malicious code, adware, spyware, hacker attacks, dialers, spam and network fraud.
+	</description>
+	<releaseNotes>
+If you want to change to english language on the fly in other language version press Shift+F12 with the program opened. To return Shift+F5.
+You cannot change language in the interface of Japanese, Vietnamese, Chinese, and English versions.
+Only en-us, es-mx, pt-br, nl-nl, fr-be languages supported. Similar languages like es-es, pt-pt, en-gb use them.
+	</releaseNotes>
+    <projectUrl>http://usa.kaspersky.com/downloads/free-home-trials/internet-security</projectUrl>
+    <tags>notSilent trial-version security firewall antivirus internet-security anti-spyware</tags>
+    <copyright></copyright>
+    <licenseUrl>http://support.kaspersky.com/11198</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

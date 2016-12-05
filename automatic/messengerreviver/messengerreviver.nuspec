@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Messenger Reviver</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Jonathan Kay</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Messenger Reviver is a messenger repair tool that allows use of Windows Live Messenger even after the migration to Skype.
+	</summary>
+    <description>
+Messenger Reviver is a messenger repair tool that allows use of Windows Live Messenger even after the migration to Skype.
+This simple app can install working versions of Messenger 2012 or Messenger 2009 and also Revive (repair and modify) versions of Messenger 2012, 2011, and 2009 that are already installed.
+Reviver checks to see if Messenger is currently installed, which versions can be modified, and if they need any new repairs.
+Reviver will even know if Skype automatically removed Messenger. While Reviver will allow you to sign into Messenger for the time being, it will not extend past the full discontinuation date (estimated to be March 2014).
+Reviver  will offer different options depending on whether or not Messenger is currently installed or if it was installed but removed by Skype.
+In the first case you will be able to select from a list of detected versions of Messenger. If Messenger is not installed you can choose to install Messenger 2012 or 2009 (but not 2011) and pick from 47 supported languages.
+Finally, if Skype has removed Messenger you will be prompted to begin repairs to restore it.
+All of these different processes are very simple and quick, allowing you to use Messenger again. The installations and repairs to the different versions of Messenger do not change or update the programs.
+They still function the same as before. Thankfully Reviver is just a great and simple way to maintain your favorite version of Messenger without having to switch to Skype.
+	</description>
+    <projectUrl>http://messengergeek.wordpress.com/</projectUrl>
+    <tags>notSilent messenger msn chat skype</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

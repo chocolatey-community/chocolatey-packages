@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Ad-Aware Free Antivirus+</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Lavasoft</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Ad-Aware Free Antivirus+ combines the legendary Anti-spyware engine with a super fast, free Antivirus.
+	</summary>
+    <description>
+	Ad-Aware Free Antivirus+ combines the legendary Anti-spyware engine with a super fast, free Antivirus.
+	
+	It now features download protection (blocks malicious files before being written to disk), sandboxing (keeps unknown apps running in a virtual environment) and advanced detection.
+	</description>
+    <projectUrl>http://www.lavasoft.com/products/ad_aware_free.php</projectUrl>
+    <tags>notSilent notUninstallable antivirus firewall internet-security anti-spyware anti-malware real-time-protection</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.lavasoft.com/terms_of_use/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

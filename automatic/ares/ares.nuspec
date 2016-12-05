@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Ares Galaxy</title>
+    <version>{{PackageVersion}}</version>
+    <authors>lap3k</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free open source file sharing program that enables users to share any digital file including images, audio, video, software, documents, etc.
+	</summary>
+    <description>
+	A free open source file sharing program that enables users to share any digital file including images, audio, video, software, documents, etc.
+	</description>
+    <projectUrl>http://aresgalaxy.sourceforge.net/</projectUrl>
+    <tags>file-sharing peer-to-peer</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Spybot - Search and Destroy</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Safer Networking Ltd</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Detects and removes spyware, a relatively new kind of threat not yet covered by common anti-virus applications.
+	</summary>
+    <description>
+	Detects and removes spyware, a relatively new kind of threat not yet covered by common anti-virus applications.
+	</description>
+    <projectUrl>http://www.safer-networking.org/private/</projectUrl>
+    <tags>security anti-spyware malware-scanner anti-rootkit spyware-removal</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.safer-networking.org/eula-for-private-users/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

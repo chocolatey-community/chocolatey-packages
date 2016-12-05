@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>fbvlc</title>
+    <version>{{PackageVersion}}</version>
+    <authors>rsatom</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Vlc web plugin based on FireBreath.
+	</summary>
+    <description>
+	Vlc web plugin based on FireBreath.
+	</description>
+    <projectUrl>https://code.google.com/p/fbvlc/</projectUrl>
+    <tags>notUninstallable vlc codec web</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

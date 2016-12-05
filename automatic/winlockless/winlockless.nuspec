@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>WinLockLess</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Hispasec</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free utility that protects your PC against any installation attempt by viruses, Trojans and scareware, such as police dreaded virus.
+	</summary>
+    <description>
+	A free utility that protects your PC against any installation attempt by viruses, Trojans and scareware, such as police dreaded virus.
+	</description>
+    <projectUrl>http://hispasec.com/</projectUrl>
+    <tags>security anti-trojan vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+	<dependencies>
+    <dependency id="DotNet4.0" />
+    </dependencies>
+  </metadata>
+</package>

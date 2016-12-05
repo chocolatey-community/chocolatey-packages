@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>DesignSpark PCB</title>
+    <version>{{PackageVersion}}</version>
+    <authors>RS Components Ltd</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The Most Powerful Free Schematic and PCB Layout in the World.
+	</summary>
+    <description>
+The Most Powerful Free Schematic and PCB Layout in the World.
+	</description>
+	<releaseNotes>
+Not uninstallable silently.
+	</releaseNotes>
+    <projectUrl>http://www.designspark.com/page/designspark-pcb-home-page</projectUrl>
+    <tags>notSilent electronics pcb-layout</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.designspark.com/knowledge-item/design-science-license-</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

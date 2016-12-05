@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>oscillation</id>
+    <title>OSCillation</title>
+    <version>1.0-beta</version>
+    <authors>Equipson S.A.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+OSCillation, the new WORK PRO free software for Android and Windows PC, is an application for the control of devices through OSC Protocol. Users will be able to control several devices at the same time thanks to its multi-target capability.
+This application adds 6 preset layouts for users to control audio and lighting DMX devices or digital signal processors designed by WORK PRO. Besides, users will be able to customize their own layouts for all kind of devices and software for djs, vjs…
+	</summary>
+    <description>
+OSCillation, the new WORK PRO free software for Android and Windows PC, is an application for the control of devices through OSC Protocol. Users will be able to control several devices at the same time thanks to its multi-target capability.
+	</description>
+    <projectUrl>http://workproaudio.com/oscillation</projectUrl>
+    <tags>remote-control music-production midi open-sound-control music-osc-open-sound-control osc</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://raw.github.com/adgellida/chocolateyautomaticpackagesbeta/master/icons/oscillation.png</iconUrl>
+  </metadata>
+</package>

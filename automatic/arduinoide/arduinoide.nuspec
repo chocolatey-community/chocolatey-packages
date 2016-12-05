@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Arduino IDE</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Arduino</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software.
+	</summary>
+    <description>
+	Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software.
+	
+	It's intended for artists, designers, hobbyists, and anyone interested in creating interactive objects or environments.
+	</description>
+    <projectUrl>http://arduino.cc/en/Main/Software</projectUrl>
+    <tags>ide electronics arduino processing</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

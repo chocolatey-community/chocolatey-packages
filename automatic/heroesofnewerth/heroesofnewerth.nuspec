@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Heroes of Newerth</title>
+    <version>{{PackageVersion}}</version>
+    <authors>S2 Games</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A game imitating the look of DOTA, now with a dedicated server and ratings saved in your history to make matches equally fighting for both parts.
+	</summary>
+    <description>
+	A game imitating the look of DOTA, now with a dedicated server and ratings saved in your history to make matches equally fighting for both parts.
+	</description>
+    <projectUrl>http://www.heroesofnewerth.com/download/</projectUrl>
+    <tags>game moba dota lol hon</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.heroesofnewerth.com/documents/tos/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

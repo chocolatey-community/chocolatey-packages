@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Adobe Shockwave Player</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Adobe</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Displays Web content that has been created by Adobe Director.
+	</summary>
+    <description>
+	Displays Web content that has been created by Adobe Director.
+	</description>
+    <projectUrl>http://get.adobe.com/es/shockwave/</projectUrl>
+    <tags>shockwave adobe-director</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.adobe.com/products/players/shockwave-player-licensing-distribution.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

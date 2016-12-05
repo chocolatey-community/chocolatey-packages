@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Fritzing</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Fachhochschule Potsdam</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An open-source initiative to support designers, artists, researchers and hobbyists to take the step from physical prototyping to actual product.
+	</summary>
+    <description>
+	An open-source initiative to support designers, artists, researchers and hobbyists to take the step from physical prototyping to actual product.
+	
+	###Notes
+	
+	Probably beta release (automatic push). Package version less than v1, treat as stable.
+	</description>
+    <projectUrl>http://fritzing.org/download/</projectUrl>
+    <tags>prototype pcb processing arduino breadboard</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

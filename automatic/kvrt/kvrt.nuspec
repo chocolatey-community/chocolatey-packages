@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Kaspersky Virus Removal Tool 11.0.3.7</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Kaspersky Lab</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	It can be installed on infected computers, even in Safe Mode, and it can automatically remove viruses, Trojans, rootkits, adware or spyware.
+	</summary>
+    <description>
+	The Kaspersky Virus Removal Tool application was designed to be another virus scanner and detection software from Kaspersky. The produst will scan the specified locations for any virus threats and remove them or send to Quarantine folder.
+	Kaspersky Virus Removal Tool is a utility designed to remove all types of threats from computers. Kaspersky Virus Removal Tool uses the effective detection algorithms realized in Kaspersky Anti-Virus and AVZ. 
+	Kaspersky Virus Removal Tool does not provide resident protection for your computer. After disinfecting a computer, you are supposed to remove the tool and install a full version of antivirus software.	
+
+	Features:
+			
+	-Simplified interface.
+	-Can be installed to an infected computer (Safe Mode supported).
+	-Composite scan and disinfection system: signature detection and heuristic analyzer.
+	-Gathering system information and interactive creation of scripts for disinfection.
+	-Automatic and manual removal of virus, Trojans and worms.
+	-Automatic and manual removal of Spyware and Adware modules.
+	-Automatic and manual removal of all types of rootkits.
+	</description>
+	<releaseNotes>
+	You've to uninstall it and update it through choco to use it another day.
+	</releaseNotes>
+    <projectUrl>http://www.kaspersky.com/antivirus-removal-tool?form=1</projectUrl>
+    <tags>notSilent notUninstallable free-version fix-infections no-real-time-protection security antivirus vulnerability</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.kaspersky.com/other/eulawin8-en?cid=acq_pad</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+	<title>The Windows Tweaker</title>
+    <version>{{PackageVersion}}</version>
+	<authors>Siddharth Srivastava</authors>
+	<owners>Redsandro tonigellida</owners>
+	<summary>
+Windows Tweaker is an open source program that can tweak many system settings.
+	</summary>
+	<description>
+Windows Tweaker is an open source program that can tweak many system settings.
+	</description>
+	<releaseNotes>
+Changes in version 5.2
+* Redesigned the interface, to provide better contrasts
+* Added new tweak to Disable all Windows+X hotkeys under Restrictions -> Explorer
+* Added new tweak to Disable password reveal in Windows 8 under Restrictions -> Explorer
+* Several bug-fixes
+	</releaseNotes>
+	<projectUrl>http://www.thewindowstweaker.com/</projectUrl>
+	<tags>notUninstallable admin tweaker tweaks</tags>
+	<copyright></copyright>
+	<licenseUrl>http://www.gnu.org/licenses/gpl-3.0-standalone.html</licenseUrl>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+	<dependencies>
+	<dependency id="DotNet4.5" version="4.5.0" />
+	</dependencies>
+  </metadata>
+</package>

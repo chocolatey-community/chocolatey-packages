@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SUPERAntiSpyware</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SUPERAntiSpyware</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Detects and remove spyware, adware, malware, trojans, rogue software, worms, rootkits, parasites and other potentially harmful software applications, as well as restore modified system settings.
+	</summary>
+    <description>
+	Detects and remove spyware, adware, malware, trojans, rogue software, worms, rootkits, parasites and other potentially harmful software applications, as well as restore modified system settings.	</description>
+    <projectUrl>http://www.superantispyware.com/</projectUrl>
+    <tags>notSilent anti-spyware anti-malware adware malware-removal trojans</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.superantispyware.com/eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

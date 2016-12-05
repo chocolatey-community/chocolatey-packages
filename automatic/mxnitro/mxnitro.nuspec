@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mxnitro</id>
+    <title>MxNitro</title>
+    <version>1.0.0.700-alpha</version>
+    <authors>Maxthon International Limited</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Maxthon’s MxNitro Web Browser is the newest addition to Maxthon’s family of high-performance web browsers.
+	</summary>
+    <description>
+Maxthon’s MxNitro Web Browser is the newest addition to Maxthon’s family of high-performance web browsers.
+If you want the fastest-starting, quickest page-loading, and most visually uncluttered web browser in the world, you’ve come to the right place.
+If you are one of the millions of web surfers who don’t want to mess with complicated features like ad blockers, extensions and cloud services, this is the web browser for you.
+Maxthon’s MxNitro web browser was built from the ground up to maximize start-up time, page rendering speed, and stability with impressive results.
+	</description>
+    <projectUrl>http://usa.maxthon.com/mxnitro/</projectUrl>
+    <tags>maxthon web browser webkit</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.maxthon.com/linux/eula/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://raw.github.com/adgellida/chocolateyautomaticpackagesalpha/master/icons/mxnitro.png</iconUrl>
+  </metadata>
+</package>

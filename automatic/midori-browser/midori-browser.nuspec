@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Midori</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Christian Dywan, Nancy Runge</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A lightweight, fast, and free web browser.
+	</summary>
+    <description>
+	A lightweight, fast, and free web browser.
+	</description>
+    <projectUrl>http://midori-browser.org/download/</projectUrl>
+    <tags>web-browser internet-browser webkit</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

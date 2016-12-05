@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>GoodSync</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Siber Systems Inc.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Synchronizes and backs up files such as photos, financial documents, MP3s, e-mails between desktops, laptops, servers, and external drives.
+	</summary>
+    <description>
+	Synchronizes and backs up files such as photos, financial documents, MP3s, e-mails between desktops, laptops, servers, and external drives.
+	
+	It is the latest software in a series of highly reliable, easy-to-use products from Siber Systems, the makers of RoboForm.
+	
+	It uses an innovative synchronization algorithm that offers true bi-directional synchronization.
+	
+	See for yourself how easy it is to set up and use GoodSync.
+	</description>
+    <projectUrl>http://www.goodsync.com/</projectUrl>
+    <tags>limited-version sync cloud</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.goodsync.com/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>firefox-dev</id>
+    <title>Firefox Developer Edition</title>
+    <version>35.0-alpha2</version>
+    <authors>Mozilla</authors>
+    <owners>tonigellida</owners>
+    <summary>
+A version made "by developers, for developers".
+	</summary>
+    <description>
+A version made "by developers, for developers".
+Developer Edition is "just Aurora rebranded".
+By default, the Developer Edition includes the Firefox Developer Tools Protocol Adapter which purports to allow developers to debug the Chrome desktop and iOS Safari browsers from within Firefox.
+Developer Edition replaces the Firefox Aurora channel, which is located between the Nightly channel, and the Beta channel, except in the area of Android, where there will be changes.
+	</description>
+    <projectUrl>https://www.mozilla.org/en-US/firefox/developer/</projectUrl>
+    <tags>browser mozilla firefox developer fx10</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.mozilla.org/MPL/2.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://raw.github.com/adgellida/chocolateyautomaticpackagesalpha/master/icons/firefox-dev.png</iconUrl>
+  </metadata>
+</package>

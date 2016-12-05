@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>K-Lite Codec Pack Mega</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Codec Guide</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The K-Lite Codec Pack is a collection of DirectShow filters, VFW/ACM codecs, and tools.
+	</summary>
+    <description>
+The K-Lite Codec Pack is a collection of DirectShow filters, VFW/ACM codecs, and tools.
+Codecs and DirectShow filters are needed for encoding and decoding audio and video formats.
+The K-Lite Codec Pack is designed as a user-friendly solution for playing all your audio and movie files.
+With the K-Lite Codec Pack you should be able to play all the popular audio and video formats and even several less common formats.
+======= Notes =======
+Same as Full, plus:
+-Several ACM and VFW codecs for video encoding/editing
+-A few additional DirectShow filters:
+-AC3Filter
+-A few extra small tools
+</description>	 
+	<projectUrl>http://codecguide.com/</projectUrl>
+    <tags>codecs video</tags>
+    <copyright></copyright>
+    <licenseUrl>http://codecguide.com/termsofuse.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

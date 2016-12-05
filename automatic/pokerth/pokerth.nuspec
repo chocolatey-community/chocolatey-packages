@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>PokerTH</title>
+    <version>{{PackageVersion}}</version>
+    <authors>doitux floty lotodore</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free implementation of the Texas hold'em poker game which is mostly played in casinos and has a growing popularity worldwide.
+	</summary>
+    <description>
+	A free implementation of the Texas hold'em poker game which is mostly played in casinos and has a growing popularity worldwide.
+	</description>
+    <projectUrl>http://www.pokerth.net/</projectUrl>
+    <tags>notSilent game online-game poker</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

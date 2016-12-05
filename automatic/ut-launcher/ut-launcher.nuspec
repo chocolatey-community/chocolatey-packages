@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>UTLauncher</title>
+    <version>{{PackageVersion}}</version>
+    <authors>CodeCharmLtd</authors>
+    <owners>tonigellida</owners>
+    <summary>
+UTLauncher is a standalone application to join UT4 servers.
+You will need latest raxxy's UT build to use this though.
+In the future it is planned to automatically download latest UT playable releases.
+Double click on a server to join. It will ask for UnrealTournament.exe.
+	</summary>
+    <description>
+UTLauncher is a standalone application to join UT4 servers.
+You will need latest raxxy's UT build to use this though.
+In the future it is planned to automatically download latest UT playable releases.
+Double click on a server to join. It will ask for UnrealTournament.exe.
+	</description>
+    <projectUrl>https://github.com/CodeCharmLtd/UTLauncher</projectUrl>
+    <tags>ut game games first-person-shooter unrealengine udk</tags>
+    <copyright></copyright>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

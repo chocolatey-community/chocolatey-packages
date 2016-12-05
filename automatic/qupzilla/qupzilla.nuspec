@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>QupZilla</title>
+    <version>{{PackageVersion}}</version>
+    <authors>QupZilla</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A cross-platform lightweight browser built on the QtWebKit engine.
+	</summary>
+    <description>
+	A cross-platform lightweight browser built on the QtWebKit engine.
+	</description>
+    <projectUrl>http://www.qupzilla.com/</projectUrl>
+    <tags>notSilent web-browser plugins webkit</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.gnu.org/licenses/quick-guide-gplv3.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

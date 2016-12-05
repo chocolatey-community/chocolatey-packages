@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Advanced System Care Free</title>
+    <version>{{PackageVersion}}</version>
+    <authors>IObit</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Takes a one-click approach to protect, repair, clean, and optimize your PC.
+	</summary>
+    <description>
+	Takes a one-click approach to protect, repair, clean, and optimize your PC.
+	</description>
+    <projectUrl>http://www.iobit.com/advancedsystemcareper.php#none</projectUrl>
+    <tags>privacy optimization registry-cleaner cleaner</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.iobit.com/legal.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

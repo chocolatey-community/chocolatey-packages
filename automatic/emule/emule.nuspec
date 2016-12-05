@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>eMule</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Merkur and eMule-Team</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free peer-to-peer file sharing application. Connects to the eDonkey network and the Kad network.
+	</summary>
+    <description>
+	A free peer-to-peer file sharing application. Connects to the eDonkey network and the Kad network.
+	</description>
+    <projectUrl>http://www.emule-project.net/home/perl/general.cgi?l=17</projectUrl>
+    <tags>file-sharing peer-to-peer edonkey kad</tags>
+    <copyright></copyright>
+    <licenseUrl>https://gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

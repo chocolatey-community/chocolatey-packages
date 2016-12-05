@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Sony Vegas Pro (x64)</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Sony</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An integrated environment for all phases of professional video, audio, DVD, and broadcast production.
+	</summary>
+    <description>
+	An integrated environment for all phases of professional video, audio, DVD, and broadcast production.
+	</description>
+    <projectUrl>http://www.sonycreativesoftware.com/download/trials/vegaspro</projectUrl>
+    <tags>notUninstallable trial-version 64bit-version video-editing dvd-authoring</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.sonycreativesoftware.com/corporate/terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

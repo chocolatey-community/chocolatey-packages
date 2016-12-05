@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Windows Repair</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Tweaking.com</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	An all-in-one repair tool to help fix a large majority of known Windows problems including registry errors and file permissions as well as issues with Internet Explorer, Windows Update, Windows Firewall and more.
+	</summary>
+    <description>
+	An all-in-one repair tool to help fix a large majority of known Windows problems including registry errors and file permissions as well as issues with Internet Explorer, Windows Update, Windows Firewall and more.
+	
+	Malware and installed programs can modify your default settings. 
+	
+	With Windows Repair you can restore Windows original settings.
+	</description>
+    <projectUrl>http://www.tweaking.com/content/page/windows_repair_all_in_one.html</projectUrl>
+    <tags>fix-error system-repair fix-registry</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Unity</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Unity Technologies</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A multiplatform game development tool, designed from the start to ease creation.
+	</summary>
+    <description>
+	A multiplatform game development tool, designed from the start to ease creation.
+	
+	A fully integrated professional application, Unity just happens to contain the most powerful engine this side of a million dollars.
+	</description>
+    <projectUrl>http://unity3d.com/unity/download/</projectUrl>
+    <tags>game-development game-engine game-creation 3d-engine development-environment</tags>
+    <copyright></copyright>
+    <licenseUrl>http://unity3d.com/company/legal/eula</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

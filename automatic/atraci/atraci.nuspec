@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Atraci</title>
+    <version>{{PackageVersion}}</version>
+    <authors>The Atraci Team</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Lets you listen instantly to more than 60 million songs (way more than iTunes's 26 million).
+	</summary>
+    <description>
+	Lets you listen instantly to more than 60 million songs (way more than iTunes's 26 million).
+	
+	It requires no sign up, displays no ads and is 100% safe. 
+	</description>
+    <projectUrl>http://getatraci.net/</projectUrl>
+    <tags>mp3 music player popcorntime hiphop</tags>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/Atraci/Atraci/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

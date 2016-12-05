@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>PeaZip</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Giorgio Tani</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A cross-platform file archiver and file manager utility.
+	</summary>
+    <description>
+	A cross-platform file archiver and file manager utility.
+	
+	The program supports over 150 archive formats including 7Z, ACE, ARC, ARJ, BZ2, CAB, DMG, GZ, ISO, LHA, PAQ, PEA, RAR, TAR, UDF, WIM, ZIP, ZIPX...
+
+	Features of PeaZip includes extract, create and convert multiple archives at once, create self-extracting archives, split/join, encrypted password manager, strong encryption with two factor authentication, secure deletion, find duplicate files, calculate hashes, manage graphic files (rotate, crop, resize, convert).
+	
+	###Notes
+	
+	Plain version dissapeared, free of adware not tested!.
+	</description>
+    <projectUrl>http://peazip.sourceforge.net/</projectUrl>
+    <tags>file-manager file-encryption file-compression zip rar 7zip tar</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

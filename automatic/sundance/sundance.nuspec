@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Sundance</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Digola</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A browser without a conservative interface.
+	</summary>
+    <description>
+	A browser without a conservative interface.
+	</description>
+    <projectUrl>http://digola.com/sundance.html</projectUrl>
+    <tags>browser</tags>
+    <copyright></copyright>
+    <licenseUrl>http://digola.com/sundance.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

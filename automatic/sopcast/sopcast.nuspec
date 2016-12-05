@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>SopCast</title>
+    <version>{{PackageVersion}}</version>
+    <authors>SopCast</authors>
+    <owners>tonigellida</owners>
+    <summary>
+SopCast is a simple, free way to broadcast video and audio or watch the video and listen to radio on the Internet.
+	</summary>
+    <description>
+SopCast is a simple, free way to broadcast video and audio or watch the video and listen to radio on the Internet.
+	</description>
+    <projectUrl>http://www.sopcast.com/</projectUrl>
+    <tags>checksIfIsInstalled streaming p2p live-broadcasting live-streaming</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.sopcast.com/info/eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

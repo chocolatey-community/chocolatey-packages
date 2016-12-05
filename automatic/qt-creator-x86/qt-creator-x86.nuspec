@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Qt Creator x86</title>
+    <version>{{PackageVersion}}</version>
+    <authors>The Qt Company</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Qt Creator is a cross-platform utility that works through an integrated development environment (IDE) for helping developers create applications for desktop and mobile device platforms. 
+	</summary>
+    <description>
+Qt Creator is a cross-platform utility that works through an integrated development environment (IDE) for helping developers create applications for desktop and mobile device platforms. 
+	</description>
+    <projectUrl>http://qt-project.org/</projectUrl>
+    <tags>notSilent notUninstallable sdk framework qt qt-creator ide dev development x86</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>0 A.D.</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Wildfire Games</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A free, open-source, cross-platform real-time strategy (RTS) game of ancient warfare.
+	</summary>
+    <description>
+	A free, open-source, cross-platform real-time strategy (RTS) game of ancient warfare.
+	
+	In short, it is a historically-based war/economy game that allows players to relive or rewrite the history of Western civilizations, focusing on the years between 500 B.C. and 500 A.D.
+	
+	The project is highly ambitious, involving state-of-the-art 3D graphics, detailed artwork, sound, and a flexible and powerful custom-built game engine.
+	
+	###Notes
+	
+	Probably alpha release (automatic push). Package version less than v1, treat as stable.
+	
+	</description>
+    <projectUrl>http://play0ad.com/</projectUrl>
+    <tags>real-time-strategy historical-game zero-ad</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

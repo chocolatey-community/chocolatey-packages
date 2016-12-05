@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>F-Secure Internet Security</title>
+    <version>{{PackageVersion}}</version>
+    <authors>F-Secure</authors>
+    <owners>tonigellida</owners>
+    <summary>
+The best protection for your computer and online life.
+	</summary>
+    <description>
+The best protection for your computer and online life.
+Complete protection for surfing, shopping, banking and using social media.
+F-Secure Internet Security protects your digital content and you with real-time protection against malware, hackers and identity theft.
+Your online transactions are secured with banking protection, and you and your children are protected against harmful and unsavory web sites.
+The award-winning technology in F-Secure Internet Security protects you against existing and emerging online threats.
+Easy to install and does not slow down your computer.
+F-Secure Internet Security will protect you.
+	</description>
+    <projectUrl>http://www.f-secure.com/en/web/home_global/internet-security</projectUrl>
+    <tags>trial-version notSilent antivirus firewall anti-spyware</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.f-secure.com/en/web/home_global/license-terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

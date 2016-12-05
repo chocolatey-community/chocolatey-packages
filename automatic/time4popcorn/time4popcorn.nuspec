@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Time 4 Popcorn</title>
+    <version>{{PackageVersion}}</version>
+    <authors>YTS</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	Watch movies free on your desktop, with a big movie catalog.
+	</summary>
+    <description>
+	Watch movies free on your desktop, with a big movie catalog.
+	
+	YTS Release. 
+	
+	This p2p client offers a whole new way to watch movies. Just select the movie to watch and press play.
+	
+	Popcorn Time! is the result of many developers and designers putting a bunch of APIs together to make the experience of watching torrent movies as simple as possible.
+	
+	###Notes
+	
+	Probably beta release (automatic push). Package version less than v1, treat as stable.	
+	</description>
+    <projectUrl>http://popcorn-time.se/</projectUrl>
+	<tags>peer-to-peer movie-catalog torrent-movies YTS popcorntime</tags>
+    <copyright></copyright>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

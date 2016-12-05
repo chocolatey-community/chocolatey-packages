@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Spiceworks</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Spiceworks Inc.</authors>
+    <owners>tonigellida</owners>
+    <summary>
+Spiceworks is the complete network monitoring and management, help desk, PC inventory, and software reporting solution to manage Everything IT in small and medium businesses.
+	</summary>
+    <description>
+Join over 2.2 million IT professionals and download Spiceworks.
+Spiceworks is the complete network monitoring and management, help desk, PC inventory, and software reporting solution to manage Everything IT in small and medium businesses.
+The following (but not limited to) features allow IT pros to:
+* Discover virtual server information
+* View and kill processes remotely
+* Get more out of your help desk
+* Purchase CDW equipment directly from your application
+* Discover installed applications on your workstations
+* Find out what Cloud services are being used
+* Implement a help desk ticketing system
+* Track purchases in-app, request quotes from vendors
+	</description>
+    <projectUrl>http://www.spiceworks.com/</projectUrl>
+    <tags>network-monitoring helpdesk small-business network-management network-mapping medium-business purchasing</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.spiceworks.com/terms/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>

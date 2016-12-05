@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Desura</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Desura</authors>
+    <owners>tonigellida</owners>
+    <summary>
+	A digital distribution service for gamers, putting the best games, mods and downloadable content at your fingertips and ready to play.
+	</summary>
+    <description>
+	A digital distribution service for gamers, putting the best games, mods and downloadable content at your fingertips and ready to play.
+	</description>
+    <projectUrl>http://www.desura.com/</projectUrl>
+    <tags>game social-network indie-game game-database mods distribution</tags>
+    <copyright></copyright>
+    <licenseUrl>http://lindenlab.com/tos</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/{{PackageName}}.png</iconUrl>
+  </metadata>
+</package>
