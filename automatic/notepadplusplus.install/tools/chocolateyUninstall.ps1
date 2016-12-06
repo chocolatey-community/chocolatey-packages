@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'notepadplusplus.install'
-$softwareName = 'Notepad++*'
+$softwareNamePattern = 'Notepad++*'
 
 [array] $key = Get-UninstallRegistryKey $softwareNamePattern
 if ($key.Count -eq 1) {
