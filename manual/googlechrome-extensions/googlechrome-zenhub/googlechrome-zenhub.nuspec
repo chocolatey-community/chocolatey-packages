@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>googlechrome-zenhub</id>
+    <version>1.0.0</version>
+    <title>ZenHub for GitHub</title>
+    <authors>zenhub</authors>
+    <owners>gep13 chocolatey</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/t1YTSCMqAqg71faORFTtQ6hy2zCO5S43q6UQcjh3xZ7roSCuOtepxgAKXzJ8EwUef6Hpt0Ociw=s26-h26-e365-rw</iconUrl>
+    <projectSourceUrl>https://www.zenhub.com/</projectSourceUrl>
+    <docsUrl>https://www.zenhub.com/documentation/more-than-a-github-issue-tracker</docsUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/googlechrome-extensions/googlechrome-zenhub</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://www.zenhub.com/pricing</licenseUrl>
+    <description>
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+
+ZenHub tracks work where the work actually happens – GitHub. Managers get deeper insights than ever before, and developers stay focused in the environment they know and love.
+    </description>
+    <summary>
+Build your team's ultimate GitHub workflow.
+    </summary>
+    <tags>foss github chrome extension zenhub</tags>
+    <releaseNotes>
+https://www.zenhub.com/blog/tag/new-feature/
+    </releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" version="10.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->
