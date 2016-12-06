@@ -14,7 +14,7 @@ function global:au_SearchReplace {
           "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL)"
           "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum)"
           "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum)"
-          "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.Checksum)"
+          "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL)"
         }
     }
 }
