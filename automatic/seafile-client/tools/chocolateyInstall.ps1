@@ -3,11 +3,11 @@ $ErrorActionPreference = 'Stop'
 $packageArgs = @{
   packageName = 'seafile-client'
   fileType    = 'msi'
-  softwareName = 'Seafile 6.0.0'
+  softwareName = 'Seafile 6.0.1'
 
-  checksum     = '64f0e7192acbbbad4e6ac34d5b531ff27697172b9109f2c00cf61ebae923a642'
+  checksum     = 'a3c4d69cf2a3ca56b3a3c5aaa7a80e29499294ee9f994b17d9b352f245ed12cd'
   checksumType = 'sha256'
-  url          = 'https://bintray.com/artifact/download/seafile-org/seafile/seafile-6.0.0-en.msi'
+  url          = 'https://bintray.com/artifact/download/seafile-org/seafile/seafile-6.0.1-en.msi'
 
   silentArgs   = '/passive'
   validExitCodes = @(0)
