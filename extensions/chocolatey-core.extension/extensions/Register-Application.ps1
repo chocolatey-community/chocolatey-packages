@@ -1,3 +1,9 @@
+if ((Get-Command Register-Application -ErrorAction SilentlyContinue))
+{
+  Write-Debug "Register-Application already loaded from a different extension or possibly built into Chocolatey. Not loading function with Chocolatey-Core.Extension."
+  return
+}
+
 <#
 .SYNOPSIS
     Register application in the system
