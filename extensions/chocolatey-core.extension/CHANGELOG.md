@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.0.2
+
+- Bugfix in `Get-PackageParameters`: PowerShell 2 compatibility
+
 ## Version 1.0.1
 
 - Bugfix in `Get-PackageParameters`: unaliased `sls` to work on PowerShell 2.
