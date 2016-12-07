@@ -4,7 +4,7 @@
   <metadata>
     <id>Cygwin</id>
     <title>Cygwin</title>
-    <version>2.6.0.20161202</version>
+    <version>2.6.0.20161207</version>
     <authors>Red Hat, Inc.</authors>
     <owners>Chocolatey</owners>
     <summary>A Linux environment for Windows.</summary>
