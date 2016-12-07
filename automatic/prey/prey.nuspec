@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prey</id>
-    <version>1.6.4</version>
+    <version>1.6.5</version>
     <title>Prey</title>
     <owners>chocolatey</owners>
     <authors>Fork Ltd</authors>
