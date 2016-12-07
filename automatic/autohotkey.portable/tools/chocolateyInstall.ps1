@@ -1,18 +1,17 @@
 $ErrorActionPreference = 'Stop'
 
-$toolsPath   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$fileName  = 'AutoHotkey_1.1.24.03.zip'
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$zip_path = "$toolsPath\$fileName"
+rm $toolsPath\* -Recurse -Force -Exclude $fileName
 
 $packageArgs = @{
-  packageName    = 'autohotkey.portable'
-  url            = 'https://autohotkey.com/download/1.1/AutoHotkey_1.1.24.03.zip'
-  url64Bit       = 'https://autohotkey.com/download/1.1/AutoHotkey_1.1.24.03.zip'
-  checksum       = 'aede977e786a059e196b7b4f1fee73e57ce8755a34c9e8c092b69f83eca023ee'
-  checksum64     = 'aede977e786a059e196b7b4f1fee73e57ce8755a34c9e8c092b69f83eca023ee'
-  checksumType   = 'sha256'
-  checksumType64 = 'sha256'
-  unzipLocation  = $toolsPath
+    PackageName  = 'autohotkey.portable'
+    FileFullPath = $zip_path
+    Destination  = $toolsPath
 }
-Install-ChocolateyZipPackage @packageArgs
+Get-ChocolateyUnzip @packageArgs
+rm $zip_path -ea 0
 
 Write-Host "Removing ANSI version"
 rm "$toolsPath/AutoHotkeyA32.exe" -ea 0
