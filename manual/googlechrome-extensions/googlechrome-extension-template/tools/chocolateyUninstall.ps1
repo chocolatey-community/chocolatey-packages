@@ -1,5 +1,4 @@
 $bits = Get-ProcessorBits
-$packageName = 'googlechrome-'
 $extensionID = ''
 
 if ($bits -eq 64) {

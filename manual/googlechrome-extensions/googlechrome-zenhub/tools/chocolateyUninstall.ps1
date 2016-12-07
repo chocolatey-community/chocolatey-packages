@@ -1,5 +1,4 @@
 $bits = Get-ProcessorBits
-$packageName = 'googlechrome-zenhub'
 $extensionID = 'ogcgkffhplmphkaahpmffcafajaocjbd'
 
 if ($bits -eq 64) {
