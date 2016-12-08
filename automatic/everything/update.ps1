@@ -33,12 +33,14 @@ function global:au_BeforeUpdate {
                 $file_path = "$PSScriptRoot\tools\" + ($Latest.URL32 -split '/' | select -Last 1)
                 $client.DownloadFile($Latest.URL32, $file_path)
                 $Latest.Checksum32 = Get-FileHash $file_path | % Hash
+                $Latest.ChecksumType32 = 'sha256'
             }
 
             if ($Latest.Url64) {
                 $file_path = "$PSScriptRoot\tools\" + ($Latest.URL64 -split '/' | select -Last 1)
                 $client.DownloadFile($Latest.URL64, $file_path)
                 $Latest.Checksum64 = Get-FileHash $file_path | % Hash
+                $Latest.ChecksumType64 = 'sha256'
             }
         } finally { $client.Dispose() }
     }
