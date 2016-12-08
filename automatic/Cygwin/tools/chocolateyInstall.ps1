@@ -31,6 +31,7 @@ $silentArgs = @(
     if ($pp.NoStartMenu)  { '--no-startmenu';        Write-Host 'No start menu items will be created' }
     if ($pp.Proxy)        { "--proxy $($pp.Proxy)";  Write-Host "Using proxy: $($pp.Proxy)" }
     if ($pp.Pubkey)       { "--pubkey $($pp.Pubkey)";Write-Host "URL of extra public key file is provided" }
+    if ($pp.NoAdmin)      { '--no-admin';            Write-Host "Do not require running as administrator" }
 )
 
 $packageArgs = @{
