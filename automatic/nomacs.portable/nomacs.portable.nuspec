@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>nomacs</id>
-    <version>3.4.0</version>
+    <id>nomacs.portable</id>
+    <version>3.4.0.20161205</version>
     <title>nomacs Image Lounge</title>
     <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
@@ -51,11 +51,6 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
     - images can be sent over LAN connection
 
 See detailed nomacs [features page](http://nomacs.org/features/).
-
-## Notes
-
-- This package will **always install the latest version**, regardless of the version specified in the package. Nomacs is using [online installer](https://www.nomacs.org/redmine/issues/573) for non-portable package exlusivelly.
-- If you are installing **behind the proxy**, you will need to configure proxy settings in the installer manually (via Settings button) during the installation. You can use [nomacs.portable](https://chocolatey.org/packages/nomacs.portable) as alternative in such scenario.
     </description>
     <summary>Open source image viewer</summary>
     <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.4.0</releaseNotes>
