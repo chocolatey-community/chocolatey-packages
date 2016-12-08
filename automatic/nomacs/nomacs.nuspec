@@ -16,7 +16,7 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
 ## Features
 
 - Image Viewing
-  - supports the most common image formats including RAW (
+  - supports the most common image formats including RAW
   - fast thumbnail preview
   - zoomable grid preview of thumbnails
   - display exif information
@@ -30,7 +30,7 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
   - crop images
   - resize images
   - pseudo color function
-  - color adjustments (brightness/contrast/saturation …)
+  - color adjustments (brightness, contrast, saturation …)
   - multi page TIFF export
   - rotate images
   - drag and drop images
@@ -39,7 +39,7 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
   - create mosaic image
   - set wallpaper (windows only)
 - Viewer Synchronization
-  - synchronize multiple instances (Screenshot) (Howto)
+  - synchronize multiple instances
     - synchronized zooming
     - synchronized panning
     - synchronized next/previous file
