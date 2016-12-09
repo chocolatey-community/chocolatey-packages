@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>codeblocks</id>
-    <version>16.1.0.20161201</version>
+    <version>16.1.0.20161209</version>
     <title>Code::Blocks</title>
     <authors>The Code::Blocks Team</authors>
     <owners>chocolatey purity</owners>
