@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>everything</id>
-    <version>1.4.1809.20161208</version>
+    <version>0.0</version>
     <title>Everything</title>
     <authors>David Carpenter</authors>
     <owners>chocolatey, Mark Michaelis</owners>
@@ -36,6 +36,8 @@ You type in a search filter to limit what files and folders are displayed.
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.2" />
     </dependencies>
-
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
