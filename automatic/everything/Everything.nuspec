@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>everything</id>
+    <version>0.0</version>
+    <title>Everything</title>
+    <authors>David Carpenter</authors>
+    <owners>chocolatey, Mark Michaelis</owners>
+    <licenseUrl>http://www.voidtools.com/License.txt</licenseUrl>
+    <projectUrl>http://www.voidtools.com</projectUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>"Everything" is an administrative tool that locates files and folders by filename instantly for Windows.
+Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything").
+You type in a search filter to limit what files and folders are displayed.
+
+## Features
+
+- Small installation file
+- Clean and simple user interface
+- Quick file indexing
+- Quick searching
+- Minimal resource usage
+- Share files with others easily
+- Real-time updating
+- [More ...](https://www.voidtools.com/faq/)
+</description>
+    <summary>Everything Search Engine - locate files and folders by name instantly</summary>
+    <releaseNotes>https://www.voidtools.com/Changes.txt</releaseNotes>
+    <copyright>2016 David Carpenter</copyright>
+    <tags>everything file-system indexing freeware file search admin</tags>
+    <docsUrl>https://www.voidtools.com/faq/</docsUrl>
+    <mailingListUrl>https://www.voidtools.com/forum/</mailingListUrl>
+    <bugTrackerUrl>https://www.voidtools.com/forum/viewforum.php?f=6</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/everything</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
