@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## Version 1.0.3
+
+- Bugfix in `Get-PackageParameters`: error when parsing of path
+
 ## Version 1.0.2
 
 - Bugfix in `Get-PackageParameters`: PowerShell 2 compatibility

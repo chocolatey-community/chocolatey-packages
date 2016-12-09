@@ -16,7 +16,7 @@ function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackagePara
     $results = $Parameters | Select-String $re -AllMatches | select -Expand Matches
     foreach ($m in $results) {
         $a = $m.Value -split ':'
-        $opt = $a[0].Substring(1); $val = $a[1..100]
+        $opt = $a[0].Substring(1); $val = $a[1..100] -join ':'
         if ($val -match '^(".+")|(''.+'')$') {$val = $val -replace '^.|.$'}
         $res[ $opt ] = if ($val) { $val } else { $true }
     }
