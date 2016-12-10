@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://filehippo.com/download/file/f949ffbcfec6cac77ab57993d1c31b876119a75dc4ea0d44a5d54de53d51e91b/
+   x32: http://filehippo.com/download_audacity/download/b4e7b950a9a83a2e11ce65428af67777/
 
    to download the installer.
 
@@ -16,7 +16,3 @@ Package can be verified like this:
    - Use Chocolatey utility 'checksum.exe'
 
    checksum32: 22E0F0ADA3E8D24690DD741CA9FEB868DFFC024D45D2CD3168F8C54C47EEC3C9
-
-Using AU:
-
-   Get-RemoteChecksum http://filehippo.com/download/file/f949ffbcfec6cac77ab57993d1c31b876119a75dc4ea0d44a5d54de53d51e91b/
