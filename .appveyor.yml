@@ -63,6 +63,8 @@ install:
 
 build_script:
 - ps: |
+    $ErrorActionPreference = 'Continue'
+
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
 
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
@@ -84,7 +86,6 @@ build_script:
         }
     }
 
-    $ErrorActionPreference = 'Continue'
     ./update_all.ps1 -ForcedPackages $forced
     7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 

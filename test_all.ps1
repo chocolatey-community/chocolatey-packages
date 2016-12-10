@@ -28,9 +28,9 @@ $options = [ordered]@{
         Path = "$PSScriptRoot\Update-Force-Test-${n}.md"      #Path where to save the report
         Params= @{                                          #Report parameters:
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
-            NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
+            NoAppVeyor  = $true                             #  Markdown: do not show AppVeyor build shield
             Title       = "Update Force Test - Group ${n}"
-            UserMessage = "[Update report](https://gist.github.com/$Env:gist_id) | **USING AU NEXT VERSION**"       #  Markdown, Text: Custom user message to show
+            UserMessage = "[Update report](https://gist.github.com/$Env:gist_id) | [Build](https://ci.appveyor.com/project/chocolatey/chocolatey-coreteampackages-xnxcr) | **USING AU NEXT VERSION**"       #  Markdown, Text: Custom user message to show
         }
     }
 
