@@ -1,18 +1,13 @@
-﻿$packageName = '{{PackageName}}'
-$url = 'http://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/{{PackageVersion}}/supertuxkart-{{PackageVersion}}.exe/download'
-$silentArgs = '/S'
+$ErrorActionPreference = 'Stop'
 
-# Create the package temp folder if it doesn’t already exist
-$tempDir = "$env:TEMP\chocolatey\$packageName"
-if (!(Test-Path $tempDir)) {
-  New-Item $tempDir -ItemType directory -Force
+$packageArgs = @{
+  packageName            = 'supertuxkart'
+  fileType               = 'exe'
+  url                    = 'https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.2/supertuxkart-0.9.2.exe/download'
+  checksum               = 'd55e9af26d1adafc3432527925c54aa0e613b6111170caf9715ca65ed4c196a1'
+  checksumType           = 'sha256'
+  silentArgs             = '/S'
+  validExitCodes         = @(0)
+  softwareName           = 'supertuxkart*'
 }
-
-# Download the installer, run it and also start the silent installation script
-# which handles closing the appearing non-silent windows
-# for installing the VC++ Runtime and OpenAL
-$fileFullPath = Join-Path $tempDir ${packageName}Install.exe
-Get-ChocolateyWebFile $packageName $fileFullPath $url
-Start-Process $fileFullPath -Verb Runas -ArgumentList $silentArgs
-$silentScript =  Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) 'silent.ps1'
-Start-ChocolateyProcessAsAdmin "& `'$silentScript`'"
+Install-ChocolateyPackage @packageArgs
