@@ -4,12 +4,21 @@
     <id>audacity</id>
     <title>Audacity</title>
     <owners>chocolatey</owners>
-    <version>2.1.2.20161201</version>
+    <version>2.1.2</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>
 <description>
 Audacity is free, open source, cross-platform software for recording and editing sounds.
-See [full list of features](http://www.audacityteam.org/about/features).
+
+## Features
+
+- Record live audio.
+- Convert tapes and records into digital recordings or CDs.
+- Edit Ogg Vorbis, MP3, WAV or AIFF sound files.
+- Cut, copy, splice or mix sounds together.
+- Change the speed or pitch of a recording.
+- Add new effects with LADSPA plug-ins.
+- And more! See [full list of features](http://www.audacityteam.org/about/features).
 
 </description>
     <projectUrl>http://audacityteam.org/</projectUrl>
@@ -19,9 +28,9 @@ See [full list of features](http://www.audacityteam.org/about/features).
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/audacity.svg</iconUrl>
     <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/audacity</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-fosshub.extension" version="0.6.0" />
+      <dependency id="chocolatey-core.extension" version="1.0.3" />
     </dependencies>
     <docsUrl>http://www.audacityteam.org/help/documentation</docsUrl>
     <projectSourceUrl>https://github.com/audacity/audacity</projectSourceUrl>
