@@ -19,6 +19,7 @@ rm ($toolsDir + '\*.' + $packageArgs.fileType)
 $pp = Get-PackageParameters
 if ($pp.Language) {
     Write-Host 'Setting langauge to' $pp.Language
+    mkdir -force HKCU:\Software\VideoLAN\VLC
     sp HKCU:\Software\VideoLAN\VLC Lang $pp.Language
 }
 
