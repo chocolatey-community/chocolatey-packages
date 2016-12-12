@@ -1,0 +1,1 @@
+python -m pip uninstall mkdocs-material -y
