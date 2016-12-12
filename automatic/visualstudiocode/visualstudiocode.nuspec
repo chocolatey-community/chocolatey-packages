@@ -42,7 +42,7 @@ The package uses default install options except that it adds context menu entrie
     </description>
     <tags>microsoft visualstudiocode vscode editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.1" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
       <dependency id="DotNet4.5.2" />
     </dependencies>
     <releaseNotes>
