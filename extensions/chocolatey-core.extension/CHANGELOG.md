@@ -1,12 +1,16 @@
 # CHANGELOG
 
+## Version 1.0.4
+
+- Bugfix in `Get-PackageParameters`: Powershell 2 bug workaround ([#465](https://github.com/chocolatey/chocolatey-coreteampackages/issues/465)).
+
 ## Version 1.0.3
 
-- Bugfix in `Get-PackageParameters`: error when parsing of path
+- Bugfix in `Get-PackageParameters`: error when parsing of path.
 
 ## Version 1.0.2
 
-- Bugfix in `Get-PackageParameters`: PowerShell 2 compatibility
+- Bugfix in `Get-PackageParameters`: PowerShell 2 compatibility.
 
 ## Version 1.0.1
 
