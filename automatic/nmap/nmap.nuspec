@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>nmap</id>
-    <version>7.31.0.20161212</version>
+    <version>7.31</version>
     <title>Nmap</title>
     <authors>Fyodor</authors>
     <owners>chocolatey zippy1981 ferventcoder</owners>

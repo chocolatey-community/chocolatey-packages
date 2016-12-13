@@ -19,7 +19,7 @@ Package can be verified like this:
 
 Using AU:
 
-   Get-RemoteChecksum 
+   Get-RemoteChecksum https://nmap.org/dist/nmap-7.31-setup.exe
 
 File 'COPYING' is obtained from:
     https://svn.nmap.org/nmap-releases/nmap-7.31/COPYING

@@ -6,6 +6,7 @@ function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+            "(?i)(^[$]fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
         }
 
         "$($Latest.PackageName).nuspec" = @{
