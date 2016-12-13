@@ -27,4 +27,7 @@ Portable Document Format (PDF) is the de facto standard for the secure and relia
     <releaseNotes>http://www.cutepdf.com/support/updates.asp</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cutepdf</packageSourceUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
