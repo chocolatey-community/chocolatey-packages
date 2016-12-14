@@ -22,7 +22,7 @@ Mixxx is free DJ software for Windows, Mac OS X and Linux. It’s easy to use so
     <bugTrackerUrl>https://bugs.launchpad.net/mixxx</bugTrackerUrl>
     <docsUrl>http://www.mixxx.org/manual/latest/</docsUrl>
     <dependencies>
-      <dependency id="mm-choco.extension" version="0.0.3" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
   </metadata>
   <files>

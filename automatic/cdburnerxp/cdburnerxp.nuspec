@@ -70,7 +70,7 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
     <bugTrackerUrl>https://bugs.cdburnerxp.se</bugTrackerUrl>
     <docsUrl>http://maxima.sourceforge.net/documentation.html</docsUrl>
     <dependencies>
-      <dependency id="mm-choco.extension" version="0.0.3" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
   </metadata>
   <files>

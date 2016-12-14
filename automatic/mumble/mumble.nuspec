@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mumble</id>
@@ -38,7 +38,7 @@ Mumble is free and open-source software, is cross-platform, and is released unde
     <projectSourceUrl>https://github.com/mumble-voip/mumble</projectSourceUrl>
     <bugTrackerUrl>https://github.com/mumble-voip/mumble/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="mm-choco.extension" version="0.0.3" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
   </metadata>
   <files>

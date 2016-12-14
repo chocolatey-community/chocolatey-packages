@@ -15,7 +15,7 @@
 Clementine is a modern music player and library organizer. It is inspired by Amarok 1.4, focusing on a fast and easy-to-use interface for searching and playing your music.
     </description>
     <dependencies>
-      <dependency id="mm-choco.extension" version="0.0.3" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
     <summary>Multiplatform music player</summary>
     <releaseNotes>https://raw.githubusercontent.com/clementine-player/Clementine/master/Changelog</releaseNotes>
