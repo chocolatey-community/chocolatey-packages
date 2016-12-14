@@ -22,7 +22,8 @@ You can do a single race against other karts, compete in one of several Grand Pr
     <copyright />
     <tags>supertuxkart foss cross-platform racing game admin</tags>
     <dependencies>
-      <dependency id="vcredist2015" />
+      <dependency id="vcredist2015" version="14.0.24215.20160928" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/supertuxkart</packageSourceUrl>
   </metadata>
