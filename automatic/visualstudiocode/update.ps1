@@ -1,4 +1,5 @@
 import-module au
+import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
 
 $releases = 'https://vscode-update.azurewebsites.net/api/update/win32/stable/VERSION'
 
