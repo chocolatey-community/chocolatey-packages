@@ -36,6 +36,7 @@ Created by the people behind ![Ubuntu](https://jujucharms.com/static/img/home/ub
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
