@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>supertuxkart</id>
+    <version>0.9.0</version>
     <title>SuperTuxKart</title>
     <owners>chocolatey</owners>
     <authors>SuperTuxKart developers</authors>
@@ -16,20 +16,16 @@ SuperTuxKart is a Free 3D kart racing game; we want to make the game fun more th
 See the great lighthouse or drive through the sand and visit the pyramids. Race underground or in space, watching the stars passing by. Have some rest under the palms on the beach (watching the other karts overtaking you :) ). But don't eat the bananas! Watch for bowling balls, plungers, bubble gum and cakes thrown by opponents.
 
 You can do a single race against other karts, compete in one of several Grand Prix, try to beat the high score in time trials on your own, play battle mode against your friends, and more!
-
-### Note
-
-Don’t close the empty appearing PowerShell window. Otherwise the silent installation won’t work.
     </description>
     <summary>Open Source 3D kart racing game</summary>
     <releaseNotes />
     <copyright />
-    <tags>supertuxkart racing game admin</tags>
+    <tags>supertuxkart foss cross-platform racing game admin</tags>
     <dependencies>
-      <dependency id="openal" />
-      <dependency id="vcredist2013" />
+      <dependency id="vcredist2015" version="14.0.24215.20160928" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/supertuxkart</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
