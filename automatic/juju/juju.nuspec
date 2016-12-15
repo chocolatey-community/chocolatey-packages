@@ -31,7 +31,7 @@ Created by the people behind ![Ubuntu](https://jujucharms.com/static/img/home/ub
     </description>
     <releaseNotes>https://jujucharms.com/docs/stable/reference-release-notes</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
   </metadata>
   <files>
