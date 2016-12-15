@@ -3,9 +3,9 @@
 $packageName         = 'supertuxkart'
 
 $installLocation = Get-AppInstallLocation $packageName
-if ($installLocation) {
-    Write-Warning "Can't find install location"
-    return
+if (!$installLocation) {
+    $installLocation = gp HKCU:\Software\SuperTuxKart -ea 0 | % '(default)'
+    if (!$installLocation) { Write-Warning "Can't find install location"; return }
 }
 
 $packageArgs = @{
@@ -15,4 +15,6 @@ $packageArgs = @{
     validExitCodes = @(0)
     file           = "$installLocation\Uninstall.exe"
 }
+
+Write-Host "Using" $packageArgs.file
 Uninstall-ChocolateyPackage @packageArgs
