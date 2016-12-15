@@ -1,6 +1,6 @@
 $packageName = 'youtube-dl'
-$url = 'https://github.com/rg3/youtube-dl/releases/download/2016.12.12/youtube-dl.exe'
-$checksum = '1eac846e4ce65dd27efbcd5784436b27a350e2b4b58f4ec4b9e3ee1278007d63b9b64b0a6d3aefa7ef2f2fe2ed4a2e7ddecb4cb581b49ad2129f7531e5b05418'
+$url = 'https://github.com/rg3/youtube-dl/releases/download/2016.12.15/youtube-dl.exe'
+$checksum = '534948676578c7fedf16c1df7aa729712b43b7b10ed792b3bbc6d73d733d3f3c2e43eb93f4b1711bf4b7227a2396c1d860591f23f8203a4f27c374d1e26a1300'
 $checksumType = 'sha512'
 
 $installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
