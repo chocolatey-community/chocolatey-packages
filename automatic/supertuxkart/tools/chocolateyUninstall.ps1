@@ -4,7 +4,7 @@ $packageName         = 'supertuxkart'
 
 $installLocation = Get-AppInstallLocation $packageName
 if (!$installLocation) {
-    $installLocation = gp HKCU:\Software\SuperTuxKart -ea 0 | % '(default)'
+    $installLocation = gp HKCU:\Software\SuperTuxKart -ea 0 | select -Expand '(default)'
     if (!$installLocation) { Write-Warning "Can't find install location"; return }
 }
 
