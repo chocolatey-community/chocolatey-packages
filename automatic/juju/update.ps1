@@ -1,13 +1,29 @@
 ﻿import-module au
+import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = 'https://launchpad.net/juju/+download'
+
+function global:au_BeforeUpdate {
+  Remove-Item "$PSScriptRoot\tools\*.exe"
+
+  $Latest.FileName = Get-WebFileName $Latest.URL32 'juju.exe'
+  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+
+  Get-WebFile $Latest.URL32 $filePath
+
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
+}
 
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
+      "(?i)(`"[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
+    }
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(1\..+)\<.*\>"      = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"      = "`${1} $($Latest.Checksum32)"
     }
   }
 }
@@ -34,4 +50,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
