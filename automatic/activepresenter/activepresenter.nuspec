@@ -38,6 +38,9 @@ Activating with a license key will remove the watermark on appropriate outputs.
     <docsUrl>https://atomisystems.com/tutorials</docsUrl>
     <bugTrackerUrl>https://atomisystems.com/community</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
