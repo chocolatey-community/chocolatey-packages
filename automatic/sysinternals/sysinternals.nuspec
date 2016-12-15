@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>sysinternals</id>
+    <title>Sysinternals</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Mark Russinovich, Bryce Cogswell</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
+    <description>The Sysinternals Troubleshooting Utilities have been rolled up into a single suite of tools. This file contains the individual troubleshooting tools and help files. It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotMyFault
+    </description>
+    <projectUrl>http://technet.microsoft.com/en-us/sysinternals/bb842062</projectUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <tags>sysinternals troubleshooting pstools psexec file disk utilities tools</tags>
+    <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
