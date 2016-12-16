@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName   = 'juju'
   fileType      = 'exe'
   softwareName  = 'Juju'
-  file          = "$toolsDir\juju-setup-2.1-beta2.exe"
+  file          = "$toolsDir\juju-setup-2.1-beta3.exe"
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
 }
