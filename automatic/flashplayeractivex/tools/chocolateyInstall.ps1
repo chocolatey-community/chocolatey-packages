@@ -1,9 +1,10 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
+$packageName = 'flashplayeractivex'
+$version = '24.0.0.186'
+$majorVersion = '24'
 $installArgs = '/quiet /norestart REMOVE_PREVIOUS=YES'
-$url = '{{DownloadUrl}}'
-
-$majorVersion = ([version] $version).Major
+$url = 'http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_24_active_x.msi'
+$checksum = 'D1D60DF68B172F2CB21E4F8572BBB6727385BF4E5874DF95560947D35956BB9D'
+$checksumType = 'sha256'
 
 $alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
   $_.Name -eq "Adobe Flash Player $majorVersion ActiveX" -and
