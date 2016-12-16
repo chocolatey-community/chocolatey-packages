@@ -12,7 +12,7 @@
     <description>
 All the necessary tools for recording screen and creating engaging screencast videos in a free application.
 
-### Features
+## Features
 
 - Advanced screen recording: Full Motion Recording, Smart Capture
 - Video editing: Cut, Crop, Join, Change Volume, Speed Up, Slow Down, Blur
@@ -22,7 +22,7 @@ All the necessary tools for recording screen and creating engaging screencast vi
 - No watermark and no time limit
 - No nags, no ads!
 
-### Notes
+## Notes
 
 - There is only one setup package which will serve as both Free and Paid editions.  
 With Free edition, you can create video tutorials, export to other formats will have a watermark.  
@@ -30,7 +30,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
 - Supported Operating Systems: Windows 7/8/10, Windows XP, Vista: All Editions (both 32-bit (x86) and 64-bit (x64) are supported).
     </description>
     <projectUrl>https://atomisystems.com/</projectUrl>
-    <tags>admin presentation recording screencast eLearning webcast freeware trial</tags>
+    <tags>admin cross-platform presentation recording screencast eLearning webcast freeware trial</tags>
     <copyright>Atomi Systems, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/1f8e9eae96f9f498c520385ccdbf05e2d8696ee2/icons/activepresenter.jpg</iconUrl>
