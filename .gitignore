@@ -33,4 +33,3 @@ automatic/_output/
 /Update-Force-Test*.md
 /update_vars.ps1
 /update_info.xml
-*.pdf binary
