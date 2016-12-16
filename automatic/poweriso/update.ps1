@@ -2,11 +2,14 @@ import-module au
 
 $releases = ' http://www.poweriso.com/download.htm'
 
+function global:au_BeforeUpdate {
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
+  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+}
+
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')"     = "`$1'$($Latest.URL64)'"
             "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
             "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
             "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
@@ -25,4 +28,4 @@ function global:au_GetLatest {
     }
 }
 
-update
+update -ChecksumFor none
