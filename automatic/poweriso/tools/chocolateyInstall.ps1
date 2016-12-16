@@ -1,7 +1,5 @@
 $ErrorActionPreference = 'Stop'
 
-import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
-
 $download_content = Get-WebContent 'http://www.poweriso.com/download.htm'
 
 $reMatches = [regex]::Matches($download_content, '\<a class="download_link" href="([^"]+)"')
