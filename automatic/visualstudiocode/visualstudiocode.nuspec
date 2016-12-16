@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id></id>
+    <id>visualstudiocode</id>
     <title>Visual Studio Code</title>
-    <version></version>
+    <version>1.8.0</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
@@ -34,8 +34,8 @@ The following package parameters can be set:
 * `/NoContextMenuFolders` - Dont't add an `Open with Code` entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the path.
 
-These parameters can be passed to the installer with the use of `-params`.
-For example: `-params '"/NoDesktopIcon /DontAddToPath"'`.
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/NoDesktopIcon /DontAddToPath"'`.
 
 ## Notes
 The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
@@ -49,4 +49,7 @@ The package uses default install options except that it adds context menu entrie
       https://code.visualstudio.com/Updates
     </releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

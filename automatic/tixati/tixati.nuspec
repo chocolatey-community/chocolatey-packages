@@ -34,7 +34,7 @@ __Tixati__ has the following features:
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/icons/tixati.png</iconUrl>
         <dependencies>
-            <dependency id="mm-choco.extension" version="0.0.3" />
+            <dependency id="chocolatey-core.extension" version="1.0.4" />
             <dependency id="autohotkey.portable" />
         </dependencies>
         <releaseNotes></releaseNotes>

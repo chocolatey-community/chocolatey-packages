@@ -27,4 +27,7 @@ PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it l
 	<docsUrl>http://docs.pdfforge.org/pdfcreator/latest/en/</docsUrl>
 	<projectSourceUrl>https://github.com/pdfforge/PDFCreator</projectSourceUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

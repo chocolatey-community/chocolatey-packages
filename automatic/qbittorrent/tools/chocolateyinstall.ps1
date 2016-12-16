@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\qbittorrent_3.3.7_setup.exe"
+$filePath = "$toolsDir\qbittorrent_3.3.9_setup.exe"
 
 $packageArgs = @{
   packageName    = 'qbittorrent'

@@ -19,7 +19,7 @@ Lightworks is Academy and Emmy award-winning, professional Non-Linear Editing (N
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
         <dependencies>
-            <dependency id="mm-choco.extension" version="0.0.3" />
+            <dependency id="chocolatey-core.extension" version="1.0.4" />
         </dependencies>
         <releaseNotes></releaseNotes>
     </metadata>
