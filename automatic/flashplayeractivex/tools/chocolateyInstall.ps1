@@ -32,5 +32,14 @@ if ($alreadyInstalled) {
 }
 
 if ($allRight) {
-  Install-ChocolateyPackage $packageName 'msi' $installArgs $url
+$packageArgs = @{
+  packageName   = $packageName
+  fileType      = 'msi'
+  url           = $url
+  silentArgs    = $installArgs
+  softwareName  = 'Adobe Flash Player ActiveX'
+  checksum      = $checksum
+  checksumType  = $checksumType
+}
+  Install-ChocolateyPackage @packageArgs    
 }
