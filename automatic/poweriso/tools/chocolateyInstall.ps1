@@ -14,7 +14,7 @@ $packageArgs = @{
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/S'
-  validExitCodes         = @(0, 4) # It somehow returns code 4 even when successful
+  validExitCodes         = @(0)
   softwareName           = 'poweriso*'
 }
 Install-ChocolateyPackage @packageArgs
