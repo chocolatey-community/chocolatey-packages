@@ -9,3 +9,4 @@
 *.dll binary
 *.zip binary
 *.cer binary
+*.pdf binary
