@@ -31,6 +31,7 @@ function global:au_GetLatest {
     @{
         Version  = $updated.ToString("yyyy.MM.dd")
         URL32    = $url
+        URL64    = $url
     }
 }
 
