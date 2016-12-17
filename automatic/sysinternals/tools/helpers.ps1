@@ -16,8 +16,9 @@ $tools = `
 "Winobj",           "ZoomIt"
 
     $root_path = "HKCU:\SOFTWARE\Sysinternals"
+    mkdir "$root_path" -ea 0 | Out-Null
     foreach($tool in $tools) {
-        mkdir "$root_path\$tool" -Force | Out-Null
+        mkdir "$root_path\$tool" -ea 0 | Out-Null
         New-ItemProperty -Path "$root_path\$tool" -Name EulaAccepted -Value 1 -Force | Out-Null
     }
 }
