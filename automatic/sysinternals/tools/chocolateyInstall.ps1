@@ -18,11 +18,7 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 Accept-Eula
-
-if ($installDir -ne $toolsPath) {
-    Write-Host "Adding to PATH if needed"
-    Install-ChocolateyPath $installDir
-}
+if ($installDir -ne $toolsPath) { Install-ChocolateyPath $installDir }
 
 $old_path = 'c:\sysinternals'
 if ((Test-Path $old_path) -and ($installDir -ne $old_path)) {
