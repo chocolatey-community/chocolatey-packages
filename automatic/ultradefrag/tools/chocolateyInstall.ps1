@@ -9,10 +9,10 @@ $silentArgs += if ($pp.NoBootInterface)      { " /BOOT=0"; Write-Host 'Boot inte
 $packageArgs = @{
   packageName    = 'ultradefrag'
   fileType       = 'exe'
-  url            = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.1.bin.i386.exe'
-  url64bit       = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.1.bin.amd64.exe'
-  checksum       = '0b86c593c60551e85ccba411ec1e8a70ecf9f244a51ce115015c6c4af773196f'
-  checksum64     = '554beef1b969b4dec2fd5041d442bc1142c550e02d38c1fd9b3d552bad1f9e99'
+  url            = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.2.bin.i386.exe'
+  url64bit       = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.2.bin.amd64.exe'
+  checksum       = '69ea62c2987b869bcd21e7a7a7ae65d01ee9a853ace33b5bc973bbcbaa8a4123'
+  checksum64     = '34cfc8b7a2b43891e0a7527fc27549b2b3372330f82cf95d32c1744429d2820f'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = $silentArgs
