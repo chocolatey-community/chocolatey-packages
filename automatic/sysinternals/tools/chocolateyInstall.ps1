@@ -3,7 +3,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $pp = Get-PackageParameters
 $installDir = $toolsPath
-$installDir = if ($pp.InstallDir -or $pp.InstallationPath ) { $pp.InstallDir + $pp.InstallationPath }
+if ($pp.InstallDir -or $pp.InstallationPath ) { $InstallDir = $pp.InstallDir + $pp.InstallationPath }
 Write-Host "Sysinternals Suite is going to be installed in '$installDir'"
 
 $packageArgs = @{
