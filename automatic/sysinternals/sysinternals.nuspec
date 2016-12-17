@@ -99,6 +99,7 @@ The Suite is a bundling of the following selected Sysinternals Utilities:
     <tags>sysinternals troubleshooting pstools psexec file disk utilities freeware cli tools</tags>
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/b1f1ca10bdbdb554ba80db4ccd9aa5332ae3d9df/icons/sysinternals.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
