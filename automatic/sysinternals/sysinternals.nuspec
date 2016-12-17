@@ -7,11 +7,96 @@
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
-    <description>The Sysinternals Troubleshooting Utilities have been rolled up into a single suite of tools. This file contains the individual troubleshooting tools and help files. It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotMyFault
-    </description>
+<description>
+The Sysinternals Troubleshooting Utilities have been rolled up into a single suite of tools.
+This file contains the individual troubleshooting tools and help files. It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotMyFault.
+
+## Features
+
+The Suite is a bundling of the following selected Sysinternals Utilities:
+
+- [AccessChk](https://technet.microsoft.com/en-us/sysinternals/accesschk)
+- [AccessEnum](https://technet.microsoft.com/en-us/sysinternals/accessenum)
+- [AdExplorer](https://technet.microsoft.com/en-us/sysinternals/adexplorer)
+- [AdInsight](https://technet.microsoft.com/en-us/sysinternals/adinsight)
+- [AdRestore](https://technet.microsoft.com/en-us/sysinternals/adrestore)
+- [Autologon](https://technet.microsoft.com/en-us/sysinternals/autologon)
+- [Autoruns](https://technet.microsoft.com/en-us/sysinternals/bb963902)
+- [BgInfo](https://technet.microsoft.com/en-us/sysinternals/bginfo)
+- [CacheSet](https://technet.microsoft.com/en-us/sysinternals/bb897561)
+- [ClockRes](https://technet.microsoft.com/en-us/sysinternals/bb897568)
+- [Contig](https://technet.microsoft.com/en-us/sysinternals/contig)
+- [Coreinfo](https://technet.microsoft.com/en-us/sysinternals/cc835722)
+- [Ctrl2Cap](https://technet.microsoft.com/en-us/sysinternals/bb897578)
+- [DebugView](https://technet.microsoft.com/en-us/sysinternals/debugview)
+- [Desktops](https://technet.microsoft.com/en-us/sysinternals/cc817881)
+- [Disk2vhd](https://technet.microsoft.com/en-us/sysinternals/ee656415)
+- [DiskExt](https://technet.microsoft.com/en-us/sysinternals/diskext)
+- [DiskMon](https://technet.microsoft.com/en-us/sysinternals/diskmon)
+- [DiskView](https://technet.microsoft.com/en-us/sysinternals/bb896650)
+- [Disk Usage (DU)](https://technet.microsoft.com/en-us/sysinternals/du)
+- [EFSDump](https://technet.microsoft.com/en-us/sysinternals/efsdump)
+- [FindLinks](https://technet.microsoft.com/en-us/sysinternals/findlinks)
+- [Handle](https://technet.microsoft.com/en-us/sysinternals/handle)
+- [Hex2dec](https://technet.microsoft.com/en-us/sysinternals/hex2dec)
+- [Junction](https://technet.microsoft.com/en-us/sysinternals/bb896768)
+- [LDMDump](https://technet.microsoft.com/en-us/sysinternals/ldmdump)
+- [ListDLLs](https://technet.microsoft.com/en-us/sysinternals/bb896656)
+- [LiveKd](https://technet.microsoft.com/en-us/sysinternals/livekd)
+- [LoadOrder](https://technet.microsoft.com/en-us/sysinternals/loadorder)
+- [LogonSessions](https://technet.microsoft.com/en-us/sysinternals/logonsessions)
+- [MoveFile](https://technet.microsoft.com/en-us/sysinternals/pendmoves)
+- [NTFSInfo](https://technet.microsoft.com/en-us/sysinternals/bb897424)
+- [PendMoves](https://technet.microsoft.com/en-us/sysinternals/pendmoves)
+- [PipeList](https://technet.microsoft.com/en-us/sysinternals/dd581625)
+- [PortMon](https://technet.microsoft.com/en-us/sysinternals/portmon)
+- [ProcDump](https://technet.microsoft.com/en-us/sysinternals/dd996900)
+- [Process Explorer](https://technet.microsoft.com/en-us/sysinternals/processexplorer)
+- [Process Monitor](https://technet.microsoft.com/en-us/sysinternals/processmonitor)
+- [PsExec](https://technet.microsoft.com/en-us/sysinternals/pxexec)
+- [PsFile](https://technet.microsoft.com/en-us/sysinternals/psfile)
+- [PsInfo](https://technet.microsoft.com/en-us/sysinternals/psinfo)
+- [PsPing](https://technet.microsoft.com/en-us/sysinternals/jj729731)
+- [PsKill](https://technet.microsoft.com/en-us/sysinternals/pskill)
+- [PsList](https://technet.microsoft.com/en-us/sysinternals/pslist)
+- [PsLoggedOn](https://technet.microsoft.com/en-us/sysinternals/psloggedon)
+- [PsLogList](https://technet.microsoft.com/en-us/sysinternals/psloglist)
+- [PsPasswd](https://technet.microsoft.com/en-us/sysinternals/bb897543)
+- [PsService](https://technet.microsoft.com/en-us/sysinternals/psservice)
+- [PsShutdown](https://technet.microsoft.com/en-us/sysinternals/psshutdown)
+- [PsSuspend](https://technet.microsoft.com/en-us/sysinternals/pssuspend)
+- [RAMMap](https://technet.microsoft.com/en-us/sysinternals/rammap)
+- [RegDelNull](https://technet.microsoft.com/en-us/sysinternals/regdelnull)
+- [Registry Usage (RU)](https://technet.microsoft.com/en-us/sysinternals/ru)
+- [RegJump](https://technet.microsoft.com/en-us/sysinternals/regjump)
+- [SDelete](https://technet.microsoft.com/en-us/sysinternals/sdelete)
+- [ShareEnum](https://technet.microsoft.com/en-us/sysinternals/shareenum)
+- [ShellRunas](https://technet.microsoft.com/en-us/sysinternals/cc300361)
+- [Sigcheck](https://technet.microsoft.com/en-us/sysinternals/bb897441)
+- [Streams](https://technet.microsoft.com/en-us/sysinternals/streams)
+- [Strings](https://technet.microsoft.com/en-us/sysinternals/strings)
+- [Sync](https://technet.microsoft.com/en-us/sysinternals/bb897438)
+- [Sysmon](https://technet.microsoft.com/en-us/sysinternals/sysmon)
+- [TCPView](https://technet.microsoft.com/en-us/sysinternals/tcpview)
+- [VMMap](https://technet.microsoft.com/en-us/sysinternals/vmmap)
+- [VolumeID](https://technet.microsoft.com/en-us/sysinternals/bb897436)
+- [WhoIs](https://technet.microsoft.com/en-us/sysinternals/whois)
+- [WinObj](https://technet.microsoft.com/en-us/sysinternals/winobj)
+- [ZoomIt](https://technet.microsoft.com/en-us/sysinternals/zoomit)
+
+## Package parameters
+
+- `InstallDir` - Installation directory, by default Chocolatey tools directory.
+- `InstallationPath` - the same as `InstallDir`
+
+## Notes
+
+- This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to PATH.
+
+</description>
     <projectUrl>http://technet.microsoft.com/en-us/sysinternals/bb842062</projectUrl>
-    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
-    <tags>sysinternals troubleshooting pstools psexec file disk utilities tools</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sysinternals</packageSourceUrl>
+    <tags>sysinternals troubleshooting pstools psexec file disk utilities freeware cli tools</tags>
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
