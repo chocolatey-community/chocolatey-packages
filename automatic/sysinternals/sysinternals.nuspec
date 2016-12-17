@@ -5,11 +5,12 @@
     <title>Sysinternals</title>
     <version>2016.11.18.20161217</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
-    <owners>Rob Reynolds</owners>
+    <owners>chocolatey, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
 <description>
 The Sysinternals Troubleshooting Utilities have been rolled up into a single suite of tools.
-This file contains the individual troubleshooting tools and help files. It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotMyFault.
+This file contains the individual troubleshooting tools and help files.
+It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotMyFault.
 
 ## Features
 
