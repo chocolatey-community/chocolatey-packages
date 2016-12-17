@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>sysinternals</id>
     <title>Sysinternals</title>
-    <version>{{PackageVersion}}</version>
+    <version>2016.11.18.20161217</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
