@@ -1,12 +1,24 @@
-﻿$packageName = 'vagrant'
-$url = '{{DownloadUrl}}'
+$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'msi'
-  url           = $url
-  silentArgs    = "/qn /norestart"
-  validExitCodes= @(0, 3010, 1641)
+  packageName    = 'vagrant'
+  fileType       = 'msi'
+  url            = 'https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.msi'
+  url64bit       = 'https://releases.hashicorp.com/vagrant/1.9.1/vagrant_1.9.1.msi'
+  checksum       = 'db1fef59dd15ac90b6f5cfad20af7e15eccd814556a81f46e5422386166789a6'
+  checksum64     = ''
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+  silentArgs     = "/qn /norestart"
+  validExitCodes = @(0, 3010, 1641)
+  softwareName   = 'vagrant'
 }
-
 Install-ChocolateyPackage @packageArgs
+
+#$packageName = $packageArgs.packageName
+#$installLocation = Get-AppInstallLocation $packageName
+#if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
+#Write-Host "$packageName installed to '$installLocation'"
+
+#Register-Application "$installLocation\$packageName.exe"
+#Write-Host "$packageName registered as $packageName"

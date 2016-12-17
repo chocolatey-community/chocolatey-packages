@@ -4,14 +4,15 @@
   <metadata>
     <id>vagrant</id>
     <title>Vagrant (Install)</title>
-    <version>{{PackageVersion}}</version>
+    <version>1.9.1</version>
     <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
     <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
     <summary>Vagrant - Development environments made easy.</summary>
-    <description>
+<description>
 Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.
 
 To achieve its magic, Vagrant stands on the shoulders of giants. Machines are provisioned on top of VirtualBox, VMware, AWS, or any other provider. Then, industry-standard provisioning tools such as shell scripts, Chef, or Puppet, can be used to automatically install and configure software on the machine.
+</description>
     <projectUrl>https://www.vagrantup.com</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-packages/tree/master/automatic/vagrant</packageSourceUrl>
     <projectSourceUrl>https://github.com/mitchellh/vagrant</projectSourceUrl>
