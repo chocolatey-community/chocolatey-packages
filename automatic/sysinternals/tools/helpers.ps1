@@ -15,7 +15,7 @@ $tools = `
 "System Monitor",   "TCPView",                   "VMMap",      "VolumeID",        "Whois",
 "Winobj",           "ZoomIt"
 
-    $root_path = HKCU:\SOFTWARE\Sysinternals
+    $root_path = "HKCU:\SOFTWARE\Sysinternals"
     foreach($tools in $tools) {
         mkdir "$root_path\$tool" -Force | Out-Null
         New-ItemProperty -Name EulaAccepted -Value 1 -Force | Out-Null
