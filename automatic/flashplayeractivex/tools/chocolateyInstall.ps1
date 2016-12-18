@@ -1,6 +1,6 @@
 $packageName = 'flashplayeractivex'
-$version = '24.0.0.186'
-$majorVersion = '24'
+$version = '23.0.0.162'
+$majorVersion = '23'
 $registry = ( Get-UninstallRegistryKey -SoftwareName "Adobe Flash Player $majorVersion ActiveX" ).DisplayVersion
 $checking = ( $registry -eq $version )
 $alreadyInstalled = @{$true = "Adobe Flash Player ActiveX for IE $version is already installed."; $false = "Adobe Flash Player ActiveX for IE $version is not already installed."}[ $checking ]
