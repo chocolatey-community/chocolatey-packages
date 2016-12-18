@@ -158,6 +158,22 @@ function Update-IconUrl{
     $possibleNames += @($Name.Substring(0, $index))
   }
 
+  # Let check if the package already contains a url, and get the filename from that
+  $content = gc "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" -Encoding UTF8
+  $content | ? { $_ -match "\<iconUrl\>(.+)\<\/iconUrl\>" } | Out-Null
+  if ($Matches) {
+    $url = $Matches[1]
+    $index = $url.LastIndexOf('/')
+    if ($index -gt 0) {
+      $fileName = $url.Substring($index + 1)
+      $index = $fileName.IndexOf('.')
+      if ($index -gt 0) {
+        $fileName = $fileName.Substring(0, $index)
+        $possibleNames += @($fileName)
+      }
+    }
+  }
+
   foreach ($possibleName in $possibleNames) {
 
     foreach ($extension in $validExtensions) {
