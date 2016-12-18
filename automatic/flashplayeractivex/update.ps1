@@ -19,7 +19,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
 		
 	$HTML = Invoke-WebRequest -Uri $releases
-	$try = ($HTML.ParsedHtml.getElementsByTagName(‘p’) | Where{ $_.className -eq ‘NoBottomMargin’ } ).innerText
+	$try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.className -eq 'NoBottomMargin' } ).innerText
 	$try = $try  -split "\r?\n"
 	$try = $try[0] -replace ' ', ' = '
 	$try =  ConvertFrom-StringData -StringData $try
