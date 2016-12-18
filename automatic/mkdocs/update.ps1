@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $version = (Invoke-WebRequest -UseBasicParsing -Uri $releases | ConvertFrom-Json | Select -Expand info | Select version).version
+    $version = (Invoke-WebRequest -Uri $releases | ConvertFrom-Json | Select -Expand info | Select version).version
 
     return @{ Version = $version }
 }
