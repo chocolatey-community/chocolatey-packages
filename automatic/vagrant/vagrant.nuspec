@@ -14,7 +14,7 @@ Vagrant provides easy to configure, reproducible, and portable work environments
 To achieve its magic, Vagrant stands on the shoulders of giants. Machines are provisioned on top of VirtualBox, VMware, AWS, or any other provider. Then, industry-standard provisioning tools such as shell scripts, Chef, or Puppet, can be used to automatically install and configure software on the machine.
 </description>
     <projectUrl>https://www.vagrantup.com</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-packages/tree/master/automatic/vagrant</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vagrant</packageSourceUrl>
     <projectSourceUrl>https://github.com/mitchellh/vagrant</projectSourceUrl>
     <docsUrl>https://docs.vagrantup.com/docs</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/vagrant-up</mailingListUrl>
