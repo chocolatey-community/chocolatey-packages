@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python2</id>
-    <version>2.7.12.20161123</version>
+    <version>2.7.13</version>
     <title>Python 2.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
