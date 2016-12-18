@@ -6,10 +6,8 @@ $url = 'http://download.macromedia.com/get/flashplayer/current/licensing/win/ins
 $checksum = 'D1D60DF68B172F2CB21E4F8572BBB6727385BF4E5874DF95560947D35956BB9D'
 $checksumType = 'sha256'
 
-$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
-  $_.Name -eq "Adobe Flash Player $majorVersion ActiveX" -and
-  $_.Version -eq $version
-}
+$registry = ( Get-UninstallRegistryKey -SoftwareName Adobe Flash Player $majorVersion ActiveX ).DisplayVersion
+$alreadyInstalled = @{$true = "Adobe Flash Player ActiveX for IE $version is already installed."; $false = "Adobe Flash Player ActiveX for IE $version is not already installed."}[ $registry -ne $version ]
 
 $allRight = $true
 
@@ -26,9 +24,9 @@ if (Get-Process iexplore -ErrorAction SilentlyContinue) {
     'Close Internet Explorer and reinstall this package.'
 }
 
-if ($alreadyInstalled) {
+if ( $registry -ne $version ) {
   $allRight = $false
-  Write-Output "Adobe Flash Player ActiveX for IE $version is already installed."
+  Write-Output $alreadyInstalled
 }
 
 if ($allRight) {
