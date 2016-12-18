@@ -4,7 +4,7 @@ you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gnucash</id>
-    <version>2.6.14</version>
+    <version>2.6.15</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnucash</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>GnuCash</title>
