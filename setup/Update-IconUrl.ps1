@@ -26,6 +26,10 @@
 .PARAMETER UseStopwatch
   Uses a stopwatch to time how long this script used to execute
 
+.PARAMETER Quiet
+  Write anything to Host
+  NOTE: Output from git and Write-Warning will still be available
+
 .OUTPUTS
   The number of packages that was updates,
   if some packages is already up to date, outputs how many.
@@ -84,7 +88,8 @@ param(
   [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
   [string]$RelativeIconDir = "../icons",
   [string]$PackagesDirectory = "../automatic",
-  [switch]$UseStopwatch
+  [switch]$UseStopwatch,
+  [switch]$Quiet
 )
 
 $counts = @{
@@ -219,25 +224,35 @@ else {
 
 if ($UseStopwatch) {
   $stopWatch.Stop();
-  Write-Host "Time Used: $($stopWatch.Elapsed)"
+  if (!Quiet) {
+    Write-Host "Time Used: $($stopWatch.Elapsed)"
+  }
 }
-if ($counts.replaced -eq 0) {
+if ($counts.replaced -eq 0 -and !$Quiet) {
   Write-Host "Congratulations, all found icon urls is up to date."
-} else {
+} elseif (!$Quiet) {
   Write-Host "Updated $($counts.replaced) icon url(s)";
 }
-if ($counts.uptodate -gt 0) {
+if ($counts.uptodate -gt 0 -and !$Quiet) {
   Write-Host "$($counts.uptodate) icon url(s) was already up to date.";
 }
-if ($counts.missing -gt 0) {
+if ($counts.missing -gt 1) {
   Write-Warning "$($counts.missing) icon(s) was not found!"
-  $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Hell Yeah"
-  $no  = New-Object System.Management.Automation.Host.ChoiceDescription "&No","No WAY"
-  $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
-  [int]$defaultChoice = 1
-  $message = "Do you want to view the package names?";
-  $choice = $host.ui.PromptForChoice($caption, $message, $options, $defaultChoice);
+  if (!$PrintMissingIcons) {
+    $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Hell Yeah"
+    $no  = New-Object System.Management.Automation.Host.ChoiceDescription "&No","No WAY"
+    $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
+    [int]$defaultChoice = 1
+    $message = "Do you want to view the package names?";
+    $choice = $host.ui.PromptForChoice($caption, $message, $options, $defaultChoice);
+  } else {
+    $choice = 0
+  }
   if ($choice -eq 0) {
+    Write-Warning "We did not found an icon for the following packages"
     $missingIcons -join "`n";
   }
+}elseif ($counts.missing -eq 1) {
+  $package = $missingIcons[0]
+  Write-Warning "Unable to find icon url for $package"
 }
