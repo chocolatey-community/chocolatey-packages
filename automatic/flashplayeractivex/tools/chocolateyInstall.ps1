@@ -1,14 +1,12 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$installArgs = '/quiet /norestart REMOVE_PREVIOUS=YES'
-$url = '{{DownloadUrl}}'
-
-$majorVersion = ([version] $version).Major
-
-$alreadyInstalled = Get-WmiObject -Class Win32_Product | Where-Object {
-  $_.Name -eq "Adobe Flash Player $majorVersion ActiveX" -and
-  $_.Version -eq $version
-}
+$packageName = 'flashplayeractivex'
+$version = '24.0.0.186'
+$majorVersion = '24'
+$url = 'http://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_24_active_x.msi'
+$checksum = 'D1D60DF68B172F2CB21E4F8572BBB6727385BF4E5874DF95560947D35956BB9D'
+$checksumType = 'sha256'
+$registry = ( Get-UninstallRegistryKey -SoftwareName "Adobe Flash Player $majorVersion ActiveX" ).DisplayVersion
+$checking = ( $registry -eq $version )
+$alreadyInstalled = @{$true = "Adobe Flash Player ActiveX for IE $version is already installed."; $false = "Adobe Flash Player ActiveX for IE $version is not already installed."}[ $checking ]
 
 $allRight = $true
 
@@ -25,11 +23,20 @@ if (Get-Process iexplore -ErrorAction SilentlyContinue) {
     'Close Internet Explorer and reinstall this package.'
 }
 
-if ($alreadyInstalled) {
+if ( $checking ) {
   $allRight = $false
-  Write-Output "Adobe Flash Player ActiveX for IE $version is already installed."
+  Write-Output $alreadyInstalled
 }
 
 if ($allRight) {
-  Install-ChocolateyPackage $packageName 'msi' $installArgs $url
+$packageArgs = @{
+  packageName   = $packageName
+  fileType      = 'msi'
+  url           = $url
+  silentArgs    = '/quiet /norestart REMOVE_PREVIOUS=YES'
+  softwareName  = 'Adobe Flash Player ActiveX'
+  checksum      = $checksum
+  checksumType  = $checksumType
+}
+  Install-ChocolateyPackage @packageArgs    
 }
