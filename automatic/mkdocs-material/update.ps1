@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/squidfunk/mkdocs-material/releases'
+$releases = 'https://pypi.python.org/pypi/mkdocs-material/json'
 
 function global:au_SearchReplace {
     @{
@@ -11,16 +11,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $version = (Invoke-WebRequest -UseBasicParsing -Uri $releases | ConvertFrom-Json | Select -Expand info | Select version).version
 
-    #0.2.4.zip
-    $re  = "(.*).zip"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
-
-    $version = [IO.Path]::GetFileNameWithoutExtension($url)
-
-    $Latest = @{ Version = $version }
-    return $Latest
+    return @{ Version = $version }
 }
 
 update -ChecksumFor none
