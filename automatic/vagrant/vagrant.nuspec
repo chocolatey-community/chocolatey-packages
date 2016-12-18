@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vagrant</id>
+    <title>Vagrant (Install)</title>
+    <version>1.9.1</version>
+    <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
+    <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
+    <summary>Vagrant - Development environments made easy.</summary>
+<description>
+Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.
+
+To achieve its magic, Vagrant stands on the shoulders of giants. Machines are provisioned on top of VirtualBox, VMware, AWS, or any other provider. Then, industry-standard provisioning tools such as shell scripts, Chef, or Puppet, can be used to automatically install and configure software on the machine.
+</description>
+    <projectUrl>https://www.vagrantup.com</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-packages/tree/master/automatic/vagrant</packageSourceUrl>
+    <projectSourceUrl>https://github.com/mitchellh/vagrant</projectSourceUrl>
+    <docsUrl>https://docs.vagrantup.com/docs</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/vagrant-up</mailingListUrl>
+    <bugTrackerUrl>https://github.com/mitchellh/vagrant/issues</bugTrackerUrl>
+    <tags>vagrant admin sandbox virtual machine testing VM VirtualBox VMware cross-platform foss cli</tags>
+    <copyright>Copyright 2015 HashiCorp</copyright>
+    <licenseUrl>https://github.com/mitchellh/vagrant/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/62469751380dc5a9f2620f4b34c08fd7c741e5a5/icons/vagrant.png</iconUrl>
+    <releaseNotes>[CHANGELOG](https://github.com/mitchellh/vagrant/blob/master/CHANGELOG.md)</releaseNotes>
+    <!--<provides>vagrant</provides>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
