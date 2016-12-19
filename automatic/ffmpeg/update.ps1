@@ -5,12 +5,22 @@ $releases = 'https://ffmpeg.zeranoe.com/builds'
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+        }
+
+        ".\legal\VERIFICATION.txt" = @{
+          "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
+          "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
+          "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
+          "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
+          "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL64)"
         }
     }
+}
+
+function global:au_BeforeUpdate {
+    . $PSScriptRoot\Convert-ToEmbedded.ps1
+    Convert-ToEmbedded -Purge
 }
 
 function global:au_GetLatest {
@@ -24,4 +34,4 @@ function global:au_GetLatest {
     @{ URL32 = $url32; URL64=$url64; Version = $version }
 }
 
-update -NoCheckUrl
+update -ChecksumFor none

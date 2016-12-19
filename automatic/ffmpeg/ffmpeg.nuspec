@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ffmpeg</id>
-    <version>3.2.2</version>
+    <version>3.2.2.20161219</version>
     <title>FFmpeg</title>
     <owners>chocolatey</owners>
     <authors>FFmpeg Contributors</authors>
@@ -17,17 +17,18 @@ The FFmpeg project tries to provide the best technically possible solution for d
 
 Security is a high priority and code review is always done with security in mind. Though due to the very large amounts of code touching untrusted data security issues are unavoidable and thus we provide as quick as possible updates to our last stable releases when new security issues are found.
 
-### Note
+## Notes
 
 * This package is for the stable static ffmpeg version.
     </description>
     <summary>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.</summary>
-    <releaseNotes>http://git.videolan.org/?p=ffmpeg.git;a=shortlog;h=n{{PackageVersion}}</releaseNotes>
+    <releaseNotes>https://ffmpeg.org/index.html#news</releaseNotes>
     <copyright />
     <language>en-US</language>
     <tags>ffmpeg libavcodec foss cli audio video convert cross-platform audio video media</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
+    <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

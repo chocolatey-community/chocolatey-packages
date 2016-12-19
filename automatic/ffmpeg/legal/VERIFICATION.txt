@@ -1,0 +1,27 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to
+
+   x32: https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-3.2.2-win32-static.zip
+   x64: https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.2.2-win64-static.zip
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum32: 80FB6D5C41317CE1F226132F18A13D37BC2E03F31D18E2CF9C099A56724D5DA4
+   checksum64: 46E07BAD60C2BE4B79E71CEA1736E9BED00818EFE90BA9521E29E24BB59D5A63
+
+Using AU:
+
+   Get-RemoteChecksum https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.2.2-win64-static.zip
+
+File 'COPYING.GPLv3' is obtained from:
+   https://git.ffmpeg.org/gitweb/ffmpeg.git/blob_plain/HEAD:/COPYING.GPLv3
