@@ -32,6 +32,7 @@ Security is a high priority and code review is always done with security in mind
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
 <!-- “UTF-8” test -->
