@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>LockHunter</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Igor Tkachenko, Nikolay Duylovskiy, Crystal Rich Ltd</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>LockHunter is a foolproof file unlocker.</summary>
+    <description>LockHunter is a foolproof file unlocker. It is a free tool to delete files blocked by something you do not know. LockHunter is useful for fighting against malware, and other programs that are blocking files without a reason. Unlike other similar tools it deletes files into the recycle bin so you may restore them if deleted by mistake.</description>
+    <projectUrl>http://lockhunter.com/</projectUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/lockhunter.png</iconUrl>
+    <tags>lockhunter unlocker file system locked files admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
