@@ -1,28 +1,17 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$fileType = 'exe'
-$silentArgs = '/SILENT'
-# \{\{DownloadUrlx64\}\} is the required variable here (it’s not a typo)
-$url = "{{DownloadUrlx64}}"
+$ErrorActionPreference = 'Stop';
 
-$registryPath32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
-$registryPathWow6432 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\GnuCash_is1'
+$packageArgs = @{
+  packageName   = 'gnucash'
+  fileType      = 'exe'
+  url           = 'https://github.com/Gnucash/gnucash/releases/download/2.6.15/gnucash-2.6.15.setup.exe'
 
-if (Test-Path $registryPath32) {
-  $registryPath = $registryPath32
+  softwareName  = 'GnuCash*'
+
+  checksum      = '822d4c99e402cf9526c5ec1f2f246ded704eefd96185e7e18712ab06f12b00e9'
+  checksumType  = 'sha256'
+
+  silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /SP-"
+  validExitCodes= @(0)
 }
 
-if (Test-Path $registryPathWow6432) {
-  $registryPath = $registryPathWow6432
-}
-
-if ($registryPath) {
-  $displayName = (Get-ItemProperty -Path $registryPath -Name 'DisplayName').DisplayName
-  $installedVersion = $displayName -replace '.+?([\d\.]+)', '$1'
-}
-
-if ($version -eq $installedVersion) {
-  Write-Output "GnuCash $installedVersion is already installed. Skipping download and installation."
-} else {
-  Install-ChocolateyPackage $packageName $fileType $silentArgs $url
-}
+Install-ChocolateyPackage @packageArgs

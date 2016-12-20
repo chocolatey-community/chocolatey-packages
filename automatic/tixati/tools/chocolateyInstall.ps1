@@ -1,26 +1,29 @@
-$packageName		= 'Tixati'
-$installerType		= 'EXE'
-$url			= '{{DownloadUrl}}'
-$url64			= '{{DownloadUrlx64}}'
-$validExitCodes		= @(0)
-$pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
-$au3			= Join-Path $pwd 'tixati.au3'
+$ErrorActionPreference = 'Stop'
 
-# Calculate $binRoot, which should always be set in $env:ChocolateyBinRoot as a full path (not relative)
-$binRoot		= Get-BinRoot;
-# Override. I thought Get-BinRoot was supposed to do this but guess not: https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/chocolatey/5R7OtVM9RUI/ERcFFKZcFnQJ
-$binRoot		= Join-Path $env:ChocolateyInstall "bin"
+$packageName = 'tixati'
+$fileName = 'tixati-2.49-1.install.exe'
+$download_dir = "$Env:TEMP\chocolatey\$packageName\$Env:ChocolateyPackageVersion"
 
-$chocTempDir	= Join-Path $env:TEMP "chocolatey"
-$tempDir		= Join-Path $chocTempDir "$packageName"
-if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
+$packageArgs = @{
+  packageName    = $packageName
+  fileFullPath   = "$download_dir\$fileName"
+  url            = 'https://download1.tixati.com/download/tixati-2.49-1.win32-install.exe'
+  url64bit       = 'https://download1.tixati.com/download/tixati-2.49-1.win64-install.exe'
+  checksum       = '6faf627170f0244d19510cd65c5d7a5a7c3d9e284001d1ff0999cf44712e6b6e'
+  checksum64     = '2f7a29dc72a96d8def728f4eb1b0553066fe83fa888041bc7934f753e1d70d09'
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+}
+Get-ChocolateyWebFile @packageArgs
 
-$tempFile		= Join-Path $tempDir "$packageName.installer.exe"
+Write-Output "Running Autohotkey installer"
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+Autohotkey.exe $toolsPath\$packageName.ahk $packageArgs.fileFullPath
 
-Get-ChocolateyWebFile "$packageName" "$tempFile" "$url" "$url64"
-	
-Write-Output "Running `'upx.exe -d `"$tempFile`"`'"
-upx.exe -d "$tempFile"
-	
-Write-Output "Running AutoIt3 using `'$au3`'"
-Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'
+$installLocation = Get-AppInstallLocation $packageName
+if ($installLocation)  {
+    Write-Host "$packageName installed to '$installLocation'"
+    Register-Application "$installLocation\$packageName.exe"
+    Write-Host "$packageName registered as $packageName"
+}
+else { Write-Warning "Can't find $PackageName install location" }

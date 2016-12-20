@@ -1,8 +1,22 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$fileArgs = '/VERYSILENT'
-$version = '{{PackageVersion}}'
+$ErrorActionPreference = 'Stop'
 
-$url = Get-UrlFromFosshub "http://www.fosshub.com/genLink/Audacity/audacity-win-${version}.exe"
+$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
-Install-ChocolateyPackage $packageName $fileType $fileArgs $url
+$packageArgs = @{
+  packageName    = 'audacity'
+  fileType       = 'exe'
+  file           = gi "$toolsDir\*.exe"
+  silentArgs     = '/VERYSILENT'
+  validExitCodes = @(0, 1223)
+}
+Install-ChocolateyInstallPackage @packageArgs
+rm ($toolsDir + '\*.' + $packageArgs.fileType)
+
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageName
+if ($installLocation)  {
+    Write-Host "$packageName installed to '$installLocation'"
+    Register-Application "$installLocation\$packageName.exe"
+    Write-Host "$packageName registered as $packageName"
+}
+else { Write-Warning "Can't find $PackageName install location" }

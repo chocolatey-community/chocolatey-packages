@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>mp3tag</id>
+    <version>2.80</version>
     <title>Mp3tag</title>
     <owners>chocolatey</owners>
     <authors>Florian Heidenreich</authors>
@@ -16,7 +16,7 @@ Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio f
     <summary>Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio formats.</summary>
     <tags>mp3 tag admin</tags>
     <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mp3tag</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

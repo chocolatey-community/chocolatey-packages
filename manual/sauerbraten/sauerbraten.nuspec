@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>sauerbraten</id>
+    <version>2013.02.03.20161112</version>
+    <title>Cube 2: Sauerbraten</title>
+    <owners>chocolatey,purity</owners>
+    <authors>Cube 2: Sauerbraten development team</authors>
+    <licenseUrl>http://sauerbraten.org/README.html#license</licenseUrl>
+    <projectUrl>http://sauerbraten.org/</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/p/sauerbraten/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>http://cubeengine.com/wiki/</docsUrl>
+    <mailingListUrl>http://www.cubeengine.com/forum.php</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sauerbraten.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter, the successor of the Cube FPS.
+
+Much like the original Cube, the aim of this game is fun,
+old school deathmatch gameplay and also to allow map/geometry editing to be done cooperatively in-game.
+
+The engine supporting the game is entirely original in code &amp; design, and its code is Open Source.
+
+## Game Features
+* Oldskool fast &amp; intense gameplay (read: similar to Doom 2 / Quake 1).
+* Many multiplayer gameplay modes, most in teamplay variants as well: deathmatch, instagib, efficiency, tactics,
+  capture (domination/battlefield style), CTF (capture the flag), coop edit (!).
+* Masterserver &amp; ingame server browser.
+* Lag-free gameplay experience.
+* Two singleplayer modes: DMSP (fight a monster invasion on any DM map), classic SP (progression driven SP like other games)
+* 7 weapons tuned for maximum satisfaction: double barrelled shogun, rocket launcher, machine gun, rifle, grenade launcher, pistol, fist.
+
+## Engine Features
+* 6 directional heightfield in octree world structure allowing for instant easy in-game geometry editing (even in multiplayer, coop edit).
+* Rendering engine optimized for high geometry throughput,
+  supporting hardware occlusion culling and software precomputed conservative PVS with occluder fusion.
+* Lightmap based lighting with accurate shadows from everything including mapmodels, smooth lighting for faceted geometry, and fast compiles.
+  Soft shadowmap based shadows for dynamic entities.
+* Pixel and vertex shader support, each model and world texture can have its own shader assigned.
+  Supports normal and parallax mapping, specular and dynamic lighting with bloom and glow,
+  environment-mapped and planar reflections/refractions, and post-process effects.
+* Robust physics written specifically for this world structure.
+* Loading of md2/md3/md5/obj/smd/iqm models for skeletal and vertex animated characters, weapons, items, and world objects.
+  Supports animation blending, procedural pitch animation, and ragdoll physics for skeletally-animated characters.
+* Network library designed for high speed games, client/server network system.
+* Small but complete configuration/scripting language.
+* Simple stereo positional sound system.
+* Particle engine, supporting text particles, volumetric explosions, soft particles, and decals.
+* 3d menu/gui system, for in-world representation of choices.
+    </description>
+    <summary>Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter</summary>
+    <copyright>Copyright (C) 2001-2016 Wouter van Oortmerssen, Lee Salzman, Mike Dysart, Robert Pointon, and Quinton Reeves</copyright>
+    <tags>game cube sauerbraten admin fos cross-platform freeware fps</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/sauerbraten</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

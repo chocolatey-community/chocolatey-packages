@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Tuniac</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Tony Million, Brett Hoyle, Blur, Mike Vierya, Daniel, Brice and RA</authors>
+    <owners>chocolatey</owners>
+    <summary>Tuniac is an iTunes style media player/manager for Windows.</summary>
+    <description>
+Tuniac is an iTunes style media player/manager for Windows.
+Supporting advanced playlist editing, search as you type and queue support.
+
+File formats supported:
+ * MPEG-1 Audio (mp3, mp2, mp1)
+ * FLAC (flac, fla, oga, ogg)
+ * Advanced Audio Coding (aac, m4a, m4b, mp4)
+ * Apple Lossless Audio Codec aka ALAC (m4a)
+ * Windows Media Audio (wma)
+ * Vorbis (ogg)
+ * Opus (opus)
+ * WavPack (wv)
+ * TAK Audio (tak)
+ * TrueAudio (tta)
+ * Monkeys Audio (ape, mac)
+ * Musepack (mpc, mp+, mpp)
+ * OptimFrog (ofr, ofs)
+ * Shorten (shn)
+ * Dolby Digital (ac3)
+ * DSD (dff, dfs)
+ * PCM (wav, aif)
+ * CD Audio (cda)
+ * Speex (spx)
+ * MOD Formats (mod, mo3, xm, it, s3m, mtm)
+ * Game Audio Formats (adx, umx)
+ * MIDI (mid)
+ Supporting radio streaming of most the above formats.
+	</description>
+    <projectUrl>http://www.tuniac.org/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/leonghui/chocolatey-coreteampackages/a9d7e228c4fbe34895628f4b58e759165e93af87/icons/tuniac.png</iconUrl>
+    <dependencies>
+	    <dependency id="vcredist2010" />
+	    <dependency id="vcredist2015" />
+	  </dependencies>
+    <tags>tuniac music player MP3 FLAC OGG WMA</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

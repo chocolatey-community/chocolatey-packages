@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>mumble</id>
     <title>Mumble</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>1.2.18</version>
     <authors>Natvig, et. al.</authors>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/mumble.svg</iconUrl>
     <summary>Mumble is an open source, low-latency, high quality voice chat software primarily intended for use while gaming.</summary>
@@ -14,14 +14,32 @@ Mumble is a voice over IP (VOIP) application primarily designed for use by gamer
 Mumble uses a client–server architecture which allows users to talk to each other via the same server. It has a very simple administrative interface and features high sound quality and low latency. All communication is encrypted to ensure user privacy.
 
 Mumble is free and open-source software, is cross-platform, and is released under the terms of the new BSD license. *(from Wikipedia, 2013-04-18)*
-    </description>
+
+## Features
+
+- Low-latency - great for talking and gaming
+- Stay private and secure
+- Recognize friends across servers
+- For gamers:
+  - In-game Overlay - see who is talking
+  - Positional audio - hear the players from where they are located
+- Extensive user permission system (ACL)
+- Extendible through Ice middleware
+- Very stable server software
+- Many other options
+</description>
     <projectUrl>http://www.mumble.info/</projectUrl>
-    <tags>voice chat voip admin</tags>
+    <tags>voice foss chat cross-platform voip admin</tags>
     <copyright>Natvig, et. al.  See License for more information.</copyright>
     <licenseUrl>https://github.com/mumble-voip/mumble/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://github.com/mumble-voip/mumble/releases/tag/1.2.18</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mumble</packageSourceUrl>
+    <projectSourceUrl>https://github.com/mumble-voip/mumble</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/mumble-voip/mumble/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

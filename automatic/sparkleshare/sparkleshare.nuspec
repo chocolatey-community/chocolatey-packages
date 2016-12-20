@@ -1,26 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks,
+you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>SparkleShare</title>
+    <id>sparkleshare</id>
+    <version>1.5.0.20161115</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sparkleshare</packageSourceUrl>
     <owners>chocolatey</owners>
-    <authors>Linux Community</authors>
-    <licenseUrl>https://github.com/hbons/SparkleShare#license</licenseUrl>
+    <title>SparkleShare</title>
+    <authors>Linux Community,Hylke Bons</authors>
     <projectUrl>http://sparkleshare.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/sparkleshare.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png</iconUrl>
+    <copyright>Copyright (C) 2010  Hylke Bons</copyright>
+    <licenseUrl>https://github.com/hbons/SparkleShare/tree/master/legal</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/hbons/SparkleShare</projectSourceUrl>
+    <docsUrl>https://github.com/hbons/SparkleShare/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/hbons/SparkleShare/issues</bugTrackerUrl>
+    <tags>sparkleshare git collaboration sync files admin foss cross-platform</tags>
+    <summary>
+SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way.
+    </summary>
     <description>
-SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way. It allows you to instantly sync with Git repositories and is available for Linux distributions, Mac and Windows.
+SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way.
+It allows you to instantly sync with Git repositories and is available for Linux distributions, Mac and Windows.
+
+## How does it work?
+SparkleShare creates a special folder on your computer.
+You can add remotely hosted folders (or *"projects"*) to this folder.
+These projects will be automatically kept in sync with both the host and all of your peers when someone adds, removes or edits a file.
+
+## What's it good for?
+SparkleShare was made to cover certain use cases, but doesn't handle every scenario well.
+To help you decide if SparkleShare is right for you, here's a few examples of what it does well and less well:
+
+**Great**
+* Frequently changing project files, like text, office documents, and images
+* Tracking and syncing files edited by multiple people
+* Reverting a file to any points in its history
+* Preventing spying on your files on the server using encryption
+
+**Not so great**
+* Full computer backups
+* Storing your photos or music collection
+* Large binary files that change often, like video editing projects
+
+For more information on usecases, see the docs.
+
+## Features
+* File synchronization
+* Version control
+* Self hosted
+* Client side encryption
+* Free and Open Source
     </description>
-    <summary>SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way.</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>sparkleshare git collaboration sync files admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://github.com/hbons/SparkleShare/blob/master/News.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
-<!-- “UTF-8” test -->

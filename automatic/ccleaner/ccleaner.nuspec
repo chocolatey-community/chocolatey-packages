@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>ccleaner</id>
     <title>CCleaner</title>
-    <version>{{PackageVersion}}</version>
+    <version>5.25.5902</version>
     <authors>Piriform</authors>
     <owners>maartenba, tonigellida</owners>
     <summary>
@@ -19,12 +20,13 @@ It protects your privacy online and makes your computer faster and more secure.
 This package installs CCleaner without additional adware.
   </description>
     <projectUrl>http://www.piriform.com/ccleaner</projectUrl>
-    <tags>ccleaner system cleanup registry admin</tags>
+    <tags>ccleaner system cleanup freeware trial registry admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-  <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ccleaner.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ccleaner.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ccleaner</packageSourceUrl>
+    <releaseNotes>https://www.piriform.com/ccleaner/version-history</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

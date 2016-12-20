@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>PandaFreeAntivirus</id>
+		<title>Panda Free Antivirus 2015</title>
+		<version>{{PackageVersion}}</version>
+		<authors>Panda Security SL</authors>
+		<owners>Redsandro</owners>
+		<summary>Panda Free Antivirus provides the easiest-to-use and most intuitive protection for your computer. Install it and forget about viruses, spyware, rootkits, hackers and online fraud.</summary>
+		<description>
+__Panda Antivirus Free__ is an evolution of first cloud antivirus, based on Collective Intelligence. It is unique system for detecting and disinfecting viruses and other threats that feeds off the knowledge shared by millions of users in a real time. Thanks to it, the computers that are part of the Panda Community instantly share and benefit from all the information stored in the cloud.
+
+The new Panda Free Antivirus provides the easiest-to-use and most intuitive protection for your computer. Install it and forget about viruses, spyware, rootkits, hackers and online fraud.
+
+__High security scores__  
+
+Panda Free Antivirus scored an impressive 99.9 percent in real-world protection from AV-Comparatives, edging Bitdefender out of the top spot. Scanning in full mode took us about six minutes, which is fast for a free scanner.
+		</description>
+		<projectUrl>http://www.pandasecurity.com/</projectUrl>
+		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+		<tags>Antivirus Security Protection NotSilent AutoIt</tags>
+		<copyright></copyright>
+		<licenseUrl>http://softwareula.wordpress.com/2010/07/20/panda-cloud-antivirus/</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://i.imgur.com/McibFJt.jpg</iconUrl>
+		<dependencies>
+			<dependency id="autoit.commandline" version="3.3.12.0" />
+		</dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>

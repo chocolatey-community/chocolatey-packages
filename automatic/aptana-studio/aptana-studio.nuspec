@@ -1,27 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>aptana-studio</id>
+    <version>3.6.1.20161113</version>
     <title>Aptana Studio</title>
     <owners>chocolatey</owners>
     <authors>Aptana Inc.</authors>
     <licenseUrl>http://www.aptana.com/legal</licenseUrl>
     <projectUrl>http://www.aptana.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/aptana-studio.png</iconUrl>
+    <projectSourceUrl>https://github.com/aptana/studio3</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/aptana/studio3/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/aptana-studio.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-Aptana Studio is an open source integrated development environment (IDE) for building Ajax web applications. Based on Eclipse, it supports JavaScript, HTML, DOM and CSS with code-completion, outlining, JavaScript debugging, error and warning notifications and integrated documentation. Additional plugins allow Aptana Studio to support Ruby on Rails, PHP, Python, Perl, Adobe AIR, Apple iPhone and Nokia WRT (Web Runtime).
+Aptana Studio is an open source integrated development environment (IDE) for building Ajax web applications.
+Based on Eclipse, it supports JavaScript, HTML, DOM and CSS with code-completion, outlining, JavaScript debugging, error and warning notifications
+and integrated documentation.
+Additional plugins allow Aptana Studio to support Ruby on Rails, PHP, Python, Perl, Adobe AIR, Apple iPhone and Nokia WRT (Web Runtime).
 
-### Note
+# Features
+* __HTML, CSS, and JavaScript Code Assist__
+  Aids in authoring of HTML, CSS, JavaScript, PHP and Ruby.
+  Supports the latest HTML5 specifications.
+  Includes information about the level of support for each element in the major web browsers.
+* __Deployment Wizard__
+  Support for one-shot as well as keep-synchronized setups.
+  Multiple protocols including FTP, SFTP, FTPS and Capistrano.
+  Ability to automatically publish your Ruby &amp; Rails applications to hosting services such as Heroku and Engine Yard.
+* __Integrated Debugger__
+  Set breakpoints, inspect variables, control execution.
+  The integrated Ruby &amp; Rails and JavaScript debuggers help you squash those bugs.
+* __Git Integration__
+  Easily put your projects under git source code control.
+  Collaborate with team members thru merge, pull and push actions to remote repositories such those hosted on Github.
+  Facilitates git-based deployments.
+* __Built-in Terminal__
+  Quickly access a command line terminal for execution of operating system commands and language utilities such as gem, rake, etc.
+* __IDE Customization__
+  Setup your development environment exactly the way you want it by extending the core capabilities through scripting of custom commands.
+  Studio ships with hundreds of commands but always presents them in context based on the type of file your are editing.
+
+## Note
 
 This package installs the standalone version of Aptana Studio.
+
+### Optional Dependencies
+* __Ruby [1.8.7+](https://chocolatey.org/packages/ruby/1.8.7) and /or [1.9.1+](https://chocolatey.org/packages/ruby/1.9.2)__
+* __Rails (2.x and/or 3.0)__
+* The gem that supports the database(s) of your choice.
+* For debugging you will need to have the `ruby-debug-base` and `ruby-debug-ide` gems installed.
     </description>
     <summary>Aptana Studio is an open source integrated development environment (IDE) for building Ajax web applications.</summary>
-    <releaseNotes>http://www.aptana.org/products/studio3/releasenotes</releaseNotes>
+    <releaseNotes>https://github.com/aptana/studio3/wiki/Release-Notes</releaseNotes>
     <copyright />
-    <tags>aptana ide ajax web admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>aptana ide ajax web admin foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/aptana-studio</packageSourceUrl>
+    <dependencies>
+      <dependency id="javaruntime" version="8.0" />
+      <dependency id="git" version="2.9" />
+      <dependency id="chocolatey-core.extension" version="0.1.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

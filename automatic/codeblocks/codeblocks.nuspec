@@ -1,27 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>codeblocks</id>
+    <version>16.1.0.20161209</version>
     <title>Code::Blocks</title>
     <authors>The Code::Blocks Team</authors>
     <owners>chocolatey purity</owners>
     <licenseUrl>http://www.codeblocks.org/license</licenseUrl>
     <projectUrl>http://www.codeblocks.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/codeblocks.png</iconUrl>
+    <projectSourceUrl>http://svn.code.sf.net/p/codeblocks/code/</projectSourceUrl>
+    <docsUrl>http://wiki.codeblocks.org/index.php/Main_Page</docsUrl>
+    <mailingListUrl>http://forums.codeblocks.org/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/codeblocks/tickets/</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable. Finally, an IDE with all the features you need, having a consistent look, feel and operation across platforms. Built around a plugin framework, Code::Blocks can be extended with plugins. Any kind of functionality can be added by installing/coding a plugin. For instance, compiling and debugging functionality is already provided by plugins!
+Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.
+Finally, an IDE with all the features you need, having a consistent look, feel and operation across platforms.
+Built around a plugin framework, Code::Blocks can be extended with plugins. Any kind of functionality can be added by installing/coding a plugin.
+For instance, compiling and debugging functionality is already provided by plugins!
 
-### Note
+## Features
+
+### Highlights
+* **Open Source!**, GPLv3, no hidden cost
+* **Cross-platform**, Runs on Linux, Mac, Windows (uses wxWidgets).
+* Written in C++. No interpreted languages or propertietary libs needed.
+* Extensible through plugins
+
+### Compiler
+* **Muliple compiler support:**
+  * GCC (MingW / GNU GCC) *(Included)*
+  * MSVC++
+  * clang
+  * Digital Mars
+  * Borland C++ 5.5
+  * Open Watcom
+  * ...and more
+* **Very fast** custom build system (no makefiles needed)
+* Support for **parallel builds** (utilizing your CPU's extra cores)
+* Multi-target projects
+* Workspaces to combine multiple projects
+* Inter-project dependencies inside workspace
+* Imports MSVC projects and workspaces (*NOTE: assembly code not supported yet*)
+* Imports Dev-C++ projects
+
+### Debugger:
+* Interfaces GNU GDB
+* Also supports MS CDB (not fully featured)
+* **Full breakpoints support:**
+  * Code breakpoints
+  * Data breakpoints (read, write and read/write)
+  * Break point conditions (break only when an expression is true)
+  * User-defined watches (support fro watching user-defined types through scripting)
+  * Call stack
+  * Disassembly
+  * Custom memory dump
+  * Switch between threads
+  * View CPU registers
+
+### Interface:
+* Syntax highlighting, customizable and extensible
+* Code folding for C, C++, Fortran, XML and many more files.
+* Tabbed interface
+* Code completion
+* Class Browser
+* Smart indent
+* One-key swap between .h and .c/.cpp files
+* Open files list for quick switching between files (optional)
+* External customizable "Tools"
+* To-do list management with different users
+
+And many more features provided through plugins!
+
+## Notes
 
 This package downloads the installer with the included GCC compiler.
     </description>
     <summary>Code::Blocks is a free C++ IDE.</summary>
-    <releaseNotes>http://www.codeblocks.org/downloads/31</releaseNotes>
+    <releaseNotes>http://www.codeblocks.org/downloads/45</releaseNotes>
     <copyright />
-    <tags>codeblocks C++ IDE admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>codeblocks C++ IDE admin foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/codeblocks</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

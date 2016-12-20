@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>tixati</id>
         <title>Tixati</title>
-        <version>{{PackageVersion}}</version>
+        <version>2.49</version>
         <authors>Kevin Hearn</authors>
         <owners>Redsandro</owners>
         <summary>Tixati is a cross-platform BitTorrent client written in C++ that has been designed to be light on system resources.</summary>
@@ -28,17 +28,17 @@ __Tixati__ has the following features:
 * Windows and Linux-GTK native versions available
         </description>
         <projectUrl>http://www.tixati.com/</projectUrl>
-        <tags>Internet Network Download Torrent BitTorrent admin</tags>
+        <tags>internet network download torrent p2p share admin</tags>
         <copyright></copyright>
         <licenseUrl>http://www.tixati.com/tixati_eula.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://i.imgur.com/fGvaQfg.png</iconUrl>
+        <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/icons/tixati.png</iconUrl>
         <dependencies>
-            <dependency id="upx" version="3.0" />
-            <dependency id="autoit.commandline" version="3.3.12.0" />
+            <dependency id="chocolatey-core.extension" version="1.0.4" />
+            <dependency id="autohotkey.portable" />
         </dependencies>
         <releaseNotes></releaseNotes>
-      <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tixiati</packageSourceUrl>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />

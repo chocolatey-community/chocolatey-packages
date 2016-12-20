@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>clipgrab</id>
+    <version>3.6.2</version>
     <title>Clipgrab</title>
     <owners>chocolatey</owners>
     <authors>Philipp Schmieder Medien</authors>
@@ -13,13 +13,15 @@
     <description>
 ClipGrab is a free software for downloading and converting online videos from many sites like YouTube or Vimeo. ClipGrab can download from the following sites: YouTube, Clipfish, Collegehumor, Dailymotion, MyVideo, MySpass, Sevenload, Tudou, Vimeo. Downloaded videos can be converted to the following file formats: WMV, MPEG4, OGG Theora, MP3 (audio only), OGG Vorbis (audio only).
 
-Note: The Windows installer of Clipgrab contains the OpenCandy Adware which is reported by some Antivirus tools. However, OpenCandy newer gets installed in silent mode, so this package doesn’t install any unwanted Adware.
+## Notes
+
+- The Windows installer of Clipgrab contains the OpenCandy Adware which is reported by some Antivirus tools. However, OpenCandy newer gets installed in silent mode, so this package doesn’t install any unwanted Adware.
     </description>
     <summary>Download and convert online videos</summary>
     <releaseNotes />
     <copyright />
-    <tags>youtube vimeo video convert music admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>download freeware online vimeo dailymotion youtube vimeo video convert music admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clipgrab</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

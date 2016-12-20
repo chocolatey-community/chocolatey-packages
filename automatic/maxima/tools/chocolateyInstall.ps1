@@ -1,16 +1,16 @@
-﻿$PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
-Import-Module (Join-Path $PSScriptRoot 'functions.ps1')
+$ErrorActionPreference = 'Stop'
 
-$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/S'
-$url = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/{{PackageVersion}}-Windows/maxima-clisp-sbcl-{{PackageVersion}}.exe/download'
-$url64 = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/{{PackageVersion}}-Windows/maxima-sbcl-{{PackageVersion}}-win64.exe/download'
-$version = '{{PackageVersion}}'
-$installedVersion = (Get-InstallProperties).DisplayVersion
-
-if ($version -eq $installedVersion) {
-  Write-Output "Maxima v$version is already installed. No need to install again."
-} else {
-  Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64
+$packageArgs = @{
+  packageName            = 'maxima'
+  fileType               = 'exe'
+  url                    = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.38.1-Windows/maxima-clisp-sbcl-5.38.1.exe'
+  url64bit               = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.38.1-Windows/maxima-sbcl-5.38.1-win64.exe'
+  checksum               = 'f6dd4c04191c6ae865181b32e9cdc502837feb3d56bd89933ca7a84e0f33c4c1'
+  checksum64             = '848675602ac090ab75d8db8b065012af753ce1e325dfbef38045dc571d76429d'
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
+  validExitCodes         = @(0)
+  softwareName           = 'maxima*'
 }
+Install-ChocolateyPackage @packageArgs

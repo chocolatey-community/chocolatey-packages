@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>vlc</id>
+    <title>VLC media player</title>
+    <version>2.2.4.20161210</version>
+    <authors>VideoLAN Organization</authors>
+    <owners>chocolatey, Rob Reynolds</owners>
+    <summary>VLC Media Player</summary>
+    <licenseUrl>http://www.videolan.org/legal.html</licenseUrl>
+    <description>
+VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.
+
+## Features
+
+- Plays Files, Discs, Webcams, Devices and Streams.
+- Fast - Hardware Decoding.
+- Plays most codecs with no codec packs needed - MPEG-2, MPEG-4, H.264, MKV, WebM, WMV, MP3...
+- Complete feature-set over the video, subtitle synchronisation, video and audio filters.
+- Runs on all platforms - Windows, Linux, Mac OS X, Unix, iOS, Android ...
+- Completely Free - no spyware, no ads and no user tracking.
+
+## Package parameters
+
+- `Language` - Two letter language code: nl, en, fr ...
+    </description>
+    <projectUrl>http://www.videolan.org/vlc/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vlc</packageSourceUrl>
+    <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
+    <tags>vlc foss cross-platform multimedia audio video mp3 dvd avi media player admin</tags>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->

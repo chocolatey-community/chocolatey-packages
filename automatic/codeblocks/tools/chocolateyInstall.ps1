@@ -1,7 +1,24 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/S'
-# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-$url = '{{DownloadUrlx64}}'
+$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$packageArgs = @{
+  packageName    = 'codeblocks'
+  fileType       = 'exe'
+  softwareName   = 'CodeBlocks'
+  file           = "$toolsDir\codeblocks-16.01mingw-setup.exe"
+
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+# Lets remove the installer as there is no more need for it
+Remove-Item -Force $packageArgs.file
+
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if ($installLocation) {
+  Write-Host "$($packageArgs.packageName) installed to '$installLocation'"
+  Register-Application "$installLocation\codeblocks.exe"
+}

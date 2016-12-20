@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>Clover</id>
     <title>Clover</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>3.2.5</version>
     <authors>EJIE Technology</authors>
     <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
     <description>
@@ -15,12 +15,15 @@ Clover is an extension of the Windows Explorer, to add multi-tab functionality s
 After Clover is installed, you will be able to open multiple folders within the same window, and you can also be able to add folder bookmarks.
     </description>
     <projectUrl>http://ejie.me/</projectUrl>
-    <tags>admin windows-explorer filemanager tab tabbed-browsing tabbed-file-manager</tags>
+    <tags>admin freeware windows-explorer file-system file-manager tab tabs </tags>
     <copyright></copyright>
     <licenseUrl>http://www.scribd.com/doc/164355290/License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Clover.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Clover</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

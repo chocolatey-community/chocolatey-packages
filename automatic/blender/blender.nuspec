@@ -1,26 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>blender</id>
+    <version>2.78</version>
     <title>Blender</title>
     <owners>chocolatey</owners>
     <authors>Blender Foundation</authors>
-    <licenseUrl>http://download.blender.org/release/GPL-license.txt</licenseUrl>
-    <projectUrl>http://www.blender.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/blender.svg</iconUrl>
+    <licenseUrl>https://www.blender.org/about/license/</licenseUrl>
+    <projectUrl>https://www.blender.org</projectUrl>
+    <projectSourceUrl>https://git.blender.org/gitweb/</projectSourceUrl>
+    <bugTrackerUrl>https://developer.blender.org/maniphest/</bugTrackerUrl>
+    <mailingListUrl>https://wiki.blender.org/index.php/Dev:Doc/Contact#Mailing_Lists</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 From Wikipedia on 2013-04-18: Blender is a free and open-source 3D computer graphics software product used for creating animated films, visual effects, interactive 3D applications or video games. Blender's features include 3D modeling, UV unwrapping, texturing, rigging and skinning, fluid and smoke simulation, particle simulation, soft body simulation, animating, match moving, camera tracking, rendering, video editing and compositing. It also features a built-in game engine.
+
+## Features
+
+- Blender is a fully integrated 3D content creation suite, offering a broad range of essential tools, including Modeling, Rendering, Animation, Video Editing, VFX, Compositing, Texturing, Rigging, many types of Simulations, and Game Creation.
+- Cross platform, with an OpenGL GUI that is uniform on all major platforms (and customizable with Python scripts).
+- High-quality 3D architecture enabling fast and efficient creation work-flow.
+- Excellent community support from forums and IRC.
+- Small executable size, optionally portable.
     </description>
     <summary>Blender is 3D creation for everyone, free to use for any purpose.</summary>
-    <releaseNotes>http://www.blender.org/development/release-logs/</releaseNotes>
+    <releaseNotes>https://wiki.blender.org/index.php/Dev:Ref/Release_Notes</releaseNotes>
     <copyright>Blender Foundation</copyright>
-    <tags>3d rendering modeling animation admin</tags>
+    <tags>3d rendering foss cross-platform modeling animation admin</tags>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729.1" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/blender</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>bluegriffon</id>
+    <version>2.1.2</version>
     <title>BlueGriffon</title>
     <owners>chocolatey</owners>
     <authors>Daniel Glazman</authors>
     <licenseUrl>http://www.bluegriffon.org/</licenseUrl>
     <projectUrl>http://bluegriffon.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/bluegriffon.svg</iconUrl>
+    <projectSourceUrl>https://github.com/therealglazou/bluegriffon</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/therealglazou/bluegriffon/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluegriffon.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 BlueGriffon is a WYSIWYG content editor for the World Wide Web. Powered by Gecko, the rendering engine of Firefox, it's a modern and robust solution to edit Web pages in conformance to the latest Web Standards.
@@ -20,8 +22,11 @@ Because Gecko lives inside BlueGriffon, the document you edit will look exactly 
     <summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
     <releaseNotes />
     <copyright />
-    <tags>bluegriffon WYSIWYG gecko firefox html admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>bluegriffon cross-platform trial WYSIWYG gecko firefox html admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluegriffon</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

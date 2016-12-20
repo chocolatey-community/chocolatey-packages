@@ -1,33 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>thunderbird</id>
+    <version>45.5.1</version>
     <title>Mozilla Thunderbird</title>
     <owners>chocolatey</owners>
     <authors>Mozilla</authors>
     <licenseUrl>http://www.mozilla.org/en-US/legal/eula/thunderbird.html</licenseUrl>
     <projectUrl>https://www.mozilla.org/en/thunderbird/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/thunderbird.png</iconUrl>
+    <projectSourceUrl>https://dxr.mozilla.org/comm-central/source/</projectSourceUrl>
+    <docsUrl>https://developer.mozilla.org/en-US/Thunderbird</docsUrl>
+    <bugTrackerUrl>https://bugzilla.mozilla.org/</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Thunderbird is a free email application that’s easy to set up and customize – and it’s loaded with great features!
 
 This package installs Thunderbird in the first language which matches this list:
 
-1. Install arguments override parameter if present, e.g. `choco install Thunderbird -packageParameters "l=en-GB"`. To get a list of all available locales have a look at http://releases.mozilla.org/pub/thunderbird/releases/latest/README.txt.
+1. Install arguments override parameter if present, e.g. `choco install Thunderbird -packageParameters "l=en-GB"`.
+   To get a list of all available locales have a look at http://releases.mozilla.org/pub/thunderbird/releases/latest/README.txt.
 2. If Thunderbird is already installed: the same language as the already installed Thunderbird.
 3. The Windows system language where the Thunderbird package gets installed.
 4. If Thunderbird does not support the system language, it will fallback to “en-US”
     </description>
     <summary>A free email client from Mozilla</summary>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.mozilla.org/en-US/thunderbird/notes/</releaseNotes>
     <copyright>Mozilla. All rights reserved.</copyright>
-    <tags>mozilla thunderbird email admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>mozilla thunderbird email admin foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/thunderbird</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="..\Firefox\tools\helpers.ps1" target="tools\helpers.ps1" />
   </files>
 </package>
 <!-- “UTF-8” test -->

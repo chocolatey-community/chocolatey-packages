@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>cutepdf</id>
     <title>CutePDF</title>
-    <version>{{PackageVersion}}</version>
+    <version>3.0</version>
     <authors>Acro Software Inc.</authors>
     <owners>Redsandro</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
     <description>
-CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert
-to professional quality PDF documents. No watermarks!
+Portable Document Format (PDF) is the de facto standard for the secure and reliable distribution and exchange of electronic documents and forms around the world.  CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert to professional quality PDF documents - with just a push of a button!
+
+## Notes
+
+- Free software for commercial and non-commercial use.
     </description>
     <projectUrl>http://www.cutepdf.com/</projectUrl>
-    <tags>PDF Printer Converter Office admin</tags>
+    <tags>PDF Printer Converter Office freeware admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.cutepdf.com/Info/legal.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -20,8 +24,8 @@ to professional quality PDF documents. No watermarks!
     <dependencies>
       <dependency id="Ghostscript.app" version="8.15" />
     </dependencies>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://www.cutepdf.com/support/updates.asp</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cutepdf</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

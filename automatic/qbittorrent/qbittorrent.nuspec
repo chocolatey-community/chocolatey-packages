@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks,
+you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>qbittorrent</id>
+    <title>qBittorrent</title>
+    <version>3.3.10</version>
+    <authors>Christophe Dumez</authors>
+    <owners>nconrads, chocolatey</owners>
+    <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
+    <description>
+qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
+The program uses libtorrent-rasterbar library for the torrent back-end (network communication) functionality.
+It is developed by Christophe Dumez, from the University of Technology of Belfort-Montbeliard in France.
+It was started in March 2006 and has been in active development ever since.
+
+qBittorrent aims to have a small foot-print, to be powerful, intuitive and visually attractive going beyond the
+current functions widely provided by other applications. qBittorrent is an attempt to provide a μTorrent equivalent
+that is open-source and multi-platform adding a streaming-like function to let users download-and-play video files.
+qBittorrent is currently offering functionality comparable to more popular BitTorrent clients such as Vuze but
+without requiring the Java Virtual Machine.
+qBittorrent requires Python only for the search engine while other clients such as Deluge and BitTornado require
+it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
+
+
+## Features
+
+- Polished µTorrent-like User Interface
+- Well-integrated and extensible Search Engine
+- Simultaneous search in most famous BitTorrent search sites
+- Per-category-specific search requests (e.g. Books, Music, Movies)
+- All Bittorrent extensions
+- DHT, Peer Exchange, Full encryption, Magnet/BitComet URIs, ...
+- Remote control through a Web user interface
+- Nearly identical to the regular UI, all in Ajax
+- Advanced control over trackers, peers and torrents
+- Torrents queueing and prioritizing
+- Torrent content selection and prioritizing
+- UPnP / NAT-PMP port forwarding support
+- Available in ~41 languages (Unicode support)
+- Torrent creation tool
+- Advanced RSS support with download filters (inc. regex)
+- Bandwidth scheduler
+- IP Filtering (eMule and PeerGuardian compatible)
+- IPv6 compliant
+- Sequential downloading (aka "Download in order")
+- Available on most platforms: Linux, Mac OS X, Windows, OS/2, FreeBSD
+    </description>
+    <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
+    <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>
+    <docsUrl>https://github.com/qbittorrent/qBittorrent/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/qbittorrent/qBittorrent/issues</bugTrackerUrl>
+    <tags>qbittorrent torrent sharing p2p foss cross-platform admin</tags>
+    <licenseUrl>https://github.com/qbittorrent/qBittorrent/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright ©2006-2016 The qBittorrent project</copyright>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
+    <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

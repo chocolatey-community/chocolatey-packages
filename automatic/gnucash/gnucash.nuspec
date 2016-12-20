@@ -1,28 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks,
+you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>GnuCash</title>
+    <id>gnucash</id>
+    <version>2.6.15</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnucash</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>GnuCash</title>
     <authors>The GnuCash Project</authors>
-    <licenseUrl>http://svn.gnucash.org/trac/browser/gnucash/trunk/LICENSE</licenseUrl>
     <projectUrl>http://www.gnucash.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/gnucash.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/gnucash.svg</iconUrl>
+    <copyright>2001-2016 The GnuCash Project</copyright>
+    <licenseUrl>http://svn.gnucash.org/trac/browser/gnucash/trunk/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://svn.gnucash.org/trac/browser/gnucash</projectSourceUrl>
+    <docsUrl>https://www.gnucash.org/docs.phtml</docsUrl>
+    <mailingListUrl>http://wiki.gnucash.org/wiki/Mailing_Lists</mailingListUrl>
+    <bugTrackerUrl>http://wiki.gnucash.org/wiki/Bugzilla</bugTrackerUrl>
+    <tags>gnucash admin financial accounting foss cross-platform</tags>
+    <summary>Financial accounting software</summary>
     <description>
-GnuCash is personal and small-business financial-accounting software, freely licensed under the GNU GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.
+*GnuCash* is personal and small-business financial-accounting softwre,
+freely licensed under the [GNU](http://www.gnu.org/) GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.
 
-Designed to be easy to use, yet powerful and flexible, GnuCash allows you to track bank accounts, stocks, income and expenses. As quick and intuitive to use as a checkbook register, it is based on professional accounting principles to ensure balanced books and accurate reports.
+Designed to be easy to use, yet powerful and flexible, *GnuCash* allows you to track bank accounts, stocks, income and expenses.
+As quick and intuitive to use as a checkbook register,
+it is based on professional accounting principles to ensure balanced books and accurate reports.
+
+## Features
+* Double-Entry accounting
+* Stock/Bond/Mutual Fund Accounts
+* Small-Business Accounting
+* Reports, Graphs
+* QIF/OFX/HBCI Import, Transaction Matching
+* Scheduled Transactions
+* Financial Calculations
+* and [more](https://www.gnucash.org/features.phtml)
     </description>
-    <summary>financial-accounting software</summary>
     <releaseNotes>http://www.gnucash.org/#newscontainer</releaseNotes>
-    <copyright>The GnuCash Project</copyright>
-    <tags>financial accounting admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
-<!-- “UTF-8” test -->

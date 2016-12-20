@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>ffmpeg</id>
+    <version>3.2.2.20161219</version>
     <title>FFmpeg</title>
-    <owners>chocolatey purity</owners>
+    <owners>chocolatey</owners>
     <authors>FFmpeg Contributors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
     <projectUrl>http://www.ffmpeg.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ffmpeg.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffmpeg.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.
+FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
 
-### Note
+The FFmpeg project tries to provide the best technically possible solution for developers of applications and end users alike. To achieve this we combine the best free software options available. We slightly favor our own code to keep the dependencies on other libs low and to maximize code sharing between parts of FFmpeg. Wherever the question of "best" cannot be answered we support both options so the end user can choose.
 
-This package is for the stable ffmpeg version with shared libraries.
+Security is a high priority and code review is always done with security in mind. Though due to the very large amounts of code touching untrusted data security issues are unavoidable and thus we provide as quick as possible updates to our last stable releases when new security issues are found.
+
+## Notes
+
+* This package is for the stable static ffmpeg version.
     </description>
     <summary>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.</summary>
-    <releaseNotes>http://git.videolan.org/?p=ffmpeg.git;a=shortlog;h=n{{PackageVersion}}</releaseNotes>
+    <releaseNotes>https://ffmpeg.org/index.html#news</releaseNotes>
     <copyright />
     <language>en-US</language>
-    <tags>ffmpeg libavcodec audio video convert</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>ffmpeg libavcodec foss cli audio video convert cross-platform audio video media</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
+    <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
+    <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
 <!-- “UTF-8” test -->

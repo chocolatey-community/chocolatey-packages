@@ -1,13 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>youtube-dl</id>
+    <version>2016.12.18</version>
     <title>youtube-dl</title>
     <owners>chocolatey</owners>
     <authors>Ricardo Garcia and others</authors>
-    <licenseUrl>http://rg3.github.io/youtube-dl/</licenseUrl>
+    <licenseUrl>https://github.com/rg3/youtube-dl/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://rg3.github.io/youtube-dl/</projectUrl>
+    <projectSourceUrl>https://github.com/rg3/youtube-dl</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/rg3/youtube-dl/issues</bugTrackerUrl>
+    <docsUrl>https://github.com/rg3/youtube-dl/blob/master/README.md#readme</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it’s not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
@@ -15,12 +18,15 @@ youtube-dl is a small command-line program to download videos from YouTube.com a
 Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction and conversion support)
     </description>
     <summary>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites.</summary>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/y-dl.svg</iconUrl>
-    <releaseNotes />
-    <copyright />
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a42da86c9cc480a5f3f23677e0d73d88416a3b3c/icons/y-dl.svg</iconUrl>
+    <releaseNotes>https://github.com/rg3/youtube-dl/blob/master/ChangeLog</releaseNotes>
+    <copyright>Copyright © 2006-2016 Ricardo Garcia Gonzalez</copyright>
     <language>en-US</language>
     <tags>youtube-dl ffmpeg youtube download</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="vcredist2010" version="10.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

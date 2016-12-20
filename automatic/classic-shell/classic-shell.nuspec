@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>classic-shell</id>
+    <version>4.3.0</version>
     <title>Classic Shell</title>
     <owners>chocolatey</owners>
     <authors>Ivo Beltchev</authors>
@@ -13,21 +13,25 @@
     <description>
 Classic Shell is a collection of usability enhancements for Windows. The main features are:
 
-* Highly customizable start menu with multiple styles and skins
-* Start button for Windows 7 and Windows 8
-* Toolbar and status bar for Windows Explorer
-* Caption and status bar for Internet Explorer
+## Features
 
-### Note
+- Highly customizable start menu with multiple styles and skins
+- Quick access to recent, frequently-used, or pinned programs
+- Find programs, settings, files and documents
+- Start button for Windows 7, Windows 8, Windows 8.1 and Windows 10
+- Toolbar and status bar for Windows Explorer
+- Caption and status bar for Internet Explorer
 
-If you want to install only specific components, e.g. only the Start Menu, use
+## Notes
+
+- If you want to install only specific components, e.g. only the Start Menu, use
 `choco install classic-shell -installArgs ADDLOCAL=ClassicStartMenu`. If Classic Shell gets updated, you won’t have to specify the `-installArgs` again. It remembers your previous selection and will only install the component you have specified. To look for other possible installer arguments, go to http://www.classicshell.net/faq/#install_commands
     </description>
     <summary>Usability enhancements for Windows</summary>
     <releaseNotes></releaseNotes>
     <copyright>Classic Shell</copyright>
-    <tags>classic shell start menu windows 8 admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>shell freeware start-menu admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/classic-shell</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

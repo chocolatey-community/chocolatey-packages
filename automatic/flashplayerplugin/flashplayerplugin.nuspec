@@ -1,21 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>{{PackageVersion}}</version>
+    <version>23.0.0.208</version>
     <authors>Adobe Systems Incorporated</authors>
     <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/flashplayer.png</iconUrl>
     <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
-    <id>{{PackageName}}</id>
+    <id>flashplayerplugin</id>
     <title>Flash Player Plugin</title>
     <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.
+
+## Notes
+
+- This vendor versions sowftware only by the latest major version so `-version` parameter wich targets specific minor version will always install latest minor version.
     </description>
     <summary>Adobe Flash Player Plugin for other browsers</summary>
-    <tags>adobe flash player plugin admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>adobe flash player plugin freeware cross-platform browser admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flashplayerplugin</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

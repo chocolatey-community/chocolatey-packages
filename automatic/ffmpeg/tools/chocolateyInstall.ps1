@@ -1,26 +1,14 @@
-﻿$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
+﻿$ErrorActionPreference = 'Stop'
 
-$destinationFolder = Split-Path $script:MyInvocation.MyCommand.Path
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$embedded_path = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
+         Write-Host "Installing 64 bit version"; gi "$toolsPath\*_x64.zip"
+} else { Write-Host "Installing 32 bit version"; gi "$toolsPath\*_x32.zip" }
 
-$binRoot = Get-BinRoot
-$oldDestinationFolders = @(
-  (Join-Path $env:SystemDrive 'tools\ffmpeg'),
-  (Join-Path $binRoot 'ffmpeg')
-)
-
-foreach ($oldDestFolder in $oldDestinationFolders) {
-  if (Test-Path $oldDestFolder) {
-
-    Write-Output @"
-Warning: Deprecated installation folder detected: ${oldDestFolder}.
-Please manually remove that folder. This package now installs the ffmpeg binaries to ${scriptDir}\ffmpeg,
-which is a better choice.
-"@
-
-  }
+$packageArgs = @{
+  PackageName    = 'ffmpeg'
+  FileFullPath   = $embedded_path
+  Destination    = $toolsPath
 }
-
-Remove-Item $(Join-Path "$destinationFolder" "$(Get-ChildItem -Directory $destinationFolder)") -Recurse
-Install-ChocolateyZipPackage $packageName $url $destinationFolder $url64
+Get-ChocolateyUnzip @packageArgs
+rm $toolsPath\*.zip -ea 0

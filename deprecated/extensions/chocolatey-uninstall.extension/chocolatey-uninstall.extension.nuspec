@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-uninstall.extension</id>
+    <version>1.2.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>[Deprecated] Chocolatey Uninstall Extension</title>
+    <authors>dtgm,ferventcoder,chocolatey</authors>
+    <copyright>© 2016 Chocolatey Core Team Package Contributors</copyright>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
+    <licenseUrl>https://github.com/chocolatey/choco/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
+    <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/wiki</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/chocolatey</mailingListUrl>
+    <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
+    <tags>chocolatey uninstall extension admin</tags>
+    <summary>Helper functions for use during uninstall of Chocolatey packages</summary>
+    <description>
+**NOTE:** This package has been deprecated, in favour of the chocolatey-core.extension.
+
+This package provides helper functions installed as a Chocolatey extension. These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+
+&lt;`dependencies`&gt;
+&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-uninstall.extension" /`&gt;
+&lt;`/dependencies`&gt;
+
+### Functions
+
+`Get-UninstallRegistryKey` -- retrieve registry keys for use during uninstall of Chocolatey packages
+
+1. To use, add the following to chocolateyUninstall.ps1, setting `$softwareName` to the name as seen in Control Panel's "Programs and Features"
+
+`$softwareName = "Example Name"`
+`[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName`
+
+2. The found registry key's properties are accessible by dot notation. For example, `$key.UninstallString`
+    </description>
+    <releaseNotes>
+#### 1.2.0
+* Deprecated package in favour of chocolatey-core.extension.
+
+#### 1.1.0
+
+##### Bug fixes
+* Not building array properly; fails if more than one bad key
+* Not reporting correct key
+
+##### Improvements
+* Try to remove all bad keys found.
+* (reporting) add warning if more than 10 bad keys are found
+* (reporting) no registry keys matched SoftwareName
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
+  </metadata>
+</package>

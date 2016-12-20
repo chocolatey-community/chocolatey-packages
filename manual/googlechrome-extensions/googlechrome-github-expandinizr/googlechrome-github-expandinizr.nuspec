@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>googlechrome-github-expandinizr</id>
+    <version>1.0.0</version>
+    <title>github.expandinizr</title>
+    <authors>TheCodeJunkie</authors>
+    <owners>gep13 chocolatey</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/githubexpandinizr/cbehdjjcilgnejbpnjhobkiiggkedfib</projectUrl>
+    <iconUrl>https://lh6.googleusercontent.com/629YrRMzim_zZBoOhsXlz8xdA58BrD2t-04iabdDhB9YqCqeCbPdQimDDR6o17zdPnmRPMW1Vnc=s26-h26-e365-rw</iconUrl>
+    <projectSourceUrl>https://github.com/thecodejunkie/github.expandinizr</projectSourceUrl>
+    <docsUrl>https://github.com/thecodejunkie/github.expandinizr/blob/master/readme.md</docsUrl>
+    <bugTrackerUrl>https://github.com/thecodejunkie/github.expandinizr/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/googlechrome-extensions/googlechrome-github-expandinizr</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/thecodejunkie/github.expandinizr#license</licenseUrl>
+    <description>
+## Features
+
+Currently enhances the following: 
+* Removes the truncating of file and directory names in the repository browser
+* Really long file and directory names will word-wrap
+* Fully expands the website, with breakpoints at 1400px, 1600px and 1800px
+* Removes truncation in notifications
+* Adds shrink/expand button for comment form
+* Adds possibility to collapse code previews
+    </description>
+    <summary>
+Chrome extension that improves the GitHub experience.
+    </summary>
+    <tags>foss github expandinizr chrome extension</tags>
+    <releaseNotes>
+https://github.com/thecodejunkie/github.expandinizr#changelog    
+    </releaseNotes>    
+    <dependencies>
+      <dependency id="googlechrome" version="10.0.0" />
+    </dependencies> 
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
+</package>
+<!-- “UTF-8” test -->

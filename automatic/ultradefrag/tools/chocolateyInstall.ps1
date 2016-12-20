@@ -1,67 +1,22 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$installerType = 'EXE'
+$ErrorActionPreference = 'Stop'
+
+$pp = Get-PackageParameters
 $silentArgs = '/S /FULL=1'
-$url = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${version}/ultradefrag-${version}.bin.i386.exe/download"
-$url64 = "http://sourceforge.net/projects/ultradefrag/files/stable-release/${version}/ultradefrag-${version}.bin.amd64.exe/download"
+$silentArgs += if ($pp.NoShellExtension)     { " /SHELLEXTENSION=0"; Write-Host 'Shell extension disabled' }
+$silentArgs += if ($pp.DisableUsageTracking) { " /DISABLE_USAGE_TRACKING=1"; Write-Host 'Usage tracking disabled'}
+$silentArgs += if ($pp.NoBootInterface)      { " /BOOT=0"; Write-Host 'Boot interface disabled'}
 
-
-# Manually uncomment this if you want to run with the beta/prerelease/releasecandidate versions.
-# Take care, they keep using different names, this will probably only survive a couple of times.
-#
-#$version = '{{PackageVersion}}' # e.g. 7.0.0%20beta1
-#$version2 = $version -replace "%20", '-'
-#$url = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version2}.bin.i386.exe/download"
-#$url64 = "http://sourceforge.net/projects/ultradefrag/files/latest-release-candidates/${version}/ultradefrag-${version2}.bin.amd64.exe/download"
-
-$arguments = @{};
-# /NoShellExtension /DisableUsageTracking /NoBootInterface
-$packageParameters = $env:chocolateyPackageParameters;
-
-# Default the values
-$noShellExtension = $false
-$disableUsageTracking = $false
-$noBootInterface = $false
-
-# Now parse the packageParameters using good old regular expression
-if ($packageParameters) {
-    $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
-    #"
-    $option_name = 'option'
-    $value_name = 'value'
-
-    if ($packageParameters -match $match_pattern ){
-        $results = $packageParameters | Select-String $match_pattern -AllMatches
-        $results.matches | % {
-          $arguments.Add(
-              $_.Groups[$option_name].Value.Trim(),
-              $_.Groups[$value_name].Value.Trim())
-      }
-    }
-    else
-    {
-      throw "Package Parameters were found but were invalid (REGEX Failure)"
-    }
-
-    if ($arguments.ContainsKey("NoShellExtension")) {
-        $noShellExtension = $true
-    }
-
-    if ($arguments.ContainsKey("DisableUsageTracking")) {
-        $disableUsageTracking = $true
-    }
-
-    if ($arguments.ContainsKey("NoBootInterface")) {
-        $noBootInterface = $true
-    }
-} else {
-    Write-Debug "No Package Parameters Passed in";
+$packageArgs = @{
+  packageName    = 'ultradefrag'
+  fileType       = 'exe'
+  url            = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.2.bin.i386.exe'
+  url64bit       = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.2.bin.amd64.exe'
+  checksum       = '69ea62c2987b869bcd21e7a7a7ae65d01ee9a853ace33b5bc973bbcbaa8a4123'
+  checksum64     = '34cfc8b7a2b43891e0a7527fc27549b2b3372330f82cf95d32c1744429d2820f'
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+  silentArgs     = $silentArgs
+  validExitCodes = @(0)
+  softwareName   = 'Ultra Defragmenter'
 }
-
-if ($noShellExtension) { $silentArgs += " /SHELLEXTENSION=0" }
-if ($disableUsageTracking) { $silentArgs += " /DISABLE_USAGE_TRACKING=1" }
-if ($noBootInterface) { $silentArgs += " /BOOT=0" }
-
-Install-ChocolateyPackage "$packageName" "$installerType" "$silentArgs" "$url" "$url64"
-
-#TODO: Rename the ugly default context-menuitem "------UltraDefrag---------" to "Ultra Defragmenter"
+Install-ChocolateyPackage @packageArgs

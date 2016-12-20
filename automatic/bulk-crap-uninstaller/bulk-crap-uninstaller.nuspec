@@ -1,25 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>bulk-crap-uninstaller</id>
     <title>Bulk Crap Uninstaller</title>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <version>3.5</version>
     <authors>Marcin Szeniak</authors>
     <summary>Bulk Crap Uninstaller is an open source program uninstaller.</summary>
     <description>
-Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more! 
+Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more!
 
 Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it effortlessly!
+
+## Features
+
+- Detect orphaned applications
+- Startup manager
+- Multiple languages
+- Uninstall lists and searching
+- Verification of certificates
+- More data than you'd ever need
+- Detection and uninstallation of Windows Store apps
+- Uninstallation of multiple items at once (with collision prevention)
+- Advanced grouping, sorting, filtering and searching
+- Automatic detection and closing of running applications
+- Automatic updating and error reporting
+- Custom commands can be executed before and after uninstallation
+- Editing tools and backup creation - can generate .reg files and remove junk to recycle bin
+- Fully portable, requires Net 3.5 which is installed on all Windows 7 machines by default
+- Quiet (unattended) uninstall of many programs when they don't openly support it
+- Visibility of protected and invalid entries (system uninstaller doesn't see them)
     </description>
     <projectUrl>http://klocmansoftware.weebly.com/</projectUrl>
-    <tags>uninstaller admin foss opensource</tags>
+    <tags>uninstaller uninstall bulk admin foss</tags>
     <copyright></copyright>
     <licenseUrl>https://sourceforge.net/p/bulk-crap-uninstaller/code/ci/master/tree/Licence.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png</iconUrl>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://klocmansoftware.weebly.com/changelog.html</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller</packageSourceUrl>
+    <projectSourceUrl>https://github.com/Klocman/Bulk-Crap-Uninstaller</projectSourceUrl>
+    <dependencies>
+      <dependency id="dotnet3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

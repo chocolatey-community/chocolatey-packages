@@ -42,11 +42,11 @@ if (installed = 1)
 			Send, {Enter}
 			BlockInput, Off
 		}
+    exit
 }
 
 ; installing part
-
-winpcapInstaller = %A_Temp%\chocolatey\winpcap\winpcapInstall.exe
+winpcapInstaller = %1%
 Run, %winpcapInstaller%
 
 WinWait, WinPcap [\d\.]+ Setup,, 30

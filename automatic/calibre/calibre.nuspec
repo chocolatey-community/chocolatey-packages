@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>calibre</id>
     <title>Calibre</title>
-    <version>{{PackageVersion}}</version>
+    <version>2.73.0</version>
     <authors>Kovid Goyal</authors>
     <owners>gep13, chocolatey</owners>
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
     <description>calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
     <projectUrl>http://calibre-ebook.com/</projectUrl>
-    <tags>ebook library management admin</tags>
+    <tags>ebook book foss cross-platform library management admin</tags>
     <copyright>Kovid Goyal</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,7 +20,7 @@ Up to date release notes for this application can be found here:
 
 http://calibre-ebook.com/whats-new
     </releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/calibre</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

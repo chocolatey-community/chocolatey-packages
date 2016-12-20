@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-core.extension</id>
+    <version>1.0.4</version>
+    <title>Chocolatey Core Extensions</title>
+    <summary>Helper functions extending core choco functionality</summary>
+    <authors>chocolatey</authors>
+    <owners>chocolatey</owners>
+    <description>
+This package provides helper functions installed as a Chocolatey extension.
+These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+    </description>
+    <tags>chocolatey core extension admin</tags>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/chocolatey-coreteampackages/master/icons/chocolatey-common.extension.png</iconUrl>-->
+    <copyright>© 2016 Chocolatey Core Team Package Contributors</copyright>
+    <licenseUrl>https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension</packageSourceUrl>
+    <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension/CHANGELOG.md</releaseNotes>
+    </metadata>
+    <files>
+    <file src="extensions\**" target="extensions" />
+  </files>
+</package>

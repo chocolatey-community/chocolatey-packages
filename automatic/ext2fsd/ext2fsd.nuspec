@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>ext2fsd</id>
+    <version>0.68.0.20161111</version>
     <title>Ext2Fsd</title>
     <owners>chocolatey</owners>
     <authors>Matt</authors>
@@ -11,17 +11,35 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Open source ext3/4 file system driver for Windows
-### Note
 
-The uninstaller doesn’t work silently.
+## Features
+
+- ext2/ext3 volume reading and writing
+- ext3 journal replay when mounting
+- various codepage: utf8, cp936, cp950 …
+- mountpoint automatical assignment
+- large inode size: 128, 256, …
+- large file size bigger than 4G
+- CIFS sharing over network
+- htree directory indexing
+- ext4 extent support
+- fast fsck (uninit_bg) and group block checksum support
+- up to 4G*blocksize volume: 16TB for 4K block
+- 64k block-size, support compatible to Linux ext4 and e2fsprogs
+- OS: 2k, xp, vista, server 2003/2008, win7
+
+## Notes
+
+- The uninstaller doesn’t work silently.
     </description>
     <summary>Open source ext3/4 file system driver for Windows</summary>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ext2fsd.jpg</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.ext2fsd.com/?cat=3</releaseNotes>
     <copyright />
     <language>en-US</language>
-    <tags>ext3 ext4 file system driver admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>ext3 ext4 file-system foss linux driver admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ext2fsd</packageSourceUrl>
+    <projectSourceUrl>https://sourceforge.net/p/ext2fsd/code/ci/master/tree/</projectSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

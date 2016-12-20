@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>{{PackageVersion}}</version>
+    <version>24.0.0.186</version>
     <authors>Adobe Systems Incorporated</authors>
-    <projectUrl>http://www.adobe.com/software/flash/about/</projectUrl>
+    <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/flashplayer.png</iconUrl>
-    <licenseUrl>http://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
-    <id>{{PackageName}}</id>
+    <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
+    <id>flashplayeractivex</id>
     <title>Flash Player ActiveX</title>
     <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,9 +22,9 @@ This package is only for Windows XP to Windows 7, because Windows ≥ 8 already 
 The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
     </description>
     <summary>Adobe Flash Player ActiveX for Internet Explorer</summary>
-    <tags>adobe flash player activex admin</tags>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>adobe flash player activex admin freeware</tags>
+    <releaseNotes>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flashplayeractivex</packageSourceUrl>
   </metadata>
     <files>
     <file src="tools\**" target="tools" />

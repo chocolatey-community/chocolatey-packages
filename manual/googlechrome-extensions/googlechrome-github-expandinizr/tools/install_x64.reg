@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google\Chrome\Extensions\cbehdjjcilgnejbpnjhobkiiggkedfib]
+"update_url"="https://clients2.google.com/service/update2/crx"

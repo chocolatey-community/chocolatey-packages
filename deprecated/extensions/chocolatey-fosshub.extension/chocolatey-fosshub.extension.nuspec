@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-fosshub.extension</id>
+    <version>0.6.1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>[Deprecated] Chocolatey FossHub Extension</title>
+    <authors>gep13,dtgm,chocolatey</authors>
+    <copyright>2016-Present: Chocolatey Core Team Package Contributors</copyright>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
+    <licenseUrl>https://github.com/chocolatey/choco/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
+    <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/wiki</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/chocolatey</mailingListUrl>
+    <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
+    <tags>chocolatey-fosshub.extension admin fosshub extension</tags>
+    <summary>Helper Function for extracting download URL from FossHub</summary>
+    <description>
+**NOTE:** This extension is no longer supported.  See here for additional [information](https://github.com/chocolatey/package-validator/wiki/ScriptsDoNotDownloadFromFossHub)
+
+Provides a helper function to help with extracting the actual download URL for an application whose binaries are housed on FossHub.
+
+These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+
+&lt;`dependencies`&gt;
+&amp;nbsp;&amp;nbsp;&lt;`dependency id="chocolatey-fosshub.extension" /`&gt;
+&lt;`/dependencies`&gt;
+
+### Functions
+
+`Get-UrlFromFosshub` --  Get the resolved URL from a FossHub download link.
+
+Example:
+`Get-UrlFromFosshub http://www.fosshub.com/genLink/Data-Crow/FILE.zip`
+    </description>
+  </metadata>
+</package>

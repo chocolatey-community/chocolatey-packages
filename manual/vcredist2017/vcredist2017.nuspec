@@ -1,0 +1,34 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>vcredist2017</id>
+    <version>14.10.24629.0-rc1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2017</packageSourceUrl>
+    <owners>Jakub Bereżański</owners>
+    <title>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.visualstudio.com/downloads/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8ca7bf823384fbe4b441650428cc0283a7eeb9a6/icons/vcredist2017.png</iconUrl>
+    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
+    <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
+    <tags>Microsoft Visual C++ Redistributable 2017 admin</tags>
+    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2017 RC</summary>
+    <description>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2017 RC and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2017 RC installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
+
+**NOTE**: The installer replaces the existing installation of the Visual Studio 2015 Redistributable (i.e. performs an in-place upgrade).
+
+[Supported Operating Systems](https://www.visualstudio.com/productinfo/visual-studio-15-system-requirements-vs): Windows 10 / Server 2016, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows Server 2003 SP2, Windows XP SP3
+    </description>
+    <releaseNotes>
+##### Software
+[Visual Studio 2017 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="KB3033929" version="1.0.0" /> <!-- for Win7 SP1/2008R2-->
+      <dependency id="KB2919355" version="1.0.20160915" /> <!-- for Win8.1/2012R2 -->
+    </dependencies>
+  </metadata>
+</package>

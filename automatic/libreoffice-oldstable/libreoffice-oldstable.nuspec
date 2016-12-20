@@ -1,29 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <title>LibreOffice (oldstable)</title>
-    <version>{{PackageVersion}}</version>
+    <id>libreoffice-oldstable</id>
+    <title>LibreOffice Still</title>
+    <version>5.1.6</version>
     <authors>LibreOffice developers</authors>
-    <owners>chocolatey purity</owners>
+    <owners>chocolatey</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
     <description>
 LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
 
-### Notes
+## Notes
 
-This package is for the older stable version LibreOffice (officially called [LibreOffice Still](https://www.libreoffice.org/download/libreoffice-still/)). This version is recommended for more conservative users. If you want the latest version, install the [libreoffice](/packages/libreoffice) package instead.
-
-Warning: Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
+- LibreOffice Still is the stable version that has undergone more testing (over a longer time). This version is recommended for more conservative users. If you want the latest version, install the [libreoffice](/packages/libreoffice) package instead.
+- Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
     </description>
-    <projectUrl>https://www.libreoffice.org/download/libreoffice-still/</projectUrl>
-    <tags>libreoffice office admin</tags>
+    <projectUrl>https://www.libreoffice.org/</projectUrl>
+    <tags>libreoffice cross-platform foss office admin</tags>
     <copyright></copyright>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/libreoffice.svg</iconUrl>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/libreoffice-oldstable</packageSourceUrl>
+    <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
+    <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

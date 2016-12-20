@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>lightalloy</id>
+    <title>[Deprecated] Light Alloy Video Player</title>
+    <version>4.8.9</version>
+    <authors>Vortex Group, LLC.</authors>
+    <owners>Redsandro</owners>
+    <summary>Video Player with built-in codecs.</summary>
+    <description>
+Complete video player with built-in codecs.
+
+_The installer is not silent. I've used AutoIt to automate the installation. Be careful when doing something else while installing._
+
+Deprecated due to no interest.
+    </description>
+    <projectUrl>http://www.light-alloy.ru/</projectUrl>
+    <tags>Media Video Player admin</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/lightalloy.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/deprecated/lightalloy</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

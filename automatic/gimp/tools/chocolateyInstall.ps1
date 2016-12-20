@@ -1,9 +1,24 @@
-﻿$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$url = '{{DownloadUrl}}'
-$url64bit = $url
-$installerType = 'exe'
-$installArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$ErrorActionPreference = 'Stop';
+
+$packageArgs = @{
+  packageName    = 'gimp'
+  fileType       = 'exe'
+  softwareName   = 'GIMP'
+
+  checksum       = '41e98ef75c2992acc9b481147bf3db35652a4c7e1da70bb06a2d2ec9a0853a2d'
+  checksum64     = '41e98ef75c2992acc9b481147bf3db35652a4c7e1da70bb06a2d2ec9a0853a2d'
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'
+
+  # The installer contains both 32-bit and 64-bit versions of GIMP, and will automatically use the appropriate one.
+  # Text quoted from <https://www.gimp.org/downloads/>, look below download buttons.
+  url            = 'https://download.gimp.org/mirror/pub/gimp/v2.8/windows/gimp-2.8.18-setup.exe'
+  url64bit       = 'https://download.gimp.org/mirror/pub/gimp/v2.8/windows/gimp-2.8.18-setup.exe'
+
+  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  validExitCodes = @(0)
+}
+$version = '2.8.18'
 $gimpRegistryPath = $(
   'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GIMP-2_is1'
 )
@@ -20,6 +35,5 @@ if ($installedVersion -eq $version) {
     "Skipping download and installation."
   )
 } else {
-  Install-ChocolateyPackage $packageName $installerType `
-    $installArgs $url $url64bit -validExitCodes @(0)
+  Install-ChocolateyPackage @packageArgs
 }

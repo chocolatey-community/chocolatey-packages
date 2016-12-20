@@ -1,18 +1,25 @@
-﻿$PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
+$ErrorActionPreference = 'Stop'
 
-$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/S'
+$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
+$installerFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') { gi "$toolsDir\*win64.exe" } else { gi "$toolsDir\*win32.exe" }
 
-# {\{DownloadUrlx64}\} gets “misused” here as genLink
-# part for FossHub (only visible in the template, not in
-# the final file generated for the package.)
-$genLinkUrl = '{{DownloadUrlx64}}32.exe'
-$genLinkUrl64bit = '{{DownloadUrlx64}}64.exe'
-$validExitCodes = @(0, 1223)
+$silentArgs = @('/S')
 
-$url = Get-UrlFromFosshub $genLinkUrl
-$url64bit = Get-UrlFromFosshub $genLinkUrl64bit
+$packageArgs = @{
+  packageName    = 'avidemux'
+  fileType       = 'exe'
+  file           = $installerFile
+  silentArgs     = $silentArgs
+  validExitCodes = @(0, 1223)
+}
+Install-ChocolateyInstallPackage @packageArgs
+rm $toolsDir\*.exe
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs `
-  $url $url64bit -validExitCodes $validExitCodes
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageName
+if ($installLocation)  {
+    Write-Host "$packageName installed to '$installLocation'"
+    Register-Application "$installLocation\$packageName.exe"
+    Write-Host "$packageName registered as $packageName"
+}
+else { Write-Warning "Can't find $PackageName install location" }

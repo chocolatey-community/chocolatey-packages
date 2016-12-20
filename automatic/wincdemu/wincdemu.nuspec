@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>wincdemu</id>
+    <version>4.1</version>
     <title>WinCDEmu</title>
     <owners>chocolatey</owners>
     <authors>Sysprogs OÜ</authors>
@@ -31,8 +31,10 @@ WinCDEmu is free for any kind of use – it is licensed under LGPL.
     <summary>WinCDEmu is an open-source CD/DVD/BD emulator</summary>
     <releaseNotes>http://www.digital-digest.com/software/WinCDEmu_history.html#4</releaseNotes>
     <copyright>2013 Sysprogs OÜ</copyright>
-    <tags>emulator virtual drive CD DVD BD admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>emulator ISO CUE IMG virtual drive CD DVD BD admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wincdemu</packageSourceUrl>
+    <projectSourceUrl>https://github.com/sysprogs/WinCDEmu</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/sysprogs/WinCDEmu/issues</bugTrackerUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

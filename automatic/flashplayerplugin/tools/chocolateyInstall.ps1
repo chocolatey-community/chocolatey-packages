@@ -1,33 +1,13 @@
-﻿### functions
+$ErrorActionPreference = 'Stop'
 
-function Check-SoftwareInstalled ($displayName, $displayVersion) {
-  $registryPaths = @(
-    'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*',
-    'HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*'
-  )
-
-  return Get-ItemProperty $registryPaths -ErrorAction SilentlyContinue | Where-Object {
-    $_.DisplayName -eq $displayName -and $_.DisplayVersion -eq $displayVersion
-  }
+$packageArgs = @{
+  packageName            = 'flashplayerplugin'
+  fileType               = 'msi'
+  url                    = 'https://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_23_plugin.msi'
+  checksum               = '17327ab2c9666a0bc88a5f661c1bf98bfba644d92f252f5cb23cbb4b2527f3fd'
+  checksumType           = 'sha256'
+  silentArgs             = '/quiet /norestart REMOVE_PREVIOUS=YES'
+  validExitCodes         = @(0)
+  softwareName           = 'Adobe Flash Player *'
 }
-
-### end functions
-
-$packageName = '{{PackageName}}'
-$version = '{{PackageVersion}}'
-$installArgs = '/quiet /norestart REMOVE_PREVIOUS=YES'
-$url = '{{DownloadUrl}}'
-
-$majorVersion = ([version] $version).Major
-
-$alreadyInstalled = Check-SoftwareInstalled "Adobe Flash Player $majorVersion NPAPI" $version
-
-if ($alreadyInstalled) {
-  Write-Output $(
-    "Adobe Flash Player NPAPI (for non-IE browsers) v$version " +
-    "is already installed. No need to download and install it again."
-  )
-} else {
-  Install-ChocolateyPackage $packageName 'msi' $installArgs $url
-}
-
+Install-ChocolateyPackage @packageArgs

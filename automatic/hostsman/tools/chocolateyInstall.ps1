@@ -1,24 +1,10 @@
-$name		= 'HostsMan'
-$zipName	= "$name.zip"
-$installer	= "HostsMan_Setup.exe"
-$silentArgs	= "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
-$url		= '{{DownloadUrl}}'
-$pwd		= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+$ErrorActionPreference = 'Stop'
 
-
-
-$tempDir = Join-Path $env:TEMP $name
-	if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-
-$filePath = Join-Path $tempDir $zipName
-
-# Download zip
-Get-ChocolateyWebFile "$name" "$filePath" "$url"
-
-# Extract zip
-Get-ChocolateyUnzip "$filePath" "$tempDir"
-
-$exeName = Join-Path $tempDir "$installer"
-
-# Execute installer
-Install-ChocolateyPackage "$name" "EXE" "$silentArgs" "$exeName"
+$packageArgs = @{
+  packageName    = 'hostsman'
+  url            = 'http://hostsman2.it-mate.co.uk/HostsMan_4.6.103.zip'
+  checksum       = 'A9E5CCDF9734297517772DAD0BE19918EEF8A5837FD78DF8788766B78ECEA8DC'
+  checksumType   = 'sha256'
+  unzipLocation  = Split-Path $MyInvocation.MyCommand.Definition
+}
+Install-ChocolateyZipPackage @packageArgs

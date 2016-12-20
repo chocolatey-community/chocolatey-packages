@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>unchecky</id>
     <title>Unchecky</title>
-    <version>{{PackageVersion}}</version>
+    <version>1.0.1.20161027</version>
     <authors>RaMMicHaeL</authors>
     <owners>Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
@@ -11,16 +11,21 @@
 Have you ever felt, while installing software, that the installer tries to push additional unwanted programs at all cost? Ever missed a checkbox, and spent hours afterwards removing adware? Ever opened your browser after an installation, only to find out that you have a new homepage, a new search engine, or even a new browser?
 
 __Unchecky aims to keep potentially unwanted programs out of your computer.__
+
+### Notes
+
+* This package always installs the latest version of the application, regardless of the version specified in the package.
+* This program automatically updates itself.
     </description>
     <projectUrl>http://unchecky.com/</projectUrl>
     <tags>Installer Prevent System Unwanted Toolbar Installers Uncheck Warn Update admin</tags>
-    <copyright></copyright>
-    <licenseUrl>http://rammichael.com/introducing-unchecky</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/unchecky.png</iconUrl>
-    <dependencies></dependencies>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <copyright>Copyright © 2016 Reason Company Software Inc.</copyright>
+    <licenseUrl>https://unchecky.com/eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <bugTrackerUrl>http://unchecky.userecho.com/</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/400df127014e0d9856ed420fe89c728668d310d2/icons/unchecky.png</iconUrl>
+    <releaseNotes>http://unchecky.com/changelog</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/unchecky</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

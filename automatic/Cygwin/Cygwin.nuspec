@@ -2,28 +2,44 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>Cygwin</id>
     <title>Cygwin</title>
-    <version>{{PackageVersion}}</version>
+    <version>2.6.0.20161207</version>
     <authors>Red Hat, Inc.</authors>
     <owners>Chocolatey</owners>
     <summary>A Linux environment for Windows.</summary>
     <description>
 Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
-### Notes:
+## Package parameters
 
-* For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
+- `InstallDir`  - Set install location
+- `DesktopIcon` - Set to true to install desktop icon
+- `Proxy`       - Set to "proxy:port". Otherwise system proxy or explicit chocolatey proxy will be used
+- `Pubkey`      - URL of extra public key file (gpg format)
+- `Site`        - Download site
+- `NoStartMenu` - Set to true to prevent installation of start menu items
+- `NoAdmin`     - Do not check for and enforce running as administrator
+
+## Notes
+
+- This package provides only the last version of Cygwin.
+- For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <projectUrl>https://cygwin.com/</projectUrl>
     <docsUrl>http://cygwin.com/docs.html</docsUrl>
-    <tags>Cygwin linux admin</tags>
+    <tags>Cygwin foss cli unix posix linux admin</tags>
     <copyright>Red Hat, Inc.</copyright>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Cygwin</packageSourceUrl>
     <licenseUrl>https://cygwin.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Cygwin.png</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://cygwin.com/ml/cygwin-announce/2016-08/msg00114.html</releaseNotes>
+    <mailingListUrl>https://cygwin.com/lists.html</mailingListUrl>
+    <projectSourceUrl>https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git</projectSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

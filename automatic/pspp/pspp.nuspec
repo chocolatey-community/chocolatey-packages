@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>PSPP</title>
+    <version>{{PackageVersion}}</version>
+    <authors>GNU Project</authors>
+    <owners>chocolatey</owners>
+    <summary>__GNU PSPP__ is a program for statistical analysis of sampled data. It is a Free replacement for the proprietary program __SPSS__.</summary>
+    <description>__GNU PSPP__ is a program for statistical analysis of sampled data. It is a Free replacement for the proprietary program __SPSS__.
+
+PSPP can perform descriptive statistics, T-tests, anova, linear and logistic regression, cluster analysis, reliability and factor analysis, non-parametric tests and more. Its backend is designed to perform its analyses as fast as possible, regardless of the size of the input data. You can use PSPP with its graphical interface or the more traditional syntax commands.</description>
+    <projectUrl>http://www.gnu.org/software/pspp/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>spss statistics educative scientific</tags>
+    <copyright>2013 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://chocolatey.org/content/packageimages/pspp.0.8.4.png</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

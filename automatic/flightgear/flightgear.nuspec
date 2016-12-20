@@ -1,29 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>flightgear</id>
+    <version>2016.4.1</version>
     <title>FlightGear</title>
     <owners>chocolatey</owners>
     <authors>FlightGear Team</authors>
     <licenseUrl>http://wiki.flightgear.org/GNU_General_Public_License</licenseUrl>
     <projectUrl>http://www.flightgear.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/flightgear.png</iconUrl>
+    <projectSourceUrl>https://sourceforge.net/p/flightgear/flightgear/ci/next/tree/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/flightgear/codetickets/</bugTrackerUrl>
+    <docsUrl>http://wiki.flightgear.org/Main_Page</docsUrl>
+    <mailingListUrl>https://forum.flightgear.org/</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flightgear.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-FlightGear is an open-source flight simulator. It supports a variety of popular platforms (Windows, Mac, Linux, etc.) and is developed by skilled volunteers from around the world. Source code for the entire project is available and licensed under the GNU General Public License.
+FlightGear is an open-source flight simulator.
+It supports a variety of popular platforms (Windows, Mac, Linux, etc.) and is developed by skilled volunteers from around the world.
+Source code for the entire project is available and licensed under the GNU General Public License.
 
-The goal of the FlightGear project is to create a sophisticated and open flight simulator framework for use in research or academic environments, pilot training, as an industry engineering tool, for DIY-ers to pursue their favorite interesting flight simulation idea, and last but certainly not least as a fun, realistic, and challenging desktop flight simulator.
+The goal of the FlightGear project is to create a sophisticated and open flight simulator framework for use in research or academic environments,
+pilot training, as an industry engineering tool, for DIY-ers to pursue their favorite interesting flight simulation idea,
+and last but certainly not least as a fun, realistic, and challenging desktop flight simulator.
 
-### Note
-
-The FlightGear also installs the OpenAL library which hasn’t a silent switch.
+### Notes
+* If [kb2919355](https://chocolatey.org/packages/kb2919355) hasn't been installed previously,
+  and you are running on Windows 8.1 or Windows Server 2012 R2.
+  Then it must be installed and a reboot must occur before trying to install FlightGear.
+  Otherwise installation may fail.
     </description>
-    <summary>FlightGear is an open-source flight simulator.  It supports a variety of popular platforms (Windows, Mac, Linux, etc.) and is developed by skilled volunteers from around the world.</summary>
-    <releaseNotes />
+    <summary>
+FlightGear is an open-source flight simulator.  It supports a variety of popular platforms (Windows, Mac, Linux, etc.)
+and is developed by skilled volunteers from around the world.
+    </summary>
+    <releaseNotes>http://wiki.flightgear.org/Changelog_2016.4</releaseNotes>
     <copyright />
-    <tags>flightgear flight simulator game admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>flightgear flight simulator game admin foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
+    <dependencies>
+      <dependency id="vcredist2010" version="10.0.40219.2" />
+      <dependency id="kb2999226" version="1.0.20161030" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

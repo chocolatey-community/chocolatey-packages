@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>rdcman</id>
+    <version>2.7.1406.20160916</version>
+    <title>Remote Desktop Connection Manager</title>
+    <authors>Julian Burger</authors>
+    <owners>Anthony Mastrean</owners>
+    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=44989</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/rdcman.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://gist.github.com/jberezanski/d50e5bf9ce0e1f25aea4</licenseUrl>
+    <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>
+    <tags>remote desktop rdp connect admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>
+2.7.1406.20160916: added checksum and switched to HTTPS
+    </releaseNotes>
+  </metadata>
+</package>

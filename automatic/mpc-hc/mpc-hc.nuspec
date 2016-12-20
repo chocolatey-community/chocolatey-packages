@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>mpc-hc</id>
+    <version>1.7.10.20161107</version>
     <title>MPC-HC</title>
     <owners>chocolatey</owners>
     <authors>MPC-HC Team</authors>
@@ -12,12 +12,23 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.
+
+## Features
+
+- It is written in C++.
+- Supports common video and audio formats.
+- MPC-HC can also be used as DVB player.
+- Supports GPU assisted decoding.
+- Translated in 41 languages.
+- 100% spyware free, there are no advertisements or toolbars.
     </description>
     <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>
-    <releaseNotes></releaseNotes>
     <copyright>MPC-HC Team</copyright>
-    <tags>media player admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>media player video audio music admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mpc-hc</packageSourceUrl>
+    <projectSourceUrl>https://github.com/mpc-hc/mpc-hc</projectSourceUrl>
+    <bugTrackerUrl>https://trac.mpc-hc.org</bugTrackerUrl>
+    <releaseNotes>https://trac.mpc-hc.org/wiki/Changelog/1.7.10</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

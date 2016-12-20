@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>truecrypt-langfiles</id>
+    <version>7.1.2</version>
+    <title>[Deprecated] TrueCrypt language files</title>
+    <owners>chocolatey</owners>
+    <authors>Various (see http://www.truecrypt.org/localizations)</authors>
+    <projectUrl>http://www.truecrypt.org/localizations</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/truecrypt.png</iconUrl>
+    <description>
+**Deprecated because parent software is no longer maintained**.
+
+This package contains all available language files for TrueCrypt, the free open-source disk encryption software. The language files get extracted into the TrueCrypt program folder. Then the desired language can be selected in the TrueCrypt settings.
+
+### Note
+
+- The language files are public domain, so they can be distributed and modified freely.
+    </description>
+    <summary>Language files for TrueCrypt, the free open-source disk encryption software</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>truecrypt language localization i18n</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

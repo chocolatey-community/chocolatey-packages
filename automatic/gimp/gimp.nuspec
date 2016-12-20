@@ -1,15 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>gimp</id>
+    <version>2.8.18.20161026</version>
     <title>GIMP</title>
     <owners>chocolatey</owners>
     <authors>GIMP Team</authors>
     <licenseUrl>https://www.gimp.org/about/</licenseUrl>
-    <projectUrl>https://www.gimp.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/gimp.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://www.gimp.org/</projectUrl>
+    <projectSourceUrl>https://git.gnome.org/browse/gimp</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/gimp.svg</iconUrl>
+    <mailingListUrl>https://www.gimp.org/mail_lists.html</mailingListUrl>
+    <bugTrackerUrl>https://www.gimp.org/bugs/</bugTrackerUrl>
 		<summary>GNU Image Manipulation Program</summary>
     <description>
 GIMP is a multi-platform photo manipulation tool. GIMP is an acronym for GNU Image Manipulation Program. The GIMP is suitable for a variety of image manipulation tasks, including photo retouching, image composition, and image construction.
@@ -18,10 +21,10 @@ GIMP has many capabilities. It can be used as a simple paint program, an expert 
 
 GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted.
     </description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.gimp.org/release-notes/</releaseNotes>
     <copyright>GIMP Team</copyright>
     <tags>gimp editor images graphics photo art png admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gimp</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

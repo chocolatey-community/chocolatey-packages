@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>lightworks</id>
+        <title>Lightworks</title>
+        <version>12.6.0.20161107</version>
+        <authors>EditShare LLC</authors>
+        <owners>Redsandro</owners>
+        <summary>Lightworks is a professional NLE for editing and mastering digital video.</summary>
+        <description>
+Lightworks is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K. In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The King’s Speech and many more.
+        </description>
+        <projectUrl>http://www.lwks.com/</projectUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+        <tags>NLE video editor lightworks</tags>
+        <copyright></copyright>
+        <licenseUrl>https://en.wikipedia.org/wiki/Freemium</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
+        <dependencies>
+            <dependency id="chocolatey-core.extension" version="1.0.4" />
+        </dependencies>
+        <releaseNotes></releaseNotes>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>

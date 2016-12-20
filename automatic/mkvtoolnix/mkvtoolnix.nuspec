@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>mkvtoolnix</id>
+    <version>9.6.0.20161201</version>
     <title>MKVToolNix</title>
     <owners>chocolatey</owners>
     <authors>Moritz Bunkus</authors>
@@ -17,10 +17,12 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
     </description>
     <summary>Tools for Matroska files</summary>
     <releaseNotes>https://www.bunkus.org/videotools/mkvtoolnix/doc/ChangeLog</releaseNotes>
-    <tags>multimedia mkv container muxing demuxing admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>multimedia mkv container muxing demuxing cli foss cross-platform admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mkvtoolnix</packageSourceUrl>
+    <projectSourceUrl>https://mkvtoolnix.download/source.html</projectSourceUrl>
+    <docsUrl>https://mkvtoolnix.download/docs.html</docsUrl>
     <dependencies>
-      <dependency id="chocolatey-fosshub.extension" />
+      <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
   </metadata>
   <files>

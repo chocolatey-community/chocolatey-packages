@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>autohotkey</id>
+    <version>1.1.24.04</version>
     <title>AutoHotkey</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
@@ -13,15 +13,38 @@
     <description>
 AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 
-AutoHotkey\_L is a fork of AutoHotkey which adds a long list of new features and fixes some bugs. Anything that can be done with AutoHotkey can also be done with AutoHotkey\_L. Scripts written for AutoHotkey will also run on AutoHotkey\_L, with some exceptions.
+**You can use AutoHotkey to**:
+
+- Automate almost anything by sending keystrokes and mouse clicks.
+- You can write a mouse or keyboard macro by hand or a macro recorder.
+- Remap keys and buttons on your keyboard, joystick, and mouse.
+- Create hotkeys for keyboard, joystick, and mouse.
+- Essentially any key, button or combination can become a hotkey.
+- Expand abbreviations as you type them.
+- Retrieve and change the clipboard's contents.
+- Convert any AHK script into an executable file that can be run on computers where AutoHotkey is not installed.
+
+**You can also**:
+
+- Create custom data-entry forms, user interfaces and menu bars.
+- See GUI for details (you can use a Gui editor).
+- Automate data entry jobs by reading data from text files, XML, CSV, Excel and various database formats.
+- Read signals from hand-held remote controls via the WinLIRC client script.
+- Use the Component Object Model (COM).
+- Use array/associative array/OOP (Objects).
+- Use variadic functions.
+- Use DLL calls and Windows Messages.
+- Use Perl Compatible Regular Expressions (PCRE).
+- Use interactive debugging features and more.
     </description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes></releaseNotes>
-    <tags>automation hotkeys scripting windows</tags>
+    <tags>automation hotkeys scripting windows foss admin</tags>
     <dependencies>
-      <dependency id="{{PackageName}}.install" version="{{PackageVersion}}" />
+      <dependency id="autohotkey.install" version="1.1.24.04" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autohotkey</packageSourceUrl>
+    <projectSourceUrl>https://github.com/Lexikos/AutoHotkey_L</projectSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

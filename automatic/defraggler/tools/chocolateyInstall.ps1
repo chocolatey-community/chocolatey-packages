@@ -1,14 +1,40 @@
-﻿# Set the standard 4 parameters
-$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$LCID = (Get-Culture).LCID
-$silentArgs = "/S /L=$LCID"
-# Please test every new version of Speccy for possible adware/spyware/crapware which installs silently together with Piriform software products.
-# Only push the new package to the gallery if you are 100 % sure that this package prevents the install of the bundled adware.
-$url = '{{DownloadUrl}}'
-$regAdd = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\regAdd.ps1"
+$ErrorActionPreference = 'Stop'
 
-# This adds a registry key which prevents Google Chrome from getting installed together with Piriform software products.
-Start-ChocolateyProcessAsAdmin "& `'$regAdd`'"
+$packageName = 'defraggler'
+$url32       = 'http://download.piriform.com/dfsetup221.exe'
+$url64       = $url32
+$checksum32  = '29a8e556ac9db50b809da213ba3cc2e80d88e90a90e6c58e8177a5f3cf6b134d'
+$checksum64  = $checksum32
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
+    Write-Host "Using system locale"
+    $locale = "/L=" + (Get-Culture).LCID 
+}
+
+$packageArgs = @{
+  packageName            = $packageName
+  fileType               = 'EXE'
+  url                    = $url32
+  url64bit               = $url64
+  checksum               = $checksum32
+  checksum64             = $checksum64
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
+  silentArgs             = "/S $locale"
+  validExitCodes         = @(0)
+}
+Install-ChocolateyPackage @packageArgs
+
+# This adds a registry keys which prevent Google Chrome from getting installed together with Piriform software products.
+$regDirChrome    = 'HKLM:\SOFTWARE\Google\No Chrome Offer Until'
+$regDirToolbar   = 'HKLM:\SOFTWARE\Google\No Toolbar Offer Until'
+if (Get-ProcessorBits 64) {
+    $regDirChrome  = $regDirChrome -replace 'SOFTWARE', 'SOFTWARE\Wow6432Node'
+    $regDirToolbar = $regDirChrome -replace 'SOFTWARE', 'SOFTWARE\Wow6432Node'
+}
+& {
+    New-Item $regDirChrome -ItemType directory -Force
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDirChrome -PropertyType DWORD -Value 20991231 -Force
+    New-Item $regDirToolbar -ItemType directory -Force
+    New-ItemProperty -Name "Piriform Ltd" -Path $regDirToolbar -PropertyType DWORD -Value 20991231 -Force
+} | Out-Null

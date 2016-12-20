@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>{{PackageName}}</id>
+		<title>X2go Client</title>
+		<version>{{PackageVersion}}</version>
+		<authors>X2go Team</authors>
+		<owners>Redsandro</owners>
+		<summary>X2GO is for having a graphical remote desktop of Linux computers over a low bandwidth connection.</summary>
+		<description>X2GO is for having a graphical remote desktop of Linux computers over a low bandwidth connection.</description>
+		<projectUrl>http://wiki.x2go.org/doku.php</projectUrl>
+		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+		<tags>Remote Desktop Linux Xorg KVM Network</tags>
+		<copyright></copyright>
+		<licenseUrl>http://wiki.x2go.org/doku.php/sources:start#licenses_of_x2go</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/x2go/img/x2go.80x80.png</iconUrl>
+		<dependencies></dependencies>
+		<releaseNotes></releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+		<!--<file src="content\**" target="content" />-->
+	</files>
+</package>

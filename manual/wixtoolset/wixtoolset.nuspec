@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wixtoolset</id>
+    <title>WiX Toolset</title>
+    <version>3.10.3.3007</version>
+    <authors>Rob Mensching, Bob Arnson</authors>
+    <owners>Gary Ewan Park</owners>
+    <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
+    <description>The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages. The WiX toolset CodePlex project stores the stable releases and Mercurial repository.</description>
+    <projectUrl>http://wixtoolset.org/</projectUrl>
+    <tags>wix toolset msi xml admin</tags>
+    <copyright>2009 - 2016 Outercurve Foundation</copyright>
+    <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/wixtoolset.png</iconUrl>
+    <releaseNotes>
+Information on this release can be found in the following blog post:
+* [http://wixtoolset.org/releases/v3-10-3-3007/](http://wixtoolset.org/releases/v3-10-3-3007/)
+	</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+  </metadata>
+</package>

@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'gimp'
 $installerType = 'exe'
 $installArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $gimpRegistryPath = $(

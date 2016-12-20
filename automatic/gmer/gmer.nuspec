@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gmer</id>
+    <title>GMER</title>
+    <version>2.2.19882.20161107</version>
+    <authors>Avast</authors>
+    <owners>Redsandro</owners>
+    <summary>GMER is one of the most respected specialized antirootkit applications available.</summary>
+    <description>
+GMER is one of the most respected specialized antirootkit applications available. The author now works for Avast.
+    </description>
+    <projectUrl>http://www.gmer.net/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gmer</packageSourceUrl>
+    <tags>GMER Security Rootkit Scanner</tags>
+    <copyright>Copyright (c) GMER 2004 - 2016</copyright>
+    <licenseUrl>http://www.gmer.net/#contact</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2a390a7bffa1328468b860436ff6e3791918f67b/icons/gmer.png</iconUrl>
+    <releaseNotes>http://www.gmer.net/#files</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--<file src="content\**" target="content" />-->
+  </files>
+</package>
