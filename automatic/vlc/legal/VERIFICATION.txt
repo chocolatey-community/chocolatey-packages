@@ -22,3 +22,6 @@ Package can be verified like this:
 Using AU:
 
    Get-RemoteChecksum http://get.videolan.org/vlc/2.2.4/win64/vlc-2.2.4-win64.exe
+
+File 'COPYING' obtained from:
+   http://svn.videolan.org/filedetails.php?repname=VideoLAN+Server&path=%2Ftrunk%2FCOPYING
