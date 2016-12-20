@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>lockhunter</id>
+    <title>LockHunter</title>
+    <version>3.1</version>
+    <authors>Igor Tkachenko, Nikolay Duylovskiy, Crystal Rich Ltd</authors>
+    <owners>chocolatey, Rob Reynolds</owners>
+    <copyright>2016 Crystal Rich Ltd</copyright>
+    <summary>LockHunter is a foolproof file unlocker</summary>
+    <description>LockHunter is a foolproof file unlocker. It is a free tool to delete files blocked by something you do not know. LockHunter is useful for fighting against malware, and other programs that are blocking files without a reason. Unlike other similar tools it deletes files into the recycle bin so you may restore them if deleted by mistake.
+
+## Features
+
+- Shows processes locking a file or folder
+- Gives you detailed information on the process
+- Allows to unlock, delete, copy or rename a locked file
+- Can delete a file at next OS restart
+- Allows to kill locking process
+- Allows to remove locking processes from hard drive
+- Can unload DLLs from processes
+- Integrates in to Explorer menu
+- It deletes files into the recycle bin, so you may restore them if deleted by mistake
+- Supports both 32 and 64 bit Windows
+
+![screenshot](http://lockhunter.com/screenshots/mainScreenshotRes.png)
+    </description>
+    <projectUrl>http://lockhunter.com/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/lockhunter</packageSourceUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/ba83ede01009052e80d43d93341f66b9c1d51b44/icons/lockhunter.png</iconUrl>
+    <tags>lockhunter unlocker file system locked files freeware admin</tags>
+    <docsUrl>http://lockhunter.com/manual.htm</docsUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
