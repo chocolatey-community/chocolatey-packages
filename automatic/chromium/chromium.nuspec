@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromium</id>
-    <version>57.0.2957.0</version>
+    <version>57.0.2958.0</version>
     <title>Chromium snapshots build</title>
     <owners>chocolatey</owners>
     <authors>The Chromium Authors</authors>
