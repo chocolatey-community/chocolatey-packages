@@ -1,11 +1,10 @@
 $path = Get-AppInstallLocation 'Freemake Video Converter'
-$fullPath = "${path}\Uninstall\unins000.exe"
 
 $packageArgs = @{
   packageName = 'freemake-video-converter'
   fileType    = 'exe'
   silentArgs  = '/VERYSILENT /NORESTART'
-  file        = $fullPath
+  file        = "${path}\Uninstall\unins000.exe"
 }
 
 Uninstall-ChocolateyPackage @packageArgs
