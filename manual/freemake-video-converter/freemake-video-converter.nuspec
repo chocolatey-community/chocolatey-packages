@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>freemake-video-converter</id>
+    <title>Freemake Video Converter</title>
+    <version>4.1.9.45</version>
+    <authors>Ellora Assets Corporation</authors>
+    <owners>agabrys, chocolatey</owners>
+    <summary>Freemake Video Converter is a free software to convert video files between formats.</summary>
+    <description>Freemake Video Converter converts video free to AVI, MP4, WMV, MKV, DVD, MP3, iPad, iPhone, PSP, Xbox, Android phones. Transform video to MP3 with one click! Rip &amp; burn DVD/ Blu-ray. Convert YouTube to MP3, MP4, AVI, etc. Free, safe, guaranteed result.</description>
+    <projectUrl>http://www.freemake.com/free_video_converter/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/freemake-video-converter</packageSourceUrl>
+    <tags>freemake video converter admin</tags>
+    <copyright>Copyright 2010 Ellora Assets Corporation.</copyright>
+    <licenseUrl>http://www.freemake.com/eula_fvc/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/icons/freemake-video-converter.png</iconUrl>
+    <releaseNotes>http://www.freemake.com/freemake_video_converter_changelog/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
