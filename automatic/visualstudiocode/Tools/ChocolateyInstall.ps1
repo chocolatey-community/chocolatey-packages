@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $pp = Get-PackageParameters
 $mergeTasks = "!runCode"
@@ -12,10 +12,10 @@ Write-Host "$mergeTasks"
 
 $packageName = 'visualstudiocode'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32 = 'https://az764295.vo.msecnd.net/stable/38746938a4ab94f2f57d9e1309c51fd6fb37553d/VSCodeSetup-1.8.0.exe'
-$url64 = 'https://az764295.vo.msecnd.net/stable/38746938a4ab94f2f57d9e1309c51fd6fb37553d/VSCodeSetup-1.8.0.exe'
-$checksum32 = 'f39f5506301552662a705d141d5ff0be33a9499be3a17fad73884555ceb6edcd'
-$checksum64 = 'f39f5506301552662a705d141d5ff0be33a9499be3a17fad73884555ceb6edcd'
+$url32 = 'https://az764295.vo.msecnd.net/stable/ee428b0eead68bf0fb99ab5fdc4439be227b6281/VSCodeSetup-1.8.1.exe'
+$url64 = 'https://az764295.vo.msecnd.net/stable/ee428b0eead68bf0fb99ab5fdc4439be227b6281/VSCodeSetup-1.8.1.exe'
+$checksum32 = 'b7a03c9b8d4dc92a40a53b156c3005e009c999900b5c490f4bd61fb9524f3331'
+$checksum64 = 'b7a03c9b8d4dc92a40a53b156c3005e009c999900b5c490f4bd61fb9524f3331'
 
 $packageArgs = @{
   packageName = $packageName
