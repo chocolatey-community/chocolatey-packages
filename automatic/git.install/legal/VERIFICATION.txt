@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from GitHub and can be verified like this:
+
+1. Download the following installers:
+  32-Bit: <https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.1/Git-2.11.0-32-bit.exe>
+  64-Bit: <https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.1/Git-2.11.0-64-bit.exe>
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: 2A6083479538C4FE454336660FCE96346EE3CF46F99CE08A666D4635539239D7
+  checksum64: FD1937EA8468461D35D9CABFCDD2DAA3A74509DC9213C43C2B9615E8F0B85086
+
+File 'LICENSE.txt' is obtained from <https://github.com/git-for-windows/git/blob/703601d6780c32d33dadf19b2b367f2f79e1e34c/COPYING>
