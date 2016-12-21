@@ -15,11 +15,11 @@
 
 ## Features
 
-- Host discovery â€“ Identifying hosts on a network. For example, listing the hosts that respond to TCP and/or ICMP requests or have a particular port open.
-- Port scanning â€“ Enumerating the open ports on target hosts.
-- Version detection â€“ Interrogating network services on remote devices to determine application name and version number.
-- OS detection â€“ Determining the operating system and hardware characteristics of network devices.
-- Scriptable interaction with the target â€“ using Nmap Scripting Engine (NSE) and Lua programming language.
+- Host discovery - Identifying hosts on a network. For example, listing the hosts that respond to TCP and/or ICMP requests or have a particular port open.
+- Port scanning - Enumerating the open ports on target hosts.
+- Version detection - Interrogating network services on remote devices to determine application name and version number.
+- OS detection - Determining the operating system and hardware characteristics of network devices.
+- Scriptable interaction with the target - using Nmap Scripting Engine (NSE) and Lua programming language.
     </description>
     <releaseNotes>https://nmap.org/changelog.html#7.40</releaseNotes>
     <copyright>Copyright 1996-2016</copyright>
