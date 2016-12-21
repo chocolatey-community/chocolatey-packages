@@ -2,28 +2,26 @@ import-module au
 
 $releases = "https://git-scm.com/download/win"
 
-if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
-    function global:au_BeforeUpdate {
-        Remove-Item "$PSScriptRoot\tools\*.exe"
+function global:au_BeforeUpdate {
+  Remove-Item "$PSScriptRoot\tools\*.exe"
 
-        $client = New-Object System.Net.WebClient
-        try 
-        {
-            $filePath32 = "$PSScriptRoot\tools\$($Latest.FileName32)"
-            $client.DownloadFile($Latest.URL32, "$filePath32")
+  $client = New-Object System.Net.WebClient
+  try 
+  {
+    $filePath32 = "$PSScriptRoot\tools\$($Latest.FileName32)"
+    $client.DownloadFile($Latest.URL32, "$filePath32")
 
-            $filePath64 = "$PSScriptRoot\tools\$($Latest.FileName64)"
-            $client.DownloadFile($Latest.URL64, "$filePath64")
-        }
-        finally 
-        {
-            $client.Dispose()
-        }
+    $filePath64 = "$PSScriptRoot\tools\$($Latest.FileName64)"
+    $client.DownloadFile($Latest.URL64, "$filePath64")
+  }
+  finally 
+  {
+    $client.Dispose()
+  }
 
-        $Latest.ChecksumType = "sha256"
-        $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath32 | ForEach-Object Hash
-        $Latest.Checksum64 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath64 | ForEach-Object Hash
-    }
+  $Latest.ChecksumType = "sha256"
+  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath32 | ForEach-Object Hash
+  $Latest.Checksum64 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath64 | ForEach-Object Hash
 }
 
 function global:au_SearchReplace {
