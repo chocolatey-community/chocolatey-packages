@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>7zip.commandline</id>
+    <title>7-Zip (Portable, CommandLine)</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Igor Pavlov</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>7-Zip is a file archiver with a high compression ratio.</summary>
+    <description>7-Zip is a file archiver with a high compression ratio. This brings the 7zip command line version to your system.</description>
+    <projectUrl>http://www.7-zip.org/</projectUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/tree/master/automatic/7zip.commandline</packageSourceUrl>
+    <tags>7zip zip archiver</tags>
+    <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/7zip.svg</iconUrl>
+    <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
+    <provides>7zip</provides>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->

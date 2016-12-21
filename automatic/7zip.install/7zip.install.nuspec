@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>7zip.install</id>
+    <title>7-Zip (Install)</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Igor Pavlov</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>7-Zip is a file archiver with a high compression ratio.</summary>
+    <description>7-Zip is a file archiver with a high compression ratio.
+
+### NOTE: The installer for 7-Zip is known to close the explorer process.
+This means you may lose current work. If it doesn't automatically restart explorer, type `explorer` on the command shell to restart it.
+    </description>
+    <projectUrl>http://www.7-zip.org/</projectUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <tags>7zip zip archiver admin</tags>
+    <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/7zip.svg</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
