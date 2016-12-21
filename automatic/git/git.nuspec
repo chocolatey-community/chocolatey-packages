@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>git</id>
+    <title>Git</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Johannes Schindelin, msysgit Committers</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>Git (for Windows) – Fast Version Control</summary>
+    <description>
+Git (for Windows) - Git is a powerful distributed Source Code Management tool. If you just want to use Git to do your version control in Windows, you will need to download Git for Windows, run the installer, and you are ready to start.
+
+Note: Git for Windows is a project run by volunteers, so if you want it to improve, volunteer!
+
+### Package Specifics
+The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/GitOnlyOnPath` - this puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
+ * `/GitAndUnixToolsOnPath` - this puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
+ * `/NoAutoCrlf` - this setting only affects new installs, it will not override an existing `.gitconfig`. This will ensure 'Checkout as is, commit as is'
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
+    </description>
+    <projectUrl>https://git-for-windows.github.io/</projectUrl>
+    <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
+    <docsUrl>http://git-scm.com/doc</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/git-for-windows</mailingListUrl>
+    <bugTrackerUrl>https://github.com/git-for-windows/git/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages</packageSourceUrl>
+    <tags>git vcs dvcs version control msysgit</tags>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/git.svg</iconUrl>
+    <dependencies>
+      <dependency id="git.install" version="[{{PackageVersion}}]" />
+    </dependencies>
+  </metadata>
+</package>
+<!-- character encoding: “UTF-8” -->
