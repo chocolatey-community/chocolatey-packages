@@ -3,41 +3,47 @@
   <metadata>
     <id>git</id>
     <title>Git</title>
-    <version>{{PackageVersion}}</version>
-    <authors>Johannes Schindelin, msysgit Committers</authors>
-    <owners>Rob Reynolds</owners>
-    <summary>Git (for Windows) – Fast Version Control</summary>
+    <version>2.11.0</version>
+    <authors>The Git Development Community</authors>
+    <owners>chocolatey</owners>
+    <summary>Git (for Windows) – We bring the awesome Git SCM to Windows</summary>
     <description>
-Git (for Windows) - Git is a powerful distributed Source Code Management tool. If you just want to use Git to do your version control in Windows, you will need to download Git for Windows, run the installer, and you are ready to start.
+Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
-Note: Git for Windows is a project run by volunteers, so if you want it to improve, volunteer!
+## Features
 
-### Package Specifics
-The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+* **Git BASH**: Git for Windows provides a BASH emulation used to run Git from the command line. *NIX users should feel right at home, as the BASH emulation behaves just like the "git" command in LINUX and UNIX environments.
+* **Git GUI**: As Windows users commonly expect graphical user interfaces, Git for Windows also provides the Git GUI, a powerful alternative to Git BASH, offering a graphical version of just about every Git command line function, as well as comprehensive visual diff tools.
+* **Shell Integration**: Simply right-click on a folder in Windows Explorer to access the BASH or GUI.
 
-#### Package Parameters
+## Package parameters
 The following package parameters can be set:
 
- * `/GitOnlyOnPath` - this puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
- * `/GitAndUnixToolsOnPath` - this puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
- * `/NoAutoCrlf` - this setting only affects new installs, it will not override an existing `.gitconfig`. This will ensure 'Checkout as is, commit as is'
+* `/GitOnlyOnPath` - this puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
+* `/GitAndUnixToolsOnPath` - this puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
+* `/NoAutoCrlf` - this setting only affects new installs, it will not override an existing `.gitconfig`. This will ensure 'Checkout as is, commit as is'
 
 These parameters can be passed to the installer with the use of `-params`.
 For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
+
+## Notes
+The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
     </description>
     <projectUrl>https://git-for-windows.github.io/</projectUrl>
     <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
     <docsUrl>http://git-scm.com/doc</docsUrl>
     <mailingListUrl>http://groups.google.com/group/git-for-windows</mailingListUrl>
     <bugTrackerUrl>https://github.com/git-for-windows/git/issues</bugTrackerUrl>
-    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages</packageSourceUrl>
-    <tags>git vcs dvcs version control msysgit</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/git</packageSourceUrl>
+    <tags>git vcs dvcs version-control msysgit foss cross-platform cli</tags>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/git.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/714d22bbb8801fc755d0c856ce30ffbfc748b34c/icons/git.svg</iconUrl>
     <dependencies>
-      <dependency id="git.install" version="[{{PackageVersion}}]" />
+      <dependency id="git.install" version="[2.11.0]" />
     </dependencies>
   </metadata>
+  <files>
+  </files>    
 </package>
 <!-- character encoding: “UTF-8” -->
