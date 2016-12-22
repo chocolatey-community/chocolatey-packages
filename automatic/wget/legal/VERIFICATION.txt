@@ -1,0 +1,18 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+1.  Download the appropriate zip:
+
+    x32: https://eternallybored.org/misc/wget/releases/wget-1.18-win32.zip
+    x64: https://eternallybored.org/misc/wget/releases/wget-1.18-win64.zip
+
+2.  You can use one of the following methods to obtain the checksum: 
+    - Use powershell function 'Get-FileHash'
+    - Use Chocolatey utility 'checksum.exe'
+
+    checksum32: 1E958D913FC1839B7CFB753DB1D4F40C11A9B064E6ED3CA4876C0C406BCE8735
+    checksum64: 1A0C1B5E4F2A62271C8881780E8949B5E5BE0E022C993E0D4E654E5FB796F150
+
+    Using AU:
+        Get-RemoteChecksum https://eternallybored.org/misc/wget/releases/wget-1.18-win64.zip
