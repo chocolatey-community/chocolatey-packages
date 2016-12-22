@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>autoit</id>
+    <title>AutoIT</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Jonathan Bennett, AutoIt Team</authors>
+    <owners>Rob Reynolds</owners>
+    <summary>AutoIT - Automation and scripting language</summary>
+    <description>AutoIt v3 is a freeware BASIC-like scripting language designed for automating the Windows GUI and general scripting. It uses a combination of simulated keystrokes, mouse movement and window/control manipulation in order to automate tasks in a way not possible or reliable with other languages. AutoIt is also very small, self-contained and will run on all versions of Windows out-of-the-box.</description>
+    <projectUrl>http://www.autoitscript.com/autoit3</projectUrl>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <tags>autoit install automation admin</tags>
+    <licenseUrl>http://www.autoitscript.com/autoit3/docs/license.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/autoit.png</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
