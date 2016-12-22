@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'libreoffice'
   fileType               = 'msi'
-  url                    = 'https://download.documentfoundation.org/libreoffice/stable/5.2.3/win/x86/LibreOffice_5.2.3_Win_x86.msi'
-  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/5.2.3/win/x86_64/LibreOffice_5.2.3_Win_x64.msi'
-  checksum               = '521a85c28ddc7ec69cbfb1c1d42f21f73eb72948710e63fb6b1cf3508b1092e2'
-  checksum64             = 'adec6a46296b90c86b72ec8f59fb0e6dc38c787d72fb92290ca529fd59cf7300'
+  url                    = 'https://download.documentfoundation.org/libreoffice/stable/5.2.4/win/x86/LibreOffice_5.2.4_Win_x86.msi'
+  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/5.2.4/win/x86_64/LibreOffice_5.2.4_Win_x64.msi'
+  checksum               = 'c04d943c371d9b1d4a060a07689d7383d941186c5df83df75ccb98be572a55a6'
+  checksum64             = '21ecb76910cf881c458bfea7846f9d1a624de2341d3128e51bc02cdaa747b7aa'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/passive /norestart'

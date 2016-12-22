@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>libreoffice</id>
     <title>LibreOffice Fresh</title>
-    <version>5.2.3.20161111</version>
+    <version>5.2.4</version>
     <authors>LibreOffice developers</authors>
     <owners>chocolatey</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
@@ -20,7 +20,7 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
     <copyright></copyright>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/libreoffice.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
     <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/libreoffice</packageSourceUrl>
     <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
