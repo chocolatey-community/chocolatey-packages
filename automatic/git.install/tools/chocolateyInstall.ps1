@@ -5,10 +5,9 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $filePath32 = "$toolsPath\Git-2.11.0-32-bit.exe"
 $filePath64 = "$toolsPath\Git-2.11.0-64-bit.exe"
-$fileArgs = $(
-    '/VERYSILENT /NORESTART /NOCANCEL /SP- ' +
-    '/COMPONENTS="icons,icons\quicklaunch,ext,ext\shellhere,ext\guihere,assoc,assoc_sh" /LOG'
-)
+
+$fileArgs = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG"
+$components = "icons", "icons\quicklaunch", "ext", "ext\shellhere", "ext\guihere", "assoc", "assoc_sh"
 
 # Parse package parameters.
 $pp = Get-PackageParameters
@@ -23,8 +22,13 @@ $installerArgs = @{
 }
 Set-InstallerSettings @installerArgs
 
+# Disable shell integration parameters.
+if ($pp.NoShellIntegration -eq $true) {
+    $components = Remove-ShellIntegration -Components $components
+}
+
 # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc).
-$fileArgs = Remove-QuickLaunchForSystemUser -FileArgs $fileArgs
+$components = Remove-QuickLaunchForSystemUser -Components $components
 
 # Stop any running Git SSH agents.
 Stop-GitSSHAgent
@@ -37,12 +41,18 @@ $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true
   $filePath32
 }
 
+$silentArgs = "$fileArgs"
+if ($components.length -gt 0) {
+    $componentArgs = $components -join ","
+    $silentArgs = $silentArgs + " /COMPONENTS=`"" + $componentArgs + "`""
+}
+
 $packageArgs = @{
     PackageName = 'git.install'
     FileType = 'exe'
     SoftwareName = 'Git version*'
     File = $installFile
-    SilentArgs = $fileArgs
+    SilentArgs = $silentArgs
     ValidExitCodes = @(0)
 }
 

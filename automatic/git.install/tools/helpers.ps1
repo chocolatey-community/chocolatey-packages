@@ -39,20 +39,25 @@ function Set-InstallerSettings([string] $InstallKey, [bool] $GitOnlyOnPath, [boo
     }    
 }
 
-function Remove-QuickLaunchForSystemUser([string] $FileArgs) {
+function Remove-QuickLaunchForSystemUser([string[]] $Components) {
     # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc)
     # Add other items to this if block or use $IsRunningUnderSystemAccount to adjust existing logic that needs changing
     $IsRunningUnderSystemAccount = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem
     If ($IsRunningUnderSystemAccount)
     {
-        #strip out quicklaunch parameter as it causes a hang under SYSTEM account
-        $FileArgs = $FileArgs.Replace('icons\quicklaunch,','')
-        If ($FileArgs -inotlike "*/SUPPRESSMSGBOXES*")
-        {
-            $FileArgs = $FileArgs + ' /SUPPRESSMSGBOXES'
-        }
-    }    
-    return $FileArgs
+        # Strip out quicklaunch parameter as it causes a hang under SYSTEM account.
+        $Components = $Components -ne "icons\quicklaunch"
+    }
+    
+    return $Components
+}
+
+function Remove-ShellIntegration([string[]] $Components) {
+    $Components = $Components -ne "ext\shellhere"
+    $Components = $Components -ne "ext\guihere"
+    $Components = $Components -ne "ext"
+
+    return $Components
 }
 
 function Stop-GitSSHAgent() {
