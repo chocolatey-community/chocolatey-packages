@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wget</id>
+    <version>1.18</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wget</packageSourceUrl>
+    <owners>chocolatey, LudicrousByte</owners>
+    <title>GNU Wget</title>
+    <authors>Giuseppe Scrivano,Hrvoje Nikšić,Jernej Simončič</authors>
+    <projectUrl>https://www.gnu.org/software/wget/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png</iconUrl>
+    <copyright>Copyright © 2010 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://ftp.gnu.org/gnu/wget/</projectSourceUrl>
+    <docsUrl>https://www.gnu.org/software/wget/manual/</docsUrl>
+    <bugTrackerUrl>http://lists.gnu.org/mailman/listinfo/bug-wget</bugTrackerUrl>
+    <tags>wget download http https ftp cli foss cross-platform</tags>
+    <summary>A command-line utility for retrieving files using HTTP, HTTPS and FTP protocols.</summary>
+    <description>
+
+GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
+
+## Features
+
+GNU Wget has many features to make retrieving large files or mirroring entire web or FTP sites easy, including:
+
+* Can resume aborted downloads, using REST and RANGE
+* Can use filename wild cards and recursively mirror directories
+* NLS-based message files for many different languages
+* Optionally converts absolute links in downloaded documents to relative, so that downloaded documents may link to each other locally
+* Runs on most UNIX-like operating systems as well as Microsoft Windows
+* Supports HTTP proxies
+* Supports HTTP cookies
+* Supports persistent HTTP connections
+* Unattended / background operation
+* Uses local file timestamps to determine whether documents need to be re-downloaded when mirroring
+* GNU Wget is distributed under the GNU General Public License.
+
+    </description>
+    <releaseNotes>
+* [News](http://wget.addictivecode.org/)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
