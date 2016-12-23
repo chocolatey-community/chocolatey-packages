@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python</id>
-    <version>3.5.2.20161029</version>
+    <version>3.6.0</version>
     <title>Python</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/python.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.
@@ -22,10 +22,10 @@ Python is a programming language that lets you work more quickly and integrate y
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/python</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
-      <dependency id="python3" version="[3.5.2.20161029]" />
+      <dependency id="python3" version="[3.6.0]" />
     </dependencies>
     <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
   </metadata>
   <files></files>
 </package>
-<!-- “UTF-8” test -->
+<!-- â€œUTF-8â€ test -->
