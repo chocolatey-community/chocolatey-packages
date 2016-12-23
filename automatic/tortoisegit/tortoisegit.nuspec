@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>TortoiseGit</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Sven Strickroth,Frank Li</authors>
+    <owners>dtgm</owners>
+    <summary>Git client that adds shell integration into Windows File Explorer</summary>
+    <description>
+TortoiseGit is a Windows Shell Interface to Git and based on TortoiseSVN. TortoiseGit supports you with regular tasks, such as committing, showing logs, diffing two versions, creating branches and tags, creating patches and so on. Since it's not an integration for a specific IDE like Visual Studio, Eclipse or others, you can use it with whatever development tools you like, and with any type of file. Main interaction with TortoiseGit will be using the context menu of the Windows explorer.
+
+[Screenshots](https://tortoisegit.org/about/screenshots/)
+[FAQ](https://tortoisegit.org/support/faq/)
+    </description>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}/</packageSourceUrl>
+    <projectUrl>https://tortoisegit.org/</projectUrl>
+    <projectSourceUrl>https://gitlab.com/tortoisegit/tortoisegit/</projectSourceUrl>
+    <bugTrackerUrl>https://tortoisegit.org/issues</bugTrackerUrl>
+    <docsUrl>https://tortoisegit.org/docs/</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/tortoisegit-dev</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/c4d81f12a4bce0a89447e29ad7df48b7c66ae964/icons/{{PackageName}}.png</iconUrl>
+    <tags>git revision-control dvcs admin</tags>
+    <copyright>© TortoiseGit</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>
+#### Program
+* [Changelog](https://tortoisegit.org/docs/releasenotes/#Release_{{PackageVersion}})
+
+#### Package
+* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
