@@ -1,10 +1,9 @@
-﻿$packageName = '{{PackageName}}'
-$url = '{{DownloadUrl}}'
-$unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$ErrorActionPreference = 'Stop'
 
-try {
-    Install-ChocolateyZipPackage $packageName $url $unzipLocation
-} catch {
-    Write-ChocolateyFailure $packageName $($_.Exception.Message)
-    throw
-}
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$filePath = "$toolsDir\autoit-v3.zip"
+
+Get-ChocolateyUnzip -FileFullPath $filePath -Destination $toolsDir
+
+# Lets remove the installer as there is no more need for it
+Remove-Item -Force $filePath
