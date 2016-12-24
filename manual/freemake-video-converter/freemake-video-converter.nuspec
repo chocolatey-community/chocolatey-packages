@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>freemake-video-converter</id>
+    <title>Freemake Video Converter</title>
+    <version>4.1.9.45</version>
+    <authors>Ellora Assets Corporation</authors>
+    <owners>agabrys, chocolatey</owners>
+    <summary>Freemake Video Converter converts video between 500+ formats and gadgets free! Convert to MP4, MP3, AVI, WMV, MKV, iPhone, Android. Convert YouTube to anything.</summary>
+    <description>Freemake Video Converter converts video between 500+ formats and gadgets free! Convert to MP4, MP3, AVI, WMV, MKV, iPhone, Android. Convert YouTube to anything.
+
+Convert Between 500+ Formats
+Freemake Video Converter supports all popular and rare formats: MP4, AVI, MKV, WMV, MP3, DVD, 3GP, SWF, FLV, HD, MOV, RM, QT, Divx, Xvid, TS, MTS, Fraps, etc. Import photos or audio files to turn multimedia to video. Convert multiple videos at once. All modern codecs are included: H.264, MKV, MPEG4, AAC.
+
+Pull Videos from Web
+Download &amp; convert streaming videos from YouTube, Facebook, Vimeo, Dailymotion, etc. Extract audio from YouTube videos or convert them to MP3, MP4, AVI, WMV, MKV. Free Video Converter automatically uploads video and audio files to iTunes and iOS after conversion. Convert large HD videos &amp; movies as well.
+
+Convert for any Gadgets
+Convert videos free for any device with video playback. Use ready profiles for Apple, Android, Sony PSP, Xbox, Samsung, Nokia, BlackBerry phones, tablets, consoles. Convert to 3GP for old cell phones. For rare gadgets, you can create and use your own conversion settings.</description>
+    <projectUrl>http://www.freemake.com/free_video_converter/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/freemake-video-converter</packageSourceUrl>
+    <tags>freemake video converter freeware admin</tags>
+    <copyright>Copyright 2010 Ellora Assets Corporation.</copyright>
+    <licenseUrl>http://www.freemake.com/eula_fvc/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/icons/freemake-video-converter.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+    <releaseNotes>http://www.freemake.com/freemake_video_converter_changelog/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
