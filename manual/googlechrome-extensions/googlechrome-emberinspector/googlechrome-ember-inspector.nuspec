@@ -20,7 +20,7 @@
     <summary>
 Adds an Ember tab to Chrome or Firefox Developer Tools that allows you to inspect Ember objects in your application.
     </summary>
-    <tags>foss github chrome extension admin</tags>
+    <tags>foss ember chrome extension admin</tags>
     <releaseNotes>https://github.com/emberjs/ember-inspector/releases</releaseNotes>
     <dependencies>
       <dependency id="googlechrome" version="10.0.0" />
