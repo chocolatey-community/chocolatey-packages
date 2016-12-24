@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>TortoiseSVN</title>
+    <version>{{PackageVersion}}</version>
+    <authors>TortoiseSVN Team</authors>
+    <owners>dtgm</owners>
+    <summary>Subversion® source control management client implemented as File Explorer shell extension</summary>
+    <description>
+TortoiseSVN is a really easy to use Revision control / version control / source control software for Windows. It is based on [Apache™ Subversion (SVN)®](http://subversion.apache.org/).
+
+TortoiseSVN is implemented as a Windows shell extension. It's intuitive and easy to use, since it doesn't require the Subversion command line client to run and provides revision information graphically with overlay icons. TortoiseSVN is free to use, even in a commercial environment.
+
+[Screenshots](http://tortoisesvn.net/screenshots.html)
+[FAQ](http://tortoisesvn.net/faq.html)
+    </description>
+    <tags>svn subversion scm revision-control admin</tags>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}/</packageSourceUrl>
+    <projectUrl>http://tortoisesvn.net/</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/p/tortoisesvn/code/HEAD/tree/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/tortoisesvn/tickets/</bugTrackerUrl>
+    <docsUrl>http://tortoisesvn.net/support.html</docsUrl>
+    <copyright>© 2004 TortoiseSVN Team</copyright>
+    <licenseUrl>https://sourceforge.net/p/tortoisesvn/code/HEAD/tree/trunk/src/COPYING.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/a1754dce4a694ba8d9cfe59b41dc11c0190b3ac3/icons/{{PackageName}}.png</iconUrl>
+    <releaseNotes>
+#### Program
+* [Overview changelog](http://tortoisesvn.net/newsarchive.html)
+* [Release changelog](http://tortoisesvn.net/Changelog.txt)
+* [Beta changelog](https://sourceforge.net/p/tortoisesvn/code/HEAD/tree/trunk/src/Changelog.txt)
+* [Nightly changelog](http://svn.apache.org/repos/asf/subversion/trunk/CHANGES)
+
+#### Package
+* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
