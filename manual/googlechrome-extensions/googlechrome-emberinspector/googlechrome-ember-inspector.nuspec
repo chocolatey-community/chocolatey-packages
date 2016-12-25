@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <title>Ember Inspector</title>
     <authors>Ember Development Team</authors>
-    <owners>gep13 chocolatey</owners>
+    <owners>gep13, chocolatey</owners>
     <projectUrl>http://emberjs.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d24c0fffa284ccddcb6d8ad862dd77c7508b97df/icons/googlechrome-ember-inspector.png</iconUrl>
     <projectSourceUrl>https://github.com/emberjs/ember-inspector</projectSourceUrl>
@@ -15,7 +15,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/emberjs/ember-inspector/blob/master/LICENSE</licenseUrl>
     <description>
-####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+## Notes
+
+This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
     </description>
     <summary>
 Adds an Ember tab to Chrome or Firefox Developer Tools that allows you to inspect Ember objects in your application.
