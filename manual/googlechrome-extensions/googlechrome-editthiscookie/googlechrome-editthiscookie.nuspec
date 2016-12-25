@@ -15,8 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/fcapano/Edit-This-Cookie/blob/master/License.txt</licenseUrl>
     <description>
-####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
-
 ## Features
 
 You can add, delete, edit, search, protect, and block cookies! Inspired by the lack of good cookie managers in Google Chrome, I developed this small, simple, and extremely useful extension that allows you to do anything you'll ever need to do to cookies!
@@ -30,6 +28,10 @@ You can add, delete, edit, search, protect, and block cookies! Inspired by the l
 - Export cookies in JSON, Netscape cookie file (perfect for wget and curl), Perl::LPW
 - Import cookies in JSON
 - Limit the maximum expiration date of any cookie
+
+## Notes
+
+This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
     </description>
     <summary>
 EditThisCookie is a cookie manager.
