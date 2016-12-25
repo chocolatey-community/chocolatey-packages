@@ -5,7 +5,7 @@
     <title>Ember Cli in Visual Studio Code </title>
     <version>1.0.0</version>
     <authors>Felix Rieseberg</authors>
-    <owners>gep13, chocolatey</owners>
+    <owners>chocolatey, gep13</owners>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=felixrieseberg.vsc-ember-cli</projectUrl>
     <projectSourceUrl>https://github.com/felixrieseberg/vsc-ember-cli</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-ember-cli</packageSourceUrl>
