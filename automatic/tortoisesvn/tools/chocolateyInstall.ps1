@@ -1,22 +1,29 @@
-﻿$packageName = '{{PackageName}}'
-$installerType = 'msi'
-$silentArgs = '/quiet /qn /norestart ADDLOCAL=ALL'
-$urlArray = {{DownloadUrlx64}}
-$url = $urlArray[0]
-$checksum = '{{Checksum}}'
-$checksumType = 'sha256'
-$url64 = $urlArray[1]
-$checksum64 = '{{Checksumx64}}'
-$checksumType64 = 'sha256'
-$validExitCodes = @(0,3010)
+$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyPackage -PackageName "$packageName" `
-                          -FileType "$installerType" `
-                          -SilentArgs "$silentArgs" `
-                          -Url "$url" `
-                          -Url64bit "$url64" `
-                          -ValidExitCodes $validExitCodes `
-                          -Checksum "$checksum" `
-                          -ChecksumType "$checksumType" `
-                          -Checksum64 "$checksum64" `
-                          -ChecksumType64 "$checksumType64"
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+
+$filePath32 = "$toolsPath\TortoiseSVN-1.9.5.27581-win32-svn-1.9.5.msi"
+$filePath64 = "$toolsPath\TortoiseSVN-1.9.5.27581-x64-svn-1.9.5.msi"
+
+$installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
+  Write-Host "Installing 64 bit version"
+  $filePath64
+} else { 
+  Write-Host "Installing 32 bit version"
+  $filePath32
+}
+
+$packageArgs = @{
+    PackageName = 'tortoisesvn'
+    FileType = 'msi'
+    SoftwareName = 'TortoiseSVN*'
+    File = $installFile
+    SilentArgs = '/quiet /qn /norestart ADDLOCAL=ALL'
+    ValidExitCodes = @(0,3010)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+# Lets remove the installer as there is no more need for it.
+Remove-Item -Force $filePath32 -ea 0
+Remove-Item -Force $filePath64 -ea 0
