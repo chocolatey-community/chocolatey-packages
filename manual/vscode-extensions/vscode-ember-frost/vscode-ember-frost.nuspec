@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vscode-ember-frost</id>
+    <title>Ember Colorizer and Theme Extension</title>
+    <version>1.0.0</version>
+    <authors>Ciena Blue Planet</authors>
+    <owners>chocolatey, gep13</owners>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=ciena-blueplanet.vsc-ember-frost</projectUrl>
+    <projectSourceUrl>https://github.com/ciena-blueplanet/vscode-ember-colorizer</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-ember-frost</packageSourceUrl>
+    <docsUrl>https://github.com/ciena-blueplanet/vscode-ember-colorizer/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/ciena-blueplanet/vscode-ember-colorizer/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code Ember Colorizer and Theme Extension</summary>
+    <description>VsCode extension that colorizes/tokeninzes Ember .hbs, Controllers, and Routes files.</description>
+    <tags>microsoft visualstudiocode vscode ember extension foss</tags>
+    <releaseNotes>https://github.com/ciena-blueplanet/vscode-ember-colorizer/releases</releaseNotes>
+    <dependencies>
+      <dependency id="VisualStudioCode" version="1.2.0" />
+    </dependencies>
+  </metadata>
+</package>
