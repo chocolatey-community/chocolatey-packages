@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>googlechrome-ember-inspector</id>
+    <version>1.0.0</version>
+    <title>Ember Inspector</title>
+    <authors>Ember Development Team</authors>
+    <owners>chocolatey, gep13</owners>
+    <projectUrl>http://emberjs.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d24c0fffa284ccddcb6d8ad862dd77c7508b97df/icons/googlechrome-ember-inspector.png</iconUrl>
+    <projectSourceUrl>https://github.com/emberjs/ember-inspector</projectSourceUrl>
+    <docsUrl>https://github.com/emberjs/ember-inspector/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/emberjs/ember-inspector/issues</bugTrackerUrl>
+    <packageSourceUrl>https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/emberjs/ember-inspector/blob/master/LICENSE</licenseUrl>
+    <description>
+## Notes
+
+This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+    </description>
+    <summary>
+Adds an Ember tab to Chrome or Firefox Developer Tools that allows you to inspect Ember objects in your application.
+    </summary>
+    <tags>foss ember chrome extension admin</tags>
+    <releaseNotes>https://github.com/emberjs/ember-inspector/releases</releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" version="10.0.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- “UTF-8” test -->

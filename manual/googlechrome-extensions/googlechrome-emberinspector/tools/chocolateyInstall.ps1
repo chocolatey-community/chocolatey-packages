@@ -1,6 +1,6 @@
 $bits = Get-ProcessorBits
-$packageName = "googlechrome-zenhub"
-$extensionID = "ogcgkffhplmphkaahpmffcafajaocjbd"
+$packageName = 'googlechrome-ember-inspector'
+$extensionID = 'bmdblncegkenkacieihfhpjfppoconhi'
 
 if ($bits -eq 64) {
   if (Test-Path -Path "HKLM:\SOFTWARE\Wow6432Node\Google\Chrome\Extensions\$extensionID") {
