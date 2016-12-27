@@ -1,25 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>totalcommander</id>
     <title>Total Commander</title>
-    <version>{{PackageVersion}}</version>
+    <version>9.00.01</version>
     <authors>Christian Ghisler</authors>
-    <owners>dtgm,Anthony Mastrean</owners>
+    <owners>chocolatey</owners>
     <summary>File manager and explorer replacement</summary>
     <description>
-Total Commander is a file manager replacement for Windows. Features: Drag/Drop from and to explorer/desktop. Packer shell for ZIP/ARJ/LHA/RAR/UC2/TAR/GZ/CAB/ACE. Command line, full text search also in packed files, button bar. Supports over 40 languages. FTP client, access to Network Neighborhood, Uuencode/Decode, compare, synchronize dirs. Changes: Unicode support, CHM help, names up to 1022 chars, breadcrumb bar, password safe, quick filter.
+Total Commander (former Wincmd) is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.
+But Total Commander uses a different approach: it has two fixed windows, which makes copying files much easier.
+
+## Features:
+
+* Two file windows side by side
+* Multiple language and Unicode support
+* Enhanced search function
+* Compare files (now with editor) / synchronize directories
+* Quick View panel with bitmap display
+* ZIP, 7ZIP, ARJ, LZH, RAR, UC2, TAR, GZ, CAB, ACE archive handling + plugins
+* Built-in FTP client with FXP (server to server) and HTTP proxy support
+* Parallel port link, multi-rename tool
+* Tabbed interface, regular expressions, history+favorites buttons
+* Thumbnails view, custom columns, enhanced search
+* Compare editor, cursor in lister, separate trees, logging, enhanced overwrite dialog etc.
+* Unicode names almost everywhere, long names (&gt;259 characters), password manager for ftp and plugins, synchronize empty dirs, 64 bit context menu, quick file filter (Ctrl+S)
+* USB port connection via special [direct transfer cable](http://ghisler.com/cables/index.htm), partial branch view (Ctrl+Shift+B), and many improvements to ftp, synchronizing and other functions
+* [And many more!](http://ghisler.com/featurel.htm)
+
+## Package parameters
+
+The following package parameters can be set:
+
+* `/LocalUser` - Install only for local user. By default it will be installed for all users.
+* `/DesktopIcon` - Add an icon for Total Commander to the Desktop. By default no icon is added.
+* `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory. 
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/LocalUser /DesktopIcon"'`.
+  
+## Notes 
+
+Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
 
 [FAQ](http://www.ghisler.com/faq.htm)
 [Plugins](http://www.ghisler.ch/wiki/index.php/Developer%27s_corner)
 [Plugin downloads](http://totalcmd.net/)
 [Plugin development](http://totalcmd.net/directory/developer.html)
-
-### Commercial software
-
-Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
     </description>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/totalcommander</packageSourceUrl>
     <projectUrl>http://www.ghisler.com</projectUrl>
     <bugTrackerUrl>http://www.ghisler.ch/wiki/index.php/Known_bugs_and_workarounds</bugTrackerUrl>
     <docsUrl>http://www.ghisler.ch/wiki/index.php</docsUrl>
@@ -28,15 +57,10 @@ Total Commander is a Shareware program. This means that you can test it for a pe
     <copyright>© 1995 Christian Ghisler</copyright>
     <licenseUrl>http://www.ghisler.com/order.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/92907451d61ad48c9e7ed7ab1df00f1b72214f7e/icons/{{PackageName}}.png</iconUrl>
-    <releaseNotes>
-### Program
-* [News](http://www.ghisler.com/mailing.htm)
-
-### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
-    </releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4d9fd7c774e1ae7edb688d04ac9b55b87477e318/icons/totalcommander.png</iconUrl>
+    <releaseNotes>http://ghisler.com/whatsnew.htm</releaseNotes>
     <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" /> 
       <dependency id="7zip.commandline" />
       <dependency id="autohotkey.portable" />
     </dependencies>
