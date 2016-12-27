@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>{{PackageName}}</id>
+    <title>Total Commander</title>
+    <version>{{PackageVersion}}</version>
+    <authors>Christian Ghisler</authors>
+    <owners>dtgm,Anthony Mastrean</owners>
+    <summary>File manager and explorer replacement</summary>
+    <description>
+Total Commander is a file manager replacement for Windows. Features: Drag/Drop from and to explorer/desktop. Packer shell for ZIP/ARJ/LHA/RAR/UC2/TAR/GZ/CAB/ACE. Command line, full text search also in packed files, button bar. Supports over 40 languages. FTP client, access to Network Neighborhood, Uuencode/Decode, compare, synchronize dirs. Changes: Unicode support, CHM help, names up to 1022 chars, breadcrumb bar, password safe, quick filter.
+
+[FAQ](http://www.ghisler.com/faq.htm)
+[Plugins](http://www.ghisler.ch/wiki/index.php/Developer%27s_corner)
+[Plugin downloads](http://totalcmd.net/)
+[Plugin development](http://totalcmd.net/directory/developer.html)
+
+### Commercial software
+
+Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
+    </description>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/{{PackageName}}/</packageSourceUrl>
+    <projectUrl>http://www.ghisler.com</projectUrl>
+    <bugTrackerUrl>http://www.ghisler.ch/wiki/index.php/Known_bugs_and_workarounds</bugTrackerUrl>
+    <docsUrl>http://www.ghisler.ch/wiki/index.php</docsUrl>
+    <mailingListUrl>http://www.ghisler.ch/board/index.php</mailingListUrl>
+    <tags>file manager shareware nagscreen admin</tags>
+    <copyright>© 1995 Christian Ghisler</copyright>
+    <licenseUrl>http://www.ghisler.com/order.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/92907451d61ad48c9e7ed7ab1df00f1b72214f7e/icons/{{PackageName}}.png</iconUrl>
+    <releaseNotes>
+### Program
+* [News](http://www.ghisler.com/mailing.htm)
+
+### Package
+* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="7zip.commandline" />
+      <dependency id="autohotkey.portable" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
