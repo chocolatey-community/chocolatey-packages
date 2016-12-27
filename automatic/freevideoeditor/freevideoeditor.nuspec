@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>freevideoeditor</id>
         <title>VSDC Free Video Editor</title>
-        <version>5.5.0.20161111</version>
+        <version>5.7.3</version>
         <authors>Flash-Integro LLC</authors>
         <owners>chocolatey</owners>
         <summary>Simple video editor.</summary>
@@ -45,7 +45,7 @@ Hardware acceleration, multi-color Chroma Key, adjustable parameters settings an
         <licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <docsUrl>http://www.videosoftdev.com/how-to-use-free-video-editor</docsUrl>
-        <iconUrl>https://i.imgur.com/eWYMC0E.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/136ef0bb871e04da4d9e0e0da37902930c80c2b4/icons/freevideoeditor.png</iconUrl>
         <dependencies>
         </dependencies>
         <releaseNotes>http://www.videosoftdev.com/free-video-editor#accordion10</releaseNotes>
