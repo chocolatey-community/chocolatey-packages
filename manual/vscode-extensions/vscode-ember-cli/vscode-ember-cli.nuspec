@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vscode-ember-cli</id>
+    <title>Ember Cli in Visual Studio Code </title>
+    <version>1.0.0</version>
+    <authors>Felix Rieseberg</authors>
+    <owners>chocolatey, gep13</owners>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=felixrieseberg.vsc-ember-cli</projectUrl>
+    <projectSourceUrl>https://github.com/felixrieseberg/vsc-ember-cli</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-ember-cli</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8b94ce90379c08d88333d83aa32f9aa115f5644d/icons/vscode_ember-cli.png</iconUrl>
+    <licenseUrl>https://github.com/felixrieseberg/vsc-ember-cli/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://github.com/felixrieseberg/vsc-ember-cli/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/felixrieseberg/vsc-ember-cli/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code Ember CLI Extension</summary>
+    <description>
+Use Ember and Ember Cli directly from Visual Studio Code. After installation, all ember cli commands are available through Code's own command list, enabling you for example to generate blueprints, run tests, or build your app without leaving your editor. Also, IntelliSense for Ember!
+
+## Features
+- Visual Studio Code is automatically configured to play well with Ember Cli projects - as soon as a .ember-cli file is detected in the workspace, we'll create a fitting jsconfig.json to ensure that Visual Studio Code enables ES6 and Modules support.
+- Typings to enable IntelliSense Support for Ember!
+- All Ember Commands are available through Visual Studio Code's Command Palette.
+- Snippets make day-to-day tasks a lot easier
+</description>
+    <tags>microsoft visualstudiocode vscode ember extension foss</tags>
+    <releaseNotes>https://github.com/felixrieseberg/vsc-ember-cli/releases</releaseNotes>
+    <dependencies>
+      <dependency id="VisualStudioCode" version="1.2.0" />
+    </dependencies>
+  </metadata>
+</package>
