@@ -1,9 +1,8 @@
 $bits = Get-ProcessorBits
-$packageName = 'googlechrome-'
-$extensionID = ''
+$packageName = 'googlechrome-editthiscookie'
+$extensionID = 'fngmhnnpilhplaeedifhccceomclgfbg'
 
-if ($bits -eq 64)
-{
+if ($bits -eq 64) {
   if (Test-Path -Path "HKLM:\SOFTWARE\Wow6432Node\Google\Chrome\Extensions\$extensionID") {
     Write-Host "Extension already installed." -foreground "magenta" -backgroundcolor "blue"
   } else {
