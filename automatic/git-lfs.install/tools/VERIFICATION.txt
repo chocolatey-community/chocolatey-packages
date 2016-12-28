@@ -1,16 +1,16 @@
-VERIFICATION
+﻿VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The installer have been downloaded from GitHub and can be verified like this:
 
-1. Go to <https://github.com/git-lfs/git-lfs/releases/download/v1.5.3/git-lfs-windows-1.5.3.exe>
+1. Go to <https://github.com/git-lfs/git-lfs/releases/download/v1.5.4/git-lfs-windows-1.5.4.exe>
    to download the installer
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 5BFC22D5D370C128A772C72EA73FA343643BF2C4B9DE9C081E192FA829AAE983
+  checksum: EEFB302FADB4926692EA887320A5DA8D15E1DE13D352DB79E69894FF283211A0
 
 File 'LICENSE.txt' is obtained from <https://github.com/git-lfs/git-lfs/blob/6faa2589cf31a87e4109eb6490a461620c6e64b2/LICENSE.md>

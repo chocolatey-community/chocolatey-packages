@@ -3,7 +3,7 @@
   <metadata>
     <id>git-lfs.install</id>
     <title>Git Large File Storage (Install)</title>
-    <version>1.5.3.20161213</version>
+    <version>1.5.4</version>
     <authors>GitHub Inc</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://git-lfs.github.com/</projectUrl>
