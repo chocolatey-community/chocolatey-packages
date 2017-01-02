@@ -2,6 +2,7 @@ $packageName = 'tor-browser'
 $installerType = 'exe'
 $installArgs = '/S'
 $url32 = ''
+$checksum32 = ''
 
 # binRoot is only for compatibility reasons.
 # will be removed from future releases
@@ -67,7 +68,14 @@ if ($langcode -eq $null) {$langcode = 'en-US'}
 
 $url = $url32.Replace("en-US", $langcode)
 
-Get-ChocolateyWebFile $packageName $pathDownloadedInstaller $url
+$packageArgs = @{
+  PackageName = $packageName 
+  FileFullPath = $pathDownloadedInstaller 
+  Url = $url
+  Checksum = $checksum32
+  ChecksumType = 'sha256'
+}
+Get-ChocolateyWebFile @packageArgs
 
 Start-Process -Wait $pathDownloadedInstaller -ArgumentList '/S', "/D=$destinationFolder"
 
