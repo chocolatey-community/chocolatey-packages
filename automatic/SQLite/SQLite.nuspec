@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>SQLite</id>
-    <version>3.15.2</version>
+    <version>3.16.0</version>
     <title>SQLite</title>
     <owners>chocolatey</owners>
     <authors>D. Richard Hipp, SQLite contributors</authors>
     <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
     <projectUrl>http://www.sqlite.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/sqlite.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sqlite.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
