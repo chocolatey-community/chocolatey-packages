@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>notepadplusplus.install</id>
     <title>Notepad++ (Install)</title>
-    <version>7.2.2</version>
+    <version>7.3</version>
     <authors>Don Ho</authors>
     <owners>chocolatey</owners>
     <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>
@@ -34,7 +34,7 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
     <tags>notepad notepadplusplus notepad-plus-plus editor text development foss</tags>
     <licenseUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/LICENSE</licenseUrl>
     <releaseNotes>https://notepad-plus-plus.org/news</releaseNotes>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/notepadplusplus/icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/136ef0bb871e04da4d9e0e0da37902930c80c2b4/icons/notepadplusplus.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/notepadplusplus.install</packageSourceUrl>
     <projectSourceUrl>https://github.com/notepad-plus-plus/notepad-plus-plus</projectSourceUrl>
     <mailingListUrl>https://notepad-plus-plus.org/community/</mailingListUrl>
