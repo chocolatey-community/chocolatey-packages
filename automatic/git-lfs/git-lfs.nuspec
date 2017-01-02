@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>git-lfs</id>
@@ -24,7 +24,7 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 * **Same access controls and permissions:** Keep the same access controls and permissions for large files as the rest of your Git repository when working with a remote host like GitHub.
 </description>
     <tags>git lfs vcs dvcs version-control foss cross-platform cli</tags>
-    <releaseNotes>https://github.com/github/git-lfs/blob/master/CHANGELOG.md</releaseNotes>
+    <releaseNotes>https://github.com/git-lfs/git-lfs/releases/tag/v1.5.4</releaseNotes>
     <dependencies>
       <dependency id="git-lfs.install" version="[1.5.4]" />
     </dependencies>
