@@ -1,6 +1,7 @@
-﻿$packageName = '{{PackageName}}'
+$packageName = 'tor-browser'
 $installerType = 'exe'
 $installArgs = '/S'
+$url32 = ''
 
 # binRoot is only for compatibility reasons.
 # will be removed from future releases
@@ -31,7 +32,7 @@ if ((Test-Path $oldDestinationFolder) -and
 
 Write-Output @"
 Warning: Deprecated installation folder detected: Desktop/Tor Browser.
-This package will continue to install {{PackageName}} there unless you
+This package will continue to install tor-browser there unless you
 remove the deprecated installation folder. After you did that, reinstall
 this package again with the “-force” parameter. Then it will use
 %ChocolateyBinRoot%\tor-browser.
@@ -64,15 +65,13 @@ $langcode = $table[$language]
 # English = fallback language
 if ($langcode -eq $null) {$langcode = 'en-US'}
 
-# DownloadUrlx64 gets “misused” here as variable for the real version with  hyphen
-$url = "https://www.torproject.org/dist/torbrowser/{{DownloadUrlx64}}/torbrowser-install-{{DownloadUrlx64}}_${langcode}.exe"
+$url = $url32.Replace("en-US", $langcode)
 
 Get-ChocolateyWebFile $packageName $pathDownloadedInstaller $url
 
 Start-Process -Wait $pathDownloadedInstaller -ArgumentList '/S', "/D=$destinationFolder"
 
 Remove-Item $pathDownloadedInstaller
-
 
 # Create .ignore files for exe’s
 Get-ChildItem -Path $destinationFolder -Recurse | Where {
