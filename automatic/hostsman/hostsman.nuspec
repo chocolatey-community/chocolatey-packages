@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>hostsman</id>
-    <version>4.6.103.20161126</version>
+    <version>4.7.105</version>
     <title>HostsMan</title>
     <authors>abelhadigital.com</authors>
     <owners>chocolatey</owners>
@@ -11,7 +11,7 @@
     <tags>security hosts hostsfile freeware admin</tags>
     <licenseUrl>http://hostsman.it-mate.co.uk/licenses/hostsman_4.txt</licenseUrl>
     <projectUrl>http://www.abelhadigital.com/hostsman</projectUrl>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/d3ba6b8a6b663536b70f5d9a3e710bfca64c73f4/icons/hostsman.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d3ba6b8a6b663536b70f5d9a3e710bfca64c73f4/icons/hostsman.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 __HostsMan__ is a freeware application that lets you manage your Hosts file with ease.
