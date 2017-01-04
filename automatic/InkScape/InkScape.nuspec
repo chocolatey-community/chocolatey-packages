@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>InkScape</id>
-    <version>0.91.0.20161126</version>
+    <version>0.92.0</version>
     <title>Inkscape</title>
     <owners>chocolatey</owners>
     <authors>Inkscape developers</authors>
     <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://inkscape.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/InkScape.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Inkscape is an open-source vector graphics editor similar to Adobe Illustrator, Corel Draw, Freehand, or Xara X. What sets Inkscape apart is its use of Scalable Vector Graphics (SVG), an open XML-based W3C standard, as the native format.
@@ -30,7 +30,7 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
 [Screenshots](https://inkscape.org/en/about/screenshots/).
     </description>
     <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
-    <releaseNotes>http://wiki.inkscape.org/wiki/index.php/Release_notes/0.91</releaseNotes>
+    <releaseNotes>http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92</releaseNotes>
     <copyright>inkscape.org</copyright>
     <tags>inkscape editor foss cross-platform svg vector-graphics icons graphics export drawing art admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/InkScape</packageSourceUrl>
@@ -43,4 +43,4 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->
+<!-- â€œUTF-8â€ test -->
