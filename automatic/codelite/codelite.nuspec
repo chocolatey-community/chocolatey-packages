@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if â€œÎ©â€ doesnâ€™t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>codelite</id>
-    <version>9.2.0</version>
+    <version>10.0.0</version>
     <title>CodeLite</title>
     <owners>chocolatey</owners>
     <authors>Eran Ifrah,CodeLite team</authors>
@@ -24,8 +24,8 @@ programming languages which runs best on all major Plattforms (OSC, Windows and 
 - This package downloads the installer which includes CodeLite, the MinGW suite and the wxWidgets SDK.
     </description>
     <summary>CodeLite is an open-source, cross plattform IDE specialized in C, C++, PHP and JavaScript.</summary>
-    <releaseNotes>http://codelite.org/LiteEditor/ReleaseNotesCodeLite92</releaseNotes>
-    <copyright>© 2016 by SmartKoders, All rights reserved.</copyright>
+    <releaseNotes>http://codelite.org/LiteEditor/ReleaseNotesCodeLite10</releaseNotes>
+    <copyright>Â© 2016 by SmartKoders, All rights reserved.</copyright>
     <tags>C C++ foss cross-platform IDE development programming admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/codelite</packageSourceUrl>
   </metadata>

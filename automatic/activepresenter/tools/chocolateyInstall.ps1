@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $fileType      = 'exe'
 $toolsDir      = Split-Path $MyInvocation.MyCommand.Definition
