@@ -21,4 +21,8 @@ $tools = `
         mkdir "$root_path\$tool" -ea 0 | Out-Null
         New-ItemProperty -Path "$root_path\$tool" -Name EulaAccepted -Value 1 -Force | Out-Null
     }
+
+    $vt = "$root_path\SigCheck\VirusTotal"
+    mkdir $vt -ea 0 | Out-Null
+    New-ItemProperty -Path $vt -Name VirusTotalTermsAccepted -Value 1 -Force | Out-Null
 }
