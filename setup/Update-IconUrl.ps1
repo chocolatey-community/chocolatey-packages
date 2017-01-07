@@ -158,9 +158,13 @@ function Update-IconUrl{
 
   $possibleNames = @($Name);
   if ($IconName) { $possibleNames = @($IconName) + $possibleNames }
-  if ($Name.EndsWith('.install') -or $Name.EndsWith('.portable')) {
-    $index = $Name.LastIndexOf('.');
-    $possibleNames += @($Name.Substring(0, $index))
+
+  $validSuffixes = @(".install"; ".portable"; ".commandline")
+
+  $suffixMatch = $validSuffixes | ? { $Name.EndsWith($_) } | select -first 1
+
+  if ($suffixMatch) {
+    $possibleNames += $Name.TrimEnd($suffixMatch)
   }
 
   # Let check if the package already contains a url, and get the filename from that
