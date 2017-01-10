@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>autoit</id>
-    <title>AutoIt</title>
+    <id>autoit.install</id>
+    <title>AutoIt (Install)</title>
     <version>3.3.14.2</version>
     <authors>Jonathan Bennett, AutoIt Team</authors>
     <owners>chocolatey</owners>
@@ -32,7 +32,7 @@ AutoIt is also very small, self-contained and will run on all versions of Window
     </description>
     <projectUrl>http://www.autoitscript.com/autoit3</projectUrl>
     <docsUrl>https://www.autoitscript.com/autoit3/docs/</docsUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autoit</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autoit.install</packageSourceUrl>
     <tags>autoit install automation admin freeware</tags>
     <licenseUrl>http://www.autoitscript.com/autoit3/docs/license.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
