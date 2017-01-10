@@ -2,14 +2,16 @@ import-module au
 
 $releases = "https://www.autoitscript.com/site/autoit/downloads"
 
-function global:au_BeforeUpdate {
-    Remove-Item "$PSScriptRoot\tools\*.exe"
+if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
+    function global:au_BeforeUpdate {
+        Remove-Item "$PSScriptRoot\tools\*.exe"
 
-    $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
-    Invoke-WebRequest $Latest.URL32 -OutFile $filePath
+        $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+        Invoke-WebRequest $Latest.URL32 -OutFile $filePath
 
-    $Latest.ChecksumType = "sha256"
-    $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | ForEach-Object Hash
+        $Latest.ChecksumType = "sha256"
+        $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | ForEach-Object Hash
+    }
 }
 
 function global:au_SearchReplace {
