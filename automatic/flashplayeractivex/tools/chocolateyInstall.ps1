@@ -1,5 +1,5 @@
-$packageName = 'flashplayeractivex'
-$version = '24.0.0.186'
+﻿$packageName = 'flashplayeractivex'
+$version = '24.0.0.194'
 $majorVersion = '24'
 $registry = ( Get-UninstallRegistryKey -SoftwareName "Adobe Flash Player $majorVersion ActiveX" ).DisplayVersion
 $checking = ( $registry -eq $version )
