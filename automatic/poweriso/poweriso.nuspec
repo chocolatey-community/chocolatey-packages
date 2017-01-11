@@ -42,6 +42,9 @@
     <releaseNotes>http://www.poweriso.com/tutorials/history.htm</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/poweriso</packageSourceUrl>
     <docsUrl>http://www.poweriso.com/tutorials/index.htm</docsUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
