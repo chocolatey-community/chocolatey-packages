@@ -7,16 +7,18 @@
     <owners>chocolatey</owners>
     <authors>The Chromium Authors</authors>
     <projectUrl>http://www.chromium.org/Home</projectUrl>
+    <projectSourceUrl>https://chromium.googlesource.com/chromium/src</projectSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chromium.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This package installs the Chromium snapshots builds by default to the '%programfiles(x86)%' instead of `%localappdata%\Chromium`.
     If you have installed this package in the past to the `%localappdata%\Chromium` location it will continue to be installed in this location.
     These builds can be unstable. MD5 checking is done on the file before install.</description>
     <summary>Chromium snapshots build (unstable)</summary>
-    <releaseNotes />
-    <copyright />
+    <copyright>Copyright (c) 2013 The Chromium OS Author</copyright>
+    <bugTrackerUrl>https://bugs.chromium.org/p/chromium/issues/list</bugTrackerUrl>
+    <mailingListUrl>https://www.chromium.org/developers/discussion-groups</mailingListUrl>
     <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
-    <tags>chromium google cross-platform foss chrome browser</tags>
+    <tags>chromium admin google cross-platform foss chrome browser</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
   </metadata>
   <files>
