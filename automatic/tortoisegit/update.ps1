@@ -6,7 +6,6 @@ $releases = 'https://tortoisegit.org/download/'
 function global:au_BeforeUpdate {
   $Latest.ChecksumType = "sha256"
   Get-RemoteFiles -Purge
-  Get-RemoteFiles -Purge
 }
 
 function global:au_SearchReplace {
