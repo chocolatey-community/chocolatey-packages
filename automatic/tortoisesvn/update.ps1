@@ -1,5 +1,5 @@
 import-module au
-import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
+import-module "$PSScriptRoot/../../extensions/extensions.psm1"
 
 $releases = 'https://tortoisesvn.net/downloads.html'
 
