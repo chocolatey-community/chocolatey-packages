@@ -30,6 +30,8 @@
 ## Notes
 
 - Free unregistered versions will allow you to evaluate the software for free to determine if it suits your needs. The unregistered version will display a dialog prompts you to register, and you can not create or edit image files greater than 300MB with the unregistered version.
+- This package always looks for the latest version, as such there may be times where the checksum will not match the downloaded installer.
+- After installation your default web browser will be opened with a thank you note from power iso team.
 </description>
     <projectUrl>http://www.poweriso.com/index.htm</projectUrl>
     <tags>PowerISO cd dvd bluray iso cross-platform media burn trial admin</tags>
