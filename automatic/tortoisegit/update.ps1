@@ -1,28 +1,12 @@
 import-module au
-import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
+import-module "$PSScriptRoot/../../extensions/extensions.psm1"
 
 $releases = 'https://tortoisegit.org/download/'
 
 function global:au_BeforeUpdate {
-  Remove-Item "$PSScriptRoot\tools\*.exe"
-
-  $client = New-Object System.Net.WebClient
-  try 
-  {
-    $filePath32 = "$PSScriptRoot\tools\$($Latest.FileName32)"
-    $client.DownloadFile($Latest.URL32, "$filePath32")
-
-    $filePath64 = "$PSScriptRoot\tools\$($Latest.FileName64)"
-    $client.DownloadFile($Latest.URL64, "$filePath64")
-  }
-  finally 
-  {
-    $client.Dispose()
-  }
-
   $Latest.ChecksumType = "sha256"
-  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath32 | ForEach-Object Hash
-  $Latest.Checksum64 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath64 | ForEach-Object Hash
+  Get-RemoteFiles -Purge -FileNameBase $Latest.FileName32
+  Get-RemoteFiles -Purge -FileNameBase $Latest.FileName64
 }
 
 function global:au_SearchReplace {
