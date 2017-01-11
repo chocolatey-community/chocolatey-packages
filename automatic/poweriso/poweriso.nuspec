@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>poweriso</id>
     <title>PowerISO</title>
-    <version>6.7.0.20161216</version>
+    <version>2016.12.16</version>
     <authors>Power Software Ltd</authors>
     <owners>gep13, chocolatey</owners>
     <summary>PowerISO is a powerful CD / DVD / BD image file processing tool.</summary>
@@ -38,7 +38,7 @@
     <copyright>Copyright 2004-2012 Power Software Ltd. All rights reserved.</copyright>
     <licenseUrl>http://www.poweriso.com/order.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/poweriso.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/poweriso.png</iconUrl>
     <releaseNotes>http://www.poweriso.com/tutorials/history.htm</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/poweriso</packageSourceUrl>
     <docsUrl>http://www.poweriso.com/tutorials/index.htm</docsUrl>

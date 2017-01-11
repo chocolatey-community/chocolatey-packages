@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $download_content = Get-WebContent 'http://www.poweriso.com/download.htm'
 
