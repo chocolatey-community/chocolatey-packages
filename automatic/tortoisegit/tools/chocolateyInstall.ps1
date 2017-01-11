@@ -14,12 +14,12 @@ $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true
 }
 
 $packageArgs = @{
-    PackageName = 'tortoisegit'
-    FileType = 'msi'
-    SoftwareName = 'TortoiseGit*'
-    File = $installFile
-    SilentArgs = '/quiet /qn /norestart REBOOT=ReallySuppress'
-    ValidExitCodes = @(0,3010)
+  PackageName = 'tortoisegit'
+  FileType = 'msi'
+  SoftwareName = 'TortoiseGit*'
+  File = $installFile
+  SilentArgs = '/quiet /qn /norestart REBOOT=ReallySuppress'
+  ValidExitCodes = @(0,3010)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
