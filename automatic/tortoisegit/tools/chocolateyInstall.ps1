@@ -1,14 +1,14 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$filePath32 = "$toolsPath\TortoiseGit-2.3.0.0-32bit.msi"
-$filePath64 = "$toolsPath\TortoiseGit-2.3.0.0-64bit.msi"
+$filePath32 = Resolve-Path "$toolsPath\*_32.msi"
+$filePath64 = Resolve-Path "$toolsPath\*_64.msi"
 
 $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
   Write-Host "Installing 64 bit version"
   $filePath64
-} else { 
+} else {
   Write-Host "Installing 32 bit version"
   $filePath32
 }
