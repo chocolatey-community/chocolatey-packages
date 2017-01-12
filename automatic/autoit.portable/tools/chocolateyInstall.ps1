@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\autoit-v3-setup.exe"
+$filePath = "$toolsDir\autoit-v3.zip"
 
 Get-ChocolateyUnzip -FileFullPath $filePath -Destination $toolsDir
 
