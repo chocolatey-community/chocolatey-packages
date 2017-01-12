@@ -33,8 +33,7 @@ function global:au_GetLatest {
   $CurrentVersion = ( $try.Version )
   $majorVersion = ([version] $CurrentVersion).Major
 
-  $url32 = 'https://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_<majorVersion>_active_x.msi'
-  $url32 = $url32 -replace '<majorVersion>', $majorVersion
+  $url32 = "https://fpdownload.macromedia.com/pub/flashplayer/pdc/${CurrentVersion}/install_flash_player_${majorVersion}_plugin.msi"
 
   return @{ URL32 = $url32; Version = $CurrentVersion; majorVersion = $majorVersion; }
 }
