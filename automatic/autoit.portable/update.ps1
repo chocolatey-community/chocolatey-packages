@@ -21,7 +21,7 @@ function global:au_SearchReplace {
             "(?i)(1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
             "(?i)(checksum:\s+).*" = "`${1}$($Latest.Checksum)"
-        }        
+        }
      }
 }
 
@@ -32,7 +32,7 @@ function global:au_GetLatest {
     $download_page.RawContent -match '><strong>Latest version:</strong> v(.+)</p>' | Out-Null
     $version = $Matches[1]
 
-    $re = ".*exe$"
+    $re = ".*zip$"
     $url = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
     $filename = $url -split '/' | Select-Object -Last 1
