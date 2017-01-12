@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>autoit</id>
+    <title>AutoIt</title>
+    <version>3.3.14.2</version>
+    <authors>Jonathan Bennett, AutoIt Team</authors>
+    <owners>chocolatey, Rob Reynolds</owners>
+    <summary>AutoIT - Automation and scripting language</summary>
+    <description>
+AutoIt is a freeware BASIC-like scripting language designed for automating the Windows GUI and general scripting.
+It uses a combination of simulated keystrokes, mouse movement and window/control manipulation in order to automate tasks in a way not possible or reliable with other languages.
+AutoIt is also very small, self-contained and will run on all versions of Windows out-of-the-box.
+
+## Features
+
+* Easy to learn BASIC-like syntax
+* Simulate keystrokes and mouse movements
+* Manipulate windows and processes
+* Interact with all standard windows controls
+* Scripts can be compiled into standalone executables
+* Create Graphical User Interfaces (GUIs)
+* COM support
+* Regular expressions
+* Directly call external DLL and Windows API functions
+* Scriptable RunAs functions
+* Detailed helpfile and large community-based support forums
+* Compatible with Windows XP / 2003 / Vista / 2008 / Windows 7 / 2008 R2 / Windows 8 / 2012 R2
+* Unicode and x64 support
+* Digitally signed for peace of mind
+* Works with Windows Vista’s User Account Control (UAC)
+    </description>
+    <projectUrl>http://www.autoitscript.com/autoit3</projectUrl>
+    <docsUrl>https://www.autoitscript.com/autoit3/docs/</docsUrl>
+    <mailingListUrl>https://www.autoitscript.com/forum/</mailingListUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autoit</packageSourceUrl>
+    <tags>autoit install automation admin freeware</tags>
+    <licenseUrl>http://www.autoitscript.com/autoit3/docs/license.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/dc920218fed5d4f234f9f281896ca8eadfd91925/icons/autoit.png</iconUrl>
+    <dependencies>
+      <dependency id="autoit.install" version="[3.3.14.2]" />
+    </dependencies>
+  </metadata>
+  <files>
+  </files>    
+</package>
+<!-- character encoding: “UTF-8” -->
