@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vscode-azurerm-tools</id>
+    <title>Visual Studio Code Azure Resource Manager Tools Extension</title>
+    <version>1.0.0</version>
+    <authors>Microsoft</authors>
+    <owners>chocolatey, Pascal Berger</owners>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-azurerm-tools</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6182f6eb471a17f0aeee3e05dc9f1ad5d8c9d1e3/icons/vscode-azurerm-tools.png</iconUrl>
+    <licenseUrl>https://go.microsoft.com/fwlink/?LinkID=734037</licenseUrl>
+    <bugTrackerUrl>https://visualstudio.uservoice.com/forums/293070-visual-studio-code</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Template language support for Azure Resource Manager JSON files.</summary>
+    <description>
+This extension provides language support for Azure Resource Manager deployment templates and template language expressions.
+
+## Features
+* IntelliSense
+    * [Template Language Expression (TLE) function names](https://go.microsoft.com/fwlink/?LinkID=733958)
+    * [Parameter references](https://go.microsoft.com/fwlink/?LinkID=733959)
+    * [Variable references](https://go.microsoft.com/fwlink/?LinkID=733960)
+    * [resourceGroup() properties](https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-functions/#resourcegroup)
+    * [subscription() properties](https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-functions/#subscription)
+    * Properties of references to variables that are objects
+* [Signature help](https://code.visualstudio.com/docs/editor/editingevolved#_parameter-hints) for TLE function parameters
+* [Go To Definition](https://code.visualstudio.com/docs/editor/editingevolved#_go-to-definition) for variable and parameter references
+* [Peek](https://code.visualstudio.com/docs/editor/editingevolved#_peek) for variable and parameter definitions
+* Find all references (Shift + F12) for variables and parameters
+* Rename all references (F2) for variables and parameters
+* [Hover](https://code.visualstudio.com/docs/editor/editingevolved#_hover) for parameter description
+* [TLE brace matching](https://code.visualstudio.com/docs/editor/editingevolved#_bracket-matching)
+* [Errors](https://code.visualstudio.com/docs/editor/editingevolved#_errors-warnings) for:
+    * Undefined parameter references
+    * Undefined variable references
+    * Unrecognized TLE function names
+    * [reference() function usage in variable definition](https://azure.microsoft.com/en-us/documentation/articles/resource-group-template-functions/#reference)
+    * Incorrect number of arguments in TLE functions
+* [Warnings](https://code.visualstudio.com/docs/editor/editingevolved#_errors-warnings) for:
+    * Unused parameters
+    * Unused variables
+    </description>
+    <tags>microsoft visualstudiocode vscode extension azure resourcemanager arm cross-platform freeware</tags>
+    <dependencies>
+      <dependency id="VisualStudioCode" version="1.2.0" />
+    </dependencies>
+  </metadata>
+</package>
