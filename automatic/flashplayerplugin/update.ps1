@@ -14,12 +14,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
-    $version = ($download_page.links | ? href -match 'version=' | % href | select -last 1) -split '=|&' | ? { [version]::TryParse($_, [ref]($__))}
-    $major_version = ([version]$version).Major
+  $HTML = Invoke-WebRequest -Uri $releases
+  $try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.className -eq 'NoBottomMargin' } ).innerText
+  $try = $try  -split "\r?\n"
+  $try = $try[0] -replace ' ', ' = '
+  $try =  ConvertFrom-StringData -StringData $try
+  $version = ( $try.Version )
+  $major_version = ([version]$version).Major
     @{
         Version = $version
-        URL32   = "https://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_${major_version}_plugin.msi"
+        URL32   = "https://download.macromedia.com/get/flashplayer/pdc/${version}/install_flash_player_${major_version}_plugin.msi"
     }
 }
 
