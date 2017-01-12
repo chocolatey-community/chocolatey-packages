@@ -18,7 +18,7 @@ Get-ChocolateyUnzip -FileFullPath $filePath -Destination $installLocation
 
 # Add to path
 $gitBinPath = Join-Path $installLocation 'bin'
-Install-ChocolateyPath $gitBinPath 'Machine'
+Install-ChocolateyPath $gitBinPath
 $env:Path = "$($env:Path);$gitBinPath"
 
 # Remove old installations
