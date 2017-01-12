@@ -1,20 +1,36 @@
 import-module au
+import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $domain   = 'https://github.com'
 $releases = "$domain/rg3/youtube-dl/releases/latest"
 
-function global:au_afterUpdate {
-  rm $PSScriptRoot/tools/*.exe -ea Ignore
+function global:au_BeforeUpdate {
+  if (Test-Path "$PSScriptRoot\tools") {
+    Remove-Item "$PSScriptRoot\tools\*.exe" -Force
+  } else {
+    New-Item -ItemType Directory "$PSScriptRoot\tools"
+  }
+  $Latest.FileName = Get-WebFileName $Latest.URL32 'youtube-dl.exe'
+  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+  Get-WebFile $Latest.URL32 $filePath
+
+  # Let us check if the checksum actually matches
+  $actualChecksum = Get-FileHash -Algorithm $Latest.ChecksumType32 $filePath | % Hash
+
+  if ($actualChecksum -ne $Latest.Checksum32) {
+    throw "The downloaded file do not match the provided checksum.`Actual Checksum is: $actualChecksum"
+  }
 }
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-        }
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
     }
+  }
 }
 
 function global:au_GetLatest {
@@ -37,4 +53,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
