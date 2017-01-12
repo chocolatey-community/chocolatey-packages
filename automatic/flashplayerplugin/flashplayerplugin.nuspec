@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>23.0.0.208</version>
+    <version>24.0.0.194</version>
     <authors>Adobe Systems Incorporated</authors>
     <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/flashplayer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flashplayer.png</iconUrl>
     <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
     <id>flashplayerplugin</id>
     <title>Flash Player Plugin</title>
