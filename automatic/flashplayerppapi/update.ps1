@@ -28,12 +28,15 @@ function global:au_GetLatest {
   $try = $try  -split "\r?\n"
   $try = $try[0] -replace ' ', ' = '
   $try =  ConvertFrom-StringData -StringData $try
-  $CurrentVersion = ( $try.Version )
-  $majorVersion = ([version] $CurrentVersion).Major
+  $currentVersion = ( $try.Version )
+  $majorVersion = ([version] $currentVersion).Major
 
-  $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${CurrentVersion}/install_flash_player_${majorVersion}_ppapi.msi"
+  $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${currentVersion}/install_flash_player_${majorVersion}_ppapi.msi"
 
-  return @{ URL32 = $url32 }
+  return @{ 
+    URL32 = $url32 
+    Version = $currentVersion
+  }
 }
 
 update -ChecksumFor 32
