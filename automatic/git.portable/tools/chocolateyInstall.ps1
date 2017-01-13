@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath32 = "$toolsPath\PortableGit-2.11.0-32-bit.7z.exe"
-$filePath64 = "$toolsPath\PortableGit-2.11.0-64-bit.7z.exe"
+$filePath32 = "$toolsPath\PortableGit-2.11.0.2-32-bit.7z.exe"
+$filePath64 = "$toolsPath\PortableGit-2.11.0.2-64-bit.7z.exe"
 
 $filePath = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
   Write-Host "Installing 64 bit version"
