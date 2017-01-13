@@ -1,6 +1,4 @@
 $packageName = 'flashplayerppapi'
-$version = '24.0.0.194'
-$majorVersion = '24'
 
 $packageArgs = @{
   packageName   = $packageName
