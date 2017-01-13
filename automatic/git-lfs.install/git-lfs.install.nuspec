@@ -1,9 +1,9 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>git-lfs.install</id>
     <title>Git Large File Storage (Install)</title>
-    <version>1.5.4</version>
+    <version>1.5.5</version>
     <authors>GitHub Inc</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://git-lfs.github.com/</projectUrl>
@@ -17,14 +17,14 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 
 ## Features
 
-* **Large file versioning:** Version large files—even those as large as a couple GB in size—with Git.
+* **Large file versioning:** Version large filesâ€”even those as large as a couple GB in sizeâ€”with Git.
 * **More repository space:** Host more in your Git repositories. External file storage makes it easy to keep your repository at a manageable size.
 * **Faster cloning and fetching:** Download less data. This means faster cloning and fetching from repositories that deal with large files.
-* **Same Git workflow:** Work like you always do on Git—no need for additional commands, secondary storage systems, or toolsets.
+* **Same Git workflow:** Work like you always do on Gitâ€”no need for additional commands, secondary storage systems, or toolsets.
 * **Same access controls and permissions:** Keep the same access controls and permissions for large files as the rest of your Git repository when working with a remote host like GitHub.
 </description>
     <tags>git lfs vcs dvcs version-control admin foss cross-platform cli</tags>
-    <releaseNotes>https://github.com/git-lfs/git-lfs/releases/tag/v1.5.4</releaseNotes>
+    <releaseNotes>https://github.com/git-lfs/git-lfs/releases/tag/v1.5.5</releaseNotes>
     <dependencies>
       <dependency id="git" version="1.8.2" />
     </dependencies>
