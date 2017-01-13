@@ -32,6 +32,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
 <!-- character encoding: “UTF-8” -->

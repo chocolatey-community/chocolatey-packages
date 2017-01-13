@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>git</id>
@@ -6,7 +6,7 @@
     <version>2.11.0.2</version>
     <authors>The Git Development Community</authors>
     <owners>chocolatey</owners>
-    <summary>Git (for Windows) â€“ We bring the awesome Git SCM to Windows</summary>
+    <summary>Git (for Windows) – We bring the awesome Git SCM to Windows</summary>
     <description>
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
@@ -46,4 +46,4 @@ The package uses default install options minus cheetah integration and desktop i
   <files>
   </files>    
 </package>
-<!-- character encoding: â€œUTF-8â€ -->
+<!-- character encoding: “UTF-8” -->

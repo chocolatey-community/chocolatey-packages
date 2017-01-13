@@ -47,6 +47,7 @@ The package uses default install options minus cheetah integration and desktop i
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
 <!-- character encoding: “UTF-8” -->
