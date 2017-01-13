@@ -4,7 +4,7 @@
   <metadata>
     <id>mkdocs-material</id>
     <title>MkDocs Material Theme</title>
-    <version>1.0.0-beta</version>
+    <version>1.0.0</version>
     <authors>Martin Donath</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://squidfunk.github.io/mkdocs-material/</projectUrl>
