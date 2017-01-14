@@ -30,7 +30,7 @@ Material is a theme for [MkDocs](http://www.mkdocs.org/), an excellent static si
     <tags>mkdocs markdown documentation material foss cross-platform cli</tags>
     <releaseNotes>https://github.com/squidfunk/mkdocs-material/blob/master/CHANGELOG</releaseNotes>
     <dependencies>
-      <dependency id="MkDocs" version="0.15.0" />
+      <dependency id="MkDocs" version="0.16.0" />
     </dependencies>
   </metadata>
   <files>
