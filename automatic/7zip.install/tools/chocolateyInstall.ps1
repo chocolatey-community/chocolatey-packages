@@ -37,4 +37,4 @@ if($initialProcessCount -lt $finalProcessCount)
   Start-Process explorer.exe
 }
 
-Remove-Item "$filePath32*","$filePath64*" -Force -ErrorAction SilentlyContinue
+Remove-Item "$filePath32*","$filePath64*" -Force -ea 0

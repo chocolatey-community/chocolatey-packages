@@ -22,7 +22,7 @@ $packageArgs.destination = "$toolsDir\7z-extra"
 $packageArgs.file        = $filePathExtra
 Get-ChocolateyUnzip @packageArgs
 
-Remove-Item -Path "$toolsDir\Uninstall.exe",$filePath32,$filePath64,$filePathExtra -Force
+Remove-Item -Path "$toolsDir\Uninstall.exe",$filePath32,$filePath64,$filePathExtra -Force -ea 0
 
 if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne $true) {
   #generate ignore for 7za.exe and let x64 version pick up and shim
