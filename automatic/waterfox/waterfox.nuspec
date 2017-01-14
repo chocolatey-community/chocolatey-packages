@@ -4,7 +4,7 @@
     <id>waterfox</id>
     <version>32.0.3</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/waterfox</packageSourceUrl>
-    <owners>tonigellida,AdmiringWorm</owners>
+    <owners>tonigellida,admiringworm,chocolatey</owners>
     <title>Waterfox</title>
     <authors>Alex Kontos</authors>
     <projectUrl>https://www.waterfoxproject.org/</projectUrl>
