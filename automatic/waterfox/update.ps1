@@ -25,11 +25,6 @@ function global:au_SearchReplace {
       "(?i)(^\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
     }
-
-    ".\tools\chocolateyUninstall.ps1" = @{
-      "(?i)(^[$]packageName\s*=\s*)'.*'" = "`${1}'$($Latest.PackageName)'"
-      "(?i)(\s*\-SoftwareName\s+)'.*'"   = "`${1}'$softwareName'"
-    }
   }
 }
 
