@@ -1,21 +1,33 @@
-﻿$versionMinusDots = "{{PackageVersion}}".Replace(".","")
+﻿$ErrorActionPreference = 'Stop'
 
-$packageName = '7zip.commandline'
 $toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$extrasDir = Join-Path "$toolsDir" "7z-extra"
-$url = "http://www.7-zip.org/a/7z$($versionMinusDots).exe"
-$url64 = "http://www.7-zip.org/a/7z$($versionMinusDots)-x64.exe"
-$extrasUrl = "http://www.7-zip.org/a/7z$($versionMinusDots)-extra.7z"
 
-Install-ChocolateyZipPackage $packageName $url $toolsDir $url64
-Install-ChocolateyZipPackage $packageName $extrasUrl $extrasDir
+$filePath32    = "$toolsDir\7zip_x32.exe"
+$filePath64    = "$toolsDir\7zip_x64.exe"
+$filePathExtra = "$toolsDir\7zip_extra.7z"
 
-Remove-Item -Path "$toolsDir\Uninstall.exe"
+$packageArgs = @{
+  packageName = '7zip.commandline'
+  destination = "$toolsDir"
+  file = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne $true) {
+    Write-Host "Installing 64 bit version" ; $filePath64
+  } else {
+    Write-Host "Installing 32 bit version" ; $filePath32
+  }
+}
+Get-ChocolateyUnzip @packageArgs
 
-if (Get-ProcessorBits 32) {
-  # generate ignore for x64\7za.exe
-  New-Item "$extrasDir\x64\7za.exe.ignore" -Type file -Force | Out-Null
-} else {
+$packageArgs.packageName = '7zip.commandline Extras'
+$packageArgs.destination = "$toolsDir\7z-extra"
+$packageArgs.file        = $filePathExtra
+Get-ChocolateyUnzip @packageArgs
+
+Remove-Item -Path "$toolsDir\Uninstall.exe",$filePath32,$filePath64,$filePathExtra -Force
+
+if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne $true) {
   #generate ignore for 7za.exe and let x64 version pick up and shim
-  New-Item "$extrasDir\7za.exe.ignore" -Type file -Force | Out-Null
+  New-Item "$($packageArgs.destination)\7za.exe.ignore" -Type file -Force | Out-Null
+} else {
+  # generate ignore for x64\7za.exe
+  New-Item "$($packageArgs.destination)\x64\7za.exe.ignore" -Type file -Force | Out-Null
 }
