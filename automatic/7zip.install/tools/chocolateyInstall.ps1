@@ -1,13 +1,10 @@
-﻿Function Get-ExplorerProcessCount
-{
-  $process = Get-Process explorer -ErrorAction SilentlyContinue
-  $processCount = ($process | Measure-Object).Count
-  return $processCount
-}
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+. "$toolsDir\helpers.ps1"
 
 $initialProcessCount = Get-ExplorerProcessCount
 Write-Warning "This installer is known to close the explorer process. This means `nyou may lose current work. `nIf it doesn't automatically restart explorer, type 'explorer' on the `ncommand shell to restart it."
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $filePath32 = "$toolsDir\7zip_x32.exe"
 $filePath64 = "$toolsDir\7zip_x64.exe"
