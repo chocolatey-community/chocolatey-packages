@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>waterfox</id>
-    <version>32.0.3</version>
+    <version>50.1.0</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/waterfox</packageSourceUrl>
     <owners>tonigellida,admiringworm,chocolatey</owners>
     <title>Waterfox</title>
     <authors>Alex Kontos</authors>
     <projectUrl>https://www.waterfoxproject.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/eab9461b056ab358d6acb2e549881d772385a188/icons/waterfox.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png</iconUrl>
     <copyright>Copyright © 2011-2016 Waterfox</copyright>
     <licenseUrl>https://github.com/MrAlex94/Waterfox/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
