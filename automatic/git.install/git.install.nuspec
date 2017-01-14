@@ -6,7 +6,7 @@
     <version>2.11.0</version>
     <authors>The Git Development Community</authors>
     <owners>chocolatey</owners>
-    <summary> Git for Windows offers a native set of tools that bring the full feature set of the Git SCM to Windows</summary>
+    <summary>Git for Windows offers a native set of tools that bring the full feature set of the Git SCM to Windows</summary>
     <description>
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
