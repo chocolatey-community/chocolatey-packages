@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>InkScape</id>
@@ -43,4 +44,3 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- â€œUTF-8â€ test -->
