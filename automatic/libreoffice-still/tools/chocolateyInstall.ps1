@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
-  packageName            = 'libreoffice'
+  packageName            = 'libreoffice-still'
   fileType               = 'MSI'
   url                    = 'https://download.documentfoundation.org/libreoffice/stable/5.1.6/win/x86/LibreOffice_5.1.6_Win_x86.msi'
   url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/5.1.6/win/x86_64/LibreOffice_5.1.6_Win_x64.msi'

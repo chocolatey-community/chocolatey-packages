@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>libreoffice-help</id>
+    <version>5.2.4</version>
+    <title>[Deprecated] LibreOffice Help Pack</title>
+    <authors>LibreOffice community</authors>
+    <owners>chocolatey</owners>
+    <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
+    <projectUrl>https://www.libreoffice.org/</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+This package now follows the naming guidelines from upstream. Use the package libreoffice-fresh-help instead.
+    </description>
+    <summary>Help Pack for LibreOffice</summary>
+    <releaseNotes />
+    <copyright />
+    <tags>libreoffice office help admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+  </metadata>
+  <dependencies>
+      <dependency id="libreoffice-fresh-help" version="5.2.4" />
+  </dependencies>
+</package>
+<!-- “UTF-8” test -->

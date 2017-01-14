@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>libreoffice-oldstable</id>
+    <title>[Deprecated] LibreOffice Still</title>
+    <version>5.1.6</version>
+    <authors>LibreOffice developers</authors>
+    <owners>chocolatey</owners>
+    <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
+    <description>
+This package now follows the naming guidelines from upstream. Use the package libreoffice-still instead.
+    </description>
+    <projectUrl>https://www.libreoffice.org/</projectUrl>
+    <tags>libreoffice cross-platform foss office admin</tags>
+    <copyright></copyright>
+    <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl></iconUrl>
+    <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/libreoffice-oldstable</packageSourceUrl>
+    <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
+    <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
+  </metadata>
+  <dependencies>
+    <dependency id="libreoffice-fresh" version="5.1.6" />
+  </dependencies>
+</package>
+<!-- “UTF-8” test -->
