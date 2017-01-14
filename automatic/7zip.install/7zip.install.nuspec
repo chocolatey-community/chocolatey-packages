@@ -3,21 +3,42 @@
   <metadata>
     <id>7zip.install</id>
     <title>7-Zip (Install)</title>
-    <version>{{PackageVersion}}</version>
+    <version>0.0</version>
     <authors>Igor Pavlov</authors>
-    <owners>Rob Reynolds</owners>
+    <owners>Rob Reynolds, chocolatey</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
     <description>7-Zip is a file archiver with a high compression ratio.
 
-### NOTE: The installer for 7-Zip is known to close the explorer process.
-This means you may lose current work. If it doesn't automatically restart explorer, type `explorer` on the command shell to restart it.
+## Features
+- High compression ratio in [7z format](http://www.7-zip.org/7z.html) with **LZMA** and **LZMA2** compression
+- Supported formats:
+  - Packing / unpacking: 7z, XZ, BZIP2, GZIP, TAR, ZIP and WIM
+  - Unpacking only: AR, ARJ, CAB, CHM, CPIO, CramFS, DMG, EXT, FAT, GPT, HFS, IHEX, ISO, LZH, LZMA, MBR, MSI, NSIS, NTFS, QCOW2, RAR, RPM, SquashFS, UDF, UEFI, VDI, VHD, VMDK, WIM, XAR and Z.
+- For ZIP and GZIP formats, **7-Zip** provides a compression ratio that is 2-10 % better than the ratio provided by PKZip and WinZip
+- Strong AES-256 encryption in 7z and ZIP formats
+- Self-extracting capability for 7z format
+- Integration with Windows Shell
+- Powerful File Manager
+- Powerful command line version
+- Plugin for FAR Manager
+- Localizations for 87 languages
+
+## Notes
+- The installer for 7-Zip is known to close the explorer process.
+  This means you may lose current work. If it doesn't automatically restart explorer, type `explorer` on the command shell to restart it.
     </description>
     <projectUrl>http://www.7-zip.org/</projectUrl>
-    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
-    <tags>7zip zip archiver admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/7zip</packageSourceUrl>
+    <tags>7zip zip archiver admin foss</tags>
     <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/7zip.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/dbedb56d5ff709cd37f4abecc736d4a9e6400da8/icons/7zip.svg</iconUrl>
+    <docsUrl>http://www.7-zip.org/faq.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/sevenzip/discussion/45797/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
