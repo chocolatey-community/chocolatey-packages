@@ -9,6 +9,7 @@ $packageArgs = @{
   url           = $url
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup Package
   validExitCodes= @(0)
+  softwareName  = 'cutepdf*'
   checksum      = $checksum
   checksumType  = 'sha256'
 }
