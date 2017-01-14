@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>cutepdf</id>
-    <title>CutePDF</title>
-    <version>3.0</version>
+    <title>CutePDF Writer</title>
+    <version>3.1</version>
     <authors>Acro Software Inc.</authors>
-    <owners>Redsandro</owners>
+    <owners>chocolatey,Redsandro,Thilas</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
     <description>
 Portable Document Format (PDF) is the de facto standard for the secure and reliable distribution and exchange of electronic documents and forms around the world.  CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert to professional quality PDF documents - with just a push of a button!
@@ -15,17 +15,17 @@ Portable Document Format (PDF) is the de facto standard for the secure and relia
 
 - Free software for commercial and non-commercial use.
     </description>
-    <projectUrl>http://www.cutepdf.com/</projectUrl>
+    <projectUrl>http://www.cutepdf.com/products/cutepdf/writer.asp</projectUrl>
     <tags>PDF Printer Converter Office freeware admin</tags>
-    <copyright></copyright>
+    <copyright>Copyright © Acro Software Inc.</copyright>
     <licenseUrl>http://www.cutepdf.com/Info/legal.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/cutepdf.png</iconUrl>
-    <dependencies>
-      <dependency id="Ghostscript.app" version="8.15" />
-    </dependencies>
-    <releaseNotes>http://www.cutepdf.com/support/updates.asp</releaseNotes>
+    <releaseNotes>[Software Updates](http://www.cutepdf.com/Support/updates.asp)</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cutepdf</packageSourceUrl>
+    <dependencies>
+      <dependency id="ghostscript.app" version="8.15" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
