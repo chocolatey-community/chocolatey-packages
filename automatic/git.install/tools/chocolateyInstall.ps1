@@ -2,8 +2,8 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$filePath32  = "$toolsPath\Git-2.11.0-32-bit.exe"
-$filePath64  = "$toolsPath\Git-2.11.0-64-bit.exe"
+$filePath32 = "$toolsPath\Git-2.11.0.3-32-bit.exe"
+$filePath64 = "$toolsPath\Git-2.11.0.3-64-bit.exe"
 $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
                       Write-Host "Installing 64 bit version"; $filePath64 }
                else { Write-Host "Installing 32 bit version"; $filePath32 }
