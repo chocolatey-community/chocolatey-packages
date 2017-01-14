@@ -1,69 +1,48 @@
-function Get-InstallKey() {
-    $registryKeyName = 'Git_is1'
-    $installKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
-    if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -eq 'true') {
-        $installKey = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
-    }
+function Get-InstallKey()
+{
+    $keyName = 'Git_is1'
+    $installKey = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -eq 'true') {
+             "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$keyName"
+    } else { "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$keyName" }
 
-    $userInstallKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
-    if (Test-Path $userInstallKey) {
-        $installKey = $userInstallKey
-    }
+    $userInstallKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$keyName"
+    if (Test-Path $userInstallKey) { $installKey = $userInstallKey }
 
-    return $installKey
+    mkdir $installKey -ea 0 | Out-Null
+    $installKey
 }
 
-function Set-InstallerSettings([string] $InstallKey, [bool] $GitOnlyOnPath, [bool] $WindowsTerminal, [bool] $GitAndUnixToolsOnPath, [bool] $NoAutoCrlf) {
-    if (-not (Test-Path $InstallKey)) {
-        New-Item -Path $InstallKey | Out-Null
-    }
+function Set-InstallerRegistrySettings( [HashTable]$pp )
+{
+    $installkey = Get-InstallKey
+    $ino = "Inno Setup CodeFile:"
 
-    if ($GitOnlyOnPath) {
-        # update registry so installer picks it up automatically
-        New-ItemProperty $InstallKey -Name "Inno Setup CodeFile: Path Option" -Value "Cmd" -PropertyType "String" -Force | Out-Null
-    }
-
-    if ($WindowsTerminal) {
-        # update registry so installer picks it up automatically
-        New-ItemProperty $InstallKey -Name "Inno Setup CodeFile: Bash Terminal Option" -Value "ConHost" -PropertyType "String" -Force | Out-Null
-    }
-
-    if ($GitAndUnixToolsOnPath) {
-        # update registry so installer picks it up automatically
-        New-ItemProperty $InstallKey -Name "Inno Setup CodeFile: Path Option" -Value "CmdTools" -PropertyType "String" -Force | Out-Null
-    }
-
-    if ($NoAutoCrlf) {
-        # update registry so installer picks it up automatically
-        New-ItemProperty $InstallKey -Name "Inno Setup CodeFile: CRLF Option" -Value "CRLFCommitAsIs" -PropertyType "String" -Force | Out-Null
-    }    
+    if ($pp.GitOnlyOnPath)         { New-ItemProperty $InstallKey -Name "$ino Path Option"          -Value "Cmd"            -Force }
+    if ($pp.GitAndUnixToolsOnPath) { New-ItemProperty $InstallKey -Name "$ino Path Option"          -Value "CmdTools"       -Force }
+    if ($pp.WindowsTerminal)       { New-ItemProperty $InstallKey -Name "$ino Bash Terminal Option" -Value "ConHost"        -Force }
+    if ($pp.NoAutoCrlf)            { New-ItemProperty $InstallKey -Name "$ino CRLF Option"          -Value "CRLFCommitAsIs" -Force }
 }
 
-function Remove-QuickLaunchForSystemUser([string[]] $Components) {
+function Get-InstallComponents( [HashTable]$pp )
+{
+    $res = "icons", "assoc", "assoc_sh"
+
+    if ($pp.NoShellIntegration) {
+        Write-Host "Parameter: no git shell integration"
+    } else { $res += "ext", "ext\shellhere", "ext\guihere" }
+
     # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc)
-    # Add other items to this if block or use $IsRunningUnderSystemAccount to adjust existing logic that needs changing
-    $IsRunningUnderSystemAccount = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem
-    If ($IsRunningUnderSystemAccount)
-    {
-        # Strip out quicklaunch parameter as it causes a hang under SYSTEM account.
-        $Components = $Components -ne "icons\quicklaunch"
-    }
-    
-    return $Components
+    $isSystem = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem
+    if ( !$isSystem ) { $res += "icons\quicklaunch" }
+
+    if ($res.Length -eq 0) { return }
+    $res = '/COMPONENTS="{0}"' -f ($res -join ",")
 }
 
-function Remove-ShellIntegration([string[]] $Components) {
-    $Components = $Components -ne "ext\shellhere"
-    $Components = $Components -ne "ext\guihere"
-    $Components = $Components -ne "ext"
+function Stop-GitSSHAgent()
+{
+    if (!(Get-Process ssh-agent -ea 0)) { return }
 
-    return $Components
-}
-
-function Stop-GitSSHAgent() {
-    If ([bool](Get-Process ssh-agent -ErrorAction SilentlyContinue))
-    {
-        Write-Output "Killing any Git ssh-agent instances for install."
-        (Get-Process ssh-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"}) | Stop-Process
-    }    
+    Write-Host "Killing any running git ssh-agent instances"
+    Get-Process ssh-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"} | Stop-Process
 }

@@ -6,7 +6,7 @@
     <version>2.11.0.3</version>
     <authors>The Git Development Community</authors>
     <owners>chocolatey</owners>
-    <summary>Git (for Windows) Ã¢â‚¬â€œ We bring the awesome Git SCM to Windows</summary>
+    <summary>Git for Windows offers a native set of tools that bring the full feature set of the Git SCM to Windows</summary>
     <description>
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
@@ -17,18 +17,22 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 * **Shell Integration**: Simply right-click on a folder in Windows Explorer to access the BASH or GUI.
 
 ## Package parameters
+
 The following package parameters can be set:
 
-* `/GitOnlyOnPath` - this puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
-* `/GitAndUnixToolsOnPath` - this puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
-* `/NoAutoCrlf` - this setting only affects new installs, it will not override an existing `.gitconfig`. This will ensure 'Checkout as is, commit as is'
+- `GitOnlyOnPath` - Puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
+- `GitAndUnixToolsOnPath` - Puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
+- `NoAutoCrlf` - Ensure _'Checkout as is, commit as is'_. This setting **only affects new installs**, it will not override an existing `.gitconfig`.
+- `WindowsTerminal` - Makes `vim` use the regular Windows terminal instead of MinTTY terminal.
+- `NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
 
 These parameters can be passed to the installer with the use of `-params`.
 For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
 
 ## Notes
-The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
-    </description>
+
+- The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+</description>
     <projectUrl>https://git-for-windows.github.io/</projectUrl>
     <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
     <docsUrl>http://git-scm.com/doc</docsUrl>
@@ -38,12 +42,12 @@ The package uses default install options minus cheetah integration and desktop i
     <tags>git vcs dvcs version-control msysgit foss cross-platform cli</tags>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/714d22bbb8801fc755d0c856ce30ffbfc748b34c/icons/git.svg</iconUrl>
     <dependencies>
       <dependency id="git.install" version="[2.11.0.3]" />
     </dependencies>
   </metadata>
   <files>
-  </files>    
+  </files>
 </package>
-<!-- character encoding: Ã¢â‚¬Å“UTF-8Ã¢â‚¬Â -->
+<!-- character encoding: “UTF-8” -->

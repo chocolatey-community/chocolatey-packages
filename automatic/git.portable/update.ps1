@@ -6,7 +6,7 @@ function global:au_BeforeUpdate {
   Remove-Item "$PSScriptRoot\tools\*.exe"
 
   $client = New-Object System.Net.WebClient
-  try 
+  try
   {
     $filePath32 = "$PSScriptRoot\tools\$($Latest.FileName32)"
     $client.DownloadFile($Latest.URL32, "$filePath32")
@@ -14,7 +14,7 @@ function global:au_BeforeUpdate {
     $filePath64 = "$PSScriptRoot\tools\$($Latest.FileName64)"
     $client.DownloadFile($Latest.URL64, "$filePath64")
   }
-  finally 
+  finally
   {
     $client.Dispose()
   }
@@ -26,7 +26,7 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
     @{
-        ".\tools\chocolateyInstall.ps1" = @{
+      ".\tools\chocolateyInstall.ps1" = @{
             "(^[$]filePath32\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
             "(^[$]filePath64\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
         }
@@ -36,7 +36,7 @@ function global:au_SearchReplace {
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
             "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
             "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
-        }        
+        }
      }
 }
 
@@ -62,11 +62,11 @@ function global:au_GetLatest {
     }
 
     return @{
-        URL32 = $url32 
-        URL64 = $url64 
+        URL32 = $url32
+        URL64 = $url64
         FileName32 = $filename32
         FileName64 = $filename64
-        Version = $version32 
+        Version = $version32
     }
 }
 
