@@ -22,7 +22,7 @@ This package now follows the naming guidelines from upstream. Use the package li
     <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
   </metadata>
   <dependencies>
-    <dependency id="libreoffice-fresh" version="5.1.6" />
+    <dependency id="libreoffice-still" version="5.1.6" />
   </dependencies>
 </package>
 <!-- “UTF-8” test -->
