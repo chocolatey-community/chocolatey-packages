@@ -1,8 +1,8 @@
 function Get-InstallKey() {
     $registryKeyName = 'Git_is1'
-    $installKey = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
-    if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-        $installKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
+    $installKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
+    if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -eq 'true') {
+        $installKey = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
     }
 
     $userInstallKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$registryKeyName"
