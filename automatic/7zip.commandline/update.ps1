@@ -6,9 +6,8 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -FileNameBase '7zip'
   $Latest.ChecksumType = 'sha256'
 
+  $client = New-Object System.Net.WebClient
   try {
-    $client = New-Object System.Net.WebClient
-
     $filePath = "$PSScriptRoot\tools\7zip_extra.7z"
     Remove-Item $filePath -Force -ea 0
     Write-Host "Downloading to 7zip_extra.7z"
