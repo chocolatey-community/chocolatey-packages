@@ -7,7 +7,7 @@ $filePath64    = "$toolsDir\7zip_x64.exe"
 $filePathExtra = "$toolsDir\7zip_extra.7z"
 
 $packageArgs = @{
-  packageName = '7zip.commandline'
+  packageName = '7zip.portable'
   destination = "$toolsDir"
   file = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne $true) {
     Write-Host "Installing 64 bit version" ; $filePath64
@@ -17,7 +17,7 @@ $packageArgs = @{
 }
 Get-ChocolateyUnzip @packageArgs
 
-$packageArgs.packageName = '7zip.commandline Extras'
+$packageArgs.packageName = '7zip.portable Extras'
 $packageArgs.destination = "$toolsDir\7z-extra"
 $packageArgs.file        = $filePathExtra
 Get-ChocolateyUnzip @packageArgs
