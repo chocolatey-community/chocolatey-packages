@@ -5,7 +5,7 @@ $loHelpIsAlreadyInstalled = Join-Path $scriptDir 'loHelpIsAlreadyInstalled.ps1'
 Import-Module $matchLanguagePath
 Import-Module $loHelpIsAlreadyInstalled
 
-$packageName = 'libreoffice-help'
+$packageName = 'libreoffice-fresh-help'
 $fileType = 'msi'
 $version = '{{PackageVersion}}'
 $silentArgs = '/passive /norestart'
@@ -34,9 +34,9 @@ function getLangOfExistentInstall() {
 
 # Language detection
 $urlDownloadLinks = "http://download.documentfoundation.org/libreoffice/stable/$version/win/x86/"
-$htmlDownloadLinks = "$env:TEMP\libreoffice-help-download-links.html"
+$htmlDownloadLinks = "$env:TEMP\libreoffice-fresh-help-download-links.html"
 
-Get-ChocolateyWebFile 'libreoffice-help-download-links' $htmlDownloadLinks $urlDownloadLinks
+Get-ChocolateyWebFile 'libreoffice-fresh-help-download-links' $htmlDownloadLinks $urlDownloadLinks
 
 $htmlLinksContent = Get-Content $htmlDownloadLinks
 Remove-Item $htmlDownloadLinks
