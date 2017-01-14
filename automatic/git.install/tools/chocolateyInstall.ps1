@@ -3,8 +3,8 @@ $ErrorActionPreference = 'Stop'
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$filePath32 = "$toolsPath\Git-2.11.0.2-32-bit.exe"
-$filePath64 = "$toolsPath\Git-2.11.0.2-64-bit.exe"
+$filePath32 = "$toolsPath\Git-2.11.0.3-32-bit.exe"
+$filePath64 = "$toolsPath\Git-2.11.0.3-64-bit.exe"
 
 $fileArgs = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG"
 $components = "icons", "icons\quicklaunch", "ext", "ext\shellhere", "ext\guihere", "assoc", "assoc_sh"
