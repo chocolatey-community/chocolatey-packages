@@ -1,4 +1,6 @@
-﻿$parameters = @{
+﻿$ErrorActionPreference = 'Stop';
+
+$parameters = @{
     PackageName = "sonarlint-vs2015"
     VsixUrl = "https://sonarsource.gallerycdn.vsassets.io/extensions/sonarsource/sonarlintforvisualstudio/2.9.0.355/1484298304458/169863/22/SonarLint.VSIX-2.9.0.355-2015.vsix"
     VsVersion = 14 
