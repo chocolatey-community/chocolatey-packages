@@ -27,7 +27,7 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
     <tags>git lfs vcs dvcs version-control admin foss cross-platform cli</tags>
     <releaseNotes>https://github.com/git-lfs/git-lfs/releases/tag/v1.5.5</releaseNotes>
     <dependencies>
-      <dependency id="git" version="1.8.2" />
+      <dependency id="git" version="1.8.5" />
     </dependencies>
   </metadata>
   <files>
