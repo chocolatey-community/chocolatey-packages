@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio'
 
