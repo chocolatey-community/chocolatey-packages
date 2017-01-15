@@ -17,6 +17,7 @@
     <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>
     <summary>Waterfox is basically a 64-bit version of Firefox.</summary>
     <description>
+## How and why Waterfox is here...
 Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
 He had a fascination for the web and wanted to help expand on the ideals of what Mozilla had for a free and open web.
 And so he decided to make Waterfox, a 64-Bit browser based on Mozilla's free and open source platform.
