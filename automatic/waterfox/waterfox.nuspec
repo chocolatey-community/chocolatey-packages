@@ -4,8 +4,8 @@
   <metadata>
     <id>waterfox</id>
     <version>50.1.0</version>
-    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/waterfox</packageSourceUrl>
-    <owners>tonigellida,admiringworm,chocolatey</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/waterfox</packageSourceUrl>
+    <owners>chocolatey,tonigellida,admiringworm</owners>
     <title>Waterfox</title>
     <authors>Alex Kontos</authors>
     <projectUrl>https://www.waterfoxproject.org/</projectUrl>
@@ -14,18 +14,16 @@
     <licenseUrl>https://github.com/MrAlex94/Waterfox/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/MrAlex94/Waterfox</projectSourceUrl>
-    <tags>waterfox admin web-browser firefox 64-bit</tags>
+    <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>
     <summary>Waterfox is basically a 64-bit version of Firefox.</summary>
     <description>
 ## How and why Waterfox is here...
-Waterfox was started back in March 2011 by myself ([Alex Kontos](https://github.com/MrAlex94)), a 16 year old student.
-I had a fascination for the web and wanted to help expand on the ideals of what Mozilla had for a free and open web.
-And so I decided to make Waterfox, a 64-Bit browser based on Mozilla's free and open source platform.
+Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
+He had a fascination for the web and wanted to help expand on the ideals of what Mozilla had for a free and open web.
+And so he decided to make Waterfox, a 64-Bit browser based on Mozilla's free and open source platform.
 
 Waterfox was one of the first widely distributed 64-Bit browsers on the web and quickly gained a loyal following.
 At a time Waterfox had one thing in mind: speed, but now Waterfox also attempts to be an ethical, user-oriented browser
-
-![](https://www.waterfoxproject.org/img/storm-speed.png)
 
 Waterfox focuses on giving users choice while also helping make the world a better place.
 Watefox is partners with Ecosia, a search engine that plants trees with its generated revenues.
@@ -44,7 +42,7 @@ telemetry is sent back to Mozilla or the Waterfox project.
 - More under the hood changes...
 
 ## Notes
-- Uninstalling fails when running through choco, manual uninstall is needed.
+  - Uninstalling fails when running through choco, manual uninstall is needed.
   The issue for this is tracked [here](https://github.com/chocolatey/choco/issues/1135)
     </description>
     <releaseNotes>https://www.waterfoxproject.org/blog/</releaseNotes>
