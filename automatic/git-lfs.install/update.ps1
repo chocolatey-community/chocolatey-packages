@@ -27,7 +27,7 @@ function global:au_SearchReplace {
         "tools\chocolateyInstall.ps1" = @{
             "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
         }
-        ".\tools\verification.txt" = @{
+        ".\legal\verification.txt" = @{
             "(?i)(1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
             "(?i)(checksum:\s+).*" = "`${1}$($Latest.Checksum)"
