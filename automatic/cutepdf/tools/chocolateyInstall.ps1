@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$checksum = '2D9E07F25358C9D2317BC639AFCDEDDB893D1FCFD43BB66FF372DBA11E169EE1'
+$checksum = '2d9e07f25358c9d2317bc639afcdeddb893d1fcfd43bb66ff372dba11e169ee1'
 $url = 'http://www.cutepdf.com/download/CuteWriter.exe'
 
 $packageArgs = @{
