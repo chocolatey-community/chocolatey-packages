@@ -18,10 +18,10 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
 
 ## Features
 
-* **Large file versioning:** Version large filesÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Âeven those as large as a couple GB in sizeÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Âwith Git.
+* **Large file versioning:** Version large files-even those as large as a couple GB in size-Âwith Git.
 * **More repository space:** Host more in your Git repositories. External file storage makes it easy to keep your repository at a manageable size.
 * **Faster cloning and fetching:** Download less data. This means faster cloning and fetching from repositories that deal with large files.
-* **Same Git workflow:** Work like you always do on GitÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Âno need for additional commands, secondary storage systems, or toolsets.
+* **Same Git workflow:** Work like you always do on Git-no need for additional commands, secondary storage systems, or toolsets.
 * **Same access controls and permissions:** Keep the same access controls and permissions for large files as the rest of your Git repository when working with a remote host like GitHub.
 </description>
     <tags>git lfs vcs dvcs version-control foss cross-platform cli</tags>
@@ -31,5 +31,5 @@ Git Large File Storage (LFS) replaces large files such as audio samples, videos,
     </dependencies>
   </metadata>
   <files>
-  </files>  
+  </files>
 </package>
