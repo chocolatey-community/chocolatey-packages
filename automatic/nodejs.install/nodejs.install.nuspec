@@ -19,11 +19,12 @@ This package runs the official Node JS installer, resulting in Node.exe and NPM 
     <bugTrackerUrl>https://github.com/nodejs/node/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nodejs.install</packageSourceUrl>
     <tags>nodejs node javascript npm admin foss cross-platform</tags>
-    <licenseUrl>https://raw.github.com/nodejs/node/master/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/nodejs/node/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
