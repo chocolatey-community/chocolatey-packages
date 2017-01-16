@@ -19,7 +19,7 @@ This package used to install `nodejs.commandline`. It is recommended that you un
     <docsUrl>https://nodejs.org/en/docs/</docsUrl>
     <bugTrackerUrl>https://github.com/nodejs/node/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nodejs</packageSourceUrl>
-    <tags>nodejs node javascript foss cross-platform</tags>
+    <tags>nodejs node javascript npm admin foss cross-platform</tags>
     <licenseUrl>https://raw.github.com/nodejs/node/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
