@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode-icons</id>
     <title>Visual Studio Code Icons Extension</title>
-    <version>1.0.0</version>
+    <version>1.0.0.20170116</version>
     <authors>Roberto Huertas</authors>
     <owners>chocolatey, gep13</owners>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons</projectUrl>
