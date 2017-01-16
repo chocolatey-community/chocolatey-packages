@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+
 $filePath32 = "$toolsPath\node-v7.4.0-x86.msi"
 $filePath64 = "$toolsPath\node-v7.4.0-x64.msi"
 $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
