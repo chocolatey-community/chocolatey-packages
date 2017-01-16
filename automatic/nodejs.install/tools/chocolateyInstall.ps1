@@ -7,18 +7,13 @@ $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true
                else { Write-Host "Installing 32 bit version"; $filePath32 }
 
 $packageArgs = @{
-    PackageName    = 'nodejs.install'
-    FileType       = 'msi'
-    SoftwareName   = 'Node.js'
-    File           = $installFile
-    SilentArgs     = "/quiet"
-    ValidExitCodes = @(0)
+  PackageName    = 'nodejs.install'
+  FileType       = 'msi'
+  SoftwareName   = 'Node.js'
+  File           = $installFile
+  SilentArgs     = "/quiet"
+  ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
-
-$nodePath = "$env:SystemDrive\Program Files\nodejs"
-if (![System.IO.Directory]::Exists($nodePath)) {$nodePath = "$env:SystemDrive\Program Files (x86)\nodejs";}
-
-$env:Path = "$($env:Path);$nodePath"
 
 Remove-Item -Force $filePath32, $filePath64 -ea 0
