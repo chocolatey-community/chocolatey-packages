@@ -24,10 +24,10 @@ function global:au_SearchReplace {
         ".\git-lfs.install.nuspec" = @{
             "(<releaseNotes>https:\/\/github.com\/git-lfs\/git-lfs\/releases\/tag\/v)(.*)(<\/releaseNotes>)" = "`${1}$($Latest.Version.ToString())`$3"
         }
-        "tools\chocolateyInstall.ps1" = @{
+        ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
         }
-        ".\tools\verification.txt" = @{
+        ".\legal\verification.txt" = @{
             "(?i)(1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
             "(?i)(checksum:\s+).*" = "`${1}$($Latest.Checksum)"
