@@ -4,7 +4,7 @@
   <metadata>
     <id>nodejs.install</id>
     <title>Node JS (Install)</title>
-    <version>1.0.0</version>
+    <version>7.4.0</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
