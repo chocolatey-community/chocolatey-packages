@@ -1,6 +1,6 @@
 import-module au
 
-$releases = "https://github.com/git-for-windows/git/releases/tag/v2.11.0.windows.1"
+$releases = "https://git-scm.com/download/win"
 
 function global:au_BeforeUpdate {
   Remove-Item "$PSScriptRoot\tools\*.exe"
@@ -41,7 +41,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     #https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.1/PortableGit-2.11.0-32-bit.7z.exe
     $re32  = "PortableGit-.+-32-bit.7z.exe"
@@ -60,9 +60,6 @@ function global:au_GetLatest {
     if ($version32 -ne $version64) {
         throw "Different versions for 32-Bit and 64-Bit detected."
     }
-
-    if ($url32.StartsWith('/')) { $url32 = 'https://github.com' + $url32 }
-    if ($url64.StartsWith('/')) { $url64 = 'https://github.com' + $url64 }
 
     return @{
         URL32 = $url32
