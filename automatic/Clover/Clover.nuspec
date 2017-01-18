@@ -5,7 +5,7 @@
     <id>Clover</id>
     <title>Clover</title>
     <owners>chocolatey</owners>
-    <version>3.2.5</version>
+    <version>3.2.6</version>
     <authors>EJIE Technology</authors>
     <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
     <description>
@@ -20,7 +20,7 @@ After Clover is installed, you will be able to open multiple folders within the 
     <copyright></copyright>
     <licenseUrl>http://www.scribd.com/doc/164355290/License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Clover.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf2b66066fc04a6517bbd7bfef76fe2653b5ff7c/icons/Clover.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Clover</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />
