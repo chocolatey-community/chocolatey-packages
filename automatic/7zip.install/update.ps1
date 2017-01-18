@@ -9,12 +9,6 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*softwareName\s*=\s*)'.*'" = "`$1'$softwareNamePrefix $($Latest.RemoteVersion)*'"
-    }
-    ".\tools\chocolateyUninstall.ps1" = @{
-      "(?i)(\s*\-SoftwareName\s+)'.*'" = "`$1'$softwareNamePrefix $($Latest.RemoteVersion)*'"
-    }
     ".\legal\verification.txt" = @{
       "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"

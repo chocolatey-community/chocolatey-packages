@@ -3,7 +3,7 @@
 $packageName = '7zip.install'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName '7-zip 16.04*'
+[array]$key = Get-UninstallRegistryKey -SoftwareName '7-zip*'
 
 if ($key.Count -eq 1) {
   $key | % {

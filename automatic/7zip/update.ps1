@@ -28,7 +28,6 @@ function global:au_GetLatest {
     URL64 = $domain + $url64
     URL_EXTRA = $domain + $url_extra
     Version = $version
-    RemoteVersion = $version
   }
 }
 
