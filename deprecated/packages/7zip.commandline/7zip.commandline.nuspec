@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>7zip.commandline</id>
+    <title>[Deprecated] 7-Zip (Portable, CommandLine)</title>
+    <version>16.02.0.20170114</version>
+    <authors>Igor Pavlov</authors>
+    <owners>chocolatey,Rob Reynolds</owners>
+    <summary>7-Zip is a file archiver with a high compression ratio.</summary>
+    <description>
+#### New package name: **[7zip.portable](https://chocolatey.org/packages/7zip.portable)**
+
+---
+
+`7zip.commandline` has been deprecated because of [Chocolatey naming conventions](https://github.com/chocolatey/choco/wiki/ChocolateyFAQs#what-is-the-difference-between-packages-named-install-ie-autohotkeyinstall-portable-ie-autohotkeyportable-and--ie-autohotkey).
+
+It exists only for backward compatibility to provide a transitional dummy package for existing users and scripts which may still use this package ID.
+    </description>
+    <releaseNotes>#### New users
+* Do not install this package. Install **7zip.portable** instead.
+
+#### Existing users - Updating
+* Updating this package will automatically install the most recent version of the **7zip.portable** chocolatey package.
+* Please update any links, dependencies, or scripts that reference this package to the new package name **7zip.portable**
+
+#### Existing users - Post-update Cleanup (optional)
+`choco uninstall 7zip.commandline --whatif`
+    </releaseNotes>
+    <projectUrl>http://www.7-zip.org/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/7zip</packageSourceUrl>
+    <tags>7zip zip archiver foss</tags>
+    <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.7-zip.org/faq.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/sevenzip/discussion/45797/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
+    <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
+    <dependencies>
+      <dependency id="7zip.portable" />
+    </dependencies>
+  </metadata>
+</package>
+<!-- character encoding: “UTF-8” -->
