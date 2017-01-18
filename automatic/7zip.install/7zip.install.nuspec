@@ -3,7 +3,7 @@
   <metadata>
     <id>7zip.install</id>
     <title>7-Zip (Install)</title>
-    <version>0.0</version>
+    <version>16.04</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
@@ -32,7 +32,7 @@
     <tags>7zip zip archiver admin foss</tags>
     <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/dbedb56d5ff709cd37f4abecc736d4a9e6400da8/icons/7zip.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/68b91a851cee97e55c748521aa6da6211dd37c98/icons/7zip.svg</iconUrl>
     <docsUrl>http://www.7-zip.org/faq.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/sevenzip/discussion/45797/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
