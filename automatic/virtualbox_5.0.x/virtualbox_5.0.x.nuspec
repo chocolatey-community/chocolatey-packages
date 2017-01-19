@@ -7,8 +7,7 @@
     <authors>Oracle Corporation</authors>
     <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
-<description>
-
+    <description>
 VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
 
 ## Package parameters
@@ -19,10 +18,9 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 - `NoRegister`        - Do not register virtualbox file extensions
 - `NoPath`            - Do not add virtualbox install directory to the PATH
 - `NoExtensionPack`   - Do not install extension pack
-
-</description>
-<projectUrl>https://www.virtualbox.org/</projectUrl>
-<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
+    </description>
+    <projectUrl>https://www.virtualbox.org/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
     <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>
     <tags>virtualbox virtualization virtual oracle admin foss cross-platform</tags>
     <docsUrl>https://www.virtualbox.org/manual</docsUrl>
