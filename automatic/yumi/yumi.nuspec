@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yumi</id>
-    <version>2.0.2.9</version>
+    <version>2.0.3.6</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/yumi</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>YUMI (Your Universal Multiboot Installer)</title>
     <authors>Pendrivelinux</authors>
     <projectUrl>http://www.pendrivelinux.com/yumi-multiboot-usb-creator/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/73659ed154120300656be885e139bcefd4f7d8ca/icons/yumi.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b3e21b285f846b9e399b42bff269a6f596eef03b/icons/yumi.png</iconUrl>
     <copyright>2011–2017 Lance www.pendrivelinux.com</copyright>
     <licenseUrl>https://www.pendrivelinux.com/disclaimer/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
