@@ -6,7 +6,7 @@ The embedded software have been downloaded from the listed download
 location on <http://www.pendrivelinux.com/yumi-multiboot-usb-creator/>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <http://www.pendrivelinux.com/downloads/YUMI/YUMI-2.0.3.6.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
