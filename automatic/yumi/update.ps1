@@ -16,6 +16,7 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>"  = "`${1}<$releases>"
+      "(?i)(^1\..*)\<.*\>"            = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"   = "`${1} $($Latest.Checksum32)"
     }
