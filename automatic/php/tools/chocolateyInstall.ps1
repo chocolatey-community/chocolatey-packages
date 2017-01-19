@@ -1,12 +1,12 @@
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $packageArgs = @{
   packageName    = 'php'
-  url            = 'http://windows.php.net//downloads/releases/php-7.1.0-nts-Win32-VC14-x86.zip'
-  url64Bit       = 'http://windows.php.net//downloads/releases/php-7.1.0-nts-Win32-VC14-x64.zip'
-  checksum       = '0bfb7ea5a20090830377fb5e8f0b202174ec849cbbce2d04c9b6536052ad6e70'
-  checksum64     = 'f51c45ac4c485db7a5b980c2dd00eed990bd50823fb5061f6a3cf730d8cadff3'
+  url            = 'http://windows.php.net//downloads/releases/php-7.1.1-nts-Win32-VC14-x86.zip'
+  url64Bit       = 'http://windows.php.net//downloads/releases/php-7.1.1-nts-Win32-VC14-x64.zip'
+  checksum       = '8f5e76646cdf5f467ff66edaba74c483856c266d891df4bf54b9a1477b204098'
+  checksum64     = 'f01024e53da0ff4284c3585553e44805237c7e04fcf7c0b074658f52e633df83'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
