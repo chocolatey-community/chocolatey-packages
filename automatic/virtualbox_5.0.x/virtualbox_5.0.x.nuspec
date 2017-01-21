@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>virtualbox</id>
+    <title>VirtualBox</title>
+    <version>0.0</version>
+    <authors>Oracle Corporation</authors>
+    <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
+    <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
+    <description>
+VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
+
+## Package parameters
+
+- `CurrentUser`       - Install for current user only
+- `NoDesktopShortcut` - Do not create desktop shortcut
+- `NoQuickLaunch`     - Do not create quick launch icon
+- `NoRegister`        - Do not register virtualbox file extensions
+- `NoPath`            - Do not add virtualbox install directory to the PATH
+- `NoExtensionPack`   - Do not install extension pack
+    </description>
+    <projectUrl>https://www.virtualbox.org/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox_5.0.x</packageSourceUrl>
+    <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>
+    <tags>virtualbox virtualization virtual oracle admin foss cross-platform</tags>
+    <docsUrl>https://www.virtualbox.org/manual</docsUrl>
+    <copyright>Copyright (C) 2009-2016 Oracle Corporation</copyright>
+    <licenseUrl>https://www.virtualbox.org/wiki/VirtualBox_PUEL</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c9f08adeb0cc2dcda323211894358e69d3af323c/icons/virtualbox.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\virtualbox\tools\chocolateyBeforeModify.ps1" target="tools" />
+    <file src="..\virtualbox\tools\helpers.ps1" target="tools" />
+    <file src="..\virtualbox\tools\oracle.cer" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
