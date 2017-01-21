@@ -20,7 +20,7 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 - `NoExtensionPack`   - Do not install extension pack
     </description>
     <projectUrl>https://www.virtualbox.org/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox_5.0.x</packageSourceUrl>
     <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>
     <tags>virtualbox virtualization virtual oracle admin foss cross-platform</tags>
     <docsUrl>https://www.virtualbox.org/manual</docsUrl>
