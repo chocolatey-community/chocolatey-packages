@@ -4,7 +4,8 @@ $installerType = 'exe'
 $silentArgs = '/uninstall /quiet'
 $validExitCodes = @(0, 3010)  # http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
 
-$uninstallKeys = Get-UninstallRegistryKey @uninstallData
+# TODO: Get-UninstallRegistryKey is broken on Win7/PS2
+$uninstallKeys = Get-UninstallRegistryKey @uninstallData | Where-Object { $_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0 }
 foreach ($uninstallKey in $uninstallKeys)
 {
     if ($uninstallKey.PSObject.Properties['UninstallString'] -ne $null)
