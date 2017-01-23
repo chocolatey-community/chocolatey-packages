@@ -32,7 +32,7 @@ The Visual C++ Redistributable for Visual Studio 2015 consists of files vcruntim
 14.0.23026.0: Initial package release for Visual Studio 2015 RTM.
 </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.0.5" />
       <dependency id="KB3033929" version="1.0.0" /> <!-- for Win7 SP1/2008R2-->
       <dependency id="KB2919355" version="1.0.20160915" /> <!-- for Win8.1/2012R2 -->
     </dependencies>
