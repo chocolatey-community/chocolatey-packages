@@ -11,6 +11,8 @@
 .PARAMETER SoftwareName
     Part or all of the Display Name as you see it in Programs and Features.
     It should be enough to be unique.
+    The syntax follows the rules of the PowerShell `-like` operator, so the `*` character is interpreted
+    as a wildcard, which matches any (zero or more) characters.
 
     If the display name contains a version number, such as "Launchy (2.5)", it is recommended you use a
     fuzzy search `"Launchy (*)"` (the wildcard `*`) so if Launchy auto-updates or is updated outside

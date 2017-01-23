@@ -3,6 +3,7 @@
 ## UNRELEASED
 
 - Bugfix in `Get-UninstallRegistryKey`: Powershell 2 compatibility.
+- Slightly improved documentation of `Get-UninstallRegistryKey`.
 
 ## Version 1.0.4
 
