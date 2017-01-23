@@ -1,7 +1,9 @@
-
+﻿
 import-module au
+. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
 $releases = "https://get.adobe.com/en/flashplayer/" # URL to for GetLatest
+$padVersionUnder = '24.0.1'
 
 function global:au_BeforeUpdate {
   # We need this, otherwise the checksum won't get created
@@ -13,7 +15,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]version\s*=\s*)('.*')"= "`$1'$($Latest.Version)'"
+      "(^[$]version\s*=\s*)('.*')"= "`$1'$($Latest.RemoteVersion)'"
       "(^[$]majorVersion\s*=\s*)('.*')"= "`$1'$($Latest.majorVersion)'"
       "(^[$]packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
       "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
@@ -35,7 +37,9 @@ function global:au_GetLatest {
 
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${CurrentVersion}/install_flash_player_${majorVersion}_plugin.msi"
 
-  return @{ URL32 = $url32; Version = $CurrentVersion; majorVersion = $majorVersion; }
+  $packageVersion = Get-Padded-Version $CurrentVersion $padVersionUnder
+
+  return @{ URL32 = $url32; Version = $packageVersion; RemoteVersion = $CurrentVersion; majorVersion = $majorVersion; }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
