@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## UNRELEASED
+## 1.0.5
 
 - Bugfix in `Get-UninstallRegistryKey`: Powershell 2 compatibility.
 - Slightly improved documentation of `Get-UninstallRegistryKey`.
