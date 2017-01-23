@@ -1,7 +1,8 @@
-
-import-module au
+﻿import-module au
+. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
 $releases = "https://get.adobe.com/en/flashplayer/" # URL to for GetLatest
+$padVersionUnder = '24.0.1'
 
 function global:au_BeforeUpdate {
   # We need this, otherwise the checksum won't get created
@@ -33,9 +34,9 @@ function global:au_GetLatest {
 
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${currentVersion}/install_flash_player_${majorVersion}_ppapi.msi"
 
-  return @{ 
-    URL32 = $url32 
-    Version = $currentVersion
+  return @{
+    URL32 = $url32
+    Version = Get-Padded-Version $currentVersion $padVersionUnder
   }
 }
 
