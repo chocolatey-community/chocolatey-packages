@@ -72,8 +72,9 @@ function Get-UninstallRegistryKey {
     {
         $success = $false
 
+        $keyPaths = $keys | Select-Object -ExpandProperty PSPath
         try {
-            [array]$foundKey = Get-ItemProperty -Path $keys.PsPath -ea 0 | ? { $_.DisplayName -like $SoftwareName }
+            [array]$foundKey = Get-ItemProperty -Path $keyPaths -ea 0 | ? { $_.DisplayName -like $SoftwareName }
             $success = $true
         } catch {
             Write-Debug "Found bad key."
