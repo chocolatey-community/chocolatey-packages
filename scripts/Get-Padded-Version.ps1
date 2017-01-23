@@ -3,7 +3,7 @@ function Get-Padded-Version() {
     [Parameter(Mandatory = $true, Position = 0)]
     [string]$Version,
     [Parameter(Position = 1)]
-    [version]$MaximumVersion = $null
+    [version]$OnlyBelowVersion = $null
   )
 
   if ($Version -match "^([\d]+\.){1,2}[\d]+$") {
@@ -16,7 +16,7 @@ function Get-Padded-Version() {
 
   $Matches = $null
 
-  if ($MaximumVersion -ne $null -and ([version]$Version) -ge $MaximumVersion) {
+  if ($OnlyBelowVersion -ne $null -and ([version]$Version) -ge $OnlyBelowVersion) {
     return $Version;
   }
 
