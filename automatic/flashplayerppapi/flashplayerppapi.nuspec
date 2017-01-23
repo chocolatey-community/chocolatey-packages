@@ -14,7 +14,7 @@
     <tags>adobe flash player ppapi plugin admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flashplayerppapi</packageSourceUrl>
     <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
-    <releaseNotesUrl>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</releaseNotesUrl>
+    <releaseNotes>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
   <files>
