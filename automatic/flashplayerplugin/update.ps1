@@ -1,6 +1,8 @@
-import-module au
+﻿import-module au
+. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
 $releases = 'https://get.adobe.com/flashplayer/'
+$padVersionUnder = '24.0.1'
 
 function global:au_SearchReplace {
    @{
@@ -22,7 +24,7 @@ function global:au_GetLatest {
   $version = ( $try.Version )
   $major_version = ([version]$version).Major
     @{
-        Version = $version
+        Version = Get-Padded-Version $version $padVersionUnder
         URL32   = "https://download.macromedia.com/get/flashplayer/pdc/${version}/install_flash_player_${major_version}_plugin.msi"
     }
 }
