@@ -27,4 +27,6 @@ This package used to install `nodejs.commandline`. It is recommended that you un
       <dependency id="nodejs.install" version="[7.4.0]" />
     </dependencies>
   </metadata>
+  <files>
+  </files>  
 </package>
