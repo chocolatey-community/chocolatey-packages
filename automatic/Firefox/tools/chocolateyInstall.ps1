@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 # This is the general install script for Mozilla products (Firefox and Thunderbird).
 # This file must be identical for all Choco packages for Mozilla products in this repository.
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
@@ -9,7 +9,7 @@ $softwareName = 'Mozilla Firefox'
 
 $allLocalesListURL = 'https://www.mozilla.org/en-US/firefox/all/'
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '50.1.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '51.0')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
@@ -36,7 +36,7 @@ if ($alreadyInstalled) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=firefox-50.1.0-SSL&os=win&lang=${locale}"
+    Url = "https://download.mozilla.org/?product=firefox-51.0-SSL&os=win&lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
@@ -45,7 +45,7 @@ if ($alreadyInstalled) {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-ProcessorBits 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-50.1.0-SSL&os=win64&lang=${locale}"
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-51.0-SSL&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs
