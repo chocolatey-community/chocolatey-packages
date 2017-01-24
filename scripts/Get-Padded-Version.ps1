@@ -40,7 +40,6 @@ function Get-Padded-Version() {
     [string]$Version,
     [Parameter(Position = 1)]
     [version]$OnlyBelowVersion = $null,
-    [Parameter(Position = 2)]
     [int]$RevisionLength = 6
   )
 
@@ -55,6 +54,7 @@ function Get-Padded-Version() {
   $Matches = $null
 
   if ($OnlyBelowVersion -ne $null -and ([version]$Version) -ge $OnlyBelowVersion) {
+    Write-Debug "Version is greater than or equal to $OnlyBelowVersion, no need to pad revision version."
     return $Version;
   }
 
