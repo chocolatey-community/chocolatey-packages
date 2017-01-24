@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 1.0.5
+
+- Bugfix in `Get-UninstallRegistryKey`: Powershell 2 compatibility.
+- Slightly improved documentation of `Get-UninstallRegistryKey`.
+
 ## Version 1.0.4
 
 - Bugfix in `Get-PackageParameters`: Powershell 2 bug workaround ([#465](https://github.com/chocolatey/chocolatey-coreteampackages/issues/465)).
