@@ -1,7 +1,13 @@
-﻿$packageName = 'php'
+﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
 
-$installLocation = Join-Path $(Get-ToolsLocation) $packageName
-Write-Host "Deleting $installLocation"
-rm -Force -Recurse $installLocation
+$packageName = 'php'
 
-#Uninstall-ChocolateyPath $installLocation
+$installLocation = GetInstallLocation -libDirectory "$toolsPath\.."
+
+if ($installLocation) {
+  UninstallPackage -libDirectory "$toolsPath\.." -packageName $packageName
+  Uninstall-ChocolateyPath -pathToRemove $installLocation
+} else {
+  Write-Warning "$packageName install path was not found. It may already be uninstalled!"
+}

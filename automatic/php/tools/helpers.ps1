@@ -1,5 +1,4 @@
-#TODO: Proxy
-function UrlExists($uri) {
+﻿function UrlExists($uri) {
     try {
         Get-WebHeaders $uri | Out-Null
     }
@@ -30,5 +29,64 @@ function GetDownloadInfo {
     $downloadInfo | ? { $_.Type -eq 'threadsafe' } | select -first 1
   } else {
     $downloadInfo | ? { $_.Type -eq 'not-threadsafe' } | select -first 1
+  }
+}
+
+function GetInstallLocation {
+  param(
+    [string]$libDirectory
+  )
+
+  if (Test-Path "$libDirectory\*.txt") {
+    $txtContent = Get-Content -Encoding UTF8 "$libDirectory\*.txt" | select -first 1
+    $index = $txtContent.LastIndexOf('\\')
+    if ($index -gt 0) {
+      return $txtContent.Substring(0, $index)
+    }
+  }
+
+  # If we got here, the text file doesn't exist or is empty
+  # we don't return anything as it may be already uninstalled
+}
+
+function UninstallPackage {
+  param(
+    [string]$libDirectory,
+    [string]$packageName
+  )
+  if (Test-Path "$libDirectory\*.txt") {
+    $txtFile = Resolve-Path "$libDirectory\*.txt" | select -first 1
+    $fileName = ($txtFile -split '\\' | select -last 1).TrimEnd('.txt')
+    Uninstall-ChocolateyZipPackage -PackageName $packageName -ZipFileName $fileName
+  }
+}
+
+if (!(Test-Path function:\Uninstall-ChocolateyPath)) {
+  function Uninstall-ChocolateyPath {
+    param(
+      [string]$pathToRemove,
+      [System.EnvironmentVariableTarget] $pathType = [System.EnvironmentVariableTarget]::User
+    )
+
+    Write-Debug "Running 'Uninstall-ChocolateyPath' with pathToRemove: `'$pathToRemove`'"
+
+    # get the PATH variable
+    Update-SessionEnvironment
+    $envPath = $env:PATH
+    if ($envPath.ToLower().Contains($pathToRemove)) {
+      Write-Host "PATH environment variable do have $pathToRemove in it. Removing..."
+      $actualPath = Get-EnvironmentVariable -Name 'Path' -Scope $pathType -PreserveVariables
+
+      $newPath = $actualPath -replace $pathToRemove,'' -replace ';;',';'
+      $newPath = $newPath.TrimEnd(';')
+
+      if (($pathType -eq [System.EnvironmentVariableTarget]::Machine) -and !(Test-ProcessAdminRights)) {
+        Write-Warning "Removing path from machine environment variable is not supported when not running as an elevated user!"
+      } else {
+        Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
+      }
+
+      $env:PATH = $newPath
+    }
   }
 }
