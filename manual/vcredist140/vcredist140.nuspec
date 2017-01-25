@@ -24,6 +24,8 @@ The Visual C++ Redistributable for Visual Studio 2015 consists of files vcruntim
 ## Notes
 
 [Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2015-sysrequirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
+
+Note: on some systems, if KB2999226 is installed as a dependency of this package, the computer may need to be restarted before the installation of this package will succeed.
     </description>
     <releaseNotes>
 ##### Software
@@ -33,7 +35,7 @@ The Visual C++ Redistributable for Visual Studio 2015 consists of files vcruntim
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.5" />
-      <dependency id="KB3033929" version="1.0.0" /> <!-- for Win7 SP1/2008R2-->
+      <dependency id="KB3033929" version="1.0.1" /> <!-- for Win7 SP1/2008R2-->
       <dependency id="KB2919355" version="1.0.20160915" /> <!-- for Win8.1/2012R2 -->
       <dependency id="KB2999226" version="1.0.0" />
     </dependencies>
