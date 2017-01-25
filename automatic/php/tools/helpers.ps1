@@ -1,13 +1,11 @@
 #TODO: Proxy
 function UrlExists($uri) {
     try {
-        $webClient =[System.Net.HttpWebRequest] [System.Net.WebRequest]::Create($uri)
-        $webClient.Method = "HEAD"
-        $webClient.Timeout = 3000
-        $webClient.GetResponse()
+        Get-WebHeaders $uri | Out-Null
     }
-    catch [System.Net.WebException] {
-        return $false;
+    catch {
+        if ($_ -match "unauthorized") { return $false }
+        throw $_
     }
     return $true;
 }
