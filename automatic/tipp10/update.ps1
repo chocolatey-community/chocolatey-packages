@@ -6,7 +6,6 @@ $releases     = "$domain/en/download/"
 $softwareName = 'Tipp10*'
 
 function global:au_BeforeUpdate {
-  #Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName
   $Latest.FileName32 = 'tipp10.exe'
   $filePath = "$PSScriptRoot\tools\$($Latest.FileName32)"
   Get-WebFile $Latest.URL32 $filePath
@@ -18,6 +17,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*1\..+)\<.*\>"         = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"   = "`${1} $($Latest.Checksum32)"
     }
