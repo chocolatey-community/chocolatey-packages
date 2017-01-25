@@ -1,6 +1,14 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
+$installLocation = GetInstallLocation "$toolsPath\.."
+
+if ($installLocation) {
+  Write-Host "Uninstalling previous version of php..."
+  UninstallLocation -libDirectory "$toolsPath\.." -packageName 'php'
+  Uninstall-ChocolateyPath $installLocation
+}
+
 $pp = Get-PackageParameters
 
 $downloadInfo = GetDownloadInfo -downloadInfoFile "$toolsPath\downloadInfo.csv" -parameters $pp

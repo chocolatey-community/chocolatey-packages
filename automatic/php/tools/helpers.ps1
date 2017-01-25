@@ -37,9 +37,11 @@ function GetInstallLocation {
     [string]$libDirectory
   )
 
+  Write-Debug "Checking for uninstall text document in $libDirectory"
+
   if (Test-Path "$libDirectory\*.txt") {
     $txtContent = Get-Content -Encoding UTF8 "$libDirectory\*.txt" | select -first 1
-    $index = $txtContent.LastIndexOf('\\')
+    $index = $txtContent.LastIndexOf('\')
     if ($index -gt 0) {
       return $txtContent.Substring(0, $index)
     }
