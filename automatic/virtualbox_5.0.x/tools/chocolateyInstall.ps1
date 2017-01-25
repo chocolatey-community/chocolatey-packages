@@ -1,4 +1,4 @@
-﻿#https://www.virtualbox.org/manual/ch02.html#idm819
+#https://www.virtualbox.org/manual/ch02.html#idm819
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
@@ -19,10 +19,10 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'http://download.virtualbox.org/virtualbox/5.0.30/VirtualBox-5.0.30-112061-Win.exe'
-  url64bit               = 'http://download.virtualbox.org/virtualbox/5.0.30/VirtualBox-5.0.30-112061-Win.exe'
-  checksum               = '2c333c56b85aeac771600533e8169cef8d2eeed08ed3775f551582c857bdc0ba'
-  checksum64             = '2c333c56b85aeac771600533e8169cef8d2eeed08ed3775f551582c857bdc0ba'
+  url                    = 'http://download.virtualbox.org/virtualbox/5.0.32/VirtualBox-5.0.32-112930-Win.exe'
+  url64bit               = 'http://download.virtualbox.org/virtualbox/5.0.32/VirtualBox-5.0.32-112930-Win.exe'
+  checksum               = 'B84BDB5B8AFFBFAC1872DA2D9712D8BE9E893B137DCD712213B6A96ECFF2A688'
+  checksum64             = 'B84BDB5B8AFFBFAC1872DA2D9712D8BE9E893B137DCD712213B6A96ECFF2A688'
   checksumType           = ''
   checksumType64         = ''
   silentArgs             = $silentArgs
@@ -38,8 +38,8 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 if (!$pp.NoExtensionPack) {
     Write-Host "Installing extension pack"
 
-    $url_ep       = 'http://download.virtualbox.org/virtualbox/5.0.30/Oracle_VM_VirtualBox_Extension_Pack-5.0.30.vbox-extpack'
-    $checksum_ep  = 'f0880b7948bdc185d7e7be0fc98b551296ed9578f21e38d01b43771323a71a3d'
+    $url_ep       = 'http://download.virtualbox.org/virtualbox/5.0.32/Oracle_VM_VirtualBox_Extension_Pack-5.0.32.vbox-extpack'
+    $checksum_ep  = '3A0C45EB2471566787DEF7D73F8C01B03A806E5B2042C21911C2142DAFDF9A44'
     $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | select -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
