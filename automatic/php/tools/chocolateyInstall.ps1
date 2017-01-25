@@ -1,22 +1,26 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
+$pp = Get-PackageParameters
+
+$downloadInfo = GetDownloadInfo -downloadInfoFile "$toolsPath\downloadInfo.csv" -parameters $pp
+
+if (!(UrlExists($downloadInfo.URL32))) {
+    Write-Host "Using archive urls"
+    $downloadInfo.URL32 = AddArchivePathToUrl($downloadInfo.URL32)
+    $downloadInfo.URL64 = AddArchivePathToUrl($downloadInfo.URL64) # Assuming the 64 bit version is archived simultaneously as the 32 bit one
+}
+
 $packageArgs = @{
   packageName    = 'php'
-  url            = 'http://windows.php.net//downloads/releases/php-7.1.1-nts-Win32-VC14-x86.zip'
-  url64Bit       = 'http://windows.php.net//downloads/releases/php-7.1.1-nts-Win32-VC14-x64.zip'
-  checksum       = '8f5e76646cdf5f467ff66edaba74c483856c266d891df4bf54b9a1477b204098'
-  checksum64     = 'f01024e53da0ff4284c3585553e44805237c7e04fcf7c0b074658f52e633df83'
+  url            = $downloadInfo.URL32
+  url64Bit       = $downloadInfo.URL64
+  checksum       = $downloadInfo.Checksum32
+  checksum64     = $downloadInfo.Checksum64
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
 $installLocation = $packageArgs.unzipLocation = Join-Path $(Get-ToolsLocation) $packageArgs.packageName
-
-if (!(UrlExists($packageArgs.url))) {
-    Write-Host "Using archive urls"
-    $url   = AddArchivePathToUrl($url)
-    $url64 = AddArchivePathToUrl($url64) # Assuming the 64 bit version is archived simultaneously as the 32 bit one
-}
 
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyPath $installLocation
