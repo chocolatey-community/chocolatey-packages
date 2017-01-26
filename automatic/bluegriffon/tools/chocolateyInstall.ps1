@@ -1,13 +1,13 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = 'bluegriffon'
   fileType       = 'exe'
   softwareName   = 'BlueGriffon*'
 
-  checksum       = 'a63ddfcf19d1d68c75311964bb0b8ab52e1d41d306b40f8e588851f6d1d62b30'
+  checksum       = '3119bb380d335baccc8fba5d4d023e566600c564b5e76dde1774a84ab032c6d1'
   checksumType   = 'sha256'
-  url            = 'http://bluegriffon.org/freshmeat/2.1.2/bluegriffon-2.1.2.win32-installer.exe'
+  url            = 'http://bluegriffon.org/freshmeat/2.2/bluegriffon-2.2.win32-installer.exe'
 
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0)
