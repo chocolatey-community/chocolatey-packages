@@ -6,7 +6,7 @@ The embedded software have been downloaded from the listed download
 location on <https://www.tipp10.com/en/download/>
 and can be verified by doing the following:
 
-1. Download the following <https://www.tipp10.com/en/download/getfile/0/1485382735/>
+1. Download the following <https://www.tipp10.com/en/download/getfile/0/1485444544/>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'

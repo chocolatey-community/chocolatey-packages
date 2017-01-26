@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tipp10</id>
-    <version>2.1.0.20130528</version>
+    <version>2.1.0.20170126</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/tipp10</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>TIPP10</title>
     <authors>Tom Thielicke IT Solutions</authors>
     <projectUrl>https://www.tipp10.com/en/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/tipp10.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e0c82fddfc50af5efc5aeb9c8b09b11592a3819/icons/tipp10.png</iconUrl>
     <copyright>2006-2013 Tom Thielicke IT Solutions</copyright>
     <licenseUrl>https://www.tipp10.com/en/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
