@@ -1,8 +1,16 @@
-﻿$name = '{{PackageName}}'
-$pwd = "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+﻿$ErrorActionPreference = 'Stop';
 
-Import-Module "$($pwd)\Get-FilenameFromRegex.ps1"
-# Why does an import failure on this module not throw an error?
-$url = Get-FilenameFromRegex "http://www.tipp10.com/de/download/getfile/0/" '/getfile/0/([\d]+)/' 'http://www.tipp10.com/de/download/getfile/0/$1'
-Write-Output "Found URL: $url"
-Install-ChocolateyPackage "$name" "exe" "/verysilent" "$url"
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$packageArgs = @{
+  packageName    = 'tipp10'
+  fileType       = 'exe'
+  softwareName   = 'Tipp10*'
+  file           = "$toolsPath\tipp10.exe"
+  silentArgs     = '/SILENT /NORESTART /SP- /SUPPRESSMSGBOXES'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item $packageArgs.file -Force -ea 0
