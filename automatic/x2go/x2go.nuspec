@@ -15,7 +15,7 @@
 		<copyright></copyright>
 		<licenseUrl>http://wiki.x2go.org/doku.php/sources:start#licenses_of_x2go</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/x2go/img/x2go.80x80.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/x2go.png</iconUrl>
 		<dependencies></dependencies>
 		<releaseNotes></releaseNotes>
 	</metadata>

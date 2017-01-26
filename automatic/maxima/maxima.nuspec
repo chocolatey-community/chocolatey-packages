@@ -9,7 +9,7 @@
     <authors>Macsyma group at Project MAC and volunteer contributors</authors>
     <projectUrl>http://maxima.sourceforge.net/</projectUrl>
     <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/maxima.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/maxima.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Maxima, a Computer Algebra System

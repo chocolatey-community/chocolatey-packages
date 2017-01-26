@@ -9,7 +9,7 @@
     <owners>chocolatey, Mark Michaelis</owners>
     <licenseUrl>http://www.voidtools.com/License.txt</licenseUrl>
     <projectUrl>http://www.voidtools.com</projectUrl>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>"Everything" is an administrative tool that locates files and folders by filename instantly for Windows.
 Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything").

@@ -38,7 +38,7 @@ AutoIt is also very small, self-contained and will run on all versions of Window
     <tags>autoit install automation admin freeware</tags>
     <licenseUrl>http://www.autoitscript.com/autoit3/docs/license.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/dc920218fed5d4f234f9f281896ca8eadfd91925/icons/autoit.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/40da80591281de666f24852bb71cb12449cf2997/icons/autoit.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

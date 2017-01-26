@@ -26,7 +26,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
     <tags>git vcs dvcs version-control msysgit foss cross-platform cli</tags>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/714d22bbb8801fc755d0c856ce30ffbfc748b34c/icons/git.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
     <dependencies>
       <dependency id="chocolatey" version="0.9.10" />
     </dependencies>

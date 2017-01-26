@@ -8,7 +8,7 @@
     <owners>chocolatey</owners>
     <authors>Dino Nuhagic (nuhi)</authors>
     <projectUrl>http://www.nliteos.com/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/nlite.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/nlite.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Deployment Tool for the Bootable Unattended Windows ISO

@@ -27,7 +27,7 @@ Audacity is free, open source, cross-platform software for recording and editing
     <copyright></copyright>
     <licenseUrl>http://audacityteam.org/about/license#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/audacity.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg</iconUrl>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/audacity</packageSourceUrl>
     <dependencies>

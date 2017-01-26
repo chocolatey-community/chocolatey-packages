@@ -18,7 +18,7 @@ Auslogics Disk Defrag Touch is a product of Auslogics, certified Microsoft® Gol
         <copyright></copyright>
         <licenseUrl>http://www.auslogics.com/en/legal/</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://i.imgur.com/aOrA3GL.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/136ef0bb871e04da4d9e0e0da37902930c80c2b4/icons/diskdefragtouch.png</iconUrl>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/diskdefragtouch</packageSourceUrl>
         <dependencies></dependencies>
         <releaseNotes></releaseNotes>

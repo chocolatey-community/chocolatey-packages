@@ -22,7 +22,7 @@ Resource Hacker is a complete resource editing tool: compiling, viewing, decompi
         <copyright></copyright>
         <licenseUrl>http://www.angusj.com/resourcehacker/</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/da1a06bf2e600442203ca66680b1d1539002b813/icons/reshack.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/da1a06bf2e600442203ca66680b1d1539002b813/icons/reshack.png</iconUrl>
         <dependencies></dependencies>
         <releaseNotes></releaseNotes>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/reshack</packageSourceUrl>

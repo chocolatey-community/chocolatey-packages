@@ -43,7 +43,7 @@ UltraDefrag is an open source disk defragmenter for Windows. It eliminates the f
     <docsUrl>http://ultradefrag.sourceforge.net/handbook</docsUrl>
     <licenseUrl>http://ultradefrag.sourceforge.net/handbook/Credits.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2874dccce862f882aad9a52c2d8d1f9da3e46e80/icons/ultradefrag.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f47c573f12e0505f678bcdbe75624d128704f393/icons/ultradefrag.png</iconUrl>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ultradefrag</packageSourceUrl>
     <projectSourceUrl>https://sourceforge.net/p/ultradefrag/code/HEAD/tree</projectSourceUrl>

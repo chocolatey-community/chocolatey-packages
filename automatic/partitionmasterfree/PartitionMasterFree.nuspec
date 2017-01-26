@@ -17,7 +17,7 @@
 		<licenseUrl>http://www.easeus.com/license.htm</licenseUrl>
 
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/partitionmasterfree/img/partitionmasterfree.128x128.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/partitionmasterfree.png</iconUrl>
 		<dependencies></dependencies>
 		<releaseNotes></releaseNotes>
 	</metadata>

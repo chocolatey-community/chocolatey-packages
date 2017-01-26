@@ -9,7 +9,7 @@
     <title>Jubler Subtitle Editor</title>
     <authors>Panayotis Katsaloulis</authors>
     <projectUrl>http://www.jubler.org/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/02444ce6ec4708744c1ff4c6170cb4699c3e0eb4/icons/jubler.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png</iconUrl>
     <copyright>2005 Panayotis Katsaloulis</copyright>
     <licenseUrl>https://sourceforge.net/p/jubler/code/ci/jubler/tree/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

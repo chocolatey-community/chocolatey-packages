@@ -23,7 +23,7 @@ To achieve its magic, Vagrant stands on the shoulders of giants. Machines are pr
     <copyright>Copyright 2015 HashiCorp</copyright>
     <licenseUrl>https://github.com/mitchellh/vagrant/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/62469751380dc5a9f2620f4b34c08fd7c741e5a5/icons/vagrant.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/62469751380dc5a9f2620f4b34c08fd7c741e5a5/icons/vagrant.png</iconUrl>
     <releaseNotes>[CHANGELOG](https://github.com/mitchellh/vagrant/blob/master/CHANGELOG.md)</releaseNotes>
     <!--<provides>vagrant</provides>-->
   </metadata>
