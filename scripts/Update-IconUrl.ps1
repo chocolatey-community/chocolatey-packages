@@ -133,6 +133,7 @@ function Replace-IconUrl{
   )
 
   $nuspec = gc "$NuspecPath" -Encoding UTF8
+
   $oldContent = ($nuspec | Out-String) -replace '\r\n?',"`n"
 
   $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$iconPath"
@@ -153,7 +154,8 @@ function Update-IconUrl{
     [string]$Name,
     [string]$IconName,
     [string]$IconDir,
-    [string]$GithubRepository
+    [string]$GithubRepository,
+    [bool]$Quiet
   )
 
   $possibleNames = @($Name);
@@ -169,6 +171,14 @@ function Update-IconUrl{
 
   # Let check if the package already contains a url, and get the filename from that
   $content = gc "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" -Encoding UTF8
+
+  if ($content | ? { $_ -match 'Icon(Url)?:\s*Skip( check)?' }) {
+    if (!($Quiet)) {
+      Write-Warning "Skipping icon check for $Name"
+    }
+    return;
+  }
+
   $content | ? { $_ -match "\<iconUrl\>(.+)\<\/iconUrl\>" } | Out-Null
   if ($Matches) {
     $url = $Matches[1]
@@ -214,14 +224,14 @@ if ($UseStopwatch) {
 }
 
 If ($Name) {
-  Update-IconUrl -Name $Name -IconName $IconName -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository;
+  Update-IconUrl -Name $Name -IconName $IconName -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet
 }
 else {
   $directories = Get-ChildItem -Path "$PSScriptRoot/$PackagesDirectory" -Directory;
 
   foreach ($directory in $directories) {
     if ((Test-Path "$($directory.FullName)/$($directory.Name).nuspec")) {
-      Update-IconUrl -Name $directory.Name -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository;
+      Update-IconUrl -Name $directory.Name -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet
     }
   }
 }
