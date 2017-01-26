@@ -27,8 +27,12 @@
   Uses a stopwatch to time how long this script used to execute
 
 .PARAMETER Quiet
-  Write anything to Host
+  Do not write normal output to host.
   NOTE: Output from git and Write-Warning will still be available
+
+.PARAMETER ThrowErrorOnIconNotFound
+  Throw an error if a icon for the specified package is not found.
+  NOTE: Only available when updating a single icon.
 
 .OUTPUTS
   The number of packages that was updates,
@@ -89,7 +93,8 @@ param(
   [string]$RelativeIconDir = "../icons",
   [string]$PackagesDirectory = "../automatic",
   [switch]$UseStopwatch,
-  [switch]$Quiet
+  [switch]$Quiet,
+  [switch]$ThrowErrorOnIconNotFound
 )
 
 $counts = @{
@@ -252,13 +257,15 @@ if ($counts.uptodate -gt 0 -and !$Quiet) {
 }
 if ($counts.missing -gt 1) {
   Write-Warning "$($counts.missing) icon(s) was not found!"
-  if (!$PrintMissingIcons) {
+  if (!$PrintMissingIcons -and !$Quiet) {
     $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Hell Yeah"
     $no  = New-Object System.Management.Automation.Host.ChoiceDescription "&No","No WAY"
     $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
     [int]$defaultChoice = 1
     $message = "Do you want to view the package names?";
     $choice = $host.ui.PromptForChoice($caption, $message, $options, $defaultChoice);
+  } elseif($Quiet) {
+    $choice = 1
   } else {
     $choice = 0
   }
@@ -268,5 +275,9 @@ if ($counts.missing -gt 1) {
   }
 }elseif ($counts.missing -eq 1) {
   $package = $missingIcons[0]
-  Write-Warning "Unable to find icon url for $package"
+  if ($ThrowErrorOnIconNotFound) {
+    throw "Unable to find icon url for $package"
+  } else {
+    Write-Warning "Unable to find icon url for $package"
+  }
 }
