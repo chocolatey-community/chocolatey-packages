@@ -1,4 +1,4 @@
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $version = $Env:ChocolateyPackageVersion
@@ -12,8 +12,8 @@ $packageArgs = @{
   fileType               = 'MSI'
   url                    = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
   url64bit               = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'
-  checksum               = 'f30e97b8bd48f9e0b9706f24461db6718a3b9bfc3ddb110cea5b952643c617c8'
-  checksum64             = 'e87064ecdb9583b2ce3b61dad2248952d15ecb031ee5ab70587c29ed6baf8bd1'
+  checksum               = 'a0c8388b71cfe1440b2425a812d4240e21159a97a5f46a6dc77d9ba60b27563e'
+  checksum64             = '037402fbcdf4c63dbc31ef8cc90d41672d4ecb41526e634000debdad493d2a33'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/quiet'
