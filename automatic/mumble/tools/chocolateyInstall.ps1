@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'mumble'
   fileType               = 'msi'
-  url                    = 'https://github.com/mumble-voip/mumble/releases/download/1.2.18/mumble-1.2.18.msi'
-  checksum               = '489adb72e9a84f9ac3ff55441f174ae989e89e56f9fe4e900f5dc7875bdbd05e'
+  url                    = 'https://github.com/mumble-voip/mumble/releases/download/1.2.19/mumble-1.2.19.msi'
+  checksum               = '2186eddd99264c2e68f5425308f59bd5151a8aecebea9f852728be3487a7a93b'
   checksumType           = 'sha256'
   silentArgs             = '/passive /norestart'
   validExitCodes         = @(0)
