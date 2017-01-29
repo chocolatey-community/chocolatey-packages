@@ -29,10 +29,10 @@ if ($allRight) {
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/24.0.0.194/install_flash_player_24_plugin.msi'
+  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/24.0.0.194/install_flash_player_24_active_x.msi'
   silentArgs    = '/quiet /norestart REMOVE_PREVIOUS=YES'
   softwareName  = 'Adobe Flash Player ActiveX'
-  checksum      = '81d5c96efe58e6ddaaa296da282688eb656ade966fa97671c87b1a89427f1583'
+  checksum      = 'a0e29b07aa055dd87941312d5a3c3d8b50230a784795d86d1205c2649ba0447b'
   checksumType  = 'sha256'
 }
   Install-ChocolateyPackage @packageArgs
