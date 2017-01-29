@@ -13,3 +13,7 @@ $installData64 = @{
 $uninstallData = @{
     SoftwareName = 'Microsoft Visual C++ 2015 Redistributable*'
 }
+
+$otherData = @{
+    Version = [version]'14.0.23026.0'
+}
