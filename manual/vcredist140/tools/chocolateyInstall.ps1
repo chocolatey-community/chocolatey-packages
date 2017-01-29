@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 . (Join-Path -Path (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent) -ChildPath 'data.ps1')
-$packageName = 'vcredist140'
+$packageName = $otherData.PackageName
 $installerType = 'exe'
 $silentArgs = '/quiet /norestart'
 $validExitCodes = @(0, 3010)
@@ -69,7 +69,7 @@ foreach ($archAndPath in $pathVariantsPerOSBitness[[string](Get-ProcessorBits)].
     }
 
     # the runtime consists of several DLLs, but all of them have the same version, so pick one
-    $dllName = 'vcruntime140.dll'
+    $dllName = $otherData.DllName
     Write-Verbose "Determining presence of $dllName for architecture $arch"
     $dll = Get-Item -Path (Join-Path -Path $path -ChildPath $dllName) -ErrorAction SilentlyContinue
     if ($dll -eq $null -or $dll.VersionInfo -eq $null -or $dll.VersionInfo.ProductVersion -eq $null)
