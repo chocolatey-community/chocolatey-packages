@@ -19,7 +19,7 @@ if (Get-32bitOnlyInstalled -product $softwareName) {
   )
 }
 
-if ($alreadyInstalled) {
+if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
     "Firefox is already installed. " +
     'No need to download an re-install again.'

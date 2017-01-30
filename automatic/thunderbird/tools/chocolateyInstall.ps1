@@ -11,7 +11,7 @@ $allLocalesListURL = 'https://www.mozilla.org/en-US/thunderbird/all/'
 
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '45.7.0')
 
-if ($alreadyInstalled) {
+if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
     "Thunderbird is already installed. " +
     'No need to download an re-install again.'
