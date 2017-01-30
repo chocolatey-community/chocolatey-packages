@@ -17,6 +17,9 @@ Python 3.x is a programming language that lets you work more quickly and integra
 
 - `/InstallDir` - Installation directory
 
+These parameters can be passed to the installer with the user of --params.
+For example: `--params '"/InstallDir:C:\tools\python2"'
+
 ## Notes
 
 - This package installs the latest stable version of Python 3.x. It will install to Python 3.x to C:\Python3x.
