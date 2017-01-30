@@ -31,8 +31,8 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    $re      = 'php.+\.zip$'
-    $url     = $download_page.links | ? href -match 'php-\d.+-nts.+\.zip$'  | % href | select -First 2
+    $re      = 'php-\d.+-nts.+\.zip$'
+    $url     = $download_page.links | ? href -match $re  | % href | select -First 2
     $urlTS   = $url | % { $_ -replace '\-nts','' }
     $version = $url[0] -split '-' | select -Index 1
     $Result = @{

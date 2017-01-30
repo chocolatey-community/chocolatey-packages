@@ -8,7 +8,6 @@ $installLocation = GetInstallLocation "$toolsPath\.."
 if ($installLocation) {
   Write-Host "Uninstalling previous version of php..."
   UninstallLocation -libDirectory "$toolsPath\.." -packageName 'php'
-  Uninstall-ChocolateyPath $installLocation
 }
 
 $pp = Get-PackageParameters
@@ -34,6 +33,11 @@ $installLocation = $packageArgs.unzipLocation = Join-Path $(Get-ToolsLocation) $
 
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyPath $installLocation
+
+if (Test-Path "$env:TEMP\php.ini") {
+  Write-Host "Restoring php configuration file"
+  Move-Item "$env:TEMP\php.ini" "$installLocation\php.ini"
+}
 
 $php_ini_path = $installLocation + '/php.ini'
 if (!(Test-Path $php_ini_path)) {
