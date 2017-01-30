@@ -7,7 +7,7 @@ $installLocation = GetInstallLocation "$toolsPath\.."
 
 if ($installLocation) {
   Write-Host "Uninstalling previous version of php..."
-  UninstallLocation -libDirectory "$toolsPath\.." -packageName 'php'
+  UninstallPackage -libDirectory "$toolsPath\.." -packageName 'php'
 }
 
 $pp = Get-PackageParameters

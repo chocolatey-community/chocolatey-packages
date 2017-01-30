@@ -35,13 +35,14 @@ function global:au_GetLatest {
     $url     = $download_page.links | ? href -match $re  | % href | select -First 2
     $urlTS   = $url | % { $_ -replace '\-nts','' }
     $version = $url[0] -split '-' | select -Index 1
+    $majorVersion = $version -split '\.' | select -first 1
     $Result = @{
         Version      = $version
         URLNTS32     = "http://windows.php.net/" + ($url -match 'x86' | select -First 1)
         URLNTS64     = "http://windows.php.net/" + ($url -match 'x64' | select -First 1)
         URLTS32      = "http://windows.php.net/" + ($urlTS -match 'x86' | select -First 1)
         URLTS64      = "http://windows.php.net/" + ($urlTS -match 'x64' | select -First 1)
-        ReleaseNotes = "https://secure.php.net/ChangeLog-7.php#${version}"
+        ReleaseNotes = "https://secure.php.net/ChangeLog-${majorVersion}.php#${version}"
     }
 
     if ($Result.URLNTS32 -eq $Result.TS32) {
