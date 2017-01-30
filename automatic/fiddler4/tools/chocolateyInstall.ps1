@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'fiddler4'
   fileType               = 'EXE'
   url                    = 'https://www.telerik.com/docs/default-source/fiddler/fiddlersetup.exe'
-  checksum               = 'a22d8c8d786aae045b244256babfefb2c0ef2999c0f8ac57e77b3147ba6295b8'
+  checksum               = 'd91b7013bbc2e7ecadaa0876f3dcf7e7c58bef6e5fb7ef0039ac13909f6ba796'
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
