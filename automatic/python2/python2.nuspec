@@ -18,6 +18,9 @@ Python 2.x is a programming language that lets you work more quickly and integra
 
 - `/InstallDir` - Installation directory
 
+These parameters can be passed to the installer with the user of --params.
+For example: `--params '"/InstallDir:C:\tools\python2"'
+
 ## Notes
 
 - This package installs the latest stable version of Python 2.x. It will install to Python 2.x to `$env:ChocolateyBinRoot\{{PackageName}}`, but only if Python 2.x is not already installed where the installer puts it by default, which is `$env:SystemDrive\PythonXX` (XX stands for the major/minor version digits).
