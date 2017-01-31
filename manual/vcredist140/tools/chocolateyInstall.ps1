@@ -28,6 +28,12 @@ Set-StrictMode -Off
 Set-StrictMode -Version 2
 foreach ($uninstallKey in $uninstallKeys)
 {
+    if ($uninstallKey -eq $null)
+    {
+        # this might happen on PS 2.0
+        continue
+    }
+
     if ($uninstallKey.DisplayName -match '\((x((86)|(64)))\)')
     {
         $arch = $matches[1]

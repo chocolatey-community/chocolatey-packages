@@ -7,6 +7,12 @@ $validExitCodes = @(0, 3010)  # http://msdn.microsoft.com/en-us/library/aa368542
 [array] $uninstallKeys = Get-UninstallRegistryKey @uninstallData | Where-Object { $_ -ne $null -and ($_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0) }
 foreach ($uninstallKey in $uninstallKeys)
 {
+    if ($uninstallKey -eq $null)
+    {
+        # this might happen on PS 2.0
+        continue
+    }
+
     if ($uninstallKey.PSObject.Properties['UninstallString'] -ne $null)
     {
         $uninstallString = $uninstallKey.UninstallString
