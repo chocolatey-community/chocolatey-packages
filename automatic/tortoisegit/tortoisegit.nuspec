@@ -3,7 +3,7 @@
   <metadata>
     <id>tortoisegit</id>
     <title>TortoiseGit</title>
-    <version>2.3.0.0</version>
+    <version>2.4.0.0</version>
     <authors>TortoiseGit and contributors</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>TortoiseGit provides overlay icons showing the file status, a powerful context menu for Git and much more!</summary>
@@ -58,7 +58,7 @@ Main interaction with TortoiseGit will be using the context menu of the Windows 
     <copyright>© TortoiseGit</copyright>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://tortoisegit.org/docs/releasenotes/#Release_2.3.0.0</releaseNotes>
+    <releaseNotes>https://tortoisegit.org/docs/releasenotes/#Release_2.4.0.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
