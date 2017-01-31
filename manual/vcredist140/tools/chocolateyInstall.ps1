@@ -24,9 +24,10 @@ $runtimes = @{
 
 Write-Verbose 'Analyzing uninstall information in the registry'
 Set-StrictMode -Off
-[array] $uninstallKeys = Get-UninstallRegistryKey @uninstallData | Where-Object { $_ -ne $null -and ($_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0) }
+[array] $uninstallKeys = Get-UninstallRegistryKey @uninstallData
 Set-StrictMode -Version 2
-foreach ($uninstallKey in $uninstallKeys)
+[array] $filteredUninstallKeys = $uninstallKeys | Where-Object { $_ -ne $null -and ($_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0) }
+foreach ($uninstallKey in $filteredUninstallKeys)
 {
     if ($uninstallKey -eq $null)
     {
@@ -59,13 +60,15 @@ foreach ($uninstallKey in $uninstallKeys)
     }
 }
 
-$pathVariantsPerOSBitness = @{
-    '32' = @{ x86 = "$Env:SystemRoot\System32"; x64 = $null }
-    '64' = @{ x86 = "$Env:SystemRoot\SysWOW64"; x64 = "$Env:SystemRoot\System32" }
+switch ([string](Get-ProcessorBits))
+{
+    '32' { $pathVariants = @{ x86 = "$Env:SystemRoot\System32"; x64 = $null } }
+    '64' { $pathVariants = @{ x86 = "$Env:SystemRoot\SysWOW64"; x64 = "$Env:SystemRoot\System32" } }
+    default { throw "Unsupported bitness: $_" }
 }
 
 Write-Verbose 'Analyzing version of DLLs present on the system'
-foreach ($archAndPath in $pathVariantsPerOSBitness[[string](Get-ProcessorBits)].GetEnumerator())
+foreach ($archAndPath in $pathVariants.GetEnumerator())
 {
     $arch = $archAndPath.Key
     $path = $archAndPath.Value

@@ -1,11 +1,17 @@
-﻿. (Join-Path -Path (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent) -ChildPath 'data.ps1')
+﻿Set-StrictMode -Version 2
+$ErrorActionPreference = 'Stop'
+
+. (Join-Path -Path (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent) -ChildPath 'data.ps1')
 $packageName = 'vcredist140'
 $installerType = 'exe'
 $silentArgs = '/uninstall /quiet'
 $validExitCodes = @(0, 3010)  # http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
 
-[array] $uninstallKeys = Get-UninstallRegistryKey @uninstallData | Where-Object { $_ -ne $null -and ($_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0) }
-foreach ($uninstallKey in $uninstallKeys)
+Set-StrictMode -Off
+[array] $uninstallKeys = Get-UninstallRegistryKey @uninstallData
+Set-StrictMode -Version 2
+[array] $filteredUninstallKeys = $uninstallKeys | Where-Object { $_ -ne $null -and ($_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0) }
+foreach ($uninstallKey in $filteredUninstallKeys)
 {
     if ($uninstallKey -eq $null)
     {
@@ -20,11 +26,13 @@ foreach ($uninstallKey in $uninstallKeys)
         if ($uninstallString -match '^"?(.*?)(".*)?$')
         {
             $uninstallerPath = $matches[1]
+            Set-StrictMode -Off
             Uninstall-ChocolateyPackage -PackageName $packageName `
                                         -FileType $installerType `
                                         -SilentArgs $silentArgs `
                                         -File $uninstallerPath `
                                         -ValidExitCodes $validExitCodes
+            Set-StrictMode -Version 2
         }
         else
         {
