@@ -1,6 +1,14 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/S'
-$url = '{{DownloadUrl}}'
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$packageArgs = @{
+  packageName    = 'picard'
+  fileType       = 'exe'
+  file           = "$toolsPath\picard_x32.exe"
+  softwareName   = 'MusicBrainz Picard'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
