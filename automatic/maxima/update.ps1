@@ -23,6 +23,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
     $version = ($download_page.Links | ? InnerText -match 'Windows' | % InnerText) -replace '-Windows'
     $version = $version | ? { [version]::TryParse($_, [ref]($__)) } | measure -Maximum | % Maximum
+
     @{
         Version      = $version
         URL32        = "https://sourceforge.net/projects/maxima/files/Maxima-Windows/${version}-Windows/maxima-clisp-sbcl-${version}.exe"
@@ -34,7 +35,7 @@ function global:au_GetLatest {
 try {
     update
 } catch {
-    $ignore = "Unable to connect to the remote server"
+    $ignore = "Unable to connect to the remote server|Not Found.*win64\.exe"
     if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }
 }
 
