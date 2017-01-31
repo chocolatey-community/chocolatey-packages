@@ -143,7 +143,7 @@ foreach ($archAndRuntime in $runtimes.GetEnumerator())
         Write-Verbose "Installing runtime for architecture $arch"
         $installData = $runtime.InstallData
         Set-StrictMode -Off
-        Install-ChocolateyPackage -PackageName $packageName `
+        Install-ChocolateyPackage -PackageName "${packageName}-$arch" `
                                   -FileType $installerType `
                                   -SilentArgs $silentArgs `
                                   -ValidExitCodes $validExitCodes `
