@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.0.6
+- Bufix in `Get-AppInstallLocation`: Powershell 2 can not replace on null value.
+
 ## 1.0.5
 
 - Bugfix in `Get-UninstallRegistryKey`: Powershell 2 compatibility.
