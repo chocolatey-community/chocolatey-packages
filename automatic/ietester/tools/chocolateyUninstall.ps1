@@ -1,14 +1,28 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/S'
-$validExitCodes = @(0)
+﻿$ErrorActionPreference = 'Stop';
 
-$unfile = "${Env:ProgramFiles}\Core Services\IETester\Uninstall.exe"
-$unfilex86 = "${Env:ProgramFiles(x86)}\Core Services\IETester\Uninstall.exe"
+$packageName = 'ietester'
 
-if (Test-Path "$unfile") {$file = "$unfile"}
-if (Test-Path "$unfilex86") {$file = "$unfilex86"}
+$uninstalled = $false
 
-if ((Test-Path "$unfile") -or (Test-Path "$unfilex86")) {
-  Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'IETester*'
+
+if ($key.Count -eq 1) {
+  $key | % {
+
+    $packageArgs = @{
+      packageName = $packageName
+      fileType    = 'exe'
+      silentArgs  = '/S'
+      file        = "$($_.UninstallString)"
+    }
+
+    Uninstall-ChocolateyPackage @packageArgs
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$($key.Count) matches found!"
+  To prevent accidental data loss, no programs will be uninstall."
+  Please alert the package maintainer the following keys were matched:"
+  $key | % { Write-Warning "- $($_.DisplayName)" }
 }
