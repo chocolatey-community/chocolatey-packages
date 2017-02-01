@@ -71,6 +71,7 @@ TortoiseSVN is implemented as a Windows shell extension. It's intuitive and easy
     <releaseNotes>http://tortoisesvn.net/Changelog.txt</releaseNotes>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
