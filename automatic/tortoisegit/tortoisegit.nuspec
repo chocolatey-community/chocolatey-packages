@@ -61,6 +61,7 @@ Main interaction with TortoiseGit will be using the context menu of the Windows 
     <releaseNotes>https://tortoisegit.org/docs/releasenotes/#Release_2.4.0.0</releaseNotes>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
