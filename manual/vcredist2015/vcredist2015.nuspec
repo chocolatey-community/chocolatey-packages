@@ -29,10 +29,10 @@ On some systems, if KB2999226 is installed as a dependency of this package, the 
 #### Program
 [Visual Studio 2015 Update 3 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
 #### Package
-14.0.24215.20170201: updated metadata
+14.0.24215.20170201: updated metadata, refactored into a virtual package dependent upon vcredist140
     </releaseNotes>
     <dependencies>
-       <dependency id="KB2919355" version="1.0.20160719" />
+      <dependency id="vcredist140" version="14.0.24215.1" />
     </dependencies>
   </metadata>
 </package>
