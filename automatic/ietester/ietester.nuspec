@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>IETester</title>
+    <id>ietester</id>
+    <version>0.5.4.20170201</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/ietester</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>IETester</title>
     <authors>Core Services</authors>
-    <licenseUrl>http://www.my-debugbar.com/wiki/IETester/HomePage</licenseUrl>
     <projectUrl>http://my-debugbar.com/wiki/IETester/HomePage</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ietester.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ed166b4b5efd500ba039e8207c52a7f0b42c4ce3/icons/ietester.png</iconUrl>
+    <copyright>2008–2017 Core Services</copyright>
+    <licenseUrl>http://www.my-debugbar.com/wiki/IETester/HomePage</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.my-debugbar.com/wiki/IETester/Doc</docsUrl>
+    <mailingListUrl>http://www.my-debugbar.com/forum/</mailingListUrl>
+    <tags>ietester internet explorer tester admin freeware</tags>
+    <summary>Browser Compatibility Check for Internet Explorer Versions from 5.5 to 11</summary>
     <description>
-IETester is a free (both for personal and professional usage) WebBrowser that allows you to have the rendering and javascript engines of IE10, IE9, IE8, IE7 IE 6 and IE5.5 on Windows 8 desktop, Windows 7, Vista and XP, as well as the installed IE in the same process.
+IETester is a free (both for personal and professional usage) WebBrowser that allows you to have the rendering and javascript engines of IE11, IE10, IE9, IE8, IE7 IE 6 and IE5.5 on Windows 8 desktop, Windows 7, Vista and XP, as well as the installed IE in the same process.
+
+## Notes
+- See the home page for known problems and limitations
     </description>
-    <summary>Browser Compatibility Check for Internet Explorer Versions from 5.5 to 10</summary>
-    <releaseNotes />
-    <copyright>2008–2013 Core Services</copyright>
-    <tags>ietester internet explorer tester admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://www.my-debugbar.com/wiki/IETester/ChangeLog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
