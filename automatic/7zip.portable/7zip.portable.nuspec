@@ -3,7 +3,7 @@
   <metadata>
     <id>7zip.portable</id>
     <title>7-Zip (Portable, CommandLine)</title>
-    <version>16.04</version>
+    <version>0.0</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
@@ -21,7 +21,7 @@
 - Localizations for 87 languages
     </description>
     <projectUrl>http://www.7-zip.org/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/7zip</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/7zip.portable</packageSourceUrl>
     <tags>7zip zip archiver foss</tags>
     <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
