@@ -21,7 +21,7 @@
 IETester is a free (both for personal and professional usage) WebBrowser that allows you to have the rendering and javascript engines of IE11, IE10, IE9, IE8, IE7 IE 6 and IE5.5 on Windows 8 desktop, Windows 7, Vista and XP, as well as the installed IE in the same process.
 
 ## Notes
-- See the home page for known problems and limitations
+- See the [website](http://www.my-debugbar.com/wiki/IETester/HomePage) for known problems and limitations.
     </description>
     <releaseNotes>http://www.my-debugbar.com/wiki/IETester/ChangeLog</releaseNotes>
     <dependencies>
