@@ -51,6 +51,21 @@ function GetInstallLocation {
   # we don't return anything as it may be already uninstalled
 }
 
+function GetNewInstallLocation {
+  param(
+    [string]$PackageName,
+    [string]$Version,
+    $pp
+  )
+
+  if ($pp -and $pp.InstallDir) {
+    return $pp.InstallDir
+  }
+
+  $toolsLocation = Get-BinRoot
+  return "$toolsLocation\{0}{1}" -f $PackageName, ($Version -replace '\.').Substring(0,2)
+}
+
 function UninstallPackage {
   param(
     [string]$libDirectory,

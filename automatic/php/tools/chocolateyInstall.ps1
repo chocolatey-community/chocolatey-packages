@@ -29,7 +29,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
-$installLocation = $packageArgs.unzipLocation = Join-Path $(Get-ToolsLocation) $packageArgs.packageName
+$installLocation = $packageArgs.unzipLocation = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
 
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyPath $installLocation
