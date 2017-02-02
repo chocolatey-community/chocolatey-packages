@@ -1,4 +1,5 @@
 ﻿import-module au
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = "https://github.com/qTox/qTox/blob/master/README.md"
 $changelog = "https://github.com/qTox/qTox/blob/master/CHANGELOG.md"
