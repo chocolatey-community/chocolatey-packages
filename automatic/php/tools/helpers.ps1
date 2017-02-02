@@ -90,12 +90,11 @@ if (!(Test-Path function:\Uninstall-ChocolateyPath)) {
     # get the PATH variable
     Update-SessionEnvironment
     $envPath = $env:PATH
-    if ($envPath.ToLower().Contains($pathToRemove)) {
+    if ($envPath.ToLower().Contains($pathToRemove.ToLower())) {
       Write-Host "PATH environment variable do have $pathToRemove in it. Removing..."
       $actualPath = Get-EnvironmentVariable -Name 'Path' -Scope $pathType -PreserveVariables
 
-      $newPath = $actualPath -replace $pathToRemove,'' -replace ';;',';'
-      $newPath = $newPath.TrimEnd(';')
+      $newPath = $actualPath -replace [regex]::Escape($pathToRemove + ';'),'' -replace ';;',';'
 
       if (($pathType -eq [System.EnvironmentVariableTarget]::Machine) -and !(Test-ProcessAdminRights)) {
         Write-Warning "Removing path from machine environment variable is not supported when not running as an elevated user!"

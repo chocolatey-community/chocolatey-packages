@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
@@ -8,6 +9,7 @@ $installLocation = GetInstallLocation "$toolsPath\.."
 if ($installLocation) {
   Write-Host "Uninstalling previous version of php..."
   UninstallPackage -libDirectory "$toolsPath\.." -packageName 'php'
+  Uninstall-ChocolateyPath $installLocation
 }
 
 $pp = Get-PackageParameters
@@ -29,23 +31,30 @@ $packageArgs = @{
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
-$installLocation = $packageArgs.unzipLocation = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
+$newInstallLocation = $packageArgs.unzipLocation = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyPath $installLocation
+Install-ChocolateyPath $newInstallLocation
 
-if (Test-Path "$env:TEMP\php.ini") {
-  Write-Host "Restoring php configuration file"
-  Move-Item "$env:TEMP\php.ini" "$installLocation\php.ini"
+$php_ini_path = $newInstallLocation + '/php.ini'
+
+if (($installLocation -ne $newInstallLocation) -and (Test-Path "$installLocation\php.ini")) {
+  Write-Host "Moving old configuration file."
+  Move-Item "$installLocation\php.ini" "$php_ini_path"
+
+  $di = Get-ChildItem $installLocation -ea 0 | Measure-Object
+  if ($di.Count -eq 0) {
+    Write-Host "Removing old install location."
+    Remove-Item -Force -ea 0 $installLocation
+  }
 }
 
-$php_ini_path = $installLocation + '/php.ini'
 if (!(Test-Path $php_ini_path)) {
   Write-Host 'Creating default php.ini'
-  cp $installLocation/php.ini-production $php_ini_path
+  cp $newInstallLocation/php.ini-production $php_ini_path
 
   Write-Host 'Configuring PHP extensions directory'
   (gc $php_ini_path) -replace '; extension_dir = "ext"', 'extension_dir = "ext"' | sc $php_ini_path
 }
 
-Write-Host 'Please make sure you have CGI installed in IIS for local hosting'
+if (!$pp.ThreadSafe) { Write-Host 'Please make sure you have CGI installed in IIS for local hosting' }
