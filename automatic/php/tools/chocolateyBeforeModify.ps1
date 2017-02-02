@@ -11,8 +11,8 @@ if (Test-Path "$installLocation\php.ini") {
   if (!(Test-Path "$env:TEMP\php")) {
     New-Item "$env:TEMP\php" -ItemType Directory
   }
-  Write-Host "Backing up php configuration file."
-  Copy-Item -Force -ea 0 "$installLocation\php.ini" $cacheFile
+  Write-Host "Moving php configuration file to a temporary location."
+  Move-Item -Force -ea 0 "$installLocation\php.ini" $cacheFile
 }
 
 Uninstall-ChocolateyPath $installLocation
