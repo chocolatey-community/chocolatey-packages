@@ -1,15 +1,16 @@
 import-module au
-. "$PSScriptRoot\update_helper.ps1"
+. "$PSScriptRoot\..\Firefox\update_helper.ps1"
 
-$releases = 'https://www.mozilla.org/en-US/firefox/all/'
-$product  = 'firefox'
+$releases = 'https://www.mozilla.org/en-US/firefox/organizations/all/'
+$product  = 'firefox' # not a typo
 
 function global:au_AfterUpdate {
   $version = $Latest.RemoteVersion
   CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" `
-    -ExecutableName "Firefox Setup $version.exe" `
+    -ExecutableName "Firefox Setup ${version}esr.exe" `
     -Version $version `
-    -Product $product
+    -Product $product `
+    -ExtendedRelease
 }
 
 function global:au_SearchReplace {
@@ -28,7 +29,7 @@ function global:au_GetLatest {
     RemoteVersion = $data.Version
     Win32Format = $data.Win32Format
     Win64Format = $data.Win64Format
-    SoftwareName = 'Mozilla Firefox'
+    SoftwareName = 'Mozilla Firefox*ESR'
     ReleaseNotes = "https://www.mozilla.org/en-US/firefox/$($data.Version)/releasenotes/"
   }
 }
