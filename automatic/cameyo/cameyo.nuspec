@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>Cameyo</title>
+    <id>cameyo</id>
+    <version>3.1.1427</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cameyo</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>Cameyo</title>
     <authors>Cameyo developers</authors>
-    <licenseUrl>http://www.cameyo.com/doc/index.html?license.htm</licenseUrl>
     <projectUrl>http://www.cameyo.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/cameyo.svg</iconUrl>
+    <copyright>Cameyo, all rights resreved</copyright>
+    <licenseUrl>http://www.cameyo.com/doc/index.html?license.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/cameyo/cameyo</projectSourceUrl>
+    <docsUrl>http://www.cameyo.com/doc/index.html</docsUrl>
+    <mailingListUrl>http://cameyo.activeboard.com/</mailingListUrl>
+    <tags>cameyo application virtualization portable foss</tags>
+    <summary>Application virtualization</summary>
     <description>
 Cameyo's virtualization technology is about bringing entire application environments into one single executable that can run anywhere, and whose usage will not affect or modify your system. Windows applications usually have dozens of files, DLLS, registry keys and other components that install and possibly influence your system. Our purpose is to bring the benefits of application virtualization to everyone, with 3 fundamentals:
 
 Simplicity, Light weight &amp; performance, Cloud.
 
 The idea of Cameyo was born by thinking about how Windows applications should be like in today's era of Internet and mobility. Since its first release, the product has been through an average of 1 new major version each year, and 2-3 minor versions yearly. Each major version brings considerable improvements.
+
+## Features
+- Package virtual applications on your machine
+- Edit and optimize Cameyo packages
+- Stream applications to your machine within seconds
+- Unleash advanced features with our open-source Package Editor
     </description>
-    <summary>Application virtualization</summary>
-    <releaseNotes>http://www.cameyo.com/about-us</releaseNotes>
-    <copyright>Cameyo, all rights resreved</copyright>
-    <tags>application virtualization portable</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://www.cameyo.com/version-history</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

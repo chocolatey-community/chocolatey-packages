@@ -1,20 +1,25 @@
-﻿$url = '{{DownloadUrl}}'
-$scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$exePath = Join-Path "$scriptPath" "Cameyo.exe"
-if (Test-Path "$exePath") {Remove-Item "$exePath"}
-Get-ChocolateyWebFile '{{PackageName}}' "$exePath" "$url"
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyDesktopLink "$exePath"
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$desktop = [Environment]::GetFolderPath("Desktop")
+$packageArgs = @{
+  packageName    = 'cameyo'
+  fileFullPath   = "$toolsDir\Cameyo.exe"
+  url            = 'http://online.cameyo.com/packager.aspx?op=Retrieve&pkgId=1'
+  checksum       = '1787eead7d6bb0d581139b941474e8c0a5b3c182ef653cac7d527b64d82d2cef'
+  checksumType   = 'sha256'
+}
 
-if (Test-Path "$desktop\Cameyo.lnk") {Remove-Item "$desktop\Cameyo.lnk"}
+Get-ChocolateyWebFile @packageArgs
 
-Rename-Item "$desktop\Cameyo.exe.lnk" "Cameyo.lnk"
+$desktop = [System.Environment]::GetFolderPath('Desktop')
 
+Install-ChocolateyShortcut `
+  -ShortcutFilePath "$desktop\Cameyo.lnk" `
+  -TargetPath $packageArgs.fileFullPath
 
 $startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))
 
-if (Test-Path "$startMenu\Programs\Cameyo.lnk") {Remove-Item "$startMenu\Programs\Cameyo.lnk"}
-
-Copy-Item "$desktop\Cameyo.lnk" "$startMenu\Programs\Cameyo.lnk"
+Install-ChocolateyShortcut `
+  -ShortcutFilePath "$startMenu\Programs\Cameyo.lnk" `
+  -TargetPath $packageArgs.fileFullPath

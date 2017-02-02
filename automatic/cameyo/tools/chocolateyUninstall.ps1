@@ -1,4 +1,6 @@
-﻿$desktop = [Environment]::GetFolderPath("Desktop")
+﻿$ErrorActionPreference = 'Stop';
+
+$desktop = [System.Environment]::GetFolderPath("Desktop")
 if (Test-Path "$desktop\Cameyo.lnk") {Remove-Item "$desktop\Cameyo.lnk"}
 
 $startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))
