@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://picard.musicbrainz.org/downloads/>
+and can be verified by doing the following:
+
+1. Download the following <ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-1.3.2.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 23C6B03D9BB722CCF704571D54255AB6F6F3CD8F0855AF01673A89ECF1E1221A
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/metabrainz/picard/blob/eeb586b392a5a7dc63d64ba697374ea37e6e122a/COPYING.txt>
