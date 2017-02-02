@@ -34,7 +34,10 @@ $packageArgs = @{
 $newInstallLocation = $packageArgs.unzipLocation = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyPath $newInstallLocation
+
+if (!$pp.DontAddToPath) {
+  Install-ChocolateyPath $newInstallLocation
+}
 
 $php_ini_path = $newInstallLocation + '/php.ini'
 
