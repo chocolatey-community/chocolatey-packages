@@ -30,6 +30,7 @@ function global:au_GetLatest {
     Win32Format = $data.Win32Format
     Win64Format = $data.Win64Format
     SoftwareName = 'Mozilla Firefox*ESR'
+    ReleaseNotes = "https://www.mozilla.org/en-US/firefox/$($data.Version)/releasenotes/"
   }
 }
 

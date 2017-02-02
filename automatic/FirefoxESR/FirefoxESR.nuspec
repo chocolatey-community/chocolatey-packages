@@ -17,16 +17,20 @@
     <description>
 Bringing together all kinds of awesomeness to make browsing better for you.
 
-This package installs Firefox ESR in the first language which matches this list:
+## Features
+- **Freedom is fast:** Go anywhere you want on the Web — with a quickness.
+- **Freedom is personal:** Enjoy the most built-in privacy tools of any browser.
+- **Freedom is yours:** people, not profit.
 
-1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`.
-  To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest-esr/README.txt.
-2. If Firefox is already installed: the same language as the already installed Firefox.
-3. The Windows system language where the Firefox package gets installed.
-4. If Firefox does not support the system language, it will fall back to “en-US”
-
-Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
-Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) package.
+## Notes
+- Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
+- Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) package.
+- This package installs Firefox ESR in the first language which matches this list:
+  1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`.
+     To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest-esr/README.txt.
+  2. If Firefox is already installed: the same language as the already installed Firefox.
+  3. The Windows system language where the Firefox package gets installed.
+  4. If Firefox does not support the system language, it will fall back to “en-US”
     </description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
@@ -38,6 +42,6 @@ Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) p
   </metadata>
     <files>
     <file src="tools\**" target="tools" />
-	<file src="..\Firefox\tools\helpers.ps1" target="tools" />
+    <file src="..\Firefox\tools\helpers.ps1" target="tools" />
   </files>
 </package>

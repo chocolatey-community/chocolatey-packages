@@ -70,11 +70,21 @@ function SearchAndReplace() {
     }
   }
 
-  @{
+  $result = @{
     "$PackageDirectory\tools\chocolateyInstall.ps1" = $installReplacements
     "$PackageDirectory\tools\chocolateyUninstall.ps1" = @{
       "(?i)(^[$]packageName\s*=\s*)('.*')"      = "`$1'$($Data.PackageName)'"
       "(?i)(-SoftwareName\s*)('.*')"            = "`$1'$($Data.SoftwareName)*'"
     }
   }
+
+  if ($Latest.ReleaseNotes) {
+    $result += @{
+      "$PackageDirectory\$($Latest.PackageName).nuspec" = @{
+        "(?i)(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
+      }
+    }
+  }
+
+  $result
 }
