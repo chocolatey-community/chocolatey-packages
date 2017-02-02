@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cameyo</id>
-    <version>3.1.1427</version>
+    <version>3.1.1446</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cameyo</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Cameyo</title>
