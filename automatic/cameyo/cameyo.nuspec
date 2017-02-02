@@ -24,6 +24,12 @@ Cameyo's virtualization technology is about bringing entire application environm
 Simplicity, Light weight &amp; performance, Cloud.
 
 The idea of Cameyo was born by thinking about how Windows applications should be like in today's era of Internet and mobility. Since its first release, the product has been through an average of 1 new major version each year, and 2-3 minor versions yearly. Each major version brings considerable improvements.
+
+## Features
+- Package virtual applications on your machine
+- Edit and optimize Cameyo packages
+- Stream applications to your machine within seconds
+- Unleash advanced features with our open-source Package Editor
     </description>
     <releaseNotes>http://www.cameyo.com/version-history</releaseNotes>
   </metadata>
