@@ -15,6 +15,9 @@ function GetVersionAndUrlFormats() {
     Version = $url -split '[-&]' | select -last 1 -skip 3
     Win32Format = $url
   }
+  if ($result.Version.EndsWith('esr')) {
+    $result.Version = $result.Version.TrimEnd('esr')
+  }
   if ($Supports64Bit) {
     $result += @{
       Win64Format = $url -replace 'os=win','os=win64'
@@ -28,10 +31,14 @@ function CreateChecksumsFile() {
     [string]$ToolsDirectory,
     [string]$ExecutableName,
     [string]$Version,
-    [string]$Product
+    [string]$Product,
+    [switch]$ExtendedRelease
   )
-
-  $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/$Product/releases/$Version/SHA512SUMS"
+  if ($ExtendedRelease) {
+    $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/$Product/releases/${Version}esr/SHA512SUMS"
+  } else {
+    $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/$Product/releases/$Version/SHA512SUMS"
+  }
 
   $reOpts = [System.Text.RegularExpressions.RegexOptions]::Multiline `
     -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase

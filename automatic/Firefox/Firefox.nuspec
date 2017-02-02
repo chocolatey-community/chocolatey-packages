@@ -26,6 +26,7 @@ This package installs Firefox in the first language which matches this list:
 4. If Firefox does not support the system language, it will fall back to “en-US”
 
 Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
+Looking for Firefox Extended Support Release? Install the [FirefoxESR](/packages/FirefoxESR) package.
     </description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
