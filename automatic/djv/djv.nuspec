@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>djv</id>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/djv</packageSourceUrl>
     <owners>chocolatey, Redsandro</owners>
     <title>DJV Imaging</title>
