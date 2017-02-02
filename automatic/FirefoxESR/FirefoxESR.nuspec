@@ -5,7 +5,7 @@
     <version>0.0</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/organizations/</projectUrl>
-    <projectSourceUrl>https://dxr.mozilla.org/comm-central/source/</projectSourceUrl>
+    <projectSourceUrl>https://hg.mozilla.org/mozilla-central/</projectSourceUrl>
     <docsUrl>https://developer.mozilla.org/en-US/Firefox</docsUrl>
     <bugTrackerUrl>https://bugzilla.mozilla.org/</bugTrackerUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/firefox.png</iconUrl>
