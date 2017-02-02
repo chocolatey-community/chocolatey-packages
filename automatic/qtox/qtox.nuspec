@@ -4,7 +4,7 @@
   <metadata>
     <id>qtox</id>
     <title>qTox</title>
-    <version>1.4.1.1</version>
+    <version>0.0</version>
     <authors>qTox developers</authors>
     <owners>chocolatey</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
@@ -46,6 +46,7 @@ This package will always install the latest version of qTox, regardless of the p
     <releaseNotes>https://github.com/qTox/qTox/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
