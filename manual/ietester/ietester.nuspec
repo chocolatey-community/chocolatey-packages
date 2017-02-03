@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ietester</id>
-    <version>0.5.4.20170201</version>
+    <version>0.5.4.20170203</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/ietester</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>IETester</title>
