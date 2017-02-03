@@ -8,7 +8,16 @@
     <authors>PHP Authors</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
-    <description>PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.</description>
+    <description>PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
+
+## Package Parameters
+- `/DontAddToPath` - Do not add install directory to path
+- `/InstallDir:`   - Override the installation directory (needs to be specified both during install and update, until it is remembered by choco)
+- `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
+
+These parameters can be passed to the installer with the use of --params.
+For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
+    </description>
     <projectUrl>http://www.php.net/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/php</packageSourceUrl>
     <tags>php development programming foss cross-platform admin</tags>
@@ -21,7 +30,8 @@
     <projectSourceUrl>http://git.php.net</projectSourceUrl>
     <dependencies>
       <dependency id="chocolatey" version="0.9.10" />
-      <dependency id="vcredist2015" />
+      <dependency id="vcredist2015" version="14.0" />
+      <dependency id="chocolatey-core.extension" version="1.0.5" />
     </dependencies>
   </metadata>
   <files>

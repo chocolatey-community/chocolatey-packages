@@ -1,0 +1,2 @@
+threadsafe|http://windows.php.net//downloads/releases/php-7.1.1-Win32-VC14-x86.zip|http://windows.php.net//downloads/releases/php-7.1.1-Win32-VC14-x64.zip|7adcb74d596b0f9ebe2d7e661389a3ff18d74eb196720ba1f18d848d3d5dd557|fe42a78c96ae8d4343a39e4f858e19af10b4118d1b77a25ed29c1a3301f07098
+not-threadsafe|http://windows.php.net//downloads/releases/php-7.1.1-nts-Win32-VC14-x86.zip|http://windows.php.net//downloads/releases/php-7.1.1-nts-Win32-VC14-x64.zip|8f5e76646cdf5f467ff66edaba74c483856c266d891df4bf54b9a1477b204098|f01024e53da0ff4284c3585553e44805237c7e04fcf7c0b074658f52e633df83
