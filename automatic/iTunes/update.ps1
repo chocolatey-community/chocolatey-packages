@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ﻿Import-Module AU
-=======
-Import-Module AU
->>>>>>> (itunes) Added AU update script
 
 $releases     = 'https://www.apple.com/itunes/download/'
 $softwareName = 'iTunes'
