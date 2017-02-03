@@ -1,4 +1,5 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\extensions\extensions.psm1"
 
 $releases     = 'https://www.apple.com/itunes/download/'
 $softwareName = 'iTunes'
