@@ -14,12 +14,12 @@ $packageArgs = @{
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 2010, 1641)
-  unzipLocation = Get-PackageCacheLocation
+  unzipLocation  = Get-PackageCacheLocation
 }
 
 $app = Get-UninstallRegistryKey -SoftwareName $packageArgs.softwareName | select -first 1
 
-if ($app -and ([version]$app.Version -ge [version]$version)) {
+if ($app -and ([version]$app.DisplayVersion -ge [version]$version) -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "iTunes $version or higher is already installed."
   Write-Host "No need to download and install again"
   return;
@@ -37,4 +37,4 @@ foreach ($msiFile in $msiFileList) {
   Install-ChocolateyInstallPackage @packageArgs
 }
 
-Remove-Item $packageArgs.unzipLocation -Recurse
+Remove-Item $packageArgs.unzipLocation -Recurse -Force -ea 0
