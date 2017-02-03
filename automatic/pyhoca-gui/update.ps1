@@ -1,7 +1,9 @@
 ﻿Import-Module AU
+. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
 $releases     = 'http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/'
 $softwareName = 'PyHoca-GUI'
+$padVersionUnder = '0.5.1'
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -Algorithm sha256
@@ -51,7 +53,7 @@ function global:au_GetLatest {
 
   @{
     URL32 = $url32
-    Version = $version32
+    Version = Get-Padded-Version $version32 $padVersionUnder -RevisionLength 4
     VerifyChecksum32 = $checksum32
     VersionReleaseUrl = $releases + $versionDir
   }

@@ -2,7 +2,7 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$filePath = "$toolsPath\PyHoca-GUI_0.4.0.4_win32-setup_x32.exe"
+$filePath = "$toolsPath\PyHoca-GUI_0.5.0.4-20150125_win32-setup_x32.exe"
 
 $packageArgs = @{
   packageName    = 'pyhoca-gui'
