@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>avidemux</id>
-    <version>2.6.17</version>
+    <version>2.6.18</version>
     <title>Avidemux</title>
     <authors>Mean, Gruntster, Fahr</authors>
     <owners>chocolatey, purity</owners>
@@ -17,7 +17,7 @@ Avidemux is a free video editor designed for simple cutting, filtering and encod
 Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the GNU GPL license. The program was written from scratch by Mean, but code from other people and projects has been used as well. Patches, translations and even bug reports are always welcome.
     </description>
     <summary>Video editor</summary>
-    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.6.17/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.6.18/</releaseNotes>
     <copyright>2001-2016 Mean</copyright>
     <tags>video editor foss cross-platform cutting filtering encoding admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
