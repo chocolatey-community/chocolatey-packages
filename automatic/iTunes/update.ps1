@@ -20,21 +20,26 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $iframeLink = $download_page.AllElements | ? title -eq 'Please select a download.' | select -first 1 -expand src
+  $download_page.Content -match "\<iframe src=`"([^`"]+)`"[^\>\/]+title=`"Please select a download" | Out-Null
+  $iframeLink = $Matches[1]
+  $Matches = $null
 
-  $download_page = Invoke-WebRequest -Uri $iframeLink
+  $download_page = Invoke-WebRequest -Uri $iframeLink -UseBasicParsing
 
-  $re = 'iTunesSetup\.exe$'
-  $url32 = $download_page.InputFields | ? value -match $re | select -first 1 -expand value
+  $download_page.Content -match "[`"'](https:\/\/[^`"']+iTunesSetup\.exe)[`"']" | Out-Null
+  $url32 = $Matches[1]
+  $Matches = $null
 
-  $re = 'iTunes6464Setup\.exe$'
-  $url64 = $download_page.InputFields | ? value -match $re | select -first 1 -expand value
 
-  $re = '^iTunes ([\d\.]+) for Windows'
-  $versionLink = $download_page.InputFields | ? value -match $re | select -first 1 -expand value
-  if ($versionLink) {
+  $download_page.Content -match "[`"'](https:\/\/[^`"']+iTunes6464Setup\.exe)[`"']" | Out-Null
+  $url64 = $Matches[1]
+  $Matches = $null
+
+  $re = "[`"']iTunes ([\d\.]+) for Windows"
+  $download_page.Content -match $re
+  if ($Matches) {
     $version = $Matches[1]
   }
 
