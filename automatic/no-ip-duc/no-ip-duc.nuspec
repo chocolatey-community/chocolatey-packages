@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>No-IP DUC (Dynamic Update Client)</title>
+    <id>no-ip-duc</id>
+    <version>4.1.1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/no-ip-duc</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>No-IP DUC (Dynamic Update Client)</title>
     <authors>No-IP</authors>
     <projectUrl>http://www.noip.com/downloads.php?page=win</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/no-ip-duc.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e10d54a324b6e69d75aaecd061772762d27c68ba/icons/no-ip-duc.png</iconUrl>
+    <copyright>©1999-2017 • No-IP.com • All Rights Reserved.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.noip.com/support/knowledgebase/installing-the-windows-4-x-dynamic-update-client-duc/</docsUrl>
+    <tags>no-ip-duc no-ip dns dyndns dynamic-dns admin</tags>
+    <summary>Keep your current IP address in sync with your No-IP host</summary>
     <description>
 Keep your current IP address in sync with your No-IP host or domain with the Dynamic Update Client (DUC). The dynamic DNS update client continually checks for IP address changes in the background and automatically updates the DNS at No-IP whenever it changes.
+
+## Features
+- **Secure Key Based Updates:** Our secure DUC does not resend your No-IP credentials each time it sends an IP address update, instead it sends a unique key for username and password for your specific Dynamic Update Client.
+- **Client Tracking:** This feature allows you to see a list of each location where you have DUC installed. You can also set each update Client ID to a custom name for example home, work, client name, etc to help keep track of each.
+- **Host Creation (Plus &amp; Enhanced Users):** If you are an Enhanced Dynamic DNS or Plus Managed DNS customer, you are able to easily add hostnames directly from the Dynamic Update Client.
+- **Runs When Logged Out:** If your computer is running, your hostname will still be updated when your IP address changes.
+- **Notifications:** Receive notifications when a service is about to expire, or if we send out an important network update.
     </description>
-    <summary>Keep your current IP address in sync with your No-IP host</summary>
-    <releaseNotes />
-    <copyright />
-    <language>en-US</language>
-    <tags>no-ip dns dyndns dynamic-dns admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
