@@ -19,7 +19,7 @@ These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     </description>
     <projectUrl>http://www.php.net/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/php</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/php_5.6.x</packageSourceUrl>
     <tags>php development programming foss cross-platform admin</tags>
     <licenseUrl>http://us.php.net/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -29,8 +29,7 @@ For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     <docsUrl>https://secure.php.net/docs.php</docsUrl>
     <projectSourceUrl>http://git.php.net</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey" version="0.9.10" />
-      <dependency id="vcredist2015" version="14.0" />
+      <dependency id="vcredist2012" version="11.0" />
       <dependency id="chocolatey-core.extension" version="1.0.5" />
     </dependencies>
   </metadata>
