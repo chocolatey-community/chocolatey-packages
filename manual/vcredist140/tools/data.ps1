@@ -15,7 +15,7 @@ $uninstallData = @{
 }
 
 $otherData = @{
-    Version = [version]'14.0.23026.0'
-    DllName = 'vcruntime140.dll'
+    ThreePartVersion = [version]'14.0.23026'
+    FamilyRegistryKey = '14.0'
     PackageName = 'vcredist140'
 }

@@ -37,118 +37,63 @@ $runtimes = @{
     'x86' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData32; Applicable = $true }
 }
 
-Write-Verbose 'Analyzing uninstall information in the registry'
-Set-StrictMode -Off
-[array] $uninstallKeys = Get-UninstallRegistryKey @uninstallData
-Set-StrictMode -Version 2
-[array] $filteredUninstallKeys = $uninstallKeys | Where-Object { $_ -ne $null -and ($_.PSObject.Properties['SystemComponent'] -eq $null -or $_.SystemComponent -eq 0) }
-foreach ($uninstallKey in $filteredUninstallKeys)
-{
-    if ($uninstallKey -eq $null)
-    {
-        # this might happen on PS 2.0
-        continue
-    }
-
-    if ($uninstallKey.DisplayName -match '\((x((86)|(64)))\)')
-    {
-        $arch = $matches[1]
-        $runtimes[$arch].RegistryPresent = $true
-        Write-Verbose "Uninstall information for runtime for architecture $arch is present in the registry"
-        if ($uninstallKey.PSObject.Properties['DisplayVersion'] -ne $null)
-        {
-            $versionString = $uninstallKey.DisplayVersion
-            try
-            {
-                $runtimes[$arch].RegistryVersion = [version]$versionString
-                Write-Verbose "Version of installed runtime for architecture $arch in the registry: $versionString"
-            }
-            catch
-            {
-                Write-Warning "The uninstall information in the registry is in an unknown format. Please report this to package maintainers. Data from the registry: DisplayVersion = [$versionString]"
-            }
-        }
-    }
-    else
-    {
-        Write-Warning "The uninstall information in the registry is in an unknown format. Please report this to package maintainers. Data from the registry: DisplayName = [$($uninstallKey.DisplayName)]"
-    }
-}
-
 switch ([string](Get-ProcessorBits))
 {
-    '32' { $pathVariants = @{ x86 = "$Env:SystemRoot\System32"; x64 = $null } }
-    '64' { $pathVariants = @{ x86 = "$Env:SystemRoot\SysWOW64"; x64 = "$Env:SystemRoot\System32" } }
+    '32' { $registryRoots = @{ x86 = 'HKLM:\SOFTWARE'; x64 = $null } }
+    '64' { $registryRoots = @{ x86 = 'HKLM:\SOFTWARE\WOW6432Node'; x64 = 'HKLM:\SOFTWARE' } }
     default { throw "Unsupported bitness: $_" }
 }
 
-Write-Verbose 'Analyzing version of DLLs present on the system'
-foreach ($archAndPath in $pathVariants.GetEnumerator())
+Write-Verbose 'Analyzing servicing information in the registry'
+foreach ($archAndRegRoot in $registryRoots.GetEnumerator())
 {
-    $arch = $archAndPath.Key
-    $path = $archAndPath.Value
-    if ($path -eq $null)
+    $arch = $archAndRegRoot.Key
+    $regRoot = $archAndRegRoot.Value
+    # https://docs.microsoft.com/en-us/cpp/ide/redistributing-visual-cpp-files
+    $regData = Get-ItemProperty -Path "$regRoot\Microsoft\DevDiv\vc\Servicing\$($otherData.FamilyRegistryKey)\RuntimeMinimum" -Name 'Version' -ErrorAction SilentlyContinue
+    if ($regData -ne $null)
     {
-        continue
-    }
-
-    # the runtime consists of several DLLs, but all of them have the same version, so pick one
-    $dllName = $otherData.DllName
-    Write-Verbose "Determining presence of $dllName for architecture $arch"
-    $dll = Get-Item -Path (Join-Path -Path $path -ChildPath $dllName) -ErrorAction SilentlyContinue
-    if ($dll -eq $null -or $dll.VersionInfo -eq $null -or $dll.VersionInfo.ProductVersion -eq $null)
-    {
-        Write-Verbose "$dllName for architecture $arch is not present or does not contain version information"
-        continue
-    }
-
-    Write-Verbose "$dllName for architecture $arch is present ($($dll.FullName))"
-    $versionString = $dll.VersionInfo.ProductVersion
-    try
-    {
-        $runtimes[$arch].DllVersion = [version]$versionString
-        Write-Verbose "Version of $dllName architecture ${arch}: $versionString"
-    }
-    catch
-    {
-        Write-Warning "The $dllName version info is in an unknown format. Please report this to package maintainers. Data from the DLL: ProductVersion = [$versionString]"
+        $versionString = $regData.Version
+        try
+        {
+            $parsedVersion = [version]$versionString
+            Write-Verbose "Version of installed runtime for architecture $arch in the registry: $versionString"
+            $normalizedVersion = [version]($parsedVersion.ToString(3)) # future-proofing in case Microsoft starts putting more than 3 parts here
+            $runtimes[$arch].RegistryVersion = $normalizedVersion
+        }
+        catch
+        {
+            Write-Warning "The servicing information in the registry is in an unknown format. Please report this to package maintainers. Data from the registry: Version = [$versionString]"
+        }
     }
 }
 
-Write-Verbose "Version number of runtime installed by this package: $($otherData.Version)"
+$packageRuntimeVersion = $otherData.ThreePartVersion
+Write-Verbose "Version number of runtime installed by this package: $packageRuntimeVersion"
 foreach ($archAndRuntime in $runtimes.GetEnumerator())
 {
     $arch = $archAndRuntime.Key
     $runtime = $archAndRuntime.Value
 
-    # The runtime should be installed if (both conditions must be met):
-    # - there is no uninstall information in the registry or version in the registry is lower than installed by this package,
-    # - the DLL does not exist or its version is not higher than installed by this package.
-    # This logic handles the following cases:
-    # 1) when the runtime is uninstalled, DLLs may be left behind on disk (so we need to look at uninstall info in the registry, or rather lack of it)
-    # 2) later releases of the runtime may change the uninstall DisplayName (2015 -> vNext -> (probably) 2017),
-    #    so the package will not detect uninstall information from a later or earlier "generation" (so we need to look at DLL version to detect if a newer release is installed)
-    # The overall idea is to allow upgrades, disallow downgrades (unless forced by the user) and prevent unnecessary download and reinstall if the exact version is already installed.
-    $laterDllVersionPresent = $runtime.DllVersion -ne $null -and $runtime.DllVersion -gt $otherData.Version
-    $shouldInstall = -not $laterDllVersionPresent -and (-not $runtime.RegistryPresent -or $runtime.RegistryVersion -eq $null -or $runtime.RegistryVersion -lt $otherData.Version)
-    Write-Verbose "Runtime for architecture $arch applicable: $($runtime.Applicable); present in registry: $($runtime.RegistryPresent); version in registry: [$($runtime.RegistryVersion)]; version of DLL: [$($runtime.DllVersion)]; should install: $shouldInstall"
+    $shouldInstall = $runtime.RegistryVersion -eq $null -or $runtime.RegistryVersion -lt $packageRuntimeVersion
+    Write-Verbose "Runtime for architecture $arch applicable: $($runtime.Applicable); version in registry: [$($runtime.RegistryVersion)]; should install: $shouldInstall"
     if ($runtime.Applicable)
     {
         if (-not $shouldInstall)
         {
             if ($force)
             {
-                Write-Warning "Forcing installation of runtime for architecture $arch version $($otherData.Version) even though this or later version appears present, because 'Force' was specified in package parameters."
+                Write-Warning "Forcing installation of runtime for architecture $arch version $packageRuntimeVersion even though this or later version appears present, because 'Force' was specified in package parameters."
             }
             else
             {
-                if ($laterDllVersionPresent)
+                if ($runtime.RegistryVersion -gt $packageRuntimeVersion)
                 {
-                    Write-Warning "Skipping installation of runtime for architecture $arch version $($otherData.Version) because a newer DLL version ($($runtime.DllVersion)) is present."
+                    Write-Warning "Skipping installation of runtime for architecture $arch version $packageRuntimeVersion because a newer version ($($runtime.RegistryVersion)) is installed."
                 }
                 else
                 {
-                    Write-Host "Runtime for architecture $arch version $($otherData.Version) is already installed."
+                    Write-Host "Runtime for architecture $arch version $packageRuntimeVersion is already installed."
                 }
 
                 continue
