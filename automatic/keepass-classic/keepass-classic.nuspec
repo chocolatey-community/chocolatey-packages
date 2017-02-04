@@ -40,6 +40,14 @@ KeePass is a free open source password manager, which helps you to manage your p
 - [Plugin Architecture](http://keepass.info/features.html#lnkplugins)
 - [Open Source!](http://keepass.info/features.html#lnkopensrc)
 
+## Parameters
+- `/DisableFileAssoc` - Do not associate KeePass with the .kbd file extension
+- `/DesktopIcon` - Create an icon on the Current Users Desktop
+- `/QuickLaunchIcon` - Create an icon on the Current Users Quick Launch bar (only available for Windows 7)
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/DisableFileAssoc /DesktopIcon /QuickLaunchIcon"'`
+
 ## Notes
 - This is the classic version of KeePass. If you're looking for the 2.x version (also known as *KeePass Professional Edition*), install [keepass](/packages/keepass) instead.
 - Looking for the source code of KeePass classic? Click the project source url and look for the file ending with `-Src.zip`
