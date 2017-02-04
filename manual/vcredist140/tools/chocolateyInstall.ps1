@@ -89,7 +89,7 @@ foreach ($archAndRuntime in $runtimes.GetEnumerator())
             {
                 if ($runtime.RegistryVersion -gt $packageRuntimeVersion)
                 {
-                    Write-Warning "Skipping installation of runtime for architecture $arch version $packageRuntimeVersion because a newer version ($($runtime.RegistryVersion)) is installed."
+                    Write-Warning "Skipping installation of runtime for architecture $arch version $packageRuntimeVersion because a newer version ($($runtime.RegistryVersion)) is already installed."
                 }
                 else
                 {
