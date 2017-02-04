@@ -4,6 +4,14 @@ Import-Module "$PSScriptRoot\..\..\extensions\extensions.psm1"
 $releases     = 'https://www.apple.com/itunes/download/'
 $softwareName = 'iTunes'
 
+function global:au_BeforeUpdate {
+  $checksumType = 'sha256'
+  $Latest.ChecksumType32 = $Latest.ChecksumType64 = $checksumType
+
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $checksumType
+  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $checksumType
+}
+
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1"   = @{
@@ -51,4 +59,4 @@ function global:au_GetLatest {
   }
 }
 
-update
+update -ChecksumFor none
