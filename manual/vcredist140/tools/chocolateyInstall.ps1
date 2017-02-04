@@ -18,7 +18,7 @@ if ($version -ge [Version]'6.1' -and $version -lt [Version]'6.2' -and $os.Servic
 }
 
 $runtimes = @{
-    'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = (Get-ProcessorBits -eq 64) }
+    'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = (Get-ProcessorBits) -eq 64 }
     'x86' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData32; Applicable = $true }
 }
 
