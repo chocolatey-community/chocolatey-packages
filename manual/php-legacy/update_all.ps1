@@ -22,4 +22,6 @@ foreach ($folder in $folders) {
 $global:au_Force = $null
 
 git add "$PSScriptRoot"
-git commit -m "[PUSH $(($folders | % Name) -join ' ')]"
+if ($CreateCommitMessage) {
+  git commit -m "[PUSH $(($folders | % Name) -join ' ')]"
+}
