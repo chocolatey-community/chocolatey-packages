@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>iTunes</id>
-    <version>12.5.5</version>
+    <version>12.5.5.20170204</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/iTunes</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>iTunes</title>
     <authors>Apple Inc.</authors>
     <projectUrl>http://www.apple.com/itunes</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/955603901b9607a249d1d9375ef106a6a1c8dc77/icons/itunes.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/849eb1042625bdc77a95f0b92491857e9dfc326d/icons/itunes.png</iconUrl>
     <copyright>Apple Inc. All rights reserved.</copyright>
     <licenseUrl>http://www.apple.com/legal/terms/site.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
