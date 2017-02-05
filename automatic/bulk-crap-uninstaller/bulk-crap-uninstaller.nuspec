@@ -5,7 +5,7 @@
     <id>bulk-crap-uninstaller</id>
     <title>Bulk Crap Uninstaller</title>
     <owners>chocolatey</owners>
-    <version>3.7</version>
+    <version>3.7.1</version>
     <authors>Marcin Szeniak</authors>
     <summary>Bulk Crap Uninstaller is an open source program uninstaller.</summary>
     <description>
