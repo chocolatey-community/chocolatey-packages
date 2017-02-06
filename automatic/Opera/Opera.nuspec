@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Opera</id>
-    <version>42.0.2393.94</version>
+    <version>43.0.2442.806</version>
     <title>Opera</title>
     <owners>chocolatey</owners>
     <authors>Opera</authors>
