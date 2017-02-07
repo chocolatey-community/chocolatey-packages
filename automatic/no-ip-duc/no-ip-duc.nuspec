@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>no-ip-duc</id>
-    <version>4.1.1</version>
+    <version>4.1.1.20170207</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/no-ip-duc</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>No-IP DUC (Dynamic Update Client)</title>
