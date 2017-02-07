@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>djv</id>
-    <version>1.0.5.20170203</version>
+    <version>1.1.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/djv</packageSourceUrl>
     <owners>chocolatey, Redsandro</owners>
     <title>DJV Imaging</title>
@@ -28,6 +28,9 @@ DJV Imaging provides professional movie playback software for film production, V
 * Plays both image sequences and movies
 * Works with industry standard file formats including Cineon, DPX, OpenEXR, and QuickTime
 * Includes command line utilities for batch processing
+
+## Notes
+* This package no longer support 32-bit Operating Systems, install version 1.0.5.20170203 or earlier if you have a need for 32-bit
     </description>
     <releaseNotes>http://djv.sourceforge.net/djvChangeList.html</releaseNotes>
     <dependencies>
