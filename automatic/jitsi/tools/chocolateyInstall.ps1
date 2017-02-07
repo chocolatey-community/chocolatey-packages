@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'jitsi'
   fileType               = 'MSI'
-  url                    = 'https://download.jitsi.org/jitsi/msi/jitsi-2.8.5426-x86.msi'
-  url64bit               = 'https://download.jitsi.org/jitsi/msi/jitsi-2.8.5426-x64.msi'
-  checksum               = '015de91cf5c89335908b17020bddfae436e6cf8bcb490f3ddc8183fb20d195ee'
-  checksum64             = 'da8a85a039e62ef4563c3d576c4d2e12ed84db29bfd1bcec8b0e523776a5b358'
+  url                    = 'https://download.jitsi.org/jitsi/msi/jitsi-2.10.5550-x86.msi'
+  url64bit               = 'https://download.jitsi.org/jitsi/msi/jitsi-2.10.5550-x64.msi'
+  checksum               = 'f0aabb9f32e93183d6845f5b5d9e2f1f8b531133c92f3a26bf539a87f16b4572'
+  checksum64             = 'cf0afa658974af2ffc2683497419ba03a68448d69d3f972b0d29c89c629d0442'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/passive'

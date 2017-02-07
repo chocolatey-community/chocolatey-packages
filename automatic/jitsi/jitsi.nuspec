@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>jitsi</id>
-    <version>2.8.5426</version>
+    <version>2.10.5550</version>
     <title>Jitsi</title>
     <owners>chocolatey</owners>
     <authors>Emil Ivov and others</authors>
