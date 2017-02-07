@@ -5,7 +5,7 @@
     <id>patch-my-pc</id>
     <version>3.0.3.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/patch-my-pc</packageSourceUrl>
-    <owners>chocolatey, , Redsandro</owners>
+    <owners>chocolatey, Redsandro</owners>
     <title>Patch my PC</title>
     <authors>Patch My PC</authors>
     <projectUrl>http://patchmypc.net/</projectUrl>
