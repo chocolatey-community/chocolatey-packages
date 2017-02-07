@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>yo</id>
+    <title>Yeoman</title>
+    <version>1.8.5</version>
+    <authors>The Yeoman Team</authors>
+    <owners>chocolatey, Pascal Berger</owners>
+    <summary>CLI tool for running Yeoman generators</summary>
+    <description>
+Yeoman is a generic scaffolding system allowing the creation of any kind of app.
+It allows for rapidly getting started on new projects and streamlines the maintenance of existing projects.
+
+Yeoman is language agnostic.
+It can generate projects in any language (Web, Java, Python, C#, etc.)
+
+Yeoman by itself doesn't make any decisions.
+Every decision is made by generators which are basically plugins in the Yeoman environment.
+There's a [lot of publicly available generators](http://yeoman.io/generators/) and its easy to [create a new one](http://yeoman.io/authoring/) to match any workflow.
+Yeoman is always the right choice for your scaffolding needs.
+    </description>
+    <projectUrl>http://yeoman.io/</projectUrl>
+    <projectSourceUrl>https://github.com/yeoman/yo</projectSourceUrl>
+    <docsUrl>http://yeoman.io/learning/</docsUrl>
+    <bugTrackerUrl>https://github.com/yeoman/yo/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/yo</packageSourceUrl>
+    <tags>nodejs node javascript web foss cross-platform cli</tags>
+    <licenseUrl>https://opensource.org/licenses/bsd-license.php/</licenseUrl>
+    <copyright>© Google</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9e732d13804ce0097f9c52c080241edc560acbf9/icons/yo.png</iconUrl>
+    <releaseNotes>https://github.com/yeoman/yo/releases</releaseNotes>
+    <dependencies>
+      <dependency id="nodejs" version="0.12.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
