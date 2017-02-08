@@ -3,7 +3,7 @@
   <metadata>
     <id>7zip.commandline</id>
     <title>[Deprecated] 7-Zip (Portable, CommandLine)</title>
-    <version>16.02.0.20170114</version>
+    <version>16.02.0.20170209</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
