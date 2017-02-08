@@ -36,7 +36,7 @@ function Get-InstallComponents( [HashTable]$pp )
     if ( !$isSystem ) { $res += "icons\quicklaunch" }
 
     if ($res.Length -eq 0) { return }
-    $res = '/COMPONENTS="{0}"' -f ($res -join ",")
+    return '/COMPONENTS="{0}"' -f ($res -join ",")
 }
 
 function Stop-GitSSHAgent()
