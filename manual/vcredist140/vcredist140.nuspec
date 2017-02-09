@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.0.23026.0</version>
+    <version>14.0.23506.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist140</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
-    <title>Microsoft Visual C++ Redistributable for Visual Studio 2015 RTM</title>
+    <title>Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 1</title>
     <authors>Microsoft</authors>
-    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=48145</projectUrl>
+    <projectUrl>https://blogs.msdn.microsoft.com/vcblog/2015/12/01/visual-studio-2015-update-1-is-here/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b97fb59ed6ea38ebd16f90ea8789aa77fdb8e4d0/icons/vcredist140.png</iconUrl>
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
@@ -16,10 +16,10 @@
     <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
     <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
     <tags>microsoft visual c++ redistributable 140 2015 admin</tags>
-    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2015</summary>
-    <description>Microsoft Visual C++ Redistributable for Visual Studio 2015 installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015 and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2015 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
+    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2015 Update 1</summary>
+    <description>Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 1 installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015 Update 1 and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2015 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
 
-The Visual C++ Redistributable for Visual Studio 2015 consists of files vcruntime140.dll, msvcp140.dll, vcomp140.dll, vcamp140.dll, mfc140.dll and other.
+The Visual C++ Redistributable for Visual Studio 2015 Update 1 consists of files vcruntime140.dll, msvcp140.dll, vcomp140.dll, vcamp140.dll, mfc140.dll and other.
 
 ## Notes
 
@@ -29,9 +29,9 @@ Note: on some systems, if KB2999226 is installed as a dependency of this package
     </description>
     <releaseNotes>
 ##### Software
-[Visual Studio 2015 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-rtm-vs)
+[Visual Studio 2015 Update 1 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update1-vs)
 ##### Package
-14.0.23026.0: Initial package release for Visual Studio 2015 RTM.
+14.0.23506.0: Initial package release for Visual Studio 2015 Update 1.
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.5" />
