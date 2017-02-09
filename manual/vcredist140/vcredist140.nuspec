@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.0.24212.0</version>
+    <version>14.0.24215.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist140</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
-    <title>Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 3 (with hotfix 2016-07-20)</title>
+    <title>Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 3 (with hotfix 2016-09-14)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://blogs.msdn.microsoft.com/vcblog/2016/06/28/visual-studio-2015-update-3-available-now/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b97fb59ed6ea38ebd16f90ea8789aa77fdb8e4d0/icons/vcredist140.png</iconUrl>
@@ -31,7 +31,7 @@ Note: on some systems, if KB2999226 is installed as a dependency of this package
 ##### Software
 [Visual Studio 2015 Update 3 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
 ##### Package
-14.0.24212.0: Initial package release for Visual Studio 2015 Update 3 with [hotfix 2016-07-20](https://msdn.microsoft.com/en-us/library/mt752379.aspx).
+14.0.24215.1: Initial package release for Visual Studio 2015 Update 3 with [hotfix 2016-09-14](https://msdn.microsoft.com/en-us/library/mt752379.aspx).
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.5" />
