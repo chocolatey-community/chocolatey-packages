@@ -17,44 +17,44 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*packageName\s*=\s*)('.*')"                        = "`$1'$($Latest.PackageName)'"
-        }
-
-        "$($Latest.PackageName)_5.6.x.nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-        }
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')"       = "`$1'$($Latest.PackageName)'"
     }
+    "$($Latest.PackageName)_5.6.x.nuspec" = @{
+      "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases
 
-    $re      = 'php-5\.6.+-nts.+\.zip$'
-    $url     = $download_page.links | ? href -match $re  | % href | select -First 2
-    $urlTS   = $url | % { $_ -replace '\-nts','' }
-    $version = $url[0] -split '-' | select -Index 1
-    $majorVersion = $version -split '\.' | select -first 1
-    $Result = @{
-        Version      = $version
-        URLNTS32     = "http://windows.php.net/" + ($url -match 'x86' | select -First 1)
-        URLNTS64     = "http://windows.php.net/" + ($url -match 'x64' | select -First 1)
-        URLTS32      = "http://windows.php.net/" + ($urlTS -match 'x86' | select -First 1)
-        URLTS64      = "http://windows.php.net/" + ($urlTS -match 'x64' | select -First 1)
-        ReleaseNotes = "https://secure.php.net/ChangeLog-${majorVersion}.php#${version}"
-        PackageName  = 'php'
-    }
+  $re      = 'php-5\.6.+-nts.+\.zip$'
+  $url     = $download_page.links | ? href -match $re  | % href | select -First 2
+  $urlTS   = $url | % { $_ -replace '\-nts','' }
+  $version = $url[0] -split '-' | select -Index 1
+  $majorVersion = $version -split '\.' | select -first 1
 
-    if ($Result.URLNTS32 -eq $Result.TS32) {
-      throw "The threadsafe and non-threadsafe 32bit url is equal... This is not expected"
-    }
+  $Result = @{
+    Version      = $version
+    URLNTS32     = "http://windows.php.net/" + ($url -match 'x86' | select -First 1)
+    URLNTS64     = "http://windows.php.net/" + ($url -match 'x64' | select -First 1)
+    URLTS32      = "http://windows.php.net/" + ($urlTS -match 'x86' | select -First 1)
+    URLTS64      = "http://windows.php.net/" + ($urlTS -match 'x64' | select -First 1)
+    ReleaseNotes = "https://secure.php.net/ChangeLog-${majorVersion}.php#${version}"
+    PackageName  = 'php'
+  }
 
-    if ($Result.URLNTS64 -eq $Result.TS64) {
-      throw "The threadsafe and non-threadsafe 64bit url is equal... This is not expected"
-    }
+  if ($Result.URLNTS32 -eq $Result.TS32) {
+    throw "The threadsafe and non-threadsafe 32bit url is equal... This is not expected"
+  }
 
-    $Result
+  if ($Result.URLNTS64 -eq $Result.TS64) {
+    throw "The threadsafe and non-threadsafe 64bit url is equal... This is not expected"
+  }
+
+  $Result
 }
 
 update -ChecksumFor none
