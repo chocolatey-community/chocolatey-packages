@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'wps-office-free'
 $regName = $packageName -replace('\-',' ')
@@ -8,11 +8,11 @@ $file = $registry.UninstallString
   
 # All arguments for the Uninstallation of this package
 $packageArgs = @{
-PackageName = $packageName
-FileType = 'exe'
-SilentArgs = '/S'
-validExitCodes = @(0)
-File = $file
+  PackageName = $packageName
+  FileType = 'exe'
+  SilentArgs = '/S'
+  validExitCodes = @(0)
+  File = $file
 }
   
 Uninstall-ChocolateyPackage @packageArgs
