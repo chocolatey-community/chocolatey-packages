@@ -34,7 +34,6 @@ It exists only for backward compatibility to provide a transitional dummy packag
     <docsUrl>http://www.7-zip.org/faq.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/sevenzip/discussion/45797/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
-    <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
     <dependencies>
       <dependency id="7zip.portable" />
     </dependencies>
