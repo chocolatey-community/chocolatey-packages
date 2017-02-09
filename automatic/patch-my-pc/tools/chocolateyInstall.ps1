@@ -4,7 +4,7 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
 # Combatibility - This function has not been merged
 if (!(Get-Command Install-ChocolateyPinnedItem -errorAction SilentlyContinue)) {
-  Import-Module "$($toolsDir)\Install-ChocolateyPinnedItem.ps1"
+  . "$toolsDir\helpers.ps1"
 }
 
 $packageArgs = @{
