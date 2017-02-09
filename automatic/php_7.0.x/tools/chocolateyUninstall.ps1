@@ -14,7 +14,6 @@ if ($installLocation) {
   }
 
   Uninstall-ChocolateyPath $installLocation
-
 } else {
   Write-Warning "$packageName install path was not found. It may already be uninstalled!"
 }
