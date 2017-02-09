@@ -5,7 +5,7 @@
     <id>fiddler4</id>
     <title>Fiddler</title>
     <owners>chocolatey</owners>
-    <version>4.6.20171.7553</version>
+    <version>4.6.20171.9220</version>
     <authors>Telerik</authors>
     <summary>Fiddler Web Debugging Proxy</summary>
     <description>
