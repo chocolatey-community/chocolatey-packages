@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>wps-office-free</id>
-    <version>10.1.0.5820</version>
+    <version>0.0</version>
     <title>WPS Office Free</title>
     <owners>chocolatey</owners>
     <authors>Kingsoft Software</authors>
@@ -13,7 +13,7 @@
     <description>
 WPS Office Free the perfect free office software. Your dream solution for a low-budget, no-commitment, free productivity office suite.
 The smallest size office suite consisting of Writer, Presentation, and Spreadsheets, plus PDF tools to fulfill all of your document needs.
-Includes a brand new Docer Templates page. 
+Includes a brand new Docer Templates page.
 Available in English, French, German, Spanish, Portuguese, Polish and Russian.
 
 ##Features

@@ -16,7 +16,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
 }
 
-if ( $registry.DisplayVersion -ge $version ) {
+if (($registry.DisplayVersion -ge $version) -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "The $registry.DisplayVersion is already installed."
 } else {
   Install-ChocolateyPackage @packageArgs
