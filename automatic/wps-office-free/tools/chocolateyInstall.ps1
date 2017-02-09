@@ -11,7 +11,7 @@ $packageArgs = @{
   url            = 'https://jump.wps.com/latest_package?distsrc=00100.00000103&lang=en'
   silentArgs     = '/S'
   validExitCodes = @(0)
-  softwareName   = 'WPS Office'
+  softwareName   = $regName
   checksum       = '1F2F28BE2A2E21D2CF0B3FA0E3196D2291470220A28645CADBCC55EECD936C3B'
   checksumType   = 'sha256'
 }
