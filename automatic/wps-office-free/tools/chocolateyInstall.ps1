@@ -12,7 +12,7 @@ $packageArgs = @{
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = $regName
-  checksum       = '1F2F28BE2A2E21D2CF0B3FA0E3196D2291470220A28645CADBCC55EECD936C3B'
+  checksum       = '1f2f28be2a2e21d2cf0b3fa0e3196d2291470220a28645cadbcc55eecd936c3b'
   checksumType   = 'sha256'
 }
 
