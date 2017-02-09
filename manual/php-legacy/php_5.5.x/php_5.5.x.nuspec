@@ -4,7 +4,7 @@
   <metadata>
     <id>php</id>
     <title>PHP (Hypertext Preprocessor)</title>
-    <version>7.1.1</version>
+    <version>0.0</version>
     <authors>PHP Authors</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
@@ -19,21 +19,22 @@ These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     </description>
     <projectUrl>http://www.php.net/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/php</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/php-legacy/php_5.5.x</packageSourceUrl>
     <tags>php development programming foss cross-platform admin</tags>
     <licenseUrl>http://us.php.net/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.1.1</releaseNotes>
+    <releaseNotes>https://secure.php.net/ChangeLog-5.php#5.5.38</releaseNotes>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg</iconUrl>
     <bugTrackerUrl>https://bugs.php.net/</bugTrackerUrl>
     <docsUrl>https://secure.php.net/docs.php</docsUrl>
     <projectSourceUrl>http://git.php.net</projectSourceUrl>
     <dependencies>
-      <dependency id="vcredist2015" version="14.0" />
+      <dependency id="vcredist2012" version="11.0" />
       <dependency id="chocolatey-core.extension" version="1.0.5" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="..\..\..\automatic\php\tools\helpers.ps1" target="tools" />
   </files>
 </package>

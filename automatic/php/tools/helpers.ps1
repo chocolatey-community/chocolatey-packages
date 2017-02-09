@@ -75,6 +75,9 @@ function UninstallPackage {
     $txtFile = Resolve-Path "$libDirectory\*.txt" | select -first 1
     $fileName = ($txtFile -split '\\' | select -last 1).TrimEnd('.txt')
     Uninstall-ChocolateyZipPackage -PackageName $packageName -ZipFileName $fileName
+    if (Test-Path $txtFile) {
+      Remove-Item -Force -ea 0 $txtFile
+    }
   }
 }
 
