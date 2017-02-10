@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist2017</id>
-    <version>14.10.24629.20170201-rc1</version>
+    <version>14.10.24911.0-rc5</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2017</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
-    <title>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC (2016-11-16)</title>
+    <title>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC (2017-01-27)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://blogs.msdn.microsoft.com/vcblog/2016/11/16/visual-studio-2017-rc-now-available/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8ca7bf823384fbe4b441650428cc0283a7eeb9a6/icons/vcredist2017.png</iconUrl>
@@ -21,19 +21,16 @@
 
 ## Notes
 
-The installer replaces the existing installation of the Visual Studio 2015 Redistributable (i.e. performs an in-place upgrade).
-
 [Supported Operating Systems](https://www.visualstudio.com/productinfo/visual-studio-15-system-requirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
     </description>
     <releaseNotes>
 ##### Software
 [Visual Studio 2017 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
 ##### Package
-14.10.24629.20170201-rc1: updated metadata
+14.10.24911.0-rc5: Initial package release for Visual Studio 2017 RC (2017-01-27).
     </releaseNotes>
     <dependencies>
-      <dependency id="KB3033929" version="1.0.0" /> <!-- for Win7 SP1/2008R2-->
-      <dependency id="KB2919355" version="1.0.20160915" /> <!-- for Win8.1/2012R2 -->
+      <dependency id="vcredist140" version="14.10.24911.0-rc5" />
     </dependencies>
   </metadata>
 </package>
