@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>free-virtual-keyboard</id>
@@ -25,7 +26,7 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
     <releaseNotes />
     <copyright>Comfort Software Group. All rights reserved.</copyright>
     <tags>on-screen keyboard freeware admin</tags>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
@@ -35,4 +36,3 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

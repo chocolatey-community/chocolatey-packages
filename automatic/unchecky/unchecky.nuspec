@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>unchecky</id>
     <title>Unchecky</title>
-    <version>1.0.1.20161027</version>
+    <version>1.0.2</version>
     <authors>RaMMicHaeL</authors>
     <owners>Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
@@ -31,4 +32,3 @@ __Unchecky aims to keep potentially unwanted programs out of your computer.__
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

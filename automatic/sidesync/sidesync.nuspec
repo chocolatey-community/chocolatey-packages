@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -15,7 +16,7 @@ Your Samsung Galaxy phone or tablet becomes an extension of your PC when the dev
     <copyright>1995–2014 SAMSUNG All Rights reserved.</copyright>
     <licenseUrl>https://www.samsung.com/us/common/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/sidesync.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/19caae85d0eb96020c2aed7b02208349d611b980/icons/sidesync.png</iconUrl>
     <dependencies>
       <dependency id="directx" version="9.0.0.0" />
     </dependencies>
@@ -26,4 +27,3 @@ Your Samsung Galaxy phone or tablet becomes an extension of your PC when the dev
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

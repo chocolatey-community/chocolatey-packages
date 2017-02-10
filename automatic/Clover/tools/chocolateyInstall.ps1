@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'clover'
   fileType               = 'EXE'
-  url                    = 'http://ejie.me/uploads/setup_clover@3.2.5.exe'
-  checksum               = '0e89aa0e385eeeb645f74a0a94c672fd4b2c9285942ef8755a4646e1dba9ca0c'
+  url                    = 'http://ejie.me/uploads/setup_clover@3.2.7.exe'
+  checksum               = 'f5868b375e5c8eab86fc5ded703af7b48970cf8a3af26be34f38d0de790c6edd'
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)

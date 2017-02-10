@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tipp10</id>
+    <version>2.1.0.20170126</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/tipp10</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>TIPP10</title>
+    <authors>Tom Thielicke IT Solutions</authors>
+    <projectUrl>https://www.tipp10.com/en/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e0c82fddfc50af5efc5aeb9c8b09b11592a3819/icons/tipp10.png</iconUrl>
+    <copyright>2006-2013 Tom Thielicke IT Solutions</copyright>
+    <licenseUrl>https://www.tipp10.com/en/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.tipp10.com/doc/html/en/index.html</docsUrl>
+    <bugTrackerUrl>https://www.tipp10.com/en/support/bugs/</bugTrackerUrl>
+    <tags>tipp10 typing keyboard 10-finger admin foss cross-platform</tags>
+    <summary>10-finger touch typing tutor</summary>
+    <description>
+TIPP10 is a free 10-finger touch typing tutor. TIPP10 is easy to use and features a clear user interface. Beginners and even children will find their way around right away so they can start practicing without a hitch. You will be able to learn touch typing quickly and efficiently with the program’s intelligent practice lessons, useful support functions and an extensive progress tracker. You can also play a typing game and expand the program with open lessons or make your own to meet your specific needs.
+
+## Features
+- Easy to use and for free
+- Intelligent text selection
+- Ticker and virtual assistance keyboard
+- Detailed results
+- Open lessons and using your own texts
+- Extensive customization
+
+## Notes
+- Their source code is downloadable from their download page located [here](https://www.tipp10.com/en/download/)
+    </description>
+    <releaseNotes>2013-05-28: fixed an error when current working directory was not writable
+2013-05-26: download link works now thanks to regex search and replace
+https://www.tipp10.com/en/news/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>cdburnerxp</id>
     <title>CDBurnerXP</title>
-    <version>4.5.7.6452</version>
+    <version>4.5.7.6521</version>
     <authors>Canneverbe Limited</authors>
     <owners>gep13, chocolatey</owners>
     <summary>CDBurnerXP - burn CDs and DVDs for free!</summary>
@@ -63,7 +63,7 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
     <copyright>2002-2012 Canneverbe Limitied</copyright>
     <licenseUrl>http://cdburnerxp.se/help/intro/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/cdburnerxp.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/cdburnerxp.png</iconUrl>
     <releaseNotes>https://cdburnerxp.se/en/development?full </releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdburnerxp</packageSourceUrl>
     <mailingListUrl>https://forum.cdburnerxp.se</mailingListUrl>

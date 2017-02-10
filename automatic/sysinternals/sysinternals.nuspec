@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>sysinternals</id>
@@ -27,10 +28,9 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
     <tags>sysinternals troubleshooting pstools psexec file disk utilities freeware cli tools</tags>
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/b1f1ca10bdbdb554ba80db4ccd9aa5332ae3d9df/icons/sysinternals.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a042fbe6c07391d0c2da13f638b1fdde474850f/icons/sysinternals.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- character encoding: “UTF-8” -->

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
@@ -17,7 +17,7 @@ Lightworks is Academy and Emmy award-winning, professional Non-Linear Editing (N
         <copyright></copyright>
         <licenseUrl>https://en.wikipedia.org/wiki/Freemium</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
         <dependencies>
             <dependency id="chocolatey-core.extension" version="1.0.4" />
         </dependencies>

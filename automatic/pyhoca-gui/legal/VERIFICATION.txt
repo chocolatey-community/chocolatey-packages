@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from their official download repository
+located at <http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/0.5.0.4-20150125/>
+and can be verified by doing the following:
+
+1. Download the following <http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/0.5.0.4-20150125/PyHoca-GUI_0.5.0.4-20150125_win32-setup.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 271E006F933DBD9059BF7A0187C2235C16215641B2E070EB4D468A6622206723
+
+The file 'LICENSE.txt' has been obtained from <http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=blob_plain;f=COPYING;hb=HEAD>

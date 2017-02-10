@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>The Magical Jelly Bean Keyfinder</title>
+    <id>keyfinder</id>
+    <version>2.0.10.12</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keyfinder</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>The Magical Jelly Bean Keyfinder</title>
     <authors>Magical Jelly Bean</authors>
-    <licenseUrl>http://www.magicaljellybean.com/tos/</licenseUrl>
     <projectUrl>http://www.magicaljellybean.com/keyfinder/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/keyfinder.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4d1b2ee166754abb43796875684dbf5be79b2635/icons/keyfinder.png</iconUrl>
+    <copyright>© 2017 Magical Jelly Bean. All Rights Reserved</copyright>
+    <licenseUrl>http://www.magicaljellybean.com/tos/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.magicaljellybean.com/keyfinder-faq/</docsUrl>
+    <tags>keyfinder product key license freeware</tags>
+    <summary>Retrieve product keys</summary>
     <description>
 The Magical Jelly Bean Keyfinder is a freeware utility that retrieves your Product Key (cd key) used to install windows from your registry. It also has a community-updated configuration file that retrieves product keys for many other applications. Another feature is the ability to retrieve product keys from unbootable Windows installations.
+
+## Features
+- 300+ Supported programs
+- Scan another or non-bootable Windows
+- Works with 64-bit systems
+- Recover serials for Windows 7, 8 and Office 2010
+- Save to: TXT, CSV
+- Free
+
+## Parameters
+- `/DesktopIcon` - Create an icon on the Current Users Desktop
+- `/QuickLaunchIcon` - Create an icon on the Current Users Quick Launch bar (only available for Windows 7)
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/DesktopIcon /QuickLaunchIcon"'`
     </description>
-    <summary>Retrieve product keys</summary>
-    <releaseNotes />
-    <copyright />
-    <language>en-US</language>
-    <tags>product key license</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

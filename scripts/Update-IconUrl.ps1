@@ -27,8 +27,12 @@
   Uses a stopwatch to time how long this script used to execute
 
 .PARAMETER Quiet
-  Write anything to Host
+  Do not write normal output to host.
   NOTE: Output from git and Write-Warning will still be available
+
+.PARAMETER ThrowErrorOnIconNotFound
+  Throw an error if a icon for the specified package is not found.
+  NOTE: Only available when updating a single icon.
 
 .OUTPUTS
   The number of packages that was updates,
@@ -89,7 +93,8 @@ param(
   [string]$RelativeIconDir = "../icons",
   [string]$PackagesDirectory = "../automatic",
   [switch]$UseStopwatch,
-  [switch]$Quiet
+  [switch]$Quiet,
+  [switch]$ThrowErrorOnIconNotFound
 )
 
 $counts = @{
@@ -133,6 +138,7 @@ function Replace-IconUrl{
   )
 
   $nuspec = gc "$NuspecPath" -Encoding UTF8
+
   $oldContent = ($nuspec | Out-String) -replace '\r\n?',"`n"
 
   $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$iconPath"
@@ -153,18 +159,31 @@ function Update-IconUrl{
     [string]$Name,
     [string]$IconName,
     [string]$IconDir,
-    [string]$GithubRepository
+    [string]$GithubRepository,
+    [bool]$Quiet
   )
 
   $possibleNames = @($Name);
   if ($IconName) { $possibleNames = @($IconName) + $possibleNames }
-  if ($Name.EndsWith('.install') -or $Name.EndsWith('.portable')) {
-    $index = $Name.LastIndexOf('.');
-    $possibleNames += @($Name.Substring(0, $index))
+
+  $validSuffixes = @(".install"; ".portable"; ".commandline")
+
+  $suffixMatch = $validSuffixes | ? { $Name.EndsWith($_) } | select -first 1
+
+  if ($suffixMatch) {
+    $possibleNames += $Name.TrimEnd($suffixMatch)
   }
 
   # Let check if the package already contains a url, and get the filename from that
   $content = gc "$PSScriptRoot/$PackagesDirectory/$Name/$Name.nuspec" -Encoding UTF8
+
+  if ($content | ? { $_ -match 'Icon(Url)?:\s*Skip( check)?' }) {
+    if (!($Quiet)) {
+      Write-Warning "Skipping icon check for $Name"
+    }
+    return;
+  }
+
   $content | ? { $_ -match "\<iconUrl\>(.+)\<\/iconUrl\>" } | Out-Null
   if ($Matches) {
     $url = $Matches[1]
@@ -210,14 +229,14 @@ if ($UseStopwatch) {
 }
 
 If ($Name) {
-  Update-IconUrl -Name $Name -IconName $IconName -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository;
+  Update-IconUrl -Name $Name -IconName $IconName -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet
 }
 else {
   $directories = Get-ChildItem -Path "$PSScriptRoot/$PackagesDirectory" -Directory;
 
   foreach ($directory in $directories) {
     if ((Test-Path "$($directory.FullName)/$($directory.Name).nuspec")) {
-      Update-IconUrl -Name $directory.Name -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository;
+      Update-IconUrl -Name $directory.Name -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet
     }
   }
 }
@@ -238,13 +257,15 @@ if ($counts.uptodate -gt 0 -and !$Quiet) {
 }
 if ($counts.missing -gt 1) {
   Write-Warning "$($counts.missing) icon(s) was not found!"
-  if (!$PrintMissingIcons) {
+  if (!$PrintMissingIcons -and !$Quiet) {
     $yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Hell Yeah"
     $no  = New-Object System.Management.Automation.Host.ChoiceDescription "&No","No WAY"
     $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
     [int]$defaultChoice = 1
     $message = "Do you want to view the package names?";
     $choice = $host.ui.PromptForChoice($caption, $message, $options, $defaultChoice);
+  } elseif($Quiet) {
+    $choice = 1
   } else {
     $choice = 0
   }
@@ -254,5 +275,9 @@ if ($counts.missing -gt 1) {
   }
 }elseif ($counts.missing -eq 1) {
   $package = $missingIcons[0]
-  Write-Warning "Unable to find icon url for $package"
+  if ($ThrowErrorOnIconNotFound) {
+    throw "Unable to find icon url for $package"
+  } else {
+    Write-Warning "Unable to find icon url for $package"
+  }
 }

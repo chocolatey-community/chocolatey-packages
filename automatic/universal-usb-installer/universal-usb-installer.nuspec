@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -8,7 +9,7 @@
     <authors>Pendrivelinux</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/universal-usb-installer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/universal-usb-installer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to choose from a selection of Linux Distributions to put on your USB Flash Drive. The Universal USB Installer is easy to use. Simply choose a Live Linux Distribution, the ISO file, your Flash Drive and, Click Install. Upon completion, you should have a ready to run bootable USB Flash Drive with your select operating system installed. Other features include; Persistence (if available) – note that casper persistence will only work with fat16 or fat32 formatted drives.
@@ -25,4 +26,3 @@ Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to c
     <file src="C:\Chocolatey\_work\universal-usb-installer.exe" target="tools\universal-usb-installer.exe" />
   </files>
 </package>
-<!-- “UTF-8” test -->

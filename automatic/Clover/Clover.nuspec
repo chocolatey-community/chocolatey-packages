@@ -1,10 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Clover</id>
     <title>Clover</title>
     <owners>chocolatey</owners>
-    <version>3.2.5</version>
+    <version>3.2.7.20170123</version>
     <authors>EJIE Technology</authors>
     <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
     <description>
@@ -19,7 +20,7 @@ After Clover is installed, you will be able to open multiple folders within the 
     <copyright></copyright>
     <licenseUrl>http://www.scribd.com/doc/164355290/License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/Clover.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf2b66066fc04a6517bbd7bfef76fe2653b5ff7c/icons/Clover.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Clover</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />
@@ -29,4 +30,3 @@ After Clover is installed, you will be able to open multiple folders within the 
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

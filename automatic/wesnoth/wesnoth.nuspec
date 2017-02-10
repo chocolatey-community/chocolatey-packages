@@ -1,28 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>The Battle for Wesnoth</title>
+    <id>wesnoth</id>
+    <version>1.12.6</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wesnoth</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>The Battle for Wesnoth</title>
     <authors>David White and others</authors>
-    <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
     <projectUrl>http://www.wesnoth.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/wesnoth.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/333ef9e0436d235bd3fa6b7ca2ed68cf799072d5/icons/wesnoth.png</iconUrl>
+    <copyright>2003–2016 The Battle for Wesnoth</copyright>
+    <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/wesnoth/wesnoth</projectSourceUrl>
+    <docsUrl>https://wiki.wesnoth.org/Support</docsUrl>
+    <mailingListUrl>https://forums.wesnoth.org/</mailingListUrl>
+    <bugTrackerUrl>https://gna.org/bugs/index.php?group=wesnoth&amp;set=custom&amp;report_id=101&amp;status_id=1&amp;chunksz=150&amp;boxoptionwanted=1</bugTrackerUrl>
+    <tags>wesnoth game strategy turn-based admin foss cross-platform</tags>
+    <summary>The Battle for Wesnoth is a turn-based tactical strategy game with a high fantasy theme.</summary>
     <description>
 The Battle for Wesnoth is a turn-based tactical strategy game with a high fantasy theme.
+Build up a great army, gradually turning raw recruits into hardened veterans. In later games, recall your toughest warriors and form a deadly host that none can stand against! Choose units from a large pool of specialists, and hand-pick a force with the right strengths to fight well on different terrains against all manner of opposition.
 
-Build up a great army, gradually turning raw recruits into hardened veterans. In later games, recall your toughest warriors and form a deadly host whom none can stand against! Choose units from a large pool of specialists, and hand-pick a force with the right strengths to fight well on different terrains against all manner of opposition.
+Wesnoth has many different sagas waiting to be played. Fight to regain the throne of Wesnoth, of which you are the legitimate heir... step into the boots of a young officer sent to guard a not-so-sleepy frontier outpost... lead a brutal quest to unite the orcish tribes... vanquish a horde of undead warriors unleashed by a foul necromancer, who also happens to have taken your brother hostage... guide a band of elvish survivors in an epic quest to find a new home... get revenge on the orcs by using the foul art of necromancy...
+There are at least two hundred unit types, sixteen races, six major factions, and hundreds of years of history. The world of Wesnoth is absolutely huge and only limited by your creativity — make your own custom units, create your own maps, and write your own scenarios or even full-blown campaigns. You can also challenge up to eight friends—or strangers—and fight in epic multiplayer fantasy battles.
+
+## Features
+- Build up a farmidable fighting force, starting from a single leader and a small amount of gold.
+- Over two hundred unit types in six major factions, all with distinctive abillities, weapons and spells.
+- Experienced units gain powerful new abillities as they advance.
+- Several multiplayer options available, including Internet play.
+- Scores of different custom-designed map and unlimited random maps.
+- Hundreds of campaign scenarios available for download through a simple in-game dialog.
+- *Fog of War* feature available for a true test of generalship.
+- Sophisticated markup language lets advanced users make their own maps, factions, or campaigns.
+- Excellent language support — 54 different languages currently available.
     </description>
-    <summary>The Battle for Wesnoth is a turn-based tactical strategy game with a high fantasy theme.</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>game strategy turn-based admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>https://raw.githubusercontent.com/wesnoth/wesnoth/master/changelog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

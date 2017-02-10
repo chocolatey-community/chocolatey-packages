@@ -20,7 +20,7 @@ The installation of this package is __not silent.__
         <copyright></copyright>
         <licenseUrl>http://www.disk-partition.com/license-agreement.html</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://raw.github.com/Redsandro/chocolatey/master/partitionassistant/img/passistant.64x64.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f6f98182519f22d27322e0f11de8342a0cbc5ed0/icons/partitionassistant.png</iconUrl>
             <dependencies></dependencies>
         <releaseNotes></releaseNotes>
       <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -8,7 +9,7 @@
     <authors>X-Moto Contributors</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://xmoto.tuxfamily.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/x-moto.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/x-moto.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 X-Moto is a free and open source 2D motocross platform game developed for Linux, FreeBSD, Mac OS X and Microsoft Windows, where physics play an all important role in the gameplay. The basic gameplay clones that of Elasto Mania, but the simulated physics are subtly different.
@@ -23,4 +24,3 @@ X-Moto is a free and open source 2D motocross platform game developed for Linux,
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

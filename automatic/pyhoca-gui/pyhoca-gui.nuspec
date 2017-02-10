@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <title>PyHoca-GUI</title>
+    <id>pyhoca-gui</id>
+    <version>0.5.0.4001</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pyhoca-gui</packageSourceUrl>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <title>PyHoca-GUI</title>
     <authors>Mike Gabriel and Dick Kniep</authors>
+    <projectUrl>http://wiki.x2go.org/doku.php/doc:usage:pyhoca-gui</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/pyhoca-gui.svg</iconUrl>
+    <copyright>2010-2013, Mike Gabriel and Dick Kniep</copyright>
+    <licenseUrl>http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=blob;f=COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=summary</projectSourceUrl>
+    <docsUrl>http://wiki.x2go.org/doku.php/doc:usage:pyhoca-gui</docsUrl>
+    <tags>pyhoca-gui x2go remote display admin foss</tags>
     <summary>PyHoca-GUI is designed as a very minimal GUI that behaves very similar to GNOME's network manager applet (nm-applet). It appears as a small Phoca icon (a little seal) that docks to your systray panel (also called notification area) and allows you to manage multiple X2go sessions simultaneously.</summary>
     <description>
 PyHoca-GUI is designed as a very minimal GUI that behaves very similar to GNOME's network manager applet (nm-applet). It appears as a small Phoca icon (a little seal) that docks to your systray panel (also called notification area) and allows you to manage multiple X2go sessions simultaneously.
     </description>
-    <projectUrl>http://wiki.x2go.org/doku.php/doc:usage:pyhoca-gui</projectUrl>
-    <tags>x2go remote display admin</tags>
-    <copyright>2010-2013, Mike Gabriel and Dick Kniep</copyright>
-    <licenseUrl>http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=blob_plain;f=LICENSE.txt;hb=HEAD</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>Please refer to http://code.x2go.org/gitweb?p=pyhoca-gui.git;a=history;f=debian/changelog for changelogs.</releaseNotes>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/pyhoca-gui.svg</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1.24" />
+      <dependency id="chocolatey-core.extension" version="1.0.5" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

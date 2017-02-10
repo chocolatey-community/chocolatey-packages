@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'bulk-crap-uninstaller'
   fileType               = 'exe'
-  url                    = 'https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v3.5/BCUninstaller_3.5_setup.exe'
-  url64bit               = 'https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v3.5/BCUninstaller_3.5_setup.exe'
-  checksum               = '215695407efcd5f2096f7a4e98d02ddfdc89fa1e2ebdd63468393620bd014270'
-  checksum64             = '215695407efcd5f2096f7a4e98d02ddfdc89fa1e2ebdd63468393620bd014270'
+  url                    = 'https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v3.7.1/BCUninstaller_3.7.1_setup.exe'
+  url64bit               = 'https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v3.7.1/BCUninstaller_3.7.1_setup.exe'
+  checksum               = '9ffbbf4f88dad06d04d6bb4d208fdfd02f8d0e8c60b3ca227798ce30c72c19ee'
+  checksum64             = '9ffbbf4f88dad06d04d6bb4d208fdfd02f8d0e8c60b3ca227798ce30c72c19ee'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'

@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>YUMI</title>
+    <id>yumi</id>
+    <version>2.0.3.9</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/yumi</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>YUMI (Your Universal Multiboot Installer)</title>
     <authors>Pendrivelinux</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.pendrivelinux.com/yumi-multiboot-usb-creator/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/yumi.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b3e21b285f846b9e399b42bff269a6f596eef03b/icons/yumi.png</iconUrl>
+    <copyright>2011–2017 Lance www.pendrivelinux.com</copyright>
+    <licenseUrl>https://www.pendrivelinux.com/disclaimer/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>yumi usb flash drive multiboot linux iso foss cross-platform</tags>
+    <summary>YUMI – Multiboot USB Creator for Windows</summary>
     <description>
 YUMI (Your Universal Multiboot Installer), is the successor to MultibootISOs. It can be used to create a Multiboot USB Flash Drive containing multiple operating systems, antivirus utilities, disc cloning, diagnostic tools, and more. Contrary to MultiBootISO's which used grub to boot ISO files directly from USB, YUMI uses syslinux to boot extracted distributions stored on the USB device, and reverts to using grub to Boot Multiple ISO files from USB, if necessary.
 
 Aside from a few distributions, all files are stored within the Multiboot folder, making for a nicely organized Multiboot Drive that can still be used for other storage purposes.
+
+## Notes
+- The download link for the YUMI source code is located on their download page [here](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)
     </description>
-    <summary>YUMI – Multiboot USB Creator for Windows</summary>
-    <releaseNotes>The real version of YUMI in this package is {{DownloadUrlx64}}.</releaseNotes>
-    <copyright>2011–2012 Lance www.pendrivelinux.com</copyright>
-    <tags>usb flash drive multiboot linux iso</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
-    <file src="C:\Chocolatey\_work\yumi.exe" target="tools\yumi.exe" />
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

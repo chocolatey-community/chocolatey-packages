@@ -9,9 +9,9 @@ $softwareName = 'Mozilla Thunderbird'
 
 $allLocalesListURL = 'https://www.mozilla.org/en-US/thunderbird/all/'
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '45.6.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '45.7.1')
 
-if ($alreadyInstalled) {
+if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
     "Thunderbird is already installed. " +
     'No need to download an re-install again.'
@@ -28,7 +28,7 @@ if ($alreadyInstalled) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=thunderbird-45.6.0-SSL&os=win&lang=${locale}"
+    Url = "https://download.mozilla.org/?product=thunderbird-45.7.1-SSL&os=win&lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)

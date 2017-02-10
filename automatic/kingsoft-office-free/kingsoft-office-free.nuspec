@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -7,7 +8,7 @@
     <owners>chocolatey</owners>
     <authors>Kingsoft</authors>
     <projectUrl>http://www.kingsoftstore.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/kingsoft-office-free.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/kingsoft-office-free.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Kingsoft Office Suite Free 2013 is a free office suite, which includes free word processor, spreadsheet program and presentation maker. These three programs help you deal with office tasks with ease:
@@ -27,4 +28,3 @@ Although it is a free suite, Kingsoft Office comes with many innovative features
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

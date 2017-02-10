@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>hedgewars</id>
@@ -20,7 +21,7 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
     <releaseNotes>http://hg.hedgewars.org/hedgewars/file/c680b7db1e2e/ChangeLog.txt</releaseNotes>
     <copyright>© 2004-2015 Hedgewars Project</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/hedgewars</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/hedgewars.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/hedgewars.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
     </dependencies>
@@ -29,4 +30,3 @@ As commander, it's your job to assemble your crack team of hedgehog soldiers and
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

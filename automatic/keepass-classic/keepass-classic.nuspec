@@ -1,29 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <title>KeePass Classic Password Safe</title>
+    <id>keepass-classic</id>
+    <version>1.32</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keepass-classic</packageSourceUrl>
     <owners>chocolatey</owners>
-    <version>{{PackageVersion}}</version>
+    <title>KeePass Classic Password Safe</title>
     <authors>Dominik Reichl</authors>
+    <projectUrl>http://keepass.info/index.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
+    <copyright>Copyright © 2003-2017 Dominik Reichl</copyright>
+    <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://sourceforge.net/projects/keepass/files/KeePass%201.x/1.32/</projectSourceUrl>
+    <docsUrl>http://keepass.info/help/base/index.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/keepass/discussion/?source=navbar</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/projects/keepass/support</bugTrackerUrl>
+    <tags>keepass-classic multiplatform password safe admin foss cross-platform</tags>
     <summary>This version of the popular KeePass password manager is compatible with KeePassX for Linux and OS X.</summary>
     <description>
+Today you need to remember many passwords. You need a password for the Windows network logon, your e-mail account, your website's FTP password, online passwords (like website member account), etc. etc. etc. The list is endless. Also, you should use different passwords for each account. Because if you use only one password everywhere and someone gets this password you have a problem... A serious problem. The thief would have access to your e-mail account, website, etc. Unimaginable.
+
 KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish).
 
-Note: This is the classic version of KeePass. If you’re looking for the 2.x version (also known as *KeePass Professional Edition*), install [keepass](/packages/keepass) instead.
+## Features
+- [Strong Security](http://keepass.info/features.html#lnksec)
+- [Multiple User Keys](http://keepass.info/features.html#lnkkeys)
+- [Export To TXT, HTML, XML and CSV Files](http://keepass.info/features.html#lnkexp)
+- [Import From Many File Formats](http://keepass.info/features.html#lnkimp)
+- [Easy Database Transfer](http://keepass.info/features.html#lnktrans)
+- [Support of Password Groups](http://keepass.info/features.html#lnkgroups)
+- [Time Fields and Entry Attachments](http://keepass.info/features.html#lnktimes)
+- [Auto-Type, Global Auto-Type Hot Key and Drag&amp;Drop](http://keepass.info/features.html#lnkdragdrop)
+- [Intuitive and Secure Clipboard Handling](http://keepass.info/features.html#lnkclipboard)
+- [Searching and Sorting](http://keepass.info/features.html#lnksearch)
+- [Multi-Language Support](http://keepass.info/features.html#lnkmultilang)
+- [Strong Random Password Generator](http://keepass.info/features.html#lnkrandgen)
+- [Plugin Architecture](http://keepass.info/features.html#lnkplugins)
+- [Open Source!](http://keepass.info/features.html#lnkopensrc)
+
+## Parameters
+- `/DisableFileAssoc` - Do not associate KeePass with the .kbd file extension
+- `/DesktopIcon` - Create an icon on the Current Users Desktop
+- `/QuickLaunchIcon` - Create an icon on the Current Users Quick Launch bar (only available for Windows 7)
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/DisableFileAssoc /DesktopIcon /QuickLaunchIcon"'`
+
+## Notes
+- This is the classic version of KeePass. If you're looking for the 2.x version (also known as *KeePass Professional Edition*), install [keepass](/packages/keepass) instead.
+- Looking for the source code of KeePass classic? Click the project source url and look for the file ending with `-Src.zip`
     </description>
-    <projectUrl>http://keepass.info/index.html</projectUrl>
-    <tags>multiplatform password safe admin</tags>
-    <copyright></copyright>
-    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/keepass.svg</iconUrl>
-    <dependencies></dependencies>
-    <releaseNotes></releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://keepass.info/news/n170102_1.32.html</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.6" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

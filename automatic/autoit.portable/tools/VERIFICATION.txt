@@ -1,0 +1,16 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from GitHub and can be verified like this:
+
+1. Go to <https://www.autoitscript.com/cgi-bin/getfile.pl?autoit3/autoit-v3.zip>
+   to download the installer
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum: 44A2BA6B723CBC5EEC389EA07AC43D696AEFF01F0F1A62788AED1D1CE992A886
+
+File 'LICENSE.txt' is obtained from <https://www.autoitscript.com/autoit3/docs/license.htm>

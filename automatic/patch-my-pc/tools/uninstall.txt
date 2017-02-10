@@ -1,1 +1,0 @@
-C:\Windows\System32\msiexec.exe /x {F6881752-3DD7-44C9-9AC6-D827A1E641CC}

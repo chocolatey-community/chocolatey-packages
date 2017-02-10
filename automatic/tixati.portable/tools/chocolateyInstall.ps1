@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'tixati.portable'
-  url            = 'https://download3.tixati.com/download/tixati-2.49-1.portable.zip'
-  checksum       = 'bdf09d8dfe2c99b7d5ddd2eac3d21c814d474b23072caafe36ebb0072f71f54d'
+  url            = 'https://download3.tixati.com/download/tixati-2.51-1.portable.zip'
+  checksum       = 'ad662c98db4e0b4ae73c98a533cb9fc8e671a929d3050ab9f9b51ff8057069ba'
   checksumType   = 'sha256'
   unzipLocation  = $toolsPath
 }

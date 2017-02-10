@@ -14,7 +14,7 @@
         <copyright></copyright>
         <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://raw.github.com/Redsandro/chocolatey/master/renamemaster/img/renamemaster.128x128.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a5e41f3cfe85911003740988a86417afb0a1a5ac/icons/renamemaster.png</iconUrl>
         <dependencies>
         </dependencies>
         <releaseNotes></releaseNotes>

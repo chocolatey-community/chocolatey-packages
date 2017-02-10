@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.tipp10.com/en/download/>
+and can be verified by doing the following:
+
+1. Download the following <https://www.tipp10.com/en/download/getfile/0/1485444544/>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 405ADAF0DC8CA3C958ABD161E6DC6B682B710FFDF8AE7428153EDBED0DB6FCD3
+
+The file 'LICENSE.txt' has been obtained from <https://www.tipp10.com/en/license/>

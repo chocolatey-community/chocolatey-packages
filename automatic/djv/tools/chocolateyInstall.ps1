@@ -1,18 +1,19 @@
-﻿$packageName = '{{PackageName}}'
-$installerType = 'EXE'
-$url64 = 'http://sourceforge.net/projects/djv/files/djv-stable/{{PackageVersion}}/djv-{{PackageVersion}}-Windows-64.exe/download'
+﻿$ErrorActionPreference = 'Stop';
 
-# v1.0.5 is the latest version for 32 bit OSes
-$url = 'http://sourceforge.net/projects/djv/files/djv-stable/1.0.5/djv-1.0.5-Windows-32.exe/download'
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$silentArgs = '/S' # NSIS package
-$validExitCodes = @(0)
+if ((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true)
+  { Write-Error "32-bit is no longer supported. Please install version 1.0.5.20170203" }
 
-if (Get-ProcessorBits 32) {
-  Write-Output $("You’re using a 32 bit OS. " +
-    "DJV v1.0.5 is the latest version available for 32 bit OSes."
-  )
+$packageArgs = @{
+  packageName    = 'djv'
+  fileType       = 'exe'
+  file           = "$toolsPath\djv-1.1.0-Windows-64.exe"
+  softwareName   = 'djv-*'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage "$packageName" "$installerType" `
-  "$silentArgs" "$url" "$url64" -validExitCodes $validExitCodes
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 $packageArgs.file,"$($packageArgs.file).ignore"

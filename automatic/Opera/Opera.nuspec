@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Opera</id>
-    <version>42.0.2393.94</version>
+    <version>43.0.2442.806</version>
     <title>Opera</title>
     <owners>chocolatey</owners>
     <authors>Opera</authors>
@@ -22,4 +23,3 @@ The Opera web browser makes the Web fast and fun, giving you a better web browse
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

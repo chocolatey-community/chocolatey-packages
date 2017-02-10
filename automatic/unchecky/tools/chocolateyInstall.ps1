@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = 'unchecky'
   fileType       = 'exe'
   softwareName   = 'unchecky'
 
-  checksum       = '727269090f5cf495897e8e0acd51c76c8230dff31e041d3d064eee24798d6cc3'
+  checksum       = '7343662791ebe9bdf1bcfd833d56a35d6018e050fdeb3f70807db1c8f13d2ecd'
   checksumType   = 'sha256'
   url            = 'https://unchecky.com/files/unchecky_setup.exe'
 

@@ -2,18 +2,19 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
+    <id>flashplayerppapi</id>
     <title>Flash Player PPAPI</title>
-    <version>{{PackageVersion}}</version>
+    <version>24.0.0.194000</version>
     <authors>Adobe Systems Incorporated</authors>
     <owners>chocolatey</owners>
     <summary>Adobe Flash Player PPAPI Plugin for Opera and Chromium based browsers</summary>
     <description>The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.</description>
     <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/flashplayer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flashplayer.png</iconUrl>
     <tags>adobe flash player ppapi plugin admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flashplayerppapi</packageSourceUrl>
     <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
+    <releaseNotes>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
   </metadata>
   <files>

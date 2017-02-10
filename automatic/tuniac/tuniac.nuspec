@@ -38,7 +38,7 @@ File formats supported:
  Supporting radio streaming of most the above formats.
 	</description>
     <projectUrl>http://www.tuniac.org/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/leonghui/chocolatey-coreteampackages/a9d7e228c4fbe34895628f4b58e759165e93af87/icons/tuniac.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a9d7e228c4fbe34895628f4b58e759165e93af87/icons/tuniac.png</iconUrl>
     <dependencies>
 	    <dependency id="vcredist2010" />
 	    <dependency id="vcredist2015" />

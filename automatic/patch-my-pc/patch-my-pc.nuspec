@@ -1,32 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>{{PackageName}}</id>
-        <title>Patch my PC</title>
-        <version>{{PackageVersion}}</version>
-        <authors>Patch My PC</authors>
-        <owners>Redsandro</owners>
-        <summary>Patch My PC creates software to patch third party applications to fix security vulnerabilities.</summary>
-        <description>
-Patch My PC helps to simplify the process of keeping your software up to date.
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>patch-my-pc</id>
+    <version>3.0.4.1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/patch-my-pc</packageSourceUrl>
+    <owners>chocolatey, Redsandro</owners>
+    <title>Patch my PC</title>
+    <authors>Patch My PC</authors>
+    <projectUrl>http://patchmypc.net/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png</iconUrl>
+    <copyright>© 2017 Patch My PC</copyright>
+    <licenseUrl>https://patchmypc.net/about</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://patchmypc.net/faq</docsUrl>
+    <tags>patch-my-pc admin software update updates freeware</tags>
+    <summary>Patch My PC creates software to patch third party applications to fix security vulnerabilities.</summary>
+    <description>
+A key component of staying safe online is keeping your computer up-to-date. Hackers and virus writers love outdated software. It might contain a security vulnerability or “hole” that can provide them with access to your computer. Outdated software can also be buggy, or have performance issues, which is usually fixed with a newer version of the software. These are two of the main reasons why it is important to keep the software on your computer updated (or “patched”).
 
-_Link to start menu is no longer working. Looking for a package writer who can fix this._
+Patch My PC Updater is a free, easy-to-use program that keeps over 100 programs up-to-date on your computer. It is also an easy way to install any of these programs on to your computer.When you open Patch My PC Updater, it will scan your system for outdated programs.
+- Programs that are outdated will be shown in Red
+- Programs that are updated will be shown in Green
+- Programs that are not installed will be shown in Black
+
+Whether you are a computer novice, semi-tech savvy, the go-to tech person for your family and friends, or an IT professional, Patch My PC Updater will make patching your PC easy.
+
+## Features
+- Easy to use User Interface
+- Outdated software will show in Red
+- Up to date will show in Green
+- Not installed software will show up as Black
+- Patches many common third party products e.g. Reader, Flash, Java, Quicktime and More
+- Portable and very small around 500 Kb.
+- Scan and install needed Windows updates
+- Quickly uninstall multiple programs
+- Enable or disable programs
+- Set updates to happen on a schedule
+
+## Notes
+- Link to start menu is no longer working. Looking for a package writer who can fix this.
         </description>
-        <releaseNotes></releaseNotes>
-        <projectUrl>http://patchmypc.net/</projectUrl>
-        <tags>Admin Software Update Updates</tags>
-        <copyright></copyright>
-        <licenseUrl>https://patchmypc.net/about</licenseUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>http://i.imgur.com/hCXOK5O.png</iconUrl>
-        <dependencies>
-            <!-- <dependency id="DotNet4.5" version="4.5.0" /> -->
-        </dependencies>
-      <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-    </metadata>
-    <files>
-        <file src="tools\**" target="tools" />
-        <!--<file src="content\**" target="content" />-->
-    </files>
+    <releaseNotes>https://patchmypc.net/release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

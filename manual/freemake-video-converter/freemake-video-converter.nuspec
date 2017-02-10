@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freemake-video-converter</id>
@@ -23,7 +24,7 @@ Convert videos free for any device with video playback. Use ready profiles for A
     <copyright>Copyright 2010 Ellora Assets Corporation.</copyright>
     <licenseUrl>http://www.freemake.com/eula_fvc/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/icons/freemake-video-converter.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e8c2d8438bd429e4815b91eefd248b99b0bd84b/icons/freemake-video-converter.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>

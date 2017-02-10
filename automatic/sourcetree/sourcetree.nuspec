@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>sourcetree</id>
@@ -29,6 +30,11 @@ SourceTree simplifies how you interact with your Git and Mercurial repositories 
 * **Local commit search:** Search for commits, file changes, and branches right within SourceTree.
 * **Interactive rebase:** Get clean and clear commits with SourceTree's interactive rebase tool.
 * **Remote repository manager:** SourceTree allows you to search for and clone remote repositories within its simple user interface.
+
+## Notes
+
+This package installs the current version in General Availability.
+For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/)
 </description>
     <releaseNotes>https://www.sourcetreeapp.com/update/WindowsReleaseNotes.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>

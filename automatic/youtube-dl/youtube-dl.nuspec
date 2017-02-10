@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>youtube-dl</id>
-    <version>2016.12.31</version>
+    <version>2017.02.10</version>
     <title>youtube-dl</title>
     <owners>chocolatey</owners>
     <authors>Ricardo Garcia and others</authors>
@@ -32,4 +33,3 @@ Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction a
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

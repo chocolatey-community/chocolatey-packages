@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
@@ -17,7 +17,7 @@
 		<licenseUrl>http://www.easeus.com/license.htm</licenseUrl>
 
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<iconUrl>https://raw.github.com/Redsandro/chocolatey/master/partitionmasterfree/img/partitionmasterfree.128x128.png</iconUrl>
+		<iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/partitionmasterfree.png</iconUrl>
 		<dependencies></dependencies>
 		<releaseNotes></releaseNotes>
 	</metadata>

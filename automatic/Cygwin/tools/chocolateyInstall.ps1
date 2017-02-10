@@ -1,4 +1,4 @@
-# https://cygwin.com/faq/faq.html#faq.setup.cli
+﻿# https://cygwin.com/faq/faq.html#faq.setup.cli
 
 $ErrorActionPreference = 'Stop'
 
@@ -39,8 +39,8 @@ $packageArgs = @{
   fileType               = 'exe'
   url                    = 'https://cygwin.com/setup-x86.exe'
   url64bit               = 'https://cygwin.com/setup-x86_64.exe'
-  checksum               = '5540542d7fa1d1f13453e7a250c1c6de44a6a794e81ffde0dfea6b5689dbc052'
-  checksum64             = '446b658bc1b8b6c7865474188cb4d7e9873003e2b6a9d74dcdfb7a3ff77e8634'
+  checksum               = '406bfa31d0c724de90aced5edddaf07f3eac46220c9cc9998ae2428d13989c28'
+  checksum64             = 'b67afe083b2547acee0857b45ff9784f873d1fb226a0148c1364f255180fc282'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs

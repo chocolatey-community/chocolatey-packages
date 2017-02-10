@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>speccy</id>
@@ -23,7 +24,7 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
     <tags>piriform freeware system information speccy admin</tags>
     <copyright>Piriform LTD</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/speccy.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/speccy.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/speccy</packageSourceUrl>
     <releaseNotes>https://www.piriform.com/speccy/version-history</releaseNotes>
     <licenseUrl>https://www.piriform.com/legal/software-license/speccy</licenseUrl>
@@ -32,4 +33,3 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

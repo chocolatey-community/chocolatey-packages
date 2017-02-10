@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nircmd</id>
@@ -22,9 +23,9 @@ NirCmd is a small command-line utility that allows you to do some useful tasks w
     <tags>nircmd utility freeware cli</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nircmd</packageSourceUrl>
     <docsUrl>http://www.nirsoft.net/utils/nircmd2.html#using</docsUrl>
+    <!-- IconUrl: Skip check -->
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

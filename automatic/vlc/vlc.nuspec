@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>vlc</id>
@@ -28,7 +29,7 @@ VLC is a free and open source cross-platform multimedia player and framework tha
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vlc</packageSourceUrl>
     <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
     <tags>vlc foss cross-platform multimedia audio video mp3 dvd avi media player admin</tags>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />
     </dependencies>
@@ -37,4 +38,3 @@ VLC is a free and open source cross-platform multimedia player and framework tha
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- character encoding: “UTF-8” -->

@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package>
   <metadata>
     <id>WinPcap</id>
@@ -31,4 +32,3 @@ WinPcap is the industry-standard tool for link-layer network access in Windows e
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>waterfox</id>
+    <version>51.0.1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/waterfox</packageSourceUrl>
+    <owners>chocolatey,tonigellida,admiringworm</owners>
+    <title>Waterfox</title>
+    <authors>Alex Kontos</authors>
+    <projectUrl>https://www.waterfoxproject.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png</iconUrl>
+    <copyright>Copyright © 2011-2016 Waterfox</copyright>
+    <licenseUrl>https://github.com/MrAlex94/Waterfox/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/MrAlex94/Waterfox</projectSourceUrl>
+    <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>
+    <summary>Waterfox is basically a 64-bit version of Firefox.</summary>
+    <description>
+## How and why Waterfox is here...
+Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
+He had a fascination for the web and wanted to help expand on the ideals of what Mozilla had for a free and open web.
+And so he decided to make Waterfox, a 64-Bit browser based on Mozilla's free and open source platform.
+
+Waterfox was one of the first widely distributed 64-Bit browsers on the web and quickly gained a loyal following.
+At a time Waterfox had one thing in mind: speed, but now Waterfox also attempts to be an ethical, user-oriented browser
+
+Waterfox focuses on giving users choice while also helping make the world a better place.
+Watefox is partners with Ecosia, a search engine that plants trees with its generated revenues.
+The browser itself is focused on power users, which lets you make the important decisions.
+There is no plugin whitelist, you can run whichever extensions you like and absolutely no data or
+telemetry is sent back to Mozilla or the Waterfox project.
+
+## Features
+- Built with Clang-cl on Windows
+- No Adobe DRM
+- No Pcket
+- No data collection
+- Run every 64-Bit plugin
+- Run every Add-On (even unsigned ones!)
+- Windows XP 64-Bit Support
+- More under the hood changes...
+
+## Notes
+  - Uninstalling fails when running through choco, manual uninstall is needed.
+  The issue for this is tracked [here](https://github.com/chocolatey/choco/issues/1135)
+    </description>
+    <releaseNotes>https://www.waterfoxproject.org/blog/</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

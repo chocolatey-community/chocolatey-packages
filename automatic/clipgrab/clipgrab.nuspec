@@ -1,14 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>clipgrab</id>
-    <version>3.6.2</version>
+    <version>3.6.3</version>
     <title>Clipgrab</title>
     <owners>chocolatey</owners>
     <authors>Philipp Schmieder Medien</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://clipgrab.de/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/clipgrab.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/clipgrab.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ClipGrab is a free software for downloading and converting online videos from many sites like YouTube or Vimeo. ClipGrab can download from the following sites: YouTube, Clipfish, Collegehumor, Dailymotion, MyVideo, MySpass, Sevenload, Tudou, Vimeo. Downloaded videos can be converted to the following file formats: WMV, MPEG4, OGG Theora, MP3 (audio only), OGG Vorbis (audio only).
@@ -27,4 +28,3 @@ ClipGrab is a free software for downloading and converting online videos from ma
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

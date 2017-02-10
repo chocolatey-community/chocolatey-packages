@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>{{PackageName}}</id>
@@ -8,7 +9,7 @@
     <authors>Lck</authors>
     <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
     <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/ontopreplica.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ontopreplica.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 A real-time, always on top, “replica” of a window of your choice, based on DWM Thumbnails.
@@ -39,4 +40,3 @@ Completely written in C# for .NET 4.0/4.5, makes use of the Windows Forms Aero l
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

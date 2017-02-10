@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>defraggler</id>
@@ -8,7 +9,7 @@
     <authors>Piriform</authors>
     <licenseUrl>http://www.piriform.com/legal/software-license/defraggler</licenseUrl>
     <projectUrl>http://www.piriform.com/defraggler</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/defraggler.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/defraggler.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Use Defraggler to defrag your entire hard drive, or individual files – unique in the industry. This compact and portable Windows application supports NTFS and FAT32 file systems.
@@ -35,4 +36,3 @@ Use Defraggler to defrag your entire hard drive, or individual files – unique 
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

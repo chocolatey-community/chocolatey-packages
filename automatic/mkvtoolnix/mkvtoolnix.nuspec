@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mkvtoolnix</id>
-    <version>9.7.0</version>
+    <version>9.8.0</version>
     <title>MKVToolNix</title>
     <owners>chocolatey</owners>
     <authors>Moritz Bunkus</authors>
@@ -29,4 +30,3 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

@@ -1,22 +1,26 @@
-﻿$url = '{{DownloadUrl}}'
-$scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$exeFile = "keyfinder.exe"
-$exeFileLink = "Keyfinder.lnk"
-$exePath = Join-Path "$scriptPath" "$exeFile"
-if (Test-Path "$exePath") {Remove-Item "$exePath"}
-Install-ChocolateyZipPackage '{{PackageName}}' $url "$scriptPath"
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyDesktopLink "$exePath"
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+. "$toolsPath\helpers.ps1"
 
-$desktop = [Environment]::GetFolderPath("Desktop")
+$pp  = Get-PackageParameters
+$filePath = "$toolsPath\KeyFinderInstaller_x32.exe"
+$packageArgs = @{
+  packageName    = 'keyfinder'
+  fileType       = 'exe'
+  file           = $filePath
+  softwareName   = 'Magical Jelly Bean KeyFinder'
+  silentArgs     = '/SILENT' + (Get-InstallTasks $pp)
+  validExitCodes = @(0)
+}
 
-if (Test-Path "$desktop\$exeFileLink") {Remove-Item "$desktop\$exeFileLink"}
+Install-ChocolateyInstallPackage @packageArgs
 
-Rename-Item "$desktop\$exeFile.lnk" "$exeFileLink"
+Remove-Item -Force -ea 0 $filePath,"$filePath.ignore"
 
+$installDirectory = Get-AppInstallLocation $packageArgs.softwareName
 
-$startMenu = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))
-
-if (Test-Path "$startMenu\Programs\$exeFileLink") {Remove-Item "$startMenu\Programs\$exeFileLink"}
-
-Copy-Item "$desktop\$exeFileLink" "$startMenu\Programs\$exeFileLink"
+if ($installDirectory) {
+  Install-BinFile -Name "keyfinder" -Path "$installDirectory\keyfinder.exe" -UseStart
+  Register-Application -ExePath "$installDirectory\keyfinder.exe" -Name "keyfinder"
+}

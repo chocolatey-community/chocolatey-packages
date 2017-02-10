@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>seafile-client</id>
-    <version>6.0.1</version>
+    <version>6.0.2</version>
     <title>Seafile (Windows Client)</title>
     <owners>chocolatey</owners>
     <authors>Seafile Ltd.</authors>
@@ -32,4 +33,3 @@ Seafile allows users to create groups with file syncing, wiki, and discussion to
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

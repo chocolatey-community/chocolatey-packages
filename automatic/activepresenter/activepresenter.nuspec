@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>activepresenter</id>
     <title>Active Presenter</title>
-    <version>6.0.3.20161216</version>
+    <version>6.0.5</version>
     <authors>Atomi Systems</authors>
     <owners>chocolatey</owners>
     <summary>Screen Recording and Interactive eLearning Authoring Tool</summary>
@@ -33,7 +33,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
     <tags>admin cross-platform presentation recording screencast eLearning webcast freeware trial</tags>
     <copyright>Atomi Systems, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/1f8e9eae96f9f498c520385ccdbf05e2d8696ee2/icons/activepresenter.jpg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/be15ad94669cde630a296b19002b3aa19c4d4cd8/icons/activepresenter.jpg</iconUrl>
     <releaseNotes>https://atomisystems.com/updates/ActivePresenter/v6/releasenotes_v6.html</releaseNotes>
     <docsUrl>https://atomisystems.com/tutorials</docsUrl>
     <bugTrackerUrl>https://atomisystems.com/community</bugTrackerUrl>
