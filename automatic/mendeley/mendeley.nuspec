@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mendeley</id>
+    <title>Mendeley Desktop</title>
+    <version>0.0</version>
+    <authors>Mendeley Ltd.</authors>
+    <owners>chocolatey</owners>
+    <summary>Empowering researches to organize their references</summary>
+    <description>
+Mendeley is a platform that allows scholars from all over the world to collaborate, and opens up science for everyone.
+    </description>
+    <projectUrl>https://www.mendeley.com</projectUrl>
+    <tags>education scientific</tags>
+    <copyright>Mendeley Ltd.</copyright>
+    <licenseUrl>https://www.mendeley.com/copyright/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://i.imgur.com/QP2H8NR.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
