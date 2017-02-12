@@ -1,5 +1,4 @@
-﻿import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
