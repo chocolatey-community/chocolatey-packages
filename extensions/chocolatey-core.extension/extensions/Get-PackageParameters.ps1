@@ -12,7 +12,6 @@
 #>
 function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackageParameters) {
     $res = @{}
-    write-host "p:  $Parameters"
 
     $re = "\/([a-zA-Z0-9]+)(:([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)?"
     $results = $Parameters | Select-String $re -AllMatches | select -Expand Matches
@@ -24,6 +23,5 @@ function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackagePara
         if ($val -match '^(".+")|(''.+'')$') {$val = $val -replace '^.|.$'}
         $res[ $opt ] = if ($val) { $val } else { $true }
     }
-    write-host $res
     $res
 }
