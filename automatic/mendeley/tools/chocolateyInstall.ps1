@@ -21,6 +21,3 @@ if (!$installLocation) {
   return 
 }
 Write-Host "$packageName installed to '$installLocation'"
-
-Register-Application "$installLocation\$packageName.exe"
-Write-Host "$packageName registered as $packageName"
