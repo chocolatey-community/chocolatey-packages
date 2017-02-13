@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>sourcetree-disableautoupdate</id>
+    <title>SourceTree Auto Update Deactivation</title>
+    <version>1.0.0</version>
+    <authors>chocolatey</authors>
+    <owners>chocolatey, Pascal Berger</owners>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/sourcetree-disableautoupdate</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/sourcetree-disableautoupdate</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d9984ffd9b6481c92e83fc1ec16f55184633adb6/icons/sourcetree.png</iconUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>SourceTree Auto Update Deactivation</summary>
+    <description>Disables the auto update functionality of SourceTree.</description>
+    <tags>sourcetree configuration cross-platform</tags>
+    <dependencies>
+      <dependency id="sourcetree" version="1.0.0"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

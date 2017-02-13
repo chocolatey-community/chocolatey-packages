@@ -34,7 +34,9 @@ SourceTree simplifies how you interact with your Git and Mercurial repositories 
 ## Notes
 
 This package installs the current version in General Availability.
-For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/)
+For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
+
+For disabling the auto-update functionality of SourceTree see the [SourceTree Auto Update Deactivation package](https://chocolatey.org/packages/sourcetree-disableautoupdate).
 </description>
     <releaseNotes>https://www.sourcetreeapp.com/update/WindowsReleaseNotes.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>
