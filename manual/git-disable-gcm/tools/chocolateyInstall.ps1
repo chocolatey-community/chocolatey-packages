@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-Update-SessionEnvironment
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
 
-git config --system --unset credential.helper
+$gitExecutable = Get-GitExecutable
+& $gitExecutable config --system --unset credential.helper
