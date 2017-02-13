@@ -3,17 +3,36 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>NuGet.CommandLine</id>
+    <title>[Deprecated] NuGet.CommandLine</title>
     <version>3.4.4-rtm-final</version>
     <authors>Microsoft</authors>
-    <owners>Microsoft</owners>
+    <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <developmentDependency>true</developmentDependency>
     <licenseUrl>https://raw.githubusercontent.com/NuGet/NuGet.Client/dev/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/NuGet/NuGet.Client</projectUrl>
-    <description>NuGet Command Line Tool</description>
+    <description>
+#### New package name: **[nuget.portable](https://chocolatey.org/packages/nuget.portable)**
+
+---
+
+`nuget.commandline` has been deprecated because of [Chocolatey naming conventions](https://github.com/chocolatey/choco/wiki/ChocolateyFAQs#what-is-the-difference-between-packages-named-install-ie-autohotkeyinstall-portable-ie-autohotkeyportable-and--ie-autohotkey).
+
+It exists only for backward compatibility to provide a transitional dummy package for existing users and scripts which may still use this package ID.
+    </description>
+    <releaseNotes>#### New users
+* Do not install this package. Install **nuget.portable** instead.
+
+#### Existing users - Updating
+* Updating this package will automatically install the most recent version of the **nuget.portable** chocolatey package.
+* Please update any links, dependencies, or scripts that reference this package to the new package name **nuget.portable**
+
+#### Existing users - Post-update Cleanup (optional)
+`choco uninstall nuget.commandline --whatif`
+    </releaseNotes>
     <copyright>© .NET Foundation. All rights reserved.</copyright>
+    <dependencies>
+      <dependency id="nuget.portable" />
+    </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
