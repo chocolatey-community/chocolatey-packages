@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>visualstudiocode-disableautoupdate</id>
+    <title>Visual Studio Code Auto Update Deactivation</title>
+    <version>1.0.0</version>
+    <authors>chocolatey</authors>
+    <owners>chocolatey, Pascal Berger</owners>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code Auto Update Deactivation</summary>
+    <description>Disables the auto update functionality of Visual Studio Code.</description>
+    <tags>visualstudiocode vscode foss cross-platform</tags>
+    <dependencies>
+      <dependency id="visualstudiocode" version="0.5.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
