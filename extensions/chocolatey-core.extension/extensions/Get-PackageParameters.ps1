@@ -12,7 +12,9 @@
 #>
 function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackageParameters) {
     $res = @{}
-    $re = "\/([a-zA-Z]+)(:([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)?"
+    write-host "p:  $Parameters"
+
+    $re = "\/([a-zA-Z0-9]+)(:([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)?"
     $results = $Parameters | Select-String $re -AllMatches | select -Expand Matches
     foreach ($m in $results) {
         if (!$m) { continue } # must because of posh 2.0 bug: https://github.com/chocolatey/chocolatey-coreteampackages/issues/465
@@ -22,5 +24,6 @@ function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackagePara
         if ($val -match '^(".+")|(''.+'')$') {$val = $val -replace '^.|.$'}
         $res[ $opt ] = if ($val) { $val } else { $true }
     }
+    write-host $res
     $res
 }
