@@ -9,7 +9,7 @@ $packageArgs = @{
   checksum       = '0b46791c26767322421315edfffae086043a86c27b29f200aa74a3414207328a'
   checksumType   = 'sha256'
   silentArgs     = '/S'
-  validExitCodes = @(0)
+  validExitCodes = @(0, 1223)
   softwareName   = 'Mendeley Desktop'
 }
 Install-ChocolateyPackage @packageArgs
