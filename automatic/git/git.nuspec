@@ -32,7 +32,9 @@ For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
 
 ## Notes
 
-- The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+
+For disabling the Git Credential Manager see the [Disable Git Credential Manager package](https://chocolatey.org/packages/git-disable-gcm).
 </description>
     <projectUrl>https://git-for-windows.github.io/</projectUrl>
     <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
