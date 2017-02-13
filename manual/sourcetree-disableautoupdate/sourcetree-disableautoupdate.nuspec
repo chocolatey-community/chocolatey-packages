@@ -7,6 +7,7 @@
     <version>1.0.0</version>
     <authors>chocolatey</authors>
     <owners>chocolatey, Pascal Berger</owners>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/sourcetree-disableautoupdate</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/sourcetree-disableautoupdate</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d9984ffd9b6481c92e83fc1ec16f55184633adb6/icons/sourcetree.png</iconUrl>
@@ -14,9 +15,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>SourceTree Auto Update Deactivation</summary>
     <description>Disables the auto update functionality of SourceTree.</description>
-    <tags>sourcetree cross-platform</tags>
+    <tags>sourcetree configuration cross-platform</tags>
     <dependencies>
-      <dependency id="sourcetree"/>
+      <dependency id="sourcetree" version="1.0.0"/>
     </dependencies>
   </metadata>
   <files>
