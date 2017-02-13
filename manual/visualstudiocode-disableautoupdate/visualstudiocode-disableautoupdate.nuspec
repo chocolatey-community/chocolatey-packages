@@ -7,6 +7,7 @@
     <version>1.0.0</version>
     <authors>chocolatey</authors>
     <owners>chocolatey, Pascal Berger</owners>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</projectUrl>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
@@ -14,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Visual Studio Code Auto Update Deactivation</summary>
     <description>Disables the auto update functionality of Visual Studio Code.</description>
-    <tags>visualstudiocode vscode foss cross-platform</tags>
+    <tags>visualstudiocode vscode configuration foss cross-platform</tags>
     <dependencies>
       <dependency id="visualstudiocode" version="0.5.0" />
     </dependencies>
