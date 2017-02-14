@@ -24,4 +24,4 @@ $packageArgs = @{
 Get-ChocolateyWebFile @packageArgs
 
 Write-Output "Running AutoIt3 using `'$au3`'"
-Start-ChocolateyProcessAsAdmin "/c AutoIt3.exe `"$au3`" `"$tempFile`"" 'cmd.exe'
+Start-ChocolateyProcessAsAdmin "`"$au3`" `"$tempFile`"" 'AutoIt3.exe'

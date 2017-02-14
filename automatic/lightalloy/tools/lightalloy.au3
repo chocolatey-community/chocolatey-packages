@@ -25,13 +25,18 @@ Run($CmdLine[1])
 # Deactivate 'open website', 'associate player with video files', and 'add desktop icon'
 # Title:	"Light Alloy installer"
 # Text:		"Visit Light Alloy"
-_WinWaitActivate("[CLASS:TMainForm]", "")
+_WinWaitActivate("[CLASS:TMainForm]", "", 2)
 Send("{SPACE}{SHIFTDOWN}{TAB}{SHIFTUP}{SPACE}{SHIFTDOWN}{TAB}{TAB}{SHIFTUP}{SPACE}{ENTER}")
 
 # Choose to use internal codecs (recommended)
 # Title:	"Basic options"
 # Text:		"What kind of codecs"
-_WinWaitActivate("[CLASS:LightAlloyFront.UnicodeClass]", "")
+_WinWaitActivate("[CLASS:LightAlloyFront.UnicodeClass]", "", 6)
 Send("{TAB}{TAB}{TAB}{ENTER}")
+
+# Player auto-starts - shutdown
+# Title:	"Light Alloy"
+_WinWaitActivate("[CLASS:LightAlloyFront]", "", 2)
+Send("{ALTDOWN}{F4}{ALTUP}")
 
 Exit

@@ -6,24 +6,43 @@
     <title>Light Alloy Video Player</title>
     <version>4.8.8.20161201</version>
     <authors>Vortex Group, LLC.</authors>
-    <owners>chocolatey</owners>
+    <owners>Redsandro,chocolatey</owners>
     <summary>Video Player with built-in codecs.</summary>
     <description>
 Complete aesthetically pleasing video player with built-in codecs.
+
+##Features
+
+* Timeline
+  * So you can see graphically how much is played and how much is still to play
+* Built-in codecs
+  * You don't have to install a codec pack anymore: you can use the player immediately after installation
+* Live Preview
+  * Just like on YouTube you can navigate with a preview window while searching on the timeline
+* IPTV support
+  * Allows you to watch tv over the internet and online videos like youtube
+* Internet Radio
+  * Contains an expandable list of online radio stations which you can play and record, and a list to store your favorites
+* Streams switch
+  * In case of multiple audio/subtitles streams you can easily switch from stream
+* Multilingual
+  * Contains Dutch, German, Russian, Japanese, Chinese, and others
+* Blu-Ray and DVD
+  * You also can watch Blu-Rays and DVDs with Light Alloy, but only if they are not encrypted
 
 __Warning:__ The installer is not silent.
 `AutoIt` will automatically click through the installer. Be careful when doing something else while installing, you might mess up the automated click-through.
     </description>
     <projectUrl>http://www.light-alloy.ru/</projectUrl>
-    <tags>Media Video Player NotSilent</tags>
-    <copyright></copyright>
-    <licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
+    <tags>media video player notsilent</tags>
+    <copyright>2011-2017 Vortex Team</copyright>
+    <licenseUrl>https://github.com/Krakean/lightalloy/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/lightalloy.png</iconUrl>
     <dependencies>
       <dependency id="autoit.portable" version="3.3.14.2" />
     </dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://light-alloy.ru/download/</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/lightalloy</packageSourceUrl>
   </metadata>
   <files>
