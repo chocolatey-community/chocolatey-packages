@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'notepadplusplus'
-$url32       = 'https://notepad-plus-plus.org/repository/7.x/7.3.1/npp.7.3.1.Installer.exe'
-$url64       = 'https://notepad-plus-plus.org/repository/7.x/7.3.1/npp.7.3.1.Installer.x64.exe'
-$checksum32  = '0cf11069ccf6a069a41959b859b71a789c536c0e5d6d2bc5669530eb87d407ab'
-$checksum64  = '1355b690f500addd3af9d8d6657ebc6a47b30845bfd067026082e37fe70e4b54'
+$url32       = 'https://notepad-plus-plus.org/repository/7.x/7.3.2/npp.7.3.2.Installer.exe'
+$url64       = 'https://notepad-plus-plus.org/repository/7.x/7.3.2/npp.7.3.2.Installer.x64.exe'
+$checksum32  = '9c914b2922ad9fd625cfd507699b2589b9d68104d5f120304961d960cf201a89'
+$checksum64  = '94f0b5c9ace8a431ca0be9e754a544d8434de918494ad17dedff28523b6bbcde'
 
 $packageArgs = @{
   packageName            = $packageName
