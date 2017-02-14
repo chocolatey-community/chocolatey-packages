@@ -9,9 +9,10 @@
     <owners>chocolatey</owners>
     <summary>Video Player with built-in codecs.</summary>
     <description>
-Complete video player with built-in codecs.
+Complete aesthetically pleasing video player with built-in codecs.
 
-_The installer is not silent. I've used AutoIt to automate the installation. Be careful when doing something else while installing._
+__Warning:__ The installer is not silent.
+`AutoIt` will automatically click through the installer. Be careful when doing something else while installing, you might mess up the automated click-through.
     </description>
     <projectUrl>http://www.light-alloy.ru/</projectUrl>
     <tags>Media Video Player admin</tags>

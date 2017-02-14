@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $url = $download_page.Links | ? href -match "LA_Setup_v[0-9\.]+\.exe$" | % href | select -First 1
   $version = $url -split 'v' | select -First 1 -Skip 1
   $version = $version -split '.exe' | select -First 1

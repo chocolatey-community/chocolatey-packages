@@ -1,4 +1,7 @@
+# Written and tested for installer v4.9.2
+
 #region --- Internal functions Au3Recorder Start ---
+
 Func _Au3RecordSetup()
 	Opt('WinWaitDelay',100)
 	Opt('WinDetectHiddenText',1)
@@ -23,17 +26,12 @@ Run($CmdLine[1])
 # Title:	"Light Alloy installer"
 # Text:		"Visit Light Alloy"
 _WinWaitActivate("[CLASS:TMainForm]", "")
-Send("{SPACE}{SHIFTDOWN}{TAB}{SHIFTUP}{SPACE}{SHIFTDOWN}{TAB}{SHIFTUP}{SPACE}{SHIFTDOWN}{TAB}{TAB}{SHIFTUP}{SPACE}{ENTER}")
+Send("{SPACE}{SHIFTDOWN}{TAB}{SHIFTUP}{SPACE}{SHIFTDOWN}{TAB}{TAB}{SHIFTUP}{SPACE}{ENTER}")
 
 # Choose to use internal codecs (recommended)
 # Title:	"Basic options"
 # Text:		"What kind of codecs"
 _WinWaitActivate("[CLASS:LightAlloyFront.UnicodeClass]", "")
 Send("{TAB}{TAB}{TAB}{ENTER}")
-
-# Player auto-starts - shutdown
-# Title:	"Light Alloy"
-_WinWaitActivate("Light Alloy", "")
-Send("{ALTDOWN}{F4}{ALTUP}")
 
 Exit
