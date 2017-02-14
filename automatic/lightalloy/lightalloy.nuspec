@@ -15,7 +15,7 @@ __Warning:__ The installer is not silent.
 `AutoIt` will automatically click through the installer. Be careful when doing something else while installing, you might mess up the automated click-through.
     </description>
     <projectUrl>http://www.light-alloy.ru/</projectUrl>
-    <tags>Media Video Player admin</tags>
+    <tags>Media Video Player NotSilent</tags>
     <copyright></copyright>
     <licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
