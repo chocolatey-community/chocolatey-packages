@@ -5,9 +5,9 @@ $releases = 'http://www.light-alloy.ru/download/'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
-      "(?i)(^\s*url32\s*=\s*)('.*')" = "`$1'$($Latest.Url32)'"
-      "(?i)(^\s*checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^[$]packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
+      "(?i)(^[$]url32\s*=\s*)('.*')" = "`$1'$($Latest.Url32)'"
+      "(?i)(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
     }
   }
 }
@@ -20,7 +20,7 @@ function global:au_GetLatest {
 
   @{
     Version = $version
-    Url32   = $url32
+    Url32   = $url
   }
 }
 

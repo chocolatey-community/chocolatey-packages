@@ -20,7 +20,7 @@ _The installer is not silent. I've used AutoIt to automate the installation. Be 
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/lightalloy.png</iconUrl>
     <dependencies>
-      <dependency id="autoit.commandline" version="3.3.12.0" />
+      <dependency id="autoit.portable" version="3.3.12.0" />
     </dependencies>
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/lightalloy</packageSourceUrl>
