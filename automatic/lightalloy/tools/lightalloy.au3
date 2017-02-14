@@ -31,12 +31,12 @@ Send("{SPACE}{SHIFTDOWN}{TAB}{SHIFTUP}{SPACE}{SHIFTDOWN}{TAB}{TAB}{SHIFTUP}{SPAC
 # Choose to use internal codecs (recommended)
 # Title:	"Basic options"
 # Text:		"What kind of codecs"
-_WinWaitActivate("[CLASS:LightAlloyFront.UnicodeClass]", "", 6)
+_WinWaitActivate("[CLASS:LightAlloyFront.UnicodeClass]", "", 3)
 Send("{TAB}{TAB}{TAB}{ENTER}")
 
 # Player auto-starts - shutdown
 # Title:	"Light Alloy"
-_WinWaitActivate("[CLASS:LightAlloyFront]", "", 2)
+_WinWaitActivate("[CLASS:LightAlloyFront]", "", 1)
 Send("{ALTDOWN}{F4}{ALTUP}")
 
 Exit
