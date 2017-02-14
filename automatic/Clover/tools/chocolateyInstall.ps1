@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'clover'
   fileType               = 'EXE'
-  url                    = 'http://ejie.me/uploads/setup_clover@3.2.7.exe'
-  checksum               = 'f5868b375e5c8eab86fc5ded703af7b48970cf8a3af26be34f38d0de790c6edd'
+  url                    = 'http://ejie.me/uploads/setup_clover@3.2.9.exe'
+  checksum               = '29995f246aab1f0675e6d34b09dd7154bce8599d9218ed0205422434fa16c50b'
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
