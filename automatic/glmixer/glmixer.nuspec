@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>glmixer</id>
-    <version>1.5.1329</version>
+    <version>0.0</version>
     <title>Graphic Live Mixer</title>
     <owners>chocolatey</owners>
     <authors>Bruno Herbelin</authors>
     <projectUrl>http://glmixer.sourceforge.net/</projectUrl>
     <licenseUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/trunk/COPYING.txt</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2dfbcc36f6e79a59d3e7b4e32dd763609a572db0/icons/glmixer.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3b738438efc064648bcb934801fd588876379b6b/icons/glmixer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 GLMixer performs in real time the graphical blending of several movie clips. Typically, you load a set of video samples, and decide on the fly how much they should be visible, arrange the images in the screen, and which effects you apply to them.
