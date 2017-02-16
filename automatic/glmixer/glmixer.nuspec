@@ -3,11 +3,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>glmixer</id>
-    <version>0.0</version>
+    <version>1.5.1329</version>
     <title>Graphic Live Mixer</title>
     <owners>chocolatey</owners>
     <authors>Bruno Herbelin</authors>
-    <projectUrl>https://glmixer.sourceforge.net/</projectUrl>
+    <projectUrl>http://glmixer.sourceforge.net/</projectUrl>
     <licenseUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/trunk/COPYING.txt</licenseUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2dfbcc36f6e79a59d3e7b4e32dd763609a572db0/icons/glmixer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,11 +19,9 @@ The principle of interaction is to drop video files into a workspace, and to mov
 The output of your operations is shown in the output window, which should typically be displayed full-screen on an external monitor or a projector, or can be saved as a video file.
     </description>
     <summary>Real-time video mixing software for live performances</summary>
-    <copyright />
     <tags>glmixer vj video foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/glmixer</packageSourceUrl>
     <projectSourceUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/</projectSourceUrl>
-    <releaseNotes />
     <docsUrl>https://sourceforge.net/p/glmixer/wiki/UserManual/</docsUrl>
   </metadata>
   <files>
