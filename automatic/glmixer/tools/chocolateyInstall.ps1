@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'glmixer'
   fileType               = 'exe'
-  url                    = 'https://sourceforge.net/projects/glmixer/files/Windows%20Binary/GLMixer_1.5-1329_Windows.exe'
-  url64bit               = 'https://sourceforge.net/projects/glmixer/files/Windows%20Binary/GLMixer_1.5-1329_Windows.exe'
+  url                    = ''
+  url64bit               = 'https://sourceforge.net/projects/glmixer/files/Windows%20Binary/GLMixer_1.5-1329_Windows.exe/download'
   checksum               = ''
   checksum64             = 'cfdad745f98390c5c0b40976ef25dd9899811bcd610f69471eb9533c756f1649'
   checksumType           = ''
