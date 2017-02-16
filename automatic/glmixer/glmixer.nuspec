@@ -9,7 +9,7 @@
     <authors>Bruno Herbelin</authors>
     <projectUrl>https://glmixer.sourceforge.net/</projectUrl>
     <licenseUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/trunk/COPYING.txt</licenseUrl>
-    <iconUrl>http://i.imgur.com/hPlKZ0J.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2dfbcc36f6e79a59d3e7b4e32dd763609a572db0/icons/glmixer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 GLMixer performs in real time the graphical blending of several movie clips. Typically, you load a set of video samples, and decide on the fly how much they should be visible, arrange the images in the screen, and which effects you apply to them.
