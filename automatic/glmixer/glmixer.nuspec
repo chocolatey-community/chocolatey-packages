@@ -3,9 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>glmixer</id>
-    <version>0.0</version>
+    <version>1.5.1329</version>
     <title>Graphic Live Mixer</title>
-    <owners>chocolatey</owners>
+    <owners>Redsandro,chocolatey</owners>
     <authors>Bruno Herbelin</authors>
     <projectUrl>http://glmixer.sourceforge.net/</projectUrl>
     <licenseUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/trunk/COPYING.txt</licenseUrl>

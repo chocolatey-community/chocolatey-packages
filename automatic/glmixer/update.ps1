@@ -5,6 +5,8 @@ $releases = 'https://sourceforge.net/projects/glmixer/files/Windows%20Binary/'
 function global:au_SearchReplace {
   @{
     "tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*url\s*=\s*)('.*')"       = "`$1'$($Latest.URL64)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
       "(?i)(^\s*url64bit\s*=\s*)('.*')"       = "`$1'$($Latest.URL64)'"
       "(?i)(^\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
     }
