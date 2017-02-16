@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>glmixer</id>
+    <version>0.0</version>
+    <title>Graphic Live Mixer</title>
+    <owners>chocolatey</owners>
+    <authors>Bruno Herbelin</authors>
+    <projectUrl>https://glmixer.sourceforge.net/</projectUrl>
+    <licenseUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/trunk/COPYING.txt</licenseUrl>
+    <iconUrl>http://i.imgur.com/hPlKZ0J.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+GLMixer performs in real time the graphical blending of several movie clips. Typically, you load a set of video samples, and decide on the fly how much they should be visible, arrange the images in the screen, and which effects you apply to them.
+
+The principle of interaction is to drop video files into a workspace, and to move them in a circular area to change their opacity ; if you selects two videos, moving them together makes a fading transition. This principle is generalized to any number of videos. Direct interaction with the video allows to be fast and reactive, and to move and deform them on screen.
+
+The output of your operations is shown in the output window, which should typically be displayed full-screen on an external monitor or a projector, or can be saved as a video file.
+    </description>
+    <summary>Real-time video mixing software for live performances</summary>
+    <copyright />
+    <tags>glmixer vj video foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/glmixer</packageSourceUrl>
+    <projectSourceUrl>https://sourceforge.net/p/glmixer/Source/HEAD/tree/</projectSourceUrl>
+    <releaseNotes />
+    <docsUrl>https://sourceforge.net/p/glmixer/wiki/UserManual/</docsUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
