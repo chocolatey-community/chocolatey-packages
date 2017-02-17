@@ -1,5 +1,5 @@
-﻿$checksum = 'd2a96e30129706ef0603a30251973e01073bd1148c57a37258c4c78a95b56cca'
-$url = 'http://orange.download.pdfforge.org/pdfcreator/2.5.0/PDFCreator-2_5_0-Setup.exe?file=AMIfv94Imo0ysrHIU1R0pTJm0p0bObBNxNjX4uT8t-wVM1Yi6X8_wG-yOiDKN9BdLOkU7N7SE-DReFcoBpz7EHyIlzN9Qny6RB9-gsFv7V9s8WwW_ew0PqVi5l0oNcpYqwOw5GCBSJyBG1YFbrmtN2S9ERdYFcauHP_X_N7Z06K1SWs2yODn64c&download'
+﻿$checksum = '9d650f48253c4cff23cb49a1a3626f26f43313c81f78dc8b1c771fde458e6e5d'
+$url = 'http://orange.download.pdfforge.org/pdfcreator/2.5.1/PDFCreator-2_5_1-Setup.exe?file=AMIfv96uTRKHMoE1jDD0NrNd_FPXZ0tgOt1h6T41hh3Zt6__PsyOCdLEudIcX8fWeK-muSYUQVSSg3HrU_xmAZHHfmAd40Q8RTnO_OhLLljqfdeyRBFlUmMGZzgXCg6-OqY6DB4IKsH5yWP9Z7slBwhEcO0w-BwVyhh6EscTqeTExfK8ACYboII&download'
 
 $installArgs = $('' +
   '/VERYSILENT /NORESTART ' +
