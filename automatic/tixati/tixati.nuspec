@@ -11,7 +11,11 @@
         <description>
 __Tixati__ is one of the most advanced and flexible BitTorrent clients available.  And unlike many other clients, Tixati contains _NO SPYWARE, NO ADS,_ and _NO GIMMICKS._
 
-__Tixati__ has the following features:
+![Peers](https://i.imgur.com/DCrcBsN.png)
+
+![DHT](http://i.imgur.com/FAKIZQC.png)
+
+## Features
 
 * detailed views of all aspects of the swarm, including peers, pieces, files, and trackers
 * support for magnet links, so no need to download .torrent files if a simple magnet-link is available
@@ -27,7 +31,7 @@ __Tixati__ has the following features:
 * Windows and Linux-GTK native versions available
         </description>
         <projectUrl>http://www.tixati.com/</projectUrl>
-        <tags>internet network download torrent p2p share admin</tags>
+        <tags>internet network download torrent p2p share admin freeware</tags>
         <copyright></copyright>
         <licenseUrl>http://www.tixati.com/tixati_eula.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
