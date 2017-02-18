@@ -5,12 +5,12 @@ $packageArgs = @{
   fileType       = 'msi'
   softwareName   = 'Blender'
 
-  checksum       = '42681299b9eb169200314dee2c0969d1acc10b8d05981b0c64f4690609cd0b3f'
-  checksum64     = 'd9ef1e058d4170c7d58e461480f705a197f695a753754dc30e2e88b6b249dc6a'
+  checksum       = 'f31f2af341d447ead18ca4b42b438db01d1f54a576ec8d86d619d5e604322436'
+  checksum64     = 'c942270486b92479bcdd78a9ae2da6d96e9b49545155695b41619d9896b63018'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
-  url            = 'http://ftp.nluug.nl/pub/graphics/blender/release/Blender2.78/blender-2.78a-windows32.msi'
-  url64          = 'http://ftp.nluug.nl/pub/graphics/blender/release/Blender2.78/blender-2.78a-windows64.msi'
+  url            = 'http://ftp.nluug.nl/pub/graphics/blender/release/Blender2.78/blender-2.78b-windows32.msi'
+  url64          = 'http://ftp.nluug.nl/pub/graphics/blender/release/Blender2.78/blender-2.78b-windows64.msi'
 
   silentArgs     = '/quiet /norestart'
   validExitCodes = @(0)
