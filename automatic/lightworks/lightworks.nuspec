@@ -9,11 +9,28 @@
         <owners>Redsandro</owners>
         <summary>Lightworks is a professional NLE for editing and mastering digital video.</summary>
         <description>
-Lightworks is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K. In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The King’s Speech and many more.
+__Lightworks__ is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K. 
+
+In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The King’s Speech and many more.
+
+##Features
+
+* Cross-platform
+* Optimised for speed
+* Multicam editing
+* Powerful, realtime effects with inbuilt presets
+
+![Lightworks screenshot](https://i.imgur.com/BOHhHH2.png)
+
+##Notes
+
+The free version is has some limitations compared to the commercial version, most importantly to a resolution of **1080P**.
+
+For a feature comparison, see [www.lwks.com](https://www.lwks.com/index.php?option=com_content&view=article&id=102&Itemid=213).
         </description>
         <projectUrl>http://www.lwks.com/</projectUrl>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-        <tags>NLE video editor lightworks</tags>
+        <tags>NLE video editor lightworks freeware freemium FOSS cross-platform</tags>
         <copyright></copyright>
         <licenseUrl>https://en.wikipedia.org/wiki/Freemium</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
