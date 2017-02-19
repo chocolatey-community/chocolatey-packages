@@ -11,7 +11,7 @@
     <description>
 qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.
 
-### Features
+## Features
 
 * One to one chat with friends
 * Group chats
@@ -27,10 +27,6 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
 * Emoticons
 * Auto-updates on Windows and Mac, packages on Linux
 * And many more options!
-
-### Package notes
-
-This package will always install the latest version of qTox, regardless of the package version.
     </description>
     <projectUrl>https://tox.chat/clients.html#qtox</projectUrl>
     <projectSourceUrl>https://github.com/qTox/qTox</projectSourceUrl>
