@@ -1,10 +1,10 @@
 ﻿VERIFICATION
+
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://qtox-win.pkg.tox.chat/qtox/win64>
-and can be verified by doing the following:
+locations and can be verified by doing the following:
 
 1. Download the following
   32-Bit software: <https://qtox-win.pkg.tox.chat/qtox/win32/download>
@@ -14,7 +14,7 @@ and can be verified by doing the following:
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: 
+  checksum type: SHA256
   checksum32: 63F824C590101FC162FB3709E7CE45FFA3702A52D8A6BD291E3C00BA08F68F65
   checksum64: 9DA6BB903B3AB067BCED84A45923856ACE1B52563EB811DFE0454BD51898968F
 
