@@ -10,7 +10,6 @@
 .PARAMETER SkipFirst
   Number of start lines to skip from the README.md, by default 0.
 
-
 .PARAMETER SkipLast
   Number of end lines to skip from the README.md, by default 0.
 
