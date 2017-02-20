@@ -4,7 +4,7 @@
   <metadata>
     <id>qtox</id>
     <title>qTox</title>
-    <version>1.8.0</version>
+    <version>1.8.1</version>
     <authors>qTox developers</authors>
     <owners>chocolatey</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
