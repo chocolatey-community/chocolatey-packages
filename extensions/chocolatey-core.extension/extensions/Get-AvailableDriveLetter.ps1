@@ -13,7 +13,7 @@
   (do not return X, even if it'd be the next choice)
 
 .INPUTS
-  specific drive letter 
+  specific drive letter(s) that will be excluded as potential candidates
 
 .OUTPUTS
   System.String (single drive-letter character)
@@ -22,7 +22,7 @@
   http://stackoverflow.com/questions/12488030/getting-a-free-drive-letter/29373301#29373301
 #>
 function Get-AvailableDriveLetter {
-  param ([char]$ExcludedLetter)
+  param ([char[]]$ExcludedLetter)
 
   $Letter = [int][char]'C'
   $i = @()
@@ -35,6 +35,10 @@ function Get-AvailableDriveLetter {
   
   while($i -contains $([char]$Letter)){$Letter++}
 
+  if ($Letter -gt [int][char]'Z') {
+    throw "error: no drive letter available!"
+  }
+  Write-Verbose "available drive letter: '$([char]$Letter)'"
   Return $([char]$Letter)
 }
 
