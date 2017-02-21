@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'Opera'
-$url32       = 'http://get.geo.opera.com/pub/opera/desktop/43.0.2442.806/win/Opera_43.0.2442.806_Setup.exe'
-$checksum32  = 'd9ff04df950464bb3357dad2337972e699fa2243775105c7f5a6c21a85326e52'
-$version     = '43.0.2442.806'
+$url32       = 'http://get.geo.opera.com/pub/opera/desktop/43.0.2442.991/win/Opera_43.0.2442.991_Setup.exe'
+$checksum32  = '892d3e018cd18b8aade02fe05363afa9f17deba8c616a44d43990384b5f7d95e'
+$version     = '43.0.2442.991'
 
 $packageArgs = @{
   packageName    = $packageName
