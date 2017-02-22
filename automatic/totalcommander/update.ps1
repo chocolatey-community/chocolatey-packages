@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
-    mv tools\installer.exe tools\installer.zip -ea 0
+    mv $PSScriptRoot\tools\installer.exe $PSScriptRoot\tools\installer.zip -ea 0
 }
 
 function global:au_GetLatest {
