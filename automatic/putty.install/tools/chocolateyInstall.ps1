@@ -2,7 +2,7 @@
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$filePath = "$toolsPath\putty-0.67-installer.msi"
+$filePath = "$toolsPath\putty-0.68-installer.msi"
 
 $packageArgs = @{
     PackageName    = "putty.install"
