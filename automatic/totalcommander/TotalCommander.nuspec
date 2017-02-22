@@ -4,15 +4,15 @@
   <metadata>
     <id>totalcommander</id>
     <title>Total Commander</title>
-    <version>9.00.01</version>
+    <version>0.0</version>
     <authors>Christian Ghisler</authors>
     <owners>chocolatey</owners>
     <summary>File manager and explorer replacement</summary>
     <description>
-Total Commander (former Wincmd) is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.
+Total Commander is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.
 But Total Commander uses a different approach: it has two fixed windows, which makes copying files much easier.
 
-## Features:
+## Features
 
 * Two file windows side by side
 * Multiple language and Unicode support
@@ -35,12 +35,12 @@ The following package parameters can be set:
 
 * `/LocalUser` - Install only for local user. By default it will be installed for all users.
 * `/DesktopIcon` - Add an icon for Total Commander to the Desktop. By default no icon is added.
-* `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory. 
+* `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory.
 
 These parameters can be passed to the installer with the use of `--params`.
-For example: `--params '"/LocalUser /DesktopIcon"'`.
-  
-## Notes 
+For example: `--params '/LocalUser /DesktopIcon'`.
+
+## Notes
 
 Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
 
@@ -61,12 +61,13 @@ Total Commander is a Shareware program. This means that you can test it for a pe
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4d9fd7c774e1ae7edb688d04ac9b55b87477e318/icons/totalcommander.png</iconUrl>
     <releaseNotes>http://ghisler.com/whatsnew.htm</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" /> 
-      <dependency id="7zip.commandline" />
+      <dependency id="chocolatey-core.extension" version="1.0.7" /> 
+      <dependency id="7zip.portable" />
       <dependency id="autohotkey.portable" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

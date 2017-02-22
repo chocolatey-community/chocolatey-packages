@@ -1,4 +1,4 @@
-﻿$packageName = '{{PackageName}}'
+﻿$packageName = 'totalcommander'
 $packageSearch = "Total Commander*"
 $installerType = 'exe'
 $silentArgs = ''
