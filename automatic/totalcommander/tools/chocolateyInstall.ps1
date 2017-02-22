@@ -16,5 +16,4 @@ $packageArgs = @{
     SoftwareName   = 'Total Commander*'
 }
 Install-ChocolateyInstallPackage @packageArgs
-Write-Verbose "Removing package files"
 rm $toolsPath\*.exe, $toolsPath\*.zip -ea 0
