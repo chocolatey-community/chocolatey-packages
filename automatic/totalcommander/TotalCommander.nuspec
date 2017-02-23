@@ -54,7 +54,7 @@ Total Commander is a Shareware program. This means that you can test it for a pe
     <bugTrackerUrl>http://www.ghisler.ch/wiki/index.php/Known_bugs_and_workarounds</bugTrackerUrl>
     <docsUrl>http://www.ghisler.ch/wiki/index.php</docsUrl>
     <mailingListUrl>http://www.ghisler.ch/board/index.php</mailingListUrl>
-    <tags>file manager shareware nagscreen admin</tags>
+    <tags>file manager shareware nagscreen trial admin</tags>
     <copyright>© 1995 Christian Ghisler</copyright>
     <licenseUrl>http://www.ghisler.com/order.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -62,8 +62,8 @@ Total Commander is a Shareware program. This means that you can test it for a pe
     <releaseNotes>http://ghisler.com/whatsnew.htm</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.7" /> 
-      <dependency id="7zip.portable" />
-      <dependency id="autohotkey.portable" />
+      <dependency id="7zip.portable" version="16.04" />
+      <dependency id="autohotkey.portable" version="1.1.24.05" />
     </dependencies>
   </metadata>
   <files>
