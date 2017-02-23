@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.1.0
+- `Get-AvailableDriveLetter` - Get the next unused drive letter
+
 ## 1.0.7
 - Bugfix in `Get-PackageParameters`: flags can now have numbers in their names, whereas before, everything past the number would be truncated and the flag would turn into a boolean.
 
