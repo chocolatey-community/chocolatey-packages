@@ -16,12 +16,12 @@ function Extract-TCFiles() {
     Write-Verbose "Extract EXE to change install options"
     $setupFile = gi $toolsPath\*.exe
     7za x -y "-o$($tcmdWork)" $setupFile
-    if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd exe - exit code $exitCode." }
+    if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd exe - exit code $LastExitCode." }
 
     Write-Verbose "Extract installer"
     $instFile  = gi $toolsPath\*.zip
     7za x -y "-o$($tcmdWork)" $instFile
-    if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd installer - exit code $exitCode." }
+    if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd installer - exit code $LastExitCode." }
 
     if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
         Write-Host "Installing 64 bit version"
