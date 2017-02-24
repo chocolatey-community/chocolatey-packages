@@ -32,8 +32,8 @@ But Total Commander uses a different approach: it has two fixed windows, which m
 [FAQ](http://www.ghisler.com/faq.htm)
 [Plugins](http://www.ghisler.ch/wiki/index.php/Developer%27s_corner)
 [Plugin downloads](http://totalcmd.net/)
-[Plugin development](http://totalcmd.net/directory/developer.html)      
-      
+[Plugin development](http://totalcmd.net/directory/developer.html)
+
 ## Package parameters
 
 The following package parameters can be set:
@@ -42,13 +42,12 @@ The following package parameters can be set:
 * `/DesktopIcon` - Add an icon for Total Commander to the Desktop. By default no icon is added.
 * `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory.
 
-These parameters can be passed to the installer with the use of `--params`.
-For example: `--params '/LocalUser /DesktopIcon'`.
+These parameters can be passed to the installer with the use of `--params`. For example: `--params '/LocalUser /DesktopIcon'`.
 
 ## Notes
 
-- The package installer puts the Total Commander ini files in its own directory, rather then in `$Env:WinDir`.
-- Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.      
+- This package contain combined Total Commander installer which contains both x32 and x64 bit versions.
+- Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
     </description>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/totalcommander</packageSourceUrl>
     <projectUrl>http://www.ghisler.com</projectUrl>

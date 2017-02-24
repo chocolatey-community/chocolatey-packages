@@ -23,15 +23,17 @@ function Extract-TCFiles() {
     7za x -y "-o$($tcmdWork)" $instFile
     if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd installer - exit code $LastExitCode." }
 
-    if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-        Write-Host "Installing 64 bit version"
+    if ($is64) {
         mv $tcmdWork\INSTALL64.exe  $tcmdWork\INSTALL.exe -Force
-    } else {
-        Write-Host "Installing 32 bit version"
+        mv $tcmdWork\INSTALL64.inf  $tcmdWork\INSTALL.inf -Force
     }
 }
 
-function Set-IniFilesLocation() {
+function Get-TCInstallLocation() {
+    (gp 'HKLM:\SOFTWARE\Ghisler\Total Commander').InstallDir
+}
+
+function Set-TCIniFilesLocation() {
     sp 'HKCU:\SOFTWARE\Ghisler\Total Commander' IniFileName '%COMMANDER_PATH%\wincmd.ini'
-    sp 'HKCU:\SOFTWARE\Ghisler\Total Commander' FtpIniName '%COMMANDER_PATH%\wcx_ftp.ini'
+    sp 'HKCU:\SOFTWARE\Ghisler\Total Commander' FtpIniName  '%COMMANDER_PATH%\wcx_ftp.ini'
 }
