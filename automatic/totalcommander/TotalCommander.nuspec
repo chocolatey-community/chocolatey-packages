@@ -4,7 +4,7 @@
   <metadata>
     <id>totalcommander</id>
     <title>Total Commander</title>
-    <version>0.0</version>
+    <version>9.00.01</version>
     <authors>Christian Ghisler</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>File manager and explorer replacement</summary>
@@ -58,7 +58,7 @@ Total Commander is a Shareware program. This means that you can test it for a pe
     <copyright>© 1995 Christian Ghisler</copyright>
     <licenseUrl>http://www.ghisler.com/order.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4d9fd7c774e1ae7edb688d04ac9b55b87477e318/icons/totalcommander.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a37f40763d259eab20d0462b72cba86a108441d9/icons/totalcommander.png</iconUrl>
     <releaseNotes>http://ghisler.com/whatsnew.htm</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.7" /> 
