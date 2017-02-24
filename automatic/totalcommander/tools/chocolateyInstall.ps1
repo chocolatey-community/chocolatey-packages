@@ -17,3 +17,5 @@ $packageArgs = @{
 }
 Install-ChocolateyInstallPackage @packageArgs
 rm $toolsPath\*.exe, $toolsPath\*.zip -ea 0
+
+Set-IniFilesLocation
