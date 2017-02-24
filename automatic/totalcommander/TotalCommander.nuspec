@@ -29,6 +29,11 @@ But Total Commander uses a different approach: it has two fixed windows, which m
 * USB port connection via special [direct transfer cable](http://ghisler.com/cables/index.htm), partial branch view (Ctrl+Shift+B), and many improvements to ftp, synchronizing and other functions
 * [And many more!](http://ghisler.com/featurel.htm)
 
+[FAQ](http://www.ghisler.com/faq.htm)
+[Plugins](http://www.ghisler.ch/wiki/index.php/Developer%27s_corner)
+[Plugin downloads](http://totalcmd.net/)
+[Plugin development](http://totalcmd.net/directory/developer.html)      
+      
 ## Package parameters
 
 The following package parameters can be set:
@@ -42,12 +47,8 @@ For example: `--params '/LocalUser /DesktopIcon'`.
 
 ## Notes
 
-Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
-
-[FAQ](http://www.ghisler.com/faq.htm)
-[Plugins](http://www.ghisler.ch/wiki/index.php/Developer%27s_corner)
-[Plugin downloads](http://totalcmd.net/)
-[Plugin development](http://totalcmd.net/directory/developer.html)
+- The package installer puts the Total Commander ini files in its own directory, rather then in `$Env:WinDir`.
+- Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.      
     </description>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/totalcommander</packageSourceUrl>
     <projectUrl>http://www.ghisler.com</projectUrl>
