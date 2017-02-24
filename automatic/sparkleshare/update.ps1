@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  try { $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases } catch { throw 'Downloading releases page failed' }
 
   $re    = 'sparkleshare.*\.msi$'
   $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
