@@ -30,6 +30,7 @@ function global:au_GetLatest {
         URL32   = $url
         URL64   = "http://ghisler.fileburst.com/addons/installer.zip"
         Version = $version
+        FileType = 'exe'
     }
 }
 
