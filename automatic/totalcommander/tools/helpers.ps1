@@ -30,3 +30,8 @@ function Extract-TCFiles() {
         Write-Host "Installing 32 bit version"
     }
 }
+
+function Set-IniFilesLocation() {
+    sp 'HKCU:\SOFTWARE\Ghisler\Total Commander' IniFileName '%COMMANDER_PATH%\wincmd.ini'
+    sp 'HKCU:\SOFTWARE\Ghisler\Total Commander' FtpIniName '%COMMANDER_PATH%\wcx_ftp.ini'
+}
