@@ -4,7 +4,7 @@
   <metadata>
     <id>NuGet.CommandLine</id>
     <title>[Deprecated] NuGet.CommandLine</title>
-    <version>3.4.4-rtm-final</version>
+    <version>3.4.4</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
