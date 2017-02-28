@@ -22,14 +22,10 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]filePath32\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
-    }
     ".\legal\verification.txt" = @{
-      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(1\..+)\<.*\>"        = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType)"
-      "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum)"
+      "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
     }
   }
 }
