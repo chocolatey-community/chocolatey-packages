@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = "http://dist.nuget.org/index.json"
 
