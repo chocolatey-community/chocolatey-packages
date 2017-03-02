@@ -4,7 +4,7 @@ function Set-UpdateChannel() {
     [string]$UpdateChannel
   )
 
-  $codeSettingsPath = $(Join-Path $env:APPDATA "Code") 
+  $codeSettingsPath = $(Join-Path $env:APPDATA -ChildPath "Code" | Join-Path -ChildPath "User") 
   if (-not (Test-Path $codeSettingsPath)) {
     Write-Output "Settings path '$codeSettingsPath' does not exist. Creating it now."
     New-Item -ItemType Directory -Path $codeSettingsPath | Out-Null
@@ -12,7 +12,7 @@ function Set-UpdateChannel() {
     Write-Output "Settings path '$codeSettingsPath' already exists."
   }
 
-  $storageFilePath = $(Join-Path $codeSettingsPath "storage.json")
+  $storageFilePath = $(Join-Path $codeSettingsPath "settings.json")
   if (-not (Test-Path $storageFilePath)) {
     Write-Output "Settings file '$storageFilePath' does not exist. Creating it now."
     New-Item -ItemType File -Path $storageFilePath | Out-Null
@@ -36,12 +36,12 @@ function Set-UpdateChannel() {
     try
     {
       $storageFileObject.updateChannel = "$UpdateChannel"
-      Write-Output "Updated 'updateChannel' to '$UpdateChannel'."
+      Write-Output "Updated 'update.channel' to '$UpdateChannel'."
     }
     catch
     {
-      Write-Output "Add new 'updateChannel' node with value '$UpdateChannel'."
-      $storageFileObject | Add-Member -Name "updateChannel" -value $UpdateChannel -MemberType NoteProperty
+      Write-Output "Add new 'update.channel' node with value '$UpdateChannel'."
+      $storageFileObject | Add-Member -Name "update.channel" -value $UpdateChannel -MemberType NoteProperty
     }
 
     if ($PSVersionTable.PSVersion.Major -gt 2) {
