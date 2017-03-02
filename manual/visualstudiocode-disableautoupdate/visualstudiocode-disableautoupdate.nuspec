@@ -4,7 +4,7 @@
   <metadata>
     <id>visualstudiocode-disableautoupdate</id>
     <title>Visual Studio Code Auto Update Deactivation</title>
-    <version>1.0.0</version>
+    <version>1.0.0.20170302</version>
     <authors>chocolatey</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
