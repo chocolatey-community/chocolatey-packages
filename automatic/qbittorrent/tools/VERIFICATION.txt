@@ -5,13 +5,13 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from the alternative sourceforge mirror listed on <http://www.qbittorrent.org/download.php>
 and can be verified like this:
 
-1. Go to <http://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-3.3.10/qbittorrent_3.3.10_setup.exe/download>
+1. Go to <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-3.3.11/qbittorrent_3.3.11_setup.exe/download>
    to download the installer
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 070D50FB9BA068544E2177C2C7E7D7CB0972FBB2EDC3D8C92D3255B8A896A6BC
+  checksum: 64E94CCCE482C8B0C7E044F3A582CF708591A4877E8E10221231A0787F4D0949
 
 File 'LICENSE.txt' is obtained from <https://github.com/qbittorrent/qBittorrent/blob/0070dcf5509e43c2c3457c4e3f1ed0b1ae087e36/COPYING>

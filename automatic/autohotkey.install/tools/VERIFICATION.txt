@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.24.05/AutoHotkey_1.1.24.05_setup.exe
-   x64: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.24.05/AutoHotkey_1.1.24.05_setup.exe
+   x32: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.25.00/AutoHotkey_1.1.25.00_setup.exe
+   x64: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.25.00/AutoHotkey_1.1.25.00_setup.exe
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 4FF331412EFCFE9DD76ABAFDED09F3AEA78C3D02D0807CF1EB6505F572AA412E
-   checksum64: 4FF331412EFCFE9DD76ABAFDED09F3AEA78C3D02D0807CF1EB6505F572AA412E
+   checksum32: B0F55FBE840C7C6C2161A3193C56DB1B30C54E00CA19A49D725930758CC82459
+   checksum64: B0F55FBE840C7C6C2161A3193C56DB1B30C54E00CA19A49D725930758CC82459
 
 Using AU:
 
-   Get-RemoteChecksum https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.24.05/AutoHotkey_1.1.24.05_setup.exe
+   Get-RemoteChecksum https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.25.00/AutoHotkey_1.1.25.00_setup.exe
 
 File 'license.txt' is obtained from:
    https://github.com/AutoHotkey/AutoHotkey/blob/26daaddf714135a6fcc730fe250bd1d41a9d3c53/license.txt

@@ -4,7 +4,7 @@
   <metadata>
     <id>qbittorrent</id>
     <title>qBittorrent</title>
-    <version>3.3.10</version>
+    <version>3.3.11</version>
     <authors>Christophe Dumez</authors>
     <owners>nconrads, chocolatey</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
