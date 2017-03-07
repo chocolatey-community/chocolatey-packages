@@ -3,23 +3,23 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.10.24930.0-rc6</version>
+    <version>14.10.25008.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist140</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
-    <title>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC (2017-02-07)</title>
+    <title>Microsoft Visual C++ Redistributable for Visual Studio 2017 RTM</title>
     <authors>Microsoft</authors>
-    <projectUrl>https://blogs.msdn.microsoft.com/vcblog/2016/11/16/visual-studio-2017-rc-now-available/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c79c4c774b6e8115e2297eed35225a3193294467/icons/vcredist140.png</iconUrl>
+    <projectUrl>https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d8a28da83b3b9bf058e1fbbeed5ce74329b73245/icons/vcredist140.png</iconUrl>
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
     <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
-    <tags>microsoft visual c++ redistributable 140 2015 admin</tags>
-    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2017 RC</summary>
-    <description>Microsoft Visual C++ Redistributable for Visual Studio 2017 RC installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2017 RC and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2017 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
+    <tags>microsoft visual c++ redistributable 140 2017 admin</tags>
+    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2017</summary>
+    <description>Microsoft Visual C++ Redistributable for Visual Studio 2017 installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2017 and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2017 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
 
-The Visual C++ Redistributable for Visual Studio 2017 RC consists of files vcruntime140.dll, msvcp140.dll, vcomp140.dll, vcamp140.dll, mfc140.dll and other.
+The Visual C++ Redistributable for Visual Studio 2017 consists of files vcruntime140.dll, msvcp140.dll, vcomp140.dll, vcamp140.dll, mfc140.dll and other.
 
 ## Notes
 
@@ -29,15 +29,15 @@ On some systems, if KB2999226 is installed as a dependency of this package, the 
     </description>
     <releaseNotes>
 ##### Software
-[Visual Studio 2017 RC Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
+[Visual Studio 2017 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
 ##### Package
-14.10.24930.0-rc6: Initial package release for Visual Studio 2017 RC (2017-02-07).
+14.10.25008.0: Initial package release for Visual Studio 2017 RTM.
 </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.5" />
-      <dependency id="KB3033929" version="1.0.1" /> <!-- for Win7 SP1/2008R2-->
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+      <dependency id="KB3033929" version="1.0.2" /> <!-- for Win7 SP1/2008R2-->
       <dependency id="KB2919355" version="1.0.20160915" /> <!-- for Win8.1/2012R2 -->
-      <dependency id="KB2999226" version="1.0.0" />
+      <dependency id="KB2999226" version="1.0.20161201" />
     </dependencies>
   </metadata>
 </package>
