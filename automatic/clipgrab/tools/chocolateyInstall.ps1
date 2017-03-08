@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'clipgrab'
   fileType               = 'exe'
-  url                    = 'https://download.clipgrab.org/clipgrab-3.6.3-cgde.exe'
-  checksum               = 'c23b69c26c18a55d6b825927bb374c8b3aae5a1298b28894e94b1376f78ee8e3'
+  url                    = 'https://download.clipgrab.org/clipgrab-3.6.4-cgde.exe'
+  checksum               = '12c2d25eaccb6e82c71e2b814cd565b6d7bb6a706c48afcc31fb7cd3267f5cca'
   checksumType           = 'sha256'
   silentArgs             = '/VERYSILENT'
   validExitCodes         = @(0)
