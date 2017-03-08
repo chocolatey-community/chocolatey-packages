@@ -30,6 +30,4 @@ function global:au_GetLatest {
     }
 }
 
-Write-Host 'See https://github.com/chocolatey/chocolatey-coreteampackages/issues/445'
-'ignore'
-#update
+update
