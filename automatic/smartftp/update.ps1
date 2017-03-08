@@ -16,13 +16,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re    = '\.exe$'
-    $url = $download_page.links | ? href -match $re 
+    $url = $download_page.links | ? href -match $re
 
-    $url   = $url | ? InnerText -match '64-bit' | select -First 1
-    $version = $url.InnerText -split ' ' | ? {  [version]::TryParse($_, [ref]($__)) }
+    $url   = $url | ? OuterHTML -match '64-bit' | select -First 1
+    $version = $url.OuterHTML -split ' ' | ? {  [version]::TryParse($_, [ref]($__)) }
     @{
         Version      = $version
         URL32        = 'https://www.smartftp.com/get/SmartFTP86.msi'
