@@ -23,7 +23,7 @@ Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction a
     <releaseNotes>https://github.com/rg3/youtube-dl/blob/master/ChangeLog</releaseNotes>
     <copyright>Copyright © 2006-2016 Ricardo Garcia Gonzalez</copyright>
     <language>en-US</language>
-    <tags>youtube-dl ffmpeg youtube download</tags>
+    <tags>youtube-dl cli foss cross-platform video multimedia ffmpeg youtube download</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
       <dependency id="vcredist2010" version="10.0" />
