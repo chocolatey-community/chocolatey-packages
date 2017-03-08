@@ -31,5 +31,6 @@ Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction a
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" /> 
   </files>
 </package>
