@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>spotify</id>
+    <version>1.0.49.125</version>
+    <title>Spotify</title>
+    <authors>Spotify</authors>
+    <projectUrl>http://spotify.com</projectUrl>
+    <owners>Boyan Kostadinov (boyank@gmail.com)</owners>
+    <packageSourceUrl>https://github.com/Boyan-Kostadinov/BoxStarter</packageSourceUrl>
+    <licenseUrl>https://www.spotify.com/us/legal/end-user-agreement/</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/922a763c73805cd98d2c0bb76215720bd77728e6/icons/spotify.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Spotify – Millions of tracks, any time you like. Just search for it in Spotify, then play it. Just help yourself to whatever you want, whenever you want it.</description>
+    <summary>Spotify is a new way to listen to music</summary>
+    <copyright>Copyright(c) 2017, Spotify Ltd</copyright>
+    <tags>spotify music player radio admin</tags>
+    <releaseNotes>
+    Updated to work with the latest requirment for user not to be admin when installing.
+    </releaseNotes>
+  </metadata>
+</package>
