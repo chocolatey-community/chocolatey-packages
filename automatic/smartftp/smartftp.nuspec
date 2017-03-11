@@ -9,12 +9,12 @@
     <authors>SmartSoft</authors>
     <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
     <description>
-SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.
+SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Backblaze B2, Telnet, Terminal client with lots of features and a modern user interface.
 
 ## Features
 - Protocols
 - FTP and FTPS (Secure FTP)
-- SFTP over SSH, WebDAV, Amazon S3 (Enterprise Edition), Google Drive (Ultimate Edition), Google Cloud Storage (Enterprise Edition), Microsoft OneDrive (Ultimate Edition), Terminal Emulator (Ultimate Edition)
+- SFTP over SSH, WebDAV, Amazon S3 (Enterprise Edition), Google Drive (Ultimate Edition), Google Cloud Storage (Enterprise Edition), Microsoft OneDrive (Ultimate Edition), Backblaze B2 (Enterprise Edition), Terminal Emulator (Ultimate Edition)
 - Integrated Editor
 - Modern Graphical User Interface (GUI)
 - High DPI support
@@ -50,7 +50,7 @@ SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google
 - Only latest version is available as vendor [doesn't maintain the old versions](https://www.smartftp.com/support/kb/where-can-i-find-an-older-build-of-smartftp-f175.html).
 </description>
     <projectUrl>https://www.smartftp.com/</projectUrl>
-    <tags>trial ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client admin</tags>
+    <tags>trial ftp sftp sftp ssh webdav s3 amazon onedrive google drive b2 secure client admin</tags>
     <copyright>SmartSoft Ltd</copyright>
     <releaseNotes>https://www.smartftp.com/changelog/1</releaseNotes>
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
