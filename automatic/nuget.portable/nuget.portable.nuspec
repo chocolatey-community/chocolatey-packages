@@ -20,4 +20,7 @@
     <bugTrackerUrl>https://github.com/NuGet/NuGetGallery/issues</bugTrackerUrl>
     <releaseNotes>https://docs.microsoft.com/en-us/nuget/release-notes/</releaseNotes>
   </metadata>
+  <files>
+   <file src="tools\**" target="tools" />
+  </files>
 </package>
