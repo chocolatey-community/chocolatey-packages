@@ -4,7 +4,7 @@
   <metadata>
     <id>nuget.portable</id>
     <title>NuGet (Portable, CommandLine)</title>
-    <version>3.5.0.20170313</version>
+    <version>3.5.0</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <summary>NuGet package manager for the Microsoft development platform.</summary>
