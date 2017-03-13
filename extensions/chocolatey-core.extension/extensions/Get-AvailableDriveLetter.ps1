@@ -22,7 +22,13 @@
   http://stackoverflow.com/questions/12488030/getting-a-free-drive-letter/29373301#29373301
 #>
 function Get-AvailableDriveLetter {
-  param ([char[]]$ExcludedLetters)
+  param (
+    [char[]]$ExcludedLetters,
+
+    # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+    [parameter(ValueFromRemainingArguments = $true)]
+    [Object[]] $IgnoredArguments
+  )
 
   $Letter = [int][char]'C'
   $i = @()

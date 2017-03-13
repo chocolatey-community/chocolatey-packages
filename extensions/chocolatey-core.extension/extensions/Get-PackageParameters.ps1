@@ -10,7 +10,15 @@
 .OUTPUTS
     [HashTable]
 #>
-function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackageParameters) {
+function Get-PackageParameters {
+    [CmdletBinding()]
+    param(
+       [string] $Parameters = $Env:ChocolateyPackageParameters,
+       # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+       [parameter(ValueFromRemainingArguments = $true)]
+       [Object[]] $IgnoredArguments
+    )
+
     $res = @{}
 
     $re = "\/([a-zA-Z0-9]+)(:([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)?"
