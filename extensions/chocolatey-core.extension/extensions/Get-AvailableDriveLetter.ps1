@@ -32,13 +32,13 @@ function Get-AvailableDriveLetter {
 
   $Letter = [int][char]'C'
   $i = @()
-  
+
   #getting all the used Drive letters reported by the Operating System
   $(Get-PSDrive -PSProvider filesystem) | %{$i += $_.name}
-  
+
   #Adding the excluded letter
   $i+=$ExcludedLetters
-  
+
   while($i -contains $([char]$Letter)){$Letter++}
 
   if ($Letter -gt [char]'Z') {
