@@ -1,5 +1,5 @@
 ﻿Update-SessionEnvironment
 
-$version = '0.16.1'
+$version = '0.16.2'
 
 python -m pip install mkdocs==$version
