@@ -16,8 +16,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" /t REG_DWORD /v 1A10 /f /d 0 | out-null
-  $HTML = Invoke-WebRequest -Uri $releases
+  
+  $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
   $try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.className -eq 'NoBottomMargin' } ).innerText
   $try = $try  -split "\r?\n"
   $try = $try[0] -replace ' ', ' = '
@@ -25,7 +25,7 @@ function global:au_GetLatest {
   $version = ( $try.Version )
   $major_version = ([version]$version).Major
   $HTML.close
-  reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" /v 1A10 /f | out-null
+  
     @{
         Version = Get-Padded-Version $version $padVersionUnder
         URL32   = "https://download.macromedia.com/get/flashplayer/pdc/${version}/install_flash_player_${major_version}_plugin.msi"
