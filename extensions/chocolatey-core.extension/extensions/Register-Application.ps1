@@ -34,7 +34,11 @@ function Register-Application{
         [string]$Name,
 
         # Register application only for the current user. By default registration is for the machine.
-        [switch]$User
+        [switch]$User,
+
+        # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+        [parameter(ValueFromRemainingArguments = $true)]
+        [Object[]] $IgnoredArguments
     )
 
     if (!(Test-Path $ExePath)) { throw "Path doesn't exist: $ExePath" }

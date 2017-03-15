@@ -25,7 +25,11 @@ function Get-AppInstallLocation {
     param(
         # Regular expression pattern
         [ValidateNotNullOrEmpty()]
-        [string] $AppNamePattern
+        [string] $AppNamePattern,
+
+        # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+        [parameter(ValueFromRemainingArguments = $true)]
+        [Object[]] $IgnoredArguments
     )
 
     function strip($path) { if ($path.EndsWith('\')) { return $path -replace '.$' } else { $path } }

@@ -1,7 +1,11 @@
 # CHANGELOG
 
+## 1.2.0
+
+- Use `$IgnoredArguments` in all functions to allow for future expansion and splatting ([#621](https://github.com/chocolatey/chocolatey-coreteampackages/issues/621))
+
 ## 1.1.0
-- `Get-AvailableDriveLetter` - Get the next unused drive letter
+- `Get-AvailableDriveLetter`: Get the next unused drive letter
 
 ## 1.0.7
 - Bugfix in `Get-PackageParameters`: flags can now have numbers in their names, whereas before, everything past the number would be truncated and the flag would turn into a boolean.
@@ -40,4 +44,4 @@
 
 ## Version 0.1.3
 
-- `Get-WebContent` -  Download file with choco internals.
+- `Get-WebContent`:  Download file with choco internals.

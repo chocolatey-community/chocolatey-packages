@@ -22,17 +22,23 @@
   http://stackoverflow.com/questions/12488030/getting-a-free-drive-letter/29373301#29373301
 #>
 function Get-AvailableDriveLetter {
-  param ([char[]]$ExcludedLetters)
+  param (
+    [char[]]$ExcludedLetters,
+
+    # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+    [parameter(ValueFromRemainingArguments = $true)]
+    [Object[]] $IgnoredArguments
+  )
 
   $Letter = [int][char]'C'
   $i = @()
-  
+
   #getting all the used Drive letters reported by the Operating System
   $(Get-PSDrive -PSProvider filesystem) | %{$i += $_.name}
-  
+
   #Adding the excluded letter
   $i+=$ExcludedLetters
-  
+
   while($i -contains $([char]$Letter)){$Letter++}
 
   if ($Letter -gt [char]'Z') {
