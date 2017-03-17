@@ -30,7 +30,15 @@ function Extract-TCFiles() {
 }
 
 function Get-TCInstallLocation() {
-    (gp 'HKLM:\SOFTWARE\Ghisler\Total Commander').InstallDir
+    if ($Env:COMMANDER_PATH) { return $Env:COMMANDER_PATH }
+
+    $key = gp 'HKLM:\SOFTWARE\Ghisler\Total Commander' -ea 0
+    if ($key) { return $key.InstallDir }
+
+    $installLocation = Get-AppInstallLocation totalcmd
+    if ($installLocation) { return $installLocation }
+
+    if (Test-Path c:\totalcmd) { return "c:\totalcmd" }
 }
 
 function Set-TCIniFilesLocation() {

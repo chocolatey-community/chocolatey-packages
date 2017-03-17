@@ -1,7 +1,5 @@
 import-module au
 
-$releases = 'https://www.telerik.com/download/fiddler'
-
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
@@ -12,12 +10,19 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version  = $download_page.Content -match 'Version (4(\.[0-9]+)+)'
+    $url        = 'https://www.telerik.com/docs/default-source/fiddler/fiddlersetup.exe'
+    $setup_path = "$PSScriptRoot\fiddlersetup.exe"
+
+    Write-Host "Downloading full setup file to find the version"
+    iwr $url -OutFile $setup_path
+    $version = gi $setup_path | % { [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
+    $checksum32 = Get-FileHash $setup_path | % Hash
+    rm fiddlersetup.exe -ea 0
     @{
-        Version = $Matches[1]
-        URL32   = 'https://www.telerik.com/docs/default-source/fiddler/fiddlersetup.exe'
+        Version    = $version
+        URL32      = $url
+        Checksum32 = $checksum32
     }
 }
 
-update -ChecksumFor 32
+update -NoCheckUrl -ChecksumFor none

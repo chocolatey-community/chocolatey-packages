@@ -29,6 +29,10 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 * Bookmark
 * Macro recording and playback
 * Launch with different [arguments](https://notepad-plus-plus.org/assets/images/scsh/scsh_cmdlineArguments.png)
+
+## Notes
+
+- To force the installation of x32 version, use the `--x86` argument with `choco install`.
 </description>
     <projectUrl>https://notepad-plus-plus.org/</projectUrl>
     <tags>notepad notepadplusplus notepad-plus-plus editor text development foss</tags>
