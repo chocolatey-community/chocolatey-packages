@@ -4,7 +4,7 @@
   <metadata>
     <id>sysinternals</id>
     <title>Sysinternals</title>
-    <version>2017.02.17</version> 
+    <version>2017.2.17</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
@@ -21,6 +21,7 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 ## Notes
 
 - This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to the PATH.
+- This package now downloads the nano edition of sysinternals on nano servers.
 
 </description>
     <projectUrl>http://technet.microsoft.com/en-us/sysinternals/bb842062</projectUrl>
