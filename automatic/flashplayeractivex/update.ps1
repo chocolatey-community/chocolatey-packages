@@ -2,7 +2,7 @@
 import-module au
 . "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
-$releases = "https://get.adobe.com/en/flashplayer/" # URL to for GetLatest
+$releases = "https://get.adobe.com/en/flashplayer/?activex" # URL to for GetLatest
 $padVersionUnder = '24.0.1'
 
 function global:au_BeforeUpdate {
@@ -27,7 +27,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   
-  $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $HTML = Invoke-WebRequest -Uri $releases
   $try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.className -eq 'NoBottomMargin' } ).innerText
   $try = $try  -split "\r?\n"
   $try = $try[0] -replace ' ', ' = '
