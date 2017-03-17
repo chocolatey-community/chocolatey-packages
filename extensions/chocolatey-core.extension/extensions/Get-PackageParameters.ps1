@@ -21,7 +21,7 @@ function Get-PackageParameters {
 
     $res = @{}
 
-    $re = "\/([a-zA-Z0-9]+)(:([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)?"
+    $re = "\/([a-zA-Z0-9]+)(:[`"'].+?[`"']|[^ ]+)?"
     $results = $Parameters | Select-String $re -AllMatches | select -Expand Matches
     foreach ($m in $results) {
         if (!$m) { continue } # must because of posh 2.0 bug: https://github.com/chocolatey/chocolatey-coreteampackages/issues/465
