@@ -3,6 +3,7 @@
 ## 1.2.0
 
 - Use `$IgnoredArguments` in all functions to allow for future expansion and splatting ([#621](https://github.com/chocolatey/chocolatey-coreteampackages/issues/621))
+- Bugfix in `Get-PackageParameters` parsing of paths containing symbol chars.
 
 ## 1.1.0
 - `Get-AvailableDriveLetter`: Get the next unused drive letter
