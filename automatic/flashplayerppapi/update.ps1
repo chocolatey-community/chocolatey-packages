@@ -23,15 +23,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-
-  $HTML = Invoke-WebRequest -Uri $releases
+  
+  $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
   $try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.id -eq 'AUTO_ID_columnleft_p_version' } ).innerText
   $try = $try  -split "\r?\n"
   $try = $try[0] -replace ' ', ' = '
   $try =  ConvertFrom-StringData -StringData $try
   $currentVersion = ( $try.Version )
   $majorVersion = ([version] $currentVersion).Major
-
+  $HTML.close
+  
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${currentVersion}/install_flash_player_${majorVersion}_ppapi.msi"
 
   return @{
