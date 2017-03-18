@@ -27,9 +27,9 @@ function global:au_GetLatest {
 
     # Put combined installer as URL32 and installerzip as URL64 so I can use Get-RemoteFiles to download both later
     @{
-        URL32   = $url
-        URL64   = "http://ghisler.fileburst.com/addons/installer.zip"
-        Version = $version
+        URL32    = $url
+        URL64    = "http://ghisler.fileburst.com/addons/installer.zip"
+        Version  = ([version]$version).ToString()  #prevent leading 0es, see https://github.com/chocolatey/chocolatey-coreteampackages/issues/600
         FileType = 'exe'
     }
 }
