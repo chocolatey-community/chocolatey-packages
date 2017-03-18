@@ -1,5 +1,4 @@
 function Set-TCParameters() {
-    $pp = Get-PackageParameters
     $localUser   = 'UserName='  + $(if ($pp.LocalUser)   { '' }  else { '*' })
     $desktopIcon = 'mkdesktop=' + $(if ($pp.DesktopIcon) { '1' } else { '0' })
     $installPath = 'Dir='       + $(if ($pp.InstallPath) { $pp.InstallPath } else { '%ProgramFiles%\totalcmd' })
@@ -27,6 +26,41 @@ function Extract-TCFiles() {
         mv $tcmdWork\INSTALL64.exe  $tcmdWork\INSTALL.exe -Force
         mv $tcmdWork\INSTALL64.inf  $tcmdWork\INSTALL.inf -Force
     }
+}
+
+function Set-TCShellExtension() {
+    Write-Host "Setting shell extension"
+
+    New-PSDrive -Name HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT -ea 0 | Out-Null
+    #sp HKCR:\Directory\shell -name "(Default)" -Value "Total_Commander"
+    mkdir HKCR:\Directory\shell\Total_Commander\command -force | Out-Null
+    sp HKCR:\Directory\shell\Total_Commander -name "(Default)" -Value "Total Commander"
+    sp HKCR:\Directory\shell\Total_Commander\command  -name "(Default)" -Value "$installLocation\$tcExeName /O ""%1"""
+}
+
+function Set-ExplorerAsDefaultFM() {
+    Write-Host "Setting Explorer as default file manager"
+
+    New-PSDrive -Name HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT -ea 0 | Out-Null
+    'HKCR:\Directory', 'HKCR:\Drive' | % {
+        $key = gi $_
+        $key = $key.OpenSubKey('shell', 'ReadWriteSubTree')
+        $key.DeleteValue('')
+    }
+}
+
+function Set-TCAsDefaultFM() {
+    Write-Host "Setting Total Commander as default file manager"
+
+    New-PSDrive -Name HKCR -PSProvider Registry -Root HKEY_CLASSES_ROOT -ea 0 | Out-Null
+
+    sp HKCR:\Drive\shell -name "(Default)" -Value "open"
+    mkdir HKCR:\Drive\shell\open\command -force | Out-Null
+    sp HKCR:\Drive\shell\open\command  -name "(Default)" -Value "$installLocation\$tcExeName /O ""%1"""
+
+    sp HKCR:\Directory\shell -name "(Default)" -Value "open"
+    mkdir HKCR:\Directory\shell\open\command -force | Out-Null
+    sp HKCR:\Directory\shell\open\command  -name "(Default)" -Value "$installLocation\$tcExeName /O ""%1"""
 }
 
 function Get-TCInstallLocation() {

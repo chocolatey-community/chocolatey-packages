@@ -1,11 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
+
 $is64 = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
                Write-Host "Installing 64 bit version"; $true  }
         else { Write-Host "Installing 32 bit version"; $false }
 
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-. $toolsPath\helpers.ps1
+$tcExeName = if ($is64) { 'totalcmd64.exe' } else { 'totalcmd.exe' }
+$pp = Get-PackageParameters
 
 $tcmdWork = Get-PackageCacheLocation
 Extract-TCFiles
@@ -27,6 +30,9 @@ $installLocation = Get-TCInstallLocation
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
 Write-Host "$packageName installed to '$installLocation'"
 
-$tcExeName = if ($is64) { 'totalcmd64.exe' } else { 'totalcmd.exe' }
+if ($pp.ShellExtension) { Set-TCShellExtension }
+if ($pp.DefaultFM -eq $true) { Set-TCAsDefaultFM }
+if ($pp.DefaultFM -like 'explorer*') { Set-ExplorerAsDefaultFM }
+
 Register-Application "$installLocation\$tcExeName" tc
 Write-Host "$packageName registered as tc"
