@@ -8,6 +8,7 @@
     <owners>chocolatey</owners>
     <authors>Rainer Ullrich</authors>
     <projectUrl>http://rukerneltool.rainerullrich.de/</projectUrl>
+    <licenseUrl>http://rukerneltool.com/_Kurzanleitung_.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Universal flash-, upload- and recovery-tool for AVM Fritz!Box.
