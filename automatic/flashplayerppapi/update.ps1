@@ -1,7 +1,7 @@
 ﻿import-module au
 . "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
-$releases = "https://get.adobe.com/en/flashplayer/" # URL to for GetLatest
+$releases = 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_win_pl.xml'
 $padVersionUnder = '24.0.1'
 
 function global:au_BeforeUpdate {
@@ -24,13 +24,10 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 
-  $HTML = Invoke-WebRequest -Uri $releases
-  $try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.id -eq 'AUTO_ID_columnleft_p_version' } ).innerText
-  $try = $try  -split "\r?\n"
-  $try = $try[0] -replace ' ', ' = '
-  $try =  ConvertFrom-StringData -StringData $try
-  $currentVersion = ( $try.Version )
-  $majorVersion = ([version] $currentVersion).Major
+  $XML = New-Object  System.Xml.XmlDocument
+  $XML.load($releases)
+  $currentVersion = $XML.XML.update.version.replace(',', '.')
+  $majorVersion = ([version]$currentVersion).Major
 
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${currentVersion}/install_flash_player_${majorVersion}_ppapi.msi"
 
