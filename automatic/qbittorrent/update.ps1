@@ -3,29 +3,7 @@ Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
 
 $releases = 'http://www.qbittorrent.org/download.php'
 
-function global:au_BeforeUpdate {
-  # We can't get Get-RemoteFiles because we use sourceforge
-  #Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName
-
-  function Download-File($url, $defaultName) {
-    $fileName = Get-WebFileName $url $defaultName
-    $toolsDir = "$PSScriptRoot\tools"
-
-    Get-WebFile $url "$toolsDir\$fileName"
-
-    $checksum = Get-FileHash "$toolsDir\$fileName" -Algorithm SHA256 | % Hash
-    @{ FileName = $fileName ; Checksum = $checksum }
-  }
-
-  $result32 = Download-File -url $Latest.URL32 "qbittorrent_x86.exe"
-  $result64 = Download-File -url $Latest.URL64 "qbittorrent_x64.exe"
-
-  $Latest.ChecksumType = 'sha256'
-  $Latest.FileName32   = $result32.FileName
-  $Latest.Checksum32   = $result32.Checksum
-  $Latest.FileName64   = $result64.FileName
-  $Latest.Checksum64   = $result64.Checksum
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameSkip 1 -NoSuffix }
 
 function global:au_SearchReplace {
   @{
@@ -59,9 +37,10 @@ function global:au_GetLatest {
   }
 
   return @{
-    URL32 = $url32
-    URL64 = $url64
-    Version = $version
+    URL32    = $url32
+    URL64    = $url64
+    Version  = $version
+    FileType = 'exe'
   }
 }
 
