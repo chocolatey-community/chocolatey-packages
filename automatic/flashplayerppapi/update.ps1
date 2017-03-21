@@ -26,7 +26,7 @@ function global:au_GetLatest {
 
   $XML = New-Object  System.Xml.XmlDocument
   $XML.load($releases)
-  $currentVersion = $XML.XML.update.version.replace(',', '.')
+  $currentVersion = $XML.XML[1].update.version.replace(',', '.')
   $majorVersion = ([version]$currentVersion).Major
 
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${currentVersion}/install_flash_player_${majorVersion}_ppapi.msi"
