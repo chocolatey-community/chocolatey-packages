@@ -6,7 +6,7 @@
     <title>qBittorrent</title>
     <version>3.3.11</version>
     <authors>Christophe Dumez</authors>
-    <owners>nconrads, chocolatey</owners>
+    <owners>chocolatey,nconrads</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
     <description>
 qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
@@ -45,6 +45,9 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
 - IPv6 compliant
 - Sequential downloading (aka "Download in order")
 - Available on most platforms: Linux, Mac OS X, Windows, OS/2, FreeBSD
+
+## Notes
+- This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
     </description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
     <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
