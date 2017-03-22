@@ -1,44 +1,47 @@
 import-module au
+Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
 
 $releases = 'http://www.qbittorrent.org/download.php'
 
-function global:au_BeforeUpdate {
-  Remove-Item "$PSScriptRoot\tools\*.exe"
-
-  $client = New-Object System.Net.WebClient
-
-  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
-
-  $client.DownloadFile($Latest.URL32, "$filePath")
-  $client.Dispose()
-
-  $Latest.ChecksumType = 'sha256'
-  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameSkip 1 -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName)`""
-        }
-        ".\tools\verification.txt"      = @{
-          "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
-          "(?i)(checksum type:\s+).*"   = "`${1}$($Latest.ChecksumType)"
-          "(?i)(checksum:\s+).*"       = "`${1}$($Latest.Checksum)"
-        }
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(\s;\s*)'.*'(\s*# 32\-bit)" = "`${1}'$($Latest.FileName32)'`${2}"
+      "(?i)(\s;\s*)'.*'(\s*# 64\-bit)" = "`${1}'$($Latest.FileName64)'`${2}"
     }
+    ".\tools\verification.txt" = @{
+      "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
+      "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
+      "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re    = 'setup\.exe'
-    $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re    = 'setup\.exe\/download$'
+  $urls  = $download_page.links | ? href -match $re | select -First 2 -expand href
+  $url32 = $urls | ? { $_ -notmatch "x64" }  | select -first 1
+  $url64 = $urls | ? { $_ -match "x64" } | select -first 1
 
-    $version  = $url -split '[_]' | select -Last 1 -Skip 1
-    $fileName = $url -split '/' | select -last 1 -skip 1
+  $version   = $url32 -split '[_]' | select -Last 1 -Skip 1
+  $version64 = $url64 -split '[_]' | select -Last 1 -Skip 2
 
-    return @{ URL32 = $url; Version = $version; FileName = $fileName }
+  if ($version -ne $version64) {
+    throw "32-bit and 64-bit version do not match. Please investigate."
+  }
+
+  return @{
+    URL32    = $url32
+    URL64    = $url64
+    Version  = $version
+    FileType = 'exe'
+  }
 }
 
 update -ChecksumFor none
