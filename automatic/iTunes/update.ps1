@@ -41,7 +41,7 @@ function global:au_GetLatest {
   $Matches = $null
 
 
-  $download_page.Content -match "[`"'](https:\/\/[^`"']+iTunes6464Setup\.exe)[`"']" | Out-Null
+  $download_page.Content -match "[`"'](https:\/\/[^`"']+iTunes64Setup\.exe)[`"']" | Out-Null
   $url64 = $Matches[1]
   $Matches = $null
 
