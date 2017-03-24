@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
 
@@ -7,8 +7,8 @@ $packageArgs = @{
   fileType               = 'exe'
   url                    = 'http://download.nomacs.org/nomacs-setup.exe'
   url64bit               = 'http://download.nomacs.org/nomacs-setup.exe'
-  checksum               = '580702af8d677d0172812f9c906e25686b2a0fd057a7e05ca6fbafbefa797967'
-  checksum64             = '580702af8d677d0172812f9c906e25686b2a0fd057a7e05ca6fbafbefa797967'
+  checksum               = 'd3d13450ddff8d368d844e1232f3df23858201cf795fbd742d2e3699cafdf1be'
+  checksum64             = 'd3d13450ddff8d368d844e1232f3df23858201cf795fbd742d2e3699cafdf1be'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '--script "{0}\install-script.js"' -f $toolsPath
