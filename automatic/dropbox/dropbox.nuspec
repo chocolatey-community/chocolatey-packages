@@ -24,8 +24,5 @@ The confusing dialog box with the content *“Dropbox will not work correctly if
     <summary>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere.</summary>
     <tags>dropbox virtual files file admin</tags>
     <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
-    <dependencies>
-      <dependency id="autohotkey.portable" />
-    </dependencies>
   </metadata>
 </package>

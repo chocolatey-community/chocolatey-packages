@@ -1,13 +1,23 @@
+Import-Module au
 
-import-module au
+$global:getBetaVersion = $false
+$global:stableVersionDownloadUri = 'https://www.dropbox.com/download?full=1&plat=win'
+$global:stableVersionRegEx = '.*Dropbox%20([0-9\.]+).*'
+$global:betaVersionReleasePageUri = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
+$global:betaVersionDownloadUri = 'https://clientupdates.dropboxstatic.com/client/Dropbox%20$($betaVersion)%20Offline%20Installer.exe'
+$global:betaVersionRegEx = '.*Beta-Build-([0-9\.\-]+).*'
 
-$releases = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
-
+function global:Get-FirstBetaLink([string] $uri, [string] $regEx) {
+  $progressPreference = 'silentlyContinue'
+  $html = Invoke-WebRequest -UseBasicParsing -Uri $uri
+  $progressPreference = 'Continue'
+   
+  return $html.links | Where-Object { $_.href -match $regEx } | Select-Object -First 1
+}
 
 function global:au_SearchReplace {
-  @{
+  return @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]version\s*=\s*)('.*')"= "`$1'$($Latest.Version)'"
       "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
       "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
@@ -16,36 +26,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+  if ($global:getBetaVersion) {
+    
+    $betaVersion = ((Get-FirstBetaLink $global:betaVersionReleasePageUri $global:betaVersionRegEx) -replace $global:betaVersionRegEx, '$1') -replace '-', '.'
+    $betaVersionDownloadUri = $ExecutionContext.InvokeCommand.ExpandString($global:betaVersionDownloadUri)
 
-$HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
-# Intialize Stable Array
-$stable_builds = @();
-# Intialize Beta Array
-$beta_builds = @();
-$HTML.Links | foreach {
-if ($_.href -match "stable" ) {
-# Build the Stable Array by Adding all matches
-$stable_builds += $_.href;
-}
-if ($_.href -match "beta" ) {
-# Build the Beta Array by Adding all matches
-$beta_builds += $_.href;
-}
-}
-$Stable_latestVersion = $stable_builds[0]
-$Stable_latestVersion = $Stable_latestVersion -split ( '\/' )
-$stable = $Stable_latestVersion[3]
-$Beta_latestVersion = $beta_builds[2]
-$Beta_latestVersion = $Beta_latestVersion -split ( '\/' )
-$beta = $Beta_latestVersion[3]
-$stable = $stable -replace ('Stable-Build-', '' )
-$stable = $stable -replace ('-', '.')
-$beta = $beta -replace ('Beta-Build-', '' )
-$beta = $beta -replace ('-', '.')
-$HTML.close
-$url = "https://dl-web.dropbox.com/u/17/Dropbox%20${stable}.exe"
+    return @{ URL32 = $betaVersionDownloadUri; Version = $betaVersion }
+  }
 
-  return @{ URL32 = $url; Version = $stable; }
+  $stableVersionDownloadUri = ((Get-WebURL -Url $global:stableVersionDownloadUri).ResponseUri).AbsoluteUri
+  $stableVersion = $($stableVersionDownloadUri -replace $global:stableVersionRegEx, '$1')
+
+  return @{ URL32 = $stableVersionDownloadUri; Version = $stableVersion }
 }
 
 update -ChecksumFor 32
