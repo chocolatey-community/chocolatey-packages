@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-	$version = $download_page.Content -match 'EaseUS Partition Master ([1-9\.]+) Free Edition'
+	$version = $download_page.Content -match 'EaseUS Partition Master ([0-9\.]+) Free Edition'
 	$version = $matches[1]
 	$url = "http://download.easeus.com/free/epm.exe"
 
