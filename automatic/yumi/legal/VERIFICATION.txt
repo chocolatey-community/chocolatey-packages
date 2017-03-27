@@ -6,14 +6,14 @@ The embedded software have been downloaded from the listed download
 location on <http://www.pendrivelinux.com/yumi-multiboot-usb-creator/>
 and can be verified by doing the following:
 
-1. Download the following <http://www.pendrivelinux.com/downloads/YUMI/YUMI-2.0.4.5.exe>
+1. Download the following <http://www.pendrivelinux.com/downloads/YUMI/YUMI-2.0.4.6.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: C1F01CE61A98200D5EE5336824D75BA69F8AC58EB31EA4B27F93578B3D129239
+  checksum: FF4CEB0434D3EB1B4DFD78874E5AB68E62B871776B7CA7BCD884C4441B996A3E
 
 The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/gpl.txt>
 This license was linked to from the following page <https://www.pendrivelinux.com/disclaimer/>
