@@ -4,7 +4,7 @@
   <metadata>
     <id>wixtoolset</id>
     <title>WiX Toolset</title>
-    <version>3.10.3.3007</version>
+    <version>3.11.0.1507</version>
     <authors>Rob Mensching, Bob Arnson</authors>
     <owners>Gary Ewan Park</owners>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
@@ -17,7 +17,7 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8d9b19f28a26f92affd02b8ef8ddd53d873739d4/icons/wixtoolset.png</iconUrl>
     <releaseNotes>
 Information on this release can be found in the following blog post:
-* [http://wixtoolset.org/releases/v3-10-3-3007/](http://wixtoolset.org/releases/v3-10-3-3007/)
+* [http://wixtoolset.org/releases/v3-11-0-1507/](http://wixtoolset.org/releases/v3-11-0-1507/)
 	</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
