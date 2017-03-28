@@ -11,4 +11,7 @@ function global:au_SearchReplace {
     }
  }
 
+# Left empty intentionally to override BeforeUpdate in autohotkey.install
+ function global:au_BeforeUpdate { }
+
 update -ChecksumFor none
