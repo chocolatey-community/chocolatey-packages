@@ -26,7 +26,7 @@ function global:au_GetLatest {
   if (Test-Path $global:file) {
     $Latest.Checksum32 = (Get-FileHash $global:file -Algorithm $global:checksumType | ForEach Hash).ToLowerInvariant()
 
-    $versionInfo = (Get-Item $global:fileName).VersionInfo
+    $versionInfo = (Get-Item $global:file).VersionInfo
     $stableVersion = $versionInfo.ProductVersion -replace '([0-9\.]+)\..*', '$1'
 
     Remove-Item $global:file -Force
