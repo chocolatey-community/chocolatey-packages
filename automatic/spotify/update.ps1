@@ -1,38 +1,43 @@
 Import-Module AU
 
-$global:downloadUrl = 'https://download.spotify.com/SpotifyFullSetup.exe'
-$global:fileType = 'exe'
-$global:checksumType = 'sha256'
-$global:file = Join-Path . "\tools\$([System.IO.Path]::GetFileNameWithoutExtension($Latest.URL32))_x32.exe"
+# We only use this for checking for Spotify versions, nothing else
+$releasesUrl = 'http://www.filehorse.com/download-spotify/'
+$downloadUrl = 'https://download.spotify.com/SpotifyFullSetup.exe'
+
+function global:au_BeforeUpdate {
+  # we need to verify that the downloaded file is the correct version
+  Get-RemoteFiles -Purge
+  $file = Get-ChildItem "$PSScriptRoot\tools" -Filter "*.exe" | select -First 1 | % { Get-Item $_.FullName }
+  [version]$productVersion = $file.VersionInfo.ProductVersion -replace '([\d\.]+)\..*','$1'
+
+  if ($productVersion -gt [version]$Latest.Version) {
+    throw "New version is released, but not yet updated on filehorse"
+  } elseif($productVersion -lt [version]$Latest.Version) {
+    throw "filehorse shows a newer version than what is available officially"
+  }
+
+  Remove-Item $file -Force
+}
 
 function global:au_SearchReplace {
   return @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]installer\s*=\s*)('.*')" = "`$1'$([System.IO.Path]::GetFileName($Latest.URL32))'"
-      "(?i)(^[$]url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
-      "(?i)(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
       "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
     }
   }
 }
 
 function global:au_GetLatest {
-  $Latest.Url32 = $global:downloadUrl
-  $Latest.FileType = $global:fileType
-  $Latest.ChecksumType32 = $global:checksumType
-
-  Get-RemoteFiles
-
-  if (Test-Path $global:file) {
-    $Latest.Checksum32 = (Get-FileHash $global:file -Algorithm $global:checksumType | ForEach Hash).ToLowerInvariant()
-
-    $versionInfo = (Get-Item $global:file).VersionInfo
-    $stableVersion = $versionInfo.ProductVersion -replace '([0-9\.]+)\..*', '$1'
-
-    Remove-Item $global:file -Force
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releasesUrl
+  $re = 'Spotify ([\d]+\.[\d\.]+)'
+  $version = $download_page.Content -match $re
+  if ($Matches) {
+    $version = $Matches[1]
   }
 
-  return @{ Url32 = $Latest.Url32; Version = $stableVersion }
+  return @{ Url32 = $downloadUrl; Version = $version }
 }
 
 update -ChecksumFor none
