@@ -1,13 +1,11 @@
+﻿$downloadDir = Get-PackageCacheLocation
 $installer          = 'SpotifyFullSetup.exe'
-$url                = 'https://download.spotify.com/SpotifyFullSetup.exe'
-$checksum           = '56acd50df0d3e4706abb04f8952536dbb8fab627a54df53019e47884af024d0d'
 $arguments          = @{
     packageName     = $env:ChocolateyPackageName
-    softwareName    = $evn:ChocolateyPackageTitle
-    unzipLocation   = $env:ChocolateyPackageFolder
-    file            = Join-Path $env:ChocolateyPackageFolder $installer
-    url             = $url
-    checksum        = $checksum
+    softwareName    = 'Spotify'
+    file            = Join-Path $downloadDir $installer
+    url             = 'https://download.spotify.com/SpotifyFullSetup.exe'
+    checksum        = '56ACD50DF0D3E4706ABB04F8952536DBB8FAB627A54DF53019E47884AF024D0D'
     fileType        = 'exe'
     checksumType    = 'sha256'
     silentArgs      = '/silent'
@@ -17,9 +15,11 @@ $arguments          = @{
 # Download the installer
 $arguments['file'] = Get-ChocolateyWebFile @arguments
 
-schtasks.exe /Create /SC Once /sd (Get-Date) /TN $arguments['packageName'] /TR "$($arguments['packageName']) $($arguments['silentArgs'])"
+# It doesn't matter what time we choose, we need to start it manually
+schtasks.exe /Create /SC Once /st (Get-Date -Format 'HH:mm') /TN $arguments['packageName'] /TR "'$($arguments['file'])' $($arguments['silentArgs'])" /F 2>$null
+schtasks.exe /Run /TN $arguments['packageName']
 Start-Sleep -s 1
-schtasks.exe /Delete /TN $arguments['packageName']
+schtasks.exe /Delete /TN $arguments['packageName'] /F
 
 # Wait for Spotify to start, then kill it
 $done = $false
