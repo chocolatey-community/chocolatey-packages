@@ -35,4 +35,4 @@ function global:au_GetLatest {
   return @{ Url32 = $Latest.Url32; Version = $stableVersion }
 }
 
-update -ChecksumFor none -NoCheckChocoVersion
+update -ChecksumFor none
