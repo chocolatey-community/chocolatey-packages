@@ -6,9 +6,9 @@ $osBitness = Get-ProcessorBits
 
 # Remove not needed folder with binaries
 if ($osBitness -eq 64) {
-  $uninstallRegKey = 'HKLM:SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{96f2cba3-1b26-4e8c-8bef-eeae7259b99d}'
+  $uninstallRegKey = 'HKLM:SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{d812c5ae-99d2-4e55-b7f0-d73e687f1069}'
 } else {
-  $uninstallRegKey = 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{96f2cba3-1b26-4e8c-8bef-eeae7259b99d}'
+  $uninstallRegKey = 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{d812c5ae-99d2-4e55-b7f0-d73e687f1069}'
 }
 
 $uninstallPath = (Get-ItemProperty $uninstallRegKey).BundleCachePath
