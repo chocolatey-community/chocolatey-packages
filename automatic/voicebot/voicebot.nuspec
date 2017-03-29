@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>voicebot</id>
+    <version>0.0</version>
+    <title>VoiceBot</title>
+    <authors>Binary Fortress Software</authors>
+    <projectUrl>https://www.voicebot.net</projectUrl>
+    <licenseUrl>https://www.voicebot.net/License/</licenseUrl>
+    <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/VoiceBot.png</iconUrl>
+    <docsUrl>https://www.voicebot.net/Help/</docsUrl>
+    <mailingListUrl>https://www.voicebot.net/Discussions/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>    
+    <description>
+    Take command of your games with your voice using VoiceBot!
+    Sending commands to your games and applications is as easy as saying
+    the command out loud. Use your voice to run keyboard shortcuts, click
+    and move your mouse, and even execute complicated macros and scripts.
+    </description>
+    <copyright>Copyright © 2017 Binary Fortress Software</copyright>
+    <tags>voice control macros games</tags>
+    <owners>chocolatey,ferventcoder</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/voicebot</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
