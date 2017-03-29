@@ -3,6 +3,8 @@ Import-Module AU
 $global:getBetaVersion
 
 function global:au_BeforeUpdate {
+  $Latest.ChecksumType32 = 'sha256
+  '
   Get-RemoteFiles -Purge
 
   $file = Get-ChildItem $PSScriptRoot\tools -Filter "*.exe" | select -First 1 | % { Get-Item $_.FullName }
