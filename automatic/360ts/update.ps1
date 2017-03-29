@@ -2,7 +2,7 @@
 import-module au
 
 $URL32 = 'http://int.down.360safe.com/totalsecurity/360TS_Setup.exe'
-$releases = 'https://www.360totalsecurity.com/en/features/360-total-security/'
+$releases = 'https://www.360totalsecurity.com/en/download-free-antivirus/360-total-security/?offline=1'
 
 
 function global:au_SearchReplace {
@@ -17,16 +17,14 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 
-reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" /t REG_DWORD /v 1A10 /f /d 0 | out-null
-$HTML = Invoke-WebRequest -Uri $releases
-$try = ($HTML.ParsedHtml.getElementsByTagName('span') | Where{ $_.className -eq 'version' } ).innerText
-$try = $try -replace( ' : ',' = ')
-$techy =  ConvertFrom-StringData -StringData $try
-$CurrentVersion = ( $techy.Version )
-reg delete "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\3" /v 1A10 /f | out-null
-$HTML.close
+$HTML = Invoke-WebRequest -UseBasicParsing -Uri $URI
+$links = $HTML.Links | where{ ($_.href -match "360TS_Setup" ) } | Select -first 1
+$link = $links.href -split ( '\/' )
+$name = $link | Select -Last 1
+$ver = $name -replace('.exe','')
+$version = $ver -split ( '_' )
 
-  return @{ URL32 = $URL32; Version = $CurrentVersion; }
+  return @{ URL32 = $URL32; Version = ( $version | Select -Last 1 ); }
 }
 
 update -ChecksumFor 32
