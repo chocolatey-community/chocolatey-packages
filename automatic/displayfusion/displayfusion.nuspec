@@ -21,10 +21,9 @@
     - The free license is only usable in a personal and non-commercial context.
     Commercial use of Display Fusion requires the purchase of a license.
     </description>
-    <summary>Spotify is a new way to listen to music</summary>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
-    <tags>multiMonitor displayFusion display binaryFortress monitor free</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/clipboardfusion</packageSourceUrl>
+    <tags>multimonitor displayFusion display binaryFortress monitor free</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/displayfusion</packageSourceUrl>
     <owners>chocolatey,ferventcoder</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
