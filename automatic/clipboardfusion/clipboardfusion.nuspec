@@ -5,7 +5,7 @@
     <version>0.0</version>
     <title>ClipboardFusion</title>
     <authors>Binary Fortress Software</authors>
-    <licenseUrl>https://www.binaryfortress.com/Data/Download/?package=clipboardfusion%26licenseen=1%26log=0</licenseUrl>
+    <licenseUrl>https://www.clipboardfusion.com/License/</licenseUrl>
     <projectUrl>https://www.clipboardfusion.com</projectUrl>
     <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/ClipboardFusion.png</iconUrl>
     <docsUrl>https://www.clipboardfusion.com/FAQ/</docsUrl>
@@ -16,7 +16,6 @@
     replace clipboard text or run powerful macros on your clipboard contents.
     You can even sync your clipboard with other computers and mobile devices.
     </description>
-    <summary>Spotify is a new way to listen to music</summary>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>clipboardfusion clipboard sync history scrubbing macros</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/clipboardfusion</packageSourceUrl>
