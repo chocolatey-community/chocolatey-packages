@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>itunesfusion</id>
+    <version>0.0</version>
+    <title>iTunesFusion</title>
+    <authors>Binary Fortress Software</authors>
+    <projectUrl>https://www.itunesfusion.com</projectUrl>
+    <licenseUrl>https://www.itunesfusion.com/License/</licenseUrl>
+    <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/iTunesFusion.png</iconUrl>
+    <docsUrl>https://www.itunesfusion.com/Help/</docsUrl>
+    <mailingListUrl>https://www.itunesfusion.com/Discussions/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>    
+    <description>In just a few easy steps iTunesFusion will let you synchronize any iTunes playlist(s) with almost any device! You can configure as many different devices as you need and synchronize each one with different iTunes playlists. You can use standard playlists or dynamically updating smart playlists to synchronize your device.</description>
+    <copyright>Copyright © 2017 Binary Fortress Software</copyright>
+    <tags>itunesfusion itunes sync android mp3 usb</tags>
+    <owners>chocolatey,ferventcoder</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/itunesfusion</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="iTunes" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
