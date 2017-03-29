@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://sourceforge.net/projects/avidemux/files/avidemux/2.6.18/avidemux_2.6.18_win32.exe/download
-   x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.6.18/avidemux_2.6.18_win64.exe/download
+   x32: https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win32.exe/download
+   x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win64.exe/download
 
    to download the installer.
 
@@ -16,9 +16,9 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 190486A5D50EC2F5A30465EF3B96A701F9569EFF0101BFB2325DD9113DDF8709
-   checksum64: 069F36A0469E64964F100262A7642020E31452A9C572326BD8021445BC491A53
+   checksum32: 3398B294436299D139FD35E757D81D917753F41A757CF5073586C5F80C4C74F8
+   checksum64: 383B6F0EB8DFCB009035BC76A756375D8D5EC9CB3CFF5195796367EAB6C32ABE
 
 Using AU:
 
-   Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.6.18/avidemux_2.6.18_win64.exe/download
+   Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win64.exe/download
