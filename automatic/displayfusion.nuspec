@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>displayfusion</id>
+    <version>0.0</version>
+    <title>DisplayFusion</title>
+    <authors>Binary Fortress Software</authors>
+    <projectUrl>http://www.displayfusion.com</projectUrl>
+    <licenseUrl>https://www.displayfusion.com/License/</licenseUrl>
+    <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/DisplayFusion.png</iconUrl>
+    <docsUrl>https://www.displayfusion.com/Help/</docsUrl>
+    <mailingListUrl>https://www.displayfusion.com/Discussions/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    DisplayFusion will make your multi-monitor life much easier.
+    With powerful features like Multi-Monitor Taskbars, TitleBar Buttons
+    and fully customizable Functions, DisplayFusion will make managing your
+    multiple monitors easy.
+
+    # Free for personal use
+    - The free license is only usable in a personal and non-commercial context.
+    Commercial use of Display Fusion requires the purchase of a license.
+    </description>
+    <copyright>Copyright © 2017 Binary Fortress Software</copyright>
+    <tags>multimonitor displayFusion display binaryFortress monitor free</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/displayfusion</packageSourceUrl>
+    <owners>chocolatey,ferventcoder</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
