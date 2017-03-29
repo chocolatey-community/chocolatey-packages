@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nomacs</id>
-    <version>3.4.0</version>
+    <version>3.6.1</version>
     <title>nomacs Image Lounge</title>
     <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
@@ -59,7 +59,7 @@ See detailed nomacs [features page](http://nomacs.org/features/).
 - If you are installing **behind the proxy**, you will need to configure proxy settings in the installer manually (via Settings button) during the installation. You can use [nomacs.portable](https://chocolatey.org/packages/nomacs.portable) as alternative in such scenario.
     </description>
     <summary>Open source image viewer</summary>
-    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.4.0</releaseNotes>
+    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.6.1</releaseNotes>
     <copyright>Markus Diem, Stefan Fiel, Florian Kleber</copyright>
     <tags>admin image editor viewer jpg png svg foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nomacs</packageSourceUrl>

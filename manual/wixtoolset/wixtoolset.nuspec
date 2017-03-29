@@ -4,7 +4,7 @@
   <metadata>
     <id>wixtoolset</id>
     <title>WiX Toolset</title>
-    <version>3.10.3.3007</version>
+    <version>3.10.3.300701</version>
     <authors>Rob Mensching, Bob Arnson</authors>
     <owners>Gary Ewan Park</owners>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
