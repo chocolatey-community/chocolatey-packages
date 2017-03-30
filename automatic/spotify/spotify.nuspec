@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spotify</id>
-    <version>0.0</version>
+    <version>1.0.51.693</version>
     <title>Spotify</title>
     <authors>Spotify</authors>
     <projectUrl>http://spotify.com</projectUrl>
@@ -11,7 +11,7 @@
     <owners>chocolatey,ferventcoder</owners>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/spotify</packageSourceUrl>
     <licenseUrl>https://www.spotify.com/us/legal/end-user-agreement/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/spotify.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4ad26e5a5ab2b5280e4d57e5b14fcc9d4c6a22c5/icons/spotify.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
     #Music
