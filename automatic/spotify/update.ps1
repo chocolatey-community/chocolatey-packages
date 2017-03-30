@@ -7,7 +7,7 @@ $downloadUrl = 'https://download.spotify.com/SpotifyFullSetup.exe'
 function global:au_BeforeUpdate {
   # we need to verify that the downloaded file is the correct version
   Get-RemoteFiles -Purge
-  $file = Get-ChildItem "$PSScriptRoot\tools" -Filter "*.exe" | select -First 1 | % { Get-Item $_.FullName }
+  $file = Get-Item "tools\*.exe" | select -First 1
   [version]$productVersion = $file.VersionInfo.ProductVersion -replace '([\d\.]+)\..*','$1'
 
   if ($productVersion -gt [version]$Latest.Version) {
@@ -28,6 +28,9 @@ function global:au_SearchReplace {
     }
   }
 }
+
+# TODO: When forced, download the file and use the
+# installer version, instead of parsing from filehorse
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releasesUrl
