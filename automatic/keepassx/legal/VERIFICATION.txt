@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.keepassx.org/downloads>
+and can be verified by doing the following:
+
+1. Download the following <https://www.keepassx.org/releases/2.0.3/KeePassX-2.0.3.zip>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: F6DF49982423BC0FAE7B6B294E7CDB4566506F5ED72F3118241A648A023A6DCA
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/keepassx/keepassx/blob/d511905c1647a1e311e8b20d5930a37a9c2531cd/LICENSE.GPL-2>
