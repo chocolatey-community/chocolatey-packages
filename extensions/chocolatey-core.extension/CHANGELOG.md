@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.4.0
+- `Install-ChocolateyInstallPackage`: Overrides chocos own function and provides option to use 64-bit files
+
 ## 1.3.0
 
 - `Get-EffectiveProxy`: Get the current proxy using several methods
