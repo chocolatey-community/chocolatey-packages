@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Ghostscript.app</id>
-    <version>9.21</version>
+    <version>9.21.0.20170331</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/Ghostscript.app</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Ghostscript (Install)</title>
