@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>keepassx</id>
-    <version>2.0.2</version>
+    <version>2.0.3</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keepassx</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>KeePassX Password Manager</title>
