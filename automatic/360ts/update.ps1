@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-$HTML = Invoke-WebRequest -UseBasicParsing -Uri $URI
+$HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
 $links = $HTML.Links | where{ ($_.href -match "360TS_Setup" ) } | Select -first 1
 $link = $links.href -split ( '\/' )
 $name = $link | Select -Last 1
