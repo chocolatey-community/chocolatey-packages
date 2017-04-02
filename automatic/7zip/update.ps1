@@ -24,10 +24,10 @@ function global:au_GetLatest {
   if ($Matches[1] -and ($Matches[1] -match '^[\d\.]+$')) { $version = $Matches[0] }
 
   @{
-    URL32 = $domain + $url32
-    URL64 = $domain + $url64
+    URL32     = $domain + $url32
+    URL64     = $domain + $url64
     URL_EXTRA = $domain + $url_extra
-    Version = $version
+    Version   = [version]$version
   }
 }
 
