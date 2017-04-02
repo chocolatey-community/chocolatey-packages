@@ -3,7 +3,7 @@
   <metadata>
     <id>7zip</id>
     <title>7-Zip</title>
-    <version>16.04</version>
+    <version>16.4.0.20170402</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
@@ -38,7 +38,7 @@
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
     <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
     <dependencies>
-      <dependency id="7zip.install" version="[16.04]" />
+      <dependency id="7zip.install" version="[16.4.0.20170402]" />
     </dependencies>
   </metadata>
   <files>
