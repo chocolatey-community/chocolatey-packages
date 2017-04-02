@@ -28,6 +28,7 @@
       - WiFi Security Check
       - Sandbox
       - Patch Up
+      **NOTE:** The uninstall for this package **is not silent**.
     </description>
     <summary>A feature-packed software solution that provides users with a powerful antivirus, a junk cleaner and a system booster within the same interface</summary>
     <copyright>&copy; 2014 - 2017 Qihu 360 Software Co. Limited</copyright>
