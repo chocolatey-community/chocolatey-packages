@@ -2,8 +2,8 @@
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $filePath = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne $true) {
-       Write-Host "Installing 64 bit version" ; gi $toolsDir\*_x32.exe }
-else { Write-Host "Installing 32 bit version" ; gi $toolsDir\*_x64.exe }
+       Write-Host "Installing 64 bit version" ; gi $toolsDir\*_x64.exe }
+else { Write-Host "Installing 32 bit version" ; gi $toolsDir\*_x32.exe }
 
 $packageArgs = @{
   packageName    = '7zip.install'
