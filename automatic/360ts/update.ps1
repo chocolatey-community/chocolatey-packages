@@ -18,7 +18,7 @@ function global:au_GetLatest {
   $url = $HTML.Links | ? href -match "\.exe$" | select -first 1 -expand href
   $version = $url -split '_|(\.exe)' | select -last 1 -skip 2
 
-  $url = 'https' + $url
+  $url = 'https:' + $url
 
   return @{ URL32 = $url; Version = $version }
 }
