@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>360ts</id>
-    <version>0.0</version>
+    <version>9.0.0.1157</version>
     <title>360 Total Security</title>
     <authors>Qihu 360 Software</authors>
     <owners>chocolatey,adgellida</owners>
     <licenseUrl>http://www.360totalsecurity.com/en/about.html</licenseUrl>
     <projectUrl>http://www.360totalsecurity.com/</projectUrl>
-    <iconUrl> https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b92d42be38598e16e7e526b3b8b43c3220439cd4/icons/360ts.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b92d42be38598e16e7e526b3b8b43c3220439cd4/icons/360ts.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
       A feature-packed software solution that provides users with a powerful antivirus, a junk cleaner and a system booster within the same interface

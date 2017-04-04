@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = '360ts'
   fileType               = 'exe'
-  url                    = 'http://int.down.360safe.com/totalsecurity/360TS_Setup.exe'
-  checksum               = 'cce663b3a4086543c6f398f226f6e861bf827ea85170c1ee9d1ab7233d49b0ea'
+  url                    = 'https://free.360totalsecurity.com/totalsecurity/360TS_Setup_9.0.0.1157.exe'
+  checksum               = 'c227b962eb3798a68b8ef07238269701c9e9c8d1a9198fe527e4165c9cf3c84d'
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
