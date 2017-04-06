@@ -1,14 +1,14 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'tightvnc'
   fileType       = 'msi'
-  url            = 'http://www.tightvnc.com/download/2.8.5/tightvnc-2.8.5-gpl-setup-32bit.msi'
-  url64bit       = 'http://www.tightvnc.com/download/2.8.5/tightvnc-2.8.5-gpl-setup-64bit.msi'
-  checksum       = '4504cc34153e52bb1f8bcebd864e951a38fd290aec71a54f6031b2fcf1cd1fcf'
-  checksum64     = '2029b35d044590fe27f857032b26210d8139246fbd430b352a3644c3e5d99011'
+  url            = 'http://www.tightvnc.com/download/2.8.8/tightvnc-2.8.8-gpl-setup-32bit.msi'
+  url64bit       = 'http://www.tightvnc.com/download/2.8.8/tightvnc-2.8.8-gpl-setup-64bit.msi'
+  checksum       = '1e2088ec30823ada6ca27225424209a24d796301c4e57a32db2dcb6161aa1ddd'
+  checksum64     = '47bc1e8cce620e996da4b67aa886ae9ea854ec13e94d05928b6bf4af8ce17ef1'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/quiet /norestart'
