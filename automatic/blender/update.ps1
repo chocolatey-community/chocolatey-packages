@@ -23,7 +23,22 @@ function global:au_GetLatest {
     $url32 = $urls -match "windows32" | select -first 1
     $url64 = $urls -match "windows64" | select -first 1
 
-    $version  = $url32 -split '[a-f]?-' | select -Last 1 -Skip 1
+    $version = $url32 -split '\-' | select -Last 1 -Skip 1
+
+    # swapping out a-f to a numeric value
+    $maps = @{
+      'a' = '.0'
+      'b' = '.1'
+      'c' = '.2'
+      'd' = '.3'
+      'e' = '.4'
+      'f' = '.5'
+    }
+    if ($version -match '^[\d\.]+$') {
+      $version += '.0'
+    } else {
+      $maps.Keys | ? { $version.EndsWith($_) } | % { $version = $version -replace $_,$maps[$_] }
+    }
 
     return @{
       URL32 = $url32
