@@ -27,18 +27,15 @@ function global:au_GetLatest {
 
     # swapping out a-f to a numeric value
     $maps = @{
-      'a' = '.0'
+      'a' = ''
       'b' = '.1'
       'c' = '.2'
       'd' = '.3'
       'e' = '.4'
       'f' = '.5'
     }
-    if ($version -match '^[\d\.]+$') {
-      $version += '.0'
-    } else {
-      $maps.Keys | ? { $version.EndsWith($_) } | % { $version = $version -replace $_,$maps[$_] }
-    }
+
+    $maps.Keys | ? { $version.EndsWith($_) } | % { $version = $version -replace $_,$maps[$_] }
 
     return @{
       URL32 = $url32
