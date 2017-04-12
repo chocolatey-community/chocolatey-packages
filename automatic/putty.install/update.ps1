@@ -1,6 +1,6 @@
 ﻿. $PSScriptRoot\..\putty\update.ps1
 
-if ($MyInvocation.InvocationName -ne '.') { # run the update only if the script is not sourced
+if ($MyInvocation.InvocationName -ne '.') { # run the BeforeUpdate function only if the script is not sourced
   function global:au_BeforeUpdate {
     $Latest.FileType = 'msi' # could potentially be overridden from putty.portable
     $Latest.URL32 = $Latest.URL32Installer
@@ -27,4 +27,6 @@ function global:au_SearchReplace {
   }
 }
 
-update -ChecksumFor none
+if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
+  update -ChecksumFor none
+}
