@@ -21,5 +21,8 @@ Information on this release can be found in the following blog post:
     </releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/wixtoolset</packageSourceUrl>
     <projectSourceUrl>https://github.com/wixtoolset/</projectSourceUrl>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
   </metadata>
 </package>
