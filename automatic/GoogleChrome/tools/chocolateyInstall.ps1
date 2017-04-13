@@ -1,7 +1,7 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$version = $Env:ChocolateyPackageVersion
+$version = '57.0.2987.133'
 if ($version -eq (Get-ChromeVersion)) {
     Write-Host "Google Chrome $version is already installed."
     return
