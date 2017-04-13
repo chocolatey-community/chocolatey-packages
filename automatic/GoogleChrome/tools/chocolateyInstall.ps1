@@ -3,8 +3,8 @@
 
 $version = '57.0.2987.133'
 if ($version -eq (Get-ChromeVersion)) {
-    Write-Host "Google Chrome $version is already installed."
-    return
+  Write-Host "Google Chrome $version is already installed."
+  return
 }
 
 $packageArgs = @{
