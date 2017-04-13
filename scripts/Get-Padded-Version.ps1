@@ -62,17 +62,20 @@ function Get-Padded-Version() {
   $revision = $versionInfo.Revision
   $paddedRev = [int]($revision.ToString().PadRight($RevisionLength, '0'));
 
+  Write-Debug "Loading nuspec file to get the previous version"
+  $content = gc -Encoding UTF8 (Resolve-Path "*.nuspec")
+  $content | ? { $_ -match "\<version\>([\d\.]+)\<\/version\>" } | Out-Null
+  if ($Matches) { $newVersion = [version]$Matches[1] }
+
   if ($global:au_force -eq $true) {
-    Write-Debug "Loading nuspec file to see if we need to pad the version"
-    $content = gc -Encoding UTF8 (Resolve-Path "*.nuspec");
-    $content | ? { $_ -match "\<version\>([\d\.]+)\<\/version\>" } | Out-Null
-    if ($Matches) {
-      $newVersion = [version]$Matches[1]
+    if ($newVersion) {
       $paddedNewRev = [int]$newVersion.Revision.ToString().PadRight($RevisionLength, '0')
       while ($paddedRev -le $paddedNewRev) {
         $paddedRev++ | Out-Null
       }
     }
+  } elseif($newVersion -and $newVersion -eq $versionInfo) {
+    return $Version
   }
 
   return $versionInfo.ToString() -replace '^([\d]+\.[\d]+\.[\d]+\.)\d+$',"`${1}$paddedRev"
