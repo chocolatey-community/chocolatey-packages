@@ -1,10 +1,12 @@
-﻿$packageArgs        = @{
+﻿$ErrorActionPreference  = 'Stop'
+
+$packageArgs        = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = "Dropbox*"
-    url             = 'https://clientupdates.dropboxstatic.com/client/Dropbox%2022.4.24%20Offline%20Installer.exe'
-    checksum        = '37d27d3ebd0426be061495e9efd4d67f7e3dd3b582f89fea6a31b45b3fb9beb0'
+    url             = 'https://clientupdates.dropboxstatic.com/client/Dropbox%2023.4.18%20Offline%20Installer.exe'
+    checksum        = ''
     fileType        = 'exe'
-    checksumType    = 'sha256'
+    checksumType    = ''
     silentArgs      = '/s'
     validExitCodes = @(0, 1641, 3010)
 }

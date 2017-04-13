@@ -6,11 +6,14 @@
     <title>Dropbox</title>
     <authors>Dropbox</authors>
     <owners>chocolatey,ferventcoder,the-running-dev</owners>
-    <licenseUrl>http://www.dropbox.com/terms</licenseUrl>
+    <licenseUrl>https://www.dropbox.com/terms</licenseUrl>
     <projectUrl>https://www.dropbox.com/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/chocolatey/chocolatey-coreteampackages/master/icons/dropbox.svg</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9d90583a4103d4a9db86425a5fbda79cc845b4ef/icons/dropbox.svg</iconUrl>
+    <mailingListUrl>https://www.dropboxforum.com/</mailingListUrl>
+    <docsUrl>https://www.dropbox.com/help</docsUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>
+    ## Features
     Dropbox is a free service that lets you bring all your photos, docs,
     and videos anywhere. This means that any file you save to your
     Dropbox will automatically save to all your computers,
@@ -22,7 +25,7 @@
     </description>
     <summary>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere.</summary>
     <tags>dropbox virtual files file admin freeware cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/dropbox</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
