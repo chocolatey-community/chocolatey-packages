@@ -2,16 +2,15 @@
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$filePath = "$toolsPath\putty-0.68-installer.msi"
-
 $packageArgs = @{
     PackageName    = "putty.install"
     FileType       = "msi"
     SoftwareName   = "PuTTY"
-    File           = $filePath
+    File           = "$toolsPath\putty-0.68-installer.msi"
+    File64         = "$toolsPath\putty-64bit-0.68-installer.msi"
     SilentArgs     = "/quiet"
     ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force $filePath -ea 0
+Remove-Item -Force "$toolsPath\*.msi","$toolsPath\*.ignore" -ea 0

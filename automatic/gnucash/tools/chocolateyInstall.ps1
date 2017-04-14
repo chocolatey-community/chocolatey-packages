@@ -1,13 +1,13 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $packageArgs = @{
   packageName   = 'gnucash'
   fileType      = 'exe'
-  url           = 'https://github.com/Gnucash/gnucash/releases/download/2.6.15/gnucash-2.6.15.setup.exe'
+  url           = 'https://github.com/Gnucash/gnucash/releases/download/2.6.16/gnucash-2.6.16-1.setup.exe'
 
   softwareName  = 'GnuCash*'
 
-  checksum      = '822d4c99e402cf9526c5ec1f2f246ded704eefd96185e7e18712ab06f12b00e9'
+  checksum      = 'db0e2f8e020d4e33a40b819456022b791ad23cc541b29f619914c3f97d786d80'
   checksumType  = 'sha256'
 
   silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /SP-"

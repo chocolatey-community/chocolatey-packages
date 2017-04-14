@@ -1,5 +1,0 @@
-﻿$url = '{{DownloadUrl}}'
-$url64 = '{{DownloadUrlx64}}'
-$uninstallRegKey = 'HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\GPL Ghostscript {{PackageVersion}}'
-$version = [Version] '{{PackageVersion}}'
-$package = '{{PackageName}}'

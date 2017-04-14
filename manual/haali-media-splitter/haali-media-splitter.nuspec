@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>haali-media-splitter</id>
+    <version>1.13.138.1401</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/haali-media-splitter</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>Haali Media Splitter</title>
+    <authors>Mike Matsnev</authors>
+    <projectUrl>http://haali.su/mkv/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/haali-media-splitter.svg</iconUrl>
+    <copyright>2004–2009 Mike Matsnev</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>http://lists.matroska.org/</mailingListUrl>
+    <tags>haali-media-splitter haali media splitter matroska ts admin freeware</tags>
+    <summary>Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter.</summary>
+    <description>
+Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter. mkv2vfr included, convert mkvs with variable framerate to constant framerate. GDSMux/DS Mux included also, a simple mkv/m2ts multiplexer and cutter.
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
