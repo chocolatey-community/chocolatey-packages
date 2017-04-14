@@ -1,4 +1,6 @@
-﻿$downloadDir        = Get-PackageCacheLocation
+﻿$ErrorActionPreference  = 'Stop'
+
+$downloadDir        = Get-PackageCacheLocation
 $installer          = 'iTunesFusionSetup-2.6.exe'
 $arguments          = @{
     packageName     = $env:ChocolateyPackageName

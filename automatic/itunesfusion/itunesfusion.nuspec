@@ -7,15 +7,20 @@
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.itunesfusion.com</projectUrl>
     <licenseUrl>https://www.itunesfusion.com/License/</licenseUrl>
-    <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/iTunesFusion.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/eac42b924ab69856d600a4733ea1bba32fbb99d8/icons/iTunesFusion.png</iconUrl>
     <docsUrl>https://www.itunesfusion.com/Help/</docsUrl>
     <mailingListUrl>https://www.itunesfusion.com/Discussions/</mailingListUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>    
-    <description>In just a few easy steps iTunesFusion will let you synchronize any iTunes playlist(s) with almost any device! You can configure as many different devices as you need and synchronize each one with different iTunes playlists. You can use standard playlists or dynamically updating smart playlists to synchronize your device.</description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    ## Features
+    - Synchronize any iTunes playlist(s) with almost any device
+    - Configure as many different devices as you need
+    - Synchronize each one with different iTunes playlists.
+    - Use standard playlists or dynamically updating smart playlists to synchronize your device</description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>itunesfusion itunes sync android mp3 usb</tags>
-    <owners>chocolatey,ferventcoder</owners>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/itunesfusion</packageSourceUrl>
+    <owners>chocolatey,the-running-dev</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/itunesfusion</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
       <dependency id="iTunes" />
