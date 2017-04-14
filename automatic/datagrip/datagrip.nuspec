@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>datagrip</id>
+    <version>0.0</version>
+    <title>JetBrains DataGrip</title>
+    <authors>JetBrains</authors>
+    <licenseUrl>https://www.datagrip.org/terms.php</licenseUrl>
+    <projectUrl>https://www.jetbrains.com/datagrip/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/04a664cc932597e990efa9772dfc16114f18bed8/icons/datagrip.png</iconUrl>
+    <docsUrl>https://www.jetbrains.com/help/datagrip</docsUrl>
+    <summary>Your Swiss Army Knife for Databases and SQL</summary>
+    <releaseNotes>https://confluence.jetbrains.com/display/DBE/Public+DataGrip+Page</releaseNotes>
+    <tags>datagrip admin jetbrains trial 30days</tags>
+    <bugTrackerUrl>https://youtrack.jetbrains.com/issues/DBE</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    Meet DataGrip, our new database IDE that is tailored to suit specific needs of professional SQL developers.
+
+    ## Features
+    - Intelligent query console
+    - Efficient schema navigation
+    - Explain plan
+    - Smart code completion
+    - On-the-fly analysis and quick-fixes
+    - Refactorings that work in SQL files and schemas
+    - Version control integration
+    </description>
+    <copyright>Copyright © 2017 JetBrains</copyright>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/datagrip</packageSourceUrl>
+    <owners>chocolatey,Xuanwo,the-running-dev</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
