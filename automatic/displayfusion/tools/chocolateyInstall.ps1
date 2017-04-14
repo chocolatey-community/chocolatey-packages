@@ -1,4 +1,6 @@
-﻿$downloadDir        = Get-PackageCacheLocation
+﻿$ErrorActionPreference  = 'Stop'
+
+$downloadDir        = Get-PackageCacheLocation
 $installer          = 'DisplayFusionSetup-8.1.2.exe'
 $programFiles       = Join-Path (Get-ProgramFilesDirectory) 'DisplayFusion'
 $arguments          = @{
