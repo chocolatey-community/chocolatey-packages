@@ -5,12 +5,16 @@ in verifying that this package's contents are trustworthy.
 The extension has been downloaded from their official download link listed on <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>
 and can be verified like this:
 
-1. Download <https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.68-installer.msi>
-2. Then use one of the following methods to obtain the checksum
+
+1. Download the following installers:
+  32-Bit: <https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.68-installer.msi>
+  64-Bit: <https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi>
+2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 
+  checksum32: 3979670A28D93780D330D1361C0062C543B7E77C7DD96DCAB61C65F9D163843B
+  checksum64: ED33504AF4B91244E7B6026CF90D45E9C2D3BDC6F1656163B0B41D1DAE19BC41
 
 File 'LICENSE.txt' is obtained from <http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html>

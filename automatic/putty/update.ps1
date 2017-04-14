@@ -14,22 +14,26 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   #https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi
-  $reInstaller  = "putty-(.+)-installer.msi"
-  $url32Installer = $download_page.links | Where-Object href -match $reInstaller | Select-Object -First 1 -expand href
-  $version = $matches[1] 
-  $filename32Installer = [IO.Path]::GetFileName($url32Installer)
+  $url32Installer = $download_page.links | ? href -match '\.msi$' | ? href -notmatch '64bit' | select -First 1 -expand href
+  $url64Installer = $download_page.links | ? href -match '64bit.*\.msi$' | select -First 1 -expand href
+
+  $version = $url32Installer -split '\-' | select -last 1 -skip 1
 
   #https://the.earth.li/~sgtatham/putty/latest/x86/putty.zip
   $rePortable  = "putty.zip"
-  $url32Portable = $download_page.links | Where-Object href -match $rePortable | Select-Object -First 1 -expand href
-  $filename32Portable = [IO.Path]::GetFileName($url32Portable)
+  $portables = $download_page.links | ? href -match $rePortable | select -First 2 -expand href
+  $url32Portable = $download_page.links | ? href -match "w32.*$rePortable" | select -First 1 -expand href
+  $url64Portable = $download_page.links | ? href -match "w64.*$rePortable" | select -First 1 -expand href
 
+  if (!$url32Installer -or !$url64Installer -or !$url32Portable -or !$url64Portable) {
+    throw "Either 32bit or 64bit installer/portable was not found. Please check if naming have changed."
+  }
 
   return @{
     URL32Installer = $url32Installer
-    FileName32Installer = $filename32Installer
+    URL64Installer = $url64Installer
     URL32Portable = $url32Portable
-    FileName32Portable = $filename32Portable
+    URL64Portable = $url64Portable
     Version = $version
   }
 }

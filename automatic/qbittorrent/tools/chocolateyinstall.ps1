@@ -3,9 +3,9 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $fileName = if ((Get-ProcessorBits 64) -and ($env:chocolateyForceX86 -ne 'true')) {
-  Write-Host "Installing 64 bit version" ; 'qbittorrent_3.3.11_x64_setup.exe' # 64-bit
+  Write-Host "Installing 64 bit version" ; 'qbittorrent_3.3.12_x64_setup.exe' # 64-bit
 } else {
-  Write-Host "Installing 32 bit version" ; 'qbittorrent_3.3.11_setup.exe' # 32-bit
+  Write-Host "Installing 32 bit version" ; 'qbittorrent_3.3.12_setup.exe' # 32-bit
 }
 
 $packageArgs = @{

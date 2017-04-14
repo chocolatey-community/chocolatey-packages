@@ -2,10 +2,7 @@
 
 $softwareNamePrefix = '7-zip'
 
-function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -FileNameBase '7zip'
-  $Latest.ChecksumType = 'sha256'
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase '7zip' }
 
 function global:au_SearchReplace {
   @{
