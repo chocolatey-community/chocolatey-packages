@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>webstorm</id>
+    <version>2017.1.1</version>
+    <title>JetBrains WebStorm</title>
+    <authors>JetBrains</authors>
+    <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
+    <projectUrl>https://www.jetbrains.com/webstorm/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/06598317f9dfd0d48b3e74c636e4b04d3a88f017/icons/webstorm.png</iconUrl>
+    <docsUrl>https://www.jetbrains.com/help/webstorm</docsUrl>
+    <summary>WebStorm - The Smartest JavaScript IDE</summary>
+    <releaseNotes>https://www.jetbrains.com/webstorm/whatsnew/</releaseNotes>
+    <tags>webstorm ide admin jetbrains developer productivity IDE HTML CSS JavaScript trial 30days</tags>
+    <bugTrackerUrl>https://youtrack.jetbrains.com/issues/WEB</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    Use the full power of the modern JavaScript ecosystem – WebStorm’s got you covered!
+    Enjoy the intelligent code completion, on-the-fly error detection, powerful navigation
+    and refactoring for JavaScript, TypeScript, stylesheet languages, and the most popular frameworks.
+
+    ## Features
+    - Web (Angular, React, Vue.js)
+    - Mobile (Ionic, Cordova, React Native)
+    - Server (Node.js, Meteor)
+    - Desktop (Electron)
+    - Debugger
+    - Seamless tool integration
+    - Unit testing
+    - Integration with VCS
+    </description>
+    <copyright>Copyright © 2017 JetBrains</copyright>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/webstorm</packageSourceUrl>
+    <owners>chocolatey,digitaldrummerj,the-running-dev</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
