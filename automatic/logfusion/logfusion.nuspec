@@ -7,26 +7,23 @@
     <authors>Binary Fortress Software</authors>
     <projectUrl>http://www.logfusion.ca</projectUrl>
     <licenseUrl>https://www.logfusion.ca/License/</licenseUrl>
-    <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/LogFusion.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/7457c4aec7a50384fc3e8787fb59e4be48b84738/icons/LogFusion.png</iconUrl>
     <docsUrl>https://www.logfusion.ca/Help/</docsUrl>
     <mailingListUrl>https://www.logfusion.ca/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-    LogFusion is a powerful log monitoring tool that makes parsing your logs easy.
-    Take advantage of LogFusion's Row Highlighting and Text Filtering features to
-    quickly filter your log and only show the relevant lines you are looking for.
-    Use the Custom Columns feature to let LogFusion parse and split your logs into
-    separate columns for easier reading. Just like the popular 'tail' program in
-    Linux/Unix, LogFusion can also auto-scroll and always show you the newest lines
-    in your log files in real-time. LogFusion can load any text logs, including
-    web server logs, developer debug logs and any other text that is outputted to a file.
-    LogFusion can also read Event Logs in real-time, and can even use it's powerful
-    Text Filtering and Row Highlighting features to help you find specific items.
+    ## Features
+    - Pwerful log monitoring
+    - Row highlighting and text filtering
+    - Custom columns to parse and split your logs
+    - Auto-scroll and always show you the newest lines
+    - Load any text logs, including web server logs, developer debug logs and any other text that is outputted to a file
+    - Read Event Logs in real-time
     </description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
-    <tags>logfusion log logs parsing tail monitoring</tags>
+    <tags>logfusion log logs parsing tail monitoring trial freeware</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/logfusion</packageSourceUrl>
-    <owners>chocolatey,ferventcoder</owners>
+    <owners>chocolatey,the-running-dev</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
