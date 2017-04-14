@@ -44,4 +44,4 @@ function global:au_GetLatest {
     return @{ Url32 = $downloadUrl; Version = $version }
 }
 
-Update -ChecksumFor None -NoCheckChocoVersion
+Update -ChecksumFor None
