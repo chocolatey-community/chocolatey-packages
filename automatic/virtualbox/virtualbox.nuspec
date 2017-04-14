@@ -21,6 +21,9 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 - `NoPath`            - Do not add virtualbox install directory to the PATH
 - `NoExtensionPack`   - Do not install extension pack
 
+### Uninstall parameters
+- `KeepExtensions`    - Do not uninstall installed virtualbox extensions
+
 </description>
 <projectUrl>https://www.virtualbox.org/</projectUrl>
 <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
