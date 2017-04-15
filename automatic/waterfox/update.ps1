@@ -31,7 +31,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = 'Setup\.exe$'
+  $re    = '(?:Waterfox)%20([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2})(%20Setup\-\d+\.[ex]+)|(?:Waterfox)%20([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2})(%20Setup)(?!\-\d+)(\.[ex]+)'
   $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
 
   $version  = $url -split '%20' | select -Last 1 -Skip 1
