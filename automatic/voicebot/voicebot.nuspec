@@ -7,7 +7,7 @@
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.voicebot.net</projectUrl>
     <licenseUrl>https://www.voicebot.net/License/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b586265ad8082ed125ed506419753e3f85702f86/icons/VoiceBot.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b586265ad8082ed125ed506419753e3f85702f86/icons/voicebot.png</iconUrl>
     <docsUrl>https://www.voicebot.net/Help/</docsUrl>
     <mailingListUrl>https://www.voicebot.net/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
