@@ -1,6 +1,8 @@
 # AU template: https://github.com/majkinetor/au-packages-template
 
 version: '{build}'
+pull_requests:
+  do_not_increment_build_number: true
 max_jobs: 1
 image: WMF 5
 # History plugin requires complete log
@@ -33,14 +35,13 @@ environment:
 
   #ID of the gist used to save run results
   gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
-  
+
   #ID of the gist used to save test run results
   gist_id_test: b733b29e320a8c05bc99cc0bf59cd8d1
 
   #Chocolatey API key - to push updated packages
   api_key:
     secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
-
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
@@ -51,27 +52,30 @@ install:
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
+- choco --version
 - ps: |
     git clone -q https://github.com/majkinetor/au.git $Env:TEMP/au
     . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
-
 - ps: |
     "Build info"
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
     '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
     '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
-
 build_script:
 - ps: |
     $ErrorActionPreference = 'Continue'
-
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
-
+    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
+      ./scripts/Test-RepoPackage.ps1 -CleanFiles -TakeScreenshots
+      return
+    } else {
+      # Clean the choco logs as it's quite large
+      rm "$env:ChocolateyInstall\logs\*.log"
+    }
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
         switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
             '\[AU (.+?)\]'   { $forced = $Matches[1] }
-
             '\[PUSH (.+?)\]' {
                 $packages = $Matches[1] -split ' '
                 Write-Host "PUSHING PACKAGES: $packages"
@@ -87,12 +91,16 @@ build_script:
     }
 
     ./update_all.ps1 -ForcedPackages $forced
-    7z a au_temp.zip $Env:TEMP\chocolatey\au\*
 
 artifacts:
 - path: update_info.xml
 - path: Update-AUPackages.md
-- path: au_temp.zip
+
+on_finish:
+- 7z a -mx9 choco_logs.7z "%ChocolateyInstall%\logs\*"
+- ps: if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* ; Push-AppveyorArtifact au_temp.7z }
+- appveyor PushArtifact choco_logs.7z
+#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 notifications:
 - provider: Email
@@ -100,6 +108,3 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
-
-#on_finish:
-#- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
