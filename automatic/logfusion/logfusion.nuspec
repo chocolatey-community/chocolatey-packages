@@ -5,13 +5,18 @@
     <version>0.0</version>
     <title>LogFusion</title>
     <authors>Binary Fortress Software</authors>
-    <projectUrl>http://www.logfusion.ca</projectUrl>
+    <projectUrl>https://www.logfusion.ca</projectUrl>
     <licenseUrl>https://www.logfusion.ca/License/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/7457c4aec7a50384fc3e8787fb59e4be48b84738/icons/LogFusion.png</iconUrl>
+    <iconUrl></iconUrl>
     <docsUrl>https://www.logfusion.ca/Help/</docsUrl>
     <mailingListUrl>https://www.logfusion.ca/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+    Real-Time Log Monitoring Made Easy!
+    LogFusion is a powerful realtime log monitoring application designed for system
+    administrators and developers! Use custom highlighting rules, filtering and more.
+    You can even sync your LogFusion settings between computers.
+
     ## Features
     - Pwerful log monitoring
     - Row highlighting and text filtering
@@ -22,8 +27,8 @@
     </description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>logfusion log logs parsing tail monitoring trial freeware</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/logfusion</packageSourceUrl>
-    <owners>chocolatey,the-running-dev</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/logfusion</packageSourceUrl>
+    <owners>chocolatey,keiththe-running-dev</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
