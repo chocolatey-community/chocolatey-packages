@@ -15,7 +15,8 @@
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/DBE</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-    Meet DataGrip, our new database IDE that is tailored to suit specific needs of professional SQL developers.
+    Meet DataGrip, our new database IDE that is tailored to suit specific needs of
+    professional SQL developers.
 
     ## Features
     - Intelligent query console
