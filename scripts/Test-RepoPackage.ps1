@@ -311,11 +311,7 @@ function RunChocoProcess() {
     '--yes'
     "--execution-timeout=$timeout"
   )
-  if ($arguments[0] -eq 'install') {
-    $args += @(
-      '--requirechecksum'
-    )
-  } else {
+  if ($arguments[0] -eq 'uninstall') {
     $args += @(
       '--all-versions'
       '--autouninstaller'
