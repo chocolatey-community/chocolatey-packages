@@ -22,3 +22,5 @@ Write-Host "$packageName installed to '$installLocation'"
 
 Register-Application "$installLocation\$packageName.exe"
 Write-Host "$packageName registered as $packageName"
+
+Install-BinFile $packageName "$installLocation\$packageName.exe"
