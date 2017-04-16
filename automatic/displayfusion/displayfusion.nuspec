@@ -5,13 +5,19 @@
     <version>0.0</version>
     <title>DisplayFusion</title>
     <authors>Binary Fortress Software</authors>
-    <projectUrl>http://www.displayfusion.com</projectUrl>
+    <projectUrl>https://www.displayfusion.com</projectUrl>
     <licenseUrl>https://www.displayfusion.com/License/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d5deb06ccda7af181948eddc25eb4f15ce6c9a6c/icons/DisplayFusion.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5ef6055d4f21fde8a6efc8dc3dac6f5a59ad7ca4/icons/displayfusion.png</iconUrl>
     <docsUrl>https://www.displayfusion.com/Help/</docsUrl>
     <mailingListUrl>https://www.displayfusion.com/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+    Multiple Monitors Made Easy!
+    DisplayFusion will make your multi-monitor life much easier!
+    With powerful features like Multi-Monitor Taskbars, TitleBar Buttons
+    and fully customizable HotKeys, DisplayFusion will make managing your
+    multiple monitors easy.
+
     ## Features
     - Make your multi-monitor life much easier
     - Multi-Monitor taskbars
@@ -25,8 +31,8 @@
     </description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>multimonitor displayFusion display binaryFortress monitor free</tags>
-     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/displayfusion</packageSourceUrl>
-    <owners>chocolatey,the-running-dev</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/displayfusion</packageSourceUrl>
+    <owners>chocolatey,keithlammers,the-running-dev</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
