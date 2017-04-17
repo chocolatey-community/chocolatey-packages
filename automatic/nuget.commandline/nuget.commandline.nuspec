@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<!-- Do not remove this test for UTF-8: if â€œÎ©â€ doesnâ€™t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>nuget.commandline</id>
     <title>Nuget.CommandLine</title>
-    <version>0</version>
+    <version>3.5.0</version>
     <authors>Microsoft</authors>
     <owners>chocolatey, nuget-mirror</owners>
     <summary>NuGet is the package manager for the Microsoft development platforms</summary>
@@ -13,7 +13,7 @@
 </description>
     <projectUrl>https://github.com/NuGet/NuGet.Client</projectUrl>
     <tags>nuget dot.net microsoft foss cross-platform</tags>
-    <copyright>© .NET Foundation. All rights reserved.</copyright>
+    <copyright>Â© .NET Foundation. All rights reserved.</copyright>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/27f780622b37514680f86c7f5e5f7f9bb0a32fe9/icons/nuget.commandline.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/NuGet/NuGet.Client/dev/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
