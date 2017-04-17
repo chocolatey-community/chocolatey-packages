@@ -29,7 +29,7 @@ function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
     $releases = "https://www.nuget.org/packages/$packageName"
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $url     = $download_page.links | ? title -like '*this version*' | % href
     $version = $url -split '/' | select -last 1
