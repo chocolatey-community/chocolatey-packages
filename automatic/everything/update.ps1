@@ -1,4 +1,5 @@
 import-module au
+. $PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1
 
 $releases = 'https://www.voidtools.com/Changes.txt'
 
@@ -22,6 +23,8 @@ function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge
     iwr 'https://www.voidtools.com/es.exe' -OutFile $PSScriptRoot\tools\es.exe
 }
+
+function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
