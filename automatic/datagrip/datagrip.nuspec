@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>datagrip</id>
-    <version>0.0</version>
+    <version>2017.1.1</version>
     <title>JetBrains DataGrip</title>
     <authors>JetBrains</authors>
     <licenseUrl>https://www.datagrip.org/terms.php</licenseUrl>
@@ -15,8 +15,11 @@
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/DBE</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-    Meet DataGrip, our new database IDE that is tailored to suit specific needs of
-    professional SQL developers.
+    DataGrip is the multi-engine database environment.
+    We support MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Sybase, DB2, SQLite,
+    HyperSQL, Apache Derby and H2. If the DBMS has a JDBC driver you can connect to
+    it via DataGrip. For any of supported engines it provides database introspection
+    and various instruments for creating and modifying objects.
 
     ## Features
     - Intelligent query console
