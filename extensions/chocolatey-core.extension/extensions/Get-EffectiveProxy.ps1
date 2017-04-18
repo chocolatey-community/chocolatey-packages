@@ -6,8 +6,8 @@
     Function tries to find the current proxy using several methods, in the given order:
         - $env:chocolateyProxyLocation variable
         - $env:http_proxy environment variable
-        - Chocolatey config
         - IE proxy
+        - Chocolatey config
         - Winhttp proxy
         - WebClient proxy
 
@@ -30,29 +30,31 @@ function Get-EffectiveProxy(){
         Write-Verbose "Using `$Env:http_proxy"
         return $env:http_proxy
     }
-
-    # Try chocolatey config file
-    $p = choco.exe config get proxy --limit-output
-    if ($p) {
-        Write-Verbose "Using choco config proxy"
-        return $p
-    }
     
     # Try to get IE proxy
     $key = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings"
     $r = Get-ItemProperty $key
     if ($r.ProxyEnable -and $r.ProxyServer) {
         Write-Verbose "Using IE proxy settings"
-        return $r.ProxyServer
+        return "http://" + $r.ProxyServer
+    }
+    
+    # Try chocolatey config file
+    $p = 'y' | choco.exe config get proxy --limit-output
+    $p = ($p -join "`n") -replace '(?s).+Do you want to continue.+?\n'    #happens on non-administrative shell
+    $p = $p.Trim()
+    if ($p) {
+        Write-Verbose "Using choco config proxy"
+        return $p
     }
 
     # Try winhttp proxy
-     (netsh.exe winhttp show proxy) -match 'Proxy Server(s)' | set proxy 
+     (netsh.exe winhttp show proxy) -match 'Proxy Server\(s\)' | set proxy 
      $proxy = $proxy -split ' :' | select -Last 1
      $proxy = $proxy.Trim()
      if ($proxy) {
          Write-Verbose "Using winhttp proxy server"
-         return $proxy
+         return "http://" + $proxy
      }
 
     # Try using WebClient
@@ -61,5 +63,5 @@ function Get-EffectiveProxy(){
     if ($client.Proxy.IsBypassed($url)) { return $null }
 
     Write-Verbose "Using WebClient proxy"
-    return $client.Proxy.GetProxy($url).Authority
+    return "http://" + $client.Proxy.GetProxy($url).Authority
 }
