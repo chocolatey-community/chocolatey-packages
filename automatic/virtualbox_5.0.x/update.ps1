@@ -13,6 +13,12 @@ function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum -Algorithm $Latest.ChecksumType32 -Url $Latest.URL32
 }
 
+function global:au_AfterUpdate {
+  pushd "$PSScriptRoot\..\virtualbox"
+  Set-DescriptionFromReadme -SkipFirst 2
+  popd
+}
+
 function global:au_GetLatest {
   $Latest = GetLatest $releases
   $Latest.PackageName = 'virtualbox'
