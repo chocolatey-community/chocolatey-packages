@@ -1,23 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>jubler</id>
-    <version>5.1</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/jubler</packageSourceUrl>
-    <owners>AdmiringWorm,chocolatey</owners>
-    <title>Jubler Subtitle Editor</title>
-    <authors>Panayotis Katsaloulis</authors>
-    <projectUrl>http://www.jubler.org/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png</iconUrl>
-    <copyright>2005 Panayotis Katsaloulis</copyright>
-    <licenseUrl>https://sourceforge.net/p/jubler/code/ci/jubler/tree/LICENCE</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/jubler/code/ci/jubler/tree/</projectSourceUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/jubler/_list/tickets?source=navbar</bugTrackerUrl>
-    <tags>jubler admin subtitle editor video</tags>
-    <summary>Jubler is a tool to edit text-based subtitles.</summary>
-    <description>Jubler is a tool to edit text-based subtitles.
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png" width="48" height="48" /> jubler
+
+Jubler is a tool to edit text-based subtitles.
 It can be used as an authoring software for new subtitles or as a tool to convert, transform, correct and refine existing subtitles.
 The most popular subtitle formats can be used.
 Preview of the subtitles in realtime or in design time, spell checking, translation mode and styles editing are some of the main features.
@@ -50,16 +33,3 @@ Preview of the subtitles in realtime or in design time, spell checking, translat
 * Undo &amp; redo
 * Cut, copy, paste, delete areas according to time &amp; color patterns
 * Clear areas used for hearing impaired
-</description>
-    <releaseNotes>http://www.jubler.org/changelog.html</releaseNotes>
-    <dependencies>
-      <dependency id="javaruntime" version="8.0" />
-      <dependency id="smplayer" version="16.8.0" />
-      <dependency id="chocolatey-core.extension" version="1.0" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
-  </files>
-</package>
