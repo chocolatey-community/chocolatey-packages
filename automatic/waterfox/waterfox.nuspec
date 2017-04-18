@@ -16,8 +16,7 @@
     <projectSourceUrl>https://github.com/MrAlex94/Waterfox</projectSourceUrl>
     <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>
     <summary>Waterfox is basically a 64-bit version of Firefox.</summary>
-    <description>
-## How and why Waterfox is here...
+    <description>## How and why Waterfox is here...
 Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
 He had a fascination for the web and wanted to help expand on the ideals of what Mozilla had for a free and open web.
 And so he decided to make Waterfox, a 64-Bit browser based on Mozilla's free and open source platform.
@@ -44,7 +43,7 @@ telemetry is sent back to Mozilla or the Waterfox project.
 ## Notes
   - Uninstalling fails when running through choco, manual uninstall is needed.
   The issue for this is tracked [here](https://github.com/chocolatey/choco/issues/1135)
-    </description>
+</description>
     <releaseNotes>https://www.waterfoxproject.org/blog/</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />

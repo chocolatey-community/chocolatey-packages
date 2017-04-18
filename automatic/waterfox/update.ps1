@@ -1,4 +1,5 @@
 ﻿import-module au
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'https://www.waterfoxproject.org/downloads'
 $softwareName = 'Waterfox*'
@@ -26,6 +27,10 @@ function global:au_SearchReplace {
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
     }
   }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_GetLatest {
