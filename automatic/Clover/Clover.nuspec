@@ -5,7 +5,7 @@
     <id>Clover</id>
     <title>Clover</title>
     <owners>chocolatey</owners>
-    <version>3.3.3</version>
+    <version>3.3.4</version>
     <authors>EJIE Technology</authors>
     <summary>Brings Chrome-Style Tabs to Windows Explorer.</summary>
     <description>
