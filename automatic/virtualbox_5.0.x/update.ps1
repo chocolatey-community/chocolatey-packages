@@ -11,12 +11,16 @@ $releases = 'https://www.virtualbox.org/wiki/Download_Old_Builds_5_0'
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
   $Latest.Checksum32 = Get-RemoteChecksum -Algorithm $Latest.ChecksumType32 -Url $Latest.URL32
+  # Copy the original file from the virtualbox folder
+  if (!(Test-Path "$PSScriptRoot\tools" -PathType Container)) { New-Item -ItemType Directory "$PSScriptRoot\tools" }
+  Copy-Item "$PSScriptRoot\..\virtualbox\tools" "$PSScriptRoot" -Force -Recurse
 }
 
 function global:au_AfterUpdate {
-  pushd "$PSScriptRoot\..\virtualbox"
+  Move-Item "$PSScriptRoot\Readme.md" "$PSScriptRoot\Readme.md.backup" -Force
+  Copy-Item "$PSScriptRoot\..\virtualbox\Readme.md" "$PSScriptRoot\Readme.md" -Force
   Set-DescriptionFromReadme -SkipFirst 2
-  popd
+  Move-Item "$PSScriptRoot\Readme.md.backup" "$PSScriptRoot\Readme.md" -Force
 }
 
 function global:au_GetLatest {
