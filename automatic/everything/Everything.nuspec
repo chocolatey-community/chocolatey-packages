@@ -46,7 +46,7 @@ You type in a search filter to limit what files and folders are displayed.
     <bugTrackerUrl>https://www.voidtools.com/forum/viewforum.php?f=6</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/everything</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2" />
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
   </metadata>
   <files>
