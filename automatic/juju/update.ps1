@@ -1,5 +1,6 @@
 ﻿import-module au
 import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'https://launchpad.net/juju/+download'
 
@@ -14,6 +15,8 @@ function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
   $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType32 -Path $filePath | % Hash
 }
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{
