@@ -10,8 +10,6 @@
     <owners>AdmiringWorm,chocolatey</owners>
     <summary>Gobby is a multi-platform collaborative text editor. It allows multiple users to edit the same document together over the internet in real-time.</summary>
     <description>
-## Synopsis
-
 Gobby is a free collaborative editor. This means that it
 provides you with the possibility to edit files simultaneously
 with other users over a network. The platforms on which you could use
@@ -46,7 +44,7 @@ nicely into the GNOME desktop environment if you want it to.
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
     <releaseNotes>https://github.com/gobby/gobby/blob/master/NEWS</releaseNotes>
     <docsUrl>https://github.com/gobby/gobby/wiki</docsUrl>
