@@ -39,4 +39,4 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
 ## Notes
 - This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
 
-![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0ce523dd21760ae0be06fc3c7ca97890c206a21d/automatic/qbittorrent/screenshot.png)
+![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/798547edb9c6cb22a4a58e08361da4450f0ab14c/automatic/qbittorrent/screenshot.png)
