@@ -1,8 +1,11 @@
 ﻿Import-Module AU
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases     = 'http://player.gomlab.com/?language=eng'
 $versions     = 'http://player.gomlab.com/history.gom?language=eng'
 $softwareName = 'GOM Player'
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{
