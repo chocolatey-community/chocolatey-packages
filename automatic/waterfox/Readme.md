@@ -25,5 +25,5 @@ telemetry is sent back to Mozilla or the Waterfox project.
 - More under the hood changes...
 
 ## Notes
-  - Uninstalling fails when running through choco, manual uninstall is needed.
+- Uninstalling fails when running through choco, manual uninstall is needed.
   The issue for this is tracked [here](https://github.com/chocolatey/choco/issues/1135)
