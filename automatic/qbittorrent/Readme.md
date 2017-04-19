@@ -1,14 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>qbittorrent</id>
-    <title>qBittorrent</title>
-    <version>3.3.12</version>
-    <authors>Christophe Dumez</authors>
-    <owners>chocolatey,nconrads</owners>
-    <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
-    <description>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
+# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png" height="48" width="48" /> qbittorrent](https://chocolatey.org/packages/qbittorrent)
+
+qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
 The program uses libtorrent-rasterbar library for the torrent back-end (network communication) functionality.
 It is developed by Christophe Dumez, from the University of Technology of Belfort-Montbeliard in France.
 It was started in March 2006 and has been in active development ever since.
@@ -48,23 +40,3 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
 - This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
 
 ![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0ce523dd21760ae0be06fc3c7ca97890c206a21d/automatic/qbittorrent/screenshot.png)
-</description>
-    <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
-    <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>
-    <docsUrl>https://github.com/qbittorrent/qBittorrent/wiki</docsUrl>
-    <bugTrackerUrl>https://github.com/qbittorrent/qBittorrent/issues</bugTrackerUrl>
-    <tags>qbittorrent torrent sharing p2p foss cross-platform admin</tags>
-    <licenseUrl>https://github.com/qbittorrent/qBittorrent/blob/master/COPYING</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>Copyright ©2006-2016 The qBittorrent project</copyright>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
-    <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.1" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
-</package>
