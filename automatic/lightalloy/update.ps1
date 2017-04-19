@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.light-alloy.ru/download/'
+$releases = 'http://light-alloy.verona.im/download/'
 
 function global:au_SearchReplace {
   @{
@@ -15,8 +15,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $url = $download_page.Links | ? href -match "LA_Setup_v[0-9\.]+\.exe$" | % href | select -First 1
-  $version = $url -split 'v' | select -First 1 -Skip 1
-  $version = $version -split '.exe' | select -First 1
+  $version = $url -split '_v|\.exe' | select -Last 1 -Skip 1
 
   @{
     Version = $version
