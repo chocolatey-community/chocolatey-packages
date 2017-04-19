@@ -190,7 +190,8 @@ function GetPackagesFromDiff() {
     if ($_.StartsWith('..')) {
       $path = Split-Path -Parent $_
     } else {
-      $path = Split-Path -Parent (Resolve-Path -Relative "$PSScriptRoot\..\$_")
+      $root = Resolve-Path "$PSScriptRoot\.." -Relative
+      $path = Split-Path -Parent "$root\$_"
     }
     while ($path -and !(Test-Path "$path\*.nuspec")) {
       $path = Split-Path -Parent $path
