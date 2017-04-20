@@ -36,7 +36,7 @@
 
 .PARAMETER Optimize
   Additionally optimize/compress the icon if one is found, and a supported
-  optimizer is available.
+  optimizer is available. (Runs through all supported optimizers)
 
 .OUTPUTS
   The number of packages that was updates,
@@ -166,7 +166,7 @@ function Optimize-Image {
   $supportedOptimizers | ? {
     $name = if ($_.ExeName) { $_.ExeName } else { $_.DisplayName }
     return $_.Extensions.Contains($extension) -and (Get-Command $name -ea 0)
-  } | select -first 1 | % {
+  } | % {
     Write-Host "Optimizing the icon $fileName using $($_.DisplayName)"
     $originalSize = Get-Item $iconPath | % Length
     $name = if ($_.ExeName) { $_.ExeName } else { $_.DisplayName }
