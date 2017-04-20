@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ontopreplica</id>
+    <version>3.5.1.20170427</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/ontopreplica</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>OnTopReplica (Install)</title>
+    <authors>Lck</authors>
+    <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/78d42b0a714d5870167fce4bc2b70e39e9686707/icons/ontopreplica.png</iconUrl>
+    <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://ontopreplica.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <tags>ontopreplica replica window on-top foss</tags>
+    <summary>A real-time, always on top, "replica" of a window of your choice</summary>
+    <description>
+A real-time, always on top, “replica” of a window of your choice, based on DWM Thumbnails. Completely written in C# for .NET 4.0/4.5, makes use of the Windows Forms Aero library.
+
+## Features
+
+- Clone any of your windows and keep it always on top while working with other windows,
+- Select a subregion of the cloned window:
+  - Store the selected subregions for future use,
+  - Now with relative subregions from the window's borders.
+- Auto-resizing (fit the original window, half, quarter and fullscreen mode),
+- Position lock on the screen's corners,
+- Adjustable opacity,
+- “Click forwarding” allows to interact with the cloned window,
+- “Click-through” allows to click through the cloned thumbnail (especially useful with partial opacity),
+- “Group switch” mode automatically switches through a group of windows while you use them,
+- Non invasive installation: doesn’t require administrator elevation.
+
+## Notes
+- CodePlex is planning to shut down in December 2017, after that it is unlikely that this package will every be updated again.
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
