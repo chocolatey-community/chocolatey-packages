@@ -87,7 +87,7 @@
 #>
 
 param(
-  [string]$Name = $null,
+  [string]$Name = 'qbittorrent',
   [string]$IconName = $null,
   [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
   [string]$RelativeIconDir = "../icons",
@@ -129,6 +129,24 @@ function Test-Icon{
   return git log -1 --format="%H" "$path";
 }
 
+function Update-Readme {
+  param(
+    [string]$ReadmePath,
+    [string]$Url
+  )
+
+  if (!(Test-Path $ReadmePath)) { return }
+
+  $content = Get-Content $ReadmePath -Encoding UTF8
+  $re = "(^\#+.*\<img.*src=)`"[^`"]*`""
+  if ($content.Length -ge 1 -and $content[0] -match $re) {
+    $content[0] = $content[0] -replace $re,"`${1}`"$Url`""
+  }
+
+  $output = $content | Out-String
+  [System.IO.File]::WriteAllText("$ReadmePath", $output, $encoding)
+}
+
 function Replace-IconUrl{
   param(
     [string]$NuspecPath,
@@ -151,6 +169,8 @@ function Replace-IconUrl{
     return;
   }
   [System.IO.File]::WriteAllText("$NuspecPath", $output, $encoding);
+  $readMePath = (Split-Path -Parent $NuspecPath) + "\Readme.md"
+  Update-Readme -ReadmePath $readMePath -Url $url
   $counts.replaced++;
 }
 
