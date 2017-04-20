@@ -325,6 +325,17 @@ function RunChocoProcess() {
 
   try {
     RunChocoPackProcess '' | WriteChocoOutput
+    if ($arguments[0] -eq 'install') {
+      $packageName = $arguments[1] -split ' ' | select -first 1
+      $nupkgFile = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName*.nupkg" -Recurse | select -first 1
+      $version = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' } | select -last 1
+      if ($version) {
+        $args += @("--version=$($version)")
+        if ($version -match '\-') {
+          $args += @('--prerelease')
+        }
+      }
+    }
     $failureOccurred = $false
     $previousPercentage = -1;
     $progressRegex = 'Progress\:.*\s+([\d]+)\%'
