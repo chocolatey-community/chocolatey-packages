@@ -1,9 +1,17 @@
-﻿$packageName = 'scribus'
-$fileType = 'exe'
-$silentArgs = '/S'
-# {\{DownloadUrlx64}\} gets “misused” here as 32- and 64-bit link array due to limitations of Ketarin/chocopkgup
-$urlArray = {{DownloadUrlx64}}
-$url = $urlArray[0]
-$url64bit = $urlArray[1]
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url $url64bit
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$packageArgs = @{
+  packageName    = 'scribus'
+  fileType       = 'exe'
+  file           = "$toolsPath\scribus-1.4.6-windows.exe"
+  file64         = "$toolsPath\scribus-1.4.6-windows-x64.exe"
+  softwareName   = ''
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
