@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/>
+and can be verified by doing the following:
+
+1. Download the following <https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-1.9.7.7.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 1053AA3D531E2B89D619BDC3768BB7F1FF3C8EACD3D491D4CEFABE2B6C1EBD3A
+
+The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl-2.0.txt>
+This license was mentioned on their disclaimer page <https://www.pendrivelinux.com/disclaimer/>
