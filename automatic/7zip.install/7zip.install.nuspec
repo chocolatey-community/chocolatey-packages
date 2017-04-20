@@ -3,7 +3,7 @@
   <metadata>
     <id>7zip.install</id>
     <title>7-Zip (Install)</title>
-    <version>16.4.0.20170403</version>
+    <version>16.4.0.20170420</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
