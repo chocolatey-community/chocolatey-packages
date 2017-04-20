@@ -1,14 +1,28 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/S'
-$validExitCodes = @(0)
+﻿$ErrorActionPreference = 'Stop';
 
-$unfile = "${Env:ProgramFiles}\Texmaker\uninstall.exe"
-$unfilex86 = "${Env:ProgramFiles(x86)}\Texmaker\uninstall.exe"
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  softwareName  = 'texmaker*'
+  fileType      = 'exe'
+  silentArgs    = '/S'
+  validExitCodes= @(@(0))
+}
 
-if (Test-Path "$unfile") {$file = "$unfile"}
-if (Test-Path "$unfilex86") {$file = "$unfilex86"}
+$uninstalled = $false
 
-if ((Test-Path "$unfile") -or (Test-Path "$unfilex86")) {
-  Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $file -validExitCodes $validExitCodes
+[array]$key = Get-UninstallRegistryKey @packageArgs
+
+if ($key.Count -eq 1) {
+  $key | % {
+    $packageArgs['file'] = "$($_.UninstallString)"
+
+    Uninstall-ChocolateyPackage @packageArgs
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$($key.Count) matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert the package maintainer that the following keys were matched:"
+  $key | % { Write-Warning "- $($_.DisplayName)" }
 }
