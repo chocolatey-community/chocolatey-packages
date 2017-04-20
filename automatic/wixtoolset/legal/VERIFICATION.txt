@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://wixtoolset.org/releases/v3-11-0-1528/>
+and can be verified by doing the following:
+
+1. Download the following <http://wixtoolset.org/downloads/v3.11.0.1528/wix311.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 8665634D6E051EEA7259438D1BE2E1F052DCCFFC4B254FF826F251FE54051A18
+
+The file 'LICENSE.txt' have been obtained from <https://github.com/wixtoolset/wix3/blob/a83b2130299ef95c9b0ec5c6d80bf34cc4722dfb/LICENSE.TXT>
