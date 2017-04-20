@@ -123,7 +123,12 @@ function Test-Icon{
   if (!(Test-Path $path)) { return $false; }
   if ((git status "$path" -s)) {
     git add $path | Out-Null;
-    git commit -m "($Name) Updated icon" "$path" | Out-Null;
+    $message = "($Name) Updated icon"
+    if ((git log --oneline -1) -match "$([regex]::Escape($message))$") {
+      git commit --amend -m "$message" "$path" | Out-Null
+    } else {
+      git commit -m "$message" "$path" | Out-Null;
+    }
   }
 
   return git log -1 --format="%H" "$path";
