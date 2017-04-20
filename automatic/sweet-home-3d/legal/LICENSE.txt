@@ -1,0 +1,35 @@
+                                                     License
+Sweet Home 3D, Copyright (c) 2005-2017 Emmanuel PUYBARET / eTeks <info@eteks.com>
+
+The free version of Sweet Home 3D application, the Furniture Library Editor and Textures Library Editor applications, as well as Sweet Home 3D JS library are distributed under the GNU General Public License; you can use them, copy them, redistribute them and/or modify them under the terms of that license as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. For more details, please read the terms of the GNU General Public License and its FAQ.
+
+These programs are distributed in the hope that they will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+The GNU General Public License and other licenses under which Sweet Home 3D, Furniture Library Editor, Textures Library Editor applications and Sweet Home 3D JS library are available, allow you to publish the documents created with these applications, whether for personal or commercial use, within the limits of the rights granted by the licenses of the 3D models and textures you imported in the documents generated with these applications.
+You can use and redistribute the 3D models and the textures available in the default catalogs of all Sweet Home 3D versions for personal or commercial use, as well as the free 3D models hosted on sweethome3d.com, and the furniture libraries and textures libraries available among the Sweet Home 3D files on SourceForge.net. If you include some of these 3D models and textures in your documents, you should attribute the author of the ones that are distributed under Free Art License or CC-BY License, possibly using a notice similar to the following one (including the links to let users find the authors of the pieces of art you used):
+Project designed with Sweet Home 3D. Includes 3D models and textures distributed under a free license.
+Using and redistributing 3D models or textures found on other web sites may be restricted by the license under which they are distributed, and it's up to you to check their license. For example, 3D models available at Archibit are distributed under the Creative Commons BY-NC-SA license which forbids to use a work for commercial purposes, whereas the sections 1.B and 2.vi of the Terms of Use of the models available at Trimble 3D Warehouse allows you to use them for business purposes (including for commercial purposes), but forbids to aggregate any content obtained from the Site for redistribution, a condition that prevents to redistribute furniture libraries containing 3D Warehouse models.
+
+The GNU General Public License allows you also to freely redistribute under the same license the free version of Sweet Home 3D application, the Furniture Library Editor and Textures Library Editor applications, as well as Sweet Home 3D JS library, if you provide the terms of the GNU General Public License with them and add the following copyright notice at the appropriate place (with a link to http://www.sweethome3d.com web site when possible):
+Sweet Home 3D, Copyright (c) 2005-2017 Emmanuel PUYBARET / eTeks <info@eteks.com>
+This rule applies also to the use of Sweet Home 3D viewer or the online version on your web site, which is some kind of redistribution.
+
+Note that the GNU General Public License forbids developers who don't own the copyrights of Sweet Home 3D to create proprietary programs derived from this software or incorporating it into proprietary programs.
+If you are interested by Sweet Home 3D for such use, please write to info@eteks.com to get information about the other available licenses that could meet your needs.
+
+Sweet Home 3D includes also the following libraries distributed under licenses less restrictive than GNU GPL:
+
+Java 3D library distributed under BSD license and GNU General Public License with the CLASSPATH exception,
+Java Media Framework library distributed under JMF 2.1.1 Binary Code License,
+iText PDF print library version 2.1.7 distributed under GNU Lesser General Public License,
+FreeHep SVG export library distributed under GNU Lesser General Public License,
+Batik SVG path compilation library distributed under Apache License,
+SunFlow global illumination rendering library distributed under MIT license,
+Tango icons library available in public domain,
+Contributed 3D models available in the default catalog of the free version are distributed under Free Art Licence,
+3D models and textures available in the default catalogs of the Mac App Store and Amazon Store versions are distributed under Free Art Licence, CC-BY License or are available in public domain.
+Sweet Home 3D JS requires also the following libraries:
+
+JSZip library distributed under MIT license,
+glMatrix library distributed under MIT license,
+big.js library distributed under MIT license.
