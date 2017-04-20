@@ -1,4 +1,17 @@
-#$url      = 'http://sourceforge.net/projects/pspp4windows/files/{{DateStamp}}/pspp-{{VersionSec}}%2B{{DateStampSec}}-snapshot-32bits-setup.exe/download'
-#$url64      = 'http://sourceforge.net/projects/pspp4windows/files/{{DateStamp}}/pspp-{{VersionSec}}%2B{{DateStampSec}}-snapshot-64bits-setup.exe/download'
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyPackage "{{PackageName}}" "EXE" "/S" "{{DownloadUrl}}" "{{DownloadUrlx64}}" -validExitCodes @(0)
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$packageArgs = @{
+  packageName    = 'pspp'
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  file64         = "$toolsPath\"
+  softwareName   = 'pspp*'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
