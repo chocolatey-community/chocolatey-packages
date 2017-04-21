@@ -40,22 +40,21 @@ function Get-EffectiveProxy(){
     }
     
     # Try chocolatey config file
-    $p = 'y' | choco.exe config get proxy --limit-output
-    $p = ($p -join "`n") -replace '(?s).+Do you want to continue.+?\n'    #happens on non-administrative shell
-    $p = $p.Trim()
+    [xml] $cfg = gc $env:ChocolateyInstall\config\chocolatey.config
+    $p = $cfg.chocolatey.config | % { $_.add } | ? { $_.key -eq 'proxy' } | select -Expand value
     if ($p) {
         Write-Verbose "Using choco config proxy"
         return $p
     }
 
     # Try winhttp proxy
-     (netsh.exe winhttp show proxy) -match 'Proxy Server\(s\)' | set proxy 
-     $proxy = $proxy -split ' :' | select -Last 1
-     $proxy = $proxy.Trim()
-     if ($proxy) {
-         Write-Verbose "Using winhttp proxy server"
-         return "http://" + $proxy
-     }
+    (netsh.exe winhttp show proxy) -match 'Proxy Server\(s\)' | set proxy 
+    $proxy = $proxy -split ' :' | select -Last 1
+    $proxy = $proxy.Trim()
+    if ($proxy) {
+        Write-Verbose "Using winhttp proxy server"
+        return "http://" + $proxy
+    }
 
     # Try using WebClient
     $url = "http://chocolatey.org"
