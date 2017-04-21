@@ -4,10 +4,8 @@ This repository presents **the latest and highest package standards**. The purpo
 
 * **Stable**  
 Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.4.4](#114-embed-a-package-if-allowed)).
-* **High quality**  
-Packages should be resilient and should provide parameters where adequate.
-* **Free**  
-Packages shold be generally usable by anybody without any special prerequisites.
+* **High quality** - Packages should be resilient and should provide parameters where adequate.
+* **Free** - Packages shold be generally usable by anybody without any special prerequisites.
 
 To achieve those goals we are practicing the following priorities when adding new or maintaing existing packages:
 
@@ -16,7 +14,7 @@ To achieve those goals we are practicing the following priorities when adding ne
 1. Freeware packages.
 1. Commercial packages with unrestricted trials.
 
-**NONTE**: When packages have the same priorities, software with higher number of users will generally be considered more important.
+**NOTE**: When packages have the same priorities, software with higher number of users will generally be considered more important.
 
 Existing packages of the chocolatey user that no longer fit above principles will be unlisted, and will only continue to be updated when the original maintainer or a community member fixes the package.
 
