@@ -7,7 +7,7 @@ Current and earlier versions should generally work so you could depend on them. 
 * **High quality** - Packages should be resilient and should provide parameters where adequate.
 * **Free** - Packages shold be generally usable by anybody without any special prerequisites.
 
-To achieve those goals we are practicing the following priorities when adding new or maintaing existing packages:
+To achieve those goals we are using the following priorities when adding new or maintaing existing packages:
 
 1. Cross platform FOSS packages.
 1. Windows only FOSS packages.
