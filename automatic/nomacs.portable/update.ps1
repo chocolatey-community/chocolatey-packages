@@ -1,4 +1,5 @@
 import-module au
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'http://download.nomacs.org/versions'
 
