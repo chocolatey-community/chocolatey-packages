@@ -8,7 +8,7 @@
 
 ### Description
 
-This repository contains [chocolatey automatic packages](https://chocolatey.org/docs/automatic-packages).
+This repository contains chocolatey packages, most of which are [automatic](https://chocolatey.org/docs/automatic-packages).
 
 These packages are managed and maintained by the Chocolatey community package maintainers core team, and [also maintained by you (the community)](https://github.com/chocolatey/chocolatey-coreteampackages/wiki/Contributing-guidelines)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
 
