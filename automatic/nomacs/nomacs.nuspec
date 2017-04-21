@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nomacs</id>
-    <version>3.6.1</version>
+    <version>3.6.1.20170421</version>
     <title>nomacs Image Lounge</title>
     <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
@@ -11,7 +11,8 @@
     <projectUrl>https://nomacs.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bcd6e5bad67c9a360b1e9bc9a1ccfedfd4e57fdd/icons/nomacs.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>nomacs is a free image viewer for windows, linux, and mac systems, which is licensed under the GNU General Public License v3. nomacs is small, fast and able to handle the most common image formats including RAW images. Additionally it is possible to synchronize multiple viewers. A synchronization of viewers running on the same computer or via LAN is possible. It allows to compare images and spot the differences (e.g. schemes of architects to show the progress).
+    <description>
+nomacs is a free image viewer for windows, linux, and mac systems, which is licensed under the GNU General Public License v3. nomacs is small, fast and able to handle the most common image formats including RAW images. Additionally it is possible to synchronize multiple viewers. A synchronization of viewers running on the same computer or via LAN is possible. It allows to compare images and spot the differences (e.g. schemes of architects to show the progress).
 
 ## Features
 
@@ -55,8 +56,8 @@ See detailed nomacs [features page](http://nomacs.org/features/).
 ## Notes
 
 - This package will **always install the latest version**, regardless of the version specified in the package. Nomacs is using [online installer](https://www.nomacs.org/redmine/issues/573) for non-portable package exlusivelly.
-- If you are installing **behind the proxy**, you will need to configure proxy settings in the installer manually (via Settings button) during the installation. You can use [nomacs.portable](https://chocolatey.org/packages/nomacs.portable) as alternative in such scenario. 
-    </description>
+- If you are installing **behind the proxy**, you will need to configure proxy settings in the installer manually (via Settings button) during the installation. You can use [nomacs.portable](https://chocolatey.org/packages/nomacs.portable) as alternative in such scenario.
+</description>
     <summary>Open source image viewer</summary>
     <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.6.1</releaseNotes>
     <copyright>Markus Diem, Stefan Fiel, Florian Kleber</copyright>
