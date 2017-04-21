@@ -1,3 +1,5 @@
+# Contributing
+
 This repository presents **the latest and highest package standards**. The purpose of this repository is to provide packages that are:
 
 * **Stable**  
@@ -14,7 +16,7 @@ To achieve those goals we are practicing the following priorities when adding ne
 1. Freeware packages.
 1. Commercial packages with unrestricted trials.
 
-When packages have the same priorities, software with higher number of users will generally be considered more important.
+**NONTE**: When packages have the same priorities, software with higher number of users will generally be considered more important.
 
 Existing packages of the chocolatey user that no longer fit above principles will be unlisted, and will only continue to be updated when the original maintainer or a community member fixes the package.
 
