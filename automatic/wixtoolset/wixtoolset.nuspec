@@ -19,6 +19,7 @@
     <bugTrackerUrl>https://github.com/wixtoolset/issues/issues</bugTrackerUrl>
     <tags>wixtoolset wix toolset msi xml admin</tags>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages. The WiX toolset CodePlex project stores the stable releases and Mercurial repository.
 </description>
