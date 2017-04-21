@@ -42,7 +42,7 @@ For software that explicitelly doesn't allow redistribution via adequate license
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [balsamiqmockups3](https://chocolatey.org/packages/balsamiqmockups3) package. Embeding non allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal). 
+As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal). 
 
 **NOTE**: 150MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
