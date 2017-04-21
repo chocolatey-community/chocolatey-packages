@@ -1,5 +1,4 @@
-Chocolatey Community Core Team Packages
-===========================
+# Chocolatey Community Core Team Packages
 
 [![Join the chat at https://gitter.im/chocolatey/chocolatey-coreteampackages](https://badges.gitter.im/chocolatey/chocolatey-coreteampackages.svg)](https://gitter.im/chocolatey/chocolatey-coreteampackages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build status](https://ci.appveyor.com/api/projects/status/tugg0i6x1hlq9lpg?svg=true)](https://ci.appveyor.com/project/chocolatey/chocolatey-coreteampackages) 
 [![](http://transparent-favicon.info/favicon.ico)](#)[![](http://transparent-favicon.info/favicon.ico)](#)
@@ -13,7 +12,7 @@ This repository contains [chocolatey automatic packages](https://chocolatey.org/
 
 These packages are managed and maintained by the Chocolatey community package maintainers core team, and [also maintained by you (the community)](https://github.com/chocolatey/chocolatey-coreteampackages/wiki/Contributing-guidelines)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
 
-All packages in this repo should be in conformity with the [contributing guidelines](https://github.com/chocolatey/chocolatey-coreteampackages/wiki/Contributing-guidelines).
+All packages in this repo should be in conformity with the [contributing guidelines](CONTRIBUTING.md).
 
 ### Etiquette Regarding Communication
 
