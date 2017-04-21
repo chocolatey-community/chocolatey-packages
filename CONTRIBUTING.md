@@ -1,12 +1,29 @@
-This repository presents **the latest and highest package standards**. Please read the following sections carefully, especially because some of the rules are enforced and if broken will fail the PR build.
+This repository presents **the latest and highest package standards**. The purpose of this repository is to provide packages that are:
 
-All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
+* **Stable**  
+Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.4.4](#114-embed-a-package-if-allowed)).
+* **High quality** 
+Packages should be resilient and should provide parameters where adequate.
+* **Free**  
+Packages shold be generally usable by anybody without any special prerequisites.
+
+To achieve those goals we are practicing the following priorities when adding new or maintaing existing packages:
+
+1. Cross platform FOSS packages.
+1. Windows only FOSS packages.
+1. Freeware packages.
+1. Commercial packages with unrestricted trials.
+
+When packages have the same priorities, software with higher number of users will generally be considered more important.
+
+Existing packages of the chocolatey user that no longer fit above principles will be unlisted, and will only continue to be updated when the original maintainer or a community member fixes the package.
+
+The following sections present complete set of guideliness, please read them carefully, especially since some of the rules are enforced and if broken will result in the failed PR build.
 
 ---
 
     [Packages](#1-packages)                                                                                 [Source Files](#2-source-files)    [Teamwork](#3-teamwork)  
     [Basics](#11-basics) - [Metadata](#12-metadata) - [AU Script](#13-au-script) - [UI Automation](#14-ui-automation)
-
 
 ---
 
@@ -195,19 +212,23 @@ Keep the package source files clean and remove obsolete or outdated code and unn
 
 Good communiction is essential so please take a look at [etiquette](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication) regarding it.
 
-### 3.1 Pull request expires after 6 months
+### 3.1 Single package per push request
+
+All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
+
+### 3.2 Pull request expires after 6 months
 
 PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
-### 3.2 Open issue expires after 6 months
+### 3.3 Open issue expires after 6 months
 
 Issues that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
-### 3.3 Pull request one package
+### 3.4 Pull request one package
 
 Do not mix multiple packages in single pull request unless in specific special cases that fix common problem. 
 
-### 3.4 Understanding labels
+### 3.5 Understanding labels
 
 Most of the labels are self describing, here are few that require explanation:
 
