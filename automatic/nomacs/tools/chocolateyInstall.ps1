@@ -1,6 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
+$script_content = gc $toolsPath\install-script.js
+if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
+  Write-Host "Setting 64 bit install"
+  $script_content -replace '^\s+// (.+)//x64 install', '$1' | sc $toolsPath\install-script.js
+} else { 
+  Write-Host "Setting 32 bit install" 
+  $script_content -replace '^\s+// (.+)//x32 install', '$1' | sc $toolsPath\install-script.js
+}
 
 $packageArgs = @{
   packageName            = 'nomacs'
