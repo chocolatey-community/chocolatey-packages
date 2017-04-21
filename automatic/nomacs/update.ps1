@@ -1,4 +1,5 @@
 import-module au
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'http://download.nomacs.org/versions'
 
@@ -20,6 +21,9 @@ function global:au_SearchReplace {
     }
 }
 
+function global:au_BeforeUpdate  { $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 }
+function global:au_AfterUpdate   { Set-DescriptionFromReadme -SkipFirst 1 }
+
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $url     = $download_page.links | ? href -like '*/nomacs-*' | % href | sort -desc | select -First 1
@@ -31,4 +35,4 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

@@ -44,9 +44,9 @@ Controller.prototype.IntroductionPageCallback = function()
 Controller.prototype.ComponentSelectionPageCallback = function() 
 {
 	// Select your components -----------------------------------------------------
-	// var page = gui.currentPageWidget();
-	// page.selectComponent("nomacs.x86");
-	// page.deselectComponent("nomacs.x64");	
+	var page = gui.currentPageWidget();
+	// page.deselectComponent("nomacs.x86"); page.selectComponent("nomacs.x64");	//x64 install
+    // page.deselectComponent("nomacs.x64"); page.selectComponent("nomacs.x86");    //x32 install
 	// Select your components -----------------------------------------------------
 	
 	gui.clickButton(buttons.NextButton);
