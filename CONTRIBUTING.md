@@ -1,5 +1,12 @@
 # Contributing
 
+---
+
+    [Packages](#1-packages)                                                                                 [Source Files](#2-source-files)    [Teamwork](#3-teamwork)  
+    [Basics](#11-basics) - [Metadata](#12-metadata) - [AU Script](#13-au-script) - [UI Automation](#14-ui-automation)
+
+---
+
 This repository presents **the latest and highest package standards**. The purpose of this repository is to provide packages that are:
 
 * **Stable** - Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.4.4](#114-embed-a-package-if-allowed)).
@@ -18,13 +25,6 @@ To achieve those goals we are using the following priorities when adding new or 
 Existing packages of the chocolatey user that no longer fit above principles will be unlisted, and will only continue to be updated when the original maintainer or a community member fixes the package.
 
 The following sections present complete set of guideliness, please read them carefully, especially since some of the rules are enforced and if broken will result in the failed PR build.
-
----
-
-    [Packages](#1-packages)                                                                                 [Source Files](#2-source-files)    [Teamwork](#3-teamwork)  
-    [Basics](#11-basics) - [Metadata](#12-metadata) - [AU Script](#13-au-script) - [UI Automation](#14-ui-automation)
-
----
 
 # 1. Packages
 
