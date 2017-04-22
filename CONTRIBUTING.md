@@ -1,7 +1,5 @@
 # Contributing
 
----
-
     [Packages](#1-packages)                                                                                 [Source Files](#2-source-files)    [Teamwork](#3-teamwork)  
     [Basics](#11-basics) - [Metadata](#12-metadata) - [AU Script](#13-au-script) - [UI Automation](#14-ui-automation)
 
