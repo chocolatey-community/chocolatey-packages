@@ -239,3 +239,5 @@ The issue is unresolved - no feedback, no interest and it probably expired.
 Team is checking, confirming and measuring out the request.
 - [Pending closure](https://github.com/chocolatey/chocolatey-coreteampackages/labels/Pending%20closure)  
 The issue is approaching end of issue life time. This is annoucement that issue will soon get closed in few weeks unless there is some new activity.
+- [Waiting feedback](https://github.com/chocolatey/chocolatey-coreteampackages/labels/Waiting%20feedback)  
+The team is waiting for somebody to respond. Until that happens, there will be no activity.
