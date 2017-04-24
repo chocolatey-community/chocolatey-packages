@@ -2,7 +2,7 @@
 . "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 . "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
-#$redirectPage = 'http://wixtoolset.org/releases/v3-10-3-3007/' # Provided in case we need to update the latest stable
+$redirectPage = 'http://wixtoolset.org/releases/v3-10-3-3007/' # Provided in case we need to update the latest stable
 $releases = 'http://wixtoolset.org/releases/'
 $softwareName = 'WiX Toolset*'
 $padUnderVersion = '3.10.4'
@@ -31,6 +31,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
 
   $builder = New-Object System.UriBuilder($releases)
+  <#
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $re = '(rc[\d]+|stable)$'
   $builder.Path  = $download_page.Links | ? href -match $re | select -first 1 -expand href
@@ -39,7 +40,7 @@ function global:au_GetLatest {
     else {
       $index = $builder.Path.IndexOf('rc')
       "-" + $builder.Path.Substring($index)
-    }
+    }#>
 
   $download_page = Invoke-WebRequest -Uri $redirectPage -UseBasicParsing
   $builder.Path = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href
