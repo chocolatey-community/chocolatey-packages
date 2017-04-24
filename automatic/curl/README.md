@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a072e23e25bca049828cdff10007b9bb7d6ee786/icons/curl.png"></img> [curl](https://chocolatey.com/packages/curl)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a072e23e25bca049828cdff10007b9bb7d6ee786/icons/curl.png" width="48" height="48"></img> [curl](https://chocolatey.com/packages/curl)
 
 curl is used in command lines or scripts to transfer data. It is also used in cars, television sets, routers, printers, audio equipment, mobile phones, tablets, settop boxes, media players and is the internet transfer backbone for thousands of software applications affecting billions of humans daily.
 
