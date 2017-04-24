@@ -1,5 +1,5 @@
 import-module au
-. $PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'https://rubyinstaller.org/downloads'
 
