@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>curl</id>
-    <version>0.0</version>
+    <version>7.54.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/curl</packageSourceUrl>
     <owners>chocolatey, Rob Reynolds</owners>
     <title>cURL</title>
     <authors>Daniel Stenberg, cURL Contributors</authors>
     <projectUrl>https://curl.haxx.se/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/curl.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a072e23e25bca049828cdff10007b9bb7d6ee786/icons/curl.png</iconUrl>
     <copyright>1996 - 2017, Daniel Stenberg, and many contributors</copyright>
     <licenseUrl>https://curl.haxx.se/docs/copyright.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
