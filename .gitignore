@@ -9,6 +9,10 @@
 *.suo
 *.test
 *.work
+*.exe
+*.dll
+*.zip
+*.7z
 *.handover
 *.new
 *.exist
