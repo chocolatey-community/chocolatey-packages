@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>ruby</id>
+    <version>0.0</version>
+    <title>Ruby</title>
+    <authors>Yukihiro Matsumoto</authors>
+    <owners>chocolatey, Rob Reynolds</owners>
+    <summary>Ruby - A dynamic, open source programming language with a focus on simplicity and productivity.</summary>
+    <description>Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+
+This package provides a self-contained [Windows-based installer](https://rubyinstaller.org) that includes the Ruby language, an execution environment, important documentation, and more.
+
+## Package Parameters
+
+- `InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
+- `NoPath`     - Do not add ruby bin folder to machine PATH.
+</description>
+    <tags>ruby admin language programming development dynamic cross-platform foss</tags>
+    <licenseUrl>http://www.ruby-lang.org/en/about/license.txt</licenseUrl>
+    <projectUrl>http://www.ruby-lang.org</projectUrl>
+    <projectSourceUrl>https://bugs.ruby-lang.org/projects/ruby-trunk/repository</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ruby</packageSourceUrl>
+    <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-trunk/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://www.ruby-lang.org/en/downloads/releases/</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/ruby.svg</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3" />
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
