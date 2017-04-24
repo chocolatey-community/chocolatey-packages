@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wixtoolset</id>
-    <version>3.10.3.300702</version>
+    <version>3.11.0.1528-rc2</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/wixtoolset</packageSourceUrl>
     <owners>chocolatey, Gary Ewan Park</owners>
     <title>WiX Toolset</title>
@@ -21,15 +21,7 @@
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
-The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages.
-
-The core of WiX is a set of build tools that build Windows Installer packages using the same build concepts as the rest of your product: source code is compiled and then linked to create executables; in this case .exe setup bundles, .msi installation packages, .msm merge modules, and .msp patches. The WiX command-line build tools work with any automated build system. Also, MSBuild is supported from the command line, Visual Studio, and Team Build.
-
-WiX includes several extensions that offer functionality beyond that of Windows Installer. For example, WiX can install IIS web sites, create SQL Server databases, and register exceptions in the Windows Firewall, among others.
-
-With Burn, the WiX bootstrapper, you can create setup bundles that install prerequisites like the .NET Framework and other runtimes along with your own product. Burn lets you download packages or combine them into a single downloadable .exe.
-
-The WiX SDK includes managed and native libraries that make it easier to write code that works with Windows Installer, including custom actions in both C# and C++.
+The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages. The WiX toolset CodePlex project stores the stable releases and Mercurial repository.
 </description>
     <dependencies>
       <dependency id="dotnet3.5" version="3.5" />
