@@ -6,8 +6,11 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 
 ## Package parameters
 
-- `InstallDir` - Installation directory, by default Chocolatey tools directory.
-- `InstallationPath` - the same as `InstallDir`
+- `/InstallDir` - Installation directory, by default Chocolatey tools directory.
+- `/InstallationPath` - the same as `InstallDir`
+
+These parameters can be passed to the installer with the use of --params.
+For example: `--params '"""/InstallDir:C:\sysinternals"""'`.
 
 ## Notes
 
