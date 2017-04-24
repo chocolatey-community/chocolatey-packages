@@ -1,5 +1,5 @@
 ﻿import-module au
-. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://omahaproxy.appspot.com/all?os=win&amp;channel=stable'
 $paddedUnderVersion = '57.0.2988'
@@ -28,7 +28,7 @@ function global:au_GetLatest {
   @{
     URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
     URL64 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'
-    Version = Get-Padded-Version -Version $version -OnlyBelowVersion $paddedUnderVersion -RevisionLength 5
+    Version = Get-PaddedVersion -Version $version -OnlyBelowVersion $paddedUnderVersion -RevisionLength 5
     RemoteVersion = $version
   }
 }

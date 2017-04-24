@@ -49,7 +49,7 @@ function global:au_GetLatest {
 
   @{
     URL32 = [uri]$builder.ToString()
-    Version = Get-Padded-Version $version32 -OnlyBelowVersion $padUnderVersion
+    Version = Get-PaddedVersion $version32 -OnlyBelowVersion $padUnderVersion
     ReleasesUrl = $redirectPage
   }
 }

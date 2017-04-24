@@ -21,20 +21,20 @@
   The full padded version, or the specified Version if padding was not needed.
 
 .EXAMPLE
-  Get-Padded-Version -Version '24.0.0.195'
+  Get-PaddedVersion -Version '24.0.0.195'
   will output '24.0.0.195000' if the nuspec version is less than the version
 
 .EXAMPLE
-  Get-Padded-Version -Version '24.0.0.195'
+  Get-PaddedVersion -Version '24.0.0.195'
   will output '24.0.0.195001' if the nuspec version is equal to '24.0.0.195'
   or equal to '24.0.0.195000'
 
 .EXAMPLE
-  Get-Padded-Version -Version '24.0.1.2' -OnlyBelowVersion '24.0.1'
+  Get-PaddedVersion -Version '24.0.1.2' -OnlyBelowVersion '24.0.1'
   Will output the same version that was given without padded zeroes.
 #>
 
-function Get-Padded-Version() {
+function Get-PaddedVersion() {
   param(
     [Parameter(Mandatory = $true, Position = 0)]
     [string]$Version,
