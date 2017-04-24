@@ -1,9 +1,11 @@
 ﻿Import-Module AU
 . "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
+. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
 
 #$redirectPage = 'http://wixtoolset.org/releases/v3-10-3-3007/' # Provided in case we need to update the latest stable
 $releases = 'http://wixtoolset.org/releases/'
 $softwareName = 'WiX Toolset*'
+$padUnderVersion = '3.10.4'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -48,7 +50,7 @@ function global:au_GetLatest {
 
   @{
     URL32 = [uri]$builder.ToString()
-    Version = $version32
+    Version = Get-Padded-Version $version32 -OnlyBelowVersion $padUnderVersion
     ReleasesUrl = $redirectPage
   }
 }
