@@ -91,7 +91,7 @@
 #>
 
 param(
-  [string]$Name = 'qbittorrent',
+  [string]$Name = $null,
   [string]$IconName = $null,
   [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
   [string]$RelativeIconDir = "../icons",
