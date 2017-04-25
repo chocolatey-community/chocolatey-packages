@@ -83,7 +83,11 @@ build_script:
                     Write-Host ("{0}`n{1}`n" -f ('-'*60), "PACKAGE: $package")
                     $package_dir = ls -recurse | ? { $_.Name -eq "$package.nuspec"} | select -First 1 | % Directory
                     if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
-                    pushd $package_dir; choco pack; Push-Package; popd
+                    
+                    pushd $package_dir
+                      if (Test-Path update.ps1 -ea 0) { ./update.p1 }
+                      choco pack; Push-Package; 
+                    popd
                 }
                 return
             }
