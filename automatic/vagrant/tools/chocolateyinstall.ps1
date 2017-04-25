@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName    = 'vagrant'
   fileType       = 'msi'
-  url            = 'https://releases.hashicorp.com/vagrant/1.9.2/vagrant_1.9.2.msi'
-  checksum       = '083025f5a2c0fd7a7a93c73d92bc3e929c8cd03ddd4be1f04a5dae3688af56ec'
+  url            = 'https://releases.hashicorp.com/vagrant/1.9.4/vagrant_1.9.4.msi'
+  checksum       = 'efe0b24d99cf99f44d3be536ce340062b3cef1e7951da55e2f6a8a33db292cbc'
   checksumType   = 'sha256'
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 3010, 1641)
