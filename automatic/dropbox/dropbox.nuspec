@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>dropbox</id>
+    <version>22.4.24</version>
+    <title>Dropbox</title>
+    <authors>Dropbox</authors>
+    <owners>chocolatey, Rob Reynolds</owners>
+    <licenseUrl>http://www.dropbox.com/terms</licenseUrl>
+    <projectUrl>https://www.dropbox.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/dropbox.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere. This means that any file you save to your Dropbox will automatically save to all your computers, phones and even the Dropbox website. Dropbox also makes it super easy to share with others, whether you're a student or professional, parent or grandparent. Even if you accidentally spill a latte on your laptop, have no fear! You can relax knowing that Dropbox always has you covered, and none of your stuff will ever be lost.
+
+### Notes
+
+Even though the official installer for Dropbox asserts administrator rights, it installs Dropbox only for the currently logged user (path: `%APPDATA%\Dropbox`).
+
+If the official Dropbox installer would be started with administrative rights, the installation would not be unattended.
+
+To prevent this problem, this package uses an AutoHotkey-script (thus the [autohotkey.portable](./autohotkey.portable) dependency) to close a non-unattended dialog box opened by the Dropbox installer during installation.
+
+The confusing dialog box with the content *“Dropbox will not work correctly if installed using the ‘Run as Administrator’ command. …”* can be ignored. Always select “Yes” if this dialog box appears. Regardless of this message, Dropbox will work correctly.</description>
+    <summary>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere.</summary>
+    <tags>dropbox virtual files file admin</tags>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+  </metadata>
+</package>
