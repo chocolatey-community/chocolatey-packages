@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>waterfox</id>
-    <version>52.0.2</version>
+    <version>53.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/waterfox</packageSourceUrl>
     <owners>chocolatey,tonigellida,admiringworm</owners>
     <title>Waterfox</title>
@@ -41,7 +41,7 @@ telemetry is sent back to Mozilla or the Waterfox project.
 - More under the hood changes...
 
 ## Notes
-  - Uninstalling fails when running through choco, manual uninstall is needed.
+- Uninstalling fails when running through choco, manual uninstall is needed.
   The issue for this is tracked [here](https://github.com/chocolatey/choco/issues/1135)
 </description>
     <releaseNotes>https://www.waterfoxproject.org/blog/</releaseNotes>
