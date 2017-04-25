@@ -6,5 +6,5 @@ This package provides a self-contained [Windows-based installer](https://rubyins
 
 ## Package Parameters
 
-- `InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
-- `NoPath`     - Do not add ruby bin folder to machine PATH.
+- `/InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
+- `/NoPath`     - Do not add ruby bin folder to machine PATH.
