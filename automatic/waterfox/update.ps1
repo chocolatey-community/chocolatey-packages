@@ -1,6 +1,5 @@
 ﻿import-module au
 . "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
-cd $PSScriptRoot
 
 $releases = 'https://www.waterfoxproject.org/downloads'
 $softwareName = 'Waterfox*'
