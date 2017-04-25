@@ -3,8 +3,8 @@
 $packageName = 'dropbox'
 $fileType = 'exe'
 $silentArgs = '/S'
-$uninstallerPath = (getDropboxRegProps).UninstallString
+$uninstallProps = getDropboxRegProps
 
-if ($uninstallerPath) {
-    Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $uninstallerPath
+if ($uninstallProps -and $uninstallProps.UninstallString) {
+    Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $uninstallerPath.UninstallString
 }
