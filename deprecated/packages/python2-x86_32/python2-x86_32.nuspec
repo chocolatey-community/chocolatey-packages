@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>Python 2.x (32-bit)</id>
+    <id>python2-x86_32</id>
     <version>2.7.11.20170425</version>
     <title>[DEPRECATED] Python 2.x (32-bit)</title>
     <owners>chocolatey</owners>
