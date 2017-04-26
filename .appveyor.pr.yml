@@ -1,0 +1,43 @@
+version: '{build}'
+branches:
+  except:
+  - master
+environment:
+  au_version: master
+  gist_id_test: 30a8b66d4c02ecacce2da3c8734ac61f
+  github_api_key:
+    secure: MIXUB67FrqxqiHlnf1S1MLQGYZRX/Lv//IwNvKNEVThVkC5IwNsOsi+zYbj/cYWg
+  choco_version: 0.9.10
+  au_push: false
+install:
+- ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
+- ps: $PSVersionTable
+- git --version
+- choco --version
+- cup chocolatey --version %choco_version%
+- choco --version
+- ps: |
+    git clone -q https://github.com/majkinetor/au.git $env:TEMP/au -b $env:au_version
+    . "$env:TEMP/au/scripts/Install-AU.ps1" $env:au_version
+- ps: |
+    if (Test-Path env:\ChocolateyPath) { $env:ChocoPath = $env:ChocolateyPath }
+    elseif (Test-Path env:\ChocolateyInstall) { $env:ChocoPath = $env:ChocolateyInstall }
+    else { throw "Chocolatey path was not found" }
+    Remove-Item "$($env:ChocoPath)\logs\*"
+build_script:
+- ps: |
+    $paths = git diff master... --name-only
+    $packages = $paths | ? { $_ -match "automatic\/([\da-z\-\.]+)" | % { $Matches[1] } | select -Unique
+    if ($packages -and $packages.Count -gt 0) {
+      Write-Host "Testing the update script for the following pacakges:"
+      Write-Host "$packages"
+      .\test_all.ps1 $packages
+    } else {
+      Write-Host "No automatic packages to test"
+    }
+test_script:
+- ps: Write-Host "Not implemented yet"
+artifacts:
+- path: '%ChocolateyInstall%\logs\*'
+- path: update_info.xml
+- path: Update-AUPackages.md
