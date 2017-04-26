@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3-x86_32</id>
-    <version>3.5.1.20170425</version>
+    <version>3.5.2.20170425</version>
     <title>[DEPRECATED] Python 3.x (32-bit)</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>

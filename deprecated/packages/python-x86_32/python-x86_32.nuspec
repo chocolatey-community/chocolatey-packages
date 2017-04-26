@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python-x86_32</id>
-    <version>3.5.2</version>
-    <title>Python (32-bit)</title>
+    <version>3.5.2.20170425</version>
+    <title>[DEPRECATED] Python (32-bit)</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
