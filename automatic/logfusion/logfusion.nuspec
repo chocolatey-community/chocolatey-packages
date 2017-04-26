@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>logfusion</id>
+    <version>0.0</version>
+    <title>LogFusion</title>
+    <authors>Binary Fortress Software</authors>
+    <projectUrl>http://www.logfusion.ca</projectUrl>
+    <licenseUrl>https://www.logfusion.ca/License/</licenseUrl>
+    <iconUrl>https://images.binaryfortress.com/ChocolateyIcons/LogFusion.png</iconUrl>
+    <docsUrl>https://www.logfusion.ca/Help/</docsUrl>
+    <mailingListUrl>https://www.logfusion.ca/Discussions/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    LogFusion is a powerful log monitoring tool that makes parsing your logs easy.
+    Take advantage of LogFusion's Row Highlighting and Text Filtering features to
+    quickly filter your log and only show the relevant lines you are looking for.
+    Use the Custom Columns feature to let LogFusion parse and split your logs into
+    separate columns for easier reading. Just like the popular 'tail' program in
+    Linux/Unix, LogFusion can also auto-scroll and always show you the newest lines
+    in your log files in real-time. LogFusion can load any text logs, including
+    web server logs, developer debug logs and any other text that is outputted to a file.
+    LogFusion can also read Event Logs in real-time, and can even use it's powerful
+    Text Filtering and Row Highlighting features to help you find specific items.
+    </description>
+    <copyright>Copyright © 2017 Binary Fortress Software</copyright>
+    <tags>logfusion log logs parsing tail monitoring</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatci/logfusion</packageSourceUrl>
+    <owners>chocolatey,ferventcoder</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
