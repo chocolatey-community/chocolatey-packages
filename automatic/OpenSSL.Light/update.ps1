@@ -4,6 +4,8 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $domain   = 'https://slproweb.com'
 $releases = "$domain/products/Win32OpenSSL.html"
 
+$padUnderVersion = '1.1.1'
+
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
@@ -34,22 +36,25 @@ function global:au_GetLatest {
   $url64 = $domain + ($download_page.links | ? href -match $re | select -first 1 -expand href)
 
   $verRe = '[\-]|\.exe'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+  $version32 = ($url32 -split "$verRe" | select -last 1 -skip 1) -replace '_','.'
+  $version64 = ($url64 -split "$verRe" | select -last 1 -skip 1) -replace '_','.'
   if ($version32 -ne $version64) {
     throw "32bit version do not match the 64bit version"
   }
+  $rev = ([byte][char]$version32[$version32.Length - 1]) - 97
+  $version32 = $version32 -replace '[a-z]+$',".$rev"
 
-  if (Test-Path "$PSScriptRoot\LastVersion.txt") {
-    $lastVersion = Get-Content "$PSScriptRoot\LastVersion.txt"
-    if ($lastVersion -ne $version32) { $global:au_Force = $true }
-    }
-    Set-Content "$PSScriptRoot\LastVersion.txt" -Value $version32
+  if ([version]$version32 -lt [version]'1.1.1') {
+    # Because previous package updates used dates, we need a number that ends up being larger
+    $revisionLen = '8' # Will end up with version '1.1.0.40000000'
+  } else {
+    $revisionLen = '4'
+  }
 
   @{
     URL32 = $url32
     URL64 = $url64
-    Version = $version32 -replace '_','.' -split '[a-z]' | select -first 1
+    Version = Get-PaddedVersion $version32 -OnlyBelowVersion $padUnderVersion -RevisionLength $revisionLen
   }
 }
 
