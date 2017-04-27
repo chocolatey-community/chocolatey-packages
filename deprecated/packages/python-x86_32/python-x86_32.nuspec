@@ -21,7 +21,7 @@ This package depends on the python (32-bit) package the latest major version.
     <tags>python</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
-      <dependency id="python3-x86_32" version="[3.5.2]" />
+      <dependency id="python3-x86_32" version="[3.5.2.20170425]" />
     </dependencies>
   </metadata>
 </package>
