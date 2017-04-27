@@ -13,7 +13,7 @@
     <copyright>Ⓒ 2000-2003 Shining Light Productions</copyright>
     <licenseUrl>https://www.openssl.org/source/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>openssl-light openssl ssl tls pfx pem key rsa admin</tags>
+    <tags>openssl-light openssl ssl tls pfx pem key rsa admin foss cross-platform</tags>
     <summary>Open Source SSL v2/v3 and TLS v1 toolkit</summary>
     <description>
 The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well as a full-strength general purpose cryptography library. The project is managed by a worldwide community of volunteers that use the Internet to communicate, plan, and develop the OpenSSL toolkit and its related documentation.
