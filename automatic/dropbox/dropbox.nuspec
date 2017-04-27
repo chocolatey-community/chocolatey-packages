@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dropbox</id>
-    <version>0.0</version>
+    <version>24.4.17</version>
     <title>Dropbox</title>
     <authors>Dropbox</authors>
     <owners>chocolatey,ferventcoder,the-running-dev</owners>
     <licenseUrl>https://www.dropbox.com/terms</licenseUrl>
     <projectUrl>https://www.dropbox.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9d90583a4103d4a9db86425a5fbda79cc845b4ef/icons/dropbox.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/797be4455d8f66a1989713e741137ed8293dd322/icons/dropbox.svg</iconUrl>
     <mailingListUrl>https://www.dropboxforum.com/</mailingListUrl>
     <docsUrl>https://www.dropbox.com/help</docsUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
