@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>OpenSSL.Light</id>
-    <version>1.1.0.20170216</version>
+    <version>1.1.0.40000000</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/OpenSSL.Light</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>OpenSSL – The Open Source SSL and TLS toolkit</title>
     <authors>Shining Light Productions</authors>
     <projectUrl>https://slproweb.com/products/Win32OpenSSL.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ff58a020fa163df8a14004b9802a3cb455a76eac/icons/openssl.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1a1a45ece68d4852cc454cf9354d9a441516fccc/icons/openssl.png</iconUrl>
     <copyright>Ⓒ 2000-2003 Shining Light Productions</copyright>
     <licenseUrl>https://www.openssl.org/source/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
