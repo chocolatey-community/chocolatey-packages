@@ -85,7 +85,7 @@ build_script:
 
                     if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
                     pushd $package_dir
-                      if (Test-Path update.ps1 -ea 0) { ./update.p1 }
+                      if (Test-Path update.ps1 -ea 0) { ./update.ps1 }
                       choco pack; Push-Package;
                     popd
                 }
