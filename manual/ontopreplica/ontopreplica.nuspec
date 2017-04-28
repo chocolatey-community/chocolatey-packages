@@ -33,7 +33,7 @@ A real-time, always on top, “replica” of a window of your choice, based on D
 - Non invasive installation: doesn’t require administrator elevation.
 
 ## Notes
-- CodePlex is planning to shut down in December 2017, after that it is unlikely that this package will every be updated again.
+- CodePlex is planning to shut down in December 2017, after that it is unlikely that this package will ever be updated again.
     </description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.0" />
