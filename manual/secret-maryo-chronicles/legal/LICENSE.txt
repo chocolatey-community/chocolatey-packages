@@ -1,174 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
-	<head>
-		<title>Secret Maryo Chronicles - Disclaimer</title>
-		
-		<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-		<meta http-equiv="Content-Style-Type" content="text/css" />
-		<meta name="description" content="Secret Maryo Chronicles is an Open Source two-dimensional platform game and is using an Open Graphics Library for the best possible graphic design and stock performance." /> 		<meta name="keywords" content="Secret Maryo Chronicles, SMC, programming services, open source code, C++, video game developer, rendering engine, software development, linux application, desktop software, mac" /> 		<meta name="robots" content="index, follow" />
-		<meta name="author" content="Florian Richter" />
-		<meta name="copyright" content="Florian Richter" />
-
-		<link rel="shortcut icon" type="image/png" href="/images/icon.png" />
-		<link rel="alternate" type="application/rss+xml" title="News from Secret Maryo Chronicles" href="http://www.secretmaryo.org/feeds/news.xml" />
-		<link rel="stylesheet" type="text/css" href="/style/style.css" media="screen" />
-		<!--[if lte IE 6]>
-		<link rel="stylesheet" type="text/css" href="/style/style_ie6.css" media="screen" />
-		<![endif]-->
-		<!--[if IE 7]>
-		<link rel="stylesheet" type="text/css" href="/style/style_ie7.css" media="screen" />
-		<![endif]-->
-		<!--[if IE 8]>
-		<link rel="stylesheet" type="text/css" href="/style/style_ie8.css" media="screen" />
-		<![endif]-->		<script type="text/javascript" src="/style/menu.js"></script>
-		<script type="text/javascript" src="/style/script.js"></script>
-		<base target="_top" />
-	</head>
-
-<body>
-		
-	<!--[if lte IE 6]><script src="/style/ie6_warning/warning.js"></script><script>window.onload=function(){_ie6("/style/ie6_warning/")}</script><![endif]-->
-	
-	
-		<div id="wrapper">
-		<div id="header">
-				<table width="100%" cellpadding="0" cellspacing="0">
-				<tr id="header_logo">
-			<td style="text-align: center; vertical-align: bottom; height: 160px;">
-				<img src="images/logo/left/cactus.png" width="64" height="64" alt="Cactus" title="Cactus" />
-			</td>
-			<td style="vertical-align: bottom;">
-				<!-- User Box -->
-				<div id="user_box">
-										Welcome, Guest<br />
-					<div style="margin: 2px;">
-						<a href="/phpBB3/ucp.php?mode=register&amp;sid=1a97e799b341e61a8d92ed8ffd896681">Register</a>
-						<a href="/phpBB3/ucp.php?mode=login&amp;redirect=../index.php?page=disclaimer">Login</a>
-					</div>
-									</div>
-			</td>
-			<td style="text-align: center; vertical-align: bottom;"> 
-				<img src="images/logo/sign.png" width="64" height="64" alt="Sign" title="Sign" />
-			</td>
-			<td style="text-align: center; vertical-align: bottom;">
-						<img src="images/logo/maryo.png" width="58" height="58" alt="Maryo" title="Maryo" />
-			</td>
-			<td style="text-align: center; vertical-align: bottom;">
-				<div>
-					<div style="height: 10px; position: relative; top: -10px; left: -150px; z-index: 2;">
-					<img src="images/logo/logo.png" width="256" height="64" alt="Secret Maryo Chronicles Logo" title="Secret Maryo Chronicles Logo" />
-					</div>
-					</div>
-					<div>
-					<div style="text-align: center; vertical-align: bottom; z-index: 1;">
-						<img src="images/logo/right/hills.png" width="98" height="110" alt="Hills" title="Hills" />
-					</div>
-					</div>
-			</td>
-			<td style="text-align: center; vertical-align: bottom;">
-					<img src="images/logo/right/eato.png" width="32" height="32" alt="Eato" title="Eato" />
-			</td>
-			<td style="text-align: center; vertical-align: top;">
-				<div id="header_menu_donate" style="border-color: #82ab22; background-color: #aff004; font-size: 18px; width: 120px; padding: 15px;">
-					<a style="color: #2233ee; text-shadow: #a5a5ff 0px 0px 1px;" href='index.php?page=donate&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'><img src="images/icons/donate_small.png" width="16" height="16" alt="Hearts" title="Hearts" /> Donate!</a>
-				</div>
-				<img src="images/logo/right/box.png" width="32" height="32" alt="Box" title="Box" />
-			</td>
-			  <td style="text-align: center; vertical-align: bottom;"> 
-				<img src="images/logo/right/jpiranha.png" width="80" height="104" alt="Jumping Piranha" title="Jumping Piranha" />
-			</td>
-			<td style="text-align: center; vertical-align: bottom;">
-				<img src="images/logo/right/hedge.png" width="32" height="32" alt="Hedge" title="Hedge" />
-			</td>
-		</tr>
-						<tr id="header_box">
-		<td colspan="8" id="header_menu">
-						<div>
-				<div id="header_menu_search">
-				<!-- SiteSearch Google -->
-				<form action="http://www.secretmaryo.org/index.php" id="cse-search-box">  <div>    <input type="hidden" name="cx" value="partner-pub-6305100280516621:11vjt67i6gj" />    <input type="hidden" name="cof" value="FORID:10" />    <input type="hidden" name="ie" value="UTF-8" />    <input type="text" name="q" size="25" />    <input type="submit" name="sa" value="Search" />  </div></form><script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&amp;lang=en"></script> 
-				<!-- SiteSearch Google -->
-				</div>
-			</div>
-						<div>
-								<div style="width: 468px; height: 60px; z-index: 2;">
-					
-<script type="text/javascript"><!--
-google_ad_client = "pub-6305100280516621";
-/* header */
-google_ad_slot = "7175168092";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-					<noscript>
-						<div style="background-color: #ffcc66; text-align: center; font-size: 90%;">
-							Warning : Scripts disabled.
-						</div>
-					</noscript>
-					
-				</div>
-							</div>
-	    			</td>
-		<td width="64">
-			<img src="images/logo/ground/right.png" width="64" height="64" alt="Ground Down" title="Ground Down" />
-		</td>
-		</tr>
-		      </table>
-	</div>
-		<div id="content_background">
-		<div style="position: relative; left: 64px; float: right; width: 64px; background-color: #e0f4fc;">
-			<img src="images/logo/ground/down_right.png" width="64" height="24" alt="Ground Down" />
-		</div>
-	</div>
-		<table width="100%" cellpadding="0" cellspacing="0">
-	<tr>
-		<td id="menu_top">
-	</td>
-		<td rowspan="3" id="content" valign="top">
-	
-
-	<div id="content_ad_top">
-<script type="text/javascript"><!--
-google_ad_client = "pub-6305100280516621";
-/* disclaimer_leader */
-google_ad_slot = "1124202195";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-</div>
-
-<p>
-<img alt="Info" src="images/icons/license/info.png" style="float: left;" />
-<b>Website</b>
-</p>
-
-<ul style="padding: 8px 0px 10px 30px;">
-<li style="padding-top: 8px;">Third-party Icons : Nuvola icons are licensed under the <a href="http://www.gnu.org/copyleft/lgpl.html">LGPL</a> by David Vignoni</li>
-<li style="padding-top: 8px;">Third-party Advertising : We use third-party advertising companies (Google Adsense) to serve ads when you visit our website. These companies may use information (not including your name, address, email address, or telephone number) about your visits to this and other websites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, <a href="http://www.google.com/privacy_ads.html">click here</a>.</li>
-<li style="padding-top: 8px;">Modifications to Service : SecretMaryo.org reserves the right at any time and from time to time to modify, limit or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice. You agree that SecretMaryo.org shall not be liable to you or to any third party for any modification, suspension or discontinuance of the Service.</li>
-<li style="padding-top: 8px;">Links : SecretMaryo.org may, from time-to-time, link to other websites which are operated independently from SecretMaryo.org. You agree that your linking to any such website is at your own risk, and SecretMaryo.org bears no responsibility for your linking or for the content or information contained in any such website, including the accuracy thereof.</li>
-<li style="padding-top: 8px;">Indemnification : You agree to indemnify and hold SecretMaryo.org, its principals, officers, directors, employees, agents, successors, and assigns harmless from any claim or demand, including reasonable attorney fees and court costs, made by any third party due to or arising out of Content that you submit, post or make available through the SecretMaryo.org Service, of your use of the SecretMaryo.org Service, your breach of any of the representations and warranties herein, or your violation of the rights of another.</li>
-</ul>
-
-<p>
-<img alt="Gnu" src="images/icons/license/gnu.png" style="float: left;" />
-<b>Game License</b>
-</p>
-
-<pre style="background: #faf5e6; color: black; border: 1px solid black; padding: 2em;">
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Copyright (C) 2007 Free Software Foundation, Inc.
  Everyone is permitted to copy and distribute verbatim copies
  of this license document, but changing it is not allowed.
 
@@ -798,8 +631,8 @@ to attach them to the start of each source file to most effectively
 state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+
+    Copyright (C)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -812,14 +645,14 @@ the "copyright" line and a pointer to where the full notice is found.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    along with this program.  If not, see .
 
 Also add information on how to contact you by electronic and paper mail.
 
   If the program does terminal interaction, make it output a short
 notice like this when it starts in an interactive mode:
 
-    <program>  Copyright (C) <year>  <name of author>
+      Copyright (C)
     This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type `show c' for details.
@@ -831,144 +664,11 @@ might be different; for a GUI interface, you would use an "about box".
   You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU GPL, see
-<http://www.gnu.org/licenses/>.
+.
 
   The GNU General Public License does not permit incorporating your program
 into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<http://www.gnu.org/philosophy/why-not-lgpl.html>.
-</pre></td>
-</tr>
-<tr>
-<td id="menu">
-	<img id="news_button" src="images/menu/news.png" width="126" height="28" alt="News" title="News" />
-	<div id="menu_news">
-		<ul>
-		<li><a href='index.php?page=public_news&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>News</a></li>
-		<li><a href='index.php?page=game_history&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>History</a></li>
-		<li><a href="javascript:object_visible_toggle('notes')">Release Notes</a></li>
-		</ul>
-		<ul id="notes" style="padding-left: 35px; color: #ffff88;">
-		<li><a href='index.php?page=new_1_9&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.9</a></li>
-		<li><a href='index.php?page=new_1_8&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.8</a></li>
-		<li><a href='index.php?page=new_1_7&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.7</a></li>
-		<li><a href='index.php?page=new_1_6&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.6</a></li>
-		<li><a href='index.php?page=new_1_5&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.5</a></li>
-		<li><a href='index.php?page=new_1_4&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.4</a></li>
-		<li><a href='index.php?page=new_1_3&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.3</a></li>
-		<li><a href='index.php?page=new_1_2&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.2</a></li>
-		<li><a href='index.php?page=new_1_1&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.1</a></li>
-		<li><a href='index.php?page=new_1_0&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>1.0</a></li>
-		<li><a href='index.php?page=notes_old&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Previous</a></li>
-		</ul>
-	</div>
-	<img id="about_button" src="images/menu/about.png" width="126" height="28" alt="About" title="About"/>
-	<div id="menu_about">
-		<ul>
-		<li><a href='index.php?page=about&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>About</a></li>
-		<li><a href='index.php?page=powerups&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Powerups</a></li>
-		<li><a href='index.php?page=enemies&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Enemies</a></li>
-		<li><a href='index.php?page=media&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Media</a></li>
-		<li><a href='index.php?page=contact&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>The Creators</a></li>
-				</ul>
-	</div>
-	<img id="community_button" src="images/menu/community.png" width="126" height="28" alt="Community" title="Community"/>
-	<div id="menu_community">
-		<ul>
-				<li><a href='index.php?page=links&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Links</a></li>
-		<li><a href='phpBB3/index.php?sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Forums</a></li>
-		<li><a href='wiki/'>Wiki</a></li>
-		<li><a href='index.php?page=irc&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>IRC</a></li>
-				</ul>
-	</div>
-	<img id="support_button" src="images/menu/support.png" width="126" height="28" alt="Support" title="Support" />
-	<div id="menu_support">
-		<ul>
-		<li><a href='index.php?page=editor&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Editor</a></li>
-		<li><a href='index.php?page=button&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Buttons</a></li>
-		<li><a href='index.php?page=info&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Website Info</a></li>
-		<li><a href='index.php?page=shop&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Shop</a></li>
-		</ul>
-	</div>
-	<div id="menu_extra">
-		<a href="index.php?page=donate&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681"><img id="donate_button" src="images/menu/donate_disabled.png" width="126" height="28" alt="Donate" title="Donate" /></a>
-		<a href="index.php?page=game_downloads&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681"><img id="download_button" src="images/menu/download_disabled.png" width="126" height="28" alt="Download" title="Download" /></a>
-	</div>
-</td>
-</tr>
-<tr>
-<td id="menu_bottom" valign="bottom">
-				
-	<div style="margin-left: 24px; margin-bottom: 20px;">
-<script type="text/javascript"><!--
-google_ad_client = "pub-6305100280516621";
-/* menu_left */
-google_ad_slot = "2001036762";
-google_ad_width = 120;
-google_ad_height = 600;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-	</div>
-			<img src="images/menu/bottom_image.png" alt="Bottom Tree" title="Bottom Tree" />
-</td>
-</tr>
-<tr id="content_bottom">
-<td colspan="2" align="center" valign="bottom">
-    <div style="height: 15px;">
-        <div class="footer_section">
-            <a href='index.php?page=info&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Website Info</a>
-        </div>
-        <div class="footer_section" style="text-align: center; width: 25px;">
-            -
-        </div>
-        <div class="footer_section">
-            <a href='index.php?page=disclaimer&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Disclaimer</a>
-        </div>
-        <div class="footer_section" style="text-align: center; width: 25px;">
-            -
-        </div>
-        <div class="footer_section">
-            <a href='index.php?page=contact&amp;sid=?sid=1a97e799b341e61a8d92ed8ffd896681'>Contact</a>
-        </div>
-        <div class="footer_section" style="text-align: center; width: 25px;">
-            -
-        </div>
-        <div class="footer_section" style="color: #aaaaaa;">
-        	&copy; SecretMaryo.org
-        </div>
-    </div>
-</td>
-</tr>
-</table>
-</div>
-
-<div id="end">
-	<a href="http://www.secretmaryo.org/" title="Secret Maryo Chronicles Homepage"><img src="http://www.secretmaryo.org/smc_button.png" alt="Secret Maryo Chronicles" /></a>
-	<a target="_blank" href="http://sourceforge.net/projects/smclone"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=70514&amp;type=11" width="120" height="30" alt="Get Secret Maryo Chronicles at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
-		<a target="_blank" href="http://www.noooxml.org/" title="Say NO to Microsoft Office broken standard"><img src="images/button/no_ooxml.png" alt="NO OOXML" /></a>
-	<a target="_blank" href="http://www.iedgmbh.de" title="IED Waste water systems"><img src="images/ied_logo.png" alt="IED Logo" /></a>
-	<a target="_blank" href="http://www.rheinland24.info/" title="Rheinland Online Zeitung"><img src="images/button/r24.png" alt="R24" /></a>
-</div>
-
-<!-- Google Analytics -->
-
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-10154577-1");
-pageTracker._trackPageview();
-} catch(err) {}
-</script>
-
-<!-- Google Analytics -->
-
-</body>
-</html>
+.
