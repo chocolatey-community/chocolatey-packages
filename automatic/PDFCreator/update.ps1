@@ -1,6 +1,8 @@
 import-module au
+cd "$PSScriptRoot"
 
-$download_page_url = 'http://download.pdfforge.org/download/pdfcreator/list'
+$domain            = 'http://download.pdfforge.org'
+$download_page_url = "$domain/download/pdfcreator/list"
 
 function global:au_SearchReplace {
     @{
@@ -12,17 +14,17 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest $download_page_url
-	$html = $page.parsedHTML
+    $page = Invoke-WebRequest $download_page_url -UseBasicParsing
 
-    $newest_release = $html.body.getElementsByTagName("td") | where {$_.className -like "*colrelease*" -and $_.innerText -notlike "*nightly*"} | Select-Object -first 1
-    $version = $newest_release.innerText.Replace("PDFCreator ", "").Trim()
+    $latestUrl = $page.Links | ? href -match 'Setup\.exe' | select -first 1 -expand href
+    if ($latestUrl.StartsWith('/')) {
+      $latestUrl = $domain + $latestUrl
+    }
+    $latestUrl += '&download'
 
-    $newest_release_url = $html.body.getElementsByTagName("a") | where {$_.href -like "*/download/pdfcreator/$version*"}
+    $version = $latestUrl -split '/' | select -last 1 -skip 1
 
-    $url = $newest_release_url.href.Replace("about:/download", "http://orange.download.pdfforge.org") + "&download"
-
-    return @{ URL = $url; Version = $version }
+    return @{ URL = $latestUrl; Version = $version }
 }
 
 update -ChecksumFor 32
