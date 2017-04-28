@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\scribus-1.4.6-windows.exe"
   file64         = "$toolsPath\scribus-1.4.6-windows-x64.exe"
-  softwareName   = ''
+  softwareName   = 'Scribus*'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
