@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://svgextension.codeplex.com/releases/view/118790>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://svgextension.codeplex.com/downloads/get/803085>
+  64-Bit software: <https://svgextension.codeplex.com/downloads/get/803086>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: 7C7A40ED5530C0350ADCA4CB2A306C8F1CDF617823A2DB4BEADC5191B963E4C7
+  checksum64: 8D13CAD568FCB835980147B91228BF8A5CCE10C35F69954C6A83288298B2C2BF
+
+The file 'LICENSE.txt' has been obtained from <https://svgextension.codeplex.com/license>
