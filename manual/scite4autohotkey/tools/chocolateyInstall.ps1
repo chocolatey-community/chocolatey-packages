@@ -1,20 +1,20 @@
-﻿$packageName = '{{PackageName}}'
-$filePath = "$env:TEMP\chocolatey\$packageName"
-$fileFullPath = "$filePath\${packageName}Install.exe"
-$url    = '{{DownloadUrl}}'
-$fileType = 'exe'
-$statements = ''
+﻿$ErrorActionPreference = 'Stop';
 
-# Variables for the AutoHotkey-script
-$scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkFile = "`"$scriptPath\install.ahk`""
-$exeToRun = "$env:ProgramFiles\AutoHotkey\AutoHotkey.exe"
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-if (-not (Test-Path $filePath)) {
-  New-Item $filePath -type directory
+$packageArgs = @{
+  packageName    = 'scite4autohotkey'
+  fileType       = 'exe'
+  file           = "$toolsPath\s4ahk-install.exe"
+  softwareName   = ''
+  silentArgs     = ''
+  validExitCodes = @(0)
 }
 
-Get-ChocolateyWebFile $packageName $fileFullPath $url
-Start-Process $exeToRun -Verb runas -ArgumentList $ahkFile
+# Experimental environment variable, but the best I know of for testing if '--notsilent' is used
+if ($env:chocolateyInstallOverride -ne $true) {
+  Start-Process "autohotkey" -Verb runas -ArgumentList "`"$toolsPath\install.ahk`""
+}
+Install-ChocolateyInstallPackage @packageArgs
 
-Start-ChocolateyProcessAsAdmin $statements $fileFullPath
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"

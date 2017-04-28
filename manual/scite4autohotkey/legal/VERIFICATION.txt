@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://fincs.ahk4.net/scite4ahk/>
+and can be verified by doing the following:
+
+1. Download the following <https://fincs.ahk4.net/scite4ahk/dl/s4ahk-install.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 59770ba956ec114265909d9fe97546052c7c7c322e58228e3de2341629ff3c5d
+
+The file 'LICENSE.txt' has been obtained from <https://fincs.ahk4.net/scite4ahk/license.htm>
