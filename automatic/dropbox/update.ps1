@@ -1,4 +1,5 @@
 Import-Module au
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $global:getBetaVersion = $false
 $global:stableVersionDownloadUri = 'https://www.dropbox.com/download?full=1&plat=win'
@@ -14,6 +15,8 @@ function global:Get-FirstBetaLink([string] $uri, [string] $regEx) {
 
   return $html.links | Where-Object { $_.href -match $regEx } | Select-Object -First 1
 }
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   return @{
