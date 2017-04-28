@@ -464,6 +464,32 @@ function TestAuUpdatePackages() {
   }
 }
 
+function RunUpdateScripts {
+  param(
+    $packages
+  )
+  [array]$manualPackages = $packages | ? { !$_.IsAutomatic -and (Test-Path "$($_.Directory)\update.ps1") }
+  # Currently we do not support dependent packages
+  if (!$manualPackages) {
+    WriteOutput "No manual packages that contain an update script"
+    return
+  }
+
+  $manualPackages | % {
+    $name = $_.Name
+    WriteOutput "Running update.ps1 for $name"
+    try {
+      pushd $_.Directory
+      .\update.ps1
+    } catch {
+      SetAppveyorExitCode 1
+      throw "An exception ocurred during the manual update of $name. Cancelling all other checks."
+    } finally {
+      popd
+    }
+  }
+}
+
 function TestInstallAllPackages() {
 <#
 .SYNOPSIS
@@ -616,6 +642,7 @@ $arguments = @{
 switch -Exact ($type) {
   'update' {
     TestAuUpdatePackages -packages $packages
+    RunUpdateScripts -packages $packages
   }
   'install' {
     [array]$failedInstalls = TestInstallAllPackages @arguments
@@ -626,6 +653,7 @@ switch -Exact ($type) {
    'none' { WriteOutput "No tests is being run." }
   Default {
     TestAuUpdatePackages -packages $packages
+    RunUpdateScripts -packages $packages
     [array]$failedInstalls = TestInstallAllPackages @arguments
     [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
   }
