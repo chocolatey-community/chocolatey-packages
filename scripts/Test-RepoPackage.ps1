@@ -657,28 +657,17 @@ $arguments = @{
   screenShotDir = $artifactsDirectory
 }
 
-switch -Exact ($type) {
-  'update' {
-    TestAuUpdatePackages -packages $packages
-    RunUpdateScripts -packages $packages
-  }
-  'install' {
-    [array]$failedInstalls = TestInstallAllPackages @arguments
-    CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
-  }
-  'uninstall' {
-    [array]$failedUninstalls = TestUninstallAllPackages @arguments
-   }
-   'none' { WriteOutput "No tests is being run." }
-  Default {
-    TestAuUpdatePackages -packages $packages
-    RunUpdateScripts -packages $packages
-    [array]$failedInstalls = TestInstallAllPackages @arguments
-    CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
-    [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
-  }
+if (@('all','update')) {
+  TestAuUpdatePackages -packages $packages
+  RunUpdateScripts -packages $packages
 }
-
+if (@('all','install')) {
+  [array]$failedInstalls = TestInstallAllPackages @arguments
+  CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
+} else { $failedInstalls = @() }
+if (@('all','uninstall')) {
+  [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
+}
 if (@('all','install','uninstall').Contains($type)) { CreateLogArchive $artifactsDirectory }
 
 if ($failedInstalls.Count -gt 0) {
