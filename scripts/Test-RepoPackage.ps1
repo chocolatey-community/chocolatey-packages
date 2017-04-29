@@ -54,6 +54,28 @@ param(
   [string]$artifactsDirectory = "$env:TEMP\artifacts"
 )
 
+function CheckPackageSizes() {
+  $nupkgFiles = Get-ChildItem "$PSScriptRoot\.." -Filter "*.nupkg" -Recurse
+
+  $nupkgFiles | % {
+    $size = $_.Length
+    $maxSize = 150 * 1024 *1024
+    $packageName = $_.Directory.Name
+    if ($size -gt $maxSize) {
+      $friendlySize = $size / 1024 / 1024
+      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is 150 MB. Actual size was $friendlySize MB!"
+      SetAppveyorExitCode -ExitCode 2
+    } else {
+      $index = 0
+      $suffix = @('Bytes';'KB';'MB')
+      $friendlySize = $size
+      while ($friendlySize -ge 1024 -and $index -lt ($suffix.Count - 1)) { $index++; $friendlySize /= 1024 }
+      $friendlySize = "{0:N2} {1}" -f $friendlySize,$suffix[$index]
+      WriteOutput "The size of the package $packageName was $friendlySize."
+    }
+  }
+}
+
 function CreateSnapshotArchive() {
   param($packages, [string]$artifactsDirectory)
 
@@ -657,15 +679,15 @@ $arguments = @{
   screenShotDir = $artifactsDirectory
 }
 
-if (@('all','update')) {
+if (@('all','update').Contains($type)) {
   TestAuUpdatePackages -packages $packages
   RunUpdateScripts -packages $packages
 }
-if (@('all','install')) {
+if (@('all','install').Contains($type)) {
   [array]$failedInstalls = TestInstallAllPackages @arguments
   CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
 } else { $failedInstalls = @() }
-if (@('all','uninstall')) {
+if (@('all','uninstall').Contains($type)) {
   [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
 }
 if (@('all','install','uninstall').Contains($type)) { CreateLogArchive $artifactsDirectory }
@@ -678,3 +700,5 @@ if ($failedUninstalls.Count -gt 0) {
   WriteOutput "The following packages failed to uninstall:" -type ChocoWarning
   WriteOutput "    $($failedUninstalls -join ' ')" -type ChocoWarning
 }
+
+CheckPackageSizes
