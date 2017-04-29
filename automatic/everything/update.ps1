@@ -15,13 +15,15 @@ function global:au_SearchReplace {
           "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
           "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
           "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
+          "(?i)(checksum es.exe:).*"   = "`${1} $($Latest.ChecksumEsExe)"
           "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL64)"
         }
     }
 }
 function global:au_BeforeUpdate {
-    Get-RemoteFiles -Purge
+    Get-RemoteFiles -Purge -NoSuffix
     iwr 'https://www.voidtools.com/es.exe' -OutFile $PSScriptRoot\tools\es.exe
+    $Latest.ChecksumEsExe = Get-FileHash $PSScriptRoot\tools\es.exe | % Hash
 }
 
 function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
