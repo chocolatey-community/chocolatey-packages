@@ -640,7 +640,7 @@ if ($packageName) {
 $packages = RemoveDependentPackages -packages $packages
 
 if ($CleanFiles) {
-    CleanFiles -screenShotDir $screenShotDir
+    CleanFiles -screenShotDir $artifactsDirectory
 }
 
 if (!$packages) {
