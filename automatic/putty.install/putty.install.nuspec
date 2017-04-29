@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>putty.install</id>
-    <version>0.68.0.20170412</version>
+    <version>0.69</version>
     <title>PuTTY (Install)</title>
     <authors>Simon Tatham</authors>
     <owners>chocolatey, Rob Reynolds</owners>
