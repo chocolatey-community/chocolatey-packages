@@ -1,3 +1,5 @@
+$localeChecksumFile = 'LanguageChecksums.csv'
+
 function GetVersionAndUrlFormats() {
   param(
     [string]$UpdateUrl,
@@ -46,7 +48,7 @@ function CreateChecksumsFile() {
     return "$($_.Groups[3].Value)|$($_.Groups[2].Value)|$($_.Groups[1].Value)"
   }
 
-  $checksumRows | Out-File "$ToolsDirectory\LanguageChecksums" -Encoding utf8
+  $checksumRows | Out-File "$ToolsDirectory\$localeChecksumFile" -Encoding utf8
 }
 
 function SearchAndReplace() {
@@ -59,9 +61,9 @@ function SearchAndReplace() {
   $installReplacements = @{
     "(?i)(^[$]packageName\s*=\s*)('.*')"      = "`$1'$($Data.PackageName)'"
     "(?i)(^[$]softwareName\s*=\s*)('.*')"     = "`$1'$($Data.SoftwareName)'"
-    "(?i)(^[$]allLocalesListURL\s*=\s*)('.*')"= "`$1'$($Data.LocaleURL)'"
     "(?i)(-version\s*)('.*')"                 = "`$1'$($Data.RemoteVersion)'"
     '(?i)(\s*Url\s*=\s*)(".*")'               = "`$1`"$($Data.Win32Format)`""
+    '(?i)(\s*\-(checksum|locale)File\s*)".*"' = "`$1`"`$toolsPath\$localeChecksumFile`""
   }
 
   if ($Supports64Bit) {

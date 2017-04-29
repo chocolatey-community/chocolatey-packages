@@ -7,8 +7,6 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'Firefox'
 $softwareName = 'Mozilla Firefox'
 
-$allLocalesListURL = 'https://www.mozilla.org/en-US/firefox/all/'
-
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.0.2')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
@@ -26,8 +24,8 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   )
 } else {
 
-  $locale = GetLocale -localeUrl $allLocalesListURL -product $softwareName
-  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums"
+  $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
+  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
     packageName = $packageName

@@ -26,7 +26,7 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 ## Notes
 - Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
 - Looking for Firefox Extended Support Release? Install the [FirefoxESR](/packages/FirefoxESR) package.
-- This package installs Firefox ESR in the first language which matches this list:
+- This package installs Firefox in the first language which matches this list:
   1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`.
      To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest/README.txt.
   2. If Firefox is already installed: the same language as the already installed Firefox.

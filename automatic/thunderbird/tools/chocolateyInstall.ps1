@@ -7,8 +7,6 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'thunderbird'
 $softwareName = 'Mozilla Thunderbird'
 
-$allLocalesListURL = 'https://www.mozilla.org/en-US/thunderbird/all/'
-
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.0.1')
 
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
@@ -18,8 +16,8 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   )
 } else {
 
-  $locale = GetLocale -localeUrl $allLocalesListURL -product $softwareName
-  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums"
+  $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
+  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
     packageName = $packageName

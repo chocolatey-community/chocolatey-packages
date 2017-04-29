@@ -3,7 +3,7 @@
 $packageName = 'Firefox'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName 'Mozilla Firefox*'
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'Mozilla Firefox*' | ? { $_.DisplayName -notmatch "ESR" }
 
 if ($key.Count -eq 1) {
   $key | % {

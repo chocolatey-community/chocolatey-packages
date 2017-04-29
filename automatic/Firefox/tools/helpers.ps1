@@ -19,11 +19,12 @@
 function GetLocale {
   param(
     [Parameter(Mandatory = $true)]
-    [string]$localeUrl,
+    [string]$localeFile,
     [Parameter(Mandatory = $true)]
     [string]$product
   )
-  $availableLocales = Get-WebContent $localeUrl 2>$null
+  #$availableLocales = Get-WebContent $localeUrl 2>$null
+  $availableLocales = Get-Content $localeFile | % { $_ -split '\|' | select -first 1 } | select -Unique
 
   $packageParameters = $env:chocolateyPackageParameters
 
@@ -44,7 +45,7 @@ function GetLocale {
     $systemLocalizeAndCountry, $systemLocaleTwoLetter, $fallbackLocale
 
     foreach ($locale in $locales) {
-      $localeMatch = $availableLocales -match "os=win&amp;lang=$locale`"" | select -first 1
+      $localeMatch = $availableLocales | ? { $_ -eq $locale } | select -first 1
       if ($localeMatch -and $locale -ne $null) {
         break
       }
