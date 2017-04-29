@@ -99,7 +99,13 @@ build_script:
 on_finish:
 - ps: |
     if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
-    ls -Path "$env:TEMP\artifacts\*",'au_temp.7z','update_info.xml','Update-AUPackages.md' -ea 0 | % { Push-AppveyorArtifact $_.FullName }
+    $paths = @(
+      Resolve-Path "$env:TEMP\artifacts\*" -ea 0
+      'au_temp.7z'
+      'update_info.xml'
+      'Update-AUPackages.md'
+    )
+    $paths | ? { Test-Path $_ } | % { Push-AppveyorArtifact $_ }
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 notifications:
