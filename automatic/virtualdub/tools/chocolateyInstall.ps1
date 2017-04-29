@@ -11,21 +11,11 @@ $checksumType = 'SHA512'
 Install-ChocolateyZipPackage $packageName $url $toolsdir $url64 `
 -Checksum $checksum -ChecksumType $checksumType -Checksum64 $checksum64
 
-$admin = Test-ProcessAdminRights
-$bitness = Get-OSArchitectureWidth
-
 # Unique names for each bitness
-if ( $bitness -eq '64' ) {
-	$binName = "Veedub64.exe"
-} else {
-	$binName = "VirtualDub.exe"
-}
+$binName = "Veedub64.exe"
+If ( Get-OSArchitectureWidth -compare '32' ) { $binName = "VirtualDub.exe" }
 
 # Place shortcuts in appropriate location
-if ( $admin -eq $true ) {
-	$commProgs = [environment]::getfolderpath('CommonPrograms')
-	Install-ChocolateyShortcut -shortcutFilePath "$commProgs\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
-} Else { 
-	$userProgs = [environment]::getfolderpath('Programs')
-	Install-ChocolateyShortcut -shortcutFilePath "$userProgs\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
-}
+$ProgsFolder = [environment]::getfolderpath('Programs')
+If ( Test-ProcessAdminRights ) { $ProgsFolder = [environment]::getfolderpath('CommonPrograms') }
+Install-ChocolateyShortcut -shortcutFilePath "$ProgsFolder\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
