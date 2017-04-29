@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'texmaker*'
+  softwareName  = 'Texmaker'
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(@(0))
