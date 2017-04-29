@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>voicebot</id>
-    <version>0.0</version>
+    <version>3.0</version>
     <title>VoiceBot</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.voicebot.net</projectUrl>

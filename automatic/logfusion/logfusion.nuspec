@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logfusion</id>
-    <version>0.0</version>
+    <version>5.2.1</version>
     <title>LogFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.logfusion.ca</projectUrl>

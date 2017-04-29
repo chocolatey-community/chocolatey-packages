@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>itunesfusion</id>
-    <version>0.0</version>
+    <version>2.6</version>
     <title>iTunesFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.itunesfusion.com</projectUrl>
