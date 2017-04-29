@@ -96,14 +96,10 @@ build_script:
 
     ./update_all.ps1 -ForcedPackages $forced
 
-artifacts:
-- path: update_info.xml
-- path: Update-AUPackages.md
-
 on_finish:
-- 7z a -mx9 choco_logs.7z "%ChocolateyInstall%\logs\*"
-- ps: if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* ; Push-AppveyorArtifact au_temp.7z }
-- appveyor PushArtifact choco_logs.7z
+- ps: |
+    if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
+    ls . -Path "$env:TEMP\artifacts\*",'au_temp.7z','update_info.xml','Update-AUPackages.md' -ea 0 | % { Push-AppveyorArtifact $_.FullName }
 #- ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
 
 notifications:

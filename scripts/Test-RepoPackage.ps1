@@ -51,8 +51,42 @@ param(
   [switch]$TakeScreenshots,
   [int]$chocoCommandTimeout = 600,
   [int]$timeoutBeforeScreenshot = 1,
-  [string]$screenShotDir = "$env:TEMP\screenshots"
+  [string]$artifactsDirectory = "$env:TEMP\artifacts"
 )
+
+function CreateSnapshotArchive() {
+  param($packages, [string]$artifactsDirectory)
+
+  if (!(Get-Command 7z.exe -ea 0)) { WriteOutput -type Warning "7zip was not found in path, skipping creation of 7zip archive."; return }
+
+  if (!(Test-Path $artifactsDirectory)) { mkdir $artifactsDirectory }
+  $directories = $packages | ? {
+    Test-path "$env:ChocolateyInstall\.chocolatey\$($_.Name)*"
+  } | % {
+    $directory = Resolve-Path "$env:ChocolateyInstall\.chocolatey\$($_.Name)*" | select -last 1
+    "`"$directory`""
+  }
+
+  $arguments = @(
+    'a'
+    '-mx9'
+    "`"$artifactsDirectory\install_snapshot.7z`""
+  ) + $directories
+
+  . 7z $arguments
+}
+
+function CreateLogArchive() {
+  param([string]$artifactsDirectory)
+
+  $arguments = @(
+    'a'
+    '-mx9'
+    "`"$artifactsDirectory\choco_logs.7z`""
+    "`"$env:ChocolateyInstall\logs\*`""
+  )
+  . 7z $arguments
+}
 
 function WriteOutput() {
 <#
@@ -274,21 +308,6 @@ function SetAppveyorExitCode() {
   }
 }
 
-function UploadAppveyorArtifact() {
-<#
-.SYNOPSIS
-  Uploads the specified filePaths to appveyor when a appveyor build
-  is currently running.
-#>
-  param(
-    [string[]]$filePaths
-  )
-
-  if (Test-Path env:\APPVEYOR) {
-    $filePaths | ? { Test-Path $_ } | % { Push-AppveyorArtifact $_ -FileName (Split-Path -Leaf $_)}
-  }
-}
-
 function RunChocoProcess() {
 <#
   Function responsible for running choco install/uninstall
@@ -382,7 +401,6 @@ function RunChocoProcess() {
       # We take a screenshot when install/uninstall have finished to see if a program have started that isn't monitored by choco
       $filePath = "$screenShotDir\$($arguments[0])_$($arguments[1]).jpg"
       Take-ScreenShot -file $filePath -imagetype jpeg
-      UploadAppveyorArtifact $errorFilePath,$filePath
     }
   }
   return $res
@@ -636,7 +654,7 @@ $arguments = @{
   chocoCommandTimeout = $chocoCommandTimeout
   takeScreenshot = $TakeScreenshots
   screenShotTimeout = $timeoutBeforeScreenshot
-  screenShotDir = $screenShotDir
+  screenShotDir = $artifactsDirectory
 }
 
 switch -Exact ($type) {
@@ -646,6 +664,7 @@ switch -Exact ($type) {
   }
   'install' {
     [array]$failedInstalls = TestInstallAllPackages @arguments
+    CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
   }
   'uninstall' {
     [array]$failedUninstalls = TestUninstallAllPackages @arguments
@@ -655,9 +674,12 @@ switch -Exact ($type) {
     TestAuUpdatePackages -packages $packages
     RunUpdateScripts -packages $packages
     [array]$failedInstalls = TestInstallAllPackages @arguments
+    CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
     [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
   }
 }
+
+if (@('all','install','uninstall').Contains($type)) { CreateLogArchive $artifactsDirectory }
 
 if ($failedInstalls.Count -gt 0) {
   WriteOutput "The following packages failed to install:" -type ChocoWarning
