@@ -1,25 +1,31 @@
-﻿$packageName = '{{PackageName}}'
-# {\{DownloadUrlx64}\} gets “misused” here as 32- and 64-bit link array due to limitations of Ketarin/chocopkgup
-$urlArray = {{DownloadUrlx64}}
-$url = $urlArray[0]
-$url64 = $urlArray[1]
-$binRoot = "$env:systemdrive\tools"
-$unzipLocation = "$binRoot\VirtualDub"
+﻿$packageName = 'virtualdub'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$version = '{{PackageVersion}}'
+$build = '{{Build}}'
+$url = "https://sourceforge.net/projects/virtualdub/files/virtualdub-win/${version}.${build}/VirtualDub-${version}.zip/download"
+$url64 = "https://sourceforge.net/projects/virtualdub/files/virtualdub-win/${version}.${build}/VirtualDub-${version}-AMD64.zip/download"
+$checksum = '{{Checksum}}'
+$checksum64 = '{{Checksumx64}}'
+$checksumType = 'SHA512'
 
-Install-ChocolateyZipPackage $packageName $url $unzipLocation $url64
+Install-ChocolateyZipPackage $packageName $url $toolsdir $url64 `
+-Checksum $checksum -ChecksumType $checksumType -Checksum64 $checksum64
 
-$desktop = "$([Environment]::GetFolderPath("Desktop"))"
-$startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
+$admin = Test-ProcessAdminRights
+$bitness = Get-OSArchitectureWidth
 
-$processor = Get-WmiObject Win32_Processor
-$is64bit = $processor.AddressWidth -eq 64
-
-if ($is64bit) {
-  Install-ChocolateyDesktopLink "$unzipLocation\Veedub64.exe"
-  Rename-Item -Path "$desktop\Veedub64.exe.lnk" -NewName "VirtualDub.lnk"
+# Unique names for each bitness
+if ( $bitness -eq '64' ) {
+	$binName = "Veedub64.exe"
 } else {
-  Install-ChocolateyDesktopLink "$unzipLocation\VirtualDub.exe"
-  Rename-Item -Path "$desktop\VirtualDub.exe.lnk" -NewName "VirtualDub.lnk"
+	$binName = "VirtualDub.exe"
 }
 
-Copy-Item "$desktop\VirtualDub.lnk" -Destination "$startMenu"
+# Place shortcuts in appropriate location
+if ( $admin -eq $true ) {
+	$commProgs = [environment]::getfolderpath('CommonPrograms')
+	Install-ChocolateyShortcut -shortcutFilePath "$commProgs\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
+} Else { 
+	$userProgs = [environment]::getfolderpath('Programs')
+	Install-ChocolateyShortcut -shortcutFilePath "$userProgs\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
+}
