@@ -4,7 +4,7 @@
   <metadata>
     <id>7zip.portable</id>
     <title>7-Zip (Portable, CommandLine)</title>
-    <version>16.04</version>
+    <version>17.0</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
