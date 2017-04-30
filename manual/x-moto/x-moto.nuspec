@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>x-moto</id>
+    <version>0.5.11.20170430</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/x-moto</packageSourceUrl>
+    <owners>chocolatey, chocolatey purity</owners>
+    <title>X-Moto</title>
+    <authors>X-Moto Contributors</authors>
+    <projectUrl>https://xmoto.tuxfamily.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/267ca0fe62e8e0947eacab7bee70bc8c31dadeb6/icons/x-moto.png</iconUrl>
+    <copyright>© 2005-2017 XMoto</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://svn.tuxfamily.org/viewvc.cgi/xmoto_xmoto/</projectSourceUrl>
+    <docsUrl>https://wiki.xmoto.tuxfamily.org/</docsUrl>
+    <mailingListUrl>https://forum.xmoto.tuxfamily.org/</mailingListUrl>
+    <tags>x-moto motocross physics game admin foss cross-platform</tags>
+    <summary>Free and open source 2D motocross platform game</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
+    <releaseNotes>https://xmoto.tuxfamily.org/dev/ChangeLog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

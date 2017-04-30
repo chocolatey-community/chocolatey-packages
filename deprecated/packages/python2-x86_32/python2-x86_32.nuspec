@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>python2-x86_32</id>
+    <version>2.7.11.20170425</version>
+    <title>[DEPRECATED] Python 2.x (32-bit)</title>
+    <owners>chocolatey</owners>
+    <authors>Python Software Foundation</authors>
+    <projectUrl>http://www.python.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Python 2.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 2.x and see almost immediate gains in productivity and lower maintenance costs.
+
+### Note
+
+This package installs the latest stable version of Python 2.x 32-bit, even on 64-bit systems. Do not install this package on 32-bit systems. On 32-bit systems you should install [python2](/packages/python2) instead.
+
+This package will install to Python 2.x to `$env:ChocolateyBinRoot\{{PackageName}}`, but only if Python 2.x is not already installed where the installer puts it by default, which is `$env:SystemDrive\PythonXX` (XX stands for the major/minor version digits).
+
+If you want a 64-bit Python 2.x on 64-bit systems, install the [python2](/packages/python2) package instead. You can also install both packages. In this case you must manually adapt your PATH environment variable so that it picks the Python 2.x version (32- or 64-bit) that you want when invoking `python.exe`.
+    </description>
+    <summary>Python 2.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 2.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
+    <tags>python admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -17,8 +17,7 @@
     <bugTrackerUrl>https://sourceforge.net/p/jubler/_list/tickets?source=navbar</bugTrackerUrl>
     <tags>jubler admin subtitle editor video</tags>
     <summary>Jubler is a tool to edit text-based subtitles.</summary>
-    <description>
-Jubler is a tool to edit text-based subtitles.
+    <description>Jubler is a tool to edit text-based subtitles.
 It can be used as an authoring software for new subtitles or as a tool to convert, transform, correct and refine existing subtitles.
 The most popular subtitle formats can be used.
 Preview of the subtitles in realtime or in design time, spell checking, translation mode and styles editing are some of the main features.
@@ -51,7 +50,7 @@ Preview of the subtitles in realtime or in design time, spell checking, translat
 * Undo &amp; redo
 * Cut, copy, paste, delete areas according to time &amp; color patterns
 * Clear areas used for hearing impaired
-    </description>
+</description>
     <releaseNotes>http://www.jubler.org/changelog.html</releaseNotes>
     <dependencies>
       <dependency id="javaruntime" version="8.0" />

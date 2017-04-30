@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://www.sweethome3d.com/download.jsp>
+and can be verified by doing the following:
+
+1. Download the following <http://sourceforge.net/projects/sweethome3d/files/SweetHome3D/SweetHome3D-5.4/SweetHome3D-5.4-windows.exe/download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: E43FCAB0DEEE76A7ECA12C0CA0D86B94BC54285941B322E4085FB2682258312E
+
+The file 'LICENSE.txt' has been obtained from <http://www.sweethome3d.com/license.jsp>

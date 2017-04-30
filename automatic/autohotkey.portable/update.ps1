@@ -19,15 +19,11 @@ function global:au_SearchReplace {
     }
 }
 function global:au_BeforeUpdate {
-    rm "$PSScriptRoot\tools\*.zip"
-
-    $client = New-Object System.Net.WebClient
-        $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
-        $client.DownloadFile($Latest.URL, $filePath)
-    $client.Dispose()
-
-    $Latest.ChecksumType = 'sha256'
-    $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
+  rm "$PSScriptRoot\tools\*.zip"
+  $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
+  Invoke-WebRequest $Latest.URL -OutFile $filePath -UseBasicParsing
+  $Latest.ChecksumType = 'sha256'
+  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
 }
 
 function global:au_GetLatest {
@@ -40,4 +36,4 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -NoCheckUrl

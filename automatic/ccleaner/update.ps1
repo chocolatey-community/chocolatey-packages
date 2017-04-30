@@ -12,17 +12,17 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re  = '\.exe$'
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re  = '\.exe$'
+  $url = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $download_page = Invoke-WebRequest https://www.piriform.com/ccleaner/version-history
-    $version = $download_page.AllElements | ? tagName -eq 'h6' | % InnerText | select -first 1
-    $version = $version -split ' ' | select -First 1
-    $version = $version.Replace('v','')
+  $download_page = Invoke-WebRequest https://www.piriform.com/ccleaner/version-history -UseBasicParsing
+  $Matches = $null
+  $download_page.Content -match "\<h6\>v((?:[\d]\.)[\d\.]+)"
+  $version = $Matches[1]
 
-    @{ URL32 = $url; Version = $version }
+  @{ URL32 = $url; Version = $version }
 }
 
 update -ChecksumFor 32

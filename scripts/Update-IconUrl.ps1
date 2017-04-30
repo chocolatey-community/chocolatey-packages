@@ -34,6 +34,10 @@
   Throw an error if a icon for the specified package is not found.
   NOTE: Only available when updating a single icon.
 
+.PARAMETER Optimize
+  Additionally optimize/compress the icon if one is found, and a supported
+  optimizer is available. (Runs through all supported optimizers)
+
 .OUTPUTS
   The number of packages that was updates,
   if some packages is already up to date, outputs how many.
@@ -94,7 +98,8 @@ param(
   [string]$PackagesDirectory = "../automatic",
   [switch]$UseStopwatch,
   [switch]$Quiet,
-  [switch]$ThrowErrorOnIconNotFound
+  [switch]$ThrowErrorOnIconNotFound,
+  [switch]$Optimize
 )
 
 $counts = @{
@@ -113,20 +118,114 @@ $validExtensions = @(
   "ico"
 )
 
+function Format-Size {
+  param(
+    [double]$size
+  )
+  $suffixes = @(
+    'Byte'
+    'KB'
+    'MB' # unlikely, but you never know
+    'GB' # Highly unlikely
+  )
+  $index = 0
+  while (($index -lt $suffixes.Count) -and ($size -ge 1024)) {
+    $index++
+    $size = $size / 1024
+  }
+  $format = if ($index -eq 0) { "{0:0} {1}" } else { "{0:2} {1}" }
+
+  return $format -f $size,$suffixes[$index]
+}
+
+function Optimize-Image {
+  param(
+    [string]$iconPath
+  )
+
+  $supportedOptimizers = @(
+    @{
+      DisplayName = "pngquant"
+      Arguments   = @('--strip','--force','--output',"`"$iconPath`"", "`"$iconPath`"")
+      Extensions = @('.png')
+    }
+    @{
+      DisplayName = "optipng"
+      Arguments   = @('-o7','--strip','all','--quiet', "`"$iconPath`"")
+      Extensions  = @('.png', '.bmp','.gif','.pnm','.tiff')
+    }
+    @{
+      DisplayName = "jpegoptim"
+      Arguments = @('--strip-all', '--preserve', '--quiet','--max=90', "`"$iconPath`"")
+      Extensions = @('.jpg', '.jpeg')
+    }
+  )
+  $extension = [System.IO.Path]::GetExtension($iconPath)
+  $fileName  = [System.IO.Path]::GetFileName($iconPath)
+
+  $supportedOptimizers | ? {
+    $name = if ($_.ExeName) { $_.ExeName } else { $_.DisplayName }
+    return $_.Extensions.Contains($extension) -and (Get-Command $name -ea 0)
+  } | % {
+    Write-Host "Optimizing the icon $fileName using $($_.DisplayName)"
+    $originalSize = Get-Item $iconPath | % Length
+    $name = if ($_.ExeName) { $_.ExeName } else { $_.DisplayName }
+    $path = Get-Command $name
+    do {
+      $sizeBefore = Get-Item $iconPath | % Length
+      Start-Process -FilePath $path -ArgumentList $_.Arguments -Wait -NoNewWindow
+      $sizeAfter = Get-Item $iconPath | % Length
+    } while ($sizeAfter -lt $sizeBefore)
+
+    if ($sizeAfter -lt $originalSize) {
+      $format = Format-Size ($originalSize - $sizeAfter)
+      Write-Host "$fileName size decreased by $format"
+    } elseif($sizeAfter -gt $originalSize) {
+      $format = Format-Size ($sizeAfter - $originalSize)
+      Write-Warning "$fileName size increased by $format"
+    }
+  }
+}
+
 function Test-Icon{
   param(
     [string]$Name,
     [string]$Extension,
-    [string]$IconDir
+    [string]$IconDir,
+    [bool]$Optimize
   )
   $path = "$IconDir/$Name.$Extension"
   if (!(Test-Path $path)) { return $false; }
+  if ($Optimize) { Optimize-Image $path }
   if ((git status "$path" -s)) {
     git add $path | Out-Null;
-    git commit -m "Added/Updated $Name icon" "$path" | Out-Null;
+    $message = "($Name) Updated icon"
+    if ((git log --oneline -1) -match "$([regex]::Escape($message))$") {
+      git commit --amend -m "$message" "$path" | Out-Null
+    } else {
+      git commit -m "$message" "$path" | Out-Null;
+    }
   }
 
   return git log -1 --format="%H" "$path";
+}
+
+function Update-Readme {
+  param(
+    [string]$ReadmePath,
+    [string]$Url
+  )
+
+  if (!(Test-Path $ReadmePath)) { return }
+
+  $content = Get-Content $ReadmePath -Encoding UTF8
+  $re = "(^\#+.*\<img.*src=)`"[^`"]*`""
+  if ($content.Length -ge 1 -and $content[0] -match $re) {
+    $content[0] = $content[0] -replace $re,"`${1}`"$Url`""
+  }
+
+  $output = $content | Out-String
+  [System.IO.File]::WriteAllText("$ReadmePath", $output, $encoding)
 }
 
 function Replace-IconUrl{
@@ -151,6 +250,8 @@ function Replace-IconUrl{
     return;
   }
   [System.IO.File]::WriteAllText("$NuspecPath", $output, $encoding);
+  $readMePath = (Split-Path -Parent $NuspecPath) + "\Readme.md"
+  Update-Readme -ReadmePath $readMePath -Url $url
   $counts.replaced++;
 }
 
@@ -160,7 +261,8 @@ function Update-IconUrl{
     [string]$IconName,
     [string]$IconDir,
     [string]$GithubRepository,
-    [bool]$Quiet
+    [bool]$Quiet,
+    [bool]$Optimize
   )
 
   $possibleNames = @($Name);
@@ -202,7 +304,7 @@ function Update-IconUrl{
 
     foreach ($extension in $validExtensions) {
       $iconNameWithExtension = "$possibleName.$extension";
-      $commitHash = Test-Icon -Name $possibleName -Extension $extension -IconDir $IconDir;
+      $commitHash = Test-Icon -Name $possibleName -Extension $extension -IconDir $IconDir -Optimize $Optimize;
       if ($commitHash) { break; }
     }
     if ($commitHash) { break; }
@@ -229,14 +331,14 @@ if ($UseStopwatch) {
 }
 
 If ($Name) {
-  Update-IconUrl -Name $Name -IconName $IconName -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet
+  Update-IconUrl -Name $Name -IconName $IconName -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet -Optimize $Optimize
 }
 else {
   $directories = Get-ChildItem -Path "$PSScriptRoot/$PackagesDirectory" -Directory;
 
   foreach ($directory in $directories) {
     if ((Test-Path "$($directory.FullName)/$($directory.Name).nuspec")) {
-      Update-IconUrl -Name $directory.Name -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet
+      Update-IconUrl -Name $directory.Name -IconDir "$PSScriptRoot/$RelativeIconDir" -GithubRepository $GithubRepository -Quiet $Quiet -Optimize $Optimize
     }
   }
 }

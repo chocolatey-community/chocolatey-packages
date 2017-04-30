@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://www.secretmaryo.org/index.php?page=game_download_windows&sid=?sid=>
+and can be verified by doing the following:
+
+1. Download the following
+  Installer: <http://downloads.sourceforge.net/smclone/SMC_1.9_win32.exe?download>
+  BG Music : <http://downloads.sourceforge.net/smclone/SMC_Music_5.0_high_win32.exe?download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum installer: 4EA14B8B12403254011486CA8D6578992F30645ED5E8883ADC30D7C207717D2C
+  checksum bg music : C0603CBDFCEECD2C0AAB316EDAF8F42BE1DBC5BB7F8175EB1C2E062DB0865C5C
+
+The file 'LICENSE.txt' has been obtained from <http://www.secretmaryo.org/index.php?page=disclaimer>

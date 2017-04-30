@@ -1,0 +1,17 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download location on <https://github.com/gobby/gobby/wiki/Download>
+(Look under Source Code Tarballs) and can be verified by doing the following:
+
+1. Download the following <>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type:
+  checksum:
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/gobby/gobby/blob/8d1af06e037b7d7b9dd5d89f1136288ff3bfc4b5/COPYING>

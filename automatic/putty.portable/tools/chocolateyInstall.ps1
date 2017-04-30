@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsPath\putty.zip"
 
 $packageArgs = @{
     PackageName  = "putty.portable"
-    FileFullPath = $filePath
+    File         = "$toolsPath\putty_x32.zip"
+    File64       = "$toolsPath\putty_x64.zip"
     Destination  = $toolsPath
 }
 Get-ChocolateyUnzip @packageArgs
 
-Remove-Item -force $filePath -ea 0
+Remove-Item -force "$toolsPath\*.zip" -ea 0

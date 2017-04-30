@@ -1,7 +1,16 @@
-﻿$packageName = '{{PackageName}}'
-$fileType = 'exe'
-$silentArgs = '/VERYSILENT'
-# {\{DownloadUrlx64}\} gets “misused” here as 32-bit download link due to limitations of Ketarin/chocopkgup
-$url = '{{DownloadUrlx64}}'
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$packageArgs = @{
+  packageName    = 'sweet-home-3d'
+  fileType       = 'exe'
+  file           = "$toolsPath\SweetHome3D-5.4-windows.exe"
+  softwareName   = 'Sweet Home 3D*'
+  silentArgs     = '/SILENT'
+  validExitCodes = @(0)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"

@@ -1,29 +1,17 @@
-﻿$packageId = '{{PackageName}}'
+﻿$ErrorActionPreference = 'Stop';
 
-#default is to plop in c:\ -- yuck!
-$installDir = Join-Path $Env:ProgramFiles 'OpenSSL'
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$params = @{
-  packageName = $packageId;
-  fileType = 'exe';
-  #InnoSetup - http://unattended.sourceforge.net/InnoSetup_Switches_ExitCodes.html
-  silentArgs = '/silent', '/verysilent', '/sp-', '/suppressmsgboxes',
-    "/DIR=`"$installDir`"";
-  url = '{{DownloadUrl}}'
-  url64bit = '{{DownloadUrlx64}}'
+$packageArgs = @{
+  packageName    = 'OpenSSL.Light'
+  fileType       = 'exe'
+  file           = "$toolsPath\Win32OpenSSL_Light-1_1_0e.exe"
+  file64         = "$toolsPath\Win64OpenSSL_Light-1_1_0e.exe"
+  softwareName   = ''
+  silentArgs     = '/silent'
+  validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @params
+Install-ChocolateyInstallPackage @packageArgs
 
-if (!$Env:OPENSSL_CONF)
-{
-  $configPath = Join-Path $installDir 'bin\openssl.cfg'
-
-  if (Test-Path $configPath)
-  {
-    [Environment]::SetEnvironmentVariable(
-      'OPENSSL_CONF', $configPath, 'User')
-
-    Write-Output "Configured OPENSSL_CONF variable as $configPath"
-  }
-}
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"

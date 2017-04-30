@@ -7,9 +7,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'FirefoxESR'
 $softwareName = 'Mozilla Firefox*ESR'
 
-$allLocalesListURL = 'https://www.mozilla.org/en-US/firefox/organizations/all/'
-
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '45.7.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.1.0')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
@@ -25,8 +23,8 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
     'No need to download an re-install again.'
   )
 } else {
-  $locale = GetLocale -localeUrl $allLocalesListURL -product $softwareName
-  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums"
+  $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
+  $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
     packageName = $packageName
@@ -35,7 +33,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=firefox-45.7.0esr-SSL&os=win&lang=${locale}"
+    Url = "https://download.mozilla.org/?product=firefox-52.1.0esr-SSL&os=win&lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
@@ -44,7 +42,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-ProcessorBits 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-45.7.0esr-SSL&os=win64&lang=${locale}"
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-52.1.0esr-SSL&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs

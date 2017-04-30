@@ -1,13 +1,22 @@
-$pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
+﻿$ErrorActionPreference = 'Stop';
 
-Install-ChocolateyZipPackage "KeePassX" "{{DownloadUrl}}" "$pwd"
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$packageArgs = @{
+  packageName  = $env:ChocolateyPackageName
+  file         = "$toolsPath\KeePassX-2.0.3.zip"
+  destination  = $toolsPath
+}
 
-# Add to start menu
+# first we need to remove any existing keepass directory
+Get-ChildItem "$toolsPath" -Filter "KeePassX*" | ? { $_.PSIsContainer } | % {
+  Remove-Item $_.FullName -Recurse
+}
 
-$appData = [environment]::GetFolderPath([environment+specialfolder]::ApplicationData)
-$destPath = Join-Path "$appData" "Microsoft\Windows\Start Menu\Programs\"
-$destLink = Join-Path "$destPath" "KeePassX.lnk"
-$shell = New-Object -comObject WScript.Shell
-$shortcut = $shell.CreateShortcut($destLink)
-$shortcut.TargetPath = Join-Path "$pwd" "KeePassX\KeePassX.exe"
-$shortcut.Save()
+Get-ChocolateyUnzip @packageArgs
+Remove-Item -Force -ea 0 "$toolsPath\*.zip"
+$filePath = Get-ChildItem "$toolsPath" -Filter "KeePassX.exe" -Recurse | select -First 1 -expand FullName
+
+$programsDir = [System.Environment]::GetFolderPath('Programs')
+Install-ChocolateyShortcut `
+  -ShortcutFilePath "$programsDir\KeePassX.lnk" `
+  -TargetPath "$filePath"

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>itunesfusion</id>
+    <version>2.6</version>
+    <title>iTunesFusion</title>
+    <authors>Binary Fortress Software</authors>
+    <projectUrl>https://www.itunesfusion.com</projectUrl>
+    <licenseUrl>https://www.itunesfusion.com/License/</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1e793798a1b6d9c6a0fc2b4fe91c850fa253ade1/icons/itunesfusion.png</iconUrl>
+    <docsUrl>https://www.itunesfusion.com/Help/</docsUrl>
+    <mailingListUrl>https://www.itunesfusion.com/Discussions/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    Sync iTunes with almost any device!
+    iTunesFusion (formerly iTunes Sync) makes it easy to sync iTunes with almost any phone,
+    tablet or MP3 player. Fast and easy to use, with customizable settings for power-users
+    like custom file naming based on tags.
+
+    ## Features
+    - Synchronize any iTunes playlist(s) with almost any device
+    - Configure as many different devices as you need
+    - Synchronize each one with different iTunes playlists.
+    - Use standard playlists or dynamically updating smart playlists to synchronize your device</description>
+    <copyright>Copyright © 2017 Binary Fortress Software</copyright>
+    <tags>itunesfusion itunes sync android mp3 usb</tags>
+    <owners>chocolatey,keithlammers,the-running-dev</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/itunesfusion</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="iTunes" version="12.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

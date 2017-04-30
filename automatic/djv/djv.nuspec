@@ -29,8 +29,11 @@ DJV Imaging provides professional movie playback software for film production, V
 * Works with industry standard file formats including Cineon, DPX, OpenEXR, and QuickTime
 * Includes command line utilities for batch processing
 
+![DJV screenshot](https://i.imgur.com/20p7xAL.png)
+
 ## Notes
-* This package no longer support 32-bit Operating Systems, install version 1.0.5.20170203 or earlier if you have a need for 32-bit
+
+* This package no longer support 32-bit Operating Systems, install version 1.0.5.20170203 or earlier if you have a need for 32-bit.
     </description>
     <releaseNotes>http://djv.sourceforge.net/djvChangeList.html</releaseNotes>
     <dependencies>

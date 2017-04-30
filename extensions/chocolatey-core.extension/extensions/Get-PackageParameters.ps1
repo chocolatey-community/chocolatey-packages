@@ -10,9 +10,18 @@
 .OUTPUTS
     [HashTable]
 #>
-function Get-PackageParameters([string] $Parameters = $Env:ChocolateyPackageParameters) {
+function Get-PackageParameters {
+    [CmdletBinding()]
+    param(
+       [string] $Parameters = $Env:ChocolateyPackageParameters,
+       # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+       [parameter(ValueFromRemainingArguments = $true)]
+       [Object[]] $IgnoredArguments
+    )
+
     $res = @{}
-    $re = "\/([a-zA-Z]+)(:([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)?"
+
+    $re = "\/([a-zA-Z0-9]+)(:[`"'].+?[`"']|[^ ]+)?"
     $results = $Parameters | Select-String $re -AllMatches | select -Expand Matches
     foreach ($m in $results) {
         if (!$m) { continue } # must because of posh 2.0 bug: https://github.com/chocolatey/chocolatey-coreteampackages/issues/465

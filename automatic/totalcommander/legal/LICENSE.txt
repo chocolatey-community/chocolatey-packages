@@ -1,0 +1,39 @@
+Software Licence / Copyright
+ 
+Software Licence
+ 
+Please read the following lines carefully before using this software. If you disagree with any of the following, you are not allowed to use this program. You MUST then delete it immediately.
+ 
+Shareware-version
+ 
+You have the right to test this program for a period of one month. You are allowed to copy this Shareware-version (and ONLY the Shareware version) and give it to any other person, as long as it is not modified in any way. Under modifications is understood the changing, adding or removing of any files of this package without the author's written permission. You are NOT allowed to pack this program together with a commercial program or a book. Shareware dealers are allowed to sell the Shareware version for a small fee (around CHF/US$ 10.-). It must be clear to the buyer that he isn't receiving the full version! You are encouraged to put this program on as many BBS systems as possible. The distribution on CD-ROM is also permitted, as long as the original files are not changed in any way. Please contact me if you want to distribute the program with a different installation program, changed files etc. Programs marked as "Beta" or "Release candidate" may not be distributed under any conditions.
+ 
+Use of this software after the trial period of one month is in violation of international Copyright law! It is also unfair to the author, who has spent hundreds of hours developing this program.
+ 
+Registration
+ 
+This program is neither freeware nor public domain. Use after the 30 day trial period requires registration. The registration fee is only CHF 40.- incl. S&H ($ 38.- US personal cheque or cash including handling fees) for a personal licence, or CHF 30.- for a student licence (with photocopy of student identity card). The student licence can only be registered to the full name of the student. See How to register for details on registration and support.
+ 
+Registered version (personal licence)
+ 
+The registered version may be installed on as many computers as desired, as long as it is used by only one person at any one time (I.e. one installation at home and one at the office used by the same person). Therefore you need only one licence for a port connection between two computers. The usage by multiple people at the same time (on multiple computers) requires additional licences.
+ 
+Additional licences (multi-user licences)
+ 
+Additional licences allow an institution, company or school to install the program on multiple computers and/or servers. Each licence allows one person at the same time to use the program on an unlimited number of computers. For example, if 10 people run Total Commander at the same time on 20 computers (desktop/notebook), a 10 user licence would be needed. All licences are issued to the same (company) name, which appears in the program's title bar. Additional licences cost CHF 20.- for the 2nd to 10th licence, etc. (see additional licences for details). For larger amounts than 1000 please contact the author. Each additional licence also allows a single user to use the program at home.
+ 
+Liability
+ 
+We try to keep our software as bug-free as possible. But it's a general rule (Murphy's), that no software ever is error free, and the number of errors increases with the complexity of the program. That's why we cannot guarantee that this software will run in every environment, on any Windows compatible machine, together with any other application, without producing errors. Any liability for damage of any sort is hereby denied. In any case, the liability is limited to the registration fee.
+ 
+Please test this program with non-critical data. We cannot guarantee the safety of your data. Especially new operating systems released after a specific version of Total Commander can cause trouble, so make sure to upgrade often. Should you detect errors before registration, you accept them if you register. Any description of bugs will be accepted, but we cannot guarantee that we will be able to correct them (but we will try our best).
+ 
+Development of Total Commander
+ 
+Total Commander was written utilizing Borland Delphi 1.0 (16 bit) and 2.0 (32 bit) (© 1993-96 by Borland International), and Lazarus/Free Pascal (64 bit). The Drag&Drop-algorithms, especially the undocumented parts, were found in the very good book "Undocumented Windows", Andrew Schulman, Addison Wesley 1991. The DPMI-handling for setting the volume label was taken from the book "Turbo Pascal für Windows - Object Windows", A. Ertl/R. Machholz, Sybex 1992. Only the algorithms were taken and rewritten in Pascal. The idea for the screen layout was taken from DCC, a Norton Commander (© Symantec) clone. All code from the German issue WinDOS was removed and rewritten for Copyright reasons. The ARJ and LHA code was translated by Mart Heubels (WinCAT PRO) and myself from public C sources to Pascal. A free unpacking DLL is available upon request. The internal ZIP packer is based on Zlib by Jean-loup Gailly. The C sources are available on the Internet, on the same server as ZIP-NT. MD5 Implementation provided by Greg Carter, CRYPTOCard Corporation. The AES encryption code used in the ZIP packer was developed by Dr Brian Gladman. The LZMA SDK (ZIP method 14) is written and placed in the public domain by Igor Pavlov. The AES256 and AES512-hash functions are Copyright 2002-2007 Wolfgang Ehrhardt. Optimized MD5, SHA1 and SHA256 parts from DCPcrypt Cryptographic Component Library v2, Copyright (c) 1999-2003 David Barton.
+ 
+All mentioned Trademarks and Copyrights belong to their respective owners.
+ 
+Legal domicile is Bern, Switzerland.
+ 
+Christian Ghisler, Ghisler Software GmbH, PO Box, CH-3065 Bolligen, Switzerland, 2015

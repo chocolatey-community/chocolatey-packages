@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vp8-vfw</id>
+    <version>1.2.0.20170430</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/vp8-vfw</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>VP8 Video for Windows codec</title>
+    <authors>Optima SC Inc</authors>
+    <projectUrl>http://www.optimasc.com/products/vp8vfw/index.html</projectUrl>
+    <!-- IconUrl: Skip check -->
+    <copyright>2009–2016 Optima SC Inc</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>vp8-vfw vp8 vfw video-for-windows codec admin foss</tags>
+    <summary>This is a video for windows (VFW) driver of the Google VP8 codec.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description></description>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

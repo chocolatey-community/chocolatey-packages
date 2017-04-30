@@ -4,7 +4,7 @@
   <metadata>
     <id>vagrant</id>
     <title>Vagrant (Install)</title>
-    <version>1.9.1</version>
+    <version>1.9.4</version>
     <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
     <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
     <summary>Vagrant - Development environments made easy.</summary>
@@ -23,7 +23,7 @@ To achieve its magic, Vagrant stands on the shoulders of giants. Machines are pr
     <copyright>Copyright 2015 HashiCorp</copyright>
     <licenseUrl>https://github.com/mitchellh/vagrant/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/62469751380dc5a9f2620f4b34c08fd7c741e5a5/icons/vagrant.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png</iconUrl>
     <releaseNotes>[CHANGELOG](https://github.com/mitchellh/vagrant/blob/master/CHANGELOG.md)</releaseNotes>
     <!--<provides>vagrant</provides>-->
   </metadata>

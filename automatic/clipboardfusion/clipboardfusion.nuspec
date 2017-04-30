@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>clipboardfusion</id>
+    <version>4.2</version>
+    <title>ClipboardFusion</title>
+    <authors>Binary Fortress Software</authors>
+    <licenseUrl>https://www.clipboardfusion.com/License/</licenseUrl>
+    <projectUrl>https://www.clipboardfusion.com</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/7269667975d1078bdcc82c3da8efc43482069ead/icons/clipboardfusion.png</iconUrl>
+    <docsUrl>https://www.clipboardfusion.com/FAQ/</docsUrl>
+    <mailingListUrl>https://www.clipboardfusion.com/Discussions/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    ClipboardFusion makes it easy to remove clipboard text formatting,
+    replace clipboard text or run powerful macros on your clipboard contents.
+    You can even sync your clipboard with other computers and mobile devices.
+
+    ## Features
+    - Text Scrubbing
+    - Text Replace
+    - HotKeys
+    - Clipboard Preview
+    - Macros
+
+    ## Notes
+    - Free license is only for personal &amp; non-commercial use
+    </description>
+    <copyright>Copyright © 2017 Binary Fortress Software</copyright>
+    <releaseNotes>https://www.clipboardfusion.com/ChangeLog/</releaseNotes>
+    <tags>clipboardfusion clipboard sync history scrubbing macros trial freeware</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clipboardfusion</packageSourceUrl>
+    <owners>chocolatey,keithlammers,the-running-dev</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

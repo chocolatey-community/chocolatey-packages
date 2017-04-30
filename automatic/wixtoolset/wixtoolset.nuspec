@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wixtoolset</id>
+    <version>3.11.0.1528-rc2-20170424</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/wixtoolset</packageSourceUrl>
+    <owners>chocolatey, Gary Ewan Park</owners>
+    <title>WiX Toolset</title>
+    <authors>Rob Mensching, Bob Arnson</authors>
+    <projectUrl>http://wixtoolset.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
+    <copyright>2009 - 2016 Outercurve Foundation</copyright>
+    <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/wixtoolset/wix3</projectSourceUrl>
+    <docsUrl>http://wixtoolset.org/documentation/</docsUrl>
+    <mailingListUrl>http://wixtoolset.org/documentation/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/wixtoolset/issues/issues</bugTrackerUrl>
+    <tags>wixtoolset wix toolset msi xml admin</tags>
+    <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages.
+
+The core of WiX is a set of build tools that build Windows Installer packages using the same build concepts as the rest of your product: source code is compiled and then linked to create executables; in this case .exe setup bundles, .msi installation packages, .msm merge modules, and .msp patches. The WiX command-line build tools work with any automated build system. Also, MSBuild is supported from the command line, Visual Studio, and Team Build.
+
+WiX includes several extensions that offer functionality beyond that of Windows Installer. For example, WiX can install IIS web sites, create SQL Server databases, and register exceptions in the Windows Firewall, among others.
+
+With Burn, the WiX bootstrapper, you can create setup bundles that install prerequisites like the .NET Framework and other runtimes along with your own product. Burn lets you download packages or combine them into a single downloadable .exe.
+
+The WiX SDK includes managed and native libraries that make it easier to write code that works with Windows Installer, including custom actions in both C# and C++.
+</description>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5" />
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

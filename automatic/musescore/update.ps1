@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://ftp.osuosl.org/pub/musescore/releases/'
+$releases = 'https://musescore.org/'
 
 function global:au_SearchReplace {
    @{
@@ -22,7 +22,12 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version = ($download_page.links | ? href -match 'MuseScore-.+').href -replace 'MuseScore-|/' | % { [version]$_ } | measure -Maximum | % Maximum
+    $regex = '(?:MuseScore \d+(\.\d+){1,4})'
+    foreach ( $_ in $download_page.links) {
+    if ( $_.href -match 'download' ) {
+    if ( $_.outerhtml -match $regex ) {
+    $version = $Matches[0] -replace( 'musescore ', '' )
+    } } }
     @{
         URL32        = "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-${version}/MuseScore-${version}.msi"
         Version      = $version

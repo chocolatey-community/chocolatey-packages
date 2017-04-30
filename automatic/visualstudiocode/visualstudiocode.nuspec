@@ -4,7 +4,7 @@
   <metadata>
     <id>visualstudiocode</id>
     <title>Visual Studio Code</title>
-    <version>1.9.1</version>
+    <version>1.11.2</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
@@ -40,6 +40,8 @@ For example: `--params '"/NoDesktopIcon /DontAddToPath"'`.
 
 ## Notes
 The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
+
+For disabling the auto-update functionality of Visual Studio Code see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
     </description>
     <tags>microsoft visualstudiocode vscode editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>

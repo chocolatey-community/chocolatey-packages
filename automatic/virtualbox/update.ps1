@@ -1,5 +1,6 @@
 import-module au
 import-module .\..\..\extensions\extensions.psm1
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'https://www.virtualbox.org/wiki/Downloads'
 
@@ -16,6 +17,10 @@ function GetLatest {
     URLep         = "${base_url}Oracle_VM_VirtualBox_Extension_Pack-${version}.vbox-extpack"
     Version       = $version
   }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_SearchReplace {

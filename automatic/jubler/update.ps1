@@ -1,4 +1,5 @@
 import-module au
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'http://www.jubler.org/download.html'
 
@@ -13,6 +14,10 @@ function global:au_SearchReplace {
       "(?i)(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
     }
   }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_GetLatest {

@@ -4,14 +4,14 @@
   <metadata>
     <id>qtox</id>
     <title>qTox</title>
-    <version>1.8.0</version>
+    <version>1.8.1</version>
     <authors>qTox developers</authors>
     <owners>chocolatey</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
     <description>
 qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.
 
-### Features
+## Features
 
 * One to one chat with friends
 * Group chats
@@ -27,19 +27,15 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
 * Emoticons
 * Auto-updates on Windows and Mac, packages on Linux
 * And many more options!
-
-### Package notes
-
-This package will always install the latest version of qTox, regardless of the package version.
     </description>
-    <projectUrl>https://tox.chat/clients.html#qtox</projectUrl>
+    <projectUrl>https://qtox.github.io</projectUrl>
     <projectSourceUrl>https://github.com/qTox/qTox</projectSourceUrl>
     <docsUrl>https://github.com/qTox/qTox/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/qTox/qTox/issues</bugTrackerUrl>
     <mailingListUrl>https://lists.tox.chat/listinfo</mailingListUrl>
-    <tags>qtox tox chat voip admin</tags>
+    <tags>qtox tox chat voip foss cross-platform admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qtox</packageSourceUrl>
-    <copyright></copyright>
+    <copyright>qTox contributors</copyright>
     <licenseUrl>https://github.com/qTox/qTox/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg</iconUrl>

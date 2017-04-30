@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>python3-x86_32</id>
+    <version>3.5.2.20170425</version>
+    <title>[DEPRECATED] Python 3.x (32-bit)</title>
+    <owners>chocolatey</owners>
+    <authors>Python Software Foundation</authors>
+    <projectUrl>http://www.python.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.
+
+### Note
+
+This package installs the latest stable version of Python 3.x. It will install to Python 3.x to `$PSScriptRoot`, not in the default installation directory. We think that’s more convenient.
+
+If you want a 64-bit Python 3.x on 64-bit systems, install the [python3](/packages/python3) package instead. You can also install both packages. You can also install both. In that case you must manually adapt your .exe shims so that it picks the desired version when you invoke `python.exe`.
+    </description>
+    <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
+    <tags>python admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

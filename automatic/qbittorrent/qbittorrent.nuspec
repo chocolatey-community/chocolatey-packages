@@ -4,12 +4,11 @@
   <metadata>
     <id>qbittorrent</id>
     <title>qBittorrent</title>
-    <version>3.3.10</version>
+    <version>3.3.12</version>
     <authors>Christophe Dumez</authors>
-    <owners>nconrads, chocolatey</owners>
+    <owners>chocolatey,nconrads</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
-    <description>
-qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
+    <description>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
 The program uses libtorrent-rasterbar library for the torrent back-end (network communication) functionality.
 It is developed by Christophe Dumez, from the University of Technology of Belfort-Montbeliard in France.
 It was started in March 2006 and has been in active development ever since.
@@ -21,7 +20,6 @@ qBittorrent is currently offering functionality comparable to more popular BitTo
 without requiring the Java Virtual Machine.
 qBittorrent requires Python only for the search engine while other clients such as Deluge and BitTornado require
 it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
-
 
 ## Features
 
@@ -45,7 +43,12 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
 - IPv6 compliant
 - Sequential downloading (aka "Download in order")
 - Available on most platforms: Linux, Mac OS X, Windows, OS/2, FreeBSD
-    </description>
+
+## Notes
+- This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
+
+![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0ce523dd21760ae0be06fc3c7ca97890c206a21d/automatic/qbittorrent/screenshot.png)
+</description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
     <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>

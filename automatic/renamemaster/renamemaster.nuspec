@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>renamemaster</id>
-        <title>Rename Master</title>
-        <version>{{PackageVersion}}</version>
-        <authors>Joe Joe Soft</authors>
-        <owners>Redsandro</owners>
-        <summary>Rename Master is a freeware utility designed to rename multiple files with a just few clicks.</summary>
-        <description>Rename Master is a freeware utility designed to rename multiple files with a just few clicks. Anyone that has worked with websites, file archives, or collections of music, videos, or pictures has probably spent way too much time renaming hundreds of files. This utility will add, remove, or replace parts of the filename with ease and also supports renaming via file properties, MP3 tags, JPEG JFIF and EXIF tags, Video tags, and text files. Batch renaming that's simple to use, yet still very powerful.</description>
-        <projectUrl>http://www.joejoesoft.com/vcms/108</projectUrl>
-        <tags>batch rename files admin</tags>
-        <copyright></copyright>
-        <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a5e41f3cfe85911003740988a86417afb0a1a5ac/icons/renamemaster.png</iconUrl>
-        <dependencies>
-        </dependencies>
-        <releaseNotes></releaseNotes>
-      <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-    </metadata>
-    <files>
-        <file src="tools\**" target="tools" />
-    </files>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>renamemaster</id>
+    <version>3.12</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/renamemaster</packageSourceUrl>
+    <owners>chocolatey, Redsandro</owners>
+    <title>Rename Master</title>
+    <authors>Joe Joe Soft</authors>
+    <projectUrl>http://www.joejoesoft.com/vcms/108</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/430343e7340dd59994b68ec86842b65ed74466ed/icons/renamemaster.png</iconUrl>
+    <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.joejoesoft.com/vcms/121/</docsUrl>
+    <tags>renamemaster batch rename files admin freeware</tags>
+    <summary>Rename Master is a freeware utility designed to rename multiple files with a just few clicks.</summary>
+    <description>Rename Master is a freeware utility designed to rename multiple files with a just few clicks. Anyone that has worked with websites, file archives, or collections of music, videos, or pictures has probably spent way too much time renaming hundreds of files. This utility will add, remove, or replace parts of the filename with ease and also supports renaming via file properties, MP3 tags, JPEG JFIF and EXIF tags, Video tags, and text files. Batch renaming that's simple to use, yet still very powerful.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

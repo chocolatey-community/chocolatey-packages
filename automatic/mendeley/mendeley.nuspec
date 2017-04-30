@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mendeley</id>
+    <title>Mendeley Desktop</title>
+    <version>1.17.8</version>
+    <authors>Mendeley Ltd.</authors>
+    <owners>chocolatey</owners>
+    <summary>Empowering researches to organize their references</summary>
+    <description>
+Mendeley is a platform that allows scholars from all over the world to collaborate, and opens up science for everyone.
+
+## Features
+
+* **Reference management:** Read, organize and cite all of your research from one library.
+* **Research network:** Connect and collaborate with millions of researchers worldwide.
+* **Datasets:** Store, share and cite your datasets with one secure online repository.
+* **Careers:** Search for science and technology jobs in institutions worldwide.
+    </description>
+    <projectUrl>https://www.mendeley.com</projectUrl>
+    <tags>education scientific admin cross-platform</tags>
+    <copyright>Mendeley Ltd.</copyright>
+    <licenseUrl>https://www.mendeley.com/copyright/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4c7b68edb2f1db5d189b220fa21221fb7a9e2704/icons/mendeley.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mendeley</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

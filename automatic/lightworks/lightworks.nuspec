@@ -4,22 +4,39 @@
     <metadata>
         <id>lightworks</id>
         <title>Lightworks</title>
-        <version>12.6.0.20161107</version>
+        <version>14.0.0</version>
         <authors>EditShare LLC</authors>
         <owners>Redsandro</owners>
         <summary>Lightworks is a professional NLE for editing and mastering digital video.</summary>
         <description>
-Lightworks is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K. In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The King’s Speech and many more.
+__Lightworks__ is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K.
+
+In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The King’s Speech and many more.
+
+## Features
+
+* Cross-platform
+* Optimised for speed
+* Multicam editing
+* Powerful, realtime effects with inbuilt presets
+
+![Lightworks screenshot](https://i.imgur.com/BOHhHH2.png)
+
+## Notes
+
+- The free version is has some limitations compared to the commercial version, most importantly to a resolution of **1080P**.
+
+For a feature comparison, see [www.lwks.com](https://www.lwks.com/index.php?option=com_content&amp;view=article&amp;id=102&amp;Itemid=213).
         </description>
         <projectUrl>http://www.lwks.com/</projectUrl>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-        <tags>NLE video editor lightworks</tags>
+        <tags>NLE video editor lightworks freeware multimedia FOSS cross-platform</tags>
         <copyright></copyright>
         <licenseUrl>https://en.wikipedia.org/wiki/Freemium</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
         <dependencies>
-            <dependency id="chocolatey-core.extension" version="1.0.4" />
+            <dependency id="chocolatey-core.extension" version="1.1" />
         </dependencies>
         <releaseNotes></releaseNotes>
     </metadata>

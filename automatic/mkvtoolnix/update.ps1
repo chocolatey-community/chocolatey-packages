@@ -19,7 +19,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version = $download_page.links | % { $_.href.Replace('/','') } | ? { [version]::TryParse($_, [ref]($__)) } | measure -Max | % Maximum
+    $version = $download_page.links | % { $_.href.Replace('/','') } | % -begin { $max = $null } { try { $ver = [version]$_; if($ver -gt $max) { $max = $ver } } catch {} } -end { $max }
 
     $releases = "$releases/$version/"
     $re = '^mkvtoolnix-.+\.exe$'

@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yumi</id>
-    <version>2.0.3.9</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/yumi</packageSourceUrl>
+    <version>2.0.4.7</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/yumi</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>YUMI (Your Universal Multiboot Installer)</title>
     <authors>Pendrivelinux</authors>

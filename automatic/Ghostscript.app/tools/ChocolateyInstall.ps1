@@ -1,14 +1,23 @@
-﻿. (Join-Path (Split-Path -parent $MyInvocation.MyCommand.Definition) chocolateyInclude.ps1)
+﻿$ErrorActionPreference = 'Stop';
 
-if (Test-Path $uninstallRegKey) {
-  $installedVersion = [Version] (Get-ItemProperty $uninstallRegKey DisplayVersion).DisplayVersion
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
+$filePath32 = "$toolsPath\gs921w32.exe"
+$filePath64 = "$toolsPath\gs921w64.exe"
+
+$filePath = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne $true) {
+  Write-Host "Installing 64 bit version" ; $filePath64
+} else { Write-Host "Installing 32 bit version" ; $filePath32 }
+
+$packageArgs = @{
+  packageName = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = $filePath
+  softwareName   = 'GPL Ghostscript'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
 }
-if ($installedVersion -eq $version) {
-  Write-Output $package '$(package) is already installed. Updating the chococolatey database.'
-}
-elseif ($installedVersion -gt $version) {
-  Write-Output $package "A newer version of $package [$($installedVersion)] is already installed. Updating the chococolatey database."
-}
-else {
-  Install-ChocolateyPackage $package 'exe' '/S /NCRC' $url $url64
-}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 "$toolsPath\*.$($packageArgs.fileType)*"

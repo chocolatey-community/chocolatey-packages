@@ -1,8 +1,8 @@
 ﻿
 import-module au
-. "$PSScriptRoot\..\..\scripts\Get-Padded-Version.ps1"
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = "https://get.adobe.com/en/flashplayer/" # URL to for GetLatest
+$releases = 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_win_pl.xml'
 $padVersionUnder = '24.0.1'
 
 function global:au_BeforeUpdate {
@@ -27,17 +27,14 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 
-  $HTML = Invoke-WebRequest -Uri $releases
-  $try = ($HTML.ParsedHtml.getElementsByTagName('p') | Where{ $_.className -eq 'NoBottomMargin' } ).innerText
-  $try = $try  -split "\r?\n"
-  $try = $try[0] -replace ' ', ' = '
-  $try =  ConvertFrom-StringData -StringData $try
-  $CurrentVersion = ( $try.Version )
-  $majorVersion = ([version] $CurrentVersion).Major
+  $XML = New-Object  System.Xml.XmlDocument
+  $XML.load($releases)
+  $currentVersion = $XML.XML.update.version.replace(',', '.')
+  $majorVersion = ([version]$currentVersion).Major
 
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${CurrentVersion}/install_flash_player_${majorVersion}_active_x.msi"
 
-  $packageVersion = Get-Padded-Version $CurrentVersion $padVersionUnder
+  $packageVersion = Get-PaddedVersion $CurrentVersion $padVersionUnder
 
   return @{ URL32 = $url32; Version = $packageVersion; RemoteVersion = $CurrentVersion; majorVersion = $majorVersion; }
 }

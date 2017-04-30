@@ -19,10 +19,10 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-Win.exe'
-  url64bit               = 'http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-Win.exe'
-  checksum               = 'bb3e5284cd827994c153b6b0454f4a5cf96f5b3e40535942ac02f44245a94eec'
-  checksum64             = 'bb3e5284cd827994c153b6b0454f4a5cf96f5b3e40535942ac02f44245a94eec'
+  url                    = 'http://download.virtualbox.org/virtualbox/5.1.22/VirtualBox-5.1.22-115126-Win.exe'
+  url64bit               = 'http://download.virtualbox.org/virtualbox/5.1.22/VirtualBox-5.1.22-115126-Win.exe'
+  checksum               = 'e36883bb27653aabe20ca0cbf140b2aa19573fc989c47e3cce7986dc544b0e93'
+  checksum64             = 'e36883bb27653aabe20ca0cbf140b2aa19573fc989c47e3cce7986dc544b0e93'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
@@ -38,8 +38,8 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 if (!$pp.NoExtensionPack) {
     Write-Host "Installing extension pack"
 
-    $url_ep       = 'http://download.virtualbox.org/virtualbox/5.1.14/Oracle_VM_VirtualBox_Extension_Pack-5.1.14.vbox-extpack'
-    $checksum_ep  = 'baddb7cc49224ecc1147f82d77fce2685ac39941ac9b0aac83c270dd6570ea85'
+    $url_ep       = 'http://download.virtualbox.org/virtualbox/5.1.22/Oracle_VM_VirtualBox_Extension_Pack-5.1.22.vbox-extpack'
+    $checksum_ep  = '244e6f450cba64e0b025711050db3c43e6ce77e12cd80bcd08796315a90c8aaf'
     $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | select -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
@@ -53,7 +53,7 @@ if (!$pp.NoExtensionPack) {
     if (!(Test-Path $file_path_ep)) { Write-Warning "Can't download latest extension pack" }
     else {
         Set-Alias vboxmanage $installLocation\VBoxManage.exe
-        vboxmanage extpack install --replace $file_path_ep 2>&1
+        "y" | vboxmanage extpack install --replace $file_path_ep 2>&1
         if ($LastExitCode -ne 0) { Write-Warning "Extension pack installation failed with exit code $LastExitCode" }
     }
 }

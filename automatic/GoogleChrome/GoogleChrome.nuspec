@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>GoogleChrome</id>
-    <version>56.0.2924.87</version>
+    <version>58.0.3029.81</version>
     <title>Google Chrome</title>
     <owners>chocolatey</owners>
     <authors>Google Inc.</authors>
@@ -22,6 +22,9 @@ Chrome is a fast, simple, and secure web browser, built for the modern web.
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/GoogleChrome</packageSourceUrl>
     <tags>google chrome web internet browser admin</tags>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

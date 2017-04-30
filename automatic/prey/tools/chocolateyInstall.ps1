@@ -1,14 +1,14 @@
-#http://help.preyproject.com/article/188-prey-unattended-install-for-computers
+﻿#http://help.preyproject.com/article/188-prey-unattended-install-for-computers
 
 $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'prey'
   fileType               = 'msi'
-  url                    = 'https://github.com/prey/prey-node-client/releases/download/v1.6.5/prey-windows-1.6.5-x86.msi'
-  url64bit               = 'https://github.com/prey/prey-node-client/releases/download/v1.6.5/prey-windows-1.6.5-x64.msi'
-  checksum               = '82443710115d033c7f6d7eaf8426a980ae531cbf63cb958dee40bb6f127a7722'
-  checksum64             = 'f91d125da6e71bb49a15f9b0fec00227fc19df6467d10ef36f6ac6d66be14778'
+  url                    = 'https://github.com/prey/prey-node-client/releases/download/v1.6.6/prey-windows-1.6.6-x86.msi'
+  url64bit               = 'https://github.com/prey/prey-node-client/releases/download/v1.6.6/prey-windows-1.6.6-x64.msi'
+  checksum               = 'b38c383da6cfc283d9e59ab22629688f82cc4007f166563084a18680cfc450d3'
+  checksum64             = '49cbdd7dc73c3a675d1f0c6615db4a7e2809475120109ffda4f27465b4871843'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/qn'

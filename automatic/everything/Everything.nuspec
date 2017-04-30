@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>everything</id>
-    <version>1.4.1809</version>
+    <version>1.4.1867.20170417</version>
     <title>Everything</title>
     <authors>David Carpenter</authors>
     <owners>chocolatey, Mark Michaelis</owners>
@@ -25,6 +25,17 @@ You type in a search filter to limit what files and folders are displayed.
 - Share files with others easily
 - Real-time updating
 - [More ...](https://www.voidtools.com/faq/)
+
+## Package parameters
+
+- `/client-service`	- Install the "Everything" client as a service.
+- `/desktop-shortcut`- Install desktop shortcut.
+- `/efu-association` - Install EFU file association.
+- `/folder-context-menu` - Install folder context menus.
+- `/quick-launch-shortcut` - Install Quick Launch shortcut.
+- `/run-on-system-startup` - Install "Everything" in  the system startup.
+- `/service` - Install and start the "Everything" service.
+- `/start-menu-shortcuts` - Install "Everything" shortcuts from the Start menu.
 </description>
     <summary>Everything Search Engine - locate files and folders by name instantly</summary>
     <releaseNotes>https://www.voidtools.com/Changes.txt</releaseNotes>
@@ -35,10 +46,11 @@ You type in a search filter to limit what files and folders are displayed.
     <bugTrackerUrl>https://www.voidtools.com/forum/viewforum.php?f=6</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/everything</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.2" />
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

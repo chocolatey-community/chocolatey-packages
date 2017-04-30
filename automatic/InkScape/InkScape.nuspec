@@ -18,17 +18,19 @@ Inkscape supports many advanced SVG features (markers, clones, alpha blending, e
 
 All Inkscape projects may be exported in formats friendly to web browsers or commercial printer rooms. It is cross-platform, which means it is easy to run on Windows, Mac OS X, and Linux distributions. Visit the Download page to install or share this application now. 
 
+![InkScape](https://i.imgur.com/hvdwGBt.png)
+
+[More screenshots](https://inkscape.org/en/about/screenshots/).
+
 ## Features
 
-- Object creation: drawing, shape tools, text tool, bitmaps, clones
-- Object manipulation: transformations, z-order operations, grouping, layers, aligment
-- Fill and stroke: color selector, color picker tool, copy/paste style, pattern fills, dashed strokes, with many predefined dash patterns, path markers (ending, middle and/or beginning marks, e.g. arrowheads)
-- Operations on paths
-- Rendering: fully anti-aliased display, alpha transparency support for display and PNG export
-- File formats: SVG, PNG, OpenDocument Drawing, DXF, sk1, PDF, EPS and PostScript export formats and more
-- Command line options for export and conversions
-
-[Screenshots](https://inkscape.org/en/about/screenshots/).
+* Object creation: drawing, shape tools, text tool, bitmaps, clones
+* Object manipulation: transformations, z-order operations, grouping, layers, aligment
+* Fill and stroke: color selector, color picker tool, copy/paste style, pattern fills, dashed strokes, with many predefined dash patterns, path markers (ending, middle and/or beginning marks, e.g. arrowheads)
+* Operations on paths
+* Rendering: fully anti-aliased display, alpha transparency support for display and PNG export
+* File formats: SVG, PNG, OpenDocument Drawing, DXF, sk1, PDF, EPS and PostScript export formats and more
+* Command line options for export and conversions
     </description>
     <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
     <releaseNotes>http://wiki.inkscape.org/wiki/index.php/Release_notes/0.92</releaseNotes>

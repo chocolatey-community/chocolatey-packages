@@ -1,16 +1,20 @@
-﻿VERIFICATION
+VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The extension has been downloaded from their official download link listed on <http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html>
 and can be verified like this:
 
-1. Download <https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi>
-2. Then use one of the following methods to obtain the checksum
+
+1. Download the following installers:
+  32-Bit: <https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.69-installer.msi>
+  64-Bit: <https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.69-installer.msi>
+2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 
+  checksum32: 47BA6589FBFF301D36F863C7C3224A1EBD0373E66BF34C0A1B4A19F8F43492D3
+  checksum64: A80950786FEDE183668486FB4549D52055DF4B584428FD814F2736C164780411
 
 File 'LICENSE.txt' is obtained from <http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html>

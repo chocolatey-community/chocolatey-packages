@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
-    <title>Scribus</title>
+    <id>scribus</id>
+    <version>1.4.6.20170429</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/scribus</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>Scribus</title>
     <authors>The Scribus Team</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
-    <projectUrl>http://scribus.net/canvas/Scribus</projectUrl>
+    <projectUrl>https://www.scribus.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c60e11994d4e9da90e4e5a974f54e284b8d92823/icons/scribus.svg</iconUrl>
+    <copyright>Copyright 2015-2016 The Scribus Team</copyright>
+    <licenseUrl>https://sourceforge.net/p/scribus/code/ci/master/tree/Scribus/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/scribus/code/ci/master/tree/</projectSourceUrl>
+    <tags>scribus desktop publishing admin foss cross-platform</tags>
+    <summary>Open Source Desktop Publishing</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Scribus is an Open Source program that brings professional page layout to Linux/UNIX, Mac OS X, OS/2 Warp 4, eComStation, Haiku and Windows desktops with a combination of press-ready output and new approaches to page design.
 
 Underneath a modern and user-friendly interface, Scribus supports professional publishing features, such as color separations, CMYK and spot colors, ICC color management, and versatile PDF creation.
-    </description>
-    <summary>Open Source Desktop Publishing</summary>
-    <releaseNotes></releaseNotes>
-    <tags>desktop publishing admin</tags>
+</description>
     <dependencies>
-      <dependency id="Ghostscript.app" />
+      <dependency id="vcredist2008" version="9.0.30729.17" />
+      <dependency id="vcredist2012" version="11.0.61031" />
+      <dependency id="Ghostscript" version="9.21.0.20170331" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -4,7 +4,7 @@
   <metadata>
     <id>sysinternals</id>
     <title>Sysinternals</title>
-    <version>2016.11.18.20161217</version>
+    <version>2017.2.17.20170317</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
@@ -21,6 +21,7 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 ## Notes
 
 - This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to the PATH.
+- This package now downloads the nano edition of sysinternals on nano servers.
 
 </description>
     <projectUrl>http://technet.microsoft.com/en-us/sysinternals/bb842062</projectUrl>
@@ -29,6 +30,9 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
     <licenseUrl>http://technet.microsoft.com/en-us/sysinternals/bb469936</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a042fbe6c07391d0c2da13f638b1fdde474850f/icons/sysinternals.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.7" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

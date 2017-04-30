@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>svg-explorer-extension</id>
-    <version>0.1.1</version>
-    <title>svg-explorer-extension</title>
+    <version>0.1.1.20170428</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/svg-explorer-extension</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>svg-explorer-extension</title>
     <authors>Tibold Kandrai</authors>
-    <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
     <projectUrl>https://svgextension.codeplex.com/</projectUrl>
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-Extension module for Windows Explorer to render SVG thumbnails, so that you can have an overview of your SVG files.
-    </description>
+    <projectSourceUrl>https://svgextension.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <bugTrackerUrl>https://svgextension.codeplex.com/workitem/list/basic</bugTrackerUrl>
+    <mailingListUrl>https://svgextension.codeplex.com/discussions</mailingListUrl>
+    <tags>svg-explorer-extension svg thumbnail preview explorer extension admin foss</tags>
     <summary>SVG Viewer Extension for Windows Explorer</summary>
-    <tags>SVG thumbnail preview explorer extension admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <description></description>
+    <dependencies>
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

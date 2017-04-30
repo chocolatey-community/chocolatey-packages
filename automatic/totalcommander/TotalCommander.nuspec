@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>totalcommander</id>
+    <title>Total Commander</title>
+    <version>9.0.1.20170417</version>
+    <authors>Christian Ghisler</authors>
+    <owners>chocolatey, dtgm</owners>
+    <summary>File manager and explorer replacement</summary>
+    <description>
+Total Commander is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.
+But Total Commander uses a different approach: it has two fixed windows, which makes copying files much easier.
+
+## Features
+
+* Two file windows side by side
+* Multiple language and Unicode support
+* Enhanced search function
+* Compare files (now with editor) / synchronize directories
+* Quick View panel with bitmap display
+* ZIP, 7ZIP, ARJ, LZH, RAR, UC2, TAR, GZ, CAB, ACE archive handling + plugins
+* Built-in FTP client with FXP (server to server) and HTTP proxy support
+* Parallel port link, multi-rename tool
+* Tabbed interface, regular expressions, history+favorites buttons
+* Thumbnails view, custom columns, enhanced search
+* Compare editor, cursor in lister, separate trees, logging, enhanced overwrite dialog etc.
+* Unicode names almost everywhere, long names (&gt;259 characters), password manager for ftp and plugins, synchronize empty dirs, 64 bit context menu, quick file filter (Ctrl+S)
+* USB port connection via special [direct transfer cable](http://ghisler.com/cables/index.htm), partial branch view (Ctrl+Shift+B), and many improvements to ftp, synchronizing and other functions
+* [And many more!](http://ghisler.com/featurel.htm)
+
+[FAQ](http://www.ghisler.com/faq.htm)
+[Plugins](http://www.ghisler.ch/wiki/index.php/Developer%27s_corner)
+[Plugin downloads](http://totalcmd.net/)
+[Plugin development](http://totalcmd.net/directory/developer.html)
+
+## Package parameters
+
+The following package parameters can be set:
+
+* `/LocalUser` - Install only for local user. By default it will be installed for all users.
+* `/DesktopIcon` - Add an icon for Total Commander to the Desktop. By default no icon is added.
+* `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory.
+* `/DefaultFM`   - Use TC as default file manager instead of Explorer. Use `/DefaultFM:explorer` to return to Explorer.
+* `/ShellExtension` - Add Total Commander in shell context menu for directories.
+* `/AddCommanderPath` - Add system environment variable COMMANDER_PATH which points to install directory.
+
+These parameters can be passed to the installer with the use of `--params`. For example: `--params '/LocalUser /DesktopIcon'`.
+
+## Notes
+
+- This package contain combined Total Commander installer which contains both x32 and x64 bit versions.
+- Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
+    </description>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/totalcommander</packageSourceUrl>
+    <projectUrl>http://www.ghisler.com</projectUrl>
+    <bugTrackerUrl>http://www.ghisler.ch/wiki/index.php/Known_bugs_and_workarounds</bugTrackerUrl>
+    <docsUrl>http://www.ghisler.ch/wiki/index.php</docsUrl>
+    <mailingListUrl>http://www.ghisler.ch/board/index.php</mailingListUrl>
+    <tags>file manager shareware nagscreen trial admin</tags>
+    <copyright>© 1995 Christian Ghisler</copyright>
+    <licenseUrl>http://www.ghisler.com/order.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a37f40763d259eab20d0462b72cba86a108441d9/icons/totalcommander.png</iconUrl>
+    <releaseNotes>http://ghisler.com/whatsnew.htm</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.7" /> 
+      <dependency id="7zip.portable" version="16.04" />
+      <dependency id="autohotkey.portable" version="1.1.24.05" />
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

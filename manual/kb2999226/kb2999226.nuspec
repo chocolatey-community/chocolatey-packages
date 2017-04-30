@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>KB2999226</id>
-    <version>1.0.20161201</version>
+    <version>1.0.20170422</version>
     <title>Update for Universal C Runtime in Windows (KB2999226)</title>
     <authors>Microsoft</authors>
-    <owners>RB chocolatey</owners>
+    <owners>chocolatey,RB</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://support.microsoft.com/en-us/kb/2999226</licenseUrl>
     <projectUrl>https://support.microsoft.com/en-us/kb/2999226</projectUrl>
@@ -19,9 +19,10 @@
 * 1.0.20161201: Fixed installation for windows 10 versions
 * 1.0.20161030: fixed installation on a few specific OS versions; added checking for requisite Service Packs; simplified install script
     </releaseNotes>
-    <tags>Microsoft Visual Studio 2015 Windows Update KB2919355</tags>
+    <tags>microsoft visual studio 2015 windows update kb2919355</tags>
     <dependencies>
       <dependency id="kb2919355" version="1.0.20160915" />
+      <dependency id="chocolatey-windowsupdate.extension" version="1.0.2" />
     </dependencies>
   </metadata>
 </package>

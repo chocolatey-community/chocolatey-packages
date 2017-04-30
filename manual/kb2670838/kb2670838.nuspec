@@ -3,16 +3,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>KB2670838</id>
-        <version>1.0.0</version>
+        <version>1.0.20170428</version>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/kb2670838</packageSourceUrl>
         <owners>chocolatey</owners>
         <title>Platform update for Windows 7 SP1 and Windows Server 2008 R2 SP1</title>
         <authors>Microsoft</authors>
         <projectUrl>https://support.microsoft.com/en-us/kb/2670838</projectUrl>
         <iconUrl>https://assets.onestore.ms/cdnfiles/onestorerolling-1509-17011/shell/v1_2/images/logo/microsoft.png</iconUrl>
-        <licenseUrl>https://support.microsoft.com/en-us/kb/2670838</licenseUrl>
+        <licenseUrl>http://go.microsoft.com/fwlink/?LinkID=206977</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>Microsoft Windows Update KB2670838 admin</tags>
+        <tags>microsoft windows update kb2670838 admin</tags>
         <summary>This update improves the range and performance of the graphics and imaging components</summary>
         <description>This update improves the range and performance of the following graphics and imaging components:
 - Direct2D
@@ -29,6 +29,7 @@ This package requires Service Pack 1 for Windows 7 or Windows Server 2008 R2 to 
 On systems other than Windows 7 or Windows Server 2008 R2, this package installs successfully, but does nothing.
         </description>
         <dependencies>
+          <dependency id="chocolatey-windowsupdate.extension" version="1.0.2" />
         </dependencies>
     </metadata>
 </package>

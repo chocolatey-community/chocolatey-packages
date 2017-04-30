@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>gobby</id>
-    <title>Gobby</title>
     <version>0.5.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gobby</packageSourceUrl>
+    <owners>chocolatey, AdmiringWorm</owners>
+    <title>Gobby</title>
     <authors>aburgm</authors>
-    <owners>AdmiringWorm,chocolatey</owners>
+    <projectUrl>https://gobby.github.io/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
+    <copyright>Copyright © 2008-2014 Armin Burgmeier</copyright>
+    <licenseUrl>https://github.com/gobby/gobby/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/gobby/gobby</projectSourceUrl>
+    <docsUrl>https://github.com/gobby/gobby/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/gobby/gobby/issues</bugTrackerUrl>
+    <tags>gobby admin collaboration editor foss cross-platform</tags>
     <summary>Gobby is a multi-platform collaborative text editor. It allows multiple users to edit the same document together over the internet in real-time.</summary>
     <description>
-## Synopsis
-
 Gobby is a free collaborative editor. This means that it
 provides you with the possibility to edit files simultaneously
 with other users over a network. The platforms on which you could use
@@ -39,22 +46,13 @@ nicely into the GNOME desktop environment if you want it to.
   flavours of Unix
 * Free software, licenced under the terms of the ISC license
     </description>
-    <projectUrl>https://gobby.github.io/</projectUrl>
-    <tags>gobby admin collaboration editor</tags>
-    <copyright>Copyright © 2008-2014 Armin Burgmeier</copyright>
-    <licenseUrl>https://github.com/gobby/gobby/blob/master/COPYING</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
-    </dependencies>
     <releaseNotes>https://github.com/gobby/gobby/blob/master/NEWS</releaseNotes>
-    <docsUrl>https://github.com/gobby/gobby/wiki</docsUrl>
-    <bugTrackerUrl>https://github.com/gobby/gobby/issues</bugTrackerUrl>
-    <projectSourceUrl>https://github.com/gobby/gobby</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gobby</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

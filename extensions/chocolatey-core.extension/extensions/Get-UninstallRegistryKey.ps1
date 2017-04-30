@@ -22,6 +22,9 @@
     or common root words to prevent overmatching. For example, "SketchUp*" would match two keys with software
     names "SketchUp 2016" and "SketchUp Viewer" that are different programs released by the same company.
 
+.PARAMETER IgnoredArguments
+    Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+
 .INPUTS
     System.String
 
@@ -55,7 +58,9 @@ function Get-UninstallRegistryKey {
     param(
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
         [ValidateNotNullOrEmpty()]
-        [string] $SoftwareName
+        [string] $SoftwareName,
+        [parameter(ValueFromRemainingArguments = $true)]
+        [Object[]] $IgnoredArguments
     )
     Write-Debug "Running 'Get-UninstallRegistryKey' for `'$env:ChocolateyPackageName`' with SoftwareName:`'$SoftwareName`'";
 

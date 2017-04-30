@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>clipgrab</id>
-    <version>3.6.3</version>
+    <version>3.6.4</version>
     <title>Clipgrab</title>
     <owners>chocolatey</owners>
     <authors>Philipp Schmieder Medien</authors>

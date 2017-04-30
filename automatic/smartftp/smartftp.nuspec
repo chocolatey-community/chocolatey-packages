@@ -5,16 +5,16 @@
     <id>smartftp</id>
     <title>SmartFTP</title>
     <owners>chocolatey</owners>
-    <version>8.0.2271.0</version>
+    <version>9.0.2432.0</version>
     <authors>SmartSoft</authors>
     <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
     <description>
-SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client with lots of features and a modern user interface.
+SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Backblaze B2, Telnet, Terminal client with lots of features and a modern user interface.
 
 ## Features
 - Protocols
 - FTP and FTPS (Secure FTP)
-- SFTP over SSH, WebDAV, Amazon S3 (Enterprise Edition), Google Drive (Ultimate Edition), Google Cloud Storage (Enterprise Edition), Microsoft OneDrive (Ultimate Edition), Terminal Emulator (Ultimate Edition)
+- SFTP over SSH, WebDAV, Amazon S3 (Enterprise Edition), Google Drive (Ultimate Edition), Google Cloud Storage (Enterprise Edition), Microsoft OneDrive (Ultimate Edition), Backblaze B2 (Enterprise Edition), Terminal Emulator (Ultimate Edition)
 - Integrated Editor
 - Modern Graphical User Interface (GUI)
 - High DPI support
@@ -50,7 +50,7 @@ SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google
 - Only latest version is available as vendor [doesn't maintain the old versions](https://www.smartftp.com/support/kb/where-can-i-find-an-older-build-of-smartftp-f175.html).
 </description>
     <projectUrl>https://www.smartftp.com/</projectUrl>
-    <tags>trial ftp sftp sftp ssh webdav s3 amazon onedrive google drive secure client admin</tags>
+    <tags>trial ftp sftp sftp ssh webdav s3 amazon onedrive google drive b2 secure client admin</tags>
     <copyright>SmartSoft Ltd</copyright>
     <releaseNotes>https://www.smartftp.com/changelog/1</releaseNotes>
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
@@ -58,9 +58,7 @@ SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg</iconUrl>
     <bugTrackerUrl>https://www.smartftp.com/forums/index.php?/forum/14-support/</bugTrackerUrl>
     <dependencies>
-      <dependency id="vcredist2017" version="14.10.24629.0-rc1" />
-      <dependency id="KB2533623" version="1.0.0" />
-      <dependency id="KB2670838" version="1.0.0" />
+      <dependency id="vcredist2017" version="14.10.25008.0" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/smartftp</packageSourceUrl>
     <docsUrl>https://www.smartftp.com/support</docsUrl>

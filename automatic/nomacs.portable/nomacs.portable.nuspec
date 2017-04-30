@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nomacs.portable</id>
-    <version>3.4.0</version>
+    <version>3.6.0</version>
     <title>nomacs Image Lounge</title>
     <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
@@ -54,7 +54,7 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
 See detailed nomacs [features page](http://nomacs.org/features/).
     </description>
     <summary>Open source image viewer</summary>
-    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.4.0</releaseNotes>
+    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.6.0</releaseNotes>
     <copyright>Markus Diem, Stefan Fiel, Florian Kleber</copyright>
     <tags>admin image editor viewer jpg png svg foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nomacs</packageSourceUrl>

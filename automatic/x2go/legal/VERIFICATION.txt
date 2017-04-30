@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://wiki.x2go.org/doku.php>
+and can be verified by doing the following:
+
+1. Download the following <https://code.x2go.org/releases/binary-win32/x2goclient/releases/4.1.0.0-2017.03.11/x2goclient-4.1.0.0-2017.03.11-setup.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 3F89AD9386DEDFC6D9EB1CD928DE3C9509D02244F890233CD08513DF45A4E959
+
+The file 'LICENSE.txt' has been obtained from <https://code.x2go.org/gitweb?p=x2goclient.git;a=blob;f=LICENSE;h=612f591cfbc3e984a781c64abd32726c74237984;hb=HEAD>

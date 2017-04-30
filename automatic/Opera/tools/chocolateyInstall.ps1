@@ -1,31 +1,24 @@
 ﻿$ErrorActionPreference = 'Stop'
+$toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
+. "$toolsPath\helpers.ps1"
 
-$packageName = 'Opera'
-$url32       = 'http://get.geo.opera.com/pub/opera/desktop/43.0.2442.806/win/Opera_43.0.2442.806_Setup.exe'
-$checksum32  = 'd9ff04df950464bb3357dad2337972e699fa2243775105c7f5a6c21a85326e52'
-$version     = '43.0.2442.806'
+if (Is32BitInstalled) { $env:ChocolateyForceX86 = $true }
 
+$version     = '44.0.2510.1457'
 $packageArgs = @{
-  packageName    = $packageName
+  packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = $url32
-  checksum       = $checksum32
+  url            = 'https://get.geo.opera.com/pub/opera/desktop/44.0.2510.1457/win/Opera_44.0.2510.1457_Setup.exe'
+  url64          = 'https://get.geo.opera.com/pub/opera/desktop/44.0.2510.1457/win/Opera_44.0.2510.1457_Setup_x64.exe'
+  checksum       = '417834b5e9ffbf524101203dd361a106a2bc4e1ce063d58d8589fede6fbd4fcf'
+  checksum64     = '3b9f1ebee9096634c6ca51a870474811c7e2cdcd1f9f1667a10c1b5ac99824c4'
   checksumType   = 'sha256'
+  checksumType64 = 'sha256'
   silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0'
   validExitCodes = @(0)
 }
 
-$regPathModifierArray = @('Wow6432Node\', '')
-$alreadyInstalled = $null
-
-foreach ($regPathModifier in $regPathModifierArray) {
-  $regPath = "HKLM:\SOFTWARE\${regPathModifier}Microsoft\Windows\CurrentVersion\Uninstall\Opera $version"
-  if (Test-Path $regPath) {
-    $alreadyInstalled = $true
-  }
-}
-
-if ($alreadyInstalled) {
+if (IsVersionAlreadyInstalled $version) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
 } else {
   Install-ChocolateyPackage @packageArgs

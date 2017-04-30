@@ -1,7 +1,6 @@
-Chocolatey Community Core Team Packages
-===========================
+# Chocolatey Community Core Team Packages
 
-[![Build status](https://ci.appveyor.com/api/projects/status/tugg0i6x1hlq9lpg?svg=true)](https://ci.appveyor.com/project/chocolatey/chocolatey-coreteampackages)
+[![Join the chat at https://gitter.im/chocolatey/chocolatey-coreteampackages](https://badges.gitter.im/chocolatey/chocolatey-coreteampackages.svg)](https://gitter.im/chocolatey/chocolatey-coreteampackages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build status](https://ci.appveyor.com/api/projects/status/tugg0i6x1hlq9lpg?svg=true)](https://ci.appveyor.com/project/chocolatey/chocolatey-coreteampackages) 
 [![](http://transparent-favicon.info/favicon.ico)](#)[![](http://transparent-favicon.info/favicon.ico)](#)
 [Update status](http://gep13.me/choco-au)
 [![](http://transparent-favicon.info/favicon.ico)](#)
@@ -9,11 +8,11 @@ Chocolatey Community Core Team Packages
 
 ### Description
 
-This repository contains [chocolatey automatic packages](https://chocolatey.org/docs/automatic-packages).
+This repository contains chocolatey packages, most of which are [automatic](https://chocolatey.org/docs/automatic-packages).
 
-These packages are managed and maintained by the Chocolatey community package maintainers core team, and [also maintained by you (the community)](https://github.com/chocolatey/chocolatey-coreteampackages/wiki/Contributing-guidelines)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
+These packages are managed and maintained by the Chocolatey community package maintainers core team, and also maintained by you (the community)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
 
-All packages in this repo should be in conformity with the [contributing guidelines](https://github.com/chocolatey/chocolatey-coreteampackages/wiki/Contributing-guidelines).
+**All packages in this repo should be in conformity with the [contributing guidelines](CONTRIBUTING.md).**
 
 ### Etiquette Regarding Communication
 
@@ -23,5 +22,4 @@ When requesting support, try to remember that we are all volunteers that have li
 
 This repo is maintained by volunteers in the Chocolatey community, some of which have been identified as core community package maintainers. There may be some overlap with members of the Chocolatey team / Chocolatey staff.
 
-Disclaimer: This repository may contain packages that may not be officially sanctioned by Chocolatey staff, and that is okay. This repository exists to bring community packages under one repository where they can be developed and maintained by the community. Typically if there is a legal issue, then Chocolatey staff will step in. If you want to speak directly to the Chocolatey team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website". HTH
-
+Disclaimer: This repository may contain packages that may not be officially sanctioned by Chocolatey staff, and that is okay. This repository exists to bring community packages under one repository where they can be developed and maintained by the community. Typically if there is a legal issue, then Chocolatey staff will step in. If you want to speak directly to the Chocolatey team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website". HTH 

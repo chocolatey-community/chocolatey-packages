@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>scite4autohotkey</id>
+    <version>3.0.06.20170428</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/scite4autohotkey</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>SciTE4AutoHotkey</title>
+    <authors>fincs</authors>
+    <projectUrl>https://fincs.ahk4.net/scite4ahk/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/102485a3d4606c6294d152f4b2e8b8b030d65b99/icons/scite4autohotkey.png</iconUrl>
+    <licenseUrl>https://fincs.ahk4.net/scite4ahk/license.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/fincs/SciTE4AutoHotkey</projectSourceUrl>
+    <mailingListUrl>http://ahkscript.org/boards/viewtopic.php?f=6&amp;t=62</mailingListUrl>
+    <bugTrackerUrl>https://github.com/fincs/SciTE4AutoHotkey/issues</bugTrackerUrl>
+    <tags>scite4autohotkey autohotkey debugging ide admin foss</tags>
+    <summary>SciTE distribution designed for AutoHotkey</summary>
+    <description></description>
+    <releaseNotes>https://fincs.ahk4.net/scite4ahk/changelog.htm</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.install" version="1.1.25.01" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
