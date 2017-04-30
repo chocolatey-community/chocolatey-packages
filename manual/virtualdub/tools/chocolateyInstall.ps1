@@ -11,7 +11,11 @@ If ( Get-OSArchitectureWidth -compare '32' ) { $binName = "VirtualDub.exe" }
 
 # Place shortcuts in appropriate location
 $ProgsFolder = [environment]::getfolderpath('Programs')
-If ( Test-ProcessAdminRights ) { $ProgsFolder = [environment]::getfolderpath('CommonPrograms') }
+If ( Test-ProcessAdminRights ) {
+  $ProgsFolder = Join-Path `
+	([environment]::getfolderpath('CommonApplicationData')) `
+	"Microsoft\Windows\Start Menu\Programs"
+}
 Install-ChocolateyShortcut -shortcutFilePath "$ProgsFolder\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
 
 Remove-Item -Force -ea 0 "$toolsDir\VirtualDub-1.10.4.zip"
