@@ -14,14 +14,14 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest $releases
 
-  $URLS = $download_page.links | ? href -match "7z.*\.exe$" | select -expand href
+  $download_page.AllElements | ? innerText -match "^Download 7\-Zip ([\d\.]+) \([\d]{4}[\-\d]+\)" | select -First 1 | Out-Null
+  if ($Matches[1] -and ($Matches[1] -match '^[\d\.]+$')) { $version = $Matches[0] }
+
+  $URLS = $download_page.links | ? href -match "7z$($version -replace '\.','')(\-x64)?\.exe$" | select -expand href
 
   $url32 = $URLS | ? { $_ -notmatch "x64" } | select -first 1
   $url64 = $URLS | ? { $_ -match "x64" } | select -first 1
   $url_extra = $download_page.links | ? href -match "7z.*extra\.7z" | select -first 1 -expand href
-
-  $download_page.AllElements | ? innerText -match "^Download 7\-Zip ([\d\.]+)" | select -First 1 | Out-Null
-  if ($Matches[1] -and ($Matches[1] -match '^[\d\.]+$')) { $version = $Matches[0] }
 
   @{
     URL32     = $domain + $url32
