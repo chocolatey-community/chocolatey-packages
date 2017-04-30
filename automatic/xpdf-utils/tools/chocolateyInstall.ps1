@@ -1,25 +1,26 @@
-﻿try {
+﻿$ErrorActionPreference = 'Stop';
 
-    $packageName = '{{PackageName}}'
-    $version = '{{PackageVersion}}'
-    $url = '{{DownloadUrl}}'
-    $url64bit = $url
-    $unzipLocation = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-    $mainFolder = "xpdfbin-win-$version"
-    
-    Install-ChocolateyZipPackage $packageName $url $unzipLocation $url64bit
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-    $osBitness = Get-ProcessorBits
+Get-ChildItem "$toolsPath" -Filter "xpdfbin-win*" | `
+  Where-Object { Test-Path $_.FullName -PathType Container } | `
+  ForEach-Object { Remove-Item $_.FullName -Recurse }
 
-    # Remove not needed folder with binaries
-    if ($osBitness -eq 64) {
-        Remove-Item -Recurse (Join-Path $unzipLocation (Join-Path $mainFolder 'bin32'))
-    } else {
-        Remove-Item -Recurse (Join-Path $unzipLocation (Join-Path $mainFolder 'bin64'))
-    }
-
-
-} catch {
-    Write-Output $packageName $($_.Exception.Message)
-    throw
+$packageArgs = @{
+  packageName = 'xpdf-utils'
+  fileType    = 'zip'
+  file        = "$toolsPath\xpdfbin-win-3.04.zip"
+  destination = $toolsPath
 }
+
+Get-ChocolateyUnzip @packageArgs
+
+if ((Get-ProcessorBits 32) -or ($env:ChocolateyForceX86 -eq $true)) {
+  $dir = Get-Item "$toolsPath\*\bin64"
+  Remove-Item -Force -Recurse -ea 0 $dir
+} else {
+  $dir = Get-Item "$toolsPath\*\bin32"
+  Remove-Item -Force -Recurse -ea 0 $dir
+}
+
+Remove-Item "$toolsPath\*.zip" -Force -ea 0
