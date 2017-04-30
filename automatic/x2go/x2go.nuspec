@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-	<metadata>
-		<id>{{PackageName}}</id>
-		<title>X2go Client</title>
-		<version>{{PackageVersion}}</version>
-		<authors>X2go Team</authors>
-		<owners>Redsandro</owners>
-		<summary>X2GO is for having a graphical remote desktop of Linux computers over a low bandwidth connection.</summary>
-		<description>X2GO is for having a graphical remote desktop of Linux computers over a low bandwidth connection.</description>
-		<projectUrl>http://wiki.x2go.org/doku.php</projectUrl>
-		<packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-		<tags>Remote Desktop Linux Xorg KVM Network</tags>
-		<copyright></copyright>
-		<licenseUrl>http://wiki.x2go.org/doku.php/sources:start#licenses_of_x2go</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/x2go.png</iconUrl>
-		<dependencies></dependencies>
-		<releaseNotes></releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-		<!--<file src="content\**" target="content" />-->
-	</files>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>x2go</id>
+    <version>4.1.0.0</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/x2go</packageSourceUrl>
+    <owners>chocolatey, Redsandro</owners>
+    <title>X2go Client</title>
+    <authors>X2go Team</authors>
+    <projectUrl>http://wiki.x2go.org/doku.php</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6f8b9a53f9d006195407a4d32cde86df9e0415d1/icons/x2go.png</iconUrl>
+    <licenseUrl>http://wiki.x2go.org/doku.php/sources:start#licenses_of_x2go</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://git.x2go.org/</projectSourceUrl>
+    <docsUrl>http://wiki.x2go.org/doku.php/doc:start</docsUrl>
+    <mailingListUrl>http://wiki.x2go.org/doku.php/news:latest-list-postings</mailingListUrl>
+    <bugTrackerUrl>https://bugs.x2go.org/</bugTrackerUrl>
+    <tags>x2go remote desktop linux xorg kvm network foss cross-platform</tags>
+    <summary>X2GO is for having a graphical remote desktop of Linux computers over a low bandwidth connection.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
