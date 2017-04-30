@@ -1,9 +1,10 @@
 ﻿$packageName = 'virtualdub'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = "file://$toolsDir/VirtualDub-1.10.4.zip"
-$url64 = "file://$toolsDir/VirtualDub-1.10.4-AMD64.zip"
+$fullPath = "$toolsDir\VirtualDub-1.10.4.zip"
+$fullPath64 = "$toolsDir\VirtualDub-1.10.4-AMD64.zip"
 
-Install-ChocolateyZipPackage $packageName $url $toolsdir $url64
+Get-ChocolateyUnzip -FileFullPath $fullPath -Destination $toolsdir `
+	-PackageName $packageName -FileFullPath64 $fullPath64
 
 # Unique names for each bitness
 $binName = "Veedub64.exe"
@@ -16,7 +17,8 @@ If ( Test-ProcessAdminRights ) {
 	([environment]::getfolderpath('CommonApplicationData')) `
 	"Microsoft\Windows\Start Menu\Programs"
 }
-Install-ChocolateyShortcut -shortcutFilePath "$ProgsFolder\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
+Install-ChocolateyShortcut -shortcutFilePath "$ProgsFolder\VirtualDub.lnk" `
+	-targetPath "$toolsDir\$binName"
 
 Remove-Item -Force -ea 0 "$toolsDir\VirtualDub-1.10.4.zip"
 Remove-Item -Force -ea 0 "$toolsDir\VirtualDub-1.10.4-AMD64.zip"
