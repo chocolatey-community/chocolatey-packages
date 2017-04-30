@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>x-moto</id>
+    <version>0.5.11.20170430</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/x-moto</packageSourceUrl>
+    <owners>chocolatey, chocolatey purity</owners>
     <title>X-Moto</title>
-    <owners>chocolatey purity</owners>
     <authors>X-Moto Contributors</authors>
+    <projectUrl>https://xmoto.tuxfamily.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/267ca0fe62e8e0947eacab7bee70bc8c31dadeb6/icons/x-moto.png</iconUrl>
+    <copyright>© 2005-2017 XMoto</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
-    <projectUrl>http://xmoto.tuxfamily.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/x-moto.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-X-Moto is a free and open source 2D motocross platform game developed for Linux, FreeBSD, Mac OS X and Microsoft Windows, where physics play an all important role in the gameplay. The basic gameplay clones that of Elasto Mania, but the simulated physics are subtly different.
-    </description>
+    <projectSourceUrl>https://svn.tuxfamily.org/viewvc.cgi/xmoto_xmoto/</projectSourceUrl>
+    <docsUrl>https://wiki.xmoto.tuxfamily.org/</docsUrl>
+    <mailingListUrl>https://forum.xmoto.tuxfamily.org/</mailingListUrl>
+    <tags>x-moto motocross physics game admin foss cross-platform</tags>
     <summary>Free and open source 2D motocross platform game</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>x-moto motocross physics game admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
+    <releaseNotes>https://xmoto.tuxfamily.org/dev/ChangeLog</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.0" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
