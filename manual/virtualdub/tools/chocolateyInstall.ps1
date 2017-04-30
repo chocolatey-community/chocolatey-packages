@@ -1,25 +1,18 @@
-﻿$packageName = '{{PackageName}}'
-# {\{DownloadUrlx64}\} gets “misused” here as 32- and 64-bit link array due to limitations of Ketarin/chocopkgup
-$urlArray = {{DownloadUrlx64}}
-$url = $urlArray[0]
-$url64 = $urlArray[1]
-$binRoot = "$env:systemdrive\tools"
-$unzipLocation = "$binRoot\VirtualDub"
+﻿$packageName = 'virtualdub'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url = "file://$toolsDir/VirtualDub-1.10.4.zip"
+$url64 = "file://$toolsDir/VirtualDub-1.10.4-AMD64.zip"
 
-Install-ChocolateyZipPackage $packageName $url $unzipLocation $url64
+Install-ChocolateyZipPackage $packageName $url $toolsdir $url64
 
-$desktop = "$([Environment]::GetFolderPath("Desktop"))"
-$startMenu = "$([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::StartMenu))\Programs"
+# Unique names for each bitness
+$binName = "Veedub64.exe"
+If ( Get-OSArchitectureWidth -compare '32' ) { $binName = "VirtualDub.exe" }
 
-$processor = Get-WmiObject Win32_Processor
-$is64bit = $processor.AddressWidth -eq 64
+# Place shortcuts in appropriate location
+$ProgsFolder = [environment]::getfolderpath('Programs')
+If ( Test-ProcessAdminRights ) { $ProgsFolder = [environment]::getfolderpath('CommonPrograms') }
+Install-ChocolateyShortcut -shortcutFilePath "$ProgsFolder\VirtualDub.lnk" -targetPath "$toolsDir\$binName"
 
-if ($is64bit) {
-  Install-ChocolateyDesktopLink "$unzipLocation\Veedub64.exe"
-  Rename-Item -Path "$desktop\Veedub64.exe.lnk" -NewName "VirtualDub.lnk"
-} else {
-  Install-ChocolateyDesktopLink "$unzipLocation\VirtualDub.exe"
-  Rename-Item -Path "$desktop\VirtualDub.exe.lnk" -NewName "VirtualDub.lnk"
-}
-
-Copy-Item "$desktop\VirtualDub.lnk" -Destination "$startMenu"
+Remove-Item -Force -ea 0 "$toolsDir\VirtualDub-1.10.4.zip"
+Remove-Item -Force -ea 0 "$toolsDir\VirtualDub-1.10.4-AMD64.zip"
