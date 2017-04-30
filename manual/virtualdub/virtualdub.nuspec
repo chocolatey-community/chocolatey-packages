@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>virtualdub</id>
-    <version>1.10.4.401</version>
+    <version>1.10.4.3549101</version>
     <title>VirtualDub</title>
     <owners>chocolatey</owners>
     <authors>Avery Lee</authors>
