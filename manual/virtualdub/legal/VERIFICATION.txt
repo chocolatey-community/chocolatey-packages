@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://www.virtualdub.org/>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://sourceforge.net/projects/virtualdub/files/virtualdub-win/1.10.4.35491/VirtualDub-1.10.4.zip/download>
+  64-Bit software: <https://sourceforge.net/projects/virtualdub/files/virtualdub-win/1.10.4.35491/VirtualDub-1.10.4-AMD64.zip/download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha512
+  checksum32: 11e480422c1d9ffdbf271dfc83f9220e0fc850869ef8d2b8b6759c90bd84e8bf3f056e8d042c2d706b37846677a0ae1c9484b5bc5f13422171530bc90507f351
+  checksum64: 6e1bb5a47f2589133b58a12960f2133e2f2bf42886789f4b6592b0ee873ad42414241526917c331ddab10ee553a7e3fc77d3c6fc7b8480aba64e339e7d208ac9
+
+The file 'LICENSE.txt' has been obtained from <http://www.virtualdub.org/gpl.html>
