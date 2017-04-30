@@ -36,9 +36,13 @@
   The amount of seconds to sleep after installing/uninstalling a package
   and before taking the screenshot.
 
-.PARAMETER screenShotDir
-  The directory to where the scrip should save all taken screenshots.
+.PARAMETER artifactsDirectory
+  The directory to where the script should save all artifacts (screenshots, logs, etc).
   (The directory does not need to exist before running the script)
+
+.PARAMETER runChocoWithAu
+  When specified we uses AU's Test-Package function instead of installing directly
+  with choco (NOTE: No validation is done by itself in this case)
 
 .EXAMPLE
   .\Test-RepoPackage.ps1
@@ -51,7 +55,8 @@ param(
   [switch]$TakeScreenshots,
   [int]$chocoCommandTimeout = 600,
   [int]$timeoutBeforeScreenshot = 1,
-  [string]$artifactsDirectory = "$env:TEMP\artifacts"
+  [string]$artifactsDirectory = "$env:TEMP\artifacts",
+  [switch]$runChocoWithAu
 )
 
 function CheckPackageSizes() {
@@ -145,8 +150,8 @@ function WriteChocoOutput() {
   begin {}
   process {
     switch -Regex ($text) {
-      '^\s*ERROR|\s*Failures|^Uninstall may not be silent' { WriteOutput $text -type ChocoError }
-      '^\s*WARNING' { WriteOutput $text -type ChocoWarning }
+      '(^|==\>.*\:)\s*ERROR|\s*Failures|^Uninstall may not be silent' { WriteOutput $text -type ChocoError }
+      '(^|==\>.*\:)\s*WARNING' { WriteOutput $text -type ChocoWarning }
       Default { WriteOutput $text -type ChocoInfo }
     }
   }
@@ -552,13 +557,16 @@ function TestInstallAllPackages() {
 
   $packages | % {
     pushd $_.Directory
-    InstallPackage `
-      -package $_ `
-      -chocoCommandTimeout $chocoCommandTimeout `
-      -screenshotTimeout $screenshotTimeout `
-      -takeScreenshot $takeScreenshot `
-      -screenShotDir $screenShotDir
-    MoveLogFile -packageName $_.Name -commandType 'install'
+    if ($runChocoWithAu) { Test-Package -Install | WriteChocoOutput }
+    else {
+      InstallPackage `
+        -package $_ `
+        -chocoCommandTimeout $chocoCommandTimeout `
+        -screenshotTimeout $screenshotTimeout `
+        -takeScreenshot $takeScreenshot `
+        -screenShotDir $screenShotDir
+      MoveLogFile -packageName $_.Name -commandType 'install'
+    }
     popd
   } | ? { $_ -ne $null -and $_ -ne '' }
 }
@@ -641,13 +649,16 @@ function TestUninstallAllPackages() {
       return ""
     } else {
       pushd $_.Directory
-      UninstallPackage `
-        -package $_ `
-        -chocoCommandTimeout $chocoCommandTimeout `
-        -screenshotTimeout $screenshotTimeout `
-        -takeScreenshot $takeScreenshot `
-        -screenShotDir $screenShotDir
-      MoveLogFile -packageName $name -commandType 'uninstall'
+      if ($runChocoWithAu) { Test-Package -Uninstall | WriteChocoOutput }
+      else {
+        UninstallPackage `
+          -package $_ `
+          -chocoCommandTimeout $chocoCommandTimeout `
+          -screenshotTimeout $screenshotTimeout `
+          -takeScreenshot $takeScreenshot `
+          -screenShotDir $screenShotDir
+        MoveLogFile -packageName $name -commandType 'uninstall'
+      }
       popd
     }
   } | ? { $_ -ne $null -and $_ -ne '' }
@@ -685,12 +696,12 @@ if (@('all','update').Contains($type)) {
 }
 if (@('all','install').Contains($type)) {
   [array]$failedInstalls = TestInstallAllPackages @arguments
-  CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory
+  if (!$runChocoWithAu) { CreateSnapshotArchive -packages $packages -artifactsDirectory $artifactsDirectory }
 } else { $failedInstalls = @() }
 if (@('all','uninstall').Contains($type)) {
   [array]$failedUninstalls = TestUninstallAllPackages @arguments -failedInstalls $failedInstalls
 }
-if (@('all','install','uninstall').Contains($type)) { CreateLogArchive $artifactsDirectory }
+if (@('all','install','uninstall').Contains($type) -and !$runChocoWithAu) { CreateLogArchive $artifactsDirectory }
 
 if ($failedInstalls.Count -gt 0) {
   WriteOutput "The following packages failed to install:" -type ChocoWarning
