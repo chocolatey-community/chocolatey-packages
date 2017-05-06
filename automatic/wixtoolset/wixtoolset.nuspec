@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wixtoolset</id>
-    <version>3.11.0.1528-rc2-20170424</version>
+    <version>3.11</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/wixtoolset</packageSourceUrl>
     <owners>chocolatey, Gary Ewan Park</owners>
     <title>WiX Toolset</title>
