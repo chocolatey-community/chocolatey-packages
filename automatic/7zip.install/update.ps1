@@ -1,8 +1,13 @@
 . "$PSScriptRoot\..\7zip\update.ps1"
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $softwareNamePrefix = '7-zip'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase '7zip' }
+
+function global:au_AfterUpdate {
+  Update-ChangelogVersion -Version $Latest.Version
+}
 
 function global:au_SearchReplace {
   @{

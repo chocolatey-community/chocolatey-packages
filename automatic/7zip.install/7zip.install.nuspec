@@ -39,7 +39,10 @@
     <docsUrl>http://www.7-zip.org/faq.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/sevenzip/discussion/45797/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
-    <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://www.7-zip.org/history.txt)
+[Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/7zip.install/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2" />
     </dependencies>

@@ -7,6 +7,7 @@
 $funcs = @(
   'Get-PaddedVersion'
   'Set-DescriptionFromReadme'
+  'Update-ChangelogVersion'
 )
 
 $funcs | % {
