@@ -32,7 +32,8 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/paint.net</packageSourceUrl>
     <owners>chocolatey,the-running-dev</owners>
     <dependencies>
-      <dependency id="Chocolatey-Package.extension" />
+      <dependency id="chocolatey-core.extension" version="1.0.3" />
+      <dependency id="dotnet4.6.1" version="4.6.01055.20161213" />
     </dependencies>
   </metadata>
   <files>
