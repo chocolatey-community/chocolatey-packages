@@ -66,6 +66,7 @@ build_script:
     $ErrorActionPreference = 'Continue'
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
     if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
+      Set-Service wuauserv -StartupType Manual
       ./scripts/Test-RepoPackage.ps1 -CleanFiles
       return
     } else {
