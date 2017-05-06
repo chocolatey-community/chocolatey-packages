@@ -40,16 +40,17 @@ function global:au_GetLatest {
       "-" + $builder.Path.Substring($index)
     }
 
+  $downloadBuilder = New-Object System.UriBuilder($redirectPage)
   $download_page = Invoke-WebRequest -Uri $redirectPage -UseBasicParsing
-  $builder.Path = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href
+  $downloadBuilder.Path = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href
 
   $verRe = '\/v?'
   $version32 = ($builder.Path -split "$verRe" | select -last 1 -skip 1) -replace '\-','.'
   if ($preReleaseSuffix) { $version32 += $preReleaseSuffix }
 
   @{
-    URL32 = [uri]$builder.ToString()
-    Version = Get-PaddedVersion $version32 -OnlyBelowVersion $padUnderVersion
+    URL32 = $downloadBuilder.Uri.ToString()
+    Version = $version32
     ReleasesUrl = $redirectPage
   }
 }
