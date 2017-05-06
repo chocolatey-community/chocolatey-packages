@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
    <metadata>
     <id>paint.net</id>
-    <version>0.0</version>
+    <version>4.0.16</version>
     <title>Paint.NET</title>
     <authors>Rick Brewster, dotPDN</authors>
     <projectUrl>http://www.getpaint.net/</projectUrl>
