@@ -1,6 +1,6 @@
 # Package changelog
 
-## Upcoming
+## Version: 16.4.0.20170506 (2017-05-06)
 ### Bugs
 - Removed check and restart of explorer, this is no longer necessary as 7zip no longer closes explorer. (Issue [#714][i714])
 
