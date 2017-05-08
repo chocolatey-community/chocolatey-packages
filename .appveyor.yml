@@ -43,12 +43,23 @@ environment:
   api_key:
     secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
 
+  #Chocolatey version we want to use when checing for updates.
+  choco_version: '0.10.1'
+  nupkg_cache_path: C:\packages
+
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
 - git config --global user.name "Chocolatey"
 - git config --global core.safecrlf false
 
 install:
+- ps: |
+    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) {
+      # We only want to update chocolatey if we're running a normal build, not during PR testing
+      if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
+      if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${env:choco_version}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${env:choco_version}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${env:choco_version}.nupkg" }
+      cup chocolatey --source ${env:nupkg_cache_path}
+    }
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
@@ -115,3 +126,6 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
+
+cache:
+  - '%nupkg_cache_path% -> appveyor.yml'
