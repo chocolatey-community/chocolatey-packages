@@ -111,7 +111,7 @@ build_script:
     }
 
     ./update_all.ps1 -ForcedPackages $forced
-    Get-EventLogs * | fl * |  out-file eventlogs.txt
+    Get-EventLogs * | ? Source -eq 'Schannel' | fl * |  out-file eventlogs.txt
 on_finish:
 - ps: |
     if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
