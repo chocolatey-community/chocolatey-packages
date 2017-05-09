@@ -77,7 +77,7 @@ build_script:
     $ErrorActionPreference = 'Continue'
     
     . ./scripts/EventLogs.ps1
-    clearlogs
+    Clear-EventLogs
     
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
     if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
@@ -111,7 +111,7 @@ build_script:
     }
 
     ./update_all.ps1 -ForcedPackages $forced
-    logs | fl * |  out-file eventlogs.txt
+    Get-EventLogs * | fl * |  out-file eventlogs.txt
 on_finish:
 - ps: |
     if (Test-Path $Env:TEMP\chocolatey\au) { 7z a  -mx9 au_temp.7z $Env:TEMP\chocolatey\au\* }
