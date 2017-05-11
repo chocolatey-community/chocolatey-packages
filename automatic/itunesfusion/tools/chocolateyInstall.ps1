@@ -3,8 +3,8 @@
 $arguments          = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = 'iTunesFusion'
-    url             = 'https://binaryfortressdownloads.com/Download/BFSFiles/102/iTunesFusionSetup-2.6.exe'
-    checksum        = '2ce11ce6f3c5ed6a6b24d47c9ea346488ba5fa46ae525b31f9adf7246e06fa1f'
+    url             = 'https://binaryfortressdownloads.com/Download/BFSFiles/102/iTunesFusionSetup-3.0.exe'
+    checksum        = '82892fe3dc04d9518a6ce33a16fc81d1ed672796b7ba0e652f3f59eabd8d8054'
     fileType        = 'exe'
     checksumType    = 'sha256'
     silentArgs      = '/VERYSILENT /LAUNCHAFTER=0'
