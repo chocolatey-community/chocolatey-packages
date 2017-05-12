@@ -13,6 +13,6 @@ $packageArgs        = @{
 
 Install-ChocolateyPackage @packageArgs
 
-if (Get-Process -Name Dropbox) {
+if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {
     Stop-Process -processname Dropbox
 }
