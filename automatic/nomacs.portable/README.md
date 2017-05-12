@@ -1,4 +1,4 @@
-# [<img src="https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/icons/nomacs.svg" height="48" width="48" /> nomacs](https://chocolatey.org/packages/nomacs)
+# [<img src="https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/icons/nomacs.svg" height="48" width="48" /> nomacs.portable](https://chocolatey.org/packages/nomacs.portable)
 
 nomacs is a free image viewer for windows, linux, and mac systems, which is licensed under the GNU General Public License v3. nomacs is small, fast and able to handle the most common image formats including RAW images. Additionally it is possible to synchronize multiple viewers. A synchronization of viewers running on the same computer or via LAN is possible. It allows to compare images and spot the differences (e.g. schemes of architects to show the progress).
 
