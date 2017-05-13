@@ -1,6 +1,6 @@
 # Package changelog for [itunesfusion](https://chocolatey.org/packages/itunesfusion)
 
-## Upcoming
+## Version: 3.0.1 (2017-05-13)
 - **BUG:** Added missinb .NET 4.6 dependency
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Extracted Description to its own file
