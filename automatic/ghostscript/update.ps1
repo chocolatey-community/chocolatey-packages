@@ -1,6 +1,6 @@
 ﻿Import-Module AU
 
-$releases     = 'https://ghostscript.com/download/gsdnld.html'
+$releases = 'http://downloads.ghostscript.com/public/old-gs-releases/'
 
 function global:au_SearchReplace {
   [version]$version = $Latest.RemoteVersion
@@ -17,24 +17,25 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'w32\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $re = 'gs916w32\.exe$'
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $releases + $_ }
 
-  $re = 'w64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $re = 'gs916w64\.exe$'
+  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { $releases + $_ }
 
-  $verRe = 'Ghostscript\s*([\d]+\.[\d\.]+) for Windows'
+  <#$verRe = 'Ghostscript\s*([\d]+\.[\d\.]+) for Windows'
   $Matches = $null
   $download_page.Content -match $verRe | Out-Null
   if ($Matches) {
     $version = $Matches[1]
-  }
+  }#>
 
   @{
     URL32 = $url32
     URL64 = $url64
-    Version = $version
-    RemoteVersion = $version
+    #Version = $version
+    Version  = '9.16'
+    RemoteVersion = '9.16'
     PackageName = 'Ghostscript'
   }
 }
