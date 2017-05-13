@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://ghostscript.com/download/gsdnld.html>
+location on <http://downloads.ghostscript.com/public/old-gs-releases/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs921/gs921w32.exe>
-  64-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs921/gs921w64.exe>
+  32-Bit software: <http://downloads.ghostscript.com/public/old-gs-releases/gs916w32.exe>
+  64-Bit software: <http://downloads.ghostscript.com/public/old-gs-releases/gs916w64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 75F5983AC23FBC26760F1033062EC914E7DBAFCB029E47E54E77A762EE934089
-  checksum64: 41BF242D0E4303F329F4B67FC0C556885FE0A5D4012CF5C1E7DDC62A5D25ABA9
+  checksum32: 53E30B22F7DC9E26685EF18AD969650C9573F42D281257DBBFF02D9403F89502
+  checksum64: 3E19A2316BEE2CC655395C16CAD0970D058B29E00EC4DB1290A92180FAC28FB6
 
 The file 'LICENSE.txt' has been obtained from <http://git.ghostscript.com/?p=ghostpdl.git;a=blob_plain;f=LICENSE;h=572496a331cefa0933a9e997374f5e7dde3b95c8;hb=HEAD>
