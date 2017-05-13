@@ -1,4 +1,5 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 function global:au_GetLatest {
     $downloadEndPointUrl = 'https://www.binaryfortress.com/Data/Download/?package=itunesfusion&log=102'
@@ -12,6 +13,10 @@ function global:au_GetLatest {
     }
 
     return @{ Url32 = $downloadUrl; Version = $version }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
 }
 
 function global:au_SearchReplace {
