@@ -31,6 +31,7 @@
       <dependency id="iTunes" version="12.6" />
       <dependency id="dotnet4.6" version="4.6.00081.20150925" />
     </dependencies>
+    <releaseNotes>[Package Changelog](https://github.com/Chocolatey/chocolatey-coreteampackages/blob/master/automatic/itunesfusion/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
