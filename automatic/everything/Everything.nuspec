@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>everything</id>
-    <version>1.4.1867.20170417</version>
+    <version>1.4.1873</version>
     <title>Everything</title>
     <authors>David Carpenter</authors>
     <owners>chocolatey, Mark Michaelis</owners>
