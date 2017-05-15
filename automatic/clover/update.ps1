@@ -21,4 +21,6 @@ function global:au_GetLatest {
     @{ URL32 = $url; Version = $version; PackageName = 'Clover' }
 }
 
-update -ChecksumFor 32
+#update -ChecksumFor 32
+Write-Host "Update is disabled due to several virus results on virustotal"
+return "ignore"
