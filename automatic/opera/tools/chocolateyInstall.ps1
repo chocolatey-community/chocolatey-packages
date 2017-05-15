@@ -4,14 +4,14 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 if (Is32BitInstalled) { $env:ChocolateyForceX86 = $true }
 
-$version     = '45.0.2552.635'
+$version     = '45.0.2552.812'
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://get.geo.opera.com/pub/opera/desktop/45.0.2552.635/win/Opera_45.0.2552.635_Setup.exe'
-  url64          = 'https://get.geo.opera.com/pub/opera/desktop/45.0.2552.635/win/Opera_45.0.2552.635_Setup_x64.exe'
-  checksum       = '41d6e4a0278861379685988d71521d82d0c3554916a80dd54a26e3010bd92cc8'
-  checksum64     = 'a72c2b10e016132b755c26b662196c8b781e90bbdd4683d31c7d23e20330789a'
+  url            = 'https://get.geo.opera.com/pub/opera/desktop/45.0.2552.812/win/Opera_45.0.2552.812_Setup.exe'
+  url64          = 'https://get.geo.opera.com/pub/opera/desktop/45.0.2552.812/win/Opera_45.0.2552.812_Setup_x64.exe'
+  checksum       = '8d27d8674a0c2a7477fb09a57362c582c2b10a3c843892b7361a81bca1c97be0'
+  checksum64     = '960a17e17b9c9229f4dac72e9263870afc6cdd5e4889e7f5bafe1174171f9ffb'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0'
