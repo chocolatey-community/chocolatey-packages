@@ -1,7 +1,7 @@
 import-module au
 import-module "$PSScriptRoot\..\..\extensions\extensions.psm1"
 
-$releases = 'http://www.poweriso.com/download.htm'
+$releases = 'https://www.poweriso.com/download.htm'
 
 function global:au_SearchReplace {
    @{
