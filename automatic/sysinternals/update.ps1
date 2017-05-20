@@ -40,4 +40,4 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor none
+update -ChecksumFor 32
