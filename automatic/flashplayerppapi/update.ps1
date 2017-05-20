@@ -37,4 +37,11 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+try {
+  update -ChecksumFor 32
+} catch {
+  if ($_ -match 'Could not create SSL\/TLS secure channel.') {
+    Write-Host "Unable to create secure channel, ignoring..."
+    return 'ignore'
+  } else { throw $_ }
+}
