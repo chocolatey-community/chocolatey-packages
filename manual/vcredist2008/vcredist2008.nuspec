@@ -19,5 +19,14 @@
     <tags>microsoft visual c++ redistributable 2017 admin</tags>
     <summary>Runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP)</summary>
     <description> </description>
+    <releaseNotes>
+    - MFC Security Update: A security issue has been identified leading to MFC application vulnerability in DLL planting due to MFC not specifying the full path to system/localization DLLs. You can protect your computer by installing this update from Microsoft. After you install this item, you may have to restart.
+    - KB Article: [KB2538243](http://support.microsoft.com/kb/2538243)
+    - Security bulletin: [MS11-025](http://technet.microsoft.com/security/Bulletin/MS11-025)
+    - Microsoft published: 6/7/2011
+    </releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

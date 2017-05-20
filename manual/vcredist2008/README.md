@@ -7,5 +7,4 @@ This package installs runtime components of C Runtime (CRT), Standard C++, ATL, 
 ## Notes
 
 - This will install **both the 32 and 64 bit versions** on a 64 bit OS.  The 32 bit version will only be installed on a 32 bit OS.
-- Microsoft published: 6/7/2011
 - [Latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
