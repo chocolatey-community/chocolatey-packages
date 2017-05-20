@@ -4,4 +4,6 @@ The Microsoft Visual C++ 2008 SP1 Redistributable Package installs runtime compo
 
 This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) they are installed into the native assembly cache, also called WinSxS folder, on versions of Windows operating system that support side-by-side assemblies.
 
-This will install both the 32 and 64 bit versions on a 64 bit OS.  The 32 bit version will only be installed on a 32 bit OS.
+## Notes
+
+- This will install **both the 32 and 64 bit versions** on a 64 bit OS.  The 32 bit version will only be installed on a 32 bit OS.
