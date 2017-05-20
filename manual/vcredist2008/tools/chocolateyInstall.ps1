@@ -11,3 +11,7 @@
   ValidExitCodes= @(0,3010)  # http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
 } 
 Install-ChocolateyPackage @params
+
+# Install both 32bit and 64bit on a 64bit OS
+# If a program is compiled as x86 and the 32bit version of vcredist isn't installed, then the program would fail to start.
+if (Get-ProcessorBits 64) { $Env:chocolateyForceX86 = $true; Install-ChocolateyPackage @params }
