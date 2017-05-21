@@ -10,7 +10,7 @@ $Options = [ordered]@{
     Threads       = 10                                      #Number of background jobs to use
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
     PluginPath    = ''                                      #Path to user plugins
-    IgnoreOn      = ''                                      #Error message parts to set the package ignore status
+    #IgnoreOn      = ''                                      #Error message parts to set the package ignore status
     RepeatOn      = @(                                      #Error message parts on which to repeat package updater
       'Unable to create secure channel'
       'Could not establish trust relationship'
