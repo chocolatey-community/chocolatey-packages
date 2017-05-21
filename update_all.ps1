@@ -11,8 +11,8 @@ $Options = [ordered]@{
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
     PluginPath    = ''                                      #Path to user plugins
     RepeatOn      = 'Unable to create secure channel', 'Could not establish trust relationship', 'Unable to connect'
-    #RepeatSleep   = 60
-    #RepeatCount   = 2
+    RepeatSleep   = 120                                     #How much to sleep between repeats in seconds
+    #RepeatCount   = 2                                      #How many times to repeat on errors
 
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
