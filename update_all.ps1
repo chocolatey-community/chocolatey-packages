@@ -10,6 +10,9 @@ $Options = [ordered]@{
     Threads       = 10                                      #Number of background jobs to use
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
     PluginPath    = ''                                      #Path to user plugins
+    RepeatOn      = 'Unable to create secure channel', 'Could not establish trust relationship'
+    #RepeatSleep   = 60
+    #RepeatCount   = 2
 
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
