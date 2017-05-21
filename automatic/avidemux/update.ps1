@@ -50,6 +50,6 @@ function global:au_GetLatest {
 try {
 update -ChecksumFor none
 } catch {
-  if ($_ -match 'ignoring for now') { return 'ignore' }
+  if ($_ -match 'ignoring for now') { Write-Host "$_"; return 'ignore' }
   else { throw $_ }
 }
