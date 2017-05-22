@@ -39,11 +39,4 @@ function global:au_GetLatest {
   return @{ URL32 = $url32; Version = $packageVersion; RemoteVersion = $CurrentVersion; majorVersion = $majorVersion; }
 }
 
-try {
-  update -ChecksumFor none
-} catch {
-  if ($_ -match 'Could not create SSL\/TLS secure channel.') {
-    Write-Host "Unable to create secure channel, ignoring..."
-    return 'ignore'
-  } else { throw $_ }
-}
+update -ChecksumFor none
