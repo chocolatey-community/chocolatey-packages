@@ -5,6 +5,8 @@ param([string] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
 $Options = [ordered]@{
+    WhatIf        = $au_WhatIf                              #Whatif all packages
+    Force         = $false                                  #Force all packages
     Timeout       = 100                                     #Connection timeout in seconds
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
