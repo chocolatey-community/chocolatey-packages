@@ -1,4 +1,5 @@
 import-module au
+. $PSScriptRoot\..\..\scripts\au_extensions.ps1
 
 $releases = 'http://light-alloy.verona.im/download/'
 
@@ -11,6 +12,8 @@ function global:au_SearchReplace {
     }
   }
 }
+
+function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
