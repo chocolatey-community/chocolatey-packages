@@ -26,4 +26,7 @@ function global:au_GetLatest {
   }
 }
 
+Write-Host 'Moved to foshub, new updater is required that wil embedd the package'
+return 'ignore'
+
 update -ChecksumFor 32
