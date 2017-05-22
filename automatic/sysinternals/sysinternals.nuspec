@@ -4,7 +4,7 @@
   <metadata>
     <id>sysinternals</id>
     <title>Sysinternals</title>
-    <version>2017.5.16.20170518</version>
+    <version>2017.05.22</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
