@@ -1,5 +1,5 @@
 import-module au
-. $PSScriptRoot\..\..\scripts\au_extensions.ps1
+import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'http://light-alloy.verona.im/download/'
 
