@@ -16,7 +16,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
     <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
-    <tags>microsoft visual c++ redistributable 2017 admin</tags>
+    <tags>microsoft visual c++ redistributable 2008 admin</tags>
     <summary>Runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP)</summary>
     <description> </description>
     <releaseNotes>
