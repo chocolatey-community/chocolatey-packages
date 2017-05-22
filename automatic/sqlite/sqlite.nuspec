@@ -16,7 +16,24 @@ SQLite is a software library that implements a self-contained, serverless, zero-
 
 This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLite SQL database engine in your system PATH. This package is only needed if you have software that expects the SQLite DLL in the PATH. If you just want to create or manage SQLite databases, install the [SQLite Shell](/packages/sqlite.shell) instead. A (proprietary, but free for non-commercial use) GUI tool to manage SQLite databases is [SQLite Administrator](/packages/sqliteadmin).
 
-## Package notes
+## Features
+      
+- Transactions are atomic, consistent, isolated, and durable (ACID) even after system crashes and power failures.
+- Zero-configuration - no setup or administration needed.
+- Full-featured SQL implementation with advanced capabilities like partial indexes, indexes on expressions, JSON, and common table expressions. (Omitted features)
+- A complete database is stored in a single cross-platform disk file. Great for use as an application file format.
+- Supports terabyte-sized databases and gigabyte-sized strings and blobs. (See limits.html.)
+- Small code footprint: less than 500KiB fully configured or much less with optional features omitted.
+- Simple, easy to use API.
+- Written in ANSI-C. TCL bindings included. Bindings for dozens of other languages available separately.
+- Well-commented source code with 100% branch test coverage.
+- Available as a single ANSI-C source-code file that is easy to compile and hence is easy to add into a larger project.
+- Self-contained: no external dependencies.
+- Cross-platform: Android, *BSD, iOS, Linux, Mac, Solaris, VxWorks, and Windows (Win32, WinCE, WinRT) are supported out of the box. Easy to port to other systems.
+- Sources are in the public domain. Use for any purpose.
+- omes with a standalone command-line interface (CLI) client that can be used to administer SQLite databases.
+      
+## Notes
 
 - Only x32 DLL is available without tools.
     </description>
