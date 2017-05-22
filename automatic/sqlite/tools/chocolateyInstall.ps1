@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName    = 'sqlite'
-$url32          = 'https://sqlite.org/2017/sqlite-dll-win32-x86-3180000.zip'
+$url32          = 'https://sqlite.org/2017/sqlite-dll-win32-x86-3190000.zip'
 $url64          = $url32
-$checksum32     = 'd01c69d09282f9050f6b113c45884fe9b9abf3bdf5bd93b45927d9b6bfb233fe'
+$checksum32     = '3102600d3ad67b0e3f132bc0f8e0e66d976ba3700c3cc96459b65a87fa57c373'
 $checksum64     = $checksum32
 $instDir        = "$(Get-ToolsLocation)\$packageName"
 
