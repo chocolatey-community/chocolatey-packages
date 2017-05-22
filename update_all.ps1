@@ -10,9 +10,12 @@ $Options = [ordered]@{
     Threads       = 10                                      #Number of background jobs to use
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
     PluginPath    = ''                                      #Path to user plugins
-    #IgnoreOn      = @()                                     #Error message parts to set the package ignore status
+    IgnoreOn      = @(                                      #Error message parts to set the package ignore status
+      'Could not create SSL/TLS secure channel'
+      'Could not establish trust relationship'
+    )
     RepeatOn      = @(                                      #Error message parts on which to repeat package updater
-      'Unable to create secure channel'                     # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
+      'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
       'Could not establish trust relationship'              # -||-
       'Unable to connect'
       'The remote name could not be resolved'
