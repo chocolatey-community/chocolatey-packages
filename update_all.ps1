@@ -15,8 +15,9 @@ $Options = [ordered]@{
       'Unable to create secure channel'
       'Could not establish trust relationship'
       'Unable to connect'
+      'The remote name could not be resolved'
     )
-    #RepeatSleep   = 120                                    #How much to sleep between repeats in seconds, by default 0
+    RepeatSleep   = 250                                     #How much to sleep between repeats in seconds, by default 0
     #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
 
     Report = @{
