@@ -26,10 +26,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
-  try {
     update -ChecksumFor none
-  } catch {
-    if ($_ -match 'Could not create SSL/TLS secure channel') { return 'ignore' }
-    else { throw $_ }
-  }
 }

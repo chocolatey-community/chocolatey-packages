@@ -11,9 +11,4 @@ function global:au_SearchReplace {
     }
 }
 
-try {
-  update
-} catch {
-  if ($_ -match 'Could not create SSL/TLS secure channel') { return 'Ignore' }
-  else { throw $_ }
-}
+update
