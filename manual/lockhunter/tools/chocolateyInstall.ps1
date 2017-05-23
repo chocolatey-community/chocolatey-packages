@@ -11,7 +11,7 @@ $packageArgs = @{
   checksumType64         = 'sha256'
   silentArgs             = '/VERYSILENT'
   validExitCodes         = @(0)
-  softwareName           = 'LockHunter'
+  softwareName           = 'LockHunter*'
 }
 Install-ChocolateyPackage @packageArgs
 
