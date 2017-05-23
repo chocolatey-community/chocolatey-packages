@@ -73,5 +73,3 @@ function Get-AppInstallLocation {
 
     Write-Verbose "No location found"
 }
-
-Get-AppInstallLocation 'qBittorrent*'
