@@ -47,5 +47,6 @@ This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLi
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
