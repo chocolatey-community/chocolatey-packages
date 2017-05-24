@@ -19,7 +19,7 @@
       <dependency id="autoit.portable" version="3.3.14.2" />
     </dependencies>
     <releaseNotes>http://light-alloy.ru/download/</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/lightalloy</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/lightalloy</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
