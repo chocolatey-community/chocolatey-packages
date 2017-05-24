@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath     = Split-Path $MyInvocation.MyCommand.Definition
-$au3		   = Join-Path $toolsPath 'lightalloy.au3'
-$embedded_path = gi "$toolsDir\*.exe"
+$ahk		   = Join-Path $toolsPath 'lightalloy.ahk'
+$embedded_path = gi "$toolsPath\*.exe"
 
-Write-Output "Running AutoIt3 using `'$au3`'"
-Start-ChocolateyProcessAsAdmin "`"$au3`" `"$tempFile`"" 'AutoIt3.exe'
+Write-Output "Running AutoHotkey script"
+Start-ChocolateyProcessAsAdmin "`"$ahk`" `"$embedded_path`"" 'AutoHotkey.exe'
 
-ls $toolsDir\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}
