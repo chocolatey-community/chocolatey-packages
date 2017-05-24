@@ -2,8 +2,6 @@
 
 SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 
-This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLite SQL database engine in your system PATH. This package is only needed if you have software that expects the SQLite DLL in the PATH. If you just want to create or manage SQLite databases, install the [SQLite Shell](/packages/sqlite.shell) instead. A (proprietary, but free for non-commercial use) GUI tool to manage SQLite databases is [SQLite Administrator](/packages/sqliteadmin).
-
 ## Features
       
 - Transactions are atomic, consistent, isolated, and durable (ACID) even after system crashes and power failures.
