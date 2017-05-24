@@ -2,6 +2,8 @@
 
 SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 
+This package also installs sqlite tools by default - sqldiff, sqlite3, sqlite3_analyzer.
+
 ## Features
       
 - Transactions are atomic, consistent, isolated, and durable (ACID) even after system crashes and power failures.
@@ -17,8 +19,8 @@ SQLite is a software library that implements a self-contained, serverless, zero-
 - Self-contained: no external dependencies.
 - Cross-platform: Android, *BSD, iOS, Linux, Mac, Solaris, VxWorks, and Windows (Win32, WinCE, WinRT) are supported out of the box. Easy to port to other systems.
 - Sources are in the public domain. Use for any purpose.
-- omes with a standalone command-line interface (CLI) client that can be used to administer SQLite databases.
+- Comes with a standalone command-line interface (CLI) client that can be used to administer SQLite databases.
       
 ## Package parameters
 
-- `/NoTools` - Do not install sqlite tools (sqldiff, sqlite3, sqlite3_analyzer).
+- `/NoTools` - Do not install sqlite tools 
