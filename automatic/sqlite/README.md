@@ -1,17 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>SQLite</id>
-    <version>3.19.0</version>
-    <title>SQLite</title>
-    <owners>chocolatey</owners>
-    <authors>D. Richard Hipp, SQLite contributors</authors>
-    <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
-    <projectUrl>http://www.sqlite.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sqlite.svg</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+# <img src="" width="48" height="48"></img> [sqlite](https://chocolatey.org/packages/sqlite)
+
+SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 
 This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLite SQL database engine in your system PATH. This package is only needed if you have software that expects the SQLite DLL in the PATH. If you just want to create or manage SQLite databases, install the [SQLite Shell](/packages/sqlite.shell) instead. A (proprietary, but free for non-commercial use) GUI tool to manage SQLite databases is [SQLite Administrator](/packages/sqliteadmin).
 
@@ -33,19 +22,5 @@ This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLi
 - omes with a standalone command-line interface (CLI) client that can be used to administer SQLite databases.
       
 ## Package parameters
-</description>
-    <summary>A DLL for the SQLite SQL database engine installed in your user path.</summary>
-    <tags>sql sqlite db database embedded foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sqlite</packageSourceUrl>
-    <projectSourceUrl>http://www.sqlite.org/src</projectSourceUrl>
-    <bugTrackerUrl>https://www.sqlite.org/src/rptview?rn=1</bugTrackerUrl>
-    <docsUrl>https://sqlite.org/docs.html</docsUrl>
-    <releaseNotes>https://sqlite.org/changes.html</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey" version="0.9.10" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
-</package>
+
+- '/NoTools' - Do not install sqlite tools (sqldiff, sqlite3, sqlite3_analyzer).

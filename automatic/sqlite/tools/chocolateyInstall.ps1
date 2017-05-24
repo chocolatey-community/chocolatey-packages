@@ -1,40 +1,23 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
-$packageName    = 'sqlite'
-$url32          = 'https://sqlite.org/2017/sqlite-dll-win32-x86-3190000.zip'
-$url64          = $url32
-$checksum32     = '3102600d3ad67b0e3f132bc0f8e0e66d976ba3700c3cc96459b65a87fa57c373'
-$checksum64     = $checksum32
-$instDir        = "$(Get-ToolsLocation)\$packageName"
-
-# Detect if sqlite package uses old/deprecated installation path
-$oldInstDir = Join-Path $env:ChocolateyInstall 'bin'
-$sqliteFiles = @('sqlite3.dll', 'sqlite3.def')
-foreach ($file in $sqliteFiles) {
-    $oldFilePath = Join-Path $oldInstDir $file
-    if (Test-Path $oldFilePath) { $usesOldPath = $true }
-}
-if ($usesOldPath) {
-  Write-Host @"
-Old installation directory for $packageName detected: $oldInstDir
-If you want to use the new installation directory (ChocolateyBinRoot\$packageName),
-remove the old sqlite*.dll sqlite*.def files and reinstall this package with the -force parameter.
-"@
-    $instDir = $oldInstDir
-}
+$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
+$embedded_path = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
+         Write-Host "Installing 64 bit version"; gi "$toolsDir\*dll*win64*.zip"
+} else { Write-Host "Installing 32 bit version"; gi "$toolsDir\*dll*win32*.zip" }
 
 $packageArgs = @{
-  packageName    = $packageName
-  url            = $url32
-  url64Bit       = $url64
-  checksum       = $checksum32
-  checksum64     = $checksum64
-  checksumType   = 'sha256'
-  checksumType64 = 'sha256'
-  unzipLocation  = $instDir
+    PackageName  = 'sqlite'
+    FileFullPath = $embedded_path
+    Destination  = $toolsDir
 }
-Install-ChocolateyZipPackage @packageArgs
-if (!$usesOldPath) {
-    Install-ChocolateyPath $instDir 'Machine'
-    $env:Path = "$($env:Path);$instDir"
+ls $toolsDir\* | ? { $_.PSISContainer } | rm -Recurse -Force #remove older package dirs
+Get-ChocolateyUnzip @packageArgs
+
+$pp = Get-PackageParameters
+if (!$pp.NoTools) {
+    Write-Host "Installing tools"
+    $packageArgs.FileFullPath = gi "$toolsDir\*tools*win32*.zip"
+    Get-ChocolateyUnzip @packageArgs
 }
+
+rm $toolsDir\*.zip -ea 0
