@@ -42,7 +42,7 @@ This package installs the DLL (32-bit only, even on 64-bit systems) for the SQLi
     <docsUrl>https://sqlite.org/docs.html</docsUrl>
     <releaseNotes>https://sqlite.org/changes.html</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey" version="0.9.10" />
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
     </dependencies>
   </metadata>
   <files>
