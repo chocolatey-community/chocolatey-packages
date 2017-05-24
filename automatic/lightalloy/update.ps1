@@ -5,14 +5,14 @@ $releases = 'http://light-alloy.verona.im/download/'
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
-      "(?i)(^[$]url32\s*=\s*)('.*')" = "`$1'$($Latest.Url32)'"
-      "(?i)(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-    }
+      ".\legal\VERIFICATION.txt" = @{
+        "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
+        "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
+      }
   }
 }
 
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_GetLatest {
@@ -26,7 +26,4 @@ function global:au_GetLatest {
   }
 }
 
-Write-Host 'Moved to foshub, new updater is required that wil embedd the package'
-return 'ignore'
-
-update -ChecksumFor 32
+update -ChecksumFor none
