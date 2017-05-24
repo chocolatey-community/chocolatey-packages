@@ -35,7 +35,7 @@ function global:au_GetLatest {
   $url32 = $download_page.Links | ? href -match "win32\.exe$" | % select -first 1 -expand href
   $url64 = $download_page.Links | ? href -match "win64\.exe$" | % select -first 1 -expand href
   if (!$url32 -or !$url64) {
-    throw "Either 32-bit or 64-bit url is missing, ignoring for now"
+    Write-Host "Either 32-bit or 64-bit url is missing"; return 'ignore'
   } else {
     $version = $url -split '/' | select -Last 1 -Skip 1
     @{
@@ -47,9 +47,6 @@ function global:au_GetLatest {
   }
 }
 
-try {
+
 update -ChecksumFor none
-} catch {
-  if ($_ -match 'ignoring for now') { Write-Host "$_"; return 'ignore' }
-  else { throw $_ }
-}
+
