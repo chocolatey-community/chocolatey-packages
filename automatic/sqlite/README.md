@@ -21,4 +21,4 @@ SQLite is a software library that implements a self-contained, serverless, zero-
       
 ## Package parameters
 
-- '/NoTools' - Do not install sqlite tools (sqldiff, sqlite3, sqlite3_analyzer).
+- `/NoTools` - Do not install sqlite tools (sqldiff, sqlite3, sqlite3_analyzer).
