@@ -1,6 +1,5 @@
 # <img src="" width="48" height="48"></img> [ligthalloy](https://chocolatey.org/packages/lightalloy)
 
-
 Complete aesthetically pleasing video player with built-in codecs.
 
 ## Features
@@ -14,7 +13,7 @@ Complete aesthetically pleasing video player with built-in codecs.
 * Multilingual - Contains Dutch, German, Russian, Japanese, Chinese, and others
 * Blu-Ray and DVD - You also can watch Blu-Rays and DVDs with Light Alloy, but only if they are not encrypted
     
-![Light-Alloy screenshot](https://i.imgur.com/XDIgvS1.png)
+![Light-Alloy screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/727f4612/automatic/lightalloy/screenshot.png)
 
 ## Notes
 
