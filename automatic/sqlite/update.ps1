@@ -48,8 +48,12 @@ function global:au_GetLatest {
     # https://github.com/chocolatey/chocolatey-coreteampackages/issues/733
     if ($version32 -eq $version64) { $Version = $version32 }
     else {
-        if (url_exists ($url64 -replace 'win64', 'win32')) { $Version = $version64 }
-        elseif (url_exists ($url64 -replace 'win32', 'win64')) { $Version = $version32 }
+
+        $u32 = $url64 -replace 'win64', 'win32'
+        $u64 = $url64 -replace 'win32', 'win64'
+        
+        if (url_exists $u32)    { $Version = $version64; $url32 = $u32 }
+        elseif (url_exists $64) { $Version = $version32; $url64 = $u64 }
         else {
             Write-Host "Can't find common version for x32 and x64 architecture."
             return 'ignore'
