@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>SQLite</id>
-    <version>3.19.1</version>
+    <version>3.19.2</version>
     <title>SQLite</title>
     <owners>chocolatey</owners>
     <authors>D. Richard Hipp, SQLite contributors</authors>
