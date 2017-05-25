@@ -38,7 +38,7 @@ Complete aesthetically pleasing video player with built-in codecs.
       <dependency id="autohotkey.portable" version="1.1.25.02" />
     </dependencies>
     <releaseNotes>http://light-alloy.ru/download/</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/lightalloy</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/lightalloy</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

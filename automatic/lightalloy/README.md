@@ -14,7 +14,3 @@ Complete aesthetically pleasing video player with built-in codecs.
 * Blu-Ray and DVD - You also can watch Blu-Rays and DVDs with Light Alloy, but only if they are not encrypted
     
 ![Light-Alloy screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/727f4612/automatic/lightalloy/screenshot.png)
-
-## Notes
-
-- __Warning:__ The installer is not silent. `AutoIt` will automatically click through the installer. Be careful when doing something else while installing, you might mess up the automated click-through.
