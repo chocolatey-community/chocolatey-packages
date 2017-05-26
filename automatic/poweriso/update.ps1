@@ -23,4 +23,9 @@ function global:au_GetLatest {
     }
 }
 
-update
+try {
+  update
+} catch {
+  Write-Host "Ignored until someone can be bothered to fix the parsing"
+  return "ignore"
+}
