@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>cdex</id>
+    <title>CDex</title>
+    <version>1.82</version>
+    <authors>Ariane Paola Gomes,Georgy Berdyshev</authors>
+    <owners>chocolatey</owners>
+    <summary>CD-Ripper, extracting digital audio data from an Audio CD</summary>
+    <description>
+CDex can extract the data directly (digital) from an Audio CD, which is generally called a CD Ripper or a CDDA utility. The resulting audio file can be a plain WAV file (useful for making compilation audio CDs) or the ripped audio data can be compressed using an audio encoder such as MP3, FLAC, AAC, WMA or OGG.
+    </description>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdex</packageSourceUrl>
+    <projectUrl>http://cdex.mu/</projectUrl>
+    <tags>unattended audio cd ripper extract cdda encoder admin</tags>
+    <copyright>Ariane Paola Gomes, Georgy Berdyshev</copyright>
+    <licenseUrl>http://cdex.mu/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/5df5d849c2feb6a30225bad1f7a8e27d4cd2fa65/icons/cdex.png</iconUrl>
+    <releaseNotes>http://cdex.mu/</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
