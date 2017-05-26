@@ -1,18 +1,37 @@
-$packageName = 'WebStorm 2016.3'
-$programsDir = 'JetBrains';
-$extractionPath = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
-$installDir = Join-Path $extractionPath $programsDir
-$installVersionDir = Join-Path $installDir $packageName
+﻿$ErrorActionPreference = 'Stop'
 
-if (Test-Path ($installVersionDir)) {
-    $uninstallExe = (gci "${installDir}/$packageName/bin/Uninstall.exe").FullName | sort -Descending | Select -first 1
+$packageName = 'WebStorm'
+$softwareName = 'JetBrains WebStorm*'
+$installerType = 'exe'
 
-    $params = @{
-        PackageName = $packageName;
-        FileType = "exe";
-        SilentArgs = "/S";
-        File = $uninstallExe;
+$silentArgs = '/S'
+$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+
+if ($installerType -ne 'MSI') {
+    $validExitCodes = @(0)
+}
+
+$uninstalled = $false
+[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
+
+if ($key.Count -eq 1) {
+    $key | ForEach-Object {
+        $file = "$($_.UninstallString)"
+
+        Uninstall-ChocolateyPackage `
+          -PackageName $packageName `
+          -FileType $installerType `
+          -SilentArgs "$silentArgs" `
+          -ValidExitCodes $validExitCodes `
+          -File "$file"
     }
-
-    Uninstall-ChocolateyPackage @params
+}
+elseif ($key.Count -eq 0) {
+    Write-Warning "$packageName has already been uninstalled by other means."
+}
+elseif ($key.Count -gt 1) {
+    Write-Warning "$key.Count matches found!"
+    Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+    Write-Warning "Please alert package maintainer the following keys were matched:"
+    $key | ForEach-Object { Write-Warning "- $_.DisplayName" }
 }

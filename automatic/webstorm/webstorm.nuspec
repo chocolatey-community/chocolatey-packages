@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>webstorm</id>
-    <version>2017.1.1</version>
+    <version>2017.1.3.20170526</version>
     <title>JetBrains WebStorm</title>
     <authors>JetBrains</authors>
     <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
     <projectUrl>https://www.jetbrains.com/webstorm/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/06598317f9dfd0d48b3e74c636e4b04d3a88f017/icons/webstorm.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8edfc93894e9bdd11deb36d1cbbfe8a47a7b013a/icons/webstorm.png</iconUrl>
     <docsUrl>https://www.jetbrains.com/help/webstorm</docsUrl>
-    <summary>WebStorm - The Smartest JavaScript IDE</summary>
+    <summary>WebStorm — The smartest JavaScript IDE</summary>
     <releaseNotes>https://www.jetbrains.com/webstorm/whatsnew/</releaseNotes>
-    <tags>webstorm ide admin jetbrains developer productivity IDE HTML CSS JavaScript trial 30days</tags>
+    <tags>webstorm admin jetbrains trial 30days developer IDE HTML CSS JavaScript</tags>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/WEB</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-    Use the full power of the modern JavaScript ecosystem – WebStorm’s got you covered!
-    Enjoy the intelligent code completion, on-the-fly error detection, powerful navigation
-    and refactoring for JavaScript, TypeScript, stylesheet languages, and the most popular frameworks.
+WebStorm — The smartest JavaScript IDE. Lightweight yet powerful IDE,
+perfectly equipped for complex client-side development and server-side development with Node.js.
+Free 30 day Trial. Beyond that you need to purchase a license.
 
-    ## Features
-    - Web (Angular, React, Vue.js)
-    - Mobile (Ionic, Cordova, React Native)
-    - Server (Node.js, Meteor)
-    - Desktop (Electron)
-    - Debugger
-    - Seamless tool integration
-    - Unit testing
-    - Integration with VCS
+## Features
+- Web (Angular, React, Vue.js)
+- Mobile (Ionic, Cordova, React Native)
+- Server (Node.js, Meteor)
+- Desktop (Electron)
+- Debugger
+- Seamless tool integration
+- Unit testing
+- Integration with VCS
+- Integration with Jest
+- Support for Vue.js
+- Support for Standard Style
     </description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/webstorm</packageSourceUrl>
-    <owners>chocolatey,digitaldrummerj,the-running-dev</owners>
+    <owners>chocolatey,Xuanwo,the-running-dev</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>

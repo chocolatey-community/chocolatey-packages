@@ -1,24 +1,4 @@
-Import-Module AU
-
-function global:au_BeforeUpdate {
-    $Latest.ChecksumType32 = 'sha256'
-
-    Get-RemoteFiles -Purge
-
-    $file = Get-Item tools\*.exe | Select-Object -first 1
-    Remove-Item $file -Force -ErrorAction SilentlyContinue
-}
-
-function global:au_SearchReplace {
-    return @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^[$]installer\s*=\s*)('.*')" = "`$1'$([System.IO.Path]::GetFileName($Latest.Url32))'"
-            "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.Url32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-        }
-    }
-}
+﻿Import-Module AU
 
 function global:au_GetLatest {
     $productName = 'WebStorm'
@@ -31,6 +11,7 @@ function global:au_GetLatest {
         | ForEach-Object { $_.channel } | Where-Object { $_.id -eq 'WS_Release' } `
         | ForEach-Object { $_.build } `
         | Sort-Object { [version] $_.number } `
+        | Where-Object { $_.version -notmatch 'EAP' } `
         | Select-Object -Last 1
 
     $version = $versionInfo.Version
@@ -44,4 +25,14 @@ function global:au_GetLatest {
     return @{ Url32 = $downloadUrl; Version = $version }
 }
 
-Update -ChecksumFor None
+function global:au_SearchReplace {
+    return @{
+        ".\tools\chocolateyInstall.ps1" = @{
+            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.Url32)'"
+            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+        }
+    }
+}
+
+Update -ChecksumFor 32 -Force

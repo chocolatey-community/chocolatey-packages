@@ -1,12 +1,10 @@
 ﻿$ErrorActionPreference  = 'Stop'
-$downloadDir            = Get-PackageCacheLocation
-$installer              = 'WebStorm-2017.1.1.exe'
+
 $arguments              = @{
     packageName         =  $env:ChocolateyPackageName
-    softwareName        = 'WebStorm'
-    file                = Join-Path $downloadDir $installer
-    url                 = 'https://download.jetbrains.com/webstorm/WebStorm-2017.1.1.exe'
-    checksum            = '794D23C1E0947C330EE2B6CFB0AF17AB62DBCFA6FFF83B2439AB3B6114F87B48'
+    softwareName        = 'JetBrains WebStorm*'
+    url                 = 'https://download.jetbrains.com/webstorm/WebStorm-2017.1.3.exe'
+    checksum            = '35a09f65713c7b31f40efc355bef6370ee2541d561fb180f8a084411364ceba3'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = '/S'
