@@ -35,4 +35,4 @@ function global:au_SearchReplace {
     }
 }
 
-Update -ChecksumFor 32 -Force
+Update -ChecksumFor 32
