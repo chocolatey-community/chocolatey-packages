@@ -1,24 +1,25 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop';
 
-$toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  packageName            = 'hedgewars'
-  fileType               = 'exe'
-  url                    = 'http://download.gna.org/hedgewars/Hedgewars-0.9.22.exe'
-  checksum               = '42716d965037ae67022331f7ed1972e2a0289e97cee59df7b3bcc71de041180c'
-  checksumType           = 'sha256'
-  silentArgs             = '/S'
-  validExitCodes         = @(0)
-  softwareName           = 'hedgewars*'
+  packageName    = 'hedgewars'
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  softwareName   = 'hedgewars*'
+  silentArgs     = '/S'
+  validExitCodes = @(0)
 }
-Install-ChocolateyPackage @packageArgs
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
 
 $packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
-if ($installLocation)  {
-    Write-Host "$packageName installed to '$installLocation'"
-    Register-Application "$installLocation\$packageName.exe"
-    Write-Host "$packageName registered as $packageName"
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if ($installLocation) {
+  Write-Host "$packageName installed to '$installLocation'"
+  Register-Application "$installLocation\$packageName.exe"
+  Write-Host "$packageName registered as $packageName"
 }
 else { Write-Warning "Can't find $PackageName install location" }
