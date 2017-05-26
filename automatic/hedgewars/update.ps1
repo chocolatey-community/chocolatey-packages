@@ -1,28 +1,31 @@
 import-module au
 
-$releases = 'http://download.gna.org/hedgewars'
+$releases = 'https://www.hedgewars.org/download.html'
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
-        }
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
+      "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')" = "`$1'$($Latest.FileType)'"
     }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re  = '\.exe$'
     $url = $download_page.links | ? href -match $re | % href
-    $version = $url | % { ($_ -split '\.exe|-' | select -Index 1) } | ? { [version]::TryParse($_,[ref]($__))} | measure -max | % maximum
+    $Matches = $null
+    $verRe = '\>\s*Latest Hedgewars Release ([\d]+\.[\d\.]+)\s*\<'
+    $download_page.Content -match $verRe | Out-Null
+    if ($Matches) { $version = $Matches[1] }
     @{
         Version = $version
-        URL32   = "http://download.gna.org/hedgewars/Hedgewars-${version}.exe"
+        URL32   = $url
     }
 }
 
