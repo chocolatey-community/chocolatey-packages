@@ -5,7 +5,7 @@ $packageArgs  = @{
   packageName    = $env:chocolateyPackageName
   softwareName   = 'Ant Renamer'
   fileType       = 'exe'
-  file           = "$toolsPath\"
+  file           = "$toolsPath\antrenamer2_install.exe"
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0)
 }

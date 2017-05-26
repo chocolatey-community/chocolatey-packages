@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ant-renamer</id>
-    <version>2.12.0.20161011</version>
+    <version>2.12.0.20170526</version>
     <title>Ant Renamer</title>
     <owners>chocolatey</owners>
     <authors>Antoine Potten</authors>
@@ -13,7 +13,9 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ant-renamer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy</description>
+    <description>
+Ant Renamer is a free (really free, i. e. the source code is available) program that makes easier the renaming of lots of files and folders by using specified settings. It supports Unicode names.
+</description>
     <summary>Rename multiple files easily</summary>
     <releaseNotes>
 [Software Changelog](http://www.antp.be/software/renamer/history)
