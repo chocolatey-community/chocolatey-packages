@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromium</id>
-    <version>60.0.3112.0</version>
+    <version>61.0.3113.0</version>
     <title>Chromium snapshots build</title>
     <owners>chocolatey</owners>
     <authors>The Chromium Authors</authors>
