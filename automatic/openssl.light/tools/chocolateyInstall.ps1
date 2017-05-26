@@ -12,8 +12,8 @@ else {
 $packageArgs = @{
   packageName    = 'OpenSSL.Light'
   fileType       = 'exe'
-  file           = "$toolsPath\Win32OpenSSL_Light-1_1_0e.exe"
-  file64         = "$toolsPath\Win64OpenSSL_Light-1_1_0e.exe"
+  file           = "$toolsPath\Win32OpenSSL_Light-1_1_0f.exe"
+  file64         = "$toolsPath\Win64OpenSSL_Light-1_1_0f.exe"
   softwareName   = 'OpenSSL*Light*'
   silentArgs     = $silentArgs
   validExitCodes = @(0)
