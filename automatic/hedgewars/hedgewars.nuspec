@@ -8,7 +8,7 @@
     <owners>chocolatey</owners>
     <authors>Hedgewars Team</authors>
     <tags>game foss cross-platform turn-based strategy artillery admin</tags>
-    <licenseUrl>http://www.hedgewars.org/about.html</licenseUrl>
+    <licenseUrl>https://hg.hedgewars.org/hedgewars/file/90e43d1bcd5b/COPYING</licenseUrl>
     <projectUrl>http://www.hedgewars.org/</projectUrl>
     <projectSourceUrl>http://hg.hedgewars.org/hedgewars</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
