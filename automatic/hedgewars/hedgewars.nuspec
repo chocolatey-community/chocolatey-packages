@@ -9,8 +9,8 @@
     <authors>Hedgewars Team</authors>
     <tags>game foss cross-platform turn-based strategy artillery admin</tags>
     <licenseUrl>https://hg.hedgewars.org/hedgewars/file/90e43d1bcd5b/COPYING</licenseUrl>
-    <projectUrl>http://www.hedgewars.org/</projectUrl>
-    <projectSourceUrl>http://hg.hedgewars.org/hedgewars</projectSourceUrl>
+    <projectUrl>https://www.hedgewars.org/</projectUrl>
+    <projectSourceUrl>https://hg.hedgewars.org/hedgewars</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Hedgewars is a turn based strategy, artillery, action and comedy game, featuring the antics of pink hedgehogs with attitude as they battle from the depths of hell to the depths of space.
@@ -18,7 +18,7 @@ Hedgewars is a turn based strategy, artillery, action and comedy game, featuring
 As commander, it's your job to assemble your crack team of hedgehog soldiers and bring the war to your enemy.
     </description>
     <summary>Hedgewars is a turn based strategy, artillery, action and comedy game.</summary>
-    <releaseNotes>http://hg.hedgewars.org/hedgewars/file/c680b7db1e2e/ChangeLog.txt</releaseNotes>
+    <releaseNotes>https://hg.hedgewars.org/hedgewars/file/c680b7db1e2e/ChangeLog.txt</releaseNotes>
     <copyright>© 2004-2015 Hedgewars Project</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/hedgewars</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/hedgewars.png</iconUrl>
