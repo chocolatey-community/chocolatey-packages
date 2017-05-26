@@ -1,16 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs  = @{
   packageName    = $env:chocolateyPackageName
-  fileType       = 'exe'
   softwareName   = 'Ant Renamer'
-
-  checksum       = ''
-  checksumType   = ''
-  url            = ''
-
+  fileType       = 'exe'
+  file           = "$toolsPath\"
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
