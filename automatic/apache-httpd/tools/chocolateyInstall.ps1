@@ -1,71 +1,67 @@
-$ErrorActionPreference = 'Stop';
-
-$packageName  = $env:chocolateyPackageName
-$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-
-$installLocation = GetInstallLocation $toolsPath "Apache/httpd-$env:chocolateyPackageVersion"
-$serviceName = "Apache"
+$packageName = $env:chocolateyPackageName
+$vcNumber = "14"
+$releaseNumber = "0"
 
 if(!$PSScriptRoot){ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
 $optionsFile = (Join-Path $PSScriptRoot 'options.xml')
 
-if ($installLocation) {
-  Write-Host "Uninstalling previous version of apache-httpd..."
-  UninstallPackage -libDirectory "$toolsPath\.." -packageName $env:chocolateyPackageName
-  Uninstall-ChocolateyPath $installLocation
+#http://www.apachehaus.com/downloads/httpd-2.4.25-x64-vc14-r1.zip
+$unzipParameters = @{
+    packageName = $env:chocolateyPackageName
+    url = "http://www.apachehaus.com/downloads/httpd-$($env:chocolateyPackageVersion)-x86-vc$vcNumber.zip" 
+    url64bit = "http://www.apachehaus.com/downloads/httpd-$($env:chocolateyPackageVersion)-x64-vc$vcNumber.zip" 
+    checksum = '9132c1aabdaacaf96895cb247f171c1ea4125eda';
+    checksumType = 'sha1';
+    checksum64 = '3064f9a2df8dd8a86a0c2619c5128eac58d3c0e4';
+    checksumType64 = 'sha1';
 }
 
-if ($installLocation) {
-  Write-Host "Uninstalling previous version of apache-httpd..."
-  UninstallPackage -libDirectory "$toolsPath\.." -packageName $env:chocolateyPackageName
-  Uninstall-ChocolateyPath $installLocation
-}
+$arguments = @{}
 
-$pp = Get-PackageParameters
+# Now we can use the $env:chocolateyPackageParameters inside the Chocolatey package
+$packageParameters = $env:chocolateyPackageParameters
 
-$downloadInfo = GetDownloadInfo -downloadInfoFile "$toolsPath\downloadInfo.csv" -parameters $pp
+# Default value
+$InstallationPath = Join-Path (Get-BinRoot) "Apache/httpd-$env:chocolateyPackageVersion"
+$serviceName = "Apache"
 
-$packageArgs = @{
-  packageName   = $packageName
-  url            = $downloadInfo.URL32
-  url64Bit       = $downloadInfo.URL64
-  checksum       = $downloadInfo.Checksum32
-  checksum64     = $downloadInfo.Checksum64
-  checksumType   = 'sha1'
-  checksumType64 = 'sha1'
-}
+# Now parse the packageParameters using good old regular expression
+if ($packageParameters) {
+    $match_pattern = "\/(?<option>([a-zA-Z0-9]+)):(?<value>([`"'])?([a-zA-Z0-9- \(\)\s_\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
+    $option_name = 'option'
+    $value_name = 'value'
 
-$newInstallLocation = $packageArgs.unzipLocation = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
-
-Write-Debug "Installing to $installLocation, creating service $serviceName"
-
-Install-ChocolateyInstallPackage @packageArgs
-
-if (!$pp.DontAddToPath) {
-  Install-ChocolateyPath $newInstallLocation
-}
-
-$htdocs_path = $newInstallLocation + '/htdocs'
-$conf_path = $newInstallLocation + '/conf'
-
-if ($installLocation -ne $newInstallLocation) {
-    if  (Test-Path "$installLocation\htdocs") {
-        Write-Host "Moving old htdocs folder."
-        Move-Item "$installLocation\htdocs" "$htdocs_path"
+    if ($packageParameters -match $match_pattern ){
+        $results = $packageParameters | Select-String $match_pattern -AllMatches
+        $results.matches | % {
+        $arguments.Add(
+            $_.Groups[$option_name].Value.Trim(),
+            $_.Groups[$value_name].Value.Trim())
+        }
     }
-    if (Test-Path "$installLocation\conf") {
-      Write-Host "Moving old conf folder."
-      Move-Item "$installLocation\conf" "$conf_path"
+    else
+    {
+        Throw "Package Parameters were found but were invalid (REGEX Failure)"
     }
 
-    $di = Get-ChildItem $installLocation -ea 0 | Measure-Object
-    if ($di.Count -eq 0) {
-    Write-Host "Removing old install location."
-    Remove-Item -Force -ea 0 $installLocation
+    if ($arguments.ContainsKey("unzipLocation")) {
+        Write-Host "InstallationPath Argument Found"
+        $InstallationPath = $arguments["unzipLocation"]
     }
+    if ($arguments.ContainsKey("serviceName")) {
+        Write-Host "ServiceName Argument Found"
+        $serviceName = $arguments["serviceName"]
+    }
+} else {
+    Write-Debug "No Package Parameters Passed in"
 }
 
-$binPath = (Join-Path $installLocation 'Apache24\bin')
+
+Write-Debug "Installing to $InstallationPath, creating service $serviceName"
+
+Install-ChocolateyZipPackage @unzipParameters -UnzipLocation $InstallationPath
+
+$binPath = (Join-Path $InstallationPath 'Apache24\bin')
 
 Write-Debug "Installing Service $binPath : $serviceName"
 
@@ -75,7 +71,7 @@ Pop-Location
 
 $options = @{
     version = $env:chocolateyPackageVersion;
-    unzipLocation = $installLocation;
+    unzipLocation = $InstallationPath;
     serviceName = $serviceName;
 }
 
