@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>apache-httpd</id>
+    <version>2.4.25</version>
+    <title>Apache HTTP Server Project</title>
+     <authors>Apache Software Foundation</authors>
+    <owners>rgra</owners>
+    <licenseUrl>http://www.apache.org/licenses</licenseUrl>
+    <projectUrl>http://httpd.apache.org</projectUrl>
+    <docsUrl>http://httpd.apache.org/docs/2.4</docsUrl>
+    <iconUrl>https://cdn.rawgit.com/rgra/choco-packages/8b2d9f8f121f4331f2984c28089bf25ec20bcc1e/apache-httpd/feather.png</iconUrl>
+    <bugTrackerUrl>http://httpd.apache.org/bug_report.html</bugTrackerUrl>
+    <releaseNotes>http://httpd.apache.org/docs/2.4/new_features_2_4.html</releaseNotes >
+    <packageSourceUrl>https://github.com/rgra/choco-packages/tree/master/apache-httpd</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+       <dependency id="vcredist2015" version="14.0" />
+       <dependency id="chocolatey-core.extension" version="1.0.5" />
+   </dependencies>
+    <summary>The Apache HTTP Server Project is a collaborative software development effort aimed at creating a robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server.</summary>
+    <description>Apache HTTP Web Server for Windows.
+
+### Note
+
+This package will unzip the latest windows binary provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL on Visual Studio 2012 (VC11): 
+with OpenSSL 1.0.2g, nghttp 1.9.2, Zlib 1.2.8 (mod_deflate), PCRE 8.38, APR 1.5.2, APR-Util 1.5.4, IPv6 and TLS SNI enabled
+
+The complete path of the package will be ''%unzipLocation%\Apache24'' (default: C:\tools\Apache\httpd-2.4.25\Apache24).
+
+A service with a given name is created with the default config location.
+
+This package needs either a Java Runtime to run. The package has no dependencies to a java runtime to give a choice to install JRE, JDK or Server JRE.
+
+### Parameters
+
+The following package parameters can be set:
+
+ * `/unzipLocation` - Unzip to a different destination folder. Default: C:\tools\Apache\httpd-2.4.25
+ * `/serviceName` - The name of the windows service which will be create. Default: Apache
+
+These parameters can be passed to the installer with the use of `-packageParameters `.
+For example: choco install apache-httpd `-packageParameters '"/unzipLocation:C:\tools\Server /serviceName:Apache"'`.
+
+### Install
+</description>
+    <tags>apache httpd webserver admin</tags>
+  </metadata>
+</package>
