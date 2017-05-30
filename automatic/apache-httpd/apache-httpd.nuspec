@@ -1,18 +1,19 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>apache-httpd</id>
     <version>2.4.25</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
-    <owners>rgra</owners>
+    <owners>chocolatey, rgra</owners>
     <licenseUrl>http://www.apache.org/licenses</licenseUrl>
     <projectUrl>http://httpd.apache.org</projectUrl>
     <docsUrl>http://httpd.apache.org/docs/2.4</docsUrl>
-    <iconUrl>https://cdn.rawgit.com/rgra/choco-packages/8b2d9f8f121f4331f2984c28089bf25ec20bcc1e/apache-httpd/feather.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/automatic/8b2d9f8f121f4331f2984c28089bf25ec20bcc1e/apache-httpd/feather.png</iconUrl>
     <bugTrackerUrl>http://httpd.apache.org/bug_report.html</bugTrackerUrl>
     <releaseNotes>http://httpd.apache.org/docs/2.4/new_features_2_4.html</releaseNotes >
-    <packageSourceUrl>https://github.com/rgra/choco-packages/tree/master/apache-httpd</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/apache-httpd</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
        <dependency id="vcredist2015" version="14.0" />
@@ -46,4 +47,7 @@ For example: choco install apache-httpd `-packageParameters '"/unzipLocation:C:\
 </description>
     <tags>apache httpd webserver admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
