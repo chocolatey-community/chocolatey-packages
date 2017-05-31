@@ -1,7 +1,8 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://www.hedgewars.org/download.html'
+$domain   = 'https://www.hedgewars.org'
+$releases = "$domain/download.html"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -27,7 +28,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re  = '\.exe$'
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url = $download_page.links | ? href -match $re | select -First 1 -expand href | % {
+      if ($_.StartsWith("/")) { $domain + $_ }
+      else { $_ }
+    }
     $Matches = $null
     $verRe = '\>\s*Latest Hedgewars Release ([\d]+\.[\d\.]+)\s*\<'
     $download_page.Content -match $verRe | Out-Null

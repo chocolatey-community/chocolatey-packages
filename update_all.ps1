@@ -27,7 +27,7 @@ $Options = [ordered]@{
       'The operation has timed out'
       'Internal Server Error'
     )
-    RepeatSleep   = 250                                     #How much to sleep between repeats in seconds, by default 0
+    #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
     #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
 
     Report = @{
