@@ -1,78 +1,60 @@
-$packageName = $env:chocolateyPackageName
-$vcNumber = "14"
-$releaseNumber = "0"
+$PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 
-if(!$PSScriptRoot){ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
-$optionsFile = (Join-Path $PSScriptRoot 'options.xml')
+. (Join-Path $PSScriptRoot 'Helpers.ps1')
 
-#http://www.apachehaus.com/downloads/httpd-2.4.25-x64-vc14-r1.zip
-$unzipParameters = @{
-    packageName = $env:chocolateyPackageName
-    url = "http://www.apachehaus.com/downloads/httpd-$($env:chocolateyPackageVersion)-x86-vc$vcNumber.zip" 
-    url64bit = "http://www.apachehaus.com/downloads/httpd-$($env:chocolateyPackageVersion)-x64-vc$vcNumber.zip" 
-    checksum = '9132c1aabdaacaf96895cb247f171c1ea4125eda';
-    checksumType = 'sha1';
-    checksum64 = '3064f9a2df8dd8a86a0c2619c5128eac58d3c0e4';
-    checksumType64 = 'sha1';
+$configFile = Join-Path $env:chocolateyPackageFolder 'config.json'
+
+$packageArgs = @{
+    packageName     = $env:chocolateyPackageName
+    url             = 'https://www.apachehaus.com/downloads/httpd-2.4.25-x86-vc14-r1.zip'
+    url64           = 'https://www.apachehaus.com/downloads/httpd-2.4.25-x64-vc14-r1.zip'
+    checksum        = 'c3a64bfe00303c89412df0764b80be0540b03f2ccdb73cdfe5256e9eeb0744fd'
+    checksum64      = '449355e68fac3d7da6bc703fd1c29be903dd990295b78f85ae67d5c628c09e61'
+    checksumType    = 'sha256'
+    checksumType64  = 'sha256'
+    unzipLocation   = $env:chocolateyPackageFolder
+    installLocation = $env:APPDATA
+    port            = 80
+    serviceName     = 'Apache'
 }
 
-$arguments = @{}
-
-# Now we can use the $env:chocolateyPackageParameters inside the Chocolatey package
-$packageParameters = $env:chocolateyPackageParameters
-
-# Default value
-$InstallationPath = Join-Path (Get-BinRoot) "Apache/httpd-$env:chocolateyPackageVersion"
-$serviceName = "Apache"
-
-# Now parse the packageParameters using good old regular expression
-if ($packageParameters) {
-    $match_pattern = "\/(?<option>([a-zA-Z0-9]+)):(?<value>([`"'])?([a-zA-Z0-9- \(\)\s_\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
-    $option_name = 'option'
-    $value_name = 'value'
-
-    if ($packageParameters -match $match_pattern ){
-        $results = $packageParameters | Select-String $match_pattern -AllMatches
-        $results.matches | % {
-        $arguments.Add(
-            $_.Groups[$option_name].Value.Trim(),
-            $_.Groups[$value_name].Value.Trim())
-        }
-    }
-    else
-    {
-        Throw "Package Parameters were found but were invalid (REGEX Failure)"
-    }
-
-    if ($arguments.ContainsKey("unzipLocation")) {
-        Write-Host "InstallationPath Argument Found"
-        $InstallationPath = $arguments["unzipLocation"]
-    }
-    if ($arguments.ContainsKey("serviceName")) {
-        Write-Host "ServiceName Argument Found"
-        $serviceName = $arguments["serviceName"]
-    }
-} else {
-    Write-Debug "No Package Parameters Passed in"
+$packageParameters = Get-PackageParameters
+if ($packageParameters.installLocation) {
+    $packageArgs.installLocation = $packageParameters.installLocation
+}
+if ($packageParameters.port) {
+    $packageArgs.port = $packageParameters.port
+}
+if ($packageParameters.serviceName) {
+    $packageArgs.serviceName = $packageParameters.serviceName
 }
 
-
-Write-Debug "Installing to $InstallationPath, creating service $serviceName"
-
-Install-ChocolateyZipPackage @unzipParameters -UnzipLocation $InstallationPath
-
-$binPath = (Join-Path $InstallationPath 'Apache24\bin')
-
-Write-Debug "Installing Service $binPath : $serviceName"
-
-Push-Location $binPath
-Start-ChocolateyProcessAsAdmin ".\httpd.exe -k install -n '$($serviceName)'"
-Pop-Location
-
-$options = @{
-    version = $env:chocolateyPackageVersion;
-    unzipLocation = $InstallationPath;
-    serviceName = $serviceName;
+if (-not (Assert-TcpPortIsOpen $packageArgs.port)) {
+    throw 'Please specify a different port number...'
 }
 
-Export-CliXml -Path $optionsFile -InputObject $options
+Install-ChocolateyZipPackage @packageArgs
+
+$apacheDir = Get-ChildItem $packageArgs.unzipLocation -Directory -Filter 'Apache*'
+
+Move-Item $apacheDir.FullName $packageArgs.installLocation
+
+$apacheDir = Join-Path $packageArgs.installLocation $apacheDir.BaseName
+$httpdConfPath = Join-Path $apacheDir 'conf\httpd.conf'
+$httpdPath = Join-Path $apacheDir 'bin\httpd.exe'
+
+# Set the server root and port number
+$httpConf = Get-Content $httpdConfPath
+$httpConf = $httpConf -replace 'Define SRVROOT.*', "Define SRVROOT ""$($apacheDir -replace '\\', '/')"""
+$httpConf = $httpConf -replace 'Listen 80', "Listen $($packageArgs.port)"
+Set-Content -Path $httpdConfPath -Value $httpConf
+
+& $httpdPath -k install -n "$($packageArgs.serviceName)"
+
+$config = @{
+    installLocation = $apacheDir
+    httpdPath       = $httpdPath
+    serviceName     = $packageArgs.serviceName
+}
+
+Set-Content $configFile -Value ($config | ConvertTo-Json)
