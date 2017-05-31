@@ -7,8 +7,8 @@ function global:au_GetLatest {
     $downloadPageUrl = 'http://www.apachehaus.com/cgi-bin/download.plx'
     $vcNumber = "14"
     $versionRegEx = 'httpd\-([0-9\.]+)\-x\d+\-(.*)\.zip'
-    $url32 = 'http://www.apachehaus.com/downloads/httpd-$version-x86-vc$vcNumber.zip'
-    $url64 = 'http://www.apachehaus.com/downloads/httpd-$version-x64-vc$vcNumber.zip'
+    $url32 = 'http://www.apachehaus.com/downloads/httpd-$version-x86-$vcNumber.zip'
+    $url64 = 'http://www.apachehaus.com/downloads/httpd-$version-x64-$vcNumber.zip'
 
     $downloadPage = Invoke-WebRequest $downloadPageUrl -UseBasicParsing
     $matches = [regex]::match($downloadPage.Content, $versionRegEx)
