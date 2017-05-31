@@ -1,6 +1,6 @@
 $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 
-. (Join-Path $PSScriptRoot 'Helpers.ps1')
+. (Join-Path $PSScriptRoot 'helpers.ps1')
 
 $configFile = Join-Path $env:chocolateyPackageFolder 'config.json'
 
