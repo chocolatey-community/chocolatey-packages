@@ -6,8 +6,8 @@ function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 function global:au_GetLatest {
     $downloadPageUrl = 'http://www.apachehaus.com/cgi-bin/download.plx'
     $versionRegEx = 'httpd\-([0-9\.]+)\-x\d+\-(.*)\.zip'
-    $url32 = 'http://www.apachehaus.com/downloads/httpd-$version-x86-$vcNumber-r1.zip'
-    $url64 = 'http://www.apachehaus.com/downloads/httpd-$version-x64-$vcNumber-r1.zip'
+    $url32 = 'http://www.apachehaus.com/downloads/httpd-$version-x86-$vcNumber.zip'
+    $url64 = 'http://www.apachehaus.com/downloads/httpd-$version-x64-$vcNumber.zip'
 
     $downloadPage = Invoke-WebRequest $downloadPageUrl -UseBasicParsing
     $matches = [regex]::match($downloadPage.Content, $versionRegEx)
