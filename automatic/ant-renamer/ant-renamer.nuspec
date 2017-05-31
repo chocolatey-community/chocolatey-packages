@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ant-renamer</id>
-    <version>2.12.0.20161011</version>
+    <version>2.12.0.20170526</version>
     <title>Ant Renamer</title>
     <owners>chocolatey</owners>
     <authors>Antoine Potten</authors>
     <licenseUrl>http://www.gnu.org/licenses/gpl.txt</licenseUrl>
     <projectUrl>http://www.antp.be/software/renamer</projectUrl>
+    <mailingListUrl>http://forum.antp.be/phpbb2/index.php?c=5</mailingListUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ant-renamer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Ant Renamer is a free (really free, i. e. the source code is available) program that makes easier the renaming of lots of files and folders by using specified settings. It supports Unicode names.
-    </description>
+</description>
     <summary>Rename multiple files easily</summary>
-    <releaseNotes>http://www.antp.be/software/renamer/history</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://www.antp.be/software/renamer/history)
+[Package Changelog](https://github.com/Chocolatey/chocolatey-coreteampackages/blob/master/automatic/ant-renamer/Changelog.md)
+    </releaseNotes>
     <copyright>Antoine Potten</copyright>
-    <tags>renamer foss regex admin</tags>
+    <tags>ant-renamer renamer foss regex admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ant-renamer</packageSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

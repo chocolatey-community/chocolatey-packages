@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3.exe
-   x64: https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe
+   x32: https://github.com/oneclick/rubyinstaller2/releases/download/2.4.1-1/rubyinstaller-2.4.1-1-x86.exe
+   x64: https://github.com/oneclick/rubyinstaller2/releases/download/2.4.1-1/rubyinstaller-2.4.1-1-x64.exe
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 43110F9BCD8A067D69409507CAD6A43F1FCF05E8BD64D096DD9DF47475DE50F3
-   checksum64: 3D0A4AD06C5503E1CB88827443593969E689AC96B5161140B08F0BECB7B792CF
+   checksum32: 40E235DEAFD39902823386B212D144E1984EED422650765A98988913346C055A
+   checksum64: 9073B5009655E6FD79BDBCCF21CA7488CE024113C385DEF69438C6B2FBA8EE25
 
 Using AU:
 
-   Get-RemoteChecksum https://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-2.3.3-x64.exe
+   Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/2.4.1-1/rubyinstaller-2.4.1-1-x64.exe
 
 File 'license.txt' is obtained from:
    https://raw.githubusercontent.com/oneclick/rubyinstaller/master/LICENSE.txt

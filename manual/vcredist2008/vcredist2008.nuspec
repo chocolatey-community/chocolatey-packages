@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+
+<!-- IconUrl: Skip check -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>vcredist2008</id>
+    <version>9.0.30729.6161</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2008</packageSourceUrl>
+    <owners>chocolatey, dtgm</owners>
+    <title>Microsoft Visual C++ 2008 SP1 Redistributable Package</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/download/details.aspx?id=26368</projectUrl>
+    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
+    <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
+    <tags>microsoft visual c++ redistributable 2008 admin</tags>
+    <summary>Runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP)</summary>
+    <description> </description>
+    <releaseNotes>
+    - MFC Security Update: A security issue has been identified leading to MFC application vulnerability in DLL planting due to MFC not specifying the full path to system/localization DLLs. You can protect your computer by installing this update from Microsoft. After you install this item, you may have to restart.
+    - KB Article: [KB2538243](http://support.microsoft.com/kb/2538243)
+    - Security bulletin: [MS11-025](http://technet.microsoft.com/security/Bulletin/MS11-025)
+    - Microsoft published: 6/7/2011
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

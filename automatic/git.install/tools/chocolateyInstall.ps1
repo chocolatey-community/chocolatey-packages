@@ -28,4 +28,4 @@ $installLocation = Get-AppInstallLocation $packageArgs.SoftwareName
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
 Write-Host "$packageName installed to '$installLocation'"
 
-Remove-Item -Force $filePath32, $filePath64 -ea 0
+$filePath32, $filepath64 | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}

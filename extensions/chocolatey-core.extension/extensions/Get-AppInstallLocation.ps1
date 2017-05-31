@@ -1,3 +1,4 @@
+. "$PSScriptRoot\Get-UninstallRegistryKey.ps1"
 <#
 .SYNOPSIS
     Get application install location
@@ -45,7 +46,7 @@ function Get-AppInstallLocation {
 
         Write-Verbose "Trying Uninstall key property 'UninstallString'"
         $location = $key.UninstallString
-        if ($location) { $location = $location.Replace('"', '') | Split-Path $location }
+        if ($location) { $location = $location.Replace('"', '') | Split-Path }
         if ($location -and (Test-Path $location))  { return strip $location }
 
         Write-Verbose "Trying Uninstall key property 'DisplayIcon'"

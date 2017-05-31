@@ -1,27 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'lightalloy'
-$url32 = 'http://light-alloy.ru/LA_Setup_v4.9.2.exe'
-$checksum32  = 'bdfd3e9bc9f22a55377970769e29dd8535ca3003aff0d69e2d39cfec3000a43d'
+$toolsPath     = Split-Path $MyInvocation.MyCommand.Definition
+$ahk		   = Join-Path $toolsPath 'lightalloy.ahk'
+$embedded_path = gi "$toolsPath\*.exe"
 
-$pwd			= "$(split-path -parent $MyInvocation.MyCommand.Definition)"
-$au3			= Join-Path $pwd 'lightalloy.au3'
+Write-Output "Running AutoHotkey script"
+Start-ChocolateyProcessAsAdmin "`"$ahk`" `"$embedded_path`"" 'AutoHotkey.exe'
 
-# Need some AutoIt3 wizardry because installer is not silent
-$chocTempDir	= Join-Path $env:TEMP "chocolatey"
-$tempDir		= Join-Path $chocTempDir "$packageName"
-$tempFile		= Join-Path $tempDir "$packageName.installer.exe"
-if (![System.IO.Directory]::Exists($tempDir)) {[System.IO.Directory]::CreateDirectory($tempDir)}
-
-$packageArgs = @{
-  packageName    = $packageName
-  fileFullPath   = $tempFile
-  url            = $url32
-  checksum       = $checksum32
-  checksumType   = 'sha256'
-}
-
-Get-ChocolateyWebFile @packageArgs
-
-Write-Output "Running AutoIt3 using `'$au3`'"
-Start-ChocolateyProcessAsAdmin "`"$au3`" `"$tempFile`"" 'AutoIt3.exe'
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}

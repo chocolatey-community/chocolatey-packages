@@ -1,7 +1,7 @@
 import-module au
 import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
-$releases = 'http://www.samsung.com/us/sidesync'
+$releases = 'http://www.samsung.com/global/download/Sidesyncwin'
 
 function global:au_SearchReplace {
    @{
@@ -17,11 +17,11 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-    $re   = '\.exe$'
-    $url  = $download_page.links | ? href -match $re | select -First 1 -expand href
-    $url  = "https://www.samsung.com/$url"
+    $download_page = Invoke-WebRequest -Uri $releases
+    $url = ($download_page.AllElements |  ? tagName -eq 'meta' | % content) -split 'URL=' | select -Last 1
+    $url = $url -replace '&amp;', '&'
+    $download_page = iwr $url -MaximumRedirection 0 -ea 0 -UseBasicParsing
+    $url = $download_page.links.href
     $version  = $url -split '_|.exe' | select -Last 1 -skip 1
 
     @{
