@@ -1,4 +1,7 @@
 ﻿Import-Module AU
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme }
 
 function global:au_GetLatest {
     $productName = 'WebStorm'
@@ -20,9 +23,10 @@ function global:au_GetLatest {
         $version = "$($version).$($versionInfo.ReleaseDate)"
     }
 
-    $downloadUrl = $ExecutionContext.InvokeCommand.ExpandString($downloadUrl)
+    # Expands the URL into https://download.jetbrains.com/webstorm/WebStorm-2017.1.3.exe
+    $url = $ExecutionContext.InvokeCommand.ExpandString($downloadUrl)
 
-    return @{ Url32 = $downloadUrl; Version = $version }
+    return @{ Url32 = $url; Version = $version }
 }
 
 function global:au_SearchReplace {

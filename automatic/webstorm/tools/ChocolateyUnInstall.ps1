@@ -5,13 +5,8 @@ $softwareName = 'JetBrains WebStorm*'
 $installerType = 'exe'
 
 $silentArgs = '/S'
-$validExitCodes = @(0, 3010, 1605, 1614, 1641)
+$validExitCodes = @(0)
 
-if ($installerType -ne 'MSI') {
-    $validExitCodes = @(0)
-}
-
-$uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 
 if ($key.Count -eq 1) {
@@ -19,11 +14,11 @@ if ($key.Count -eq 1) {
         $file = "$($_.UninstallString)"
 
         Uninstall-ChocolateyPackage `
-          -PackageName $packageName `
-          -FileType $installerType `
-          -SilentArgs "$silentArgs" `
-          -ValidExitCodes $validExitCodes `
-          -File "$file"
+            -PackageName $packageName `
+            -FileType $installerType `
+            -SilentArgs "$silentArgs" `
+            -ValidExitCodes $validExitCodes `
+            -File "$file"
     }
 }
 elseif ($key.Count -eq 0) {

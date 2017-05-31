@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>webstorm</id>
-    <version>2017.1.3.20170526</version>
+    <version>2017.1.3.20170531</version>
     <title>JetBrains WebStorm</title>
     <authors>JetBrains</authors>
     <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
@@ -12,13 +12,11 @@
     <docsUrl>https://www.jetbrains.com/help/webstorm</docsUrl>
     <summary>WebStorm — The smartest JavaScript IDE</summary>
     <releaseNotes>https://www.jetbrains.com/webstorm/whatsnew/</releaseNotes>
-    <tags>webstorm admin jetbrains trial 30days developer IDE HTML CSS JavaScript</tags>
+    <tags>webstorm admin jetbrains trial 30days developer IDE HTML CSS JavaScript cross-platform</tags>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/WEB</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-WebStorm — The smartest JavaScript IDE. Lightweight yet powerful IDE,
+    <description>WebStorm — The smartest JavaScript IDE. Lightweight yet powerful IDE,
 perfectly equipped for complex client-side development and server-side development with Node.js.
-Free 30 day Trial. Beyond that you need to purchase a license.
 
 ## Features
 - Web (Angular, React, Vue.js)
@@ -32,10 +30,13 @@ Free 30 day Trial. Beyond that you need to purchase a license.
 - Integration with Jest
 - Support for Vue.js
 - Support for Standard Style
-    </description>
+
+## Notes
+- Free 30 day Trial. Beyond that you need to purchase a license.
+</description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/webstorm</packageSourceUrl>
-    <owners>chocolatey,Xuanwo,the-running-dev</owners>
+    <owners>chocolatey,the-running-dev</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
