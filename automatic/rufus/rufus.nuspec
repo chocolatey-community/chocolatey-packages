@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>rufus.install</id>
+    <id>rufus</id>
     <version>2.14</version>
-    <title>Rufus (Install)</title>
+    <title>Rufus</title>
     <authors>Pete "Akeo" Batard</authors>
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
