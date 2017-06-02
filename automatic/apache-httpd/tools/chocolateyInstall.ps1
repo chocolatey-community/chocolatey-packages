@@ -1,35 +1,31 @@
-$PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
+﻿$PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
+$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 . (Join-Path $PSScriptRoot 'Helpers.ps1')
 
-$configFile = Join-Path $env:chocolateyPackageFolder 'config.json'
 $pp = Get-PackageParameters
 
+$fileName32 = 'httpd-2.4.25-x86-vc14-r1.zip'
+$fileName64 = 'httpd-2.4.25-x64-vc14-r1.zip'
 $packageArgs = @{
-    packageName     = $env:chocolateyPackageName
-    url             = 'https://www.apachehaus.com/downloads/httpd-2.4.25-x86-vc14-r1.zip'
-    url64           = 'https://www.apachehaus.com/downloads/httpd-2.4.25-x64-vc14-r1.zip'
-    checksum        = 'c3a64bfe00303c89412df0764b80be0540b03f2ccdb73cdfe5256e9eeb0744fd'
-    checksum64      = '449355e68fac3d7da6bc703fd1c29be903dd990295b78f85ae67d5c628c09e61'
-    checksumType    = 'sha256'
-    checksumType64  = 'sha256'
-    unzipLocation   = $env:chocolateyPackageFolder
-    installLocation = if ($pp.installLocation) { $pp.installLocation } else { $env:APPDATA }
-    port            = if ($pp.Port) { $pp.Port } else { 80 }
-    serviceName     = if ($pp.serviceName) { $pp.serviceName } else { 'Apache' }
+    packageName = $env:chocolateyPackageName
+    file        = Join-Path $toolsDir $fileName32
+    file64      = Join-Path $toolsDir $fileName64
+    destination = if ($pp.installLocation) { $pp.installLocation } else { $env:APPDATA }
+    port        = if ($pp.Port) { $pp.Port } else { 80 }
+    serviceName = if ($pp.serviceName) { $pp.serviceName } else { 'Apache' }
 }
 
 if (-not (Assert-TcpPortIsOpen $packageArgs.port)) {
     throw 'Please specify a different port number...'
 }
 
-Install-ChocolateyZipPackage @packageArgs
+Get-ChocolateyUnzip `
+    -file $packageArgs.file `
+    -file64 $packageArgs.file64 `
+    -destination $packageArgs.destination
 
-$apacheDir = Get-ChildItem $packageArgs.unzipLocation -Directory -Filter 'Apache*'
-
-Move-Item $apacheDir.FullName $packageArgs.installLocation
-
-$apacheDir = Join-Path $packageArgs.installLocation $apacheDir.BaseName
+$apacheDir = Get-ChildItem $packageArgs.destination -Directory -Filter 'Apache*' | Select-Object -First 1 -ExpandProperty FullName
 $httpdConfPath = Join-Path $apacheDir 'conf\httpd.conf'
 $httpdPath = Join-Path $apacheDir 'bin\httpd.exe'
 
@@ -42,9 +38,9 @@ Set-Content -Path $httpdConfPath -Value $httpConf -Encoding Ascii
 & $httpdPath -k install -n "$($packageArgs.serviceName)"
 
 $config = @{
-    installLocation = $apacheDir
-    httpdPath       = $httpdPath
-    serviceName     = $packageArgs.serviceName
+    destination = $apacheDir
+    httpdPath   = $httpdPath
+    serviceName = $packageArgs.serviceName
 }
-
+$configFile = Join-Path $toolsDir 'config.json'
 Set-Content $configFile -Value ($config | ConvertTo-Json)
