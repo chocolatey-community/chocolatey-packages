@@ -3,6 +3,7 @@ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent
 . (Join-Path $PSScriptRoot 'Helpers.ps1')
 
 $configFile = Join-Path $env:chocolateyPackageFolder 'config.json'
+$pp = Get-PackageParameters
 
 $packageArgs = @{
     packageName     = $env:chocolateyPackageName
@@ -13,20 +14,9 @@ $packageArgs = @{
     checksumType    = 'sha256'
     checksumType64  = 'sha256'
     unzipLocation   = $env:chocolateyPackageFolder
-    installLocation = $env:APPDATA
-    port            = 80
-    serviceName     = 'Apache'
-}
-
-$packageParameters = Get-PackageParameters
-if ($packageParameters.installLocation) {
-    $packageArgs.installLocation = $packageParameters.installLocation
-}
-if ($packageParameters.port) {
-    $packageArgs.port = $packageParameters.port
-}
-if ($packageParameters.serviceName) {
-    $packageArgs.serviceName = $packageParameters.serviceName
+    installLocation = if ($pp.installLocation) { $pp.installLocation } else { $env:APPDATA }
+    port            = if ($pp.Port) { $pp.Port } else { 80 }
+    serviceName     = if ($pp.serviceName) { $pp.serviceName } else { 'Apache' }
 }
 
 if (-not (Assert-TcpPortIsOpen $packageArgs.port)) {
@@ -47,7 +37,7 @@ $httpdPath = Join-Path $apacheDir 'bin\httpd.exe'
 $httpConf = Get-Content $httpdConfPath
 $httpConf = $httpConf -replace 'Define SRVROOT.*', "Define SRVROOT ""$($apacheDir -replace '\\', '/')"""
 $httpConf = $httpConf -replace 'Listen 80', "Listen $($packageArgs.port)"
-Set-Content -Path $httpdConfPath -Value $httpConf
+Set-Content -Path $httpdConfPath -Value $httpConf -Encoding Ascii
 
 & $httpdPath -k install -n "$($packageArgs.serviceName)"
 

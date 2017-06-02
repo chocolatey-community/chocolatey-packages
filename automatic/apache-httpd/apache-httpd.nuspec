@@ -20,8 +20,8 @@
     </description>
     <tags>apache httpd webserver admin</tags>
     <dependencies>
-       <dependency id="vcredist2015" version="14.0" />
-       <dependency id="chocolatey-core.extension" version="1.0.5" />
+       <dependency id="vcredist2015" />
+       <dependency id="chocolatey-core.extension" />
    </dependencies>
   </metadata>
   <files>
