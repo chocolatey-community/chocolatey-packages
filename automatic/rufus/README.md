@@ -17,7 +17,7 @@ It can be especially useful for cases where:
 * Create bootable drives from bootable ISOs (Windows, Linux, etc.)
 * Create bootable drives from bootable disk images, including compressed ones
 * Create [Windows To Go](https://en.wikipedia.org/wiki/Windows_To_Go) drives
-* Twice as fast as Microsoft's USB/DVD tool or UNetbootin, on ISO -> USB creation <sup>(1)</sup>
+* Twice as fast as Microsoft's USB/DVD tool or UNetbootin, on ISO -> USB creation.
 * Perform bad blocks checks, including detection of "fake" flash drives
 * Compute MD5, SHA-1 and SHA-256 checksums of the selected image
 * Modern and familiar UI, with more than [35 languages natively supported](https://rufus.akeo.ie/translations)
