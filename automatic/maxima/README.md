@@ -1,4 +1,4 @@
-# [<img src="" height="48" width="48" /> maxima](https://chocolatey.org/packages/maxima)
+# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/maxima.png" height="48" width="48" /> maxima](https://chocolatey.org/packages/maxima)
 
 Maxima, a Computer Algebra System
 
