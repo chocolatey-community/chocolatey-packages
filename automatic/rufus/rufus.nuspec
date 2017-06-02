@@ -8,9 +8,9 @@
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <projectUrl>http://rufus.akeo.ie/</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>automatically populated</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>dummy</description>
+    <description>automatically populated</description>
     <summary>Create bootable USB drives from Windows and Linux images</summary>
     <releaseNotes>https://github.com/pbatard/rufus/blob/master/ChangeLog.txt</releaseNotes>
     <copyright>Akeo Consulting</copyright>
