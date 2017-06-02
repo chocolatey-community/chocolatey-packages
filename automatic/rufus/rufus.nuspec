@@ -10,7 +10,7 @@
     <projectUrl>http://rufus.akeo.ie/</projectUrl>
     <iconUrl></iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description></description>
+    <description>dummy</description>
     <summary>Create bootable USB drives from Windows and Linux images</summary>
     <releaseNotes>https://github.com/pbatard/rufus/blob/master/ChangeLog.txt</releaseNotes>
     <copyright>Akeo Consulting</copyright>
