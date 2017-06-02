@@ -1,4 +1,4 @@
-# <img src="" width="48" height="48"/> [rufus.install](https://chocolatey.org/packages/rufus.install)
+# <img src="" width="48" height="48"/> [rufus](https://chocolatey.org/packages/rufus.install)
 
 Rufus is a utility that helps format and create bootable USB flash drives, such as USB keys/pendrives, memory sticks, etc.
 
@@ -25,8 +25,8 @@ It can be especially useful for cases where:
 * Portable
 * 100% [Free Software](http://www.gnu.org/philosophy/free-sw.en.html) ([GPL v3](http://www.gnu.org/licenses/gpl-3.0.en.html))
 
-[FAQ](https://github.com/pbatard/rufus/wiki/FAQ)
-[Supported ISOs](http://rufus.akeo.ie/#ref2)
+* [FAQ](https://github.com/pbatard/rufus/wiki/FAQ)
+* [Supported ISOs](http://rufus.akeo.ie/#ref2)
 
 
 ![screenshot](screenshot.png)
