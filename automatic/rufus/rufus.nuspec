@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>rufus.install</id>
+    <version>2.14</version>
+    <title>Rufus (Install)</title>
+    <authors>Pete "Akeo" Batard</authors>
+    <owners>chocolatey, dtgm</owners>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <projectUrl>http://rufus.akeo.ie/</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description></description>
+    <summary>Create bootable USB drives from Windows and Linux images</summary>
+    <releaseNotes>https://github.com/pbatard/rufus/blob/master/ChangeLog.txt</releaseNotes>
+    <copyright>Akeo Consulting</copyright>
+    <tags>liveusb usb bootdisk linux windows foss</tags>
+    <projectSourceUrl>https://github.com/pbatard/rufus/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-coreteampackages/tree/master/automatic/rufus.install</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
