@@ -19,7 +19,7 @@ function global:au_GetLatest {
 
   $XML = New-Object  System.Xml.XmlDocument
   $XML.load($releases)
-  $version = $XML.XML.update.version.replace(',', '.')
+  $version = $XML.XML[1].update.version.replace(',', '.')
   $major_version = ([version]$version).Major
 
     @{
