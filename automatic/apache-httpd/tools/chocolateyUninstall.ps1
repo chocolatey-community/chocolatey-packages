@@ -1,6 +1,3 @@
-$configFile = Join-Path $env:chocolateyPackageFolder 'config.json'
-$config = Get-Content $configFile -Raw | Out-String | ConvertFrom-Json
+. (Join-Path (Split-Path -parent $MyInvocation.MyCommand.Definition) 'Helpers.ps1')
 
-& $($config.httpdPath) -k uninstall -n "$($config.serviceName)"
-
-Remove-Item $config.destination -Recurse -Force
+Uninstall-Apache
