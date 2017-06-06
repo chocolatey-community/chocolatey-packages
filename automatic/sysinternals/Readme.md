@@ -9,9 +9,6 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 - `/InstallDir` - Installation directory, by default Chocolatey tools directory.
 - `/InstallationPath` - the same as `InstallDir`
 
-These parameters can be passed to the installer with the use of --params.
-For example: `--params '"""/InstallDir:C:\sysinternals"""'`.
-
 ## Notes
 
 - This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to the PATH.
