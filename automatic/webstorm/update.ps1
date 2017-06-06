@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme }
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_GetLatest {
     $productName = 'WebStorm'

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>webstorm</id>
-    <version>2017.1.3.20170531</version>
+    <version>2017.1.3.20170606</version>
     <title>JetBrains WebStorm</title>
     <authors>JetBrains</authors>
     <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
@@ -15,7 +15,8 @@
     <tags>webstorm admin jetbrains trial 30days developer IDE HTML CSS JavaScript cross-platform</tags>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/WEB</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>WebStorm — The smartest JavaScript IDE. Lightweight yet powerful IDE,
+    <description>
+WebStorm — The smartest JavaScript IDE. Lightweight yet powerful IDE,
 perfectly equipped for complex client-side development and server-side development with Node.js.
 
 ## Features
@@ -36,7 +37,7 @@ perfectly equipped for complex client-side development and server-side developme
 </description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/webstorm</packageSourceUrl>
-    <owners>chocolatey,the-running-dev</owners>
+    <owners>chocolatey</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
     </dependencies>
