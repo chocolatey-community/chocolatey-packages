@@ -16,7 +16,10 @@
     <licenseUrl>https://github.com/kovidgoyal/calibre/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/calibre.png</iconUrl>
-    <releaseNotes>http://calibre-ebook.com/whats-new</releaseNotes>
+    <releaseNotes>
+[Software Changelog](https://calibre-ebook.com/whats-new)
+[Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/calibre/Changelog.md)
+    </releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/calibre</packageSourceUrl>
     <projectSourceUrl>https://github.com/kovidgoyal/calibre</projectSourceUrl>
     <mailingListUrl>https://www.mobileread.com/forums/forumdisplay.php?f=166</mailingListUrl>
