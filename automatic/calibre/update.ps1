@@ -1,17 +1,27 @@
 import-module au
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://download.calibre-ebook.com/2.html'
 
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
+
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^\s*packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
-            "(^\s*url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^\s*url64Bit\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
@@ -30,4 +40,4 @@ function global:au_GetLatest {
     return @{ URL32 = $url32; URL64 = $url64; Version = $version }
 }
 
-update
+update -ChecksumFor none
