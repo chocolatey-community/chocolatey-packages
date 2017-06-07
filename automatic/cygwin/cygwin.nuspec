@@ -28,7 +28,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
 - For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
     </description>
     <projectUrl>https://cygwin.com/</projectUrl>
-    <docsUrl>http://cygwin.com/docs.html</docsUrl>
+    <docsUrl>https://cygwin.com/docs.html</docsUrl>
     <tags>Cygwin foss cli unix posix linux admin</tags>
     <copyright>Red Hat, Inc.</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cygwin</packageSourceUrl>
