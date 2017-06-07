@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>maxima</id>
-    <version>5.40.0</version>
+    <version>5.40.0.20170607</version>
     <title>Maxima</title>
     <owners>chocolatey</owners>
     <authors>Macsyma group at Project MAC and volunteer contributors</authors>
