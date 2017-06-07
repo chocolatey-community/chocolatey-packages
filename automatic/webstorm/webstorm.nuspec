@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>webstorm</id>
+    <version>2017.1.3.20170606</version>
+    <title>JetBrains WebStorm</title>
+    <authors>JetBrains</authors>
+    <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
+    <projectUrl>https://www.jetbrains.com/webstorm/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8edfc93894e9bdd11deb36d1cbbfe8a47a7b013a/icons/webstorm.png</iconUrl>
+    <docsUrl>https://www.jetbrains.com/help/webstorm</docsUrl>
+    <summary>WebStorm — The smartest JavaScript IDE</summary>
+    <releaseNotes>https://www.jetbrains.com/webstorm/whatsnew/</releaseNotes>
+    <tags>webstorm admin jetbrains trial 30days developer IDE HTML CSS JavaScript cross-platform</tags>
+    <bugTrackerUrl>https://youtrack.jetbrains.com/issues/WEB</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+WebStorm — The smartest JavaScript IDE. Lightweight yet powerful IDE,
+perfectly equipped for complex client-side development and server-side development with Node.js.
+
+## Features
+- Web (Angular, React, Vue.js)
+- Mobile (Ionic, Cordova, React Native)
+- Server (Node.js, Meteor)
+- Desktop (Electron)
+- Debugger
+- Seamless tool integration
+- Unit testing
+- Integration with VCS
+- Integration with Jest
+- Support for Vue.js
+- Support for Standard Style
+
+## Notes
+- Free 30 day Trial. Beyond that you need to purchase a license.
+</description>
+    <copyright>Copyright © 2017 JetBrains</copyright>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/webstorm</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
