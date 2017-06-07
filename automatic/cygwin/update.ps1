@@ -3,6 +3,10 @@ import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensio
 
 $releases = 'https://cygwin.com/'
 
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
+}
+
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
