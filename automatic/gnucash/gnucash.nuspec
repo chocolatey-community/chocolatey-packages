@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gnucash</id>
-    <version>2.6.16.20170330</version>
+    <version>2.6.16.20170607</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnucash</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>GnuCash</title>
@@ -37,7 +37,7 @@ it is based on professional accounting principles to ensure balanced books and a
 * Scheduled Transactions
 * Financial Calculations
 * and [more](https://www.gnucash.org/features.phtml)
-    </description>
+</description>
     <releaseNotes>
 [Software Changelog](http://www.gnucash.org/#newscontainer)
 [Package Changelog](https://github.com/Chocolatey/chocolatey-coreteampackages/blob/master/automatic/gnucash/Changelog.md)

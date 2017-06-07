@@ -1,6 +1,6 @@
 # Package changelog for [gnucash](https://chocolatey.org/packages/gnucash)
 
-## Upcoming
+## Version: 2.6.16.20170607 (2017-06-07)
 - **BUGS:** Software license url pointing to wrong location
 - **BUGS:** Software source url pointing to wrong location
 - **ENHANCEMENT:** Added changelog for package

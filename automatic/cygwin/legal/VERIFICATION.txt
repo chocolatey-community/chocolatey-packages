@@ -7,15 +7,15 @@ location on <https://cygwin.com/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://cygwin.com/setup-x86.exe>
+  64-Bit software: <https://cygwin.com/setup-x86_64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: 679B02E08E7CB307F697384AE1EC16E6B66C62E34106467690ABE6582FD310AC
+  checksum64: D88F4073F64255B3EE806B8513595EA6F034E0EE62890B96FA80848256981818
 
 The file 'LICENSE.txt' has been obtained from <https://cygwin.com/COPYING>
