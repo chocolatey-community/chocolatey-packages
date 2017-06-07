@@ -37,7 +37,7 @@ Apache will be installed as a service under the default name 'Apache'
 </description>
     <tags>apache httpd webserver admin</tags>
     <dependencies>
-       <dependency id="vcredist2012" />
+       <dependency id="vcredist2015" />
        <dependency id="chocolatey-core.extension" />
    </dependencies>
   </metadata>
