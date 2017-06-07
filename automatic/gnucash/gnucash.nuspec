@@ -11,9 +11,9 @@
     <projectUrl>http://www.gnucash.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/gnucash.svg</iconUrl>
     <copyright>2001-2016 The GnuCash Project</copyright>
-    <licenseUrl>http://svn.gnucash.org/trac/browser/gnucash/trunk/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/Gnucash/gnucash/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://svn.gnucash.org/trac/browser/gnucash</projectSourceUrl>
+    <projectSourceUrl>https://github.com/Gnucash/gnucash</projectSourceUrl>
     <docsUrl>https://www.gnucash.org/docs.phtml</docsUrl>
     <mailingListUrl>http://wiki.gnucash.org/wiki/Mailing_Lists</mailingListUrl>
     <bugTrackerUrl>http://wiki.gnucash.org/wiki/Bugzilla</bugTrackerUrl>
