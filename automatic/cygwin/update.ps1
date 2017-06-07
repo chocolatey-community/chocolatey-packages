@@ -5,6 +5,7 @@ $releases = 'https://cygwin.com/'
 
 function global:au_AfterUpdate {
   Set-DescriptionFromReadme -SkipFirst 1
+  Update-ChangelogVersion -version $Latest.Version
 }
 
 function global:au_SearchReplace {
@@ -19,7 +20,7 @@ function global:au_SearchReplace {
         }
 
         "$($Latest.PackageName).nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
+            "(\[Software Changelog\])\(.*\)" = "`${1}($($Latest.ReleaseNotes))"
         }
     }
 }
