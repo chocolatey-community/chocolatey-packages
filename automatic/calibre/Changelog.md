@@ -5,6 +5,7 @@
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Embedded package
 - **ENHANCEMENT:** Extracted Description to its own file
+- **ENHANCEMENT:** Updated description
 
 ## Version: 2.70.0 (2016-10-14)
 - Initial migration of the calibre chocolatey package to AU
