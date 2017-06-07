@@ -9,7 +9,7 @@ $packageArgs = @{
   checksum64             = '3c78b27ef1d3f1ac08c97f84f1a8653e7f38b7fec4a66699015dd094c95cfd2a'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
-  silentArgs             = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
+  silentArgs             = '/S'
   validExitCodes         = @(0)
   softwareName           = 'maxima*'
 }
