@@ -10,7 +10,7 @@
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
-    <projectUrl>http://calibre-ebook.com/</projectUrl>
+    <projectUrl>https://calibre-ebook.com/</projectUrl>
     <tags>calibre ebook book foss cross-platform library management admin</tags>
     <copyright>Kovid Goyal</copyright>
     <licenseUrl>https://github.com/kovidgoyal/calibre/blob/master/LICENSE</licenseUrl>
