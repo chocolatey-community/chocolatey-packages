@@ -1,7 +1,9 @@
 import-module au
-import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://cygwin.com/'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate {
   Set-DescriptionFromReadme -SkipFirst 1
@@ -10,35 +12,38 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
    @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')"     = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
-        }
-
-        "$($Latest.PackageName).nuspec" = @{
-            "(\[Software Changelog\])\(.*\)" = "`${1}($($Latest.ReleaseNotes))"
-        }
+    "$($Latest.PackageName).nuspec" = @{
+      "(\[Software Changelog\])\(.*\)" = "`${1}($($Latest.ReleaseNotes))"
     }
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
+    }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     $re  = '\.exe$'
-    $url = $download_page.links | ? href -match $re | select -First 2 -expand href
+    $url = $download_page.links | ? href -match $re | select -First 2 -expand href | % { $releases + $_ }
     $rn  = $download_page.links | ? href -match 'announce'
 
     @{
-        URL32        = $releases + ($url -notmatch 'x86_64' | select -First 1)
-        URL64        = $releases + ($url -match 'x86_64' | select -First 1)
+        URL32        = $url -notmatch 'x86_64' | select -First 1
+        URL64        = $url -match 'x86_64' | select -First 1
         ReleaseNotes = $rn.href
         Version      = $rn.innerText
         PackageName  = 'Cygwin'
     }
 }
 
-update
+update -ChecksumFor none

@@ -2,4 +2,5 @@
 
 ## Upcoming
 - **ENHANCEMENT:** Added changelog for package
+- **ENHANCEMENT:** Embedded cygwin package
 - **ENHANCEMENT:** Extracted Description to its own file
