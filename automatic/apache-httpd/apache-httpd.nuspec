@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>apache-httpd</id>
+    <version>2.4.25</version>
+    <title>Apache HTTP Server Project</title>
+     <authors>Apache Software Foundation</authors>
+    <owners>chocolatey</owners>
+    <licenseUrl>http://www.apache.org/licenses</licenseUrl>
+    <projectUrl>http://httpd.apache.org</projectUrl>
+    <docsUrl>http://httpd.apache.org/docs/2.4</docsUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2bdf6f7e33ec1a8126829fbbc87b83e4473b3634/icons/apache-httpd.png</iconUrl>
+    <bugTrackerUrl>http://httpd.apache.org/bug_report.html</bugTrackerUrl>
+    <releaseNotes>http://httpd.apache.org/docs/2.4/new_features_2_4.html</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/apache-httpd</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>The Apache HTTP Server Project is a collaborative software development effort aimed at creating a robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server.</summary>
+    <description>
+Apache HTTP Web Server for Windows.
+
+### Notes
+
+This package will install the latest Apache binaries provided at
+Apache Haus (http://www.apachehaus.com/) with OpenSSL on Visual Studio 2012 (VC11):
+with OpenSSL 1.0.2g, nghttp 1.9.2, Zlib 1.2.8 (mod_deflate), PCRE 8.38, APR 1.5.2, APR-Util 1.5.4, IPv6 and TLS SNI enabled.
+
+The complete path of the package will be ''%AppData%\Apache24''
+
+Apache will be installed as a service under the default name 'Apache'
+
+### Package Parameters
+
+ * /installLocation - Intstall to a different destination folder. Default: %AppData%\Apache*
+ * /serviceName - The name of the windows service which will be create. Default: Apache
+ * /port - The port Apache will listen to. Default: 80
+</description>
+    <tags>apache httpd webserver admin</tags>
+    <dependencies>
+       <dependency id="vcredist2015" />
+       <dependency id="chocolatey-core.extension" />
+   </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
