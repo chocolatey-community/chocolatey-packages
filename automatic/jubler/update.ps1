@@ -1,23 +1,32 @@
 import-module au
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://www.jubler.org/download.html'
+$softwareName = 'Jubler subtitle editor'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
+    }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
-      "(?i)(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
     }
   }
-}
-
-function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_GetLatest {
@@ -37,7 +46,7 @@ function global:au_GetLatest {
 
 
 try {
-    update
+    update -ChecksumFor none
 } catch {
     $ignore = "Unable to connect to the remote server"
     if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }
