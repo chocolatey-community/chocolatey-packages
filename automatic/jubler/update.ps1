@@ -4,7 +4,7 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $releases = 'http://www.jubler.org/download.html'
 $softwareName = 'Jubler subtitle editor'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
 
 function global:au_AfterUpdate {
   Set-DescriptionFromReadme -SkipFirst 1
@@ -44,6 +44,7 @@ function global:au_GetLatest {
     URL32 = $urls -notmatch "64\.exe" | select -first 1
     URL64 = $urls -match "64\.exe" | select -first 1
     Version = $version
+    FileType = 'exe'
   }
 }
 
