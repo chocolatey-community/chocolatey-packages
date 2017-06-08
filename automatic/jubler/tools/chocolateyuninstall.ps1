@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'jubler*'
+  softwareName  = 'Jubler subtitle editor'
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(@(0))

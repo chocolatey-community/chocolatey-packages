@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>jubler</id>
-    <version>5.1</version>
+    <version>5.1.0.20170608</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/jubler</packageSourceUrl>
     <owners>chocolatey, AdmiringWorm</owners>
     <title>Jubler Subtitle Editor</title>
@@ -18,7 +18,8 @@
     <tags>jubler admin subtitle editor video</tags>
     <summary>Jubler is a tool to edit text-based subtitles.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Jubler is a tool to edit text-based subtitles.
+    <description>
+Jubler is a tool to edit text-based subtitles.
 It can be used as an authoring software for new subtitles or as a tool to convert, transform, correct and refine existing subtitles.
 The most popular subtitle formats can be used.
 Preview of the subtitles in realtime or in design time, spell checking, translation mode and styles editing are some of the main features.
