@@ -52,7 +52,10 @@ Preview of the subtitles in realtime or in design time, spell checking, translat
 * Cut, copy, paste, delete areas according to time &amp; color patterns
 * Clear areas used for hearing impaired
 </description>
-    <releaseNotes>http://www.jubler.org/changelog.html</releaseNotes>
+    <releaseNotes>
+[Software Changelog](http://www.jubler.org/changelog.html)
+[Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/jubler/Changelog.md)
+    </releaseNotes>
     <dependencies>
       <dependency id="javaruntime" version="8.0" />
       <dependency id="smplayer" version="16.8.0" />
