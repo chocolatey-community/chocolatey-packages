@@ -4,12 +4,23 @@
   <metadata>
     <id>calibre</id>
     <title>Calibre</title>
-    <version>2.85.1</version>
+    <version>2.85.1.20170608</version>
     <authors>Kovid Goyal</authors>
     <owners>chocolatey, gep13</owners>
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
+    <description>
+**calibre is a powerful and easy to use e-book manager**. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also **completely free** and open source and great for both **casual users** and computer experts.
+
+## Features
+- Save time on managing your e-book collection
+- Use it everywhere and with anything
+- Comprehensive e-book viewer
+- Download news/magazines from the web
+- Share and backup your library easily
+- Edit the books in your collection
+- Satisfy every e-book need and get support
+</description>
     <projectUrl>https://calibre-ebook.com/</projectUrl>
     <tags>calibre ebook book foss cross-platform library management admin</tags>
     <copyright>Kovid Goyal</copyright>

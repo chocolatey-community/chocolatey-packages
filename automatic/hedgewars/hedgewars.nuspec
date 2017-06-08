@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hedgewars</id>
-    <version>0.9.22.20161127</version>
+    <version>0.9.22.20170608</version>
     <title>Hedgewars</title>
     <owners>chocolatey</owners>
     <authors>Hedgewars Team</authors>
@@ -15,7 +15,11 @@
     <bugTrackerUrl>https://www.hedgewars.org/bugs</bugTrackerUrl>
     <projectSourceUrl>https://hg.hedgewars.org/hedgewars</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Dummy</description>
+    <description>
+Hedgewars is a turn based strategy, artillery, action and comedy game, featuring the antics of pink hedgehogs with attitude as they battle from the depths of hell to the depths of space.
+
+As commander, it's your job to assemble your crack team of hedgehog soldiers and bring the war to your enemy.
+</description>
     <summary>Hedgewars is a turn based strategy, artillery, action and comedy game.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <releaseNotes>https://hg.hedgewars.org/hedgewars/file/c680b7db1e2e/ChangeLog.txt</releaseNotes>

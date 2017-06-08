@@ -1,6 +1,6 @@
 # Package changelog for [calibre](https://chocolatey.org/packages/calibre)
 
-## Upcoming
+## Version: 2.85.1.20170608 (2017-06-08)
 - **BUGS:** Updated all urls to use https
 - **ENHANCEMENT:** Added changelog for package
 - **ENHANCEMENT:** Embedded package
