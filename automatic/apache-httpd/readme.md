@@ -10,9 +10,9 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
 
 ## Package Parameters
 
- * /installLocation - Intstall to a different destination folder. Default: `$Env:AppData\Apache*`
- * /serviceName - The name of the windows service which will be create. Default: `Apache`
- * /port - The port Apache will listen to. Default: `80`
+ * `/installLocation` - Intstall to a different destination folder. Default: `$Env:AppData\Apache*`
+ * `/serviceName` - The name of the windows service which will be create. Default: `Apache`
+ * `/port` - The port Apache will listen to. Default: `80`
 
 ## Notes
 
