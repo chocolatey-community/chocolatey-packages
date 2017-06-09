@@ -4,7 +4,7 @@
   <metadata>
     <id>visualstudiocode</id>
     <title>Visual Studio Code</title>
-    <version>1.12.2</version>
+    <version>1.13.0</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
