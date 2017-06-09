@@ -34,7 +34,7 @@ function global:au_GetLatest {
     $updated = $download_page.Content -split "`n" | sls '(?<=Updated: )[^/<>]+' | % Matches | % Value
     $updated = [datetime]::ParseExact($updated, 'MMMM dd, yyyy', [cultureinfo]::InstalledUICulture)
     @{
-        Version  = $updated.ToString("yyyy.MM.dd")
+        Version  = $updated.ToString("yyyy.M.d")
         URL32    = $url
         URLNano  = $urlNano
     }
