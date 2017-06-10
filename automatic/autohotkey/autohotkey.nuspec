@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey</id>
-    <version>1.1.25.02</version>
+    <version>1.1.26.00</version>
     <title>AutoHotkey</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
@@ -42,7 +42,7 @@ AutoHotkey is a free, open source macro-creation and automation software utility
     <releaseNotes></releaseNotes>
     <tags>automation hotkeys scripting windows foss admin</tags>
     <dependencies>
-      <dependency id="autohotkey.install" version="1.1.25.02" />
+      <dependency id="autohotkey.install" version="1.1.26.00" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autohotkey</packageSourceUrl>
     <projectSourceUrl>https://github.com/Lexikos/AutoHotkey_L</projectSourceUrl>
