@@ -13,7 +13,7 @@
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://msdn.microsoft.com/library/jj620919.aspx</docsUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/visualstudio/ide/getting-started-with-cpp-in-visual-studio</docsUrl>
     <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
     <tags>microsoft visual c++ redistributable 2017 admin</tags>
     <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2017</summary>
@@ -21,7 +21,7 @@
 
 ## Notes
 
-[Supported Operating Systems](https://www.visualstudio.com/productinfo/visual-studio-15-system-requirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
+[Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2017-sysrequirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
     </description>
     <releaseNotes>
 ##### Software
