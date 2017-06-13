@@ -22,7 +22,7 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
-if ($installLocation)  {
-    Write-Host "$packageName installed to '$installLocation'"
-}
-else { Write-Warning "Can't find $PackageName install location" }
+if (!$installLocation)  {  Write-Warning "Can't find $PackageName install location"; return }
+
+Write-Host "$packageName installed to '$installLocation'"
+Install-BinFile -Path "$installLocation\notepad++.exe" -Name 'notepad++'
