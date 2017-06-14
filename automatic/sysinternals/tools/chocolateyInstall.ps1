@@ -9,7 +9,7 @@ Write-Host "Sysinternals Suite is going to be installed in '$installDir'"
 $packageArgs = @{
   packageName    = 'sysinternals'
   url            = 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
-  checksum       = '9c55cef14e4cfd65cdd2caa27f3a718d68bdb7b9bda14a54139b08b40b96015d'
+  checksum       = 'c67f49b4d2b4a15c460dfd97a62f842afcd4f215797fde27ae2dcb529ed734eb'
   checksumType   = 'sha256'
   unzipLocation  = $installDir
 }
@@ -18,7 +18,7 @@ Accept-Eula
 if ($installDir -ne $toolsPath) { Install-ChocolateyPath $installDir }
 if (Is-NanoServer) {
   $packageArgs.url = 'https://download.sysinternals.com/files/SysinternalsSuite-Nano.zip'
-  $packageArgs.checksum = '79b6ec8db89b42ef3863b640c029d59925081f576c254a084437558d0a62ea1a'
+  $packageArgs.checksum = '620de0f2f27aa458013aec58494cd60882731e7cbaa77afeaed7a998f69ae92e'
  }
 
 $old_path = 'c:\sysinternals'
