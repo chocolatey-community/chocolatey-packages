@@ -1,0 +1,4 @@
+Licence
+-------
+NSSM is public domain.  You may unconditionally use it and/or its source code 
+for any purpose you wish.
