@@ -28,7 +28,7 @@ nssm logs its progress to the system Event Log so you can get some idea of why a
     <summary>Service helper program similar to srvany and cygrunsrv</summary>
     <releaseNotes>http://nssm.cc/changelog</releaseNotes>
     <copyright>© Iain Patterson</copyright>
-    <tags>service</tags>
+    <tags>service foss admin cli</tags>
     <projectSourceUrl>http://git.nssm.cc/?p=nssm.git</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nssm</packageSourceUrl>
     <docsUrl>http://nssm.cc/commands</docsUrl>
