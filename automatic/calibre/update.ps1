@@ -31,7 +31,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     $versionHyperlink = $download_page.links | select -First 1
-    if ($versionHyperlink.Title -notmatch 'Release (2[\d\.]+)' ) { throw "Calibre version 2.x not found on $releases" }
+    if ($versionHyperlink.Title -notmatch 'Release (4[\d\.]+)' ) { throw "Calibre version 3.x not found on $releases" }
 
     $version = $versionHyperlink.InnerText
     $url32   = 'https://download.calibre-ebook.com/<version>/calibre-<version>.msi'
