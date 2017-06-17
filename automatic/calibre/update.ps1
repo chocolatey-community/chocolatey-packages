@@ -1,7 +1,7 @@
 import-module au
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://download.calibre-ebook.com/2.html'
+$releases = 'https://download.calibre-ebook.com/3.html'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
