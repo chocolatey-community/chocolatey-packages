@@ -36,4 +36,6 @@ Function Get-RedirectedUrl {
     }
 }
 
-update -ChecksumFor 32
+#update -ChecksumFor 32
+Write-Host "Dropbox update have been temporarily stopped until we add changes to stop it from picking up beta builds"
+return "ignore"
