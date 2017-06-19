@@ -42,7 +42,7 @@ For disabling the Git Credential Manager see the [Disable Git Credential Manager
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
     </dependencies>
   </metadata>
   <files>
