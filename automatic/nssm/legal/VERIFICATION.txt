@@ -7,7 +7,7 @@ Package is downloaded from https://www.nssm.cc/download and can be verified like
 
 1. Go to
 
-   x32: http://www.nssm.cc//release/nssm-2.24.zip
+   x32: https://www.nssm.cc/release/nssm-2.24.zip
 
    to download the installer.
 
