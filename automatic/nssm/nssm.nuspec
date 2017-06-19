@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nssm</id>
-    <version>2.24.0.20170619</version>
+    <version>2.24.101-g897c7ad</version>
     <title>NSSM - the Non-Sucking Service Manager</title>
     <authors>Iain Patterson</authors>
     <owners>chocolatey, dtgm</owners>
