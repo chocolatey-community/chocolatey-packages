@@ -19,20 +19,15 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 
 ## Package parameters
 
-The following package parameters can be set:
-
-- `GitOnlyOnPath` - Puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
-- `GitAndUnixToolsOnPath` - Puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
-- `NoAutoCrlf` - Ensure _'Checkout as is, commit as is'_. This setting **only affects new installs**, it will not override an existing `.gitconfig`.
-- `WindowsTerminal` - Makes `vim` use the regular Windows terminal instead of MinTTY terminal.
-- `NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
-
-These parameters can be passed to the installer with the use of `-params`.
-For example: `-params '"/GitAndUnixToolsOnPath /NoAutoCrlf"'`.
+- `/GitOnlyOnPath` - Puts gitinstall\cmd on path. This is also done by default if no package parameters are set.
+- `/GitAndUnixToolsOnPath` - Puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
+- `/NoAutoCrlf` - Ensure _'Checkout as is, commit as is'_. This setting **only affects new installs**, it will not override an existing `.gitconfig`.
+- `/WindowsTerminal` - Makes `vim` use the regular Windows terminal instead of MinTTY terminal.
+- `/NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
 
 ## Notes
 
-The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+- The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
 
 For disabling the Git Credential Manager see the [Disable Git Credential Manager package](https://chocolatey.org/packages/git-disable-gcm).
     </description>
