@@ -21,7 +21,7 @@ function global:au_GetLatest {
 
     @{
         Version = $url -split '-|\.zip' | select -Last 1 -Skip 1
-        URL32   = "http://www.nssm.cc${url}"
+        URL32   = "https://www.nssm.cc${url}"
     }
 }
 
