@@ -1,7 +1,7 @@
 import-module au
 import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
-$releases = 'http://www.nssm.cc/download'
+$releases = 'https://www.nssm.cc/download'
 
 function global:au_SearchReplace {
    @{
@@ -21,7 +21,7 @@ function global:au_GetLatest {
 
     @{
         Version = $url -split '-|\.zip' | select -Last 1 -Skip 1
-        URL32   = "http://www.nssm.cc/$url"
+        URL32   = "http://www.nssm.cc${url}"
     }
 }
 

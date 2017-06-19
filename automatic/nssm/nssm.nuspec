@@ -33,4 +33,8 @@ nssm logs its progress to the system Event Log so you can get some idea of why a
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nssm</packageSourceUrl>
     <docsUrl>http://nssm.cc/commands</docsUrl>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
