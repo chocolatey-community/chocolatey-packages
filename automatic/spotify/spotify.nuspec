@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spotify</id>
-    <version>1.0.55.487</version>
+    <version>1.0.57.474</version>
     <title>Spotify</title>
     <authors>Spotify</authors>
     <projectUrl>http://spotify.com</projectUrl>
