@@ -52,6 +52,7 @@ function Install-Apache {
 
     Get-ChocolateyUnzip `
         -file $arguments.file `
+        -file64 $arguments.file64 `
         -destination $arguments.destination
 
     Set-ApacheConfig $arguments

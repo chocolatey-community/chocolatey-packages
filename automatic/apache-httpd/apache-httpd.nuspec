@@ -41,6 +41,7 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
     <dependencies>
        <dependency id="vcredist2015" />
        <dependency id="chocolatey-core.extension" />
+       <dependency id="chocolatey" version="0.10.5" />
    </dependencies>
   </metadata>
   <files>
