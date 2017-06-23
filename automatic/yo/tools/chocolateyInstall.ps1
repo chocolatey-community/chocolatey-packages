@@ -1,5 +1,5 @@
 ﻿Update-SessionEnvironment
 
-$version = '1.8.5'
+$version = '2.0.0'
 
 npm install -g yo@$version

@@ -44,7 +44,7 @@ environment:
     secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
 
   #Chocolatey version we want to use when checing for updates.
-  choco_version: '0.10.1'
+  choco_version: '0.10.6.1'
   nupkg_cache_path: C:\packages
 
 init:
@@ -75,10 +75,10 @@ install:
 build_script:
 - ps: |
     $ErrorActionPreference = 'Continue'
-    
+
     . ./scripts/EventLogs.ps1
     Clear-EventLogs
-    
+
     if ($Env:APPVEYOR_PROJECT_NAME  -like '*test*') { ./test_all.ps1 "random $Env:au_test_groups"; return }
     if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne $null) -and ($Env:APPVEYOR_PULL_REQUEST_NUMBER -ne '')) {
       Set-Service wuauserv -StartupType Manual

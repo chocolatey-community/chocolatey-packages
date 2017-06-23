@@ -1,6 +1,6 @@
 ﻿$packageName = 'flashplayeractivex'
-$version = '25.0.0.171'
-$majorVersion = '25'
+$version = '26.0.0.131'
+$majorVersion = '26'
 $registry = ( Get-UninstallRegistryKey -SoftwareName "Adobe Flash Player $majorVersion ActiveX" ).DisplayVersion
 $checking = ( $registry -eq $version )
 $alreadyInstalled = @{$true = "Adobe Flash Player ActiveX for IE $version is already installed."; $false = "Adobe Flash Player ActiveX for IE $version is not already installed."}[ $checking ]
@@ -29,10 +29,10 @@ if ($allRight) {
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/25.0.0.171/install_flash_player_25_active_x.msi'
+  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/26.0.0.131/install_flash_player_26_active_x.msi'
   silentArgs    = '/quiet /norestart REMOVE_PREVIOUS=YES'
   softwareName  = 'Adobe Flash Player ActiveX'
-  checksum      = 'c725c6e8eed9c1afce19d8f4e604aad1b4bdd351ae73d154c7f0f0cb9c7b66f1'
+  checksum      = '272998498f5d7cd5bdec5ca43d2a6c6249c6b470001a8c03649e9c65ad16469c'
   checksumType  = 'sha256'
 }
   Install-ChocolateyPackage @packageArgs

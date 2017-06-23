@@ -1,0 +1,21 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package is downloaded from https://www.nssm.cc/download and can be verified like this:
+
+1. Go to
+
+   x32: https://www.nssm.cc/ci/nssm-2.24-101-g897c7ad.zip
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum32: 99F5045FFFBFFB745D67FE3A065A953C4A3D9C253B868892D9B685B0EE7D07B8
+
+File 'License.txt' is obtained from:
+    https://git.nssm.cc/?p=nssm.git;a=blob;f=README.txt;h=12db7e88a4cd83edb7023b2b92e7d3d5eabf1175;hb=HEAD#l882

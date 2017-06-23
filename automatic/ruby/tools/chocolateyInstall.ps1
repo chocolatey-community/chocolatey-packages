@@ -13,7 +13,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = gi "$toolsDir\*_x32.exe"
   file64         = gi "$toolsDir\*_x64.exe"
-  silentArgs     = '/verysilent /dir="{0}" /tasks="assocfiles,modpath"' -f $installDir
+  silentArgs     = '/verysilent /dir="{0}" /tasks="assocfiles, modpath, noridkinstall"' -f $installDir
   validExitCodes = @(0)
   softwareName   = 'ruby *'
 }

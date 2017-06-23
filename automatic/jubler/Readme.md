@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png" width="48" height="48" /> jubler
+# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png" height="48" width="48" /> jubler](https://chocolatey.org/packages/jubler)
 
 Jubler is a tool to edit text-based subtitles.
 It can be used as an authoring software for new subtitles or as a tool to convert, transform, correct and refine existing subtitles.

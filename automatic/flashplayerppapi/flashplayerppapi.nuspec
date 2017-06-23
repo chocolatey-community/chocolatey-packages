@@ -4,7 +4,7 @@
   <metadata>
     <id>flashplayerppapi</id>
     <title>Flash Player PPAPI</title>
-    <version>25.0.0.171</version>
+    <version>26.0.0.131</version>
     <authors>Adobe Systems Incorporated</authors>
     <owners>chocolatey</owners>
     <summary>Adobe Flash Player PPAPI Plugin for Opera and Chromium based browsers</summary>

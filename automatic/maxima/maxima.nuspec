@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>maxima</id>
-    <version>0.0</version>
+    <version>5.40.0.20170607</version>
     <title>Maxima</title>
     <owners>chocolatey</owners>
     <authors>Macsyma group at Project MAC and volunteer contributors</authors>
@@ -19,14 +19,16 @@ Maxima is a system for the manipulation of symbolic and numerical expressions, i
 The Maxima source code can be compiled on many systems, including Windows, Linux, and MacOS X. The source code for all systems and precompiled binaries for Windows and Linux are available at the SourceForge file manager.
 
 Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.
-    </description>
+
+![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/maxima/screenshot.png)
+</description>
     <summary>Maxima is a computer algebra system based on a 1982 version of Macsyma</summary>
     <copyright />
     <tags>maxima cas algebra foss cross-platform mathematics admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/maxima</packageSourceUrl>
     <mailingListUrl>http://maxima.sourceforge.net/maximalist.html</mailingListUrl>
     <projectSourceUrl>https://sourceforge.net/p/maxima/code/ci/master/tree</projectSourceUrl>
-    <releaseNotes>https://sourceforge.net/p/maxima/code/ci/master/tree/ChangeLog-5.38.1</releaseNotes>
+    <releaseNotes>https://sourceforge.net/p/maxima/code/ci/master/tree/ChangeLog-5.40.md</releaseNotes>
     <docsUrl>http://maxima.sourceforge.net/documentation.html</docsUrl>
   </metadata>
   <files>
