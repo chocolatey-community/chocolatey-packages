@@ -22,14 +22,11 @@ The #1 torrent download client on desktops worldwide.
     <summary>A (very) tiny BitTorrent client.</summary>
     <releaseNotes />
     <copyright>© 2017 BitTorrent, Inc.</copyright>
-    <tags>utorrent bittorrent client admin</tags>
+    <tags>utorrent bittorrent client admin freeware</tags>
     <docsUrl>http://help.utorrent.com/</docsUrl>
     <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
     <bugTrackerUrl>http://blog.utorrent.com/releases/windows/</bugTrackerUrl>
     <owners>chocolatey</owners>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/utorrent</packageSourceUrl>
-    <dependencies>
-       <dependency id="chocolatey-core.extension" />
-   </dependencies>
   </metadata>
 </package>
