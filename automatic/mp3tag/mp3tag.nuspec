@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mp3tag</id>
-    <version>2.82</version>
+    <version>2.83</version>
     <title>Mp3tag</title>
     <owners>chocolatey</owners>
     <authors>Florian Heidenreich</authors>
