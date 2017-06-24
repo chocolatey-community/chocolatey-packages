@@ -27,13 +27,10 @@ function global:au_GetLatest {
 	   $beta_version =  ( drpbx-builds -hrefs $beta_builds -beta_build $true )
 	   $stable_version = ( drpbx-builds -hrefs $stable_builds -beta_version $beta_version )
     $downloadUrl = "https://dl-web.dropbox.com/u/17/Dropbox%20${stable_version}.exe"
-    $beta_downloadUrl = "https://dl-web.dropbox.com/u/17/Dropbox%20${beta_version}.exe"
 
     return @{
     URL32 = $downloadUrl;
     Version = $stable_version;
-    #URL32_b = $beta_downloadUrl; # Not yet used at this time
-    #Version_b = $beta_version; # Not yet used at this time
     }
 }
 
@@ -66,6 +63,5 @@ function drpbx-builds {
 	return $build
 }
 
-#update -ChecksumFor 32
-Write-Host "Dropbox update have been temporarily stopped until we add changes to stop it from picking up beta builds"
-return "ignore"
+update -ChecksumFor 32
+
