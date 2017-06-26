@@ -16,6 +16,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 - `/WindowsTerminal` - Makes `vim` use the regular Windows terminal instead of MinTTY terminal.
 - `/NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
 - `/NoCredentialManager` - Disable git credential manager by adding `$Env:GCM_VALIDATE='false'` user environment variable.
+- `/NoGitLfs` - Disable Git LFS installation.
 
 ## Notes
 
