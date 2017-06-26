@@ -24,3 +24,8 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 Write-Host "$packageName installed to '$installLocation'"
 
 ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" } }
+
+if ($pp.NoCredentialManager) {
+    Write-Host "Git credential manager will be disabled."
+    Install-ChocolateyEnvironmentVariable GCM_VALIDATE 'false'
+}
