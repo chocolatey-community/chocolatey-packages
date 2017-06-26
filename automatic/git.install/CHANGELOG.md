@@ -2,4 +2,5 @@
 
 ## 2017-06-26
 
-- Added `/NoCredentialManager` argument
+- Added `/NoCredentialManager` parameter
+- Added `/NoGitLfs` parameter
