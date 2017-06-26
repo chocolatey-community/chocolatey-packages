@@ -3,8 +3,8 @@
 $arguments              = @{
     packageName         =  $env:ChocolateyPackageName
     softwareName        = 'JetBrains DataGrip*'
-    url                 = 'https://download.jetbrains.com/datagrip/datagrip-2017.1.4.exe'
-    checksum            = '8ec99e69dbc5e2fcbf2c9d7e4c88e4be390c08970799eceae4341c00062884fb'
+    url                 = 'https://download.jetbrains.com/datagrip/datagrip-2017.1.5.exe'
+    checksum            = '7ab30463be1babb5d0abe961efbab50421c3c340a35b5eebdf80cc91f7ef68e5'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = '/S'
