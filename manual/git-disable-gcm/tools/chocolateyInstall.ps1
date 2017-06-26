@@ -1,7 +1,3 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-. $toolsPath\helpers.ps1
-
-$gitExecutable = Get-GitExecutable
-& $gitExecutable config --system --unset credential.helper
+throw 'This package is deprecated. Use `/NoCredentialManager` parameter of git.install package instead.'
