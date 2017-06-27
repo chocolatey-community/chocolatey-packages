@@ -23,11 +23,11 @@ You can not use TV-Browser to watch TV.
     <summary>TV-Browser is a digital TV guide.</summary>
     <releaseNotes />
     <copyright />
-    <tags>tv-browser tv television guide admin</tags>
+    <tags>foss cross-platform tv-browser tv television guide admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tv-browser</packageSourceUrl>
     <dependencies>
       <dependency id="javaruntime" version="6.0.30" />
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
     </dependencies>
   </metadata>
   <files>
