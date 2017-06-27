@@ -15,7 +15,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 - `/NoAutoCrlf` - Ensure _'Checkout as is, commit as is'_. This setting **only affects new installs**, it will not override an existing `.gitconfig`.
 - `/WindowsTerminal` - Makes `vim` use the regular Windows terminal instead of MinTTY terminal.
 - `/NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
-- `/NoCredentialManager` - Disable git credential manager by adding `$Env:GCM_VALIDATE='false'` user environment variable.
+- `/NoCredentialManager` - Disable _Git Credential Manager_ by adding `$Env:GCM_VALIDATE='false'` user environment variable.
 - `/NoGitLfs` - Disable Git LFS installation.
 
 ## Notes
