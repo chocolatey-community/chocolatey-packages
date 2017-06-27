@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tv-browser</id>
-    <version>3.4.4.20161107</version>
+    <version>4.0</version>
     <title>TV-Browser</title>
     <owners>chocolatey</owners>
     <authors>TV-Browser Developers</authors>
