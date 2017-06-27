@@ -4,10 +4,15 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $pp = Get-PackageParameters
 $silentArgs = '/silent','/sp-','/suppressmsgboxes'
-if ($pp.InstallDir) { $silentArgs += @("/DIR=`"$($pp.InstallDir)`"") }
-else {
-  $silentArgs += @("/DIR=`"$env:ProgramFiles\OpenSSL`"")
+
+if ($pp.InstallDir) {
+  $dir = $pp.InstallDir 
 }
+else {
+  $dir = "$($env:ProgramFiles)\OpenSSL"
+}
+
+$silentArgs += @("/DIR=`"$dir`"")
 
 $packageArgs = @{
   packageName    = 'OpenSSL.Light'
@@ -20,5 +25,7 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+$binPath = "$($dir)\bin" 
+Install-ChocolateyPath -PathToInstall $binPath 
 
 Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
