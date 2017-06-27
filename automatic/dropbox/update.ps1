@@ -19,7 +19,7 @@ function global:au_GetLatest {
     $versionRegEx = '.*Dropbox%20([0-9\.]+).*'
     $downloadUrl = Get-RedirectedUrl $downloadEndpointUrl
     $fnd_version = $downloadUrl -replace $versionRegEx, '$1'
-	$version = ( drpbx-compare $fnd_version )
+	  $version = ( drpbx-compare $fnd_version )
     return @{ URL32 = $downloadUrl; Version = $version }
 }
 
