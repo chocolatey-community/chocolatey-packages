@@ -14,14 +14,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re    = '\.exe$'
     $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
 
-    $version  = $download_page.ParsedHtml.body.getElementsByClassName('au_index_ver') | select -first 1 -expand "innerText";
+    #$version  = $download_page.ParsedHtml.body.getElementsByClassName('au_index_ver') | select -first 1 -expand "innerText";
+    $version = ($download_page.Content -split "`n" | sls au_index_ver) -split '<|>'
+    $version =  $version | ? { [version]::TryParse($_, [ref]($__)) }
 
-    return @{ URL32 = $url; Version = $version }
+    @{ URL32 = $url; Version = $version }
 }
 
 update -ChecksumFor 32
