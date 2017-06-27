@@ -17,15 +17,15 @@ function global:au_GetLatest {
     $releases = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
     $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
     $stable_builds = @()
-    $beta_builds = @()
+    $nonstable_builds = @()
     $HTML.Links | foreach {
   	  if ($_.href -match "stable" ) { $stable_builds += $_.href }
-  	  if ($_.href -match "beta" ) { $beta_builds += $_.href }
+  	  if ($_.href -match "beta" ) { $nonstable_builds += $_.href }
     }
     $re_dash = '-'; $re_dashndigits = "\-\D+"; $re_t5 = 't5'; $re_abc = '[a-z]\w+'; $re_num_M = '\d+\#[M]\d+';
-    $re_dot = '.'; $re_non = ''; $re_stable = 'Stable-'; $re_beta = 'Beta-'; $re_build = 'Build-';
-	   $beta_version =  ( drpbx-builds -hrefs $beta_builds -beta_build $true )
-	   $stable_version = ( drpbx-builds -hrefs $stable_builds -beta_version $beta_version )
+    $re_dot = '.'; $re_non = ''; $re_stable = 'Stable-'; $re_nonstable = 'Beta-'; $re_build = 'Build-';
+	   $nonstable_version =  ( drpbx-builds -hrefs $nonstable_builds -nonstable_build $true )
+	   $stable_version = ( drpbx-builds -hrefs $stable_builds -nonstable_version $nonstable_version )
     $downloadUrl = "https://dl-web.dropbox.com/u/17/Dropbox%20${stable_version}.exe"
 
     return @{
@@ -37,15 +37,15 @@ function global:au_GetLatest {
 function drpbx-builds {
 	param(
 		[string]$hrefs,
-		[string]$beta_version,
-		[bool]$beta_build
+		[string]$nonstable_version,
+		[bool]$nonstable_build
 	)
     $links = $hrefs
     $links = $links -split ( '\/' ); $build = @()
-	   $build_version = @{$true=($re_beta + $re_build);$false=($re_stable + $re_build)}[( ($beta_build) )]
+	   $build_version = @{$true=($re_nonstable + $re_build);$false=($re_stable + $re_build)}[( ($nonstable_build) )]
     foreach( $_ in $links ) {
      $_ = $_ -replace ( ($build_version), $re_non ) -replace ( $re_dashndigits , $re_non ) -replace ($re_dash , $re_dot ) -replace ( $re_t5 , $re_non ) -replace ($re_abc  , $re_non ) -replace ( $re_num_M , $re_non )
-      if (( $beta_build )) {
+      if (( $nonstable_build )) {
         if ( $_ -ge '27.3.21' ) {
         if ( $_ -match '(\d+\.)?(\d+\.)?(\*|\d+)') {
         $build = $_
@@ -54,7 +54,7 @@ function drpbx-builds {
       }
 		} else {
       $_ = $_  -replace ('m', $re_non )
-			if (( $_ -ge '27.3.21' ) -and ( $_ -le $beta_version )) {
+			if (( $_ -ge '27.3.21' ) -and ( $_ -le $nonstable_version )) {
 			$build = $_
 			break;
 			}
