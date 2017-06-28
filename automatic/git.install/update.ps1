@@ -1,37 +1,14 @@
 import-module au
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = "https://git-scm.com/download/win"
 
-if ($MyInvocation.InvocationName -ne '.') { # run the update only if the script is not sourced
-  function global:au_BeforeUpdate {
-    Remove-Item "$PSScriptRoot\tools\*.exe"
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-    $client = New-Object System.Net.WebClient
-    try
-    {
-      $filePath32 = "$PSScriptRoot\tools\$($Latest.FileName32)"
-      $client.DownloadFile($Latest.URL32, "$filePath32")
-
-      $filePath64 = "$PSScriptRoot\tools\$($Latest.FileName64)"
-      $client.DownloadFile($Latest.URL64, "$filePath64")
-    }
-    finally
-    {
-      $client.Dispose()
-    }
-
-    $Latest.ChecksumType = "sha256"
-    $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath32 | ForEach-Object Hash
-    $Latest.Checksum64 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath64 | ForEach-Object Hash
-  }
-}
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
     @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^[$]filePath32\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
-            "(^[$]filePath64\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
-        }
         ".\legal\verification.txt" = @{
             "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
@@ -53,22 +30,14 @@ function global:au_GetLatest {
     $re64  = "Git-.+-64-bit.exe"
     $url64 = $download_page.links | Where-Object href -match $re64 | Select-Object -First 1 -expand href
 
-    $filename32 = [IO.Path]::GetFileName($url32)
-    $filename64 = [IO.Path]::GetFileName($url64)
+    $version32 = $url32 -split '-' | Select-Object -Skip 2 -Last 1
+    $version64 = $url64 -split '-' | Select-Object -Skip 2 -Last 1
+    if ($version32 -ne $version64) {  throw "Different versions for 32-Bit and 64-Bit detected." }
 
-    $version32 = $filename32 -split '-' | Select-Object -Skip 1 -First 1
-    $version64 = $filename64 -split '-' | Select-Object -Skip 1 -First 1
-
-    if ($version32 -ne $version64) {
-        throw "Different versions for 32-Bit and 64-Bit detected."
-    }
-
-    return @{
-        URL32 = $url32
-        URL64 = $url64
-        FileName32 = $filename32
-        FileName64 = $filename64
+    @{
         Version = $version32
+        URL32   = $url32
+        URL64   = $url64        
     }
 }
 
