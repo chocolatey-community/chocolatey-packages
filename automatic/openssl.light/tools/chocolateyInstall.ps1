@@ -21,4 +21,14 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+$binPath = "$($installLocation)\bin" 
+
+if(Test-Path $installLocation ) {
+  Install-ChocolateyPath -PathToInstall $binPath -PathType Machine 
+}
+else {
+  Write-Warning "Could not add install directory to path"
+}
+
 Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
