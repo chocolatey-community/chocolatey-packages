@@ -28,7 +28,7 @@
 - [ ] My code follows the code style of this repository.
 - [ ] My change requires a change to documentation (this mean usually the notes in the description of a package).
 - [ ] I have updated the documentation accordingly (this mean usually the notes in the description of a package).
-- [ ] All files is up to date with the latest [Contributing Guidelines](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/.github/CONTRIBUTING.md)
+- [ ] All files is up to date with the latest [Contributing Guidelines](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/CONTRIBUTING.md)
 - [ ] The added/modified package passed install/uninstall in the chocolatey test environment.
 - [ ] The changes only affect a single package (not including meta package).
 
