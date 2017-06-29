@@ -23,7 +23,7 @@ function global:au_BeforeUpdate {
     $url = @($download_page.links | ? href -match $re | % href) -match 'files' | select -First 1
 
     "Downloading from $url"
-    Invoke-WebRequest $url -OutFile "tools\$($Latest.FileName32)"
+    Invoke-WebRequest $url -OutFile "tools\$($Latest.FileName32)" -UseBasicParsing
 }
 function global:au_AfterUpdate  {  Set-DescriptionFromReadme -SkipFirst 2 }
 

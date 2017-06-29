@@ -22,7 +22,7 @@ function global:au_BeforeUpdate {
     $url = @($download_page.links | ? href -match $re | % href) -match 'files' | select -First 1
 
     "Downloading from $url"
-    Invoke-WebRequest $url -OutFile $Latest.FileName32
+    Invoke-WebRequest $url -OutFile $Latest.FileName32 -UseBasicParsing
 
     cp $PSScriptRoot\..\winscp.install\README.md $PSScriptRoot\README.md
 
