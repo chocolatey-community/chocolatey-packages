@@ -5,32 +5,24 @@
     <version>5.9.5</version>
     <title>WinSCP (Install)</title>
     <authors>Martin Přikryl</authors>
-    <owners>dtgm</owners>
+    <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://winscp.net/docs/license</licenseUrl>
     <projectUrl>https://winscp.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/5b5d9335e9008d5f0cb0960fcef183926c1bc6ad/icons/winscp.png</iconUrl>
+    <iconUrl></iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
-
-#### Documentation
-* [Features](https://winscp.net/docs/introduction#features)
-* [Screenshots](https://winscp.net/docs/screenshots)
-* [FAQ](https://winscp.net/docs/faq)
-* [Install guide](https://winscp.net/docs/guide_install)</description>
     <summary>Open source free SFTP client, SCP client, FTPS client and FTP client</summary>
-    <releaseNotes>#### Program
-* [News](https://sourceforge.net/p/winscp/news/)
-* [Roadmap](https://winscp.net/docs/history)
-* [Changelog](https://winscp.net/docs/history#5.9.5)
-
-#### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
+    <releaseNotes></releaseNotes>
     <copyright>© 2000 Martin Přikryl</copyright>
-    <tags>scp sftp ftp client admin</tags>
+    <tags>scp cli ssh sftp ftp remote file client foss admin</tags>
     <projectSourceUrl>https://sourceforge.net/p/winscp/code/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/winscp.install/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-coreteampackages/chocolatey-packages/tree/master/automatic/winscp.install/</packageSourceUrl>
     <docsUrl>https://winscp.net/docs/</docsUrl>
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
