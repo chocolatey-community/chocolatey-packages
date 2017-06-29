@@ -7,6 +7,8 @@ function global:au_SearchReplace {
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
             "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+            "(?i)(^\s*url64bit\s*=\s*)('.*')"     = "`$1'$($Latest.URL64)'"
+            "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
             "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
             "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
             "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
@@ -23,9 +25,10 @@ function global:au_GetLatest {
     $link = $download_page.links | ? href -match '\.msi$'
     $url = 'https://releases.hashicorp.com' + $link.href
     @{
-        Version      = $link.'data-version'
-        URL32        = $url
+        Version  = $link.'data-version'
+        URL32    = $url -notmatch '_64' | select -First 1
+        URL64    = $url -match '_64'    | select -First 1
     }
 }
 
-update -ChecksumFor 32
+update
