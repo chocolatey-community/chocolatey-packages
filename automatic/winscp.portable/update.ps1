@@ -15,14 +15,14 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate {
-    Get-RemoteFiles -NoSuffix -Purge -FileNameBase $Latest.FileName32.Replace('.zip','')
-
-    cp $PSScriptRoot\..\winscp.install\README.md $PSScriptRoot\README.md
+    rm tools\*
+    Get-RemoteFiles -NoSuffix -FileNameBase $Latest.FileName32.Replace('.zip','')
 
     set-alias 7z $Env:chocolateyInstall\tools\7z.exe
-    rm tools\*
-    7z x $Latest.FileName32 -otools
-    rm $Latest.FileName32
+    7z x "tools\$($Latest.FileName32)" -otools
+    rm "tools\$($Latest.FileName32)"
+    
+    cp $PSScriptRoot\..\winscp.install\README.md $PSScriptRoot\README.md
 }
 function global:au_AfterUpdate  {  Set-DescriptionFromReadme -SkipFirst 2 }
 
