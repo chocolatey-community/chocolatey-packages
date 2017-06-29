@@ -20,7 +20,8 @@ function global:au_BeforeUpdate {
     'Determine download link from the latest url'
     $download_page = Invoke-WebRequest $Latest.URL32 -UseBasicParsing
     $url = @($download_page.links | ? href -match $re | % href) -match 'files' | select -First 1
-
+    if (!$url) { throw "Can't find download url" }
+    
     "Downloading from $url"
     Invoke-WebRequest $url -OutFile $Latest.FileName32 -UseBasicParsing
 
