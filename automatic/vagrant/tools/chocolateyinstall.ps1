@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = 'vagrant'
   fileType       = 'msi'
-  url            = 'https://releases.hashicorp.com/vagrant/1.9.5/vagrant_1.9.5.msi'
-  url64bit       = ''
-  checksum       = '8ce945cd01d1273b628aa101e035716c246dfbddad29cccc8d96c873f77d386b'
+  url            = 'https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_i686.msi'
+  url64bit       = 'https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_x86_64.msi'
+  checksum       = ''
   checksum64     = ''
   checksumType   = 'sha256'
   checksumType64 = 'sha256'

@@ -22,12 +22,12 @@ function global:au_GetLatest {
     $version_url   = 'https://releases.hashicorp.com' + $version_url
 
     $download_page = Invoke-WebRequest -Uri $version_url -UseBasicParsing
-    $link = $download_page.links | ? href -match '\.msi$'
-    $url = 'https://releases.hashicorp.com' + $link.href
+    $link = $download_page.links | ? href -match '\.msi$' 
+    $url = 'https://releases.hashicorp.com'
     @{
-        Version  = $link.'data-version'
-        URL32    = $url -notmatch '_64' | select -First 1
-        URL64    = $url -match '_64'    | select -First 1
+        Version  = $link.'data-version' | select -first 1
+        URL32    = $url + ($link.href -notmatch '_64' | select -First 1)
+        URL64    = $url + ($link.href -match '_64'    | select -First 1)
     }
 }
 
