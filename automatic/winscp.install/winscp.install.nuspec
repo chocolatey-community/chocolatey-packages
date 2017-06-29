@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winscp.install</id>
-    <version>0.0</version>
+    <version>5.9.6</version>
     <title>WinSCP (Install)</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>

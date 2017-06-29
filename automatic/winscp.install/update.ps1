@@ -17,15 +17,7 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate {
-    'Determine download link from the latest url'
-    $download_page = Invoke-WebRequest $Latest.URL32 -UseBasicParsing
-    $url = @($download_page.links | ? href -match $re | % href) -match 'files' | select -First 1
-    if (!$url) { throw "Can't find download url" }
- 
-    "Downloading from $url"
-    Invoke-WebRequest $url -OutFile "tools\$($Latest.FileName32)" -UseBasicParsing
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix -Purge -FileNameBase $Latest.FileName32.Replace('.exe','') }
 function global:au_AfterUpdate  {  Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
@@ -33,12 +25,14 @@ function global:au_GetLatest {
 
     $url = @($download_page.links | ? href -match $re) -notmatch 'beta' | % href
     $url = 'https://winscp.net/eng/' + $url
-    $version  =$url -split '-' | select -Last 1 -Skip 1
+    $version   = $url -split '-' | select -Last 1 -Skip 1
+    $file_name = $url -split '/' | select -last 1
     @{
         Version      = $version
-        URL32        = $url
-        FileName32   = $url -split '/' | select -last 1
+        URL32        = "https://sourceforge.net/projects/winscp/files/WinSCP/$version/$file_name/download"
+        FileName32   = $file_name
         ReleaseNotes = "https://winscp.net/download/WinSCP-${version}-ReadMe.txt"
+        FileType     = 'exe'
     }
 }
 
