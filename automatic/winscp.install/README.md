@@ -6,7 +6,7 @@ WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP clien
 
 - Graphical user interface
 - Translated into many languages
-- Integration with Windows (drag&drop, URL, shortcut icons, jump list)
+- Integration with Windows (drag and drop, URL, shortcut icons, jump list)
 - All common operations with files
 - Support for SFTP and SCP protocols over SSH and FTP and WebDAV protocols
 - Batch file scripting and command-line interface and .NET assembly for advanced programming tasks
