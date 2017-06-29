@@ -38,4 +38,8 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor none -NoCheckUrl
+if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
+    update -ChecksumFor none -NoCheckUrl
+}
+
+

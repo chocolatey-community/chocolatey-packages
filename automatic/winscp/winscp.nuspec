@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>winscp.install</id>
+    <id>winscp</id>
     <version>0.0</version>
-    <title>WinSCP (Install)</title>
+    <title>WinSCP</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://winscp.net/docs/license</licenseUrl>
@@ -40,9 +40,8 @@
     <docsUrl>https://winscp.net/docs/</docsUrl>
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
+    <dependencies>
+      <dependency id="winscp.install" version="0.0" />
+    </dependencies>
   </metadata>
-  <files>
-    <file src="legal\**" target="legal" />
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
