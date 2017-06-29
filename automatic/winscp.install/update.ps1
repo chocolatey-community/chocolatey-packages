@@ -17,9 +17,12 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { 
+function global:au_BeforeUpdate {
+    'Determine URL from the latest url'
     $download_page = Invoke-WebRequest $Latest.URL32 -UseBasicParsing
     $url = @($download_page.links | ? href -match $re | % href) -match 'files' | select -First 1
+
+    "Downloading from $url"
     Invoke-WebRequest $url -OutFile "tools\$($Latest.FileName32)"
 }
 function global:au_AfterUpdate  {  Set-DescriptionFromReadme -SkipFirst 2 }
