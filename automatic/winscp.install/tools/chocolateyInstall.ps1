@@ -1,7 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$pp = Get-PackageParameters
 
 $packageArgs = @{
   packageName    = 'winscp'

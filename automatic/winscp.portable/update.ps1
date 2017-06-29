@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate {
-    rm tools\*
+    rm tools\* -ea 0
     Get-RemoteFiles -NoSuffix -FileNameBase $Latest.FileName32.Replace('.zip','')
 
     set-alias 7z $Env:chocolateyInstall\tools\7z.exe
