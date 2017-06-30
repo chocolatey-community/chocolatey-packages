@@ -49,5 +49,5 @@ Install-ChocolateyInstallPackage @packageArgs
 Install-BinFile -Name "Cygwin" -Path "$cygwin_root\Cygwin.bat"
 
 Write-Host "Copying cygwin package manager (setup) to $cygwin_root"
-$setup_path = if (Get-ProcessorBits 64 -and $env:ChocolateyForceX86 -ne $true) { $packageArgs.file } else { $packageArgs.file64 }
+$setup_path = if (Get-ProcessorBits 32 -or $env:ChocolateyForceX86) { $packageArgs.file } else { $packageArgs.file64 }
 mv $setup_path $cygwin_root\cygwinsetup.exe -Force
