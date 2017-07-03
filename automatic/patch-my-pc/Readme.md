@@ -1,22 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>patch-my-pc</id>
-    <version>3.0.5.0</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/patch-my-pc</packageSourceUrl>
-    <owners>chocolatey, Redsandro</owners>
-    <title>Patch my PC</title>
-    <authors>Patch My PC</authors>
-    <projectUrl>http://patchmypc.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png</iconUrl>
-    <copyright>© 2017 Patch My PC</copyright>
-    <licenseUrl>https://patchmypc.net/about</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://patchmypc.net/faq</docsUrl>
-    <tags>patch-my-pc admin software update updates freeware</tags>
-    <summary>Patch My PC creates software to patch third party applications to fix security vulnerabilities.</summary>
-    <description>
+# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png" height="48" width="48" /> patch-my-pc](https://chocolatey.org/packages/patch-my-pc)
+
 A key component of staying safe online is keeping your computer up-to-date. Hackers and virus writers love outdated software. It might contain a security vulnerability or “hole” that can provide them with access to your computer. Outdated software can also be buggy, or have performance issues, which is usually fixed with a newer version of the software. These are two of the main reasons why it is important to keep the software on your computer updated (or “patched”).
 
 Patch My PC Updater is a free, easy-to-use program that keeps over 100 programs up-to-date on your computer. It is also an easy way to install any of these programs on to your computer.When you open Patch My PC Updater, it will scan your system for outdated programs.
@@ -40,13 +23,3 @@ Whether you are a computer novice, semi-tech savvy, the go-to tech person for yo
 
 ## Notes
 - Link to start menu is no longer working. Looking for a package writer who can fix this.
-</description>
-    <releaseNotes>https://patchmypc.net/release-notes</releaseNotes>
-    <dependencies>
-      <dependency id="dotnet3.5" version="3.5" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
-</package>

@@ -1,10 +1,12 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases     = 'https://patchmypc.net/start-download'
 $versions     = 'https://patchmypc.net/release-notes'
 
 function global:au_AfterUpdate {
   Remove-Item -Force "$PSScriptRoot\tools\*.exe"
+  Set-DescriptionFromReadme -SkipFirst 1
 }
 
 function global:au_SearchReplace {
