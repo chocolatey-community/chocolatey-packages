@@ -35,7 +35,7 @@ function global:au_GetLatest {
   $re    = '^/.+\.exe$'
   $url   = $download_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
 
-  $version  = $url -split '\/' | select -Last 1 -Skip 1
+  $version  = $url -split '[a-z]?\/' | select -Last 1 -Skip 1
 
   if (!($version -match "^[\d\.]+$")) {
     # They changed the filename again, lets try the tag name
