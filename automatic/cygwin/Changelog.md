@@ -1,6 +1,6 @@
 # Package changelog for [cygwin](https://chocolatey.org/packages/cygwin)
 
-## Upcoming
+## Version: 2.8.1 (2017-07-03)
 - **BUGS:** Removed admin tag
 
 ## Version: 2.8.0.20170607 (2017-06-07)

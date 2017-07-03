@@ -4,7 +4,7 @@
   <metadata>
     <id>Cygwin</id>
     <title>Cygwin</title>
-    <version>2.8.0.20170607</version>
+    <version>2.8.1</version>
     <authors>Red Hat, Inc.</authors>
     <owners>Chocolatey</owners>
     <summary>A Linux environment for Windows.</summary>
@@ -36,7 +36,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png</iconUrl>
     <releaseNotes>
-[Software Changelog](https://cygwin.com/ml/cygwin-announce/2017-04/msg00001.html)
+[Software Changelog](https://cygwin.com/ml/cygwin-announce/2017-07/msg00002.html)
 [Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/cygwin/Changelog.md)
     </releaseNotes>
     <mailingListUrl>https://cygwin.com/lists.html</mailingListUrl>
