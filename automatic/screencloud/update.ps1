@@ -14,6 +14,9 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
     @{
+        ".\tools\chocolateyInstall.ps1" = @{
+            "(?i)'$($pattern)'" = "`${1}'$($Latest.FileName32)'"
+        }
         ".\legal\VERIFICATION.txt" = @{
             "(?i)(\s+x32:).*"      = "`${1} $($Latest.URL32)"
             "(?i)(\checksum32:).*" = "`${1} $($Latest.Checksum32)"
