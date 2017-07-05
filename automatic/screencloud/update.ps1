@@ -1,10 +1,15 @@
 Import-Module au
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $source = "https://screencloud.net/pages/download"
 $pattern = "ScreenCloud-(.+)-x86.msi"
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
+}
+
+function global:au_AfterUpdate {
+    Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_SearchReplace {
