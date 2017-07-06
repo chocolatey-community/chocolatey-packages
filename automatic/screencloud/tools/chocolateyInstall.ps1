@@ -15,3 +15,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+
+# clean up
+rm "$toolsDir\$fileName" -ea 0
