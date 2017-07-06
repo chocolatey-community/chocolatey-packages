@@ -4,7 +4,7 @@
   <metadata>
     <id>php</id>
     <title>PHP (Hypertext Preprocessor)</title>
-    <version>7.0.20</version>
+    <version>7.0.21</version>
     <authors>PHP Authors</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
@@ -23,7 +23,7 @@ For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     <tags>php development programming foss cross-platform admin</tags>
     <licenseUrl>http://us.php.net/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.0.20</releaseNotes>
+    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.0.21</releaseNotes>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg</iconUrl>
     <bugTrackerUrl>https://bugs.php.net/</bugTrackerUrl>
     <docsUrl>https://secure.php.net/docs.php</docsUrl>
