@@ -2,7 +2,7 @@ Import-Module au
 . "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $source = "https://screencloud.net/pages/download"
-$pattern = "ScreenCloud-(.+)-x86.msi"
+$pattern = "ScreenCloud-(.+)-x86.msi$"
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
@@ -27,7 +27,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $res = Invoke-WebRequest -Uri $source -UseBasicParsing
 
-    $url = $res.Links | ? href -match $pattern | % href
+    $url = $res.Links | ? href -match $pattern | select -First 1 -Expand href
     $version = $matches[1]
 
     @{
