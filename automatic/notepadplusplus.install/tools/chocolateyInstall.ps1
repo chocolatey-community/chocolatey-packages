@@ -17,7 +17,7 @@ $packageArgs = @{
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
-  softwareName   = 'Notepad++*'
+  softwareName   = 'Notepad\+\+'
 }
 Install-ChocolateyPackage @packageArgs
 
