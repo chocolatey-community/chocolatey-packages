@@ -1,11 +1,12 @@
 Import-Module au
 . "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
-$source = "https://screencloud.net/pages/download"
-$pattern = "ScreenCloud-(.+)-x86.msi$"
+$releases = "https://sourceforge.net/projects/screencloud/files/"
+$versionPattern = "([0-9.]+)"
+$filePattern = "ScreenCloud-$($versionPattern)-x86.msi"
 
 function global:au_BeforeUpdate {
-    Get-RemoteFiles -Purge -NoSuffix
+    Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1
 }
 
 function global:au_AfterUpdate {
@@ -15,24 +16,28 @@ function global:au_AfterUpdate {
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)'$($pattern)'" = "`${1}'$($Latest.FileName32)'"
+            "(^[$]fileName\s*=\s*)('.*')" = "`${1}'$($Latest.FileName32)'"
         }
         ".\legal\VERIFICATION.txt" = @{
-            "(?i)(\s+x32:).*"      = "`${1} $($Latest.URL32)"
-            "(?i)(\checksum32:).*" = "`${1} $($Latest.Checksum32)"
+            "(?i)(\s+x32:).*"           = "`${1} $($Latest.URL32)"
+            "(?i)(checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+            "(?i)(checksum32\:).*"      = "`${1} $($Latest.Checksum32)"
         }
     }
 }
 
 function global:au_GetLatest {
-    $res = Invoke-WebRequest -Uri $source -UseBasicParsing
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $download_page.Links | ? href -Match "$($versionPattern)/$" | % href | Select -First 1 | Out-Null
+    $version = $Matches[1]
 
-    $url = $res.Links | ? href -match $pattern | select -First 1 -Expand href
-    $version = $matches[1]
+    $download_page = Invoke-WebRequest -Uri "$($releases + $version)/windows/" -UseBasicParsing
+    $url = $download_page.Links | ? href -Match "$($filePattern)/download" | % href | Select -First 1
 
     @{
-        Version = $version
-        URL32 = "https:$url"
+        Version  = $version
+        URL32    = $url
+        FileType = 'msi'
     }
 }
 
