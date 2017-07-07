@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'brackets'
-$url32       = 'https://github.com/adobe/brackets/releases/download/release-1.9/Brackets.Release.1.9.msi'
+$url32       = 'https://github.com/adobe/brackets/releases/download/release-1.10/Brackets.Release.1.10.msi'
 $url64       = $url32
-$checksum32  = '46779c5819f9d7b9339eba50e6e34bfa0733ebb6bff9ac88acd5fb913e36ff03'
+$checksum32  = 'd691bbb24cca2e0b8aa3f37f85b9d16884d950ba75ac7f82bfbd17771a48e906'
 $checksum64  = $checsum32
 
 $packageArgs = @{
