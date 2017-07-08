@@ -4,7 +4,7 @@
   <metadata>
     <id>vagrant</id>
     <title>Vagrant (Install)</title>
-    <version>1.9.6</version>
+    <version>1.9.7</version>
     <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
     <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
     <summary>Vagrant - Development environments made easy.</summary>
