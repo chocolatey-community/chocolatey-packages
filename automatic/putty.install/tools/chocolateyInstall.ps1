@@ -6,8 +6,8 @@ $packageArgs = @{
     PackageName    = "putty.install"
     FileType       = "msi"
     SoftwareName   = "PuTTY"
-    File           = "$toolsPath\putty-0.69-installer.msi"
-    File64         = "$toolsPath\putty-64bit-0.69-installer.msi"
+    File           = "$toolsPath\putty-0.70-installer.msi"
+    File64         = "$toolsPath\putty-64bit-0.70-installer.msi"
     SilentArgs     = "/quiet"
     ValidExitCodes = @(0)
 }
