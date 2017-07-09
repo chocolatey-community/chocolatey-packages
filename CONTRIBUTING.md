@@ -18,10 +18,10 @@ To achieve those goals we are using the following priorities when adding new or 
 1. Freeware packages.
 1. Commercial packages with unrestricted trials.
 
-The following notes also apply: 
-- When packages have the same priorities, software with higher number of users will generally be considered more important.
-- Applications without english localization are not accepted in this repository.
-- The core team may deciede to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance. 
+The following rules also apply: 
+1. When packages have the same priorities, software with higher number of users will generally be considered more important.
+1. Applications without english localization are not accepted in this repository.
+1. The core team may deciede to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance. 
 
 For existing packages that no longer fit above principles chocolatey user will be removed from the list of the maintainers.
 
