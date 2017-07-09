@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://wiki.x2go.org/doku.php'
+$releases = 'https://code.x2go.org/releases/binary-win32/x2goclient/releases/'
 $softwareName = 'X2Go Client*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -11,7 +11,7 @@ function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*located at\:?\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
@@ -31,8 +31,13 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'x2goclient.*setup\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $re = '^[\d]+\.[\d\.\-]+\/$'
+  $verSort = { [version]($_.href -split '[\-\/]' | select -first 1) }
+  $releaseUrl = $download_page.Links | ? href -match $re | sort $verSort | select -last 1 -Expand href | % { $releases + $_ }
+
+  $download_page = Invoke-WebRequest -Uri $releaseUrl -UseBasicParsing
+
+  $url32 = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href | % { $releaseUrl + $_ }
 
   $verRe = '[-]'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
