@@ -1,16 +1,19 @@
-﻿try {
-  $package = 'OptiPNG'
-  $installDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$ErrorActionPreference = 'Stop';
 
-  $zipUrl = 'http://sourceforge.net/projects/optipng/files/OptiPNG/optipng-0.7.5/optipng-0.7.5-win32.zip/download'
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-  Install-ChocolateyZipPackage $package "$zipUrl" "$installDir"
-
-  Move-Item -Path "$($installDir)\optipng-0.7.5-win32\*" -Destination "$installDir" -Force
-  Remove-Item "$($installDir)\optipng-0.7.5-win32"
-
-} catch {
-  Write-ChocolateyFailure $package "$($_.Exception.Message)"
-  throw
+if (Test-Path "$toolsPath\optipng-*win32") {
+  # Remove the directory from a previous installation
+  Remove-Item -Force -Recurse -ea 0 "$toolsPath\optipng-*win32"
 }
 
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'zip'
+  file           = "$toolsPath\optipng.zip"
+  destination    = $toolsPath
+}
+
+Get-ChocolateyUnzip @packageArgs
+
+Remove-Item -Force -ea 0 $packageArgs.file
