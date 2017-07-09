@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>OptiPNG</id>
+    <version>0.7.5.20141004</version>
+    <title>OptiPNG: Advanced PNG Optimizer</title>
+    <authors>Cosmin Truta</authors>
+    <owners>Cosmin Truta</owners>
+    <licenseUrl>http://optipng.sourceforge.net/license.txt</licenseUrl>
+    <projectUrl>http://optipng.sourceforge.net/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections.</description>
+    <summary>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.</summary>
+    <releaseNotes>0.7.5.20141004: Installation directory is now `$PSScriptDir` instead of `$env:ChocolateyBinRoot\OptiPNG`</releaseNotes>
+    <copyright>Cosmin Truta 2001-2012</copyright>
+    <tags>OptiPNG PNG GIF TIFF compression</tags>
+  </metadata>
+</package>
