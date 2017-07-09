@@ -1,0 +1,21 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to https://winscp.net/eng/download.php
+
+   x32: https://sourceforge.net/projects/winscp/files/WinSCP/5.9.6/WinSCP-5.9.6-Setup.exe/download
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum32: DB1053D9F136302607738487621F77F577AC0A642482D0DAD87508795EA94E7F
+
+File 'license.txt' is obtained from:
+   https://www.gnu.org/licenses/gpl-3.0.txt

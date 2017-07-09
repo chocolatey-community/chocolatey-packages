@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>winscp.install</id>
+    <version>0.0</version>
+    <title>WinSCP (Install)</title>
+    <authors>Martin Přikryl</authors>
+    <owners>chocolatey, dtgm</owners>
+    <licenseUrl>https://winscp.net/docs/license</licenseUrl>
+    <projectUrl>https://winscp.net/</projectUrl>
+    <iconUrl>https://automatic</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
+
+## Features
+
+- Graphical user interface
+- Translated into many languages
+- Integration with Windows (drag and drop, URL, shortcut icons, jump list)
+- All common operations with files
+- Support for SFTP and SCP protocols over SSH and FTP and WebDAV protocols
+- Batch file scripting and command-line interface and .NET assembly for advanced programming tasks
+- Directory synchronization in several semi or fully automatic ways
+- Integrated text editor
+- Shares site settings with PuTTY
+- Support for password, keyboard-interactive, public key and Kerberos (GSS) authentication
+- Integrates with Pageant (PuTTY authentication agent) for full support of public key authentication with SSH
+- Explorer and Commander interfaces
+- Optionally protects stored site information with master password
+- Optionally supports portable operation using a configuration file in place of registry entries, suitable for operation from removable media
+
+![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/winscp.install/screenshot.png)
+</description>
+    <summary>Open source free SFTP client, SCP client, FTPS client and FTP client</summary>
+    <releaseNotes>https://winscp.net/download/WinSCP-5.9.6-ReadMe.txt</releaseNotes>
+    <copyright>© 2000 Martin Přikryl</copyright>
+    <tags>scp cli ssh sftp ftp remote file client foss admin</tags>
+    <projectSourceUrl>https://sourceforge.net/p/winscp/code/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-coreteampackages/chocolatey-packages/tree/master/automatic/winscp.install/</packageSourceUrl>
+    <docsUrl>https://winscp.net/docs/</docsUrl>
+    <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
+    <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
