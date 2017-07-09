@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://optipng.sourceforge.net/>
+and can be verified by doing the following:
+
+1. Download the following <http://prdownloads.sourceforge.net/optipng/optipng-0.7.6-win32.zip?download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 0012EC30EE5292E1FD19E0F8C45DE4CC291FB5872C5BC83355C17E0B6CE662F7
+
+The file 'LICENSE.txt' has been obtained from <http://optipng.sourceforge.net/license.txt>
