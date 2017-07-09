@@ -91,7 +91,7 @@
 #>
 
 param(
-  [string]$Name = $null,
+  [string]$Name = "winscp.portable",
   [string]$IconName = $null,
   [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
   [string]$RelativeIconDir = "../icons",
@@ -273,7 +273,7 @@ function Update-IconUrl{
   $suffixMatch = $validSuffixes | ? { $Name.EndsWith($_) } | select -first 1
 
   if ($suffixMatch) {
-    $possibleNames += $Name.TrimEnd($suffixMatch)
+    $possibleNames += $Name.Substring(0, $Name.Length - $suffixMatch.Length)
   }
 
   # Let check if the package already contains a url, and get the filename from that
