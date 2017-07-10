@@ -21,7 +21,7 @@
 [Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/optipng/Changelog.md)
     </releaseNotes>
     <copyright>Cosmin Truta 2001-2012</copyright>
-    <tags>optipng png gif tiff compression optimization</tags>
+    <tags>optipng png gif tiff compression optimization cli cross-platform foss</tags>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
