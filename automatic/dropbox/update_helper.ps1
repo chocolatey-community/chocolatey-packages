@@ -3,12 +3,11 @@ function drpbx-compare {
 	param( 
 [Parameter(Position = 0)][string]$_version, [string]$build = 'stable' )
     $releases = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
-    $weblinks = "${env:temp}\${build}links.txt"
     $HTML = (Invoke-WebRequest -UseBasicParsing -Uri $releases).Links`
-     | where {($_ -match $build)} | Select -First 6 | Out-File $weblinks
+     | where {($_ -match $build)} | Select -First 6
     $re_dash = '-'; $re_dot = '.'; $re_non = ''; $re_build = $build + "-Build-";
-    $version = (drpbx-builds -hrefs (Get-Content $weblinks) -testVersion $_version);
-    rm $weblinks; return $version
+    $version = (drpbx-builds -hrefs $HTML -testVersion $_version);
+    return $version
 }
 
 function drpbx-builds {
