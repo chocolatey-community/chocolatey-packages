@@ -7,15 +7,15 @@ location on <https://sourceforge.net/projects/pspp4windows/files/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://sourceforge.net/projects/pspp4windows/files/2016-09-27/pspp-20160927-daily-32bits-setup.exe/download>
+  64-Bit software: <https://sourceforge.net/projects/pspp4windows/files/2016-09-27/pspp-20160927-daily-64bits-setup.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: FFC2171887C9BB6C480B053ACB0FD2C4C441C7FC4622C3D1B8ABEC22F1A29A50
+  checksum64: 36977C1829D644739C9BE0834D71A614218844801B7E7A0F86B03CB99F470432
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl-3.0.txt>
