@@ -1,26 +1,29 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName 'Blender'
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  softwareName  = 'blender*'
+  fileType      = 'msi'
+  silentArgs    = '/quiet /norestart'
+  validExitCodes= @(@(0, 2010, 1641))
+}
+
+$uninstalled = $false
+
+[array]$key = Get-UninstallRegistryKey @packageArgs
 
 if ($key.Count -eq 1) {
   $key | % {
-    $file = "$($_.UninstallString)"
-
-    $packageArgs = @{
-      packageName    = 'blender'
-      fileType       = 'MSI'
-      silentArgs     = "$($_.PSChildName) /qn /norestart"
-      validExitCodes = @(0)
-      file           = ''
-    }
+    $packageArgs['silentArgs'] = "$($_.PSChildName) $($packageArgs['silentArgs'])"
+    $packageArgs['file'] = ''
 
     Uninstall-ChocolateyPackage @packageArgs
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
 } elseif ($key.Count -gt 1) {
-  Write-Warning "$key.Count matches found!"
+  Write-Warning "$($key.Count) matches found!"
   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
-  Write-Warning "Please alert package maintainer the following keys were matched:"
-  $key | % {Write-Warning "- $_.DisplayName"}
+  Write-Warning "Please alert the package maintainer that the following keys were matched:"
+  $key | % { Write-Warning "- $($_.DisplayName)" }
 }

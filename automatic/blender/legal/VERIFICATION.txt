@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.blender.org/download/> (the listed mirrors may differ from the used mirror below)
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <>
+  64-Bit software: <>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type:
+  checksum32:
+  checksum64:
+
+The file 'LICENSE.txt' has been obtained from <http://download.blender.org/release/GPL3-license.txt>

@@ -1,47 +1,60 @@
-﻿import-module au
+﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://www.blender.org/download/'
+$softwareName = 'Blender'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+
+function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"   = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-            "(?i)(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+    }
+  }
 }
-
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re    = '\.msi$'
-    $urls = $download_page.Links | ? href -match $re | select -expand href
-    $url32 = $urls -match "windows32" | select -first 1
-    $url64 = $urls -match "windows64" | select -first 1
+  $re = 'windows32.*\.msi$'
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-    $version = $url32 -split '\-' | select -Last 1 -Skip 1
+  $re = 'windows64.*\.msi$'
+  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-    # swapping out a-f to a numeric value
-    $maps = @{
-      'a' = ''
-      'b' = '.1'
-      'c' = '.2'
-      'd' = '.3'
-      'e' = '.4'
-      'f' = '.5'
-    }
+  $verRe = '[-]'
+  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+  if ($version32 -ne $version64) {
+    throw "32bit version do not match the 64bit version"
+  }
 
-    $maps.Keys | ? { $version.EndsWith($_) } | % { $version = $version -replace $_,$maps[$_] }
+  if ($version32 -match '[a-z]$') {
+    [char]$letter = $version32[$version32.Length - 1]
+    [int]$num = $letter - [char]'a'
+    $version32 = $version32 -replace $letter,".$num"
+  }
 
-    return @{
-      URL32 = $url32
-      URL64 = $url64
-      Version = $version
-    }
+  @{
+    URL32 = $url32
+    URL64 = $url64
+    Version = $version32
+  }
 }
 
-update
+update -ChecksumFor none
