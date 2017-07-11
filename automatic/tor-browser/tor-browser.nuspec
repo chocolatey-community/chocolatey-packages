@@ -22,6 +22,9 @@ This package puts the Tor Browser Bundle into `$env:ChocolateyBinRoot\tor-browse
     <releaseNotes>https://blog.torproject.org/category/tags/tor-browser</releaseNotes>
     <tags>tor browser privacy anonymity security relay network foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tor-browser</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
