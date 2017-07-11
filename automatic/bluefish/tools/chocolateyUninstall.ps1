@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'bluefish*'
+  softwareName  = 'Bluefish*'
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(@(0))

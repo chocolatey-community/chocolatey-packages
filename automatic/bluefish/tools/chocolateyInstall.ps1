@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName   = 'bluefish'
   fileType      = 'exe'
   softwareName  = 'Bluefish*'
-  file          = "$toolsPath\"
+  file          = "$toolsPath\Bluefish-2.2.10-setup.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }
