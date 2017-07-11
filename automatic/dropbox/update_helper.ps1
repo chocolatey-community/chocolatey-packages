@@ -4,7 +4,7 @@ function drpbx-compare {
 [Parameter(Position = 0)][string]$_version, [string]$build = 'stable' )
     $releases = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
     $HTML = (Invoke-WebRequest -UseBasicParsing -Uri $releases).Links`
-     | where {($_ -match $build)} | Select -First 6
+     | where {($_ -match $build)} | Select -First 6 | out-string
     $re_dash = '-'; $re_dot = '.'; $re_non = ''; $re_build = $build + "-Build-";
     $version = (drpbx-builds -hrefs $HTML -testVersion $_version);
     return $version
