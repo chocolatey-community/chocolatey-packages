@@ -55,17 +55,4 @@ function global:au_GetLatest {
   }
 }
 
-function Get-RedirectedUrl {
-  param([uri]$url)
-
-  $request = [System.Net.WebRequest]::CreateDefault($url)
-  $request.AllowAutoRedirect = $false
-  $response = $request.GetResponse()
-  if ($response.StatusCode -eq 'Redirected' -or $response.StatusCode -eq 'MovedPermanently') {
-    $result = $response.GetResponseHeader('Location')
-  }
-  $response.Dispose()
-  return $result
-}
-
 update -ChecksumFor none
