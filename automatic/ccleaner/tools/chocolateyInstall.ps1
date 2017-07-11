@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'ccleaner'
-$url32       = 'https://download.piriform.com/ccsetup531.exe'
+$url32       = 'https://download.piriform.com/ccsetup532.exe'
 $url64       = $url32
-$checksum32  = 'c0ea5b0a8c1f2f1bf0eed8e688ea60fc48f6f953f46e7df40bc26cb8de4585f3'
+$checksum32  = '5efe445a696914b968f763b5830a62365d95e45052c35a96e05794bc7a7a2964'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
