@@ -14,12 +14,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
-    $url = $download_page.links | ? href -match '[0-9.]+/$' | % href | select -first 1
-    $url = 'https://sourceforge.net' + $url
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $url = $download_page.links | ? href -match '[\d]+\.[\d\.]+\/$' | % href | select -first 1
+    if (!$url.StartsWith("http")) { $url = 'https://sourceforge.net' + $url }
     $version = $url -split '/' | select -Last 1 -Skip 1
 
-    $download_page =  Invoke-WebRequest $url
+    $download_page =  Invoke-WebRequest $url -UseBasicParsing
 
     $version = $url -split '/' | select -Last 1 -Skip 1
     @{
