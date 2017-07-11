@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://www.zotero.org/download'
+$releases = 'https://www.zotero.org/download/client/dl?channel=release&platform=win32'
 
 function global:au_SearchReplace {
    @{
@@ -14,15 +14,27 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $url = GetRedirectedUrl -url $releases
 
-    $re    = '\.exe$'
-    $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
     $version  = $url -split '/' | select -Last 1 -Skip 1
     @{
         Version      = $version
         URL32        = $url
     }
+}
+
+function GetRedirectedUrl() {
+  param([string]$url)
+
+  $req = [System.Net.WebRequest]::Create($url)
+  $resp = $req.GetResponse()
+  if ($resp.ResponseUri.OriginalString -eq $url) { $res = $url }
+  else {
+    $res = $resp.ResponseUri.OriginalString
+  }
+
+  $resp.Dispose() | Out-Null
+  return $res
 }
 
 update -ChecksumFor 32
