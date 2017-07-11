@@ -1,6 +1,7 @@
 ﻿import-module au
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://www.mendeley.com/release-notes/'
+$releases = 'https://www.mendeley.com/client/get/1/'
 
 function global:au_SearchReplace {
   @{
@@ -8,19 +9,21 @@ function global:au_SearchReplace {
       "(?i)(^\s*url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
     }
+    ".\mendeley.nuspec" = @{
+      "(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
+    }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $url = Get-RedirectedUrl $releases
 
-	$url = $download_page.Content -match 'Release Notes for Mendeley Desktop v([1-9\.]+)'
-	$version = $matches[1]
-	$url = "http://desktop-download.mendeley.com/download/Mendeley-Desktop-${version}-win32.exe"
+  $version = $url -split '-' | select -Last 1 -skip 1
 
   @{
     Version = $version
     URL32   = $url
+    ReleaseNotes = "https://www.mendeley.com/release-notes/v$($version -replace '\.','_')"
   }
 }
 
