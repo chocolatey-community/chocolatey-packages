@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://sourceforge.net/projects/tortoisesvn/files/1.9.5/Application/TortoiseSVN-1.9.5.27581-win32-svn-1.9.5.msi/download>
-  64-Bit: <https://sourceforge.net/projects/tortoisesvn/files/1.9.5/Application/TortoiseSVN-1.9.5.27581-x64-svn-1.9.5.msi/download>
+  32-Bit: <https://sourceforge.net/projects/tortoisesvn/files/1.9.6/Application/TortoiseSVN-1.9.6.27867-win32-svn-1.9.6.msi/download>
+  64-Bit: <https://sourceforge.net/projects/tortoisesvn/files/1.9.6/Application/TortoiseSVN-1.9.6.27867-x64-svn-1.9.6.msi/download>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: C2A74ECFBE1260A950A0ED42056E665CABFD19BAC3C34D93FF83BA8A3F558AF2
-  checksum64: DBB3E538FDE2FAC56781B4893AE6AB45B6CB331D2A3888ED4308A5EC47E85468
+  checksum32: 19B0A609BC0AA62BA103ECE702E75A06C0D58B79BFCD7439BAD449A7D14B937C
+  checksum64: 5ACD9838F6640DA5FB9B26AE8BEAAAC3DF0325E83D1B13EFAEC7D522E8C8BA39
 
 File 'LICENSE.txt' is obtained from <https://sourceforge.net/p/tortoisesvn/code/23615/tree/trunk/src/COPYING.txt>

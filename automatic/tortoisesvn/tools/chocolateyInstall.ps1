@@ -2,8 +2,8 @@
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$filePath32 = "$toolsPath\TortoiseSVN-1.9.5.27581-win32-svn-1.9.5.msi"
-$filePath64 = "$toolsPath\TortoiseSVN-1.9.5.27581-x64-svn-1.9.5.msi"
+$filePath32 = "$toolsPath\TortoiseSVN-1.9.6.27867-win32-svn-1.9.6.msi"
+$filePath64 = "$toolsPath\TortoiseSVN-1.9.6.27867-x64-svn-1.9.6.msi"
 
 $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
   Write-Host "Installing 64 bit version"

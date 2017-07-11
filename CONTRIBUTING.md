@@ -7,7 +7,7 @@
 
 This repository presents **the latest and highest package standards**. The purpose of this repository is to provide packages that are:
 
-* **Stable** - Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.4.4](#114-embed-a-package-if-allowed)).
+* **Stable** - Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.1.4](#114-embed-a-package-if-allowed)).
 * **High quality** - Packages should be resilient and should provide parameters where adequate.
 * **Free** - Packages shold be generally usable by anybody without any special prerequisites.
 
@@ -18,9 +18,12 @@ To achieve those goals we are using the following priorities when adding new or 
 1. Freeware packages.
 1. Commercial packages with unrestricted trials.
 
-**NOTE**: When packages have the same priorities, software with higher number of users will generally be considered more important.
+The following rules also apply: 
+1. When packages have the same priorities, software with higher number of users will generally be considered more important.
+1. Applications without english localization are not accepted in this repository.
+1. The core team may deciede to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance. 
 
-Existing packages of the chocolatey user that no longer fit above principles will be unlisted, and will only continue to be updated when the original maintainer or a community member fixes the package.
+For existing packages that no longer fit above principles chocolatey user will be removed from the list of the maintainers.
 
 The following sections present complete set of guideliness, please read them carefully, especially since some of the rules are enforced and if broken will result in the failed PR build.
 
@@ -58,7 +61,7 @@ For software that explicitelly doesn't allow redistribution via adequate license
 
 As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal). 
 
-**NOTE**: 150MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
+**NOTE**: 300MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
 ### 1.1.5 Support multiple versions
 

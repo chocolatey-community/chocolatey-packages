@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'musescore'
   fileType               = 'msi'
-  url                    = 'http://ftp.osuosl.org/pub/musescore/releases/MuseScore-2.0.3/MuseScore-2.0.3.msi'
-  url64bit               = 'http://ftp.osuosl.org/pub/musescore/releases/MuseScore-2.0.3/MuseScore-2.0.3.msi'
-  checksum               = 'f45f90adcf4d70bb4e5525b188cd6e65e6a19ebe2d273752068c71a4939633d8'
-  checksum64             = 'f45f90adcf4d70bb4e5525b188cd6e65e6a19ebe2d273752068c71a4939633d8'
+  url                    = 'http://ftp.osuosl.org/pub/musescore/releases/MuseScore-2.1/MuseScore-2.1.msi'
+  url64bit               = 'http://ftp.osuosl.org/pub/musescore/releases/MuseScore-2.1/MuseScore-2.1.msi'
+  checksum               = '9fd7c2372896ddbd9c727e33d43e97f8f66678cf662a0a64c51435bffe8c25b2'
+  checksum64             = '9fd7c2372896ddbd9c727e33d43e97f8f66678cf662a0a64c51435bffe8c25b2'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/qn'

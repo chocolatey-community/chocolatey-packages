@@ -23,6 +23,7 @@ function global:au_GetLatest {
   }
 
   $version  = $url -split '[_]' | select -Last 1 -Skip 1
+  if ($version.Length -eq 1) { $version = "$version.0" }
 
   return @{ URL32 = $url; Version = $version }
 }

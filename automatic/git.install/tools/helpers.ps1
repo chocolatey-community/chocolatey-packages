@@ -31,6 +31,11 @@ function Get-InstallComponents( [HashTable]$pp )
         Write-Host "Parameter: no git shell integration"
     } else { $res += "ext", "ext\shellhere", "ext\guihere" }
 
+    if (!$pp.NoGitLfs) {
+        Write-Host "Using Git LFS"
+        $res += 'gitlfs'
+    }
+
     # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc)
     $isSystem = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem
     if ( !$isSystem ) { $res += "icons\quicklaunch" }

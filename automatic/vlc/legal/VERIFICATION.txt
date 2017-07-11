@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://get.videolan.org/vlc/2.2.4/win32/vlc-2.2.4-win32.exe
-   x64: http://get.videolan.org/vlc/2.2.4/win64/vlc-2.2.4-win64.exe
+   x32: http://get.videolan.org/vlc/2.2.6/win32/vlc-2.2.6-win32.exe
+   x64: http://get.videolan.org/vlc/2.2.6/win64/vlc-2.2.6-win64.exe
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: F4A4B8897E86F52A319EE4568E62BE9CDA1BCB2341E798DA12E359D81CB36E51
-   checksum64: A283B1913C8905C4D58787F34B4A85F28F3F77C4157BEE554E3E70441E6E75E4
+   checksum32: 6000F3A1386C06EED2A61EDE6437DF2E537E1BCAAC73A4A32B7648A99FFCB6ED
+   checksum64: 21670EAE2C8041D6F26667C664F97E8931F5977225BCC3C146902BEB26305ED2
 
 Using AU:
 
-   Get-RemoteChecksum http://get.videolan.org/vlc/2.2.4/win64/vlc-2.2.4-win64.exe
+   Get-RemoteChecksum http://get.videolan.org/vlc/2.2.6/win64/vlc-2.2.6-win64.exe
 
 File 'COPYING' obtained from:
    http://svn.videolan.org/filedetails.php?repname=VideoLAN+Server&path=%2Ftrunk%2FCOPYING

@@ -40,7 +40,7 @@ Whether you are a computer novice, semi-tech savvy, the go-to tech person for yo
 
 ## Notes
 - Link to start menu is no longer working. Looking for a package writer who can fix this.
-        </description>
+</description>
     <releaseNotes>https://patchmypc.net/release-notes</releaseNotes>
     <dependencies>
       <dependency id="dotnet3.5" version="3.5" />

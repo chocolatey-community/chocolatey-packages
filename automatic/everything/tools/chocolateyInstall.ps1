@@ -22,7 +22,7 @@ Register-Application "$installLocation\$packageName.exe"
 Write-Host "$packageName registered as $packageName"
 
 $pp = Get-PackageParameters
-$pp.Keys | % { $cmd=@(". '$installLocation\Everything.exe'") } { $cmd += "--install-" + $_.ToLower() }
+$pp.Keys | % { $cmd=@(". '$installLocation\Everything.exe'", '--disable-run-as-admin') } { $cmd += "--install-" + $_.ToLower() }
 Write-Host "Post install command line:" $cmd
 "$cmd" | iex
 

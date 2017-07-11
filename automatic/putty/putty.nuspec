@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>putty</id>
-    <version>0.68.0.20170412</version>
+    <version>0.70</version>
     <title>PuTTY</title>
     <authors>Simon Tatham</authors>
     <owners>chocolatey, Rob Reynolds</owners>
@@ -23,7 +23,7 @@
     <summary>PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms, along with an xterm terminal emulator.</summary>
     <tags>putty telnet ssh foss cross-platform</tags>
     <dependencies>
-      <dependency id="putty.portable" version="[0.68.0.20170412]" />
+      <dependency id="putty.portable" version="[0.70]" />
     </dependencies>
   </metadata>
   <files>

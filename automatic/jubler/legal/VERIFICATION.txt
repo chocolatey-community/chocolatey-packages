@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://www.jubler.org/download.html>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://sourceforge.net/projects/jubler/files/Jubler%20Binary%20Releases/5.1/Jubler-5.1_32.exe/download>
+  64-Bit software: <https://sourceforge.net/projects/jubler/files/Jubler%20Binary%20Releases/5.1/Jubler-5.1_64.exe/download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: 22E3C1EA77C44AC86065A8D79C18052B0C7BFCAE9D0121C22D53F2B4827E378E
+  checksum64: CE1875C4E992BFCC260544C133A2ABF600815707BB5CE1338D62576B021D9539
+
+The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/jubler/code/ci/jubler/tree/LICENCE?format=raw>

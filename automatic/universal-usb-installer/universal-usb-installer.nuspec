@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>universal-usb-installer</id>
-    <version>1.9.7.701</version>
+    <version>1.9.7.800</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/universal-usb-installer</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Universal USB Installer</title>

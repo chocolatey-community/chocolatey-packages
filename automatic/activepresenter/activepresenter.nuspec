@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>activepresenter</id>
     <title>Active Presenter</title>
-    <version>6.1.0</version>
+    <version>6.1.1</version>
     <authors>Atomi Systems</authors>
     <owners>chocolatey</owners>
     <summary>Screen Recording and Interactive eLearning Authoring Tool</summary>

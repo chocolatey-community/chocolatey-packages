@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.hedgewars.org/download.html>
+and can be verified by doing the following:
+
+1. Download the following <https://www.hedgewars.org/download/releases/hedgewars-win32.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 42716D965037AE67022331F7ED1972E2A0289E97CEE59DF7B3BCC71DE041180C
+
+The file 'LICENSE.txt' has been obtained from <https://hg.hedgewars.org/hedgewars/raw-file/90e43d1bcd5b/COPYING>

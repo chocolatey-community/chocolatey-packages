@@ -65,5 +65,6 @@ How fast is this operation?  On a C450, 40 frames per second (1.3x real-time sp
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

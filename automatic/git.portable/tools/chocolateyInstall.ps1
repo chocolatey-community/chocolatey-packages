@@ -1,25 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath32 = "$toolsPath\PortableGit-2.12.2-32-bit.7z.exe"
-$filePath64 = "$toolsPath\PortableGit-2.12.2-64-bit.7z.exe"
-
-$filePath   = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-                     Write-Host "Installing 64 bit version"; $filePath64 }
-              else { Write-Host "Installing 32 bit version"; $filePath32 }
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-    PackageName  = 'git.portable'
-    FileFullPath = $filePath
-    Destination  = "$(Get-ToolsLocation)\git"
+    PackageName    = 'git.portable'
+    FileFullPath   = gi $toolsPath\*-32-bit.7z.exe
+    FileFullPath64 = gi $toolsPath\*-64-bit.7z.exe
+    Destination    = "$(Get-ToolsLocation)\git"
 }
 Get-ChocolateyUnzip @packageArgs
 Install-ChocolateyPath $packageArgs.Destination
 
-$deprecatedInstallDir = Join-Path $env:systemdrive 'git'
-if (Test-Path $deprecatedInstallDir) {
-    Write-Host "Removing old installation at: $deprecatedInstallDir"
-    Remove-Item $deprecatedInstallDir -recurse -force -ea 0
-}
-
-Remove-Item -force $filePath32, $filePath64 -ea 0
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" } }

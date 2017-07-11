@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The extension has been downloaded from their official download link listed on <https://screencloud.net/pages/download>
+and can be verified like this:
+
+
+1. Download the following installers:
+  x32: https://sourceforge.net/projects/screencloud/files/1.3.0/windows/ScreenCloud-1.3.0-x86.msi/download
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: 41B4A0C38DC677820ADD2A7B2A695E9F9E8E60A14E3E869ABE5BFAE27E54A2E5
+
+File 'LICENSE.txt' is obtained from <https://github.com/olav-st/screencloud/blob/master/LICENSE>

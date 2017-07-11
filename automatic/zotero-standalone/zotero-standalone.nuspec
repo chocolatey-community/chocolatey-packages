@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zotero-standalone</id>
     <title>Zotero Standalone</title>
     <owners>chocolatey</owners>
-    <version>4.0.29.17</version>
+    <version>0.0</version>
     <authors>Center for History and New Media, et. al.</authors>
     <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
-    <description>
-Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice. It is produced by the Center for History and New Media of George Mason University (GMU). *(from Wikipedia, 2013-04-18)*
-    </description>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/zotero-standalone.png</iconUrl>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
     <projectUrl>https://www.zotero.org/</projectUrl>
-    <tags>references manager bibliography foss cross-platform admin</tags>
+    <tags>zotero-standalone references manager bibliography foss cross-platform admin</tags>
     <copyright>2006-2011, Center for History and New Media, George Mason University, Fairfax, Virginia, USA</copyright>
     <licenseUrl>https://github.com/zotero/zotero/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -21,8 +20,14 @@ Zotero is free and open-source reference management software to manage bibliogra
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/zotero-standalone</packageSourceUrl>
     <projectSourceUrl>https://www.zotero.org/support/dev/source_code</projectSourceUrl>
     <docsUrl>https://www.zotero.org/support</docsUrl>
+    <mailingListUrl>https://forums.zotero.org/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/zotero/zotero/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

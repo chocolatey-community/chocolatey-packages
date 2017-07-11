@@ -4,7 +4,7 @@
   <metadata>
     <id>qbittorrent</id>
     <title>qBittorrent</title>
-    <version>3.3.12</version>
+    <version>3.3.13</version>
     <authors>Christophe Dumez</authors>
     <owners>chocolatey,nconrads</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
@@ -47,7 +47,7 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
 ## Notes
 - This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
 
-![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0ce523dd21760ae0be06fc3c7ca97890c206a21d/automatic/qbittorrent/screenshot.png)
+![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/798547edb9c6cb22a4a58e08361da4450f0ab14c/automatic/qbittorrent/screenshot.png)
 </description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
     <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
@@ -61,7 +61,7 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
     <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.1" />
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
     </dependencies>
   </metadata>
   <files>

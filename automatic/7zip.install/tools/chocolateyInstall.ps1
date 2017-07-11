@@ -16,14 +16,6 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 rm $toolsDir\*.exe -ea 0 -force
 
-# 7z installer may close explorer
-if (!(ps explorer -ea 0)) {
-    # Only start explorer if the file exists; Server Core installs do not have it.
-    if (!(Test-Path "$env:windir\explorer.exe")) {
-        start explorer.exe
-    }
-}
-
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if (!$installLocation)  { Write-Warning "Can't find 7zip install location"; return }
 Write-Host "7zip installed to '$installLocation'"

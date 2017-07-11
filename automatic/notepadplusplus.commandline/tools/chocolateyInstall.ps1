@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'notepadplusplus.commandline'
-$url32       = 'https://notepad-plus-plus.org/repository/7.x/7.3.3/npp.7.3.3.bin.7z'
-$url64       = 'https://notepad-plus-plus.org/repository/7.x/7.3.3/npp.7.3.3.bin.x64.7z'
-$checksum32  = '672eb5f7cc36f2e5b98f8ca906141b3abac2f131736d704c93f3cc4469f29c4f'
-$checksum64  = 'f54c62ce4f8de6a7cd008489e7440b9fc3f2e81eb186b17e4d603177cd20865e'
+$url32       = 'https://notepad-plus-plus.org/repository/7.x/7.4.2/npp.7.4.2.bin.7z'
+$url64       = 'https://notepad-plus-plus.org/repository/7.x/7.4.2/npp.7.4.2.bin.x64.7z'
+$checksum32  = '53c3780fb4079dca1ea90cc0eab2b533cca279d34d31a96c79d7acb6747ed533'
+$checksum64  = '4a4b869930e5fa3b143aa9c185aaf50ece0387344e5929bb7181c7d1aceffc7a'
 $toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{

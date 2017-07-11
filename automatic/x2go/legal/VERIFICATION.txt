@@ -2,8 +2,8 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The embedded software have been downloaded from the listed download
-location on <http://wiki.x2go.org/doku.php>
+The embedded software have been downloaded from their official file server
+located at <http://wiki.x2go.org/doku.php>
 and can be verified by doing the following:
 
 1. Download the following <https://code.x2go.org/releases/binary-win32/x2goclient/releases/4.1.0.0-2017.03.11/x2goclient-4.1.0.0-2017.03.11-setup.exe>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>juju</id>
-    <version>2.2-beta2</version>
+    <version>2.2.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/juju</packageSourceUrl>
     <owners>AdmiringWorm,chocolatey</owners>
     <title>Juju</title>
@@ -19,15 +19,10 @@
     <tags>juju admin console cloud services foss cross-platform cli</tags>
     <summary>Model-driven operations for hybrid cloud services commandline</summary>
     <description>
-The Canonical Distribution of Kubernetes works across all major public clouds and private infrastructure,
-enabling your teams to operate Kubernetes clusters on demand, anywhere.
+The Canonical Distribution of Kubernetes works across all major public clouds and private infrastructure, enabling your teams to operate Kubernetes clusters on demand, anywhere.
 
-Juju is an application and service modelling tool that enables you to quickly model, configure,
-deploy and manage applications in the cloud with only a few commands.
-Use it to deploy hundreds of preconfigured services, OpenStack, or your own code to any public or private cloud.
-
-Created by the people behind ![Ubuntu](https://jujucharms.com/static/img/home/ubuntu-logo.svg)
-    </description>
+Juju is an application and service modelling tool that enables you to quickly model, configure, deploy and manage applications in the cloud with only a few commands. Use it to deploy hundreds of preconfigured services, OpenStack, or your own code to any public or private cloud.
+</description>
     <releaseNotes>https://jujucharms.com/docs/stable/reference-release-notes</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />

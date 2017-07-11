@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.piriform.com/ccleaner/download/standard'
+$releases = 'https://www.piriform.com/ccleaner/download/standard'
 
 function global:au_SearchReplace {
    @{
@@ -22,7 +22,7 @@ function global:au_GetLatest {
   $download_page.Content -match "\<h6\>v((?:[\d]\.)[\d\.]+)"
   $version = $Matches[1]
 
-  @{ URL32 = $url; Version = $version }
+  @{ URL32 = $url -replace 'http:','https:'; Version = $version }
 }
 
 update -ChecksumFor 32

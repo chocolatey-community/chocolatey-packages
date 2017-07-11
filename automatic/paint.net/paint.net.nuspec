@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+   <metadata>
+    <id>paint.net</id>
+    <version>4.0.16</version>
+    <title>Paint.NET</title>
+    <authors>Rick Brewster, dotPDN</authors>
+    <projectUrl>http://www.getpaint.net/</projectUrl>
+    <licenseUrl>http://www.getpaint.net/license.html</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b89548a8e0a21620abe8643335fd7ba0c5b03ca1/icons/paint.net.png</iconUrl>
+    <docsUrl>https://forums.getpaint.net/index.php?/forum/18-tutorials-publishing-only/</docsUrl>
+    <mailingListUrl>https://forums.getpaint.net/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+    Paint.NET is free image and photo editing software for PCs that run Windows.
+    It features an intuitive and innovative user interface with support for layers,
+    unlimited undo, special effects, and a wide variety of useful and powerful tools.
+    An active and growing online community provides friendly help, tutorials, and plugins.
+
+    ## Features
+    - Simple, intuitive, and innovative user interface
+    - Performance
+    - Support for layers
+    - Unlimited undo
+    - Active Online Community
+    </description>
+    <summary>
+    Paint.NET is image and photo manipulation software designed to be used on computers that run Windows.
+    </summary>
+    <tags>paint.net photo editing paint admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/paint.net</packageSourceUrl>
+    <owners>chocolatey,the-running-dev</owners>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.0.3" />
+      <dependency id="dotnet4.6.1" version="4.6.01055.20161213" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

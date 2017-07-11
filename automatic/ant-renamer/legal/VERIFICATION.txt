@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://www.antp.be/software/renamer/download>
+and can be verified by doing the following:
+
+1. Download the following <http://update.antp.be/renamer/antrenamer2_install.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 0C18554DF377AAC201A94CBA2FD682990D6153D9DD365390A793098C403A496C
+
+The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/gpl.txt>.
+This was mentioned to be the correct license on the following page: <http://www.antp.be/software/renamer/sources>

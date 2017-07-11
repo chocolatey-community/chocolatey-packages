@@ -3,8 +3,8 @@
 $packageArgs        = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = "Dropbox*"
-    url             = 'https://clientupdates.dropboxstatic.com/client/Dropbox%2024.4.17%20Offline%20Installer.exe'
-    checksum        = '8f1673b46bf331aee6a4d1b1d6cde0dbff610f0db524606c49e2e505be75baa4'
+    url             = 'https://clientupdates.dropboxstatic.com/client/Dropbox%2029.4.20%20Offline%20Installer.exe'
+    checksum        = '8ae54e360b8e6ba7bd0680e62c75a48f942c3b06536431c6947f878edd3b9935'
     fileType        = 'exe'
     checksumType    = 'sha256'
     silentArgs      = '/s'
@@ -13,6 +13,6 @@ $packageArgs        = @{
 
 Install-ChocolateyPackage @packageArgs
 
-if (Get-Process -Name Dropbox) {
+if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {
     Stop-Process -processname Dropbox
 }

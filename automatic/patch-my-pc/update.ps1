@@ -1,10 +1,12 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases     = 'https://patchmypc.net/start-download'
-$versions     = 'https://patchmypc.net/download'
+$versions     = 'https://patchmypc.net/release-notes'
 
 function global:au_AfterUpdate {
   Remove-Item -Force "$PSScriptRoot\tools\*.exe"
+  Set-DescriptionFromReadme -SkipFirst 1
 }
 
 function global:au_SearchReplace {
@@ -24,9 +26,8 @@ function global:au_GetLatest {
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $version_page = Invoke-WebRequest -Uri $versions -UseBasicParsing
-  $Matches = $null
-  $version_page.Links | ? outerHTML -match "\>Download Patch My PC Updater ([\d\.]+)\<" | Out-Null
-  $version32 = $Matches[1]
+  $re = New-Object regex("\>What&#8217;s new in ([\d\.]+)\<")
+  $version32 = $re.Match($version_page.Content).Groups[1]
 
   @{
     URL32 = $url32

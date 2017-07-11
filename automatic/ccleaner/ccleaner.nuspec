@@ -4,7 +4,7 @@
   <metadata>
     <id>ccleaner</id>
     <title>CCleaner</title>
-    <version>5.28.6005</version>
+    <version>5.31.6105</version>
     <authors>Piriform</authors>
     <owners>maartenba, tonigellida</owners>
     <summary>
@@ -19,10 +19,10 @@ It protects your privacy online and makes your computer faster and more secure.
 
 This package installs CCleaner without additional adware.
   </description>
-    <projectUrl>http://www.piriform.com/ccleaner</projectUrl>
+    <projectUrl>https://www.piriform.com/ccleaner</projectUrl>
     <tags>ccleaner system cleanup freeware trial registry admin</tags>
     <copyright></copyright>
-    <licenseUrl>http://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
+    <licenseUrl>https://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ccleaner</packageSourceUrl>

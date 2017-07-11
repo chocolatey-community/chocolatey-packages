@@ -2,8 +2,8 @@
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$filePath32 = "$toolsPath\node-v7.7.3-x86.msi"
-$filePath64 = "$toolsPath\node-v7.7.3-x64.msi"
+$filePath32 = "$toolsPath\node-v8.1.3-x86.msi"
+$filePath64 = "$toolsPath\node-v8.1.3-x64.msi"
 $installFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
                       Write-Host "Installing 64 bit version"; $filePath64 }
                else { Write-Host "Installing 32 bit version"; $filePath32 }

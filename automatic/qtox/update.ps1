@@ -28,7 +28,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $download_page.Links | ? href -match 'setup-qtox64-(.+?).exe.asc' | Out-Null
+  $download_page.Links | ? href -match 'setup-qtox64-([\d\.]+).*.exe.asc$' | Out-Null
   $version = $Matches[1]
   if (!$version) { throw "qtox version not found on $releases" }
 

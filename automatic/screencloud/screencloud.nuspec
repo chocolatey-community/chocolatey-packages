@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>screencloud</id>
+    <version>1.3.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/screencloud</packageSourceUrl>
+    <owners>chocolatey, p3lim</owners>
+    <title>screencloud (Install)</title>
+    <authors>Olav Sortland Thoresen</authors>
+    <projectUrl>https://screencloud.net/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1c7defed5af3d4f87905acc3d19cfa1903e78bc4/icons/screencloud.svg</iconUrl>
+    <copyright>Copyright © 1989, 1991 Free Software Foundation, Inc.</copyright>
+    <licenseUrl>https://github.com/olav-st/screencloud/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/olav-st/screencloud</projectSourceUrl>
+    <docsUrl>https://github.com/olav-st/screencloud/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/olav-st/screencloud/issues</bugTrackerUrl>
+    <tags>screencloud screenshot clipboard upload foss cross-platform admin</tags>
+    <summary>ScreenCloud makes screenshot sharing easy!</summary>
+    <description>This is the source code for the ScreenCloud client. ScreenCloud is an easy to use screenshot sharing tool consisting of a cross-platform client and a sharing website: [http://screencloud.net/](http://screencloud.net/)
+
+You can also upload to other services, including your own FTP server, Imgur, Dropbox &amp; Ubuntu One through the use of [plugins](https://github.com/olav-st/screencloud-plugins).
+
+![A screenshot of the client running on Ubuntu](https://screencloud.net/img/systemtray_linux.png)
+
+Features
+--------------
+* Open Source and cross-platform(Windows, Mac &amp; Linux)  
+* Fast and easy: Snap a photo, paste the link, done!
+* Plugin support, save to Dropbox, Imgur, etc.
+* Built in screenshot editor.
+</description>
+    <releaseNotes>
+[Software Changelog](https://github.com/olav-st/screencloud/commits/master)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

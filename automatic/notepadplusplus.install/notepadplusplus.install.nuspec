@@ -4,7 +4,7 @@
   <metadata>
     <id>notepadplusplus.install</id>
     <title>Notepad++ (Install)</title>
-    <version>7.3.3</version>
+    <version>7.4.2</version>
     <authors>Don Ho</authors>
     <owners>chocolatey</owners>
     <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>

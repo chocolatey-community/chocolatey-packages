@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>git-disable-gcm</id>
-    <title>Disable Git Credential Manager</title>
+    <title>[DEPRECATED] Disable Git Credential Manager</title>
     <version>1.0.0</version>
     <authors>chocolatey</authors>
     <owners>chocolatey, Pascal Berger</owners>
@@ -14,7 +14,10 @@
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Disable Git Credential Manager</summary>
-    <description>Disables the Git Credential Manager which is installed as part of the [Git](https://chocolatey.org/packages/git.install/) package.</description>
+    <description>Disables the Git Credential Manager which is installed as part of the [Git](https://chocolatey.org/packages/git.install/) package.
+    ## Note
+    - This package is deprecated. Use `/NoCredentialManager` parameter of git.install package instead.
+    </description>
     <tags>git gcm configuration admin foss cross-platform</tags>
     <dependencies>
       <dependency id="git" version="2.7.3" />

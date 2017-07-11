@@ -20,8 +20,9 @@ function global:au_GetLatest {
     $url32 = $download_page.links | Where-Object href -match $re32 | Select-Object -First 1 -expand href
 
     @{
-        Version   = $Matches[1]
-        URL32     = $url32
+        Version     = $Matches[1]
+        URL32       = $url32
+        PackageName = 'SourceTree'
     }
 }
 

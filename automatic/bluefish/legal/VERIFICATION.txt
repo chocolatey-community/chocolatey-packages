@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.bennewitz.com/bluefish/stable/binaries/win32/>
+and can be verified by doing the following:
+
+1. Download the following <https://www.bennewitz.com/bluefish/stable/binaries/win32/Bluefish-2.2.10-setup.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 65E70A80882DFD289661ED718FAD16054B89D95848885008E443ED81B2A76623
+
+The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish/COPYING>

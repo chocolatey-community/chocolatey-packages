@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>freeciv</id>
-    <version>2.5.6</version>
+    <version>2.5.7</version>
     <title>Freeciv</title>
     <owners>chocolatey purity</owners>
     <authors>Freeciv Contributors</authors>
@@ -22,7 +22,7 @@ and build an army, with the ultimate goal of creating the best civilization.
 You can play online against other players (multiplayer) or play by yourself against the computer.
     </description>
     <summary>Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.</summary>
-    <releaseNotes>http://www.freeciv.org/wiki/NEWS-2.5.6</releaseNotes>
+    <releaseNotes>http://www.freeciv.org/wiki/NEWS-2.5.7</releaseNotes>
     <copyright />
     <tags>freeciv game strategy civilization admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freeciv</packageSourceUrl>

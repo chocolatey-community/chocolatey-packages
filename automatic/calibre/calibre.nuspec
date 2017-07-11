@@ -1,28 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>calibre</id>
     <title>Calibre</title>
-    <version>2.82.0</version>
+    <version>3.3.0</version>
     <authors>Kovid Goyal</authors>
-    <owners>gep13, chocolatey</owners>
+    <owners>chocolatey, gep13</owners>
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
-    <description>calibre is a free and open source e-book library management application developed by users of e-books for users of e-books.</description>
-    <projectUrl>http://calibre-ebook.com/</projectUrl>
-    <tags>ebook book foss cross-platform library management admin</tags>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>
+**calibre is a powerful and easy to use e-book manager**. Users say it’s outstanding and a must-have. It’ll allow you to do nearly everything and it takes things a step beyond normal e-book software. It’s also **completely free** and open source and great for both **casual users** and computer experts.
+
+## Features
+- Save time on managing your e-book collection
+- Use it everywhere and with anything
+- Comprehensive e-book viewer
+- Download news/magazines from the web
+- Share and backup your library easily
+- Edit the books in your collection
+- Satisfy every e-book need and get support
+</description>
+    <projectUrl>https://calibre-ebook.com/</projectUrl>
+    <tags>calibre ebook book foss cross-platform library management admin</tags>
     <copyright>Kovid Goyal</copyright>
-    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <licenseUrl>https://github.com/kovidgoyal/calibre/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/calibre.png</iconUrl>
     <releaseNotes>
-Up to date release notes for this application can be found here:
-
-http://calibre-ebook.com/whats-new
+[Software Changelog](https://calibre-ebook.com/whats-new)
+[Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/calibre/Changelog.md)
     </releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/calibre</packageSourceUrl>
+    <projectSourceUrl>https://github.com/kovidgoyal/calibre</projectSourceUrl>
+    <mailingListUrl>https://www.mobileread.com/forums/forumdisplay.php?f=166</mailingListUrl>
+    <bugTrackerUrl>https://bugs.launchpad.net/calibre</bugTrackerUrl>
+    <dependencies>
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

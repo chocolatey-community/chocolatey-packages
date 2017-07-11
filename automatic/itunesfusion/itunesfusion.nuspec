@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>itunesfusion</id>
-    <version>2.6</version>
+    <version>3.1</version>
     <title>iTunesFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.itunesfusion.com</projectUrl>
@@ -12,16 +12,14 @@
     <mailingListUrl>https://www.itunesfusion.com/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-    Sync iTunes with almost any device!
-    iTunesFusion (formerly iTunes Sync) makes it easy to sync iTunes with almost any phone,
-    tablet or MP3 player. Fast and easy to use, with customizable settings for power-users
-    like custom file naming based on tags.
+Sync iTunes with almost any device! iTunesFusion (formerly iTunes Sync) makes it easy to sync iTunes with almost any phone, tablet or MP3 player. Fast and easy to use, with customizable settings for power-users like custom file naming based on tags.
 
-    ## Features
-    - Synchronize any iTunes playlist(s) with almost any device
-    - Configure as many different devices as you need
-    - Synchronize each one with different iTunes playlists.
-    - Use standard playlists or dynamically updating smart playlists to synchronize your device</description>
+## Features
+- Synchronize any iTunes playlist(s) with almost any device
+- Configure as many different devices as you need
+- Synchronize each one with different iTunes playlists.
+- Use standard playlists or dynamically updating smart playlists to synchronize your device
+</description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>itunesfusion itunes sync android mp3 usb</tags>
     <owners>chocolatey,keithlammers,the-running-dev</owners>
@@ -29,7 +27,9 @@
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
       <dependency id="iTunes" version="12.6" />
+      <dependency id="dotnet4.6" version="4.6.00081.20150925" />
     </dependencies>
+    <releaseNotes>[Package Changelog](https://github.com/Chocolatey/chocolatey-coreteampackages/blob/master/automatic/itunesfusion/Changelog.md)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
