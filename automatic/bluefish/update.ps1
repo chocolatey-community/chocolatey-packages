@@ -15,8 +15,8 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-  $re    = 'Bluefish.*-setup\.exe$'
-  $url   = $download_page.links | ? href -match $re | sort -Descending -Property href | select -First 1 -expand href
+  $re    = 'Bluefish-[\d\.]+-setup\.exe$'
+  $url   = $download_page.links | ? href -match $re | select -Last 1 -expand href
 
   $version  = $url -split '[-]' | select -Last 1 -Skip 1
 
