@@ -1,36 +1,29 @@
 
 function drpbx-compare {
-	param(
-		[string]$nonstable_version
-	)
+	param( 
+[Parameter(Position = 0)][string]$_version, [string]$build = 'stable' )
     $releases = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
-    $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
-    $stable_builds = @()
-    $HTML.Links | foreach {
-  	  if ($_.href -match "stable" ) { $stable_builds += $_.href }
-    }
-    $re_dash = '-'; $re_dashndigits = "\-\D+"; $re_t5 = 't5'; $re_abc = '[a-z]\w+'; $re_num_M = '\d+\#[M]\d+';
-    $re_dot = '.'; $re_non = ''; $re_stable = 'Stable-'; $re_build = 'Build-';
-    $stable_version = ( drpbx-builds -hrefs $stable_builds -nonstable_version $nonstable_version )
-    return $stable_version
+    $HTML = (Invoke-WebRequest -UseBasicParsing -Uri $releases).Links`
+     | where {($_ -match $build)} | Select -First 6 | out-string
+    $re_dash = '-'; $re_dot = '.'; $re_non = ''; $re_build = $build + "-Build-";
+    $version = (drpbx-builds -hrefs $HTML -testVersion $_version);
+    return $version
 }
 
 function drpbx-builds {
-	param(
-		[string]$hrefs,
-		[string]$nonstable_version,
-		[bool]$nonstable_build
-	)
-    $links = $hrefs
-    $links = $links -split ( '\/' ); $build = @()
-    $build_version = ($re_stable + $re_build)
-    foreach( $_ in $links ) {
-     $_ = $_ -replace ( ($build_version), $re_non ) -replace ( $re_dashndigits , $re_non ) -replace ($re_dash , $re_dot ) -replace ( $re_t5 , $re_non ) -replace ($re_abc  , $re_non ) -replace ( $re_num_M , $re_non )
-      $_ = $_  -replace ('m', $re_non )
-			if (( $_ -ge '27.3.21' ) -and ( $_ -le $nonstable_version )) {
-			$build = $_
-			break;
-			}
+	param( [string]$default = '27.3.21', [string]$hrefs, [string]$testVersion )
+    $links = $hrefs -split ( '\/' ); $build = @(); $regex = ($re_build);
+    foreach($_ in $links) {
+        foreach($G in $_) {
+            if ($G -match '([\d]{2}[\-]{1}[\d]{1,2}[\-]{1}[\d]{2})') {
+                $G = $G -replace($regex,$re_non) -replace($re_dash,$re_dot);
+                    if ($G -ge $default) { switch -w ($regex) {
+                    'stable*' { if ($G -le $testVersion) { $build += $G; } }
+                    default { if ($G -ge $testVersion) { $build += $G; } } }
+                    }
+			if (($build | measure).Count -ge '6') { $build = ($build | measure -Maximum).Maximum; break; }
+            }
+        }
     }
-	return $build
+	return ($build | select -First 1)
 }
