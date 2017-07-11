@@ -2,7 +2,7 @@ Import-Module au
 . "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = "https://sourceforge.net/projects/screencloud/files/"
-$versionPattern = "([0-9.]+)"
+$versionPattern = "([\d]+\.[\d\.]+)"
 $filePattern = "ScreenCloud-$($versionPattern)-x86.msi"
 
 function global:au_BeforeUpdate {
