@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>tor-browser</id>
-    <version>6.0.5</version>
+    <version>7.0.2</version>
     <title>Tor Browser Bundle</title>
     <owners>chocolatey</owners>
     <authors>Tor Project</authors>
@@ -17,7 +17,7 @@ The Tor software protects you by bouncing your communications around a distribut
 The Tor Browser Bundle lets you use Tor on Windows without needing to install any software. It comes with a pre-configured web browser to protect your anonymity, and is self-contained.
 
 This package puts the Tor Browser Bundle into `$env:ChocolateyBinRoot\tor-browser`.
-    </description>
+</description>
     <summary>Protect your privacy with the Tor Browser Bundle</summary>
     <releaseNotes>https://blog.torproject.org/category/tags/tor-browser</releaseNotes>
     <tags>tor browser privacy anonymity security relay network foss cross-platform</tags>
