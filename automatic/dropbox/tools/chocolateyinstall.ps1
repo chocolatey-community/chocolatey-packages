@@ -11,8 +11,15 @@ $packageArgs        = @{
     validExitCodes = @(0, 1641, 3010)
 }
 
-Install-ChocolateyPackage @packageArgs
+$regex = '(-[a-z]+)'; $re_non = '';
+$installedVersion = ( Get-UninstallRegistryKey -SoftwareName "Dropbox" ).DisplayVersion
+$packageVersion = @{$true=(($Env:ChocolateyPackageVersion) -replace($regex,$re_non));$false=($Env:ChocolateyPackageVersion)}[ $Env:ChocolateyPackageVersion -match $regex ]
 
-if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {
-    Stop-Process -processname Dropbox
-}
+  if ($installedVersion -ge $packageVersion) {
+    Write-Host "Dropbox $installedVersion is already installed."
+  } else {
+	if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {
+		Stop-Process -processname Dropbox
+	}
+	Install-ChocolateyPackage @packageArgs
+  }
