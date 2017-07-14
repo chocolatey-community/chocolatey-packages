@@ -387,7 +387,7 @@ function RunChocoProcess() {
     $progressRegex = 'Progress\:.*\s+([\d]+)\%'
     . choco $args | % {
       $matches = $null
-      if ($failureOccurred) { WriteOutput $_ -type ChocoError }
+      if ($failureOccurred) { WriteOutput "$_" -type ChocoError }
        # We are only showing progress per 10th value
       elseif([regex]::IsMatch($_, $progressRegex)) {
         $progressMatch = [regex]::Match($_, $progressRegex).Groups[1].Value
@@ -456,7 +456,7 @@ function InstallPackage() {
     try {
       RunChocoPackProcess -path $dependentSource | WriteChocoOutput
     } catch {
-      WriteOutput $_ -type Error
+      WriteOutput "$_" -type Error
       return $package.Name
     }
     $sources = "$($_.Directory);$dependentSource;chocolatey"
@@ -475,7 +475,7 @@ function InstallPackage() {
   try {
   if (!(RunChocoProcess @arguments)) { return $package.Name }
   } catch {
-    WriteOutput $_ -type Error
+    WriteOutput "$_" -type Error
     return $package.Name
   }
 
@@ -594,7 +594,7 @@ function UninstallPackage() {
     try {
       RunChocoPackProcess -path $dependentSource | WriteOutput
     } catch {
-      WriteOutput $_ -type Error
+      WriteOutput "$_" -type Error
       return $package.Name
     }
     $packageNames = @($package.Name ; $package.DependentPackage)
@@ -612,7 +612,7 @@ function UninstallPackage() {
   try {
     if (!(RunChocoProcess @arguments)) { return $package.Name }
   } catch {
-    WriteOutput $_ -type Error
+    WriteOutput "$_" -type Error
     return $package.Name
   }
 
