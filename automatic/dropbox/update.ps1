@@ -20,7 +20,7 @@ function global:au_GetLatest {
     $downloadUrl = Get-RedirectedUrl $downloadEndpointUrl
     $fnd_version = $downloadUrl -replace $versionRegEx, '$1'
 	  $version = ( drpbx-compare $fnd_version )
-    $downloadUrl = [uri]::EscapeUriString($downloadUrl)
+
     return @{ URL32 = $downloadUrl; Version = $version }
 }
 
