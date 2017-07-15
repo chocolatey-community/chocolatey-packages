@@ -22,17 +22,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+
  $build = '-beta';
-
  $oldversion = ($Latest.nuspecversion -replace($build,''));
-
  $beta = ( drpbx-compare $oldversion -build ($build -replace('-','')) )
-
  $url = "https://dl-web.dropbox.com/u/17/Dropbox%20${beta}.exe"
-
  $Latest.PackageName = 'dropbox'
  $Latest
-
  return @{ URL32 = $url; Version = ($beta + $build); }
 
 }
