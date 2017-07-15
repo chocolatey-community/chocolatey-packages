@@ -375,7 +375,7 @@ function RunChocoProcess() {
   $pkgNameVersion = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' }
   $packageName = $pkgNameVersion | select -first 1
   $version     = $pkgNameVersion | select -last 1
-  if ($packageName -ne $arguments[1]) { $arguments[1] = $packageName }
+  if ($packageName -ne $arguments[1]) { $args[1] = $packageName }
 
   try {
     RunChocoPackProcess '' | WriteChocoOutput
