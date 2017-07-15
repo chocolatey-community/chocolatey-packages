@@ -369,12 +369,17 @@ function RunChocoProcess() {
   $errorFilePath = "$screenShotDir\$($arguments[0])Error_$($arguments[1]).jpg"
   if (!(Test-Path "$screenShotDir")) { mkdir "$screenShotDir" -Force | Out-Null }
 
+  $packageName = $arguments[1] -split ' ' | select -first 1
+  $pkgDir = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName" -Recurse -Directory | select -first 1
+  $nupkgFile = Get-ChildItem -Path $pkgDir.FullName -Filter "*.nupkg" | select -first 1
+  $pkgNameVersion = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' }
+  $packageName = $pkgNameVersion | select -first 1
+  $version     = $pkgNameVersion | select -last 1
+  if ($packageName -ne $arguments[1]) { $arguments[1] = $packageName }
+
   try {
     RunChocoPackProcess '' | WriteChocoOutput
     if ($arguments[0] -eq 'install') {
-      $packageName = $arguments[1] -split ' ' | select -first 1
-      $nupkgFile = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName*.nupkg" -Recurse | select -first 1
-      $version = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' } | select -last 1
       if ($version) {
         $args += @("--version=$($version)")
         if ($version -match '\-') {
