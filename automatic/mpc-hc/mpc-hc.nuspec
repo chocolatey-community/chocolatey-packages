@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mpc-hc</id>
-    <version>1.7.11</version>
+    <version>1.7.13</version>
     <title>MPC-HC</title>
     <owners>chocolatey</owners>
     <authors>MPC-HC Team</authors>
@@ -29,7 +29,7 @@ MPC-HC is an extremely light-weight, open source media player for Windows. It su
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mpc-hc</packageSourceUrl>
     <projectSourceUrl>https://github.com/mpc-hc/mpc-hc</projectSourceUrl>
     <bugTrackerUrl>https://trac.mpc-hc.org</bugTrackerUrl>
-    <releaseNotes>https://trac.mpc-hc.org/wiki/Changelog/1.7.11</releaseNotes>
+    <releaseNotes>https://trac.mpc-hc.org/wiki/Changelog/1.7.13</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
