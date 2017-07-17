@@ -14,7 +14,7 @@ function global:au_GetLatest {
         | Where-Object { $_.version -notmatch 'EAP' } `
         | Select-Object -Last 1
 
-    $version = $versionInfo.Version
+    $version = $versionInfo.Version -replace ' ','-'
 
     if (!($version -match '\d+\.\d+')) {
         $version = "$($version).$($versionInfo.ReleaseDate)"
