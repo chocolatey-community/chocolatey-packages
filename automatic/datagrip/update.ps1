@@ -14,7 +14,7 @@ function global:au_GetLatest {
         | Where-Object { $_.version -notmatch 'EAP' } `
         | Select-Object -Last 1
 
-    $version = $versionInfo.Version -replace ' ','-'
+    $version = $versionInfo.Version
 
     if (!($version -match '\d+\.\d+')) {
         $version = "$($version).$($versionInfo.ReleaseDate)"
@@ -22,7 +22,7 @@ function global:au_GetLatest {
 
     $downloadUrl = $ExecutionContext.InvokeCommand.ExpandString($downloadUrl)
 
-    return @{ Url32 = $downloadUrl; Version = $version }
+    return @{ Url32 = $downloadUrl; Version = $version -replace ' ','-' }
 }
 
 function global:au_SearchReplace {
