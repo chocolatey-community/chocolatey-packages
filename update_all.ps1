@@ -17,6 +17,7 @@ $Options = [ordered]@{
       'Could not establish trust relationship'
       'The operation has timed out'
       'Internal Server Error'
+      'Service Temporarily Unavailable'
     )
     RepeatOn      = @(                                      #Error message parts on which to repeat package updater
       'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
