@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>OptiPNG</id>
+    <version>0.7.5.20141004</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/optipng</packageSourceUrl>
+    <title>OptiPNG: Advanced PNG Optimizer</title>
+    <authors>Cosmin Truta</authors>
+    <owners>chocolatey, ferventcoder</owners>
+    <licenseUrl>http://optipng.sourceforge.net/license.txt</licenseUrl>
+    <projectUrl>http://optipng.sourceforge.net/</projectUrl>
+    <!-- IconUrl: Skip check -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections.</description>
+    <bugTrackerUrl>https://sourceforge.net/p/optipng/_list/tickets</bugTrackerUrl>
+    <summary>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.</summary>
+    <releaseNotes>
+[Software Changelog](http://optipng.sourceforge.net/history.txt)
+[Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/optipng/Changelog.md)
+    </releaseNotes>
+    <copyright>Cosmin Truta 2001-2012</copyright>
+    <tags>optipng png gif tiff compression optimization cli cross-platform foss</tags>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
