@@ -29,13 +29,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.exe$'
+  $re = '\.msi$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = 'Texmaker ([\d]+\.[\d\.]+) for Windows'
-  $Matches = $null
-  $download_page.Content -match $verRe | Out-Null
-  if ($Matches) { $version32 = $Matches[1] }
+  $version32 = $url32 -split '_' | select -last 1 -skip 2
 
   @{
     URL32 = $releasePagePart + $url32
