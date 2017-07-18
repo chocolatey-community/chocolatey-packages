@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>OptiPNG</id>
-    <version>0.7.5.20141004</version>
+    <version>0.7.6</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/optipng</packageSourceUrl>
     <title>OptiPNG: Advanced PNG Optimizer</title>
     <authors>Cosmin Truta</authors>
@@ -13,7 +13,13 @@
     <!-- IconUrl: Skip check -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections.</description>
+    <description>
+OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections.
+
+
+## Notes
+- Please uninstall any versions prior to version 0.7.6, otherwise you may experience problems with multiple optipng.exe file being available.
+</description>
     <bugTrackerUrl>https://sourceforge.net/p/optipng/_list/tickets</bugTrackerUrl>
     <summary>OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.</summary>
     <releaseNotes>
