@@ -6,10 +6,9 @@ function global:au_GetLatest {
     $downloadUrl = 'https://download.jetbrains.com/datagrip/datagrip-$($version).exe'
 
     [xml] $updates = (New-Object System.Net.WebClient).DownloadString($releaseUrl)
-    $versionInfo = $updates.products.product `
-        | Where-Object { $_.name -eq $productName } `
-        | ForEach-Object { $_.channel } `
-        | ForEach-Object { $_.build } `
+    $channels = $updates.products.product | ? name -eq $productName | select -expand channel
+    $build = $channels | ? status -eq 'release' | select -expand build
+    $versionInfo = $build `
         | Sort-Object { [version] $_.fullNumber } `
         | Where-Object { $_.version -notmatch 'EAP' } `
         | Select-Object -Last 1
@@ -22,7 +21,7 @@ function global:au_GetLatest {
 
     $downloadUrl = $ExecutionContext.InvokeCommand.ExpandString($downloadUrl)
 
-    return @{ Url32 = $downloadUrl; Version = $version -replace ' ','-' }
+    return @{ Url32 = $downloadUrl; Version = $version }
 }
 
 function global:au_SearchReplace {
