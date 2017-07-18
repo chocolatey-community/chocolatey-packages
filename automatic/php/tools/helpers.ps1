@@ -94,7 +94,7 @@ if (!(Test-Path function:\Uninstall-ChocolateyPath)) {
     Update-SessionEnvironment
     $envPath = $env:PATH
     if ($envPath.ToLower().Contains($pathToRemove.ToLower())) {
-      Write-Host "PATH environment variable do have $pathToRemove in it. Removing..."
+      Write-Host "The PATH environment variable already contains the directory '$pathToRemove'. Removing..."
       $actualPath = Get-EnvironmentVariable -Name 'Path' -Scope $pathType -PreserveVariables
 
       $newPath = $actualPath -replace [regex]::Escape($pathToRemove + ';'),'' -replace ';;',';'
