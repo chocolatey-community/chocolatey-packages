@@ -3,7 +3,7 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releasePagePart = 'http://www.xm1math.net/texmaker/'
 $releases = "${releasePagePart}download.html"
-$softwareName = 'Texmaker'
+$softwareName = 'Texmaker*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 

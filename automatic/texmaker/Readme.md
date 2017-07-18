@@ -29,4 +29,9 @@ Texmaker is released under the GPL license.
 - **Full asymptote support:** (syntax higlighting - commands )
 - **Unlimited number of snippets:** With Texmaker, users can define an unlimited number of snippets with keyboard triggers [Demo on YouTube](http://youtu.be/UxCx78bgCTY)
 
+## Notes
+- If you need support for 32bit installation, please install a version prior to 5.0
+- Before upgrading to the latest version, any version prior to 5.0 needs to be uninstalled if you do not wish to have several versions of texmaker available.
+- Windows 8 or later is required to install version 5.0 or later
+
 ![Windows 8 screenshot](http://www.xm1math.net/texmaker/windows8.png)
