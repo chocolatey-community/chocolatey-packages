@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>iTunes</id>
-    <version>12.6.1</version>
+    <version>12.6.2</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/itunes</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>iTunes</title>
