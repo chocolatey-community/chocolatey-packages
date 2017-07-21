@@ -12,10 +12,10 @@ Write-Host "$mergeTasks"
 
 $packageName = 'visualstudiocode'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url32 = 'https://az764295.vo.msecnd.net/stable/2648980a697a4c8fb5777dcfb2ab110cec8a2f58/VSCodeSetup-ia32-1.14.1.exe'
-$url64 = 'https://az764295.vo.msecnd.net/stable/2648980a697a4c8fb5777dcfb2ab110cec8a2f58/VSCodeSetup-ia32-1.14.1.exe'
-$checksum32 = '8984da56c3c16f9d76ebb626dd3bce02fc56c18306460b092340003694308a38'
-$checksum64 = '8984da56c3c16f9d76ebb626dd3bce02fc56c18306460b092340003694308a38'
+$url32 = 'https://az764295.vo.msecnd.net/stable/cb82febafda0c8c199b9201ad274e25d9a76874e/VSCodeSetup-ia32-1.14.2.exe'
+$url64 = 'https://az764295.vo.msecnd.net/stable/cb82febafda0c8c199b9201ad274e25d9a76874e/VSCodeSetup-ia32-1.14.2.exe'
+$checksum32 = '8adcdc99e4adc74042ca7f6dc0f24a5c9b8195356183cb1be05a0e389a67ce23'
+$checksum64 = '8adcdc99e4adc74042ca7f6dc0f24a5c9b8195356183cb1be05a0e389a67ce23'
 
 $packageArgs = @{
   packageName = $packageName

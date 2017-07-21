@@ -4,7 +4,7 @@
   <metadata>
     <id>nodejs</id>
     <title>Node JS</title>
-    <version>8.2.0</version>
+    <version>8.2.1</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
@@ -28,7 +28,7 @@ If you want the **LTS** (Long Term Support) release of Node.js, install the [nod
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
     <dependencies>
-      <dependency id="nodejs.install" version="[8.2.0]" />
+      <dependency id="nodejs.install" version="[8.2.1]" />
     </dependencies>
   </metadata>
   <files>
