@@ -8,7 +8,6 @@ function global:au_SearchReplace {
       "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum32)'"
       "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'$($Latest.ChecksumType32)'"
-      "(?i)(^\s*softwareName\s*=\s*)('.*')"            = "`$1'Seafile $($Latest.RemoteVersion)'"
     }
   }
 }
@@ -24,7 +23,6 @@ function global:au_GetLatest {
   @{
     URL32 = $url
     Version = $version
-    RemoteVersion = $version
   }
 }
 
