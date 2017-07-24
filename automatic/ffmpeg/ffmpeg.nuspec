@@ -30,6 +30,9 @@ Security is a high priority and code review is always done with security in mind
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
     <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="0.10.5" />     
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
