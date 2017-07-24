@@ -31,10 +31,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'windows32.*\.msi$'
+  $re = 'windows32\.msi\/$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $re = 'windows64.*\.msi$'
+  $re = 'windows64\.msi\/$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
   $verRe = '[-]'
@@ -51,10 +51,29 @@ function global:au_GetLatest {
   }
 
   @{
-    URL32 = $url32
-    URL64 = $url64
+    URL32 = Get-ActualUrl $url32
+    URL64 = Get-ActualUrl $url64
     Version = $version32
   }
+}
+
+function Get-ActualUrl() {
+  param([string]$url)
+
+  $request = [System.Net.WebRequest]::Create($url)
+
+  $response = $request.GetResponse()
+
+  $headers = $response.Headers
+
+  if ($headers["refresh"]) {
+    $res = $headers["refresh"] -split '[;=]' | select -last 1
+  } else {
+    $res = $url
+  }
+
+  $response.Dispose()
+  return $res
 }
 
 update -ChecksumFor none
