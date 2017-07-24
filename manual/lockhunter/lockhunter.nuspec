@@ -4,7 +4,7 @@
   <metadata>
     <id>lockhunter</id>
     <title>LockHunter</title>
-    <version>3.1.1.20170523</version>
+    <version>3.2</version>
     <authors>Igor Tkachenko, Nikolay Duylovskiy, Crystal Rich Ltd</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <copyright>2016 Crystal Rich Ltd</copyright>
@@ -32,7 +32,7 @@
     <tags>lockhunter unlocker file system locked files freeware admin</tags>
     <docsUrl>http://lockhunter.com/manual.htm</docsUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
     </dependencies>
   </metadata>
   <files>
