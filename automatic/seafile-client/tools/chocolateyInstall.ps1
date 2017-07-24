@@ -7,7 +7,7 @@ $packageArgs = @{
 
   checksum     = 'e76626742272ac04060d002b7f83f5f25d2f704723b6192751e6ac104140b5e1'
   checksumType = 'sha256'
-  url          = 'https://bintray.com/artifact/download/seafile-org/seafile/seafile-6.0.7-en.msi'
+  url          = 'https://download.seadrive.org/seafile-6.0.7-en.msi'
 
   silentArgs   = '/passive'
   validExitCodes = @(0)
