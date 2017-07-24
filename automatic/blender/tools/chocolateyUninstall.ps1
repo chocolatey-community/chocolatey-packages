@@ -5,7 +5,7 @@ $packageArgs = @{
   softwareName  = 'blender*'
   fileType      = 'msi'
   silentArgs    = '/quiet /norestart'
-  validExitCodes= @(@(0, 2010, 1641))
+  validExitCodes= @(0, 2010, 1641)
 }
 
 $uninstalled = $false
