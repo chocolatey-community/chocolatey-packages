@@ -12,3 +12,6 @@ $packageArgs = @{
 ls $toolsPath\* | ? { $_.PSISContainer } | rm -Recurse -Force #remove older package dirs
 Get-ChocolateyUnzip @packageArgs
 rm $toolsPath\*.zip -ea 0
+
+$installDir = ls $toolsPath\* | ? { $_.PSISContainer } | sort CreationTime -Descending | select -first 1
+mv $installDir $packageArgs.PackageName
