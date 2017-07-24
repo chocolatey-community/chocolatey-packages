@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>seafile-client</id>
     <version>6.0.7</version>
@@ -15,6 +15,7 @@
     <mailingListUrl>https://forum.seafile.com/</mailingListUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/seafile-client.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Seafile is a next-generation open source cloud storage system with advanced support for file syncing, privacy protection and teamwork.
 
@@ -26,10 +27,11 @@ Seafile allows users to create groups with file syncing, wiki, and discussion to
     <summary>File Syncing and Collaboration for Teams</summary>
     <releaseNotes>https://seacloud.cc/group/3/wiki/client-changelog</releaseNotes>
     <copyright>Copyright ©2016 Seafile Ltd.</copyright>
-    <tags>seafile syncing sharing admin foss cross-platform</tags>
+    <tags>seafile-client seafile syncing sharing admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/seafile-client</packageSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
