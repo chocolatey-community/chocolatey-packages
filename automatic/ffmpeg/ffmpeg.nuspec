@@ -31,7 +31,7 @@ Security is a high priority and code review is always done with security in mind
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
     <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
     <dependencies>
-      <dependency id="chocolatey" version="0.10.7" />     
+      <dependency id="chocolatey" version="0.10.5" />     
     </dependencies>
   </metadata>
   <files>
