@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>texmaker</id>
-    <version>4.5.0.20170429</version>
+    <version>5.0.0</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/texmaker</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Texmaker</title>
     <authors>Pascal Brachet,Joël Amblard</authors>
     <projectUrl>http://www.xm1math.net/texmaker/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/texmaker.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fc7e378fe2fb55d56be7493fba9613a920ca6c34/icons/texmaker.png</iconUrl>
     <copyright>© 2003/2015 - Pascal Brachet</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -46,6 +46,11 @@ Texmaker is released under the GPL license.
 - **Regular expressions support**
 - **Full asymptote support:** (syntax higlighting - commands )
 - **Unlimited number of snippets:** With Texmaker, users can define an unlimited number of snippets with keyboard triggers [Demo on YouTube](http://youtu.be/UxCx78bgCTY)
+
+## Notes
+- If you need support for 32bit installation, please install a version prior to 5.0
+- Before upgrading to the latest version, any version prior to 5.0 needs to be uninstalled if you do not wish to have several versions of texmaker available.
+- Windows 8 or later is required to install version 5.0 or later
 
 ![Windows 8 screenshot](http://www.xm1math.net/texmaker/windows8.png)
 </description>

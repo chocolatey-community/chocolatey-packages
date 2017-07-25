@@ -9,8 +9,8 @@ if ((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true) {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\texmakerwin32_install.exe"
-  softwareName   = 'Texmaker'
+  file           = "$toolsPath\Texmaker_5.0.0_Win_x64.msi"
+  softwareName   = 'Texmaker*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
 }
