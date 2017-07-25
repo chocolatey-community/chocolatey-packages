@@ -17,4 +17,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
+Remove-Item -Force -ea 0 "$toolsPath\*.msi","$toolsPath\*.ignore"
