@@ -51,7 +51,7 @@ Texmaker is released under the GPL license.
 </description>
     <releaseNotes>http://www.xm1math.net/texmaker/log.html</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.0" />
+      <dependency id="kb2999226" version="1.0.20170509" />
     </dependencies>
   </metadata>
   <files>

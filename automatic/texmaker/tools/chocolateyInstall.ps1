@@ -2,15 +2,19 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
+if ((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true) {
+  throw "Version 5+ no longer supports 32bit, please install a version prior to 5.0 if you need 32bit."
+}
+
 $packageArgs = @{
-  packageName    = 'texmaker'
-  fileType       = 'exe'
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'msi'
   file           = "$toolsPath\texmakerwin32_install.exe"
   softwareName   = 'Texmaker'
-  silentArgs     = '/S'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
+Remove-Item -Force -ea 0 "$toolsPath\*.msi","$toolsPath\*.ignore"
