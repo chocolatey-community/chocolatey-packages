@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>nmap</id>
-    <version>7.50</version>
+    <version>7.60</version>
     <title>Nmap</title>
     <authors>Fyodor</authors>
     <owners>chocolatey zippy1981 ferventcoder</owners>
@@ -22,7 +22,7 @@
 - OS detection - Determining the operating system and hardware characteristics of network devices.
 - Scriptable interaction with the target - using Nmap Scripting Engine (NSE) and Lua programming language.
     </description>
-    <releaseNotes>https://nmap.org/changelog.html#7.50</releaseNotes>
+    <releaseNotes>https://nmap.org/changelog.html#7.60</releaseNotes>
     <copyright>Copyright 1996-2016</copyright>
     <tags>nmap foss cross-platform  port scanner network infosec</tags>
     <docsUrl>https://nmap.org/docs.html</docsUrl>
