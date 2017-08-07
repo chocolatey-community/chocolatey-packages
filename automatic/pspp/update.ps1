@@ -42,9 +42,9 @@ function global:au_GetLatest {
   $re = '64bits.*\.exe\/download$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = "PSPPVersion\:\s*pspp-(\d+\.[\d\.]+)\-g"
+  $verRe = "PSPPVersion\:\s*pspp-(\d+\.[\d\.]+(-pre2|-))g"
   $download_page.Content -match $verRe | Out-Null
-  $version = $Matches[1]
+  $version = $Matches[1].TrimEnd('-')
 
   @{
     URL32 = $url32
