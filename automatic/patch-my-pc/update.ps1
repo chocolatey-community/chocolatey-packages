@@ -26,7 +26,7 @@ function global:au_GetLatest {
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $version_page = Invoke-WebRequest -Uri $versions -UseBasicParsing
-  $re = New-Object regex("\>What&#8217;s new in ([\d\.]+)\<")
+  $re = New-Object regex("\>What's new in ([\d\.]+)")
   $version32 = $re.Match($version_page.Content).Groups[1]
 
   @{
