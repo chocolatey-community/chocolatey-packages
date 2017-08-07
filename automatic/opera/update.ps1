@@ -32,10 +32,15 @@ function global:au_GetLatest {
 
     [version]$version     = $versionLink.href -replace '/', ''
 
-    $url32       = 'https://get.geo.opera.com/pub/opera/desktop/<version>/win/Opera_<version>_Setup.exe'
-    $url64       = 'https://get.geo.opera.com/pub/opera/desktop/<version>/win/Opera_<version>_Setup_x64.exe'
-    $url32       = $url32 -replace '<version>', $version
-    $url64       = $url64 -replace '<version>', $version
+    $url = "https://get.geo.opera.com/pub/opera/desktop/$version/win/"
+    $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
+
+    $url32 = $download_page.Links | ? href -NotMatch 'x64' | ? href -Match 'Setup\.exe$' | select -First 1 -expand href | % { $url + $_ }
+    $url64 = $download_page.Links | ? href -Match "x64.*Setup\.exe$" | select -First 1 -expand href | % { $url + $_ }
+
+    if (!$url32 -or !$url64) {
+      throw "32bit or 64bit url was not found, investigate or ignore."
+    }
 
     return @{
       URL32 = $url32;
