@@ -3,7 +3,7 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-    PackageName    = ''
+    PackageName    = 'ffmpeg'
     FileFullPath   = gi $toolsPath\*_x32.zip
     FileFullPath64 = gi $toolsPath\*_x64.zip    
     Destination    = $toolsPath
