@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = 'flashplayerplugin'
   fileType               = 'msi'
-  url                    = 'https://download.macromedia.com/get/flashplayer/pdc/26.0.0.137/install_flash_player_26_plugin.msi'
-  checksum               = '7e781c353feebe0c06c20ce749caeb5ebe6f4628fcfe1e78913fb8ea6adb2d08'
+  url                    = 'https://download.macromedia.com/get/flashplayer/pdc/26.0.0.151/install_flash_player_26_plugin.msi'
+  checksum               = '28f692b79090178710fbf8b9c8403014d3ab5f1cff18b6f8fe41e853671e10b6'
   checksumType           = 'sha256'
   silentArgs             = '/quiet /norestart REMOVE_PREVIOUS=YES'
   validExitCodes         = @(0)
