@@ -36,7 +36,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
 
     $url32 = $download_page.Links | ? href -NotMatch 'x64' | ? href -Match 'Setup\.exe$' | select -First 1 -expand href | % { $url + $_ }
-    $url64 = $download_page.Links | ? href -Match "x64.*Setup\.exe$" | select -First 1 -expand href | % { $url + $_ }
+    $url64 = $download_page.Links | ? href -Match "(x64.*Setup|Setup_x64)\.exe$" | select -First 1 -expand href | % { $url + $_ }
 
     if (!$url32 -or !$url64) {
       throw "32bit or 64bit url was not found, investigate or ignore."
