@@ -1,5 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop';
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
+
+$softwareName = 'Microsoft Visual Studio Code'
+
+if (Get-32BitInstalledOn64BitSystem -product $softwareName) {
+  Write-Output $(
+    'Detected the 32-bit version of Visual Studio Code on a 64-bit system. ' +
+    'This package will continue to install the 32-bit version of Visual Studio Code ' +
+    'unless the 32-bit version is uninstalled.'
+  )
+}
+
 $pp = Get-PackageParameters
 $mergeTasks = "!runCode"
 $mergeTasks += if ($pp.NoDesktopIcon) { ',!desktopicon' } else { ',desktopicon' }
@@ -20,17 +33,20 @@ $packageArgs = @{
   packageName = $packageName
   fileType = 'EXE'
   url = $url32
-  url64bit = $url64
 
-  softwareName = 'Microsoft Visual Studio Code'
+  softwareName = $softwareName
 
   checksum = $checksum32
   checksumType = 'sha256'
-  checksum64 = $checksum64
-  checksumType64 = 'sha256'
 
   silentArgs = "/verysilent /suppressmsgboxes /mergetasks=$mergeTasks /log=""$env:temp\vscode.log"""
   validExitCodes = @(0, 3010, 1641)
+}
+
+if (!(Get-32BitInstalledOn64BitSystem($softwareName)) -and (Get-ProcessorBits 64)) {
+  $packageArgs.Checksum64 = $checksum64
+  $packageArgs.ChecksumType64 = 'sha256'
+  $packageArgs.Url64 = $url64
 }
 
 Install-ChocolateyPackage @packageArgs
