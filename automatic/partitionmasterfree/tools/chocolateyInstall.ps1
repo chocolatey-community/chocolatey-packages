@@ -2,7 +2,7 @@
   packageName    = 'partitionmasterfree'
   fileType       = 'EXE'
   url            = 'http://download.easeus.com/free/epm.exe'
-  checksum       = '77c9329df7ff694015094cc9e4b017666d968c764ec3dd3216b6cef7dcd94bf0'
+  checksum       = 'f9f1af2d9ea1892143b4178d591f076a966c8c9710ec0d167df046e744bf397c'
   checksumType   = 'sha256'
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0)
