@@ -4,7 +4,7 @@
   <metadata>
     <id>tortoisesvn</id>
     <title>TortoiseSVN</title>
-    <version>1.9.6.27867</version>
+    <version>1.9.7.27907</version>
     <authors>TortoiseSVN Team</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>Subversion® source control management client implemented as File Explorer shell extension</summary>
