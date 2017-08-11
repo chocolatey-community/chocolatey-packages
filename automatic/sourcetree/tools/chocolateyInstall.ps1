@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageArgs = @{
-  packageName = 'sourcetree'
+  packageName = 'SourceTree'
   fileType = 'EXE'
-  url = 'https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.0.20.1.exe'
+  url = 'https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.1.10.0.exe'
 
   softwareName = 'SourceTree'
 
-  checksum = '4eb706d8ffc7c6c30a1e5c677147ff09da4ba70aa8be01b2a7edce46af902eba'
+  checksum = 'aeee578f62495efb4edee4854036b3d9d3f7747ffcbdc0975a6e669acd8efc8a'
   checksumType = 'sha256'
 
   silentArgs = "/passive"
