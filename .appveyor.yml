@@ -43,8 +43,8 @@ environment:
   api_key:
     secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
 
-  #Chocolatey version we want to use when checing for updates.
-  choco_version: '0.10.6.1'
+  #Chocolatey version we want to use when checking for updates.
+  choco_version: '0.10.7.0'
   nupkg_cache_path: C:\packages
 
 init:
