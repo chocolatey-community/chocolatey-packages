@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>texmaker</id>
-    <version>5.0.1</version>
+    <version>5.0.2</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/texmaker</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Texmaker</title>
