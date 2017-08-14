@@ -15,12 +15,9 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     $re      = '\.exe$'
-    $url     = $download_page.links | ? { $_.href -notmatch "fosshub" -and $_.href -match $re } | select -skip 1 | select -First 1
+    $url32     = $download_page.links | ? { $_.href -notmatch "fosshub" -and $_.href -match $re } | select -skip 1 | select -First 1 -Expand href
 
-    $url32   = $url.href
-
-    $version     = $download_page.links | ? href -match $re | select -First 1
-    $version = $version.InnerHTML
+    $version     = $url32 -split 'Setup_|\.exe' | select -last -skip 1 | % { $_ -replace '_','.' }
 
     return @{ URL32 = $url32; Version = $version }
 }
