@@ -14,7 +14,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    $re      = '.exe'
+    $re      = '\.exe$'
     $url     = $download_page.links | ? { $_.href -notmatch "fosshub" -and $_.href -match $re } | select -skip 1 | select -First 1
 
     $url32   = $url.href
