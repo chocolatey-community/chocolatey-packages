@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>classic-shell</id>
-    <version>4.3.0</version>
+    <version>4.3.1</version>
     <title>Classic Shell</title>
     <owners>chocolatey</owners>
     <authors>Ivo Beltchev</authors>

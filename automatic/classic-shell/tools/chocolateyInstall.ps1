@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'classic-shell'
-$url32       = 'http://www.mediafire.com/download/dbbil746gavpirr/ClassicShellSetup_4_3_0.exe'
+$url32       = 'http://classicshell.mediafire.com/file/d5llbbm8wu92jg8/ClassicShellSetup_4_3_1.exe'
 $url64       = $url32
-$checksum32  = '4ee910b283871ab31ef03eeb15d9557e89b55eda8f0580340b4dd2fc90305ac8'
+$checksum32  = '8bbd850fd8a2b41d090fbf8e005f9a5a76c774aca643318a8a34254f99f79ed8'
 $checksum64  = $checksum32
 
 $packageArgs = @{
