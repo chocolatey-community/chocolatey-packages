@@ -25,8 +25,11 @@ The #1 torrent download client on desktops worldwide.
     <tags>utorrent bittorrent client admin freeware</tags>
     <docsUrl>http://help.utorrent.com/</docsUrl>
     <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
-    <bugTrackerUrl>http://blog.utorrent.com/releases/windows/</bugTrackerUrl>
+    <releaseNotes>http://blog.utorrent.com/releases/windows/</releaseNotes>
     <owners>chocolatey</owners>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/utorrent</packageSourceUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

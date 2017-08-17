@@ -6,8 +6,4 @@
     validExitCodes = @(0, 3010, 1605, 1614, 1641)
 }
 
-if (Get-Process uTorrent -ea SilentlyContinue) {
-    Stop-Process uTorrent
-}
-
 Uninstall-ChocolateyPackage @arguments
