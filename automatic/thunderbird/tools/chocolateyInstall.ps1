@@ -7,7 +7,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'thunderbird'
 $softwareName = 'Mozilla Thunderbird'
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.2.1')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.3.0')
 
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
@@ -26,7 +26,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=thunderbird-52.2.1-SSL&os=win&lang=${locale}"
+    Url = "https://download.mozilla.org/?product=thunderbird-52.3.0-SSL&os=win&lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
