@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'STOP'
+﻿$ErrorActionPreference = 'STOP'
 
 $packageArgs = @{
   packageName    = 'absolute-uninstaller'
   url            = 'http://download.glarysoft.com/ausetup.exe'
   fileType       = 'exe'
   softwareName   = 'Absolute Uninstaller*'
-  checksum       = '1a9146ac0eaa94b6389625e743cc17406073f4217b3a46df3799dc834fe8119a'
+  checksum       = '6822236a408fb665f57679eef58215c921abfced1bd997a79a455673d98ff67a'
   checksumType   = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
