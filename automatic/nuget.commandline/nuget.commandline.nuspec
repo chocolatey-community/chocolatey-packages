@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>nuget.commandline</id>
     <title>Nuget.CommandLine</title>
-    <version>4.3.0-preview3-4168</version>
+    <version>4.3.0</version>
     <authors>Microsoft</authors>
     <owners>chocolatey, nuget-mirror</owners>
     <summary>NuGet is the package manager for the Microsoft development platforms</summary>
