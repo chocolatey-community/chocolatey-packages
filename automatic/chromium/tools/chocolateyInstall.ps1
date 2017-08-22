@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$version = '62.0.3193.0'
+$version = '62.0.3194.0'
 
 $chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $hive = "hkcu"
@@ -15,14 +15,14 @@ if (Test-Path $Chromium) {
 $packageArgs = @{
   packageName   = 'chromium'
   fileType      = 'exe'
-  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/495870/mini_installer.exe'
-  url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/495869/mini_installer.exe'
+  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/496195/mini_installer.exe'
+  url64bit      = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/496209/mini_installer.exe'
   silentArgs    = $silentArgs
   validExitCodes= @(0)
   softwareName  = 'Chromium'
-  checksum      = 'e1d866b05e8654c6e43b53018b82c611'
+  checksum      = '340b954910d7eeda1f6bc54ee950d2f0'
   checksumType  = 'md5'
-  checksum64    = 'f63156c8fc78dddc555873dd490bb39e'
+  checksum64    = 'be74f9da310ba6ad37baf3ea4d0fe609'
   checksumType64= 'md5'
 }
 
