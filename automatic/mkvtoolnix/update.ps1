@@ -19,15 +19,18 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version = $download_page.links | % { $_.href.Replace('/','') } | % -begin { $max = $null } { try { $ver = [version]$_; if($ver -gt $max) { $max = $ver } } catch {} } -end { $max }
+
+    $versionSort = { [version]($_.href.TrimEnd('/')) }
+    $version = $download_page.links | ? href -match "^\d+\.[\d\.]+\/" `
+      | sort $versionSort -Descending | select -first 1 -expand href | % { $_.TrimEnd('/') }
 
     $releases = "$releases/$version/"
     $re = '^mkvtoolnix-.+\.exe$'
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $url = $download_page.links | ? href -match $re | % href | unique
     @{
-        URL32   = "$releases" + ($url -match '32bit' | Select -First 1)
-        URL64   = "$releases" + ($url -match '64bit' | select -First 1)
+        URL32   = "$releases" + ($url -match '32\-?bit' | Select -First 1)
+        URL64   = "$releases" + ($url -match '64\-?bit' | select -First 1)
         Version = $version
     }
 }
