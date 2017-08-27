@@ -2,6 +2,10 @@ import-module au
 
 $releases = 'http://www.mp3tag.de/en/download.html'
 
+function global:au_BeforeUpdate {
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
+}
+
 function global:au_SearchReplace {
    @{
         ".\tools\ChocolateyInstall.ps1" = @{
@@ -35,4 +39,4 @@ function global:au_GetLatest {
     return @{ URL32 = $url32; Version = $version }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
