@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>encfs4win</id>
-    <version>1.10.1-RC10</version>
+    <version>1.10.1-RC12</version>
     <title>encfs4win</title>
     <owners>chocolatey</owners>
     <authors>jetwhiz, freddy77</authors>
@@ -25,7 +25,7 @@ EncFS provides an encrypted filesystem in user-space, using the Dokan library fo
     <copyright />
     <tags>driver encfs encryption foss file-system</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/encfs4win</packageSourceUrl>
-    <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/1.10.1-RC10</releaseNotes>
+    <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/v1.10.1-RC12</releaseNotes>
     <bugTrackerUrl>https://github.com/jetwhiz/encfs4win/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/jetwhiz/encfs4win</projectSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/adfba62c6e358480c755fbfeb96614352d743fa1/icons/encfs4win.png</iconUrl>

@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'encfs4win'
   fileType               = 'exe'
-  url                    = 'https://github.com/jetwhiz/encfs4win/releases/download/v1.10.1-RC10/encfs-installer.exe'
+  url                    = 'https://github.com/jetwhiz/encfs4win/releases/download/v1.10.1-RC12/encfs-installer.exe'
   url64bit               = 'https://github.com/jetwhiz/encfs4win/releases/download/v1.10.1-RC10/encfs-installer.exe'
-  checksum               = '5967fd809d79f8c6c11da62e9d041a126e45865dc81cb7682be406741d459aaa'
+  checksum               = 'ee8e49acc8ae373c239f54694aba372ad00d886ce44c490dc36dab7f50fff7b3'
   checksum64             = '5967fd809d79f8c6c11da62e9d041a126e45865dc81cb7682be406741d459aaa'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
