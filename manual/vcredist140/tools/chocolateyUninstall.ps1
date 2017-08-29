@@ -2,7 +2,7 @@
 $ErrorActionPreference = 'Stop'
 
 . (Join-Path -Path (Split-Path -Path $MyInvocation.MyCommand.Definition -Parent) -ChildPath 'data.ps1')
-$packageName = 'vcredist140'
+$packageName = $otherData.PackageName
 $installerType = 'exe'
 $silentArgs = '/uninstall /quiet'
 $validExitCodes = @(0, 3010)  # http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
