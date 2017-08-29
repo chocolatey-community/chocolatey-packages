@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.10.25017.0</version>
+    <version>14.11.25325.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist140</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2017</title>
@@ -31,7 +31,7 @@ On some systems, if KB2999226 is installed as a dependency of this package, the 
 ##### Software
 [Visual Studio 2017 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
 ##### Package
-14.10.25017.0: Initial package release for software version 14.10.25017.0.
+14.11.25325.0: Initial package release for software version 14.11.25325.0.
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
