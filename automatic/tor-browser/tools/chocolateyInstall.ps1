@@ -35,3 +35,10 @@ Install-ChocolateyShortcut `
   -ShortcutFilePath "$desktop\Tor Browser.lnk" `
   -TargetPath "$toolsDir\tor-browser\Browser\firefox.exe" `
   -WorkingDirectory "$toolsDir\tor-browser\Browser"
+
+# set NTFS modify file permissions to $toolsDir\tor-browser\ for user account that installed the package
+$WhoAmI=whoami
+$Acl = Get-Acl "$toolsDir\tor-browser"
+$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI,"Modify","Allow")
+$Acl.SetAccessRule($Ar)
+Set-Acl "$toolsDir\tor-browser" $Acl
