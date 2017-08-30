@@ -1,12 +1,12 @@
 ﻿$installData32 = @{
-  Url = 'https://download.microsoft.com/download/1/f/e/1febbdb2-aded-4e14-9063-39fb17e88444/vc_redist.x86.exe'
-  Checksum = '54133DC6E13D775199BBEC9268AE5E54063F9C6CB7B630F7865704CC64F50774'
+  Url = 'https://download.visualstudio.microsoft.com/download/pr/11100229/78c1e864d806e36f6035d80a0e80399e/VC_redist.x86.exe'
+  Checksum = '2DA11E22A276BE85970EAED255DAF3D92AF84E94142EC04252326A882E57303E'
   ChecksumType = 'sha256'
 }
 
 $installData64 = @{
-  Url64 = 'https://download.microsoft.com/download/3/b/f/3bf6e759-c555-4595-8973-86b7b4312927/vc_redist.x64.exe'
-  Checksum64 = '871983B6B4C3BCE1B5B9AE2173C818137C8831C818393268FB2F0414C096E241'
+  Url64 = 'https://download.visualstudio.microsoft.com/download/pr/11100230/15ccb3f02745c7b206ad10373cbca89b/VC_redist.x64.exe'
+  Checksum64 = '7434BF559290CCCC3DD3624F10C9E6422CCE9927D2231D294114B2F929F0E465'
   ChecksumType64 = 'sha256'
 }
 
@@ -15,7 +15,7 @@ $uninstallData = @{
 }
 
 $otherData = @{
-  ThreePartVersion = [version]'14.10.25017'
+  ThreePartVersion = [version]'14.11.25325'
   FamilyRegistryKey = '14.0'
   PackageName = 'vcredist140'
 }
