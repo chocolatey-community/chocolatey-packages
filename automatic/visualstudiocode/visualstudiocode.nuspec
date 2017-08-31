@@ -1,3 +1,5 @@
+# <img src="" width="48" height="48"/> [visualstudiocode](https://chocolatey.org/packages/visualstudiocode)
+
 <?xml version="1.0"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
@@ -43,14 +45,12 @@ The package uses default install options except that it adds context menu entrie
 
 For disabling the auto-update functionality of Visual Studio Code see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
     </description>
-    <tags>microsoft visualstudiocode vscode editor ide javascript typescript admin foss cross-platform</tags>
+    <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.1" />
       <dependency id="DotNet4.5.2" />
     </dependencies>
-    <releaseNotes>
-      https://code.visualstudio.com/Updates
-    </releaseNotes>
+    <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
