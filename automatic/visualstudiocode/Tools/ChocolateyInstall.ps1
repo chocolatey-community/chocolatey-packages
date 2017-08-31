@@ -15,10 +15,9 @@ ps code -ea 0 | % { $_.CloseMainWindow() | Out-Null }
 
 $packageArgs = @{
   packageName    = 'visualstudiocode'
-  unzipLocation  = $toolsDir
   fileType       = 'EXE'
-  url            = $url32
-  url64bit       = $url64
+  url            = 'https://az764295.vo.msecnd.net/stable/41abd21afdf7424c89319ee7cb0445cc6f376959/VSCodeSetup-ia32-1.15.1.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/stable/41abd21afdf7424c89319ee7cb0445cc6f376959/VSCodeSetup-x64-1.15.1.exe'
  
   softwareName   = 'Microsoft Visual Studio Code'
  
