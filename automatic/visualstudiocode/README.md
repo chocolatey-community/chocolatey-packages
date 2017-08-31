@@ -23,3 +23,6 @@ Example: `choco install visualstudiocode --params '/NoDesktopIcon /DontAddToPath
 
 * The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
 * For disabling the auto-update functionality see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
+
+
+![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/visualstudiocode/screenshot.png)
