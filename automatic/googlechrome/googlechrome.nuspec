@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>GoogleChrome</id>
-    <version>60.0.3112.113</version>
+    <version>61.0.3163.79</version>
     <title>Google Chrome</title>
     <owners>chocolatey</owners>
     <authors>Google Inc.</authors>
