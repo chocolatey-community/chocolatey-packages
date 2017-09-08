@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>juju</id>
-    <version>2.2.3</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/juju</packageSourceUrl>
     <owners>AdmiringWorm,chocolatey</owners>
     <title>Juju</title>
