@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winscp</id>
-    <version>5.11</version>
+    <version>5.11.1</version>
     <title>WinSCP</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>
@@ -41,7 +41,7 @@
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
     <dependencies>
-      <dependency id="winscp.install" version="[5.11]" />
+      <dependency id="winscp.install" version="[5.11.1]" />
     </dependencies>
   </metadata>
 </package>
