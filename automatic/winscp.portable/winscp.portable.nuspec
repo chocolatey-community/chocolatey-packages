@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winscp.portable</id>
-    <version>0.0</version>
+    <version>5.11.1</version>
     <title>WinSCP (Portable)</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://winscp.net/docs/license</licenseUrl>
     <projectUrl>https://winscp.net/</projectUrl>
-    <iconUrl>https://automatic</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
 
