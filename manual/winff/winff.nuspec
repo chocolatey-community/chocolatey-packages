@@ -21,10 +21,11 @@ WinFF is free video converter for Win Xp to Win 10, Debian, and Ubuntu. WinFF ha
     <summary>WinFF is a GUI for the command line video converter, FFMPEG.</summary>
     <releaseNotes />
     <copyright>2008–2013 WinFF.org</copyright>
-    <tags>converter encoder audio video ffmpeg admin</tags>
+    <tags>converter encoder audio video ffmpeg admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
