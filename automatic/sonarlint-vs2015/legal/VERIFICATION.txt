@@ -13,4 +13,4 @@ and can be verified like this:
   checksum type: sha256
   checksum: 0C2B917139D2C379CC1403A83AE271EF0275DC71822EF4A99A39D362E903285E
 
-File 'LICENSE.txt' is obtained from <https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio/blob/149beb363170251ce42a852d13a7d23229f6ca16/LICENSE>
+File 'LICENSE.txt' is obtained from <https://marketplace.visualstudio.com/items/SonarSource.SonarLintforVisualStudio/license>
