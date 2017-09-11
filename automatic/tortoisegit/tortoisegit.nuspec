@@ -60,6 +60,9 @@ Main interaction with TortoiseGit will be using the context menu of the Windows 
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://tortoisegit.org/docs/releasenotes/#Release_2.5.0.0</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2015" version="14.0.24215.20170201" />   <!-- https://github.com/chocolatey/chocolatey-coreteampackages/issues/807 -->
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
