@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winff</id>
-    <version>1.5.4</version>
+    <version>1.5.5</version>
     <title>WinFF</title>
     <owners>chocolatey</owners>
     <authors>Matthew Weatherford,Ian Stoffberg</authors>
@@ -13,7 +13,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 WinFF is a GUI for the command line video converter, FFMPEG. It will convert most any video file that FFmpeg will convert. For example: you can convert your camera, phone, and internet videos into videos for multiple phones, websites, and media players.
-    </description>
+
+WinFF is free video converter for Win Xp to Win 10, Debian, and Ubuntu. WinFF has been used around the world to help people post their videos on the internet despite repressive regimes.
+
+![screenshot](screenshot.jpg)
+</description>
     <summary>WinFF is a GUI for the command line video converter, FFMPEG.</summary>
     <releaseNotes />
     <copyright>2008–2013 WinFF.org</copyright>
