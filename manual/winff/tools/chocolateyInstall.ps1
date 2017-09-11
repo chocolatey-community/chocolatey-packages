@@ -1,6 +1,14 @@
-﻿$packageName = 'winff'
-$fileType = 'exe'
-$silentArgs = '/VERYSILENT'
-$url = 'https://docs.google.com/uc?authuser=0&id=0B8HoAIi30ZDkano0TWZseUdhejQ&export=download'
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+$toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+  packageName    = 'winff'
+  fileType       = 'exe'
+  file           = gi $toolsPath\*exe
+  silentArgs     = '/VERYSILENT'
+  validExitCodes = @(0)
+  softwareName   = 'WinFF *'
+}
+Install-ChocolateyInstallPackage @packageArgs
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}
