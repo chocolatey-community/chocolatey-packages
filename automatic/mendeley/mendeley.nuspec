@@ -4,7 +4,7 @@
   <metadata>
     <id>mendeley</id>
     <title>Mendeley Desktop</title>
-    <version>1.17.10</version>
+    <version>1.17.11</version>
     <authors>Mendeley Ltd.</authors>
     <owners>chocolatey</owners>
     <summary>Empowering researches to organize their references</summary>
@@ -18,7 +18,7 @@ Mendeley is a platform that allows scholars from all over the world to collabora
 * **Datasets:** Store, share and cite your datasets with one secure online repository.
 * **Careers:** Search for science and technology jobs in institutions worldwide.
     </description>
-    <releaseNotes>https://www.mendeley.com/release-notes/v1_17_10</releaseNotes>
+    <releaseNotes>https://www.mendeley.com/release-notes/v1_17_11</releaseNotes>
     <projectUrl>https://www.mendeley.com</projectUrl>
     <tags>education scientific admin cross-platform</tags>
     <copyright>Mendeley Ltd.</copyright>
