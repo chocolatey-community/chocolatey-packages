@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'blender*'
+  softwareName  = 'Blender'
   fileType      = 'msi'
   silentArgs    = '/quiet /norestart'
   validExitCodes= @(0, 2010, 1641)
