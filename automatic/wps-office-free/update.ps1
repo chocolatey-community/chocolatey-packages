@@ -1,4 +1,5 @@
 ﻿import-module au
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://www.wps.com/office-free'
 
@@ -39,7 +40,7 @@ function global:au_GetLatest {
 
   return @{
     URL32 = $url
-    Version = $version
+    Version = Get-PaddedVersion $version
   }
 }
 
