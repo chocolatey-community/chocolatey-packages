@@ -1,10 +1,11 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 function global:au_GetLatest {
     $downloadEndPointUrl = 'https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101'
     $versionRegEx = 'DisplayFusionSetup-([0-9\.\-]+)\.exe'
 
-    $downloadUrl = ((Get-WebURL -Url $downloadEndPointUrl).ResponseUri).AbsoluteUri
+    $downloadUrl = Get-RedirectedUrl $downloadEndPointUrl
     $version = $downloadUrl -match $versionRegEx
 
     if ($matches) {
