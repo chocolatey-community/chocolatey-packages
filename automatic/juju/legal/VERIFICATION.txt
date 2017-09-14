@@ -6,13 +6,13 @@ The installer have been downloaded from their launchpad page <https://launchpad.
 The same download links are also located in their docs <https://jujucharms.com/docs/stable/reference-releases>
 and can be verified like this:
 
-1. Go to <https://launchpad.net/juju/2.2/2.2.3/+download/juju-setup-2.2.3-signed.exe>
+1. Go to <https://launchpad.net/juju/2.2/2.2.4/+download/juju-setup-2.2.4.exe>
    to download the installer
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: D32C855EBAB042C619BAE72E519C7BE253145FDB9A4F0B4DCB670E8F1AE2713F
+  checksum: 366227B42BF4EFD93A83E91903148B6FC6732D856E84F0EFB53CAAF1584BD803
 
 File 'LICENSE.txt' is obtained from <https://github.com/juju/juju/blob/1a64fe64d6c5d9aacbda27a1fea925e078f191f2/LICENCE>
