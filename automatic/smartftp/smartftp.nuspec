@@ -58,7 +58,7 @@ SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg</iconUrl>
     <bugTrackerUrl>https://www.smartftp.com/forums/index.php?/forum/14-support/</bugTrackerUrl>
     <dependencies>
-      <dependency id="vcredist2017" version="14.10.25017.0" />
+      <dependency id="vcredist2017" version="14.11.25325.0" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/smartftp</packageSourceUrl>
     <docsUrl>https://www.smartftp.com/support</docsUrl>
