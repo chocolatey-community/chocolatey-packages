@@ -4,13 +4,13 @@ in verifying that this package's contents are trustworthy.
 
 The installer have been downloaded from GitHub and can be verified like this:
 
-1. Go to <https://github.com/git-lfs/git-lfs/releases/download/v2.2.1/git-lfs-windows-2.2.1.exe>
+1. Go to <https://github.com/git-lfs/git-lfs/releases/download/v2.3.0/git-lfs-windows-2.3.0.exe>
    to download the installer
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 0F70B16BA9A42FAB51C72A1A8E02A30971BC6921F485FB940547B41EAB3DC7DD
+  checksum: 086BF4141CFF018A45559F179603D6F90C8660319D79E2AA16EB3FB9B3228521
 
 File 'LICENSE.txt' is obtained from <https://github.com/git-lfs/git-lfs/blob/6faa2589cf31a87e4109eb6490a461620c6e64b2/LICENSE.md>
