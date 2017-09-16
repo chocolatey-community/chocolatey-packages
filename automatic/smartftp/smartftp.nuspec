@@ -5,7 +5,7 @@
     <id>smartftp</id>
     <title>SmartFTP</title>
     <owners>chocolatey</owners>
-    <version>9.0.2486.0</version>
+    <version>9.0.2487.0</version>
     <authors>SmartSoft</authors>
     <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
     <description>
