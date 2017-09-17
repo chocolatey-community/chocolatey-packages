@@ -1,4 +1,4 @@
-# This file should be identical for all python* packages
+﻿# This file should be identical for all python* packages
 # https://docs.python.org/3/using/windows.html#installing-without-ui
 
 $installDir  = '{0}\Python{1}' -f $Env:SystemDrive, ($Env:ChocolateyPackageVersion -replace '\.').Substring(0,2)
@@ -12,10 +12,10 @@ $params = @{
   packageName    = 'python2'
   fileType       = 'msi'
   silentArgs     = $installArgs
-  url            = 'https://www.python.org/ftp/python/2.7.13/python-2.7.13.msi'
-  url64Bit       = 'https://www.python.org/ftp/python/2.7.13/python-2.7.13.amd64.msi'
-  checksum       = '44ea95356365195b18a5058796285789b0bfc94da1ee2ec1cb8e0a1c2ff6017a'
-  checksum64     = '8b3e65fc1aad8809bb69477e922c3609a8e8fa9e2f6d5ab8f00f3553e3c61d7a'
+  url            = 'https://www.python.org/ftp/python/2.7.14/python-2.7.14.msi'
+  url64Bit       = 'https://www.python.org/ftp/python/2.7.14/python-2.7.14.amd64.msi'
+  checksum       = '450bde0540341d4f7a6ad2bb66639fd3fac1c53087e9844dc34ddf88057a17ca'
+  checksum64     = 'af293df7728b861648162ba0cd4a067299385cb6a3f172569205ac0b33190693'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
