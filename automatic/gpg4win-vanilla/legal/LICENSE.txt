@@ -1,0 +1,309 @@
+Gpg4win is
+
+  Copyright (C) 2005-2011 g10 Code GmbH, Intevation GmbH
+
+  Gpg4win is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  Gpg4win is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+  02110-1301, USA
+
+GnuPG is
+
+  Copyright 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005,
+            2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
+
+  GnuPG is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  GnuPG is distributed in the hope that it will be useful, but WITHOUT
+  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+  or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+  License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, see .
+
+  See the files AUTHORS and THANKS for credits, further legal
+  information and bug reporting addresses pertaining to GnuPG.
+
+
+NSIS is
+
+  Copyright (C) 1999-2008 Nullsoft and Contributors
+
+  This license applies to everything in the NSIS package, except where
+  otherwise noted.
+
+  This software is provided 'as-is', without any express or implied
+  warranty. In no event will the authors be held liable for any
+  damages arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any
+  purpose, including commercial applications, and to alter it and
+  redistribute it freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must
+     not claim that you wrote the original software. If you use this
+     software in a product, an acknowledgment in the product
+     documentation would be appreciated but is not required.
+
+  2. Altered source versions must be plainly marked as such, and must
+     not be misrepresented as being the original software.
+
+  3. This notice may not be removed or altered from any source
+     distribution.
+
+  The user interface used with the installer is
+
+  Copyright (C) 2002-2005 Joost Verburg
+
+  [It is distributed along with NSIS and the same conditions as stated
+   above apply]
+
+
+GLIB is
+
+  Copyright (C) 1995-1997  Peter Mattis, Spencer Kimball and Josh MacDonald
+
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the
+  Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+  Boston, MA 02111-1307, USA.
+
+  Modified by the GLib Team and others 1997-2000.  See the AUTHORS
+  file for a list of people on the GLib Team.  See the ChangeLog
+  files for a list of changes.  These files are distributed with
+  GLib at ftp://ftp.gtk.org/pub/gtk/.
+
+
+GPA is
+
+  Copyright (C) 2000-2002 G-N-U GmbH (http://www.g-n-u.de)
+  Copyright (C) 2002-2003 Miguel Coca.
+  Copyright (C) 2005, 2008, 2009 g10 Code GmbH.
+
+  GPA uses fragments from the following programs and libraries:
+  JNLIB, Copyright (C) 1998-2000 Free Software Foundation, Inc.
+  GPGME, Copyright (C) 2000-2001 Werner Koch
+  WinPT, Copyright (C) 2000-2002 Timo Schulz
+  (For details, see the file AUTHORS.)
+
+  GPA is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 3 of the License, or
+  (at your option) any later version.
+
+  GPA is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, see .
+
+
+GPGME is
+
+  Copyright (C) 2000 Werner Koch (dd9jn)
+  Copyright (C) 2001, 2002, 2003, 2004, 2005, 2007, 2008,
+                2009 g10 Code GmbH
+
+  GPGME is free software; you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License as
+  published by the Free Software Foundation; either version 2.1 of
+  the License, or (at your option) any later version.
+
+  GPGME is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this program; if not, see .
+
+  See the files AUTHORS and THANKS for credits, further legal
+  information and bug reporting addresses pertaining to GPGME.
+
+
+GpgOL is
+
+  Copyright (C) 2001 G Data Software AG, http://www.gdata.de
+  Copyright (C) 2004, 2005, 2007, 2008, 2009 g10 Code GmbH
+
+  GpgOL is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public
+  License as published by the Free Software Foundation; either
+  version 2 of the License, or (at your option) any later version.
+
+  GpgOL is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this program; if not, see .
+
+  See the files AUTHORS and THANKS for credits, further legal
+  information and bug reporting addresses pertaining to GpgOL.
+
+
+LIBGPG-ERROR is
+
+  Copyright (C) 2003, 2004 g10 Code GmbH
+
+  libgpg-error is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public License
+  as published by the Free Software Foundation; either version 2.1 of
+  the License, or (at your option) any later version.
+
+  libgpg-error is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this program; if not, see .
+
+
+Pthreads-win32 is
+
+  Copyright(C) 1998 John E. Bossom
+  Copyright(C) 1999,2002 Pthreads-win32 contributors
+
+  Most of this is work available under the GNU Lesser General Public
+  License as published by the Free Software Foundation version 2.1 of
+  the License.  The detailed terms are given in the file COPYING in
+  the source distribution; that very file may not be modified and thus
+  it is not possible to include it here.
+
+
+BZIP2 is
+
+  This program, "bzip2", the associated library "libbzip2", and all
+  documentation, are copyright (C) 1996-2006 Julian R Seward.  All
+  rights reserved.
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  1. Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+
+  2. The origin of this software must not be misrepresented; you must
+     not claim that you wrote the original software.  If you use this
+     software in a product, an acknowledgment in the product
+     documentation would be appreciated but is not required.
+
+  3. Altered source versions must be plainly marked as such, and must
+     not be misrepresented as being the original software.
+
+  4. The name of the author may not be used to endorse or promote
+     products derived from this software without specific prior written
+     permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE AUTHOR `AS IS' AND ANY EXPRESS
+  OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+  DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  Julian Seward, Cambridge, UK.
+  jseward@bzip.org
+  bzip2/libbzip2 version 1.0.4 of 20 December 2006
+
+
+ADNS
+
+  adns is Copyright 2008 g10 Code GmbH, Copyright 1997-2000,2003,2006
+  Ian Jackson, Copyright 1999-2000,2003,2006 Tony Finch, and Copyright
+  (C) 1991 Massachusetts Institute of Technology.
+
+  adns is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program and documentation is distributed in the hope that it will
+  be useful, but without any warranty; without even the implied warranty
+  of merchantability or fitness for a particular purpose. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with adns, or one should be available above; if not, write to
+  the Free Software Foundation, 59 Temple Place - Suite 330, Boston,
+  MA 02111-1307, USA, or email adns-maint@chiark.greenend.org.uk.
+
+
+Paperkey
+
+  Copyright (C) 2007, 2008, 2009 David Shaw
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+  MA 02110-1301, USA.
+
+  The included man page is
+
+  Copyright (C) 2007 Peter Palfrader
+
+  Examples have been taken from David Shaw's README. The license is
+  the same as for Paperkey.
+
+
+Scute
+
+  Copyright 2006, 2008 g10 Code GmbH
+
+  Scute is licensed under the GNU General Pubic License, either
+  version 2, or (at your option) any later version with this special
+  exception:
+
+  In addition, as a special exception, g10 Code GmbH gives permission
+  to link this library: with the Mozilla Foundation's code for
+  Mozilla (or with modified versions of it that use the same license
+  as the "Mozilla" code), and distribute the linked executables.  You
+  must obey the GNU General Public License in all respects for all of
+  the code used other than "Mozilla".  If you modify the software, you
+  may extend this exception to your version of the software, but you
+  are not obligated to do so.  If you do not wish to do so, delete this
+  exception statement from your version and from all source files.
