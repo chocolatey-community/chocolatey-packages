@@ -77,4 +77,8 @@ The documentation for beginner and advanced users, available in English and Germ
     <mailingListUrl>http://www.gpg4win.org/community.html#main</mailingListUrl>
     <bugTrackerUrl>https://bugs.gnupg.org/</bugTrackerUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
 </package>
