@@ -70,9 +70,9 @@ The documentation for beginner and advanced users, available in English and Germ
     <summary>GNU Privacy Guard suite of programs for encryption and digital signatures</summary>
     <releaseNotes>http://www.gpg4win.org/change-history.html</releaseNotes>
     <copyright>© 2006 g10 Code GmbH</copyright>
-    <tags>gui cli security signature encryption certificate gpg gnupg gpa gpgol gpgex clawsmail admin</tags>
+    <tags>gui cli foss cross-platfrom security signature encryption certificate gpg gnupg gpa gpgol gpgex clawsmail admin</tags>
     <projectSourceUrl>http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpg4win.git;a=tree</projectSourceUrl>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/gpg4win-light/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gpg4win-light</packageSourceUrl>
     <docsUrl>http://www.gpg4win.org/documentation.html</docsUrl>
     <mailingListUrl>http://www.gpg4win.org/community.html#main</mailingListUrl>
     <bugTrackerUrl>https://bugs.gnupg.org/</bugTrackerUrl>
