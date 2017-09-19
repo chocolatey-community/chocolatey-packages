@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ruby</id>
-    <version>2.4.1.2</version>
+    <version>2.4.2.2</version>
     <title>Ruby</title>
     <authors>Yukihiro Matsumoto</authors>
     <owners>chocolatey, Rob Reynolds</owners>
