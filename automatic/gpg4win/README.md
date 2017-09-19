@@ -1,4 +1,4 @@
-# [<img src="" height="48" width="48" /> gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla)
+# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" height="48" width="48" /> gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla)
 
 Gpg4win (GNU Privacy Guard for Windows) is the full suite of programs for file encryption and digital signatures.
 
