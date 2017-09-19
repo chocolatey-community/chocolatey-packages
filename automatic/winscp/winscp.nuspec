@@ -44,4 +44,5 @@
       <dependency id="winscp.install" version="[5.11.1]" />
     </dependencies>
   </metadata>
+  <files></files>
 </package>
