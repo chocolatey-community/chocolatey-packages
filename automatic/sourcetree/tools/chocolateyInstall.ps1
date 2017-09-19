@@ -3,11 +3,11 @@
 $packageArgs = @{
   packageName = 'SourceTree'
   fileType = 'EXE'
-  url = 'https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.1.11.0.exe'
+  url = 'https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.1.0.exe'
 
   softwareName = 'SourceTree'
 
-  checksum = 'be92a608935949be668fe210efb8c891f7d647beeff1b9cfd57c55dc9a373219'
+  checksum = 'b33dc517013bdc5c06ee2f0c48894abf6fa1328fddbe78f9d38b66504d8607f6'
   checksumType = 'sha256'
 
   silentArgs = "/passive"
