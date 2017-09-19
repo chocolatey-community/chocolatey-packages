@@ -6,7 +6,7 @@
     <title>Gpg4win Light</title>
     <authors>g10 Code GmbH</authors>
     <owners>chocolatey, dtgm</owners>
-    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <licenseUrl>https://www.gpg4win.org/license.html</licenseUrl>
     <projectUrl>http://www.gpg4win.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/1a97e0e5849191aea5a30a0eb7fa4a18b54d633e/icons/gpg4win.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
