@@ -3,7 +3,7 @@
   <metadata>
     <id>gpg4win-vanilla</id>
     <version>2.3.4.20170919</version>
-    <title>Gpg4win Light</title>
+    <title>Gpg4win Vanilla</title>
     <authors>g10 Code GmbH</authors>
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://www.gpg4win.org/license.html</licenseUrl>
