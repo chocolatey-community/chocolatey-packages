@@ -144,7 +144,7 @@ Keep tags **lowercase**. Use `-` between words. The following tags are mandatory
 | `Package parameters` | Bullet list with of all package parameters |
 | `Notes` | Bullet list with any special information to the user if any |
 
-Description is maintained in the README.md file in the root of the package and automatically set in the nuspec during AU update using the [Set-DescriptionFromReadme](https://github.com/chocolatey/chocolatey-coreteampackages/blob/976ca8f515cac39666fba995a560e31677d6408b/scripts/Set-DescriptionFromReadme.ps1) script (see [qbittorrent](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent) for example).
+Description is maintained in the `README.md` file in the root of the package and automatically set in the nuspec by AU during an update.
 
 ### 1.2.4 Add chocolatey among owners
 
