@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dropbox</id>
-    <version>35.3.15-beta</version>
+    <version>36.3.19-beta</version>
     <title>Dropbox</title>
     <authors>Dropbox</authors>
     <owners>chocolatey, Rob Reynolds</owners>
@@ -12,8 +12,7 @@
     <mailingListUrl>https://www.dropboxforum.com/</mailingListUrl>
     <docsUrl>https://www.dropbox.com/help</docsUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>
-Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere. This means that any file you save to your Dropbox will automatically save to all your computers, phones and even the Dropbox website. Dropbox also makes it super easy to share with others, whether you're a student or professional, parent or grandparent. Even if you accidentally spill a latte on your laptop, have no fear! You can relax knowing that Dropbox always has you covered, and none of your stuff will ever be lost.
+    <description><![CDATA[Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere. This means that any file you save to your Dropbox will automatically save to all your computers, phones and even the Dropbox website. Dropbox also makes it super easy to share with others, whether you're a student or professional, parent or grandparent. Even if you accidentally spill a latte on your laptop, have no fear! You can relax knowing that Dropbox always has you covered, and none of your stuff will ever be lost.
 
 ## Features
 - Best-in-class sync technology
@@ -43,7 +42,7 @@ Dropbox is a free service that lets you bring all your photos, docs, and videos 
 - API access for data transport
 - Priority email support
 - Live chat support
-</description>
+]]></description>
     <summary>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere.</summary>
     <tags>dropbox virtual files file admin freeware cross-platform beta</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/dropbox</packageSourceUrl>
