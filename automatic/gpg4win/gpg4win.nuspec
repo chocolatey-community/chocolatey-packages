@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gpg4win</id>
-    <version>2.3.4.20170919</version>
+    <version>3.0.0</version>
     <title>Gpg4win</title>
     <authors>g10 Code GmbH</authors>
     <owners>chocolatey, dtgm</owners>
