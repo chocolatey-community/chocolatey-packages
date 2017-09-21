@@ -1,0 +1,12 @@
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/cdrtfe.png" width="48" height="48"/> [cdrtfe](https://chocolatey.org/packages/cdrtfe)
+
+
+cdrtfe is an open source CD/DVD/BD burning application for Microsoft Windows. You can burn data discs, Audio CDs, XCDs, (S)VCDs and DVD-Video discs. It supports creation and writing of ISO images and bootable discs. Disc images and Audio CDs can be written simultaneously to multiple writers.
+
+cdrtfe is a win32 frontend for the cdrtools (cdrecord, mkisofs, readcd, cdda2wav), Mode2CDMaker, VCDImager and other well-known tools.
+
+### Recommended
+
+In cdrtfe, go to *Extras > Settings > cdrtfe* and activate â€žSave on exitâ€œ. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
+
+

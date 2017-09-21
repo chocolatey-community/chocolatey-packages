@@ -1,4 +1,5 @@
-# <img src="" width="48" height="48"></img> [ligthalloy](https://chocolatey.org/packages/lightalloy)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d7bfe343c5b5698b26d587defcd9009301d09f55/icons/lightalloy.png" width="48" height="48"/> [lightalloy](https://chocolatey.org/packages/lightalloy)
+
 
 Complete aesthetically pleasing video player with built-in codecs.
 
@@ -12,5 +13,10 @@ Complete aesthetically pleasing video player with built-in codecs.
 * Streams switch - In case of multiple audio/subtitles streams you can easily switch from stream
 * Multilingual - Contains Dutch, German, Russian, Japanese, Chinese, and others
 * Blu-Ray and DVD - You also can watch Blu-Rays and DVDs with Light Alloy, but only if they are not encrypted
-    
+
 ![Light-Alloy screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/727f4612/automatic/lightalloy/screenshot.png)
+
+## Notes
+
+- __Warning:__ The installer is not silent. `AutoIt` will automatically click through the installer. Be careful when doing something else while installing, you might mess up the automated click-through.
+

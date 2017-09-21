@@ -1,0 +1,42 @@
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d8c632d9d68fad6f36d31c68e9d886cd2c8d1748/icons/keepassx.png" width="48" height="48"/> [keepassx](https://chocolatey.org/packages/keepassx)
+
+
+**KeePassX** saves many different information e.g. user names, passwords, urls, attachments and comments in one single database. For a better management user-defined titles and icons can be specified for each single entry. Furthermore the entries are sorted in groups, which are customizable as well.
+
+Originally KeePassX was called KeePass/L for Linux since it was a port of Windows password manager Keepass Password Safe. After KeePass/L became a cross platform application the name was not appropriate anymore and therefore, on 22 March 2006 it has been changed.
+
+## Notes
+- Do not save keypass database in chocolatey tools folder, it may be removed during upgrade.
+
+## Features
+- Extensive management
+- title for each entry for its better identification
+- possibility to determine different expiration dates
+- insertion of attachments
+- user-defined symbols for groups and entries
+- fast entry dublication
+- sorting entries in groups
+- Search function
+- search either in specific groups or complete database
+- Autofill (experimental)
+- Database security
+- access to the KeePassX database is granted either with a password, a key-file (e.g. a CD or a memory-stick) or even both.
+- Automatic generation of secure passwords
+- extremly customizable password generator for fast and easy creation of secure passwords
+- Precaution features
+- quality indicator for chosen passwords
+- hiding all passwords behind asterisks
+- Encryption
+- either the Advanced Encryption Standard (AES) or the Twofish algorithm are used
+- encryption of the database in 256 bit sized increments
+- Import and export of entries
+- import from PwManager (*.pwm) and KWallet (*.xml) files
+- export as textfile (*.txt)
+- Operating system independent
+- KeePassX is cross platform, so are the databases as well
+- Free software
+KeePassX is free software, published under the terms of the General Public License, so you are not only free to use it free of charge, but also to redistribute it, to examine and/or modify itâ€™s source code and to publish your modifications as long as you provide the same freedoms for your modified version.
+
+![KeePassX Screenshot](https://www.keepassx.org/wp-content/uploads/2016/02/kpx2_main.png)
+[More Screenshots here](https://www.keepassx.org/screenshots)
+

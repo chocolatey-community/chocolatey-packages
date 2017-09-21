@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cb12fa392bf8b8ee1cffabb8084994ee01516a49/icons/logfusion.png" height="48" width="48" /> logfusion](https://chocolatey.org/packages/logfusion)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cb12fa392bf8b8ee1cffabb8084994ee01516a49/icons/logfusion.png" width="48" height="48"/> [logfusion](https://chocolatey.org/packages/logfusion)
+
 
 Real-Time Log Monitoring Made Easy! LogFusion is a powerful realtime log monitoring application designed for system administrators and developers! Use custom highlighting rules, filtering and more. You can even sync your LogFusion settings between computers.
 
@@ -9,3 +10,4 @@ Real-Time Log Monitoring Made Easy! LogFusion is a powerful realtime log monitor
 - Auto-scroll and always show you the newest lines
 - Load any text logs, including web server logs, developer debug logs and any other text that is outputted to a file
 - Read Event Logs in real-time
+

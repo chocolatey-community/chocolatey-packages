@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg" height="48" width="48" /> git.install](https://chocolatey.org/packages/git.install)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg" width="48" height="48"/> [git.install](https://chocolatey.org/packages/git.install)
+
 
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
@@ -21,3 +22,4 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 ## Notes
 
 - The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
+
