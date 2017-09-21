@@ -166,7 +166,7 @@ If you use `Invoke-WebRequest` to download a web page, try to use `UseBasicParsi
 
 ### 1.3.2 Do not download large files
 
-Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger then few MB should never be downloaded within au_* functions.
+Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger then few MB should never be downloaded within au_* functions, unless the purpose is to create the embedded package.
 
 ### 1.3.3 Specify correct `NuspecVersion`
 
