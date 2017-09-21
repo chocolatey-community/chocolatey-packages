@@ -136,15 +136,13 @@ Keep tags **lowercase**. Use `-` between words. The following tags are mandatory
 
 ### 1.2.3 Informative description
 
-`description` should include the following **2nd level headers (##)** in the given order:
+Description is maintained in the `README.md` file in the root of the package and automatically set in the nuspec by AU during an update. It should include the following **2nd level headers (##) in the given order**:
 
-|header|meaning|
-|---|---|
-| `Features` | Bullet list with basic software functionality |
-| `Package parameters` | Bullet list with of all package parameters |
-| `Notes` | Bullet list with any special information to the user if any |
-
-Description is maintained in the `README.md` file in the root of the package and automatically set in the nuspec by AU during an update.
+|header                |meaning                                        |
+|---                   |---                                            |
+| `Features`           | Bullet list with basic software functionality |
+| `Package parameters` | Bullet list with of all package parameters    |
+| `Notes`              | Bullet list with any special information to the user if any |
 
 ### 1.2.4 Add chocolatey among owners
 
