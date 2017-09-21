@@ -39,6 +39,6 @@ Install-ChocolateyShortcut `
 # set NTFS modify file permissions to $toolsDir\tor-browser\ for user account that installed the package
 $WhoAmI=whoami
 $Acl = Get-Acl "$toolsDir\tor-browser"
-$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI,"Modify","Allow")
+$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI,"Modify",'ContainerInherit,ObjectInherit', 'None', "Allow")
 $Acl.SetAccessRule($Ar)
 Set-Acl "$toolsDir\tor-browser" $Acl
