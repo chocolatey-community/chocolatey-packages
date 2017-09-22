@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>patch-my-pc</id>
-    <version>3.2.0.1</version>
+    <version>3.2.5.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/patch-my-pc</packageSourceUrl>
     <owners>chocolatey, Redsandro</owners>
     <title>Patch my PC</title>
