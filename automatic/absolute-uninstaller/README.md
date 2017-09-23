@@ -3,6 +3,8 @@
 
 GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you remove programs thoroughly without leaving any invalid remnant to burden your system gradually.
 
+## Features
+
 * Autofix invalid program entries.
 * List installed programs with appropriate icons.
 * Simple and user-friendly interface.
