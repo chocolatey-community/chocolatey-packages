@@ -34,4 +34,10 @@ function global:au_GetLatest {
   }
 }
 
-Update-Package -ChecksumFor none
+try {
+  Update-Package -ChecksumFor none
+} catch {
+  Write-Host "Cameyo failed to update"
+  Write-Host $_
+  return "ignore";
+}
