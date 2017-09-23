@@ -34,10 +34,7 @@ function global:au_GetLatest {
   }
 }
 
-try {
-  Update-Package -ChecksumFor none
-} catch {
-  Write-Host "Cameyo failed to update"
-  Write-Host $_
-  return "ignore";
-}
+#  Update-Package -ChecksumFor none
+ 
+ Write-Host "Cameyo update disabled due to site change (See #848: https://goo.gl/DD92Bf)"
+ return "ignore"
