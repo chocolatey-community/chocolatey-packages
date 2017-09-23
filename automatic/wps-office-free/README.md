@@ -6,7 +6,8 @@ The smallest size office suite consisting of Writer, Presentation, and Spreadshe
 Includes a brand new Docer Templates page.
 Available in English, French, German, Spanish, Portuguese, Polish and Russian.
 
-##Features
+## Features
+
 * **WPS Cloud:** A professional office file cloud storage service with 1G Free Space, which can be used on PC, mobile and tablet.
 With only one click, it can share your documents by links. In such way, documents can be viewed and edited anywhere and anytime.
 * **Drag-and-drop Tool:** WPS Officeâ€™s innovative Paragraph Layout feature is a drag-and-drop tool that allows you to adjust each paragraph naturally.
@@ -19,6 +20,7 @@ Quickly access Cover Pages, Content Pages, and your Header and Footer, or Split 
 The tab bar that appears above the editable area allows you to switch between documents by Ctrl + Tab.
 This makes your document editing as easy and natural as web browsing.
 
-##Notes
+## Notes
+
 This Package only installs the english version of WPS Office Free.
 
