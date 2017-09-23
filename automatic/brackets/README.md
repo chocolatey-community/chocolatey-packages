@@ -10,7 +10,7 @@ Brackets is built using HTML, CSS and JavaScript. If you can code in Brackets, y
 Brackets, is a fully open-source, community-driven project. Want to influence its direction? Join the developer list and start contributing.
 
 **Tools shouldn't get in your way**
-Rather than clutter your workspace with floating panels, toolbars and icons, Brackets focuses on providing â€œQuick Editâ€ in-line views that provide context-sensitive access to your content, without taking you away from your code.
+Rather than clutter your workspace with floating panels, toolbars and icons, Brackets focuses on providing Quick Edit in-line views that provide context-sensitive access to your content, without taking you away from your code.
 
 **Works with your browser**
 The browser is your design view. Brackets hooks up directly to the browser, allowing you to design and develop in the same environment that you deploy.
