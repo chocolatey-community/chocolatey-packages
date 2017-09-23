@@ -5,7 +5,7 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 
 ## Features
-- **Freedom is fast:** Go anywhere you want on the Web â€” with a quickness.
+- **Freedom is fast:** Go anywhere you want on the Web with a quickness.
 - **Freedom is personal:** Enjoy the most built-in privacy tools of any browser.
 - **Freedom is yours:** people, not profit.
 
@@ -17,6 +17,5 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest/README.txt.
 2. If Firefox is already installed: the same language as the already installed Firefox.
 3. The Windows system language where the Firefox package gets installed.
-4. If Firefox does not support the system language, it will fall back to â€œen-USâ€
-This package installs Firefox in the first language which matches this list:
+4. If Firefox does not support the system language, it will fall back to `en-US`.
 
