@@ -29,7 +29,7 @@ In the last 25 years Lightworks has been used to edit some of the finest films i
 For a feature comparison, see [www.lwks.com](https://www.lwks.com/index.php?option=com_content&amp;view=article&amp;id=102&amp;Itemid=213).
         </description>
         <projectUrl>http://www.lwks.com/</projectUrl>
-        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/lightworks</packageSourceUrl>
         <tags>NLE video editor lightworks freeware multimedia FOSS cross-platform</tags>
         <copyright></copyright>
         <licenseUrl>https://en.wikipedia.org/wiki/Freemium</licenseUrl>
