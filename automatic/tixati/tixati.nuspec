@@ -41,7 +41,7 @@ __Tixati__ is one of the most advanced and flexible BitTorrent clients available
             <dependency id="autohotkey.portable" />
         </dependencies>
         <releaseNotes></releaseNotes>
-        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tixiati</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tixati</packageSourceUrl>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />

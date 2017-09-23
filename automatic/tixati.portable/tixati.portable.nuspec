@@ -38,7 +38,7 @@ It is important you do not delete the "tixati_portable_mode.txt" file within the
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bee4bc391df114723011dbd5b8a8af2a17c6bf2e/icons/tixati.png</iconUrl>
         <releaseNotes></releaseNotes>
-        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tixiati.portable</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tixati.portable</packageSourceUrl>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />
