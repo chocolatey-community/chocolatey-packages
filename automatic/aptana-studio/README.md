@@ -7,6 +7,7 @@ and integrated documentation.
 Additional plugins allow Aptana Studio to support Ruby on Rails, PHP, Python, Perl, Adobe AIR, Apple iPhone and Nokia WRT (Web Runtime).
 
 # Features
+
 * __HTML, CSS, and JavaScript Code Assist__
 Aids in authoring of HTML, CSS, JavaScript, PHP and Ruby.
 Supports the latest HTML5 specifications.
@@ -28,7 +29,7 @@ Quickly access a command line terminal for execution of operating system command
 Setup your development environment exactly the way you want it by extending the core capabilities through scripting of custom commands.
 Studio ships with hundreds of commands but always presents them in context based on the type of file your are editing.
 
-## Note
+## Notes
 
 This package installs the standalone version of Aptana Studio.
 
