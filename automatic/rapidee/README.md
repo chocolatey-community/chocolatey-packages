@@ -1,4 +1,4 @@
-# <img src="" width="48" height="48"/> [rapidee](https://chocolatey.org/packages/rapidee)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3815005f/icons/rapidee.png" width="48" height="48"/> [rapidee](https://chocolatey.org/packages/rapidee)
 
 Rapid Environment Editor (RapidEE) is an environment variables editor. It includes an easy to use GUI and replaces the small and inconvenient Windows edit box.
 
