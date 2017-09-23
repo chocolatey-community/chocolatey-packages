@@ -1,4 +1,4 @@
-# [<img src="" height="48" width="48" /> notepadplusplus.install](https://chocolatey.org/packages/notepadplusplus.install)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/136ef0bb871e04da4d9e0e0da37902930c80c2b4/icons/notepadplusplus.png" width="48" height="48"/> [notepadplusplus.install](https://chocolatey.org/packages/notepadplusplus.install)
 
 Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GPL License.
 
@@ -25,3 +25,4 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 ## Notes
 
 - To force the installation of x32 version, use the `--x86` argument with `choco install`.
+

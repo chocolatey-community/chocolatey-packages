@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/736a00f718c84566b58be6146579ed1a6ce7648e/icons/sweet-home-3d.png" height="48" width="48" /> sweet-home-3d](https://chocolatey.org/packages/sweet-home-3d)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/736a00f718c84566b58be6146579ed1a6ce7648e/icons/sweet-home-3d.png" width="48" height="48"/> [sweet-home-3d](https://chocolatey.org/packages/sweet-home-3d)
+
 
 Sweet Home 3D is a free interior design application that helps you draw the plan of your house, arrange furniture on it and visit the results in 3D.
 
@@ -14,3 +15,4 @@ Sweet Home 3D is a free interior design application that helps you draw the plan
 - **Print and export** ODFs, bitmap or vector graphics images, videos and 3D files in standard file formats.
 - **Extend the features** of Sweet Home 3D with [plug-ins](http://www.sweethome3d.com/pluginDeveloperGuide.jsp) programmed in Java, or by developing a derived version based on its Model View Controller architecture.
 - **Choose the language** displayed in the user interface of Swee Home 3D and its rich help from [25 languages](http://www.sweethome3d.com/translations.jsp).
+

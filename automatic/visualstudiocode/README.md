@@ -1,4 +1,5 @@
-# <img src="" width="48" height="48"/> [visualstudiocode](https://chocolatey.org/packages/visualstudiocode)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png" width="48" height="48"/> [visualstudiocode](https://chocolatey.org/packages/visualstudiocode)
+
 
 Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
 
@@ -26,3 +27,4 @@ Example: `choco install visualstudiocode --params '/NoDesktopIcon /DontAddToPath
 
 
 ![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/visualstudiocode/screenshot.png)
+

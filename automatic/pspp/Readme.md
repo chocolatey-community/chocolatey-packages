@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/588d16b30aa063f71d41ce18849cb42a23367d05/icons/pspp.png" height="48" width="48" /> pspp](https://chocolatey.org/packages/pspp)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/588d16b30aa063f71d41ce18849cb42a23367d05/icons/pspp.png" width="48" height="48"/> [pspp](https://chocolatey.org/packages/pspp)
+
 
 __GNU PSPP__ is a program for statistical analysis of sampled data. It is a Free replacement for the proprietary program __SPSS__.
 
@@ -17,7 +18,8 @@ PSPP can perform descriptive statistics, T-tests, anova, linear and logistic reg
 - Fast statistical procedures, even on very large data sets.
 - No license fees.
 - No expiration period.
-- No unethical “end user license agreements”.
+- No unethical â€œend user license agreementsâ€.
 - A fully indexed user manual.
 - Freedom ensured; It is licensed under the GPLv3 or later.
 - Portability; Runs on many different computers and many different operating systems (GNU or GNU/Linux are the prefered platforms, but we have had many reports that it runs well on other systems too).
+

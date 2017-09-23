@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fc7e378fe2fb55d56be7493fba9613a920ca6c34/icons/texmaker.png" height="48" width="48" /> texmaker](https://chocolatey.org/packages/texmaker)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fc7e378fe2fb55d56be7493fba9613a920ca6c34/icons/texmaker.png" width="48" height="48"/> [texmaker](https://chocolatey.org/packages/texmaker)
+
 
 Texmaker is a free, modern and cross-platform LaTeX editor for linux, macosx and windows systems that integrates many tools needed to develop documents with LaTeX, in just one application.
 
@@ -35,3 +36,4 @@ Texmaker is released under the GPL license.
 - Windows 8 or later is required to install version 5.0 or later
 
 ![Windows 8 screenshot](http://www.xm1math.net/texmaker/windows8.png)
+

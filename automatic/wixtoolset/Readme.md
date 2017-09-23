@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png" height="48" width="48" /> wixtoolset](https://chocolatey.org/packages/wixtoolset)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png" width="48" height="48"/> [wixtoolset](https://chocolatey.org/packages/wixtoolset)
+
 
 The Windows Installer XML (WiX) is a toolset that builds Windows installation packages from XML source code. The toolset supports a command line environment that developers may integrate into their build processes to build MSI and MSM setup packages.
 
@@ -9,3 +10,4 @@ WiX includes several extensions that offer functionality beyond that of Windows 
 With Burn, the WiX bootstrapper, you can create setup bundles that install prerequisites like the .NET Framework and other runtimes along with your own product. Burn lets you download packages or combine them into a single downloadable .exe.
 
 The WiX SDK includes managed and native libraries that make it easier to write code that works with Windows Installer, including custom actions in both C# and C++.
+

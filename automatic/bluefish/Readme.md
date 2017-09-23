@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg" height="48" width="48" /> bluefish](https://chocolatey.org/packages/bluefish)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg" width="48" height="48"/> [bluefish](https://chocolatey.org/packages/bluefish)
+
 
 Bluefish is a powerful editor targeted towards programmers and webdevelopers, with many options to write websites, scripts and programming code. Bluefish supports many programming and markup languages.
 
@@ -25,8 +26,9 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
 *   Multiple encodings support. Bluefish works internally with UTF8, but can save your documents in any desired encoding.
 *   Bookmarks functionality
 *   HTML toolbar and tearable menu's
-    *   Dialogs and wizards for many HTML tags, with all their attributes
-    *   Fully featured image insert dialog
-    *   Thumbnail creation and automatically linking of the thumbnail with the original image, and multi-thumbnail creation
-    *   User-customizable toolbar for quick access to often used functions
+*   Dialogs and wizards for many HTML tags, with all their attributes
+*   Fully featured image insert dialog
+*   Thumbnail creation and automatically linking of the thumbnail with the original image, and multi-thumbnail creation
+*   User-customizable toolbar for quick access to often used functions
 *   ZenCoding support
+

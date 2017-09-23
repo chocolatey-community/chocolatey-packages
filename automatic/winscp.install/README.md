@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png" height="48" width="48" /> winscp.install](https://chocolatey.org/packages/winscp.install)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png" width="48" height="48"/> [winscp.install](https://chocolatey.org/packages/winscp.install)
 
 WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
 
@@ -20,3 +20,4 @@ WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP clien
 - Optionally supports portable operation using a configuration file in place of registry entries, suitable for operation from removable media
 
 ![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/winscp.install/screenshot.png)
+

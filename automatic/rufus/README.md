@@ -1,4 +1,5 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5ba787e7d8a8accea514b0d3142c74dcae87f4b7/icons/rufus.png" width="48" height="48"/> [rufus](https://chocolatey.org/packages/rufus.install)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5ba787e7d8a8accea514b0d3142c74dcae87f4b7/icons/rufus.png" width="48" height="48"/> [rufus](https://chocolatey.org/packages/rufus)
+
 
 Rufus is a utility that helps format and create bootable USB flash drives, such as USB keys/pendrives, memory sticks, etc.
 
@@ -30,3 +31,4 @@ It can be especially useful for cases where:
 
 
 ![screenshot](screenshot.png)
+

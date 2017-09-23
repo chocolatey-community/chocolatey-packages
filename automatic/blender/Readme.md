@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg" height="48" width="48" /> blender](https://chocolatey.org/packages/blender)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg" width="48" height="48"/> [blender](https://chocolatey.org/packages/blender)
+
 
 Blender is a free and open-source professional-grade 3D computer graphics and video compositing program.
 
@@ -13,15 +14,16 @@ Blender is a free and open-source professional-grade 3D computer graphics and vi
 ## Features
 
 * Blender is a fully integrated 3D content creation suite, offering a broad range of essential tools:
-    * Modeling
-    * Rendering
-    * Animation
-    * Video Editing and Compositing
-    * Texturing
-    * Rigging
-    * Simulations
-    * Game Creation.
+* Modeling
+* Rendering
+* Animation
+* Video Editing and Compositing
+* Texturing
+* Rigging
+* Simulations
+* Game Creation.
 * Cross platform, with an OpenGL GUI that is uniform on all major platforms (and customizable with Python scripts).
 * High-quality 3D architecture enabling fast and efficient creation work-flow.
 * Excellent community support from forums and IRC.
 * Small executable size, optionally portable.
+

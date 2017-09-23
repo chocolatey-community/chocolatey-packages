@@ -1,4 +1,5 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/maxima.png" height="48" width="48" /> maxima](https://chocolatey.org/packages/maxima)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/maxima.png" width="48" height="48"/> [maxima](https://chocolatey.org/packages/maxima)
+
 
 Maxima, a Computer Algebra System
 
@@ -9,3 +10,4 @@ The Maxima source code can be compiled on many systems, including Windows, Linux
 Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.
 
 ![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/maxima/screenshot.png)
+

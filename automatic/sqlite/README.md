@@ -1,11 +1,11 @@
-# <img src="" width="48" height="48"></img> [sqlite](https://chocolatey.org/packages/sqlite)
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sqlite.svg" width="48" height="48"/> [SQLite](https://chocolatey.org/packages/SQLite)
 
 SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
 
 This package also installs sqlite tools by default - sqldiff, sqlite3, sqlite3_analyzer.
 
 ## Features
-      
+
 - Transactions are atomic, consistent, isolated, and durable (ACID) even after system crashes and power failures.
 - Zero-configuration - no setup or administration needed.
 - Full-featured SQL implementation with advanced capabilities like partial indexes, indexes on expressions, JSON, and common table expressions. (Omitted features)
@@ -20,7 +20,8 @@ This package also installs sqlite tools by default - sqldiff, sqlite3, sqlite3_a
 - Cross-platform: Android, *BSD, iOS, Linux, Mac, Solaris, VxWorks, and Windows (Win32, WinCE, WinRT) are supported out of the box. Easy to port to other systems.
 - Sources are in the public domain. Use for any purpose.
 - Comes with a standalone command-line interface (CLI) client that can be used to administer SQLite databases.
-      
+
 ## Package parameters
 
-- `/NoTools` - Do not install sqlite tools 
+- `/NoTools` - Do not install sqlite tools
+
