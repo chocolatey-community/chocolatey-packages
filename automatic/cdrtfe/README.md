@@ -5,8 +5,8 @@ cdrtfe is an open source CD/DVD/BD burning application for Microsoft Windows. Yo
 
 cdrtfe is a win32 frontend for the cdrtools (cdrecord, mkisofs, readcd, cdda2wav), Mode2CDMaker, VCDImager and other well-known tools.
 
-### Recommended
+## Notes
 
-In cdrtfe, go to *Extras > Settings > cdrtfe* and activate â€žSave on exitâ€œ. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
+- In cdrtfe, go to *Extras > Settings > cdrtfe* and activate _Save on exit_. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
 
 
