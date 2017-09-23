@@ -7,9 +7,9 @@ Open source ext3/4 file system driver for Windows
 
 - ext2/ext3 volume reading and writing
 - ext3 journal replay when mounting
-- various codepage: utf8, cp936, cp950 â€¦
+- various codepage: utf8, cp936, cp950
 - mountpoint automatical assignment
-- large inode size: 128, 256, â€¦
+- large inode size: 128, 256
 - large file size bigger than 4G
 - CIFS sharing over network
 - htree directory indexing
@@ -21,5 +21,5 @@ Open source ext3/4 file system driver for Windows
 
 ## Notes
 
-- The uninstaller doesnâ€™t work silently.
+- The uninstaller doesn't work silently.
 
