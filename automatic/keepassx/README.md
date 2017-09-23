@@ -5,9 +5,6 @@
 
 Originally KeePassX was called KeePass/L for Linux since it was a port of Windows password manager Keepass Password Safe. After KeePass/L became a cross platform application the name was not appropriate anymore and therefore, on 22 March 2006 it has been changed.
 
-## Notes
-- Do not save keypass database in chocolatey tools folder, it may be removed during upgrade.
-
 ## Features
 - Extensive management
 - title for each entry for its better identification
@@ -36,6 +33,10 @@ Originally KeePassX was called KeePass/L for Linux since it was a port of Window
 - KeePassX is cross platform, so are the databases as well
 - Free software
 KeePassX is free software, published under the terms of the General Public License, so you are not only free to use it free of charge, but also to redistribute it, to examine and/or modify itâ€™s source code and to publish your modifications as long as you provide the same freedoms for your modified version.
+
+## Notes
+- Do not save keypass database in chocolatey tools folder, it may be removed during upgrade.
+
 
 ![KeePassX Screenshot](https://www.keepassx.org/wp-content/uploads/2016/02/kpx2_main.png)
 [More Screenshots here](https://www.keepassx.org/screenshots)
