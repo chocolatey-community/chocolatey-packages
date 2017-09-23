@@ -5,5 +5,5 @@ ClipGrab is a free software for downloading and converting online videos from ma
 
 ## Notes
 
-- The Windows installer of Clipgrab contains the OpenCandy Adware which is reported by some Antivirus tools. However, OpenCandy newer gets installed in silent mode, so this package doesnâ€™t install any unwanted Adware.
+- The Windows installer of Clipgrab contains the OpenCandy Adware which is reported by some Antivirus tools. However, OpenCandy newer gets installed in silent mode, so this package doesn't install any unwanted Adware.
 
