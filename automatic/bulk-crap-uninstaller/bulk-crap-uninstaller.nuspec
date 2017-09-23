@@ -5,10 +5,10 @@
     <id>bulk-crap-uninstaller</id>
     <title>Bulk Crap Uninstaller</title>
     <owners>chocolatey</owners>
-    <version>3.15</version>
+    <version>3.16</version>
     <authors>Marcin Szeniak</authors>
     <summary>Bulk Crap Uninstaller is an open source program uninstaller.</summary>
-    <description>
+    <description><![CDATA[
 Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more!
 
 Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it effortlessly!
@@ -31,7 +31,8 @@ Even though BCU was made with IT pros in mind, by default it is so straight-forw
 - Fully portable, requires Net 3.5 which is installed on all Windows 7 machines by default
 - Quiet (unattended) uninstall of many programs when they don't openly support it
 - Visibility of protected and invalid entries (system uninstaller doesn't see them)
-    </description>
+
+]]></description>
     <projectUrl>http://klocmansoftware.weebly.com/</projectUrl>
     <tags>uninstaller uninstall bulk admin foss</tags>
     <copyright></copyright>
