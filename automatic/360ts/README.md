@@ -13,10 +13,8 @@ A feature-packed software solution that provides users with a powerful antivirus
 - Speedup: Manage and optimize your system services, boot up items and plugins - Shorten your boot time and get going sooner!
 - Cleanup: Cleanup frees your disk space by removing junk files and plugin, which can improve system performance - With cleanup you can decide which areas and files to clean.
 - Protection: Protection offers 4 different user selectable modes - Performance/Balanced/Security and Custom. Each mode offers a different level of protection from malware, phishing attacks and backdoors.
+- Top-rated tools:  WiFi Security Check,  Sandbox,  Patch Up
 
-- Top-rated tools:
-- WiFi Security Check
-- Sandbox
-- Patch Up
-**NOTE:** The uninstall for this package **is not silent**.
+## Notes
 
+- The uninstall for this package **is not silent**.
