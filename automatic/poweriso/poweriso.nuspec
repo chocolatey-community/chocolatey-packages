@@ -40,7 +40,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/poweriso.png</iconUrl>
     <releaseNotes>https://www.poweriso.com/tutorials/history.htm</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/poweriso</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/poweriso</packageSourceUrl>
     <docsUrl>https://www.poweriso.com/tutorials/index.htm</docsUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.4" />
