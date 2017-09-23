@@ -9,7 +9,7 @@ $packageArgs = @{
     File           = "$toolsPath\putty-0.70-installer.msi"
     File64         = "$toolsPath\putty-64bit-0.70-installer.msi"
     SilentArgs     = "/quiet"
-    ValidExitCodes = @(0)
+    ValidExitCodes = @(0,1603)
 }
 Install-ChocolateyInstallPackage @packageArgs
 
