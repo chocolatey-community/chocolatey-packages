@@ -36,7 +36,7 @@
     <copyright>© 2000 Martin Přikryl</copyright>
     <tags>scp cli ssh sftp ftp remote file client foss admin</tags>
     <projectSourceUrl>https://sourceforge.net/p/winscp/code/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-coreteampackages/chocolatey-packages/tree/master/automatic/winscp.portable/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/winscp.portable/</packageSourceUrl>
     <docsUrl>https://winscp.net/docs/</docsUrl>
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
