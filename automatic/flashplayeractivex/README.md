@@ -3,11 +3,8 @@
 
 The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.
 
-### Note
+## Notes
 
-This package is only for Windows XP to Windows 7, because Windows â‰¥ 8 already contains an integrated Flash Player for Internet Explorer.
-
-### Warning
-
-The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
+- This package is only for Windows XP to Windows 7, because Windows 8 already contains an integrated Flash Player for Internet Explorer.
+- **Warning**: The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
 
