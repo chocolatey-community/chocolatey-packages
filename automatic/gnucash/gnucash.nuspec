@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gnucash</id>
-    <version>2.6.17</version>
+    <version>2.6.18</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnucash</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>GnuCash</title>
@@ -21,6 +21,7 @@
     <summary>Financial accounting software</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
+
 *GnuCash* is personal and small-business financial-accounting softwre,
 freely licensed under the [GNU](http://www.gnu.org/) GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.
 
@@ -37,6 +38,7 @@ it is based on professional accounting principles to ensure balanced books and a
 * Scheduled Transactions
 * Financial Calculations
 * and [more](https://www.gnucash.org/features.phtml)
+
 </description>
     <releaseNotes>
 [Software Changelog](http://www.gnucash.org/#newscontainer)
