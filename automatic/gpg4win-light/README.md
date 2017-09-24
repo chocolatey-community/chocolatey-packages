@@ -53,7 +53,7 @@ A complete email application that offers good support for GnuPG. Also available 
 Includes all the above, and:
 
 * [Kleopatra](https://www.kde.org/applications/utilities/kleopatra/)
-The central certiï¬cate administration of Gpg4win, which ensures uniform user navigation for all cryptographic operations.
+The central certificate administration of Gpg4win, which ensures uniform user navigation for all cryptographic operations.
 * [Compendium](http://www.gpg4win.org/doc/en/gpg4win-compendium.html)
 The documentation for beginner and advanced users, available in English and German.
 
