@@ -1,11 +1,11 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/af726b9663646bcef6e18d9e7b2d84e03e4aa878/icons/gom-player.png" width="48" height="48"/> [gom-player](https://chocolatey.org/packages/gom-player)
 
 
-GOM Player is one of the worldâ€™s best free desktop video players. Originally famous for its high video and audio quality, and support of multiple video formats (flv, mp4, mov, mpg, ts, avi, divx, asx, wmv, m4v, dat, ifo, vob, 3gp/3gp2, rm/rmvb, mkv, ogm) etc. However, there is a lot more to GOM Player than codec support.
+GOM Player is one of the world's best free desktop video players. Originally famous for its high video and audio quality, and support of multiple video formats (flv, mp4, mov, mpg, ts, avi, divx, asx, wmv, m4v, dat, ifo, vob, 3gp/3gp2, rm/rmvb, mkv, ogm) etc. However, there is a lot more to GOM Player than codec support.
 
-If you are interested in VR and 360 degree videos, GOM Player is just for you! GOM Player supports a variety of VR and 360Â° video formats, and provides each user with friendly and simple UI/UX experiences.
+If you are interested in VR and 360 degree videos, GOM Player is just for you! GOM Player supports a variety of VR and 360° video formats, and provides each user with friendly and simple UI/UX experiences.
 
-It can read your local 360Â° video files and play/stream 360Â° YouTube videos. For more advanced users, GomPlayer allows custom configuration, enhancing the video view experience. There are now thousands of amazing 360Â° VR videos out there you can watch.
+It can read your local 360° video files and play/stream 360° YouTube videos. For more advanced users, GomPlayer allows custom configuration, enhancing the video view experience. There are now thousands of amazing 360° VR videos out there you can watch.
 
 If you are looking for subtitles, GOM Player just made that amazingly simple. GOM Player users are able to access the largest subtitle database in the World. And all you have to do it just play the video. Once you play your video, GOM Player will automatically search its database and show you the matching subtitle results. After you choose the subtitle you want to run, just click apply and the subtitle will be automatically downloaded and applied.
 
