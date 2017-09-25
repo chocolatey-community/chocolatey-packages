@@ -7,21 +7,21 @@ VirtualDub is a video capture/processing utility for 32-bit and 64-bit Windows p
 
 ### VirtualDub helps you get video into your computer.
 
-If your capture device is Video for Windows compatible, then VirtualDub can capture video with it.Â  But VirtualDub isn't your average capture program:
+If your capture device is Video for Windows compatible, then VirtualDub can capture video with it. But VirtualDub isn't your average capture program:
 
-- Fractional frame rates.Â  Don't settle for 29 or 30 when you want 29.97.
+- Fractional frame rates. Don't settle for 29 or 30 when you want 29.97.
 - Optimized disk access for more consistent hard disk usage.
 - Create AVI2 (OpenDML) files to break the AVI 2GB barrier and multiple files to break the FAT32 4GB limit.
 - Integrated volume meter and histogram for input level monitoring.
 - Real-time downsizing, noise reduction, and field swapping.
 - Verbose monitoring, including compression levels, CPU usage, and free disk space.
 - Access hidden video formats your capture card may support but not have a setting for, such as 352x480.
-- Keyboard and mouse shortcuts for faster operation.Â  To capture, just hit F6.
+- Keyboard and mouse shortcuts for faster operation. To capture, just hit F6.
 - Clean interface layout: caption, menu bar, info panel, status bar.
 
 ### VirtualDub lets you clean up video on your computer.
 
-There are lots of programs that let you "edit" video.Â  And yet, they're frustratingly complex for some of the simplest tasks.Â  VirtualDub isn't an editor application; it's a pre- and post-processor that works as a valuable companion to one:
+There are lots of programs that let you "edit" video. And yet, they're frustratingly complex for some of the simplest tasks. VirtualDub isn't an editor application; it's a pre- and post-processor that works as a valuable companion to one:
 
 - Reads and writes AVI2 (OpenDML) and multi-segment AVI clips.
 - Integrated MPEG-1 and Motion-JPEG decoders.
@@ -33,14 +33,14 @@ There are lots of programs that let you "edit" video.Â  And yet, they're frust
 - Adjust frame rate, decimate frames, and 3:2 pulldown removal.
 - Preview the results, with live audio.
 
-You can take a captured clip, trim the ends, clean up some of the noise, convert it to the proper frame size, and write out a better one.Â  Don't see a video filter you want?Â  Write your own, with the filter SDK.
+You can take a captured clip, trim the ends, clean up some of the noise, convert it to the proper frame size, and write out a better one. Don't see a video filter you want?  Write your own, with the filter SDK.
 
-### VirtualDub is fast.
+### VirtualDub is fast
 
-The author of VirtualDub is very impatient.Â  That means his program is designed for speed, both in the interface and in the processing pipeline.Â  Converting a compressed, 320x240 MPEG-1 file to an uncompressed, 24-bit AVI requires only these two steps in VirtualDub:
+The author of VirtualDub is very impatient. That means his program is designed for speed, both in the interface and in the processing pipeline. Converting a compressed, 320x240 MPEG-1 file to an uncompressed, 24-bit AVI requires only these two steps in VirtualDub:
 
 - Open video file (Ctrl-O).
 - Save AVI (F7).
 
-How fast is this operation?Â  On a C450, 40 frames per second (1.3x real-time speed).Â  With a little tweaking, the speed rises to 55 fps (1.8x), with the CPU hardly breaking a sweat at 40%.
+How fast is this operation? On a C450, 40 frames per second (1.3x real-time speed).Â  With a little tweaking, the speed rises to 55 fps (1.8x), with the CPU hardly breaking a sweat at 40%.
 
