@@ -3,9 +3,9 @@
 
 TV-Browser is a digital TV guide.
 
-TV-Browser gets the daily TV program from the internet and shows it clearly aranged â€“ like a printed TV guide. An internet connection is only necessary during the data update.
+TV-Browser gets the daily TV program from the internet and shows it clearly aranged like a printed TV guide. An internet connection is only necessary during the data update.
 
-### Note
+## Notes
 
-You can not use TV-Browser to watch TV.
+- You can not use TV-Browser to watch TV.
 
