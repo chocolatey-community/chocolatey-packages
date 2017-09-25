@@ -7,8 +7,6 @@ Pale Moon offers you a browsing experience in a browser completely built from it
 
 This browser, even though fairly close to Gecko-based browsers like Mozilla Firefox and SeaMonkey in the way it works, is based on a different layout engine and offers a different set of features. It aims to provide close adherence to official web standards and specifications in its implementation (with minimal compromise), and purposefully excludes a number of features to strike a balance between general use, performance, and technical advancements on the Web.
 
-With the current generation of mainstream browsers, there are also more obvious and not just "under the hood" differences: Pale Moon will continue to provide grouped navigation buttons of a decent size, a bookmarks toolbar that is enabled by default, tabs next to page content by default (easily switchable) and not in the least a functional status bar and more freedom in customization, to name a few things.
-
 # Features
 
 - Optimized for modern processors
