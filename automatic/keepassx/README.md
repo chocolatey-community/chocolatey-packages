@@ -32,7 +32,7 @@ Originally KeePassX was called KeePass/L for Linux since it was a port of Window
 - Operating system independent
 - KeePassX is cross platform, so are the databases as well
 - Free software
-KeePassX is free software, published under the terms of the General Public License, so you are not only free to use it free of charge, but also to redistribute it, to examine and/or modify itâ€™s source code and to publish your modifications as long as you provide the same freedoms for your modified version.
+KeePassX is free software, published under the terms of the General Public License, so you are not only free to use it free of charge, but also to redistribute it, to examine and/or modify it's source code and to publish your modifications as long as you provide the same freedoms for your modified version.
 
 ## Notes
 - Do not save keypass database in chocolatey tools folder, it may be removed during upgrade.
