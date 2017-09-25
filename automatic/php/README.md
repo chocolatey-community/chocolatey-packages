@@ -4,7 +4,7 @@ PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from 
 
 ## Package Parameters
 - `/DontAddToPath` - Do not add install directory to path
-- `/InstallDir:`   - Override the installation directory (needs to be specified both during install and update, until it is remembered by choco)
+- `/InstallDir`    - Override the installation directory (needs to be specified both during install and update, until it is remembered by choco)
 - `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
 
 These parameters can be passed to the installer with the use of --params.
