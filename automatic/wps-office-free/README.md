@@ -8,19 +8,24 @@ Available in English, French, German, Spanish, Portuguese, Polish and Russian.
 
 ## Features
 
-* **WPS Cloud:** A professional office file cloud storage service with 1G Free Space, which can be used on PC, mobile and tablet.
+* **WPS Cloud:**   
+A professional office file cloud storage service with 1G Free Space, which can be used on PC, mobile and tablet.
 With only one click, it can share your documents by links. In such way, documents can be viewed and edited anywhere and anytime.
-* **Drag-and-drop Tool:** WPS Officeâ€™s innovative Paragraph Layout feature is a drag-and-drop tool that allows you to adjust each paragraph naturally.
+* **Drag-and-drop Tool:**  
+WPS Office's innovative Paragraph Layout feature is a drag-and-drop tool that allows you to adjust each paragraph naturally.
 Simply by moving your mouse, you can change the location, spacing, and indentation of a paragraph.
-* **Free Templates:** WPS Office offers a large number of free templates to help you create word documents, presentations, and spreadsheets to save you time.
+* **Free Templates:**   
+WPS Office offers a large number of free templates to help you create word documents, presentations, and spreadsheets to save you time.
 Quickly select the desired templates from the Docer library to create your documents with ease.
-* **Section Navigation:** The Section Navigation tool makes it a piece of cake to jump between and edit sections.
+* **Section Navigation:**  
+The Section Navigation tool makes it a piece of cake to jump between and edit sections.
 Quickly access Cover Pages, Content Pages, and your Header and Footer, or Split Sections and Delete Sections.
-* **Multiple Document Tabs:** Avoid the hassle caused by switching between multiple document windows.
+* **Multiple Document Tabs:**  
+Avoid the hassle caused by switching between multiple document windows.
 The tab bar that appears above the editable area allows you to switch between documents by Ctrl + Tab.
 This makes your document editing as easy and natural as web browsing.
 
 ## Notes
 
-This Package only installs the english version of WPS Office Free.
+- This Package only installs the english version of WPS Office Free.
 
