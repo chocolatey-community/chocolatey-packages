@@ -15,7 +15,7 @@ A real-time, always on top, "replica" of a window of your choice, based on DWM T
 - Click forwarding allows to interact with the cloned window,
 - Click-through allows to click through the cloned thumbnail (especially useful with partial opacity),
 - Group switch mode automatically switches through a group of windows while you use them,
-- Non invasive installation: doesnâ€™t require administrator elevation.
+- Non invasive installation: doesn't require administrator elevation.
 
 ## Notes
 
