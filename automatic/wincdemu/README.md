@@ -1,7 +1,7 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/wincdemu.png" width="48" height="48"/> [wincdemu](https://chocolatey.org/packages/wincdemu)
 
 
-WinCDEmu is an open-source CD/DVD/BD emulator â€“ a tool that allows you to mount optical disc mages by simply clicking on them in Windows Explorer. If you have downloaded an ISO image and want to use it without burning it to a blank disc, WinCDEmu is the easiest way to do it.
+WinCDEmu is an open-source CD/DVD/BD emulator - a tool that allows you to mount optical disc mages by simply clicking on them in Windows Explorer. If you have downloaded an ISO image and want to use it without burning it to a blank disc, WinCDEmu is the easiest way to do it.
 
 ## Features
 
