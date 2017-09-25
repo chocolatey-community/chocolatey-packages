@@ -13,5 +13,5 @@ For example: `--params '"/InstallDir:C:\tools\python2"'`
 ## Notes
 
 - This package installs the latest stable version of Python 3.x. It will install to Python 3.x to C:\Python3x.
-- This package is not intended to use with Chocolateyâ€™s `-x86` parameter. If you want a 32-bit Python 3.x on 64-bit systems, install the [{{PackageName}}-x86_32](/packages/{{PackageName}}-x86_32) package instead. You can also install both. In that case you must manually adapt your .exe shims so that it picks the desired version when you invoke `python.exe`.
+- This package is not intended to use with Chocolatey's `-x86` parameter. If you want a 32-bit Python 3.x on 64-bit systems, install the [{{PackageName}}-x86_32](/packages/{{PackageName}}-x86_32) package instead. You can also install both. In that case you must manually adapt your .exe shims so that it picks the desired version when you invoke `python.exe`.
 
