@@ -3,7 +3,7 @@
 
 __Lightworks__ is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K.
 
-In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The Kingâ€™s Speech and many more.
+In the last 25 years Lightworks has been used to edit some of the finest films in cinema history: LA Confidential, Pulp Fiction, Heat, Road to Perdition, Hugo, The King's Speech and many more.
 
 ## Features
 
