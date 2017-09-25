@@ -6,16 +6,16 @@ It is developed by Christophe Dumez, from the University of Technology of Belfor
 It was started in March 2006 and has been in active development ever since.
 
 qBittorrent aims to have a small foot-print, to be powerful, intuitive and visually attractive going beyond the
-current functions widely provided by other applications. qBittorrent is an attempt to provide a Î¼Torrent equivalent
+current functions widely provided by other applications. qBittorrent is an attempt to provide a µTorrent equivalent
 that is open-source and multi-platform adding a streaming-like function to let users download-and-play video files.
 qBittorrent is currently offering functionality comparable to more popular BitTorrent clients such as Vuze but
 without requiring the Java Virtual Machine.
 qBittorrent requires Python only for the search engine while other clients such as Deluge and BitTornado require
-it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
+it for the BitTorrent protocol itself.
 
 ## Features
 
-- Polished ÂµTorrent-like User Interface
+- Polished µTorrent-like User Interface
 - Well-integrated and extensible Search Engine
 - Simultaneous search in most famous BitTorrent search sites
 - Per-category-specific search requests (e.g. Books, Music, Movies)
@@ -37,6 +37,7 @@ it for the BitTorrent protocol itself. *(from Wikipedia, 2013-04-18)*
 - Available on most platforms: Linux, Mac OS X, Windows, OS/2, FreeBSD
 
 ## Notes
+
 - This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
 
 ![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/798547edb9c6cb22a4a58e08361da4450f0ab14c/automatic/qbittorrent/screenshot.png)
