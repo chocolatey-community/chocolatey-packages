@@ -21,5 +21,5 @@ AutoIt is also very small, self-contained and will run on all versions of Window
 * Compatible with Windows XP / 2003 / Vista / 2008 / Windows 7 / 2008 R2 / Windows 8 / 2012 R2
 * Unicode and x64 support
 * Digitally signed for peace of mind
-* Works with Windows Vistaâ€™s User Account Control (UAC)
+* Works with Windows Vista's User Account Control (UAC)
 
