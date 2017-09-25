@@ -13,5 +13,5 @@ For example: `--params '"/InstallDir:C:\tools\python2"'`
 ## Notes
 
 - This package installs the latest stable version of Python 2.x. It will install to Python 2.x to `$env:ChocolateyBinRoot\{{PackageName}}`, but only if Python 2.x is not already installed where the installer puts it by default, which is `$env:SystemDrive\PythonXX` (XX stands for the major/minor version digits).
-- This package is not intended to use with Chocolateyâ€™s `-x86` parameter. If you want a 32-bit Python 2.x on 64-bit systems, install the [{{PackageName}}-x86_32](/packages/{{PackageName}}-x86_32) package instead. You can also install both packages. In this case you must manually adapt your PATH environment variable so that it picks the Python 2.x version that you want when invoking `python.exe`.
+- This package is not intended to use with Chocolatey's `-x86` parameter. If you want a 32-bit Python 2.x on 64-bit systems, install the [{{PackageName}}-x86_32](/packages/{{PackageName}}-x86_32) package instead. You can also install both packages. In this case you must manually adapt your PATH environment variable so that it picks the Python 2.x version that you want when invoking `python.exe`.
 
