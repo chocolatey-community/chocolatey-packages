@@ -1,4 +1,4 @@
-﻿# <img src="" width="48" height="48"/> [OptiPNG](https://chocolatey.org/packages/OptiPNG)
+﻿# [OptiPNG](https://chocolatey.org/packages/OptiPNG)
 
 
 OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information. This program also converts external formats (BMP, GIF, PNM and TIFF) to optimized PNG, and performs PNG integrity checks and corrections.
