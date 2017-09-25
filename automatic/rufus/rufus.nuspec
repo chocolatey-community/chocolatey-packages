@@ -47,7 +47,7 @@ It can be especially useful for cases where:
     <copyright>Akeo Consulting</copyright>
     <tags>liveusb usb bootdisk linux windows foss</tags>
     <projectSourceUrl>https://github.com/pbatard/rufus/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-coreteampackages/tree/master/automatic/rufus</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/rufus</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
