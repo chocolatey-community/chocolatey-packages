@@ -1,7 +1,7 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png" width="48" height="48"/> [tortoisesvn](https://chocolatey.org/packages/tortoisesvn)
 
 
-TortoiseSVN is a really easy to use Revision control / version control / source control software for Windows. It is based on [Apacheâ„¢ Subversion (SVN)Â®](http://subversion.apache.org/).
+TortoiseSVN is a really easy to use Revision control / version control / source control software for Windows. It is based on [Apache Subversion (SVN)](http://subversion.apache.org/).
 
 TortoiseSVN is implemented as a Windows shell extension. It's intuitive and easy to use, since it doesn't require the Subversion command line client to run and provides revision information graphically with overlay icons. TortoiseSVN is free to use, even in a commercial environment.
 
@@ -13,13 +13,7 @@ TortoiseSVN is implemented as a Windows shell extension. It's intuitive and easy
 * See the status of your files directly in the Windows explorer
 * descriptive dialogs, constantly improved due to user feedback
 * allows moving files by right-dragging them in the Windows explorer
-* All Subversion protocols are supported
-* http://
-* https://
-* svn://
-* svn+ssh://
-* file:///
-* svn+XXX://
+* All Subversion protocols are supported - http, https, svn, svn, file, svn+XXX
 * Powerful commit dialog
 * integrated spell checker for log messages
 * auto completion of paths and keywords of the modified files
