@@ -3,7 +3,7 @@
 
 __Tixati__ is one of the most advanced and flexible BitTorrent clients available.  And unlike many other clients, Tixati contains _NO SPYWARE, NO ADS,_ and _NO GIMMICKS._
 
-__Tixati__ has the following features:
+## Features
 
 * detailed views of all aspects of the swarm, including peers, pieces, files, and trackers
 * support for magnet links, so no need to download .torrent files if a simple magnet-link is available
@@ -18,8 +18,8 @@ __Tixati__ has the following features:
 * 100% compatible with the BitTorrent protocol
 * Windows and Linux-GTK native versions available
 
+## Notes
 
-This portable version of Tixati is meant to run on a USB flash drive or other portable media.  It stores all it's configuration files in the same folder as the executable binary files, and all file paths are stored in a format relative to the program executable folder.
-
-It is important you do not delete the "tixati_portable_mode.txt" file within the executables folder.  This file is what triggers Tixati to run in portable mode.  (The executable binaries are actually the same as the standard edition binaries.)
+- This portable version of Tixati is meant to run on a USB flash drive or other portable media.  It stores all it's configuration files in the same folder as the executable binary files, and all file paths are stored in a format relative to the program executable folder.
+- It is important you do not delete the "tixati_portable_mode.txt" file within the executables folder.  This file is what triggers Tixati to run in portable mode.  (The executable binaries are actually the same as the standard edition binaries.)
 
