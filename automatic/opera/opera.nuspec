@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Opera</id>
-    <version>47.0.2631.80</version>
+    <version>48.0.2685.32</version>
     <title>Opera</title>
     <owners>chocolatey</owners>
     <authors>Opera</authors>
@@ -11,9 +11,10 @@
     <licenseUrl>http://www.operasoftware.com/eula/browser/</licenseUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b7466aa44fbbc7e8022c05be2d866e63cd915c8d/icons/opera.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.
-    </description>
+
+]]></description>
     <summary>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.</summary>
     <releaseNotes>https://blogs.opera.com/desktop/changelog-for-47/#b2631.80</releaseNotes>
     <tags>browser opera admin</tags>
