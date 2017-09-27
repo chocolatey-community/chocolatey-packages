@@ -1,4 +1,5 @@
 ﻿Import-Module AU
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 #$redirectPage = 'http://wixtoolset.org/releases/v3-10-3-3007/' # Provided in case we need to update the latest stable
 $releases = 'http://wixtoolset.org/releases/'
