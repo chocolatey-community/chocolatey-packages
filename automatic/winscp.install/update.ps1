@@ -1,5 +1,4 @@
 import-module au
-import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'https://winscp.net/eng/download.php'
 $re  = 'WinSCP.+\.exe$'
@@ -18,7 +17,6 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix -Purge -FileNameBase $Latest.FileName32.Replace('.exe','') }
-function global:au_AfterUpdate  {  Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing

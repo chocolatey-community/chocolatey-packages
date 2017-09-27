@@ -1,5 +1,4 @@
 Import-Module au
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = "https://sourceforge.net/projects/screencloud/files/"
 $versionPattern = "([\d]+\.[\d\.]+)"
@@ -7,10 +6,6 @@ $filePattern = "ScreenCloud-$($versionPattern)-x86.msi"
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1
-}
-
-function global:au_AfterUpdate {
-    Set-DescriptionFromReadme -SkipFirst 2
 }
 
 function global:au_SearchReplace {

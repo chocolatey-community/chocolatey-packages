@@ -1,11 +1,8 @@
 ﻿Import-Module AU
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://www.cgsecurity.org/wiki/TestDisk_Download'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

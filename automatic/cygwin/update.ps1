@@ -6,7 +6,6 @@ $releases = 'https://cygwin.com/'
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
 }
 

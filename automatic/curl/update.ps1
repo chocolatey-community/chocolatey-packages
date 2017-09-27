@@ -1,5 +1,4 @@
 import-module au
-. $PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1
 
 $releases = 'https://curl.haxx.se/download.html'
 
@@ -18,17 +17,15 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { 
+function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
 
     set-alias 7z $Env:chocolateyInstall\tools\7z.exe
-    rm tools\curl_* -Recurse 
+    rm tools\curl_* -Recurse
     7z e tools\*win32* curl.exe libcurl.dll -r -otools\curl_x32
     7z e tools\*win64* curl.exe libcurl.dll -r -otools\curl_x64
     rm tools\*.7z
 }
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 

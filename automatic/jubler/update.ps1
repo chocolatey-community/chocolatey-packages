@@ -7,7 +7,6 @@ $softwareName = 'Jubler subtitle editor'
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
 }
 

@@ -1,5 +1,4 @@
 import-module au
-import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'https://winscp.net/eng/download.php'
 $re  = 'WinSCP.+Portable\.zip$'
@@ -21,10 +20,9 @@ function global:au_BeforeUpdate {
     set-alias 7z $Env:chocolateyInstall\tools\7z.exe
     7z x "tools\$($Latest.FileName32)" -otools
     rm "tools\$($Latest.FileName32)"
-    
+
     cp $PSScriptRoot\..\winscp.install\README.md $PSScriptRoot\README.md
 }
-function global:au_AfterUpdate  {  Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing

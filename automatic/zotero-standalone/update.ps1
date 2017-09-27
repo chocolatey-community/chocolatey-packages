@@ -6,8 +6,6 @@ $softwareName = 'Zotero Standalone *'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
   $version = [version]$Latest.Version
 
@@ -31,27 +29,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $url = GetRedirectedUrl -url $releases
+    $url = Get-RedirectedUrl -url $releases
 
     $version  = $url -split '/' | select -Last 1 -Skip 1
     @{
         Version      = $version
         URL32        = $url
     }
-}
-
-function GetRedirectedUrl() {
-  param([string]$url)
-
-  $req = [System.Net.WebRequest]::Create($url)
-  $resp = $req.GetResponse()
-  if ($resp.ResponseUri.OriginalString -eq $url) { $res = $url }
-  else {
-    $res = $resp.ResponseUri.OriginalString
-  }
-
-  $resp.Dispose() | Out-Null
-  return $res
 }
 
 update -ChecksumFor none

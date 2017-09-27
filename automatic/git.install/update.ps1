@@ -1,13 +1,9 @@
 import-module au
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain = 'https://github.com'
 $releases = "$domain/git-for-windows/git/releases/latest"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
     @{
         ".\legal\verification.txt" = @{

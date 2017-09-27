@@ -1,10 +1,8 @@
 import-module au
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'http://www.qbittorrent.org/download.php'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameSkip 1 -NoSuffix }
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_SearchReplace {
   @{

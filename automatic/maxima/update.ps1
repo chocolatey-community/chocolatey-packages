@@ -1,5 +1,4 @@
 import-module au
-import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows'
 
@@ -19,8 +18,6 @@ function global:au_SearchReplace {
         }
     }
 }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases

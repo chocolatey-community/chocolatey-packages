@@ -14,12 +14,8 @@ function global:au_BeforeUpdate {
   # Copy the original file from the virtualbox folder
   if (!(Test-Path "$PSScriptRoot\tools" -PathType Container)) { New-Item -ItemType Directory "$PSScriptRoot\tools" }
   Copy-Item "$PSScriptRoot\..\virtualbox\tools" "$PSScriptRoot" -Force -Recurse
-}
-
-function global:au_AfterUpdate {
   Move-Item "$PSScriptRoot\Readme.md" "$PSScriptRoot\Readme.md.backup" -Force
   Copy-Item "$PSScriptRoot\..\virtualbox\Readme.md" "$PSScriptRoot\Readme.md" -Force
-  Set-DescriptionFromReadme -SkipFirst 2
   Move-Item "$PSScriptRoot\Readme.md.backup" "$PSScriptRoot\Readme.md" -Force
 }
 

@@ -1,10 +1,8 @@
 ﻿Import-Module AU
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases     = 'http://releases.0x539.de/gobby/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

@@ -25,6 +25,4 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 Update -ChecksumFor 32

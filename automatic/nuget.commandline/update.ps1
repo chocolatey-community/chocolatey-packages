@@ -1,5 +1,4 @@
 import-module au
-. $PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1
 
 $packageName = 'NuGet.CommandLine'
 
@@ -16,7 +15,7 @@ function global:au_SearchReplace {
    }
 }
 
-function global:au_BeforeUpdate { 
+function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
 
     set-alias 7z $Env:chocolateyInstall\tools\7z.exe
@@ -25,13 +24,11 @@ function global:au_BeforeUpdate {
     rm tools\*.nupkg
 }
 
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
-
 function global:au_GetLatest {
     $package = Find-Package $packageName -provider "nuget" -Source http://www.nuget.org/api/v2/ -AllowPrereleaseVersions -Force
     $version = $package.Version
     @{
-        Version = $version 
+        Version = $version
         Url32   = "https://api.nuget.org/packages/$($packageName.ToLower()).${version}.nupkg"
     }
 }

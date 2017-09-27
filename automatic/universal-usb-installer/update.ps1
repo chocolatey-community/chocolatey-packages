@@ -6,8 +6,6 @@ $padUnderVersion = '1.9.8'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameBase $Latest.PackageName }
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{

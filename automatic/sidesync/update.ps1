@@ -1,5 +1,4 @@
 import-module au
-import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'http://www.samsung.com/global/download/Sidesyncwin'
 
@@ -13,8 +12,6 @@ function global:au_SearchReplace {
         }
     }
 }
-
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases

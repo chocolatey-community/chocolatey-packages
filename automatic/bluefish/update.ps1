@@ -1,12 +1,9 @@
 ﻿import-module au
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://www.bennewitz.com/bluefish/stable/binaries/win32/'
 $softwareName = 'Bluefish*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

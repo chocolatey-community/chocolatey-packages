@@ -1,5 +1,4 @@
 import-module au
-import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'http://light-alloy.verona.im/download/'
 
@@ -21,7 +20,6 @@ function global:au_BeforeUpdate {
   Invoke-WebRequest -Uri $Latest.URL32 -WebSession $Latest.WebSession -UseBasicParsing -OutFile "$toolsDir\$fileName"
   $Latest.Checksum32 = Get-FileHash "$toolsDir\$fileName" -Algorithm SHA256 | % Hash
 }
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -SessionVariable websession -UseBasicParsing

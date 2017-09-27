@@ -1,9 +1,6 @@
 ﻿Import-Module AU
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://sourceforge.net/projects/scribus/files/scribus/'
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

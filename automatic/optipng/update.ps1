@@ -6,7 +6,6 @@ $releases = 'http://optipng.sourceforge.net/'
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameBase "optipng" }
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
 }
 

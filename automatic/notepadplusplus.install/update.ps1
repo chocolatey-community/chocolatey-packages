@@ -1,7 +1,4 @@
 . $PSScriptRoot\..\notepadplusplus\update.ps1
-import-module $PSScriptRoot\..\..\scripts\au_extensions.psm1
-
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_SearchReplace {
    @{

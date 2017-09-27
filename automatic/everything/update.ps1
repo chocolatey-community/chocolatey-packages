@@ -1,5 +1,4 @@
 import-module au
-. $PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1
 
 $releases = 'https://www.voidtools.com/Changes.txt'
 
@@ -25,9 +24,6 @@ function global:au_BeforeUpdate {
     iwr 'https://www.voidtools.com/es.exe' -OutFile $PSScriptRoot\tools\es.exe
     $Latest.ChecksumEsExe = Get-FileHash $PSScriptRoot\tools\es.exe | % Hash
 }
-
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
-
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $version       = $download_page.Content -split "`n" | sls ': Version .+' | select -First 1

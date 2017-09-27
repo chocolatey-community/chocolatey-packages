@@ -2,8 +2,6 @@ Import-Module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 . "$PSScriptRoot\update_helper.ps1"
 
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
     return @{
         ".\tools\chocolateyInstall.ps1" = @{

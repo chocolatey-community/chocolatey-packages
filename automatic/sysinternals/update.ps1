@@ -1,5 +1,4 @@
 import-module au
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx'
 
@@ -21,8 +20,6 @@ function global:au_BeforeUpdate {
     $Latest.ChecksumType32 = 'sha256'
     $Latest.ChecksumNano = Get-RemoteChecksum $Latest.URLNano
 }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing

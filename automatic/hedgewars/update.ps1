@@ -1,12 +1,9 @@
 ﻿Import-Module AU
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain   = 'https://www.hedgewars.org'
 $releases = "$domain/download.html"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

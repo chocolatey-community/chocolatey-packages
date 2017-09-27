@@ -1,5 +1,4 @@
 ﻿Import-Module AU
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $domain   = 'http://www.joejoesoft.com'
 $releases = "$domain/vcms/108/"
@@ -8,8 +7,6 @@ function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
   $Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.URL32 -Algorithm $Latest.ChecksumType32
 }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

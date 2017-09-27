@@ -1,10 +1,8 @@
 ﻿import-module au
-. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 $releases = 'https://launchpad.net/juju/+download'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 1 }
 
 function global:au_SearchReplace {
   @{

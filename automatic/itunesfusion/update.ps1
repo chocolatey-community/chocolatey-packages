@@ -16,7 +16,6 @@ function global:au_GetLatest {
 }
 
 function global:au_AfterUpdate {
-  Set-DescriptionFromReadme -SkipFirst 1
   Update-ChangelogVersion -version $Latest.Version
 }
 

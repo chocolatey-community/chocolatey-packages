@@ -1,5 +1,4 @@
 import-module au
-import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://sqlite.org/download.html'
 
@@ -16,13 +15,12 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { 
+function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
     $tools_name = $Latest.URLTools32 -split '/' | select -Last 1
     iwr $Latest.URLTools32 -OutFile tools\$tools_name
     $Latest.ChecksumTools32 = Get-FileHash tools\$tools_name | % Hash
 }
-function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2}
 
 function global:au_GetLatest {
     function get_version( [int]$Bit=32 ) {
@@ -51,7 +49,7 @@ function global:au_GetLatest {
 
         $u32 = $url64 -replace 'win64', 'win32'
         $u64 = $url64 -replace 'win32', 'win64'
-        
+
         if (url_exists $u32)    { $Version = $version64; $url32 = $u32 }
         elseif (url_exists $64) { $Version = $version32; $url64 = $u64 }
         else {

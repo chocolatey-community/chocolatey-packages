@@ -12,9 +12,6 @@ function global:au_BeforeUpdate {
   $Latest.FileName32 = $Latest.FileName32 -replace '7z.7z$','7z'
   $Latest.FileName64 = $Latest.FileName64 -replace '7z.7z$','7z'
 }
-
-function global:au_AfterUpdate { Set-DescriptionFromReadme -SkipFirst 1 }
-
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
