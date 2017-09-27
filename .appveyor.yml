@@ -15,7 +15,7 @@ branches:
 
 environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
-  au_version: master
+  au_version: 
   au_push: true
   # Use 1 to test all, or N to split testing into N groups
   au_test_groups: 1
