@@ -6,14 +6,14 @@ The embedded software have been downloaded from the listed download
 location on <https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/>
 and can be verified by doing the following:
 
-1. Download the following <https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-1.9.7.8.exe>
+1. Download the following <https://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer-1.9.7.9.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 91B5EC7E10560C8FB6704FAC57A44F04C3608FB29B6D4B3951F6C6071065F9BF
+  checksum: 0617D71DF6CB74BA1C16D1394BC7FFEE90B05F521C8E7472B6F21CEE2C0FF359
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl-2.0.txt>
 This license was mentioned on their disclaimer page <https://www.pendrivelinux.com/disclaimer/>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>universal-usb-installer</id>
-    <version>1.9.7.800</version>
+    <version>1.9.7.900</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/universal-usb-installer</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Universal USB Installer</title>
@@ -16,9 +16,10 @@
     <tags>universal-usb-installer usb flash drive linux iso foss cross-platform</tags>
     <summary>Universal USB Installer is a Live Linux USB Creator that allows you to choose from a selection of Linux Distributions to put on your USB Flash Drive. </summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to choose from a selection of Linux Distributions to put on your USB Flash Drive. The Universal USB Installer is easy to use. Simply choose a Live Linux Distribution, the ISO file, your Flash Drive and, Click Install. Upon completion, you should have a ready to run bootable USB Flash Drive with your select operating system installed. Other features include; Persistence (if available) – note that casper persistence will only work with fat16 or fat32 formatted drives.
-</description>
+    <description><![CDATA[
+Universal USB Installer aka UUI is a Live Linux USB Creator that allows you to choose from a selection of Linux Distributions to put on your USB Flash Drive. The Universal USB Installer is easy to use. Simply choose a Live Linux Distribution, the ISO file, your Flash Drive and, Click Install. Upon completion, you should have a ready to run bootable USB Flash Drive with your select operating system installed. Other features include; Persistence (if available) - note that casper persistence will only work with fat16 or fat32 formatted drives.
+
+]]></description>
     <releaseNotes>https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/#Changelog</releaseNotes>
   </metadata>
   <files>
