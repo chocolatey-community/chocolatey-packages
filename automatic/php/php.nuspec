@@ -4,20 +4,21 @@
   <metadata>
     <id>php</id>
     <title>PHP (Hypertext Preprocessor)</title>
-    <version>7.1.9</version>
+    <version>7.1.10</version>
     <authors>PHP Authors</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
-    <description>PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
+    <description><![CDATA[PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
 ## Package Parameters
 - `/DontAddToPath` - Do not add install directory to path
-- `/InstallDir:`   - Override the installation directory (needs to be specified both during install and update, until it is remembered by choco)
+- `/InstallDir`    - Override the installation directory (needs to be specified both during install and update, until it is remembered by choco)
 - `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
 
 These parameters can be passed to the installer with the use of --params.
 For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
-    </description>
+
+]]></description>
     <projectUrl>http://www.php.net/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/php</packageSourceUrl>
     <tags>php development programming foss cross-platform admin</tags>

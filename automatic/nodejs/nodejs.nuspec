@@ -4,12 +4,12 @@
   <metadata>
     <id>nodejs</id>
     <title>Node JS</title>
-    <version>8.5.0</version>
+    <version>8.6.0</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
-    <description>
-Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+    <description><![CDATA[
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
 
 ## Notes
 This package used to install `nodejs.commandline`. It is recommended that you uninstall the `nodejs.commandline` and `npm` packages in favor of this or the `nodejs.install` (which this `nodejs` package now points to).
@@ -17,7 +17,8 @@ This package used to install `nodejs.commandline`. It is recommended that you un
 This package provides the **Current** releases of Node.js.
 
 If you want the **LTS** (Long Term Support) release of Node.js, install the [nodejs-lts](https://chocolatey.org/packages/nodejs-lts) package instead.
-    </description>
+
+]]></description>
     <projectUrl>http://nodejs.org</projectUrl>
     <projectSourceUrl>https://github.com/nodejs/node</projectSourceUrl>
     <docsUrl>https://nodejs.org/en/docs/</docsUrl>
