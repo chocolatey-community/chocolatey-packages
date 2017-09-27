@@ -4,12 +4,12 @@
   <metadata>
     <id>nodejs.install</id>
     <title>Node JS (Install)</title>
-    <version>8.6.0</version>
+    <version>8.6.0.20170927</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
-    <description>
-Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+    <description><![CDATA[
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
 
 This package runs the official Node JS installer, resulting in Node.exe and NPM being installed under Program Files, and added to the SYSTEM PATH environment variable.
 
@@ -17,7 +17,8 @@ This package runs the official Node JS installer, resulting in Node.exe and NPM 
 This package provides the **Current** releases of Node.js.
 
 If you want the **LTS** (Long Term Support) release of Node.js, install the [nodejs-lts](https://chocolatey.org/packages/nodejs-lts) package instead.
-    </description>
+
+]]></description>
     <projectUrl>http://nodejs.org</projectUrl>
     <projectSourceUrl>https://github.com/nodejs/node</projectSourceUrl>
     <docsUrl>https://nodejs.org/en/docs/</docsUrl>
