@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>voicebot</id>
-    <version>3.0</version>
+    <version>3.1</version>
     <title>VoiceBot</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.voicebot.net</projectUrl>
@@ -11,18 +11,19 @@
     <docsUrl>https://www.voicebot.net/Help/</docsUrl>
     <mailingListUrl>https://www.voicebot.net/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-    Voice Powered Game Control!
-    VoiceBot lets you take command with your voice! Say commands out loud to send actions
-    to your games and applications. Use your voice to type keyboard shortcuts, click and
-    move your mouse, and execute macros and scripts.
+    <description><![CDATA[
+Voice Powered Game Control!
+VoiceBot lets you take command with your voice! Say commands out loud to send actions
+to your games and applications. Use your voice to type keyboard shortcuts, click and
+move your mouse, and execute macros and scripts.
 
-    ## Features
-    - Take command of your games with your voice using VoiceBot!
-    - Send commands to your games and applications
-    - Use your voice to run keyboard shortcuts, click
-    and move your mouse, and even execute complicated macros and scripts.
-    </description>
+## Features
+- Take command of your games with your voice using VoiceBot!
+- Send commands to your games and applications
+- Use your voice to run keyboard shortcuts, click
+and move your mouse, and even execute complicated macros and scripts.
+
+]]></description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>voice control macros games trial admin</tags>
     <owners>chocolatey,keithlammers,the-running-dev</owners>
