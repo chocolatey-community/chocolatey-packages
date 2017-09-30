@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>utorrent</id>
+    <version>3.5.0.43804</version>
+    <title>uTorrent</title>
+    <authors>BitTorrent, Inc.</authors>
+    <licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
+    <projectUrl>http://www.utorrent.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f6671290b0edaf4e45c6665c278d93222551b803/icons/utorrent.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+The #1 torrent download client on desktops worldwide.
+
+## Features
+
+- Lightweight - µTorrent is a little over 1 MB (smaller than a digital photo!). It installs ultra-fast and will never hog your valuable system resources.
+- Powerful - Want total control? uTorrent offers advanced settings such as automation, scripting, remote management and more.
+- Fast - Download your files as quickly and efficiently as possible without slowing down your other online activities.
+- Bundles - Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download media directly from a variety of artists, bands, authors and filmmakers.
+</description>
+    <summary>A (very) tiny BitTorrent client.</summary>
+    <copyright>© 2017 BitTorrent, Inc.</copyright>
+    <tags>utorrent bittorrent client admin freeware</tags>
+    <docsUrl>http://help.utorrent.com/</docsUrl>
+    <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
+    <releaseNotes>http://blog.utorrent.com/releases/windows/</releaseNotes>
+    <owners>chocolatey</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/utorrent</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
