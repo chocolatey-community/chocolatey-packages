@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>voicebot</id>
-    <version>3.1</version>
+    <version>0.0</version>
     <title>VoiceBot</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.voicebot.net</projectUrl>
@@ -30,6 +30,7 @@ and move your mouse, and even execute complicated macros and scripts.
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/voicebot</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="dotnet4.6" version="4.6.00081.20150925" />
     </dependencies>
   </metadata>
   <files>
