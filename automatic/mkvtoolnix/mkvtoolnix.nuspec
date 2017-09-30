@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mkvtoolnix</id>
-    <version>15.0.0</version>
+    <version>16.0.0</version>
     <title>MKVToolNix</title>
     <owners>chocolatey</owners>
     <authors>Moritz Bunkus</authors>
@@ -11,11 +11,12 @@
     <projectUrl>https://www.bunkus.org/videotools/mkvtoolnix/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/mkvtoolnix.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 MKVToolNix is a set of tools to create, alter, split, join and inspect Matroska files (MKV).
 
 With these tools one can get information about (mkvinfo) Matroska files, extract tracks/data from (mkvextract) Matroska files and create (mkvmerge) Matroska files from other media files. Matroska is a new multimedia file format aiming to become **the** new container format for the future. You can find more information about it and its underlying technology, the Extensible Binary Meta Language (EBML), at http://www.matroska.org/.
-    </description>
+
+]]></description>
     <summary>Tools for Matroska files</summary>
     <releaseNotes>https://www.bunkus.org/videotools/mkvtoolnix/doc/ChangeLog</releaseNotes>
     <tags>multimedia mkv container muxing demuxing cli foss cross-platform admin</tags>

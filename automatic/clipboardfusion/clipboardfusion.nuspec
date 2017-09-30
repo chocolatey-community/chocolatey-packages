@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clipboardfusion</id>
-    <version>0.0</version>
+    <version>5.0</version>
     <title>ClipboardFusion</title>
     <authors>Binary Fortress Software</authors>
     <licenseUrl>https://www.clipboardfusion.com/License/</licenseUrl>
