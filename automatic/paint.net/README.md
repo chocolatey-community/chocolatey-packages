@@ -7,9 +7,12 @@ unlimited undo, special effects, and a wide variety of useful and powerful tools
 An active and growing online community provides friendly help, tutorials, and plugins.
 
 ## Features
+
 - Simple, intuitive, and innovative user interface
 - Performance
 - Support for layers
-- Unlimited undo
+- Unlimited history
 - Active Online Community
-
+- Automatically Updated
+- Special Effects
+- Powerful Tools
