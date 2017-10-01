@@ -28,22 +28,19 @@ function global:au_BeforeUpdate {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url = $download_page.links | ? href -match 'avidemux/[0-9.]+/$' | % href | select -First 1
-  $url = 'https://sourceforge.net' + $url
+  $url = $download_page.links | ? href -match 'avidemux/[0-9.]+/$' | % href | select -First 1 | % { 'https://sourceforge.net' + $_ }
 
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $url32 = $download_page.Links | ? href -match "win32\.exe$" | % select -first 1 -expand href
-  $url64 = $download_page.Links | ? href -match "win64\.exe$" | % select -first 1 -expand href
-  if (!$url32 -or !$url64) {
-    Write-Host "Either 32-bit or 64-bit url is missing"; return 'ignore'
-  } else {
-    $version = $url -split '/' | select -Last 1 -Skip 1
-    @{
-      URL32 = "$url32"
-      URL64 = "$url64"
-      Version = $version
-      ReleaseNotes = "$url"
-    }
+  $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
+  $url32 = $download_page.Links | ? href -match "win32\.exe" | select -first 1 -expand href
+  $url64 = $download_page.Links | ? href -match "win64\.exe" | select -first 1 -expand href
+
+
+  $version = $url -split '/' | select -Last 1 -Skip 1
+  @{
+    URL32 = "$url32"
+    URL64 = "$url64"
+    Version = $version
+    ReleaseNotes = "$url"
   }
 }
 
