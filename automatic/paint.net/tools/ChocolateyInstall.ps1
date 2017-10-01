@@ -2,8 +2,8 @@
 $arguments              = @{
     packageName         =  $env:ChocolateyPackageName
     softwareName        = 'Paint.NET*'
-    url                 = 'https://www.dotpdn.com/files/paint.net.4.0.17.install.zip'
-    checksum            = '4c6f4a582bcdc8e46898d13e6eafc6358c21d8db203dce4ef26ab149f820752f'
+    url                 = 'https://www.dotpdn.com/files/paint.net.4.0.18.install.zip'
+    checksum            = 'f254361cab183d637d4915b6fa321254132158d02491ad5243357868c0b07785'
     fileType            = 'zip'
     destination         = Join-Path $env:Temp 'Paint.NET'
     checksumType        = 'sha256'

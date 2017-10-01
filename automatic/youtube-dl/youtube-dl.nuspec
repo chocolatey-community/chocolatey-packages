@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>youtube-dl</id>
-    <version>2017.09.24</version>
+    <version>2017.10.01</version>
     <title>youtube-dl</title>
     <owners>chocolatey</owners>
     <authors>Ricardo Garcia and others</authors>
@@ -14,9 +14,11 @@
     <docsUrl>https://github.com/rg3/youtube-dl/blob/master/README.md#readme</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
-youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and itâ€™s not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
+youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it's not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
 
-Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction and conversion support)
+## Notes
+
+- Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction and conversion support)
 
 ]]></description>
     <summary>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites.</summary>

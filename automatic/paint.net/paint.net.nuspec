@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
    <metadata>
     <id>paint.net</id>
-    <version>4.0.17</version>
+    <version>4.0.18</version>
     <title>Paint.NET</title>
     <authors>Rick Brewster, dotPDN</authors>
     <projectUrl>http://www.getpaint.net/</projectUrl>
@@ -12,19 +12,20 @@
     <docsUrl>https://forums.getpaint.net/index.php?/forum/18-tutorials-publishing-only/</docsUrl>
     <mailingListUrl>https://forums.getpaint.net/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-    Paint.NET is free image and photo editing software for PCs that run Windows.
-    It features an intuitive and innovative user interface with support for layers,
-    unlimited undo, special effects, and a wide variety of useful and powerful tools.
-    An active and growing online community provides friendly help, tutorials, and plugins.
+    <description><![CDATA[
+Paint.NET is free image and photo editing software for PCs that run Windows.
+It features an intuitive and innovative user interface with support for layers,
+unlimited undo, special effects, and a wide variety of useful and powerful tools.
+An active and growing online community provides friendly help, tutorials, and plugins.
 
-    ## Features
-    - Simple, intuitive, and innovative user interface
-    - Performance
-    - Support for layers
-    - Unlimited undo
-    - Active Online Community
-    </description>
+## Features
+- Simple, intuitive, and innovative user interface
+- Performance
+- Support for layers
+- Unlimited undo
+- Active Online Community
+
+]]></description>
     <summary>
     Paint.NET is image and photo manipulation software designed to be used on computers that run Windows.
     </summary>
