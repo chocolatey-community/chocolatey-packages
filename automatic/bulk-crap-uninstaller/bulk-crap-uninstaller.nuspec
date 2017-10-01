@@ -29,7 +29,7 @@ BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has
 * Fully portable, settings are saved to a single file
 * Translated to French, Polish, Slovene, Czech, English, German, Russian. More coming!
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/348f239d/automatic/bulk-crap-uninstaller/screenshot.png?raw=true)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/458c2f70/automatic/bulk-crap-uninstaller/screenshot.png)
 ]]></description>
     <projectUrl>http://klocmansoftware.weebly.com/</projectUrl>
     <tags>uninstaller uninstall bulk admin foss</tags>
