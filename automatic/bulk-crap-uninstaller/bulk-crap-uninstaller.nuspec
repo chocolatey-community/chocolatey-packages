@@ -33,8 +33,8 @@ BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has
 ]]></description>
     <projectUrl>http://klocmansoftware.weebly.com/</projectUrl>
     <tags>uninstaller uninstall bulk admin foss</tags>
-    <copyright></copyright>
-    <licenseUrl>https://sourceforge.net/p/bulk-crap-uninstaller/code/ci/master/tree/Licence.txt</licenseUrl>
+    <copyright>Marcin Szeniak 2017</copyright>
+    <licenseUrl>https://github.com/Klocman/Bulk-Crap-Uninstaller/blob/master/Licence.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png</iconUrl>
     <releaseNotes>https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/tag/v3.17</releaseNotes>
