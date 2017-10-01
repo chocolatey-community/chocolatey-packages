@@ -5,7 +5,7 @@
     <id>bulk-crap-uninstaller</id>
     <title>Bulk Crap Uninstaller</title>
     <owners>chocolatey</owners>
-    <version>3.17.0</version>
+    <version>3.17.0.20171001</version>
     <authors>Marcin Szeniak</authors>
     <summary>Bulk Crap Uninstaller is an open source program uninstaller.</summary>
     <description><![CDATA[Bulk Crap Uninstaller (or BCUninstaller) is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more! Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it.
@@ -29,7 +29,7 @@ BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has
 * Fully portable, settings are saved to a single file
 * Translated to French, Polish, Slovene, Czech, English, German, Russian. More coming!
 
-![screenshot](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller/screenshot.png)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/348f239d/automatic/bulk-crap-uninstaller/screenshot.png?raw=true)
 ]]></description>
     <projectUrl>http://klocmansoftware.weebly.com/</projectUrl>
     <tags>uninstaller uninstall bulk admin foss</tags>
