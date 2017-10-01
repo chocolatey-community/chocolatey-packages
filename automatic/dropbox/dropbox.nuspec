@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dropbox</id>
-    <version>35.4.20</version>
+    <version>0.0</version>
     <title>Dropbox</title>
     <authors>Dropbox</authors>
     <owners>chocolatey,ferventcoder,the-running-dev</owners>
@@ -47,6 +47,9 @@ Dropbox is a free service that lets you bring all your photos, docs, and videos 
     <summary>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere.</summary>
     <tags>dropbox virtual files file admin freeware cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/dropbox</packageSourceUrl>
+    <dependencies>
+      <dependency id="kb2919355" version="1.0.20160915" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
