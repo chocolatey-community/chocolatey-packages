@@ -21,4 +21,4 @@ BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has
 * Fully portable, settings are saved to a single file
 * Translated to French, Polish, Slovene, Czech, English, German, Russian. More coming!
 
-![screenshot](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller/screenshot.png)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/348f239d/automatic/bulk-crap-uninstaller/screenshot.png?raw=true)
