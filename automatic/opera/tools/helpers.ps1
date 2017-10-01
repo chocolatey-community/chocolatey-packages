@@ -1,13 +1,3 @@
-function Is32BitInstalled {
-  if ((Get-ProcessorBits 32) -or ($env:ChocolateyForceX86 -eq $true)) {
-    # We return $false here to have choco handle the 32bit processing instead
-    return $false
-  }
-  $regPath = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\Opera*"
-
-  return Test-Path $regPath -ea 0
-}
-
 function IsVersionAlreadyInstalled {
   param($version)
 
