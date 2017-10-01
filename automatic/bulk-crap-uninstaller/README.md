@@ -1,26 +1,24 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png" width="48" height="48"/> [bulk-crap-uninstaller](https://chocolatey.org/packages/bulk-crap-uninstaller)
 
+Bulk Crap Uninstaller (or BCUninstaller) is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more! Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it.
 
-Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more!
-
-Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it effortlessly!
+BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has special support for many uninstalling systems (NSIS, InnoSetup, Msiexec, and many other).
 
 ## Features
 
-- Detect orphaned applications
-- Startup manager
-- Multiple languages
-- Uninstall lists and searching
-- Verification of certificates
-- More data than you'd ever need
-- Detection and uninstallation of Windows Store apps
-- Uninstallation of multiple items at once (with collision prevention)
-- Advanced grouping, sorting, filtering and searching
-- Automatic detection and closing of running applications
-- Automatic updating and error reporting
-- Custom commands can be executed before and after uninstallation
-- Editing tools and backup creation - can generate .reg files and remove junk to recycle bin
-- Fully portable, requires Net 3.5 which is installed on all Windows 7 machines by default
-- Quiet (unattended) uninstall of many programs when they don't openly support it
-- Visibility of protected and invalid entries (system uninstaller doesn't see them)
+* Detect and quietly Windows Store apps
+* Detect and quietly uninstall Steam Apps
+* Uninstall multiple items at once to speed up the process (with collision prevention)
+* Uninstall any number of applications in a single batch
+* Minimal user input is required during uninstallation
+* Can find and remove leftovers after uninstallation
+* Can uninstall many applications even if they don't have any uninstallers
+* Detects applications with damaged or missing uninstallers
+* Adds quiet uninstall options to some uninstallers, even if they do not support them by default
+* Uninstall lists for automation
+* Startup manager
+* Verification of uninstaller certificates
+* Fully portable, settings are saved to a single file
+* Translated to French, Polish, Slovene, Czech, English, German, Russian. More coming!
 
+![screenshot](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller/screenshot.png)
