@@ -15,7 +15,8 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
-if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $Env:ChocolateyPackageVersion)) {
+$version = ''
+if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $version)) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
 } else {
   Install-ChocolateyPackage @packageArgs
