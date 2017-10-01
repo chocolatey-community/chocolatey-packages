@@ -1,7 +1,7 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d9984ffd9b6481c92e83fc1ec16f55184633adb6/icons/sourcetree.png" width="48" height="48"/> [SourceTree](https://chocolatey.org/packages/SourceTree)
 
 
-A free visual Git and Hg client for Mac and Windows
+A free visual Git and Hg client for Mac and Windows.
 
 SourceTree simplifies how you interact with your Git and Mercurial repositories so you can focus on coding. Visualize and manage your repositories through SourceTree's simple interface.
 
@@ -18,6 +18,5 @@ SourceTree simplifies how you interact with your Git and Mercurial repositories 
 
 ## Notes
 
-This package installs the current version in General Availability.
-For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
+- This package installs the current version in General Availability.For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
 
