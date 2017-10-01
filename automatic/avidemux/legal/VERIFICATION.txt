@@ -22,3 +22,7 @@ Package can be verified like this:
 Using AU:
 
    Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win64.exe/download
+
+The included license have been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+and should be the correct license as mentioned on their project page <http://avidemux.sourceforge.net/>
+and their sourceforge mirror <https://sourceforge.net/projects/avidemux/>

@@ -27,5 +27,6 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
