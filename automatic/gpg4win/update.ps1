@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.gpg4win.org/download.html'
+$releases = 'https://files.gpg4win.org/'
 
 function global:au_SearchReplace {
    @{
@@ -21,9 +21,9 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $packageName = Split-Path -Leaf $PSScriptRoot
-    $re  = "$packageName-[0-9.]+.exe.sig$"
-    $url = $download_page.links | ? href -match $re | select -First 1 -Expand href
-    $url = $url -replace '.sig$'
+    $re  = "$packageName-[0-9.]+.exe$"
+    $url = $download_page.links | ? href -match $re | select -Last 1 -Expand href | % { $releases + $_ }
+
     @{
         Version = $url -split '-|.exe' | select -Last 1 -Skip 1
         URL32   = $url
