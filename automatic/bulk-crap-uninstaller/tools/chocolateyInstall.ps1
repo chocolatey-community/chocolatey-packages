@@ -6,7 +6,6 @@ $packageArgs = @{
   packageName    = 'bulk-crap-uninstaller'
   fileType       = 'exe'
   file           = gi $toolsPath\*.exe
-  file64         = gi $toolsPath\*.exe
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   softwareName   = 'BCUninstaller'
 }
