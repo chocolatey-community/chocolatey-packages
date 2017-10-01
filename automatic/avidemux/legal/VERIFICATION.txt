@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win32.exe/download
-   x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win64.exe/download
+   x32: https://sourceforge.net/projects/avidemux/files/avidemux/2.7.0/avidemux_2.7.0_win32.exe/download
+   x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.7.0/avidemux_2.7.0_win64.exe/download
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 3398B294436299D139FD35E757D81D917753F41A757CF5073586C5F80C4C74F8
-   checksum64: 383B6F0EB8DFCB009035BC76A756375D8D5EC9CB3CFF5195796367EAB6C32ABE
+   checksum32: 9EAC037E0373665F9D0B5888CEA447310E24A2B2B87367569963965107140DC9
+   checksum64: 8A1B74A84B6BDB24FEB02E60A6B38C2A90D0BE6E28699ABF2E2082DB023265F1
 
 Using AU:
 
-   Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/avidemux_2.6.19_win64.exe/download
+   Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.7.0/avidemux_2.7.0_win64.exe/download
 
 The included license have been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 and should be the correct license as mentioned on their project page <http://avidemux.sourceforge.net/>

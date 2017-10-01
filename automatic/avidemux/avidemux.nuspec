@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>avidemux</id>
-    <version>2.6.19</version>
+    <version>2.7.0</version>
     <title>Avidemux</title>
     <authors>Mean, Gruntster, Fahr</authors>
     <owners>chocolatey, purity</owners>
@@ -11,13 +11,22 @@
     <projectUrl>http://avidemux.sourceforge.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/avidemux.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 Avidemux is a free video editor designed for simple cutting, filtering and encoding tasks. It supports many file types, including AVI, DVD compatible MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated using projects, job queue and powerful scripting capabilities.
 
 Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the GNU GPL license. The program was written from scratch by Mean, but code from other people and projects has been used as well. Patches, translations and even bug reports are always welcome.
-    </description>
+
+## Features
+
+ - Non-linear video editing, applying visual effects (called "Filters" by Avidemux) to video, and transcoding video into various formats.
+ - Multiplexing and demuxing.
+ - Supports many formats.
+ - Project system, which uses the SpiderMonkey JavaScript engine.
+ - Advanced scripting available for it both in its GUI and command line modes.
+ - Subtitle processing
+]]></description>
     <summary>Video editor</summary>
-    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.6.19/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.7.0/</releaseNotes>
     <copyright>2001-2016 Mean</copyright>
     <tags>video editor foss cross-platform cutting filtering encoding admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
