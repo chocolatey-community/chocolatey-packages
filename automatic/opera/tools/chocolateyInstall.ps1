@@ -2,9 +2,6 @@
 $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 . "$toolsPath\helpers.ps1"
 
-if (Is32BitInstalled) { $env:ChocolateyForceX86 = $true }
-
-$version     = '48.0.2685.32'
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
@@ -18,7 +15,7 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
-if (IsVersionAlreadyInstalled $version) {
+if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $Env:ChocolateyPackageVersion)) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
 } else {
   Install-ChocolateyPackage @packageArgs
