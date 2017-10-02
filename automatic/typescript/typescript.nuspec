@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>typescript</id>
-    <version>1.6.0</version>
+    <version>2.5.3</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/typescript</packageSourceUrl>
     <owners>chocolatey, Microsoft</owners>
     <title>TypeScript</title>
@@ -19,8 +19,9 @@
     <tags>typescript javascript foss cross-platform</tags>
     <summary>TypeScript is a language for application-scale JavaScript development.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy</description>
-    <releaseNotes></releaseNotes>
+    <description><![CDATA[[TypeScript](https://www.typescriptlang.org/) is a language for application-scale JavaScript. TypeScript adds optional types, classes, and modules to JavaScript. TypeScript supports tools for large-scale JavaScript applications for any browser, for any host, on any OS. TypeScript compiles to readable, standards-based JavaScript.
+]]></description>
+    <releaseNotes>https://github.com/Microsoft/TypeScript/issues?q=is%3Aissue+milestone%3A%22TypeScript+2.5.3%22+label%3A%22fixed%22+</releaseNotes>
     <dependencies>
       <dependency id="nodejs.install" version="4.2.0" />
     </dependencies>
