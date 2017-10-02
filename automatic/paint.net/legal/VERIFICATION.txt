@@ -18,4 +18,4 @@ Package can be verified like this:
    checksum32: F254361CAB183D637D4915B6FA321254132158D02491AD5243357868C0B07785
 
 File 'license.txt' is obtained from:
-   hhttps://www.getpaint.net/license.html
+   https://www.getpaint.net/license.html
