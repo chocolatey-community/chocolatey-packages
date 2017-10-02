@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>typescript</id>
-    <version>0.0</version>
+    <version>2.5.3</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/typescript</packageSourceUrl>
     <owners>chocolatey, Microsoft</owners>
     <title>TypeScript</title>
