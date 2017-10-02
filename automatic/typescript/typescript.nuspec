@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>typescript</id>
+    <version>1.6.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/typescript</packageSourceUrl>
+    <owners>chocolatey, Microsoft</owners>
+    <title>TypeScript</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.typescriptlang.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/867a5eb4c37a563906cd2b31ef6e387466b7cdcc/icons/typescript.png</iconUrl>
+    <copyright>©2012-2017 Microsof</copyright>
+    <licenseUrl>https://github.com/Microsoft/TypeScript/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Microsoft/TypeScript</projectSourceUrl>
+    <docsUrl>https://www.typescriptlang.org/docs/home.html</docsUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/TypeScript/issues</bugTrackerUrl>
+    <tags>typescript javascript foss cross-platform</tags>
+    <summary>TypeScript is a language for application-scale JavaScript development.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Dummy</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="nodejs.install" version="4.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
