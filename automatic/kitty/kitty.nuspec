@@ -30,7 +30,7 @@ Sessions filter, portability, predefined command shortcuts, session launcher, au
     <summary>kitty</summary>
     <releaseNotes>See http://www.9bis.net/kitty/?action=news</releaseNotes>
     <copyright>Cyril Dupont</copyright>
-    <tags>foss telnet ssh remote</tags>
+    <tags>foss telnet ssh ftp network remote</tags>
     <projectSourceUrl>http://svn.9bis.com/websvn/listing.php?repname=Sandbox</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kitty</packageSourceUrl>
     <docsUrl>http://www.9bis.net/kitty/?page=Welcome</docsUrl>
