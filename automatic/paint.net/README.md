@@ -16,3 +16,5 @@ An active and growing online community provides friendly help, tutorials, and pl
 - Automatically Updated
 - Special Effects
 - Powerful Tools
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/paint.net/screenshot.png)

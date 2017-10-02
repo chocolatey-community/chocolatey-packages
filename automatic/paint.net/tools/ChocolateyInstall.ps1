@@ -1,21 +1,31 @@
-﻿$ErrorActionPreference  = 'Stop'
-$arguments              = @{
-    packageName         =  $env:ChocolateyPackageName
-    softwareName        = 'Paint.NET*'
-    url                 = 'https://www.dotpdn.com/files/paint.net.4.0.18.install.zip'
-    checksum            = 'f254361cab183d637d4915b6fa321254132158d02491ad5243357868c0b07785'
-    fileType            = 'zip'
-    destination         = Join-Path $env:Temp 'Paint.NET'
-    checksumType        = 'sha256'
-    silentArgs          = '/auto'
-    validExitCodes      = @(0, 1641, 3010)
+$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+    PackageName    = $env:ChocolateyPackageName
+    FileFullPath   = gi $toolsPath\*.zip
+    Destination    = $toolsPath
+}
+Get-ChocolateyUnzip @packageArgs
+rm $toolsPath\*.zip -ea 0
+
+$packageArgs = @{
+  PackageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = gi $toolsPath\*.exe
+  silentArgs     = '/auto'
+  validExitCodes = @(0, 1641, 3010)
+  softwareName   = 'Paint.NET*'
 }
 
-Install-ChocolateyZipPackage @arguments
+Install-ChocolateyInstallPackage @packageArgs
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}
 
-$arguments.file = Get-ChildItem $arguments.destination -Recurse -Include *.exe | Select-Object -First 1
-$arguments.fileType ='exe'
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
+Write-Host "$packageName installed to '$installLocation'"
 
-Install-ChocolateyInstallPackage @arguments
-
-Remove-Item $arguments.destination -Recurse -Force
+Register-Application "$installLocation\PaintDotNet.exe" paint
+Write-Host "$packageName registered as paint"
