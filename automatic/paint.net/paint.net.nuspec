@@ -44,5 +44,6 @@ An active and growing online community provides friendly help, tutorials, and pl
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
