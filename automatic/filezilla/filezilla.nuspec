@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>filezilla</id>
+    <title>FileZilla</title>
+    <version>3.28.0</version>
+    <authors>Tim Kosse, other FileZilla committers</authors>
+    <owners>chocolatey, Rob Reynolds</owners>
+    <summary>FileZilla – The free FTP solution</summary>
+    <description><![CDATA[
+FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client with lots of useful features and an intuitive graphical user interface.
+
+## Features
+
+- Easy to use
+- Supports FTP, FTP over SSL/TLS (FTPS) and SSH File Transfer Protocol (SFTP)
+- Cross-platform. Runs on Windows, Linux, *BSD, Mac OS X and more
+- IPv6 support
+- Available in many languages
+- Supports resume and transfer of large files >4GB
+- Tabbed user interface
+- Powerful Site Manager and transfer queue
+- Bookmarks
+- Drag & drop support
+- Configurable transfer speed limits
+- Filename filters
+- Directory comparison
+- Network configuration wizard
+- Remote file editing
+- Keep-alive
+- HTTP/1.1, SOCKS5 and FTP-Proxy support
+- Logging to file
+- Synchronized directory browsing
+- Remote file search
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/filezilla/screenshot.png)
+]]></description>
+    <projectUrl>http://filezilla-project.org</projectUrl>
+    <projectSourceUrl>https://filezilla-project.org/sourcecode.php</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/filezilla</packageSourceUrl>
+    <tags>filezilla cross-platform foss ftp admin</tags>
+    <licenseUrl>https://filezilla-project.org/license.php</licenseUrl>
+    <docsUrl>https://wiki.filezilla-project.org/Documentation</docsUrl>
+    <releaseNotes>https://filezilla-project.org/changelog.php</releaseNotes>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/filezilla.svg</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
