@@ -3,7 +3,7 @@
   <metadata>
     <id>filezilla</id>
     <title>FileZilla</title>
-    <version>3.28.0</version>
+    <version>3.27.1</version>
     <authors>Tim Kosse, other FileZilla committers</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>FileZilla – The free FTP solution</summary>
