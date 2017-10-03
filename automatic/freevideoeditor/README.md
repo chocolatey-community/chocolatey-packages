@@ -30,4 +30,4 @@ Hardware acceleration, multi-color Chroma Key, adjustable parameters settings an
 
 - Only **the latest version** is avialable as vendor doesn't keep the record of older releases
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/67298954b9fd1ba4826a4cdedf542266aa64f1fd/automatic/freevideoeditor/screenshot.jpg_
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/67298954b9fd1ba4826a4cdedf542266aa64f1fd/automatic/freevideoeditor/screenshot.jpg)
