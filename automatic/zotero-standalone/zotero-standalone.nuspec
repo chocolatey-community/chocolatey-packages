@@ -5,14 +5,13 @@
     <id>zotero-standalone</id>
     <title>Zotero Standalone</title>
     <owners>chocolatey</owners>
-    <version>5.0.21</version>
+    <version>5.0.22</version>
     <authors>Center for History and New Media, et. al.</authors>
     <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/430b7ebac494468d32c2c20e362a01321a483642/icons/zotero-standalone.png</iconUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice. It is produced by the Center for History and New Media of George Mason University (GMU). *(from Wikipedia, 2013-04-18)*
-</description>
+    <description><![CDATA[Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice. It is produced by the Center for History and New Media of George Mason University (GMU). *(from Wikipedia, 2013-04-18)*
+]]></description>
     <projectUrl>https://www.zotero.org/</projectUrl>
     <tags>zotero-standalone references manager bibliography foss cross-platform admin</tags>
     <copyright>2006-2011, Center for History and New Media, George Mason University, Fairfax, Virginia, USA</copyright>

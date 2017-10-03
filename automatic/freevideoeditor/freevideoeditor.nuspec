@@ -4,16 +4,16 @@
     <metadata>
         <id>freevideoeditor</id>
         <title>VSDC Free Video Editor</title>
-        <version>5.7.8</version>
+        <version>5.8.1</version>
         <authors>Flash-Integro LLC</authors>
         <owners>chocolatey</owners>
         <summary>Simple video editor.</summary>
-        <description>
+        <description><![CDATA[
 Free video software that allows you to edit video files and create videos of all types. It supports the most popular video/audio formats and codecs, including DVD, HD and GoPro videos. Preconfigured profiles make the creation of videos for various multimedia and mobile devices a snap.
 
 The video editor offers a number of versatile features both for home and business use: text and audio overlay, an array of charts and diagrams as well as a slideshow maker.
 
-Non-linear editing system. It means that video files and images do not necessarily have to follow a specific sequence – they can be in various places at any point of time. Besides, all objects can change their properties, shape and position in time.
+Non-linear editing system. It means that video files and images do not necessarily have to follow a specific sequence â€“ they can be in various places at any point of time. Besides, all objects can change their properties, shape and position in time.
 
 Hardware acceleration, multi-color Chroma Key, adjustable parameters settings and enhanced resolution make VSDC a real time and effort saving tool allowing for creating large size HD videos in a few minutes instead of hours.
 
@@ -37,7 +37,8 @@ Hardware acceleration, multi-color Chroma Key, adjustable parameters settings an
 ## Notes
 
 - Only **the latest version** is avialable as vendor doesn't keep the record of older releases
-        </description>
+
+]]></description>
         <projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
         <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freevideoeditor</packageSourceUrl>
         <tags>freeware NLE video editor audio media avi mkv dvd mp3 flac dsp record convert</tags>
