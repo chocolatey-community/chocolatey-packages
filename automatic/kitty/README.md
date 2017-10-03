@@ -1,4 +1,4 @@
-# <img src="" width="48" height="48"/>  [kitty](https://chocolatey.org/packages/kitty)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png" width="48" height="48"/>  [kitty](https://chocolatey.org/packages/kitty)
 
 KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY. 
 

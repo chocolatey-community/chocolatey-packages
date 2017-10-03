@@ -9,9 +9,9 @@
     <owners>chocolatey, Andre-Patrick Bubel, Miodrag Milic</owners>
     <licenseUrl>https://raw.githubusercontent.com/majkinetor/au-packages/master/kitty/legal/LICENCE.TXT</licenseUrl>
     <projectUrl>http://www.9bis.net/kitty/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/majkinetor/au-packages/ea7e5cfe/kitty/kitty.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY. 
+    <description><![CDATA[KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY. 
 
 ## Features
 
@@ -25,8 +25,8 @@ Sessions filter, portability, predefined command shortcuts, session launcher, au
 
 - Package can not get updated or uninstalled if any of the kitty processes is running. For safety resons you need to manually shut them down.
 
-![screenshot](https://cdn.rawgit.com/majkinetor/chocolatey/master/kitty/screenshot.png)
-</description>
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/kitty/screenshot.png)
+]]></description>
     <summary>kitty</summary>
     <releaseNotes>See http://www.9bis.net/kitty/?action=news</releaseNotes>
     <copyright>Cyril Dupont</copyright>

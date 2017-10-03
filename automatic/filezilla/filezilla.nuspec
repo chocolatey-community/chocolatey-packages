@@ -3,7 +3,7 @@
   <metadata>
     <id>filezilla</id>
     <title>FileZilla</title>
-    <version>3.27.1</version>
+    <version>3.28.0</version>
     <authors>Tim Kosse, other FileZilla committers</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>FileZilla – The free FTP solution</summary>
@@ -43,7 +43,7 @@ FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client
     <docsUrl>https://wiki.filezilla-project.org/Documentation</docsUrl>
     <releaseNotes>https://filezilla-project.org/changelog.php</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/filezilla.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/938aeca0853717399b72289f38b9dddad0417640/icons/filezilla.svg</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
