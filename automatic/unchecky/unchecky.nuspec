@@ -4,11 +4,11 @@
   <metadata>
     <id>unchecky</id>
     <title>Unchecky</title>
-    <version>1.0.3.20170816</version>
+    <version>1.1</version>
     <authors>RaMMicHaeL</authors>
     <owners>Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
-    <description>
+    <description><![CDATA[
 Have you ever felt, while installing software, that the installer tries to push additional unwanted programs at all cost? Ever missed a checkbox, and spent hours afterwards removing adware? Ever opened your browser after an installation, only to find out that you have a new homepage, a new search engine, or even a new browser?
 
 __Unchecky aims to keep potentially unwanted programs out of your computer.__
@@ -19,7 +19,8 @@ __Unchecky aims to keep potentially unwanted programs out of your computer.__
 
 * This package always installs the latest version of the application, regardless of the version specified in the package.
 * This program automatically updates itself.
-    </description>
+
+]]></description>
     <projectUrl>http://unchecky.com/</projectUrl>
     <tags>prevent system unwanted toolbar uncheck update security freeware admin</tags>
     <copyright>Copyright © 2016 Reason Company Software Inc.</copyright>
