@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>kitty</id>
+    <version>0.70.0.1</version>
+    <title>KiTTY</title>
+    <authors>Cyril Dupont</authors>
+    <owners>chocolatey, Andre-Patrick Bubel, Miodrag Milic</owners>
+    <licenseUrl>https://raw.githubusercontent.com/majkinetor/au-packages/master/kitty/legal/LICENCE.TXT</licenseUrl>
+    <projectUrl>http://www.9bis.net/kitty/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/majkinetor/au-packages/ea7e5cfe/kitty/kitty.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY. 
+
+## Features
+
+Sessions filter, portability, predefined command shortcuts, session launcher, automatic log-on script, URL hyperlinks, automatic command and password, running locally saved scripts in remote sessions, ZModem integration, icons for each session, transparency, unfortunate keyboard input protection, roll-up, quick start of duplicate sessions, configuration box, automatic saving, Internet Explorer integration for SSH Handler, binary compression, clipboard printing, PuTTYCyg patch, background images/transparency, organizing sessions you save in a folder hierarchy and many others that are constantly added. You can find a complete list of its features on the main page - including a description for each one.
+
+## Package parameters
+
+- `/Portable` - Set kitty to use [portable](http://www.9bis.net/kitty/?page=Portability&amp;zone=en) mode.
+
+## Notes
+
+- Package can not get updated or uninstalled if any of the kitty processes is running. For safety resons you need to manually shut them down.
+
+![screenshot](https://cdn.rawgit.com/majkinetor/chocolatey/master/kitty/screenshot.png)
+</description>
+    <summary>kitty</summary>
+    <releaseNotes>See http://www.9bis.net/kitty/?action=news</releaseNotes>
+    <copyright>Cyril Dupont</copyright>
+    <tags>foss telnet ssh ftp network remote</tags>
+    <projectSourceUrl>http://svn.9bis.com/websvn/listing.php?repname=Sandbox</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kitty</packageSourceUrl>
+    <docsUrl>http://www.9bis.net/kitty/?page=Welcome</docsUrl>
+    <mailingListUrl>http://www.9bis.net/kitty/?action=forum</mailingListUrl>
+   <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.1" />   
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
