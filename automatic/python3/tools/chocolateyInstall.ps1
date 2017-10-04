@@ -13,10 +13,10 @@ $params = @{
   packageName    = 'python3'
   fileType       = 'EXE'
   silentArgs     = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
-  url            = 'https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe'
-  url64Bit       = 'https://www.python.org/ftp/python/3.6.2/python-3.6.2-amd64.exe'
-  checksum       = '13725db4df084dcc1600716cb8cd150300f4420aaf48a2f21ce14b7aad0a2c13'
-  checksum64     = '0322992c443889dd7435b67a1d9519511f0ec06b5ebbc64c15223922ae966d2e'
+  url            = 'https://www.python.org/ftp/python/3.6.3/python-3.6.3.exe'
+  url64Bit       = 'https://www.python.org/ftp/python/3.6.3/python-3.6.3-amd64.exe'
+  checksum       = 'cb3bfe1e6b0d1254cebf9bb1fc095fe74396af8baf65f244d5f9b349d232b280'
+  checksum64     = '8c83a06dce3576b65f586c2a5992febc816bed3ec5f9205e47ae0ca8581f08a7'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
