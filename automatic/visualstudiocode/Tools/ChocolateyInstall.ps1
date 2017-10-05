@@ -16,14 +16,14 @@ ps code -ea 0 | % { $_.CloseMainWindow() | Out-Null }
 $packageArgs = @{
   packageName    = 'visualstudiocode'
   fileType       = 'EXE'
-  url            = 'https://az764295.vo.msecnd.net/stable/27492b6bf3acb0775d82d2f87b25a93490673c6d/VSCodeSetup-ia32-1.16.1.exe'
-  url64bit       = 'https://az764295.vo.msecnd.net/stable/27492b6bf3acb0775d82d2f87b25a93490673c6d/VSCodeSetup-x64-1.16.1.exe'
+  url            = 'https://az764295.vo.msecnd.net/stable/be377c0faf7574a59f84940f593a6849f12e4de7/VSCodeSetup-ia32-1.17.0.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/stable/be377c0faf7574a59f84940f593a6849f12e4de7/VSCodeSetup-x64-1.17.0.exe'
  
   softwareName   = 'Microsoft Visual Studio Code'
  
-  checksum       = '49896ed32d9c9e27dfa0f376f6866c1cbc4f2a30ae6b622325eaffdfd9be21b2'
+  checksum       = '90876a8f0423d30112675be4e509acba5f27df38d8ee9112267f1c5621275660'
   checksumType   = 'sha256'
-  checksum64     = '62b6f28d0bd02c0193389fb1b716fed1a2e8d5aea7d38ed39c70e2c2d0b20797'
+  checksum64     = '2010fd6dd7c1b6858de84b3aa49f177b697e5b4bce436544f338c223be4be0e2'
   checksumType64 = 'sha256'
  
   silentArgs     = "/verysilent /suppressmsgboxes /mergetasks=$mergeTasks /log=""$env:temp\vscode.log"""
