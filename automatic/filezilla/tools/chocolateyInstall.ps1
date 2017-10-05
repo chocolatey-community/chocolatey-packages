@@ -12,4 +12,4 @@ $packageArgs = @{
   softwareName   = 'FileZilla Client*'
 }
 Install-ChocolateyInstallPackage @packageArgs
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" }}
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { Set-Content -Value "" -Path "$_.ignore" }}
