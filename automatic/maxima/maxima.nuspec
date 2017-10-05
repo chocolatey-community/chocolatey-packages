@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>maxima</id>
-    <version>5.40.0.20170607</version>
+    <version>5.41.0</version>
     <title>Maxima</title>
     <owners>chocolatey</owners>
     <authors>Macsyma group at Project MAC and volunteer contributors</authors>
@@ -11,7 +11,7 @@
     <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/maxima.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 Maxima, a Computer Algebra System
 
 Maxima is a system for the manipulation of symbolic and numerical expressions, including differentiation, integration, Taylor series, Laplace transforms, ordinary differential equations, systems of linear equations, polynomials, sets, lists, vectors, matrices and tensors. Maxima yields high precision numerical results by using exact fractions, arbitrary-precision integers and variable-precision floating-point numbers. Maxima can plot functions and data in two and three dimensions.
@@ -21,14 +21,15 @@ The Maxima source code can be compiled on many systems, including Windows, Linux
 Maxima is a descendant of Macsyma, the legendary computer algebra system developed in the late 1960s at the Massachusetts Institute of Technology. It is the only system based on that effort still publicly available and with an active user community, thanks to its open source nature. Macsyma was revolutionary in its day, and many later systems, such as Maple and Mathematica, were inspired by it.
 
 ![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/maxima/screenshot.png)
-</description>
+
+]]></description>
     <summary>Maxima is a computer algebra system based on a 1982 version of Macsyma</summary>
     <copyright />
     <tags>maxima cas algebra foss cross-platform mathematics admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/maxima</packageSourceUrl>
     <mailingListUrl>http://maxima.sourceforge.net/maximalist.html</mailingListUrl>
     <projectSourceUrl>https://sourceforge.net/p/maxima/code/ci/master/tree</projectSourceUrl>
-    <releaseNotes>https://sourceforge.net/p/maxima/code/ci/master/tree/ChangeLog-5.40.md</releaseNotes>
+    <releaseNotes>https://sourceforge.net/p/maxima/code/ci/master/tree/ChangeLog-5.41.md</releaseNotes>
     <docsUrl>http://maxima.sourceforge.net/documentation.html</docsUrl>
   </metadata>
   <files>
