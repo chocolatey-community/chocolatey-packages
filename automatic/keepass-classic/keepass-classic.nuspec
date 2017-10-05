@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>keepass-classic</id>
-    <version>1.33</version>
+    <version>1.34</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keepass-classic</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>KeePass Classic Password Safe</title>
@@ -13,13 +13,13 @@
     <copyright>Copyright © 2003-2017 Dominik Reichl</copyright>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>http://sourceforge.net/projects/keepass/files/KeePass%201.x/1.33/</projectSourceUrl>
+    <projectSourceUrl>https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.34/</projectSourceUrl>
     <docsUrl>http://keepass.info/help/base/index.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/keepass/discussion/?source=navbar</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/projects/keepass/support</bugTrackerUrl>
     <tags>keepass-classic multiplatform password safe admin foss cross-platform</tags>
     <summary>This version of the popular KeePass password manager is compatible with KeePassX for Linux and OS X.</summary>
-    <description>
+    <description><![CDATA[
 Today you need to remember many passwords. You need a password for the Windows network logon, your e-mail account, your website's FTP password, online passwords (like website member account), etc. etc. etc. The list is endless. Also, you should use different passwords for each account. Because if you use only one password everywhere and someone gets this password you have a problem... A serious problem. The thief would have access to your e-mail account, website, etc. Unimaginable.
 
 KeePass is a free open source password manager, which helps you to manage your passwords in a secure way. You can put all your passwords in one database, which is locked with one master key or a key file. So you only have to remember one single master password or select the key file to unlock the whole database. The databases are encrypted using the best and most secure encryption algorithms currently known (AES and Twofish).
@@ -32,7 +32,7 @@ KeePass is a free open source password manager, which helps you to manage your p
 - [Easy Database Transfer](http://keepass.info/features.html#lnktrans)
 - [Support of Password Groups](http://keepass.info/features.html#lnkgroups)
 - [Time Fields and Entry Attachments](http://keepass.info/features.html#lnktimes)
-- [Auto-Type, Global Auto-Type Hot Key and Drag&amp;Drop](http://keepass.info/features.html#lnkdragdrop)
+- [Auto-Type, Global Auto-Type Hot Key and Drag&Drop](http://keepass.info/features.html#lnkdragdrop)
 - [Intuitive and Secure Clipboard Handling](http://keepass.info/features.html#lnkclipboard)
 - [Searching and Sorting](http://keepass.info/features.html#lnksearch)
 - [Multi-Language Support](http://keepass.info/features.html#lnkmultilang)
@@ -51,8 +51,9 @@ For example: `--params '"/DisableFileAssoc /DesktopIcon /QuickLaunchIcon"'`
 ## Notes
 - This is the classic version of KeePass. If you're looking for the 2.x version (also known as *KeePass Professional Edition*), install [keepass](/packages/keepass) instead.
 - Looking for the source code of KeePass classic? Click the project source url and look for the file ending with `-Src.zip`
-    </description>
-    <releaseNotes>http://keepass.info/news/n170602_1.33.html</releaseNotes>
+
+]]></description>
+    <releaseNotes>http://keepass.info/news/n171005_1.34.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>

@@ -5,7 +5,7 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $pp = Get-PackageParameters
 
-$filePath = "$toolsPath\KeePass-1.33-Setup.exe"
+$filePath = "$toolsPath\KeePass-1.34-Setup.exe"
 $packageArgs = @{
   packageName    = 'keepass-classic'
   fileType       = 'exe'
