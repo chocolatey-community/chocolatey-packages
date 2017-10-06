@@ -11,4 +11,4 @@ $packageArgs = @{
 Get-ChocolateyUnzip @packageArgs
 Install-ChocolateyPath $packageArgs.Destination
 
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" } }
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
