@@ -4,8 +4,8 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $rubyDir =  'ruby' + ($Env:ChocolateyPackageVersion -replace '\.').Substring(0,2)
 
 $pp = Get-PackageParameters
-$installDir = if ($pp.InstallDir) { $pp.InstallDir } else { Get-ToolsLocation }
-$installDir = Join-Path $installDir $rubyDir
+$installDir = if ($pp.InstallDir) { $pp.InstallDir } else { Join-Path (Get-ToolsLocation) $rubyDir }
+
 $tasks = 'assocfiles', 'noridkinstall'
 if ( !$pp.NoPath ) { $taks += 'modpath'  }
 
