@@ -7,7 +7,7 @@ $pp = Get-PackageParameters
 $installDir = if ($pp.InstallDir) { $pp.InstallDir } else { Join-Path (Get-ToolsLocation) $rubyDir }
 
 $tasks = 'assocfiles', 'noridkinstall'
-if ( !$pp.NoPath ) { $taks += 'modpath'  }
+if ( !$pp.NoPath ) { $tasks += 'modpath'  }
 
 Write-Host "Ruby is going to be installed in '$installDir'"
 
