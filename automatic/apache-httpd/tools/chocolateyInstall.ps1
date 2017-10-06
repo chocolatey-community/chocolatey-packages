@@ -4,8 +4,8 @@ $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $pp = Get-PackageParameters
 
-$fileName32 = 'httpd-2.4.27-x86-vc14.zip'
-$fileName64 = 'httpd-2.4.27-x64-vc14.zip'
+$fileName32 = 'httpd-2.4.28-x86-vc11.zip'
+$fileName64 = 'httpd-2.4.28-x64-vc11.zip'
 $arguments = @{
     packageName = $env:chocolateyPackageName
     file        = Join-Path $toolsDir $fileName32

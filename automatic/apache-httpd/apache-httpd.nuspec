@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>apache-httpd</id>
-    <version>2.4.27</version>
+    <version>2.4.28</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
     <owners>chocolatey</owners>
@@ -16,7 +16,7 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/apache-httpd</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>The Apache HTTP Server Project is a collaborative software development effort aimed at creating a robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server.</summary>
-    <description>
+    <description><![CDATA[
 Apache HTTP Web Server for Windows.
 
 The Apache HTTP Server Project is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.
@@ -27,16 +27,17 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
 
 ## Package Parameters
 
- * `/installLocation` - Intstall to a different destination folder. Default: `$Env:AppData\Apache*`
- * `/serviceName` - The name of the windows service which will be create. Default: `Apache`
- * `/port` - The port Apache will listen to. Default: `80`
+* `/installLocation` - Intstall to a different destination folder. Default: `$Env:AppData\Apache*`
+* `/serviceName` - The name of the windows service which will be create. Default: `Apache`
+* `/port` - The port Apache will listen to. Default: `80`
 
 ## Notes
 
 * This package will install the latest Apache binaries provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL on Visual Studio 2012 (VC11): with OpenSSL 1.0.2g, nghttp 1.9.2, Zlib 1.2.8 (mod_deflate), PCRE 8.38, APR 1.5.2, APR-Util 1.5.4, IPv6 and TLS SNI enabled.
 * The complete path of the package will be `$Env:AppData\Apache*`
 * Apache will be installed as a service under the default name 'Apache'
-</description>
+
+]]></description>
     <tags>apache httpd webserver admin</tags>
     <dependencies>
        <dependency id="vcredist2015" />
