@@ -21,8 +21,8 @@ function global:au_GetLatest {
     $version = ($version -split ":|\n" | select -Index 1).Trim()
     @{
         Version = $version
-        URL32   = "http://downloads.lwks.com/v14/lightworks_v${version}_full_32bit_setup.exe"
-        URL64   = "http://downloads.lwks.com/v14/lightworks_v${version}_full_64bit_setup.exe"
+        URL32   = "https://s3.amazonaws.com/lightworks/lightworks_v${version}_full_32bit_setup.exe"
+        URL64   = "https://s3.amazonaws.com/lightworks/lightworks_v${version}_full_64bit_setup.exe"
     }
 }
 
