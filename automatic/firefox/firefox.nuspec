@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>56.0</version>
+    <version>56.0.1</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <projectSourceUrl>https://hg.mozilla.org/mozilla-central/</projectSourceUrl>
@@ -36,7 +36,7 @@ To get a list of all available locales have a look at this file: https://release
 ]]></description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
-    <releaseNotes>https://www.mozilla.org/en-US/firefox/56.0/releasenotes/</releaseNotes>
+    <releaseNotes>https://www.mozilla.org/en-US/firefox/56.0.1/releasenotes/</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/firefox</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />
