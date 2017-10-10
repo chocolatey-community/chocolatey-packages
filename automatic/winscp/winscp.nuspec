@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winscp</id>
-    <version>5.11.1</version>
+    <version>5.11.2</version>
     <title>WinSCP</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://winscp.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
+    <description><![CDATA[WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
 
 ## Features
 
@@ -30,7 +30,8 @@
 - Optionally supports portable operation using a configuration file in place of registry entries, suitable for operation from removable media
 
 ![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/winscp.install/screenshot.png)
-</description>
+
+]]></description>
     <summary>Open source free SFTP client, SCP client, FTPS client and FTP client</summary>
     <releaseNotes>https://winscp.net/download/WinSCP-5.9.6-ReadMe.txt</releaseNotes>
     <copyright>© 2000 Martin Přikryl</copyright>
@@ -41,7 +42,7 @@
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
     <dependencies>
-      <dependency id="winscp.install" version="[5.11.1]" />
+      <dependency id="winscp.install" version="[5.11.2]" />
     </dependencies>
   </metadata>
   <files></files>
