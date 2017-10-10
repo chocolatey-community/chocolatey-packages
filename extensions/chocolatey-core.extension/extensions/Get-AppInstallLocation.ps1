@@ -34,6 +34,7 @@ function Get-AppInstallLocation {
     )
 
     function strip($path) { if ($path.EndsWith('\')) { return $path -replace '.$' } else { $path } }
+    function is_dir( $path ) { (gi $path -ea 0).PsIsContainer -eq $true }
 
     $ErrorActionPreference = "SilentlyContinue"
 
@@ -42,34 +43,34 @@ function Get-AppInstallLocation {
     if ($key.Count -eq 1) {
         Write-Verbose "Trying Uninstall key property 'InstallLocation'"
         $location = $key.InstallLocation
-        if ($location -and (Test-Path $location))  { return strip $location }
+        if (is_dir $location) { return strip $location }
 
         Write-Verbose "Trying Uninstall key property 'UninstallString'"
         $location = $key.UninstallString
         if ($location) { $location = $location.Replace('"', '') | Split-Path }
-        if ($location -and (Test-Path $location))  { return strip $location }
+        if (is_dir $location) { return strip $location }
 
         Write-Verbose "Trying Uninstall key property 'DisplayIcon'"
         $location = $key.DisplayIcon
         if ($location) { $location = Split-Path $location }
-        if ($location -and (Test-Path $location))  { return strip $location }
+        if (is_dir $location) { return strip $location }
     } else { Write-Verbose "Found $($key.Count) keys, aborting this method" }
 
     $dirs = $Env:ProgramFiles, "$Env:ProgramFiles\*\*"
     if (Get-ProcessorBits 64) { $dirs += ${ENV:ProgramFiles(x86)}, "${ENV:ProgramFiles(x86)}\*\*" }
     Write-Verbose "Trying Program Files with 2 levels depth: $dirs"
     $location = (ls $dirs | ? {$_.PsIsContainer}) -match $AppNamePattern | select -First 1 | % {$_.FullName}
-    if ($location -and (Test-Path $location))  { return strip $location }
+    if (is_dir $location) { return strip $location }
 
     Write-Verbose "Trying native commands on PATH"
     $location = (Get-Command -CommandType Application) -match $AppNamePattern | select -First 1 | % { Split-Path $_.Source }
-    if ($location -and (Test-Path $location))  { return strip $location }
+    if (is_dir $location) { return strip $location }
 
     $appPaths =  "\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths"
     Write-Verbose "Trying Registry: $appPaths"
     $location = (ls "HKCU:\$appPaths", "HKLM:\$appPaths") -match $AppNamePattern | select -First 1
     if ($location) { $location = Split-Path $location }
-    if ($location -and (Test-Path $location))  { return strip $location }
+    if (is_dir $location) { return strip $location }
 
     Write-Verbose "No location found"
 }
