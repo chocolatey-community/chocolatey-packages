@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>52.3.0</version>
+    <version>52.4.1</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/organizations/</projectUrl>
     <projectSourceUrl>https://hg.mozilla.org/mozilla-central/</projectSourceUrl>
@@ -14,11 +14,11 @@
     <title>Mozilla Firefox ESR</title>
     <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Features
-- **Freedom is fast:** Go anywhere you want on the Web — with a quickness.
+- **Freedom is fast:** Go anywhere you want on the Web â€” with a quickness.
 - **Freedom is personal:** Enjoy the most built-in privacy tools of any browser.
 - **Freedom is yours:** people, not profit.
 
@@ -26,15 +26,16 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 - Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
 - Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) package.
 - This package installs Firefox ESR in the first language which matches this list:
-  1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`.
-     To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest-esr/README.txt.
-  2. If Firefox is already installed: the same language as the already installed Firefox.
-  3. The Windows system language where the Firefox package gets installed.
-  4. If Firefox does not support the system language, it will fall back to “en-US”
-    </description>
+1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`.
+To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest-esr/README.txt.
+2. If Firefox is already installed: the same language as the already installed Firefox.
+3. The Windows system language where the Firefox package gets installed.
+4. If Firefox does not support the system language, it will fall back to â€œen-USâ€
+
+]]></description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
-    <releaseNotes>https://www.mozilla.org/en-US/firefox/52.3.0/releasenotes/</releaseNotes>
+    <releaseNotes>https://www.mozilla.org/en-US/firefox/52.4.1/releasenotes/</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/firefoxesr</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0" />

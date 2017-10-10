@@ -4,11 +4,12 @@
   <metadata>
     <id>flashplayerppapi</id>
     <title>Flash Player PPAPI</title>
-    <version>27.0.0.130</version>
+    <version>27.0.0.159</version>
     <authors>Adobe Systems Incorporated</authors>
     <owners>chocolatey</owners>
     <summary>Adobe Flash Player PPAPI Plugin for Opera and Chromium based browsers</summary>
-    <description>The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.</description>
+    <description><![CDATA[The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.
+]]></description>
     <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flashplayer.png</iconUrl>
     <tags>adobe flash player ppapi plugin admin</tags>
