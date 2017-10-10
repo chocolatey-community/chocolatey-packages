@@ -1,10 +1,10 @@
 # CHANGELOG
 
-## Next
+## 1.3.2
 
 - Bugfix `Get-AppInstallLocation`: now checks if path is directory
 
-## 1.3.2
+## 1.3.1
 - Bugfix in `Get-AppInstallLocation`: Removed extra `$location` parameter from Split-Path when parsing the registry UninstallString.
 
 ## 1.3.0
