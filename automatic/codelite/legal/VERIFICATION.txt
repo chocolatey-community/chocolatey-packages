@@ -7,15 +7,15 @@ location on <https://github.com/eranif/codelite/releases/latest>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://github.com/eranif/codelite/releases/download/11.0/codelite-x86-11.0.0.7z.Windows.32.bit.installer.7z>
+  64-Bit software: <https://github.com/eranif/codelite/releases/download/11.0/codelite-amd64-11.0.0.7z.Windows.64.bit.installer.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: 8E810BBE58855C1687A2EFCF5DEBFEEA5FE9C8C4210C95D14CCC33A091042C7F
+  checksum64: B290C176D15B7EBBB8B23FB4FE581CE505CA2391C45528FB910F62139DF2D6D7
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/eranif/codelite/blob/5c29b6cb2a48dbf2d9b243a173c540cf85d70f4f/LICENSE>
