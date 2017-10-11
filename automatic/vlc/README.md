@@ -16,5 +16,6 @@ VLC is a free and open source cross-platform multimedia player and framework tha
 
 ## Package parameters
 
-- `Language` - Two letter language code: nl, en, fr ...
+- `/Language:en` - Two letter language code: nl, en, fr ...
 
+Example: `choco install --params "'/Language:fr'"` *Will set the language of VLC to french*
