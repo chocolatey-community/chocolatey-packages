@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.3
+
+- Bugfix `Get-AppInstallLocation`: fix path is directory
+
 ## 1.3.2
 
 - Bugfix `Get-AppInstallLocation`: now checks if path is directory

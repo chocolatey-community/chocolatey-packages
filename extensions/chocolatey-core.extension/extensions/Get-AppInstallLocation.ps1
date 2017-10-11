@@ -34,7 +34,8 @@ function Get-AppInstallLocation {
     )
 
     function strip($path) { if ($path.EndsWith('\')) { return $path -replace '.$' } else { $path } }
-    function is_dir( $path ) { (gi $path -ea 0).PsIsContainer -eq $true }
+
+    function is_dir( $path ) { $path -and (gi $path -ea 0).PsIsContainer -eq $true }
 
     $ErrorActionPreference = "SilentlyContinue"
 
