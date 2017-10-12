@@ -21,7 +21,7 @@ To achieve those goals we are using the following priorities when adding new or 
 The following rules also apply: 
 1. When packages have the same priorities, software with higher number of users will generally be considered more important.
 1. Applications without english localization are not accepted in this repository.
-1. The core team may deciede to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance. 
+1. The core team may decide to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance. 
 
 For existing packages that no longer fit above principles chocolatey user will be removed from the list of the maintainers.
 
@@ -47,7 +47,7 @@ Both *package root directory* and  *nuspec file* should be named **the same as t
 
 ### 1.1.4 Embed a package if allowed
 
-_Embedded_ packages include the packaged software directly in the nupkg archive instead of downloading it. Only tools that allow redistribution in their license can be embedded and such packages must include two additional files in the directory `legal` - `VERIFICATION.txt` and file with information about the license.
+_Embedded_ packages include the packaged software directly in the nupkg archive instead of downloading it. Only tools that allow redistribution in their license can be embedded and such packages must include two additional files in the directory `legal` - `VERIFICATION.txt` and `License.txt`.
 
 Its **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding. 
 
@@ -77,7 +77,7 @@ Packages should **support multiple versions** if possible - do not use URLs that
 
 Remember, code is written for humans, not for computers. Otherwise we'd all write assembly. So it's better to be able to reason about code than it is to take shortcuts that make code harder to decipher.
 
-If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/GoogleChrome/tools)).
+If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox/tools)).
 
 Use aliases sparingly. If you use them, limit their use to the default aliases which are read-only (can not be modified by the user), well known, and will be supported in the future versions of Powershell. Also ensure they are [compatible with PowerShell v2+](#1112-ensure-compatibility-with-powershell-v2).
 
@@ -166,7 +166,7 @@ If you use `Invoke-WebRequest` to download a web page, try to use `UseBasicParsi
 
 ### 1.3.2 Do not download large files
 
-Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger then few MB should never be downloaded within au_* functions, unless the purpose is to create the embedded package.
+Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger then few MB should never be downloaded within `au_GetLatest` function. Normally, the files are downloaded during the embeding process by the `au_BeforeUpdate`.
 
 ### 1.3.3 Specify correct `NuspecVersion`
 
