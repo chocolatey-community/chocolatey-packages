@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ffmpeg</id>
-    <version>3.3.4</version>
+    <version>0.0</version>
     <title>FFmpeg</title>
     <owners>chocolatey</owners>
     <authors>FFmpeg Contributors</authors>
@@ -32,7 +32,7 @@ Security is a high priority and code review is always done with security in mind
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
     <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
     <dependencies>
-      <dependency id="chocolatey" version="0.10.5" />     
+      <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>
   <files>
