@@ -4,11 +4,11 @@
   <metadata>
     <id>poweriso</id>
     <title>PowerISO</title>
-    <version>6.9</version>
+    <version>6.9.0.20171016</version>
     <authors>Power Software Ltd</authors>
     <owners>gep13, chocolatey</owners>
     <summary>PowerISO is a powerful CD / DVD / BD image file processing tool.</summary>
-    <description>PowerISO is a powerful CD / DVD / BD image file processing tool, which allows you to open, extract, burn, create, edit, compress, encrypt, split and convert ISO files, and mount ISO files with internal virtual drive. It can process almost all CD / DVD / BD image files including ISO and BIN files. PowerISO provides an all-in-one solution. You can do every thing with your ISO files and disc image files.
+    <description><![CDATA[PowerISO is a powerful CD / DVD / BD image file processing tool, which allows you to open, extract, burn, create, edit, compress, encrypt, split and convert ISO files, and mount ISO files with internal virtual drive. It can process almost all CD / DVD / BD image files including ISO and BIN files. PowerISO provides an all-in-one solution. You can do every thing with your ISO files and disc image files.
 
 ## Features
 
@@ -32,7 +32,8 @@
 - Free unregistered versions will allow you to evaluate the software for free to determine if it suits your needs. The unregistered version will display a dialog prompts you to register, and you can not create or edit image files greater than 300MB with the unregistered version.
 - This package always looks for the latest version, as such there may be times where the checksum will not match the downloaded installer.
 - After installation your default web browser will be opened with a thank you note from power iso team.
-</description>
+
+]]></description>
     <projectUrl>https://www.poweriso.com/index.htm</projectUrl>
     <tags>PowerISO cd dvd bluray iso cross-platform media burn trial admin</tags>
     <copyright>Copyright 2004-2012 Power Software Ltd. All rights reserved.</copyright>
