@@ -21,14 +21,16 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri "$releases/win32/static/" -UseBasicParsing -Header @{ Referer = $releases }
-    $version       = $download_page.links | ? href -match '\.(zip|7z)$' | % { $_.href -split '-' | select -Index 1} | ? { $__=$null; [version]::TryParse($_, [ref] $__) } | sort -desc | select -First 1
-    $url32         = "$releases/win32/static/" + ($download_page.links | ? href -like "*$version*" | % href)
+  $urlPre = "$releases/win32/static/"
+  $download_page = Invoke-WebRequest -Uri "$releases/win32/static/" -UseBasicParsing -Header @{ Referer = $releases }
+  $version       = $download_page.links | ? href -match '\.(zip|7z)$' | % { $_.href -split '-' | select -Index 1} | ? { $__=$null; [version]::TryParse($_, [ref] $__) } | sort -desc | select -First 1
+  $url32         = $download_page.links | ? href -match "\-${version}\-" | % href | % { $urlPre + $_ }
 
-    $download_page = Invoke-WebRequest -Uri "$releases/win64/static/" -UseBasicParsing -Header @{ Referer = $releases }
-    $url64         = "$releases/win64/static/" + ($download_page.links | ? href -like "*$version*" | % href)
+  $urlPre    = $urlPre -replace 'win32','win64'
+  $download_page = Invoke-WebRequest -Uri "$releases/win64/static/" -UseBasicParsing -Header @{ Referer = $releases }
+  $url64         = $download_page.links | ? href -match "\-${version}\-" | % href | % { $urlPre + $_ }
 
-    @{ URL32 = $url32; URL64=$url64; Version = $version }
+  @{ URL32 = $url32; URL64=$url64; Version = $version }
 }
 
 update -ChecksumFor none
