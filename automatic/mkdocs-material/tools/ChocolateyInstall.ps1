@@ -1,5 +1,5 @@
 ﻿Update-SessionEnvironment
 
-$version = '1.10.4'
+$version = '1.11.0'
 
 python -m pip install mkdocs-material==$version
