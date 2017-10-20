@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>bluegriffon</id>
     <version>2.3.1</version>
     <title>BlueGriffon</title>
     <owners>chocolatey</owners>
     <authors>Daniel Glazman</authors>
-    <licenseUrl>http://www.bluegriffon.org/</licenseUrl>
+    <licenseUrl>https://github.com/therealglazou/bluegriffon/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://bluegriffon.org/</projectUrl>
     <projectSourceUrl>https://github.com/therealglazou/bluegriffon</projectSourceUrl>
     <bugTrackerUrl>https://github.com/therealglazou/bluegriffon/issues</bugTrackerUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluegriffon.svg</iconUrl>
+    <copyright>Copyright © 2012-2017 Disruptive Innovations SAS - All rights reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 BlueGriffon is a WYSIWYG content editor for the World Wide Web. Powered by Gecko, the rendering engine of Firefox, it's a modern and robust solution to edit Web pages in conformance to the latest Web Standards.
 
@@ -21,15 +23,15 @@ BlueGriffon is an intuitive application that provides Web authors (beginners or 
 Because Gecko lives inside BlueGriffon, the document you edit will look exactly the same in Firefox. Advanced users can always use the Source View to hard-code their page.
     </description>
     <summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
-    <releaseNotes />
-    <copyright />
-    <tags>bluegriffon cross-platform trial WYSIWYG gecko firefox html admin</tags>
+    <tags>bluegriffon cross-platform trial wysiwyg gecko firefox html admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluegriffon</packageSourceUrl>
+    <releaseNotes>https://github.com/therealglazou/bluegriffon/releases/tag/2.3.1</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
