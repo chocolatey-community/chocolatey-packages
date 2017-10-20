@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\gimp-2.8.22-setup.exe"
   softwareName   = 'GIMP'
-  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).InnoSetup.log`""
   validExitCodes = @(0)
 }
 
