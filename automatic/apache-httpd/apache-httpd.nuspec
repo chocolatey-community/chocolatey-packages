@@ -47,5 +47,6 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
