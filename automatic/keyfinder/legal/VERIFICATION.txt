@@ -13,6 +13,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: A1E6F8195B1A486333665190212436EADA276741A264B2F0759EB1E7EEA0DCEE
+  checksum: 35E605862069AEB3D8413CD512AE05F2831F21F1F496C9CDB90D1C3B8A3CFB97
 
 The file 'LICENSE.txt' has been obtained from <https://www.magicaljellybean.com/tos/>

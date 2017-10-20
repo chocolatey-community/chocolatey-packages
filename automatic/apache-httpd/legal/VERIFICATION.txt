@@ -6,14 +6,14 @@ The installer have been downloaded from their official download link listed on <
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://www.apachehaus.com/downloads/httpd-2.4.25-x86-vc14-r1.zip>
-  64-Bit: <https://www.apachehaus.com/downloads/httpd-2.4.25-x64-vc14-r1.zip>
+  32-Bit: <https://www.apachehaus.com/downloads/httpd-2.4.28-o102l-x86-vc14.zip>
+  64-Bit: <https://www.apachehaus.com/downloads/httpd-2.4.28-o102l-x64-vc14.zip>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
-  checksum type:
-  checksum32: C3A64BFE00303C89412DF0764B80BE0540B03F2CCDB73CDFE5256E9EEB0744FD
-  checksum64: 449355E68FAC3D7DA6BC703FD1C29BE903DD990295B78F85AE67D5C628C09E61
+  checksum type: sha256
+  checksum32: 37B78CB7206E0E96C3914AD9C426603B790A3DB98DF5BE925AC6D3168463ADF6
+  checksum64: 9E7E6D9DA87E540605926939474E98B28BDB804E32D0A164B9F4C648B27262BB
 
 File 'LICENSE.txt' is obtained from <https://www.apache.org/licenses/LICENSE-2.0.txt>
