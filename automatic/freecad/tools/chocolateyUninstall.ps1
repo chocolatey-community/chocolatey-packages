@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'freecad*'
+  softwareName  = 'FreeCAD*'
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(@(0))

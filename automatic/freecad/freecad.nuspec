@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.16.0.20161107</version>
+    <version>0.16.6712</version>
     <title>FreeCAD</title>
     <owners>chocolatey,purity</owners>
     <authors>Jürgen Riegel</authors>
@@ -14,13 +14,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://www.freecadweb.org/tracker/my_view_page.php</bugTrackerUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD, CAx, CAE and PLM, aimed directly at mechanical engineering and product design but also fits a wider range of uses in engineering, such as architecture or other engineering specialties. It is 100 % Open Source and extremely modular, allowing for very advanced extension and customization.
 
 FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant 3D scene representation model provided by the Coin 3D library, and a broad Python API. The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX and Linux platforms.
-    </description>
+
+]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>http://www.freecadweb.org/wiki/index.php?title=Release_notes_0.16</releaseNotes>
+    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_016</releaseNotes>
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
