@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>bluegriffon</id>
-    <version>2.3.1</version>
+    <version>2.3.1.20171021</version>
     <title>BlueGriffon</title>
     <owners>chocolatey</owners>
     <authors>Daniel Glazman</authors>
@@ -15,13 +15,14 @@
     <copyright>Copyright © 2012-2017 Disruptive Innovations SAS - All rights reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 BlueGriffon is a WYSIWYG content editor for the World Wide Web. Powered by Gecko, the rendering engine of Firefox, it's a modern and robust solution to edit Web pages in conformance to the latest Web Standards.
 
 BlueGriffon is an intuitive application that provides Web authors (beginners or more advanced) with a simple User Interface allowing to create attractive Web sites without requiring extensive technical knowledge about Web Standards.
 
 Because Gecko lives inside BlueGriffon, the document you edit will look exactly the same in Firefox. Advanced users can always use the Source View to hard-code their page.
-    </description>
+
+]]></description>
     <summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
     <tags>bluegriffon cross-platform trial wysiwyg gecko firefox html admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluegriffon</packageSourceUrl>

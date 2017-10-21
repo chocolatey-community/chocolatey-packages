@@ -4,12 +4,12 @@
   <metadata>
     <id>cdburnerxp</id>
     <title>CDBurnerXP</title>
-    <version>4.5.7.662300</version>
+    <version>4.5.7.662301</version>
     <authors>Canneverbe Limited</authors>
     <owners>chocolatey, gep13</owners>
     <summary>CDBurnerXP - burn CDs and DVDs for free!</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-DVDs. It also includes the feature to burn and create ISOs, as well as a multilanguage interface. Everyone, even companies, can use it for free. It does not include adware or similar malicious components.
 
 ## Features
@@ -52,13 +52,13 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
 ### Other features
 
 *   simple cover printing feature for data- and audio-discs
-*   [LightScribe integration](http://cdburnerxp.se/help/kb/5)
-*   [Command line version](http://cdburnerxp.se/help/Appendices/commandlinearguments)
+*   [LightScribe integration](https://cdburnerxp.se/help/kb/5)
+*   [Command line version](https://cdburnerxp.se/help/Appendices/commandlinearguments)
 *   supports most IDE, USB, Firewire and SCSI drives
 *   integrated option to enable access to drive for restricted users
 *   multi-language interface
 *   online update
-</description>
+]]></description>
     <projectUrl>https://cdburnerxp.se/en/home</projectUrl>
     <tags>cdburnerxp freeware burn media cd dvd iso data admin</tags>
     <copyright>2002-2012 Canneverbe Limitied</copyright>
