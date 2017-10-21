@@ -43,10 +43,9 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
 ### Other features
 
 *   simple cover printing feature for data- and audio-discs
-*   [LightScribe integration](http://cdburnerxp.se/help/kb/5)
-*   [Command line version](http://cdburnerxp.se/help/Appendices/commandlinearguments)
+*   [LightScribe integration](https://cdburnerxp.se/help/kb/5)
+*   [Command line version](https://cdburnerxp.se/help/Appendices/commandlinearguments)
 *   supports most IDE, USB, Firewire and SCSI drives
 *   integrated option to enable access to drive for restricted users
 *   multi-language interface
 *   online update
-

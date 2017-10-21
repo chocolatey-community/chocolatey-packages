@@ -1,0 +1,39 @@
+License Agreement
+
+By using, copying or distributing CDBurnerXP and accompanying documentation (the program's object code and documentation are collectively referred to as „the software“), you indicate your acceptance of the following license terms:
+
+1. Usage
+
+Canneverbe Limited grants you (the licensee) a permission to use the software at no cost, both for commercial and non-commercial purposes on any computer in your possession. You may also make copies and distribute the software according to requirements of section 2 below.
+
+2. Distribution
+
+As used in this agreement, the term “distribute” (and its variants) includes making the Software available (either intentionally or unintentionally) to third parties for copying or use. You may not impose any further restrictions on the recipients' exercise of the rights granted herein.
+You may distribute the software under the following conditions:
+You may not modify, combine other commercial applications with, or otherwise prepare derivative works of the software.
+You may not distribute the software for a fee (by payment of money or otherwise, whether direct or indirect). In particular (but not limited to), you may not charge for the software to recover media costs associated with its distribution, you may not charge for a product or compilation the software is a part of, you may not provide a paid download of the software and you may not require a registration of some kind (for example, on your website) for downloading the software. As an exception to the condition above,
+you may personally install the software as part of a free or paid service.
+you may distribute the software along with computer hardware, as long as there is a reference to the inclusion of the software (for example, a printed logo or a desktop icon on preinstalled computer systems).
+You must not distribute the software in a manner, which arouses the impression that the software cannot be obtained for free or involves fees for its usage.
+You must make reference to this licence (by Uniform Resource Identifier (URI), spoken word or as appropriate to the media used) on all copies of the software distributed.
+You must keep intact all notices that refer to this licence, in particular the URI, if any, that are associated with the software
+
+3. Warranties and Disclaimer
+
+The software and any support from Canneverbe Limited are provided “AS IS” and without warranty, express or implied. Canneverbe Limited specifically disclaim any implied warranties of merchantability and fitness for a particular purpose. In no event will Canneverbe Limited be liable for any damages, including but not limited to any lost profits, lost savings or any incidental or consequential damages, whether resulting from impaired or lost data, software or computer failure or any other cause, or for any other claim by the user or for any third party claim.
+
+4. Limit of Liability
+
+Subject to any liability which may not be excluded or limited by law the licensor shall not be liable and hereby expressly excludes all liability for loss or damage howsoever and whenever caused to you.
+
+5. Termination
+
+The rights granted to you under this licence shall terminate automatically upon any breach by you of the terms of this licence. Individuals or entities who have received the software from you under this licence, however, will not have their licences terminated provided such individuals or entities remain in full compliance with those licences.
+
+6. General
+
+The validity or enforceability of the remaining terms of this agreement is not affected by the holding of any provision of it to be invalid or unenforceable.
+
+7. Anti-piracy statement
+
+CDBurnerXP has not been created for circumventing copy protections of any kind. It is not meant for creating illegal copies of copyrighted material and Canneverbe Limited will not support any such attempts.
