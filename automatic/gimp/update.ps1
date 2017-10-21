@@ -1,31 +1,37 @@
 ﻿import-module au
 
 $releases = 'https://www.gimp.org/downloads/'
+$softwareName = 'GIMP'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+    }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url(64bit)?\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum(64)?\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksumType(64)?\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-      "(^[$]version\s*=\s*)('.*')" = "`$1'$($Latest.RemoteVersion)'"
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
     }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = '\.exe$'
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re        = '\.exe$'
+  $url32     = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https:' + $_ }
 
-  if ($url.StartsWith("//")) {
-    $url = "https:" + $url;
+  $verRe     = '[-]|\.exe$'
+  $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
+  @{
+    URL32    = $url32
+    Version  = $version32
   }
-
-  $version  = $url -split '[-]|.exe' | select -Last 1 -Skip 2
-
-  return @{ URL32 = $url; Version = $version ; RemoteVersion = $version }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
