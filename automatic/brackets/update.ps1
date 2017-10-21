@@ -1,26 +1,35 @@
 import-module au
 
-$releases = 'http://brackets.io'
+$releases = 'https://github.com/adobe/brackets/releases/latest'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+  }
 }
-
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
-    $download_page.links | ? InnerText -match 'Download Brackets' | % InnerText | set version
-    $version = $version -replace 'Download Brackets '
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $download_page = Invoke-WebRequest https://github.com/adobe/brackets/releases
-    $url = $download_page.links | ? href -match '\.msi$' | ? href -match $version | % href | select -First 1
-    $url = 'https://github.com' + $url
+  $re = '\.msi$'
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-    @{ URL32 = $url; Version = $version; PackageName = 'Brackets' }
+  $verRe = "release\-|\/"
+  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  @{
+    URL32 = $url32
+    Version = $version32
+    PackageName = 'Brackets'
+  }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none

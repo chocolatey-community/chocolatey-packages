@@ -14,4 +14,3 @@ Rather than clutter your workspace with floating panels, toolbars and icons, Bra
 
 **Works with your browser**
 The browser is your design view. Brackets hooks up directly to the browser, allowing you to design and develop in the same environment that you deploy.
-
