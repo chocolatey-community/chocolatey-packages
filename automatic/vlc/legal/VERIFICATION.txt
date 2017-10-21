@@ -23,5 +23,5 @@ Using AU:
 
    Get-RemoteChecksum http://get.videolan.org/vlc/2.2.6/win64/vlc-2.2.6-win64.exe
 
-File 'COPYING' obtained from:
+File 'LICENSE.txt' obtained from:
    http://svn.videolan.org/filedetails.php?repname=VideoLAN+Server&path=%2Ftrunk%2FCOPYING
