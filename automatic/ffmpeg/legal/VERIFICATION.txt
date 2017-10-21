@@ -23,5 +23,5 @@ Using AU:
 
    Get-RemoteChecksum https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-3.4-win64-static.zip
 
-File 'COPYING.GPLv3' is obtained from:
+File 'LICENSE.txt' is obtained from:
    https://git.ffmpeg.org/gitweb/ffmpeg.git/blob_plain/HEAD:/COPYING.GPLv3
