@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\"
   softwareName   = 'bluegriffon*'
-  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).InnoSetup.log`""
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoSetup.log`""
   validExitCodes = @(0)
 }
 
