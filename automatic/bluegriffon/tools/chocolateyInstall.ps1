@@ -13,4 +13,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
