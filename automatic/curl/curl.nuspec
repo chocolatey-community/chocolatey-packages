@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>curl</id>
-    <version>7.56.0</version>
+    <version>7.56.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/curl</packageSourceUrl>
     <owners>chocolatey, Rob Reynolds</owners>
     <title>cURL</title>
