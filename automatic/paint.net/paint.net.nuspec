@@ -40,7 +40,7 @@ An active and growing online community provides friendly help, tutorials, and pl
     <releaseNotes>https://www.getpaint.net/roadmap.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="dotnet4.6.1" version="4.6.01055.20161213" />
+      <dependency id="dotnet4.7" version="4.7.2053.0" />
     </dependencies>
   </metadata>
   <files>
