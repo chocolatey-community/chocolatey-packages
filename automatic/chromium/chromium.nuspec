@@ -15,10 +15,10 @@
 
 ## Notes
 
-- This package installs the Chromium snapshots builds by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
+- This package installs by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
 - If you have installed this package in the past to the `%localappdata%\Chromium` location it will continue to be installed in this location.
 ]]></description>
-    <summary>Chromium snapshots build (unstable)</summary>
+    <summary>Chromium</summary>
     <copyright>Copyright (c) 2013 The Chromium OS Author</copyright>
     <bugTrackerUrl>https://bugs.chromium.org/p/chromium/issues/list</bugTrackerUrl>
     <mailingListUrl>https://www.chromium.org/developers/discussion-groups</mailingListUrl>
