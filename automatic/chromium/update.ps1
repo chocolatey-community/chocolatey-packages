@@ -1,36 +1,48 @@
 import-module au
 
-$releases = 'https://github.com/henrypp/chromium/releases/latest'
-
 function global:au_SearchReplace {
    @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
-            "(^\s*url64Bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
-            "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-            "(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-            "(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-        }
+        ".\legal\VERIFICATION.txt" = @{
+            "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+            "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+            "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+			"(?i)(^\s*checksum32\:).*"          = "`${1} $($Latest.Checksum32)"
+            "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
+			}
     }
 }
 
-function global:au_BeforeUpdate {
-	$Latest.ChecksumType32 = 'sha256'
-	$Latest.ChecksumType64 = 'sha256'
-	$Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.URL32 -Algorithm $Latest.ChecksumType32
-	$Latest.Checksum64 = Get-RemoteChecksum -Url $Latest.URL64 -Algorithm $Latest.ChecksumType64
+
+function au_BeforeUpdate() {
+    #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
+    Get-RemoteFiles -Purge
 }
 
-function global:au_GetLatest {
-	$download_page = (iwr $releases -UseBasicParsing).Links.href | Select-String '/tag/v' | Select-Object -First 1
-	$Matches = $null
-	$download_page -match '\d+\.\d+\.\d+'
-	$version = $Matches[0]
-	$url32 = "https://github.com" + ($download_page -replace "tag","download" -replace "win64","win32") + "/chromium-sync.exe"
-	$url64 = "https://github.com" + ($download_page -replace "tag","download" -replace "win32","win64") + "/chromium-sync.exe"
 
-	return @{ Version = $version; URL32 = $url32; URL64 = $url64 }
+function global:au_GetLatest {
+
+    $allVersions                    = Invoke-WebRequest -Uri https://api.github.com/repos/henrypp/chromium/releases -UseBasicParsing | ConvertFrom-Json
+    $allStableVersions              = $allVersions | Where-Object {$_.body -match "stable"}
+    $latestStableVersionNumber      = ($allStableVersions[0].tag_name.split('-') | Select-Object -First 1) -replace 'v',''
+    $anyArchLatestStablesVersions   = $allVersions  | Where-Object {$_.tag_name -match $latestStableVersionNumber}
+    
+    $32LatestVersion        = $anyArchLatestStablesVersions | Where-Object {$_.tag_name -match $latestStableVersionNumber -and $_.tag_name -match "win32"}
+    $32LatestSyncInstallUrl = ($32LatestVersion.assets | Where-Object name -match "-sync.exe").browser_download_url
+    
+    $64LatestVersion        = $anyArchLatestStablesVersions | Where-Object {$_.tag_name -match $latestStableVersionNumber -and $_.tag_name -match "win64"}
+    $64LatestSyncInstallUrl = ($64LatestVersion.assets | Where-Object name -match "-sync.exe").browser_download_url
+
+    $ChecksumType = 'sha256'
+
+    $Latest = @{
+        Version             = $latestStableVersionNumber
+        URL32               = $32LatestSyncInstallUrl
+        ChecksumType32      = $ChecksumType
+        URL64               = $64LatestSyncInstallUrl
+        ChecksumType64      = $ChecksumType
+    };
+
+    return $Latest
 }
 
 Update-Package -ChecksumFor none
