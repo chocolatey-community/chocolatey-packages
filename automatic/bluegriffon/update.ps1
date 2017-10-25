@@ -29,7 +29,7 @@ function global:au_GetLatest {
   $re    = '\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $version32 = $url32 -split '[-]|.win32|.exe$' | select -Last 1 -Skip 3
+  $version32 = $url32 -split '/' | select -Last 1 -Skip 1
   @{
     URL32 = $url32
     Version = $version32
