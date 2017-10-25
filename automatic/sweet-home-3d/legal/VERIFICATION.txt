@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://www.sweethome3d.com/download.jsp>
 and can be verified by doing the following:
 
-1. Download the following <http://sourceforge.net/projects/sweethome3d/files/SweetHome3D/SweetHome3D-5.5.2/SweetHome3D-5.5.2-windows.exe/download>
+1. Download the following <http://sourceforge.net/projects/sweethome3d/files/SweetHome3D/SweetHome3D-5.6/SweetHome3D-5.6-windows.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 5EAF18CC7E64C1F0C82F5E41DD16DF0DD603DFAA509C0756B446F5A1651D1624
+  checksum: 2CB3312E0A7C242EBE04620AD49A96B6CBBAEFF559ED811FF51CD62F41AB3474
 
 The file 'LICENSE.txt' has been obtained from <http://www.sweethome3d.com/license.jsp>
