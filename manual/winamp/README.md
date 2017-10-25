@@ -15,3 +15,6 @@ You can extend Winamp's functionality through the use of plug-ins, which are ava
 ## Notes
 
 - This is the last version of the software. It was [discontinued](http://news.softpedia.com/news/Winamp-to-Be-Discontinued-on-December-20-2013-402176.shtml) at December 2013.
+
+
+![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/manual/winamp/screenshot.png)
