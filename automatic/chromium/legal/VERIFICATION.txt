@@ -15,7 +15,7 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: B79649E84B5EFEA76FBF6A72B9B03F2C2B69B6AFF29317E6400505E65015B81C
-  checksum64: 2B4766A2C316D63A2C531097BA8B9144A945D5A465D29BBDC79AC60B76128416
+  checksum32: s
+  checksum64: s
 
 The file 'LICENSE.txt' has been obtained from <https://chromium.googlesource.com/chromium/src.git/+/master/LICENSE>

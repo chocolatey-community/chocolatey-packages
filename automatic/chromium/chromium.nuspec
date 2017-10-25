@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromium</id>
-    <version>64.0.3250.0</version>
+    <version>62.0.3202.62</version>
     <title>Chromium snapshots build</title>
     <owners>chocolatey</owners>
     <authors>The Chromium Authors</authors>
@@ -15,7 +15,7 @@
 
 ## Notes
 
-- This package installs by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
+- This package installs the Chromium snapshots builds by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
 - If you have installed this package in the past to the `%localappdata%\Chromium` location it will continue to be installed in this location.
 ]]></description>
     <summary>Chromium</summary>
