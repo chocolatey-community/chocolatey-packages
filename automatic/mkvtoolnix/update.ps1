@@ -14,9 +14,7 @@ function global:au_SearchReplace {
     }
 }
 
-function golobal:au_BeforeUpdate {
-    Get-RemoteFiles -Purge
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
