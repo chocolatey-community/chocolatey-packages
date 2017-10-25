@@ -25,4 +25,4 @@ $packageArgs = @{
   softwareName  = 'Chromium'
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
