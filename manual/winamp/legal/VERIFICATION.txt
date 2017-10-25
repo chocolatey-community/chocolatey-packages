@@ -1,0 +1,23 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to http://meggamusic.co.uk/winamp/Winamp_Download.htm
+
+   full:  http://winamp.meggamusic.co.uk/winamp5666_full_en-us_redux.exe
+   light: http://winamp.meggamusic.co.uk/winamp5666_lite_en-us_redux.exe
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   full:  5158D1E92FE476227E9BC739CD15FFF4E9E847D8598613A6AE220CE085E3A6FB
+   light: 0B0C00CD41F66C3560A400A42D990419DF952CA0E77BE096235313222FEF3636
+
+File 'license.txt' is obtained from:
+   https://www.getwinamp.net/mirror/website/WINAMP_C/LEGAL/DISTRIBUTION.HTM

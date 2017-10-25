@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>winamp</id>
+    <title>Winamp</title>
+    <version>5.666</version>
+    <authors>Nullsoft</authors>
+    <owners>chocolatey</owners>
+    <summary>Winamp is a media player for Windows</summary>
+    <description>Winamp is a skinnable, multi-format media player.
+
+Winamp supports a wide variety of contemporary and specialized music file formats, including MIDI, MOD, MPEG-1 audio layers 1 and 2, AAC, M4A, FLAC, WAV, OGG Vorbis, and Windows Media Audio. It supports gapless playback for MP3 and AAC, and Replay Gain for volume leveling across tracks. In addition, Winamp can play and import music from audio CDs, optionally with CD-Text, and can also burn music to CDs. Winamp supports playback of Windows Media Video and Nullsoft Streaming Video, as well as most of the video formats supported by Windows Media Player. 5.1 Surround sound is supported where formats and decoders allow.
+
+Winamp supports many types of streaming media: Internet radio, Internet telelvision, XM Satellite Radio, AOL video, Singingfish content, podcasts, and RSS media feeds. It also has extendable support for portable media players, and users can access their media libraries anywhere via internet connections.
+
+You can extend Winamp's functionality through the use of plug-ins, which are available on the Winamp site.
+
+## Package parameters
+
+- `/Light` - Install light version (basic 2.x-style mp3/cd player)
+
+## Notes
+
+- This is the last version of the software. It was [discontinued](http://news.softpedia.com/news/Winamp-to-Be-Discontinued-on-December-20-2013-402176.shtml) at December 2013.
+</description>
+    <projectUrl>http://www.winamp.com</projectUrl>
+    <tags>multimedia player mp3 audio cross-platform freeware</tags>
+    <copyright>Nullsoft</copyright>
+    <licenseUrl>https://www.getwinamp.net/mirror/website/WINAMP_C/LEGAL/DISTRIBUTION.HTM</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fd66d6390d7a1521a22aa1235dabff5eff38147b/icons/winamp.png</iconUrl>
+    <releaseNotes>http://forums.winamp.com/showthread.php?t=374929</releaseNotes>
+    <mailingListUrl>http://forums.winamp.com/</mailingListUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/winamp</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="0.10.8" />     
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
