@@ -25,6 +25,10 @@
     <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
     <tags>chromium admin google cross-platform foss chrome browser</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
+
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
