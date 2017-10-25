@@ -4,7 +4,7 @@
   <metadata>
     <id>mkdocs</id>
     <title>MkDocs</title>
-    <version>0.16.3</version>
+    <version>0.17.0</version>
     <authors>Tom Christie</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://www.mkdocs.org</projectUrl>
@@ -16,8 +16,8 @@
     <bugTrackerUrl>https://github.com/mkdocs/mkdocs/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Project documentation with Markdown.</summary>
-    <description>
-MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.    
+    <description><![CDATA[
+MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
 
 ## Features
 
@@ -25,7 +25,8 @@ MkDocs is a fast, simple and downright gorgeous static site generator that's gea
 * **Great themes available:** There's a stack of good looking themes available for MkDocs. Choose between the built in themes: [mkdocs](http://www.mkdocs.org/user-guide/styling-your-docs/#mkdocs) and [readthedocs](http://www.mkdocs.org/user-guide/styling-your-docs/#readthedocs), select one of the 3rd party themes in the [MkDocs wiki](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes), or [build your own](http://www.mkdocs.org/user-guide/custom-themes/).
 * **Preview your site as you work:** The built-in dev-server allows you to preview your documentation as you're writing it. It will even auto-reload and refresh your browser whenever you save your changes.
 * **Easy to customize:** Get your project documentation looking just the way you want it by customizing the theme.
-</description>
+
+]]></description>
     <tags>mkdocs markdown documentation foss cross-platform cli</tags>
     <releaseNotes>http://www.mkdocs.org/about/release-notes/</releaseNotes>
     <dependencies>

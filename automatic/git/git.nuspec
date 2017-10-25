@@ -4,12 +4,11 @@
   <metadata>
     <id>git</id>
     <title>Git</title>
-    <version>2.14.2.20170927</version>
+    <version>2.14.3</version>
     <authors>The Git Development Community</authors>
     <owners>chocolatey</owners>
     <summary>Git for Windows offers a native set of tools that bring the full feature set of the Git SCM to Windows</summary>
-    <description>
-
+    <description><![CDATA[
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
 ## Features
@@ -32,7 +31,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 
 - The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.
 
-</description>
+]]></description>
     <projectUrl>https://git-for-windows.github.io/</projectUrl>
     <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
     <docsUrl>http://git-scm.com/doc</docsUrl>
@@ -44,7 +43,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
     <dependencies>
-      <dependency id="git.install" version="[2.14.2.20170927]" />
+      <dependency id="git.install" version="[2.14.3]" />
     </dependencies>
   </metadata>
   <files>

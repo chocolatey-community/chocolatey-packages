@@ -4,7 +4,7 @@
   <metadata>
     <id>calibre</id>
     <title>Calibre</title>
-    <version>3.9.0</version>
+    <version>3.10.0</version>
     <authors>Kovid Goyal</authors>
     <owners>chocolatey, gep13</owners>
     <summary>calibre is the one stop solution to all your e-book needs.</summary>

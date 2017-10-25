@@ -4,11 +4,11 @@
   <metadata>
     <id>totalcommander</id>
     <title>Total Commander</title>
-    <version>9.0.1.20170417</version>
+    <version>9.10</version>
     <authors>Christian Ghisler</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>File manager and explorer replacement</summary>
-    <description>
+    <description><![CDATA[
 Total Commander is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.
 But Total Commander uses a different approach: it has two fixed windows, which makes copying files much easier.
 
@@ -25,7 +25,7 @@ But Total Commander uses a different approach: it has two fixed windows, which m
 * Tabbed interface, regular expressions, history+favorites buttons
 * Thumbnails view, custom columns, enhanced search
 * Compare editor, cursor in lister, separate trees, logging, enhanced overwrite dialog etc.
-* Unicode names almost everywhere, long names (&gt;259 characters), password manager for ftp and plugins, synchronize empty dirs, 64 bit context menu, quick file filter (Ctrl+S)
+* Unicode names almost everywhere, long names (>259 characters), password manager for ftp and plugins, synchronize empty dirs, 64 bit context menu, quick file filter (Ctrl+S)
 * USB port connection via special [direct transfer cable](http://ghisler.com/cables/index.htm), partial branch view (Ctrl+Shift+B), and many improvements to ftp, synchronizing and other functions
 * [And many more!](http://ghisler.com/featurel.htm)
 
@@ -51,7 +51,8 @@ These parameters can be passed to the installer with the use of `--params`. For 
 
 - This package contain combined Total Commander installer which contains both x32 and x64 bit versions.
 - Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
-    </description>
+
+]]></description>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/totalcommander</packageSourceUrl>
     <projectUrl>http://www.ghisler.com</projectUrl>
     <bugTrackerUrl>http://www.ghisler.ch/wiki/index.php/Known_bugs_and_workarounds</bugTrackerUrl>

@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>apache-httpd</id>
-    <version>2.4.28</version>
+    <version>2.4.28.20171020</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
     <owners>chocolatey</owners>
@@ -47,5 +47,6 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

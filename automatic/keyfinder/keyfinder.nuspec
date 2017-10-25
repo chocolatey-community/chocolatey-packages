@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>keyfinder</id>
-    <version>2.0.10.12</version>
+    <version>2.0.10.13</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keyfinder</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>The Magical Jelly Bean Keyfinder</title>
@@ -16,7 +16,7 @@
     <docsUrl>https://www.magicaljellybean.com/keyfinder-faq/</docsUrl>
     <tags>keyfinder product key license freeware</tags>
     <summary>Retrieve product keys</summary>
-    <description>
+    <description><![CDATA[
 The Magical Jelly Bean Keyfinder is a freeware utility that retrieves your Product Key (cd key) used to install windows from your registry. It also has a community-updated configuration file that retrieves product keys for many other applications. Another feature is the ability to retrieve product keys from unbootable Windows installations.
 
 ## Features
@@ -33,7 +33,8 @@ The Magical Jelly Bean Keyfinder is a freeware utility that retrieves your Produ
 
 These parameters can be passed to the installer with the use of `--params`.
 For example: `--params '"/DesktopIcon /QuickLaunchIcon"'`
-    </description>
+
+]]></description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.0.6" />
     </dependencies>

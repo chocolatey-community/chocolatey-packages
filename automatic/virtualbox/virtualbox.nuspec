@@ -4,11 +4,11 @@
   <metadata>
     <id>virtualbox</id>
     <title>VirtualBox</title>
-    <version>5.1.28</version>
+    <version>5.2.0</version>
     <authors>Oracle Corporation</authors>
     <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
-    <description>VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
+    <description><![CDATA[VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
 
 ## Package parameters
 
@@ -22,7 +22,8 @@
 
 ### Uninstalling
 - `/KeepExtensions`    - Do not uninstall installed virtualbox extensions
-</description>
+
+]]></description>
     <projectUrl>https://www.virtualbox.org/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
     <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>

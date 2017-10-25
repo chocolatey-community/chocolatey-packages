@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://github.com/adobe/brackets/releases/latest>
+and can be verified by doing the following:
+
+1. Download the following <https://github.com/adobe/brackets/releases/download/release-1.11/Brackets.Release.1.11.msi>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: 7209035EC30F24A3037B130F0A9A7853389DDA90CE49FECD77972535A7432239
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/adobe/brackets/blob/c56840100d4fe4322252c856d5d848426e18367c/LICENSE>

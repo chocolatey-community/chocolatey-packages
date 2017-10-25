@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+
 $packageArgs = @{
   packageName    = 'bluegriffon'
   fileType       = 'exe'
+  file           = "$toolsPath\bluegriffon-2.3.1.win32-installer.exe"
   softwareName   = 'BlueGriffon*'
-
-  checksum       = 'af87a13bfa255f996a857f1936713279d27345b0ac2f8503ea312a82d39c10b7'
-  checksumType   = 'sha256'
-  url            = 'http://bluegriffon.org/freshmeat/2.3.1/bluegriffon-2.3.1.win32-installer.exe'
-
-  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoSetup.log`""
   validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

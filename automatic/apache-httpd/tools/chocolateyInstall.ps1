@@ -1,15 +1,12 @@
-﻿. (Join-Path (Split-Path -parent $MyInvocation.MyCommand.Definition) 'Helpers.ps1')
-
-$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
+﻿$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
+. "$toolsDir\helpers.ps1"
 
 $pp = Get-PackageParameters
 
-$fileName32 = 'httpd-2.4.28-x86-vc11.zip'
-$fileName64 = 'httpd-2.4.28-x64-vc11.zip'
 $arguments = @{
     packageName = $env:chocolateyPackageName
-    file        = Join-Path $toolsDir $fileName32
-    file64      = Join-Path $toolsDir $fileName64
+    file        = "$toolsDir\httpd-2.4.28-o102l-x86-vc14.zip"
+    file64      = "$toolsDir\httpd-2.4.28-o102l-x64-vc14.zip"
     destination = if ($pp.installLocation) { $pp.installLocation } else { $env:APPDATA }
     port        = if ($pp.Port) { $pp.Port } else { 8080 }
     serviceName = if ($pp.serviceName) { $pp.serviceName } else { 'Apache' }

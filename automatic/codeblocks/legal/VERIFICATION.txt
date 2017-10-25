@@ -14,4 +14,4 @@ and can be verified like this:
   checksum type: sha256
   checksum: 4D1B66C02EA6BE91912B3F9CD67A1C3A7933B7E2DD062DB00344FAF39E3CAE1C
 
-File 'COPYING' is obtained from <http://svn.code.sf.net/p/codeblocks/code/trunk/>
+File 'LICENSE.txt' is obtained from <http://svn.code.sf.net/p/codeblocks/code/trunk/>

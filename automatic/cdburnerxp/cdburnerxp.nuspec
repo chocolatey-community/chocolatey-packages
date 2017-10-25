@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cdburnerxp</id>
     <title>CDBurnerXP</title>
-    <version>4.5.7.6623</version>
+    <version>4.5.7.662301</version>
     <authors>Canneverbe Limited</authors>
-    <owners>gep13, chocolatey</owners>
+    <owners>chocolatey, gep13</owners>
     <summary>CDBurnerXP - burn CDs and DVDs for free!</summary>
-<description>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[
 CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-DVDs. It also includes the feature to burn and create ISOs, as well as a multilanguage interface. Everyone, even companies, can use it for free. It does not include adware or similar malicious components.
 
 ## Features
@@ -51,17 +52,17 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
 ### Other features
 
 *   simple cover printing feature for data- and audio-discs
-*   [LightScribe integration](http://cdburnerxp.se/help/kb/5)
-*   [Command line version](http://cdburnerxp.se/help/Appendices/commandlinearguments)
+*   [LightScribe integration](https://cdburnerxp.se/help/kb/5)
+*   [Command line version](https://cdburnerxp.se/help/Appendices/commandlinearguments)
 *   supports most IDE, USB, Firewire and SCSI drives
 *   integrated option to enable access to drive for restricted users
 *   multi-language interface
 *   online update
-</description>
-    <projectUrl>http://cdburnerxp.se/en/home</projectUrl>
-    <tags>CDBurnerXP freeware burn media cd dvd iso data admin</tags>
+]]></description>
+    <projectUrl>https://cdburnerxp.se/en/home</projectUrl>
+    <tags>cdburnerxp freeware burn media cd dvd iso data admin</tags>
     <copyright>2002-2012 Canneverbe Limitied</copyright>
-    <licenseUrl>http://cdburnerxp.se/help/intro/license</licenseUrl>
+    <licenseUrl>https://cdburnerxp.se/help/intro/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/cdburnerxp.png</iconUrl>
     <releaseNotes>https://cdburnerxp.se/en/development?full </releaseNotes>
@@ -70,10 +71,13 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
     <bugTrackerUrl>https://bugs.cdburnerxp.se</bugTrackerUrl>
     <docsUrl>http://maxima.sourceforge.net/documentation.html</docsUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

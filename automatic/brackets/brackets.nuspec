@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Brackets</id>
     <title>Brackets</title>
     <owners>chocolatey</owners>
-    <version>1.11</version>
+    <version>1.11.0.20171021</version>
     <authors>Adobe</authors>
     <summary>Brackets open-source code editor built with the web for the web.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
 Brackets is an open-source editor for web design and development built on top of web technologies such as HTML, CSS and JavaScript. The project was created and is maintained by Adobe, and is released under an MIT License.
 
@@ -22,11 +23,11 @@ Rather than clutter your workspace with floating panels, toolbars and icons, Bra
 
 **Works with your browser**
 The browser is your design view. Brackets hooks up directly to the browser, allowing you to design and develop in the same environment that you deploy.
-
 ]]></description>
     <projectUrl>http://brackets.io/</projectUrl>
     <projectSourceUrl>https://github.com/adobe/brackets</projectSourceUrl>
-    <tags>editor web adobe javascript foss cross-platform html css admin</tags>
+    <tags>brackets editor web adobe javascript foss cross-platform html css admin</tags>
+    <copyright>Copyright (c) 2012 - present Adobe Systems Incorporated. All rights reserved.</copyright>
     <licenseUrl>https://github.com/adobe/brackets/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/Brackets.svg</iconUrl>
@@ -34,8 +35,10 @@ The browser is your design view. Brackets hooks up directly to the browser, allo
     <bugTrackerUrl>https://github.com/adobe/brackets/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/brackets</packageSourceUrl>
     <docsUrl>https://github.com/adobe/brackets/wiki</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/brackets-dev</mailingListUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.16.0.20161107</version>
+    <version>0.16.6712</version>
     <title>FreeCAD</title>
-    <owners>chocolatey purity</owners>
+    <owners>chocolatey,purity</owners>
     <authors>Jürgen Riegel</authors>
     <licenseUrl>http://www.freecadweb.org/wiki/index.php?title=Licence</licenseUrl>
     <projectUrl>http://www.freecadweb.org/</projectUrl>
     <projectSourceUrl>https://github.com/FreeCAD/FreeCAD/</projectSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <bugTrackerUrl>https://www.freecadweb.org/tracker/my_view_page.php</bugTrackerUrl>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[
 FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD, CAx, CAE and PLM, aimed directly at mechanical engineering and product design but also fits a wider range of uses in engineering, such as architecture or other engineering specialties. It is 100 % Open Source and extremely modular, allowing for very advanced extension and customization.
 
 FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant 3D scene representation model provided by the Coin 3D library, and a broad Python API. The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX and Linux platforms.
-    </description>
+
+]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>http://www.freecadweb.org/wiki/index.php?title=Release_notes_0.16</releaseNotes>
-    <copyright />
-    <tags>3D CAD modeling engineering admin</tags>
+    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_016</releaseNotes>
+    <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freecad</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

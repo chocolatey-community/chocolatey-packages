@@ -1,13 +1,10 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $pp = Get-PackageParameters
-$silentArgs = '/silent','/sp-','/suppressmsgboxes'
-if ($pp.InstallDir) { $silentArgs += @("/DIR=`"$($pp.InstallDir)`"") }
-else {
-  $silentArgs += @("/DIR=`"$env:ProgramFiles\OpenSSL`"")
-}
+$silentArgs =  '/silent','/sp-','/suppressmsgboxes'
+$silentArgs += '/DIR="{0}"' -f $( if ($pp.InstallDir) { $pp.InstallDir } else { "$Env:ProgramFiles\OpenSSL" } )
 
 $packageArgs = @{
   packageName    = 'OpenSSL.Light'
@@ -20,15 +17,10 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
-$binPath = "$($installLocation)\bin" 
+if (!$installLocation)  { Write-Warning "Can't find install location, PATH not updated"; return }
+Write-Host "Installed to '$installLocation'"
 
-if(Test-Path $installLocation ) {
-  Install-ChocolateyPath -PathToInstall $binPath -PathType Machine 
-}
-else {
-  Write-Warning "Could not add install directory to path"
-}
-
-Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
+Install-ChocolateyPath -PathToInstall "$installLocation\bin" -PathType Machine

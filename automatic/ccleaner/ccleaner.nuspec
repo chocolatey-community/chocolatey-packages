@@ -4,13 +4,13 @@
   <metadata>
     <id>ccleaner</id>
     <title>CCleaner</title>
-    <version>5.35.6210</version>
+    <version>5.36.6278</version>
     <authors>Piriform</authors>
     <owners>maartenba, tonigellida</owners>
     <summary>
   The number-one tool for cleaning your Windows PC.
   </summary>
-    <description>
+    <description><![CDATA[
 The number-one tool for cleaning your Windows PC.
 
 It protects your privacy online and makes your computer faster and more secure.
@@ -18,7 +18,8 @@ It protects your privacy online and makes your computer faster and more secure.
 ### Notes
 
 This package installs CCleaner without additional adware.
-  </description>
+
+]]></description>
     <projectUrl>https://www.piriform.com/ccleaner</projectUrl>
     <tags>ccleaner system cleanup freeware trial registry admin</tags>
     <copyright></copyright>
