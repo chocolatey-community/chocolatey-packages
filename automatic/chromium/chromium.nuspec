@@ -11,6 +11,7 @@
     <projectSourceUrl>https://chromium.googlesource.com/chromium/src</projectSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chromium.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web. This site contains design documents, architecture overviews, testing information, and more to help you learn to build and work with the Chromium source code.
 
 ## Notes
