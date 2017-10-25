@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 }
 
 
-function au_BeforeUpdate() {
+function global:au_BeforeUpdate() {
   #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
   Get-RemoteFiles -Purge
 }
