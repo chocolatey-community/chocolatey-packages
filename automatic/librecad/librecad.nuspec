@@ -24,7 +24,7 @@ LibreCAD is a free Open Source CAD application for Windows, Apple and Linux. Sup
     <tags>CAD 2D admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/librecad</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

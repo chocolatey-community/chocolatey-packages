@@ -40,7 +40,7 @@ If you are looking for subtitles, GOM Player just made that amazingly simple. GO
 </description>
     <releaseNotes>http://player.gomlab.com/history.gom?language=eng</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.7" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

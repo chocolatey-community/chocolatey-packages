@@ -26,7 +26,7 @@ Juju is an application and service modelling tool that enables you to quickly mo
 ]]></description>
     <releaseNotes>https://jujucharms.com/docs/stable/reference-release-notes</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

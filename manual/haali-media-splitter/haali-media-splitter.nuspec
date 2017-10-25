@@ -19,7 +19,7 @@
 Haali Media Splitter is a MKV, MP4, M2TS, OGM/OGG, MPEG TS and AVI container decoder/splitter. mkv2vfr included, convert mkvs with variable framerate to constant framerate. GDSMux/DS Mux included also, a simple mkv/m2ts multiplexer and cutter.
     </description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

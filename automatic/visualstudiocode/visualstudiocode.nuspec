@@ -47,8 +47,8 @@ Example: `choco install visualstudiocode --params '/NoDesktopIcon /DontAddToPath
 ]]></description>
     <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.1" />
-      <dependency id="DotNet4.5.2" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="dotnet4.5.2" version="4.5.2.20140902" />
     </dependencies>
     <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
   </metadata>

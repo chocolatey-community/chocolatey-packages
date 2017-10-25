@@ -22,7 +22,7 @@
     <description>Dummy</description>
     <releaseNotes>https://xmoto.tuxfamily.org/dev/ChangeLog</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

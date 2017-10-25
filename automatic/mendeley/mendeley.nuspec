@@ -27,7 +27,7 @@ Mendeley is a platform that allows scholars from all over the world to collabora
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4c7b68edb2f1db5d189b220fa21221fb7a9e2704/icons/mendeley.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mendeley</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

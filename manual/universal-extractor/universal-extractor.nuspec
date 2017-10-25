@@ -20,7 +20,7 @@ Universal Extractor is a program designed to decompress and extract files from a
     <tags>extract zip 7z archive files foss admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/manual/universal-extractor</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
     <projectSourceUrl>http://www.legroom.net/scripts/download.php?file=uniextract161_source</projectSourceUrl>
   </metadata>

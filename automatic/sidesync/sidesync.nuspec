@@ -24,7 +24,7 @@ Install SideSync onto a PC and mobile device, and then connect two devices throu
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/19caae85d0eb96020c2aed7b02208349d611b980/icons/sidesync.png</iconUrl>
    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sidesync</packageSourceUrl>
   </metadata>

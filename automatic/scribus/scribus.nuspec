@@ -23,7 +23,7 @@ Scribus is an Open Source program that brings professional page layout to Linux/
 Underneath a modern and user-friendly interface, Scribus supports professional publishing features, such as color separations, CMYK and spot colors, ICC color management, and versatile PDF creation.
 </description>
     <dependencies>
-      <dependency id="vcredist2008" version="9.0.30729.17" />
+      <dependency id="vcredist2008" version="9.0.30729.6161" />
       <dependency id="vcredist2012" version="11.0.61031" />
       <dependency id="Ghostscript" version="9.21.0.20170331" />
     </dependencies>

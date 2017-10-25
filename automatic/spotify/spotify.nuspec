@@ -42,7 +42,7 @@ Enjoy new music every Monday with your own personal playlist. Or sit back and en
     Updated to work with the latest requirment for user not to be admin when installing.
     </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

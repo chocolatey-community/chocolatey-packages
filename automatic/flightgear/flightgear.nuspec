@@ -40,8 +40,8 @@ and is developed by skilled volunteers from around the world.
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
-      <dependency id="kb2999226" version="1.0.20161030" />
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="kb2999226" version="1.0.20170509" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

@@ -35,7 +35,7 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/datagrip</packageSourceUrl>
     <owners>chocolatey,Xuanwo,the-running-dev</owners>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

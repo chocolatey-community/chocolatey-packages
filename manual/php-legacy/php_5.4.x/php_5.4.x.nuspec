@@ -29,8 +29,8 @@ For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     <docsUrl>https://secure.php.net/docs.php</docsUrl>
     <projectSourceUrl>http://git.php.net</projectSourceUrl>
     <dependencies>
-      <dependency id="vcredist2008" version="9.0" />
-      <dependency id="chocolatey-core.extension" version="1.0.5" />
+      <dependency id="vcredist2008" version="9.0.30729.6161" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

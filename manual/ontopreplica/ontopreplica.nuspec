@@ -36,7 +36,7 @@ A real-time, always on top, “replica” of a window of your choice, based on D
 - CodePlex is planning to shut down in December 2017, after that it is unlikely that this package will ever be updated again.
     </description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

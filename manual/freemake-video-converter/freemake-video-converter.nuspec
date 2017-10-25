@@ -26,7 +26,7 @@ Convert videos free for any device with video playback. Use ready profiles for A
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e8c2d8438bd429e4815b91eefd248b99b0bd84b/icons/freemake-video-converter.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
     <releaseNotes>http://www.freemake.com/freemake_video_converter_changelog/</releaseNotes>
   </metadata>
