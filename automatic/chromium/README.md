@@ -4,6 +4,5 @@ Chromium is an open-source browser project that aims to build a safer, faster, a
 
 ## Notes
 
-- This package installs the Chromium snapshots builds by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
+- This package installs by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
 - If you have installed this package in the past to the `%localappdata%\Chromium` location it will continue to be installed in this location.
-- These builds can be unstable. MD5 checking is done on the file before install.
