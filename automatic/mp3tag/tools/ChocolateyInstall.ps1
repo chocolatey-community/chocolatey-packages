@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'mp3tag'
-$url32       = 'http://download.mp3tag.de/mp3tagv284asetup.exe'
-$checksum32  = '1ad6c1685b3e2480aa7e79b4f48d74137b0a21e9eb2d5c542ae89a22578c5b6c'
+$url32       = 'http://download.mp3tag.de/mp3tagv285setup.exe'
+$checksum32  = '3c7c2266f8b4c0aa7513103d7009c8c6dbba05b0ed016f29bb7aebedf9226faf'
 $silentArgs  = '/S'
 
 $PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
