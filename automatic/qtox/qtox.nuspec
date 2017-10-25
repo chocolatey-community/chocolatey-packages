@@ -4,11 +4,11 @@
   <metadata>
     <id>qtox</id>
     <title>qTox</title>
-    <version>1.11.0</version>
+    <version>1.12.1</version>
     <authors>qTox developers</authors>
     <owners>chocolatey</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
-    <description>
+    <description><![CDATA[
 qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.
 
 ## Features
@@ -27,7 +27,8 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
 * Emoticons
 * Auto-updates on Windows and Mac, packages on Linux
 * And many more options!
-    </description>
+
+]]></description>
     <projectUrl>https://qtox.github.io</projectUrl>
     <projectSourceUrl>https://github.com/qTox/qTox</projectSourceUrl>
     <docsUrl>https://github.com/qTox/qTox/wiki</docsUrl>
