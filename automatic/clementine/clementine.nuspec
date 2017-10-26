@@ -37,7 +37,7 @@ Clementine is a modern music player and library organizer. It is inspired by Ama
 - Queue manager.
     </description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.6" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
     <summary>Multiplatform music player</summary>
     <releaseNotes>https://raw.githubusercontent.com/clementine-player/Clementine/master/Changelog</releaseNotes>

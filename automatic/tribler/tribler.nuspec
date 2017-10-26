@@ -41,7 +41,7 @@ Watch before the download is finished. Tribler streams it for you.
     <releaseNotes>https://github.com/Tribler/tribler/releases/tag/v6.5.2</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tribler</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

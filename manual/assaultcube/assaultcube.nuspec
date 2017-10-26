@@ -38,7 +38,7 @@ AssaultCube is a free, multiplayer, first-person shooter game, based on the CUBE
     <bugTrackerUrl>https://github.com/assaultcube/AC/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/assaultcube/AC</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

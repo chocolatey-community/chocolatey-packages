@@ -43,7 +43,7 @@ AutoHotkey is a free, open source macro-creation and automation software utility
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autohotkey.install</packageSourceUrl>
     <projectSourceUrl>https://github.com/Lexikos/AutoHotkey_L</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

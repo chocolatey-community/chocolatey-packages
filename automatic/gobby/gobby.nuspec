@@ -48,7 +48,7 @@ nicely into the GNOME desktop environment if you want it to.
     </description>
     <releaseNotes>https://github.com/gobby/gobby/blob/master/NEWS</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

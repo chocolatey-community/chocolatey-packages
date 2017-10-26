@@ -31,7 +31,7 @@ Audacity is free, open source, cross-platform software for recording and editing
     <releaseNotes></releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/audacity</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.3" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
     <docsUrl>http://www.audacityteam.org/help/documentation</docsUrl>
     <projectSourceUrl>https://github.com/audacity/audacity</projectSourceUrl>

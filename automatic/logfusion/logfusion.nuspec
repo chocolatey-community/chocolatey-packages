@@ -28,7 +28,7 @@ Real-Time Log Monitoring Made Easy! LogFusion is a powerful realtime log monitor
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/logfusion</packageSourceUrl>
     <owners>chocolatey,keithlammers,the-running-dev</owners>
     <dependencies>
-      <dependency id="dotnet4.6.1" version="4.6.01055.20161213" />
+      <dependency id="dotnet4.6.1" version="4.6.01055.20170308" />
     </dependencies>
   </metadata>
   <files>

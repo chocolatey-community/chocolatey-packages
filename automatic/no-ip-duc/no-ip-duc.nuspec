@@ -26,7 +26,7 @@ Keep your current IP address in sync with your No-IP host or domain with the Dyn
 - **Notifications:** Receive notifications when a service is about to expire, or if we send out an important network update.
     </description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.6" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

@@ -43,7 +43,7 @@ telemetry is sent back to Mozilla or the Waterfox project.
 ]]></description>
     <releaseNotes>https://www.waterfoxproject.org/blog/</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

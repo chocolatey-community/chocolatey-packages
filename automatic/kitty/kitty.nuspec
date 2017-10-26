@@ -11,7 +11,7 @@
     <projectUrl>http://www.9bis.net/kitty/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description><![CDATA[KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY. 
+    <description><![CDATA[KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY.
 
 ## Features
 
@@ -36,7 +36,7 @@ Sessions filter, portability, predefined command shortcuts, session launcher, au
     <docsUrl>http://www.9bis.net/kitty/?page=Welcome</docsUrl>
     <mailingListUrl>http://www.9bis.net/kitty/?action=forum</mailingListUrl>
    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.1" />   
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

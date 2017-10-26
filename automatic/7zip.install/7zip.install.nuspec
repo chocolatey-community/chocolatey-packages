@@ -44,7 +44,7 @@
 [Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/7zip.install/Changelog.md)
     </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.2" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

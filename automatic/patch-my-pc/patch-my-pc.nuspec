@@ -43,7 +43,7 @@ Whether you are a computer novice, semi-tech savvy, the go-to tech person for yo
 ]]></description>
     <releaseNotes>https://patchmypc.net/release-notes</releaseNotes>
     <dependencies>
-      <dependency id="dotnet3.5" version="3.5" />
+      <dependency id="dotnet3.5" version="3.5.20160716" />
     </dependencies>
   </metadata>
   <files>
