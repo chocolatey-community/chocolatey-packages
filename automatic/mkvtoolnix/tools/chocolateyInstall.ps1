@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
   packageName    = 'mkvtoolnix'
   fileType       = 'exe'
