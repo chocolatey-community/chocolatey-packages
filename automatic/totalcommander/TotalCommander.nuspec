@@ -65,9 +65,9 @@ These parameters can be passed to the installer with the use of `--params`. For 
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a37f40763d259eab20d0462b72cba86a108441d9/icons/totalcommander.png</iconUrl>
     <releaseNotes>http://ghisler.com/whatsnew.htm</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.7" /> 
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="7zip.portable" version="16.04" />
-      <dependency id="autohotkey.portable" version="1.1.24.05" />
+      <dependency id="autohotkey.portable" version="1.1.26.01" />
       <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>

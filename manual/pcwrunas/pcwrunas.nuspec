@@ -51,7 +51,7 @@ PcwRunAs4 /u hugo /p secret /app notepad.exe /arg &quot;C:\NewFile.txt&quot;
     <tags>pcwrunas runas cli admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/manual/pcwrunas</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

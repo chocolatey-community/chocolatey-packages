@@ -19,7 +19,8 @@
     <bugTrackerUrl>http://sourceforge.net/p/djv/_list/tickets</bugTrackerUrl>
     <tags>djv video movie player cineon dpx openexr quicktime admin foss cross-platform</tags>
     <summary>DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.</summary>
-    <description>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[
 DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.
 
 ## Features:
@@ -34,10 +35,11 @@ DJV Imaging provides professional movie playback software for film production, V
 ## Notes
 
 * This package no longer support 32-bit Operating Systems, install version 1.0.5.20170203 or earlier if you have a need for 32-bit.
-    </description>
+
+]]></description>
     <releaseNotes>http://djv.sourceforge.net/djvChangeList.html</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.5" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

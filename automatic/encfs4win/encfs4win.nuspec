@@ -30,8 +30,8 @@ EncFS provides an encrypted filesystem in user-space, using the Dokan library fo
     <projectSourceUrl>https://github.com/jetwhiz/encfs4win</projectSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/adfba62c6e358480c755fbfeb96614352d743fa1/icons/encfs4win.png</iconUrl>
     <dependencies>
-        <dependency id="kb2999226" />
-        <dependency id="chocolatey-core.extension" version="1.0" />
+        <dependency id="kb2999226" version="1.0.20170509" />
+        <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

@@ -1,55 +1,47 @@
-
 import-module au
 
- $releases_x32 = 'https://chromium.woolyss.com/api/v2/?os=windows&bit=32&out=string' # URL to for GetLatest 32bit
- $releases_x64 = 'https://chromium.woolyss.com/api/v2/?os=windows&bit=64&out=string' # URL to for GetLatest 64bit
-
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^[$]version\s*=\s*)('.*')"= "`$1'$($Latest.Version)'"
-            "(^\s*packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
-            "(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
-            "(^\s*url64Bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
-            "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-            "(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-            "(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum32\:).*"          = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
+  }
 }
+
+
+function global:au_BeforeUpdate() {
+  #Download $Latest.URL32 / $Latest.URL64 in tools directory and remove any older installers.
+  Get-RemoteFiles -Purge
+}
+
 
 function global:au_GetLatest {
-    $hashtype = 'md5'
+  $allVersions = Invoke-WebRequest -Uri https://api.github.com/repos/henrypp/chromium/releases -UseBasicParsing | ConvertFrom-Json
+  $allStableVersions = $allVersions | Where-Object {$_.body -match "stable"}
+  $latestStableVersionNumber = ($allStableVersions[0].tag_name.split('-') | Select-Object -First 1) -replace 'v', ''
+  $anyArchLatestStablesVersions = $allVersions  | Where-Object {$_.tag_name -match $latestStableVersionNumber}
 
-    $download_page32 = Invoke-WebRequest -Uri $releases_x32
-    $download_page64 = Invoke-WebRequest -Uri $releases_x64
+  $32LatestVersion = $anyArchLatestStablesVersions | Where-Object {$_.tag_name -match $latestStableVersionNumber -and $_.tag_name -match "win32"}
+  $32LatestSyncInstallUrl = ($32LatestVersion.assets | Where-Object name -match "-sync.exe").browser_download_url
 
-    $val32 = $download_page32 -split ";"
-    $val64 = $download_page64 -split ";"
+  $64LatestVersion = $anyArchLatestStablesVersions | Where-Object {$_.tag_name -match $latestStableVersionNumber -and $_.tag_name -match "win64"}
+  $64LatestSyncInstallUrl = ($64LatestVersion.assets | Where-Object name -match "-sync.exe").browser_download_url
 
-    $chromium32 = $val32 | out-string | ConvertFrom-StringData
-    $chromium64 = $val64 | out-string | ConvertFrom-StringData
-    $checksum32 = @{$true = $chromium32.checksum_md5; $false = $chromium32.checksum }[ $chromium32.checksum -ne ""]
-    $checksum64 = @{$true = $chromium64.checksum_md5; $false = $chromium64.checksum }[ $chromium64.checksum -ne ""]
-    $hashtype32 = @{$true = $hashtype; $false = $chromium32.hashtype }[ $chromium32.hashtype -ne ""]
-    $hashtype64 = @{$true = $hashtype; $false = $chromium64.hashtype }[ $chromium64.hashtype -ne ""]
+  $ChecksumType = 'sha256'
 
-    $version = $chromium64.version
+  $Latest = @{
+    Version        = $latestStableVersionNumber
+    URL32          = $32LatestSyncInstallUrl
+    ChecksumType32 = $ChecksumType
+    URL64          = $64LatestSyncInstallUrl
+    ChecksumType64 = $ChecksumType
+  };
 
-    $url32 = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/<revision>/mini_installer.exe'
-    $url64 = 'https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/<revision>/mini_installer.exe'
-    $url32 = $url32 -replace '<revision>', $chromium32.revision
-    $url64 = $url64 -replace '<revision>', $chromium64.revision
-
-    @{
-        URL32 = $url32; URL64 = $url64; Version = $version;
-        #Diabled until au/issues/36
-        #Checksum32     = $checksum32
-        #Checksum64     = $checksum64
-        ChecksumType32 = $hashtype32
-        ChecksumType64 = $hashtype64
-    }
+  return $Latest
 }
 
-update
+Update-Package -ChecksumFor none

@@ -40,7 +40,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter</packageSourceUrl>
     <licenseUrl>https://atomisystems.com/activepresenter-free-eula</licenseUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

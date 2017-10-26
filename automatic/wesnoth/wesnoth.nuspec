@@ -39,7 +39,7 @@ There are at least two hundred unit types, sixteen races, six major factions, an
     </description>
     <releaseNotes>https://raw.githubusercontent.com/wesnoth/wesnoth/master/changelog</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.6" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

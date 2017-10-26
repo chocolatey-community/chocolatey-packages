@@ -39,7 +39,7 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/inkscape</packageSourceUrl>
     <projectSourceUrl>https://launchpad.net/inkscape</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

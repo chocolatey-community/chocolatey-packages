@@ -30,7 +30,7 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a042fbe6c07391d0c2da13f638b1fdde474850f/icons/sysinternals.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.7" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

@@ -6,7 +6,7 @@ if ((Get-ProcessorBits 32) -or $env:chocolateyForceX86 -eq $true)
   { Write-Error "32-bit is no longer supported. Please install version 1.0.5.20170203" }
 
 $packageArgs = @{
-  packageName    = 'djv'
+  packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
   file           = "$toolsPath\djv-1.1.0-Windows-64.exe"
   softwareName   = 'djv-*'
@@ -16,4 +16,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force -ea 0 $packageArgs.file,"$($packageArgs.file).ignore"
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

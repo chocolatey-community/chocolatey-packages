@@ -31,7 +31,7 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
     <tags>video editor foss cross-platform cutting filtering encoding admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.0.2" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>

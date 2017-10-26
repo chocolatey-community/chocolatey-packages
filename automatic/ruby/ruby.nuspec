@@ -27,7 +27,7 @@ This package provides a self-contained [Windows-based installer](https://rubyins
     <releaseNotes>https://www.ruby-lang.org/en/downloads/releases/</releaseNotes>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/aad7c15bfbec43c3716f8a82bc3af22e1a55579d/icons/ruby.svg</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>

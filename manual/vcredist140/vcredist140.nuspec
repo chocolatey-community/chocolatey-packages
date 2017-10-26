@@ -34,10 +34,10 @@ On some systems, if KB2999226 is installed as a dependency of this package, the 
 14.11.25325.0: Initial package release for software version 14.11.25325.0.
 </releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-      <dependency id="KB3033929" version="1.0.2" /> <!-- for Win7 SP1/2008R2-->
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="KB3033929" version="1.0.3" /> <!-- for Win7 SP1/2008R2-->
       <dependency id="KB2919355" version="1.0.20160915" /> <!-- for Win8.1/2012R2 -->
-      <dependency id="KB2999226" version="1.0.20161201" />
+      <dependency id="kb2999226" version="1.0.20170509" />
     </dependencies>
   </metadata>
 </package>
