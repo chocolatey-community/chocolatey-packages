@@ -25,9 +25,11 @@ With these tools one can get information about (mkvinfo) Matroska files, extract
     <docsUrl>https://mkvtoolnix.download/docs.html</docsUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
