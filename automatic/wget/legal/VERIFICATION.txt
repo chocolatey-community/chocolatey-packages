@@ -4,15 +4,15 @@ in verifying that this package's contents are trustworthy.
 
 1.  Download the appropriate zip:
 
-    x32: https://eternallybored.org/misc/wget/releases/wget-1.19.1-win32.zip
-    x64: https://eternallybored.org/misc/wget/releases/wget-1.19.1-win64.zip
+    x32: https://eternallybored.org/misc/wget/releases/wget-1.19.2-win32.zip
+    x64: https://eternallybored.org/misc/wget/releases/wget-1.19.2-win64.zip
 
 2.  You can use one of the following methods to obtain the checksum: 
     - Use powershell function 'Get-FileHash'
     - Use Chocolatey utility 'checksum.exe'
 
-    checksum32: 745801B57FEE4514C131B142346A4332351E90FBC7F696F6A3E02C361CCCC27F
-    checksum64: 61320A3A2F123DD8FD4A8BAF65DB4063A97622448DC1BF3FCF1284EEBE449A1D
+    checksum32: 2350A4391C6C3B666B6AAF11842009869FBA1DEAE1DFBF4C005E2DC135C69148
+    checksum64: 34D76A8A75315CCACF9FDD6F0D928B663F74D8FF641DE3BBC822F704B82E57AD
 
     Using AU:
-        Get-RemoteChecksum https://eternallybored.org/misc/wget/releases/wget-1.19.1-win64.zip
+        Get-RemoteChecksum https://eternallybored.org/misc/wget/releases/wget-1.19.2-win64.zip

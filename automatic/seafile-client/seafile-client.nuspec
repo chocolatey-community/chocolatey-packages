@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>seafile-client</id>
-    <version>6.1.1</version>
+    <version>6.1.2</version>
     <title>Seafile (Windows Client)</title>
     <owners>chocolatey</owners>
     <authors>Seafile Ltd.</authors>
@@ -16,14 +16,15 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/65cff22d071fb30b82b8f2bdee89211b541520c7/icons/seafile-client.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 Seafile is a next-generation open source cloud storage system with advanced support for file syncing, privacy protection and teamwork.
 
 Collections of files are called libraries, and each library can be synced separately. A library can be encrypted with a user chosen password.
 This password is not stored on the server, so even the server admin cannot view a file's contents.
 
 Seafile allows users to create groups with file syncing, wiki, and discussion to enable easy collaboration around documents within a team.
-</description>
+
+]]></description>
     <summary>File Syncing and Collaboration for Teams</summary>
     <releaseNotes>https://seacloud.cc/group/3/wiki/client-changelog</releaseNotes>
     <copyright>Copyright ©2016 Seafile Ltd.</copyright>
