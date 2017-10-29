@@ -25,8 +25,8 @@ remove-item "$PSScriptRoot\tools\chocolateyInstall.ps1" -Force
 $filename = "$PSScriptRoot\..\chromium\tools\chocolateyInstall.ps1"
 foreach ($line in [System.IO.File]::ReadLines($filename)) {
     if ( $line -match 'toolsDir =' ) {
-        $line = ($myFunction + '$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"`
-$version = ""`
+        $line = ($myFunction + '$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$version = ""
 Get-CompareVersion -version $version -notation "-snapshots" -package "chromium"');
     }	
     $line |  Out-File -Append "$PSScriptRoot\tools\chocolateyInstall.ps1"
