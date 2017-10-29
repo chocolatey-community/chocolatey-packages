@@ -27,7 +27,6 @@ foreach ($line in [System.IO.File]::ReadLines($filename)) {
     if ( $line -match 'toolsDir =' ) {
         $line = ($myFunction + '$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"`
 $version = ""`
-. $toolsDir\helper.ps1`
 Get-CompareVersion -version $version -notation "-snapshots" -package "chromium"');
     }	
     $line |  Out-File -Append "$PSScriptRoot\tools\chocolateyInstall.ps1"
