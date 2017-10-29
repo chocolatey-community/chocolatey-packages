@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chromium</id>
+    <version>0.0.0.0</version>
+    <title>Chromium Snapshots Build</title>
+    <owners>chocolatey</owners>
+    <authors>The Chromium Authors</authors>
+    <projectUrl>http://www.chromium.org/Home</projectUrl>
+    <projectSourceUrl>https://chromium.googlesource.com/chromium/src</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chromium.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>test</description>
+    <summary>Chromium snapshots build (unstable)</summary>
+    <copyright>Copyright (c) 2013 The Chromium OS Author</copyright>
+    <bugTrackerUrl>https://bugs.chromium.org/p/chromium/issues/list</bugTrackerUrl>
+    <mailingListUrl>https://www.chromium.org/developers/discussion-groups</mailingListUrl>
+    <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
+    <tags>chromium admin google cross-platform foss chrome browser</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
