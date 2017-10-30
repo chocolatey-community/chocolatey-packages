@@ -23,7 +23,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: chocolatey/chocolatey-coreteampackages
   github_api_key:
-    secure: pjdyRrTcVsxIUaWQh4MQcbEVWOtFYpzy54CS8BwqOs63o+Yd2S9+DRL9v3RPvzcx
+    secure: um25UyBlvM1Ysokz1/2YUU2io57AkQEr7c8k788q8pNTCu7up9+r7fHT6V05b/CM
 
   # Mail credentials - for error notifications
   mail_user: gep13choco@gmail.com
