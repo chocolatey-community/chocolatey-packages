@@ -2,7 +2,7 @@
 
 [![Join the chat at https://gitter.im/chocolatey/chocolatey-coreteampackages](https://badges.gitter.im/chocolatey/chocolatey-coreteampackages.svg)](https://gitter.im/chocolatey/chocolatey-coreteampackages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build status](https://ci.appveyor.com/api/projects/status/tugg0i6x1hlq9lpg?svg=true)](https://ci.appveyor.com/project/chocolatey/chocolatey-coreteampackages) 
 [![](http://transparent-favicon.info/favicon.ico)](#)[![](http://transparent-favicon.info/favicon.ico)](#)
-[Update status](http://gep13.me/choco-au)
+[Update status](https://gist.github.com/choco-bot/a14b1e5bfaf70839b338eb1ab7f8226f)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey.org profile](https://chocolatey.org/profiles/chocolatey)
 
