@@ -1,12 +1,12 @@
 import-module au
 import-module .\..\..\extensions\extensions.psm1
 
-$releases = 'https://www.virtualbox.org/wiki/Downloads'
+$releases = 'https://www.virtualbox.org/wiki/Download_Old_Builds'
 
 function GetLatest {
   param([string]$releaseUrl)
 
-  $download_page = Invoke-WebRequest -uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -uri $releaseUrl -UseBasicParsing
 
   $url      = $download_page.links | ? href -match '\.exe$' | select -first 1 -expand href
   $version  = $url -split '/' | select -Last 1 -Skip 1
@@ -38,10 +38,32 @@ if (!$cert) {
     certutil -addstore 'TrustedPublisher' "$PSScriptRoot\tools\oracle.cer"
 }
 
-if ($MyInvocation.InvocationName -ne '.') {
-  function global:au_GetLatest {
-    GetLatest $releases
+# if ($MyInvocation.InvocationName -ne '.') {
+#   function global:au_GetLatest {
+#     GetLatest $releases
+#   }
+
+#   update -ChecksumFor 32
+# }
+
+function global:au_GetLatest {
+  $builds_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+
+  $links = $builds_page.Links | ? href -match 'Builds_[\d_]+$' | select -expand href
+
+  $streams = @{}
+
+  $links | % {
+    $versionPart = $_ -split 'Builds_' | select -last 1 | % { $_ -replace '_','.' }
+
+    $streams.Add($versionPart, (GetLatest "https://www.virtualbox.org$_"))
   }
 
-  update -ChecksumFor 32
+  $latest = GetLatest "https://www.virtualbox.org/wiki/Downloads"
+
+  $streams.Add((Get-Version $Latest.Version).ToString(2), $latest)
+
+  return @{ Streams = $streams}
 }
+
+Update -ChecksumFor 32
