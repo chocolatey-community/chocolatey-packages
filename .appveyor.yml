@@ -34,10 +34,10 @@ environment:
   mail_enablessl: true
 
   #ID of the gist used to save run results
-  gist_id: bd2eaa76f2a9ab739ca0544c502dca6e
+  gist_id: a14b1e5bfaf70839b338eb1ab7f8226f
 
   #ID of the gist used to save test run results
-  gist_id_test: b733b29e320a8c05bc99cc0bf59cd8d1
+  gist_id_test: ee51b7006326809d2188cfb47a0ddf87
 
   #Chocolatey API key - to push updated packages
   api_key:
