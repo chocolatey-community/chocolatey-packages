@@ -7,7 +7,7 @@ $softwareName = 'Zotero Standalone *'
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-  $version = [version]$Latest.Version
+  $version = $Latest.Version.ToString()
 
   @{
     ".\legal\VERIFICATION.txt" = @{
@@ -32,6 +32,7 @@ function global:au_GetLatest {
     $url = Get-RedirectedUrl -url $releases
 
     $version  = $url -split '/' | select -Last 1 -Skip 1
+
     @{
         Version      = $version
         URL32        = $url
