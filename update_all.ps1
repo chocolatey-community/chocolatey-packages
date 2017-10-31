@@ -82,7 +82,7 @@ $Options = [ordered]@{
                 Port       = $Env:mail_port
                 EnableSsl  = $Env:mail_enablessl -eq 'true'
                 Attachment = "$PSScriptRoot\update_info.xml"
-                UserMessage = 'Update status: https://gist.github.com/choco-bot/a14b1e5bfaf70839b338eb1ab7f8226f'
+                UserMessage = 'Update status: Update status: https://gist.github.com/choco-bot/$Env:gist_id'
                 SendAlways  = $false                        #Send notifications every time
              }
            } else {}
