@@ -8,7 +8,7 @@ $packageArgs = @{
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = 'Zotero Standalone *'
-  file           = "$toolsPath\Zotero-5.0.23_setup.exe"
+  file           = "$toolsPath\Zotero-5.0.24_setup.exe"
 }
 
 Install-ChocolateyInstallPackage @packageArgs

@@ -4,19 +4,20 @@
   <metadata>
     <id>sidesync</id>
     <title>Samsung SideSync</title>
-    <version>4.7.5.181</version>
+    <version>4.7.5.203</version>
     <authors>Samsung</authors>
     <owners>chocolatey, Redsandro</owners>
     <summary>Samsung SideSync enables the screens, windows, and data to be shared easily between your Samsung PC and Galaxy phone or tablet.</summary>
-    <description>Using SideSync, you can conveniently share the screen and data between your PC and mobile device. Receive alarms of your phone through PC and use various features of your phone on the computer. Enjoy the smarter and more convenient life with SideSync.
+    <description><![CDATA[Using SideSync, you can conveniently share the screen and data between your PC and mobile device. Receive alarms of your phone through PC and use various features of your phone on the computer. Enjoy the smarter and more convenient life with SideSync.
 
-Install SideSync onto a PC and mobile device, and then connect two devices through USB data cable or Wi-Fi. Simply connecting the PC and mobile, you can conveniently use various features of SideSync. For a PC or MAC, click the download button above to install. For a mobile device, you can download the app from Google Play™ or Samsung GALAXY Apps which is preloaded on your latest Galaxy device.
+Install SideSync onto a PC and mobile device, and then connect two devices through USB data cable or Wi-Fi. Simply connecting the PC and mobile, you can conveniently use various features of SideSync. For a PC or MAC, click the download button above to install. For a mobile device, you can download the app from Google Playâ„¢ or Samsung GALAXY Apps which is preloaded on your latest Galaxy device.
 
 ## Features
 
 - Make Phone Calls and Send Text Messages from PC
 - Share Files between your PC and Mobile Device
-</description>
+
+]]></description>
     <projectUrl>https://www.samsung.com/us/sidesync/</projectUrl>
     <tags>samsung galaxy smartphone remote phone cross-platform freeware admin</tags>
     <copyright>1995–2017 SAMSUNG All Rights reserved.</copyright>
