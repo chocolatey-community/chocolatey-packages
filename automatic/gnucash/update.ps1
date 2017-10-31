@@ -1,8 +1,7 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$domain       = 'https://github.com'
-$releases     = "$domain/Gnucash/gnucash/releases/latest"
+$releases       = 'https://www.gnucash.org/download.phtml'
 $softwareName = 'GnuCash*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -31,15 +30,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = '^/.+\.exe$'
-  $url   = $download_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+  $re    = '\.exe$'
+  $url   = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-  $version  = $url -split '[a-z]?\/' | select -Last 1 -Skip 1
-
-  if (!($version -match "^[\d\.]+$")) {
-    # They changed the filename again, lets try the tag name
-    $version = ($url -split '\/' | select -last 1 -skip 1)
-  }
+  $version  = $url -split '[-]' | select -Last 1 -Skip 1
 
   @{
     URL32 = $url
