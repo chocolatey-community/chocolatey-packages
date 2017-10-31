@@ -4,7 +4,7 @@ $freshReleases = 'https://www.libreoffice.org/download/libreoffice-fresh'
 $stillReleases = 'https://www.libreoffice.org/download/libreoffice-still'
 
 function global:au_BeforeUpdate {
-  if ($Latest.Title -contains 'Fresh') {
+  if ($Latest.Title -like '*Fresh*') {
     cp "$PSScriptRoot\README.fresh.md" "$PSScriptRoot\README.md" -Force
   } else {
     cp "$PSScriptRoot\README.still.md" "$PSScriptRoot\README.md" -Force
@@ -63,4 +63,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -NoCheckChocoVersion
+update
