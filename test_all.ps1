@@ -20,8 +20,31 @@ if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
 }
 
 $options = [ordered]@{
-    Force = $true
-    Push = $false
+    Force   = $true
+    Push    = $false
+    Threads = 10 
+
+    IgnoreOn = @(                                      #Error message parts to set the package ignore status
+        'Could not create SSL/TLS secure channel'
+        'Could not establish trust relationship'
+        'The operation has timed out'
+        'Internal Server Error'
+        'Service Temporarily Unavailable'
+        'Choco pack failed with exit code 1'
+    )
+
+    RepeatOn = @(                                      #Error message parts on which to repeat package updater
+        'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
+        'Could not establish trust relationship'              # -||-
+        'Unable to connect'
+        'The remote name could not be resolved'
+        'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-coreteampackages/issues/721
+        'The operation has timed out'
+        'Internal Server Error'
+        'An exception occurred during a WebClient request'
+    )
+    #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
+    #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
 
     Report = @{
         Type = 'markdown'                                   #Report type: markdown or text
