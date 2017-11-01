@@ -17,10 +17,11 @@ function drpbx-builds {
         foreach($G in $_) {
             if ($G -match '([\d]{2}[\-]{1}[\d]{1,2}[\-]{1}[\d]{2})') {
                 $G = $G -replace($regex,$re_non) -replace($re_dash,$re_dot) -replace('New.',$re_non);
-					if (($G -ge $default) -and ($G -ge $testVersion)) { $build += $G; }
+					if (($G -ge $default) -and ($G -ge $testVersion)) { $build += $G + ";"; }
 					}
 			if (($build | measure).Count -ge '6') { $build = ($build | measure -Maximum).Maximum; break; }
             }
         }
-	return ($build | select -First 1)
+	
+	return ($build -split(";") | select -First 1)
 }
