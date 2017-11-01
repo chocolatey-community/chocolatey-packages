@@ -16,7 +16,7 @@ $packageArgs = @{
 Get-ChocolateyUnzip @packageArgs
 
 $packageArgs.Remove('file64')
-$packageArgs.file = Get-ChildItem -Path $packageArgs.destination -Filter "*.exe" | select -first 1
+$packageArgs.file = Get-ChildItem -Path $packageArgs.destination -Filter "*.exe" | select -first 1 -expand FullName
 
 Install-ChocolateyInstallPackage @packageArgs
 
