@@ -69,7 +69,7 @@ $Options = [ordered]@{
     }
 
     RunInfo = @{
-        Exclude = 'password', 'apikey'                      #Option keys which contain those words will be removed
+        Exclude = 'password', 'apikey', 'apitoken'          #Option keys which contain those words will be removed
         Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
     }
 
