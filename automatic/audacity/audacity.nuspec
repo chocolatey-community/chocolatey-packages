@@ -38,6 +38,7 @@ Audacity is free, open source, cross-platform software for recording and editing
     <projectSourceUrl>https://github.com/audacity/audacity</projectSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
