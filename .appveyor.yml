@@ -59,7 +59,6 @@ install:
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
     if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${chocoVersion}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg" }
     cup chocolatey --source ${env:nupkg_cache_path} --version $chocoVersion
-    }
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
