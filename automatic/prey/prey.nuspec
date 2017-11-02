@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>prey</id>
-    <version>1.7.0</version>
+    <version>1.7.2</version>
     <title>Prey</title>
     <owners>chocolatey</owners>
     <authors>Fork Ltd</authors>
@@ -11,14 +11,15 @@
     <projectUrl>http://preyproject.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-Prey lets you keep track of your laptop, phone and tablet whenever stolen or missing – easily and all in one place. It’s lightweight, open source software that gives you full and remote control, 24/7.
+    <description><![CDATA[
+Prey lets you keep track of your laptop, phone and tablet whenever stolen or missing - easily and all in one place. It's lightweight, open source software that gives you full and remote control, 24/7.
 
-### Notes
+## Notes
 
 - To pass your `API_KEY` you can use `choco install prey -y -ia "'/API_KEY=foobarr123'`
 - You may need to run `C:\Windows\Prey\current\bin\prey config gui -f` after installation to configure Prey.
-    </description>
+
+]]></description>
     <summary>Prey is a lightweight application to track a laptop or mobile if it gets stolen or missing.</summary>
     <releaseNotes>https://github.com/prey/prey-node-client/releases</releaseNotes>
     <copyright />
