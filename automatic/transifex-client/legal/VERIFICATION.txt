@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://github.com/transifex/transifex-client/releases/latest>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.12.4/tx-32.exe>
+  64-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.12.4/tx-64.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: C5ABA27ACCC1EBF42502FA0C98EB70046287711EE122AB6F7879E4939020F662
+  checksum64: 8077B50F342E90810CD02E8BFC21D429AFBADB00D8C273769E2EC038D2551EAA
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/transifex/transifex-client/blob/master/LICENSE>
