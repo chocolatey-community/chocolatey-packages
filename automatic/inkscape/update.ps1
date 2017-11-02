@@ -1,6 +1,7 @@
 import-module au
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://inkscape.org/en/download/windows'
+$domain = 'https://inkscape.org'
 
 function global:au_SearchReplace {
    @{
@@ -21,18 +22,24 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $redirUrl = Get-RedirectedUrl "$domain/en/release/"
 
-    $re      = '\.msi$'
-    $url     = $download_page.links | ? href -match $re | % href
-    $version = $url[0] -split '-|\.msi$' | select -last 1 -skip 1
-    @{
-        Version      = $version
-        URL32        = $url -notmatch 'x64' | select -First 1
-        URL64        = $url -match 'x64' | select -First 1
-        ReleaseNotes = $download_page.links | ? href -match 'release_notes' | % href | select -First 1
-        PackageName  = 'InkScape'
-    }
+  $version = $redirUrl -split '\/' | select -last 1 -skip 1
+
+  $32bit_page = Invoke-WebRequest "$redirUrl/windows/32-bit/msi/dl/" -UseBasicParsing
+  $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing
+
+  $re = '\.msi$'
+  $url32 = $32bit_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+  $url64 = $64bit_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+
+  @{
+    Version      = $version
+    URL32        = $url32
+    URL64        = $url64
+    ReleaseNotes = $redirUrl + "#left-column"
+    PackageName  = 'InkScape'
+  }
 }
 
 update
