@@ -5,10 +5,10 @@
     <id>audacity</id>
     <title>Audacity</title>
     <owners>chocolatey</owners>
-    <version>2.1.3</version>
+    <version>2.2.0</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>
-<description>
+<description><![CDATA[
 Audacity is free, open source, cross-platform software for recording and editing sounds.
 
 ## Features
@@ -21,7 +21,8 @@ Audacity is free, open source, cross-platform software for recording and editing
 - Add new effects with LADSPA plug-ins.
 - And more! See [full list of features](http://www.audacityteam.org/about/features).
 
-</description>
+
+]]></description>
     <projectUrl>http://audacityteam.org/</projectUrl>
     <tags>audacity admin audio dsp foss cross-platform</tags>
     <copyright></copyright>
