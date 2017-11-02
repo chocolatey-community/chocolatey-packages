@@ -20,10 +20,6 @@ $params = @{
   checksumType64 = 'sha256'
 }
 
-# If the package is only intended for the 32-bit version, only pass
-# the 32-bit version to the install package function.
-if ($packageName -match 32) {  'url64Bit', 'checksum64' | % $params.Remove($_) }
-
 Install-ChocolateyPackage @params
 Write-Host "Installed to '$installDir'"
 
