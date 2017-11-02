@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>transifex-client</id>
+    <version>0.12.4</version>
+    <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/transifex-client</packageSourceUrl>
+    <owners>AdmiringWorm</owners>
+    <title>Transifex Command-Line Tool</title>
+    <authors>The Transifex Team</authors>
+    <projectUrl>https://www.transifex.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/AdmiringWorm/chocolatey-packages/d76fc438bcba2205765942b3d59cd2f60aa6b2ca/icons/transifex-client.png</iconUrl>
+    <licenseUrl>https://github.com/transifex/transifex-client/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/transifex/transifex-client</projectSourceUrl>
+    <docsUrl>https://docs.transifex.com/client</docsUrl>
+    <bugTrackerUrl>https://github.com/transifex/transifex-client/issues</bugTrackerUrl>
+    <tags>transifex-client transifex translation cli cross-platform foss</tags>
+    <summary>The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.
+
+You can use the command line tool to create new resources, map locale files to translations, and synchronize your Transifex project with your local repository. Translators and localization managers can use it to handle large volumes of translation files. The Transifex Command-line Tool can help to enable continuous integration workflows and can be run from CI servers like Jenkins and Bamboo.
+]]></description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="python3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
