@@ -14,18 +14,37 @@ function global:au_SearchReplace {
     }
 }
 
+function GetStreams() {
+  param($releaseUrls)
+  $streams = @{ }
+
+  $releaseUrls | % {
+    $version = $_.InnerText -split ' ' | select -last 1
+    $versionTwoPart = $version -replace '([\d]+\.[\d]+).*',"`$1"
+
+    if ($streams.ContainsKey($versionTwoPart)) { return }
+
+    $download_page = Invoke-WebRequest -Uri "https://www.python.org$($_.href)" -UseBasicParsing
+
+    $url32 = $download_page.links | ? href -match "python\-[\d\.]+\.exe$" | select -first 1 -expand href
+    $url64 = $download_page.links | ? href -match "python\-[\d\.]+\-amd64\.exe$" | select -first 1 -expand href
+    if (!($url32) -and !($url64)) {
+      Write-Host "Installers are missing for version '$version', skipping..."
+      return;
+    }
+
+    $streams.Add($versionTwoPart, @{ URL32 = $url32 ; URL64 = $url64 ; Version = $version.ToString() })
+  }
+
+  return $streams
+}
+
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    $re      = '.exe'
-    $url     = $download_page.links | ? href -match $re | select -First 1
-    if ($url.InnerText -notmatch 'Download Python (3[\d\.]+)' ) { throw "Python version 3.x not found on $releases" }
+    $releaseUrls     = $download_page.links | ? { $_.href -match $re -and $_.InnerText -match "^Python 3\.[\d\.]+$" }
 
-    $url32   = $url.href
-    $url64   = $url32 -replace '.exe', '-amd64.exe'
-    $version = $url32 -split '-|.exe' | select -Last 1 -Skip 1
-
-    return @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    return @{ Streams = GetStreams $releaseUrls }
 }
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced by the virtual package python
