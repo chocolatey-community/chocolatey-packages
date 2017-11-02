@@ -44,7 +44,8 @@ environment:
     secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
 
   #Chocolatey version we want to use when checking for updates.
-  choco_version: '0.10.7'
+  choco_version: '0.10.8'
+  choco_version_pr: '0.10.3' # Should be kept to the version available one year ago
   nupkg_cache_path: C:\packages
 
 init:
@@ -54,11 +55,10 @@ init:
 
 install:
 - ps: |
-    if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) {
-      # We only want to update chocolatey if we're running a normal build, not during PR testing
-      if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
-      if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${env:choco_version}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${env:choco_version}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${env:choco_version}.nupkg" }
-      cup chocolatey --source ${env:nupkg_cache_path}
+    $chocoVersion = if (($Env.APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($ENV:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) { $Env:choco_version } else { $Env:choco_version_pr }
+    if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
+    if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${chocoVersion}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg" }
+    cup chocolatey --source ${env:nupkg_cache_path} --version $chocoVersion
     }
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
