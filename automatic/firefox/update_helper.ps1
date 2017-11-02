@@ -1,3 +1,4 @@
+import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $localeChecksumFile = 'LanguageChecksums.csv'
 
 function GetVersionAndUrlFormats() {
@@ -11,10 +12,11 @@ function GetVersionAndUrlFormats() {
 
   $re = "download.mozilla.*product=$Product.*&amp;os=win&amp;lang=en-US"
   $url = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $url = Get-RedirectedUrl $url
   $url = $url -replace 'en-US','${locale}' -replace '&amp;','&'
 
   $result = @{
-    Version = $url -split '[-&]' | select -last 1 -skip 3
+    Version = $url -split '\/' | select -last 1 -skip 3
     Win32Format = $url
   }
   if ($result.Version.EndsWith('esr')) {
