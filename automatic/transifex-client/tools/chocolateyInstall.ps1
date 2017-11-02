@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
-$32bitExec = "$toolsPath\tx-32.exe"
-$64bitExec = "$toolsPath\tx-64.exe"
+$32bitExec = "$toolsPath\tx.py35.exe"
+$64bitExec = "$toolsPath\tx.py35.x64.exe"
 $destination = "$toolsPath\tx.exe"
 
 if (Test-Path $destination) { Remove-Item -Force $destination }
