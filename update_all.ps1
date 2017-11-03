@@ -11,7 +11,7 @@ $Options = [ordered]@{
     UpdateTimeout = 1200                                    #Update timeout in seconds
     Threads       = 10                                      #Number of background jobs to use
     Push          = $Env:au_Push -eq 'true'                 #Push to chocolatey
-    PushAll       = $true
+    PushAll       = $true                                   #Allow to push multiple packages at once
     PluginPath    = ''                                      #Path to user plugins
     IgnoreOn      = @(                                      #Error message parts to set the package ignore status
       'Could not create SSL/TLS secure channel'
@@ -93,11 +93,14 @@ $Options = [ordered]@{
         param($PackageName, $Options )
         . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
 
-        $p = $Options.ForcedPackages | ? { $_ -match "^${PackageName}(?:\:(.+))*$" }
+        $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
+        $p = $Options.ForcedPackages | ? { $_ -match $pattern }
         if (!$p) { return }
 
+        $p -match $pattern
         $global:au_Force   = $true
-        $global:au_Version = ($p -split ':')[1]
+        $global:au_Include = $Matches['stream']
+        $global:au_Version = $Matches['version']
     }
 }
 
