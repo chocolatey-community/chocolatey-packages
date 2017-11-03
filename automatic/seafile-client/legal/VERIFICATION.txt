@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.seafile.com/en/download/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.seadrive.org/seafile-6.1.2-en.msi>
+1. Download the following <https://download.seadrive.org/seafile-6.1.3-en.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 7639AB2D5165CE7D2921C6B1036B14114514631F146ECD196D37FE12BF2D8EF8
+  checksum: 5C01AB14FB7C041A2801DE88F95CED0C2EDD1D0846A9469A503E67D8AEC12C76
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/haiwen/seafile-client/blob/fc82bff33d5c13f7534e95d36840b3cf0c7515f1/LICENSE>
