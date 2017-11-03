@@ -1,4 +1,7 @@
-﻿. $PSScriptRoot\..\nodejs.install\update.ps1
+﻿[CmdletBinding()]
+param($Include, [switch] $Force)
+
+. $PSScriptRoot\..\nodejs.install\update.ps1
 
 function global:au_SearchReplace {
   @{
@@ -8,4 +11,4 @@ function global:au_SearchReplace {
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -Include $Include -Force:$Force

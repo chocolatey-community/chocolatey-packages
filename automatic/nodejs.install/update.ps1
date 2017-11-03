@@ -1,4 +1,7 @@
-﻿import-module au
+﻿[CmdletBinding()]
+param($Include, [switch] $Force)
+
+import-module au
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if the script is not sourced
   function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix -Purge }
@@ -45,11 +48,9 @@ function global:au_GetLatest {
     $versionTwoPart = $version -replace '(^\d+\.\d+).*',"`$1"
     if ($streams.ContainsKey($versionTwoPart)) { return ; }
 
-    $url64 = $msis | ? { $msis -match "-x64" } | select -first 1
-    if (!$url64) {
-      Write-Error "No 64bit url was found for version '$version', skipping..."
-      return
-    }
+    $url64 = $msis | ? { $_ -match "\-x64" } | select -first 1
+
+    if ($url32 -eq $url64) { throw "The 64bit executable is the same as the 32bit" }
 
     $streams.Add($versionTwoPart, @{ Version = $version ; URL32 = $url32; URL64 = $url64 } )
   }
@@ -58,5 +59,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
-  update -ChecksumFor none
+  update -ChecksumFor none -Include $Include -Force:$Force
 }
