@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>msys2</id>
-    <version>20160719.1.1</version>
+    <version>20161025.0.0</version>
     <title>MSYS2</title>
     <authors>Alexpux, martell, mingwandroid, elieux, renatosilva, niXman</authors>
-    <owners>userzimmermann, petemounce</owners>
+    <owners>chocolatey, userzimmermann, petemounce</owners>
     <licenseUrl>https://github.com/userzimmermann/choco-packages/blob/master/msys2/NOTICE</licenseUrl>
     <projectUrl>http://msys2.github.io</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/userzimmermann/choco-packages/master/.icons/msys2.ico</iconUrl>
+    <iconUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/icons/msys2.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>**From** https://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/ :
+    <description><![CDATA[>**From** https://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/ :
 
 "MSYS2 is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software."
 
@@ -28,13 +28,14 @@ The MSYS2 archive will be extracted to Chocolatey's **BinRoot** (usually **C:\\T
 
 MSYS2 itself will not be removed on uninstalling the Chocolatey package and will not be downloaded and extracted again (even if the MSYS2 archive version has changed) on updating or reinstalling the Chocolatey package. The existing MSYS2 will just be updated with Pacman.
 
-Chocolatey MSYS2 offers an extra **msystem.bat** script in its package folder (which will also be appended to `%PATH%`). The script can be used to activate and switch **MSYS**, **MINGW32**, and **MINGW64** environments inside a CMD shell without running Bash. It will prepend the appropriate **bin\\** folders to `%PATH%`. **MSYS** mode additionally provides **bash.bat** and **pacman.bat** wrapper scripts and according auto-completion scripts for Clink. Call `msystem /?` after installation or look at the top of the script file for more details. These extra features and even more (like better integration with other shell environments, a better **bash.bat**, and more wrapper scripts for tools like `makepkg`, ..., and an according PowerShell module) will be moved from the Chocolatey MSYS2 package to separate projects, which will then be installable as MSYS2 packages, of course auto-installed by Chocolatey MSYS2 :)</description>
+Chocolatey MSYS2 offers an extra **msystem.bat** script in its package folder (which will also be appended to `%PATH%`). The script can be used to activate and switch **MSYS**, **MINGW32**, and **MINGW64** environments inside a CMD shell without running Bash. It will prepend the appropriate **bin\\** folders to `%PATH%`. **MSYS** mode additionally provides **bash.bat** and **pacman.bat** wrapper scripts and according auto-completion scripts for Clink. Call `msystem /?` after installation or look at the top of the script file for more details. These extra features and even more (like better integration with other shell environments, a better **bash.bat**, and more wrapper scripts for tools like `makepkg`, ..., and an according PowerShell module) will be moved from the Chocolatey MSYS2 package to separate projects, which will then be installable as MSYS2 packages, of course auto-installed by Chocolatey MSYS2 :)
+]]></description>
     <summary>A Cygwin-derived software distro for Windows using Arch Linux's Pacman</summary>
     <releaseNotes>https://github.com/userzimmermann/choco-packages/blob/master/msys2/CHANGES.md</releaseNotes>
     <copyright>MSYS2 Copyright (c) 2013, Алексей</copyright>
-    <tags>msys2 msys cygwin mingw w64 gnu linux unix posix arch pacman bash makepkg gcc cmd clink powershell posh</tags>
+    <tags>msys2 msys cygwin mingw gnu linux unix posix arch pacman bash makepkg gcc shell cli foss development</tags>
     <projectSourceUrl>https://github.com/Alexpux/MSYS2-packages</projectSourceUrl>
-    <packageSourceUrl>https://github.com/userzimmermann/choco-packages/tree/master/msys2</packageSourceUrl>
-    <docsUrl>https://sourceforge.net/p/msys2/wiki</docsUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/msys2</packageSourceUrl>
+    <docsUrl>https://github.com/msys2/msys2/wiki</docsUrl>
   </metadata>
 </package>
