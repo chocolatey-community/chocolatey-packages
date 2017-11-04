@@ -8,7 +8,7 @@ $pp = Get-PackageParameters
 if (!$pp.InstallDir) { $pp.InstallDir =  "{0}\{1}" -f (Get-ToolsLocation), $dir_name  }
 $install_dir = $pp.InstallDir
 
-if (!(Test-Path $pp.InstallDir)) {
+if (!(Test-Path $install_dir)) {
     Write-Host "Installing to:" $install_dir
     $packageArgs = @{
         PackageName    = $Env:ChocolateyPackageName
@@ -24,7 +24,7 @@ if (!(Test-Path $pp.InstallDir)) {
     rm "$install_dir\*.tar" -ea 0
     $tardir = gi "$install_dir\msys*"
     mv $tardir\* $install_dir; rm $tardir
-} else { Write-Host "'$($pp.InstallDir)' already exists and will only be updated." }
+} else { Write-Host "'$install_dir' already exists and will only be updated." }
 
 #https://github.com/msys2/msys2/wiki/MSYS2-installation
 Write-Host "Starting initialization via msys2_shell.cmd"
