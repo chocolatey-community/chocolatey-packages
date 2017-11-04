@@ -15,18 +15,20 @@ It features a package management system to provide easy installation of packages
 ## Notes
 
 - MSYS2 itself will not be installed again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. Manually delete the installation folder to force complete reinstallation.
-- This package contains extra scripts in package directory **extra** folder for historical reasons. For more details see its README.md. 
 
 ### Ruby integration
 
 This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems. 
 
-The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`). Its system update is the same as initialization done with this package (`ridk install 2`). Besides this, ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`). 
+- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`). 
+- Its system update is the same as initialization done with this package (`ridk install 2`). 
+- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`). 
 
-You can also just install the msys2 package without initialization and use `ridk` afterwards:
+You can also just install the msys2 package without system update and use `ridk` afterwards:
 
 ```powershell
-cinst ruby                      # install ruby
-cinst msys2 --params "/NoInit"  # install msys2 without system update
-ridk install 2 3                # use ruby's ridk to update the system and install development toolchain
+cinst ruby                        # install ruby
+cinst msys2 --params "/NoUpdate"  # install msys2 without system update
+Update-SessionEnvironment         # refresh environment vars
+ridk install 2 3                  # use ruby's ridk to update the system and install development toolchain
 ```
