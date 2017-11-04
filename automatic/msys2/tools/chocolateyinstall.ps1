@@ -26,26 +26,21 @@ if (!(Test-Path $pp.InstallDir)) {
     mv $tardir\* $install_dir; rm $tardir
 } else { Write-Host "'$($pp.InstallDir)' already exists and will only be updated." }
 
+#https://github.com/msys2/msys2/wiki/MSYS2-installation
+Write-Host "Starting initialization via msys2_shell.cmd"
+Start-Process "$install_dir\msys2_shell.cmd" -Wait -ArgumentList '-c', exit
+
 if (!$pp.NoPath) {  Install-ChocolateyPath $pp.InstallDir }
 
 if (!$pp.NoInit) {
-    #https://github.com/msys2/msys2/wiki/MSYS2-installation
-    Write-Host "Starting initialization"
-
-    cp $toolsDir\update.sh $install_dir
-
-    Write-Host "Running: msys2_shell.cmd"
-    Start-Process "$install_dir\msys2_shell.cmd" -Wait -ArgumentList '-c', exit
-
     Write-Host "Repeating system update until there are no more updates or max 5 iterations"
-
-    sal bash "$install_dir\usr\bin\bash.exe"
     $ErrorActionPreference = 'Continue'     #otherwise bash warnings will exit
-    $i = 0    
+    sal bash "$install_dir\usr\bin\bash.exe"
     while (!$done) {
-        write-host ('='*80) "`n SYSTEM UPDATE" (++$i) ( "`n" + '='*80) 
-        bash -lc '. /update.sh'
-        $done = ((gc $install_dir\update.log) -match 'there is nothing to do' | Measure | % Count) -eq 2
+        Write-Host "`n================= SYSTEM UPDATE $((++$i)) =================`n"
+        bash -lc 'pacman --noconfirm -Syuu | tee /update.log'
+        $done = (gc $install_dir\update.log) -match 'there is nothing to do' | Measure | % { $_.Count -eq 2 }
         $done = $done -or ($i -ge 5)
     }
+    rm $install_dir\update.log -ea 0
 }
