@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>apache-httpd</id>
-    <version>2.4.28.20171020</version>
+    <version>2.4.29</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
     <owners>chocolatey</owners>
@@ -30,6 +30,8 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
 * `/installLocation` - Intstall to a different destination folder. Default: `$Env:AppData\Apache*`
 * `/serviceName` - The name of the windows service which will be create. Default: `Apache`
 * `/port` - The port Apache will listen to. Default: `80`
+
+Example: `choco install apache-httpd --params '"/installLocation:C:\HTTPD /port:433"'`
 
 ## Notes
 
