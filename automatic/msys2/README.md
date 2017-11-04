@@ -1,4 +1,4 @@
-# <img src="" width="48" height="48"/> [](https://chocolatey.org/packages/msys2)
+# <img src="" width="48" height="48"/> [msys2](https://chocolatey.org/packages/msys2)
 
 MSYS2 is a software distro and building platform for Windows.
 
