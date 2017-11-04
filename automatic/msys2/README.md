@@ -1,21 +1,20 @@
 # <img src="" width="48" height="48"/> [](https://chocolatey.org/packages/msys2)
 
->**From** https://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/ :
+MSYS2 is a software distro and building platform for Windows.
 
-"MSYS2 is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software."
+At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX compatibility layer) and MinGW-w64 with the aim of better interoperability with native Windows software. It provides a bash shell, Autotools, revision control systems and the like for building native Windows applications using MinGW-w64 toolchains.
 
-You should read the full [official introduction](http://sourceforge.net/p/msys2/wiki/MSYS2%20introduction/) before using MSYS2.
+It features a package management system to provide easy installation of packages, Pacman. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.
 
-**Chocolatey MSYS2** is not affiliated with the MSYS2 project and does not include a copy of MSYS2. It just automatically downloads and installs MSYS2 and adds some extra tools for better integration into CMD shell (and PowerShell in future releases).
+## Package parameters
 
-### NOTES
+- `/InstallDir` - Path to installation directory, by default msys will be installed in `Get-ToolsLocation`.
+- `/NoPath`     - Do not add msys installation directory to system PATH.
+- `/NoInit`     - Do not automatically initialize and update with Pacman according to the [official instructions](https://msys2.github.io).
 
-The Chocolatey MSYS2 versioning scheme uses the current MSYS2 archive version as first component and tracks further changes in the Chocolatey package with the second and third component.
+## Notes
 
-Chocolatey MSYS2 automatically installs either 32bit or 64bit MSYS2. It does NOT work with `choco install -x86` (forced 32bit installation) under 64bit Windows. There is usually no need to install a 32bit MSYS2 under 64bit Windows, because MSYS2 always contains a MINGW32 and a MINGW64 environment.
-
-The MSYS2 archive will be extracted to Chocolatey's **BinRoot** (usually **C:\\Tools\\**). The 32bit variant uses an **msys32\\** root folder and the 64bit variant uses **msys64\\** respectively. The MSYS2 root folder will be appended to `%PATH%`. It contains the **msys2\_shell.bat**, **mingw32\_shell.bat**, and **mingw64\_shell.bat** scripts. No **bin\\** folders will be added to `%PATH%`. After unpacking, MSYS2 will be automatically initialized and updated with Pacman according to the [official instructions](https://msys2.github.io).
-
-MSYS2 itself will not be removed on uninstalling the Chocolatey package and will not be downloaded and extracted again (even if the MSYS2 archive version has changed) on updating or reinstalling the Chocolatey package. The existing MSYS2 will just be updated with Pacman.
-
-Chocolatey MSYS2 offers an extra **msystem.bat** script in its package folder (which will also be appended to `%PATH%`). The script can be used to activate and switch **MSYS**, **MINGW32**, and **MINGW64** environments inside a CMD shell without running Bash. It will prepend the appropriate **bin\\** folders to `%PATH%`. **MSYS** mode additionally provides **bash.bat** and **pacman.bat** wrapper scripts and according auto-completion scripts for Clink. Call `msystem /?` after installation or look at the top of the script file for more details. These extra features and even more (like better integration with other shell environments, a better **bash.bat**, and more wrapper scripts for tools like `makepkg`, ..., and an according PowerShell module) will be moved from the Chocolatey MSYS2 package to separate projects, which will then be installable as MSYS2 packages, of course auto-installed by Chocolatey MSYS2 :)
+- This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems. The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`). Its system update is the same as initialization done with this package (`ridk install 2`). Besides this, ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`). Both can be installed in single command with `ridk install 2 3`.
+- MSYS2 itself will not be downloaded and extracted again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. You need to manually delete the installation folder to force complete reinstallation.
+- Pacman update log is saved in the root under `update_full.log`
+- This package also contains an extra scripts in package directory **extra** folder. For more details see its README.md. 
