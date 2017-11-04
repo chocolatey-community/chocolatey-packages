@@ -10,7 +10,7 @@ It features a package management system to provide easy installation of packages
 
 - `/InstallDir` - Path to installation directory, by default msys will be installed in `Get-ToolsLocation`.
 - `/NoPath`     - Do not add msys installation directory to system PATH.
-- `/NoInit`     - Do not automatically initialize and update with Pacman according to the [official instructions](https://msys2.github.io).
+- `/NoUpdate`   - Do not automatically update with Pacman according to the [official instructions](https://msys2.github.io).
 
 ## Notes
 

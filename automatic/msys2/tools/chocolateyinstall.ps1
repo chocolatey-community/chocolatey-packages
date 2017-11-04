@@ -32,7 +32,7 @@ Start-Process "$install_dir\msys2_shell.cmd" -Wait -ArgumentList '-c', exit
 
 if (!$pp.NoPath) {  Install-ChocolateyPath $pp.InstallDir }
 
-if (!$pp.NoInit) {
+if (!$pp.NoUpdate) {
     Write-Host "Repeating system update until there are no more updates or max 5 iterations"
     $ErrorActionPreference = 'Continue'     #otherwise bash warnings will exit
     sal bash "$install_dir\usr\bin\bash.exe"
