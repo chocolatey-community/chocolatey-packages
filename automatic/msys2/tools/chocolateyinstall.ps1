@@ -7,6 +7,7 @@ $dir_name = if ($is64) { 'msys64' } else { 'msys32' }
 $pp = Get-PackageParameters
 if (!$pp.InstallDir) { $pp.InstallDir =  "{0}\{1}" -f (Get-ToolsLocation), $dir_name  }
 $install_dir = $pp.InstallDir
+$pp | Export-Clixml $toolsDir\pp.xml
 
 if (!(Test-Path $install_dir)) {
     Write-Host "Installing to:" $install_dir
