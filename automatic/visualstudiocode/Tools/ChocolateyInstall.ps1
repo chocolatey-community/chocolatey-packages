@@ -12,6 +12,8 @@ $mergeTasks += ', ' + '!'*$pp.DontAddToPath        + 'addtopath'
 Write-Host "Merge Tasks: `n$mergeTasks"
 
 ps code -ea 0 | % { $_.CloseMainWindow() | Out-Null }
+sleep 1
+ps code -ea 0 | kill  #in case gracefull shutdown did not succeed, try hard kill
 
 $packageArgs = @{
   packageName    = 'visualstudiocode'
