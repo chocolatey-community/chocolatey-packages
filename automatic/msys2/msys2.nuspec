@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>msys2</id>
-    <version>0.0</version>
+    <version>20161025.0.0</version>
     <title>MSYS2</title>
     <authors>Alexpux, martell, mingwandroid, elieux, renatosilva, niXman</authors>
     <owners>chocolatey, userzimmermann, petemounce</owners>
     <licenseUrl>https://github.com/userzimmermann/choco-packages/blob/master/msys2/NOTICE</licenseUrl>
     <projectUrl>http://msys2.github.io</projectUrl>
-    <iconUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/icons/msys2.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[MSYS2 is a software distro and building platform for Windows.
 
@@ -28,11 +28,11 @@ It features a package management system to provide easy installation of packages
 
 ### Ruby integration
 
-This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems.
+This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems. 
 
-- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`).
-- Its system update is the same as initialization done with this package (`ridk install 2`).
-- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`).
+- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`). 
+- Its system update is the same as initialization done with this package (`ridk install 2`). 
+- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`). 
 
 You can also just install the msys2 package without system update and use `ridk` afterwards:
 
