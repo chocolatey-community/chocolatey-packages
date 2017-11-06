@@ -28,11 +28,11 @@ It features a package management system to provide easy installation of packages
 
 ### Ruby integration
 
-This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems. 
+This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems.
 
-- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`). 
-- Its system update is the same as initialization done with this package (`ridk install 2`). 
-- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`). 
+- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`).
+- Its system update is the same as initialization done with this package (`ridk install 2`).
+- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`).
 
 You can also just install the msys2 package without system update and use `ridk` afterwards:
 
@@ -44,7 +44,6 @@ ridk install 2 3                  # use ruby's ridk to update the system and ins
 ```
 ]]></description>
     <summary>A Cygwin-derived software distro for Windows using Arch Linux's Pacman</summary>
-    <releaseNotes>https://github.com/userzimmermann/choco-packages/blob/master/msys2/CHANGES.md</releaseNotes>
     <copyright>MSYS2 Copyright (c) 2013, Алексей</copyright>
     <tags>msys2 msys cygwin mingw gnu linux unix posix arch pacman bash makepkg gcc shell cli foss development</tags>
     <projectSourceUrl>https://github.com/Alexpux/MSYS2-packages</projectSourceUrl>
