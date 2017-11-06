@@ -54,11 +54,10 @@ function GetStillVersions() {
 }
 
 function global:au_GetLatest {
-  $streams = @{ }
-  $fresh = GetFreshVersion
-  $still = GetStillVersions
-  $streams.Add((Get-Version $fresh.Version).ToString(2), $fresh)
-  $streams.Add((Get-Version $still.Version).ToString(2), $still)
+  $streams = [ordered] @{
+    fresh = GetFreshVersion
+    still = GetStillVersions
+  }
 
   return @{ Streams = $streams }
 }
