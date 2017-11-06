@@ -86,7 +86,7 @@ Chocolatey extension [chocolatey-core.extension](https://github.com/chocolatey/c
 ### 1.1.8 Set `softwareName`
 
 If the package uses [Install-ChocolateyPackage](https://github.com/chocolatey/choco/wiki/HelpersInstallChocolateyPackage)
-`softwareName` should be set to represent software _Display Name_ correctly. You can use [myuninstaller](https://chocolatey.org/packages/myuninst) package to quickly determine it. 
+`softwareName` should be set to represent software _Display Name_ correctly. You can use [myuninstaller](https://chocolatey.org/packages/myuninst) package to quickly determine it (it's called _Entry Name_ here). 
 
 This information is used for the licensed edition of chocolatey to detect if the software is installed (Business edition) and when the software have been uninstalled (Pro edition).
 
