@@ -1,0 +1,3 @@
+This utilities package is released as freeware, which means that you can freely use it at your home or in your company.
+The only exception is NK2Edit utility, which requires to purchase a commercial license if you use it in a company/business organization.
+Disclaimer: The software package is provided "AS IS" without any warranty, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The author will not be liable for any special, incidental, consequential or indirect damages due to loss of data or any other reason.
