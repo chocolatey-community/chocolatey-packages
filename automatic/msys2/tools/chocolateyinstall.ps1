@@ -27,6 +27,8 @@ if (!(Test-Path $install_dir)) {
     mv $tardir\* $install_dir; rm $tardir
 } else { Write-Host "'$install_dir' already exists and will only be updated." }
 
+if ($proxy = Get-EffectiveProxy) { $Env:http_proxy = $Env:https_proxy = $proxy }
+
 #https://github.com/msys2/msys2/wiki/MSYS2-installation
 Write-Host "Starting initialization via msys2_shell.cmd"
 Start-Process "$install_dir\msys2_shell.cmd" -Wait -ArgumentList '-c', exit

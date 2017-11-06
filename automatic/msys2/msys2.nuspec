@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>msys2</id>
-    <version>20161025.0.0.20171104</version>
+    <version>20161025.0.0.20171106</version>
     <title>MSYS2</title>
     <authors>Alexpux, martell, mingwandroid, elieux, renatosilva, niXman</authors>
     <owners>chocolatey, userzimmermann, petemounce</owners>
@@ -16,13 +16,32 @@ At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX com
 
 It features a package management system to provide easy installation of packages, Pacman. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.
 
-## NOTES
+## Package parameters
 
-The MSYS2 archive will be extracted to Chocolatey's **BinRoot** (usually **C:\\Tools\\**). The 32bit variant uses an **msys32\\** root folder and the 64bit variant uses **msys64\\** respectively. The MSYS2 root folder will be appended to `%PATH%`. It contains the **msys2\_shell.bat**, **mingw32\_shell.bat**, and **mingw64\_shell.bat** scripts. No **bin\\** folders will be added to `%PATH%`. After unpacking, MSYS2 will be automatically initialized and updated with Pacman according to the [official instructions](https://msys2.github.io).
+- `/InstallDir` - Path to installation directory, by default msys will be installed in `Get-ToolsLocation`.
+- `/NoPath`     - Do not add msys installation directory to system PATH.
+- `/NoUpdate`   - Do not automatically update with Pacman according to the [official instructions](https://msys2.github.io).
 
-MSYS2 itself will not be removed on uninstalling the Chocolatey package and will not be downloaded and extracted again (even if the MSYS2 archive version has changed) on updating or reinstalling the Chocolatey package. The existing MSYS2 will just be updated with Pacman.
+## Notes
 
-Chocolatey MSYS2 offers an extra **msystem.bat** script in its package folder (which will also be appended to `%PATH%`). The script can be used to activate and switch **MSYS**, **MINGW32**, and **MINGW64** environments inside a CMD shell without running Bash. It will prepend the appropriate **bin\\** folders to `%PATH%`. **MSYS** mode additionally provides **bash.bat** and **pacman.bat** wrapper scripts and according auto-completion scripts for Clink. Call `msystem /?` after installation or look at the top of the script file for more details. These extra features and even more (like better integration with other shell environments, a better **bash.bat**, and more wrapper scripts for tools like `makepkg`, ..., and an according PowerShell module) will be moved from the Chocolatey MSYS2 package to separate projects, which will then be installable as MSYS2 packages, of course auto-installed by Chocolatey MSYS2 :)
+- MSYS2 itself will not be installed again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. Manually delete the installation folder to force complete reinstallation.
+
+### Ruby integration
+
+This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems.
+
+- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`).
+- Its system update is the same as initialization done with this package (`ridk install 2`).
+- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`).
+
+You can also just install the msys2 package without system update and use `ridk` afterwards:
+
+```powershell
+cinst ruby                        # install ruby
+cinst msys2 --params "/NoUpdate"  # install msys2 without system update
+Update-SessionEnvironment         # refresh environment vars
+ridk install 2 3                  # use ruby's ridk to update the system and install development toolchain
+```
 ]]></description>
     <summary>A Cygwin-derived software distro for Windows using Arch Linux's Pacman</summary>
     <releaseNotes>https://github.com/userzimmermann/choco-packages/blob/master/msys2/CHANGES.md</releaseNotes>
@@ -32,7 +51,8 @@ Chocolatey MSYS2 offers an extra **msystem.bat** script in its package folder (w
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/msys2</packageSourceUrl>
     <docsUrl>https://github.com/msys2/msys2/wiki</docsUrl>
     <dependencies>
-      <dependency id="chocolatey" version="0.10.8" />     
+      <dependency id="chocolatey" version="0.10.8" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>
