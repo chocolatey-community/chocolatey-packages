@@ -24,6 +24,7 @@ if (!(Test-Path $install_dir)) {
     Get-ChocolateyUnzip $tarFile $install_dir
     rm "$install_dir\*.tar" -ea 0
     $tardir = gi "$install_dir\msys*"
+    if ([String]::IsNullOrWhiteSpace($tardir)) { throw "Can't find msys* directory from tar archive" }
     mv $tardir\* $install_dir; rm $tardir
 } else { Write-Host "'$install_dir' already exists and will only be updated." }
 
