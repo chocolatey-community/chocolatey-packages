@@ -4,7 +4,7 @@
   <metadata>
     <id>SourceTree</id>
     <title>SourceTree</title>
-    <version>2.3.1.0</version>
+    <version>2.3.5.0</version>
     <authors>Atlassian</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://www.sourcetreeapp.com</projectUrl>
@@ -15,8 +15,8 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sourcetree</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Harness the power of Git and Hg in a beautifully simple application</summary>
-    <description>
-A free visual Git and Hg client for Mac and Windows
+    <description><![CDATA[
+A free visual Git and Hg client for Mac and Windows.
 
 SourceTree simplifies how you interact with your Git and Mercurial repositories so you can focus on coding. Visualize and manage your repositories through SourceTree's simple interface.
 
@@ -33,9 +33,9 @@ SourceTree simplifies how you interact with your Git and Mercurial repositories 
 
 ## Notes
 
-This package installs the current version in General Availability.
-For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
-</description>
+- This package installs the current version in General Availability.For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
+
+]]></description>
     <releaseNotes>https://www.sourcetreeapp.com/update/WindowsReleaseNotes.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>
   </metadata>
