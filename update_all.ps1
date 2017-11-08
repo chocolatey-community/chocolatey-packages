@@ -1,6 +1,6 @@
 # AU Packages Template: https://github.com/majkinetor/au-packages-template
 
-param([string] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
+param([string[]] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 
@@ -97,7 +97,6 @@ $Options = [ordered]@{
         $p = $Options.ForcedPackages | ? { $_ -match $pattern }
         if (!$p) { return }
 
-        $p -match $pattern
         $global:au_Force   = $true
         $global:au_Include = $Matches['stream']
         $global:au_Version = $Matches['version']
