@@ -26,7 +26,7 @@ function GetStreams() {
 
   $releaseUrls | % {
     $version = $_.InnerText.Trim() -split ' ' | select -Index 1
-    if ($version -match '[a-z]') { Write-Host "Skipping prerelease: '$version'"; return }
+    #if ($version -match '[a-z]') { Write-Host "Skipping prerelease: '$version'"; return }
     $versionTwoPart = $version -replace '([\d]+\.[\d]+).*',"`$1"
 
     if ($streams.$versionTwoPart) { return }
@@ -42,7 +42,7 @@ function GetStreams() {
         $url32 = 'https://www.python.org' + $url32
         $url64 = 'https://www.python.org' + $url64
     }
-    $streams.$versionTwoPart = @{ URL32 = $url32 ; URL64 = $url64 ; Version = $version }
+    $streams.$versionTwoPart = @{ URL32 = $url32 ; URL64 = $url64 ; Version = Get-Version $version }
   }
 
   Write-Host $streams.Count 'streams collected'
