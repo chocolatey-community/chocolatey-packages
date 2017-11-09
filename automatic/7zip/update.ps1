@@ -21,7 +21,7 @@ function global:au_GetLatest {
 
   $url32 = $URLS | ? { $_ -notmatch "x64" } | select -first 1
   $url64 = $URLS | ? { $_ -match "x64" } | select -first 1
-  $url_extra = $download_page.links | ? href -match "7z.*extra\.7z" | select -first 1 -expand href
+  $url_extra = $download_page.links | ? href -match "7z$($version -replace '\.','')\-extra\.7z" | select -first 1 -expand href
 
   @{
     URL32     = $domain + $url32
