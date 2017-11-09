@@ -1,5 +1,5 @@
 ﻿[CmdletBinding()]
-param($Include, [switch] $Force)
+param($IncludeStream, [switch] $Force)
 
 import-module au
 
@@ -59,5 +59,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
-  update -ChecksumFor none -Include $Include -Force:$Force
+  update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
 }
