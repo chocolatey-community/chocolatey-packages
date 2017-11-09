@@ -24,7 +24,8 @@ function GetStreams() {
 
     if ($streams.ContainsKey($versionTwoPart)) { return }
 
-    $download_page = Invoke-WebRequest -Uri "https://www.python.org$($_.href)" -UseBasicParsing
+    $baseUrl = [uri] "https://www.python.org$($_.href)"
+    $download_page = Invoke-WebRequest -Uri $baseUrl -UseBasicParsing
 
     $url32 = $download_page.links | ? href -match "python\-[\d\.]+\.msi$" | select -first 1 -expand href
     $url64 = $download_page.links | ? href -match "python\-[\d\.]+\.amd64\.msi$" | select -first 1 -expand href
@@ -32,6 +33,9 @@ function GetStreams() {
       Write-Host "Installers are missing for version '$version', skipping..."
       return;
     }
+    if (!$url64) { $url64 = $url32 }
+    $url32 = [uri]::new($baseUrl, $url32).ToString()
+    $url64 = [uri]::new($baseUrl, $url64).ToString()
 
     $streams.Add($versionTwoPart, @{ URL32 = $url32 ; URL64 = $url64 ; Version = $version.ToString() })
   }
