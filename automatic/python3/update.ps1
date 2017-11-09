@@ -18,7 +18,7 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
+function global:au_BeforeUpdate { rm tools\*.msi, tools\*.exe; Get-RemoteFiles -Purge }
 
 function GetStreams() {
   param($releaseUrls)
