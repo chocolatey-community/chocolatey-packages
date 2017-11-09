@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3</id>
-    <version>3.6.3</version>
+    <version>3.5.4</version>
     <title>Python 3.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
@@ -31,8 +31,12 @@ For example: `--params '"/InstallDir:C:\tools\python2"'`
     <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/python3</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />  
   </files>
 </package>
