@@ -18,7 +18,7 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { rm tools\*.msi, tools\*.exe; Get-RemoteFiles -Purge }
+function global:au_BeforeUpdate { rm tools\*.msi, tools\*.exe -ea 0; Get-RemoteFiles -Purge }
 
 function GetStreams() {
   param($releaseUrls)
@@ -35,10 +35,10 @@ function GetStreams() {
 
     $url32 = $download_page.links | ? href -match "python-.+.(exe|msi)$" | select -first 1 -expand href
     $url64 = $download_page.links | ? href -match "python-.+amd64\.(exe|msi)$" | select -first 1 -expand href
-    if (!$url32 -or !$url64) { 
+    if (!$url32 -or !$url64) {
         Write-Host "Skipping due to missing installer: '$version'"; return }
 
-    if (!$url32.StartsWith('http')) { 
+    if (!$url32.StartsWith('http')) {
         $url32 = 'https://www.python.org' + $url32
         $url64 = 'https://www.python.org' + $url64
     }
