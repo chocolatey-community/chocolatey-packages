@@ -66,5 +66,6 @@ See detailed nomacs [features page](http://nomacs.org/features/).
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
