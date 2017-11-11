@@ -28,7 +28,7 @@ function global:au_GetLatest {
     $version = $url -split '-|\.zip' | select -Last 1 -Skip 1
     @{
         Version      = $version
-        URL32        = 'http://download.nomacs.org/nomacs-setup.exe'
+        URL32        = 'http://download.nomacs.org/nomacs-setup-x64.msi'
         ReleaseNotes = "https://github.com/nomacs/nomacs/releases/tag/${version}"
     }
 }
