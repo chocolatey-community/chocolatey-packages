@@ -13,24 +13,14 @@ function global:au_SearchReplace {
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
         }
 
-        ".\tools\VERIFICATION.txt" = @{
-          "(?i)(\s+x64:).*"        = "`${1} $($Latest.URL)"
-          "(?i)(checksum64:).*"    = "`${1} $($Latest.Checksum)"
+        ".\legal\VERIFICATION.txt" = @{
+          "(?i)(\s+x64:).*"        = "`${1} $($Latest.URL64)"
+          "(?i)(checksum64:).*"    = "`${1} $($Latest.Checksum64)"
         }
     }
 }
 
-function global:au_BeforeUpdate {
-  rm "$PSScriptRoot\tools\*.zip"
-
-  $client = New-Object System.Net.WebClient
-    $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
-    $client.DownloadFile($Latest.URL, $filePath)
-  $client.Dispose()
-
-  $Latest.ChecksumType = 'sha256'
-  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix -Purge }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
@@ -38,7 +28,7 @@ function global:au_GetLatest {
     $version = $url -split '-|\.zip' | select -Last 1 -Skip 1
     @{
         Version      = $version
-        URL          = $url
+        URL64        = $url
         ReleaseNotes = "https://github.com/nomacs/nomacs/releases/tag/${version}"
         FileName     = $url -split '/' | select -last 1
     }
