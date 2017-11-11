@@ -20,7 +20,7 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
 - crop images
 - resize images
 - pseudo color function
-- color adjustments (brightness, contrast, saturation â€¦)
+- color adjustments (brightness, contrast, saturation)
 - multi page TIFF export
 - rotate images
 - drag and drop images
@@ -41,9 +41,3 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
 - images can be sent over LAN connection
 
 See detailed nomacs [features page](http://nomacs.org/features/).
-
-## Notes
-
-- This package will **always install the latest version**, regardless of the version specified in the package. Nomacs is using [online installer](https://www.nomacs.org/redmine/issues/573) for non-portable package exlusivelly.
-- If you are installing **behind the proxy**, you will need to configure proxy settings in the installer manually (via Settings button) during the installation. You can use [nomacs.portable](https://chocolatey.org/packages/nomacs.portable) as alternative in such scenario.
-

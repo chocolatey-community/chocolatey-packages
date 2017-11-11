@@ -20,7 +20,7 @@ nomacs is a free image viewer for windows, linux, and mac systems, which is lice
 - crop images
 - resize images
 - pseudo color function
-- color adjustments (brightness, contrast, saturation â€¦)
+- color adjustments (brightness, contrast, saturation)
 - multi page TIFF export
 - rotate images
 - drag and drop images
