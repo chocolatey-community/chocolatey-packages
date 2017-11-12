@@ -11,7 +11,7 @@ GlarySoft Absolute Uninstaller is a complete program uninstaller that helps you 
 * Batch uninstall programs.
 * Backup/restore uninstall information.
 
-### Notes
+## Notes
 
 * This package always installs the latest version of the application, regardless of the version specified in the package.
 
