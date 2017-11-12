@@ -6,6 +6,7 @@ and personal media in a wide range of file formats.
 
 ## Notes
 
+- **QuickTime 7 for Windows is no longer supported by Apple**.
 - This package installs QuickTime and the required Apple Application Support component, but not the Apple Software Update component.
 The latter is intrusive and thus probably undesirable for many user because it recommends unnecessary additional software from Apple.
 
