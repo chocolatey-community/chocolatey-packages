@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference  = 'Stop'
 $downloadDir            = Get-PackageCacheLocation
-$installer              = 'ClipboardFusionSetup-5.1.1.exe'
+$installer              = 'ClipboardFusionSetup-5.2.exe'
 $arguments              = @{
     packageName         = $env:ChocolateyPackageName
     softwareName        = 'ClipboardFusion'
     file                = Join-Path $downloadDir $installer
-    url                 = 'https://binaryfortressdownloads.com/Download/BFSFiles/104/ClipboardFusionSetup-5.1.1.exe'
-    checksum            = '762FECEDCA303C525330DC4D074EDEE0981237A68FF471EB5380A9AB011BDD1D'
+    url                 = 'https://binaryfortressdownloads.com/Download/BFSFiles/104/ClipboardFusionSetup-5.2.exe'
+    checksum            = '283685C66090224C180033587CE284AEA2936C0D5D800ED9B1FCDE0D73B61DFC'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = '/VERYSILENT /LAUNCHAFTER=0'
