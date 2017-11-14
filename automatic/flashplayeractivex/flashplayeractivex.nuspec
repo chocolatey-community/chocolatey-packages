@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>27.0.0.130</version>
+    <version>27.0.0.187</version>
     <authors>Adobe Systems Incorporated</authors>
     <projectUrl>https://www.adobe.com/software/flash/about/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flashplayer.png</iconUrl>
@@ -11,17 +11,15 @@
     <title>Flash Player ActiveX</title>
     <owners>chocolatey</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 The Adobe Flash Player is freeware software for viewing multimedia, executing Rich Internet Applications, and streaming video and audio, content created on the Adobe Flash platform.
 
-### Note
+## Notes
 
-This package is only for Windows XP to Windows 7, because Windows ≥ 8 already contains an integrated Flash Player for Internet Explorer.
+- This package is only for Windows XP to Windows 7, because Windows 8 already contains an integrated Flash Player for Internet Explorer.
+- **Warning**: The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
 
-### Warning
-
-The installation of Flash Player ActiveX fails with a 1603 error when Internet Explorer is open.
-    </description>
+]]></description>
     <summary>Adobe Flash Player ActiveX for Internet Explorer</summary>
     <tags>adobe flash player activex admin freeware</tags>
     <releaseNotes>https://helpx.adobe.com/flash-player/flash-player-releasenotes.html</releaseNotes>
