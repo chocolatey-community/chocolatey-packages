@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v3.19/BCUninstaller_3.19_setup.exe
+   x32: https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/download/v3.20/BCUninstaller_3.20_setup.exe
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: E813E9258867372E1C4684CBF96635FD1FEF1DAC73D7A087779AC356609B0433
+   checksum32: 10320A6D0CA80BF424FA01D0DEEDC79E2107686163F98EEA05DBA6390717F3FF
 
 File 'license.txt' is obtained from:
    https://github.com/Klocman/Bulk-Crap-Uninstaller/blob/master/Licence.txt
