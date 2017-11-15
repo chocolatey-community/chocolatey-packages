@@ -43,7 +43,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-ProcessorBits 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/57.0/win32/${locale}/Firefox%20Setup%2057.0.exe"
+    $packageArgs.Url64 = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/57.0/win64/${locale}/Firefox%20Setup%2057.0.exe"
   }
 
   Install-ChocolateyPackage @packageArgs
