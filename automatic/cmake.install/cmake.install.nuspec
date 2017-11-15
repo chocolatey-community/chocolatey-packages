@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>cmake.install</id>
+    <version>3.9.4</version>
+    <title>CMake (Install)</title>
+    <authors>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</authors>
+    <owners>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</owners>
+    <licenseUrl>https://www.cmake.org/licensing/</licenseUrl>
+    <projectUrl>https://www.cmake.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/4a10ab83c85abbcd25c72624739f130bd7ccba2c/icons/cmake.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CMake is a family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
+
+[Development](https://www.cmake.org/developer-resources/)
+
+#### MSI Properties
+`ADD_CMAKE_TO_PATH`
+* `None` - Do not add CMake to path (default)
+* `System` - Add CMake to system PATH for __all users__
+* `User` - Add CMake to system PATH for __current user__
+
+`DESKTOP_SHORTCUT_REQUESTED`
+* `0` = Do not create desktop icon (default)
+* `1` = Create CMake desktop icon
+
+For example: `choco install cmake.install --installargs 'ADD_CMAKE_TO_PATH=""User""'`</description>
+    <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
+    <releaseNotes>#### Program
+* [News](https://blog.kitware.com/tag/CMake/)
+* [Changelog](https://www.cmake.org/download/#latest)
+
+#### Package
+* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
+    <copyright>© 2000 Kitware Inc</copyright>
+    <tags>compiler make build admin</tags>
+    <projectSourceUrl>https://www.cmake.org/gitweb?p=cmake.git;a=summary</projectSourceUrl>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/cmake.install/</packageSourceUrl>
+    <docsUrl>https://www.cmake.org/documentation/</docsUrl>
+    <mailingListUrl>https://cmake.org/mailing-lists/</mailingListUrl>
+    <bugTrackerUrl>https://public.kitware.com/Bug/</bugTrackerUrl>
+  </metadata>
+</package>
