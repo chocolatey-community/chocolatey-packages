@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>datagrip</id>
-    <version>2017.2.1</version>
+    <version>2017.2.3</version>
     <title>JetBrains DataGrip</title>
     <authors>JetBrains</authors>
     <licenseUrl>https://www.datagrip.org/terms.php</licenseUrl>
@@ -15,22 +15,23 @@
     <tags>datagrip admin jetbrains trial 30days</tags>
     <bugTrackerUrl>https://youtrack.jetbrains.com/issues/DBE</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-    DataGrip is the multi-engine database environment.
-    We support MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Sybase, DB2, SQLite,
-    HyperSQL, Apache Derby and H2. If the DBMS has a JDBC driver you can connect to
-    it via DataGrip. For any of supported engines it provides database introspection
-    and various instruments for creating and modifying objects.
+    <description><![CDATA[
+DataGrip is the multi-engine database environment.
+We support MySQL, PostgreSQL, Microsoft SQL Server, Oracle, Sybase, DB2, SQLite,
+HyperSQL, Apache Derby and H2. If the DBMS has a JDBC driver you can connect to
+it via DataGrip. For any of supported engines it provides database introspection
+and various instruments for creating and modifying objects.
 
-    ## Features
-    - Intelligent query console
-    - Efficient schema navigation
-    - Explain plan
-    - Smart code completion
-    - On-the-fly analysis and quick-fixes
-    - Refactorings that work in SQL files and schemas
-    - Version control integration
-    </description>
+## Features
+- Intelligent query console
+- Efficient schema navigation
+- Explain plan
+- Smart code completion
+- On-the-fly analysis and quick-fixes
+- Refactorings that work in SQL files and schemas
+- Version control integration
+
+]]></description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/datagrip</packageSourceUrl>
     <owners>chocolatey,Xuanwo,the-running-dev</owners>
