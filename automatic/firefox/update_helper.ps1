@@ -24,7 +24,7 @@ function GetVersionAndUrlFormats() {
   }
   if ($Supports64Bit) {
     $result += @{
-      Win64Format = $url -replace 'os=win','os=win64'
+      Win64Format = $url -replace 'os=win','os=win64' -replace 'win32','win64'
     }
   }
   return $result
