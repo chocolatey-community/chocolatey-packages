@@ -13,6 +13,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 42716D965037AE67022331F7ED1972E2A0289E97CEE59DF7B3BCC71DE041180C
+  checksum: 86E235160A90EC6B80F3AA5B39E6EC05DBF7747FAC75B3589D2956A3E4B1AF9E
 
 The file 'LICENSE.txt' has been obtained from <https://hg.hedgewars.org/hedgewars/raw-file/90e43d1bcd5b/COPYING>
