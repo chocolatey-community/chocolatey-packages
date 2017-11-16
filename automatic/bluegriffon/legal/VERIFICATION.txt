@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://bluegriffon.org/>
 and can be verified by doing the following:
 
-1. Download the following <http://bluegriffon.org/freshmeat/2.4.1/bluegriffon-2.4.1.win-x86_64.exe>
+1. Download the following <http://bluegriffon.org/freshmeat/3.0/bluegriffon-3.0.win-i686.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 8B9505DE497E312F94584858BDCDA5BA79BA340FDC330668AA76367FFCB95C0B
+  checksum: A1988333763112FE3CFC29DBF163F38C8CF0B780725D90015AE44B8C30FFBBE8
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/therealglazou/bluegriffon/blob/e87a115e462e1f5fee7905ea914c72e24d2eee42/LICENSE>

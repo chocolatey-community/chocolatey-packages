@@ -5,7 +5,7 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName    = 'bluegriffon'
   fileType       = 'exe'
-  file           = "$toolsPath\bluegriffon-2.4.1.win-x86_64.exe"
+  file           = "$toolsPath\bluegriffon-3.0.win-i686.exe"
   softwareName   = 'BlueGriffon*'
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoSetup.log`""
   validExitCodes = @(0)
