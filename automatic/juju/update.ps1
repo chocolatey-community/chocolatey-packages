@@ -1,4 +1,7 @@
-﻿import-module au
+﻿[CmdletBinding()]
+param($IncludeStream, [switch] $Force)
+
+import-module au
 
 $releases = 'https://launchpad.net/juju/+download'
 
@@ -21,22 +24,24 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re    = '\.exe$'
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $urls   = $download_page.links | ? href -match $re | select -expand href
 
+  $streams = @{}
 
-  # special case, sometimes uses -signed other times it's a pre-release
-  $versionArr  = $url -split 'setup[-]|[-]signed|.exe' | select -Last 2 -Skip 1
+  $urls | % {
+    $versionArr = $_ -split 'setup[-]|[-]signed|.exe'
+    if ($versionArr[1]) {
+      $version = Get-Version $versionArr[1]
+    } else {
+      $version = Get-Version $versionArr[0]
+    }
 
-  if ($versionArr[1]) {
-    $version = $versionArr[1];
-  } else {
-    $version = $versionArr[0];
+    if (!$streams.ContainsKey($version.ToString(2))) {
+      $streams.Add($version.ToString(2), @{ URL32 = $_ ; Version = $version.ToString() })
+    }
   }
 
-  @{
-    URL32 = $url
-    Version = $version
-  }
+  return @{ Streams = $streams }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
