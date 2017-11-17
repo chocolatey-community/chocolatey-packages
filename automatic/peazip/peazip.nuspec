@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>peazip</id>
+    <title>PeaZip</title>
+    <version>6.5.0</version>
+    <authors>Giorgio Tani</authors>
+    <owners>chocolatey,dtgm</owners>
+    <summary>PeaZip is a free cross-platform file archiver.</summary>
+    <description>
+A cross-platform file archiver and file manager utility.
+
+The program supports over 150 archive formats including 7Z, ACE, ARC, ARJ, BZ2, CAB, DMG, GZ, ISO, LHA, PAQ, PEA, RAR, TAR, UDF, WIM, ZIP, ZIPX...
+
+Features of PeaZip includes extract, create and convert multiple archives at once, create self-extracting archives, split/join, encrypted password manager, strong encryption with two factor authentication, secure deletion, find duplicate files, calculate hashes, manage graphic files (rotate, crop, resize, convert).
+    </description>
+    <projectUrl>http://www.peazip.org/</projectUrl>
+    <projectSourceUrl>https://osdn.net/projects/peazip/releases/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/peazip</packageSourceUrl>
+    <docsUrl>http://www.peazip.org/peazip-help.html</docsUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/peazip/tickets/</bugTrackerUrl>
+    <tags>foss file-manager file-encryption file-compression zip rar 7zip tar admin peazip</tags>
+    <licenseUrl>http://www.peazip.org/peazip-tos-privacy.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © PeaZip srl</copyright>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b9b0ed4a/icons/peazip.svg</iconUrl>
+    <releaseNotes>[PeaZip changelog](http://www.peazip.org/changelog.html)</releaseNotes>
+    <dependencies>
+      <dependency id="peazip.install" version="[6.5.0]" />
+    </dependencies>
+  </metadata>
+</package>
