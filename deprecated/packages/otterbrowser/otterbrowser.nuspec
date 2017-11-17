@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>otterbrowser</id>
+    <version>0.9.03</version>
+    <title>Otter Browser</title>
+    <authors>Emdek</authors>
+    <owners>tonigellida</owners>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <projectUrl>http://otter-browser.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/otterbrowser.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Project aiming to recreate classic Opera (12.x) UI using Qt5.
+	
+	###Notes
+	
+	Probably beta release (automatic push). Package version less than v1, treat as stable.</description>
+    <summary>Project aiming to recreate classic Opera (12.x) UI using Qt5.</summary>
+    <copyright />
+    <tags>browser opera qt</tags>
+  </metadata>
+</package>
