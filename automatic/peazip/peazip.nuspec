@@ -16,7 +16,7 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
     </description>
     <projectUrl>http://www.peazip.org/</projectUrl>
     <projectSourceUrl>https://osdn.net/projects/peazip/releases/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/peazip</packageSourceUrl>
     <docsUrl>http://www.peazip.org/peazip-help.html</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/peazip/tickets/</bugTrackerUrl>
     <tags>file-manager file-encryption file-compression zip rar 7zip tar admin peazip</tags>
