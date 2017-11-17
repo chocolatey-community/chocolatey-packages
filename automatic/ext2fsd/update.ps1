@@ -5,13 +5,18 @@ import-module au
 
 $releases = 'https://sourceforge.net/projects/ext2fsd/files/Ext2fsd'
 
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+          "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\)(.*)`""   = "`$1$($Latest.FileName32)`""
             "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
+        }
+        ".\legal\VERIFICATION.txt" = @{
+          "(?i)(location on\s*)<.*>" = "`${1}<$releases>"
+          "(?i)(1\..+)\<.*\>"       = "`${1}<$($Latest.URL32)>"
+          "(?i)(checksum type:).*"  = "`${1} $($Latest.ChecksumType32)"
+          "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
         }
     }
 }
@@ -31,7 +36,7 @@ function global:au_GetLatest {
       $url = $download_page.links | ? href -match "$_\.exe/download$" | select -first 1 -expand href
 
       if ($url) {
-        $streams.Add($version.ToString(2), @{ Version = $version.ToString(); URL32 = $url })
+        $streams.Add($version.ToString(2), @{ Version = $version.ToString(); URL32 = $url; FileType = 'exe' })
       }
     }
 
@@ -39,7 +44,7 @@ function global:au_GetLatest {
 }
 
 try {
-    update -ChecksumFor 32 -IncludeStream $IncludeStream -Force:$Force
+    update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
 } catch {
     $ignore = "Unable to connect to the remote server"
     if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }

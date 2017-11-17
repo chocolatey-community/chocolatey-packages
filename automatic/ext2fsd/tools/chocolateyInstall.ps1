@@ -1,13 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
-  packageName            = 'ext2fsd'
-  fileType               = 'exe'
-  url                    = 'https://sourceforge.net/projects/ext2fsd/files/Ext2fsd/0.69/Ext2Fsd-0.69.exe/download'
-  checksum               = ''
-  checksumType           = 'sha256'
-  silentArgs             = '/VERYSILENT /NORESTART'
-  validExitCodes         = @(0)
-  softwareName           = 'ext2fsd*'
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  softwareName   = 'ext2fsd*'
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
+  validExitCodes = @(0)
 }
-Install-ChocolateyPackage @packageArgs
+
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

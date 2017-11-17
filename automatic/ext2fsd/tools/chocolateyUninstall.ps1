@@ -1,30 +1,28 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'ext2fsd'
-$softwareNamePattern = 'ext2fsd*'
-
 $packageArgs = @{
-    packageName            = $packageName
-    silentArgs             = "/VERYSILENT /NORESTART"
-    fileType               = 'EXE'
-    validExitCodes         = @(0)
-    file                   = ''
+  packageName   = $env:ChocolateyPackageName
+  softwareName  = 'ext2fsd*'
+  fileType      = 'exe'
+  silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Uninstall.log`""
+  validExitCodes= @(0)
 }
 
-[array] $key = Get-UninstallRegistryKey $softwareNamePattern
+$uninstalled = $false
+
+[array]$key = Get-UninstallRegistryKey @packageArgs
+
 if ($key.Count -eq 1) {
-    $key | % {
-        $packageArgs.file = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
-        Uninstall-ChocolateyPackage @packageArgs
-    }
-}
-elseif ($key.Count -eq 0) {
-    Write-Warning "$packageName has already been uninstalled by other means."
-}
-elseif ($key.Count -gt 1) {
-    Write-Warning "$key.Count matches found!"
-    Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
-    Write-Warning "Please alert package maintainer the following keys were matched:"
-    $key | % {Write-Warning "- $_.DisplayName"}
-}
+  $key | % {
+    $packageArgs['file'] = "$($_.UninstallString)"
 
+    Uninstall-ChocolateyPackage @packageArgs
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$packageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$($key.Count) matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert the package maintainer that the following keys were matched:"
+  $key | % { Write-Warning "- $($_.DisplayName)" }
+}

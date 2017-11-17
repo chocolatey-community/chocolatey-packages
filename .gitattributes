@@ -10,3 +10,7 @@
 *.zip binary
 *.cer binary
 *.pdf binary
+
+# License files should be the only files allowed to use tabs in indentation
+# to have them be as equal to the original license as possible
+LICENSE.txt text whitespace=-tab-in-indent
