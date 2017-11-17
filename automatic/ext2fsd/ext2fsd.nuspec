@@ -7,19 +7,19 @@
     <title>Ext2Fsd</title>
     <owners>chocolatey</owners>
     <authors>Matt</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <licenseUrl>https://sourceforge.net/p/ext2fsd/code/ci/master/tree/Ext3Fsd/COPYRIGHT.TXT</licenseUrl>
     <projectUrl>http://www.ext2fsd.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 Open source ext3/4 file system driver for Windows
 
 ## Features
 
 - ext2/ext3 volume reading and writing
 - ext3 journal replay when mounting
-- various codepage: utf8, cp936, cp950 …
+- various codepage: utf8, cp936, cp950
 - mountpoint automatical assignment
-- large inode size: 128, 256, …
+- large inode size: 128, 256
 - large file size bigger than 4G
 - CIFS sharing over network
 - htree directory indexing
@@ -31,8 +31,9 @@ Open source ext3/4 file system driver for Windows
 
 ## Notes
 
-- The uninstaller doesn’t work silently.
-    </description>
+- The uninstaller doesn't work silently.
+
+]]></description>
     <summary>Open source ext3/4 file system driver for Windows</summary>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a5d2740db65d1750e4312294f4163e348cd5a45/icons/ext2fsd.jpg</iconUrl>
     <releaseNotes>http://www.ext2fsd.com/?cat=3</releaseNotes>
