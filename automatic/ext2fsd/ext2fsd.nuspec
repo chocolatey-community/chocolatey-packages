@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ext2fsd</id>
-    <version>0.68.0.20161111</version>
+    <version>0.69</version>
     <title>Ext2Fsd</title>
     <owners>chocolatey</owners>
     <authors>Matt</authors>
