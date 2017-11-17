@@ -1,20 +1,32 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$isExe = $Env:ChocolateyPackageName -eq 'vlc'
+$filetype = 'zip'
 
-$installerFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Installing x64 bit version"; gi "$toolsDir\*_x64.exe"
-} else { Write-Host "Installing x32 bit version"; gi "$toolsDir\*_x32.exe" }
-
-$packageArgs = @{
+$packageArgsExe = @{
   packageName    = 'vlc'
   fileType       = 'exe'
-  file           = $installerFile
+  file           = gi $toolsPath\*-win32.exe
+  file64         = gi $toolsPath\*-win64.exe
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
-Install-ChocolateyInstallPackage @packageArgs
-rm ($toolsDir + '\*.' + $packageArgs.fileType)
+
+$packageArgsZip = @{
+  PackageName    = 'vlc.portable'
+  FileFullPath   = gi $toolsPath\*-win32.zip
+  FileFullPath64 = gi $toolsPath\*-win64.zip
+  Destination    = $toolsPath
+}
+
+if ($isExe) {
+  Install-ChocolateyInstallPackage @packageArgsExe }
+else {
+  ls $toolsPath\* | ? { $_.PSISContainer } | rm -Recurse -Force
+  Get-ChocolateyUnzip @packageArgsZip
+}
+ls $toolsPath\*.$filetype | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
 
 $pp = Get-PackageParameters
 if ($pp.Language) {
@@ -22,6 +34,8 @@ if ($pp.Language) {
     mkdir -force HKCU:\Software\VideoLAN\VLC
     sp HKCU:\Software\VideoLAN\VLC Lang $pp.Language
 }
+
+if (!$isExe) { return }
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName

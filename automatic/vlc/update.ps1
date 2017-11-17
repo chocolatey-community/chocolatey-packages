@@ -1,10 +1,12 @@
 import-module au
+
 $releases = 'https://www.videolan.org/vlc/download-windows.html'
 
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+            "(?i)(^\s*[$]fileType\s*=\s*)('.*')"  = "`$1'$($Latest.FileType)'"
         }
 
         ".\legal\VERIFICATION.txt" = @{
@@ -17,7 +19,11 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
+function global:au_BeforeUpdate {
+    rm tools\*.exe, tools\*.zip
+    Get-RemoteFiles -NoSuffix
+    if ($Latest.PackageName -eq 'vlc.portable') { rm tools\chocolateyUninstall.ps1 }
+}
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
@@ -25,10 +31,19 @@ function global:au_GetLatest {
     $re    = '\.exe$'
     $url   = $download_page.links | ? href -match $re | % href
     $version  = $url[0] -split '-' | select -Last 1 -Skip 1
+
+    $url32 = 'http:' + ( $url -match 'win32' | select -first 1 )
+    $url64 = 'http:' + ( $url -match 'win64' | select -first 1 )
+    $r = '\.exe$', '.zip'
+
     @{
-        Version      = $version
-        URL32        = 'http:' + ( $url -match 'win32' | select -first 1 )
-        URL64        = 'http:' + ( $url -match 'win64' | select -first 1 )
+        Streams = @{
+          install  = @{ Version = $version; URL32 = $url32; URL64 = $url64 }
+          portable = @{
+              Version = $version; URL32 = $url32 -replace $r ; URL64 = $url64 -replace $r
+              PackageName = 'vlc.portable'
+          }
+        }
     }
 }
 
