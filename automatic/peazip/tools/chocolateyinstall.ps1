@@ -14,4 +14,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem $toolsDir\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+Get-ChildItem -Path $toolsDir\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
