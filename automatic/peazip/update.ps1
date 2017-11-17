@@ -25,15 +25,15 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(\s;\s*)'.*'(\s*# 32\-bit)" = "`${1}'$($Latest.FileName32)'`${2}"
-      "(?i)(\s;\s*)'.*'(\s*# 64\-bit)" = "`${1}'$($Latest.FileName64)'`${2}"
-    }
+      "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName64)`""
+      }
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
-      "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
-      "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
+        "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+        "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
+        "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
+        "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
+        "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
     }
   }
 }
