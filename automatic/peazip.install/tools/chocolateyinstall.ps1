@@ -8,7 +8,7 @@ $packageArgs = @{
   fileType       = 'exe'
   packageName    = 'peazip.install'
   softwareName   = 'PeaZip'
-  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
   validExitCodes = @(0, 1223)
 }
 
