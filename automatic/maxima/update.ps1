@@ -20,9 +20,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
-    $version = ($download_page.Links | ? InnerText -match 'Windows' | % InnerText) -replace '-Windows'
-    $version = $version | ? { [version]::TryParse($_, [ref]($__)) } | measure -Maximum | % Maximum
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $version = ($download_page.Links | ? href -match "Windows\/" | select -expand href -first 1) -split '\-|\/' | select -last 1 -skip 2
 
     @{
         Version      = $version
