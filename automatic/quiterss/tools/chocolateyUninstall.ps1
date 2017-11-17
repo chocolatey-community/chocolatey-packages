@@ -2,7 +2,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = 'QuiteRSS'
   fileType      = 'exe'
-  silentArgs    = "/s /S /q /Q /quiet /silent /SILENT /VERYSILENT /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Uninstall.log`""
+  silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Uninstall.log`""
 }
 
 $uninstalled = $false
