@@ -1,0 +1,24 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to
+
+   x86: https://download.kde.org/stable/krita/3.3.2/krita-3.3.2-x86-setup.exe
+   x64: https://download.kde.org/stable/krita/3.3.2/krita-3.3.2-x64-setup.exe
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+    checksum32: 68BA242398883FCD19EA4EB7F7D916754BFAA86766A8E33882EF5D63C46DBD4C
+    checksum64: ADA15320A841BFEDCA98E595DB2BB74763DD7315684033E8CEE5FF54D50368CF
+
+   Checksums type: sha256
+
+File 'LICENSE.txt' is obtained from: https://github.com/KDE/krita/blob/master/COPYING
