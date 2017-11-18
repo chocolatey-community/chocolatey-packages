@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>notepadplusplus.commandline</id>
     <title>Notepad++ (Portable, CommandLine)</title>
@@ -8,7 +8,8 @@
     <authors>Don Ho</authors>
     <owners>chocolatey</owners>
     <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>
-    <description>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GPL License.
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GPL License.
 
 Based on the powerful editing component Scintilla, Notepad++ is written in C++ and uses pure Win32 API and STL which ensures a higher execution speed and smaller program size. By optimizing as many routines as possible without losing user friendliness, Notepad++ is trying to reduce the world carbon dioxide emissions. When using less CPU power, the PC can throttle down and reduce power consumption, resulting in a greener environment.
 
@@ -33,7 +34,8 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 
 - To force the installation of x32 version, use the `--x86` argument with `choco install`.
 
-</description>
+
+]]></description>
     <projectUrl>https://notepad-plus-plus.org/</projectUrl>
     <tags>notepad notepadplusplus notepad-plus-plus editor text development foss</tags>
     <licenseUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/LICENSE</licenseUrl>
@@ -43,9 +45,13 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
     <projectSourceUrl>https://github.com/notepad-plus-plus/notepad-plus-plus</projectSourceUrl>
     <mailingListUrl>https://notepad-plus-plus.org/community/</mailingListUrl>
     <bugTrackerUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/issues</bugTrackerUrl>
+    <dependencies>
+      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- character encoding: “UTF-8” -->
