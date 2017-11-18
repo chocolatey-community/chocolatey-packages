@@ -1,29 +1,50 @@
-import-module au
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+Import-Module AU
 
-$releases = 'http://cdrtfe.sourceforge.net/cdrtfe/download_en.html'
+$releases = 'https://cdrtfe.sourceforge.io/cdrtfe/download_en.html'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re      = '\.exe$'
-    $url     = $download_page.links | ? href -match $re | select -First 1 -expand href
-    $version = $url -split '-|.exe' | select -Last 1 -Skip 1
+  $re = '[\d\.]+\.exe$'
+  # We need to ignore the older links with kerberos in the url.
+  # These do not work, and is commented out but still picked up
+  $urls32 = $download_page.Links | ? { $_.href -match $re -and $_ -notmatch "kerberos" } | select -expand href | % { $_ -replace "^(ht|f)tp\:",'https:' }
 
-    @{ URL32 = $url; Version = $version }
+  $streams = @{}
+  $urls32 | % {
+    $verRe = '[-]|\.exe|\.msi|\.zip'
+    $version = $_ -split "$verRe" | select -last 1 -skip 1
+    # Can't get Get-Version to work in this case
+    #$version = Get-Version $version
+    $versionTwoPart = $version -replace '^([\d]+\.[\d]+).*$','$1'
+
+    if (!($streams.ContainsKey($versionTwoPart))) {
+      $streams.Add($versionTwoPart, @{
+        Version = $version
+        URL32   = $_
+      })
+    }
+  }
+
+  return @{ Streams = $streams }
 }
 
-try {
-    update -ChecksumFor 32
-} catch {
-    $ignore = "Unable to connect to the remote server"
-    if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }
-}
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force

@@ -1,22 +1,16 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'cdrtfe'
-$url32       = 'http://sourceforge.net/projects/cdrtfe/files/cdrtfe/cdrtfe%201.5.6/cdrtfe-1.5.6.exe'
-$url64       = $url32
-$checksum32  = '5bb668821147bbc2acc7beacf242b25d84f9e3bfb1e7ac44025c204a1ae6cec4'
-$checksum64  = $checksum32
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName            = $packageName
-  fileType               = 'EXE'
-  url                    = $url32
-  url64bit               = $url64
-  checksum               = $checksum32
-  checksum64             = $checksum64
-  checksumType           = 'sha256'
-  checksumType64         = 'sha256'
-  silentArgs             = '/VERYSILENT'
-  validExitCodes         = @(0)
-  registryUninstallerKey = $packageName
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\cdrtfe-1.5.7.exe"
+  softwareName   = 'cdrtfe*'
+  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
+  validExitCodes = @(0)
 }
-Install-ChocolateyPackage @packageArgs
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Get-ChildItem $toolsPath\*.exe | % { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }

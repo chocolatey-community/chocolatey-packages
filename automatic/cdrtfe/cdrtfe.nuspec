@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cdrtfe</id>
-    <version>1.5.6</version>
-    <title>cdrtfe</title>
+    <version>1.5.9</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdrtfe</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>cdrtfe</title>
     <authors>cdrtfe team</authors>
-    <licenseUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</licenseUrl>
     <projectUrl>http://cdrtfe.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/cdrtfe.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/13501ddbe6800562e3780b56153ac62e0759563e/icons/cdrtfe.png</iconUrl>
+    <licenseUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <projectSourceUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</projectSourceUrl>
+    <mailingListUrl>https://sourceforge.net/p/cdrtfe/discussion/</mailingListUrl>
+    <tags>cdrtfe burning fontend foss admin media cd dvd</tags>
+    <summary>cdrtfe is an open source CD/DVD/BD burning application.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[
 cdrtfe is an open source CD/DVD/BD burning application for Microsoft Windows. You can burn data discs, Audio CDs, XCDs, (S)VCDs and DVD-Video discs. It supports creation and writing of ISO images and bootable discs. Disc images and Audio CDs can be written simultaneously to multiple writers.
 
 cdrtfe is a win32 frontend for the cdrtools (cdrecord, mkisofs, readcd, cdda2wav), Mode2CDMaker, VCDImager and other well-known tools.
 
-### Recommended
+## Notes
 
-In cdrtfe, go to *Extras &gt; Settings &gt; cdrtfe* and activate „Save on exit“. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
+- In cdrtfe, go to *Extras > Settings > cdrtfe* and activate _Save on exit_. This will make your settings persistent and lets you change the language, which otherwise would lead to an access right error.
 
-    </description>
-    <summary>cdrtfe is an open source CD/DVD/BD burning application.</summary>
-    <copyright />
-    <tags>burning fontend foss admin media cd dvd</tags>
+
+]]></description>
     <releaseNotes>http://cdrtfe.sourceforge.net/cdrtfe/changes_en.html</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdrtfe</packageSourceUrl>
-    <projectSourceUrl>http://cdrtfe.sourceforge.net/cdrtfe/source_en.html</projectSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
