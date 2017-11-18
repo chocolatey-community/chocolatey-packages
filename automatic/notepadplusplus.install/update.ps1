@@ -1,14 +1,10 @@
-. $PSScriptRoot\..\notepadplusplus\update.ps1
+﻿. $PSScriptRoot\..\notepadplusplus.commandline\update.ps1
 
-function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32_i)'"
-            "(^[$]checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64_i)'"
-            "(^[$]checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-        }
-    }
+function global:au_BeforeUpdate {
+  $Latest.URL32 = $Latest.URL32_i
+  $Latest.URL64 = $Latest.URL64_i
+  $Latest.FileType = 'exe'
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
-update
+update -ChecksumFor none

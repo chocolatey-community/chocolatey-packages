@@ -2,6 +2,7 @@
 function global:au_BeforeUpdate {
   $Latest.URL32 = $Latest.URL32_p
   $Latest.URL64 = $Latest.URL64_p
+  $Latest.FileType = '7z'
   Get-RemoteFiles -Purge -NoSuffix
 
   if ($Latest.FileName32.EndsWith('.7z.7z')) {
