@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\Ext2Fsd-0.69.exe"
   softwareName   = 'ext2fsd*'
-  silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
+  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
   validExitCodes = @(0)
 }
 
