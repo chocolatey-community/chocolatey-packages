@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>cmake.portable</id>
+    <version>3.9.4</version>
+    <title>CMake (Portable)</title>
+    <authors>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</authors>
+    <owners>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</owners>
+    <licenseUrl>http://www.cmake.org/licensing/</licenseUrl>
+    <projectUrl>http://www.cmake.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/4a10ab83c85abbcd25c72624739f130bd7ccba2c/icons/cmake.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CMake is a family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
+
+[Development](http://www.cmake.org/developer-resources/)</description>
+    <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
+    <releaseNotes>#### Program
+* [News](http://www.kitware.com/news/home/browse/CMake)
+* [Changelog](http://www.cmake.org/download/#latest)
+
+#### Package
+* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
+    <copyright>©  2000 Kitware Inc</copyright>
+    <tags>compiler make build</tags>
+    <projectSourceUrl>http://www.cmake.org/gitweb?p=cmake.git;a=summary</projectSourceUrl>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/cmake.portable/</packageSourceUrl>
+    <docsUrl>http://www.cmake.org/documentation/</docsUrl>
+    <mailingListUrl>https://cmake.org/mailing-lists/</mailingListUrl>
+    <bugTrackerUrl>https://public.kitware.com/Bug/</bugTrackerUrl>
+  </metadata>
+</package>
