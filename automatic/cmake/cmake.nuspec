@@ -11,7 +11,7 @@
     <projectUrl>https://www.cmake.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c38961f6c3e526524e3648e6710e2cfbb2e82c05/icons/cmake.png</iconUrl>
     <copyright>© 2000 Kitware Inc</copyright>
-    <licenseUrl>https://gitlab.kitware.com/cmake/cmake/raw/master/Copyright.txt</licenseUrl>
+    <licenseUrl>https://gitlab.kitware.com/cmake/cmake/blob/master/Copyright.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://gitlab.kitware.com/cmake/cmake</projectSourceUrl>
     <docsUrl>https://www.cmake.org/documentation/</docsUrl>

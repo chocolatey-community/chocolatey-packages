@@ -24,7 +24,7 @@ function global:au_GetLatest {
     $url64 = $allMsis | ? { $_ -match "$version-win64\-x64" }
     $versionTwopart = $version -replace '^([\d]+\.[\d]+).*$','$1'
 
-    $streams.Add($versionTwopart, @{ Version = $version; URL32 = $_ ; URL64 = $url64})
+    $streams.Add($versionTwopart, @{ Version = $version; URL32_i = $_ ; URL64_i = $url64})
   }
 
   return @{ Streams = $streams }

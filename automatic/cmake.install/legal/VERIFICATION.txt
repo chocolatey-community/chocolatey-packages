@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://cmake.org/download/>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://cmake.org/files/v3.9/cmake-3.9.6-win32-x86.msi>
+  64-Bit software: <https://cmake.org/files/v3.9/cmake-3.9.6-win64-x64.msi>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: A9519EBD0ED18D81E4C36D26C6FBA3569F5901E56AD3A75BDEAF049455C516C6
+  checksum64: 2E18D1D59B9FF769F838CCA80AF918C3829103771E16A9024684ACC0B9AB3F51
+
+The file 'LICENSE.txt' has been obtained from <https://gitlab.kitware.com/cmake/cmake/blob/master/Copyright.txt>

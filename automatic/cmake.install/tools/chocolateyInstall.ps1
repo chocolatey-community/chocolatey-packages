@@ -1,15 +1,17 @@
-$packageName = 'cmake.install'
-$installerType = 'msi'
-$silentArgs = '/quiet /qn /norestart'
-$url = 'http://cmake.org/files/v3.9/cmake-3.9.4-win64-x64.msi'
-$checksum = '1c5c6f32e5ce4b2f202f9c50fd7fc60c9b7bd29ddf375a75bc63d58066090e2a'
-$checksumType = 'sha256'
-$validExitCodes = @(0,3010)
+﻿$ErrorActionPreference = 'Stop'
 
-Install-ChocolateyPackage -PackageName "$packageName" `
-                          -FileType "$installerType" `
-                          -SilentArgs "$silentArgs" `
-                          -Url "$url" `
-                          -ValidExitCodes $validExitCodes `
-                          -Checksum "$checksum" `
-                          -ChecksumType "$checksumType"
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'msi'
+  file           = "$toolsPath\cmake-3.9.4-win32-x86.msi"
+  file64         = "$toolsPath\cmake-3.9.4-win64-x64.msi"
+  softwareName   = 'CMake'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes = @(0, 3010, 1641)
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+
+Get-ChildItem $toolsPath\*.msi | % { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
