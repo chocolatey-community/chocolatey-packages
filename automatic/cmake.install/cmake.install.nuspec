@@ -20,22 +20,7 @@
     <tags>cmake compiler make build foss cross-platform</tags>
     <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description><![CDATA[CMake is a family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
-
-[Development](https://www.cmake.org/developer-resources/)
-
-#### MSI Properties
-`ADD_CMAKE_TO_PATH`
-* `None` - Do not add CMake to path (default)
-* `System` - Add CMake to system PATH for __all users__
-* `User` - Add CMake to system PATH for __current user__
-
-`DESKTOP_SHORTCUT_REQUESTED`
-* `0` = Do not create desktop icon (default)
-* `1` = Create CMake desktop icon
-
-For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=""User""'`
-]]></description>
+    <description>Dummy description</description>
     <releaseNotes>#### Program
 * [News](https://blog.kitware.com/tag/CMake/)
 * [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
