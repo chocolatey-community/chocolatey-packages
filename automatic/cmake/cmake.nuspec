@@ -1,16 +1,26 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake</id>
     <version>3.9.1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cmake</packageSourceUrl>
+    <owners>chocolatey, dtgm</owners>
     <title>CMake</title>
     <authors>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</authors>
-    <owners>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</owners>
-    <licenseUrl>https://www.cmake.org/licensing/</licenseUrl>
     <projectUrl>https://www.cmake.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/4a10ab83c85abbcd25c72624739f130bd7ccba2c/icons/cmake.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c38961f6c3e526524e3648e6710e2cfbb2e82c05/icons/cmake.png</iconUrl>
+    <copyright>© 2000 Kitware Inc</copyright>
+    <licenseUrl>https://gitlab.kitware.com/cmake/cmake/raw/master/Copyright.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>CMake is a family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
+    <projectSourceUrl>https://gitlab.kitware.com/cmake/cmake</projectSourceUrl>
+    <docsUrl>https://www.cmake.org/documentation/</docsUrl>
+    <mailingListUrl>https://cmake.org/mailing-lists/</mailingListUrl>
+    <bugTrackerUrl>https://public.kitware.com/Bug/</bugTrackerUrl>
+    <tags>cmake compiler make build foss cross-platform</tags>
+    <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[CMake is a family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files. CMake generates native makefiles and workspaces that can be used in the compiler environment of your choice.
 
 [Development](https://www.cmake.org/developer-resources/)
 
@@ -24,23 +34,14 @@
 * `0` = Do not create desktop icon (default)
 * `1` = Create CMake desktop icon
 
-For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=""User""'`</description>
-    <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
+For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=""User""'`
+]]></description>
     <releaseNotes>#### Program
 * [News](https://blog.kitware.com/tag/CMake/)
-* [Changelog](https://www.cmake.org/download/#latest)
-
-#### Package
-* Automatically built and uploaded by [dtgm](https://chocolatey.org/profiles/dtgm)</releaseNotes>
-    <copyright>© 2000 Kitware Inc</copyright>
-    <tags>compiler make build</tags>
-    <projectSourceUrl>https://www.cmake.org/gitweb?p=cmake.git;a=summary</projectSourceUrl>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/cmake/</packageSourceUrl>
-    <docsUrl>https://www.cmake.org/documentation/</docsUrl>
-    <mailingListUrl>https://cmake.org/mailing-lists/</mailingListUrl>
-    <bugTrackerUrl>https://public.kitware.com/Bug/</bugTrackerUrl>
+* [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
     <dependencies>
       <dependency id="cmake.install" version="[3.9.1]" />
     </dependencies>
   </metadata>
+  <files />
 </package>
