@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+if ($Env:ChocolateyPackageName -ne 'vlc') { return }
+
 $packageName         = 'vlc'
 $softwareNamePattern = 'VLC media player'
 
