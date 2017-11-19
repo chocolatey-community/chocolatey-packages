@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>graphviz</id>
+    <version>2.38</version>
+    <title>Graphviz - Graph Visualization Software</title>
+    <authors>Arif Bilgin, graphviz committers</authors>
+    <owners>chocolatey, Jason Denizac, Friedrich von Never</owners>
+    <licenseUrl>http://www.graphviz.org/License.php</licenseUrl>
+    <projectUrl>http://www.graphviz.org/</projectUrl>
+    <iconUrl>http://www.graphviz.org/app.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>dummy</description>
+    <summary>Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks</summary>
+    <releaseNotes>http://www.graphviz.org/News.php</releaseNotes>
+    <tags>admin drawing graph foss cross-platform visualization</tags>
+    <projectSourceUrl>https://github.com/ellson/graphviz/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/graphviz</packageSourceUrl>
+    <docsUrl>http://www.graphviz.org/Documentation.php</docsUrl>
+    <mailingListUrl>http://www.graphviz.org/MailingList.php</mailingListUrl>
+    <bugTrackerUrl>http://www.graphviz.org/content/graphviz-issue-tracker</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
