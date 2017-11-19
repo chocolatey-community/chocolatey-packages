@@ -18,5 +18,4 @@ Package can be verified like this:
    checksum32: C794EA03BC2631FFF468F4D97FA6726C536FC98EE579529779AA6F45E94E4F6D
 
 
-File 'license.txt' is obtained from:
-   http://www.graphviz.org/License.php
+File 'license.txt' is a copy of file 'share\license.rtf' obtained from the installation directory
