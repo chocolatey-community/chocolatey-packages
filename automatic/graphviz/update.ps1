@@ -1,13 +1,12 @@
 import-module au
 
-
-$releases = 'http://www.graphviz.org/Download_windows.php'
+$releases = 'https://www.graphviz.org/Download_windows.php'
 
 function global:au_SearchReplace {
    @{
         ".\legal\VERIFICATION.txt" = @{
-          "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
-          "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
+          "(?i)(\s+x32:).*"     = "`${1} $($Latest.URL32)"
+          "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
         }
     }
 }
@@ -22,7 +21,7 @@ function global:au_GetLatest {
     $version  =  $url -split '-|\.msi' | select -Last 1 -Skip 1
     @{
         Version      = $version
-        URL32        = "http://www.graphviz.org" + $url
+        URL32        = "https://www.graphviz.org" + $url
     }
 }
 
