@@ -19,6 +19,9 @@
     <docsUrl>http://www.graphviz.org/Documentation.php</docsUrl>
     <mailingListUrl>http://www.graphviz.org/MailingList.php</mailingListUrl>
     <bugTrackerUrl>http://www.graphviz.org/content/graphviz-issue-tracker</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
