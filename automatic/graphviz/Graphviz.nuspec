@@ -2,15 +2,22 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>graphviz</id>
-    <version>2.38</version>
+    <version>2.38.0.20171119</version>
     <title>Graphviz - Graph Visualization Software</title>
     <authors>Arif Bilgin, graphviz committers</authors>
     <owners>chocolatey, Jason Denizac, Friedrich von Never</owners>
     <licenseUrl>https://www.graphviz.org/License.php</licenseUrl>
     <projectUrl>https://www.graphviz.org/</projectUrl>
-    <iconUrl>https://www.graphviz.org/app.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>dummy</description>
+    <description><![CDATA[Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. It has important applications in networking, bioinformatics, software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
+
+Graphviz is open source graph visualization software. It has several main layout programs. See the gallery for sample layouts. It also has web and interactive graphical interfaces, and auxiliary tools, libraries, and language bindings. We're not able to put a lot of work into GUI editors but there are quite a few external projects and even commercial tools that incorporate Graphviz. You can find some of these in the Resources section.
+
+The Graphviz layout programs take descriptions of graphs in a simple text language, and make diagrams in useful formats, such as images and SVG for web pages; PDF or Postscript for inclusion in other documents; or display in an interactive graph browser.
+
+Graphviz has many useful features for concrete diagrams, such as options for colors, fonts, tabular node layouts, line styles, hyperlinks, and custom shapes.
+]]></description>
     <summary>Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks</summary>
     <releaseNotes>https://www.graphviz.org/News.php</releaseNotes>
     <tags>admin drawing graph foss cross-platform visualization</tags>
