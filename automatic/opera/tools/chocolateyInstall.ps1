@@ -11,7 +11,7 @@ $packageArgs = @{
   checksum64     = '44dcef541df90b3665a88091c504e56a3594a630534ea8d0f1f76f443dd6fcba'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
-  silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0'
+  silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0 /desktopshortcut 0 /pintotaskbar 0'
   validExitCodes = @(0)
 }
 
