@@ -12,6 +12,11 @@ function global:au_SearchReplace {
         # ".\tools\chocolateyUninstall.ps1" = @{
         #     "(?i)(^\s*[$]packageName\s*=\s*)('.*')"= "`$1'$packageName'"
         # }
+        ".\legal\VERIFICATION.txt" = @{
+          "(?i)(\s*download the.*)<.*>" = "`$1<$($Latest.URL32)>"
+          "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+          "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+        }
    }
 }
 
