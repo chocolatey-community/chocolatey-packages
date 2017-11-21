@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = 'supertuxkart'
   fileType       = 'exe'
-  url            = 'https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.2/supertuxkart-0.9.2.exe/download'
-  url64          = ''
-  checksum       = 'd55e9af26d1adafc3432527925c54aa0e613b6111170caf9715ca65ed4c196a1'
-  checksum64     = ''
+  url            = 'https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/supertuxkart-0.9.3-win32.exe/download'
+  url64          = 'https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/0.9.3/supertuxkart-0.9.3-win64.exe/download'
+  checksum       = 'e560b3e62d0b4e8fab7639be72f058383c80adcd8ed0a11e9516f0c888876f6e'
+  checksum64     = '73978600ee03042eaaecae126f1ecd2239588340f0ce4325564364b4342e9dcf'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
