@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>maxthon.commandline</id>
+    <version>4.9.4.1000</version>
+    <title>Maxthon (Portable)</title>
+    <authors>Maxthon International Limited</authors>
+    <owners>Maxthon International Limited</owners>
+    <projectUrl>http://www.maxthon.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/maxthon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Maxthon brings you unsurpassed speed and easy-to-use features you can’t find anywhere else.</description>
+    <summary>Maxthon - Use a Better Browser. Get a Better Web</summary>
+    <releaseNotes />
+    <copyright>1999–2012 Maxthon International Limited. All Rights Reserved.</copyright>
+    <tags>maxthon web browser webkit</tags>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <dependencies>
+      <dependency id="7zip.commandline" />
+    </dependencies>
+  </metadata>
+</package>
