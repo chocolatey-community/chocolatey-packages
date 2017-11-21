@@ -1,4 +1,13 @@
-﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-Install-ChocolateyZipPackage 'ketarin' 'https://ketarin.org/download' $toolsDir
-$guiFile = Join-Path $toolsDir Ketarin.exe.gui
-echo ''> $guiFile
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+  packageName = $env:ChocolateyPackageName
+  file        = "$toolsPath\"
+  destination = $toolsPath
+}
+
+Get-ChocolateyUnzip @packageArgs
+Set-Content -Path "$toolsPath\Ketarin.exe.gui" -Value ""
+Remove-Item $toolsPath\*.zip -ea 0

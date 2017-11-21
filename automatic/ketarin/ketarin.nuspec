@@ -1,19 +1,27 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ketarin</id>
     <version>1.8.7</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ketarin</packageSourceUrl>
+    <owners>chocolatey, Canneverbe Limited</owners>
     <title>Ketarin</title>
     <authors>Canneverbe Limited</authors>
-    <owners>Canneverbe Limited</owners>
-    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.txt</licenseUrl>
     <projectUrl>https://ketarin.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/ketarin.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2963b7e22c35b0dfb637bb1d65ab74eb298bc66c/icons/ketarin.png</iconUrl>
+    <copyright>©2008 - 2017 Canneverbe Limited (Impressum)</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Ketarin is a small application which automatically updates setup packages. As opposed to other tools, Ketarin is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.</description>
+    <docsUrl>https://wiki.ketarin.org/index.php/Ketarin_Wiki</docsUrl>
+    <mailingListUrl>https://ketarin.org/forum/</mailingListUrl>
+    <tags>ketarin updater packages freeware</tags>
     <summary>Ketarin - keep your setup packages up-to-date...</summary>
-    <copyright />
-    <tags>ketarin</tags>
-    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Ketarin is a small application which automatically updates setup packages. As opposed to other tools, Ketarin is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.</description>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
