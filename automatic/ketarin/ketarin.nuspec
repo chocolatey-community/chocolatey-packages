@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ketarin</id>
+    <version>1.8.7</version>
+    <title>Ketarin</title>
+    <authors>Canneverbe Limited</authors>
+    <owners>Canneverbe Limited</owners>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.txt</licenseUrl>
+    <projectUrl>https://ketarin.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/ketarin.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Ketarin is a small application which automatically updates setup packages. As opposed to other tools, Ketarin is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.</description>
+    <summary>Ketarin - keep your setup packages up-to-date...</summary>
+    <copyright />
+    <tags>ketarin</tags>
+    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+  </metadata>
+</package>
