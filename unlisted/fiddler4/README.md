@@ -1,4 +1,6 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg" width="48" height="48"/> [fiddler4](https://chocolatey.org/packages/fiddler4)
+﻿This package has been listed from chocolatey.org.  See this [issue](https://github.com/chocolatey/chocolatey-coreteampackages/issues/923) for further details.
+
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg" width="48" height="48"/> [fiddler4](https://chocolatey.org/packages/fiddler4)
 
 
 Fiddler is a Web Debugging Proxy which logs all HTTP(S) traffic between your computer and the Internet. Fiddler allows you to inspect all HTTP(S) traffic, set breakpoints, and "fiddle" with incoming or outgoing data. Fiddler includes a powerful event-based scripting subsystem, and can be extended using any .NET language.
