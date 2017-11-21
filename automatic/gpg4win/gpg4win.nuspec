@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gpg4win</id>
-    <version>3.0.0</version>
+    <version>3.0.1</version>
     <title>Gpg4win</title>
     <authors>g10 Code GmbH</authors>
     <owners>chocolatey, dtgm</owners>
@@ -10,7 +10,7 @@
     <projectUrl>http://www.gpg4win.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Gpg4win (GNU Privacy Guard for Windows) is the full suite of programs for file encryption and digital signatures.
+    <description><![CDATA[Gpg4win (GNU Privacy Guard for Windows) is the full suite of programs for file encryption and digital signatures.
 
 Gpg4win enables users to securely transport emails and files with the help of encryption and digital signatures. Encryption protects the contents against an unwanted party reading it. Digital signatures allow authors of files to sign them prior to distribution so a user may verify the file has not been tampered with and comes from a specific sender.
 
@@ -42,31 +42,32 @@ Gpg4win is distributed in three editions and available by the following chocolat
 
 ### [gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla)
 
-* [GnuPG](https://www.gnupg.org/faq/gnupg-faq.html#general)  
+* [GnuPG](https://www.gnupg.org/faq/gnupg-faq.html#general)
 The backend (command-line interface); this is the actual encryption and digital signature tool used by the other software in the suite.
 
 ### [gpg4win-light](https://chocolatey.org/packages/gpg4win-ligth)
 
 Includes all the above, and:
 
-* [GNU Privacy Assistant (GPA)](https://www.gnupg.org/related_software/gpa/index.html)  
+* [GNU Privacy Assistant (GPA)](https://www.gnupg.org/related_software/gpa/index.html)
 An alternative program for managing OpenPGP and X.509 (S/MIME) certificates.
-* [GnuPG for Outlook (GpgOL)](http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgol.git;a=summary)  
+* [GnuPG for Outlook (GpgOL)](http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgol.git;a=summary)
 A plugin for the 32bit versions of Microsoft Outlook 2003/2007/2010/2013 (email encryption). For Outlook 2010/2013 GpgpOL supports the Exchange Server, but does not support MIME.
-* [GPG Explorer eXtension (GpgEX)](http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgex.git;a=summary)  
+* [GPG Explorer eXtension (GpgEX)](http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpgex.git;a=summary)
 A plugin for Microsoft Windows File Explorer to sign and encrypt messages using the context menu.
-* [Claws Mail](http://www.claws-mail.org/)  
+* [Claws Mail](http://www.claws-mail.org/)
 A complete email application that offers good support for GnuPG. Also available as its own chocolatey package [claws-mail](https://chocolatey.org/packages/claws-mail).
 
 ### [gpg4win](https://chocolatey.org/packages/gpg4win)
 
 Includes all the above, and:
 
-* [Kleopatra](https://www.kde.org/applications/utilities/kleopatra/)  
-The central certiﬁcate administration of Gpg4win, which ensures uniform user navigation for all cryptographic operations.
-* [Compendium](http://www.gpg4win.org/doc/en/gpg4win-compendium.html)  
+* [Kleopatra](https://www.kde.org/applications/utilities/kleopatra/)
+The central certiï¬cate administration of Gpg4win, which ensures uniform user navigation for all cryptographic operations.
+* [Compendium](http://www.gpg4win.org/doc/en/gpg4win-compendium.html)
 The documentation for beginner and advanced users, available in English and German.
-</description>
+
+]]></description>
     <summary>GNU Privacy Guard suite of programs for encryption and digital signatures</summary>
     <releaseNotes>http://www.gpg4win.org/change-history.html</releaseNotes>
     <copyright>© 2006 g10 Code GmbH</copyright>
