@@ -1,22 +1,27 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>maxthon.commandline</id>
     <version>4.9.4.1000</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/maxthon.commandline</packageSourceUrl>
+    <owners>chocolatey, Maxthon International Limited</owners>
     <title>Maxthon (Portable)</title>
     <authors>Maxthon International Limited</authors>
-    <owners>Maxthon International Limited</owners>
     <projectUrl>http://www.maxthon.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/maxthon.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Maxthon brings you unsurpassed speed and easy-to-use features you can’t find anywhere else.</description>
-    <summary>Maxthon - Use a Better Browser. Get a Better Web</summary>
-    <releaseNotes />
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6506d53eafabcaf3997449991a037c5093d90766/icons/maxthon.png</iconUrl>
     <copyright>1999–2012 Maxthon International Limited. All Rights Reserved.</copyright>
-    <tags>maxthon web browser webkit</tags>
-    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
-    <dependencies>
-      <dependency id="7zip.commandline" />
-    </dependencies>
+    <licenseUrl>http://www.maxthon.com/user-agreement/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.maxthon.com/mx5/help/index.php</docsUrl>
+    <mailingListUrl>http://forum.maxthon.com/</mailingListUrl>
+    <tags>maxthon-commandline maxthon web browser webkit freeware cross-platform</tags>
+    <summary>Maxthon - Use a Better Browser. Get a Better Web</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>Maxthon brings you unsurpassed speed and easy-to-use features you can’t find anywhere else.</description>
+    <releaseNotes>http://www.maxthon.com/mx5/changelog/</releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
