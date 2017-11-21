@@ -22,7 +22,7 @@ if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
 $options = [ordered]@{
     Force   = $true
     Push    = $false
-    Threads = 10 
+    Threads = 10
 
     IgnoreOn = @(                                      #Error message parts to set the package ignore status
         'Could not create SSL/TLS secure channel'
@@ -43,6 +43,7 @@ $options = [ordered]@{
         'Internal Server Error'
         'An exception occurred during a WebClient request'
         'Job returned no object, Vector smash ?'
+        'remote session failed with an unexpected state'
     )
     RepeatSleep   = 60                                      #How much to sleep between repeats in seconds, by default 0
     RepeatCount   = 2                                       #How many times to repeat on errors, by default 1
