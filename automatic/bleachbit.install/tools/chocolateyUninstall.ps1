@@ -1,5 +1,6 @@
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
+  softwareName  = 'BleachBit'
   fileType      = 'exe'
   silentArgs    = '/S'
 }
