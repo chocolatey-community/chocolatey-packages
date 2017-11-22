@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>bluegriffon</id>
-    <version>3.0</version>
+    <version>3.0.1</version>
     <title>BlueGriffon</title>
     <owners>chocolatey</owners>
     <authors>Daniel Glazman</authors>
@@ -26,7 +26,7 @@ Because Gecko lives inside BlueGriffon, the document you edit will look exactly 
     <summary>BlueGriffon is a WYSIWYG content editor for the World Wide Web.</summary>
     <tags>bluegriffon cross-platform trial wysiwyg gecko firefox html admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bluegriffon</packageSourceUrl>
-    <releaseNotes>https://github.com/therealglazou/bluegriffon/releases/tag/3.0</releaseNotes>
+    <releaseNotes>https://github.com/therealglazou/bluegriffon/releases/tag/3.0.1</releaseNotes>
     <dependencies>
       <dependency id="kb2999226" version="1.0.20170509" />
     </dependencies>
