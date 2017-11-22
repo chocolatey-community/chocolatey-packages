@@ -1,4 +1,6 @@
-﻿This package has been unlisted from chocolatey.org.  See this [issue](https://github.com/chocolatey/chocolatey-coreteampackages/issues/923) for further details.
+**This package has been unlisted from chocolatey.org.  See this [issue](https://github.com/chocolatey/chocolatey-coreteampackages/issues/923) for further details.**
+
+---
 
 # <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg" width="48" height="48"/> [fiddler4](https://chocolatey.org/packages/fiddler4)
 
