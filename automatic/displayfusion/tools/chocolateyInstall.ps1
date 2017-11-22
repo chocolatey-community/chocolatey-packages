@@ -9,8 +9,8 @@ $arguments          = @{
     checksum        = '8f1cfafda844c018a87fc216b38bc38c69269a1a0798bdd1b41cca17f9ed6c08'
     fileType        = 'exe'
     checksumType    = 'sha256'
-    silentArgs      = "/VERYSILENT /LANG=$localeTwoLetter /DIR=`"$programFiles`" /STARTUPALL=1 /CONTEXTMENU=0 /LAUNCHAFTER=0"
     validExitCodes  = @(0, 1641, 3010)
+  silentArgs     = "/VERYSILENT /LANG=$localeTwoLetter /DIR=`"$programFiles`" /STARTUPALL=1 /CONTEXTMENU=0 /LAUNCHAFTER=0 /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
 }
 
 Install-ChocolateyPackage @arguments
