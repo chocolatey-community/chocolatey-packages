@@ -10,7 +10,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $url        = 'https://www.telerik.com/docs/default-source/fiddler/fiddlersetup.exe'
+    $url        = ''
     $setup_path = "$PSScriptRoot\fiddlersetup.exe"
 
     Write-Host "Downloading full setup file to find the version"
