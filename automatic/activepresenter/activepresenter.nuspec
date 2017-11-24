@@ -5,11 +5,11 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>activepresenter</id>
     <title>Active Presenter</title>
-    <version>6.1.3</version>
+    <version>6.1.4</version>
     <authors>Atomi Systems</authors>
     <owners>chocolatey</owners>
     <summary>Screen Recording and Interactive eLearning Authoring Tool</summary>
-    <description>
+    <description><![CDATA[
 All the necessary tools for recording screen and creating engaging screencast videos in a free application.
 
 ## Features
@@ -24,16 +24,17 @@ All the necessary tools for recording screen and creating engaging screencast vi
 
 ## Notes
 
-- There is only one setup package which will serve as both Free and Paid editions.  
-With Free edition, you can create video tutorials, export to other formats will have a watermark.  
+- There is only one setup package which will serve as both Free and Paid editions.
+With Free edition, you can create video tutorials, export to other formats will have a watermark.
 Activating with a license key will remove the watermark on appropriate outputs.
 - Supported Operating Systems: Windows 7/8/10, Windows XP, Vista: All Editions (both 32-bit (x86) and 64-bit (x64) are supported).
-    </description>
+
+]]></description>
     <projectUrl>https://atomisystems.com/</projectUrl>
     <tags>admin cross-platform presentation recording screencast eLearning webcast freeware trial</tags>
     <copyright>Atomi Systems, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/be15ad94669cde630a296b19002b3aa19c4d4cd8/icons/activepresenter.jpg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0798deaffb56c9b6ee759251c0948dec25b2b0f9/icons/activepresenter.png</iconUrl>
     <releaseNotes>https://atomisystems.com/updates/ActivePresenter/v6/releasenotes_v6.html</releaseNotes>
     <docsUrl>https://atomisystems.com/tutorials</docsUrl>
     <bugTrackerUrl>https://atomisystems.com/community</bugTrackerUrl>

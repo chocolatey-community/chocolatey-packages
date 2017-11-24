@@ -4,7 +4,7 @@
   <metadata>
     <id>totalcommander</id>
     <title>Total Commander</title>
-    <version>9.10</version>
+    <version>9.12</version>
     <authors>Christian Ghisler</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>File manager and explorer replacement</summary>
