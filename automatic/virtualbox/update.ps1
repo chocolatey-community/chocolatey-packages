@@ -51,17 +51,19 @@ function global:au_GetLatest {
 
   $links = $builds_page.Links | ? href -match 'Builds_[\d_]+$' | select -expand href
 
-  $streams = @{}
-
-  $links | % {
-    $versionPart = $_ -split 'Builds_' | select -last 1 | % { $_ -replace '_','.' }
-
-    $streams.Add($versionPart, (GetLatest "https://www.virtualbox.org$_"))
-  }
+  $streams = [ordered] @{}
 
   $latest = GetLatest "https://www.virtualbox.org/wiki/Downloads"
 
   $streams.Add((Get-Version $Latest.Version).ToString(2), $latest)
+
+  $links | % {
+    $versionPart = $_ -split 'Builds_' | select -last 1 | % { $_ -replace '_','.' }
+
+    if (!$streams.Contains($versionPart)) {
+      $streams.Add($versionPart, (GetLatest "https://www.virtualbox.org$_"))
+    }
+  }
 
   return @{ Streams = $streams}
 }
