@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ketarin</id>
-    <version>1.8.7</version>
+    <version>1.8.7.20171125</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ketarin</packageSourceUrl>
     <owners>chocolatey, Canneverbe Limited</owners>
     <title>Ketarin</title>
@@ -18,7 +18,19 @@
     <tags>ketarin updater packages freeware</tags>
     <summary>Ketarin - keep your setup packages up-to-date...</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Ketarin is a small application which automatically updates setup packages. As opposed to other tools, Ketarin is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.</description>
+    <description><![CDATA[Ketarin is a small application which automatically updates setup packages. As opposed to other tools, Ketarin is not meant to keep your system up-to-date, but rather to maintain a compilation of all important setup packages which can then be burned to disc or put on a USB stick.
+
+## Features
+- Clean and lean user interface
+- Groupable application overview
+- Flexible methods to specify save paths
+- Regular expression support
+- Group applications by user defined categories
+- XML based import/export of applications
+- Run custom commands after downloading
+- Support for PowerShell scripts
+- Online database
+]]></description>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

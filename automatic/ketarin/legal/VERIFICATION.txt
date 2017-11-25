@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://ketarin.org/>
+location on <>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://ketarin.org/downloads/Ketarin/Ketarin-1.8.7.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 5DF9B47503FB422B5E2979DE912D23BA933DCC2DBB213B54DDB7196B82FFD0DC
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl-2.0.txt>
