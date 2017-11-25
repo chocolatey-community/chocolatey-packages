@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>maxthon.commandline</id>
-    <version>4.9.4.1000</version>
+    <version>5.1.3.2000</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/maxthon.commandline</packageSourceUrl>
     <owners>chocolatey, Maxthon International Limited</owners>
     <title>Maxthon (Portable)</title>
     <authors>Maxthon International Limited</authors>
     <projectUrl>http://www.maxthon.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6506d53eafabcaf3997449991a037c5093d90766/icons/maxthon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/75a4f3acb5fdff5fb229650e2349925603a7743b/icons/maxthon.png</iconUrl>
     <copyright>1999–2012 Maxthon International Limited. All Rights Reserved.</copyright>
     <licenseUrl>http://www.maxthon.com/user-agreement/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,7 +18,10 @@
     <tags>maxthon-commandline maxthon web browser webkit freeware cross-platform</tags>
     <summary>Maxthon - Use a Better Browser. Get a Better Web</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Maxthon brings you unsurpassed speed and easy-to-use features you can’t find anywhere else.</description>
+    <description><![CDATA[Maxthon is a state-of-the-art, multi-platform web browser that regularly outperforms other top browsers and offers users a seamless browsing and sharing experience.
+Thanks to our supporters, Maxthon is a global phenomenon: a community � of friends, colleagues
+and fans � who believe surfing the web should be fast and fun.
+]]></description>
     <releaseNotes>http://www.maxthon.com/mx5/changelog/</releaseNotes>
   </metadata>
   <files>
