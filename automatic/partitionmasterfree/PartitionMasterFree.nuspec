@@ -4,11 +4,12 @@
   <metadata>
     <id>partitionmasterfree</id>
     <title>EaseUS Partition Master (Free)</title>
-    <version>12.5</version>
+    <version>12.5.0.20171125</version>
     <authors>CHENGDU Yiwo Tech Development Co., Ltd</authors>
     <owners>Redsandro,chocolatey</owners>
     <summary>Free (for personal use) and Easy-to-use Disk Management Software.</summary>
-    <description>As Partition Magic alternative, EaseUS Partition Master Free Edition is an ALL FREE partition solution and disk management utility. It allows you to extend partition, especially for system drive, settle low disk space problem, manage disk space easily on MBR and GUID partition table (GPT) disk under 32 bit and 64 bit Windows 2000/XP/Vista/Windows 7 SP1/Windows 8. The most popular hard disk management functions are brought together with powerful data protection including: Partition Manager, Disk and Partition Copy Wizard and Partition Recovery Wizard.</description>
+    <description><![CDATA[As Partition Magic alternative, EaseUS Partition Master Free Edition is an ALL FREE partition solution and disk management utility. It allows you to extend partition, especially for system drive, settle low disk space problem, manage disk space easily on MBR and GUID partition table (GPT) disk under 32 bit and 64 bit Windows 2000/XP/Vista/Windows 7 SP1/Windows 8. The most popular hard disk management functions are brought together with powerful data protection including: Partition Manager, Disk and Partition Copy Wizard and Partition Recovery Wizard.
+]]></description>
     <projectUrl>http://www.partition-tool.com/personal.htm</projectUrl>
     <tags>disk partition manager system admin</tags>
     <copyright>2005-2013 CHENGDU Yiwo Tech Development Co., Ltd. All rights reserved.</copyright>
