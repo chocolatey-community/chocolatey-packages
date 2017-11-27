@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://sourceforge.net/projects/supertuxkart/files/SuperTuxKart/'
+$releases = 'https://supertuxkart.net/Download'
 
 function global:au_SearchReplace {
   @{
@@ -17,16 +17,12 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $url = $download_page.links | ? href -match '[\d]+\.[\d\.]+\/$' | % href | select -first 1
-  if (!$url.StartsWith("http")) { $url = 'https://sourceforge.net' + $url }
-  $version = $url -split '/' | select -Last 1 -Skip 1
+  $urls = $download_page.links | ? href -match "\.exe\/download$" | % href
+  $version = $urls[0] -split '/' | select -Last 1 -Skip 2
 
-  $download_page = Invoke-WebRequest $url -UseBasicParsing
-
-  $version = $url -split '/' | select -Last 1 -Skip 1
   @{
-    URL32    = $download_page.links | ? href -match 'win32\.exe\/download$' | select -first 1 -expand href
-    URL64    = $download_page.links | ? href -match 'win64\.exe\/download$' | select -first 1 -expand href
+    URL32    = $urls -match 'win64' | select -first 1
+    URL64    = $urls -match 'win32' | select -first 1
     Version  = $version
     FileType = 'exe'
   }
