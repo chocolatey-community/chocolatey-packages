@@ -7,8 +7,12 @@
     <title>SuperTuxKart</title>
     <owners>chocolatey</owners>
     <authors>SuperTuxKart developers</authors>
-    <licenseUrl>http://supertuxkart.sourceforge.net/Licensing</licenseUrl>
-    <projectUrl>http://supertuxkart.sourceforge.net/</projectUrl>
+    <licenseUrl>https://supertuxkart.net/Licensing</licenseUrl>
+    <projectUrl>https://supertuxkart.net</projectUrl>
+    <projectSourceUrl>https://github.com/supertuxkart/stk-code</projectSourceUrl>
+    <mailingListUrl>http://forum.freegamedev.net/viewforum.php?f=16</mailingListUrl>
+    <bugTrackerUrl>https://github.com/supertuxkart/stk-code/issues</bugTrackerUrl>
+    <docsUrl>http://supertuxkart.sourceforge.net/doxygen/?title=doxygen</docsUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/supertuxkart.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
