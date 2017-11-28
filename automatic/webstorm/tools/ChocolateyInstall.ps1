@@ -3,8 +3,8 @@
 $arguments              = @{
     packageName         =  $env:ChocolateyPackageName
     softwareName        = 'JetBrains WebStorm*'
-    url                 = 'https://download.jetbrains.com/webstorm/WebStorm-2017.2.5.exe'
-    checksum            = '1cfa08ac0dfaeb9c40157df3b8a25479e80f11e756d836a7836dd5ef7bf598b8'
+    url                 = 'https://download.jetbrains.com/webstorm/WebStorm-2017.3.exe'
+    checksum            = '9779a9df65c78832c91c7cd23678f36e5806d469461f8c6c692c5c4174e9cdec'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = '/S'
