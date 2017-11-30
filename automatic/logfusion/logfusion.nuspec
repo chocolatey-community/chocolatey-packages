@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logfusion</id>
-    <version>6.0.1</version>
+    <version>6.1</version>
     <title>LogFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.logfusion.ca</projectUrl>
@@ -12,7 +12,7 @@
     <docsUrl>https://www.logfusion.ca/Help/</docsUrl>
     <mailingListUrl>https://www.logfusion.ca/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 Real-Time Log Monitoring Made Easy! LogFusion is a powerful realtime log monitoring application designed for system administrators and developers! Use custom highlighting rules, filtering and more. You can even sync your LogFusion settings between computers.
 
 ## Features
@@ -22,7 +22,8 @@ Real-Time Log Monitoring Made Easy! LogFusion is a powerful realtime log monitor
 - Auto-scroll and always show you the newest lines
 - Load any text logs, including web server logs, developer debug logs and any other text that is outputted to a file
 - Read Event Logs in real-time
-</description>
+
+]]></description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>logfusion log logs parsing tail monitoring trial freeware</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/logfusion</packageSourceUrl>
