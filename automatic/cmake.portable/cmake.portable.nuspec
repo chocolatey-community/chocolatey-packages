@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake.portable</id>
-    <version>3.9.4</version>
+    <version>3.9.6</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cmake.portable</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>CMake (Portable)</title>
     <authors>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</authors>
     <projectUrl>https://www.cmake.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c38961f6c3e526524e3648e6710e2cfbb2e82c05/icons/cmake.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5633c4413a8b71f75f379190546a0047c0e0b12b/icons/cmake.png</iconUrl>
     <copyright>© 2000 Kitware Inc</copyright>
     <licenseUrl>https://gitlab.kitware.com/cmake/cmake/blob/master/Copyright.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -20,7 +20,10 @@
     <tags>cmake compiler make build foss cross-platform</tags>
     <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy Description</description>
+    <description><![CDATA[CMake is an open-source, cross-platform family of tools designed to build, test and package software. CMake is used to control the software compilation process using simple platform and compiler independent configuration files, and generate native makefiles and workspaces that can be used in the compiler environment of your choice. The suite of CMake tools were created by Kitware in response to the need for a powerful, cross-platform build environment for open-source projects such as ITK and VTK.
+
+[Development](https://www.cmake.org/developer-resources/)
+]]></description>
     <releaseNotes>#### Program
 * [News](https://blog.kitware.com/tag/CMake/)
 * [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
