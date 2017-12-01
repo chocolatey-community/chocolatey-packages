@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>krita</id>
+    <title>Krita</title>
+    <version>0.0</version>
+    <owners>chocolatey,dtgm,KDE</owners>
+    <summary>Krita is a sketching and painting program designed for digital artists.</summary>
+    <description>
+Krita is the full-featured free digital painting studio for artists who want to create professional work from start to end. Krita is used by comic book artists, illustrators, concept artists, matte and texture painters and in the digital VFX industry. The name “Krita” comes from Swedish, and means “to draw” or “chalk” and was taken after the names “KImageShop” and “Krayon” gave problems.
+
+## Features
+
+Krita has several features that are unique or a first among free software painting applications: 
+
+* support for colorspaces other than RGB, like CMYK,
+* support for HDR painting,
+* painting assistants,
+* a perspective grid.
+
+The Krita developers are keen to support the artistic community that has grown around Krita.
+    </description>
+    <authors>KDE community</authors>
+    <projectUrl>https://krita.org/</projectUrl>
+    <projectSourceUrl>https://github.com/KDE/krita</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/krita</packageSourceUrl>
+    <docsUrl>https://docs.krita.org/Main_Page</docsUrl>
+    <bugTrackerUrl>https://bugs.kde.org/buglist.cgi</bugTrackerUrl>
+    <tags>foss cross-platform admin krita sketching painting kde qt qt5</tags>
+    <licenseUrl>https://github.com/KDE/krita/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b9b0ed4a/icons/krita.svg</iconUrl>
+    <releaseNotes>See: https://krita.org/en/?post_type=post</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
