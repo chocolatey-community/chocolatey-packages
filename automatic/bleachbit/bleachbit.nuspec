@@ -22,4 +22,5 @@
       <dependency id="bleachbit.install" version="[1.17-beta]" />
     </dependencies>
     </metadata>
+    <files />
 </package>
