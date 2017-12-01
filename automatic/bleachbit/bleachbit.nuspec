@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>bleachbit</id>
+    <title>BleachBit</title>
+    <version>0.0</version>
+    <owners>chocolatey,dtgm</owners>
+    <summary>BleachBit cleans files to free disk space and to maintain privacy.</summary>
+    <description>description</description>
+    <authors>Andrew Ziem</authors>
+    <projectUrl>https://www.bleachbit.org/</projectUrl>
+    <projectSourceUrl>https://github.com/bleachbit/bleachbit</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bleachbit</packageSourceUrl>
+    <docsUrl>https://docs.bleachbit.org/</docsUrl>
+    <bugTrackerUrl>https://github.com/bleachbit/bleachbit/issues</bugTrackerUrl>
+    <tags>foss cross-platform admin bleachbit disk cleaner privacy</tags>
+    <licenseUrl>https://github.com/bleachbit/bleachbit/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b9b0ed4a/icons/bleachbit.svg</iconUrl>
+    <releaseNotes>https://www.bleachbit.org/news</releaseNotes>
+    <dependencies>
+      <dependency id="bleachbit.install" version="[1.17-beta]" />
+    </dependencies>
+    </metadata>
+</package>

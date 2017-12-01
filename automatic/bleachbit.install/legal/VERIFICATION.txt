@@ -1,0 +1,20 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from the official website https://bleachbit.org/
+and can be verified like this:
+
+1. Download the following installer(s):
+
+x86: https://download.bleachbit.org/beta/1.17/BleachBit-1.17-setup.exe
+
+2. You can use one of the following methods to obtain the checksum:
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: 9BD172AEC98FC0080F2A1EF3CD4CE3C13DC5B2B4EE7BDA903F50D5D77B68E257
+
+The included 'LICENSE.txt' file have been obtained from:
+https://github.com/bleachbit/bleachbit/blob/master/COPYING
