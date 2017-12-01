@@ -3,19 +3,18 @@
   <metadata>
     <id>peazip.install</id>
     <title>PeaZip (Install)</title>
-    <version>6.4.1</version>
+    <version>6.5.0</version>
     <authors>Giorgio Tani</authors>
     <owners>chocolatey,dtgm</owners>
     <summary>PeaZip is a free cross-platform file archiver.</summary>
-    <description>
-A cross-platform file archiver and file manager utility.
+    <description><![CDATA[A cross-platform file archiver and file manager utility.
 
 The program supports over 150 archive formats including 7Z, ACE, ARC, ARJ, BZ2, CAB, DMG, GZ, ISO, LHA, PAQ, PEA, RAR, TAR, UDF, WIM, ZIP, ZIPX...
 
 ## Features
 
 Features of PeaZip includes extract, create and convert multiple archives at once, create self-extracting archives, split/join, encrypted password manager, strong encryption with two factor authentication, secure deletion, find duplicate files, calculate hashes, manage graphic files (rotate, crop, resize, convert).
-    </description>
+]]></description>
     <projectUrl>http://www.peazip.org/</projectUrl>
     <projectSourceUrl>https://osdn.net/projects/peazip/releases/</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/peazip</packageSourceUrl>
@@ -25,7 +24,7 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
     <licenseUrl>http://www.peazip.org/peazip-tos-privacy.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © PeaZip srl</copyright>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b9b0ed4a/icons/peazip.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a09d7c32df1ac4b8028df11d2b2b5196b8de2435/icons/peazip.svg</iconUrl>
     <releaseNotes>[PeaZip changelog](http://www.peazip.org/changelog.html)</releaseNotes>
   </metadata>
   <files>

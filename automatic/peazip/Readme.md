@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b9b0ed4a/icons/peazip.svg" width="48" height="48"/> [PeaZip (Install)](https://chocolatey.org/packages/peazip)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a09d7c32df1ac4b8028df11d2b2b5196b8de2435/icons/peazip.svg" width="48" height="48"/> [PeaZip (Install)](https://chocolatey.org/packages/peazip)
 
 A cross-platform file archiver and file manager utility.
 
