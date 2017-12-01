@@ -6,14 +6,14 @@ The installer have been downloaded from the alternative sourceforge mirror liste
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.0.1/qbittorrent_4.0.1_setup.exe/download>
-  64-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.0.1/qbittorrent_4.0.1_x64_setup.exe/download>
+  32-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.0.2/qbittorrent_4.0.2_setup.exe/download>
+  64-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.0.2/qbittorrent_4.0.2_x64_setup.exe/download>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: A3F8DFE13C0114DC46D766D1DF51794605AE745E2E76B326BAC1259F1672E45A
-  checksum64: 3E7918727CA21FB9D32107FE8A8EA0941EC84A6A9D1EC9F0D681C4008FDED2BF
+  checksum32: 583336C3476754461673F822BFCE6DFD0B35362CAE51286225DAA10F151BD8E6
+  checksum64: 0A680700915257C69587806C8C0C480BDEC05C87D25D31270536C8A3F3159D9D
 
 File 'LICENSE.txt' is obtained from <https://github.com/qbittorrent/qBittorrent/blob/0070dcf5509e43c2c3457c4e3f1ed0b1ae087e36/COPYING>
