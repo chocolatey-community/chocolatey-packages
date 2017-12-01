@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://www.graphviz.org/Download_windows.php'
+$releases = 'https://graphviz.gitlab.io/_pages/Download/Download_windows.html'
 
 function global:au_SearchReplace {
    @{
@@ -21,7 +21,7 @@ function global:au_GetLatest {
     $version  =  $url -split '-|\.msi' | select -Last 1 -Skip 1
     @{
         Version      = $version
-        URL32        = "https://www.graphviz.org" + $url
+        URL32        = "https://graphviz.gitlab.io/_pages/Download/" + $url
     }
 }
 
