@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>quiterss</id>
+    <title>QuiteRSS</title>
+    <version>0.0</version>
+    <owners>chocolatey,dtgm</owners>
+    <summary>QuiteRSS is a free news feeds reader written on Qt/C++.</summary>
+    <description>
+QuiteRSS is a open-source cross-platform RSS/Atom news feeds reader.
+
+## Features
+
+* Embedded browser (Webkit core)
+* Feed and news filters: new, unread, starred, deleted (for news until restart application)
+* User filters
+* Proxy configuration: automatic or manual
+* Feed import wizard: Search feed URL if site URL was entered
+* Adblock
+* Click to Flash
+* Mark news starred
+* Automatic update feeds: on startup, by timer
+* Automatic cleanup on close using criterias
+* Enable/Disable images in news preview
+* Ability to quickly hide feed tree (for comfortable viewing)
+* Open feed or news in own tab
+* Quick news filter and quick search in browser
+* Sound notification on new news
+* Popup notification on new news
+* Show new or unread news counter on tray icon
+* Minimize on system tray: on start, on close, on minimize
+* Import/Export feeds (OPML-files)
+    </description>
+    <authors>QuiteRSS Team</authors>
+    <projectUrl>https://quiterss.org/</projectUrl>
+    <projectSourceUrl>https://github.com/QuiteRSS/quiterss</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/quiterss</packageSourceUrl>
+    <docsUrl>https://github.com/QuiteRSS/quiterss/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/QuiteRSS/quiterss/issues</bugTrackerUrl>
+    <tags>foss cross-platform admin quiterss rss atom qt5 qt feedreader news reader</tags>
+    <licenseUrl>https://github.com/QuiteRSS/quiterss/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright © QuiteRSS Team</copyright>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b9b0ed4a/icons/quiterss.png</iconUrl>
+    <releaseNotes>[QuiteRSS Changelog](https://github.com/QuiteRSS/quiterss/blob/master/CHANGELOG)</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
