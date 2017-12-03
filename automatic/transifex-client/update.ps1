@@ -3,18 +3,15 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://github.com/transifex/transifex-client/releases/latest'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameBase tx }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"      = @{
+    ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
-    }
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*[$]64bitExec\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\$($Latest.PackageName).nuspec" = @{
       "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
