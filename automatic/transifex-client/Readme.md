@@ -6,3 +6,5 @@ You can use the command line tool to create new resources, map locale files to t
 
 # Notes
 - This package uses the Python 3.x version of the transifex-client
+- This package only provides the 64-bit executable due to a number of positives on VirusTotal.
+  The Software Authors believe them to be false positives, but I as the package maintainer am not convinced.

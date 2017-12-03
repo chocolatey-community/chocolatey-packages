@@ -7,7 +7,6 @@ location on <https://github.com/transifex/transifex-client/releases/latest>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.12.5/tx.py35.exe>
   64-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.12.5/tx.py35.x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -15,7 +14,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 39365030DAD0397AF2A112D2A1E6764B5CB875C22E68EFD677D6B75EF7239847
   checksum64: 4C2A19BA3A306269216F5A3E4363CC85249305D90D3061E8E8356610958AB75B
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/transifex/transifex-client/blob/master/LICENSE>

@@ -9,14 +9,11 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]32bitExec\s*=\s*`"[$]toolsPath\\).*"    = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*[$]64bitExec\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\$($Latest.PackageName).nuspec" = @{
@@ -34,7 +31,6 @@ function global:au_GetLatest {
   $version = $urls[0] -split "$verRe" | select -last 1 -skip 1
 
   @{
-    URL32        = [uri]($urls | ? { $_ -notmatch 'x64' })
     URL64        = [uri]($urls | ? { $_ -match 'x64' })
     Version      = [version]$version
     ReleaseNotes = Get-RedirectedUrl $releases
