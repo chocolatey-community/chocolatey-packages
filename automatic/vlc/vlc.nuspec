@@ -4,7 +4,7 @@
   <metadata>
     <id>vlc</id>
     <title>VLC media player</title>
-    <version>2.2.8</version>
+    <version>0.0</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>
@@ -40,5 +40,6 @@ Example: `choco install --params "'/Language:fr'"` *Will set the language of VLC
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
