@@ -4,12 +4,12 @@
   <metadata>
     <id>vlc</id>
     <title>VLC media player</title>
-    <version>2.2.6</version>
+    <version>2.2.8</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>
     <licenseUrl>http://www.videolan.org/legal.html</licenseUrl>
-    <description>
+    <description><![CDATA[
 VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.
 
 ![Screenshot](https://i.imgur.com/DEG19Fs.png)
@@ -25,8 +25,10 @@ VLC is a free and open source cross-platform multimedia player and framework tha
 
 ## Package parameters
 
-- `Language` - Two letter language code: nl, en, fr ...
-    </description>
+- `/Language:en` - Two letter language code: nl, en, fr ...
+
+Example: `choco install --params "'/Language:fr'"` *Will set the language of VLC to french*
+]]></description>
     <projectUrl>http://www.videolan.org/vlc/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vlc</packageSourceUrl>
     <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
