@@ -19,7 +19,7 @@
     <tags>portable windows10-media-creation-tool</tags>
     <copyright>Microsoft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/DarwinJS/ChocoPackages/master/windows10-media-creation-tool/appicon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/icons/windows10-media-creation-tool.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
