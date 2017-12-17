@@ -31,7 +31,7 @@ function GetResultInformation([string]$url32) {
 function global:au_GetLatest {
 
   if (($global:au_Force -ne $true) -and (Test-Path "$PSScriptRoot\info")) {
-    $items = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -First 1 | % { $_ -split '\1' }
+    $items = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -First 1 | % { $_ -split '\|' }
     $headers = Get-WebHeaders $downloadUrl
     if ($items) {
       $etag = $items[0]
