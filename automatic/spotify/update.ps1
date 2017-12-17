@@ -41,7 +41,7 @@ function global:au_GetLatest {
         "$($headers.ETag)|$($result.Version)" | Out-File "$PSScriptRoot\info" -Encoding utf8
       }
       else {
-        $result = @{ URL32 = $url32 ; Version = $version }
+        $result = @{ URL32 = $downloadUrl ; Version = $version }
       }
     }
     else {
