@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>PDFCreator</id>
-    <version>3.0.1</version>
+    <version>3.1.0</version>
     <title>PDF Creator</title>
     <owners>chocolatey</owners>
     <authors>pdfforge</authors>
@@ -11,8 +11,8 @@
     <projectUrl>http://www.pdfforge.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6e52bf3b9392bc72475a3e254eab23578ccb9d0e/icons/PDFCreator.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
+    <description><![CDATA[
+PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
 
 ## Features
 
@@ -20,7 +20,8 @@ PDFCreator – PDFCreator easily creates PDFs from any Windows program. Use it l
 - Merge multiple documents to one file
 - Profiles make frequently used settings available with one click
 - Use automatic saving to have a fully automated PDF printer
-    </description>
+
+]]></description>
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
     <tags>pdf editor printer foss admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>

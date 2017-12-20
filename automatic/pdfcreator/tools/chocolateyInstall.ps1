@@ -1,5 +1,5 @@
-﻿$checksum = 'c8eafc4d4380c1eaf43f49938ea16f39941a86ae62a25be25f16a3586f1b88fa'
-$url = 'http://download.pdfforge.org/download/pdfcreator/3.0.1/PDFCreator-3_0_1-Setup.exe?file=PDFCreator-3_0_1-Setup.exe&download'
+﻿$checksum = '70e62989680748fe0f7a372dedadd15370bb62fb290e895e0ba7d664067acd64'
+$url = 'http://download.pdfforge.org/download/pdfcreator/3.1.0/PDFCreator-3_1_0-Setup.exe?file=PDFCreator-3_1_0-Setup.exe&download'
 
 $installArgs = $('' +
   '/VERYSILENT /NORESTART ' +
