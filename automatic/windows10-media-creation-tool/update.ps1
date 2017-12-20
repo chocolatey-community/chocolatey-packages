@@ -20,9 +20,9 @@ function global:au_GetLatest {
 	$url = 'http://go.microsoft.com/fwlink/?LinkId=691209'
 	Invoke-WebRequest -Uri $url -OutFile ".\tools\$fileName"
 	$regex = "((\d+.\d+.\d+.\d+))"
-    $filer = Get-Item ".\tools\*.exe"
+	$filer = Get-Item ".\tools\*.exe"
 	$version = $filer.VersionInfo.FileVersion -replace '$regex*','$1'
-    $version = $version -match $regex;
+	$version = $version -match $regex;
 	$version = $Matches[0]
 
 	@{

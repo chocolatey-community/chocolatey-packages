@@ -1,27 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if ??? doesn?t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>windows10-media-creation-tool</id>
+    <version>10.0.16299.15</version>
     <title>Windows 10 Media Creation Tool</title>
-    <version>10.0.10586.20160317</version>
     <authors>Microsoft</authors>
-    <owners>DarwinJS</owners>
-    <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
-    <description>
-    Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).
+    <owners>DarwinJS, chocolatey</owners>
+    <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/DarwinJS/ChocoPackages/master/windows10-media-creation-tool/appicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).
     Does not support Windows 10 Enterprise.
     It is also possible to install Windows 10 on an existing machine using this tool.
-    Allows a clean installation of Windows using the free upgrade.  Expand sections until you find "Perform a clean installation using USB or DVD" on this page: https://www.microsoft.com/en-us/software-download/windows10
-    </description>
-    <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
-    <packageSourceUrl>https://github.com/DarwinJS/ChocoPackages/tree/master/windows10-media-creation-tool</packageSourceUrl>
-    <tags>portable windows10-media-creation-tool</tags>
+    Allows a clean installation of Windows using the free upgrade.  Expand sections until you find "Perform a clean installation using USB or DVD" on this page: https://www.microsoft.com/en-us/software-download/windows10</description>
+    <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
     <copyright>Microsoft</copyright>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/icons/windows10-media-creation-tool.png</iconUrl>
+    <tags>portable windows10-media-creation-tool</tags>
+    <packageSourceUrl>https://github.com/DarwinJS/ChocoPackages/tree/master/windows10-media-creation-tool</packageSourceUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
