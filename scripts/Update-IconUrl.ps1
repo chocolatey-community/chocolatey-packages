@@ -91,7 +91,7 @@
 #>
 
 param(
-  [string]$Name = "winscp.portable",
+  [string]$Name,
   [string]$IconName = $null,
   [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
   [string]$RelativeIconDir = "../icons",
