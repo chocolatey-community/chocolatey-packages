@@ -58,15 +58,15 @@ param(
     $url64 = $url64 -replace '<revision>', $chromium64.revision
     
     @{
-      URL32 = $url32
-      URL64 = $url64
-      Version = $version
-      PackageName = $PackageName
-      Title = $Title
-      PackageName32 = $PackageName32
-      PackageName64 = $PackageName64
-      ChecksumType32 = $ChecksumType
-      ChecksumType64 = $ChecksumType
+        URL32 = $url32
+        URL64 = $url64
+        Version = $version
+        PackageName = $PackageName
+        Title = $Title
+        PackageName32 = $PackageName32
+        PackageName64 = $PackageName64
+        ChecksumType32 = $ChecksumType
+        ChecksumType64 = $ChecksumType
     }
 }
 
@@ -91,10 +91,10 @@ param(
     Version = $latestStableVersionNumber
     PackageName = $PackageName
     Title = $Title
-    PackageName32 = $PackageName32
+	PackageName32 = $PackageName32
     URL32 = $32LatestSyncInstallUrl
     ChecksumType32 = $ChecksumType
-    PackageName64 = $PackageName64
+	PackageName64 = $PackageName64
     URL64 = $64LatestSyncInstallUrl
     ChecksumType64 = $ChecksumType
   }
