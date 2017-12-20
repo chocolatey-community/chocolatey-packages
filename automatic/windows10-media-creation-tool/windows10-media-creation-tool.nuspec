@@ -7,7 +7,7 @@
     <authors>Microsoft</authors>
     <owners>DarwinJS, chocolatey</owners>
     <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/DarwinJS/ChocoPackages/master/windows10-media-creation-tool/appicon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/icons/windows10-media-creation-tool.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).
     Does not support Windows 10 Enterprise.
@@ -16,6 +16,6 @@
     <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
     <copyright>Microsoft</copyright>
     <tags>portable windows10-media-creation-tool</tags>
-    <packageSourceUrl>https://github.com/DarwinJS/ChocoPackages/tree/master/windows10-media-creation-tool</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/windows10-media-creation-tool</packageSourceUrl>
   </metadata>
 </package>
