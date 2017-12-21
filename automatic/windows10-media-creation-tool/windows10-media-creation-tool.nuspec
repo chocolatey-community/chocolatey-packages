@@ -20,7 +20,7 @@ Expand sections until you find "Perform a clean installation using USB or DVD" o
 - Does not support Windows 10 Enterprise.</description>
     <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
     <copyright>Microsoft</copyright>
-    <tags>portable windows10-media-creation-tool freeware</tags>
+    <tags>portable windows10 media-creation-tool freeware</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/windows10-media-creation-tool</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
