@@ -3,7 +3,7 @@
 
 Bluefish is a powerful editor targeted towards programmers and webdevelopers, with many options to write websites, scripts and programming code. Bluefish supports many programming and markup languages.
 
-### Bluefish Features
+## Features
 
 *   Lightweight - Bluefish tries to be lean and clean, as far as possible given it is a GUI editor.
 *   Fast - Bluefish starts really quick (even on a netbook) and loads hundreds of files within seconds.
@@ -31,4 +31,3 @@ Bluefish is a powerful editor targeted towards programmers and webdevelopers, wi
 *   Thumbnail creation and automatically linking of the thumbnail with the original image, and multi-thumbnail creation
 *   User-customizable toolbar for quick access to often used functions
 *   ZenCoding support
-
