@@ -3,7 +3,7 @@
 $packageName = 'ccleaner'
 $url32       = 'https://download.piriform.com/ccsetup538.exe'
 $url64       = $url32
-$checksum32  = '5d451496b64c534e788a12d0372d10e371f91c7fcff211de7a1a6457538deca7'
+$checksum32  = 'e28d4eb40c69b7457d72a1ebef1d8ed41f9e087800d02074d1742c83d584453c'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {

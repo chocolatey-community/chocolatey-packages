@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/adobe/brackets/releases/latest'
+$releases = 'https://github.com/adobe/brackets/releases'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -20,8 +20,9 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.msi$'
+  $re = '[\d\.]+\.msi$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  if (!$url32) { Write-Host 'No Windows release is avaialble'; return 'ignore' }
 
   $verRe = "release\-|\/"
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1

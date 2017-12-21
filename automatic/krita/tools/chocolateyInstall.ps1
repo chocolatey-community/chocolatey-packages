@@ -10,3 +10,4 @@ silentArgs    = "/S"
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+ls $toolsDir\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { Set-Content -Value "" -Path "$_.ignore" }}
