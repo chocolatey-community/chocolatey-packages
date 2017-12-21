@@ -18,4 +18,7 @@
     <tags>portable windows10-media-creation-tool</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/windows10-media-creation-tool</packageSourceUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
