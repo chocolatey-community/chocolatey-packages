@@ -15,7 +15,7 @@
     Allows a clean installation of Windows using the free upgrade.  Expand sections until you find "Perform a clean installation using USB or DVD" on this page: https://www.microsoft.com/en-us/software-download/windows10</description>
     <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
     <copyright>Microsoft</copyright>
-    <tags>portable windows10-media-creation-tool</tags>
+    <tags>portable windows10-media-creation-tool freeware</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/windows10-media-creation-tool</packageSourceUrl>
   </metadata>
   <files>
