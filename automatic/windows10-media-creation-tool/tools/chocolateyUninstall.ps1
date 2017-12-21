@@ -1,5 +1,4 @@
-$packageName = 'windows10-media-creation-tool'
-$exeName = "MediaCreationTool.exe"
+﻿$exeName = "MediaCreationTool.exe"
 $AppPathKey = "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\$exeName"
 
 #Uninstall-ChocolateyZipPackage $packageName windows10-media-creation-tool.zip
