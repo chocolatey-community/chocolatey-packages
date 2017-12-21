@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/icons/windows10-media-creation-tool.png" width="48" height="48"/> [windows10-media-creation-tool](https://chocolatey.org/packages/windows10-media-creation-tool)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/icons/windows10-media-creation-tool.png" width="48" height="48"/> [windows10-media-creation-tool](https://chocolatey.org/packages/windows10-media-creation-tool)
 
 This will allow you to Create Windows 10 installation media
 To get started, you will first need to have a license to install Windows 10.
