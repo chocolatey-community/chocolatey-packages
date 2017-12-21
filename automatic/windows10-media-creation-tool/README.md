@@ -5,4 +5,3 @@ Does not support Windows 10 Enterprise.
 It is also possible to install Windows 10 on an existing machine using this tool.
 Allows a clean installation of Windows using the free upgrade.
 Expand sections until you find "Perform a clean installation using USB or DVD" on this page: https://www.microsoft.com/en-us/software-download/windows10
-

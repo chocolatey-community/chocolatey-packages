@@ -5,12 +5,12 @@ $Checksum = '2a1a018652a554c16dcccabd228961205e9064581e12c00fbd6ebcf541d0bcf5'
 $ChecksumType = 'sha256'
 $validExitCodes = @(0)
 $packageArgs = @{
-  PackageName   = $PackageName
-  FileFullPath  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\$exeName"
-  Url           = $url
-  Checksum      = $Checksum
-  ChecksumType  = $ChecksumType
-  }
+  PackageName  = $PackageName
+  FileFullPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\$exeName"
+  Url          = $url
+  Checksum     = $Checksum
+  ChecksumType = $ChecksumType
+}
 Get-ChocolateyWebFile @packageArgs
 
 $AppPathKey = "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\$exeName"
