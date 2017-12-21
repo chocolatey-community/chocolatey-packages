@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>windows10-media-creation-tool</id>
+    <id>windows10-mct</id>
     <version>10.0.16299.15</version>
     <title>Windows 10 Media Creation Tool</title>
     <authors>Microsoft</authors>
@@ -10,9 +10,14 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/icons/windows10-media-creation-tool.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).
-    Does not support Windows 10 Enterprise.
-    It is also possible to install Windows 10 on an existing machine using this tool.
-    Allows a clean installation of Windows using the free upgrade.  Expand sections until you find "Perform a clean installation using USB or DVD" on this page: https://www.microsoft.com/en-us/software-download/windows10</description>
+
+##Features
+It is also possible to install Windows 10 on an existing machine using this tool.
+Allows a clean installation of Windows using the free upgrade.
+Expand sections until you find "Perform a clean installation using USB or DVD" on this page: https://www.microsoft.com/en-us/software-download/windows10
+
+##Notes
+- Does not support Windows 10 Enterprise.</description>
     <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
     <copyright>Microsoft</copyright>
     <tags>portable windows10-media-creation-tool freeware</tags>
