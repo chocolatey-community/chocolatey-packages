@@ -40,5 +40,6 @@ WinCDEmu is an open-source CD/DVD/BD emulator - a tool that allows you to mount 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
