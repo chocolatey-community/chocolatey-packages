@@ -5,9 +5,9 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'ownCloud'
 
-  checksum       = '7c7e626f2a9c443501ede5811927fe8bff81aad3bcf684461f3b1420aa32f14f'
+  checksum       = '682ad84cbbea23f4ef9540f0552a948446572af4310b995f922f372cf14e2056'
   checksumType   = 'sha256'
-  url            = 'https://download.owncloud.com/desktop/stable/ownCloud-2.3.4.8624-setup.exe'
+  url            = 'https://download.owncloud.com/desktop/stable/ownCloud-2.4.0.8894-setup.exe'
 
   silentArgs     = '/S'
   validExitCodes = @(0)
