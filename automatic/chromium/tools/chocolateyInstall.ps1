@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
- . ".\helper.ps1"
+$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+. (Join-Path $scriptDir 'helper.ps1')
 
 $chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $hive = "hkcu"
