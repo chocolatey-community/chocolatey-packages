@@ -1,4 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
+ . ".\helper.ps1"
 
 $chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $hive = "hkcu"
@@ -9,20 +10,6 @@ if (Test-Path $Chromium) {
 } else {
   $silentArgs = '--system-level --do-not-launch-chrome'
 }
-
-function Get-CompareVersion {
-  param(
-    [string]$version,
-    [string]$notation,
-    [string]$package
-  )
-    $packver = @{$true = $version; $false = ($version -replace($notation,""))}[ ( $version -notmatch $notation ) ]
-    [array]$key = Get-UninstallRegistryKey -SoftwareName "$package*"
-    if ($packver -eq ( $key.Version )) {
-      Write-Host "$package $version is already installed."
-      return
-    }
-  }
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $version = "63.0.3239.108"
