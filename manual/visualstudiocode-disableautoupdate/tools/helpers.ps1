@@ -19,7 +19,7 @@ function Set-UpdateChannel() {
 
     $storageFileContent = @"
 {
-  "updateChannel": "$UpdateChannel"
+  "update.channel": "$UpdateChannel"
 }
 "@
   } else {
@@ -35,7 +35,7 @@ function Set-UpdateChannel() {
 
     try
     {
-      $storageFileObject.updateChannel = "$UpdateChannel"
+      $storageFileObject."update.channel" = "$UpdateChannel"
       Write-Output "Updated 'update.channel' to '$UpdateChannel'."
     }
     catch
