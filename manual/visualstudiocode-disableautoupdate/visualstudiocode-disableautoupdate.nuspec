@@ -16,6 +16,9 @@
     <summary>Visual Studio Code Auto Update Deactivation</summary>
     <description>Disables the auto update functionality of Visual Studio Code.</description>
     <tags>visualstudiocode vscode configuration foss cross-platform</tags>
+    <releaseNotes>
+* Use correct settings entry in all cases
+    </releaseNotes>
     <dependencies>
       <dependency id="visualstudiocode" version="0.5.0" />
     </dependencies>
