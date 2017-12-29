@@ -27,9 +27,7 @@ AutoHotkey is a free, open source macro-creation and automation software utility
 - Use Perl Compatible Regular Expressions (PCRE).
 - Use interactive debugging features and more.
 
-**Package Specific**:
-
-***Package Parameters***:
+**Package Parameters**:
 
 If you want the default version to be Unicode32/64-bit or ANSI 32-bit you can choose this by passing one of the following commands:
 
