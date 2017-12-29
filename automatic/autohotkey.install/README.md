@@ -26,3 +26,14 @@ AutoHotkey is a free, open source macro-creation and automation software utility
 - Use DLL calls and Windows Messages.
 - Use Perl Compatible Regular Expressions (PCRE).
 - Use interactive debugging features and more.
+
+**Package Specific**:
+***Package Parameters***:
+
+If you want the default version to be Unicode32/64-bit or ANSI 32-bit you can choose this by passing one of the following commands:
+
+- UNICODE 64-bit - choco install autohotkey.install --params="'/DefaultVer:U64'"
+- UNICODE 32-bit - choco install autohotkey.install --params="'/DefaultVer:U32'"
+- ANSI 32-bit - choco install autohotkey.install --params="'/DefaultVer:A32'"
+
+If no paramater is specified then UNICODE 32-bit or 64-bit will automatically be selected depending on your CPU Architecture and whether you have Windows 32-bit or 64-bit installed.
