@@ -2,8 +2,14 @@
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
-$silentArgs = @('/S')
-$silentArgs += if ((Get-ProcessorBits 64) -and ($env:chocolateyForceX86 -ne 'true')) { '/x64' }
+$pp = Get-PackageParameters
+
+if (!$pp['DefaultVer']){
+  if ((Get-ProcessorBits 64) -and ($env:chocolateyForceX86 -ne 'true')) {$pp['DefaultVer'] = 'x64' }
+  if (!(Get-ProcessorBits 64) -and ($env:chocolateyForceX86 -eq 'true')) {$pp['DefaultVer'] = 'U32' }
+}
+
+$silentArgs = "/S /$($pp['DefaultVer'])"
 
 $packageArgs = @{
   packageName    = 'autohotkey.install'
