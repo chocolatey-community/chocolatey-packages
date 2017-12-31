@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName    = 'codeblocks'
   fileType       = 'exe'
   softwareName   = 'CodeBlocks'
-  file           = "$toolsDir\codeblocks-16.01mingw-setup.exe"
+  file           = "$toolsDir\Windows.exe"
 
   silentArgs     = '/S'
   validExitCodes = @(0)

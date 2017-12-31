@@ -9,7 +9,7 @@ Write-Host "Sysinternals Suite is going to be installed in '$installDir'"
 $packageArgs = @{
   packageName    = 'sysinternals'
   url            = 'https://download.sysinternals.com/files/SysinternalsSuite.zip'
-  checksum       = '7d7a4959648026edcb4375603e5ddd279de2c1f91e7a003e65b1ca635c3db4d0'
+  checksum       = '609434a39c28f8382b138aa1349d32ea5acfb06668e6d11000bb6d14e66923d0'
   checksumType   = 'sha256'
   unzipLocation  = $installDir
 }
