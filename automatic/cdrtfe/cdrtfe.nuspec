@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cdrtfe</id>
-    <version>1.4.1</version>
+    <version>1.5.8</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdrtfe</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>cdrtfe</title>
