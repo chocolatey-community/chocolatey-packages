@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>keepass-classic</id>
-    <version>1.34</version>
+    <version>1.35</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keepass-classic</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>KeePass Classic Password Safe</title>
@@ -13,7 +13,7 @@
     <copyright>Copyright © 2003-2017 Dominik Reichl</copyright>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.34/</projectSourceUrl>
+    <projectSourceUrl>https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.35/</projectSourceUrl>
     <docsUrl>http://keepass.info/help/base/index.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/keepass/discussion/?source=navbar</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/projects/keepass/support</bugTrackerUrl>
@@ -53,7 +53,7 @@ For example: `--params '"/DisableFileAssoc /DesktopIcon /QuickLaunchIcon"'`
 - Looking for the source code of KeePass classic? Click the project source url and look for the file ending with `-Src.zip`
 
 ]]></description>
-    <releaseNotes>http://keepass.info/news/n171005_1.34.html</releaseNotes>
+    <releaseNotes>http://keepass.info/news/n180102_1.35.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
