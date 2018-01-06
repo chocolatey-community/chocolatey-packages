@@ -1,7 +1,7 @@
 import-module au
 
 $releases = 'https://github.com/assaultcube/AC/releases'
-$softwareName = 'assaultcube*'
+$softwareName = 'AssaultCube*'
 
 function global:au_SearchReplace {
   @{
