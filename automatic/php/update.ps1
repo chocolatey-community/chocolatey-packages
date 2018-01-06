@@ -24,7 +24,7 @@ function global:au_SearchReplace {
 
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-            "(\<dependency .+?`")vcredist[^`"]+`"( version=`"[^`"]+`")?" = "`$1$($Latest.Dependency)`""
+            "(\<dependency .+?`")vcredist[^`"]+`"( version=`"[^`"]+`")?" = "`$1$($Latest.Dependency.Id)`" version=`"$($Latest.Dependency.Version)`""
         }
     }
 }
@@ -35,8 +35,8 @@ function Get-Dependency() {
   $dep = $url -split '\-' | select -last 1 -skip 1
 
   @{
-    'vc14' = 'vcredist140'
-    'vc11' = 'vcredist2012'
+    'vc14' = @{ Id = 'vcredist140'; Version = '14.11.25325.0' }
+    'vc11' = @{ Id = 'vcredist2012'; Version = '11.0.61031' }
   }.GetEnumerator() | ? Key -eq $dep | select -first 1 -expand Value
 }
 
