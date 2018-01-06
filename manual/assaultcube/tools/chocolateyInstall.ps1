@@ -5,8 +5,8 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
-  softwareName   = 'assaultcube*'
+  file           = "$toolsPath\AssaultCube_v1.2.0.2.exe"
+  softwareName   = 'AssaultCube*'
   silentArgs     = "/S"
   validExitCodes = @(0)
 }
