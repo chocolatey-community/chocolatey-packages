@@ -30,4 +30,6 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor 32
+$global:au_Version = '1.2.0.201'
+update -ChecksumFor 32 -Force
+$global:au_Version = $null
