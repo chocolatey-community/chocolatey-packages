@@ -12,10 +12,8 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 - Firefox Quantum features: screenshots, pocket, gaming & VR, library.
 - Customization Features - addons & extensions, themes, toolbar.
 - Synced across devices - passwords, bookmarks, tabs and more.
-- Powerfull private browsing.
 - Ad tracker blocking.
 - Password manager.
-- Balanced memory usage.
 
 ## Package Parameters
 
