@@ -6,7 +6,7 @@ $pp = Get-PackageParameters
 
 if (!$pp['DefaultVer']){
   if ((Get-ProcessorBits 64) -and ($env:chocolateyForceX86 -ne 'true')) {$pp['DefaultVer'] = 'x64' }
-  if (!(Get-ProcessorBits 64) -and ($env:chocolateyForceX86 -eq 'true')) {$pp['DefaultVer'] = 'U32' }
+  else {$pp['DefaultVer'] = 'U32' }
 }
 
 $silentArgs = "/S /$($pp['DefaultVer'])"
