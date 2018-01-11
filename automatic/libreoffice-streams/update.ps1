@@ -19,7 +19,7 @@ function global:au_SearchReplace {
             "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
             "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
-        ".\libreoffice.nuspec" = @{
+        ".\libreoffice-streams.nuspec" = @{
           "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
         }
     }
