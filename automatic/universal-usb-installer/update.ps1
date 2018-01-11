@@ -27,7 +27,7 @@ function global:au_GetLatest {
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
     URL32 = $url32
-    Version = Get-PaddedVersion $version32 -OnlyBelowVersion $padUnderVersion -RevisionLength 3
+    Version = Get-FixVersion $version32 -OnlyFixBelowVersion $padVersionUnder
   }
 }
 

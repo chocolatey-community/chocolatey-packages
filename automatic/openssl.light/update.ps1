@@ -44,15 +44,15 @@ function global:au_GetLatest {
 
   if ([version]$version32 -lt [version]'1.1.1') {
     # Because previous package updates used dates, we need a number that ends up being larger
-    $revisionLen = '8' # Will end up with version '1.1.0.40000000'
+    $revisionLen = '6' # Will end up with version '1.1.0.40000000'
   } else {
-    $revisionLen = '4'
+    $revisionLen = '1'
   }
 
   @{
     URL32 = $url32
     URL64 = $url64
-    Version = Get-PaddedVersion $version32 -OnlyBelowVersion $padUnderVersion -RevisionLength $revisionLen
+    Version = Get-FixVersion $version32 -OnlyFixBelowVersion $padVersionUnder -AppendRevisionLength $revisionLen
     PackageName = 'OpenSSL.Light'
   }
 }

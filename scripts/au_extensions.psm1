@@ -5,7 +5,6 @@
 # but the file containing the functions is expected
 # to be named using the same name.
 $funcs = @(
-  'Get-PaddedVersion'
   'Set-DescriptionFromReadme'
   'Update-ChangelogVersion'
 )

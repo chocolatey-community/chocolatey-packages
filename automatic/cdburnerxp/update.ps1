@@ -32,7 +32,7 @@ function global:au_GetLatest {
     @{
         URL32   = $url -notmatch 'x64'     | select -First 1
         URL64   = $url -match 'x64'        | select -First 1
-        Version = Get-PaddedVersion ($url[0] -split '_|\.msi' | select -Last 1 -Skip 1) -OnlyBelowVersion $padUnderVersion
+        Version = Get-FixVersion ($url[0] -split '_|\.msi' | select -Last 1 -Skip 1) -OnlyFixBelowVersion $padVersionUnder
      }
 }
 

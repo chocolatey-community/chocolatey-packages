@@ -2,6 +2,7 @@
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://www.wps.com/office-free'
+$padVersionUnder = '10.2.1'
 
 function global:au_SearchReplace {
   @{
@@ -40,7 +41,7 @@ function global:au_GetLatest {
 
   return @{
     URL32 = $url
-    Version = Get-PaddedVersion $version
+    Version = Get-FixVersion $version -OnlyFixBelowVersion $padVersionUnder
   }
 }
 
