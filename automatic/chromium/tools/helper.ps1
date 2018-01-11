@@ -5,10 +5,11 @@ function Get-CompareVersion {
     [string]$notation,
     [string]$package
   )
+	$vorgehen = $true;
     $packver = @{$true = $version; $false = ($version -replace($notation,""))}[ ( $version -notmatch $notation ) ]
     [array]$key = Get-UninstallRegistryKey -SoftwareName "$package*"
     if ($packver -eq ( $key.Version )) {
-      Write-Host "$package $version is already installed."
-      return
+	  $vorgehen = $false
     }
+    return $vorgehen
   }

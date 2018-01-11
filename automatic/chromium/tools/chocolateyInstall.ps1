@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
-$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$scriptDir=$toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 . (Join-Path $scriptDir 'helper.ps1')
 
-$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
+$version = "65.0.3319.0-snapshots"
 $hive = "hkcu"
+$chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $Chromium = $hive + ":" + $chromium_string
 
 if (Test-Path $Chromium) {
@@ -11,10 +12,6 @@ if (Test-Path $Chromium) {
 } else {
   $silentArgs = '--system-level --do-not-launch-chrome'
 }
-
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version = "63.0.3239.108"
-Get-CompareVersion -version $version -notation "-snapshots" -package "chromium"
 
 $packageArgs = @{
   packageName   = 'chromium'
@@ -25,6 +22,9 @@ $packageArgs = @{
   validExitCodes= @(0)
   softwareName  = 'Chromium'
 }
-
-Install-ChocolateyInstallPackage @packageArgs
+if ( Get-CompareVersion -version $version -notation "-snapshots" -package "chromium" ) {
+Install-ChocolateyInstallPackage @packageArgs 
+} else {
+Write-Host "Chromium $version is already installed."
+}
 rm $toolsDir\*.exe -ea 0 -force
