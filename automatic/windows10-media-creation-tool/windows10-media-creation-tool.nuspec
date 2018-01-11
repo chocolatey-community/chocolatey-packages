@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>win10mct</id>
+    <version>0.0</version>
+    <title>Windows 10 Media Creation Tool</title>
+    <authors>Microsoft</authors>
+    <owners>DarwinJS, chocolatey</owners>
+    <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/tree/master/icons/win10mct.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[This will allow you to Create Windows 10 installation media
+To get started, you will first need to have a license to install Windows 10.
+You can then download and run the media creation tool. For more information on how to use the tool, see the instructions below.
+
+## Features
+- Using the tool to upgrade this PC to Windows 10 (click to show more or less information)
+- Using the tool to create installation media (USB flash drive, DVD, or ISO file) to install Windows 10 on a different PC
+- Using the media creation tool to re-install Windows 10 Pro for Workstations
+- More download options or information can be found at https://www.microsoft.com/en-us/software-download/windows10
+
+## Notes
+- Does not support Windows 10 Enterprise.
+]]></description>
+    <summary>Create a bootable ISO or Flashdrive to apply the free Windows 10 upgrade with a clean install (from scratch install).</summary>
+    <copyright>Microsoft</copyright>
+    <tags>portable windows10 media-creation-tool freeware</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/win10mct</packageSourceUrl>
+    <dependencies>
+      <dependency id="win10mct" version="0.0" />
+    </dependencies>
+  </metadata>
+</package>

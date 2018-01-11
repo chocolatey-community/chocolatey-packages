@@ -363,6 +363,7 @@ function RunChocoProcess() {
       '--all-versions'
       '--autouninstaller'
       '--fail-on-autouninstaller'
+      '--force'
     )
   }
   $packFailed = $false
