@@ -1,0 +1,23 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to
+
+   x32: https://downloads.mixxx.org/mixxx-2.0.0/mixxx-2.0.0-win32.exe
+   x64: https://downloads.mixxx.org/mixxx-2.0.0/mixxx-2.0.0-win64.exe
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum32: 3B7AD8078391B502341648F6FA4C7D094FD5EECB804F6F2789DA6017BD766665
+   checksum64: 200A1588CB59D5CB464E056166F4E79BBECFBCD133E6A2D11A974D4BF4A92628
+
+File 'license.txt' is obtained from:
+   https://www.gnu.org/licenses/gpl-2.0.html
