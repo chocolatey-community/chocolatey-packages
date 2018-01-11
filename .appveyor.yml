@@ -134,4 +134,4 @@ notifications:
   on_build_status_changed: true
 
 cache:
-  - '%nupkg_cache_path% -> appveyor.yml'
+  - '%nupkg_cache_path% -> .appveyor.yml'

@@ -93,7 +93,7 @@ $Options = [ordered]@{
     ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
     BeforeEach = {
         param($PackageName, $Options )
-        $Options.ModulePath | % { Import-Module $_ }
+        $Options.ModulePaths | % { Import-Module $_ }
         . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
         if (Test-Path tools) { Expand-Aliases -Directory tools }
 
