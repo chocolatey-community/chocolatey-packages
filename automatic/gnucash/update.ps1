@@ -31,7 +31,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   # First let us get the folder that contains the executables
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $url = $download_page.Links | ? href -match "[\d\.]+\/$" | select -First 1 -expand href | % { $domain + $_ }
+  $url = $download_page.Links | ? href -match "\/[\d\.]+\/$" | select -First 1 -expand href | % { $domain + $_ }
 
   # Then get the executable
 
