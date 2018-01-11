@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>win10mct</id>
-    <version>0.0</version>
+    <version>10.0.16299.15</version>
     <title>Windows 10 Media Creation Tool</title>
     <authors>Microsoft</authors>
     <owners>DarwinJS, chocolatey</owners>
