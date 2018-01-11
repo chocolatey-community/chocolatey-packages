@@ -7,6 +7,8 @@ function global:au_SearchReplace {
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
             "(?i)(^\s*fileType\s*=\s*)('.*')"    = "`$1'$($Latest.FileType)'"
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\)(.*)`""   = "`$1$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
         }
 
       ".\legal\VERIFICATION.txt" = @{
@@ -18,7 +20,7 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { rm tools\*.msi, tools\*.exe -ea 0; Get-RemoteFiles -Purge }
+function global:au_BeforeUpdate { rm tools\*.msi, tools\*.exe -ea 0; Get-RemoteFiles -Purge -NoSuffix }
 
 function GetStreams() {
   param($releaseUrls)
@@ -33,7 +35,7 @@ function GetStreams() {
 
     $download_page = Invoke-WebRequest -Uri "https://www.python.org$($_.href)" -UseBasicParsing
 
-    $url32 = $download_page.links | ? href -match "python-.+.(exe|msi)$" | select -first 1 -expand href
+    $url32 = $download_page.links | ? { $_.href -match "python-.+.(exe|msi)$" -and $_.href -notmatch "amd64" } | select -first 1 -expand href
     $url64 = $download_page.links | ? href -match "python-.+amd64\.(exe|msi)$" | select -first 1 -expand href
     if (!$url32 -or !$url64) {
         Write-Host "Skipping due to missing installer: '$version'"; return }
