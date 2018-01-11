@@ -19,6 +19,7 @@ $Options = [ordered]@{
       'The operation has timed out'
       'Internal Server Error'
       'Service Temporarily Unavailable'
+      'The connection was closed unexpectedly.'
     )
     RepeatOn      = @(                                      #Error message parts on which to repeat package updater
       'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
@@ -30,6 +31,7 @@ $Options = [ordered]@{
       'Internal Server Error'
       'An exception occurred during a WebClient request'
       'remote session failed with an unexpected state'
+      'The connection was closed unexpectedly.'
     )
     #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
     #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
