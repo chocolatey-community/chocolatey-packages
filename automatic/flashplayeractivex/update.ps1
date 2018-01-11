@@ -34,7 +34,7 @@ function global:au_GetLatest {
 
   $url32 = "https://download.macromedia.com/pub/flashplayer/pdc/${CurrentVersion}/install_flash_player_${majorVersion}_active_x.msi"
 
-  $packageVersion = Get-PaddedVersion $CurrentVersion $padVersionUnder
+  $packageVersion = Get-FixVersion $currentVersion -OnlyFixBelowVersion $padVersionUnder
 
   return @{ URL32 = $url32; Version = $packageVersion; RemoteVersion = $CurrentVersion; majorVersion = $majorVersion; }
 }

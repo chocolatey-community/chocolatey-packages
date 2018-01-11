@@ -23,7 +23,7 @@ function global:au_GetLatest {
   $major_version = ([version]$version).Major
 
     @{
-        Version = Get-PaddedVersion $version $padVersionUnder
+        Version = Get-FixVersion $version -OnlyFixBelowVersion $padVersionUnder
         URL32   = "https://download.macromedia.com/get/flashplayer/pdc/${version}/install_flash_player_${major_version}_plugin.msi"
     }
 }
