@@ -20,7 +20,7 @@ function global:au_SearchReplace {
         }
     ".\chromium.nuspec" = @{
 		"(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
-		}
+		   }
     }
 }
 
