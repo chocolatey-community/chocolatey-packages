@@ -5,23 +5,23 @@ import-module au
     $ChecksumType = 'sha256'
 
 function global:au_SearchReplace {
-   @{
+  @{
     ".\legal\verification.txt" = @{
-		"(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
-		"(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-		"(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-		"(?i)(^\s*checksum32\:).*"          = "`${1} $($Latest.Checksum32)"
-		"(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
-        }
-    ".\tools\chocolateyInstall.ps1" = @{
-		'(^[$]version\s*=\s*)(".*")' = "`$1""$($Latest.Version)"""
-		'(?i)(^\s*file\s*=\s*)(".*")' = "`$1""$($Latest.FileName32)"""
-		'(?i)(^\s*file64\s*=\s*)(".*")' = "`$1""$($Latest.FileName64)"""
-        }
-    ".\chromium.nuspec" = @{
-		"(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
-		   }
+    "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+    "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+    "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+    "(?i)(^\s*checksum32\:).*"          = "`${1} $($Latest.Checksum32)"
+    "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+    '(^[$]version\s*=\s*)(".*")' = "`$1""$($Latest.Version)"""
+    '(?i)(^\s*file\s*=\s*)(".*")' = "`$1""$($Latest.FileName32)"""
+    '(?i)(^\s*file64\s*=\s*)(".*")' = "`$1""$($Latest.FileName64)"""
+    }
+    ".\chromium.nuspec" = @{
+    "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
+    }
+  }
 }
 
 function global:au_BeforeUpdate {
