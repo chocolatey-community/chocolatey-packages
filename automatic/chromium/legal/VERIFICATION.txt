@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://github.com/henrypp/chromium/releases/> (the listed mirrors may differ from the used mirror below)
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://github.com/henrypp/chromium/releases/download/v63.0.3239.132-r508578-win32/chromium-sync.exe>
+  64-Bit software: <https://github.com/henrypp/chromium/releases/download/v63.0.3239.132-r508578-win64/chromium-sync.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: 99A8829DC8EB1D6461C0D691063B1F464556093EC71D6A8B7E28A8CDE6B74846
+  checksum64: C3AB42C5B553452078027E867282A379D8A84F6CE1BFA4A22BC40FCD5ACA6524
+
+The file 'LICENSE.txt' has been obtained from <https://chromium.googlesource.com/chromium/src.git/+/master/LICENSE>

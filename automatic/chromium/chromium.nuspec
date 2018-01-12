@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chromium</id>
+    <version>63.0.3239.132</version>
+    <title>Chromium</title>
+    <owners>chocolatey</owners>
+    <authors>The Chromium Authors</authors>
+    <projectUrl>http://www.chromium.org/Home</projectUrl>
+    <projectSourceUrl>https://chromium.googlesource.com/chromium/src</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chromium.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web. This site contains design documents, architecture overviews, testing information, and more to help you learn to build and work with the Chromium source code.
+
+## Notes
+
+- This package installs by default to the `%programfiles(x86)%` instead of `%localappdata%\Chromium`.
+- If you have installed this package in the past to the `%localappdata%\Chromium` location it will continue to be installed in this location.
+]]></description>
+    <summary>Chromium</summary>
+    <copyright>Copyright (c) 2013 The Chromium OS Author</copyright>
+    <bugTrackerUrl>https://bugs.chromium.org/p/chromium/issues/list</bugTrackerUrl>
+    <mailingListUrl>https://www.chromium.org/developers/discussion-groups</mailingListUrl>
+    <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
+    <tags>chromium admin google cross-platform foss chrome browser</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="0.10.5" />
+    </dependencies>
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
