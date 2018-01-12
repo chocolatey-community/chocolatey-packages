@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mixxx</id>
-    <version>2.0.0.20161110</version>
+    <version>2.0.0.20180111</version>
     <title>Mixxx</title>
     <owners>chocolatey</owners>
     <authors>Mixxx Development Team</authors>
@@ -11,13 +11,41 @@
     <projectUrl>http://mixxx.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/mixxx.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-Mixxx is free DJ software for Windows, Mac OS X and Linux. It’s easy to use so you can start mixing your favorite songs in no time, even if you’ve never DJed before. Mixxx offers a variety of features for experienced DJs and beginners alike, such as automatic beat and key detection, master sync, hotcues, looping, 4 decks, effects and many more. You can perform with Mixxx using MIDI and HID controllers, CD players, vinyl turntables or even just your computer’s keyboard and mouse.
-    </description>
+    <description><![CDATA[Mixxx is free DJ software for Windows, Mac OS X and Linux. It's easy to use so you can start mixing your favorite songs in no time, even if you've never DJed before. Mixxx offers a variety of features for experienced DJs and beginners alike, such as automatic beat and key detection, master sync, hotcues, looping, 4 decks, effects and many more. You can perform with Mixxx using MIDI and HID controllers, CD players, vinyl turntables or even just your computer's keyboard and mouse.
+
+## Features
+
+- Four Decks, Advanced Controls
+  - Time Stretch and Vinyl Emulation
+  - Beat Looping
+  - Powerful Master Sync
+  - Hotcues
+  - Beat Rolls and Censor
+  - Intuitive Pitchbend
+  - Broad Format Support
+  - EQ and Crossfader Control
+  - Built-in Effects
+- Organization
+  - Crates and PlaylistsFree Timecode Vinyl Control
+  - Disk Browsing
+  - iTunes and Traktor Library Integration
+  -  MusicBrainz Tag Lookup
+- BPM Detection and Sync
+- Auto DJ
+- Record and Broadcast 
+  - Recording
+  - Live Broadcasting
+  - ReplayGain Normalization
+  - Quad Microphone Input
+- DJ Controller Support
+- Free Timecode Vinyl Control
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/mixxx/screenshot.png)
+]]></description>
     <summary>Cross platform and open Source DJ software</summary>
     <releaseNotes>http://mixxxblog.blogspot.it/</releaseNotes>
     <copyright />
-    <tags>DJ audio mixing party mp3 media admin</tags>
+    <tags>DJ audio mixing party mp3 media cross-platform foss admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mixxx</packageSourceUrl>
     <projectSourceUrl>https://github.com/mixxxdj/mixxx</projectSourceUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/mixxx</bugTrackerUrl>
@@ -28,5 +56,6 @@ Mixxx is free DJ software for Windows, Mac OS X and Linux. It’s easy to use so
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey.portable</id>
-    <version>1.1.26.01</version>
+    <version>1.1.27.03</version>
     <title>AutoHotkey (Portable)</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
@@ -11,7 +11,7 @@
     <projectUrl>http://ahkscript.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/autohotkey.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 
 **You can use AutoHotkey to**:
@@ -36,7 +36,8 @@ AutoHotkey is a free, open source macro-creation and automation software utility
 - Use variadic functions.
 - Use DLL calls and Windows Messages.
 - Use Perl Compatible Regular Expressions (PCRE).
-- Use interactive debugging features and more.</description>
+- Use interactive debugging features and more.
+]]></description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes>https://autohotkey.com/docs/AHKL_ChangeLog.htm</releaseNotes>
     <tags>automation hotkeys scripting windows foss admin</tags>

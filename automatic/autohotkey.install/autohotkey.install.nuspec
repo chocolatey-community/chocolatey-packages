@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey.install</id>
-    <version>1.1.26.01</version>
+    <version>1.1.27.04</version>
     <title>AutoHotkey (Install)</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
@@ -11,7 +11,7 @@
     <projectUrl>http://ahkscript.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/autohotkey.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 
 **You can use AutoHotkey to**:
@@ -36,7 +36,21 @@ AutoHotkey is a free, open source macro-creation and automation software utility
 - Use variadic functions.
 - Use DLL calls and Windows Messages.
 - Use Perl Compatible Regular Expressions (PCRE).
-- Use interactive debugging features and more.    </description>
+- Use interactive debugging features and more.
+
+### Package Specific
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/DefaultVer:` - What version to run as Default - defaults to "x64" if CPU and Windows Install is 64 bit else defaults to "U32".
+  Available Options are:
+    - U32 - Unicode 32-bit
+    - x64 or U64 - Unicode 64-bit
+    - A32 or ANSI - ANSI 32-bit
+
+To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+]]></description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes>https://autohotkey.com/docs/AHKL_ChangeLog.htm</releaseNotes>
     <tags>automation hotkeys scripting windows foss admin</tags>

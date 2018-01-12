@@ -12,9 +12,9 @@ if ( $pp.InstallDir ) {
 
 $packageArgs = @{
     packageName    = 'python3'
-    fileType       = 'exe'
-    file           = gi $toolsPath\*_x32.???
-    file64         = gi $toolsPath\*_x64.???
+    fileType       = 'msi'
+    file           = "$toolsPath\python-3.4.4.msi"
+    file64         = "$toolsPath\python-3.4.4.amd64.msi"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
     validExitCodes = @(0)
     softwareName   = 'Python*'

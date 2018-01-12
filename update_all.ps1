@@ -19,6 +19,7 @@ $Options = [ordered]@{
       'The operation has timed out'
       'Internal Server Error'
       'Service Temporarily Unavailable'
+      'The connection was closed unexpectedly.'
     )
     RepeatOn      = @(                                      #Error message parts on which to repeat package updater
       'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
@@ -30,6 +31,7 @@ $Options = [ordered]@{
       'Internal Server Error'
       'An exception occurred during a WebClient request'
       'remote session failed with an unexpected state'
+      'The connection was closed unexpectedly.'
     )
     #RepeatSleep   = 250                                    #How much to sleep between repeats in seconds, by default 0
     #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
@@ -41,7 +43,7 @@ $Options = [ordered]@{
             Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
             NoAppVeyor  = $false                            #  Markdown: do not show AppVeyor build shield
             UserMessage = "[Ignored](#ignored) | [History](#update-history) | [Force Test](https://gist.github.com/$Env:gist_id_test) | [Releases](https://github.com/$Env:github_user_repo/tags) | **TESTING AU NEXT VERSION**"       #  Markdown, Text: Custom user message to show
-            NoIcons     = $false                            #  Markdown: don't show icon[Releases](https://github.com/$Env:github_user_repo/tags) 
+            NoIcons     = $false                            #  Markdown: don't show icon[Releases](https://github.com/$Env:github_user_repo/tags)
             IconSize    = 32                                #  Markdown: icon size
             Title       = ''                                #  Markdown, Text: TItle of the report, by default 'Update-AUPackages'
         }
@@ -90,9 +92,12 @@ $Options = [ordered]@{
 
     ForcedPackages = $ForcedPackages -split ' '
     UpdateIconScript = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
+    ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
     BeforeEach = {
         param($PackageName, $Options )
+        $Options.ModulePaths | % { Import-Module $_ }
         . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
+        if (Test-Path tools) { Expand-Aliases -Directory tools }
 
         $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
         $p = $Options.ForcedPackages | ? { $_ -match $pattern }

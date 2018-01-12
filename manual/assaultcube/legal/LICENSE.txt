@@ -1,0 +1,24 @@
+Licensing information
+AssaultCube is developed by various people around the world. People that enjoy making this game together. All of these various people have been given the freedom to license their works in the way they wish. Because of this, licensing of AssaultCube is very specific.
+
+To find out more about the people that help make AssaultCube happen, take a look at the team: Rabid Viper Productions.
+
+Please select from the list below to find out how permission is granted for:
+
+The entire AssaultCube package
+AssaultCube website and documentation
+A specific file in the AssaultCube package
+For anything else, please check in your ./docs/package_copyrights.txt file and any individual *.txt files or *.cfg files within AssaultCube to see if permission is granted to redistribute that data. If no permission is found, you MUST assume that the data is COPYRIGHT and you are NOT allowed to redistribute that data outside of an UNMODIFIED AssaultCube package(s).
+
+The entire AssaultCube package
+AssaultCube is FREEWARE. By downloading the AssaultCube package(s) you agree that you may freely use and redistribute the AssaultCube package(s) UNMODIFIED (the AssaultCube package(s) can be originally found at https://github.com/assaultcube/AC/) on any media, subject to the following licensing conditions:
+
+- AssaultCube is provided "as-is", without any express or implied warranty.
+- In no event will the authors be held liable for any damages arising from the use of AssaultCube.
+- You MAY NOT use AssaultCube for ANY commercial purposes.
+- You may re-compress the AssaultCube package(s) using different archival formats (i.e. zip/tgz/rpm/deb/dmg).
+- Any other changes beyond this, require EXPLICIT permission.
+- The origin of AssaultCube, or its package(s) must not be misrepresented.
+- You must not claim that you created AssaultCube or any of the original AssaultCube package(s).
+- You must not modify AssaultCube for the purposes of gaining an unfair advantage over others and you must not redistribute these modifications in any form, including, but not limited to videos, text and software.
+PLEASE NOTE: This license is for the entire UNMODIFIED AssaultCube package(s). You may choose to disect, and use or redistribute, etc. pieces of AssaultCube, instead of the entire package(s) if you wish. HOWEVER, you must adhere to the license specified for that particular data. If no license is specified, you MUST assume that the data is COPYRIGHT and you are NOT allowed to redistribute that data outside of an UNMODIFIED AssaultCube package(s).

@@ -1,9 +1,9 @@
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = "BleachBit"
-  file          = "$toolsDir\BleachBit-1.17-setup.exe"
+  file          = "$toolsDir\BleachBit-1.19-setup.exe"
   fileType      = "exe"
   silentArgs    = "/S"
 }

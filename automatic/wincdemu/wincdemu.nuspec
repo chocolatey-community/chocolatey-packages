@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>wincdemu</id>
-    <version>4.1</version>
+    <version>4.1.0.20171221</version>
     <title>WinCDEmu</title>
     <owners>chocolatey</owners>
     <authors>Sysprogs OÜ</authors>
@@ -11,26 +11,27 @@
     <projectUrl>http://wincdemu.sysprogs.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/wincdemu.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-WinCDEmu is an open-source CD/DVD/BD emulator – a tool that allows you to mount optical disc mages by simply clicking on them in Windows Explorer. If you have downloaded an ISO image and want to use it without burning it to a blank disc, WinCDEmu is the easiest way to do it.
+    <description><![CDATA[
+WinCDEmu is an open-source CD/DVD/BD emulator - a tool that allows you to mount optical disc mages by simply clicking on them in Windows Explorer. If you have downloaded an ISO image and want to use it without burning it to a blank disc, WinCDEmu is the easiest way to do it.
 
-### Features
+## Features
 
 * One-click mounting of ISO, CUE, NRG, MDS/MDF, CCD, IMG images.
 * Supports unlimited amount of virtual drives.
 * Runs on 32-bit and 64-bit Windows versions from XP to Windows 7.
 * Allows creating ISO images through a context menu in Explorer.
-* Small installer size – less than 1 MB!
+* Small installer size - less than 1 MB!
 * Does not require rebooting after installation.
 * A special portable version is available.
 * Translated to more than 20 languages.
 * Does not occupy drive letters when not used.
-Supports data, DVD-video and BD-video images.
+* Supports data, DVD-video and BD-video images.
+* WinCDEmu is free for any kind of use it is licensed under LGPL.
 
-WinCDEmu is free for any kind of use – it is licensed under LGPL.
-    </description>
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/wincdemu/screenshot.png)
+]]></description>
     <summary>WinCDEmu is an open-source CD/DVD/BD emulator</summary>
-    <releaseNotes>http://www.digital-digest.com/software/WinCDEmu_history.html#4</releaseNotes>
+    <releaseNotes>https://www.videohelp.com/software/WinCDEmu/version-history</releaseNotes>
     <copyright>2013 Sysprogs OÜ</copyright>
     <tags>emulator ISO CUE IMG virtual drive CD DVD BD admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wincdemu</packageSourceUrl>
@@ -39,5 +40,6 @@ WinCDEmu is free for any kind of use – it is licensed under LGPL.
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

@@ -17,16 +17,16 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*packageName\s*=\s*)('.*')"                        = "`$1'$($Latest.PackageName)'"
-        }
-
-        "$($Latest.PackageName).nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-            "(\<dependency .+?`")vcredist[^`"]+`"( version=`"[^`"]+`")?" = "`$1$($Latest.Dependency)`""
-        }
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
     }
+
+    "$($Latest.PackageName).nuspec" = @{
+      "(\<releaseNotes\>).*?(\</releaseNotes\>)"                   = "`${1}$($Latest.ReleaseNotes)`$2"
+      "(\<dependency .+?`")vcredist[^`"]+`"( version=`"[^`"]+`")?" = "`$1$($Latest.Dependency.Id)`" version=`"$($Latest.Dependency.Version)`""
+    }
+  }
 }
 
 function Get-Dependency() {
@@ -34,23 +34,29 @@ function Get-Dependency() {
 
   $dep = $url -split '\-' | select -last 1 -skip 1
 
-  @{
-    'vc14' = 'vcredist140'
-    'vc11' = 'vcredist2012'
+  $result = @{
+    'vc15' = @{ Id = 'vcredist140'; Version = '14.11.25325.0' }
+    'vc14' = @{ Id = 'vcredist140'; Version = '14.0.24215.1' }
+    'vc11' = @{ Id = 'vcredist2012'; Version = '11.0.61031' }
   }.GetEnumerator() | ? Key -eq $dep | select -first 1 -expand Value
+
+  if (!$result) {
+    throw "VC Redistributable version was not found. Please check the script."
+  }
+  return $result
 }
 
 function CreateStream {
   param([uri]$url32Bit, [uri]$url64bit, [version]$version)
 
   $Result = @{
-    Version = $version
-    URLNTS32 = 'http://windows.php.net' + $url32bit
-    URLNTS64 = 'http://windows.php.net' + $url64bit
-    URLTS32  = 'http://windows.php.net' + ($url32bit | % { $_ -replace '\-nts','' })
-    URLTS64 = 'http://windows.php.net' + ($url64bit | % { $_ -replace '\-nts','' })
+    Version      = $version
+    URLNTS32     = 'http://windows.php.net' + $url32bit
+    URLNTS64     = 'http://windows.php.net' + $url64bit
+    URLTS32      = 'http://windows.php.net' + ($url32bit | % { $_ -replace '\-nts', '' })
+    URLTS64      = 'http://windows.php.net' + ($url64bit | % { $_ -replace '\-nts', '' })
     ReleaseNotes = "https://secure.php.net/ChangeLog-$($version.Major).php#${version}"
-    Dependency = Get-Dependency $url32Bit
+    Dependency   = Get-Dependency $url32Bit
   }
 
   if ($Result.URLNTS32 -eq $Result.TS32) {
@@ -65,22 +71,22 @@ function CreateStream {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $url32Bits = $download_page.links | ? href -match 'nts.*x86\.zip$' | ? href -notmatch 'debug' | select -expand href
-    $url64Bits = $download_page.links | ? href -match 'nts.*x64\.zip$' | ? href -notmatch 'debug' | select -expand href
+  $url32Bits = $download_page.links | ? href -match 'nts.*x86\.zip$' | ? href -notmatch 'debug' | select -expand href
+  $url64Bits = $download_page.links | ? href -match 'nts.*x64\.zip$' | ? href -notmatch 'debug' | select -expand href
 
-    $streams = @{ }
+  $streams = @{ }
 
-    $url32Bits | sort | % {
-      $version = $_ -split '-' | select -first 1 -Skip 1
-      $url64Bit = $url64Bits | ? { $_ -split '-' | select -first 1 -skip 1 | ? { $_ -eq $version } }
+  $url32Bits | sort | % {
+    $version = $_ -split '-' | select -first 1 -Skip 1
+    $url64Bit = $url64Bits | ? { $_ -split '-' | select -first 1 -skip 1 | ? { $_ -eq $version } }
 
-      $streams.Add((Get-Version $version).ToString(2), (CreateStream $_ $url64Bit $version))
+    $streams.Add((Get-Version $version).ToString(2), (CreateStream $_ $url64Bit $version))
 
-    } | Out-Null
+  } | Out-Null
 
-    return @{ Streams = $streams }
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none

@@ -28,7 +28,7 @@ function global:au_GetLatest {
 
     if ([version]$version_pre -gt [version]$version) {
         @{
-            Version = "$version_pre-$suffix"
+            Version = $version_pre
             URL32   = $url_pre
         }
     } else {

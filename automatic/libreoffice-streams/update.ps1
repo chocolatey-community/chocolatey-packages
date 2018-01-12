@@ -19,7 +19,7 @@ function global:au_SearchReplace {
             "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
             "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
-        ".\libreoffice.nuspec" = @{
+        ".\libreoffice-streams.nuspec" = @{
           "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
         }
     }
@@ -31,7 +31,7 @@ function GetFreshVersion() {
   $version = $url -split '/' | ? { [version]::TryParse($_, [ref]($__)) }
 
   @{
-    PackageName = "libreoffice"
+    PackageName = "libreoffice-fresh"
     Title = "LibreOffice Fresh"
     Version = $version
     URL32 = "https://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
@@ -45,7 +45,7 @@ function GetStillVersions() {
   $version = $url -split '/' | ? { [version]::TryParse($_,[ref]($__)) }
 
   @{
-    PackageName = 'libreoffice-oldstable'
+    PackageName = 'libreoffice-still'
     Title = 'LibreOffice Still'
     Version = $version
     URL32   = "https://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"

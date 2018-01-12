@@ -65,6 +65,13 @@ $options = [ordered]@{
         Path   = "$PSScriptRoot\Update-Force-Test-${n}.md"       #List of files to add to the gist
         Description = "Update Force Test Report #powershell #chocolatey"
     }
+
+    ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
+
+    BeforeEach  = {
+      param($PackageName, $Options )
+      $Options.ModulePaths | % { Import-Module $_ }
+  }
 }
 
 

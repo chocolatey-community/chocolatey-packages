@@ -33,7 +33,7 @@ function global:au_GetLatest {
 
   return @{
     URL32 = $url32
-    Version = Get-PaddedVersion $currentVersion $padVersionUnder
+    Version = Get-FixVersion $currentVersion -OnlyFixBelowVersion $padVersionUnder
   }
 }
 

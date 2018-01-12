@@ -4,7 +4,7 @@
     [string]$product
   )
   $regUninstallDir = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
-  $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
+  $regUninstallDirWow64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
 
   $uninstallPaths = $(Get-ChildItem $regUninstallDir).Name
 

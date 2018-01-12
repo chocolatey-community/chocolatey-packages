@@ -17,3 +17,4 @@ WinCDEmu is an open-source CD/DVD/BD emulator - a tool that allows you to mount 
 * Supports data, DVD-video and BD-video images.
 * WinCDEmu is free for any kind of use it is licensed under LGPL.
 
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/wincdemu/screenshot.png)
