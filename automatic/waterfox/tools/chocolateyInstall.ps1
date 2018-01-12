@@ -2,7 +2,7 @@
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
-if ((Get-ProcessorBits -Compare 32) -or $env:chocolateyForceX86 -eq $true) {
+if ((Get-OSArchitectureWidth -Compare 32) -or $env:chocolateyForceX86 -eq $true) {
   throw "Waterfox do not support 32bit (x86) installation."
 }
 
@@ -10,7 +10,7 @@ $packageArgs = @{
   packageName   = 'waterfox'
   fileType      = 'exe'
   softwareName  = 'Waterfox*'
-  file          = "$toolsDir\Waterfox 56.0.2 Setup_x64.exe"
+  file          = "$toolsDir\Waterfox 56.0.3 Setup_x64.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }

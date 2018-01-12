@@ -1,26 +1,26 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = $env:ChocolateyPackageName
-    FileFullPath   = gi $toolsPath\*.zip
+    FileFullPath   = Get-Item $toolsPath\*.zip
     Destination    = $toolsPath
 }
 Get-ChocolateyUnzip @packageArgs
-rm $toolsPath\*.zip -ea 0
+Remove-Item $toolsPath\*.zip -ea 0
 
 $packageArgs = @{
   PackageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = gi $toolsPath\*.exe
+  file           = Get-Item $toolsPath\*.exe
   silentArgs     = '/auto'
   validExitCodes = @(0, 1641, 3010)
   softwareName   = 'Paint.NET*'
 }
 
 Install-ChocolateyInstallPackage @packageArgs
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" }}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" }}
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
