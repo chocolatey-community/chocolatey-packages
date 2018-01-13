@@ -15,8 +15,8 @@ function global:au_SearchReplace {
     }
     ".\tools\chocolateyInstall.ps1" = @{
     '(^[$]version\s*=\s*)(".*")' = "`$1""$($Latest.Version)"""
-    '(?i)(^\s*file\s*=\s*)(".*")' = "`$1""$($Latest.FileName32)"""
-    '(?i)(^\s*file64\s*=\s*)(".*")' = "`$1""$($Latest.FileName64)"""
+	"(?i)(^\s*file\s*=\s*`"[$]toolsdir\\).*" = "`${1}$($Latest.FileName32)`""
+	"(?i)(^\s*file64\s*=\s*`"[$]toolsdir\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\chromium.nuspec" = @{
     "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
@@ -26,8 +26,6 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -FileNameBase "$($Latest.PackageName)"
-    $Latest.FileName32 = ("`$toolsdir\"+$($Latest.PackageName)+"_x32.exe");
-    $Latest.FileName64 = ("`$toolsdir\"+$($Latest.PackageName)+"_x64.exe");
 }
 
     
