@@ -2,7 +2,7 @@
 $scriptDir=$toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 . (Join-Path $scriptDir 'helper.ps1')
 
-$version = "65.0.3319.0-snapshots"
+$version = "65.0.3320.0-snapshots"
 $hive = "hkcu"
 $chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $Chromium = $hive + ":" + $chromium_string
@@ -27,4 +27,4 @@ Install-ChocolateyInstallPackage @packageArgs
 } else {
 Write-Host "Chromium $version is already installed."
 }
-rm $toolsDir\*.exe -ea 0 -force
+Remove-Item $toolsDir\*.exe -ea 0 -force
