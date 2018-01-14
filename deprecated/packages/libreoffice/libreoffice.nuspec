@@ -15,6 +15,7 @@
 
     </description>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
+    <tags>deprecated</tags>
     <dependencies>
       <dependency id="libreoffice-fresh" version="5.4.4" />
     </dependencies>
