@@ -6,16 +6,16 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 
 #### MSI Properties
 `ADD_CMAKE_TO_PATH`
-* `None` - Do not add CMake to path (default)
-* `System` - Add CMake to system PATH for __all users__
-* `User` - Add CMake to system PATH for __current user__
+- `None` - Do not add CMake to path (default)
+- `System` - Add CMake to system PATH for __all users__
+- `User` - Add CMake to system PATH for __current user__
 
 `DESKTOP_SHORTCUT_REQUESTED`
-* `0` = Do not create desktop icon (default)
-* `1` = Create CMake desktop icon
+- `0` = Do not create desktop icon (default)
+- `1` = Create CMake desktop icon
 
 `ALLUSERS`
-* `0` = Install for the current user only
-* `1` = Install for all users (default)
+- `0` = Install for the current user only
+- `1` = Install for all users (default)
 
-For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=""User""'`
+For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=User'`
