@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$fileName  = 'AutoHotkey_1.1.27.03.zip'
+$fileName  = 'AutoHotkey_1.1.27.05.zip'
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $zip_path = "$toolsPath\$fileName"
-rm $toolsPath\* -Recurse -Force -Exclude $fileName
+Remove-Item $toolsPath\* -Recurse -Force -Exclude $fileName
 
 $packageArgs = @{
     PackageName  = 'autohotkey.portable'
@@ -11,16 +11,16 @@ $packageArgs = @{
     Destination  = $toolsPath
 }
 Get-ChocolateyUnzip @packageArgs
-rm $zip_path -ea 0
+Remove-Item $zip_path -ea 0
 
 Write-Host "Removing ANSI version"
-rm "$toolsPath/AutoHotkeyA32.exe" -ea 0
-if (Get-ProcessorBits 64) {
+Remove-Item "$toolsPath/AutoHotkeyA32.exe" -ea 0
+if (Get-OSArchitectureWidth 64) {
     Write-Verbose "Removing x32 version"
-    rm "$toolsPath/AutoHotkeyU32.exe" -ea 0
-    mv "$toolsPath/AutoHotkeyU64.exe" "$toolsPath/AutoHotkey.exe" -Force
+    Remove-Item "$toolsPath/AutoHotkeyU32.exe" -ea 0
+    Move-Item "$toolsPath/AutoHotkeyU64.exe" "$toolsPath/AutoHotkey.exe" -Force
 } else {
     Write-Verbose "Removing x64 version"
-    rm "$toolsPath/AutoHotkeyU64.exe" -ea 0
-    mv "$toolsPath/AutoHotkeyU32.exe" "$toolsPath/AutoHotkey.exe" -Force
+    Remove-Item "$toolsPath/AutoHotkeyU64.exe" -ea 0
+    Move-Item "$toolsPath/AutoHotkeyU32.exe" "$toolsPath/AutoHotkey.exe" -Force
 }

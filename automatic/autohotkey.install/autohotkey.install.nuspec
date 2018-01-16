@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey.install</id>
-    <version>1.1.27.04</version>
+    <version>1.1.27.05</version>
     <title>AutoHotkey (Install)</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
@@ -38,18 +38,15 @@ AutoHotkey is a free, open source macro-creation and automation software utility
 - Use Perl Compatible Regular Expressions (PCRE).
 - Use interactive debugging features and more.
 
-### Package Specific
-#### Package Parameters
-The following package parameters can be set:
+**Package Parameters**:
 
- * `/DefaultVer:` - What version to run as Default - defaults to "x64" if CPU and Windows Install is 64 bit else defaults to "U32".
-  Available Options are:
-    - U32 - Unicode 32-bit
-    - x64 or U64 - Unicode 64-bit
-    - A32 or ANSI - ANSI 32-bit
+If you want the default version to be Unicode32/64-bit or ANSI 32-bit you can choose this by passing one of the following commands:
 
-To pass parameters, use `--params "''"` (e.g. `choco install packageID [other options] --params="'/ITEM:value /ITEM2:value2 /FLAG_BOOLEAN'"`).
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+- UNICODE 64-bit - `choco install autohotkey.install --params="'/DefaultVer:U64'"`
+- UNICODE 32-bit - `choco install autohotkey.install --params="'/DefaultVer:U32'"`
+- ANSI 32-bit - `choco install autohotkey.install --params="'/DefaultVer:A32'"`
+
+If no paramater is specified then UNICODE 32-bit or 64-bit will automatically be selected depending on your CPU Architecture and whether you have Windows 32-bit or 64-bit installed.
 ]]></description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes>https://autohotkey.com/docs/AHKL_ChangeLog.htm</releaseNotes>

@@ -5,14 +5,14 @@ $toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'mkvtoolnix'
   fileType       = 'exe'
-  file           = gi $toolsPath\*-32-*.exe
-  file64         = gi $toolsPath\*-64-*.exe
+  file           = Get-Item $toolsPath\*-32-*.exe
+  file64         = Get-Item $toolsPath\*-64-*.exe
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = 'mkvtoolnix*'
 }
 Install-ChocolateyInstallPackage @packageArgs
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" }}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" }}
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
