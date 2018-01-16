@@ -4,15 +4,16 @@
     <metadata>
         <id>diskdefragtouch</id>
         <title>Auslogics Disk Defrag Touch</title>
-        <version>1.3.0.20161026</version>
+        <version>8.0.1.0</version>
         <authors>Auslogics Software</authors>
         <owners>Redsandro</owners>
         <summary>A compact and fast defragmenter for touch screens with achievements.</summary>
-        <description>
+        <description><![CDATA[
 A compact and fast defragmenter with over 11,000,000 users worldwide now has a special version that's perfect for defragging your touch screen PC. Get your files in order and speed up your hard drive in minutes! This program is perfect for touch screens, although a mouse works fine too. If you think defragmenting is boring, try to unlock all the achievements!
 
-Auslogics Disk Defrag Touch is a product of Auslogics, certified Microsoft® Gold Application Developer.
-        </description>
+Auslogics Disk Defrag Touch is a product of Auslogics, certified MicrosoftÂ® Gold Application Developer.
+
+]]></description>
         <projectUrl>http://www.auslogics.com/en/software/disk-defrag-touch/</projectUrl>
         <tags>system freeware gaming admin disk performance defragment</tags>
         <copyright></copyright>
