@@ -1,4 +1,4 @@
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $packageName = 'virtualbox'
@@ -7,7 +7,7 @@ $packageName = 'virtualbox'
 #sp HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system shutdownwithoutlogon 1
 $shutdown_type = 'savestate'  # 'acpipowerbutton', 'poweroff', 'savestate'
 
-$pvbox = ps virtualbox -ea 0
+$pvbox = Get-Process virtualbox -ea 0
 if (!$pvbox) {
     Write-Host "$packageName is not running"
     return

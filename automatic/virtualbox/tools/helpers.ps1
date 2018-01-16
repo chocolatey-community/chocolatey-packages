@@ -1,5 +1,5 @@
-function Get-VirtualBoxIntallLocation() {
-    $vbox_msi = gp 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment' VBOX_MSI_INSTALL_PATH -ea 0 | select -expand VBOX_MSI_INSTALL_PATH
+﻿function Get-VirtualBoxIntallLocation() {
+    $vbox_msi = Get-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Environment' VBOX_MSI_INSTALL_PATH -ea 0 | Select-Object -expand VBOX_MSI_INSTALL_PATH
     if ($vbox_msi -and $vbox_msi.EndsWith('\')) { $vbox_msi = $vbox_msi -replace '.$' }
 
     Write-Verbose 'Checking VBOX_MSI_INSTALL_PATH'
@@ -13,7 +13,7 @@ function Get-VirtualBoxIntallLocation() {
 
 #http://stackoverflow.com/questions/40863475/starting-non-elevated-prompt-from-elevated-session
 function Start-ProcessNonElevated( [string] $Cmd, [switch]$UsePowerShell ) {
-    $svc = gsv Schedule -ea 0
+    $svc = Get-Service Schedule -ea 0
     if ($svc -and $svc.Status -ne 'Running') { throw 'Start-ProcessNonElevated requires running Task Scheduler service' }
 
     $res = @{}
@@ -38,16 +38,16 @@ function Start-ProcessNonElevated( [string] $Cmd, [switch]$UsePowerShell ) {
 
     Write-Verbose 'Waiting for scheduled task to finish'
     do {
-        $status = schtasks /query /tn $task_name /FO csv | ConvertFrom-Csv | select -expand Status
-        sleep 1
+        $status = schtasks /query /tn $task_name /FO csv | ConvertFrom-Csv | Select-Object -expand Status
+        Start-Sleep 1
     }
     until ($status -eq 'Ready')
     schtasks.exe /delete /F /tn $task_name *>> "$tmp_base.schtasks.log"
 
     if ($UsePowershell) {
         $res = @{
-            out = cat "$tmp_base.out.log" -ea 0
-            err = cat "$tmp_base.err.log" -ea 0
+            out = Get-Content "$tmp_base.out.log" -ea 0
+            err = Get-Content "$tmp_base.err.log" -ea 0
         }
     }
 

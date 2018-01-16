@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
@@ -13,8 +13,8 @@ if (!$installLocation) { Write-Warning "Can not find existing installation locat
 $vboxManage = "$installLocation\VBoxManage.exe"
 if (!(Test-Path $vboxManage)) { Write-Warning "Existing installation of $packageName found but unable to find VBoxManage.exe"; return }
 
-$extensions = . $vboxManage list extpacks | ? { $_ -match 'Pack no' } | % { $_ -split '\:' | select -last 1 }
-$extensions | % {
+$extensions = . $vboxManage list extpacks | Where-Object { $_ -match 'Pack no' } | ForEach-Object { $_ -split '\:' | Select-Object -last 1 }
+$extensions | ForEach-Object {
   $extName = $_.Trim()
   Write-Host "Uninstalling extension: '$extName'"
   Start-ChocolateyProcessAsAdmin -ExeToRun $vboxManage -Statements 'extpack','uninstall',"`"$extName`"" -Elevate 2>&1

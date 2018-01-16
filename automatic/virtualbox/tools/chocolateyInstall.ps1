@@ -3,7 +3,7 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$cert = ls Cert:\CurrentUser\TrustedPublisher -Recurse | ? { $_.Thumbprint -eq 'a88fd9bdaa06bc0f3c491ba51e231be35f8d1ad5' }
+$cert = Get-ChildItem Cert:\CurrentUser\TrustedPublisher -Recurse | Where-Object { $_.Thumbprint -eq 'a88fd9bdaa06bc0f3c491ba51e231be35f8d1ad5' }
 if (!$cert) {
     $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
     Start-ChocolateyProcessAsAdmin "certutil -addstore 'TrustedPublisher' '$toolsPath\oracle.cer'"
@@ -19,10 +19,10 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'http://download.virtualbox.org/virtualbox/5.2.4/VirtualBox-5.2.4-119785-Win.exe'
-  url64bit               = 'http://download.virtualbox.org/virtualbox/5.2.4/VirtualBox-5.2.4-119785-Win.exe'
-  checksum               = '4309c836fb818ff964037b8a37b342b951273eccf761515870be4bcb8de19c01'
-  checksum64             = '4309c836fb818ff964037b8a37b342b951273eccf761515870be4bcb8de19c01'
+  url                    = 'http://download.virtualbox.org/virtualbox/5.2.6/VirtualBox-5.2.6-120293-Win.exe'
+  url64bit               = 'http://download.virtualbox.org/virtualbox/5.2.6/VirtualBox-5.2.6-120293-Win.exe'
+  checksum               = 'da7bbcc9806a3f574f1faed5381c6e116b10a7bbb4779913d5446e49fe08fd7d'
+  checksum64             = 'da7bbcc9806a3f574f1faed5381c6e116b10a7bbb4779913d5446e49fe08fd7d'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
@@ -38,9 +38,9 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 if (!$pp.NoExtensionPack) {
     Write-Host "Installing extension pack"
 
-    $url_ep       = 'http://download.virtualbox.org/virtualbox/5.2.4/Oracle_VM_VirtualBox_Extension_Pack-5.2.4.vbox-extpack'
-    $checksum_ep  = '98e9df4f23212c3de827af9d770b391cf2dba8d21f4de597145512c1479302cd'
-    $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | select -Last 1)
+    $url_ep       = 'http://download.virtualbox.org/virtualbox/5.2.6/Oracle_VM_VirtualBox_Extension_Pack-5.2.6.vbox-extpack'
+    $checksum_ep  = '70584a70b666e9332ae2c6be0e64da4b8e3a27124801156577f205750bdde4f5'
+    $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | Select-Object -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
         -FileFullPath   $file_path_ep `
