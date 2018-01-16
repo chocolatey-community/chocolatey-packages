@@ -79,8 +79,6 @@ Remember, code is written for humans, not for computers. Otherwise we'd all writ
 
 If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox/tools)).
 
-If you use aliases limit them to the default ones and ensure they are [compatible with PowerShell v2+](#1112-ensure-compatibility-with-powershell-v2).
-
 Chocolatey extension [chocolatey-core.extension](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension) provides functions that can make the code even more understandable.
 
 ### 1.1.8 Set `softwareName`
