@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.11.25325.0</version>
+    <version>14.12.25810</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist140</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2017</title>

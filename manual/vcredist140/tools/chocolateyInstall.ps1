@@ -33,11 +33,11 @@ elseif ($version -ge [Version]'5.1' -and $version -lt [Version]'5.2' -and $os.Se
 }
 
 $runtimes = @{
-  'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = (Get-ProcessorBits) -eq 64 }
+  'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = (Get-OSArchitectureWidth) -eq 64 }
   'x86' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData32; Applicable = $true }
 }
 
-switch ([string](Get-ProcessorBits))
+switch ([string](Get-OSArchitectureWidth))
 {
   '32' { $registryRoots = @{ x86 = 'HKLM:\SOFTWARE'; x64 = $null } }
   '64' { $registryRoots = @{ x86 = 'HKLM:\SOFTWARE\WOW6432Node'; x64 = 'HKLM:\SOFTWARE' } }
