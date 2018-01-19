@@ -1,7 +1,7 @@
-function Get-InstallKey()
+﻿function Get-InstallKey()
 {
     $keyName = 'Git_is1'
-    $installKey = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -eq 'true') {
+    $installKey = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -eq 'true') {
              "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$keyName"
     } else { "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$keyName" }
 
