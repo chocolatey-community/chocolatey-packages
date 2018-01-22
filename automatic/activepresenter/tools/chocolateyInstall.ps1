@@ -2,7 +2,7 @@
 
 $fileType      = 'exe'
 $toolsDir      = Split-Path $MyInvocation.MyCommand.Definition
-$embedded_path = gi "$toolsDir\*.$fileType"
+$embedded_path = Get-Item "$toolsDir\*.$fileType"
 
 $packageArgs = @{
   packageName    = 'activepresenter'
@@ -12,7 +12,7 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm $embedded_path -ea 0
+Remove-Item $embedded_path -ea 0
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
