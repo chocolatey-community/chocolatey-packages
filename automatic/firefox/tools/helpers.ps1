@@ -12,7 +12,7 @@
     $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
   }
 
-  $uninstallPath = $uninstallPaths -match "$product [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | select -first 1
+  $uninstallPath = $uninstallPaths -match "$product [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select-Object -first 1
   return $uninstallPath
 }
 
@@ -24,7 +24,7 @@ function GetLocale {
     [string]$product
   )
   #$availableLocales = Get-WebContent $localeUrl 2>$null
-  $availableLocales = Get-Content $localeFile | % { $_ -split '\|' | select -first 1 } | select -Unique
+  $availableLocales = Get-Content $localeFile | ForEach-Object { $_ -split '\|' | Select-Object -first 1 } | Select-Object -Unique
 
   $packageParameters = $env:chocolateyPackageParameters
 
@@ -45,7 +45,7 @@ function GetLocale {
     $systemLocalizeAndCountry, $systemLocaleTwoLetter, $fallbackLocale
 
     foreach ($locale in $locales) {
-      $localeMatch = $availableLocales | ? { $_ -eq $locale } | select -first 1
+      $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -first 1
       if ($localeMatch -and $locale -ne $null) {
         break
       }
@@ -80,7 +80,7 @@ function Get-32bitOnlyInstalled() {
     [Parameter(Mandatory = $true)]
     [string]$product
   )
-  $systemIs64bit = Get-ProcessorBits 64
+  $systemIs64bit = Get-OSArchitectureWidth 64
 
   if (-Not $systemIs64bit) {
     return $false
@@ -91,7 +91,7 @@ function Get-32bitOnlyInstalled() {
     'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
   )
 
-  $installedVersions = Get-ChildItem $registryPaths | ? { $_.Name -match "$product [\d\.]+ \(x(64|86)" }
+  $installedVersions = Get-ChildItem $registryPaths | Where-Object { $_.Name -match "$product [\d\.]+ \(x(64|86)" }
 
   if (
     $installedVersions -match 'x86' `
@@ -111,8 +111,8 @@ function GetChecksums() {
   )
   Write-Debug "Loading checksums from: $checksumFile"
   $checksumContent = Get-Content $checksumFile
-  $checksum32 = ($checksumContent -match "$language\|32") -split '\|' | select -last 1
-  $checksum64 = ($checksumContent -match "$language\|64") -split '\|' | select -last 1
+  $checksum32 = ($checksumContent -match "$language\|32") -split '\|' | Select-Object -last 1
+  $checksum64 = ($checksumContent -match "$language\|64") -split '\|' | Select-Object -last 1
 
   return @{
     "Win32" = $checksum32
