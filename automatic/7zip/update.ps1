@@ -14,21 +14,33 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest $releases
 
-  $download_page.AllElements | ? innerText -match "^Download 7\-Zip ([\d\.]+) \([\d]{4}[\-\d]+\)" | select -First 1 | Out-Null
-  if ($Matches[1] -and ($Matches[1] -match '^[\d\.]+$')) { $version = $Matches[0] }
+  $streams = @{}
 
-  $URLS = $download_page.links | ? href -match "7z$($version -replace '\.','')(\-x64)?\.exe$" | select -expand href
+  $download_page.AllElements | ? innerText -match "^Download 7\-Zip ([\d\.]+) ?(alpha|beta|rc)? \([\d]{4}[\-\d]+\)" | % {
+    if ($Matches[1] -and $Matches[2]) {
+      $streamName = "pre"
+      $version = "$($Matches[1])"
+      $versionFull = "$version-$($Matches[2])"
+    } elseif ($Matches[1]) {
+      $streamName = "stable"
+      $version = $Matches[1]
+      $versionFull = $version
+    } else {
+      return
+    }
+    if ($streams.ContainsKey($streamName)) { return }
 
-  $url32 = $URLS | ? { $_ -notmatch "x64" } | select -first 1
-  $url64 = $URLS | ? { $_ -match "x64" } | select -first 1
-  $url_extra = $download_page.links | ? href -match "7z$($version -replace '\.','')\-extra\.7z" | select -first 1 -expand href
+    $URLS = $download_page.links | ? href -match "7z$($version -replace '\.','')" | select -expand href
 
-  @{
-    URL32     = $domain + $url32
-    URL64     = $domain + $url64
-    URL_EXTRA = $domain + $url_extra
-    Version   = [version]$version
+    $streams["$streamName"] = @{
+      URL32 = $domain + ($URLS | ? { $_ -notmatch "x64" } | select -first 1)
+      URL64 = $domain + ($URLS | ? { $_ -match "x64" } | select -first 1)
+      URL_EXTRA = $domain + ($URLS | ? { $_ -match "extra" } | select -first 1)
+      Version = (Get-Version $versionFull).ToString()
+    }
   }
+
+  return @{ Streams = $streams }
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
