@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 . "$toolsDir\helpers.ps1"
@@ -22,9 +22,9 @@ Start-Process -Wait $packageArgs.FileFullPath -ArgumentList '/S', "/D=$destinati
 
 Remove-Item  $packageArgs.FileFullPath -Force -ea 0
 
-# Create .ignore files for exe’s
-Get-ChildItem -Path $destinationFolder -Recurse | Where {
-  $_.Extension -eq '.exe'} | % {
+# Create .ignore files for exeâ€™s
+Get-ChildItem -Path $destinationFolder -Recurse | Where-Object {
+  $_.Extension -eq '.exe'} | ForEach-Object {
   New-Item $($_.FullName + '.ignore') -Force -ItemType file
 # Suppress output of New-Item
 } | Out-Null

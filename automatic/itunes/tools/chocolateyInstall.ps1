@@ -1,23 +1,23 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$version = '12.7.2'
+$version = '12.7.3'
 
 $packageArgs = @{
   packageName    = 'iTunes'
   fileType       = 'msi'
-  url            = 'https://secure-appldnld.apple.com/itunes12/091-31208-20171206-1A6C2168-DABD-11E7-AB98-609461E0607F/iTunesSetup.exe'
-  url64bit       = 'https://secure-appldnld.apple.com/itunes12/091-31216-20171206-1A6C2208-DABD-11E7-AB98-5F9461E0607F/iTunes64Setup.exe'
+  url            = 'https://secure-appldnld.apple.com/itunes12/091-45190-20180123-72201368-FFEA-11E7-9647-F02911B39B62/iTunesSetup.exe'
+  url64bit       = 'https://secure-appldnld.apple.com/itunes12/091-45357-20180123-72201840-FFEA-11E7-92F9-85B67CCC33A9/iTunes64Setup.exe'
   softwareName   = 'iTunes'
-  checksum       = 'a19c29b0d102cf3673671cae3a326dc36ae22aa109673872fc42ce8fe3f5a899'
+  checksum       = 'c3147ef05ff16d3ea65ed07374958b494355ea378351defc9fea25698e4f617f'
   checksumType   = 'sha256'
-  checksum64     = '7cd6cc4da573dd5e4ba09e7710c2b97fb8e3ab4f2bcf729908ba26bd21aac388'
+  checksum64     = '25f2dbb9676724b9e4757e660c5eff14475e737c33f9b617222b9979eb2ca21b'
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 2010, 1641)
   unzipLocation  = Get-PackageCacheLocation
 }
 
-$app = Get-UninstallRegistryKey -SoftwareName $packageArgs.softwareName | select -first 1
+$app = Get-UninstallRegistryKey -SoftwareName $packageArgs.softwareName | Select-Object -first 1
 
 if ($app -and ([version]$app.DisplayVersion -ge [version]$version) -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "iTunes $version or higher is already installed."

@@ -1,4 +1,4 @@
-function GetDownloadsData() {
+﻿function GetDownloadsData() {
   param($filePath)
 
   $data = Get-Content $filePath | ConvertFrom-Csv -Delimiter '|'
@@ -8,7 +8,7 @@ function GetDownloadsData() {
 function GetLocaleData() {
   param($downloadData)
 
-  $availableLocales = $downloadData | select -expand Locale
+  $availableLocales = $downloadData | Select-Object -expand Locale
 
   $pp = Get-PackageParameters
   $preferredLocale = if ($pp.Locale) { $pp.Locale } else { (Get-Culture).Name }
@@ -18,14 +18,14 @@ function GetLocaleData() {
   $locales = $preferredLocale,$twoLetterLocale,$fallbackLocale
 
   foreach ($locale in $locales) {
-    $localeMatch = $availableLocales | ? { $_ -eq $locale } | select -first 1
+    $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -first 1
     if (!$localeMatch -and $locale -ne $null -and $locale.Count -eq 2) {
-      $localeMatch = $availableLocales | ? { ($_ -split '-' | select -first 1) -eq $locale } | select -first 1
+      $localeMatch = $availableLocales | Where-Object { ($_ -split '-' | Select-Object -first 1) -eq $locale } | Select-Object -first 1
     }
     if ($localeMatch -and $locale -ne $null) { break }
   }
 
-  return $downloadData | ? { $_.Locale -eq $locale } | select -first 1
+  return $downloadData | Where-Object { $_.Locale -eq $locale } | Select-Object -first 1
 }
 
 function GetDownloadInformation() {
