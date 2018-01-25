@@ -1,0 +1,22 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://github.com/kubernetes/kompose/releases/tag/v1.7.0>
+and can be verified by doing the following:
+
+1. Download the following:
+  software: <https://github.com/kubernetes/kompose/releases/download/v1.7.0/kompose-windows-amd64.exe.tar.gz>
+
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: d89d303cbbf9e57e5a540277158e4d83ad18ca7402b5b54665f1378bb4528599
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/kubernetes/kompose/blob/34d72c757906dd05499fedbe214850b41ea712b1/LICENSE>
