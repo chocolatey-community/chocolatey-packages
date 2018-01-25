@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kubernetes-kompose</id>
+    <version>1.7.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kubernetes-kompose</packageSourceUrl>
+    <owners>chocolatey,Andrei Bejenaru</owners>
+    <title>Kompose: Go from Docker Compose to Kubernetes</title>
+    <authors>Kubernetes authors</authors>
+    <projectUrl>http://kompose.io</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/kubernetes.png</iconUrl>
+    <licenseUrl>https://github.com/kubernetes/kompose/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/kubernetes/kompose</projectSourceUrl>
+    <docsUrl>http://kompose.io</docsUrl>
+    <bugTrackerUrl>https://github.com/kubernetes/kompose/issues</bugTrackerUrl>
+    <tags>kubernetes kompose docker docker-compose containers development devops cli foss</tags>
+    <summary>Kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. kompose takes a Docker Compose file and translates it into Kubernetes resources.</summary>
+    <description><![CDATA[Kompose is a convenience tool to go from local Docker development to managing your application with Kubernetes.
+
+Transformation of the Docker Compose format to Kubernetes resources manifest may not be exact, but it helps tremendously when first deploying an application on Kubernetes.
+]]></description>
+    <releaseNotes>https://github.com/kubernetes/kompose/blob/master/CHANGELOG.md</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

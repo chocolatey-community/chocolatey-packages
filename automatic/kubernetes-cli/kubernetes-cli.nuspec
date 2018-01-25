@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kubernetes-cli</id>
+    <version>1.8.7</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kubernetes-cli</packageSourceUrl>
+    <owners>chocolatey,Andrei Bejenaru</owners>
+    <title>Kubernetes Command Line Interface (CLI)</title>
+    <authors>Google</authors>
+    <projectUrl>https://kubernetes.io</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/kubernetes.png</iconUrl>
+    <copyright>(c) 2017 Kubernetes</copyright>
+    <licenseUrl>https://github.com/kubernetes/kubernetes/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/kubernetes/kubernetes</projectSourceUrl>
+    <docsUrl>https://kubernetes.io/docs</docsUrl>
+    <bugTrackerUrl>https://github.com/kubernetes/kubernetes/issues</bugTrackerUrl>
+    <tags>kubernetes kubectl docker rkt containers devops cli</tags>
+    <summary>Kubernetes is an open source system for managing containerized applications across multiple hosts, providing basic mechanisms for deployment, maintenance, and scaling of applications.</summary>
+    <description><![CDATA[Kubernetes is an open source system for managing containerized applications across multiple hosts, providing basic mechanisms for deployment, maintenance, and scaling of applications.
+Kubernetes builds upon a decade and a half of experience at Google running production workloads at scale using a system called Borg, combined with best-of-breed ideas and practices from the community.
+]]></description>
+    <releaseNotes>https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.8.md</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
