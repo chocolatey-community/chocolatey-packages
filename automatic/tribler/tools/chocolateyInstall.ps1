@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $packageName  = 'tribler'
-$url          = 'https://github.com/Tribler/tribler/releases/download/v7.0.0-rc5/Tribler_7.0.0-rc5_x64.exe'
-$checksum     = '8d1786acd970561dfa9c3931eec24abde1f3ff1f0c9a3626b12f573b260cf698'
+$url          = 'https://github.com/Tribler/tribler/releases/download/v7.0.0/Tribler_7.0.0_x64.exe'
+$checksum     = '2d5c6b02e7e787ad7ee62f8d638ef69a075b27cc30732727a922dc8ec099f733'
 $checksumType = 'sha256'
 
 $packageArgs = @{

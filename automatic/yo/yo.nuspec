@@ -4,11 +4,11 @@
   <metadata>
     <id>yo</id>
     <title>Yeoman</title>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <authors>The Yeoman Team</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <summary>CLI tool for running Yeoman generators</summary>
-    <description>
+    <description><![CDATA[
 Yeoman is a generic scaffolding system allowing the creation of any kind of app.
 It allows for rapidly getting started on new projects and streamlines the maintenance of existing projects.
 
@@ -19,7 +19,8 @@ Yeoman by itself doesn't make any decisions.
 Every decision is made by generators which are basically plugins in the Yeoman environment.
 There's a [lot of publicly available generators](http://yeoman.io/generators/) and its easy to [create a new one](http://yeoman.io/authoring/) to match any workflow.
 Yeoman is always the right choice for your scaffolding needs.
-    </description>
+
+]]></description>
     <projectUrl>http://yeoman.io/</projectUrl>
     <projectSourceUrl>https://github.com/yeoman/yo</projectSourceUrl>
     <docsUrl>http://yeoman.io/learning/</docsUrl>
