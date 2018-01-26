@@ -11,21 +11,21 @@ $mergeTasks += ', ' + '!'*$pp.NoContextMenuFolders + 'addcontextmenufolders'
 $mergeTasks += ', ' + '!'*$pp.DontAddToPath        + 'addtopath'
 Write-Host "Merge Tasks: `n$mergeTasks"
 
-ps code -ea 0 | % { $_.CloseMainWindow() | Out-Null }
-sleep 1
-ps code -ea 0 | kill  #in case gracefull shutdown did not succeed, try hard kill
+Get-Process code -ea 0 | ForEach-Object { $_.CloseMainWindow() | Out-Null }
+Start-Sleep 1
+Get-Process code -ea 0 | Stop-Process  #in case gracefull shutdown did not succeed, try hard kill
 
 $packageArgs = @{
   packageName    = 'visualstudiocode'
   fileType       = 'EXE'
-  url            = 'https://az764295.vo.msecnd.net/stable/490ef761b76b3f3b3832eff7a588aac891e5fe80/VSCodeSetup-ia32-1.19.2.exe'
-  url64bit       = 'https://az764295.vo.msecnd.net/stable/490ef761b76b3f3b3832eff7a588aac891e5fe80/VSCodeSetup-x64-1.19.2.exe'
+  url            = 'https://az764295.vo.msecnd.net/stable/7c4205b5c6e52a53b81c69d2b2dc8a627abaa0ba/VSCodeSetup-ia32-1.19.3.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/stable/7c4205b5c6e52a53b81c69d2b2dc8a627abaa0ba/VSCodeSetup-x64-1.19.3.exe'
 
   softwareName   = 'Microsoft Visual Studio Code'
 
-  checksum       = '63d038aa72277b31520ff460129b31beac29abc03ffd2eebf000ce8dc0d222cc'
+  checksum       = '9ebf4e5fce7db623b0e01df8997403eb5a280b8832c62a9c2237a2960ade3fc0'
   checksumType   = 'sha256'
-  checksum64     = 'ad71e488a9dcb4a28a818a6e31edfdb73aed281869c60a16d15e9bfc1768a0aa'
+  checksum64     = '2c68535532ace009b69a3f87f5e540fd37182cd5dcf501003266e5ad8242b764'
   checksumType64 = 'sha256'
 
   silentArgs     = "/verysilent /suppressmsgboxes /mergetasks=""$mergeTasks"" /log=""$env:temp\vscode.log"""
