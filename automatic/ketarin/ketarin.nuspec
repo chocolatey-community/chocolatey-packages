@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ketarin</id>
-    <version>1.8.7.20171125</version>
+    <version>1.8.9</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ketarin</packageSourceUrl>
     <owners>chocolatey, Canneverbe Limited</owners>
     <title>Ketarin</title>

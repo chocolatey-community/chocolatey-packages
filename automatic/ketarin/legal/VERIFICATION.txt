@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <>
 and can be verified by doing the following:
 
-1. Download the following <https://ketarin.org/downloads/Ketarin/Ketarin-1.8.7.zip>
+1. Download the following <https://ketarin.org/downloads/Ketarin/Ketarin-1.8.9.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 5DF9B47503FB422B5E2979DE912D23BA933DCC2DBB213B54DDB7196B82FFD0DC
+  checksum: E28FECFE636D371A59C9F12FB09CA797571F573A225054108BCFD15E84335EE5
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl-2.0.txt>
