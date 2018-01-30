@@ -5,7 +5,7 @@
     <id>Brackets</id>
     <title>Brackets</title>
     <owners>chocolatey</owners>
-    <version>1.11.0.20171021</version>
+    <version>1.12</version>
     <authors>Adobe</authors>
     <summary>Brackets open-source code editor built with the web for the web.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
