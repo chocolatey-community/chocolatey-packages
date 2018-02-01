@@ -26,9 +26,9 @@ function GetDownloadInfo {
   Write-Debug "Reading CSV file from $downloadInfoFile"
   $downloadInfo = Get-Content -Encoding UTF8 -Path $downloadInfoFile | ConvertFrom-Csv -Delimiter '|' -Header 'Type','URL32','URL64','Checksum32','Checksum64'
   if ($parameters.ThreadSafe) {
-    $downloadInfo | ? { $_.Type -eq 'threadsafe' } | select -first 1
+    $downloadInfo | Where-Object { $_.Type -eq 'threadsafe' } | Select-Object -first 1
   } else {
-    $downloadInfo | ? { $_.Type -eq 'not-threadsafe' } | select -first 1
+    $downloadInfo | Where-Object { $_.Type -eq 'not-threadsafe' } | Select-Object -first 1
   }
 }
 
@@ -40,7 +40,7 @@ function GetInstallLocation {
   Write-Debug "Checking for uninstall text document in $libDirectory"
 
   if (Test-Path "$libDirectory\*.txt") {
-    $txtContent = Get-Content -Encoding UTF8 "$libDirectory\*.txt" | select -first 1
+    $txtContent = Get-Content -Encoding UTF8 "$libDirectory\*.txt" | Select-Object -first 1
     $index = $txtContent.LastIndexOf('\')
     if ($index -gt 0) {
       return $txtContent.Substring(0, $index)
@@ -62,7 +62,7 @@ function GetNewInstallLocation {
     return $pp.InstallDir
   }
 
-  $toolsLocation = Get-BinRoot
+  $toolsLocation = Get-ToolsLocation
   return "$toolsLocation\{0}{1}" -f $PackageName, ($Version -replace '\.').Substring(0,2)
 }
 
@@ -72,8 +72,8 @@ function UninstallPackage {
     [string]$packageName
   )
   if (Test-Path "$libDirectory\*.txt") {
-    $txtFile = Resolve-Path "$libDirectory\*.txt" | select -first 1
-    $fileName = ($txtFile -split '\\' | select -last 1).TrimEnd('.txt')
+    $txtFile = Resolve-Path "$libDirectory\*.txt" | Select-Object -first 1
+    $fileName = ($txtFile -split '\\' | Select-Object -last 1).TrimEnd('.txt')
     Uninstall-ChocolateyZipPackage -PackageName $packageName -ZipFileName $fileName
     if (Test-Path $txtFile) {
       Remove-Item -Force -ea 0 $txtFile

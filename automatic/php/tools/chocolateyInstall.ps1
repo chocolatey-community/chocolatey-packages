@@ -51,10 +51,10 @@ if (($installLocation -ne $newInstallLocation) -and (Test-Path "$installLocation
 
 if (!(Test-Path $php_ini_path)) {
   Write-Host 'Creating default php.ini'
-  cp $newInstallLocation/php.ini-production $php_ini_path
+  Copy-Item $newInstallLocation/php.ini-production $php_ini_path
 
   Write-Host 'Configuring PHP extensions directory'
-  (gc $php_ini_path) -replace '; extension_dir = "ext"', 'extension_dir = "ext"' | sc $php_ini_path
+  (Get-Content $php_ini_path) -replace '; extension_dir = "ext"', 'extension_dir = "ext"' | Set-Content $php_ini_path
 }
 
 if (!$pp.ThreadSafe) { Write-Host 'Please make sure you have CGI installed in IIS for local hosting' }
