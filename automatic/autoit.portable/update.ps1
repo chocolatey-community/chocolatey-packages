@@ -29,7 +29,7 @@ function global:au_GetLatest {
     # BasicParsing is no option since we need to parse the version tag.
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $download_page.RawContent -match '><strong>Latest version:</strong> v(.+)</p>' | Out-Null
+    $download_page.RawContent -match '\<td\>v([\d]+\.[\d\.]+)\<\/td\>' | Out-Null
     $version = $Matches[1]
 
     $re = ".*zip$"
