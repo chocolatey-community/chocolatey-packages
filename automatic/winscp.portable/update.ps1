@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://winscp.net/eng/download.php'
+$releases = 'https://winscp.net/eng/downloads.php'
 $re  = 'WinSCP.+Portable\.zip$'
 
 function global:au_SearchReplace {
@@ -28,7 +28,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $url = @($download_page.links | ? href -match $re) -notmatch 'beta|rc' | % href
-    $url = 'https://winscp.net/eng/' + $url
+    $url = 'https://winscp.net/eng' + $url
     $version   = $url -split '-' | select -Last 1 -Skip 1
     $file_name = $url -split '/' | select -last 1
     @{
