@@ -3,13 +3,18 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 function global:au_GetLatest {
     $downloadEndPointUrl = 'https://www.binaryfortress.com/Data/Download/?package=voicebot&log=123'
-    $versionRegEx = 'VoiceBotSetup\-([0-9\.\-]+)\.exe'
+    $versionRegEx = 'VoiceBotSetup\-([0-9\.\-]+)([a-f])?\.exe'
 
     $downloadUrl = Get-RedirectedUrl $downloadEndPointUrl
-    $versionInfo = $downloadUrl -match $versionRegEx
+    $versionMatch = $downloadUrl -match $versionRegEx
 
-    if ($matches) {
+    if ($versionMatch) {
+      if ($matches[2]) {
+        $letterNum = [int]([char]$matches[2] - [char]'a')
+        $version = $matches[1] + ".$letterNum"
+      } else {
         $version = $matches[1]
+      }
     }
 
     return @{ Url32 = $downloadUrl; Version = $version }
