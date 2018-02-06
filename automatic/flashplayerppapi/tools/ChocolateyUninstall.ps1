@@ -5,9 +5,9 @@ $silentArgs = '-uninstall pepperplugin'
 
 $key32 = 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\'
 $key64 = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\'
-$key = @{64=$key64;32=$key32}[(Get-ProcessorBits)]
+$key = @{64=$key64;32=$key32}[(Get-OSArchitectureWidth)]
 
-$uninstaller = Get-ChildItem $key | %{ Get-ItemProperty $_.PSPath } | ?{ $_.PSChildName -match $programName }
+$uninstaller = Get-ChildItem $key | ForEach-Object{ Get-ItemProperty $_.PSPath } | Where-Object{ $_.PSChildName -match $programName }
 
 $uninstallString = $uninstaller.uninstallString -replace " -maintain pepperplugin",""
 
