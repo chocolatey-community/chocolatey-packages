@@ -5,13 +5,13 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'everything'
   fileType       = 'exe'
-  file           = gi "$toolsDir\*x86*.exe"
-  file64         = gi "$toolsDir\*x64*.exe"
+  file           = Get-Item "$toolsDir\*x86*.exe"
+  file64         = Get-Item "$toolsDir\*x64*.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm $toolsDir\*Setup*.exe
+Remove-Item $toolsDir\*Setup*.exe
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
@@ -22,9 +22,9 @@ Register-Application "$installLocation\$packageName.exe"
 Write-Host "$packageName registered as $packageName"
 
 $pp = Get-PackageParameters
-$pp.Keys | % { $cmd=@(". '$installLocation\Everything.exe'", '--disable-run-as-admin') } { $cmd += "--install-" + $_.ToLower() }
+$pp.Keys | ForEach-Object { $cmd=@(". '$installLocation\Everything.exe'", '--disable-run-as-admin') } { $cmd += "--install-" + $_.ToLower() }
 Write-Host "Post install command line:" $cmd
-"$cmd" | iex
+"$cmd" | Invoke-Expression
 
 Write-Host "Starting $packageName"
 Start-Process "$installLocation\Everything.exe" -ArgumentList "-startup"
