@@ -21,7 +21,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'tx\.py35.*\.exe$'
+  $re = 'tx\.py36.*\.exe$'
   $urls = $download_page.Links | ? href -match $re | select -first 2 -expand href | % { 'https://github.com' + $_ }
 
   $verRe = '\/'

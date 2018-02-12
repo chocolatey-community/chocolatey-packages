@@ -29,7 +29,7 @@ You can use the command line tool to create new resources, map locale files to t
 ]]></description>
     <releaseNotes>https://github.com/transifex/transifex-client/releases/tag/0.13.0</releaseNotes>
     <dependencies>
-      <dependency id="python3" />
+      <dependency id="python" version="3.6.0" />
     </dependencies>
   </metadata>
   <files>
