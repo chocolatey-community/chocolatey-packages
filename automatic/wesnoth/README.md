@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/333ef9e0436d235bd3fa6b7ca2ed68cf799072d5/icons/wesnoth.png" width="48" height="48"/> [wesnoth](https://chocolatey.org/packages/wesnoth)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/333ef9e0436d235bd3fa6b7ca2ed68cf799072d5/icons/wesnoth.png" width="48" height="48"/> [wesnoth](https://chocolatey.org/packages/wesnoth)
 
 
 The Battle for Wesnoth is a turn-based tactical strategy game with a high fantasy theme.
@@ -17,5 +17,5 @@ There are at least two hundred unit types, sixteen races, six major factions, an
 - Hundreds of campaign scenarios available for download through a simple in-game dialog.
 - *Fog of War* feature available for a true test of generalship.
 - Sophisticated markup language lets advanced users make their own maps, factions, or campaigns.
-- Excellent language support â€” 54 different languages currently available.
+- Excellent language support — 54 different languages currently available.
 

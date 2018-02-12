@@ -21,24 +21,36 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.exe\/download$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $streams = @{ }
 
-  $verRe = '[-]'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-
-  $fileName32 = $url32 -split '\/' | select -last 1 -skip 1
-
-  $checksum_page = Invoke-WebRequest -Uri "https://files.wesnoth.org/releases/${fileName32}.sha256" -UseBasicParsing
-
-  $checksum32 = $checksum_page -split ' ' | select -first 1
-
-  @{
-    URL32 = $url32
-    Version = $version32
-    Checksum32 = $checksum32
-    ChecksumType32 = 'sha256'
+  $reStreams = @{
+    "stable" = @{ re = "\.exe\/download$"; suffix = "" }
+    "beta" = @{ re = "\/files\/wesnoth\/.*\.exe\/download$"; suffix = "-beta" }
   }
+
+  $reStreams.Keys | % {
+    $value = $reStreams[$_]
+    $url32 = $download_page.Links | ? href -match $value.re | select -first 1 -expand href
+
+    $verRe = '[-]'
+    $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+    if ($value.suffix) { $version32 += $value.suffix }
+
+    $fileName32 = $url32 -split '\/' | select -last 1 -skip 1
+
+    $checksum_page = Invoke-WebRequest -Uri "https://files.wesnoth.org/releases/${fileName32}.sha256" -UseBasicParsing
+
+    $checksum32 = $checksum_page -split ' ' | select -first 1
+
+    $streams.Add($_,  @{
+      URL32 = $url32
+      Version = $version32
+      Checksum32 = $checksum32
+      ChecksumType32 = 'sha256'
+    })
+  }
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor 32
