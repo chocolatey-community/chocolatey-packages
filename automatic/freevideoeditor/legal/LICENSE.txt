@@ -1,0 +1,56 @@
+End-User License Agreement for Software Product of Flash-Integro LLC
+
+1. Software License Agreement
+
+In this License, "the Product" means the software products under the brand "VSDC" which may be found at www.videosoftdev.com
+This License is a legal agreement between you and Flash-Integro LLC for the Product.
+By proceeding to install the Product, and in consideration of your use of the Product, you are deemed to agree to be bound by the terms of this License.<br/ >Flash-Integro LLC permits you to use the Product only in accordance with the terms of this License and your rights under this License will terminate automatically without notice if you fail to comply with the terms of this License.
+
+2. Product Licence
+
+In consideration of your agreeing to abide by the terms of this License and subject to your compliance with the terms of this Licence, Flash-Integro LLC grants you a non-exclusive, non-transferable license to use the Product for the following purposes and in the following manner:
+
+You may:
+
+Install and use the free version of the Product, released under the brand VSDC Free Video Editor, free of charge for personal and educational use. In this case, you are granted the right to use and to make an unlimited number of copies of this software.
+Install and use the premium version of the Product, released under the brand VSDC Pro Video Editor, for personal and commercial use by purchasing a one-year subscription. In this case each subscription is bound to one user. "User" means the company, entity or individual whose funds are used to pay the subscription fee. This subscription is not transferable to any another organization or individual. Each activation key is valid for two activations. It shall not make work by two users applicable but give you an opportunity to reinstall the VSDC Pro Video Editor in case of possible hardware or hard drives failures or upgrades.
+You may not:
+
+Remove any proprietary notices or labels from the Product.
+Reverse engineer, decompile, disassemble, repackage the installation file or make derivative works based on the Product (except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation).
+Rent, lease, sublicense or assign the Product or any copy thereof, including any related documentation.
+3. Refund policies
+
+Flash-Integro LLC guarantees a refund of the payment for VSDC Pro Video Editor within 30 days after the purchase date only in the following cases:
+
+Incidental purchase of the Product’s license twice. In this case one payment shall be refunded
+The Product has serious technical problems, and no solution has been found within 30 days.
+Flash-Integro LLC shall not provide a refund of the payment for VSDC Pro Video Editor in the following cases:
+
+You refuse to cooperate with the VSDC technical support team by declining to provide information regarding the problem, or not applying the solutions offered by the VSDC technical support team.
+You use the Product on any inappropriate or outdated hardware.
+You express discontent by the Product due to reasons other than technical faults. All the issues related to the Product’s feature-set, interface and terms of use are subject for testing in the Products’s free version prior to making a purchase of the Pro version.
+
+
+4. Additional Terms for Businesses
+
+Where you are licensing the Product as a business and not as a consumer, this License shall take effect between Flash-Integro LLC and you as a business entity and you shall take all appropriate steps to ensure that the Product is operated in a proper manner by your employees and staff.
+
+5. Intellectual Property Rights
+
+The Product is intellectual property of Flash-Integro LLC and is protected by law. You acknowledge that all intellectual property rights in the Product anywhere in the world belong to Flash-Integro LLC, that rights in the Product are licensed (not sold) to you, and that you have no rights in, or to, the Product other than the right to use them in accordance with the terms of this License.
+
+6. Warranty Disclaimer
+
+THIS PRODUCT AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE PRODUCT REMAINS WITH YOU.
+
+7. Limitation of Liability
+
+IN NO EVENT SHALL FLASH-INTEGRO LLC BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OR OF INABILITY TO USE THE PRODUCT.
+
+8. General
+
+Updates may be licensed to you by Flash-Integro LLC with additional or different terms but Flash-Integro LLC has no obligation to provide any updates.
+This License is the entire agreement between you and us and supersedes any prior representations, undertakings or advertising relating to the Product and you acknowledge that in entering into this License you have not relied on any statement, representation, advertising, assurance or warranty (whether made negligently or innocently) other than as expressly set out in this License.
+This terms are subject to change without notice. Visit our site www.videosoftdev.com and download software to get the most recent End User License Agreement.
+COPYRIGHT NOTICE. Copyright(C) 2016 Flash-Integro LLC, All rights reserved. Any rights not expressly granted herein are reserved.

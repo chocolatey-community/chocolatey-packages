@@ -1,11 +1,11 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/136ef0bb871e04da4d9e0e0da37902930c80c2b4/icons/freevideoeditor.png" width="48" height="48"/> [freevideoeditor](https://chocolatey.org/packages/freevideoeditor)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c6e2b88534b29d1d7290a5a1e15a056639653410/icons/freevideoeditor.png" width="48" height="48"/> [freevideoeditor](https://chocolatey.org/packages/freevideoeditor)
 
 
 Free video software that allows you to edit video files and create videos of all types. It supports the most popular video/audio formats and codecs, including DVD, HD and GoPro videos. Preconfigured profiles make the creation of videos for various multimedia and mobile devices a snap.
 
 The video editor offers a number of versatile features both for home and business use: text and audio overlay, an array of charts and diagrams as well as a slideshow maker.
 
-Non-linear editing system. It means that video files and images do not necessarily have to follow a specific sequence â€“ they can be in various places at any point of time. Besides, all objects can change their properties, shape and position in time.
+Non-linear editing system. It means that video files and images do not necessarily have to follow a specific sequence & they can be in various places at any point of time. Besides, all objects can change their properties, shape and position in time.
 
 Hardware acceleration, multi-color Chroma Key, adjustable parameters settings and enhanced resolution make VSDC a real time and effort saving tool allowing for creating large size HD videos in a few minutes instead of hours.
 
@@ -28,6 +28,6 @@ Hardware acceleration, multi-color Chroma Key, adjustable parameters settings an
 
 ## Notes
 
-- Only **the latest version** is avialable as vendor doesn't keep the record of older releases
+- This package now supports 64bit, to keep installing 32bit make sure to call `choco install/upgrade` with the argument `--x86`.
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/67298954b9fd1ba4826a4cdedf542266aa64f1fd/automatic/freevideoeditor/screenshot.jpg)
