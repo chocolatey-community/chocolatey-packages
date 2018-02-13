@@ -1,11 +1,7 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5ef6055d4f21fde8a6efc8dc3dac6f5a59ad7ca4/icons/displayfusion.png" width="48" height="48"/> [displayfusion](https://chocolatey.org/packages/displayfusion)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png" width="48" height="48"/> [displayfusion](https://chocolatey.org/packages/displayfusion)
 
 
-Multiple Monitors Made Easy!
-DisplayFusion will make your multi-monitor life much easier!
-With powerful features like Multi-Monitor Taskbars, TitleBar Buttons
-and fully customizable HotKeys, DisplayFusion will make managing your
-multiple monitors easy.
+Multiple Monitors Made Easy! DisplayFusion will make your multi-monitor life much easier! With powerful features like Multi-Monitor Taskbars, TitleBar Buttons and fully customizable HotKeys, DisplayFusion will make managing your multiple monitors easy.
 
 ## Features
 - Make your multi-monitor life much easier
@@ -15,6 +11,5 @@ multiple monitors easy.
 
 ## Notes
 - Free for personal use
-- The free license is only usable in a personal and non-commercial context.
-Commercial use of Display Fusion requires the purchase of a license.
+- The free license is only usable in a personal and non-commercial context. Commercial use of Display Fusion requires the purchase of a license.
 

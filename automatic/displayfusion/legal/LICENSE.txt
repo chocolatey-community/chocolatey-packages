@@ -1,0 +1,40 @@
+ClipboardFusion License (EULA)
+1. General
+Please read the terms and conditions of this license agreement carefully before continuing with this installation. Binary Fortress Software's end-user license agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and Binary Fortress Software for the software products identified above which may include associated software components, media, printed materials, and "online" or electronic documentation ("software"). By installing, copying, or otherwise using the software, you agree to be bound by the terms of this EULA. This license agreement represents the entire agreement concerning the program between you and Binary Fortress Software, (referred to as "licenser"), and it supersedes any prior proposal, representation, or understanding between the parties. If you do not agree to the terms of this EULA, do not install or use the software.
+
+2. Grant of License
+Binary Fortress Software grants you the right to install and use a copy of the software, within the limits of the license restrictions (listed below), on a computer running a validly licensed copy of the operating system for which the software was designed. You may also make copies of the software as may be necessary for backup and archival purposes.
+
+3. Copyright
+The software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The software is licensed, not sold. All title, including but not limited to copyrights, in and to the software and any copies thereof are owned by Binary Fortress Software. All title and intellectual property rights in and to the content which may be accessed through use of the software is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. This EULA grants you no rights to use such content. All rights not expressly granted are reserved by Binary Fortress Software.
+
+4. Free Version License Restrictions
+The free version of ClipboardFusion is ONLY valid for PERSONAL USE. If you are using ClipboardFusion in a company environment, you must use a ClipboardFusion Pro Standard license. Non-profit, charity or educational institutions may use the free version without purchasing a license.
+
+5. Standard License Restrictions
+The Standard License version of ClipboardFusion is valid for 1 computer only. The Standard License may be used in a personal or company environment. This computer may be used by more than 1 person, but only 1 person may use this license at a time.
+
+6. Personal License Restrictions
+The Personal version of ClipboardFusion is ONLY valid for PERSONAL USE. You may use the Personal version on a single company computer, if you are the only user of the company computer. You must remove the license when returning the computer to the company.
+
+7. Description of Other Rights and Limitations
+You must not remove or alter any copyright notices on any and all copies of the software. You may not distribute registered copies of the software to third parties. Free versions available for download from Binary Fortress Software's website may be freely distributed with written permission from Binary Fortress Software - this does not include paid for versions. You may not reverse engineer, decompile, or disassemble the software in whole or in part, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation. You may not rent, lease, or lend the software. Binary Fortress Software may provide you with support services related to the software. Any supplemental software code provided to you as part of the support services shall be considered part of the software and subject to the terms and conditions of this EULA. You must comply with all applicable laws regarding use of the software.
+
+8. Update Checks
+ClipboardFusion will occasionally check for a newer version with our update servers (binaryfortress.com). During this update process, ClipboardFusion will send:
+
+Product Version (ex: 8.4.1)
+Windows Version (ex: 6.2.9200)
+Windows Bitness (ex: 32 or 64)
+Feature Status (ex: which product features you have enabled, no specific details are sent about how they are configured)
+License Hash (ex: a hashed string of your license key, if applicable)
+Sending this information allows us to tailor the updates and only serve files that you need. This saves both of us bandwidth by not downloading unnecessary files, and ensures that your version of ClipboardFusion is always up-to-date. You can opt out of these update checks at any time by unchecking the "Check for updates automatically" option in the ClipboardFusion Settings window.
+
+9. Termination
+Without prejudice to any other rights, Binary Fortress Software may terminate this EULA if you fail to comply with the terms and conditions. In such event, you must destroy all copies of the software in your possession.
+
+10. No Warranties
+Binary Fortress Software expressly disclaims any warranty for the software. The software is provided as-is without any express or implied warranty of any kind, including but not limited to any warranties of merchantability, non-infringement, or fitness of a particular purpose. Binary Fortress Software does not warrant or assume responsibility for the accuracy or completeness of any information, text, graphics, links or other items contained within the software. Binary Fortress Software makes no warranties respecting any harm that may be caused by the transmission of a computer virus or other such computer program. Binary Fortress Software further expressly disclaims any warranty or representation to Authorized Users or to any third party.
+
+11. Limitation of Liability
+In no event shall Binary Fortress Software be liable for any damages (including, without limitation, lost profits, business interruption, or lost information) rising out of use of or inability to use the software, even if Binary Fortress Software has been advised of the possibility of such damages. In no event will Binary Fortress Software be liable for loss of data or for indirect, special, incidental, consequential (including lost profit), or other damages based in contract, tort or otherwise. Binary Fortress Software shall have no liability with respect to the content of the software or any part thereof, including but not limited to errors or omissions contained therein, libel, infringements of rights of publicity, privacy, trademark rights, business interruption, personal injury, loss of privacy, moral rights or the disclosure of confidential information.
