@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/adfba62c6e358480c755fbfeb96614352d743fa1/icons/encfs4win.png" width="48" height="48"/> [encfs4win](https://chocolatey.org/packages/encfs4win)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4b6671aadbc36c1fbc086e426b9527480888ab7d/icons/encfs4win.png" width="48" height="48"/> [encfs4win](https://chocolatey.org/packages/encfs4win)
 
 
 EncFS encrypts individual files, by translating all requests for the virtual EncFS filesystem into the equivalent encrypted operations on the raw filesystem.

@@ -1,35 +1,55 @@
-import-module au
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+Import-Module AU
 
 $releases = 'https://github.com/jetwhiz/encfs4win/releases'
+$softwareName = 'encfs4win*'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
-        }
-
-        "$($Latest.PackageName).nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+    }
+    "$($Latest.PackageName).nuspec" = @{
+        "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re      = '\.exe$'
-    $url     = $download_page.links | ? href -match $re | select -First 2 -expand href
-    $url32   = $url -notmatch 'legacy'
-    $version = ($url32 -split '/' | select -Last 1 -Skip 1).Substring(1)
-    @{
-        Version      = $version
-        URL32        = 'https://github.com' + $url32
-        ReleaseNotes = "https://github.com/jetwhiz/encfs4win/releases/tag/v${version}"
+  $re = 'installer\.exe$'
+  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
+
+  $streams = @{}
+  $urls32 | % {
+    $verRe = '\/'
+    $rawTag = $_ -split "$verRe" | select -last 1 -skip 1
+    $version = Get-Version $rawTag
+
+    if (!($streams.ContainsKey($version.ToString(2)))) {
+      $streams.Add($version.ToString(2), @{
+        Version = $version.ToString()
+        URL32   = $_
+        ReleaseNotes = "https://github.com/jetwhiz/encfs4win/releases/tag/${rawTag}"
+      })
     }
+  }
+
+  return @{ Streams = $streams }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
