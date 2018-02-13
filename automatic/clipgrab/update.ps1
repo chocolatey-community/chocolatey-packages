@@ -1,27 +1,35 @@
-import-module au
+﻿Import-Module AU
 
-$releases = 'http://clipgrab.de'
+$releases = 'https://clipgrab.org/'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re      = '\.exe$'
-    $url     = $download_page.links | ? href -match $re | select -First 1 -expand href
-    $version = $url -split '-|\.exe' | select -Index 1
+  $re = 'cgorg\.exe$'
+  $url = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-    @{ URL32 = $url; Version = $version }
+  $verRe = '[-]|\.exe$'
+  $version = $url -split "$verRe" | select -last 1 -skip 2
+  @{
+    URL32 = $url
+    Version = $version
+  }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
