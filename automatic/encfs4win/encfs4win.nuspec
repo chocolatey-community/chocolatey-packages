@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>encfs4win</id>
-    <version>1.7.4</version>
+    <version>1.10.1-RC12-20180213</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/encfs4win</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>encfs4win</title>
@@ -18,7 +18,7 @@
     <tags>encfs4win driver encfs encryption foss file-system</tags>
     <summary>Windows port of EncFS which provides an encrypted virtual filesystem</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 EncFS encrypts individual files, by translating all requests for the virtual EncFS filesystem into the equivalent encrypted operations on the raw filesystem.
 
 A GUI for encfs4win is available through encfsw, providing a tray icon that makes mounting and unmounting encrypted partitions even easier!
@@ -28,7 +28,8 @@ EncFS provides an encrypted filesystem in user-space, using the Dokan library fo
 ## Notes
 
 - This package will require to be reinstalled after the restart of the OS if its dependency installation is required.
-</description>
+
+]]></description>
     <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/v1.10.1-RC12</releaseNotes>
     <dependencies>
       <dependency id="KB2999226" version="1.0.20170509" />

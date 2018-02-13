@@ -7,7 +7,7 @@ $localeTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\"
+  file           = "$toolsPath\DisplayFusionSetup-9.1.exe"
   softwareName   = 'displayfusion*'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP-  /LANG=$localeTwoLetter /STARTUPALL=1 /CONTEXTMENU=0 /LAUNCHAFTER=0 /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0, 1641, 3010)
@@ -15,4 +15,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
