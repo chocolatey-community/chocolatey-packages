@@ -7,15 +7,15 @@ location on <http://www.videosoftdev.com/free-video-editor/download>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <http://downloads.videosoftdev.com/video_tools/video_editor_x32.exe>
+  64-Bit software: <http://downloads.videosoftdev.com/video_tools/video_editor_x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: 95B60ECF5211C3A7EA1EAFAD5AA999D2FC20D0B5D2D85C63B26D22417085AF20
+  checksum64: CDD2B325EDA34233C510C22DBC3DE50212F708FD456B6CEB9FFF172E59616893
 
 The file 'LICENSE.txt' has been obtained from <http://www.videosoftdev.com/terms-and-conditions>

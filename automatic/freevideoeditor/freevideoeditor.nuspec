@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freevideoeditor</id>
-    <version>5.8.6</version>
+    <version>5.8.6.20180213</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freevideoeditor</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>VSDC Free Video Editor</title>
     <authors>Flash-Integro LLC</authors>
     <projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c6e2b88534b29d1d7290a5a1e15a056639653410/icons/freevideoeditor.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/80d7b106a3d2edf543944581b2634972157df3de/icons/freevideoeditor.png</iconUrl>
     <copyright>www.videosoftdev.com, Flash-Integro LLC</copyright>
     <licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,7 +17,38 @@
     <tags>freevideoeditor freeware nle video editor audio media avi mkv dvd mp3 flac dsp record convert</tags>
     <summary>Simple video editor.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>Dummy</description>
+    <description><![CDATA[
+Free video software that allows you to edit video files and create videos of all types. It supports the most popular video/audio formats and codecs, including DVD, HD and GoPro videos. Preconfigured profiles make the creation of videos for various multimedia and mobile devices a snap.
+
+The video editor offers a number of versatile features both for home and business use: text and audio overlay, an array of charts and diagrams as well as a slideshow maker.
+
+Non-linear editing system. It means that video files and images do not necessarily have to follow a specific sequence & they can be in various places at any point of time. Besides, all objects can change their properties, shape and position in time.
+
+Hardware acceleration, multi-color Chroma Key, adjustable parameters settings and enhanced resolution make VSDC a real time and effort saving tool allowing for creating large size HD videos in a few minutes instead of hours.
+
+## Features
+
+- Non-linear video editor
+- Visual and audio effects
+- Blending modes and Instagram-like filters
+- Masking
+- Subpixel accuracy
+- Support of popular formats
+- Creation of videos for specific multimedia devices
+- Working with charts
+- Video library
+- Built-in DVD burning tool
+- Video File Converter
+- Desktop video capture
+- Video capturing
+
+
+## Notes
+
+- This package now supports 64bit, to keep installing 32bit make sure to call `choco install/upgrade` with the argument `--x86`.
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/67298954b9fd1ba4826a4cdedf542266aa64f1fd/automatic/freevideoeditor/screenshot.jpg)
+]]></description>
     <releaseNotes>http://www.videosoftdev.com/free-video-editor#accordion10</releaseNotes>
     <dependencies>
       <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->

@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c6e2b88534b29d1d7290a5a1e15a056639653410/icons/freevideoeditor.png" width="48" height="48"/> [freevideoeditor](https://chocolatey.org/packages/freevideoeditor)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/80d7b106a3d2edf543944581b2634972157df3de/icons/freevideoeditor.png" width="48" height="48"/> [freevideoeditor](https://chocolatey.org/packages/freevideoeditor)
 
 
 Free video software that allows you to edit video files and create videos of all types. It supports the most popular video/audio formats and codecs, including DVD, HD and GoPro videos. Preconfigured profiles make the creation of videos for various multimedia and mobile devices a snap.
