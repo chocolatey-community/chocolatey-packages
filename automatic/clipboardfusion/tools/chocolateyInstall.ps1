@@ -1,16 +1,16 @@
-﻿$ErrorActionPreference  = 'Stop'
-$downloadDir            = Get-PackageCacheLocation
-$installer              = 'ClipboardFusionSetup-5.3.exe'
-$arguments              = @{
-    packageName         = $env:ChocolateyPackageName
-    softwareName        = 'ClipboardFusion'
-    file                = Join-Path $downloadDir $installer
-    url                 = 'https://binaryfortressdownloads.com/Download/BFSFiles/104/ClipboardFusionSetup-5.3.exe'
-    checksum            = 'F07A3C5A68987410FEB764FF8BC30B81B88DB3726C8F94EC91A119211D124423'
-    fileType            = 'exe'
-    checksumType        = 'sha256'
-    silentArgs          = '/VERYSILENT /LAUNCHAFTER=0'
-    validExitCodes      = @(0, 1641, 3010)
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+
+$packageArgs = @{
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  softwareName   = 'clipboardfusion*'
+  silentArgs     = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LAUNCHAFTER=0 /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`"'
+  validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @arguments
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

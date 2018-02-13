@@ -1,61 +1,60 @@
-﻿Import-Module AU
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+Import-Module AU
 
-$global:getBetaVersion = $false
+$releases = 'https://www.clipboardfusion.com/Download/'
 
-function global:au_BeforeUpdate {
-    $Latest.ChecksumType32 = 'sha256'
-
-    Get-RemoteFiles -Purge
-
-    $file = Get-Item tools\*.exe | Select-Object -first 1
-    Remove-Item $file -Force -ErrorAction SilentlyContinue
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-    return @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^[$]installer\s*=\s*)('.*')" = "`$1'$([System.IO.Path]::GetFileName($Latest.Url32))'"
-            "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.Url32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-        }
+  @{
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $stableVersionDownloadUrl = 'https://www.binaryfortress.com/Data/Download/?package=clipboardfusion&log=104'
-    $stableVersionRegEx = 'ClipboardFusionSetup-([0-9\.\-]+)\.exe'
+  $urls = @(
+    "https://www.binaryfortress.com/Data/Download/?package=clipboardfusion&log=104&beta=0"
+    "https://www.binaryfortress.com/Data/Download/?package=clipboardfusion&log=104&beta=1"
+  )
 
-    if ($global:getBetaVersion) {
-        $betaVersionDownloadUrl = 'https://www.binaryfortress.com/Data/Download/?package=clipboardfusion&beta=1&log=104'
-        $betaVersionRegEx = 'ClipboardFusionSetup-([0-9\.\-]+)-Beta([0-9]+)'
+  $streams = @{}
+  $urls | % {
+    $url = Get-RedirectedUrl $_ 3>$null
+    $verRe = '-|\.exe$'
+    $version = $url -split "$verRe" | select -last 1 -skip 1
+    if (!$version) { return }
+    $version = Get-Version $version
 
-        $betaVersionDownloadUrl = Get-RedirectUrl $betaVersionDownloadUrl
-        $versionInfo = $betaVersionDownloadUrl -match $betaVersionRegEx
-
-        if ($matches) {
-            $betaVersion = "$($matches[1]).$($matches[2])"
-        }
-
-        return @{ Url32 = $betaVersionDownloadUrl; Version = $betaVersion }
+    if (($_ -match 'beta=1') -and !$version.PreRelease) {
+      $version += "-beta"
+      $version.PreRelease = "beta"
     }
 
-    $stableVersionDownloadUrl = Get-RedirectUrl $stableVersionDownloadUrl
-    $versionInfo = $stableVersionDownloadUrl -match $stableVersionRegEx
-
-    if ($matches) {
-        $stableVersion = $matches[1]
+    if ($version.PreRelease) {
+      $key = "unstable"
+    }
+    else {
+      $key = "stable"
     }
 
-    return @{ Url32 = $stableVersionDownloadUrl; Version = $stableVersion }
+    if (!($streams.ContainsKey($key))) {
+      $streams.Add($key, @{
+          Version = $version.ToString()
+          URL32   = $url
+        })
+    }
+  }
+
+  return @{ Streams = $streams }
 }
 
-function Get-RedirectUrl([string]$uri) {
-    $request = Invoke-WebRequest -Uri $uri -MaximumRedirection 0 -ErrorAction Ignore
-
-    if ($request.StatusDescription -eq 'found') {
-        return $request.Headers.Location
-    }
-}
-
-Update -ChecksumFor None
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
