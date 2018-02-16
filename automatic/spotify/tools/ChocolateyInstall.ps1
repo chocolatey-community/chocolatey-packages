@@ -5,9 +5,9 @@ $arguments          = @{
     softwareName    = 'Spotify'
     file            = Join-Path $downloadDir $installer
     url             = 'https://download.spotify.com/SpotifyFullSetup.exe'
-    checksum        = '2185510752780AAD6079FE129984EC7E5D0BC4F0D82DB786AC88DEAFB3C781C0'
+    checksum        = '75215730B7E774EDABF76D805066CF9645FB99D2749C8E5E84959F1795DD46A11F96B821E3DB96464D3E76AAEFB084A147C9780B5E004EFEF7EFF1C738071EC1'
     fileType        = 'exe'
-    checksumType    = 'sha256'
+    checksumType    = 'sha512'
     silentArgs      = '/silent'
     validExitCodes  = @(0, 1641, 3010)
 }
