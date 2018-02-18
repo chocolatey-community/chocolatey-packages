@@ -1,6 +1,5 @@
 ﻿Import-Module AU
 
-$releases     = 'https://patchmypc.net/start-download'
 $versions     = 'https://patchmypc.net/release-notes'
 
 function global:au_AfterUpdate {
@@ -18,10 +17,7 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = 'https://patchmypc.net/freeupdater/PatchMyPC.exe'
 
   $version_page = Invoke-WebRequest -Uri $versions -UseBasicParsing
   $re = New-Object regex("\>What's new in ([\d\.]+)")
