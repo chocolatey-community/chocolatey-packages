@@ -1,16 +1,16 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'winscp'
   fileType       = 'exe'
-  file           = gi $toolsPath\*.exe
-  file64         = gi $toolsPath\*.exe
+  file           = Get-Item $toolsPath\*.exe
+  file64         = Get-Item $toolsPath\*.exe
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 }
 Install-ChocolateyInstallPackage @packageArgs
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" }}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" }}
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation "$packageName*"
