@@ -5,6 +5,7 @@
 [Update status](https://gist.github.com/choco-bot/a14b1e5bfaf70839b338eb1ab7f8226f)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey.org profile](https://chocolatey.org/profiles/chocolatey)
+[![Open Source Helpers](https://www.codetriage.com/chocolatey/chocolatey-coreteampackages/badges/users.svg)](https://www.codetriage.com/chocolatey/chocolatey-coreteampackages)
 
 ### Description
 
