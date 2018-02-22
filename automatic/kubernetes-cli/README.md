@@ -1,4 +1,4 @@
-# <img src="http://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/kubernetes.png" width="48" height="48"/> [kubernetes-cli](https://chocolatey.org/packages/kubernetes-cli)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5a8c40781821bbd2746754b7ce723938090bb7c6/icons/kubernetes-cli.png" width="48" height="48"/> [kubernetes-cli](https://chocolatey.org/packages/kubernetes-cli)
 
 ## Production-Grade Container Orchestration
 ### Automated container deployment, scaling, and management
