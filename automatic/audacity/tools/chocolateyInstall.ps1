@@ -5,12 +5,12 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'audacity'
   fileType       = 'exe'
-  file           = gi "$toolsDir\*.exe"
+  file           = Get-Item "$toolsDir\*.exe"
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm ($toolsDir + '\*.' + $packageArgs.fileType)
+Remove-Item ($toolsDir + '\*.' + $packageArgs.fileType)
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
