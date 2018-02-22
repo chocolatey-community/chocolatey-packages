@@ -1,6 +1,6 @@
 ﻿$packageName  = 'alldup'
 $url          = 'http://www.alldup.info/download/AllDupSetup.exe'
-$checksum     = '05cf65749c069cbedec7718c7105f2718c9e5406aab380a0bd83502f0caa8588'
+$checksum     = 'e68286cb809d5c09dbbe7cc367c27948914e3d8f94af49a62a0a62aba8907ffa'
 $checksumType = 'sha256'
 
 $packageArgs  = @{
