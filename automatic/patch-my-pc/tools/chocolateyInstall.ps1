@@ -11,7 +11,7 @@ $packageArgs = @{
   packageName    = 'patch-my-pc'
   file           = "$toolsDir\PatchMyPC.exe"
   url            = 'https://patchmypc.net/freeupdater/PatchMyPC.exe'
-  checksum       = 'b8b0ccf325f8738a29e293344458a789e0702944a4844345c1b019b5bca791af'
+  checksum       = 'ff9fa4b0a7571b1d598fe719895e1caea54cf3c6cb4ea0173565d40135aa404d'
   checksumType   = 'sha256'
 }
 
