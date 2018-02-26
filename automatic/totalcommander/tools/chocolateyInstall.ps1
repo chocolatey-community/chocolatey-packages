@@ -3,7 +3,7 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$is64 = (Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true'
+$is64 = (Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true'
 
 $tcExeName = if ($is64) { 'totalcmd64.exe' } else { 'totalcmd.exe' }
 $pp = Get-PackageParameters
@@ -22,7 +22,7 @@ $packageArgs = @{
     SoftwareName   = 'Total Commander*'
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm $toolsPath\*.exe, $toolsPath\*.zip -ea 0
+Remove-Item $toolsPath\*.exe, $toolsPath\*.zip -ea 0
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-TCInstallLocation
