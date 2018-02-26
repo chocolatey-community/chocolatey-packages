@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mono</id>
+    <version>4.4.2</version>
+    <title>Mono</title>
+    <authors>Miguel de Icaza,  other Mono committers</authors>
+    <owners>Miguel de Icaza,  other Mono committers</owners>
+    <licenseUrl>http://mono-project.com/FAQ:_Licensing</licenseUrl>
+    <projectUrl>http://mono-project.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/mono.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Mono is a software platform designed to allow developers to easily create cross platform applications. Sponsored by Novell, Mono is an open source implementation of Microsoft’s .NET Framework based on the ECMA standards for C# and the Common Language Runtime. A growing family of solutions and an active and enthusiastic contributing community is helping position Mono to become the leading choice for development of Linux applications.</description>
+    <summary>Mono – Cross platform, open source .NET development framework</summary>
+    <tags>mono development framework admin</tags>
+  </metadata>
+</package>
