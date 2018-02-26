@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/38688373a17d548271406a273201b950db7dbd28/icons/mono.png" height="48" width="48" /> mono](https://chocolatey.org/packages/mono)
+# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c34f28fa8b47318d55fc0eb48dc53161af85e43b/icons/mono.png" height="48" width="48" /> mono](https://chocolatey.org/packages/mono)
 
 Mono is a software platform designed to allow developers to easily create cross platform applications. Sponsored by Novell, Mono is an open source implementation of Microsoft’s .NET Framework based on the ECMA standards for C# and the Common Language Runtime. A growing family of solutions and an active and enthusiastic contributing community is helping position Mono to become the leading choice for development of Linux applications.
 
