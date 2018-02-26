@@ -13,14 +13,17 @@ function Set-TCParameters() {
 
 function Extract-TCFiles() {
     Write-Verbose "Extract EXE to change install options"
-    $setupFile = gi $toolsPath\*.exe
-    7za x -y "-o$($tcmdWork)" $setupFile
-    if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd exe - exit code $LastExitCode." }
+    $parameters = @{
+      packageName = "$($env:chocolateyInstall) setup"
+      fileFullPath = gi $toolsPath\*.exe
+      destination = $tcmdWork
+    }
+    Get-ChocolateyUnzip @parameters
 
     Write-Verbose "Extract installer"
-    $instFile  = gi $toolsPath\*.zip
-    7za x -y "-o$($tcmdWork)" $instFile
-    if ($LastExitCode) { throw "Error executing 7za to unzip totalcmd installer - exit code $LastExitCode." }
+    $parameters["packageName"] = "$($env:chocolateyPackageName) installer"
+    $parameters["fileFullPath"] = gi $toolsPath\*.zip
+    Get-ChocolateyUnzip @parameters
 
     if ($is64) {
         mv $tcmdWork\INSTALL64.exe  $tcmdWork\INSTALL.exe -Force
