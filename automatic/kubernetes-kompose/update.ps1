@@ -6,7 +6,9 @@ Import-Module AU
 $domain   = 'https://github.com'
 $releases = "$domain/kubernetes/kompose/releases/latest"
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix -FileNameBase "kompose"
+}
 
 function global:au_SearchReplace {
   @{
@@ -22,7 +24,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '\.exe\.tar\.gz$'
+  $re = '\.exe$'
   $url = $download_page.links | ? href -match $re | % href | select -First 1
 
   $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)

@@ -11,3 +11,5 @@ Transformation of the Docker Compose format to Kubernetes resources manifest may
 * Convert your docker-compose.yaml with one simple command kompose convert
 * Immediately bring up your cluster with kompose up
 * Bring it back down with kompose down
+
+#### Note: Windows support is limited to 64bit systems.
