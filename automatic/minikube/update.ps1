@@ -7,9 +7,7 @@ $domain   = 'https://github.com'
 $releases = "$domain/kubernetes/minikube/releases/latest"
 
 function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -NoSuffix
-
-  Rename-Item -Path "tools\minikube-windows-amd64.exe" -NewName "minikube.exe"
+  Get-RemoteFiles -Purge -NoSuffix -FileNameBase "minikube"
 }
 
 function global:au_SearchReplace {
@@ -30,7 +28,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '-windows-amd64$'
+  $re = '\.exe$'
   $url = $download_page.links | ? href -match $re | % href | select -First 1
 
   $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)

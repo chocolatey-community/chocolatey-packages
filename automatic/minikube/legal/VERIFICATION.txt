@@ -3,8 +3,8 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The embedded software have been downloaded from the listed download
-location on <https://github.com/kubernetes/minikube/releases/tag/v0.24.1>
+The embedded software has been downloaded from the listed Google Cloud Storage download
+location on <https://github.com/kubernetes/minikube/releases/tag/v0.24.1>, Distribution section
 and can be verified by doing the following:
 
 1. Download the following:

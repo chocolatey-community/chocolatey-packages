@@ -13,3 +13,5 @@ Minikube supports Kubernetes features such as:
 * Container Runtime: Docker, rkt and CRI-O
 * Enabling CNI (Container Network Interface)
 * Ingress
+
+#### Note: Windows support is limited to 64bit systems.
