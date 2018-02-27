@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\ClipboardFusionSetup-5.3.exe"
   softwareName   = 'clipboardfusion*'
-  silentArgs     = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LAUNCHAFTER=0 /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`"'
+  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LAUNCHAFTER=0 /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
 }
 
