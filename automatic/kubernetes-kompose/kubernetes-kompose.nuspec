@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-kompose</id>
-    <version>1.7.0</version>
+    <version>1.9.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kubernetes-kompose</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Kompose: Go from Docker Compose to Kubernetes</title>
     <authors>Kubernetes authors</authors>
     <projectUrl>http://kompose.io</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/kubernetes.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4e529ccc804ac6fac259a658e395e38b42b24f3/icons/kubernetes-kompose.png</iconUrl>
     <licenseUrl>https://github.com/kubernetes/kompose/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/kubernetes/kompose</projectSourceUrl>
@@ -17,9 +17,19 @@
     <bugTrackerUrl>https://github.com/kubernetes/kompose/issues</bugTrackerUrl>
     <tags>kubernetes kompose docker docker-compose containers development devops cli foss</tags>
     <summary>Kompose is a tool to help users who are familiar with docker-compose move to Kubernetes. kompose takes a Docker Compose file and translates it into Kubernetes resources.</summary>
-    <description><![CDATA[Kompose is a convenience tool to go from local Docker development to managing your application with Kubernetes.
+    <description><![CDATA[## Kubernetes + Compose = Kompose
+Kompose is a conversion tool for Docker Compose to container orchestrators such as Kubernetes (or OpenShift).
+It takes a Docker Compose file and translates it into Kubernetes resources.
 
 Transformation of the Docker Compose format to Kubernetes resources manifest may not be exact, but it helps tremendously when first deploying an application on Kubernetes.
+
+### Features
+* Simplify your development process with Docker Compose and then deploy your containers to a production cluster
+* Convert your docker-compose.yaml with one simple command kompose convert
+* Immediately bring up your cluster with kompose up
+* Bring it back down with kompose down
+
+#### Note: Windows support is limited to 64bit systems.
 ]]></description>
     <releaseNotes>https://github.com/kubernetes/kompose/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
