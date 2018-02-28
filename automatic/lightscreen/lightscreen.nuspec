@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>lightscreen</id>
+    <version>2.4</version>
+    <authors>Christian Kaiser</authors>
+    <summary>The easy screenshot tool.</summary>
+    <description></description>
+    <title>Lightscreen</title>
+    <owners>dimqua</owners>
+    <tags>admin foss cross-platform lightscreen screenshot tool</tags>
+    <projectUrl>http://lightscreen.com.ar/</projectUrl>
+    <projectSourceUrl>https://github.com/ckaiser/Lightscreen</projectSourceUrl>
+    <licenseUrl>https://github.com/ckaiser/Lightscreen/blob/master/LICENSE</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/icons/lightscreen.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <releaseNotes>http://lightscreen.com.ar/whatsnew</releaseNotes>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+        <file src="legal\**" target="legal" />
+    </files>
+</package>
