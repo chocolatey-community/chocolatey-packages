@@ -2,7 +2,7 @@
 
 Lightscreen is a simple tool to automate the tedious process of saving and cataloging screenshots, it operates as a hidden background process that is invoked with one (or multiple) hotkeys and then saves a screenshot file to disk according to the user's preferences.
 
-##Features
+## Features
 
 * System tray icon for easy access.
 * Six configurable actions with global hotkey access.
