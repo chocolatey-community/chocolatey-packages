@@ -25,12 +25,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $url = Get-RedirectedUrl $releases
 
-  $re = '\.tar\.gz$'
-  $url = $download_page.links | ? href -match $re | % href | select -First 1
-
-  $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
+  $version = $url -split '\/v' | select -last 1
   $majorVersion = $version.Substring(0, 3)
 
   $streams = @{}
@@ -39,8 +36,8 @@ function global:au_GetLatest {
     Version     = $version
     URL32       = "https://dl.k8s.io/v${version}/kubernetes-client-windows-386.tar.gz"
     URL64       = "https://dl.k8s.io/v${version}/kubernetes-client-windows-amd64.tar.gz"
-    ReleaseNotes= "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-${majorVersion}.md"
-    ReleaseURL  = "https://github.com/kubernetes/kubernetes/releases/tag/v${version}"
+    ReleaseNotes= "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-${majorVersion}.md#v$($version -replace '\.','')"
+    ReleaseURL  = "$releases"
   })
 
   return @{ Streams = $streams }
