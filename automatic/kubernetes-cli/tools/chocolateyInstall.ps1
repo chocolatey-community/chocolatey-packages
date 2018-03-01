@@ -23,7 +23,7 @@ if (!(Test-Path "$installLocation\kubernetes\client" -include "*.exe")) {
   Get-ChocolateyUnzip @packageArgs2
 }
 
-Move-Item "$installLocation\kubernetes\client\*" "$installLocation"
+Move-Item "$installLocation\kubernetes\client\*" "$installLocation" -Force
 Install-ChocolateyPath "$installLocation\bin"
 
 Remove-Item "$installLocation\kubernetes" -Recurse -Force -ea 0
