@@ -21,7 +21,7 @@ function GetDropbox {
 param(
 	[string]$nu_version,
 	[string]$Title,
-    [string]$kind
+  [string]$kind
 )
 
  $build = @{$true='-beta';$false=''}[( $kind -match '-' )]
