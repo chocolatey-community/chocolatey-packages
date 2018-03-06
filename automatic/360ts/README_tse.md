@@ -13,4 +13,3 @@
 ## Notes
 
 - The uninstall for this package **is not silent**.
-<!-- test -->
