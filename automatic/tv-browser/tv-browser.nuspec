@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tv-browser</id>
-    <version>4.0</version>
+    <version>4.0.1</version>
     <title>TV-Browser</title>
     <owners>chocolatey</owners>
     <authors>TV-Browser Developers</authors>
@@ -11,15 +11,16 @@
     <projectUrl>http://www.tvbrowser.org/index.php</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/tv-browser.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 TV-Browser is a digital TV guide.
 
-TV-Browser gets the daily TV program from the internet and shows it clearly aranged – like a printed TV guide. An internet connection is only necessary during the data update.
+TV-Browser gets the daily TV program from the internet and shows it clearly aranged like a printed TV guide. An internet connection is only necessary during the data update.
 
-### Note
+## Notes
 
-You can not use TV-Browser to watch TV.
-    </description>
+- You can not use TV-Browser to watch TV.
+
+]]></description>
     <summary>TV-Browser is a digital TV guide.</summary>
     <releaseNotes />
     <copyright />
