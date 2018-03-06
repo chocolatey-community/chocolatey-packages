@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>minishift</id>
+    <version>1.11.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/minishift</packageSourceUrl>
+    <owners>chocolatey,Andrei Bejenaru</owners>
+    <title>Minishift: Run OpenShift locally</title>
+    <authors>RedHat, Minishift contributors</authors>
+    <projectUrl>https://www.openshift.org/minishift</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/openshift.png</iconUrl>
+    <copyright>(c) 2017 RedHat</copyright>
+    <licenseUrl>https://github.com/minishift/minishift/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/minishift/minishift</projectSourceUrl>
+    <docsUrl>https://docs.openshift.org/latest/minishift</docsUrl>
+    <bugTrackerUrl>https://github.com/minishift/minishift/issues</bugTrackerUrl>
+    <tags>openshift kubernetes docker rkt containers devops development cli foss</tags>
+    <summary>Minishift is a tool that helps you run OpenShift locally.</summary>
+    <description><![CDATA[Minishift is a tool that helps you run OpenShift locally by running a single-node OpenShift cluster inside a VM. You can try out OpenShift or develop with it, day-to-day, on your local host.
+
+Minishift uses libmachine for provisioning VMs, and OpenShift Origin for running the cluster.
+]]></description>
+    <releaseNotes>https://github.com/minishift/minishift/releases/tag/v1.11.0</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
