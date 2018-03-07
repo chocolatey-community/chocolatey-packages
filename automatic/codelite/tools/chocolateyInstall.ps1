@@ -5,8 +5,8 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName    = 'codelite'
   fileType       = 'exe'
-  file           = "$toolsPath\codelite-x86-11.0.0.7z"
-  file64         = "$toolsPath\codelite-amd64-11.0.1.7z"
+  file           = "$toolsPath\codelite-x86-12.0.0.exe.7z"
+  file64         = "$toolsPath\codelite-amd64-12.0.0.exe.7z"
   destination    = Get-PackageCacheLocation
   softwareName   = 'CodeLite'
   silentArgs     = '/VERYSILENT /SP- /SUPPRESSMSGBOXES'
@@ -16,7 +16,7 @@ $packageArgs = @{
 Get-ChocolateyUnzip @packageArgs
 
 $packageArgs.Remove('file64')
-$packageArgs.file = Get-ChildItem -Path $packageArgs.destination -Filter "*.exe" | select -first 1 -expand FullName
+$packageArgs.file = Get-ChildItem -Path $packageArgs.destination -Filter "*.exe" | Select-Object -first 1 -expand FullName
 
 Install-ChocolateyInstallPackage @packageArgs
 
