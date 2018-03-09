@@ -4,7 +4,7 @@
   <metadata>
     <id>autoit</id>
     <title>AutoIt</title>
-    <version>3.3.14.3</version>
+    <version>3.3.14.4</version>
     <authors>Jonathan Bennett, AutoIt Team</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>AutoIT - Automation and scripting language</summary>
@@ -41,7 +41,7 @@ AutoIt is also very small, self-contained and will run on all versions of Window
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/40da80591281de666f24852bb71cb12449cf2997/icons/autoit.png</iconUrl>
     <dependencies>
-      <dependency id="autoit.install" version="[3.3.14.3]" />
+      <dependency id="autoit.install" version="[3.3.14.4]" />
     </dependencies>
   </metadata>
   <files>
