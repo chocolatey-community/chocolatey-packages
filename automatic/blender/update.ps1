@@ -44,6 +44,7 @@ function global:au_GetLatest {
   if ($version32 -match '[a-z]$') {
     [char]$letter = $version32[$version32.Length - 1]
     [int]$num = $letter - [char]'a'
+    $num++
     $version32 = $version32 -replace $letter,".$num"
   }
 
