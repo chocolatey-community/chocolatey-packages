@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>encfs4win</id>
-    <version>1.10.1-RC12-20180213</version>
+    <version>1.10.1-RC13</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/encfs4win</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>encfs4win</title>
@@ -30,7 +30,7 @@ EncFS provides an encrypted filesystem in user-space, using the Dokan library fo
 - This package will require to be reinstalled after the restart of the OS if its dependency installation is required.
 
 ]]></description>
-    <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/v1.10.1-RC12</releaseNotes>
+    <releaseNotes>https://github.com/jetwhiz/encfs4win/releases/tag/v1.10.1-RC13</releaseNotes>
     <dependencies>
       <dependency id="KB2999226" version="1.0.20170509" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
