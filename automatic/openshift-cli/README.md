@@ -2,11 +2,12 @@
 
 ## OpenShift Application Platform
 ### The Open Source Container Application Platform - Enterprise Kubernetes for Developers
+
 OpenShift Origin is a distribution of Kubernetes optimized for continuous application development and multi-tenant deployment. OpenShift adds developer and operations-centric tools on top of Kubernetes to enable rapid application development, easy deployment and scaling, and long-term lifecycle maintenance for small and large teams.
 
 Origin is the upstream community project that powers OpenShift. Built around a core of Docker container packaging and Kubernetes container cluster management, Origin is also augmented by application lifecycle management functionality and DevOps tooling. Origin provides a complete open source container application platform.
 
-### Features
+## Features
 * Easily build applications with integrated service discovery and persistent storage.
 * Quickly and easily scale applications to handle periods of increased demand.
   * Support for automatic high availability, load balancing, health checking, and failover.
