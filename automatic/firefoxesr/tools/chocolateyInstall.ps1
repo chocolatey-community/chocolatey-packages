@@ -7,7 +7,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'FirefoxESR'
 $softwareName = 'Mozilla Firefox*ESR'
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.7.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '52.7.1')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
@@ -33,7 +33,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/52.7.0esr/win32/${locale}/Firefox%20Setup%2052.7.0esr.exe"
+    Url = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/52.7.1esr/win32/${locale}/Firefox%20Setup%2052.7.1esr.exe"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
@@ -42,7 +42,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/52.7.0esr/win64/${locale}/Firefox%20Setup%2052.7.0esr.exe"
+    $packageArgs.Url64 = "https://download-installer.cdn.mozilla.net/pub/firefox/releases/52.7.1esr/win64/${locale}/Firefox%20Setup%2052.7.1esr.exe"
   }
 
   Install-ChocolateyPackage @packageArgs
