@@ -20,7 +20,7 @@ if (Get-32bitOnlyInstalled -product $softwareName) {
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
     "Firefox is already installed. " +
-    'No need to download an re-install again.'
+    'No need to download and re-install.'
   )
 } else {
   $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
