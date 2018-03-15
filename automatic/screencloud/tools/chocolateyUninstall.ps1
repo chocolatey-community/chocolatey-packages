@@ -4,14 +4,12 @@ $ErrorActionPreference = 'Stop'
 
 if($key.Count -eq 1){
     $key | % {
-        $file = "$($_.UninstallString)"
-
         $packageArgs = @{
             packageName    = 'screencloud'
             fileType       = 'msi'
             silentArgs     = "$($_.PSChildName) /qn /norestart"
             validExitCodes = @(0)
-            file           = ''
+            file           = "$($_.UninstallString)"
         }
 
         Uninstall-ChocolateyPackage @packageArgs
