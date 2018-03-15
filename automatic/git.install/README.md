@@ -18,6 +18,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 - `/NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
 - `/NoCredentialManager` - Disable _Git Credential Manager_ by adding `$Env:GCM_VALIDATE='false'` user environment variable.
 - `/NoGitLfs` - Disable Git LFS installation.
+- `/SChannel` - Configure Git to use the Windows native SSL/TLS implementation (SChannel) instead of OpenSSL. This aligns Git HTTPS behavior with other Windows applications and system components and increases manageability in enterprise environments.
 
 ## Notes
 
