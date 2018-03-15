@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>docker-kitematic</id>
+    <version>0.17.3</version>
+    <packageSourceUrl>https://github.com/abejenaru/chocolatey-packages</packageSourceUrl>
+    <owners>Andrei Bejenaru</owners>
+    <title>Kitematic: Visual client for Docker</title>
+    <authors>Kitematic, Docker</authors>
+    <projectUrl>https://kitematic.com</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/kitematic.png</iconUrl>
+    <copyright>(c) 2017 Docker</copyright>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/docker/kitematic</projectSourceUrl>
+    <docsUrl>https://docs.docker.com/kitematic/userguide</docsUrl>
+    <bugTrackerUrl>https://github.com/docker/kitematic/issues</bugTrackerUrl>
+    <tags>kitematic docker containers devops foss</tags>
+    <summary>Visual Docker Container Manager</summary>
+    <description><![CDATA[Kitematic is a simple application for managing Docker containers on Mac, Linux and Windows.
+]]></description>
+    <releaseNotes>https://github.com/docker/kitematic/releases/tag/v0.17.3</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
