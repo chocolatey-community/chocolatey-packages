@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sublimetext3dev</id>
+    <version>3.0.0.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sublimetext3dev</packageSourceUrl>
+    <owners>chocolatey, p3lim</owners>
+    <title>Sublime Text 3 Dev Build (Install)</title>
+    <authors>Sublime HQ Pty Ltd</authors>
+    <projectUrl>https://www.sublimetext.com/</projectUrl>
+    <iconUrl>https://avatars1.githubusercontent.com/u/684879</iconUrl>
+    <copyright>Copyright © Sublime HQ Pty Ltd</copyright>
+    <licenseUrl>https://www.sublimetext.com/eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/SublimeText</projectSourceUrl>
+    <docsUrl>https://www.sublimetext.com/support</docsUrl>
+    <bugTrackerUrl>https://forum.sublimetext.com/</bugTrackerUrl>
+    <tags>sublime text editor st3 admin beta</tags>
+    <summary>A sophisticated text editor for code, markup and prose</summary>
+    <description></description>
+    <releaseNotes>
+[Software Changelog](https://www.sublimetext.com/3dev)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
