@@ -7,6 +7,7 @@ function drpbx-compare {
      | where {($_ -match $build)} | Select -First 6 | out-string
     $re_dash = '-'; $re_dot = '.'; $re_non = ''; $re_build = $build + "-Build-";
     $version = (drpbx-builds -hrefs $HTML -testVersion $_version);
+    if ( $version -eq $null ) { $version=$_version; }
     return $version
 }
 
