@@ -37,7 +37,7 @@ $version = $Matches[0]
 $url = "https://free.360totalsecurity.com/totalsecurity/${PackageName}_Setup_${version}.exe"
 
  @{
-    PackageName = $PackageName.ToLower()
+    PackageName = ( $PackageName.ToLower() )
     Title = $Title
     Version = $version
     URL32   = $url
