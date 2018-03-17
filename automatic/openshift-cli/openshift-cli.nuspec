@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openshift-cli</id>
-    <version>3.7.1</version>
+    <version>3.7.2</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/openshift-cli</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>OpenShift Command Line Interface (CLI)</title>
     <authors>RedHat</authors>
     <projectUrl>http://www.openshift.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/openshift.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b091b872f1123f77e68599c21b7bfdaad249e375/icons/openshift-cli.png</iconUrl>
     <copyright>(c) 2017 RedHat</copyright>
     <licenseUrl>https://github.com/openshift/origin/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,10 +19,14 @@
     <bugTrackerUrl>https://github.com/openshift/origin/issues</bugTrackerUrl>
     <tags>openshift docker kubernetes containers development devops cli foss</tags>
     <summary>OpenShift Origin is a distribution of Kubernetes optimized for continuous application development and multi-tenant deployment. OpenShift Origin is the open source upstream project that powers OpenShift, Red Hat's container application platform.</summary>
-    <description><![CDATA[OpenShift Origin is a distribution of Kubernetes optimized for continuous application development and multi-tenant deployment. OpenShift adds developer and operations-centric tools on top of Kubernetes to enable rapid application development, easy deployment and scaling, and long-term lifecycle maintenance for small and large teams.
+    <description><![CDATA[## OpenShift Application Platform
+### The Open Source Container Application Platform - Enterprise Kubernetes for Developers
 
-Features:
+OpenShift Origin is a distribution of Kubernetes optimized for continuous application development and multi-tenant deployment. OpenShift adds developer and operations-centric tools on top of Kubernetes to enable rapid application development, easy deployment and scaling, and long-term lifecycle maintenance for small and large teams.
 
+Origin is the upstream community project that powers OpenShift. Built around a core of Docker container packaging and Kubernetes container cluster management, Origin is also augmented by application lifecycle management functionality and DevOps tooling. Origin provides a complete open source container application platform.
+
+## Features
 * Easily build applications with integrated service discovery and persistent storage.
 * Quickly and easily scale applications to handle periods of increased demand.
   * Support for automatic high availability, load balancing, health checking, and failover.
@@ -36,8 +40,10 @@ Features:
   * Allow developers to run containers securely with fine-grained controls in production.
   * Limit, track, and manage the developers and teams on the platform.
 * Integrated Docker registry, automatic edge load balancing, cluster logging, and integrated metrics.
+
+#### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/openshift/origin/releases/tag/v3.7.1</releaseNotes>
+    <releaseNotes>https://github.com/openshift/origin/releases/tag/v3.7.2</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

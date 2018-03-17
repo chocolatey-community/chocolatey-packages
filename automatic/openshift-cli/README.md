@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/openshift.png" width="48" height="48"/> [openshift-cli](https://chocolatey.org/packages/openshift-cli)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b091b872f1123f77e68599c21b7bfdaad249e375/icons/openshift-cli.png" width="48" height="48"/> [openshift-cli](https://chocolatey.org/packages/openshift-cli)
 
 ## OpenShift Application Platform
 ### The Open Source Container Application Platform - Enterprise Kubernetes for Developers
