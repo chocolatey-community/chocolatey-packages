@@ -24,7 +24,7 @@ function global:au_BeforeUpdate {
     rm tools\curl_* -Recurse
     7z e tools\*win32* curl.exe libcurl.dll -r -otools\curl_x32
     7z e tools\*win64* curl.exe libcurl.dll -r -otools\curl_x64
-    rm tools\*.7z
+    rm tools\*.zip
 
     # Download and include the ssl certificate, due to issue <https://github.com/chocolatey/chocolatey-coreteampackages/issues/957>
 
@@ -35,7 +35,7 @@ function global:au_BeforeUpdate {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re    = '/vszakats/.+\.7z'
+    $re    = '/vszakats/.+\.zip'
     $url   = $download_page.links | ? href -match $re | % href
     $version  = ($url[0] -split '/'  | select -Last 1) -split '-' | select -Index 1
     $releaseNotes = $download_page.links | ? href -match "changes\.html" | select -first 1 -expand href
