@@ -10,7 +10,7 @@
 
 ## How Has this Been Tested?
 <!-- Please describe in detail how you tested your changes. -->
-<!-- Include details of of your testing environment, and the tests you ran too -->
+<!-- Include details of your testing environment, and the tests you ran to -->
 <!-- see how your change affects other areas of the script, etc. -->
 
 ## Screenshot (if appropriate, usually isn't needed):
