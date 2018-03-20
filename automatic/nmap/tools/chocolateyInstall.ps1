@@ -5,12 +5,12 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'nmap'
   fileType       = 'exe'
-  file           = "$toolsDir\nmap-7.60-setup.exe"
+  file           = "$toolsDir\nmap-7.70-setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm $embedded_path -ea 0
+Remove-Item $embedded_path -ea 0
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
