@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Ghostscript.app</id>
-    <version>9.22</version>
+    <version>9.23</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ghostscript.app</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Ghostscript (Install)</title>
@@ -14,7 +14,7 @@
     <licenseUrl>http://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>http://git.ghostscript.com/?p=ghostpdl.git;a=summary</projectSourceUrl>
-    <docsUrl>http://www.ghostscript.com/doc/9.22/Readme.htm</docsUrl>
+    <docsUrl>http://www.ghostscript.com/doc/9.23/Readme.htm</docsUrl>
     <bugTrackerUrl>https://bugs.ghostscript.com/</bugTrackerUrl>
     <tags>ghostscript.app ghostscript postscript admin foss cross-platform</tags>
     <summary>an interpreter for the PostScript language and for PDF.</summary>
@@ -30,7 +30,7 @@ Ghostscript is written entirely in C, with special care taken to make it run pro
 * A set of C procedures (the Ghostscript library) that implement the graphics and filtering (data compression / decompression / conversion) capabilities that appear as primitive operations in the PostScript language and in PDF.
 
 ]]></description>
-    <releaseNotes>https://ghostscript.com/doc/9.22/History9.htm</releaseNotes>
+    <releaseNotes>https://ghostscript.com/doc/9.23/History9.htm</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
