@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pencil</id>
+    <version>3.0.4</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pencil</packageSourceUrl>
+    <owners>chocolatey,Andrei Bejenaru</owners>
+    <title>Pencil</title>
+    <authors>Evolus</authors>
+    <projectUrl>http://pencil.evolus.vn</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/pencil.png</iconUrl>
+    <copyright>Copyright (c) Evolus Co., Ltd. All rights reserved.</copyright>
+    <licenseUrl>https://github.com/evolus/pencil/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/evolus/pencil</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/evolus/pencil/issues</bugTrackerUrl>
+    <tags>pencil drawing stencil templates mockups prototypes admin foss cross-platform</tags>
+    <summary>An open-source GUI prototyping tool that's available for ALL platforms.</summary>
+    <description><![CDATA[Pencil is an open-source GUI prototyping tool that's available for ALL platforms.
+Pencil is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.
+]]></description>
+    <releaseNotes>https://github.com/evolus/pencil/releases/tag/v3.0.4</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
