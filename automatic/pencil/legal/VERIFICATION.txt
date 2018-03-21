@@ -19,4 +19,4 @@ and can be verified by doing the following:
   checksum type: sha256
   checksum: 324167CEAA1214AB84E73654E6A1539F787F9772B5A1D6BA0BBDDC7F4C77D186
 
-The file 'LICENSE.md.txt' has been obtained from <https://github.com/evolus/pencil/blob/634622963ba4098f97c1cc7e7eabdd482bb1dcc9/LICENSE.md>
+The file 'LICENSE.md' has been obtained from <https://github.com/evolus/pencil/blob/634622963ba4098f97c1cc7e7eabdd482bb1dcc9/LICENSE.md>

@@ -10,7 +10,7 @@
     <authors>Evolus</authors>
     <projectUrl>http://pencil.evolus.vn</projectUrl>
     <iconUrl>https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/pencil.png</iconUrl>
-    <copyright>(c) 2008-2017 Evolus</copyright>
+    <copyright>Copyright (c) Evolus Co., Ltd. All rights reserved.</copyright>
     <licenseUrl>https://github.com/evolus/pencil/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/evolus/pencil</projectSourceUrl>
