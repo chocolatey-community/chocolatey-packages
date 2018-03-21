@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/evolus/pencil</projectSourceUrl>
     <bugTrackerUrl>https://github.com/evolus/pencil/issues</bugTrackerUrl>
-    <tags>pencil drawing stencil templates mockups prototypes admin foss</tags>
+    <tags>pencil drawing stencil templates mockups prototypes admin foss cross-platform</tags>
     <summary>An open-source GUI prototyping tool that's available for ALL platforms.</summary>
     <description><![CDATA[Pencil is an open-source GUI prototyping tool that's available for ALL platforms.
 Pencil is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.
