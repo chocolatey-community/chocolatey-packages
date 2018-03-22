@@ -23,6 +23,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
     'No need to download an re-install again.'
   )
 } else {
+  $locale = 'en-US'
   $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
   $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
