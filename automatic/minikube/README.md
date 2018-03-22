@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/minikube.png" width="48" height="48"/> [minikube](https://chocolatey.org/packages/minikube)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0d3be7b221c8110f562a0059a8818238a1cb46ec/icons/minikube.png" width="48" height="48"/> [minikube](https://chocolatey.org/packages/minikube)
 
 Minikube is a tool that makes it easy to run Kubernetes locally.
 
