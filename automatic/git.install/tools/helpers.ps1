@@ -21,6 +21,7 @@ function Set-InstallerRegistrySettings( [HashTable]$pp )
     if ($pp.GitAndUnixToolsOnPath) { New-ItemProperty $InstallKey -Name "$ino Path Option"          -Value "CmdTools"       -Force }
     if ($pp.WindowsTerminal)       { New-ItemProperty $InstallKey -Name "$ino Bash Terminal Option" -Value "ConHost"        -Force }
     if ($pp.NoAutoCrlf)            { New-ItemProperty $InstallKey -Name "$ino CRLF Option"          -Value "CRLFCommitAsIs" -Force }
+    if ($pp.SChannel)              { New-ItemProperty $InstallKey -Name "$ino CURL Option"          -Value "WinSSL"         -Force }
 }
 
 function Get-InstallComponents( [HashTable]$pp )
