@@ -5,17 +5,17 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://get.geo.opera.com/pub/opera/desktop/51.0.2830.55/win/Opera_51.0.2830.55_Setup.exe'
-  url64          = 'https://get.geo.opera.com/pub/opera/desktop/51.0.2830.55/win/Opera_51.0.2830.55_Setup_x64.exe'
-  checksum       = '2223f921deae93c9b8b19841630c230d54d98a56b9648d55b212a70652d1a5e4'
-  checksum64     = 'a3bff2ea5719ec3396431b286894f42638c200adabaa54f8aa31dfef45ae7ac1'
+  url            = 'https://get.geo.opera.com/pub/opera/desktop/52.0.2871.30/win/Opera_52.0.2871.30_Setup.exe'
+  url64          = 'https://get.geo.opera.com/pub/opera/desktop/52.0.2871.30/win/Opera_52.0.2871.30_Setup_x64.exe'
+  checksum       = '8c9e9c76d664e46806a76c4971022fbc70fb7d750c0ffe1d9885a85a55d1b898'
+  checksum64     = 'b5eb218a05bfe45d3d2fda34f56dd81a75a89bdb35abbce5a141be5d18cd350e'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0'
   validExitCodes = @(0)
 }
 
-$version = '51.0.2830.55'
+$version = '52.0.2871.30'
 if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $version)) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
 } else {
