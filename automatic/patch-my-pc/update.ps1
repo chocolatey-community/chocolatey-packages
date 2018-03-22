@@ -20,7 +20,7 @@ function global:au_GetLatest {
   $url32 = 'https://patchmypc.net/freeupdater/PatchMyPC.exe'
 
   $version_page = Invoke-WebRequest -Uri $versions -UseBasicParsing
-  $re = New-Object regex("\>What's new in ([\d\.]+)")
+  $re = New-Object regex("\>What(?:'|&#039;)s new in ([\d\.]+)")
   $version32 = $re.Match($version_page.Content).Groups[1]
 
   @{
