@@ -57,7 +57,9 @@ function Install-Apache {
 
     Set-ApacheConfig $arguments
 
-    Install-ApacheService $arguments
+    if ($arguments.serviceName) {
+      Install-ApacheService $arguments
+    }
 
     Set-ApacheInstallOptions $arguments
 }
@@ -122,7 +124,9 @@ function Stop-ApacheService {
 function Uninstall-Apache {
     $config = Get-ApacheInstallOptions
 
-    & $config.BinPath -k uninstall -n "$($config.serviceName)"
+    if ($config.serviceName) {
+      & $config.BinPath -k uninstall -n "$($config.serviceName)"
+    }
 
     Remove-Item $config.destination -Recurse -Force
 }
