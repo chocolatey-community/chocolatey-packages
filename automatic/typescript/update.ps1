@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  if ($download_page.Content -match '\<strong\>([\d]+\.[\d\.]+)\<\/strong\>') {
+  if ($download_page.Content -match '\>\s*([\d]+\.[\d\.]+)\s*\<\/p\>') {
     $version32 = $Matches[1]
   }
 
