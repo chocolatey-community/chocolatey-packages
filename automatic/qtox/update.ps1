@@ -1,6 +1,5 @@
 ﻿import-module au
 
-$releases     = "https://qtox-win.pkg.tox.chat/qtox/win64"
 $softwareName = 'qTox'
 
 function global:au_BeforeUpdate {
@@ -26,16 +25,28 @@ function global:au_SearchReplace {
   }
 }
 
+function parseUrlAndVersion() {
+  param($releaseUrl)
+
+  $download_page = Invoke-WebRequest -Uri $releaseUrl -UseBasicParsing
+  $url = $download_page.Links | ? href -match "setup-qtox(?:64|32)\-([\d\.]+)\.exe$" | select -first 1 -expand href
+  $version = $url -split '-|\.exe$' | select -last 1 -Skip 1
+
+  return @{ URL = $releaseUrl + $url; Version = $version }
+}
+
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $download_page.Links | ? href -match 'setup-qtox64-([\d\.]+).*.exe.asc$' | Out-Null
-  $version = $Matches[1]
-  if (!$version) { throw "qtox version not found on $releases" }
+  $data32 = parseUrlAndVersion "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/"
+  $data64 = parseUrlAndVersion "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/"
+
+  if ($data32.Version -ne $data64.Version) {
+    throw "32bit and 64bit version do not match. Please Investigate..."
+  }
 
   @{
-    URL32    = 'https://qtox-win.pkg.tox.chat/qtox/win32/download'
-    URL64    = 'https://qtox-win.pkg.tox.chat/qtox/win64/download'
-    Version  = $version
+    URL32    = $data32.URL
+    URL64    = $data64.URL
+    Version  = $data32.Version
     FileType = 'exe'
   }
 }
