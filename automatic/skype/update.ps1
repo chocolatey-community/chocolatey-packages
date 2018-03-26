@@ -12,6 +12,7 @@ function global:au_GetLatest {
   $exeUrl = 'https://go.skype.com/classic.skype'
 
   $exePath = [System.IO.Path]::GetTempFileName()
+  $ProgressPreference = 'SilentlyContinue'
   Invoke-WebRequest -Uri $exeUrl -OutFile $exePath -UseBasicParsing
   try
   {
