@@ -4,16 +4,16 @@
     <id>skype</id>
     <title>Skype</title>
     <version>7.39.0.102</version>
-    <authors>Skype</authors>
-    <owners>Rob Reynolds</owners>
+    <authors>Microsoft</authors>
+    <owners>chocolatey,Rob Reynolds</owners>
     <summary>Skype - VOIP</summary>
     <description>Skype - Install Skype, add your friends as contacts, then call, video call and instant message with them for free. Call people who aren't on Skype too, at really low rates.</description>
     <projectUrl>http://www.skype.com</projectUrl>
-    <packageSourceUrl>https://github.com/ferventcoder/chocolatey-packages/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/skype/</packageSourceUrl>
     <tags>Skype VOIP voice over ip video conferencing admin</tags>
     <licenseUrl>http://www.skype.com/intl/en-us/legal/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/skype.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/040c834d483de9e38ceeef0fd8283d803be082bf/icons/skype.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
