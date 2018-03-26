@@ -12,8 +12,8 @@ $fileType = 'msi'
 # http://community.skype.com/t5/Windows-archive/Unattended-install/td-p/184628s
 $silentArgs = '/qn /norestart STARTSKYPE=FALSE TRANSFORMS=:RemoveDesktopShortcut.mst TRANSFORMS=:RemoveStartup.mst'
 
-$url = 'https://download.skype.com/msi/SkypeSetup_7.39.0.102.msi'
-$checksum = '772F2CF325C0A2E5FA61BFFBAA9FF25E5C1F03604E61C8CD170E905F4F40D7B1'
+$url = 'https://download.skype.com/msi/SkypeSetup_7.41.0.101.msi'
+$checksum = 'c7c5499bc1e3663c98fac492b066610c218722e83f9807328c5c4d06607027b2'
 $checksumType = 'SHA256'
 
 try {
