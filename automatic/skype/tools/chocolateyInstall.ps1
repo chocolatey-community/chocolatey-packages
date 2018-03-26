@@ -13,6 +13,8 @@ $fileType = 'msi'
 $silentArgs = '/qn /norestart STARTSKYPE=FALSE TRANSFORMS=:RemoveDesktopShortcut.mst TRANSFORMS=:RemoveStartup.mst'
 
 $url = 'https://download.skype.com/msi/SkypeSetup_7.39.0.102.msi'
+$checksum = '772F2CF325C0A2E5FA61BFFBAA9FF25E5C1F03604E61C8CD170E905F4F40D7B1'
+$checksumType = 'SHA256'
 
 try {
 

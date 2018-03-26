@@ -4,8 +4,24 @@ function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
             "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.Url32)'"
+            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "(^[$]checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
         }
     }
+}
+
+function global:au_BeforeUpdate() {
+  $pp = $global:ProgressPreference
+  $global:ProgressPreference = 'SilentlyContinue'
+  try
+  {
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.Url32
+    $Latest.ChecksumType32 = 'SHA256'
+  }
+  finally
+  {
+    $global:ProgressPreference = $pp
+  }
 }
 
 function global:au_GetLatest {
