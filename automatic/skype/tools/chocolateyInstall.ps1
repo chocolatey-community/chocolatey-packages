@@ -1,5 +1,5 @@
 ﻿#Install-ChocolateyPackage 'skype' 'exe' '/SILENT /nogoogle /noie /nodesktopicon' 'http://download.skype.com/3694814915aaa38100bfa0933f948e65/partner/59/SkypeSetup.exe'
-#Install-ChocolateyPackage 'skype' 'exe' '/SILENT /nogoogle /noie /nodesktopicon' '{{DownloadUrl}}'
+#Install-ChocolateyPackage 'skype' 'exe' '/SILENT /nogoogle /noie /nodesktopicon' 'https://download.skype.com/msi/SkypeSetup_7.39.0.102.msi'
 #Install-ChocolateyPackage 'skype' 'exe' '/SILENT /nogoogle /noie /nodesktopicon' 'http://download.skype.com/SkypeSetupFull.exe'
 
 
@@ -12,7 +12,7 @@ $fileType = 'msi'
 # http://community.skype.com/t5/Windows-archive/Unattended-install/td-p/184628s
 $silentArgs = '/qn /norestart STARTSKYPE=FALSE TRANSFORMS=:RemoveDesktopShortcut.mst TRANSFORMS=:RemoveStartup.mst'
 
-$url = '{{DownloadUrl}}'
+$url = 'https://download.skype.com/msi/SkypeSetup_7.39.0.102.msi'
 
 try {
 
