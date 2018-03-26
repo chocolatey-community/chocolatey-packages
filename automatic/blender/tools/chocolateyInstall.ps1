@@ -6,8 +6,8 @@ $packageArgs = @{
   packageName    = 'blender'
   softwareName   = 'Blender'
   fileType       = 'msi'
-  file           = "$toolsPath\blender-2.79a-windows32.msi"
-  file64         = "$toolsPath\blender-2.79a-windows64.msi"
+  file           = "$toolsPath\blender-2.79b-windows32.msi"
+  file64         = "$toolsPath\blender-2.79b-windows64.msi"
   silentArgs     = '/quiet /norestart'
   validExitCodes = @(0, 2010, 1641)
 }

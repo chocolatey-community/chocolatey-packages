@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-kompose</id>
-    <version>1.10.0</version>
+    <version>1.11.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kubernetes-kompose</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Kompose: Go from Docker Compose to Kubernetes</title>
