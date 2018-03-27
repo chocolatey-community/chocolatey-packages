@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/openshift.png" width="48" height="48"/> [minishift](https://chocolatey.org/packages/minishift)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d2ba3846157215dd14199887818129eea17950eb/icons/minishift.png" width="48" height="48"/> [minishift](https://chocolatey.org/packages/minishift)
 
 ## Run OpenShift locally
 
