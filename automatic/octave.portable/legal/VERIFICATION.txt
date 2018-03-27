@@ -1,0 +1,24 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.gnu.org/software/octave/download.html>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-bit software: <https://ftp.gnu.org/gnu/octave/windows/octave-4.2.2-w32.zip>
+  64-bit software: <https://ftp.gnu.org/gnu/octave/windows/octave-4.2.2-w64.zip>
+
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: 1446997f71ed8fee725d17e0850087f14b59fba36aacbc0fea799943a6eaad20
+  checksum64: f41d561c53fd193510f337dd379c0e0853df830fc5dced4dd98a6c4d65535117
+
+File 'gpl-3.0.txt' is obtained from <https://www.gnu.org/software/octave/license.html>
