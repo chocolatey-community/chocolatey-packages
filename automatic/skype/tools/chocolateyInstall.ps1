@@ -43,7 +43,7 @@ try {
       } until (-not (isInstalled))
   }
 
-  Install-ChocolateyPackage $packageName $fileType $silentArgs $url
+  Install-ChocolateyPackage $packageName $fileType $silentArgs $url -Checksum $checksum -ChecksumType $checksumType
 
 } catch {
   Write-ChocolateyFailure $packageName $($_.Exception.Message)
