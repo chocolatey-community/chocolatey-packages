@@ -8,7 +8,6 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 `ADD_CMAKE_TO_PATH`
 - `None` - Do not add CMake to path (default)
 - `System` - Add CMake to system PATH for __all users__
-- `User` - Add CMake to system PATH for __current user__
 
 `DESKTOP_SHORTCUT_REQUESTED`
 - `0` = Do not create desktop icon (default)
