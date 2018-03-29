@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake</id>
-    <version>3.11.0-rc4</version>
+    <version>3.11.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cmake</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>CMake</title>
@@ -28,7 +28,6 @@
 `ADD_CMAKE_TO_PATH`
 - `None` - Do not add CMake to path (default)
 - `System` - Add CMake to system PATH for __all users__
-- `User` - Add CMake to system PATH for __current user__
 
 `DESKTOP_SHORTCUT_REQUESTED`
 - `0` = Do not create desktop icon (default)
@@ -44,7 +43,7 @@ For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=User'`
 * [News](https://blog.kitware.com/tag/CMake/)
 * [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
     <dependencies>
-      <dependency id="cmake.install" version="[3.11.0-rc4]" />
+      <dependency id="cmake.install" version="[3.11.0]" />
     </dependencies>
   </metadata>
   <files />
