@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.2.14</version>
+    <version>3.2.18</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
     <authors>CoreOS</authors>
     <projectUrl>https://github.com/coreos/etcd</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/etcd.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
     <copyright>(c) 2017 CoreOS, Inc</copyright>
     <licenseUrl>https://github.com/coreos/etcd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,14 +18,17 @@
     <bugTrackerUrl>https://github.com/coreos/etcd/issues</bugTrackerUrl>
     <tags>etcd configuration admin cli foss</tags>
     <summary>etcd is a distributed, consistent key-value store for shared configuration and service discovery</summary>
-    <description><![CDATA[etcd is a distributed, consistent key-value store for shared configuration and service discovery, with a focus on being:
-    * Simple: curl'able user facing API (HTTP+JSON)
-    * Secure: optional SSL client cert authentication
-    * Fast: benchmarked 1000s of writes/s per instance
-    * Reliable: properly distributed using Raft
+    <description><![CDATA[etcd is a distributed reliable key-value store for the most critical data of a distributed system, with a focus on being:
+  * _Simple_: well-defined, user-facing API (gRPC)
+  * _Secure_: automatic TLS with optional client cert authentication
+  * _Fast_: benchmarked 10,000 writes/sec
+  * _Reliable_: properly distributed using Raft
 
 etcd is written in Go and uses the Raft consensus algorithm to manage a highly-available replicated log.
-This package installs etcd as a service, and makes etcdctl.exe available in the path. 
+
+etcd is used in production by many companies, and the development team stands behind it in critical deployment scenarios, where etcd is frequently teamed with applications such as Kubernetes, locksmith, vulcand, Doorman, and many others. Reliability is further ensured by rigorous testing.
+
+This package installs **etcd** as a service, and makes **etcdctl** (the command line client) available in the path.
 
 The package will pass package parameters to the etcd service.
 Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/tokengoeshere"`
@@ -33,8 +36,10 @@ Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/t
 The service is managed with NSSM, you can change the service parameters easily by running `nssm edit etcd`
 
 Originally packaged by Robert Labrie (https://github.com/tnwinc/chocolatey-etcd)
+
+#### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/coreos/etcd/releases/tag/v3.2.14</releaseNotes>
+    <releaseNotes>https://github.com/coreos/etcd/releases/tag/v3.2.18</releaseNotes>
     <dependencies>
       <dependency id="nssm" />
     </dependencies>

@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/etcd.png" width="48" height="48"/> [etcd](https://chocolatey.org/packages/etcd)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png" width="48" height="48"/> [etcd](https://chocolatey.org/packages/etcd)
 
 etcd is a distributed reliable key-value store for the most critical data of a distributed system, with a focus on being:
   * _Simple_: well-defined, user-facing API (gRPC)
