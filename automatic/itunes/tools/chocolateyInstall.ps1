@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$version = '12.7.3'
+$version = '12.7.4'
 
 $packageArgs = @{
   packageName    = 'iTunes'
