@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openshift-cli</id>
-    <version>3.7.2</version>
+    <version>3.9.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/openshift-cli</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>OpenShift Command Line Interface (CLI)</title>
@@ -43,7 +43,7 @@ Origin is the upstream community project that powers OpenShift. Built around a c
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/openshift/origin/releases/tag/v3.7.2</releaseNotes>
+    <releaseNotes>https://github.com/openshift/origin/releases/tag/v3.9.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

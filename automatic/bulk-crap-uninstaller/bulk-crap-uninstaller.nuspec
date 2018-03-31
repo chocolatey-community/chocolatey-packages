@@ -5,7 +5,7 @@
     <id>bulk-crap-uninstaller</id>
     <title>Bulk Crap Uninstaller</title>
     <owners>chocolatey</owners>
-    <version>4.3.1</version>
+    <version>4.3.2</version>
     <authors>Marcin Szeniak</authors>
     <summary>Bulk Crap Uninstaller is an open source program uninstaller.</summary>
     <description><![CDATA[Bulk Crap Uninstaller (or BCUninstaller) is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more! Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it.
@@ -37,7 +37,7 @@ BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has
     <licenseUrl>https://github.com/Klocman/Bulk-Crap-Uninstaller/blob/master/Licence.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png</iconUrl>
-    <releaseNotes>https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/tag/v4.3.1</releaseNotes>
+    <releaseNotes>https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/tag/v4.3.2</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller</packageSourceUrl>
     <projectSourceUrl>https://github.com/Klocman/Bulk-Crap-Uninstaller</projectSourceUrl>
     <dependencies>

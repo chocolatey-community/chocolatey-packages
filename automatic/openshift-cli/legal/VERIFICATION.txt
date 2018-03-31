@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/openshift/origin/releases/tag/v3.7.2>
+location on <https://github.com/openshift/origin/releases/tag/v3.9.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://github.com/openshift/origin/releases/download/v3.7.2/openshift-origin-client-tools-v3.7.2-282e43f-windows.zip>
+  software: <https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-windows.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 45E525B751D7659E05ADFBD005851CDEB769DF511CFE38F5E45C0DFED854E784
+  checksum: 705EB110587FDBD244FBB0F93146A643B24295CFE2410FF9FE67A0E880912663
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/openshift/origin/blob/6366485d06c43fd526899510f02582484da25519/LICENSE>
