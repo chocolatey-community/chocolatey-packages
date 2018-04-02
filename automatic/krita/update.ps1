@@ -4,8 +4,8 @@ $releases = 'https://krita.org/en/download/krita-desktop/'
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $url64   = $download_page.links | ? href -match 'x64-setup.exe$' | select -First 1 -expand href
-    $url32   = $download_page.links | ? href -match 'x86-setup.exe$' | select -First 1 -expand href
+    $url64   = $download_page.links | ? href -match 'x64.*-setup.exe$' | select -First 1 -expand href
+    $url32   = $download_page.links | ? href -match 'x86.*-setup.exe$' | select -First 1 -expand href
     $version64 = $url64 -split '-' | select -Last 1 -Skip 1
     $version32 = $url32 -split '-' | select -Last 1 -Skip 1
 
