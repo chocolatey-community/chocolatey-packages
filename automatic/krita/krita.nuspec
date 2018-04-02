@@ -3,7 +3,7 @@
   <metadata>
     <id>krita</id>
     <title>Krita</title>
-    <version>3.3.3</version>
+    <version>4.0.0</version>
     <owners>chocolatey,dtgm,KDE</owners>
     <summary>Krita is a sketching and painting program designed for digital artists.</summary>
     <description><![CDATA[Krita is the full-featured free digital painting studio for artists who want to create professional work from start to end. Krita is used by comic book artists, illustrators, concept artists, matte and texture painters and in the digital VFX industry. The name “Krita” comes from Swedish, and means “to draw” or “chalk” and was taken after the names “KImageShop” and “Krayon” gave problems.
