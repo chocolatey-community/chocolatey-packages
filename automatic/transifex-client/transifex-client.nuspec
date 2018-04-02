@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>transifex-client</id>
-    <version>0.13.1</version>
+    <version>0.13.2</version>
     <packageSourceUrl>https://github.com/AdmiringWorm/chocolatey-packages/tree/master/automatic/transifex-client</packageSourceUrl>
     <owners>AdmiringWorm</owners>
     <title>Transifex Command-Line Tool</title>
@@ -27,7 +27,7 @@ You can use the command line tool to create new resources, map locale files to t
 - This package only provides the 64-bit executable due to a number of positives on VirusTotal.
   The Software Authors believe them to be false positives, but I as the package maintainer am not convinced.
 ]]></description>
-    <releaseNotes>https://github.com/transifex/transifex-client/releases/tag/0.13.1</releaseNotes>
+    <releaseNotes>https://github.com/transifex/transifex-client/releases/tag/0.13.2</releaseNotes>
     <dependencies>
       <dependency id="python" version="3.6.0" />
     </dependencies>
