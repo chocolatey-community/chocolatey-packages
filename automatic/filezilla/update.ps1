@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://sourceforge.net/projects/filezilla/files/FileZilla_Client'
+$releases = 'https://filezilla-project.org/download.php?show_all=1'
 
 function global:au_SearchReplace {
    @{
@@ -17,16 +17,18 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameSkip 1}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version  =  $download_page.Links.href | ? { $_ } | % { $x=Split-Path -Leaf $_;  if ([Version]::TryParse($x, [ref]($__))) { $x } } | select -First 1
+    $url32 = $download_page.Links | ? href -match "win32\-setup\.exe$" | select -first 1 -expand href
+    $url64 = $download_page.Links | ? href -match "win64\-setup\.exe$" | select -first 1 -expand href
+    $version = $url32 -split '_' | select -last 1 -skip 1
+
     @{
         Version = $version
-        URL64   = "https://sourceforge.net/projects/filezilla/files/FileZilla_Client/$version/FileZilla_${version}_win64-setup.exe/download"
-        URL32   = "https://sourceforge.net/projects/filezilla/files/FileZilla_Client/$version/FileZilla_${version}_win32-setup.exe/download"
-        FileType = 'exe'
+        URL64   = $url64
+        URL32   = $url32
     }
 }
 
