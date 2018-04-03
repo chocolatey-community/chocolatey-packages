@@ -2,6 +2,7 @@ Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $downloadUrl = 'https://download.spotify.com/SpotifyFullSetup.exe'
+$padUnderVersion = '1.0.75'
 
 function global:au_SearchReplace {
   return @{
@@ -24,7 +25,7 @@ function GetResultInformation([string]$url32) {
 
   $result = @{
     URL32          = $url32
-    Version        = $version
+    Version        = Get-FixVersion -Version $version -OnlyFixBelowVersion $padUnderVersion
     Checksum32     = Get-FileHash $dest -Algorithm SHA512 | % Hash
     ChecksumType32 = 'sha512'
   }
