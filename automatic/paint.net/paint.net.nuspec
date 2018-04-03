@@ -41,6 +41,7 @@ An active and growing online community provides friendly help, tutorials, and pl
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="dotnet4.7.1" version="4.7.2558.0" />
+      <dependency id="KB2670838" version="1.0.20170428" />      
     </dependencies>
   </metadata>
   <files>
