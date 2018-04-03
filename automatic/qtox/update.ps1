@@ -32,7 +32,7 @@ function parseUrlAndVersion() {
   $url = $download_page.Links | ? href -match "setup-qtox(?:64|32)\-([\d\.]+)\.exe$" | select -first 1 -expand href
   $version = $url -split '-|\.exe$' | select -last 1 -Skip 1
 
-  return @{ URL = $releaseUrl + $url; Version = $version }
+  return @{ URL = $releaseUrl + $url; Version = $version.TrimStart('\.') }
 }
 
 function global:au_GetLatest {
