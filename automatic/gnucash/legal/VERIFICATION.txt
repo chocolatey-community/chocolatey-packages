@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/2.6.19/gnucash-2.6.19-setup.exe/download>
+1. Download the following <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/2.6.20/gnucash-2.6.20-setup.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 1FA83D9578E8C62BD7DCEF3B953E0E7610BF03BED9C1A037A72A6EEE1AC79E37
+  checksum: D985CB4147D3A347AB10090ED12583C65293324D821A45DB4F6C0BC5A3718637
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/Gnucash/gnucash/blob/a4bb22b23cdeea2c043b533b9a5b70afdc0728c3/LICENSE>
