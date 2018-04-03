@@ -38,9 +38,10 @@ function global:au_GetLatest {
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
   }
 
-  $version  = $url -split '%20' | select -Last 1 -Skip 1
+  $version  = $url -split '%20| ' | select -Last 1 -Skip 1
 
-  return @{ URL64 = $url; Version = $version }
+  # We need to replace the space in the url, otherwise we'll get an invalid url error.
+  return @{ URL64 = ($url -replace ' ','%20'); Version = $version }
 }
 
 update -ChecksumFor none
