@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.abelhadigital.com/hostsman'
+$releases = 'http://hostsman2.it-mate.co.uk/'
 
 function global:au_SearchReplace {
    @{
@@ -14,8 +14,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $re    = '(?<!installer)\.zip$'
-    $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $re    = '4[\.\d]+\.zip$'
+    $url   = $download_page.links | ? href -match $re | select -Last 1 -expand href | % { $releases + $_ }
     @{
         Version      = $url -split '\.zip|_' | select -Index 1
         URL32        = $url
