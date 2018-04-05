@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>classic-shell</id>
-    <version>4.3.1</version>
+    <version>4.3.1.20180405</version>
     <title>Classic Shell</title>
     <owners>chocolatey</owners>
     <authors>Ivo Beltchev</authors>
@@ -12,7 +12,7 @@
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 Classic Shell is a collection of usability enhancements for Windows. The main features are:
 
 ## Features
@@ -27,8 +27,9 @@ Classic Shell is a collection of usability enhancements for Windows. The main fe
 ## Notes
 
 - If you want to install only specific components, e.g. only the Start Menu, use
-`choco install classic-shell -installArgs ADDLOCAL=ClassicStartMenu`. If Classic Shell gets updated, you won’t have to specify the `-installArgs` again. It remembers your previous selection and will only install the component you have specified. To look for other possible installer arguments, go to http://www.classicshell.net/faq/#install_commands
-    </description>
+`choco install classic-shell -installArgs ADDLOCAL=ClassicStartMenu`. If Classic Shell gets updated, you won't have to specify the `-installArgs` again. It remembers your previous selection and will only install the component you have specified. To look for other possible installer arguments, go to http://www.classicshell.net/faq/#install_commands
+
+]]></description>
     <summary>Usability enhancements for Windows</summary>
     <copyright>Classic Shell</copyright>
     <tags>classic-shell shell freeware start-menu admin</tags>
