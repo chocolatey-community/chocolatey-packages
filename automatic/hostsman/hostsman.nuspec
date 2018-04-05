@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hostsman</id>
-    <version>4.0.95</version>
+    <version>4.7.105.20180405</version>
     <title>HostsMan</title>
     <authors>abelhadigital.com</authors>
     <owners>chocolatey</owners>
