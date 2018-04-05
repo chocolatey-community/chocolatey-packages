@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>classic-shell</id>
     <version>4.3.1</version>
@@ -11,6 +11,7 @@
     <projectUrl>http://www.classicshell.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Classic Shell is a collection of usability enhancements for Windows. The main features are:
 
@@ -29,12 +30,12 @@ Classic Shell is a collection of usability enhancements for Windows. The main fe
 `choco install classic-shell -installArgs ADDLOCAL=ClassicStartMenu`. If Classic Shell gets updated, you won’t have to specify the `-installArgs` again. It remembers your previous selection and will only install the component you have specified. To look for other possible installer arguments, go to http://www.classicshell.net/faq/#install_commands
     </description>
     <summary>Usability enhancements for Windows</summary>
-    <releaseNotes></releaseNotes>
     <copyright>Classic Shell</copyright>
-    <tags>shell freeware start-menu admin</tags>
+    <tags>classic-shell shell freeware start-menu admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/classic-shell</packageSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

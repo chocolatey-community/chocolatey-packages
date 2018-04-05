@@ -1,0 +1,9 @@
+You are permitted to distribute the Classic Shell installer or offer it for download on your website, as long as:
+You do it free of charge
+You don't misrepresent the origin of the software
+You don't modify the software in any way
+Wrapping Classic Shell in a secondary installer or bundling with other software is not allowed
+The Classic Shell name and logo are trademarks and cannot be used to identify other products or services.
+
+* "Commercial use" means you can use it in a commercial environment - your office, school, etc. It does not mean you can sell the software.
+If you are operating a computer shop it is permitted to install Classic Shell for your customers as long as you do it free of charge. If you do this on a large scale a donation is encouraged.
