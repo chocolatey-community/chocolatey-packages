@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName = ''
+$fileName = 'downloads.exe'
 
 $packageArgs = @{
     packageName    = 'argusmonitor'
@@ -17,4 +17,4 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 # clean up
-rm "$toolsDir\$fileName" -ea 0
+Remove-Item "$toolsDir\$fileName" -ea 0
