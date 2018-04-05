@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>argusmonitor</id>
+    <version>0.0.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/argusmonitor</packageSourceUrl>
+    <owners>chocolatey, p3lim</owners>
+    <title>ArgusMonitor (Install)</title>
+    <authors>Argotronic UG (haftungsbeschränkt)</authors>
+    <projectUrl>https://www.argotronic.com/en/</projectUrl>
+    <iconUrl>http://help.argusmonitor.com/lib/h12.png</iconUrl>
+    <copyright>Copyright © 2008-2017 Argotronic UG (haftungsbeschränkt)</copyright>
+    <licenseUrl>https://www.argotronic.com/en/gtc.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.argotronic.com/en/</projectSourceUrl>
+    <docsUrl>http://help.argusmonitor.com/</docsUrl>
+    <bugTrackerUrl>https://www.argotronic.com/en/contact.php</bugTrackerUrl>
+    <tags>argusmonitor argus monitor system fan temperature control trial admin</tags>
+    <summary>Monitoring temperatures and status of system components such as CPU, GPU and hard disk drive</summary>
+    <description></description>
+    <releaseNotes>
+[Software Changelog](https://www.argotronic.com/en/history.php)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
