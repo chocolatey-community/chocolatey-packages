@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hostsman</id>
     <version>4.7.105</version>
@@ -8,11 +8,12 @@
     <authors>abelhadigital.com</authors>
     <owners>chocolatey</owners>
     <summary>HostsMan is a freeware application that lets you manage your Hosts file with ease.</summary>
-    <tags>security hosts hostsfile freeware admin</tags>
-    <licenseUrl>http://hostsman.it-mate.co.uk/licenses/hostsman_4.txt</licenseUrl>
+    <tags>hostsman security hosts hostsfile freeware admin</tags>
+    <licenseUrl>http://hostsman2.it-mate.co.uk/licenses/hostsman_4.txt</licenseUrl>
     <projectUrl>http://www.abelhadigital.com/hostsman</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d3ba6b8a6b663536b70f5d9a3e710bfca64c73f4/icons/hostsman.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
 __HostsMan__ is a freeware application that lets you manage your Hosts file with ease.
 
@@ -27,11 +28,11 @@ __HostsMan__ is a freeware application that lets you manage your Hosts file with
 - No Spyware, no adware, no viruses, 100% freeware, clean and simple.
 
 ]]></description>
-    <releaseNotes />
     <copyright>© 1997-2016 abelhadigital.com</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/hostsman</packageSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
