@@ -1,4 +1,4 @@
-﻿# [Argus Monitor](https://www.argotronic.com/en/)
+﻿# [<img src="" width="48" height="48" /> Argus Monitor](https://chocolatey.org/packages/argusmonitor)
 
 Fan speed control for Mainboard and GPU with characteristic curve based on all available temperature sources.
 

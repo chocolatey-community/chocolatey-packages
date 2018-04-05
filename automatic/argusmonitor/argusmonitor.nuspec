@@ -6,7 +6,7 @@
     <version>0.0.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/argusmonitor</packageSourceUrl>
     <owners>chocolatey, p3lim</owners>
-    <title>ArgusMonitor (Install)</title>
+    <title>Argus Monitor (Install)</title>
     <authors>Argotronic UG (haftungsbeschränkt)</authors>
     <projectUrl>https://www.argotronic.com/en/</projectUrl>
     <iconUrl>http://help.argusmonitor.com/lib/h12.png</iconUrl>
