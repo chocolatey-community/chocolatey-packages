@@ -5,7 +5,7 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'unchecky'
 
-  checksum       = '93b0ddf0225ff5f4a867f038965e7f9e5539e48548b4d17a6ebe03be65279795'
+  checksum       = '25896931db48f0f4c9e3681720fb7c89b531d912ce5f11d596078f8d917126b7'
   checksumType   = 'sha256'
   url            = 'https://unchecky.com/files/unchecky_setup.exe'
 
