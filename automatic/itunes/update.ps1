@@ -1,15 +1,42 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\extensions\extensions.psm1"
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = 'https://www.apple.com/itunes/download/'
 $softwareName = 'iTunes'
+
+function VerifyVersionAndReturnChecksum() {
+  param($url, $remoteVersion, $checksumType)
+
+  $tempLocation = [System.IO.Path]::GetTempFileName()
+
+  Get-WebFile $url $tempLocation
+
+  try {
+    $item = Get-Item $tempLocation
+
+    if (!$item.VersionInfo.ProductVersion.StartsWith($remoteVersion)) {
+      throw "The current url does not supply itunes version $remoteVersion`nURL: $url"
+    }
+
+    return Get-FileHash $tempLocation -Algorithm $checksumType | % Hash
+  } finally {
+    Remove-item -Force $tempLocation
+  }
+}
 
 function global:au_BeforeUpdate {
   $checksumType = 'sha256'
   $Latest.ChecksumType32 = $Latest.ChecksumType64 = $checksumType
 
-  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $checksumType
-  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $checksumType
+
+
+  $Latest.Checksum32 = VerifyVersionAndReturnChecksum -url $Latest.URL32 `
+                                                      -remoteVersion $Latest.RemoteVersion `
+                                                      -checksumType $checksumType
+  $Latest.Checksum64 = VerifyVersionAndReturnChecksum -url $Latest.URL64 `
+                                                      -remoteVersion $Latest.RemoteVersion `
+                                                      -checksumType $checksumType
 }
 
 function global:au_SearchReplace {
@@ -45,4 +72,5 @@ function global:au_GetLatest {
   }
 }
 
+$global:au_Force = $true
 update -ChecksumFor none
