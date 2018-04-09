@@ -15,4 +15,4 @@ and can be verified by doing the following:
   checksum type: sha256
   checksum: D985CB4147D3A347AB10090ED12583C65293324D821A45DB4F6C0BC5A3718637
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/Gnucash/gnucash/blob/a4bb22b23cdeea2c043b533b9a5b70afdc0728c3/LICENSE>
+The file 'LICENSE.txt' has been obtained from <https://github.com/Gnucash/gnucash/blob/7a0f0d57c809a2177d015ad4a961e2b1d34dfee6/LICENSE>

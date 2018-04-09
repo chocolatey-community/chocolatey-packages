@@ -9,10 +9,10 @@ $packageArgs = @{
 
   softwareName   = 'GnuCash*'
 
-  silentArgs     = '/SILENT /SUPPRESSMSGBOXES /SP-'
+  silentArgs     = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`"'
   validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

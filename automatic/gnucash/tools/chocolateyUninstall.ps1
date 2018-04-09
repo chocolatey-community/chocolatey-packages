@@ -4,7 +4,7 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = 'GnuCash*'
   fileType      = 'exe'
-  silentArgs    = '/SILENT /SUPPRESSMSGBOXES /SP-'
+  silentArgs    = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoUninstall.log`"'
   validExitCodes= @(@(0))
 }
 

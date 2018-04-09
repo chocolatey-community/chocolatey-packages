@@ -1,4 +1,7 @@
-﻿import-module au
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+
+import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain = 'https://sourceforge.net'
@@ -14,7 +17,7 @@ function global:au_AfterUpdate {
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleasesUrl)>"
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
@@ -28,25 +31,35 @@ function global:au_SearchReplace {
     }
   }
 }
+
 function global:au_GetLatest {
-  # First let us get the folder that contains the executables
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $url = $download_page.Links | ? href -match "\/[\d\.]+\/$" | select -First 1 -expand href | % { $domain + $_ }
 
-  # Then get the executable
+  # We only grab the 5 latest updated folders, no need to take any more
+  $releasesUrls = $download_page.Links | ? href -match "\/[\d\.]+\/$" | select -First 5 -expand href | % { $domain + $_ }
 
-  $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
+  $streams = @{}
+  $releasesUrls | % {
+    $download_page = Invoke-WebRequest -Uri $_ -UseBasicParsing
+    $re = '\.exe\/download$'
+    $url32 = $download_page.Links | ? href -match $re | select -expand href -First 1
+    if (!$url32) { return }
 
-  $re = '\.exe\/download$'
-  $url = $download_page.links | ? href -match $re | select -first 1 -expand href | % { if ($_.StartsWith('/')) { $domain + $_ } else { $_ } }
+    $verRe = 'h\-|(?:\-\d)?[\.\-]setup'
+    $version = $url32 -split "$verRe" | select -last 1 -skip 1
+    $version = Get-Version $version
 
-  $version = $url -split '[-]' | select -Last 1 -Skip 1
-
-  @{
-    URL32    = $url
-    Version  = $version
-    FileType = 'exe'
+    if (!($streams.ContainsKey($version.ToString(2)))) {
+      $streams.Add($version.ToString(2), @{
+          Version     = $version.ToString()
+          URL32       = $url32
+          ReleasesUrl = $_
+          FileType    = 'exe'
+        })
+    }
   }
+
+  return @{ Streams = $streams }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
