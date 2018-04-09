@@ -23,8 +23,10 @@ function global:au_GetLatest {
     $url32 = $url[0].href
     $url64 = $url[1].href
 
-    $version = $url32 -split '/' | select -Last 1 -Skip 1
-    $version = $version -split '-' | select -Last 1
+    $versionArr = $url32 -split 'x\-|\-[\d]|\-rel|\-win' | select -Last 2 -Skip 1
+    $versionRe = '^[\d\.]+(\-rc[\d]*)?$'
+    if ($versionArr[0] -match $versionRe) { $version = $versionArr[0] }
+    elseif ($versionArr[1] -match $versionRe) { $version = $versionArr[1] }
 
     @{ URL32 = $url32; URL64 = $url64; Version = $version }
 }
