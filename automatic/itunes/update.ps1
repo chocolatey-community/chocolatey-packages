@@ -72,5 +72,4 @@ function global:au_GetLatest {
   }
 }
 
-$global:au_Force = $true
 update -ChecksumFor none
