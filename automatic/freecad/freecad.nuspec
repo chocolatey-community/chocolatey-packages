@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.16.6712</version>
+    <version>0.17</version>
     <title>FreeCAD</title>
     <owners>chocolatey,purity</owners>
     <authors>Jürgen Riegel</authors>
@@ -21,7 +21,7 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 
 ]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_016</releaseNotes>
+    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_017</releaseNotes>
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
