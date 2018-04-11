@@ -7,9 +7,9 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://sqlite.org/2018/sqlite-dll-win32-x86-3230000.zip
-   x64: https://sqlite.org/2018/sqlite-dll-win64-x64-3230000.zip
-   Toolsx32: https://sqlite.org/2018/sqlite-tools-win32-x86-3230000.zip
+   x32: https://sqlite.org/2018/sqlite-dll-win32-x86-3230100.zip
+   x64: https://sqlite.org/2018/sqlite-dll-win64-x64-3230100.zip
+   Toolsx32: https://sqlite.org/2018/sqlite-tools-win32-x86-3230100.zip
 
    to download the files.
 
@@ -17,9 +17,9 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: D6CCAB1423559C6CF50202BC81A4576F969AA9C275EAAEB9A2AC2C827CD60447
-   checksum64: 1727FB80D83340884C5C46D83155565D99EB9B511E1813D99EB3E862EFF6BF28
-   checksumTools32: B59010B11A97DF391539BA1484DC3871804912D0C7D81B4F1414F51031AA0824
+   checksum32: A9066F40A2258DB7D25255D366640B2596EC2A0B224223A15A236C30C1A0C7CD
+   checksum64: 1DC75D6928923EE609567311B8C4B1449C0E854ADA771A40017E03A5C20F90A4
+   checksumTools32: E15B06665951D7B3D598752278A017E065702A89C9166E0495C772D0C46C7611
 
 File 'license.txt' is obtained from the following URL (and converted to markdown):
    http://www.sqlite.org/copyright.html
