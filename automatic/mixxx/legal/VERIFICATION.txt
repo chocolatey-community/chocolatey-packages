@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://downloads.mixxx.org/builds/2.1/release/mixxx-2.1.0-rc1-2.1-release-x86-latest.exe
-   x64: http://downloads.mixxx.org/builds/2.1/release/mixxx-2.1.0-rc1-2.1-release-x64-latest.exe
+   x32: https://downloads.mixxx.org/mixxx-2.1.0/mixxx-2.1.0-win32.exe
+   x64: https://downloads.mixxx.org/mixxx-2.1.0/mixxx-2.1.0-win64.exe
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: D7A5E0743C76A949776DF5A4C1503E3F036E2BCC4A6C1FDBE5C99FE813156753
-   checksum64: C02081E6196CAA4665F82176F9D8D47D057B7A059336312D857CD6E5B8F8A761
+   checksum32: E7867FDB908EE27EB80D81A9D0EF2E1F190F9BD1E0E7D25C525418BDAFE29B16
+   checksum64: AE3BD458AEE0135CD4B6118FFE82870D5D9210ACCF962366F61EE8C63D4DE1C1
 
 File 'license.txt' is obtained from:
    https://www.gnu.org/licenses/gpl-2.0.html
