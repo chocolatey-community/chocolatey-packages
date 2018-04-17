@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/69f2d42b/icons/quiterss.png" width="48" height="48"/> [QuiteRSS](https://chocolatey.org/packages/quiterss)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9dc4c118fa0eafd9e4b94b2676ae79b140146a95/icons/quiterss.png" width="48" height="48"/> [QuiteRSS](https://chocolatey.org/packages/quiterss)
 
 QuiteRSS is a open-source cross-platform RSS/Atom news feeds reader.
 
