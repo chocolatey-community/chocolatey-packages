@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.hedgewars.org/download.html>
 and can be verified by doing the following:
 
-1. Download the following <https://www.hedgewars.org/download/releases/Hedgewars-0.9.24.exe>
+1. Download the following <https://www.hedgewars.org/download/releases/Hedgewars-0.9.24.1.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: A7363399C67CCD600608FF4FF91764FABC92AA691D6ECFDB505781BAAA58D380
+  checksum: ABEA50B37AC6B962910F10FD81A4C17A22DB70CCAE839AEFE47C346DB0CE6644
 
 The file 'LICENSE.txt' has been obtained from <https://hg.hedgewars.org/hedgewars/raw-file/90e43d1bcd5b/COPYING>
