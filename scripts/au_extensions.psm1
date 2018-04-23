@@ -7,6 +7,7 @@
 $funcs = @(
   'Set-DescriptionFromReadme'
   'Update-ChangelogVersion'
+  'Update-OnETagChanged'
 )
 
 $funcs | % {
