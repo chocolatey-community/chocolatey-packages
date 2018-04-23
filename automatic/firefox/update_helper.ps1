@@ -10,7 +10,7 @@ function GetVersionAndUrlFormats() {
 
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $UpdateUrl
 
-  $re = "download.mozilla.*product=$Product.*&amp;os=win&amp;lang=en-US"
+  $re = "download.mozilla.*product=$Product.*(&amp;|&)os=win(&amp;|&)lang=en-US"
   $url = $download_page.links | ? href -match $re | select -first 1 -expand href
   $url = Get-RedirectedUrl $url
   $url = $url -replace 'en-US','${locale}' -replace '&amp;','&'
