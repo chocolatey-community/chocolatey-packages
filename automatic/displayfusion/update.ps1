@@ -26,7 +26,7 @@ function global:au_GetLatest {
   $streams = @{}
   $urls | % {
     $url = Get-RedirectedUrl $_ 3>$null
-    $verRe = '-|\.exe$'
+    $verRe = 'Setup-|\.exe$'
     $version = $url -split "$verRe" | select -last 1 -skip 1
     if (!$version) { return }
     $version = Get-Version $version
