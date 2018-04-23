@@ -13,9 +13,9 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-    $re = 'mkdocs\/[\d\.]+$'
+    $re = 'mkdocs\/[\d\.]+\/$'
     $url = $download_page.links | ? href -match $re | select -first 1 -expand href
-    $version = $url -split '\/' | select -last 1
+    $version = $url -split '\/' | select -last 1 -skip 1
 
     return @{ Version = $version }
 }
