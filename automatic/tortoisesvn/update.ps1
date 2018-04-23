@@ -3,27 +3,7 @@ import-module "$PSScriptRoot/../../extensions/extensions.psm1"
 
 $releases = 'https://tortoisesvn.net/downloads.html'
 
-function global:au_BeforeUpdate {
-  Remove-Item "$PSScriptRoot\tools\*.exe"
-
-  $client = New-Object System.Net.WebClient
-  try 
-  {
-    $filePath32 = "$PSScriptRoot\tools\$($Latest.FileName32)"
-    $client.DownloadFile($Latest.URL32, "$filePath32")
-
-    $filePath64 = "$PSScriptRoot\tools\$($Latest.FileName64)"
-    $client.DownloadFile($Latest.URL64, "$filePath64")
-  }
-  finally 
-  {
-    $client.Dispose()
-  }
-
-  $Latest.ChecksumType = "sha256"
-  $Latest.Checksum32 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath32 | ForEach-Object Hash
-  $Latest.Checksum64 = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath64 | ForEach-Object Hash
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase "TortoiseSVN" }
 
 function global:au_SearchReplace {
     @{
@@ -34,11 +14,19 @@ function global:au_SearchReplace {
         ".\legal\verification.txt" = @{
             "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
-            "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
+            "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
             "(?i)(checksum32:\s+).*" = "`${1}$($Latest.Checksum32)"
             "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
-        }        
+        }
      }
+}
+
+function Get-ActualUrl([uri]$url) {
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $url
+
+  $path = $download_page.links | ? href -match 'redir.*\.msi$' | select -first 1 -expand href
+
+  return $url.Scheme + "://" + $url.Host + $path
 }
 
 function global:au_GetLatest {
@@ -52,23 +40,19 @@ function global:au_GetLatest {
     $re64  = "TortoiseSVN-(.*)-x64-svn-(.*).msi"
     $url64 = $download_page.links | Where-Object href -match $re64 | Select-Object -First 1 -expand href
 
-    $filename32 = $url32 -split '/' | Select-Object -Skip 1 -Last 1
-    $filename64 = $url64 -split '/' | Select-Object -Skip 1 -Last 1
-
-    $version32 = $filename32 -split '-' | Select-Object -Skip 1 -First 1
-    $version64 = $filename64 -split '-' | Select-Object -Skip 1 -First 1
+    $version32 = $url32 -split 'svn-|-win32' | Select-Object -Skip 2 -Last 1
+    $version64 = $url64 -split 'svn-|-x64' | Select-Object -Skip 2 -Last 1
 
     if ($version32 -ne $version64) {
         throw "Different versions for 32-Bit and 64-Bit detected."
     }
 
-    return @{
-        URL32 = $url32 
-        URL64 = $url64 
-        FileName32 = $filename32
-        FileName64 = $filename64
-        Version = $version32 
+    $result = @{
+        URL32 = Get-ActualUrl $url32
+        URL64 = Get-ActualUrl $url64
+        Version = $version32
     }
+    return $result
 }
 
 update -ChecksumFor none
