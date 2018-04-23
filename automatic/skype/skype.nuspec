@@ -3,11 +3,17 @@
   <metadata>
     <id>skype</id>
     <title>Skype</title>
-    <version>0.0</version>
+    <version>7.41.0.101</version>
     <authors>Microsoft</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>Skype - VOIP</summary>
-    <description>Skype - Install Skype, add your friends as contacts, then call, video call and instant message with them for free. Call people who aren't on Skype too, at really low rates.</description>
+    <description><![CDATA[Skype - Install Skype, add your friends as contacts, then call, video call and instant message with them for free. Call people who aren't on Skype too, at really low rates.
+
+## Notes
+The package have the following known issues.
+- Skype automatically starts after installation (no known way to disable it yet)
+- A desktop shortcut is automatically created.
+]]></description>
     <projectUrl>http://www.skype.com</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/skype/</packageSourceUrl>
     <tags>Skype VOIP voice over ip video conferencing admin</tags>
