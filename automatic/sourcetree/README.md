@@ -20,7 +20,14 @@ Sourcetree simplifies how you interact with your Git repositories so you can foc
 * **Local commit search:** Search for commits, file changes, and branches right within Sourcetree.
 * **Interactive rebase:** Get clean and clear commits with Sourcetree's interactive rebase tool.
 * **Remote repository manager:** Sourcetree allows you to search for and clone remote repositories within its simple user interface.
+* **Bitbucket sign-in:** No additional account signup required to use Sourcetree. Use your existing Bitbucket Server or Data Center credentials to confirm your identity when using the product.
 
 ## Notes
 
 - This package installs the current version in General Availability. For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
+- This package installs the [Enterprise Edition](https://www.sourcetreeapp.com/enterprise). The Enterprise Edition comes with the following differences compared to the standard installer:
+  - Application is installed in default program folder.
+  - Application is not automatically launched after installation.
+  - Embedded Git and Mercurial are not supported.
+  - Does not prompt to install global ignore files.
+  - Update notifications are disabled.
