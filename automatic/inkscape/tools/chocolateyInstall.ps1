@@ -14,10 +14,26 @@ $packageArgs = @{
   validExitCodes         = @(0)
   softwareName           = 'InkScape*'
 }
-$current_version = Get-UninstallRegistrykey $packageArgs.softwareName  | Select-Object -Expand DisplayVersion
-if ($current_version -eq $Env:ChocolateyPackageVersion) {
-    Write-Host "Sowtware already installed"
-} else { Install-ChocolateyPackage @packageArgs }
+[array]$key = Get-UninstallRegistrykey $packageArgs.softwareName
+if ($key.Count -eq 1) {
+  if ($key.DisplayVersion -eq '') {
+    Write-Host "Software already installed"
+    return
+  } else {
+    Uninstall-ChocolateyPackage -packageName $packageArgs.packageName `
+      -fileType $packageArgs.fileType `
+      -silentArgs "$($key.PSChildName) $($packageArgs.silentArgs)" `
+      -validExitCodes $packageArgs.validExitCodes `
+      -file ''
+  }
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$($key.Count) matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "This will most likely cause a 1603/1638 failure when installing InkScape."
+  Write-Warning "Please uninstall InkScape before installing this package."
+}
+
+Install-ChocolateyPackage @packageArgs
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName

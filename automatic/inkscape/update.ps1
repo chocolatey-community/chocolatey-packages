@@ -13,6 +13,7 @@ function global:au_SearchReplace {
             "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
             "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
             "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
+            "(?i)(DisplayVersion \-eq\s*)('.*')" = "`$1'$($Latest.RemoteVersion).0'"
         }
 
         "$($Latest.PackageName).nuspec" = @{
@@ -35,6 +36,7 @@ function global:au_GetLatest {
 
   @{
     Version      = $version
+    RemoteVersion= $version
     URL32        = $url32
     URL64        = $url64
     ReleaseNotes = $redirUrl + "#left-column"
