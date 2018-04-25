@@ -31,7 +31,7 @@ function global:au_GetLatest {
   $re = 'x64.*\.exe$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = '\/'
+  $verRe = 'CAD\-|\.[\dA-Z]+\-WIN'
   [version]$version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   [version]$version64 = $url64 -split "$verRe" | select -last 1 -skip 1
   if ($version32 -ne $version64 -and ($version32.Major -ne $version64.Major -or $version32.Minor -ne $version64 -ne $version64.Minor)) {
