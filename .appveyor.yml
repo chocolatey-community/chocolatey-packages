@@ -57,10 +57,14 @@ install:
 - ps: |
     $chocoVersion = if (($Env.APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($ENV:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) { $Env:choco_version } else { $Env:choco_version_pr }
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
-    if (!(Test-Path "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg")) { iwr "https://chocolatey.org/api/v2/package/chocolatey/${chocoVersion}" -OutFile   "${env:nupkg_cache_path}\chocolatey.${chocoVersion}.nupkg" }
-    cup chocolatey --source ${env:nupkg_cache_path} --version $chocoVersion
-    if (!(Test-path "${env:nupkg_cache_path}\wormies-au-helpers.0.2.0.nupkg")) { iwr "https://chocolatey.org/api/v2/package/wormies-au-helpers/0.2.0" -OutFile "${env:nupkg_cache_path}\wormies-au-helpers.0.2.0.nupkg" }
-    cinst wormies-au-helpers --source ${env:nupkg_cache_path} --version 0.2.1 --ignore-dependencies
+    @{
+      'chocolatey' = $chocoVersion
+      'wormies-au-helpers' = '0.2.1'
+    }.GetEnumerator() | % {
+      if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
+      if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} }
+      else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
+    }
 - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
 - ps: $PSVersionTable
 - git --version
