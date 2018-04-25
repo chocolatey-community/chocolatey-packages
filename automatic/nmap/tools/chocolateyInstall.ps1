@@ -10,7 +10,7 @@ $packageArgs = @{
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-Remove-Item $embedded_path -ea 0
+Remove-Item "$toolsDir\*.exe" -ea 0
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
