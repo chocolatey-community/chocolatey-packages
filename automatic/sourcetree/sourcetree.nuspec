@@ -42,6 +42,9 @@ Sourcetree simplifies how you interact with your Git repositories so you can foc
 ]]></description>
     <releaseNotes>https://www.sourcetreeapp.com/update/WindowsReleaseNotes.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>
+    <dependencies>
+      <dependency id="dotnet4.7.1" version="4.7.2558.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
