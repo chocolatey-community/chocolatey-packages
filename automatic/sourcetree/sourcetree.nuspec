@@ -3,38 +3,42 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>SourceTree</id>
-    <title>SourceTree</title>
+    <title>Sourcetree</title>
     <version>2.5.5</version>
     <authors>Atlassian</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://www.sourcetreeapp.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d9984ffd9b6481c92e83fc1ec16f55184633adb6/icons/sourcetree.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bcc3ae1af3d3d1794526ec01a1f3cd1af7dd80a9/icons/sourcetree.svg</iconUrl>
     <licenseUrl>https://www.atlassian.com/end-user-agreement/</licenseUrl>
     <docsUrl>https://confluence.atlassian.com/get-started-with-sourcetree</docsUrl>
-    <bugTrackerUrl>https://support.atlassian.com/help</bugTrackerUrl>
+    <bugTrackerUrl>https://jira.atlassian.com/projects/SRCTREE/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sourcetree</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Harness the power of Git and Hg in a beautifully simple application</summary>
+    <summary>Simplicity and power in a beautiful Git GUI</summary>
     <description><![CDATA[
-A free visual Git and Hg client for Mac and Windows.
+A free Git client for Windows.
 
-SourceTree simplifies how you interact with your Git and Mercurial repositories so you can focus on coding. Visualize and manage your repositories through SourceTree's simple interface.
+Sourcetree simplifies how you interact with your Git repositories so you can focus on coding. Visualize and manage your repositories through Sourcetree's simple Git GUI.
 
 ## Features
 
+* **Simple for beginners:** Say goodbye to the command line - simplify distributed version control with a Git client and quickly bring everyone up to speed.
+* **Powerful for experts:** Perfect for making advanced users even more productive. Review changesets, stash, cherry-pick between branches and more.
+* **Visualize your code:** Seeing really is believing. Get information on any branch or commit with a single click.
+* **Git and Hg on your desktop:** A fully-featured GUI that offers an efficient, consistent development process right out of the box. Works with Git and Mercurial.
 * **Commit with Confidence:** Visualize your work and push with confidence. Stage and discard changes by the file, hunk or line.
+* **The new Git status:** Never miss a thing. Stay on top of your work and up to date with your code at a glance.
 * **Visualize your progress:** Detailed branching diagrams make it easy to keep up with your team's progress.
-* **Git Large File Support:** SourceTree supports Git LFS, allowing teams to track large assets in one single place.
-* **Git-flow out of the box:** Smart branching with SourceTree and Git-flow, keeping repositories clean and development efficient.
-* **Submodules:** Submodules make life easier when managing projects, their dependencies, and other project groupings.
-* **Local commit search:** Search for commits, file changes, and branches right within SourceTree.
-* **Interactive rebase:** Get clean and clear commits with SourceTree's interactive rebase tool.
-* **Remote repository manager:** SourceTree allows you to search for and clone remote repositories within its simple user interface.
+* **Git Large File Support:** Sourcetree supports Git LFS, allowing teams to track large assets in one single place.
+* **Git-flow out of the box:** Smart branching with Sourcetree and [Git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/#!workflow-gitflow), keeping repositories clean and development efficient.
+* **Submodules:** [Submodules](https://confluence.atlassian.com/sourcetreekb/adding-a-submodule-subtree-with-sourcetree-785332086.html?) make life easier when managing projects, their dependencies, and other project groupings.
+* **Local commit search:** Search for commits, file changes, and branches right within Sourcetree.
+* **Interactive rebase:** Get clean and clear commits with Sourcetree's interactive rebase tool.
+* **Remote repository manager:** Sourcetree allows you to search for and clone remote repositories within its simple user interface.
 
 ## Notes
 
-- This package installs the current version in General Availability.For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
-
+- This package installs the current version in General Availability. For details on SourceTrees release process see [this blog post](https://blog.sourcetreeapp.com/2016/03/31/sourcetree-beta-program-a-look-behind-the-curtains/).
 ]]></description>
     <releaseNotes>https://www.sourcetreeapp.com/update/WindowsReleaseNotes.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>
