@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.2.18</version>
+    <version>3.2.19</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
@@ -39,7 +39,7 @@ Originally packaged by Robert Labrie (https://github.com/tnwinc/chocolatey-etcd)
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/coreos/etcd/releases/tag/v3.2.18</releaseNotes>
+    <releaseNotes>https://github.com/coreos/etcd/releases/tag/v3.2.19</releaseNotes>
     <dependencies>
       <dependency id="nssm" />
     </dependencies>
