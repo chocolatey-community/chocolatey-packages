@@ -6,8 +6,8 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   PackageName  = $env:chocolateyinstall
   FileFullPath = "$toolsDir\$exeName"
-  Url          = 'https://download.microsoft.com/download/A/B/E/ABEE70FE-7DE8-472A-8893-5F69947DE0B1/MediaCreationTool.exe'
-  Checksum     = 'B83CB0E7938BBECFCD12FAC51CFFCAB859599D9CD99376B9427AD316E01D76754C3E947DF50FE0978097A30B5BE562EA2F3C47140526608276E3609BA252EB56'
+  Url          = 'https://software-download.microsoft.com/download/pr/MediaCreationTool1803.exe'
+  Checksum     = '8960B2C95DB3A09AE2D7ABF820EA45E7100959F20CCD7EDCCA9EC5028D684B28DE3AC6ECDAE834150D40B91C1C264AD29BC2288D388B528B970C0F7531ACF909'
   ChecksumType = 'sha512'
 }
 Get-ChocolateyWebFile @packageArgs
