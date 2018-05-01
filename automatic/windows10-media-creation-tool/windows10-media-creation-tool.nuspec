@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>windows10-media-creation-tool</id>
-    <version>10.0.16299.15</version>
+    <version>10.0.17134.1</version>
     <title>Windows 10 Media Creation Tool</title>
     <authors>Microsoft</authors>
     <owners>DarwinJS, chocolatey</owners>
@@ -27,7 +27,7 @@ You can then download and run the media creation tool. For more information on h
     <tags>portable windows10 media-creation-tool freeware</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/win10mct</packageSourceUrl>
     <dependencies>
-      <dependency id="win10mct" version="10.0.16299.15" />
+      <dependency id="win10mct" version="10.0.17134.1" />
     </dependencies>
   </metadata>
 </package>
