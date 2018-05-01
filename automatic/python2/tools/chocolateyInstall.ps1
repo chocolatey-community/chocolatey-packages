@@ -12,10 +12,10 @@ $params = @{
   packageName    = 'python2'
   fileType       = 'msi'
   silentArgs     = $installArgs
-  url            = 'https://www.python.org/ftp/python/2.6.6/python-2.6.6.msi'
-  url64Bit       = 'https://www.python.org/ftp/python/2.6.6/python-2.6.6.amd64.msi'
-  checksum       = '1192931440475d07fb3e9724531a53de34097ad24e519bff2e5f458c375a31b3'
-  checksum64     = 'b9ea8892ce58101957a0bb2caa02ccf5496b13a1cc9e24de078d4451b4ef3cf8'
+  url            = 'https://www.python.org/ftp/python/2.7.15/python-2.7.15.msi'
+  url64Bit       = 'https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64.msi'
+  checksum       = '1afa1b10cf491c788baa340066a813d5ec6232561472cfc3af1664dbc6f29f77'
+  checksum64     = '5e85f3c4c209de98480acbf2ba2e71a907fd5567a838ad4b6748c76deb286ad7'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
