@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/octave.png" width="48" height="48"/> [octave.portable](https://chocolatey.org/packages/octave.portable)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/aa4dfe9a33e28ea4a94616e84b3648527d4fa87f/icons/octave.png" width="48" height="48"/> [octave.portable](https://chocolatey.org/packages/octave.portable)
 
 ## GNU Octave - Scientific Programming Language
 

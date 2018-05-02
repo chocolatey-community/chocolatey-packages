@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>octave.portable</id>
-    <version>4.2.2</version>
+    <version>4.4.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/octave.portable</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>GNU Octave (Portable)</title>
     <authors>John W. Eaton</authors>
     <projectUrl>http://www.gnu.org/software/octave</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/octave.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/aa4dfe9a33e28ea4a94616e84b3648527d4fa87f/icons/octave.png</iconUrl>
     <copyright>(c) 1998-2017 John W. Eaton</copyright>
     <licenseUrl>https://www.gnu.org/software/octave/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -30,7 +30,7 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 * Octave Forge, a central location for development of packages for GNU Octave, similar to Matlab's toolboxes.
 * Free software, runs on GNU/Linux, macOS, BSD, and Windows
 ]]></description>
-    <releaseNotes>https://www.gnu.org/software/octave/news/release/2018/03/13/octave-4.2.2-released.html</releaseNotes>
+    <releaseNotes>https://www.gnu.org/software/octave/news/release/2018/04/30/octave-4.4.0-released.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
