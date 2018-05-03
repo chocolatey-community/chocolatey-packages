@@ -18,14 +18,14 @@ Get-Process code -ea 0 | Stop-Process  #in case gracefull shutdown did not succe
 $packageArgs = @{
   packageName    = 'visualstudiocode'
   fileType       = 'EXE'
-  url            = 'https://az764295.vo.msecnd.net/stable/3aeede733d9a3098f7b4bdc1f66b63b0f48c1ef9/VSCodeSetup-ia32-1.22.2.exe'
-  url64bit       = 'https://az764295.vo.msecnd.net/stable/3aeede733d9a3098f7b4bdc1f66b63b0f48c1ef9/VSCodeSetup-x64-1.22.2.exe'
+  url            = 'https://az764295.vo.msecnd.net/stable/7c7da59c2333a1306c41e6e7b68d7f0caa7b3d45/VSCodeSetup-ia32-1.23.0.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/stable/7c7da59c2333a1306c41e6e7b68d7f0caa7b3d45/VSCodeSetup-x64-1.23.0.exe'
 
   softwareName   = 'Microsoft Visual Studio Code'
 
-  checksum       = 'fb9caa444bd2d41ba8939c327b157991232139b1a3790f03bf773f64a9639c89'
+  checksum       = 'e169e2d39c0d094417a21d3b159d2bf986e82c9b73abe243ca1e07cf596cfecb'
   checksumType   = 'sha256'
-  checksum64     = '8f10321bc920b9d593ed55bb3dde0a325721169c4f8cf59258493681c22d1e83'
+  checksum64     = '3313356942dcb24376008eb3fc1d0580c9799f66bcfd3fb8992bc3699f447421'
   checksumType64 = 'sha256'
 
   silentArgs     = "/verysilent /suppressmsgboxes /mergetasks=""$mergeTasks"" /log=""$env:temp\vscode.log"""
