@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/adobe/brackets/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/adobe/brackets/releases/download/release-1.12/Brackets.Release.1.12.msi>
+1. Download the following <https://github.com/adobe/brackets/releases/download/release-1.13-prerelease-1/Brackets.Release.release-1.13-prerelease-1.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: E98EFA56111369F301155B1BEBDA704CCACC150C4939080A5525B79E86120C3A
+  checksum: 0745CB2E0193FAC5A3E270AAA40EE121D6555BE2EF635B59D70E66D24FD01271
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/adobe/brackets/blob/c56840100d4fe4322252c856d5d848426e18367c/LICENSE>
