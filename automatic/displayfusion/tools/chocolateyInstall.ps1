@@ -7,7 +7,7 @@ $localeTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\DisplayFusionSetup-9.2-Beta1c.exe"
+  file           = "$toolsPath\DisplayFusionSetup-9.2-Beta2.exe"
   softwareName   = 'displayfusion*'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP-  /LANG=$localeTwoLetter /STARTUPALL=1 /CONTEXTMENU=0 /LAUNCHAFTER=0 /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0, 1641, 3010)
