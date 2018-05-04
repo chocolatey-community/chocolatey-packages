@@ -22,8 +22,8 @@ function global:au_BeforeUpdate {
 
     set-alias 7z $Env:chocolateyInstall\tools\7z.exe
     rm tools\curl_* -Recurse
-    7z e tools\*win32* curl.exe libcurl.dll -r -otools\curl_x32
-    7z e tools\*win64* curl.exe libcurl.dll -r -otools\curl_x64
+    7z e tools\*win32* bin -r -otools\curl_x32
+    7z e tools\*win64* bin -r -otools\curl_x64
     rm tools\*.zip
 
     # Download and include the ssl certificate, due to issue <https://github.com/chocolatey/chocolatey-coreteampackages/issues/957>
