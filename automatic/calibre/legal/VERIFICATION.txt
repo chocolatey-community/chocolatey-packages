@@ -7,15 +7,15 @@ location on <https://download.calibre-ebook.com/3.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://download.calibre-ebook.com/3.22.1/calibre-3.22.1.msi>
-  64-Bit software: <https://download.calibre-ebook.com/3.22.1/calibre-64bit-3.22.1.msi>
+  32-Bit software: <https://download.calibre-ebook.com/3.23.0/calibre-3.23.0.msi>
+  64-Bit software: <https://download.calibre-ebook.com/3.23.0/calibre-64bit-3.23.0.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 07C7017BE9D13CC9FF8D6CFE353AD24B6B54EACD2B94362C1F046B19084FEBA9
-  checksum64: 45A24F575F30DCB47EC0B5BBAB90D095B11D583AB0DFA886E6786933A96F9927
+  checksum32: EF47116EEB93DAF356B9F0C2CAF45FCCE17698293749ED9093A3DF2E294C660C
+  checksum64: 9BC65468A1B568B0DD784514FE755E65F60F07589EF814FC0A71EB088F799066
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kovidgoyal/calibre/blob/89c271759db5c71202251895f6793e4c1ec65ee6/LICENSE>
