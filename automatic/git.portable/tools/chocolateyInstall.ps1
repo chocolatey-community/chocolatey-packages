@@ -11,4 +11,4 @@ $packageArgs = @{
 Get-ChocolateyUnzip @packageArgs
 Install-ChocolateyPath "$($packageArgs.Destination)\bin"
 
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }

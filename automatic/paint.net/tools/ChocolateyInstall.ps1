@@ -20,7 +20,7 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" }}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' }}
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName

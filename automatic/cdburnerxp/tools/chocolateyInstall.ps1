@@ -16,7 +16,7 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" '' } }
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {
