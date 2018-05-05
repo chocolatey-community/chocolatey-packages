@@ -22,7 +22,13 @@ Register-Application "$installLocation\$packageName.exe"
 Write-Host "$packageName registered as $packageName"
 
 $pp = Get-PackageParameters
-$pp.Keys | ForEach-Object { $cmd=@(". '$installLocation\Everything.exe'", '--disable-run-as-admin') } { $cmd += "--install-" + $_.ToLower() }
+
+$cmd = @(
+  ". '$installLocation\Everything.exe'"
+  '--disable-run-as-admin'
+  '--install-service' 
+)
+$pp.Keys | ? { $_ -ne 'service' } | % { $cmd += "--install-" + $_.ToLower() }
 Write-Host "Post install command line:" $cmd
 "$cmd" | Invoke-Expression
 
