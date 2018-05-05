@@ -1,13 +1,22 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
   packageName    = 'reshack'
-  fileType       = 'EXE'
-  url            = 'http://www.angusj.com/resourcehacker/reshacker_setup.exe'
-  checksum       = 'efcb750e5d1d6996f0f96040e94511acb6459077dbe6d505c6c603046002bb56'
-  checksumType   = 'sha256'
+  fileType       = 'exe'
+  file           = gi $toolsPath\*.exe
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   validExitCodes = @(0)
-  softwareName   = 'Resource Hacker*'
+  softwareName   = 'Resource Hacker *'
 }
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" "" }}
+
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
+Write-Host "$packageName installed to '$installLocation'"
+
+Register-Application "$installLocation\ResourceHacker.exe" $packageName
+Write-Host "$packageName registered as $packageName"

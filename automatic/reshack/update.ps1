@@ -4,12 +4,14 @@ $releases = 'http://www.angusj.com/resourcehacker'
 
 function global:au_SearchReplace {
    @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^\s*url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+        ".\legal\VERIFICATION.txt" = @{
+          "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
+          "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
         }
     }
 }
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
@@ -21,4 +23,4 @@ function global:au_GetLatest {
     @{ URL32 = $url; Version = $version }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
