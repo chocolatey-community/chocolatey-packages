@@ -28,7 +28,7 @@ $cmd = @(
   '--disable-run-as-admin'
   '--install-service' 
 )
-$pp.Keys | ? { $_ -ne 'service' } | % { $cmd += "--install-" + $_.ToLower() }
+$pp.Keys | Where-Object { $_ -ne 'service' } | ForEach-Object { $cmd += "--install-" + $_.ToLower() }
 Write-Host "Post install command line:" $cmd
 "$cmd" | Invoke-Expression
 

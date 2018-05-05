@@ -34,9 +34,13 @@ You type in a search filter to limit what files and folders are displayed.
 - `/folder-context-menu` - Install folder context menus.
 - `/quick-launch-shortcut` - Install Quick Launch shortcut.
 - `/run-on-system-startup` - Install "Everything" in  the system startup.
-- `/service` - Install and start the "Everything" service.
 - `/start-menu-shortcuts` - Install "Everything" shortcuts from the Start menu.
 
+## Notes
+
+- This package always installs everything as a service using `--install-service` command line argument.
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/everything/screenshot.png)
 ]]></description>
     <summary>Everything Search Engine - locate files and folders by name instantly</summary>
     <releaseNotes>https://www.voidtools.com/Changes.txt</releaseNotes>
