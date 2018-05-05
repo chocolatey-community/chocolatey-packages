@@ -11,4 +11,4 @@ Resource Hacker is a freeware utility to view, modify, rename, add, delete and e
 - Replacing Images
 - All the functionality of Resource Hacker™ can be accessed from the command line
 
-![screenshot](https://cdn.rawgit.com/majkinetor/chocolatey/master/reshack/screenshot.png)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/reshack/screenshot.png)
