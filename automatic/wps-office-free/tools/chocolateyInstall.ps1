@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$version = '10.2.0.602000'
+$version = '10.2.0.605100'
 $packageName = 'wps-office-free'
 $regName = $packageName -replace('\-',' ')
 $regName = $regName -replace('free','*')
@@ -12,7 +12,7 @@ $packageArgs = @{
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = $regName
-  checksum       = '4edae655cbac243469d055ef043d16f92d0b055b407d2ebd178c98ad5f4787b4'
+  checksum       = '930c9e6d305801e1d477ce4063c1ff77b96b8890baa3f5f3f6ef24820474caf8'
   checksumType   = 'sha256'
 }
 
