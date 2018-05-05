@@ -14,3 +14,6 @@ $packageArgs = @{
   softwareName   = 'vagrant'
 }
 Install-ChocolateyPackage @packageArgs
+
+Update-SessionEnvironment
+vagrant plugin repair  #https://github.com/chocolatey/chocolatey-coreteampackages/issues/1024
