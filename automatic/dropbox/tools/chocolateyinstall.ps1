@@ -3,8 +3,8 @@
 $packageArgs        = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = "Dropbox*"
-    url             = 'https://clientupdates.dropboxstatic.com/dbx-releng/client/Dropbox%2048.4.58%20Offline%20Installer.exe'
-    checksum        = 'd0488c699672e434aca1a271bb1b6e3fda38402b674b15ccda7c575a6542133c'
+    url             = 'https://clientupdates.dropboxstatic.com/dbx-releng/client/Dropbox%2049.3.67%20Offline%20Installer.exe'
+    checksum        = 'da05bb1676f6b3c37c601e09074291ec01e9862763de891f76e9065df4ef7d76'
     fileType        = 'exe'
     checksumType    = 'sha256'
     silentArgs      = '/s'

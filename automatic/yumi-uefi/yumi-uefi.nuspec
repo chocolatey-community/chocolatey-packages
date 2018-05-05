@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yumi-uefi</id>
-    <version>0.0</version>
+    <version>0.0.0.8</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/yumi</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>YUMI UEFI (Your Universal Multiboot Installer)</title>
@@ -21,8 +21,9 @@ YUMI (Your Universal Multiboot Installer), is the successor to MultibootISOs. It
 Aside from a few distributions, all files are stored within the Multiboot folder, making for a nicely organized Multiboot Drive that can still be used for other storage purposes.
 
 ## Notes
-- The download link for the YUMI source code is located on their download page [here](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)
-
+- The download link for the YUMI UEFI source code is located on their download page [here](https://www.pendrivelinux.com/yumi-multiboot-usb-creator/)
+- You'll need to disable secure boot (*if it's enabled*)
+- Drive must be FAT32 formatted.
 ]]></description>
   </metadata>
   <files>
