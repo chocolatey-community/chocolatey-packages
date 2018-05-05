@@ -32,6 +32,8 @@ function global:au_GetLatest {
     $value = $reStreams[$_]
     $url32 = $download_page.Links | ? href -match $value.re | select -first 1 -expand href
 
+    if (!$url32 -and $_ -eq 'beta') { return; } # We'll ignore missing beta versions on the page
+
     $verRe = '[-]'
     $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
     if ($value.suffix) { $version32 += $value.suffix }
