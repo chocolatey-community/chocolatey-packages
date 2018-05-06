@@ -13,7 +13,7 @@
 
 This repository contains chocolatey packages, most of which are [automatic](https://chocolatey.org/docs/automatic-packages).
 
-These packages are managed and maintained by the Chocolatey community package maintainers core team, and also maintained by you (the community)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
+These packages are managed and maintained by the Chocolatey community package maintainers core team, and also supported by you (the community)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
 
 **All packages in this repo should be in conformity with the [contributing guidelines](CONTRIBUTING.md).**
 
@@ -22,7 +22,9 @@ These packages are managed and maintained by the Chocolatey community package ma
 When requesting support, try to remember that we are all volunteers that have lives outside of open source and none of us are paid to ensure things work for you, so please be considerate of others' time when you are asking for things. Many of us have families that also need time as well and only have so much time to give on a daily basis. A little consideration and patience can go a long way. Thanks for understanding.
 
 ## Where This Fits into Chocolatey
+ 
+This repository is maintained by a group of volunteers - _core community package maintainers_. There may be some overlap with members of the Chocolatey team / Chocolatey staff.  
 
-This repo is maintained by volunteers in the Chocolatey community, some of which have been identified as core community package maintainers. There may be some overlap with members of the Chocolatey team / Chocolatey staff.
+Contributions that follow the guideliness are welcome.
 
-Disclaimer: This repository may contain packages that may not be officially sanctioned by Chocolatey staff, and that is okay. This repository exists to bring community packages under one repository where they can be developed and maintained by the community. Typically if there is a legal issue, then Chocolatey staff will step in. If you want to speak directly to the Chocolatey team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website". HTH 
+Disclaimer: This repository may contain packages that may not be officially sanctioned by Chocolatey staff, and that is okay. Typically if there is a legal issue, then Chocolatey staff will step in. If you want to speak directly to the Chocolatey team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website". 
