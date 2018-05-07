@@ -19,17 +19,9 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
-
-    set-alias 7z $Env:chocolateyInstall\tools\7z.exe
-    rm tools\curl_* -Recurse
-    7z e tools\*win32* bin -r -otools\curl_x32
-    7z e tools\*win64* bin -r -otools\curl_x64
-    rm tools\*.zip
-
+    
     # Download and include the ssl certificate, due to issue <https://github.com/chocolatey/chocolatey-coreteampackages/issues/957>
-
     if (Test-Path "tools\cacert.pem") { remove-Item "tools\cacert.pem" }
-
     Invoke-WebRequest -Uri "https://curl.haxx.se/ca/cacert.pem" -OutFile "tools\cacert.pem" -UseBasicParsing
 }
 function global:au_GetLatest {
