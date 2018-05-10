@@ -15,7 +15,6 @@ function global:au_SearchReplace {
     }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
     }
   }
 }
