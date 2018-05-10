@@ -24,9 +24,9 @@ GIMP has many capabilities. It can be used as a simple paint program, an expert 
 
 GIMP is expandable and extensible. It is designed to be augmented with plug-ins and extensions to do just about anything. The advanced scripting interface allows everything from the simplest task to the most complex image manipulation procedures to be easily scripted.
 ]]></description>
-    <releaseNotes>https://www.gimp.org/release-notes/</releaseNotes>
+    <releaseNotes>https://www.gimp.org/release-notes</releaseNotes>
     <copyright>GIMP Team</copyright>
-    <tags>gimp editor images graphics photo art png admin</tags>
+    <tags>design publishing editor images graphics photo art png jpg admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gimp</packageSourceUrl>
   </metadata>
   <files>
