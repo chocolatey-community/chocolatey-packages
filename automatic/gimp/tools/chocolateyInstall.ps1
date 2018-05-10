@@ -5,7 +5,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = gi $toolsPath\*.exe
+  file           = Get-Item $toolsPath\*.exe
   softwareName   = 'GIMP'
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoSetup.log`""
   validExitCodes = @(0)
