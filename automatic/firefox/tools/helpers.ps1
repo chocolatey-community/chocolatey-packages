@@ -32,13 +32,16 @@ function GetLocale {
 
   $argumentMap = ConvertFrom-StringData $packageParameters
   $localeFromPackageParameters = $argumentMap.Item('l')
+  Write-Verbose "User chooses '$localeFromPackageParameters' as a locale..."
 
   $uninstallPath = GetUninstallPath -product $product
 
   $alreadyInstalledLocale = $uninstallPath -replace ".+\s([a-zA-Z\-]+)\)",'$1'
+  Write-Verbose "Installed locale is: '$alreadyInstalledLocale'..."
 
-  $systemLocalizeAndCountry = (Get-Culture).Name
-  $systemLocaleTwoLetter = (Get-Culture).TwoLetterISOLanguageName
+  $systemLocalizeAndCountry = (Get-UICulture).Name
+  $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
+  Write-Verbose "System locale is: '$locale'..."
   $fallbackLocale = 'en-US'
 
   $locales = $localeFromPackageParameters, $alreadyInstalledLocale, `
@@ -47,6 +50,7 @@ function GetLocale {
     foreach ($locale in $locales) {
       $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -first 1
       if ($localeMatch -and $locale -ne $null) {
+        Write-Verbose "Using locale '$locale'..."
         break
       }
     }

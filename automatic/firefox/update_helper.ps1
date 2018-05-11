@@ -84,7 +84,7 @@ function SearchAndReplace() {
 
   if ($Latest.ReleaseNotes) {
     $result += @{
-      "$PackageDirectory\$($Latest.PackageName).nuspec" = @{
+      "$PackageDirectory\*.nuspec" = @{
         "(?i)(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
       }
     }
