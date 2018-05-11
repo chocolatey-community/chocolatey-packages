@@ -1,3 +1,5 @@
+[CmdletBinding()]
+param($IncludeStream, [switch] $Force)
 import-module au
 . "$PSScriptRoot\update_helper.ps1"
 
@@ -57,4 +59,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
