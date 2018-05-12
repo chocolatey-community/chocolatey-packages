@@ -15,7 +15,8 @@ function global:au_AfterUpdate {
   CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" `
     -ExecutableName $Latest.ExeName `
     -Version $Latest.RemoteVersion `
-    -Product $product
+    -Product $product `
+    -ExtendedRelease:$($Latest.PackageName -eq 'FirefoxESR')
 }
 
 function global:au_SearchReplace {
