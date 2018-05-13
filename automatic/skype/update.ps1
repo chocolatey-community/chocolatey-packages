@@ -1,7 +1,13 @@
 import-module au
 Import-Module "$env:ChocolateyInstall/helpers/chocolateyInstaller.psm1"
 
-$release = 'https://go.skype.com/classic.skype'
+$release = 'https://go.skype.com/skype.download'
+
+function global:au_BeforeUpdate {
+  $checksumType = $Latest.ChecksumType32 = 'sha256'
+
+  $Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.URL32 -Algorithm $checksumType
+}
 
 function global:au_SearchReplace {
   @{
@@ -13,30 +19,13 @@ function global:au_SearchReplace {
   }
 }
 
-function GetResultInformation([string]$url32) {
-  $dest = "$env:TEMP\skype.exe"
-  Get-WebFile $url32 $dest | Out-Null
-  $chType = 'SHA256'
-
-  try {
-    return @{
-      URL32          = $url32
-      Version        = Get-Item $dest | % { $_.VersionInfo.FileVersion }
-      Checksum32     = Get-FileHash $dest -Algorithm $chType | % Hash
-      ChecksumType32 = $chType
-    }
-  }
-  finally {
-    Remove-Item -Force $dest
-  }
-}
-
 function global:au_GetLatest {
   $url32 = Get-RedirectedUrl -url $release
-
-  return Update-OnETagChanged -execUrl $url32 -OnETagChanged {
-    GetResultInformation $url32
-  } -OnUpdate { @{ URL32 = $url32 }}
+  $version = $url32 -split '\-|\.exe$' | select -Last 1 -Skip 1
+  return @{
+    URL32 = $url32
+    Version = $version
+  }
 }
 
 update -ChecksumFor none
