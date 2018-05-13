@@ -4,7 +4,7 @@
   <metadata>
     <id>visualstudiocode</id>
     <title>[Deprecated] Visual Studio Code</title>
-    <version>1.23.1</version>
+    <version>1.23.1.20180513</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
