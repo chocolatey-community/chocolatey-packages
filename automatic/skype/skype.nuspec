@@ -20,9 +20,6 @@ The package have the following known issues.
     <licenseUrl>http://www.skype.com/intl/en-us/legal/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/040c834d483de9e38ceeef0fd8283d803be082bf/icons/skype.png</iconUrl>
-    <dependencies>
-      <dependency id="vcredist2015" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
