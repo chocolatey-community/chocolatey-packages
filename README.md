@@ -21,7 +21,7 @@ These packages are managed and maintained by the Chocolatey community package ma
 
 When requesting support, try to remember that we are all volunteers that have lives outside of open source and none of us are paid to ensure things work for you, so please be considerate of others' time when you are asking for things. Many of us have families that also need time as well and only have so much time to give on a daily basis. A little consideration and patience can go a long way. Thanks for understanding.
 
-## Where This Fits into Chocolatey
+### Where This Fits into Chocolatey
  
 This repository is maintained by a group of volunteers - _core community package maintainers_. There may be some overlap with members of the Chocolatey team / Chocolatey staff.  
 
