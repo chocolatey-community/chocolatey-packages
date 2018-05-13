@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>visualstudiocode</id>
+    <title>[Deprecated] Visual Studio Code</title>
+    <version>1.23.1</version>
+    <authors>Microsoft</authors>
+    <owners>chocolatey</owners>
+    <projectUrl>https://code.visualstudio.com</projectUrl>
+    <projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/visualstudiocode</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
+    <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
+    <docsUrl>https://code.visualstudio.com/docs</docsUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Visual Studio Code</summary>
+    <description>**Deprecated because of the name change to vscode**.</description>
+    <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
+    <dependencies>
+      <dependency id="vscode" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
