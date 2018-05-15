@@ -13,7 +13,7 @@ $packageArgs = @{
   FileType       = 'msi'
   SoftwareName   = 'Node.js'
   File           = $installFile
-  SilentArgs     = "/quiet"
+  SilentArgs     = '/quiet ADDLOCAL=ALL REMOVE=NodePerfCtrSupport,NodeEtwSupport'
   ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
