@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official download link listed on <https://www.waterfoxproject.org/downloads>
 and can be verified like this:
 
-1. Download <https://storage-waterfox.netdna-ssl.com/releases/win64/installer/Waterfox%2056.1.0%20Setup.exe>
+1. Download <https://storage-waterfox.netdna-ssl.com/releases/win64/installer/Waterfox%2056.2.0%20Setup.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: E078549F37427F10D5FDF04B408C43F8F09ADF7D4BB0CCD7D644A899DEFE3984
+  checksum: 7AC35337050EFF386BDFF11A92E1310983E545F3CBFF627E941972C12C44CCC8
 
 File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/52d00fdbd7fb755c209a2fcf45eb857b2c0ec3de/LICENSE.md>
