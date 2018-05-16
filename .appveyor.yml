@@ -4,7 +4,7 @@ version: '{build}'
 pull_requests:
   do_not_increment_build_number: true
 max_jobs: 1
-image: Visual Studio 2015
+#image: Visual Studio 2015
 # History plugin requires complete log
 #clone_depth: 5
 branches:
