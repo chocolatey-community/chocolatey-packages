@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromium</id>
-    <version>66.0.3359.170</version>
+    <version>66.0.3359.181</version>
     <title>Chromium</title>
     <owners>chocolatey</owners>
     <authors>The Chromium Authors</authors>
