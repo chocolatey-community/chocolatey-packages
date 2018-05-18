@@ -1,5 +1,4 @@
-﻿$checksum = 'df33e906ce0b0148cc1be8daffa51775b4a806eb1745385fd4eaf1c2c71c45e2'
-$url = 'http://download.pdfforge.org/download/pdfcreator/3.1.2/PDFCreator-3_1_2-Setup.exe?file=PDFCreator-3_1_2-Setup.exe&download'
+﻿$ErrorActionPreference = 'Stop'
 
 $installArgs = $('' +
   '/VERYSILENT /NORESTART ' +
@@ -17,31 +16,33 @@ $installArgs = $('' +
   'languages\swedish,languages\turkish,languages\valencian_avl"'
 )
 
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
-  packageName   = 'pdfcreator'
-  unzipLocation = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-  fileType      = 'exe'
-  url           = $url
-  silentArgs    = $installArgs
-  validExitCodes= @(0)
-  softwareName  = 'pdfcreator*'
-  checksum      = $checksum
-  checksumType  = 'sha256'
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  softwareName   = 'pdfcreator*'
+  silentArgs     = $installArgs
+  validExitCodes = @(0)
 }
 
 # Make sure Print Spooler service is up and running
 # this is required for both installing, and running pdfcreator
 try {
   $serviceName = 'Spooler'
-  $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode,State -Filter "Name='$serviceName'"
+  $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode, State -Filter "Name='$serviceName'"
   if ($spoolerService -eq $null) { throw "Service $serviceName was not found" }
   Write-Host "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
   if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.State -ne 'Running') {
     Set-Service $serviceName -StartupType Automatic -Status Running
     Write-Host "Print Spooler service new state: Auto / Running"
   }
-} catch {
+}
+catch {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }

@@ -1,30 +1,36 @@
-import-module au
-cd "$PSScriptRoot"
+﻿Import-Module AU
 
-$domain            = 'http://download.pdfforge.org'
-$download_page_url = "$domain/download/pdfcreator/list"
+$softwareName = 'PDFCreator'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-    @{
-        'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-        }
-     }
+  @{
+    ".\legal\VERIFICATION.txt"        = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+    }
+    ".\tools\chocolateyInstall.ps1"   = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $page = Invoke-WebRequest $download_page_url -UseBasicParsing
+  $url32 = Get-RedirectedUrl 'http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download'
+  $version32 = $url32 -split '\/' | select -last 1 -skip 1
 
-    $latestUrl = $page.Links | ? href -match 'Setup\.exe' | select -first 1 -expand href
-    if ($latestUrl.StartsWith('/')) {
-      $latestUrl = $domain + $latestUrl
-    }
-    $latestUrl += '&download'
-
-    $version = $latestUrl -split '/' | select -last 1 -skip 1
-
-    return @{ URL = $latestUrl; Version = $version; PackageName = 'PDFCreator' }
+  return @{
+    URL32       = $url32
+    Version     = $version32
+    PackageName = 'PDFCreator'
+  }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
