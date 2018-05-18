@@ -6,7 +6,7 @@ The embedded software have been downloaded from the listed download
 location on <>
 and can be verified by doing the following:
 
-1. Download the following <http://teal.download.pdfforge.org/pdfcreator/3.2.0/PDFCreator-3_2_0-Setup.exe>
+1. Download the following <http://purple.download.pdfforge.org/pdfcreator/3.2.0/PDFCreator-3_2_0-Setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
