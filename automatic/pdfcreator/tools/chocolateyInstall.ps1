@@ -33,8 +33,8 @@ try {
   $serviceName = 'Spooler'
   $spoolerService = Get-Service -Name $serviceName
   if ($spoolerService -eq $null) { throw "Service $serviceName was not found" }
-  Write-Host "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
-  if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.State -ne 'Running') {
+  Write-Host "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.Status)"
+  if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.Status -ne 'Running') {
     Set-Service $serviceName -StartupType Automatic -Status Running
     Write-Host "Print Spooler service new state: Auto / Running"
   }
