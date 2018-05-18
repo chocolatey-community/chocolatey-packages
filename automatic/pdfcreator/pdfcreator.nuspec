@@ -33,5 +33,6 @@ PDFCreator easily creates PDFs from any Windows program. Use it like a printer i
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
