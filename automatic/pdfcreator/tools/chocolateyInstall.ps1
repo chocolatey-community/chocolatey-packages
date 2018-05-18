@@ -31,7 +31,7 @@ $packageArgs = @{
 # this is required for both installing, and running pdfcreator
 try {
   $serviceName = 'Spooler'
-  $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode, State -Filter "Name='$serviceName'"
+  $spoolerService = Get-Service -Name $serviceName
   if ($spoolerService -eq $null) { throw "Service $serviceName was not found" }
   Write-Host "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
   if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.State -ne 'Running') {
