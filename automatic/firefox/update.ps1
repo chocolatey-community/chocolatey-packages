@@ -42,7 +42,7 @@ function global:au_GetLatest {
       ExeName       = "Firefox Setup ${version}.exe"
     })
 
-  $data = GetVersionAndUrlFormats -UpdateUrl $releasesESR -Product "${product}-esr"
+  $data = GetVersionAndUrlFormats -UpdateUrl $releasesESR -Product "$product"
   $version = $data.Version
 
   $streams.Add('esr', @{
