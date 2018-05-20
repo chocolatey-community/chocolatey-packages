@@ -42,7 +42,19 @@ function global:au_GetLatest {
       ExeName       = "Firefox Setup ${version}.exe"
     })
 
-  $data = GetVersionAndUrlFormats -UpdateUrl $releasesESR -Product "$product"
+  $streams.Add('qualify', @{
+      LocaleURL     = "$releasesESR"
+      Version       = "${version}-qualify"
+      RemoteVersion = $version
+      Win32Format   = $data.Win32Format
+      Win64Format   = $data.Win64Format
+      SoftwareName  = 'Mozilla Firefox*ESR'
+      ReleaseNotes  = "https://www.mozilla.org/en-US/firefox/${version}/releaseNotes/"
+      ExeName       = "Firefox Setup ${version}esr.exe"
+      PackageName   = 'FirefoxESR'
+    })
+
+  $data = GetVersionAndUrlFormats -UpdateUrl $releasesESR -Product "${product}-esr"
   $version = $data.Version
 
   $streams.Add('esr', @{
