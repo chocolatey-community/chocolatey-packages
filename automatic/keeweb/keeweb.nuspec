@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
+     uppercase omega letter enclosed in quotation marks, you should use an
+     editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>keeweb</id>
+        <title>KeeWeb</title>
+        <version>1.6.2</version>
+        <authors>antelle</authors>
+        <owners>wget</owners>
+        <summary>Free cross-platform password manager compatible with KeePass</summary>
+        <description>This webapp is a browser and desktop password manager compatible with KeePass databases. It doesn't require any server or additional resources. The app can run either in browser, or as a desktop app.</description>
+        <projectUrl>https://keeweb.info/</projectUrl>
+        <tags>keeweb keypass password admin foss cross-platform</tags>
+        <copyright>2016 Antelle</copyright>
+        <licenseUrl>https://github.com/keeweb/keeweb/blob/master/LICENSE.txt</licenseUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <!-- Source: https://github.com/keeweb/keeweb/raw/master/graphics/128x128.png -->
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e70ea58e77056080dfc33261842d3f8c94fc7cff/icons/keeweb.png</iconUrl>
+        <releaseNotes>https://github.com/keeweb/keeweb/releases</releaseNotes>  
+        <!-- Specific to Chocolatey -->
+        <projectSourceUrl>https://github.com/keeweb/keeweb</projectSourceUrl>
+        <docsUrl>https://github.com/keeweb/keeweb/wiki</docsUrl>
+        <bugTrackerUrl>https://github.com/keeweb/keeweb/issues</bugTrackerUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keeweb</packageSourceUrl>
+  </metadata>
+  <files>
+      <file src="tools\**" target="tools" />
+      <file src="legal\**" target="legal" />
+  </files>
+</package>
