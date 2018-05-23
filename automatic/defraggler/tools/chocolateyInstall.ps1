@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'defraggler'
-$url32       = 'http://download.piriform.com/dfsetup221.exe'
+$url32       = 'https://download.ccleaner.com/dfsetup222.exe'
 $url64       = $url32
-$checksum32  = '29a8e556ac9db50b809da213ba3cc2e80d88e90a90e6c58e8177a5f3cf6b134d'
+$checksum32  = 'b53eb82d6a46c812171ca878b7342e1939a0afecc277b0b57c708eef8fc700de'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
@@ -28,7 +28,7 @@ Install-ChocolateyPackage @packageArgs
 # This adds a registry keys which prevent Google Chrome from getting installed together with Piriform software products.
 $regDirChrome    = 'HKLM:\SOFTWARE\Google\No Chrome Offer Until'
 $regDirToolbar   = 'HKLM:\SOFTWARE\Google\No Toolbar Offer Until'
-if (Get-ProcessorBits 64) {
+if (Get-OSArchitectureWidth 64) {
     $regDirChrome  = $regDirChrome -replace 'SOFTWARE', 'SOFTWARE\Wow6432Node'
     $regDirToolbar = $regDirChrome -replace 'SOFTWARE', 'SOFTWARE\Wow6432Node'
 }

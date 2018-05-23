@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'speccy'
-$url32       = 'http://download.piriform.com/spsetup131.exe'
+$url32       = 'https://download.ccleaner.com/spsetup132.exe'
 $url64       = $url32
-$checksum32  = 'f52ec93f4ea0b4d7cce5c4b495b8b2da2657ff2073a1745993d972ae8d8389f2'
+$checksum32  = '64a5ba6d65e0b73ae6987c561c86b1e2338a1f337ab5bd5a87c9eeba4963cc3f'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
@@ -28,7 +28,7 @@ Install-ChocolateyPackage @packageArgs
 # This adds a registry keys which prevent Google Chrome from getting installed together with Piriform software products.
 $regDirChrome    = 'HKLM:\SOFTWARE\Google\No Chrome Offer Until'
 $regDirToolbar   = 'HKLM:\SOFTWARE\Google\No Toolbar Offer Until'
-if (Get-ProcessorBits 64) {
+if (Get-OSArchitectureWidth 64) {
     $regDirChrome  = $regDirChrome -replace 'SOFTWARE', 'SOFTWARE\Wow6432Node'
     $regDirToolbar = $regDirChrome -replace 'SOFTWARE', 'SOFTWARE\Wow6432Node'
 }

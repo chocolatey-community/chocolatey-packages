@@ -5,11 +5,11 @@
     <id>speccy</id>
     <title>Speccy</title>
     <owners>chocolatey</owners>
-    <version>1.31.732</version>
+    <version>1.32.740</version>
     <authors>Piriform LTD</authors>
     <summary>Speccy will give you detailed statistics on every piece of hardware in your computer.</summary>
-    <description>
-Speccy will give you detailed statistics on every piece of hardware in your computer. Including CPU, Motherboard, RAM, Graphics Cards, Hard Disks, Optical Drives, Audio support. Additionally Speccy adds the temperatures of your different components, so you can easily see if there’s a problem!
+    <description><![CDATA[
+Speccy will give you detailed statistics on every piece of hardware in your computer. Including CPU, Motherboard, RAM, Graphics Cards, Hard Disks, Optical Drives, Audio support. Additionally Speccy adds the temperatures of your different components, so you can easily see if thereâ€™s a problem!
 
 ![Speccy](https://i.imgur.com/1itlSny.png)
 
@@ -23,7 +23,8 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
 
 ## Package Parameters
 
-- `/UseSystemLocale` - use system locale for the interface, by default English locale is set.    </description>
+- `/UseSystemLocale` - use system locale for the interface, by default English locale is set.
+]]></description>
     <projectUrl>http://www.piriform.com/speccy</projectUrl>
     <tags>piriform freeware system information speccy admin</tags>
     <copyright>Piriform LTD</copyright>

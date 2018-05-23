@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>defraggler</id>
-    <version>2.21.993</version>
+    <version>2.22.995</version>
     <title>Defraggler</title>
     <owners>chocolatey</owners>
     <authors>Piriform</authors>
@@ -11,8 +11,8 @@
     <projectUrl>http://www.piriform.com/defraggler</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/defraggler.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-Use Defraggler to defrag your entire hard drive, or individual files – unique in the industry. This compact and portable Windows application supports NTFS and FAT32 file systems.
+    <description><![CDATA[
+Use Defraggler to defrag your entire hard drive, or individual files. This compact and portable Windows application supports NTFS and FAT32 file systems.
 
 - Defragment exactly what you want
 - Safe and Secure
@@ -26,7 +26,8 @@ Use Defraggler to defrag your entire hard drive, or individual files – unique 
 ## Package Parameters
 
 - `/UseSystemLocale` - use system locale for the interface, by default English locale is set.
-    </description>
+
+]]></description>
     <summary>Use Defraggler to defrag your entire hard drive, or individual files - unique in the industry.</summary>
     <tags>defragment freeware defrag admin disk</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/defraggler</packageSourceUrl>
