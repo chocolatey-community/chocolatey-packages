@@ -5,8 +5,8 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName    = 'keeweb'
   fileType       = 'exe'
-  file           = "$toolsPath\KeeWeb-1.6.2.win.ia32.exe"
-  file64         = "$toolsPath\KeeWeb-1.6.2.win.x64.exe"
+  file           = "$toolsPath\KeeWeb-1.6.3.win.ia32.exe"
+  file64         = "$toolsPath\KeeWeb-1.6.3.win.x64.exe"
   softwareName   = 'keeweb*'
   silentArgs     = '/S'
   validExitCodes = @(0)
@@ -15,4 +15,4 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 # Lets remove the installer and ignore files as there is no more need for them
-Get-ChildItem $toolsPath\*.exe | % { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }

@@ -6,18 +6,48 @@
     <metadata>
         <id>keeweb</id>
         <title>KeeWeb</title>
-        <version>1.6.2</version>
+        <version>1.6.3</version>
         <authors>antelle</authors>
         <owners>wget</owners>
         <summary>Free cross-platform password manager compatible with KeePass</summary>
-        <description>This webapp is a browser and desktop password manager compatible with KeePass databases. It doesn't require any server or additional resources. The app can run either in browser, or as a desktop app.</description>
+        <description><![CDATA[Free cross-platform password manager compatible with KeePass.
+
+This webapp is a browser and desktop password manager compatible with KeePass databases. It is written using electronjs and doesn't require any server or additional resources. The app can run either in browser, or as a desktop app.
+
+## Features
+
+* Desktop apps for all platforms: Desktop apps look beautiful on each platform: macOS, Windows and Linux. You can open local files in Desktop apps.
+* Themes: Switch between dark and light theme, whichever you like more.
+* Color favorites: Mark items with color and easily find them using Colors tab.
+* Multiple files support: Open several files, search any entry or view all items from all files as one list.
+* One search for all files: Search works for all files, everything is done from one search box.
+* Dropbox sync: Open files from Dropbox, sync changes across devices automatically.
+* Easy tags input: Add tags to arrange entries. Quickly select them in the list or add new ones.
+* Drag&Drop: Drop entry attachments and database files right to the app.
+* Protected fields: Fields can be hidden when you need it. Also they will be stored in memory in more secure way than usual fields.
+* Password generator: Generate passwords of any desired length, with only symbols you want.
+* Offline access: Files are saved for offline use, even those opened from Dropbox. You can always access offline version, changes will be synced automatically when you are online again.
+* Shortcuts: Access actions faster with shortcuts.
+* Advanced search options: Refine search by specifying fields, searching passwords, history and using powerful regular expressions syntax.
+* History: All changes you make are put to history. You can rollback to any state or delete the state completely.
+* Entry icons: Select an icon from the set of predefined high-res icons, download website favicon or use your own icons.
+* Table view: Switch between list and table layout.
+* Inline image viewer: Attach images to entries and click to view.
+* Open-source: The app is completely free: no trials, no demo versions, no limits. There's no catch. Even more: you can always build it from sources yourself. The source code is available on GitHub.
+
+## Notes
+
+- This application comes with a built-in updater tool.
+
+![KeeWeb screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/16fba2c634c149d29f0d1b1ff2a79212521bb007/automatic/keeweb/screenshot.png)
+]]></description>
         <projectUrl>https://keeweb.info/</projectUrl>
         <tags>keeweb keypass password admin foss cross-platform</tags>
         <copyright>2016 Antelle</copyright>
         <licenseUrl>https://github.com/keeweb/keeweb/blob/master/LICENSE.txt</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <!-- Source: https://github.com/keeweb/keeweb/raw/master/graphics/128x128.png -->
-        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e70ea58e77056080dfc33261842d3f8c94fc7cff/icons/keeweb.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/88bbbf93f61ceb6787fbdf191a9542dddfcb2c2c/icons/keeweb.png</iconUrl>
         <releaseNotes>https://github.com/keeweb/keeweb/releases</releaseNotes>  
         <!-- Specific to Chocolatey -->
         <projectSourceUrl>https://github.com/keeweb/keeweb</projectSourceUrl>

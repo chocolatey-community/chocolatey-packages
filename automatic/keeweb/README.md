@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e70ea58e77056080dfc33261842d3f8c94fc7cff/icons/keeweb.png" width="48" height="48"/> [KeeWeb](https://chocolatey.org/packages/keeweb)
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/88bbbf93f61ceb6787fbdf191a9542dddfcb2c2c/icons/keeweb.png" width="48" height="48"/> [KeeWeb](https://chocolatey.org/packages/keeweb)
 
 Free cross-platform password manager compatible with KeePass.
 
