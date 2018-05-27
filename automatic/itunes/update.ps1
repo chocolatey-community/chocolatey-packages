@@ -1,43 +1,8 @@
 ﻿Import-Module AU
-Import-Module "$PSScriptRoot\..\..\extensions\extensions.psm1"
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
+Import-Module "$PSScriptRoot\..\..\scripts/au_extensions.psm1"
 
-$releases = 'https://www.apple.com/itunes/download/'
 $softwareName = 'iTunes'
-
-function VerifyVersionAndReturnChecksum() {
-  param($url, $remoteVersion, $checksumType)
-
-  $tempLocation = [System.IO.Path]::GetTempFileName()
-
-  Get-WebFile $url $tempLocation
-
-  try {
-    $item = Get-Item $tempLocation
-
-    if (!$item.VersionInfo.ProductVersion.StartsWith($remoteVersion)) {
-      throw "The current url does not supply itunes version $remoteVersion`nURL: $url"
-    }
-
-    return Get-FileHash $tempLocation -Algorithm $checksumType | % Hash
-  } finally {
-    Remove-item -Force $tempLocation
-  }
-}
-
-function global:au_BeforeUpdate {
-  $checksumType = 'sha256'
-  $Latest.ChecksumType32 = $Latest.ChecksumType64 = $checksumType
-
-
-
-  $Latest.Checksum32 = VerifyVersionAndReturnChecksum -url $Latest.URL32 `
-                                                      -remoteVersion $Latest.RemoteVersion `
-                                                      -checksumType $checksumType
-  $Latest.Checksum64 = VerifyVersionAndReturnChecksum -url $Latest.URL64 `
-                                                      -remoteVersion $Latest.RemoteVersion `
-                                                      -checksumType $checksumType
-}
 
 function global:au_SearchReplace {
   @{
@@ -54,22 +19,39 @@ function global:au_SearchReplace {
     }
   }
 }
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $download_page.Content -match "\<span\>iTunes\s*([\d]+\.[\d\.]+)" | Out-Null
-  $version = $Matches[1]
+function GetResultInformation([string]$url32, [string]$url64) {
+  $url32 = Get-RedirectedUrl $url32
+  $url64 = Get-RedirectedUrl $url64
+  $dest = "$env:TEMP\itunes.exe"
 
-  $url32 = $download_page.Links | ? href -match "iTunesSetup\.exe$" | select -First 1 -Expand href
-  $url64 = $download_page.Links | ? href -match "iTunes64Setup\.exe$" | select -First 1 -Expand href
+  Get-WebFile $url32 $dest | Out-Null
+  $checksumType = 'sha256'
+  $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
+  $checksum32 = Get-FileHash $dest -Algorithm $checksumType | % Hash
+  rm -force $dest
 
-  @{
-    URL32         = $url32
-    URL64         = $url64
-    Version       = $version
-    RemoteVersion = $version
-    PackageName   = 'iTunes'
+  return @{
+    URL32          = $url32
+    URL64          = $url64
+    Version        = $version
+    RemoteVersion  = $version
+    Checksum32     = $checksum32
+    ChecksumType32 = $checksumType
+    Checksum64     = Get-RemoteChecksum $url64 -Algorithm $checksumType
+    ChecksumType64 = $checksumType
+    PackageName    = 'iTunes'
   }
+}
+
+function global:au_GetLatest {
+  $url32 = 'https://www.apple.com/itunes/download/win32'
+  $url64 = 'https://www.apple.com/itunes/download/win64'
+
+  Update-OnETagChanged -execUrl "https://www.apple.com/itunes/download/win32" `
+    -OnETagChanged {
+    GetResultInformation $url32 $url64
+  } -OnUpdated { @{ URL32 = $url32 ; URL64 = $url64 ; PackageName = 'iTunes' }}
 }
 
 update -ChecksumFor none
