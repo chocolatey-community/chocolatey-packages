@@ -29,13 +29,12 @@ $installLocation = Get-TCInstallLocation
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
 Write-Host "$packageName installed to '$installLocation'"
 
-if ($pp.ShellExtension) { Set-TCShellExtension }
-if ($pp.DefaultFM -eq $true) { Set-TCAsDefaultFM }
+Write-Host 'Setting system environment COMMANDER_PATH'
+Set-EnvironmentVariable 'COMMANDER_PATH' $installLocation Machine
+
+if ($pp.ShellExtension)              { Set-TCShellExtension }
+if ($pp.DefaultFM -eq $true)         { Set-TCAsDefaultFM }
 if ($pp.DefaultFM -like 'explorer*') { Set-ExplorerAsDefaultFM }
-if ($pp.AddCommanderPath) { 
-    Write-Host 'Adding system environment COMMANDER_PATH'
-    Set-EnvironmentVariable 'COMMANDER_PATH' $installLocation Machine
-}
 
 Register-Application "$installLocation\$tcExeName" tc
 Write-Host "$packageName registered as tc"
