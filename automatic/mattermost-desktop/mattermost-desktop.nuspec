@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
+     uppercase omega letter enclosed in quotation marks, you should use an
+     editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>mattermost-desktop</id>
+        <title>Mattermost Desktop</title>
+        <version>4.1.0</version>
+        <authors>https://github.com/mattermost/desktop/graphs/contributors</authors>
+        <owners>wget, hans0</owners>
+        <summary>Native desktop application for Mattermost running on Windows</summary>
+        <description>Native desktop application for Mattermost running on Windows</description>
+        <projectUrl>https://github.com/mattermost/desktop</projectUrl>
+        <tags>mattermost-desktop mattermost admin foss cross-platform</tags>
+        <copyright>2018 Mattermost</copyright>
+        <licenseUrl>https://github.com/mattermost/desktop/blob/master/LICENSE.txt</licenseUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <!-- Source: https://github.com/mattermost/desktop/blob/master/src/assets/appicon.png -->
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/36f9217cc05a848b3df0519795631bb099045aa1/icons/mattermost-desktop.png</iconUrl>
+        <releaseNotes>https://github.com/mattermost/desktop/releases</releaseNotes>  
+        <!-- Specific to Chocolatey -->
+        <projectSourceUrl>https://github.com/mattermost/desktop</projectSourceUrl>
+        <docsUrl>https://docs.mattermost.com/</docsUrl>
+        <bugTrackerUrl>https://github.com/mattermost/desktop/issues</bugTrackerUrl>
+        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mattermost-desktop</packageSourceUrl>
+  </metadata>
+  <files>
+      <file src="tools\**" target="tools" />
+      <file src="legal\**" target="legal" />
+  </files>
+</package>
