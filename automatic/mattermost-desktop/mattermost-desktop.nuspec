@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
      uppercase omega letter enclosed in quotation marks, you should use an
      editor that supports UTF-8, not this one. -->
@@ -6,18 +6,34 @@
     <metadata>
         <id>mattermost-desktop</id>
         <title>Mattermost Desktop</title>
-        <version>4.1.0</version>
+        <version>4.1.2</version>
         <authors>https://github.com/mattermost/desktop/graphs/contributors</authors>
         <owners>wget, hans0</owners>
         <summary>Native desktop application for Mattermost running on Windows</summary>
-        <description>Native desktop application for Mattermost running on Windows</description>
+        <description><![CDATA[Native desktop application for Mattermost running on Windows.
+
+This desktop application allows to connect your desktop to Mattermost powered servers using a single view instead of having to use several web browser tabs. This desktop application is written using electronjs.
+
+## Features
+
+* Tabs for multiple teams across multiple servers
+* Desktop Notifications: Toast on Windows 10 and popup like toast on Windows 7-8.1
+* Badges for unread channels and mentions
+* Installs as native application
+
+## Notes
+
+N/A
+
+![Mattermost Desktop screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1c0055506800f00f018b559000b443d94cd22c81/automatic/mattermost-desktop/screenshot.png)
+]]></description>
         <projectUrl>https://github.com/mattermost/desktop</projectUrl>
         <tags>mattermost-desktop mattermost admin foss cross-platform</tags>
         <copyright>2018 Mattermost</copyright>
         <licenseUrl>https://github.com/mattermost/desktop/blob/master/LICENSE.txt</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <!-- Source: https://github.com/mattermost/desktop/blob/master/src/assets/appicon.png -->
-        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/36f9217cc05a848b3df0519795631bb099045aa1/icons/mattermost-desktop.png</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png</iconUrl>
         <releaseNotes>https://github.com/mattermost/desktop/releases</releaseNotes>  
         <!-- Specific to Chocolatey -->
         <projectSourceUrl>https://github.com/mattermost/desktop</projectSourceUrl>
