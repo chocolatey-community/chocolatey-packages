@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from the Github release page <https://github.com/mattermost/desktop/releases>
+and can be verified like this:
+
+1.  Download the following installers:
+    32-Bit: <https://releases.mattermost.com/desktop/4.1.0/mattermost-setup-4.1.0-win32.exe>
+    64-Bit: <https://releases.mattermost.com/desktop/4.1.0/mattermost-setup-4.1.0-win64.exe>
+2.  You can use one of the following methods to obtain the checksum
+    - Use powershell function 'Get-Filehash'
+    - Use chocolatey utility 'checksum.exe'
+
+    checksum type: sha256
+    checksum32: 99ec654d48b19777de2704092ef5d5d4058e0afae6133ced5c092606ceba49bb
+    checksum64: 1559f7498bcf072cb8a0e6568b8b2e3e1f483b8002f16e06ea3c13ab8347de94
+
+File 'LICENSE.txt' is obtained from <https://github.com/mattermost/desktop/blob/06ddc6099e9b6296e7031c04e3e4bd29743bedb4/LICENSE.txt>
