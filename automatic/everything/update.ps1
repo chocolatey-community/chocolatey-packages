@@ -21,7 +21,8 @@ function global:au_SearchReplace {
 }
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
-    iwr 'https://www.voidtools.com/es.exe' -OutFile $PSScriptRoot\tools\es.exe
+    iwr 'https://www.voidtools.com/ES-1.1.0.9.zip' -OutFile $env:TMP\ES-1.1.0.9.zip
+    7z x $env:TMP\ES-1.1.0.9.zip es.exe -o"$PSScriptRoot\tools"
     $Latest.ChecksumEsExe = Get-FileHash $PSScriptRoot\tools\es.exe | % Hash
 }
 function global:au_GetLatest {
