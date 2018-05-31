@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <>
 and can be verified by doing the following:
 
-1. Download the following <http://purple.download.pdfforge.org/pdfcreator/3.2.0/PDFCreator-3_2_0-Setup.exe>
+1. Download the following <http://teal.download.pdfforge.org/pdfcreator/3.2.1/PDFCreator-3_2_1-Setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 6A966E31038F5B5904A65E8A4FCFE869EE434B59708D2740B879D6D48C9ACB6F
+  checksum: 2099EAAB1415F35DBC0FFB4D0F375C185C03EBB13D37F1AB7430932067031554
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/pdfforge/PDFCreator/blob/dbbe3558157f5861bff35dcb37b328b679b0ccfd/LICENSE>
