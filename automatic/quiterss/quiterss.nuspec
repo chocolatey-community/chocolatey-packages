@@ -3,7 +3,7 @@
   <metadata>
     <id>quiterss</id>
     <title>QuiteRSS</title>
-    <version>0.18.10</version>
+    <version>0.18.11</version>
     <owners>chocolatey,dtgm</owners>
     <summary>QuiteRSS is a free news feeds reader written on Qt/C++.</summary>
     <description><![CDATA[QuiteRSS is a open-source cross-platform RSS/Atom news feeds reader.
