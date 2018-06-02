@@ -2,11 +2,13 @@
 
 $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
-  softwareName = "Lightscreen"
+  softwareName = "Lightscreen*"
   file         = "$toolsDir\LightscreenSetup-2.4.exe"
   fileType     = "exe"
   silentArgs   = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LAUNCHAFTER=0"
 }
+
+Start-Process 'AutoHotkey' "$toolsDir\install.ahk"
 
 Install-ChocolateyInstallPackage @packageArgs
 
