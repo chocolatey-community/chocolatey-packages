@@ -8,8 +8,6 @@ $packageArgs = @{
   silentArgs   = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LAUNCHAFTER=0"
 }
 
-Start-Process 'AutoHotkey' "$toolsDir\install.ahk"
-
 Install-ChocolateyInstallPackage @packageArgs
 
 ps Lightscreen -ea 0 | kill
