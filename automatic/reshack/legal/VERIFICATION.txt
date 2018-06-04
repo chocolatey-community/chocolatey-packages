@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 3DB4A17885D1E95F10576A19D74297AF0653D10A5B16AC6DB05ABF1846A487B4
+   checksum32: A4C6D3E44D0651F097D09FA14E483997F605AB44F9F2DA0B9600FBBCCC4767E4
 
 File 'License.txt' is created by copying paragraph of text from:
    http://www.angusj.com/resourcehacker
