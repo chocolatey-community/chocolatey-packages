@@ -4,7 +4,7 @@ SendMode Input
 SetWorkingDir %A_ScriptDir%
 
 WinActivate, Options - Lightscreen
-Send, {Enter}
+ControlSend, WinTitle, {Enter}
 Sleep, 150
 WinWait, Lightscreen
 WinClose
