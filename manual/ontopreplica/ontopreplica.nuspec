@@ -8,11 +8,11 @@
     <owners>chocolatey</owners>
     <title>OnTopReplica (Install)</title>
     <authors>Lck</authors>
-    <projectUrl>https://ontopreplica.codeplex.com/</projectUrl>
+    <projectUrl>https://github.com/LorenzCK/OnTopReplica</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/78d42b0a714d5870167fce4bc2b70e39e9686707/icons/ontopreplica.png</iconUrl>
-    <licenseUrl>https://ontopreplica.codeplex.com/license</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/LorenzCK/OnTopReplica/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://ontopreplica.codeplex.com/SourceControl/latest</projectSourceUrl>
+    <projectSourceUrl>https://github.com/LorenzCK/OnTopReplica/tree/master/src</projectSourceUrl>
     <tags>ontopreplica replica window on-top foss</tags>
     <summary>A real-time, always on top, "replica" of a window of your choice</summary>
     <description>
@@ -31,9 +31,6 @@ A real-time, always on top, “replica” of a window of your choice, based on D
 - “Click-through” allows to click through the cloned thumbnail (especially useful with partial opacity),
 - “Group switch” mode automatically switches through a group of windows while you use them,
 - Non invasive installation: doesn’t require administrator elevation.
-
-## Notes
-- CodePlex is planning to shut down in December 2017, after that it is unlikely that this package will ever be updated again.
     </description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
