@@ -4,8 +4,8 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $pp = Get-PackageParameters
 
-$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut 0"; Write-Host 'Desktop shortcut won\'t be created' }
-$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar 0"; Write-Host 'Opera won\'t be pinned to taskbar'}
+$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut 0"; Write-Host "Desktop shortcut won't be created" }
+$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar 0"; Write-Host "Opera won't be pinned to taskbar" }
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
