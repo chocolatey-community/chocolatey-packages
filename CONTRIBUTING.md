@@ -111,8 +111,8 @@ Chocolatey supports PowerShell v2+ because it supports Windows 7+/Windows Server
 
 ### 1.1.13 Chocolatey compatibility
 
-Packages is expected to be compatible with the chocolatey version available 12 months ago.
-If a later version of chocolatey is required, then a dependency on the earliest version compatible with the package must be added.
+Packages are expected to be compatible with the Chocolatey version available 12 months ago.
+If a later version of Chocolatey is required, then a dependency on the earliest version compatible with the package must be added.
 
 ## 1.2 Metadata
 

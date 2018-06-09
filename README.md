@@ -16,7 +16,7 @@ This repository contains chocolatey packages, most of which are [automatic](http
 These packages are managed and maintained by the Chocolatey community package maintainers core team, and also supported by you (the community)! To get a package added here, the official [Chocolatey Account](http://chocolatey.org/profiles/chocolatey) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
 
 **All packages in this repo should be in conformity with the [contributing guidelines](CONTRIBUTING.md).** Contributions that follow the guideliness are welcome.
-All packages in this repo is expected to be installable with any version of chocolatey being made available in the past 12 months, unless a dependency on chocolatey has been added.
+All packages in this repo are expected to be installable with any version of Chocolatey being made available in the past 12 months, unless a dependency on Chocolatey has been added.
 
 ### Etiquette Regarding Communication
 
