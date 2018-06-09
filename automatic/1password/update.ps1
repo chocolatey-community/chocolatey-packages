@@ -1,9 +1,8 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 
 Import-Module AU
 
-$releases = 'https://1password.com/downloads/'
 
 function global:au_SearchReplace {
   @{
@@ -15,36 +14,50 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_BeforeUpdate {
+  . "$PSScriptRoot/update_helper.ps1"
+    removeDependencies ".\*.nuspec"
+}
+
 function global:au_AfterUpdate {
   . "$PSScriptRoot/update_helper.ps1"
-  if ($Latest.PackageName -eq '1password4') {
-    removeDependencies ".\*.nuspec"
-  } else {
+  if ($Latest.PackageName -eq '1password') {
     addDependency ".\*.nuspec" 'dotnet4.6.1' '4.6.01055.20170308'
-  }
+  } 
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $streams = @{}
-  $res = @('OPW4';'format=zip$')
+  $res = @('OPWY';'OPW4';'OPW7')
   $res | % {
     $re = $_
-    $url32 = $download_page.Links | ? href -match $re | select -First 1 -expand href
+    switch -w ( $re ) {
+        'OPW4' {
+            $url32 = 'https://app-updates.agilebits.com/download/OPW4'
+			$kind = '1password4'
+        }
+        'OPW7' {
+            $url32 = 'https://app-updates.agilebits.com/download/OPW7'
+			$kind = '1password'
+        }
+        'OPWY' {
+            $url32 = 'https://app-updates.agilebits.com/download/OPW7/Y'
+			$kind = '1password'
+        }
+    }
     $url32 = Get-RedirectedUrl $url32
-
     $verRe = '[-]|\.exe$'
     $version = $url32 -split $verRe | select -last 1 -skip 1
+    $version = $version -replace('\.BETA',' beta')
     $version = Get-Version $version
     $major = $version.ToString(1)
-    $kind = if ($major -eq 4) { 'legacy' } else { 'latest' }
 
     if (!($streams.ContainsKey($kind))) {
-      $streams.Add($kind, @{
+      $streams.Add($re, @{
         URL32 = $url32
         Version = $version.ToString()
-        PackageName = if ($kind -eq 'legacy') { '1password4' } else { '1password' }
+        PackageName = $kind
       })
     }
   }
