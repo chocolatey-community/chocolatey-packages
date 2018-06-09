@@ -3,3 +3,10 @@
 
 The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.
 
+
+## Parameters
+- `/NoDesktopShortcut` - Do not create desktop shortcut for Opera
+- `/NoTaskbarShortcut` - Do not pin Opera to taskbar
+
+These parameters can be passed to the installer with the use of `--params`.
+For example: `--params '"/NoDesktopShortcut /NoTaskbarShortcut"'`
