@@ -12,3 +12,5 @@ The installer have been downloaded from GitHub and can be verified like this:
 
   checksum type: sha256
   checksum: AFB0C3712E4EDB682480A3DDB5A0DE73EC7D327CA97828834B2257DF1EBD9852
+
+The included license file have been downloaded from <https://github.com/gitextensions/gitextensions/blob/0a4730ccdf7e36c0078813101a3ee70e825e93ec/LICENSE.md>
