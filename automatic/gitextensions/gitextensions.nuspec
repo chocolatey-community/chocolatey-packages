@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gitextensions</id>
-    <version>2.51.02</version>
+    <version>2.51.2.20180613</version>
     <title>Git Extensions</title>
     <authors>Henk Westhuis</authors>
     <owners>chocolatey ferventcoder</owners>
     <licenseUrl>https://github.com/gitextensions/gitextensions/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>http://gitextensions.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/ferventcoder/chocolatey-packages/02c21bebe5abb495a56747cbb9b4b5415c933fc0/icons/gitextensions.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a6a2ac897a7b02a2889d5834d0133d7b8464799c/icons/gitextensions.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[## Features
 
