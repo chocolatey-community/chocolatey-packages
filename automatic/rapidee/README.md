@@ -18,4 +18,6 @@ Rapid Environment Editor (RapidEE) is an environment variables editor. It includ
 
 ## Package parameters
 
-- `NoShortcut` - Do not create shortcut
+- `/NoShortcut` - Do not create shortcut
+
+Example: `choco install rapidee --params "/NoShortcut"`

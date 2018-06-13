@@ -16,3 +16,4 @@ Use Defraggler to defrag your entire hard drive, or individual files. This compa
 
 - `/UseSystemLocale` - use system locale for the interface, by default English locale is set.
 
+Example: `choco install defraggler --params "/UseSystemLocale"`

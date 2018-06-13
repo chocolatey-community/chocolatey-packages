@@ -28,4 +28,4 @@ UltraDefrag is an open source disk defragmenter for Windows. It eliminates the f
 * `/DisableUsageTracking` - disable the usage tracking. SEE: https://sourceforge.net/p/ultradefrag/discussion/709672/thread/657b0ebe/#0e65
 * `/NoBootInterface` - install __without__ the boot time interface.
 
-
+Example: `choco install ultradefrag --params "/NoShellExtension /NoBootInterface"`

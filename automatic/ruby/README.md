@@ -9,6 +9,8 @@ This package provides a self-contained [Windows-based installer](https://rubyins
 - `/InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
 - `/NoPath`     - Do not add ruby bin folder to machine PATH.
 
+Example: `choco install ruby --params "/NoPath /InstallDir:C:\your\install\path"`
+
 ## Notes
 
 - To install ruby development kit ruby installer provides `ridk` command. It provides easy way to install msys2 via `ridk install 1`, however, the installation is interactive. To accomplish unattended install, use [msys2](https://chocolatey.org/packages/msys2) package.

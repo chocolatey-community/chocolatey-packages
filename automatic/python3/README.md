@@ -6,6 +6,8 @@ Python 3.x is a programming language that lets you work more quickly and integra
 
 - `/InstallDir` - Installation directory
 
+Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
+
 ## Notes
 
 - For complete list of silent install options see the [Installing Without UI](https://docs.python.org/3/using/windows.html#installing-without-ui) page.

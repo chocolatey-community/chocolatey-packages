@@ -8,3 +8,4 @@ The Win32 OpenSSL Installation Project is dedicated to providing a simple instal
 ## Package Parameters
 - `/InstallDir:`- Installation directory, defaults to the 'Program Files\OpenSSL' directory.
 
+Example: `choco install openssl.light --params "/InstallDir:C:\your\install\path"`

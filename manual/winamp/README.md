@@ -12,6 +12,8 @@ You can extend Winamp's functionality through the use of plug-ins, which are ava
 
 - `/Light` - Install light version (basic 2.x-style mp3/cd player)
 
+Example: `choco install winamp --params "/Light"`
+
 ## Notes
 
 - This is the last version of the software. It was [discontinued](http://news.softpedia.com/news/Winamp-to-Be-Discontinued-on-December-20-2013-402176.shtml) at December 2013.

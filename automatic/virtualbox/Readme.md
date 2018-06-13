@@ -15,3 +15,4 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 ### Uninstalling
 - `/KeepExtensions`    - Do not uninstall installed virtualbox extensions
 
+Example: `choco install virtualbox --params "/NoDesktopShortcut /NoExtensionPack"`

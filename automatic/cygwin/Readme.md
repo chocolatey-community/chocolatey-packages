@@ -13,6 +13,8 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
 - `/NoStartMenu` - Set to true to prevent installation of start menu items
 - `/NoAdmin`     - Do not check for and enforce running as administrator
 
+Example: `choco install cygwin --params "/InstallDir:C:\your\install\path /NoStartMenu"`
+
 ## Notes
 
 - This package provides only the last version of Cygwin.

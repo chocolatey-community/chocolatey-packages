@@ -20,6 +20,8 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 - `/NoGitLfs` - Disable Git LFS installation.
 - `/SChannel` - Configure Git to use the Windows native SSL/TLS implementation (SChannel) instead of OpenSSL. This aligns Git HTTPS behavior with other Windows applications and system components and increases manageability in enterprise environments.
 
+Example: `choco install git.install --params "/GitAndUnixToolsOnPath /NoGitLfs /SChannel /NoAutoCrlf"`
+
 ## Notes
 
 - The package uses default install options minus cheetah integration and desktop icons. Cheetah prevents a good upgrade scenario, so it has been removed.

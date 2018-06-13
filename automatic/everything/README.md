@@ -25,6 +25,8 @@ You type in a search filter to limit what files and folders are displayed.
 - `/run-on-system-startup` - Install "Everything" in  the system startup.
 - `/start-menu-shortcuts` - Install "Everything" shortcuts from the Start menu.
 
+Example: `choco install everything --params "/start-menu-shortcuts /run-on-system-startup"`
+
 ## Notes
 
 - This package always installs everything as a service using `--install-service` command line argument.

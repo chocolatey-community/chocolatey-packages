@@ -18,6 +18,8 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
 
+Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
+
 ## Notes
 
 * The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.

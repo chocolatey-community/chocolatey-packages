@@ -25,3 +25,4 @@ This package also installs sqlite tools by default - sqldiff, sqlite3, sqlite3_a
 
 - `/NoTools` - Do not install sqlite tools
 
+Example: `choco install sqlite --params "/NoTools"`

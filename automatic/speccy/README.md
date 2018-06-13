@@ -16,3 +16,5 @@ Speccy will give you detailed statistics on every piece of hardware in your comp
 ## Package Parameters
 
 - `/UseSystemLocale` - use system locale for the interface, by default English locale is set.
+
+Example: `choco install speccy --params "/UseSystemLocale"`

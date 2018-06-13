@@ -10,6 +10,8 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 - `/InstallDir` - Installation directory, by default Chocolatey tools directory.
 - `/InstallationPath` - the same as `InstallDir`
 
+Example: `choco install sysinternals --params "/InstallDir:C:\your\install\path"`
+
 ## Notes
 
 - This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to the PATH.
