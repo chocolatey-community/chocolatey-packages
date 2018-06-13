@@ -1,46 +1,35 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://www.wps.com/office-free'
+$releases = 'https://www.wps.com/download/?lang=en'
 $padVersionUnder = '10.2.1'
 
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]version\s*=\s*)('.*')"= "`$1'$($Latest.Version)'"
-      "(^\s*packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
-      "(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
-      "(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "(^[$]version\s*=\s*)('.*')"      = "`$1'$($Latest.Version)'"
+      "(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+      "(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
+      "(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
       "(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
     }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
-  $url = ( $download_page.ParsedHtml.getElementsByTagName('a') | Where { $_.className -match 'major transition_color ga-download-2016-free'} ).href
-  $search = 'innerHTML'
-  $cpt = 1
-  $resu = @{};
-  $match = '(?:Version:)[\d\.]{4,}'
-  $match_1 = '([WPS]{3}\s[a-zA-Z]{1,}\s\d+\s[Free]{4})'
-  $replace = 'Version:'
-  $download_page.ParsedHtml.getElementsByTagname("a") | % {
-    if ($_.id -eq $null) {
-      $_.id="p$cpt";$cpt++
-    }
-    $resu[$($_.id)]=$_.$search
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-    if ($_.$search -match($match)) {
-      $version= $_.$search
-    }
+  if ($download_page.Content -match 'location="(https\:\/\/.*latest_package[^"]*)') {
+    $url = $Matches[1]
+    $urlRedirected = Get-RedirectedUrl $url
+    $version = $urlRedirected -split '\/' | select -last 1 -skip 1
+  }
+  else {
+    throw "Unable to grab installer url"
   }
 
-  $version = $version -match($match);$version = $matches[0]
-  $version = $version -replace($replace)
-
-  return @{
-    URL32 = $url
+  @{
+    URL32   = $url
     Version = Get-FixVersion $version -OnlyFixBelowVersion $padVersionUnder
   }
 }
