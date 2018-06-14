@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode</id>
     <title>Visual Studio Code</title>
-    <version>1.24.0</version>
+    <version>1.24.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
@@ -33,6 +33,8 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoContextMenuFiles` - Don't add an _Open with Code_ entry to the context menu for files.
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
+
+Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
 
 ## Notes
 
