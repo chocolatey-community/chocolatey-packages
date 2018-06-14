@@ -71,6 +71,10 @@ $Options = [ordered]@{
       ReleaseType = 'package'
     }
 
+    Gitter = @{
+      WebHookUrl = $env:gitter_webhook
+    }
+
     RunInfo = @{
         Exclude = 'password', 'apikey', 'apitoken'          #Option keys which contain those words will be removed
         Path    = "$PSScriptRoot\update_info.xml"           #Path where to save the run info
