@@ -25,6 +25,10 @@ environment:
   github_api_key:
     secure: um25UyBlvM1Ysokz1/2YUU2io57AkQEr7c8k788q8pNTCu7up9+r7fHT6V05b/CM
 
+  # Gitter Integration
+  gitter_webhook:
+    secure: 7ytVP4w9e1d7o3dlorRpYp3plrOdmu/fxQh6F8kWljmtexgQVkcL0gbZw5tsNy13kQqga0/oE1eYuOPbLyD4iw==
+    
   # Mail credentials - for error notifications
   mail_user: gep13choco@gmail.com
   mail_pass:
