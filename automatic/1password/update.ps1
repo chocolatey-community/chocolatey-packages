@@ -1,9 +1,8 @@
-﻿[CmdletBinding()]
+[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 
 Import-Module AU
 
-$releases = 'https://1password.com/downloads/'
 
 function global:au_SearchReplace {
   @{
@@ -20,33 +19,40 @@ function global:au_AfterUpdate {
   if ($Latest.PackageName -eq '1password4') {
     removeDependencies ".\*.nuspec"
   } else {
-    addDependency ".\*.nuspec" 'dotnet4.6.1' '4.6.01055.20170308'
+    addDependency ".\*.nuspec" 'dotnet4.6.2' '4.6.01590.20170129'
   }
 }
 
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+function Get-LatestOPW {
+param (
+	[string]$url,
+	[string]$kind
 
-  $streams = @{}
-  $res = @('OPW4';'format=zip$')
-  $res | % {
-    $re = $_
-    $url32 = $download_page.Links | ? href -match $re | select -First 1 -expand href
-    $url32 = Get-RedirectedUrl $url32
+)
 
+    $url32 = Get-RedirectedUrl $url
     $verRe = '[-]|\.exe$'
     $version = $url32 -split $verRe | select -last 1 -skip 1
+    $version = $version -replace('\.BETA',' beta')
     $version = Get-Version $version
     $major = $version.ToString(1)
-    $kind = if ($major -eq 4) { 'legacy' } else { 'latest' }
 
-    if (!($streams.ContainsKey($kind))) {
-      $streams.Add($kind, @{
+      @{
         URL32 = $url32
         Version = $version.ToString()
-        PackageName = if ($kind -eq 'legacy') { '1password4' } else { '1password' }
-      })
-    }
+        PackageName = $kind
+      }
+  }
+
+  $releases_opw4 = 'https://app-updates.agilebits.com/download/OPW4'
+  $kind_opw4     = '1password4'
+  $releases_opw  = 'https://app-updates.agilebits.com/download/OPW7/Y'
+  $kind_opw      = '1password'
+
+function global:au_GetLatest {
+  $streams = [ordered] @{
+    OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4
+    OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
   }
 
   return @{ Streams = $streams }
