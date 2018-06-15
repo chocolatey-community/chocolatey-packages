@@ -11,7 +11,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   #https://github.com/yeoman/yo/archive/v1.8.5.zip
   $re  = "(.*).zip"
@@ -20,8 +20,8 @@ function global:au_GetLatest {
 
   $version = [IO.Path]::GetFileNameWithoutExtension($file)
 
-  @{ 
-    Version = $version 
+  @{
+    Version = $version
   }
 }
 
