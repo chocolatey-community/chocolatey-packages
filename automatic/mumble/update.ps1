@@ -19,8 +19,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
-    $url = $download_page.links | ? href -match $re | % href | select -first 1
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re    = '\.msi$'
     $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
