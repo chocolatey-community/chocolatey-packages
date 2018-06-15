@@ -26,8 +26,7 @@ function global:au_AfterUpdate {
 function Get-LatestOPW {
 param (
 	[string]$url,
-	[string]$kind,
-	[bool]$dependency
+	[string]$kind
 
 )
 
