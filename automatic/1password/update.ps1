@@ -19,7 +19,7 @@ function global:au_AfterUpdate {
   if ($Latest.PackageName -eq '1password4') {
     removeDependencies ".\*.nuspec"
   } else {
-    addDependency ".\*.nuspec" 'dotnet4.6.1' '4.6.01055.20170308'
+    addDependency ".\*.nuspec" 'dotnet4.6.2' '4.6.01590.20170129'
   }
 }
 
@@ -43,12 +43,12 @@ param (
         PackageName = $kind
       }
   }
-  
+
   $releases_opw4 = 'https://app-updates.agilebits.com/download/OPW4'
   $kind_opw4     = '1password4'
   $releases_opw  = 'https://app-updates.agilebits.com/download/OPW7/Y'
   $kind_opw      = '1password'
-  
+
 function global:au_GetLatest {
   $streams = [ordered] @{
     OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4

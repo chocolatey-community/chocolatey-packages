@@ -17,6 +17,11 @@ function GetDependenciesElement([xml]$nu) {
   return $nu.package.metadata.GetElementsByTagName('dependencies') | select -first 1
 }
 
+function HasDependency([System.Xml.XmlElement] $dependenciesElement, $id) {
+  $childElements = $dependenciesElement.GetElementsByTagName('dependency') | ? { $_.id -eq $id }
+  return $childElements -ne $null
+}
+
 function addDependency([string]$Path, [string]$id, [string]$version) {
   $nu = LoadXml $Path
   $dependencies = GetDependenciesElement $nu
@@ -25,7 +30,7 @@ function addDependency([string]$Path, [string]$id, [string]$version) {
     $nu.package.metadata.AppendChild($dependencies) | Out-Null
   }
 
-  if (!$dependencies.HasChildNodes -or !$dependencies."$id") {
+  if (!(HasDependency -dependenciesElement $dependencies -id $id)) {
     $dependency = $nu.CreateElement('dependency', 'http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd')
     $dependency.SetAttribute('id', $id) | Out-Null
     if ($version) {
