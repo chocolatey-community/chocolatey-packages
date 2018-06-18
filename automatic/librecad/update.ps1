@@ -1,36 +1,51 @@
-﻿import-module au
+﻿[CmdletBinding()]
+param($IncludeStream, [switch]$Force)
+Import-Module AU
 
-$domain   = 'https://github.com'
-$releases = "$domain/LibreCAD/LibreCAD/releases/latest"
+$releases = 'https://github.com/LibreCAD/LibreCAD/releases'
+$softwareName = 'LibreCAD'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
     }
-    ".\librecad.nuspec" = @{
-      "\<releaseNotes\>.+" = "<releaseNotes>$($Latest.ReleaseNotes)</releaseNotes>"
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
     }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = '\.exe$'
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $re = '\.exe$'
+  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
 
-  $version  = ($url -split '/' | select -Last 1 -Skip 1)
+  $streams = @{}
+  $urls32 | % {
+    $verRe = '\/'
+    $version = $_ -split "$verRe" | select -last 1 -skip 1
+    $version = Get-Version $version
 
-  $releaseNotesUrl = "$domain/LibreCAD/LibreCAD/releases/tag/" + $version
-
-  @{
-    URL32 = $domain + $url
-    Version = $version
-    ReleaseNotes = $releaseNotesUrl
+    if (!($streams.ContainsKey($version.ToString(2)))) {
+      $streams.Add($version.ToString(2), @{
+        Version = $version.ToString()
+        URL32   = $_
+      })
+    }
   }
+
+  return @{ Streams = $streams }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
