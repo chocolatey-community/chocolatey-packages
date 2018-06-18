@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>free-virtual-keyboard</id>
     <version>3.0</version>
-    <title>Free Virtual Keyboard</title>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/free-virtual-keyboard</packageSourceUrl>
     <owners>chocolatey</owners>
+    <title>Free Virtual Keyboard</title>
     <authors>Comfort Software Group</authors>
-    <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
     <projectUrl>http://freevirtualkeyboard.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
+    <copyright>Comfort Software Group. All rights reserved.</copyright>
+    <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>free-virtual-keyboard on-screen keyboard freeware admin</tags>
+    <summary>A free, lightweight, multilingual and finger friendly virtual on-screen keyboard</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen (Ultra-mobile PC, Tablet PC and Panel PC). If you spend a lot of time responding to e-mail or jotting down notes on your mobile computer and find your hardware keyboard awkward or too small, a screen software keyboard may be just the improvement you've been seeking. This handy keyboard has keys large enough to be typed with the fingertips.
 
@@ -22,12 +28,7 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
 
 ![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/5aba809ba5b396201f3b08ec84c52ff2c1604369/manual/free-virtual-keyboard/screenshot.png)
     </description>
-    <summary>A free, lightweight, multilingual and finger friendly virtual on-screen keyboard</summary>
-    <releaseNotes />
-    <copyright>Comfort Software Group. All rights reserved.</copyright>
-    <tags>on-screen keyboard freeware admin</tags>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/free-virtual-keyboard</packageSourceUrl>
+    <releaseNotes>__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
