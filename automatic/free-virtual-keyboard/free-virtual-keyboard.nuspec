@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>free-virtual-keyboard</id>
-    <version>3.0</version>
+    <version>4.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/free-virtual-keyboard</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Free Virtual Keyboard</title>
@@ -16,7 +16,7 @@
     <tags>free-virtual-keyboard on-screen keyboard freeware admin</tags>
     <summary>A free, lightweight, multilingual and finger friendly virtual on-screen keyboard</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen (Ultra-mobile PC, Tablet PC and Panel PC). If you spend a lot of time responding to e-mail or jotting down notes on your mobile computer and find your hardware keyboard awkward or too small, a screen software keyboard may be just the improvement you've been seeking. This handy keyboard has keys large enough to be typed with the fingertips.
 
 ## Features
@@ -26,9 +26,10 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
 - Run it from portable USB flash drive
 - Supports Microsoft Windows ® 2000/XP/Vista/7/8/8.1/10
 
-![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/5aba809ba5b396201f3b08ec84c52ff2c1604369/manual/free-virtual-keyboard/screenshot.png)
-    </description>
-    <releaseNotes>__REPLACE_OR_REMOVE__Markdown_Okay__May_Be_A_URL</releaseNotes>
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/64da03b6c44423d312ac78be89538b7af22080e6/automatic/free-virtual-keyboard/screenshot.png)
+
+]]></description>
+    <releaseNotes>https://freevirtualkeyboard.blogspot.com/2018/01/free-virtual-keyboard-41.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
