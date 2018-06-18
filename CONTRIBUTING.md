@@ -18,10 +18,10 @@ To achieve those goals we are using the following priorities when adding new or 
 1. Freeware packages.
 1. Commercial packages with unrestricted trials.
 
-The following rules also apply: 
+The following rules also apply:
 1. When packages have the same priorities, software with higher number of users will generally be considered more important.
 1. Applications without english localization are not accepted in this repository.
-1. The core team may decide to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance. 
+1. The core team may decide to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance.
 
 For existing packages that no longer fit above principles chocolatey user will be removed from the list of the maintainers.
 
@@ -31,7 +31,7 @@ The following sections present complete set of guideliness, please read them car
 
 ## 1.1 Basics
 
-### 1.1.1 Conform to guidelines 
+### 1.1.1 Conform to guidelines
 
 Conform with the [official package creation guidelines](https://chocolatey.org/docs/create-packages) and take a look at [quick start guide](https://chocolatey.org/docs/CreatePackagesQuickStart) on how to create packages.
 
@@ -49,7 +49,7 @@ Both *package root directory* and  *nuspec file* should be named **the same as t
 
 _Embedded_ packages include the packaged software directly in the nupkg archive instead of downloading it. Only tools that allow redistribution in their license can be embedded and such packages must include two additional files in the directory `legal` - `VERIFICATION.txt` and `License.txt`.
 
-Its **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding. 
+Its **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding.
 
 Binary files can not be generally checked in into this repository because that will bloat it too much.  The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
 
@@ -59,7 +59,7 @@ For software that explicitelly doesn't allow redistribution via adequate license
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal). 
+As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal).
 
 **NOTE**: 300MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
@@ -84,7 +84,7 @@ Chocolatey extension [chocolatey-core.extension](https://github.com/chocolatey/c
 ### 1.1.8 Set `softwareName`
 
 If the package uses [Install-ChocolateyPackage](https://github.com/chocolatey/choco/wiki/HelpersInstallChocolateyPackage)
-`softwareName` should be set to represent software _Display Name_ correctly. You can use [myuninstaller](https://chocolatey.org/packages/myuninst) package to quickly determine it (it's called _Entry Name_ here). 
+`softwareName` should be set to represent software _Display Name_ correctly. You can use [myuninstaller](https://chocolatey.org/packages/myuninst) package to quickly determine it (it's called _Entry Name_ here).
 
 This information is used for the licensed edition of chocolatey to detect if the software is installed (Business edition) and when the software have been uninstalled (Pro edition).
 
@@ -98,7 +98,7 @@ _Although all PR's are tested on appveyor, all packages are expected to have bee
 
 1. When taking a dependency **on an extension, specify the minimum version**.
 Without this, any version satisfies the dependency. That means unless someone upgrades the extension outside of their process or incidentally install some package that uses newer version explicitly set, it will not automatically upgrade to the latest version.
-1. When creating a dependency **for virtual package, use exact version** of the dependent package (.install or .portable) which should be the same as that of virtual package. 
+1. When creating a dependency **for virtual package, use exact version** of the dependent package (.install or .portable) which should be the same as that of virtual package.
 1. When taking a dependency on **anything else, specify minimum or exact version**.
 
 ### 1.1.11 Provide uninstaller only if needed
@@ -108,6 +108,11 @@ Packages should have uninstaller if auto uninstall doesn't work.
 ### 1.1.12 Ensure compatibility with PowerShell v2+
 
 Chocolatey supports PowerShell v2+ because it supports Windows 7+/Windows Server 2008+ (Windows Server 2003 is supported currently, but is deprecated and expected to be removed in a future version). Due to that, PowerShell v2 is expected to work when you run anything here.
+
+### 1.1.13 Chocolatey compatibility
+
+Packages are expected to be compatible with the Chocolatey version available 12 months ago.
+If a later version of Chocolatey is required, then a dependency on the earliest version compatible with the package must be added.
 
 ## 1.2 Metadata
 
@@ -144,7 +149,7 @@ Description is maintained in the `README.md` file in the root of the package and
 
 ### 1.2.4 Add chocolatey among owners
 
-Keep any exisiting owners and add `chocolatey` user before all others. 
+Keep any exisiting owners and add `chocolatey` user before all others.
 
 ### 1.2.5 Provide icon
 
@@ -152,7 +157,7 @@ Packages **must have an icon** if one is available. The icon must be named the s
 
 If the package name ends with either `.install` or `.portable` those suffixes may be ignored in the icon name.
 
-When icon is added to this folder **it will automatically be set** in the _nuspec file_ and README.md that contains `<img>` tag.   
+When icon is added to this folder **it will automatically be set** in the _nuspec file_ and README.md that contains `<img>` tag.
 
 **NOTE**: If the packaged software do not provide an icon, add the following to the package metadata file: `<!-- IconUrl: Skip check -->`.
 
@@ -191,7 +196,7 @@ Do not create brittle scripts that work only when user doesn't interfer. All scr
 
 # 2. Source Files
 
-### 2.1 Encoding 
+### 2.1 Encoding
 
 Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for the `*.ps1` files. See [character encodings](https://chocolatey.org/docs/create-packages#character-encoding).
 
@@ -199,7 +204,7 @@ Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for t
 
 Do not commit code with obvious styling problems such as irregular indentation levels, very long lines, too many comments, too much of empty lines etc.
 
-The project contains [.editorconfig](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/.editorconfig) 
+The project contains [.editorconfig](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/.editorconfig)
  file that can be used with many editors via [EditorConfig](http://editorconfig.org/) plugins.
 
 Keep the package source files clean and remove obsolete or outdated code and unnecessary comments. Comment non-obvious code so that others can easily understand what it does.
@@ -222,7 +227,7 @@ Issues that remain open for 6 months without any feedback may be closed with lab
 
 ### 3.4 Pull request one package
 
-Do not mix multiple packages in single pull request unless in specific special cases that fix common problem. 
+Do not mix multiple packages in single pull request unless in specific special cases that fix common problem.
 
 ### 3.5 Understanding labels
 
