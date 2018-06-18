@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/LibreCAD/LibreCAD/releases>
 and can be verified by doing the following:
 
-1. Download the following <>
+1. Download the following <https://github.com/LibreCAD/LibreCAD/releases/download/2.2.0-rc1/LibreCAD-Installer-2.2.0-rc1.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum:
+  checksum type: sha256
+  checksum: 3292EE933884B6877CD20C5686230DA31F4E7CF29FCDEFB899C407CC5634877D
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/LibreCAD/LibreCAD/blob/master/LICENSE>
