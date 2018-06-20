@@ -4,7 +4,7 @@
   <metadata>
     <id>SourceTree</id>
     <title>Sourcetree for Windows Enterprise</title>
-    <version>2.5.5</version>
+    <version>2.6.9</version>
     <authors>Atlassian</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://www.sourcetreeapp.com</projectUrl>
@@ -46,7 +46,6 @@ Sourcetree simplifies how you interact with your Git repositories so you can foc
   - Embedded Git and Mercurial are not supported.
   - Does not prompt to install global ignore files.
   - Update notifications are disabled.
-- If you installed Soucetree with Chocolatey with a version up to 2.5.5 you need to manually uninstall the standard version through Windows control panel if you no longer need it.
 ]]></description>
     <releaseNotes>https://www.sourcetreeapp.com/update/WindowsReleaseNotes.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>
