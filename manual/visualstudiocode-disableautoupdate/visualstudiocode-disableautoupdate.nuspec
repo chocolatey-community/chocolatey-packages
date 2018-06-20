@@ -17,7 +17,7 @@
     <description>Disables the auto update functionality of Visual Studio Code.</description>
     <tags>visualstudiocode vscode configuration foss cross-platform</tags>
     <releaseNotes>
-* Use correct settings entry in all cases
+* Update dependency to `vscode`
     </releaseNotes>
     <dependencies>
       <dependency id="vscode" version="0.5.0" />
