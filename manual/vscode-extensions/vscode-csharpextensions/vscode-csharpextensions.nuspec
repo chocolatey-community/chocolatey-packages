@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode-csharpextensions</id>
     <title>Visual Studio Code C# Extensions Extension</title>
-    <version>1.0.0.20170116</version>
+    <version>1.0.0.20180620</version>
     <authors>jchannon</authors>
     <owners>chocolatey, gep13</owners>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=jchannon.csharpextensions</projectUrl>
@@ -16,19 +16,14 @@
     <bugTrackerUrl>https://github.com/jchannon/csharpextensions/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Visual Studio Code C# Extensions Extension</summary>
-    <description>This VSCode extension provides extensions to the IDE that will hopefully speed up your development workflow.
-    
-## Features
-
-* Add C# Class
-* Add C# Interface
-* Add fields from constructors
-* Add constructor from properties
-</description>
+    <description>The description is automatically set from the associated README.md file during update</description>
     <tags>microsoft visualstudiocode vscode C# extensions extension cross-platform foss</tags>
-    <releaseNotes>https://github.com/jchannon/csharpextensions/blob/master/CHANGELOG.md</releaseNotes>
+    <releaseNotes>https://marketplace.visualstudio.com/items/jchannon.csharpextensions/changelog</releaseNotes>
     <dependencies>
-      <dependency id="VisualStudioCode" version="1.2.0" />
+      <dependency id="vscode" version="1.2.0" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
