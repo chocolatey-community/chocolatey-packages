@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>x2go</id>
-    <version>4.1.1.1</version>
+    <version>4.1.2.0</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/x2go</packageSourceUrl>
     <owners>chocolatey, Redsandro</owners>
     <title>X2go Client</title>
@@ -44,7 +44,7 @@ For the graphical part of remote desktop sessions, X2Go uses No Machine NX3 tech
 - Remote support possible via Desktop Sharing
 - The ability to access single applications by specifying the name of the desired executable in the client configuration or selecting one of the pre-defined common applications
 ]]></description>
-    <releaseNotes>http://wiki.x2go.org/doku.php/doc:release-notes-mswin:x2goclient-4.1.1.1</releaseNotes>
+    <releaseNotes>http://wiki.x2go.org/doku.php/doc:release-notes-mswin:x2goclient-4.1.2.0</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
