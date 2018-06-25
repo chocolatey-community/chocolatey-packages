@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ruby</id>
-    <version>2.5.1.1</version>
+    <version>2.5.1.2</version>
     <title>Ruby</title>
     <authors>Yukihiro Matsumoto</authors>
     <owners>chocolatey, Rob Reynolds</owners>
@@ -16,6 +16,8 @@ This package provides a self-contained [Windows-based installer](https://rubyins
 
 - `/InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
 - `/NoPath`     - Do not add ruby bin folder to machine PATH.
+
+Example: `choco install ruby --params "/NoPath /InstallDir:C:\your\install\path"`
 
 ## Notes
 
