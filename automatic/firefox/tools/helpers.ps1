@@ -33,7 +33,7 @@ function GetLocale {
   $argumentMap = ConvertFrom-StringData $packageParameters
   $localeFromPackageParameters = $argumentMap.Item('l')
   Write-Verbose "User chooses '$localeFromPackageParameters' as a locale..."
-  $localeFromPackageParametersTwoLetter = $localeFromPackageParameters -split '\-' | select -first 1
+  $localeFromPackageParametersTwoLetter = $localeFromPackageParameters -split '\-' | Select-Object -first 1
   Write-Verbose "With fallback to '$localeFromPackageParametersTwoLetter' as locale..."
 
   $uninstallPath = GetUninstallPath -product $product
