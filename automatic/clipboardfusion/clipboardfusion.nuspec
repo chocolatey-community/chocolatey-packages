@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clipboardfusion</id>
-    <version>5.4-Beta1</version>
+    <version>5.4</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clipboardfusion</packageSourceUrl>
     <owners>chocolatey, keithlammers, the-running-dev</owners>
     <title>ClipboardFusion</title>
