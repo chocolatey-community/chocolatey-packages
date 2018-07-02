@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mumble</id>
     <title>Mumble</title>
@@ -9,6 +9,7 @@
     <authors>Natvig, et. al.</authors>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/mumble.svg</iconUrl>
     <summary>Mumble is an open source, low-latency, high quality voice chat software primarily intended for use while gaming.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 Mumble is a voice over IP (VOIP) application primarily designed for use by gamers, similar to programs such as TeamSpeak and Ventrilo.
 
@@ -30,7 +31,7 @@ Mumble is free and open-source software, is cross-platform, and is released unde
 - Many other options
 </description>
     <projectUrl>http://www.mumble.info/</projectUrl>
-    <tags>voice foss chat cross-platform voip admin</tags>
+    <tags>mumble voice foss chat cross-platform voip admin</tags>
     <copyright>Natvig, et. al.  See License for more information.</copyright>
     <licenseUrl>https://github.com/mumble-voip/mumble/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -43,7 +44,7 @@ Mumble is free and open-source software, is cross-platform, and is released unde
     </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
-    <!--<file src="content\**" target="content" />-->
   </files>
 </package>
