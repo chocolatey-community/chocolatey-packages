@@ -7,7 +7,7 @@ $packageName = $env:ChocolateyPackageName
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'msi'
-  file           = "$toolsPath\"
+  file           = "$toolsPath\mumble-1.2.19.msi"
   softwareName   = 'Mumble*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 2010, 1641)
@@ -15,7 +15,7 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {

@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\"
-  file64         = "$toolsPath\"
+  file           = "$toolsPath\inkscape-0.92.3-x86.msi"
+  file64         = "$toolsPath\inkscape-0.92.3-x64.msi"
   softwareName   = 'InkScape*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
@@ -35,7 +35,7 @@ elseif ($key.Count -gt 1) {
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName

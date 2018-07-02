@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mpc-hc</id>
-    <version>1.7.13</version>
+    <version>1.7.13.20180702</version>
     <title>MPC-HC</title>
     <owners>chocolatey</owners>
     <authors>MPC-HC Team</authors>
@@ -13,7 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://trac.mpc-hc.org/</docsUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
+    <description><![CDATA[
 MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.
 
 ## Features
@@ -24,7 +24,8 @@ MPC-HC is an extremely light-weight, open source media player for Windows. It su
 - Supports GPU assisted decoding.
 - Translated in 41 languages.
 - 100% spyware free, there are no advertisements or toolbars.
-    </description>
+
+]]></description>
     <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>
     <copyright>MPC-HC Team</copyright>
     <tags>mpc-hc media player video audio music admin foss</tags>

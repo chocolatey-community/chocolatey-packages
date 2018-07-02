@@ -4,7 +4,7 @@
   <metadata>
     <id>virtualbox</id>
     <title>VirtualBox</title>
-    <version>5.1.38</version>
+    <version>5.2.14</version>
     <authors>Oracle Corporation</authors>
     <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
@@ -23,6 +23,7 @@
 ### Uninstalling
 - `/KeepExtensions`    - Do not uninstall installed virtualbox extensions
 
+Example: `choco install virtualbox --params "/NoDesktopShortcut /NoExtensionPack"`
 ]]></description>
     <projectUrl>https://www.virtualbox.org/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
