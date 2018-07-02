@@ -1,36 +1,51 @@
-import-module au
+﻿Import-Module AU
 
 $releases = 'https://mpc-hc.org/downloads'
 
-function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')"     = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
-        }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
-        "$($Latest.PackageName).nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-        }
+function global:au_SearchReplace {
+  @{
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+  }
+}
+
+function global:au_AfterUpdate {
+  Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $re    = '\.exe$'
-    $url   = $download_page.links | ? href -match $re | % href
-    $version = ($url[0] -split '_' | select -Index 1).Replace('v','')
-    @{
-        URL32   = $url -match 'x86' | select -First 1
-        URL64   = $url -match 'x64' | select -First 1
-        Version = $version
-        ReleaseNotes = "https://trac.mpc-hc.org/wiki/Changelog/${version}"
-    }
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+  $re = 'x86\.exe$'
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+
+  $re = 'x64\.exe$'
+  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
+
+  $verRe = '_v|_x(86|64)'
+  $version32 = $url32 -split "$verRe" | select -first 1 -skip 1
+  $version64 = $url64 -split "$verRe" | select -first 1 -skip 1
+  if ($version32 -ne $version64) {
+    throw "32bit version do not match the 64bit version"
+  }
+  @{
+    URL32        = $url32
+    URL64        = $url64
+    Version      = $version32
+    ReleaseNotes = "https://trac.mpc-hc.org/wiki/Changelog/${version32}"
+  }
 }
 
-update
+update -ChecksumFor none

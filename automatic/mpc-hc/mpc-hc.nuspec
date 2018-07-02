@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mpc-hc</id>
     <version>1.7.13</version>
     <title>MPC-HC</title>
     <owners>chocolatey</owners>
     <authors>MPC-HC Team</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <licenseUrl>https://github.com/mpc-hc/mpc-hc/blob/develop/COPYING.txt</licenseUrl>
     <projectUrl>https://mpc-hc.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/18bc5fef22a657d3632d88b1366126201b3b39bc/icons/mpc-hc.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://trac.mpc-hc.org/</docsUrl>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>
 MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.
 
@@ -25,13 +27,14 @@ MPC-HC is an extremely light-weight, open source media player for Windows. It su
     </description>
     <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>
     <copyright>MPC-HC Team</copyright>
-    <tags>media player video audio music admin</tags>
+    <tags>mpc-hc media player video audio music admin foss</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mpc-hc</packageSourceUrl>
     <projectSourceUrl>https://github.com/mpc-hc/mpc-hc</projectSourceUrl>
-    <bugTrackerUrl>https://trac.mpc-hc.org</bugTrackerUrl>
+    <bugTrackerUrl>https://trac.mpc-hc.org/wiki/How_to_Report_Issues</bugTrackerUrl>
     <releaseNotes>https://trac.mpc-hc.org/wiki/Changelog/1.7.13</releaseNotes>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
