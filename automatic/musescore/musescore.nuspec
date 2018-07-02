@@ -7,7 +7,7 @@
     <title>MuseScore</title>
     <owners>chocolatey</owners>
     <authors>MuseScore developers</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <licenseUrl>https://github.com/musescore/MuseScore/blob/master/LICENSE.GPL</licenseUrl>
     <projectUrl>http://musescore.org/en</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/musescore.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
