@@ -7,15 +7,15 @@ location on <https://sourceforge.net/projects/maxima/files/Maxima-Windows>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.41.0-Windows/maxima-clisp-sbcl-5.41.0a-win32.exe/download>
+  64-Bit software: <https://sourceforge.net/projects/maxima/files/Maxima-Windows/5.41.0-Windows/maxima-clisp-sbcl-5.41.0a-win64.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: AFDDBB7FFB9E811FB2265233A690691E13966E51345EC7C10159A72AD63C2C8C
+  checksum64: 000F73309B75333195CE4E18B41537F12B7F683B86AA01EC26F97C933F7E02C5
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/maxima/code/ci/master/tree/COPYING>
