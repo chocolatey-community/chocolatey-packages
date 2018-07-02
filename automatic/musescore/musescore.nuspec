@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>musescore</id>
     <version>2.2.1</version>
@@ -8,9 +8,10 @@
     <owners>chocolatey</owners>
     <authors>MuseScore developers</authors>
     <licenseUrl>https://github.com/musescore/MuseScore/blob/master/LICENSE.GPL</licenseUrl>
-    <projectUrl>http://musescore.org/en</projectUrl>
+    <projectUrl>https://musescore.org/en</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/musescore.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
 Create beautiful sheet music for free using MuseScore, the free and open source notation program!
 
@@ -21,12 +22,14 @@ MuseScore runs on Windows, MacOS, and Linux, and is available in over 40 differe
     <releaseNotes>http://musescore.org/en/developers-handbook/release-notes/release-notes-musescore-2.2.1</releaseNotes>
     <copyright>MuseScore BVBA</copyright>
     <mailingListUrl>https://musescore.org/en/forum</mailingListUrl>
+    <bugTrackerUrl>https://musescore.org/en/project/issues/musescore</bugTrackerUrl>
     <docsUrl>https://musescore.org/en/handbook</docsUrl>
-    <tags>music cross-platform foss composition notation sheet admin</tags>
+    <tags>musescore music cross-platform foss composition notation sheet admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/musescore</packageSourceUrl>
     <projectSourceUrl>https://github.com/musescore/MuseScore</projectSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

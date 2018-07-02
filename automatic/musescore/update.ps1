@@ -1,38 +1,40 @@
-import-module au
+﻿Import-Module AU
 
-$releases = 'https://musescore.org/'
+$releases = 'https://musescore.org/en/download/musescore.msi'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')"     = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)*'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
-        }
-
-        "$($Latest.PackageName).nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-        }
+  @{
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+  }
+}
+
+function global:au_AfterUpdate {
+  Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $regex = '(?:MuseScore \d+(\.\d+){1,4})'
-    foreach ( $_ in $download_page.links) {
-    if ( $_.href -match 'download' ) {
-    if ( $_.outerhtml -match $regex ) {
-    $version = $Matches[0] -replace( 'musescore ', '' )
-    } } }
-    @{
-        URL32        = "http://ftp.osuosl.org/pub/musescore/releases/MuseScore-${version}/MuseScore-${version}.msi"
-        Version      = $version
-        ReleaseNotes = "http://musescore.org/en/developers-handbook/release-notes/release-notes-musescore-${version}"
-    }
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+
+  $re = '\.msi$'
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+
+  $verRe = '\/|[-]'
+  $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
+  @{
+    URL32        = $url32
+    Version      = $version32
+    ReleaseNotes = "https://musescore.org/en/handbook/developers-handbook/release-notes/release-notes-musescore-$($version32 -replace '\.')"
+  }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor none
