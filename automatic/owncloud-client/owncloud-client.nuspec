@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>owncloud-client</id>
-    <version>2.4.1.9270</version>
-    <title>ownCloud Windows Client</title>
+    <version>2.5.0.9736-alpha1</version>
+    <title>ownCloud Windows Client (Technical Preview)</title>
     <owners>chocolatey</owners>
     <authors>ownCloud developers</authors>
     <licenseUrl>https://github.com/owncloud/client/blob/master/COPYING</licenseUrl>
