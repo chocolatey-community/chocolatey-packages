@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
-  packageName    = 'owncloud-client'
+  packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  softwareName   = 'ownCloud'
-
-  checksum       = '6424c6f2c462b1d48f9fdd28f097654b36b2c995bc6ad75a320900e845df8bca'
-  checksumType   = 'sha256'
-  url            = 'https://download.owncloud.com/desktop/stable/ownCloud-2.4.1.9270-setup.exe'
-
+  file           = "$toolsPath\"
+  softwareName   = 'owncloud-client*'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
