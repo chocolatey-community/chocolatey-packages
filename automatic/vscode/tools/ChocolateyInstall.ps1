@@ -9,14 +9,14 @@ Close-VSCode
 $packageArgs = @{
   packageName    = 'vscode'
   fileType       = 'exe'
-  url            = 'https://az764295.vo.msecnd.net/stable/24f62626b222e9a8313213fb64b10d741a326288/VSCodeSetup-ia32-1.24.1.exe'
-  url64bit       = 'https://az764295.vo.msecnd.net/stable/24f62626b222e9a8313213fb64b10d741a326288/VSCodeSetup-x64-1.24.1.exe'
+  url            = 'https://az764295.vo.msecnd.net/stable/0f080e5267e829de46638128001aeb7ca2d6d50e/VSCodeSetup-ia32-1.25.0.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/stable/0f080e5267e829de46638128001aeb7ca2d6d50e/VSCodeSetup-x64-1.25.0.exe'
 
   softwareName   = 'Microsoft Visual Studio Code'
 
-  checksum       = '1db69debf39cd1b4b0bf62bec55cf5dab31ff9b98546c6dfd587cab541b02113'
+  checksum       = '984ec579805a7fcd30f992df9be14de2f9f76bcbf33ede99bfca78dbf2518774'
   checksumType   = 'sha256'
-  checksum64     = '59a1f2f4a4d270cb36de5e5deb9de58f4e5ff3c0a76641f51832cf026481d33b'
+  checksum64     = '744b2180dfb90f5ff8d5a75de67313fd8544dfd9f3777cf812120bdbc5c2d3fb'
   checksumType64 = 'sha256'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
