@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rapidee</id>
-    <version>9.1.936.20170923</version>
+    <version>9.2.937</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/rapidee</packageSourceUrl>
     <owners>chocolatey, Raphx</owners>
     <title>RapidEE</title>
@@ -32,7 +32,9 @@
 
 ## Package parameters
 
-- `NoShortcut` - Do not create shortcut
+- `/NoShortcut` - Do not create shortcut
+
+Example: `choco install rapidee --params "/NoShortcut"`
 ]]></description>
     <releaseNotes>http://www.rapidee.com/en/history</releaseNotes>
     <dependencies>
