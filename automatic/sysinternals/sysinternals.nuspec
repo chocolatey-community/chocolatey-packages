@@ -4,7 +4,7 @@
   <metadata>
     <id>sysinternals</id>
     <title>Sysinternals</title>
-    <version>2018.5.31</version>
+    <version>2018.7.5</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
@@ -17,6 +17,8 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 
 - `/InstallDir` - Installation directory, by default Chocolatey tools directory.
 - `/InstallationPath` - the same as `InstallDir`
+
+Example: `choco install sysinternals --params "/InstallDir:C:\your\install\path"`
 
 ## Notes
 
