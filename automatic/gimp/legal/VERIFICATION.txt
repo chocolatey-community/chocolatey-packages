@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.gimp.org/downloads/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.2-setup.exe>
+1. Download the following <https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.4-setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 2C18134E0CD0805AF3FC0CD2F042031AED8CAACE1D0DBDDB6AFF34B40F3ED8A8
+  checksum: 23602C4A5C99EB4E9135E8DF0A3F9CDA6F4006C9A2223A55D1F241C1D3339520
 
 The file 'LICENSE.txt' has been obtained from <https://www.gimp.org/about/COPYING>
