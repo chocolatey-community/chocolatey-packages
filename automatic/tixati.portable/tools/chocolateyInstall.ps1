@@ -4,8 +4,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'tixati.portable'
-  url            = 'https://download2.tixati.com/download/tixati-2.57-1.portable.zip'
-  checksum       = '8ad033668958c225f2b3d197a3d3103bb29e26d6c27d38386c4731c7f06e20c8'
+  url            = 'https://download2.tixati.com/download/tixati-2.58-1.portable.zip'
+  checksum       = '326d8242d7aacd53794b0f51ef7cbe4ed1ce68da4e9f3f0efb7e083618739221'
   checksumType   = 'sha256'
   unzipLocation  = $toolsPath
 }
