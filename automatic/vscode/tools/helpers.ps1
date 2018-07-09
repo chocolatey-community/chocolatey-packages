@@ -31,7 +31,7 @@ function Get-VSCodeVersion {
     $args += "`"${env:ProgramFiles(x86)}\Microsoft VS Code\resources\app\out\cli.js`""
   }
   if ($code) {
-    if ($code.Contains('exe')) {
+    if ($code.EndsWith('.exe')) {
       $ENV:ELECTRON_RUN_AS_NODE = 1
     }
     $args += ' --version'
