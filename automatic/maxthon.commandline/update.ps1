@@ -22,7 +22,7 @@ function global:au_GetLatest {
   $verRe = '_|\.7z$'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   @{
-    URL32        = $url32 -replace 'http:', 'https:'
+    URL32        = $url32
     Version      = $version32
     ReleaseNotes = "http://www.maxthon.com/mx$($version32 -replace '^(\d+).*$','$1')/changelog/"
   }
