@@ -17,30 +17,27 @@ function Close-VSCode {
 }
 
 function Get-VSCodeVersion {
-  $args = @()
+  $possiblePaths = @(
+    "${env:ProgramFiles}\Microsoft VS Code\bin\code.cmd",
+    "${env:ProgramFiles(x86)}\Microsoft VS Code\bin\code.cmd"
+  )
 
   if (Get-Command 'code.cmd' -ErrorAction SilentlyContinue) {
-    $code = $(Get-Command 'code.cmd').Source
+    $possiblePaths += $(Get-Command 'code.cmd').Source
   }
-  elseif (Test-Path "${env:ProgramFiles}\Microsoft VS Code\Code.exe") {
-    $code = "${env:ProgramFiles}\Microsoft VS Code\Code.exe"
-    $args += "`"${env:ProgramFiles}\Microsoft VS Code\resources\app\out\cli.js`""
-  }
-  elseif (Test-Path "${env:ProgramFiles(x86)}\Microsoft VS Code\Code.exe") {
-    $code = "${env:ProgramFiles(x86)}\Microsoft VS Code\Code.exe"
-    $args += "`"${env:ProgramFiles(x86)}\Microsoft VS Code\resources\app\out\cli.js`""
+  $possiblePaths | ForEach-Object {
+    if (Test-Path "$_") {
+      $code = "$_"
+      return
+    }
   }
   if ($code) {
-    if ($code.EndsWith('.exe')) {
-      $ENV:ELECTRON_RUN_AS_NODE = 1
-    }
-    $args += ' --version'
     $pinfo = New-Object System.Diagnostics.ProcessStartInfo
     $pinfo.FileName = "$code"
     $pinfo.RedirectStandardError = $true
     $pinfo.RedirectStandardOutput = $true
     $pinfo.UseShellExecute = $false
-    $pinfo.Arguments = $args
+    $pinfo.Arguments = '--version'
     $p = New-Object System.Diagnostics.Process
     $p.StartInfo = $pinfo
     try {
@@ -55,9 +52,6 @@ function Get-VSCodeVersion {
     }
     if ($ver) {
       return $ver
-    }
-    else {
-      return 0
     }
   }
 }
