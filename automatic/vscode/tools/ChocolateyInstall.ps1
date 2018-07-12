@@ -3,7 +3,7 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$version = '1.25.0'
+$version = '1.25.1'
 if ($version -eq (Get-VSCodeVersion)) {
   Write-Host "VS Code $version is already installed."
   return
