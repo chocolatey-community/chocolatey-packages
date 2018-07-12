@@ -15,7 +15,7 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 # Lets remove the installer as there is no more need for it
-Remove-Item -Force "$toolsDir\*.exe","$toolsDir\*.exe.ignore" -ea 0
+Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {
