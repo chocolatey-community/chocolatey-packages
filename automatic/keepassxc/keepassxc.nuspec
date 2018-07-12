@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
+   uppercase omega letter enclosed in quotation marks, you should use an
+   editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>keepassxc-desktop</id>
+    <title>KeePassXC</title>
+    <version>2.3.3</version>
+    <authors>https://github.com/keepassxreboot/keepassxc/graphs/contributors</authors>
+    <owners>wget, hans0</owners>
+    <summary>KeePassXC is a community fork of KeePassX which aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository.</summary>
+    <description></description>
+    <projectUrl>https://keepassxc.org/</projectUrl>
+    <tags>keepassxc keepass keepassx keepassreboot keepassx multiplatform password safe foss cross-platform</tags>
+    <copyright>2016-2017 KeePassXC Team</copyright>
+    <licenseUrl>https://github.com/keepassxreboot/keepassxc/blob/develop/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <!-- Source: https://github.com/keepassxreboot/keepassxc/blob/develop/share/icons/application/scalable/apps/keepassxc.svgz -->
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg</iconUrl>
+    <releaseNotes>https://github.com/keepassxreboot/keepassxc/releases</releaseNotes>  
+    <!-- Specific to Chocolatey -->
+    <projectSourceUrl>https://github.com/keepassxreboot/keepassxc/</projectSourceUrl>
+    <docsUrl>https://keepassxc.org/docs/</docsUrl>
+    <bugTrackerUrl>https://github.com/keepassxreboot/keepassxc/issues</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keepassxc</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
