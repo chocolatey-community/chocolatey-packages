@@ -13,17 +13,27 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $latestPage = Invoke-WebRequest -Uri 'https://github.com/gitextensions/gitextensions/releases/latest' -UseBasicParsing
+    $download_page = Invoke-WebRequest -Uri 'https://github.com/gitextensions/gitextensions/releases' -UseBasicParsing
 
-    # e.g. https://github.com/gitextensions/gitextensions/releases/download/v2.51.01/GitExtensions-2.51.01-Setup.msi
-    $re = 'GitExtensions-(.+)\.msi'
-    $url = "https://github.com$($latestPage.links | Where-Object href -match $re | Select-Object -First 1 -expand href)"
-    $version = $matches[1]
+    $urls = $download_page.Links | ? href -match 'GitExtensions-(.+)\.msi$' | select -expand href | % { 'https://github.com' + $_ }
 
-    @{
-        Version = $version
-        URL32   = $url
+    $streams = @{}
+    $urls | % {
+      $version = $_ -split '\/' | select -last 1 -skip 1
+      if ($version -match '\.[a-z][a-z\d]*$') {
+        $version = $version -replace '\.([a-z][a-z\d]*)$',"-`$1"
+      }
+      $version = Get-Version $version
+
+      if (!($streams.ContainsKey($version.ToString(2)))) {
+        $streams.Add($version.ToString(2), @{
+          Version = $version.ToString()
+          URL32 = $_
+        })
+      }
     }
+
+    return @{ Streams = $streams }
 }
 
 Update-Package -ChecksumFor none
