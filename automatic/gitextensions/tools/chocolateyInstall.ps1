@@ -1,7 +1,12 @@
+$ErrorActionPreference = 'Stop'
+
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
+    softwareName   = ''
     fileType       = 'msi'
-    file           = Get-ChildItem "$env:ChocolateyPackageFolder\tools\*.msi"
+    file           = "$toolsDir\"
     silentArgs     = '/quiet /norestart ADDDEFAULT=ALL REMOVE=AddToPath,Icons'
     validExitCodes = @(0, 3010, 1641)
 }
