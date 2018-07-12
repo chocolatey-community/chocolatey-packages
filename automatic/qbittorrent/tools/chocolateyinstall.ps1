@@ -2,17 +2,12 @@
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$fileName = if ((Get-OSArchitectureWidth 64) -and ($env:chocolateyForceX86 -ne 'true')) {
-  Write-Host "Installing 64 bit version" ; 'qbittorrent_4.1.1_x64_setup.exe' # 64-bit
-} else {
-  Write-Host "Installing 32 bit version" ; 'qbittorrent_4.1.1_setup.exe' # 32-bit
-}
-
 $packageArgs = @{
   packageName    = 'qbittorrent'
   fileType       = 'exe'
   softwareName   = 'qBittorrent*'
-  file           = "$toolsDir\$fileName"
+  file           = "$toolsDir\qbittorrent_4.1.1_setup.exe"
+  file64         = "$toolsDir\qbittorrent_4.1.1_x64_setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
