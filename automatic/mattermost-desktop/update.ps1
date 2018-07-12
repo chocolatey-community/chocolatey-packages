@@ -24,9 +24,6 @@ function global:au_GetLatest {
 
     $downloadedPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $baseUrl = $([System.Uri]$releases).Authority
-    $scheme = $([System.Uri]$releases).Scheme
-
     $url32 = $downloadedPage.links | ? href -match '32.exe$' | select -First 1 -expand href
     $url32SegmentSize = $([System.Uri]$url32).Segments.Length
     $filename32 = $([System.Uri]$url32).Segments[$url32SegmentSize - 1]
