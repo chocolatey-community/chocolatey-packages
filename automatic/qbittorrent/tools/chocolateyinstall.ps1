@@ -2,17 +2,12 @@
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$fileName = if ((Get-OSArchitectureWidth 64) -and ($env:chocolateyForceX86 -ne 'true')) {
-  Write-Host "Installing 64 bit version" ; 'qbittorrent_4.1.1_x64_setup.exe' # 64-bit
-} else {
-  Write-Host "Installing 32 bit version" ; 'qbittorrent_4.1.1_setup.exe' # 32-bit
-}
-
 $packageArgs = @{
   packageName    = 'qbittorrent'
   fileType       = 'exe'
   softwareName   = 'qBittorrent*'
-  file           = "$toolsDir\$fileName"
+  file           = "$toolsDir\qbittorrent_4.1.1_setup.exe"
+  file64         = "$toolsDir\qbittorrent_4.1.1_x64_setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
@@ -20,7 +15,7 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 # Lets remove the installer as there is no more need for it
-Remove-Item -Force "$toolsDir\*.exe","$toolsDir\*.exe.ignore" -ea 0
+Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {

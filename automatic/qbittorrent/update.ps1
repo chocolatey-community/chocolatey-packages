@@ -7,8 +7,8 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameSkip 1 -NoSuff
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(\s;\s*)'.*'(\s*# 32\-bit)" = "`${1}'$($Latest.FileName32)'`${2}"
-      "(?i)(\s;\s*)'.*'(\s*# 64\-bit)" = "`${1}'$($Latest.FileName64)'`${2}"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\tools\verification.txt" = @{
       "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
