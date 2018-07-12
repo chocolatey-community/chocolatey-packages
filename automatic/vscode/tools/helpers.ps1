@@ -15,7 +15,3 @@ function Close-VSCode {
     Start-Sleep 1
     Get-Process code -ea 0 | Stop-Process  #in case gracefull shutdown did not succeed, try hard kill
 }
-
-function Get-VSCodeVersion {
-  return (Get-UninstallRegistryKey 'Microsoft Visual Studio Code').DisplayVersion
-}
