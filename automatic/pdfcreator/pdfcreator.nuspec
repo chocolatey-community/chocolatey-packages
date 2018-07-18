@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>PDFCreator</id>
-    <version>3.2.2</version>
-    <title>PDF Creator</title>
+    <version>3.2.2.20180717</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
     <owners>chocolatey</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PDF Creator</title>
     <authors>pdfforge</authors>
-    <licenseUrl>https://github.com/pdfforge/PDFCreator/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://www.pdfforge.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6e52bf3b9392bc72475a3e254eab23578ccb9d0e/icons/PDFCreator.png</iconUrl>
+    <licenseUrl>https://github.com/pdfforge/PDFCreator/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description><![CDATA[
-PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
+    <projectSourceUrl>https://github.com/pdfforge/PDFCreator</projectSourceUrl>
+    <docsUrl>http://docs.pdfforge.org/pdfcreator/latest/en/</docsUrl>
+    <tags>pdfcreator pdf editor printer foss notsilent</tags>
+    <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
+    <description>PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
 
 ## Features
 
@@ -21,15 +27,12 @@ PDFCreator easily creates PDFs from any Windows program. Use it like a printer i
 - Profiles make frequently used settings available with one click
 - Use automatic saving to have a fully automated PDF printer
 
-]]></description>
-    <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
-    <tags>pdf editor printer foss admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
-	<docsUrl>http://docs.pdfforge.org/pdfcreator/latest/en/</docsUrl>
-	<projectSourceUrl>https://github.com/pdfforge/PDFCreator</projectSourceUrl>
-  <dependencies>
-    <dependency id="chocolatey-core.extension" version="1.3.3" />
-  </dependencies>
+#### Note 
+The free, PDFCreator installer is no longer silent and may open a webpage on completion.
+    </description>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $installArgs = $('' +
-  '/VERYSILENT /NORESTART ' +
+  '/NORESTART /LANG=english ' +
   '/COMPONENTS="program,ghostscript,comsamples,' +
   'languages,languages\bosnian,languages\catalan,languages\catalan_valencia,' +
   'languages\chinese_simplified,languages\chinese_traditional,' +
@@ -17,11 +17,12 @@ $installArgs = $('' +
 )
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$fileLocation = (Get-ChildItem -Path $toolsPath -Filter '*.exe').FullName
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\PDFCreator-3_2_2-Setup.exe"
+  file           = $fileLocation
   softwareName   = 'PDFCreator'
   silentArgs     = $installArgs
   validExitCodes = @(0)
@@ -43,6 +44,14 @@ catch {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
+# silent install requires AutoHotKey
+$ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
+$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile" -PassThru
+Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "Process ID:`t$($ahkProc.Id)"
+
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
+New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+
+if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}
