@@ -17,12 +17,11 @@ $installArgs = $('' +
 )
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileLocation = (Get-ChildItem -Path $toolsPath -Filter '*.exe').FullName
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = $fileLocation
+  file           = "$toolsPath\PDFCreator-3_2_2-Setup.exe"
   softwareName   = 'PDFCreator'
   silentArgs     = $installArgs
   validExitCodes = @(0)
@@ -52,6 +51,6 @@ Write-Debug "Process ID:`t$($ahkProc.Id)"
 
 Install-ChocolateyInstallPackage @packageArgs
 
-New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Set-Content "$_.ignore" }
 
 if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}
