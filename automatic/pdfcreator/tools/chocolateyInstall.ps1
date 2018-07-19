@@ -45,12 +45,13 @@ catch {
 
 # silent install requires AutoHotKey
 $ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
-$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile" -PassThru
+$ahkEXE = gci "$env:ChocolateyInstall\lib\autohotkey.portable" -Recurse -filter autohotkey.exe
+$ahkProc = Start-Process -FilePath $ahkEXE.FullName -ArgumentList "$ahkFile" -PassThru
 Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
 Write-Debug "Process ID:`t$($ahkProc.Id)"
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Set-Content "$_.ignore" }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { New-Item "$_.ignore" -Type file -Force | Out-Null}
 
 if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}
