@@ -12,7 +12,7 @@ $packageArgs  = @{
   checksumType   = $checksumType
   url            = $url
 
-  silentArgs     = '/VERYSILENT'
+  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
 }
 
