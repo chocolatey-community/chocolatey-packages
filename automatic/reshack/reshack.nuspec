@@ -4,7 +4,7 @@
     <metadata>
         <id>reshack</id>
         <title>Resource Hacker</title>
-        <version>5.1.4</version>
+        <version>5.1.5</version>
         <authors>Angus Johnson</authors>
         <owners>Redsandro</owners>
         <summary>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files.</summary>

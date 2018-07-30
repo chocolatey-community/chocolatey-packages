@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://picard.musicbrainz.org/downloads/>
 and can be verified by doing the following:
 
-1. Download the following <ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-2.0.1.exe>
+1. Download the following <ftp://ftp.musicbrainz.org/pub/musicbrainz/picard/picard-setup-2.0.2.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: D7B0B6153CD56CD5FFD249391D95CB8FFD84C5F37D775A593EFDF1EC400E3506
+  checksum: 84861187C1C55BBAB85FE77073E35B6C1195CEBDD40FB82AB5B6516098D3D49C
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/metabrainz/picard/blob/eeb586b392a5a7dc63d64ba697374ea37e6e122a/COPYING.txt>
