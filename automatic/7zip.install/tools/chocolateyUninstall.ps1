@@ -16,6 +16,7 @@ if ($key.Count -eq 1) {
   }
 
     Uninstall-ChocolateyPackage @packageArgs
+    Uninstall-BinFile -Name "7z.exe" -Path $packageArgs["file"]
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
