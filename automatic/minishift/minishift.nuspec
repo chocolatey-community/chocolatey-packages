@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>minishift</id>
-    <version>1.21.0</version>
+    <version>1.22.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/minishift</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Minishift: Run OpenShift locally</title>
@@ -26,7 +26,7 @@ Minishift uses libmachine for provisioning VMs, and OpenShift Origin for running
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/minishift/minishift/releases/tag/v1.21.0</releaseNotes>
+    <releaseNotes>https://github.com/minishift/minishift/releases/tag/v1.22.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
