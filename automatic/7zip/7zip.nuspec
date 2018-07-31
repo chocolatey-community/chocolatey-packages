@@ -4,7 +4,7 @@
   <metadata>
     <id>7zip</id>
     <title>7-Zip</title>
-    <version>18.5</version>
+    <version>18.5.0.20180730</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
@@ -40,7 +40,7 @@ This means you may lose current work. If it doesn't automatically restart explor
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
     <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
     <dependencies>
-      <dependency id="7zip.install" version="[18.5]" />
+      <dependency id="7zip.install" version="[18.5.0.20180730]" />
     </dependencies>
   </metadata>
   <files>
