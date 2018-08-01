@@ -21,7 +21,7 @@ function global:au_GetLatest {
     $url32 = "https://github.com" + $url
 
     $filenameVersionPart = $url -split '-' | select -Last 1
-    $version = [IO.Path]::GetFileNameWithoutExtension($filenameVersionPart)
+    $version = Get-Version ([IO.Path]::GetFileNameWithoutExtension($filenameVersionPart))
 
     $filename = $url -split '/' | select -Last 1
 
