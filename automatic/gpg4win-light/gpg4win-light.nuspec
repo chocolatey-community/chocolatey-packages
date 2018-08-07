@@ -45,7 +45,7 @@ Gpg4win is distributed in three editions and available by the following chocolat
 * [GnuPG](https://www.gnupg.org/faq/gnupg-faq.html#general)  
 The backend (command-line interface); this is the actual encryption and digital signature tool used by the other software in the suite.
 
-### [gpg4win-light](https://chocolatey.org/packages/gpg4win-ligth)
+### [gpg4win-light](https://chocolatey.org/packages/gpg4win-light)
 
 Includes all the above, and:
 
