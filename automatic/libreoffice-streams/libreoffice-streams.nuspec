@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>libreoffice-fresh</id>
-    <title>LibreOffice Fresh</title>
-    <version>6.0.6</version>
+    <id>libreoffice-still</id>
+    <title>LibreOffice Still</title>
+    <version>6.1.0</version>
     <authors>LibreOffice developers</authors>
     <owners>chocolatey</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
@@ -13,7 +13,7 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 
 ## Notes
 
-- This package installs the latest stable version of LibreOffice (Fresh) with the most recent features. For more conservative users it is recommended to install [libreoffice-fresh](/packages/libreoffice-fresh) instead.
+- LibreOffice Still is the stable version that has undergone more testing (over a longer time). This version is recommended for more conservative users. If you want the latest version, install the [libreoffice](/packages/libreoffice-fresh) package instead.
 - Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
 ]]></description>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
