@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'ScreenCloud'
 
 if($key.Count -eq 1){
-    $key | % {
+    $key | ForEach-Object {
         $packageArgs = @{
             packageName    = 'screencloud'
             fileType       = 'msi'
@@ -20,5 +20,5 @@ if($key.Count -eq 1){
     Write-Warning "$($key.Count) matches found!"
     Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
     Write-Warning "Please alert package maintainer the following keys were matched:"
-    $key | % {Write-Warning "- $($_.DisplayName)"}
+    $key | ForEach-Object {Write-Warning "- $($_.DisplayName)"}
 }
