@@ -7,15 +7,15 @@ location on <https://github.com/henrypp/chromium/releases/> (the listed mirrors 
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/henrypp/chromium/releases/download/v68.0.3440.84-r561733-win32/chromium-sync.exe>
-  64-Bit software: <https://github.com/henrypp/chromium/releases/download/v68.0.3440.84-r561733-win64/chromium-sync.exe>
+  32-Bit software: <https://github.com/henrypp/chromium/releases/download/v68.0.3440.106-r561733-win32/chromium-sync.exe>
+  64-Bit software: <https://github.com/henrypp/chromium/releases/download/v68.0.3440.106-r561733-win64/chromium-sync.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 28A64BF36CFA18E323E8A01DE93BDE3DBCA241665554563F7CCF0951C75337FE
-  checksum64: 1986C0C7FE16869BD7C44D4137C3D7329823BEC098501BB1D4F3002DC4B5FF50
+  checksum32: A68B383B0AAA74BBE11CC4F0DB966CAD31BB35A344D35D2B7D89A90BC2A7720C
+  checksum64: 0FD2016DE9C11BD0CA4C0FEC85BCDBCD71EEBC43AE918E962D2387FDBF5A8462
 
 The file 'LICENSE.txt' has been obtained from <https://chromium.googlesource.com/chromium/src.git/+/master/LICENSE>
