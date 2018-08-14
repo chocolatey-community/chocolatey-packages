@@ -19,7 +19,7 @@ Even though BCU was made with IT pros in mind, by default it is so straight-forw
 * Windows Store apps (Universal Windows Platform apps)
 * Windows Updates
 
-## Fast, automatic uninstall
+### Fast, automatic uninstall
 
 * Uninstall any number of applications in a single batch
 * Minimal to no user input is required during uninstallation
