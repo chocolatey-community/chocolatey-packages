@@ -1,24 +1,48 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png" width="48" height="48"/> [bulk-crap-uninstaller](https://chocolatey.org/packages/bulk-crap-uninstaller)
 
-Bulk Crap Uninstaller (or BCUninstaller) is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more! Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it.
+Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more!
 
-BCU is fully compatible with Windows Store Apps, Steam, Windows Features and has special support for many uninstalling systems (NSIS, InnoSetup, Msiexec, and many other).
+Even though BCU was made with IT pros in mind, by default it is so straight-forward that anyone can use it effortlessly! 
 
 ## Features
 
-* Detect and quietly Windows Store apps
-* Detect and quietly uninstall Steam Apps
-* Uninstall multiple items at once to speed up the process (with collision prevention)
-* Uninstall any number of applications in a single batch
-* Minimal user input is required during uninstallation
-* Can find and remove leftovers after uninstallation
-* Can uninstall many applications even if they don't have any uninstallers
-* Detects applications with damaged or missing uninstallers
-* Adds quiet uninstall options to some uninstallers, even if they do not support them by default
-* Uninstall lists for automation
-* Startup manager
-* Verification of uninstaller certificates
-* Fully portable, settings are saved to a single file
-* Translated to French, Polish, Slovene, Czech, English, German, Russian. More coming!
+### Detect, manage and quietly uninstall
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/458c2f70/automatic/bulk-crap-uninstaller/screenshot.png)
+* Normal registered applications (same as Programs and Features and many other uninstallers)
+* Hidden/protected registered applications
+* Applications with damaged or missing uninstallers
+* Portable applications (might have to point BCU where to look)
+* Chocolatey packages
+* Oculus games/apps
+* Steam games/apps
+* Windows Features
+* Windows Store apps (Universal Windows Platform apps)
+* Windows Updates
+
+## Fast, automatic uninstall
+
+* Uninstall any number of applications in a single batch
+* Minimal to no user input is required during uninstallation
+* Uninstall multiple items at once to speed up the process (with collision prevention)
+* Console interface can automatically uninstall applications based on conditions with no user input
+* Quietly uninstall many uninstallers that don’t support silent uninstallation
+* Uninstall applications even if they don’t have any uninstallers
+* Uninstall applications by window, shortcut or directory
+* Can handle crashing and hanging uninstallers
+
+### Other features
+
+* Find and remove leftovers after uninstallation
+* Clean Program Files directories from unused or empty folders
+* Manually uninstall any application, bypasing it’s uninstaller (Force uninstall)
+* Startup manager
+* Application ratings
+* Huge amount of data about applications is collected and displayed. User can freely browse, filter and export everything
+* Filtering with common presets or based on fully custom rules with Regex support
+* Verification of uninstaller certificates
+* Large amount of configurability
+* Can run user-specified commands before and after uninstalling
+* Can run on .Net 4.0 or newer, or, if not available, on .Net 3.5 with reduced functionality
+* Fully portable, settings are saved to a single file
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1a2d3e36282f7987cebec6644caa277c7290f169/automatic/bulk-crap-uninstaller/screenshot.png)
