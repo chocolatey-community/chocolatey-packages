@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>zotero-standalone</id>
-    <title>Zotero Standalone</title>
+    <title>DEPRECATED - Zotero Standalone</title>
     <owners>chocolatey</owners>
     <version>5.0.55</version>
     <authors>Center for History and New Media, et. al.</authors>
@@ -24,11 +24,7 @@
     <mailingListUrl>https://forums.zotero.org/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/zotero/zotero/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="zotero" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="legal\**" target="legal" />
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
