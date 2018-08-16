@@ -29,7 +29,7 @@ function global:au_GetLatest {
     $url32 = 'https://eternallybored.org/misc/wget/' + $url[0]
     $url64 = 'https://eternallybored.org/misc/wget/' + $url[1]
     
-    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    $Latest = @{ URL32 = $url32; URL64 = $url64; Version = $version; PackageName = 'Wget' }
     return $Latest
 }
 
