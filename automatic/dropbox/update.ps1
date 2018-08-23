@@ -37,7 +37,7 @@ param(
 	}
 } 
 
-$stable = (( Get-RedirectedUrl 'https://www.dropbox.com/download?full=1&plat=win' ) -replace '.*(?:([\d]{2}[\.]{1}[\d]{1,2}[\.]{1}[\d]{2})).*', '$1')
+$stable = (( Get-RedirectedUrl 'https://www.dropbox.com/download?full=1&plat=win' ) -replace '.*(?:([\d]{2,4}[\.]{1}[\d]{1,4}[\.]{1}[\d]{2,4})).*', '$1')
 
 function global:au_GetLatest {
   $streams = [ordered] @{
