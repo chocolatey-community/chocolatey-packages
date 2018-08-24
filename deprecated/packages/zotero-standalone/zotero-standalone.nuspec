@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>zotero-standalone</id>
+    <title>[Deprecated] Zotero Standalone</title>
+    <owners>chocolatey</owners>
+    <version>5.0.54.20180816</version>
+    <authors>Center for History and New Media, et. al.</authors>
+    <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[Deprecated due to upstream name change. 
+    
+    Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice. It is produced by the Center for History and New Media of George Mason University (GMU). *(from Wikipedia, 2013-04-18)*
+]]></description>
+    <projectUrl>https://www.zotero.org/</projectUrl>
+    <tags>zotero-standalone references manager bibliography foss cross-platform admin</tags>
+    <copyright>2006-2011, Center for History and New Media, George Mason University, Fairfax, Virginia, USA</copyright>
+    <licenseUrl>https://github.com/zotero/zotero/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://www.zotero.org/support/._changelog</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/zotero-standalone</packageSourceUrl>
+    <projectSourceUrl>https://www.zotero.org/support/dev/source_code</projectSourceUrl>
+    <docsUrl>https://www.zotero.org/support</docsUrl>
+    <mailingListUrl>https://forums.zotero.org/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/zotero/zotero/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="zotero" />
+    </dependencies>
+  </metadata>
+  <files />
+</package>
