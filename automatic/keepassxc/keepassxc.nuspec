@@ -1,16 +1,41 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek
    uppercase omega letter enclosed in quotation marks, you should use an
    editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>keepassxc-desktop</id>
+    <id>keepassxc</id>
     <title>KeePassXC</title>
-    <version>2.3.3</version>
+    <version>2.3.4</version>
     <authors>https://github.com/keepassxreboot/keepassxc/graphs/contributors</authors>
     <owners>wget, hans0</owners>
     <summary>KeePassXC is a community fork of KeePassX which aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository.</summary>
-    <description></description>
+    <description><![CDATA[KeePassXC is a fork of [KeePassX](https://www.keepassx.org/) that [aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository](https://github.com/keepassxreboot/keepassx/issues/43).
+
+# Features
+
+These are the additional features compared to KeePassX:
+- Auto-Type on all three major platforms (Linux, Windows, macOS)
+- Twofish encryption
+- YubiKey challenge-response support
+- TOTP generation
+- CSV import
+- Command line interface
+- DEP and ASLR hardening
+- Stand-alone password and passphrase generator
+- Password strength meter
+- Using website favicons as entry icons
+- Merging of databases
+- Automatic reload when the database changed on disk
+- Browser integration with KeePassHTTP-Connector for Mozilla Firefox and Google Chrome or Chromium, and passafari in Safari.
+- Browser integration with KeePassXC-Browser using native messaging for Mozilla Firefox and Google Chrome or Chromium.
+
+## Notes
+
+N/A
+
+![KeepassXC screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f2cfda756d8ab847b9d65ce394de18c6a090666b/automatic/keepassxc/screenshot.png)
+]]></description>
     <projectUrl>https://keepassxc.org/</projectUrl>
     <tags>keepassxc keepass keepassx keepassreboot keepassx multiplatform password safe foss cross-platform</tags>
     <copyright>2016-2017 KeePassXC Team</copyright>
