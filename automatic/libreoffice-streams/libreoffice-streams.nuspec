@@ -22,6 +22,9 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
+    <dependencies>
+      <dependency id="kb2919355" version="1.0.20160915" />
+    </dependencies>
     <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/libreoffice-streams</packageSourceUrl>
     <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
