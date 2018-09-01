@@ -29,4 +29,4 @@ Mixxx is free DJ software for Windows, Mac OS X and Linux. It's easy to use so y
 - DJ Controller Support
 - Free Timecode Vinyl Control
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/mixxx/screenshot.png)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/77d8e200438b73081ce5e7108813a76ca32d2776/automatic/mixxx/screenshot.png)
