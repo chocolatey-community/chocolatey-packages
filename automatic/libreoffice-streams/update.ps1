@@ -64,10 +64,10 @@ function GetStillVersions($freshVersion) {
 
 function global:au_GetLatest {
   $freshStream = GetFreshVersion
-  $stillStream = GetStillVersions -freshVersion freshStream
+  $stillStream = GetStillVersions -freshVersion $freshStream.Version
 
   $streams = [ordered] @{
-    fresh = freshStream
+    fresh = $freshStream
   }
 
   # Only add the still stream if a version not matching the major-minor version of fresh
