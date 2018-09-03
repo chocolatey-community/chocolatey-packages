@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>PDFCreator</id>
-    <version>3.2.2.20180719</version>
+    <version>3.2.2.20180903</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
     <owners>chocolatey</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,8 @@
     <docsUrl>http://docs.pdfforge.org/pdfcreator/latest/en/</docsUrl>
     <tags>pdfcreator pdf editor printer foss notsilent</tags>
     <summary>PDFCreator - PDFCreator easily creates PDFs from any Windows program.</summary>
-    <description>PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
+    <description><![CDATA[
+PDFCreator easily creates PDFs from any Windows program. Use it like a printer in Word, StarCalc or any other Windows application.
 
 ## Features
 
@@ -27,9 +28,7 @@
 - Profiles make frequently used settings available with one click
 - Use automatic saving to have a fully automated PDF printer
 
-#### Note 
-The free, PDFCreator installer is no longer silent and may open a webpage on completion.
-    </description>
+]]></description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="autohotkey.portable" version="1.1" />
