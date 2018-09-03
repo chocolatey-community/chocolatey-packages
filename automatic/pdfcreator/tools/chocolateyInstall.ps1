@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $installArgs = $('' +
-  '/VERYSILENT /NORESTART ' +
+  '/NORESTART /LANG=english ' +
   '/COMPONENTS="program,ghostscript,comsamples,' +
   'languages,languages\bosnian,languages\catalan,languages\catalan_valencia,' +
   'languages\chinese_simplified,languages\chinese_traditional,' +
@@ -43,6 +43,15 @@ catch {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
+# silent install requires AutoHotKey
+$ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
+$ahkEXE = gci "$env:ChocolateyInstall\lib\autohotkey.portable" -Recurse -filter autohotkey.exe
+$ahkProc = Start-Process -FilePath $ahkEXE.FullName -ArgumentList "$ahkFile" -PassThru
+Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "Process ID:`t$($ahkProc.Id)"
+
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { New-Item "$_.ignore" -Type file -Force | Out-Null}
+
+if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}
