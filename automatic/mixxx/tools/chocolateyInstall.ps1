@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = Get-Item $toolsPath\*-win32.exe
   file64         = Get-Item $toolsPath\*-win64.exe
-  silentArgs     = '/S'
+  silentArgs     = '/quiet'
   validExitCodes = @(0)
   softwareName   = 'Mixxx *'
 }
