@@ -3,7 +3,7 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the software authors
-nuget package located on <https://www.nuget.org/packages/NuGet.CommandLine/>
+website located at <https://www.nuget.org/downloads>
 and can be verified by doing the following:
 
 1. Download the following <https://api.nuget.org/packages/nuget.commandline.4.7.1.nupkg>
