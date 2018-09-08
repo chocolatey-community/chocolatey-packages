@@ -6,14 +6,14 @@ The embedded software have been downloaded from the listed download
 location on <https://clipgrab.org/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.clipgrab.org/clipgrab-3.6.9-cgorg.exe>
+1. Download the following <https://download.clipgrab.org/clipgrab-3.7.0-cgorg.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 69E6E7D210CB311F35422F55A3171601C388DB3A3676AD272A6FB7AF01127E5D
+  checksum: F5323ABB79B6544B1AEBEA3FEE74F94F8F4D1E537DCB3941DF5D0AD51183F4A1
 
 The file 'LICENSE.txt' has been obtained from the source tarball located
 on their project page.
