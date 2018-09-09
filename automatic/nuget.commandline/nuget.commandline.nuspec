@@ -5,12 +5,15 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>nuget.commandline</id>
     <title>Nuget.CommandLine</title>
-    <version>4.7.1</version>
+    <version>4.8.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey, nuget-mirror</owners>
     <summary>NuGet is the package manager for the Microsoft development platforms</summary>
     <description><![CDATA[NuGet is the package manager for the Microsoft development platforms including .NET. NuGet gives you access to thousands of packages from other developers on [nuget.org](http://nuget.org), and the NuGet tools let you create, share, and host packages of your own.
 
+## Notes
+
+This package contains **preview** and **released** and **recommended** versions.
 ]]></description>
     <projectUrl>https://github.com/NuGet/NuGet.Client</projectUrl>
     <tags>nuget dot.net microsoft foss cross-platform</tags>
