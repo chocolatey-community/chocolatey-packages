@@ -16,4 +16,10 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 Update-SessionEnvironment
-vagrant plugin repair  #https://github.com/chocolatey/chocolatey-coreteampackages/issues/1024
+
+$ErrorActionPreference = 'Continue' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/1099
+vagrant plugin repair               #https://github.com/chocolatey/chocolatey-coreteampackages/issues/1024
+if ($LastExitCode -ne 0) {          #https://github.com/chocolatey/chocolatey-coreteampackages/issues/1099
+  Write-Host "WARNING: Plugin repair failed, run 'vagrant plugin expunge --reinstall' after rebooting."
+}
+$LastExitCode = 0
