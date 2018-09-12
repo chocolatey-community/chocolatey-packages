@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>eid-belgium-viewer</id>
+    <title>eid-</title>
+    <version>4.1.2</version>
+    <authors>ZETES S.A., Fedict</authors>
+    <owners>chocolatey</owners>
+    <summary>Middleware for the Belgian electronic identity card</summary>
+    <description>Middleware for the Belgian electronic identity card></description>
+    <projectUrl>https://eid.belgium.be/en</projectUrl>
+    <projectSourceUrl>https://github.com/Fedict/eid-mw</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/eid-belgium-viewer</packageSourceUrl>
+    <docsUrl>https://github.com/Fedict/eid-mw/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/Fedict/eid-mw/issues</bugTrackerUrl>
+    <tags>belgium eid middleware viewer identity card admin</tags>
+    <licenseUrl>https://github.com/Fedict/eid-mw/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyright 2009-2018 ZETES S.A. and Fedict</copyright>
+    <iconUrl>"https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5f317458cb64cb6465bb90336989d405be46066a/icons/eid-belgium.png</iconUrl>
+    <releaseNotes>https://eid.belgium.be/sites/default/files/content/pdf/rn446.pdf</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
