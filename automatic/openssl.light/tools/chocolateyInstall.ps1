@@ -9,8 +9,8 @@ $silentArgs += '/DIR="{0}"' -f $( if ($pp.InstallDir) { $pp.InstallDir } else { 
 $packageArgs = @{
   packageName    = 'OpenSSL.Light'
   fileType       = 'exe'
-  file           = "$toolsPath\Win32OpenSSL_Light-1_1_0i.exe"
-  file64         = "$toolsPath\Win64OpenSSL_Light-1_1_0i.exe"
+  file           = "$toolsPath\Win32OpenSSL_Light-1_1_1.exe"
+  file64         = "$toolsPath\Win64OpenSSL_Light-1_1_1.exe"
   softwareName   = 'OpenSSL*Light*'
   silentArgs     = $silentArgs
   validExitCodes = @(0)
