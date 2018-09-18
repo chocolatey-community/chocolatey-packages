@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'ccleaner'
-$url32       = 'https://download.ccleaner.com/ccsetup546.exe'
+$url32       = 'https://download.ccleaner.com/ccsetup547.exe'
 $url64       = $url32
-$checksum32  = '6588472b3db3e25bba7fb0077d9a6f7dc38337034ebcdf33599f22071da70e79'
+$checksum32  = '39cfdf127cd5735671e76f60b065ce31e7c788c040cdde6efdad1462a73055b3'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
