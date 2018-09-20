@@ -3,7 +3,7 @@
 $packageName = 'ccleaner'
 $url32       = 'https://download.ccleaner.com/ccsetup547.exe'
 $url64       = $url32
-$checksum32  = '39cfdf127cd5735671e76f60b065ce31e7c788c040cdde6efdad1462a73055b3'
+$checksum32  = 'd2c17468859fdc3d8d64c0d29c4d682e9c7f3a6b34ef28673de05ec9931af40c'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
