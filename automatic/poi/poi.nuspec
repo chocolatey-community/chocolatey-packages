@@ -20,7 +20,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/poooi/poi</projectSourceUrl>
     <bugTrackerUrl>https://github.com/poooi/poi/issues</bugTrackerUrl>
-    <tags>foss poi kancolle yuudachi</tags>
+    <tags>foss cross-platform poi kancolle yuudachi</tags>
     <summary>POI is a scalable KanColle browser and tool</summary>
     <description></description>
     <releaseNotes></releaseNotes>
