@@ -2,15 +2,11 @@
 
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>poi</id>
     <version>9.0.0</version>
-    <owners>chocolatey, POI Contributors</owners>
+    <owners>chocolatey, drelatgithub</owners>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/poi</packageSourceUrl>
-    <!-- ============================== -->
 
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <!-- This section is about the software itself -->
     <title>poi</title>
     <authors>POI Contributors</authors>
     <projectUrl>https://poi.io</projectUrl>
@@ -24,6 +20,5 @@
     <summary>POI is a scalable KanColle browser and tool</summary>
     <description></description>
     <releaseNotes></releaseNotes>
-    <!-- =============================== -->      
   </metadata>
 </package>
