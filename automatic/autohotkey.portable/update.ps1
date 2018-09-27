@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://autohotkey.com/download/1.1'
+$releases = 'https://autohotkey.com/download'
 
 function global:au_SearchReplace {
    @{
@@ -27,12 +27,26 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-    $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | % Content
-    $url     = "$releases/AutoHotkey_${version}.zip"
+    $version1 = Invoke-WebRequest -Uri "$releases/1.1/version.txt" -UseBasicParsing | % Content
+    $url1     = "$releases/1.1/AutoHotkey_${version1}.zip"
+
+    $version2withHash = Invoke-WebRequest -Uri "$releases/2.0/version.txt" -UseBasicParsing | % Content
+    $version2 = $version2withHash -replace '(\d+.\d+-\w+)-\w+', '$1'
+    $url2     = "$releases/2.0/AutoHotkey_${version2withHash}.zip"
+
     @{
-        Version  = $version
-        URL      = $url
-        FileName = $url -split '/' | select -Last 1
+        Streams = [ordered] @{
+            '2.0' = @{
+                Version  = $version2
+                URL      = $url2
+                FileName = $url2 -split '/' | select -Last 1
+            }
+            '1.1' = @{
+                Version  = $version1
+                URL      = $url1
+                FileName = $url1 -split '/' | select -Last 1
+            }
+        }
     }
 }
 
