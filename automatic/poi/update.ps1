@@ -12,6 +12,14 @@ function global:au_SearchReplace {
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
         }
+        ".\legal\LICENSE.txt" = @{
+            "[/s/S]*" = "$($Latest.License)"
+        }
+        ".\legal\VERIFICATION.txt" = @{
+            "(?i)(1\..+)\<.*\>"         = "`${1}<$($Latest.URL32)>"
+            "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
+            "(?i)(checksum:\s+).*"      = "`${1}$($Latest.Checksum32)"
+        }
     }
 }
 
@@ -35,6 +43,8 @@ function global:au_GetLatest {
     }
     until($stableReleaseFound)
 
+    $license = (Invoke-WebRequest -Uri "https://cdn.rawgit.com/poooi/poi/master/LICENSE" -UseBasicParsing).Content
+
     $exeSep  = (Split-Path($url) -Leaf) -split '-|\.exe'
     $version = $exeSep | select -Last 1 -Skip 1
 
@@ -42,6 +52,7 @@ function global:au_GetLatest {
         URL32   = 'https://github.com' + $url
         Version = $version
         ReleaseNotes = "$releases/tag/v${version}"
+        License = $license
     }
 }
 
