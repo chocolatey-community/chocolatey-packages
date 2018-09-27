@@ -12,9 +12,6 @@ function global:au_SearchReplace {
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
         }
-        ".\legal\LICENSE.txt" = @{
-            "[/s/S]*" = "$($Latest.License)"
-        }
         ".\legal\VERIFICATION.txt" = @{
             "(?i)(1\..+)\<.*\>"         = "`${1}<$($Latest.URL32)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
@@ -44,6 +41,7 @@ function global:au_GetLatest {
     until($stableReleaseFound)
 
     $license = (Invoke-WebRequest -Uri "https://cdn.rawgit.com/poooi/poi/master/LICENSE" -UseBasicParsing).Content
+    Set-Content -Value $license -Path ".\legal\LICENSE.txt"
 
     $exeSep  = (Split-Path($url) -Leaf) -split '-|\.exe'
     $version = $exeSep | select -Last 1 -Skip 1
