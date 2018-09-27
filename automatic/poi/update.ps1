@@ -50,7 +50,6 @@ function global:au_GetLatest {
         URL32   = 'https://github.com' + $url
         Version = $version
         ReleaseNotes = "$releases/tag/v${version}"
-        License = $license
     }
 }
 
