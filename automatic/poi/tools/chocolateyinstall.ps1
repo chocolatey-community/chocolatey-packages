@@ -9,7 +9,7 @@ $packageArgs = @{
 
   softwareName  = 'poi*'
 
-  silentArgs    = '/S'
+  silentArgs    = '/S /allusers'
   validExitCodes= @(0)
 }
 
