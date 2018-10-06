@@ -17,18 +17,19 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase "FileZilla_$($Latest.Version)"}
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $url32 = $download_page.Links | ? href -match "win32\-setup\.exe(\?h=.*)$" | select -first 1 -expand href
-    $url64 = $download_page.Links | ? href -match "win64\-setup\.exe(\?h=.*)$" | select -first 1 -expand href
+    $url32 = $download_page.Links | ? href -match "win32\-setup\.exe" | select -first 1 -expand href
+    $url64 = $download_page.Links | ? href -match "win64\-setup\.exe" | select -first 1 -expand href
     $version = $url32 -split '_' | select -last 1 -skip 1
 
     @{
-        Version = $version
-        URL64   = $url64
-        URL32   = $url32
+        Version  = $version
+        URL64    = $url64
+        URL32    = $url32
+        FileType = "exe"
     }
 }
 
