@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kubernetes-kustomize</id>
+    <version>0.0.1</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kubernetes-kustomize</packageSourceUrl>
+    <owners>chocolatey,Wolfgang Kritzinger</owners>
+    <title>Kustomize: Customize Kubernetes YAML definitions</title>
+    <authors>Kubernetes authors</authors>
+    <projectUrl>https://github.com/kubernetes-sigs/kustomize</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4e529ccc804ac6fac259a658e395e38b42b24f3/icons/kubernetes-kompose.png</iconUrl>
+    <licenseUrl>https://github.com/kubernetes-sigs/kustomize/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/kubernetes-sigs/kustomize</projectSourceUrl>
+    <docsUrl>https://github.com/kubernetes-sigs/kustomize</docsUrl>
+    <bugTrackerUrl>https://github.com/kubernetes-sigs/kustomize/issues</bugTrackerUrl>
+    <tags>kubernetes kustomize yaml devops cli foss</tags>
+    <summary>Kustomize lets you customize raw, template-free YAML files for multiple purposes, leaving the original YAML untouched and usable as is.</summary>
+    <description><![CDATA[
+
+]]></description>
+    <releaseNotes>https://github.com/kubernetes-sigs/kustomize/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
