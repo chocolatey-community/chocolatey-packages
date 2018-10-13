@@ -24,7 +24,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re    = '\.exe$'
+    $releases_Url = $download_page.Links | ? href -match 'stable\-release' | select -first 1 -expand href
+    $download_page = Invoke-WebRequest -Uri $releases_Url -UseBasicParsing
+
+    $re    = '\.exe\/download$'
     $url   = $download_page.links | ? href -match $re | % href
     $url32 = $url -match 'i386' | select -first 1
     $url64 = $url -match 'amd64' | select -first 1
