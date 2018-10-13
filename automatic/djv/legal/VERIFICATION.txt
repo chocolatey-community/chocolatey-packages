@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://djv.sourceforge.net/index.html>
+location on <http://djv.sourceforge.net/Download.html>
 and can be verified by doing the following:
 
-1. Download the following <http://sourceforge.net/projects/djv/files/djv-stable/1.1.0/djv-1.1.0-Windows-64.exe/download>
+1. Download the following <https://sourceforge.net/projects/djv/files/djv-stable/1.2.1/djv-1.2.1-Windows-x64.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 8C2F99AC709D93301D1E7BAE6103238DBACD48AB6CA6D052B7B8A114338C56DE
+  checksum: 6C91BD340EF52CB3DEC3B6BD7B57C0A6430196BAE6AEA7761D56BEE9F710FFA3
 
 The file 'LICENSE.txt' has been obtained from <http://djv.sourceforge.net/djvLegal.html>

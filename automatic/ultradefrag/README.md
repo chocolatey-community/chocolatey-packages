@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f47c573f12e0505f678bcdbe75624d128704f393/icons/ultradefrag.png" width="48" height="48"/> [ultradefrag](https://chocolatey.org/packages/ultradefrag)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f47c573f12e0505f678bcdbe75624d128704f393/icons/ultradefrag.png" width="48" height="48"/> [ultradefrag](https://chocolatey.org/packages/ultradefrag)
 
 
 UltraDefrag is an open source disk defragmenter for Windows. It eliminates the file fragmentation problem speeding up the computers which need less mechanical work to read continuous data from disks. UltraDefrag can fix almost everything including files which are usually locked - it launches inside of the Windows boot process when most of the files are still not in use.
