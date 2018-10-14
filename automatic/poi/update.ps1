@@ -22,23 +22,10 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 
-    $stableReleaseFound = $false
-    $url = ''
-    $lastVersionString = ''
-    do {
-        $download_page = Invoke-WebRequest -Uri "$releases$lastVersionString" -UseBasicParsing
-        $urls = $download_page.links | ? href -match 'poi-setup-.+\.exe$' | % href
-        $stableUrls = @($urls) -match 'poi-setup-\d+\.\d+\.\d+\.exe$'
-        if($stableUrls.Count -gt 0) {
-            $url = $stableUrls | select -First 1
-            $stableReleaseFound = $true
-        }
-        else {
-            $lastUrl = $urls | select -Last 1
-            $lastVersionString = "?after=$(Split-Path(Split-Path($lastUrl)) -Leaf)"
-        }
-    }
-    until($stableReleaseFound)
+
+    $download_page = Invoke-WebRequest -Uri "$releases$lastVersionString" -UseBasicParsing
+    $urls = $download_page.links | ? href -match 'poi-setup-.+\.exe$' | % href
+    $url = $urls | select -First 1
 
     $exeSep  = (Split-Path($url) -Leaf) -split '-|\.exe'
     $version = $exeSep | select -Last 1 -Skip 1
