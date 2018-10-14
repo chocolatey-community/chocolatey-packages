@@ -40,9 +40,6 @@ function global:au_GetLatest {
     }
     until($stableReleaseFound)
 
-    $license = (Invoke-WebRequest -Uri "https://cdn.rawgit.com/poooi/poi/master/LICENSE" -UseBasicParsing).Content
-    Set-Content -Value $license -Path ".\legal\LICENSE.txt"
-
     $exeSep  = (Split-Path($url) -Leaf) -split '-|\.exe'
     $version = $exeSep | select -Last 1 -Skip 1
 
