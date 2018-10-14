@@ -27,12 +27,13 @@ function global:au_GetLatest {
     $urls = $download_page.links | ? href -match 'poi-setup-.+\.exe$' | % href
     $url = $urls | select -First 1
 
-    $exeSep  = (Split-Path($url) -Leaf) -split '-|\.exe'
+    $exeSep  = (Split-Path($url) -Leaf) -split 'poi-setup-|\.exe'
     $version = $exeSep | select -Last 1 -Skip 1
+    $validVersion = $version -replace "beta\.", "beta"
 
     @{
         URL32   = 'https://github.com' + $url
-        Version = $version
+        Version = $validVersion
         ReleaseNotes = "$releases/tag/v${version}"
     }
 }
