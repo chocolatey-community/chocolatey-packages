@@ -3,20 +3,20 @@ import-module au
 $releases = 'https://autohotkey.com/download'
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*[$]fileName\s*=\s*)('.*')"  = "`$1'$($Latest.FileName)'"
-        }
-
-        ".\tools\verification.txt" = @{
-          "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL)"
-          "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL)"
-          "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum)"
-          "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum)"
-          "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL)"
-        }
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
+      "(?i)(^\s*[$]fileName\s*=\s*)('.*')" = "`$1'$($Latest.FileName)'"
     }
+
+    ".\tools\verification.txt"      = @{
+      "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL)"
+      "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL)"
+      "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum)"
+      "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum)"
+      "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL)"
+    }
+  }
 }
 function global:au_BeforeUpdate {
   rm "$PSScriptRoot\tools\*.zip"
@@ -27,27 +27,30 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-    $version1 = Invoke-WebRequest -Uri "$releases/1.1/version.txt" -UseBasicParsing | % Content
-    $url1     = "$releases/1.1/AutoHotkey_${version1}.zip"
+  $version_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $version2withHash = Invoke-WebRequest -Uri "$releases/2.0/version.txt" -UseBasicParsing | % Content
-    $version2 = $version2withHash -replace '(\d+.\d+-\w+)-\w+', '$1'
-    $url2     = "$releases/2.0/AutoHotkey_${version2withHash}.zip"
+  $urls = $version_page.Links | ? href -match "^[\d\.]+\/$" | ? href -NotMatch "1\.0" | % href
 
-    @{
-        Streams = [ordered] @{
-            '2.0' = @{
-                Version  = $version2
-                URL      = $url2
-                FileName = $url2 -split '/' | select -Last 1
-            }
-            '1.1' = @{
-                Version  = $version1
-                URL      = $url1
-                FileName = $url1 -split '/' | select -Last 1
-            }
-        }
+  $streams = @{}
+  $urls | % {
+    $releasesUrl = "$releases/$_"
+    $versionWithHash = Invoke-WebRequest -Uri "$releasesUrl/version.txt" -UseBasicParsing | % Content
+    $version = $versionWithHash -replace '(\d+.\d+-\w+)-\w+', '$1'
+    if (!$version) { $version = $versionWithHash }
+
+    $url = "$releasesUrl/AutoHotkey_${versionWithHash}.zip"
+
+    $key = $releasesUrl -split '\/' | select -last 1 -Skip 1
+    if (!$streams.ContainsKey($key)) {
+      $streams.Add($key, @{
+          Version  = $version
+          URL      = $url
+          FileName = $url -split '/' | select -Last 1
+        })
     }
+  }
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none -NoCheckUrl
