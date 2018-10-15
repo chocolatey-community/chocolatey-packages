@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>poi</id>
+    <version>9.0.0</version>
+    <owners>chocolatey, drelatgithub</owners>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/poi</packageSourceUrl>
+
+    <title>poi</title>
+    <authors>POI Contributors</authors>
+    <projectUrl>https://poi.io</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/poooi/poi/master/assets/icons/poi.png</iconUrl>
+    <copyright>Copyright (c) 2015-2018 poi contributors</copyright>
+    <licenseUrl>https://cdn.rawgit.com/poooi/poi/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/poooi/poi</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/poooi/poi/issues</bugTrackerUrl>
+    <tags>foss cross-platform poi kancolle yuudachi</tags>
+    <summary>POI is a scalable KanColle browser and tool</summary>
+    <description></description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
