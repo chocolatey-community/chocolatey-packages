@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a927ff286164545446171f26f19b436622e69b5/icons/notepadplusplus.png" width="48" height="48"/> [notepadplusplus.commandline](https://chocolatey.org/packages/notepadplusplus.commandline)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8a927ff286164545446171f26f19b436622e69b5/icons/notepadplusplus.png" width="48" height="48"/> [notepadplusplus.commandline](https://chocolatey.org/packages/notepadplusplus.commandline)
 
 Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages. Running in the MS Windows environment, its use is governed by GPL License.
 
