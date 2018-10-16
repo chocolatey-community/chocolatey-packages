@@ -26,7 +26,7 @@ While this package now provides both **Current** and **LTS** releases of Node.js
     <tags>nodejs node javascript npm admin foss cross-platform</tags>
     <licenseUrl>https://github.com/nodejs/node/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
