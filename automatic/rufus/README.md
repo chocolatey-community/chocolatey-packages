@@ -27,8 +27,8 @@ It can be especially useful for cases where:
 * 100% [Free Software](http://www.gnu.org/philosophy/free-sw.en.html) ([GPL v3](http://www.gnu.org/licenses/gpl-3.0.en.html))
 
 * [FAQ](https://github.com/pbatard/rufus/wiki/FAQ)
-* [Supported ISOs](http://rufus.akeo.ie/#ref2)
+* [Supported ISOs](https://rufus.ie/#ref2)
 
 
-![screenshot](screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6fdcf3ea1d6e0661c3b05ead97a70f92eaba218a/automatic/rufus/screenshot.png)
 

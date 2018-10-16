@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://rufus.akeo.ie'
+$releases = 'https://rufus.ie'
 
 function global:au_SearchReplace {
    @{

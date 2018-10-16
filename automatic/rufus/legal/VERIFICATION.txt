@@ -19,4 +19,4 @@ Package can be verified like this:
 
 
 File 'license.txt' is obtained from:
-   https://github.com/pbatard/rufus/blob/master/LICENSE.txt
+   https://github.com/pbatard/rufus/blob/e587997f4ea475e375f4c1fb0c785ab47a45285c/LICENSE.txt
