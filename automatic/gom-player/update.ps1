@@ -28,7 +28,7 @@ function global:au_GetLatest {
 
   @{
     URL32   = $url32
-    Version = $version32
+    Version = Get-FixVersion $version32 -OnlyFixBelowVersion '2.3.34'
   }
 }
 
