@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/chrome.svg" width="48" height="48"/> [GoogleChrome](https://chocolatey.org/packages/GoogleChrome)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/chrome.svg" width="48" height="48"/> [GoogleChrome](https://chocolatey.org/packages/GoogleChrome)
 
 
 Chrome is a fast, simple, and secure web browser, built for the modern web.
