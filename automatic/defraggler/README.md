@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/defraggler.png" width="48" height="48"/> [defraggler](https://chocolatey.org/packages/defraggler)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/defraggler.png" width="48" height="48"/> [defraggler](https://chocolatey.org/packages/defraggler)
 
 
 Use Defraggler to defrag your entire hard drive, or individual files. This compact and portable Windows application supports NTFS and FAT32 file systems.

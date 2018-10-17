@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://filehippo.com/download_audacity/download/558b34fc454fac45adfc429013805163/
+   x32: https://filehippo.com/download_audacity/download/0ba88847c8341fd960b05da3f0f0d8c2/
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: CA19471E10660765DEC12C980EBD3EEB9B82826EA4F25BC490936F312B14CAFF
+   checksum32: 3909676287CC0C44FE867BCC0E74A23891AEEEDA42EBF11B3037C9B28DCA43A1
 
 File 'LICENSE.txt' obtained from:
    http://www.audacityteam.org/about/license/#license

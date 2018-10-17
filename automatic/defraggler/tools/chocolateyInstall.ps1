@@ -22,8 +22,8 @@ if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'EXE'
-  url            = ''
-  checksum       = ''
+  url            = 'https://download.ccleaner.com/dfsetup222.exe'
+  checksum       = 'b53eb82d6a46c812171ca878b7342e1939a0afecc277b0b57c708eef8fc700de'
   checksumType   = 'sha256'
   silentArgs     = "/S $locale"
   validExitCodes = @(0)
