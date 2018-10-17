@@ -19,10 +19,17 @@ function global:au_GetLatest {
 
     $version = $download_page.AllElements | ? class -eq 'release_table' | % InnerText | Select -First 1
     $version = ($version -split ":|\n" | select -Index 1).Trim()
+    $verTwoPart = (Get-Version $version).ToString(2) -replace '\.','-'
+    if ($version -match "^\d+\.\d+$") {
+      $versionFull = "$version.0"
+    } else {
+      $versionFull = $version
+    }
+
     @{
         Version = $version
-        URL32   = "https://s3.amazonaws.com/lightworks/lightworks_v${version}_full_32bit_setup.exe"
-        URL64   = "https://s3.amazonaws.com/lightworks/lightworks_v${version}_full_64bit_setup.exe"
+        URL32   = "https://downloads.lwks.com/v$verTwoPart/lightworks_v${versionFull}_full_32bit_setup.exe"
+        URL64   = "https://downloads.lwks.com/v$verTwoPart/lightworks_v${versionFull}_full_64bit_setup.exe"
     }
 }
 
