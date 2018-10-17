@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 
-$releases     = 'http://player.gomlab.com/?language=eng'
-$versions     = 'http://player.gomlab.com/history.gom?language=eng'
+$releases     = 'https://www.gomlab.com/gomplayer-media-player/'
+$versions     = 'https://www.gomlab.com/gomplayer-media-player/?type=update'
 $softwareName = 'GOM Player'
 
 function global:au_SearchReplace {
