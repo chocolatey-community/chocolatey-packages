@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/af726b9663646bcef6e18d9e7b2d84e03e4aa878/icons/gom-player.png" width="48" height="48"/> [gom-player](https://chocolatey.org/packages/gom-player)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@af726b9663646bcef6e18d9e7b2d84e03e4aa878/icons/gom-player.png" width="48" height="48"/> [gom-player](https://chocolatey.org/packages/gom-player)
 
 
 GOM Player is one of the world's best free desktop video players. Originally famous for its high video and audio quality, and support of multiple video formats (flv, mp4, mov, mpg, ts, avi, divx, asx, wmv, m4v, dat, ifo, vob, 3gp/3gp2, rm/rmvb, mkv, ogm) etc. However, there is a lot more to GOM Player than codec support.
