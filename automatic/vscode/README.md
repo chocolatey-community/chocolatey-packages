@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/icons/vscode.png" width="48" height="48"/> [vscode](https://chocolatey.org/packages/vscode)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/icons/vscode.png" width="48" height="48"/> [vscode](https://chocolatey.org/packages/vscode)
 
 
 Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
