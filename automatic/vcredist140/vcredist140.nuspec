@@ -40,4 +40,7 @@ On some systems, if KB2999226 is installed as a dependency of this package, the 
       <dependency id="kb2999226" version="1.0.20170509" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
