@@ -41,4 +41,8 @@ More information could be obtained [here](https://github.com/poooi/poi/blob/mast
 ]]></description>
     <releaseNotes>https://github.com/poooi/poi/releases/tag/v9.0.3</releaseNotes>
   </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
