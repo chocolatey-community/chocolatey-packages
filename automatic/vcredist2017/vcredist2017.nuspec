@@ -33,4 +33,5 @@
       <dependency id="vcredist140" version="14.15.26706" />
     </dependencies>
   </metadata>
+  <files />
 </package>
