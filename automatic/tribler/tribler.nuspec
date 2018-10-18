@@ -30,13 +30,13 @@ Watch before the download is finished. Tribler streams it for you.
 **Note:** Upgrading from older version will not be completely silent since the downloaded installer uninstalls the previous version without passing silent arguments.
 
 ]]></description>
-    <projectUrl>http://www.tribler.org/</projectUrl>
+    <projectUrl>https://www.tribler.org/</projectUrl>
     <mailingListUrl>https://forum.tribler.org/</mailingListUrl>
     <bugTrackerUrl>https://github.com/Tribler/tribler/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/Tribler/tribler</projectSourceUrl>
     <tags>BitTorrent admin</tags>
     <copyright></copyright>
-    <licenseUrl>https://github.com/Tribler/tribler/blob/master/Tribler/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/Tribler/tribler/blob/next/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/31eebb648daf450ee49dfdaa5cb613009d86d862/icons/tribler.png</iconUrl>
     <releaseNotes>https://github.com/Tribler/tribler/releases/tag/v7.0.2</releaseNotes>
