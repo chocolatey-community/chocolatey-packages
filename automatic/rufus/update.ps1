@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://rufus.ie'
+$releases = 'https://rufus.ie/en_IE.html'
 
 function global:au_SearchReplace {
    @{
@@ -23,7 +23,7 @@ function global:au_GetLatest {
 
     @{
         Version  = $version
-        URL32    = $releases + $url
+        URL32    = New-Object uri([uri]$releases, $url)
     }
 }
 
