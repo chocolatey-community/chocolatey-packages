@@ -7,8 +7,8 @@
     <title>Prey</title>
     <owners>chocolatey</owners>
     <authors>Fork Ltd</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>http://preyproject.com/</projectUrl>
+    <licenseUrl>https://github.com/prey/prey-node-client/blob/master/license.txt</licenseUrl>
+    <projectUrl>https://preyproject.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
@@ -26,7 +26,7 @@ Prey lets you keep track of your laptop, phone and tablet whenever stolen or mis
     <tags>prey anti-theft lockdown tracking admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/prey</packageSourceUrl>
     <projectSourceUrl>https://github.com/prey/prey-node-client</projectSourceUrl>
-    <docsUrl>http://help.preyproject.com/</docsUrl>
+    <docsUrl>https://help.preyproject.com/</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
