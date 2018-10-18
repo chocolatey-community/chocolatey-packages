@@ -71,6 +71,7 @@ $options = [ordered]@{
     BeforeEach  = {
       param($PackageName, $Options )
       $Options.ModulePaths | % { Import-Module $_ }
+      $global:au_Force = $true # Some of the helper scripts rely on this one
   }
 }
 
