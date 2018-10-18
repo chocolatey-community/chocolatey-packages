@@ -14,4 +14,3 @@ With TightVNC, you can:
 * make sure nothing wrong is happening on your computers when you are away.
 
 [Screenshots](http://www.tightvnc.com/screenshots.php).
-

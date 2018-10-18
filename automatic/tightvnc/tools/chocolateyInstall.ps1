@@ -1,21 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath   = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName    = 'tightvnc'
+  packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = 'https://www.tightvnc.com/download/2.8.11/tightvnc-2.8.11-gpl-setup-32bit.msi'
-  url64bit       = 'https://www.tightvnc.com/download/2.8.11/tightvnc-2.8.11-gpl-setup-64bit.msi'
-  checksum       = 'eefda3f6dbf599a3679aa4cced15dd2e766e37ed1536ad2868d7748e3f44e68f'
-  checksum64     = 'ec42c674b06b37b5d6be32875356df29bb11e1d4e63bbf6049a91f01f0053e9a'
-  checksumType   = 'sha256'
-  checksumType64 = 'sha256'
-  silentArgs     = '/quiet /norestart'
-  validExitCodes = @(0)
+  file           = "$toolsPath\"
+  file64         = "$toolsPath\"
   softwareName   = 'tightvnc*'
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes = @(0, 2010, 1641)
 }
-Install-ChocolateyPackage @packageArgs
+
+Install-ChocolateyInstallPackage @packageArgs
 
 # This reads the service start mode of 'TightVNC Server' and adapts it to the current value,
 # otherwise it would always be set to 'Auto' on new installations, even if it was 'Manual'
@@ -27,3 +24,5 @@ if ($serviceStartMode -ne $null) {
     Start-ChocolateyProcessAsAdmin "Set-Service -Name tvnserver -StartupType $serviceStartMode"
   }
 }
+
+ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
