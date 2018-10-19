@@ -5,7 +5,7 @@
     <id>smartftp</id>
     <title>SmartFTP</title>
     <owners>chocolatey</owners>
-    <version>9.0.2612.0</version>
+    <version>9.0.2613.0</version>
     <authors>SmartSoft</authors>
     <summary>FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Telnet, Terminal client.</summary>
     <description><![CDATA[SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Backblaze B2, Telnet, Terminal client with lots of features and a modern user interface.
@@ -55,7 +55,7 @@
     <releaseNotes>https://www.smartftp.com/changelog/1</releaseNotes>
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg</iconUrl>
     <bugTrackerUrl>https://www.smartftp.com/forums/index.php?/forum/14-support/</bugTrackerUrl>
     <dependencies>
       <dependency id="vcredist140" version="14.12.25810.0" />
