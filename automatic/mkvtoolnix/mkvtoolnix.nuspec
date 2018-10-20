@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mkvtoolnix</id>
-    <version>27.0.0</version>
+    <version>28.0.0</version>
     <title>MKVToolNix</title>
     <owners>chocolatey</owners>
     <authors>Moritz Bunkus</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>https://www.bunkus.org/videotools/mkvtoolnix/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/mkvtoolnix.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/mkvtoolnix.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 MKVToolNix is a set of tools to create, alter, split, join and inspect Matroska files (MKV).
