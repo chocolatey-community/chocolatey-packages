@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png" width="48" height="48"/> [bulk-crap-uninstaller](https://chocolatey.org/packages/bulk-crap-uninstaller)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png" width="48" height="48"/> [bulk-crap-uninstaller](https://chocolatey.org/packages/bulk-crap-uninstaller)
 
 Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more!
 
