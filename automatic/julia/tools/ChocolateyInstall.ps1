@@ -5,7 +5,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  file32        = "$toolsDir\to-be-replaced.exe"
+  file          = "$toolsDir\to-be-replaced.exe"
   file64        = "$toolsDir\to-be-replaced.exe"
 
   softwareName  = 'Julia*'
