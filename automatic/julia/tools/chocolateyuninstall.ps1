@@ -12,7 +12,8 @@ $uninstalled = $false
 
 if ($key.Count -eq 1) {
 
-  Uninstall-BinFile -Name "julia.exe" -Path "$(Get-AppInstallLocation $packagesArgs.softwareName)\bin\julia.exe"
+  $installLocation = Get-AppInstallLocation $packageArgs.softwareName
+  Uninstall-BinFile -Name "julia.exe" -Path $installLocation\bin\julia.exe
 
   $key | ForEach-Object {
     $packageArgs['file'] = "$($_.UninstallString)"
