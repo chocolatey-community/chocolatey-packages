@@ -13,7 +13,7 @@
     <projectSourceUrl>https://github.com/JuliaLang/julia</projectSourceUrl>
     <docsUrl>http://docs.julialang.org/</docsUrl>
     <bugTrackerUrl>https://github.com/JuliaLang/julia/issues</bugTrackerUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://to.be.replaced/</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description></description>
     <summary>The Julia Language: A fresh approach to technical computing.</summary>
