@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <title>Julia programming language</title>
     <authors>Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah</authors>
-    <owners>FlorianRappl</owners>
+    <owners>FlorianRappl chocolatey</owners>
     <licenseUrl>https://github.com/JuliaLang/julia/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>http://julialang.org</projectUrl>
     <releaseNotes>https://github.com/JuliaLang/julia/releases</releaseNotes>
@@ -15,7 +15,7 @@
     <bugTrackerUrl>https://github.com/JuliaLang/julia/issues</bugTrackerUrl>
     <iconUrl>https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Julia is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments. It provides a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive mathematical function library. The library, largely written in Julia itself, also integrates mature, best-of-breed C and Fortran libraries for linear algebra, random number generation, signal processing, and string processing. In addition, the Julia developer community is contributing a number of external packages through Julia’s built-in package manager at a rapid pace. IJulia, a collaboration between the IPython and Julia communities, provides a powerful browser-based graphical notebook interface to Julia.</description>
+    <description> To be replaced. </description>
     <summary>The Julia Language: A fresh approach to technical computing.</summary>
     <tags>julia language scientific computing dynamic programming repl data visualization machine learning jit admin</tags>
   </metadata>
