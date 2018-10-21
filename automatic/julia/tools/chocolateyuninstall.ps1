@@ -22,7 +22,7 @@ if ($key.Count -eq 1) {
     }
 
     Uninstall-ChocolateyPackage @packageArgs
-    Uninstall-BinFile -Name "julia.exe" -Path "$(Get-AppInstallLocation $packageArgs.softwareName)\bin\julia.exe" 
+    Uninstall-BinFile -Name "julia.exe"
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
