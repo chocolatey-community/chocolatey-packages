@@ -11,6 +11,9 @@ $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {
+
+  Uninstall-BinFile -Name "julia.exe" -Path "$(Get-AppInstallLocation $packagesArgs.softwareName)\bin\julia.exe"
+
   $key | ForEach-Object {
     $packageArgs['file'] = "$($_.UninstallString)"
 
@@ -22,7 +25,6 @@ if ($key.Count -eq 1) {
     }
 
     Uninstall-ChocolateyPackage @packageArgs
-    Uninstall-BinFile -Name "julia.exe"
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
