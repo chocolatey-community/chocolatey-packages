@@ -18,3 +18,9 @@ Install-ChocolateyInstallPackage @packageArgs
 
 # Lets remove the installer as there is no more need for it
 Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+if (!$installLocation)  { Write-Warning "Can't find Julia install location"; return }
+Write-Host "Julia installed to '$installLocation'"
+
+Install-BinFile 'julia' $installLocation\bin\julia.exe
