@@ -7,19 +7,20 @@
     <authors>Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah, Julia contributors</authors>
     <owners>FlorianRappl chocolatey</owners>
     <licenseUrl>https://github.com/JuliaLang/julia/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>http://julialang.org</projectUrl>
-    <releaseNotes>https://github.com/JuliaLang/julia/releases</releaseNotes>
-    <packageSourceUrl>https://github.com/FlorianRappl/Chocolatey-Julia</packageSourceUrl>
+    <projectUrl>https://julialang.org</projectUrl>
+    <releaseNotes></releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/julia</packageSourceUrl>
     <projectSourceUrl>https://github.com/JuliaLang/julia</projectSourceUrl>
     <docsUrl>http://docs.julialang.org/</docsUrl>
     <bugTrackerUrl>https://github.com/JuliaLang/julia/issues</bugTrackerUrl>
-    <iconUrl>https://camo.githubusercontent.com/e1ae5c7f6fe275a50134d5889a68f0acdd09ada8/687474703a2f2f6a756c69616c616e672e6f72672f696d616765732f6c6f676f5f68697265732e706e67</iconUrl>
+    <iconUrl></iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description> To be replaced. </description>
+    <description></description>
     <summary>The Julia Language: A fresh approach to technical computing.</summary>
-    <tags>julia language scientific computing dynamic programming repl data visualization machine learning jit admin</tags>
+    <tags>julia language scientific computing dynamic programming repl data visualization machine learning jit admin foss cross-platform</tags>
   </metadata>
   <files>
-    <file src="tools\*.*" target="tools" />
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
