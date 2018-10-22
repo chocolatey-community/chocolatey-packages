@@ -6,7 +6,8 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 
 #### MSI Properties
 `ADD_CMAKE_TO_PATH`
-- `None` - Do not add CMake to path (default)
+- `None` - Do not add CMake to PATH (default)
+- `User` - Add CMake to PATH for __the current user__
 - `System` - Add CMake to system PATH for __all users__
 
 `DESKTOP_SHORTCUT_REQUESTED`
