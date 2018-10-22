@@ -98,7 +98,7 @@ function CreateSnapshotArchive() {
     'a'
     '-mx9'
     "`"$artifactsDirectory\install_snapshot.7z`""
-  ) + $directories
+  ) + ($directories | select -Unique)
 
   . 7z $arguments
 }
