@@ -18,4 +18,4 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 - `0` = Install for the current user only
 - `1` = Install for all users (default)
 
-For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=User'`
+For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'`
