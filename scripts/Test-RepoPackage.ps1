@@ -98,7 +98,7 @@ function CreateSnapshotArchive() {
     'a'
     '-mx9'
     "`"$artifactsDirectory\install_snapshot.7z`""
-  ) + $directories
+  ) + ($directories | select -Unique)
 
   . 7z $arguments
 }
@@ -363,7 +363,7 @@ function RunChocoProcess() {
       '--all-versions'
       '--autouninstaller'
       '--fail-on-autouninstaller'
-      '--force'
+      #'--force'
     )
   }
   $packFailed = $false
