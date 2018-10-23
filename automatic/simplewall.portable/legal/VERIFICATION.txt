@@ -6,14 +6,14 @@ The archive have been downloaded from the GitHub mirror and can be verified like
 
 1. Download the following archive(s):
 
-x86: https://github.com//henrypp/simplewall/releases/download/v.2.3.4/simplewall-2.3.4-bin.zip
+x86: https://github.com/henrypp/simplewall/releases/download/v.2.3.6/simplewall-2.3.6-bin.zip
 
 2. You can use one of the following methods to obtain the checksum(s):
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 036C9E53F1D4A31602F5B3861C6B7222EC7845973EF4E9FD9E0CA9274BDD2D69
+  checksum32: 8CE10DB2D01B8291BA05CF6A56A0634EECF80A8BD35E2266192906107A5F89FC
 
 The included 'LICENSE.txt' file have been obtained from:
 https://github.com/henrypp/simplewall/blob/master/LICENSE
