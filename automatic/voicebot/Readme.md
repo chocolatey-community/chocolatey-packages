@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4669940497f13f8cc317968b56dbbcb4e95d3158/icons/voicebot.png" width="48" height="48"/> [voicebot](https://chocolatey.org/packages/voicebot)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4669940497f13f8cc317968b56dbbcb4e95d3158/icons/voicebot.png" width="48" height="48"/> [voicebot](https://chocolatey.org/packages/voicebot)
 
 
 Voice Powered Game Control!
