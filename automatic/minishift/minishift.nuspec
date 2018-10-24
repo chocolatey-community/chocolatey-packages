@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>minishift</id>
-    <version>1.25.0</version>
+    <version>1.26.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/minishift</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Minishift: Run OpenShift locally</title>
     <authors>RedHat, Minishift contributors</authors>
     <projectUrl>https://www.openshift.org/minishift</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d2ba3846157215dd14199887818129eea17950eb/icons/minishift.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d2ba3846157215dd14199887818129eea17950eb/icons/minishift.png</iconUrl>
     <copyright>(c) 2017 RedHat</copyright>
     <licenseUrl>https://github.com/minishift/minishift/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -26,7 +26,7 @@ Minishift uses libmachine for provisioning VMs, and OpenShift Origin for running
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/minishift/minishift/releases/tag/v1.25.0</releaseNotes>
+    <releaseNotes>https://github.com/minishift/minishift/releases/tag/v1.26.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
