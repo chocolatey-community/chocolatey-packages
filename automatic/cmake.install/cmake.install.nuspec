@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake.install</id>
-    <version>3.12.2</version>
+    <version>3.13.0-rc2</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cmake.install</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>CMake (Install)</title>
     <authors>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</authors>
     <projectUrl>https://www.cmake.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5633c4413a8b71f75f379190546a0047c0e0b12b/icons/cmake.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5633c4413a8b71f75f379190546a0047c0e0b12b/icons/cmake.png</iconUrl>
     <copyright>© 2000 Kitware Inc</copyright>
     <licenseUrl>https://gitlab.kitware.com/cmake/cmake/blob/master/Copyright.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -26,8 +26,9 @@
 
 #### MSI Properties
 `ADD_CMAKE_TO_PATH`
-- `None` - Do not add CMake to path (default)
+- `None` - Do not add CMake to PATH (default)
 - `System` - Add CMake to system PATH for __all users__
+- `User` - Add CMake to PATH for __the current user__
 
 `DESKTOP_SHORTCUT_REQUESTED`
 - `0` = Do not create desktop icon (default)
@@ -37,7 +38,7 @@
 - `0` = Install for the current user only
 - `1` = Install for all users (default)
 
-For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=User'`
+For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'`
 ]]></description>
     <releaseNotes>#### Program
 * [News](https://blog.kitware.com/tag/CMake/)
