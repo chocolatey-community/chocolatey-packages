@@ -7,15 +7,15 @@ location on <https://www.tribler.org/download.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <>
-  64-Bit software: <>
+  32-Bit software: <https://github.com/Tribler/tribler/releases/download/v7.1.2/Tribler_7.1.2_x86.exe>
+  64-Bit software: <https://github.com/Tribler/tribler/releases/download/v7.1.2/Tribler_7.1.2_x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type:
-  checksum32:
-  checksum64:
+  checksum type: sha256
+  checksum32: 0276116894C3D329065E804E30F3DF8B36E3BE3FE8E007FF60DA7E20C2B18D14
+  checksum64: 6DA6FB8E46236F5FD1FB6CA74564FB5651E978826FCD848A833F8F7C8A075982
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/Tribler/tribler/blob/next/LICENSE>
