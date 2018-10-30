@@ -4,11 +4,11 @@
   <metadata>
     <id>sonarlint-vs2015</id>
     <title>SonarLint VSIX Extension</title>
-    <version>4.6.0.3815</version>
+    <version>4.7.0.3891</version>
     <authors>SonarSource (SonarSource SA)</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <projectSourceUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio</projectSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9d190bd5283df93c69ff06df0b78a289af483aa2/icons/sonarlint-vs2015.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9d190bd5283df93c69ff06df0b78a289af483aa2/icons/sonarlint-vs2015.png</iconUrl>
     <projectUrl>http://www.sonarlint.org/visualstudio/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sonarlint-vs2015</packageSourceUrl>
     <licenseUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio/blob/master/LICENSE</licenseUrl>
