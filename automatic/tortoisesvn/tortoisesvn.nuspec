@@ -4,7 +4,7 @@
   <metadata>
     <id>tortoisesvn</id>
     <title>TortoiseSVN</title>
-    <version>1.10.2.28392</version>
+    <version>1.11.0.28416</version>
     <authors>TortoiseSVN Team</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>Subversion® source control management client implemented as File Explorer shell extension</summary>
@@ -63,7 +63,7 @@ TortoiseSVN provides a flexible mechanism to integrate any web based bug trackin
     <copyright>© 2004 TortoiseSVN Team</copyright>
     <licenseUrl>https://sourceforge.net/p/tortoisesvn/code/HEAD/tree/trunk/src/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png</iconUrl>
     <releaseNotes>http://tortoisesvn.net/Changelog.txt</releaseNotes>
   </metadata>
   <files>

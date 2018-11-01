@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png" width="48" height="48"/> [tortoisesvn](https://chocolatey.org/packages/tortoisesvn)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png" width="48" height="48"/> [tortoisesvn](https://chocolatey.org/packages/tortoisesvn)
 
 
 TortoiseSVN is a really easy to use Revision control / version control / source control software for Windows. It is based on [Apache Subversion (SVN)](http://subversion.apache.org/).
