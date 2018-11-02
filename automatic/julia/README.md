@@ -4,5 +4,17 @@
 
 ## Features
 
-- Feat 1
-- Feat 2
+- Multiple dispatch: providing ability to define function behavior across many combinations of argument types
+- Dynamic type system: types for documentation, optimization, and dispatch
+- Good performance, approaching that of statically-typed languages like C
+- A built-in package manager
+- Lisp-like macros and other metaprogramming facilities
+- Call Python functions: use the PyCall package[a]
+- Call C functions directly: no wrappers or special APIs
+- Powerful shell-like abilities to manage other processes
+- Designed for parallel and distributed computing
+- Coroutines: lightweight green threading
+- User-defined types are as fast and compact as built-ins
+- Automatic generation of efficient, specialized code for different argument types
+- Elegant and extensible conversions and promotions for numeric and other types
+- Efficient support for Unicode, including but not limited to UTF-8
