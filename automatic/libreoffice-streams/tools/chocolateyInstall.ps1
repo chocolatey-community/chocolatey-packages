@@ -3,10 +3,10 @@
 $packageArgs = @{
   packageName            = 'libreoffice'
   fileType               = 'msi'
-  url                    = 'https://download.documentfoundation.org/libreoffice/stable/6.1.2/win/x86/LibreOffice_6.1.2_Win_x86.msi'
-  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/6.1.2/win/x86_64/LibreOffice_6.1.2_Win_x64.msi'
-  checksum               = 'ecd8678310e6dd2d73bd577f51d161c9f525865bd4b1dfc11fee66c76c3b636a'
-  checksum64             = 'ddd4cf674cc2543f7d5f375562853386793fc6003fe70fa270baf905af7f00fe'
+  url                    = 'https://download.documentfoundation.org/libreoffice/stable/6.1.3/win/x86/LibreOffice_6.1.3_Win_x86.msi'
+  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/6.1.3/win/x86_64/LibreOffice_6.1.3_Win_x64.msi'
+  checksum               = '389fb5bc70d78c9039d70fa1bc8b21f7db590bd67231cc34987c08179d021526'
+  checksum64             = 'c3d2587a247b5c873286f80fdf0eef4b055808899e11e4f1c80874709b8df819'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/passive /norestart /l*v "{0}\install.log"' -f "$Env:TEMP\chocolatey\$Env:ChocolateyPackageName\$Env:ChocolateyPackageVersion"
