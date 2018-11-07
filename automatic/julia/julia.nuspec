@@ -5,7 +5,7 @@
     <version>1.0.0</version>
     <title>Julia programming language</title>
     <authors>Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah, Julia contributors</authors>
-    <owners>FlorianRappl, chocolatey, drel</owners>
+    <owners>chocolatey, FlorianRappl, drel</owners>
     <licenseUrl>https://github.com/JuliaLang/julia/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://julialang.org</projectUrl>
     <releaseNotes></releaseNotes>
