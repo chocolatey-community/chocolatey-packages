@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/04a664cc932597e990efa9772dfc16114f18bed8/icons/datagrip.png" width="48" height="48"/> [datagrip](https://chocolatey.org/packages/datagrip)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@04a664cc932597e990efa9772dfc16114f18bed8/icons/datagrip.png" width="48" height="48"/> [datagrip](https://chocolatey.org/packages/datagrip)
 
 
 DataGrip is the multi-engine database environment.
