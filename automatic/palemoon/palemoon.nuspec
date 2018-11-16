@@ -4,7 +4,7 @@
   <metadata>
     <id>palemoon</id>
     <title>Pale Moon browser</title>
-    <version>28.1.0</version>
+    <version>28.2.1</version>
     <authors>Moonchild Productions</authors>
     <owners>Redsandro,chocolatey</owners>
     <summary>A Firefox-based web browser optimized for modern hardware.</summary>
@@ -41,7 +41,7 @@ This browser, even though fairly close to Gecko-based browsers like Mozilla Fire
     <copyright>2009-2016 Moonchild Productions</copyright>
     <licenseUrl>https://github.com/MoonchildProductions/Pale-Moon/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bceb375ac10f0c0a67e2735df00560519a078c8c/icons/palemoon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@bceb375ac10f0c0a67e2735df00560519a078c8c/icons/palemoon.png</iconUrl>
     <releaseNotes>https://www.palemoon.org/releasenotes.shtml</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/palemoon</packageSourceUrl>
   </metadata>
