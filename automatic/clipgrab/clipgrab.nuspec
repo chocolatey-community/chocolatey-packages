@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clipgrab</id>
-    <version>3.7.1</version>
+    <version>3.7.2</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clipgrab</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Clipgrab</title>
     <authors>Philipp Schmieder Medien</authors>
     <projectUrl>https://clipgrab.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6e9a022dd8e41ec09862dfb2d3aafa99a9d9ecf3/icons/clipgrab.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6e9a022dd8e41ec09862dfb2d3aafa99a9d9ecf3/icons/clipgrab.png</iconUrl>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>http://clipgrab.uservoice.com/</mailingListUrl>
