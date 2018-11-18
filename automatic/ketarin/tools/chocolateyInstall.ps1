@@ -4,7 +4,7 @@ $toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\Ketarin-1.8.9.zip"
+  file        = "$toolsPath\Ketarin-1.8.10.zip"
   destination = $toolsPath
 }
 
