@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>simplewall.install</id>
-    <version>2.3.7</version>
+    <version>2.3.9</version>
     <authors>Henry++</authors>
     <summary>Simple tool to configure Windows Filtering Platform.</summary>
     <description><![CDATA[Simple tool to configure Windows Filtering Platform (WFP) which can configure network activity on your computer.
