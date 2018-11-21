@@ -5,7 +5,7 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>activepresenter</id>
     <title>Active Presenter</title>
-    <version>7.3.3</version>
+    <version>7.5.0</version>
     <authors>Atomi Systems</authors>
     <owners>chocolatey</owners>
     <summary>Screen Recording and Interactive eLearning Authoring Tool</summary>
@@ -34,7 +34,7 @@ Activating with a license key will remove the watermark on appropriate outputs.
     <tags>admin cross-platform presentation recording screencast eLearning webcast freeware trial</tags>
     <copyright>Atomi Systems, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0798deaffb56c9b6ee759251c0948dec25b2b0f9/icons/activepresenter.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@0798deaffb56c9b6ee759251c0948dec25b2b0f9/icons/activepresenter.png</iconUrl>
     <releaseNotes>https://atomisystems.com/updates/ActivePresenter/v7/releasenotes_v7.html</releaseNotes>
     <docsUrl>https://atomisystems.com/tutorials</docsUrl>
     <bugTrackerUrl>https://atomisystems.com/community</bugTrackerUrl>
