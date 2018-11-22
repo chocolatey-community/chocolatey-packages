@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/65cff22d071fb30b82b8f2bdee89211b541520c7/icons/seafile-client.png" width="48" height="48"/> [seafile-client](https://chocolatey.org/packages/seafile-client)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@65cff22d071fb30b82b8f2bdee89211b541520c7/icons/seafile-client.png" width="48" height="48"/> [seafile-client](https://chocolatey.org/packages/seafile-client)
 
 
 Seafile is a next-generation open source cloud storage system with advanced support for file syncing, privacy protection and teamwork.
