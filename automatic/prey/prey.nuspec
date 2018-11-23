@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>prey</id>
-    <version>1.8.0</version>
+    <version>1.8.2</version>
     <title>Prey</title>
     <owners>chocolatey</owners>
     <authors>Fork Ltd</authors>
     <licenseUrl>https://github.com/prey/prey-node-client/blob/master/license.txt</licenseUrl>
     <projectUrl>https://preyproject.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
@@ -19,10 +19,9 @@ Prey lets you keep track of your laptop, phone and tablet whenever stolen or mis
 
 - To pass your `API_KEY` you can use `choco install prey -y -ia "'/API_KEY=foobarr123'`
 - You may need to run `C:\Windows\Prey\current\bin\prey config gui -f` after installation to configure Prey.
-
 ]]></description>
     <summary>Prey is a lightweight application to track a laptop or mobile if it gets stolen or missing.</summary>
-    <releaseNotes>https://github.com/prey/prey-node-client/releases</releaseNotes>
+    <releaseNotes>https://github.com/prey/prey-node-client/releases/tag/v1.8.2</releaseNotes>
     <tags>prey anti-theft lockdown tracking admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/prey</packageSourceUrl>
     <projectSourceUrl>https://github.com/prey/prey-node-client</projectSourceUrl>

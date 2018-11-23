@@ -7,8 +7,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\"
-  file64         = "$toolsPath\"
+  file           = "$toolsPath\prey-windows-1.8.2-x86.msi"
+  file64         = "$toolsPath\prey-windows-1.8.2-x64.msi"
   softwareName   = 'prey*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 2010, 1641)
@@ -16,4 +16,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" } }
+Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
