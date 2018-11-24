@@ -15,8 +15,8 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $allMsis = $download_page.Links | ? href -match '\.msi$' | select -expand href | % { "https://cmake.org" + $_ }
-  $allZips = $download_page.Links | ? href -match '\.zip$' | select -expand href | % { "https://cmake.org" + $_ }
+  $allMsis = $download_page.Links | ? href -match '\.msi$' | select -expand href
+  $allZips = $download_page.Links | ? href -match '\.zip$' | select -expand href
 
   $streams = @{ }
 
