@@ -65,6 +65,9 @@ TortoiseSVN provides a flexible mechanism to integrate any web based bug trackin
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png</iconUrl>
     <releaseNotes>http://tortoisesvn.net/Changelog.txt</releaseNotes>
+    <dependencies>
+      <dependency id="kb2999226" version="1.0.20181019" />
+    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
