@@ -11,9 +11,9 @@ if ($MyInvocation.InvocationName -ne '.') {
 function global:au_SearchReplace {
   $version = [version]$Latest.Version
   $silentArgs = if ($version -lt [version]'11.0') {
-    ',NodeEtwSupport'
+    ',NodePerfCtrSupport'
   }
-  $silentArgs = "/quiet ADDLOCAL=ALL REMOVE=NodePerfCtrSupport${silentArgs}"
+  $silentArgs = "/quiet ADDLOCAL=ALL REMOVE=NodeEtwSupport${silentArgs}"
 
 
   @{
