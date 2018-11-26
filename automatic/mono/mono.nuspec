@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mono</id>
-    <version>5.16.0.179</version>
+    <version>5.16.0.220</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mono</packageSourceUrl>
     <title>Mono</title>
     <authors>Miguel de Icaza,  other Mono committers</authors>
     <owners>chocolatey, Miguel de Icaza, other Mono committers</owners>
     <licenseUrl>https://www.mono-project.com/docs/faq/licensing/</licenseUrl>
     <projectUrl>https://www.mono-project.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c34f28fa8b47318d55fc0eb48dc53161af85e43b/icons/mono.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c34f28fa8b47318d55fc0eb48dc53161af85e43b/icons/mono.png</iconUrl>
     <copyright>© 2018 Mono Project</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
