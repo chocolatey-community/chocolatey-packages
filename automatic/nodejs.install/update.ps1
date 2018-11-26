@@ -54,14 +54,14 @@ function global:au_GetLatest {
 
     $url32 = $msis | ? { $_ -match 'x86' } | select -first 1
     $version = $url32 -split '\-v?' | select -last 1 -skip 1
-    $versionTwoPart = $version -replace '(^\d+\.\d+).*', "`$1"
-    if ($streams.ContainsKey($versionTwoPart)) { return ; }
+    $versionMajor = $version -replace '(^\d+)\..*', "`$1"
+    if ($streams.ContainsKey($versionMajor)) { return ; }
 
     $url64 = $msis | ? { $_ -match "\-x64" } | select -first 1
 
     if ($url32 -eq $url64) { throw "The 64bit executable is the same as the 32bit" }
 
-    $streams.Add($versionTwoPart, @{ Version = $version ; URL32 = $url32; URL64 = $url64 } )
+    $streams.Add($versionMajor, @{ Version = $version ; URL32 = $url32; URL64 = $url64 } )
   }
 
   return @{ Streams = $streams }
