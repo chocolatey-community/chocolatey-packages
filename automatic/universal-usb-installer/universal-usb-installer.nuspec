@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>universal-usb-installer</id>
-    <version>1.9.8.300</version>
+    <version>1.9.8.500</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/universal-usb-installer</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Universal USB Installer</title>
     <authors>Pendrivelinux</authors>
     <projectUrl>http://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ad69601042ca62073d91c79746b367a9241beaaa/icons/universal-usb-installer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ad69601042ca62073d91c79746b367a9241beaaa/icons/universal-usb-installer.png</iconUrl>
     <copyright>Lance www.pendrivelinux.com</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
