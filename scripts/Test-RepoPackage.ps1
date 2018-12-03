@@ -68,7 +68,7 @@ function CheckPackageSizes() {
     $packageName = $_.Directory.Name
     if ($size -gt $maxSize) {
       $friendlySize = $size / 1024 / 1024
-      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is 300 MB. Actual size was $friendlySize MB!"
+      WriteOutput -type Error "The package $packageName is too large. Maximum allowed size is $($maxSize / 1024 / 1024) MB. Actual size was $friendlySize MB!"
       SetAppveyorExitCode -ExitCode 2
     } else {
       $index = 0
