@@ -25,10 +25,11 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'YUMI\-[\d\.]+\.exe$'
+  $re = 'YUMI\-[\d\.]+[a-z]?\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $version32 = $url32 -split '[-]|\.exe' | select -last 1 -skip 1
+  $version32 = Get-Version $url32 -split '[-]|[a-z]?\.exe' | select -last 1 -skip 1
+
   @{
     URL32   = $domain + $url32
     Version = $version32
