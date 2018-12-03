@@ -1,6 +1,7 @@
 ﻿Import-Module AU
 
-$releases = 'https://www.tribler.org/download.html'
+$domain = 'https://github.com'
+$releases = "$domain/Tribler/tribler/releases/latest"
 $softwareName = 'Tribler'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -30,10 +31,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'x86\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
 
   $re = 'x64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
 
   $verRe = '\/v?'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
@@ -45,7 +46,7 @@ function global:au_GetLatest {
     URL32        = $url32
     URL64        = $url64
     Version      = $version32
-    ReleaseNotes = "https://github.com/Tribler/tribler/releases/tag/v${version32}"
+    ReleaseNotes = Get-RedirectedUrl $releases
   }
 }
 
