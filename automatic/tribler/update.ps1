@@ -4,22 +4,14 @@ $domain = 'https://github.com'
 $releases = "$domain/Tribler/tribler/releases/latest"
 $softwareName = 'Tribler'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
-
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"        = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
-      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
-    }
     ".\tools\chocolateyInstall.ps1"   = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'"         = "`${1}'$softwareName'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
-      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
@@ -50,4 +42,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor none
+update
