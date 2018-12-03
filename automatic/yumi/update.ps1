@@ -28,7 +28,7 @@ function global:au_GetLatest {
   $re = 'YUMI\-[\d\.]+[a-z]?\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $version32 = Get-Version $url32 -split '[-]|[a-z]?\.exe' | select -last 1 -skip 1
+  $version32 = $url32 -split '[-]|[a-z]?\.exe' | select -last 1 -skip 1
 
   @{
     URL32   = $domain + $url32
