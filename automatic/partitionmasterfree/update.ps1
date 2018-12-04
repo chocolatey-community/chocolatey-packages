@@ -18,6 +18,7 @@ function GetResultInformation([string]$url32) {
 
   $dest = "$env:TEMP\epm.exe"
   $checksumType = 'sha256'
+  Get-WebFile $url32 $dest
   $version = Get-Version (Get-Item $dest | % { $_.VersionInfo.ProductVersion })
   $checksum32 = Get-FileHash $dest -Algorithm $checksumType | % { $_.Hash.ToLowerInvariant() }
 
