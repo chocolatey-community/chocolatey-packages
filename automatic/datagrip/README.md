@@ -16,3 +16,9 @@ and various instruments for creating and modifying objects.
 - Refactorings that work in SQL files and schemas
 - Version control integration
 
+## Package Parameters
+- `/InstallDir:`- Installation directory, defaults to the 'Program Files (x86)\DataGrip*' directory.
+
+**note** the InstallDir folder should be an empty folder.
+
+Example: `choco install datagrip --params "/InstallDir:C:\your\install\path"`
