@@ -25,6 +25,8 @@ function Get-JavaSiteUpdates {
     [string]$padVersionUnder = '10.2.1'
  )
  
+$OS_caption = ( Get-CimInstance win32_operatingsystem -Property Caption )
+$check = @{$true=$true;$false=$false}[ ( $OS_caption -match 'Server' ) ]
 $regex = '([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,5})'
 $rev_regex = '([\d+]{5})';
 $url = Get-PackageName $package
@@ -34,7 +36,13 @@ $ie.Navigate2($url)
 $ie.Visible = $false
 while($ie.ReadyState -ne $wait) {
  start-sleep -Seconds 20
-} 
+}
+	if ( $check ) {
+		$url32 = $ie.Document.IHTMLDocument3_getElementsByTagName("a") | % { $_.href } | where { $_ -match $regex } | select -First 1
+	} else {
+		$url32 = $ie.Document.getElementsByTagName("a") | % { $_.href } | where { $_ -match $regex } | select -First 1
+	}
+  
     foreach ( $_ in $ie.Document.getElementsByTagName("a") ) {
      $url = $_.href;
          if ( $url -match $regex) {
