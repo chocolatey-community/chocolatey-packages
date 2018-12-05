@@ -5,7 +5,6 @@ param(
     [string]$a
 )
 
-$PreURL = 'https://usa.kaspersky.com/downloads/thank-you'
 switch -w ( $a ) {
 
 	'wps-office-free' {
@@ -28,7 +27,6 @@ function Get-JavaSiteUpdates {
 $OS_caption = ( Get-CimInstance win32_operatingsystem -Property Caption )
 $check = @{$true=$true;$false=$false}[ ( $OS_caption -match 'Server' ) ]
 $regex = '([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,5})'
-$rev_regex = '([\d+]{5})';
 $url = Get-PackageName $package
 if ( $url -match 'free' ) { $wait = 3 } else { $wait = 4 }
 $ie = New-Object -comobject InternetExplorer.Application
