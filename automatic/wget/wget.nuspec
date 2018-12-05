@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>wget</id>
-    <version>1.19.4</version>
+    <id>Wget</id>
+    <version>1.20</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wget</packageSourceUrl>
     <owners>chocolatey, LudicrousByte</owners>
     <title>GNU Wget</title>
     <authors>Giuseppe Scrivano,Hrvoje Nikšić,Jernej Simončič</authors>
     <projectUrl>https://www.gnu.org/software/wget/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png</iconUrl>
     <copyright>Copyright © 2010 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://www.gnu.org/copyleft/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

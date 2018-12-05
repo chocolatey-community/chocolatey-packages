@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png" width="48" height="48"/> [wget](https://chocolatey.org/packages/wget)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png" width="48" height="48"/> [wget](https://chocolatey.org/packages/wget)
 
 
 
