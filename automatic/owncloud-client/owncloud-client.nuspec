@@ -28,7 +28,7 @@ This package installs the ownCloud Sync Client on your computer.
     <tags>owncloud-client owncloud cloud sync webdav caldav carddav admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/owncloud-client</packageSourceUrl>
     <dependencies>
-      <dependency id="vcredist2013" version="12.0.30501.0" />
+      <!--<dependency id="vcredist2013" version="12.0.30501.0" />-->
     </dependencies>
   </metadata>
   <files>
