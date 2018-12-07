@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>owncloud-client</id>
-    <version>2.4.3.10188</version>
+    <version>2.5.1.10973</version>
     <title>ownCloud Windows Client</title>
     <owners>chocolatey</owners>
     <authors>ownCloud developers</authors>
@@ -13,7 +13,7 @@
     <bugTrackerUrl>https://github.com/owncloud/client/issues</bugTrackerUrl>
     <mailingListUrl>https://mailman.owncloud.org/mailman/listinfo/</mailingListUrl>
     <docsUrl>https://doc.owncloud.org/</docsUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/owncloud.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/owncloud.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
