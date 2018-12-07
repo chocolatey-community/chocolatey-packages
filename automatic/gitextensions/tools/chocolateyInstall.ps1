@@ -7,7 +7,7 @@ $packageArgs = @{
     softwareName   = 'Git Extensions*'
     fileType       = 'msi'
     file           = "$toolsDir\GitExtensions-3.00.00.03-RC2.msi"
-    silentArgs     = '/quiet /norestart ADDDEFAULT=ALL REMOVE=AddToPath,Icons'
+    silentArgs     = '/quiet /norestart ADDDEFAULT=ALL REMOVE=AddToPath'
     validExitCodes = @(0, 3010, 1641)
 }
 
