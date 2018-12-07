@@ -357,6 +357,7 @@ function RunChocoProcess() {
   $args = @($arguments) + @(
     '--yes'
     "--execution-timeout=$timeout"
+    "--ignorepackagecodes"
   )
   if ($arguments[0] -eq 'uninstall') {
     $args += @(
