@@ -9,7 +9,7 @@
     <title>Patch my PC</title>
     <authors>Patch My PC</authors>
     <projectUrl>http://patchmypc.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png</iconUrl>
     <copyright>© 2017 Patch My PC</copyright>
     <licenseUrl>https://patchmypc.net/about</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

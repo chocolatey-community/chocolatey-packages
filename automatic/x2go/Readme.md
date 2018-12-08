@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4eec1b0defbec7a1156c500f312109c37a32be1/icons/x2go.png" width="48" height="48"/> [x2go](https://chocolatey.org/packages/x2go)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4eec1b0defbec7a1156c500f312109c37a32be1/icons/x2go.png" width="48" height="48"/> [x2go](https://chocolatey.org/packages/x2go)
 
 2Go enables you to access a graphical desktop of a computer over a low bandwidth (or high bandwidth) connection. 
 

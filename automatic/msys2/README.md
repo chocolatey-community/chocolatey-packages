@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png" width="48" height="48"/> [msys2](https://chocolatey.org/packages/msys2)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png" width="48" height="48"/> [msys2](https://chocolatey.org/packages/msys2)
 
 MSYS2 is a software distro and building platform for Windows.
 

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf2b66066fc04a6517bbd7bfef76fe2653b5ff7c/icons/Clover.png" width="48" height="48"/> [Clover](https://chocolatey.org/packages/Clover)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@cf2b66066fc04a6517bbd7bfef76fe2653b5ff7c/icons/Clover.png" width="48" height="48"/> [Clover](https://chocolatey.org/packages/Clover)
 
 
 Brings Chrome-Style Tabs to Windows Explorer.

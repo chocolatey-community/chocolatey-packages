@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9282e769979fbb235869051249a70d56517f4ff9/icons/bitdefender-usb-immunizer.png" width="48" height="48"/> [bitdefender-usb-immunizer](https://chocolatey.org/packages/bitdefender-usb-immunizer)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9282e769979fbb235869051249a70d56517f4ff9/icons/bitdefender-usb-immunizer.png" width="48" height="48"/> [bitdefender-usb-immunizer](https://chocolatey.org/packages/bitdefender-usb-immunizer)
 
 
 Bitdefender USB Immunizer is a handy utility designed to allow users to immunize their USB storage devices or SD cards against infections with autorun-based malware.

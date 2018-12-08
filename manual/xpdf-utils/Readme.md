@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9de2a5aefc0c7d6facb695f0ac0017328ece49e8/icons/xpdf-utils.png" height="48" width="48" /> xpdf-utils](https://chocolatey.org/packages/xpdf-utils)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9de2a5aefc0c7d6facb695f0ac0017328ece49e8/icons/xpdf-utils.png" height="48" width="48" /> xpdf-utils](https://chocolatey.org/packages/xpdf-utils)
 
 Xpdf is an open source viewer for Portable Document Format (PDF) files. (These are also sometimes also called 'Acrobat' files, from the name of Adobe's PDF software.) The Xpdf project also includes a PDF text extractor, PDF-to-PostScript converter, and various other utilities.
 

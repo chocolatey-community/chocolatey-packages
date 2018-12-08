@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/git-disable-gcm</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/git-disable-gcm</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Disable Git Credential Manager</summary>

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png" width="48" height="48"/> [vlc](https://chocolatey.org/packages/vlc)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png" width="48" height="48"/> [vlc](https://chocolatey.org/packages/vlc)
 
 
 VLC is a free and open source cross-platform multimedia player and framework that plays most multimedia files as well as DVD, Audio CD, VCD, and various streaming protocols.

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ec2c867f6b43819719a477d59908a06fc176716a/icons/dotnet.png" width="48" height="48"/> [DotNet4.0](https://chocolatey.org/packages/DotNet4.0)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ec2c867f6b43819719a477d59908a06fc176716a/icons/dotnet.png" width="48" height="48"/> [DotNet4.0](https://chocolatey.org/packages/DotNet4.0)
 
 
 NOTE: This package has been created solely as a dependency for chocolatey itself, please do not attempt to install.  Any attempt to install this package will likely result in an error message.

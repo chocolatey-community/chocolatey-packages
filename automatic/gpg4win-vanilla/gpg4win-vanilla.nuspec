@@ -8,7 +8,7 @@
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://www.gpg4win.org/license.html</licenseUrl>
     <projectUrl>http://www.gpg4win.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Gpg4win-vanilla (GNU Privacy Guard for Windows) only installs the actual file encryption and digital signature command-line tool gpg.exe.
 

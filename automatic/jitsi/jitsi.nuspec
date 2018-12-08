@@ -10,7 +10,7 @@
     <licenseUrl>https://github.com/jitsi/jitsi/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://jitsi.org/</projectUrl>
     <projectSourceUrl>https://github.com/jitsi/jitsi</projectSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/jitsi.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/jitsi.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://jitsi.org/mailing-lists/</mailingListUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->

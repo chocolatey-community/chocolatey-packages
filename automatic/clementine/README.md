@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/clementine.svg" width="48" height="48"/> [clementine](https://chocolatey.org/packages/clementine)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/clementine.svg" width="48" height="48"/> [clementine](https://chocolatey.org/packages/clementine)
 
 
 Clementine is a modern music player and library organizer. It is inspired by Amarok 1.4, focusing on a fast and easy-to-use interface for searching and playing your music.

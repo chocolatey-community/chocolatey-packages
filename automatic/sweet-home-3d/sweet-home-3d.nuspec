@@ -9,7 +9,7 @@
     <title>Sweet Home 3D</title>
     <authors>Emmanuel Puybaret</authors>
     <projectUrl>http://www.sweethome3d.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/736a00f718c84566b58be6146579ed1a6ce7648e/icons/sweet-home-3d.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@736a00f718c84566b58be6146579ed1a6ce7648e/icons/sweet-home-3d.png</iconUrl>
     <copyright>© Copyrights 2006-2017 eTeks - All rights reserved</copyright>
     <licenseUrl>http://www.sweethome3d.com/license.jsp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

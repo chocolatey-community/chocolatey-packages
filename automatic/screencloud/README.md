@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1c7defed5af3d4f87905acc3d19cfa1903e78bc4/icons/screencloud.svg" width="48" height="48"/> [screencloud](https://chocolatey.org/packages/screencloud)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1c7defed5af3d4f87905acc3d19cfa1903e78bc4/icons/screencloud.svg" width="48" height="48"/> [screencloud](https://chocolatey.org/packages/screencloud)
 
 This is the source code for the ScreenCloud client. ScreenCloud is an easy to use screenshot sharing tool consisting of a cross-platform client and a sharing website: [http://screencloud.net/](http://screencloud.net/)
 

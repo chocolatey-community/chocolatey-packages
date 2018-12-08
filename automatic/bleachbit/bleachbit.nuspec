@@ -37,7 +37,7 @@ BleachBit has many useful features designed to help you easily clean your comput
     <tags>foss cross-platform admin bleachbit disk cleaner privacy</tags>
     <licenseUrl>https://github.com/bleachbit/bleachbit/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
     <releaseNotes>https://www.bleachbit.org/news</releaseNotes>
     <dependencies>
       <dependency id="bleachbit.install" version="[2.0]" />

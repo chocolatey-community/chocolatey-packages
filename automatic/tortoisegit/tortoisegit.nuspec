@@ -55,7 +55,7 @@ TortoiseGit provides a flexible mechanism to integrate any web based bug trackin
     <bugTrackerUrl>https://tortoisegit.org/issues</bugTrackerUrl>
     <docsUrl>https://tortoisegit.org/docs/</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/tortoisegit-dev</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/25a40985eb12778b130d754058887895f8b1bc40/icons/tortoisegit.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@25a40985eb12778b130d754058887895f8b1bc40/icons/tortoisegit.png</iconUrl>
     <tags>git version-control dvcs admin foss</tags>
     <copyright>© TortoiseGit</copyright>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>

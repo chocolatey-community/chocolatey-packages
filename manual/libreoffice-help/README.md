@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg" width="48" height="48"/> [libreoffice-help](https://chocolatey.org/packages/libreoffice-help)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg" width="48" height="48"/> [libreoffice-help](https://chocolatey.org/packages/libreoffice-help)
 
 **NOTE: THIS PACKAGE IS NOT MAINTAINED. See https://github.com/chocolatey/chocolatey-coreteampackages/issues/762**
 

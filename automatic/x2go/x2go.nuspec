@@ -9,7 +9,7 @@
     <title>X2go Client</title>
     <authors>X2go Team</authors>
     <projectUrl>http://wiki.x2go.org/doku.php</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4eec1b0defbec7a1156c500f312109c37a32be1/icons/x2go.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4eec1b0defbec7a1156c500f312109c37a32be1/icons/x2go.png</iconUrl>
     <licenseUrl>http://wiki.x2go.org/doku.php/sources:start#licenses_of_x2go</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>http://git.x2go.org/</projectSourceUrl>

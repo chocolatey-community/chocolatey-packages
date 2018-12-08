@@ -9,7 +9,7 @@
     <title>MusicBrainz Picard</title>
     <authors>MusicBrainz</authors>
     <projectUrl>http://musicbrainz.org/doc/MusicBrainz_Picard</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/picard.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/picard.svg</iconUrl>
     <copyright>Copyright © 2004-2014 Robert Kaye, Lukáš Lalinský and others</copyright>
     <licenseUrl>https://github.com/metabrainz/picard/blob/master/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

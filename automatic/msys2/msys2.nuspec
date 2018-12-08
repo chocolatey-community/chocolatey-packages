@@ -8,7 +8,7 @@
     <owners>chocolatey, userzimmermann, petemounce</owners>
     <licenseUrl>https://github.com/userzimmermann/choco-packages/blob/master/msys2/NOTICE</licenseUrl>
     <projectUrl>http://msys2.github.io</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[MSYS2 is a software distro and building platform for Windows.
 

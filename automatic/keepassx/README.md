@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d8c632d9d68fad6f36d31c68e9d886cd2c8d1748/icons/keepassx.png" width="48" height="48"/> [keepassx](https://chocolatey.org/packages/keepassx)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d8c632d9d68fad6f36d31c68e9d886cd2c8d1748/icons/keepassx.png" width="48" height="48"/> [keepassx](https://chocolatey.org/packages/keepassx)
 
 
 **KeePassX** saves many different information e.g. user names, passwords, urls, attachments and comments in one single database. For a better management user-defined titles and icons can be specified for each single entry. Furthermore the entries are sorted in groups, which are customizable as well.

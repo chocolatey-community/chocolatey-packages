@@ -11,7 +11,7 @@
     <copyright>Copyright (c) 2007-2017 Oleg Danilov. All rights reserved.</copyright>
     <licenseUrl>http://www.rapidee.com/en/license</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1f5bb6a276f2935ad74e3b2ef89205459955be11/icons/rapidee.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1f5bb6a276f2935ad74e3b2ef89205459955be11/icons/rapidee.png</iconUrl>
     <tags>environment variable path editor freeware</tags>
     <summary>Windows environment variables management</summary>
     <description><![CDATA[Rapid Environment Editor (RapidEE) is an environment variables editor. It includes an easy to use GUI and replaces the small and inconvenient Windows edit box.

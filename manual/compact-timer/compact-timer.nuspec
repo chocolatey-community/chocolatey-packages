@@ -9,7 +9,7 @@
     <owners>purity</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://www.compacttimerpro.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/compact-timer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/compact-timer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Compact Timer is a completely free countdown timer, countup timer, stop Watch, reminder and alarm clock all in one program. You can run any of your timers at the same time. All your timers are saved automatically.

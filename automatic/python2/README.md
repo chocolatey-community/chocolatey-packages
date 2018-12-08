@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg" width="48" height="48"/> [python2](https://chocolatey.org/packages/python2)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg" width="48" height="48"/> [python2](https://chocolatey.org/packages/python2)
 
 
 Python 2.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 2.x and see almost immediate gains in productivity and lower maintenance costs.

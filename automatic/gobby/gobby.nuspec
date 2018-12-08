@@ -9,7 +9,7 @@
     <title>Gobby</title>
     <authors>aburgm</authors>
     <projectUrl>https://gobby.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
     <copyright>Copyright © 2008-2014 Armin Burgmeier</copyright>
     <licenseUrl>https://github.com/gobby/gobby/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

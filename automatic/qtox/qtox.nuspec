@@ -39,7 +39,7 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
     <copyright>qTox contributors</copyright>
     <licenseUrl>https://github.com/qTox/qTox/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg</iconUrl>
     <releaseNotes>https://github.com/qTox/qTox/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
   <files>

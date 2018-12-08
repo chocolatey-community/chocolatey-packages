@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e10d54a324b6e69d75aaecd061772762d27c68ba/icons/no-ip-duc.png" width="48" height="48"/> [no-ip-duc](https://chocolatey.org/packages/no-ip-duc)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e10d54a324b6e69d75aaecd061772762d27c68ba/icons/no-ip-duc.png" width="48" height="48"/> [no-ip-duc](https://chocolatey.org/packages/no-ip-duc)
 
 
 Keep your current IP address in sync with your No-IP host or domain with the Dynamic Update Client (DUC). The dynamic DNS update client continually checks for IP address changes in the background and automatically updates the DNS at No-IP whenever it changes.

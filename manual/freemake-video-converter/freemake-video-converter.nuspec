@@ -24,7 +24,7 @@ Convert videos free for any device with video playback. Use ready profiles for A
     <copyright>Copyright 2010 Ellora Assets Corporation.</copyright>
     <licenseUrl>http://www.freemake.com/eula_fvc/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e8c2d8438bd429e4815b91eefd248b99b0bd84b/icons/freemake-video-converter.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@2e8c2d8438bd429e4815b91eefd248b99b0bd84b/icons/freemake-video-converter.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

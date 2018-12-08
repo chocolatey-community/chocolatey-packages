@@ -9,7 +9,7 @@
     <title>WiX Toolset</title>
     <authors>Rob Mensching, Bob Arnson</authors>
     <projectUrl>http://wixtoolset.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
     <copyright>2009 - 2016 Outercurve Foundation</copyright>
     <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

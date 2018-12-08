@@ -8,7 +8,7 @@
     <owners>chocolatey, Jason Denizac, Friedrich von Never</owners>
     <licenseUrl>https://www.graphviz.org/License.php</licenseUrl>
     <projectUrl>https://www.graphviz.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description><![CDATA[Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. It has important applications in networking, bioinformatics, software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
 

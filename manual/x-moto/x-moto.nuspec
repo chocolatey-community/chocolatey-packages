@@ -9,7 +9,7 @@
     <title>X-Moto</title>
     <authors>X-Moto Contributors</authors>
     <projectUrl>https://xmoto.tuxfamily.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/267ca0fe62e8e0947eacab7bee70bc8c31dadeb6/icons/x-moto.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@267ca0fe62e8e0947eacab7bee70bc8c31dadeb6/icons/x-moto.png</iconUrl>
     <copyright>© 2005-2017 XMoto</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

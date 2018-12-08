@@ -29,7 +29,7 @@ You can extend Winamp's functionality through the use of plug-ins, which are ava
     <copyright>Nullsoft</copyright>
     <licenseUrl>https://www.getwinamp.net/mirror/website/WINAMP_C/LEGAL/DISTRIBUTION.HTM</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fd66d6390d7a1521a22aa1235dabff5eff38147b/icons/winamp.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@fd66d6390d7a1521a22aa1235dabff5eff38147b/icons/winamp.png</iconUrl>
     <releaseNotes>http://forums.winamp.com/showthread.php?t=374929</releaseNotes>
     <mailingListUrl>http://forums.winamp.com/</mailingListUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/winamp</packageSourceUrl>

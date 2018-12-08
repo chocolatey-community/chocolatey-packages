@@ -12,7 +12,7 @@
     <projectSourceUrl>https://git.blender.org/gitweb/</projectSourceUrl>
     <bugTrackerUrl>https://developer.blender.org/maniphest/</bugTrackerUrl>
     <mailingListUrl>https://wiki.blender.org/index.php/Dev:Doc/Contact#Mailing_Lists</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[

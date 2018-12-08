@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/19caae85d0eb96020c2aed7b02208349d611b980/icons/sidesync.png" width="48" height="48"/> [sidesync](https://chocolatey.org/packages/sidesync)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@19caae85d0eb96020c2aed7b02208349d611b980/icons/sidesync.png" width="48" height="48"/> [sidesync](https://chocolatey.org/packages/sidesync)
 
 Using SideSync, you can conveniently share the screen and data between your PC and mobile device. Receive alarms of your phone through PC and use various features of your phone on the computer. Enjoy the smarter and more convenient life with SideSync.
 

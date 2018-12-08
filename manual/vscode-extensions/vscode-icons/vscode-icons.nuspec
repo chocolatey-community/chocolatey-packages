@@ -10,7 +10,7 @@
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons</projectUrl>
     <projectSourceUrl>https://github.com/robertohuertasm/vscode-icons</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-icons</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/932559dcf7cd36a4055adad2dc46859c595c1e4e/icons/vscode_icons.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@932559dcf7cd36a4055adad2dc46859c595c1e4e/icons/vscode_icons.png</iconUrl>
     <licenseUrl>https://marketplace.visualstudio.com/items/robertohuertasm.vscode-icons/license</licenseUrl>
     <docsUrl>https://github.com/robertohuertasm/vscode-icons/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/robertohuertasm/vscode-icons/issues</bugTrackerUrl>

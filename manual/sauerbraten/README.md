@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sauerbraten.png" width="48" height="48"/> [sauerbraten](https://chocolatey.org/packages/sauerbraten)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/sauerbraten.png" width="48" height="48"/> [sauerbraten](https://chocolatey.org/packages/sauerbraten)
 
 
 Cube 2: Sauerbraten is a free multiplayer & singleplayer first person shooter, the successor of the Cube FPS.

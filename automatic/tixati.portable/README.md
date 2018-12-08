@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bee4bc391df114723011dbd5b8a8af2a17c6bf2e/icons/tixati.png" width="48" height="48"/> [tixati.portable](https://chocolatey.org/packages/tixati.portable)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@bee4bc391df114723011dbd5b8a8af2a17c6bf2e/icons/tixati.png" width="48" height="48"/> [tixati.portable](https://chocolatey.org/packages/tixati.portable)
 
 
 __Tixati__ is one of the most advanced and flexible BitTorrent clients available.  And unlike many other clients, Tixati contains _NO SPYWARE, NO ADS,_ and _NO GIMMICKS._

@@ -24,7 +24,7 @@ For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     <licenseUrl>http://us.php.net/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://secure.php.net/ChangeLog-5.php#5.5.38</releaseNotes>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg</iconUrl>
     <bugTrackerUrl>https://bugs.php.net/</bugTrackerUrl>
     <docsUrl>https://secure.php.net/docs.php</docsUrl>
     <projectSourceUrl>http://git.php.net</projectSourceUrl>

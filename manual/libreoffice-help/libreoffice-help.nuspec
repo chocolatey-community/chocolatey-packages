@@ -9,7 +9,7 @@
     <owners>chocolatey</owners>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 This package installs the help pack for LibreOffice, the free and open source office suite.

@@ -9,7 +9,7 @@
     <authors>Inkscape developers</authors>
     <licenseUrl>https://git.launchpad.net/inkscape/tree/COPYING</licenseUrl>
     <projectUrl>https://inkscape.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[

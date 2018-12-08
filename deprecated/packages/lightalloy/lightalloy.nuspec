@@ -20,7 +20,7 @@ Deprecated due to no interest.
     <copyright></copyright>
     <licenseUrl>http://www.light-alloy.ru/help/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/lightalloy.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4a49519947c3cff55c17a0b08266c56b0613e64/icons/lightalloy.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/deprecated/lightalloy</packageSourceUrl>
   </metadata>
   <files>

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png" width="48" height="48"/> [classic-shell](https://chocolatey.org/packages/classic-shell)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png" width="48" height="48"/> [classic-shell](https://chocolatey.org/packages/classic-shell)
 
 
 Classic Shell is a collection of usability enhancements for Windows. The main features are:

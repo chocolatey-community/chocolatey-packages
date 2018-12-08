@@ -13,7 +13,7 @@
     <bugTrackerUrl>https://sourceforge.net/p/flightgear/codetickets/</bugTrackerUrl>
     <docsUrl>http://wiki.flightgear.org/Main_Page</docsUrl>
     <mailingListUrl>https://forum.flightgear.org/</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flightgear.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/flightgear.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 FlightGear is an open-source flight simulator.

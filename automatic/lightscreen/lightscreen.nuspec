@@ -20,7 +20,7 @@
     <projectUrl>http://lightscreen.com.ar/</projectUrl>
     <projectSourceUrl>https://github.com/ckaiser/Lightscreen</projectSourceUrl>
     <licenseUrl>https://github.com/ckaiser/Lightscreen/blob/master/LICENSE</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/297d72fc4fc0e45b5943743a659bdccc79dbd985/icons/lightscreen.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@297d72fc4fc0e45b5943743a659bdccc79dbd985/icons/lightscreen.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <releaseNotes>http://lightscreen.com.ar/whatsnew</releaseNotes>
     </metadata>

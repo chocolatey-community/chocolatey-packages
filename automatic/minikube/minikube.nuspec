@@ -9,7 +9,7 @@
     <title>Minikube: Run Kubernetes locally</title>
     <authors>Google</authors>
     <projectUrl>https://kubernetes.io</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0d3be7b221c8110f562a0059a8818238a1cb46ec/icons/minikube.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@0d3be7b221c8110f562a0059a8818238a1cb46ec/icons/minikube.png</iconUrl>
     <copyright>(c) 2017 Kubernetes</copyright>
     <licenseUrl>https://github.com/kubernetes/minikube/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

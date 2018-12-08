@@ -10,7 +10,7 @@
     <licenseUrl>http://www.gnu.org/licenses/gpl.txt</licenseUrl>
     <projectUrl>http://www.antp.be/software/renamer</projectUrl>
     <mailingListUrl>http://forum.antp.be/phpbb2/index.php?c=5</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ant-renamer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ant-renamer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>

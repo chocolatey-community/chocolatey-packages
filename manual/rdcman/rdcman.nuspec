@@ -8,7 +8,7 @@
     <authors>Julian Burger</authors>
     <owners>Anthony Mastrean</owners>
     <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=44989</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cfd84d3d546b3479bb2c5ece367867ba6e495c30/icons/rdcman.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@cfd84d3d546b3479bb2c5ece367867ba6e495c30/icons/rdcman.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://gist.github.com/jberezanski/d50e5bf9ce0e1f25aea4</licenseUrl>
     <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>

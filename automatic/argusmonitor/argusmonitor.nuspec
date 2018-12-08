@@ -9,7 +9,7 @@
     <title>Argus Monitor (Install)</title>
     <authors>Argotronic UG (haftungsbeschränkt)</authors>
     <projectUrl>https://www.argotronic.com/en/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db561d6c86814c0322bba7f2571d56b6bb9f1125/icons/argusmonitor.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@db561d6c86814c0322bba7f2571d56b6bb9f1125/icons/argusmonitor.png</iconUrl>
     <copyright>Copyright © 2008-2017 Argotronic UG (haftungsbeschränkt)</copyright>
     <licenseUrl>https://www.argotronic.com/en/gtc.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

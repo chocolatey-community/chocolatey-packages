@@ -9,7 +9,7 @@
     <authors>KeePass Team</authors>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <projectUrl>http://keepass.info/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 KeePass Classic (1.x) is a free, open source, light-weight and easy-to-use password manager.

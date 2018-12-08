@@ -33,7 +33,7 @@ N/A
         <licenseUrl>https://github.com/mattermost/desktop/blob/master/LICENSE.txt</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <!-- Source: https://github.com/mattermost/desktop/blob/master/src/assets/appicon.png -->
-        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png</iconUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png</iconUrl>
         <releaseNotes>https://github.com/mattermost/desktop/releases</releaseNotes>  
         <!-- Specific to Chocolatey -->
         <projectSourceUrl>https://github.com/mattermost/desktop</projectSourceUrl>

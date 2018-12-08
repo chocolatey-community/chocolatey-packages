@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d7bfe343c5b5698b26d587defcd9009301d09f55/icons/lightalloy.png" width="48" height="48"/> [lightalloy](https://chocolatey.org/packages/lightalloy)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d7bfe343c5b5698b26d587defcd9009301d09f55/icons/lightalloy.png" width="48" height="48"/> [lightalloy](https://chocolatey.org/packages/lightalloy)
 
 
 Complete aesthetically pleasing video player with built-in codecs.

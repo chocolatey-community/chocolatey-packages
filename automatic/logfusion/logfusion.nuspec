@@ -8,7 +8,7 @@
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.logfusion.ca</projectUrl>
     <licenseUrl>https://www.logfusion.ca/License/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cb12fa392bf8b8ee1cffabb8084994ee01516a49/icons/logfusion.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@cb12fa392bf8b8ee1cffabb8084994ee01516a49/icons/logfusion.png</iconUrl>
     <docsUrl>https://www.logfusion.ca/Help/</docsUrl>
     <mailingListUrl>https://www.logfusion.ca/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

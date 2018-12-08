@@ -9,7 +9,7 @@
     <title>LibreCAD</title>
     <authors>LibreCAD community</authors>
     <projectUrl>http://librecad.org/cms/home.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/librecad.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/librecad.svg</iconUrl>
     <copyright>What is the copyright</copyright>
     <licenseUrl>https://github.com/LibreCAD/LibreCAD/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -8,7 +8,7 @@
     <authors>Ember Development Team</authors>
     <owners>chocolatey, gep13</owners>
     <projectUrl>http://emberjs.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d24c0fffa284ccddcb6d8ad862dd77c7508b97df/icons/googlechrome-ember-inspector.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d24c0fffa284ccddcb6d8ad862dd77c7508b97df/icons/googlechrome-ember-inspector.png</iconUrl>
     <projectSourceUrl>https://github.com/emberjs/ember-inspector</projectSourceUrl>
     <docsUrl>https://github.com/emberjs/ember-inspector/blob/master/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/emberjs/ember-inspector/issues</bugTrackerUrl>

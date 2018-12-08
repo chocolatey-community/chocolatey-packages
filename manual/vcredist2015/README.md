@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/20ae24c36d6a3fa6c8db2a7bce038e9244dbcd59/icons/vcredist2015.png" width="48" height="48"/> [vcredist2015](https://chocolatey.org/packages/vcredist2015)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@20ae24c36d6a3fa6c8db2a7bce038e9244dbcd59/icons/vcredist2015.png" width="48" height="48"/> [vcredist2015](https://chocolatey.org/packages/vcredist2015)
 
 Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 3 installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015 Update 3 and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2015 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
 

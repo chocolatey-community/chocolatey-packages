@@ -9,7 +9,7 @@
     <title>The Battle for Wesnoth</title>
     <authors>David White and others</authors>
     <projectUrl>http://www.wesnoth.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/333ef9e0436d235bd3fa6b7ca2ed68cf799072d5/icons/wesnoth.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@333ef9e0436d235bd3fa6b7ca2ed68cf799072d5/icons/wesnoth.png</iconUrl>
     <copyright>2003–2016 The Battle for Wesnoth</copyright>
     <licenseUrl>http://wiki.wesnoth.org/Wesnoth:Copyrights</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

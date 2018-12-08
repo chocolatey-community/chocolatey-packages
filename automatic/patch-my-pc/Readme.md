@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png" width="48" height="48"/> [patch-my-pc](https://chocolatey.org/packages/patch-my-pc)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e181cd354f3b03be5a92e204b4e3a03274578e40/icons/patch-my-pc.png" width="48" height="48"/> [patch-my-pc](https://chocolatey.org/packages/patch-my-pc)
 
 
 A key component of staying safe online is keeping your computer up-to-date. Hackers and virus writers love outdated software. It might contain a security vulnerability or "hole" that can provide them with access to your computer. Outdated software can also be buggy, or have performance issues, which is usually fixed with a newer version of the software. These are two of the main reasons why it is important to keep the software on your computer updated (or "patched").

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg" width="48" height="48"/> [bluefish](https://chocolatey.org/packages/bluefish)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg" width="48" height="48"/> [bluefish](https://chocolatey.org/packages/bluefish)
 
 
 Bluefish is a powerful editor targeted towards programmers and webdevelopers, with many options to write websites, scripts and programming code. Bluefish supports many programming and markup languages.

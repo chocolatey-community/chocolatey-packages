@@ -7,7 +7,7 @@
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.itunesfusion.com</projectUrl>
     <licenseUrl>https://www.itunesfusion.com/License/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1e793798a1b6d9c6a0fc2b4fe91c850fa253ade1/icons/itunesfusion.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1e793798a1b6d9c6a0fc2b4fe91c850fa253ade1/icons/itunesfusion.png</iconUrl>
     <docsUrl>https://www.itunesfusion.com/Help/</docsUrl>
     <mailingListUrl>https://www.itunesfusion.com/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

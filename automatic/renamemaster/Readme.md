@@ -1,3 +1,3 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/430343e7340dd59994b68ec86842b65ed74466ed/icons/renamemaster.png" width="48" height="48"/> [renamemaster](https://chocolatey.org/packages/renamemaster)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@430343e7340dd59994b68ec86842b65ed74466ed/icons/renamemaster.png" width="48" height="48"/> [renamemaster](https://chocolatey.org/packages/renamemaster)
 
 Rename Master is a freeware utility designed to rename multiple files with a just few clicks. Anyone that has worked with websites, file archives, or collections of music, videos, or pictures has probably spent way too much time renaming hundreds of files. This utility will add, remove, or replace parts of the filename with ease and also supports renaming via file properties, MP3 tags, JPEG JFIF and EXIF tags, Video tags, and text files. Batch renaming that's simple to use, yet still very powerful.

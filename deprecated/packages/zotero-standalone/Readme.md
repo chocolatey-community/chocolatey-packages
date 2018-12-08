@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/430b7ebac494468d32c2c20e362a01321a483642/icons/zotero-standalone.png" height="48" width="48" /> zotero-standalone](https://chocolatey.org/packages/zotero-standalone)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@430b7ebac494468d32c2c20e362a01321a483642/icons/zotero-standalone.png" height="48" width="48" /> zotero-standalone](https://chocolatey.org/packages/zotero-standalone)
 
 
 [Deprecated](https://github.com/chocolatey/chocolatey-coreteampackages/issues/1089) due to upstream name change. 

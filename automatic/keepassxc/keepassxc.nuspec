@@ -42,7 +42,7 @@ N/A
     <licenseUrl>https://github.com/keepassxreboot/keepassxc/blob/develop/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!-- Source: https://github.com/keepassxreboot/keepassxc/blob/develop/share/icons/application/scalable/apps/keepassxc.svgz -->
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg</iconUrl>
     <releaseNotes>https://github.com/keepassxreboot/keepassxc/releases</releaseNotes>  
     <!-- Specific to Chocolatey -->
     <projectSourceUrl>https://github.com/keepassxreboot/keepassxc/</projectSourceUrl>

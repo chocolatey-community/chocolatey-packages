@@ -9,7 +9,7 @@
     <title>The Magical Jelly Bean Keyfinder</title>
     <authors>Magical Jelly Bean</authors>
     <projectUrl>http://www.magicaljellybean.com/keyfinder/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4d1b2ee166754abb43796875684dbf5be79b2635/icons/keyfinder.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4d1b2ee166754abb43796875684dbf5be79b2635/icons/keyfinder.png</iconUrl>
     <copyright>© 2017 Magical Jelly Bean. All Rights Reserved</copyright>
     <licenseUrl>http://www.magicaljellybean.com/tos/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

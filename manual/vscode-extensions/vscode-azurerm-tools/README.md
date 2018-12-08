@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6182f6eb471a17f0aeee3e05dc9f1ad5d8c9d1e3/icons/vscode-azurerm-tools.png" width="48" height="48"/> [vscode-azurerm-tools](https://chocolatey.org/packages/vscode-azurerm-tools)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6182f6eb471a17f0aeee3e05dc9f1ad5d8c9d1e3/icons/vscode-azurerm-tools.png" width="48" height="48"/> [vscode-azurerm-tools](https://chocolatey.org/packages/vscode-azurerm-tools)
 
 This extension provides language support for Azure Resource Manager deployment templates and template language expressions.
 

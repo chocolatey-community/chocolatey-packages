@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/911ce256e74048c93c3d64feb2a36751d0a19dfd/icons/putty.png" width="48" height="48"/> [putty](https://chocolatey.org/packages/putty)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@911ce256e74048c93c3d64feb2a36751d0a19dfd/icons/putty.png" width="48" height="48"/> [putty](https://chocolatey.org/packages/putty)
 
 PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms, along with an `xterm` terminal emulator.
 

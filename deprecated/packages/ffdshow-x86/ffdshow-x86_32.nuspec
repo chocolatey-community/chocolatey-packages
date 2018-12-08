@@ -9,7 +9,7 @@
     <owners>http://ffdshow-tryout.sourceforge.net/wiki/credits</owners>
     <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
     <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffdshow.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/TomOne/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffdshow.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 **NOTE:** This package has been deprecated in favour of the ffdshow package

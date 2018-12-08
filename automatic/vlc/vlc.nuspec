@@ -33,7 +33,7 @@ Example: `choco install --params "'/Language:fr'"` *Will set the language of VLC
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vlc</packageSourceUrl>
     <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
     <tags>vlc foss cross-platform multimedia audio video mp3 dvd avi media player admin</tags>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

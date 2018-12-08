@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e5fb8d88f655ec82c1b56702686d9627cfc3ac2e/icons/nssm.png" width="48" height="48"/> [nssm](https://chocolatey.org/packages/nssm)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e5fb8d88f655ec82c1b56702686d9627cfc3ac2e/icons/nssm.png" width="48" height="48"/> [nssm](https://chocolatey.org/packages/nssm)
 
 nssm is a service helper which doesn't suck. srvany and other service helper programs suck because they don't handle failure of the application running as a service. If you use such a program you may see a service listed as started when in fact the application has died. nssm monitors the running service and will restart it if it dies. With nssm you know that if a service says it's running, it really is. Alternatively, if your application is well-behaved you can configure nssm to absolve all responsibility for restarting it and let Windows take care of recovery actions.
 

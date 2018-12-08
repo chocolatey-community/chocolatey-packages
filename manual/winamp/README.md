@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fd66d6390d7a1521a22aa1235dabff5eff38147b/icons/winamp.png" width="48" height="48"/> [winamp](https://chocolatey.org/packages/winamp)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@fd66d6390d7a1521a22aa1235dabff5eff38147b/icons/winamp.png" width="48" height="48"/> [winamp](https://chocolatey.org/packages/winamp)
 
 Winamp is a skinnable, multi-format media player.
 

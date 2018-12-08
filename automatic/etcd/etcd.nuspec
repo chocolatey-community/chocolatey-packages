@@ -9,7 +9,7 @@
     <title>etcd (Install)</title>
     <authors>CoreOS</authors>
     <projectUrl>https://github.com/coreos/etcd</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
     <copyright>(c) 2017 CoreOS, Inc</copyright>
     <licenseUrl>https://github.com/coreos/etcd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

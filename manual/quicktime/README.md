@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/quicktime.png" width="48" height="48"/> [Quicktime](https://chocolatey.org/packages/Quicktime)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/quicktime.png" width="48" height="48"/> [Quicktime](https://chocolatey.org/packages/Quicktime)
 
 
 Quicktime is a powerful multimedia technology with a built-in media player. QuickTime lets you view Internet video, HD movie trailers,

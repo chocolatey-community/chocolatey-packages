@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1e793798a1b6d9c6a0fc2b4fe91c850fa253ade1/icons/itunesfusion.png" width="48" height="48"/> [itunesfusion](https://chocolatey.org/packages/itunesfusion)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1e793798a1b6d9c6a0fc2b4fe91c850fa253ade1/icons/itunesfusion.png" width="48" height="48"/> [itunesfusion](https://chocolatey.org/packages/itunesfusion)
 
 
 Sync iTunes with almost any device! iTunesFusion (formerly iTunes Sync) makes it easy to sync iTunes with almost any phone, tablet or MP3 player. Fast and easy to use, with customizable settings for power-users like custom file naming based on tags.

@@ -9,7 +9,7 @@
     <title>Xpdf utils</title>
     <authors>Glyph &amp; Cog, LLC</authors>
     <projectUrl>http://www.foolabs.com/xpdf/home.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9de2a5aefc0c7d6facb695f0ac0017328ece49e8/icons/xpdf-utils.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9de2a5aefc0c7d6facb695f0ac0017328ece49e8/icons/xpdf-utils.png</iconUrl>
     <copyright>Glyph &amp; Cog, LLC</copyright>
     <licenseUrl>http://www.foolabs.com/xpdf/about.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

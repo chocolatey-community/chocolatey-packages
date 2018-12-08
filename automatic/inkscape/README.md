@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg" width="48" height="48"/> [InkScape](https://chocolatey.org/packages/InkScape)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg" width="48" height="48"/> [InkScape](https://chocolatey.org/packages/InkScape)
 
 
 Inkscape is an open-source vector graphics editor similar to Adobe Illustrator, Corel Draw, Freehand, or Xara X. What sets Inkscape apart is its use of Scalable Vector Graphics (SVG), an open XML-based W3C standard, as the native format.

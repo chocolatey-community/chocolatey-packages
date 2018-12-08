@@ -9,7 +9,7 @@
     <title>DisplayFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.displayfusion.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png</iconUrl>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <licenseUrl>https://www.displayfusion.com/License/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

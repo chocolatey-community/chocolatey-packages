@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png" width="48" height="48"/> [freeciv](https://chocolatey.org/packages/freeciv)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png" width="48" height="48"/> [freeciv](https://chocolatey.org/packages/freeciv)
 
 
 Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.

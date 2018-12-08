@@ -8,7 +8,7 @@
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://winscp.net/docs/license</licenseUrl>
     <projectUrl>https://winscp.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
 

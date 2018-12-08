@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b92d42be38598e16e7e526b3b8b43c3220439cd4/icons/360ts.png" width="48" height="48"/> [360ts](https://chocolatey.org/packages/360ts)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b92d42be38598e16e7e526b3b8b43c3220439cd4/icons/360ts.png" width="48" height="48"/> [360ts](https://chocolatey.org/packages/360ts)
 
 
 A feature-packed software solution that provides users with a powerful antivirus, a junk cleaner and a system booster within the same interface

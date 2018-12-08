@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/kingsoft-office-free.png" width="48" height="48"/> [{{PackageName}}](https://chocolatey.org/packages/{{PackageName}})
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/kingsoft-office-free.png" width="48" height="48"/> [{{PackageName}}](https://chocolatey.org/packages/{{PackageName}})
 
 
 Kingsoft Office Suite Free 2013 is a free office suite, which includes free word processor, spreadsheet program and presentation maker. These three programs help you deal with office tasks with ease:

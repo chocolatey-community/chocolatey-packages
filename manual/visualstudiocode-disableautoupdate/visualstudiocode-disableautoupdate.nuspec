@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/visualstudiocode-disableautoupdate</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@db78e656a60aca25d4faddbe60721094609b846f/icons/visualstudiocode.png</iconUrl>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Visual Studio Code Auto Update Deactivation</summary>

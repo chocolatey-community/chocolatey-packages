@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/pencil.png" width="48" height="48"/> [pencil](https://chocolatey.org/packages/pencil)
+# <img src="https://cdn.jsdelivr.net/gh/abejenaru/chocolatey-packages@16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/pencil.png" width="48" height="48"/> [pencil](https://chocolatey.org/packages/pencil)
 
 Pencil is an open-source GUI prototyping tool that's available for ALL platforms.
 Pencil is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.

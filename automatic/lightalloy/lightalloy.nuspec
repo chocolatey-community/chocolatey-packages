@@ -33,7 +33,7 @@ Complete aesthetically pleasing video player with built-in codecs.
     <copyright>2011-2017 Vortex Team</copyright>
     <licenseUrl>https://github.com/Krakean/lightalloy/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d7bfe343c5b5698b26d587defcd9009301d09f55/icons/lightalloy.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d7bfe343c5b5698b26d587defcd9009301d09f55/icons/lightalloy.png</iconUrl>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.26.01" />
     </dependencies>

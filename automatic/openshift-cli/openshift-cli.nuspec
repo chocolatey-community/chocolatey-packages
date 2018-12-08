@@ -9,7 +9,7 @@
     <title>OpenShift Command Line Interface (CLI)</title>
     <authors>RedHat</authors>
     <projectUrl>http://www.openshift.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b091b872f1123f77e68599c21b7bfdaad249e375/icons/openshift-cli.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b091b872f1123f77e68599c21b7bfdaad249e375/icons/openshift-cli.png</iconUrl>
     <copyright>(c) 2017 RedHat</copyright>
     <licenseUrl>https://github.com/openshift/origin/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

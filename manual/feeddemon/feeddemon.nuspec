@@ -8,7 +8,7 @@
     <authors>Nick Bradbury</authors>
     <owners>gep13, chocolatey</owners>
     <projectUrl>http://www.feeddemon.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/feeddemon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/feeddemon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>FeedDemon is the most popular RSS reader for Windows, with an easy-to-use interface that makes it a snap to stay informed with the latest news and information.</description>
     <summary>FeedDemon - RSS reader for Windows.</summary>

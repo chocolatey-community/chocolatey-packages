@@ -9,7 +9,7 @@
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 3 (with hotfix 2016-09-14)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://blogs.msdn.microsoft.com/vcblog/2016/06/28/visual-studio-2015-update-3-available-now/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/20ae24c36d6a3fa6c8db2a7bce038e9244dbcd59/icons/vcredist2015.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@20ae24c36d6a3fa6c8db2a7bce038e9244dbcd59/icons/vcredist2015.png</iconUrl>
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
     <licenseUrl>https://msdn.microsoft.com/cc300389.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

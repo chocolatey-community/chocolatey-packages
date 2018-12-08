@@ -9,7 +9,7 @@
     <title>Bitdefender USB Immunizer</title>
     <authors>Bitdefender SRL</authors>
     <projectUrl>http://labs.bitdefender.com/projects/usb-immunizer/overview/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9282e769979fbb235869051249a70d56517f4ff9/icons/bitdefender-usb-immunizer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9282e769979fbb235869051249a70d56517f4ff9/icons/bitdefender-usb-immunizer.png</iconUrl>
     <copyright>Copyright © 1997-2017 Bitdefender. All rights reserved.</copyright>
     <licenseUrl>http://labs.bitdefender.com/projects/usb-immunizer/overview/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

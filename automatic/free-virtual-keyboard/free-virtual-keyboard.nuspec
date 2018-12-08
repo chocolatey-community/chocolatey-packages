@@ -9,7 +9,7 @@
     <title>Free Virtual Keyboard</title>
     <authors>Comfort Software Group</authors>
     <projectUrl>http://freevirtualkeyboard.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
     <copyright>Comfort Software Group. All rights reserved.</copyright>
     <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

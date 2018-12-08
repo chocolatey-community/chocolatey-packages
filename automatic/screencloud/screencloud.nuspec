@@ -9,7 +9,7 @@
     <title>screencloud (Install)</title>
     <authors>Olav Sortland Thoresen</authors>
     <projectUrl>https://screencloud.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1c7defed5af3d4f87905acc3d19cfa1903e78bc4/icons/screencloud.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1c7defed5af3d4f87905acc3d19cfa1903e78bc4/icons/screencloud.svg</iconUrl>
     <copyright>Copyright © 1989, 1991 Free Software Foundation, Inc.</copyright>
     <licenseUrl>https://github.com/olav-st/screencloud/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

@@ -5,7 +5,7 @@
     <version>4.0.30319.20141222</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ec2c867f6b43819719a477d59908a06fc176716a/icons/dotnet.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ec2c867f6b43819719a477d59908a06fc176716a/icons/dotnet.png</iconUrl>
     <projectUrl>http://www.microsoft.com/net/download</projectUrl>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <id>DotNet4.0</id>

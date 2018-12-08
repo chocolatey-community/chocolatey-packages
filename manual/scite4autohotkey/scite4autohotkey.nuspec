@@ -9,7 +9,7 @@
     <title>SciTE4AutoHotkey</title>
     <authors>fincs</authors>
     <projectUrl>https://fincs.ahk4.net/scite4ahk/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/102485a3d4606c6294d152f4b2e8b8b030d65b99/icons/scite4autohotkey.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@102485a3d4606c6294d152f4b2e8b8b030d65b99/icons/scite4autohotkey.png</iconUrl>
     <licenseUrl>https://fincs.ahk4.net/scite4ahk/license.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/fincs/SciTE4AutoHotkey</projectSourceUrl>

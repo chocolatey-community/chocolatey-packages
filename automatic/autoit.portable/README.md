@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/40da80591281de666f24852bb71cb12449cf2997/icons/autoit.png" width="48" height="48"/> [autoit.portable](https://chocolatey.org/packages/autoit.portable)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@40da80591281de666f24852bb71cb12449cf2997/icons/autoit.png" width="48" height="48"/> [autoit.portable](https://chocolatey.org/packages/autoit.portable)
 
 
 AutoIt is a freeware BASIC-like scripting language designed for automating the Windows GUI and general scripting.

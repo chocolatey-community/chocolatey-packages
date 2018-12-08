@@ -9,7 +9,7 @@
     <title>Rename Master</title>
     <authors>Joe Joe Soft</authors>
     <projectUrl>http://www.joejoesoft.com/vcms/108</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/430343e7340dd59994b68ec86842b65ed74466ed/icons/renamemaster.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@430343e7340dd59994b68ec86842b65ed74466ed/icons/renamemaster.png</iconUrl>
     <licenseUrl>http://en.wikipedia.org/wiki/Freeware</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.joejoesoft.com/vcms/121/</docsUrl>

@@ -9,7 +9,7 @@
     <title>TIPP10</title>
     <authors>Tom Thielicke IT Solutions</authors>
     <projectUrl>https://www.tipp10.com/en/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e0c82fddfc50af5efc5aeb9c8b09b11592a3819/icons/tipp10.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@2e0c82fddfc50af5efc5aeb9c8b09b11592a3819/icons/tipp10.png</iconUrl>
     <copyright>2006-2013 Tom Thielicke IT Solutions</copyright>
     <licenseUrl>https://www.tipp10.com/en/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

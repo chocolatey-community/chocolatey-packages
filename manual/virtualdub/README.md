@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/virtualdub.png" width="48" height="48"/> [virtualdub](https://chocolatey.org/packages/virtualdub)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/virtualdub.png" width="48" height="48"/> [virtualdub](https://chocolatey.org/packages/virtualdub)
 
 
 VirtualDub is a video capture/processing utility for 32-bit and 64-bit Windows platforms (98/ME/NT4/2000/XP/Vista/7), licensed under the GNU General Public License (GPL).  It lacks the editing power of a general-purpose editor such as Adobe Premiere, but is streamlined for fast linear operations over video.  It has batch-processing capabilities for processing large numbers of files and can be extended with third-party video filters.  VirtualDub is mainly geared toward processing AVI files, although it can read (not write) MPEG-1 and also handle sets of BMP images.

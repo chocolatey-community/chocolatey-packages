@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/25a40985eb12778b130d754058887895f8b1bc40/icons/tortoisegit.png" width="48" height="48"/> [tortoisegit](https://chocolatey.org/packages/tortoisegit)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@25a40985eb12778b130d754058887895f8b1bc40/icons/tortoisegit.png" width="48" height="48"/> [tortoisegit](https://chocolatey.org/packages/tortoisegit)
 
 
 TortoiseGit is a Windows Shell Interface to Git and based on TortoiseSVN.

@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg" width="48" height="48"/> [Krita](https://chocolatey.org/packages/krita)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg" width="48" height="48"/> [Krita](https://chocolatey.org/packages/krita)
 
 Krita is the full-featured free digital painting studio for artists who want to create professional work from start to end. Krita is used by comic book artists, illustrators, concept artists, matte and texture painters and in the digital VFX industry. The name “Krita” comes from Swedish, and means “to draw” or “chalk” and was taken after the names “KImageShop” and “Krayon” gave problems.
 

@@ -28,7 +28,7 @@
     </description>
     <projectUrl>http://lockhunter.com/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/lockhunter</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ba83ede01009052e80d43d93341f66b9c1d51b44/icons/lockhunter.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ba83ede01009052e80d43d93341f66b9c1d51b44/icons/lockhunter.png</iconUrl>
     <tags>lockhunter unlocker file system locked files freeware admin</tags>
     <docsUrl>http://lockhunter.com/manual.htm</docsUrl>
     <dependencies>

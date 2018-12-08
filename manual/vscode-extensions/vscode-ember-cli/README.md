@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8b94ce90379c08d88333d83aa32f9aa115f5644d/icons/vscode-ember-cli.png" width="48" height="48"/> [vscode-ember-cli](https://chocolatey.org/packages/vscode-ember-cli)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8b94ce90379c08d88333d83aa32f9aa115f5644d/icons/vscode-ember-cli.png" width="48" height="48"/> [vscode-ember-cli](https://chocolatey.org/packages/vscode-ember-cli)
 
 Use Ember and Ember Cli directly from Visual Studio Code. After installation, all ember cli commands are available through Code's own command list, enabling you for example to generate blueprints, run tests, or build your app without leaving your editor. Also, IntelliSense for Ember!
 

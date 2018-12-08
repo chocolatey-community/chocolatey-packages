@@ -9,7 +9,7 @@
     <title>CodeLite</title>
     <authors>Eran Ifrah,CodeLite team</authors>
     <projectUrl>http://www.codelite.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b3019d95b3c82527119494f67f2d4c930417913f/icons/codelite.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b3019d95b3c82527119494f67f2d4c930417913f/icons/codelite.png</iconUrl>
     <copyright>Â© 2016 by SmartKoders, All rights reserved.</copyright>
     <licenseUrl>https://github.com/eranif/codelite/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

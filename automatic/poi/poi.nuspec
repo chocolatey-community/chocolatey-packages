@@ -12,7 +12,7 @@
     <projectUrl>https://poi.io</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5be34cac264309fd6bdaaa122aea08dd4ad32bb0/icons/poi.png</iconUrl>
     <copyright>Copyright (c) 2015-2018 poi contributors</copyright>
-    <licenseUrl>https://cdn.rawgit.com/poooi/poi/master/LICENSE</licenseUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/poooi/poi/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/poooi/poi</projectSourceUrl>
     <bugTrackerUrl>https://github.com/poooi/poi/issues</bugTrackerUrl>

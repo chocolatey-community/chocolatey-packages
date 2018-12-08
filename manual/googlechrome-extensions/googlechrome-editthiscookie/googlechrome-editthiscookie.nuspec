@@ -8,7 +8,7 @@
     <authors>Francesco Capano</authors>
     <owners>chocolatey, gep13</owners>
     <projectUrl>http://www.editthiscookie.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/315c05f1387afb2acc1f028fd3752af86a9663f8/icons/googlechrome-editthiscookie.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@315c05f1387afb2acc1f028fd3752af86a9663f8/icons/googlechrome-editthiscookie.png</iconUrl>
     <projectSourceUrl>https://github.com/fcapano/Edit-This-Cookie</projectSourceUrl>
     <docsUrl>http://www.editthiscookie.com/start/</docsUrl>
     <bugTrackerUrl>https://github.com/fcapano/Edit-This-Cookie/issues</bugTrackerUrl>

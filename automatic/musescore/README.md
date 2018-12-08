@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/musescore.svg" width="48" height="48"/> [musescore](https://chocolatey.org/packages/musescore)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/musescore.svg" width="48" height="48"/> [musescore](https://chocolatey.org/packages/musescore)
 
 
 Create beautiful sheet music for free using MuseScore, the free and open source notation program!

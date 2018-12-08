@@ -11,7 +11,7 @@
     <projectUrl>http://bluegriffon.org/</projectUrl>
     <projectSourceUrl>https://github.com/therealglazou/bluegriffon</projectSourceUrl>
     <bugTrackerUrl>https://github.com/therealglazou/bluegriffon/issues</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluegriffon.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluegriffon.svg</iconUrl>
     <copyright>Copyright © 2012-2017 Disruptive Innovations SAS - All rights reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->

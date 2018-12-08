@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/db561d6c86814c0322bba7f2571d56b6bb9f1125/icons/argusmonitor.png" width="48" height="48" /> Argus Monitor](https://chocolatey.org/packages/argusmonitor)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@db561d6c86814c0322bba7f2571d56b6bb9f1125/icons/argusmonitor.png" width="48" height="48" /> Argus Monitor](https://chocolatey.org/packages/argusmonitor)
 
 Fan speed control for Mainboard and GPU with characteristic curve based on all available temperature sources.
 

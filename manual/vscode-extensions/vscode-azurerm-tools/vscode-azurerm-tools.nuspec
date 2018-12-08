@@ -9,7 +9,7 @@
     <owners>chocolatey, Pascal Berger</owners>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-azurerm-tools</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6182f6eb471a17f0aeee3e05dc9f1ad5d8c9d1e3/icons/vscode-azurerm-tools.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6182f6eb471a17f0aeee3e05dc9f1ad5d8c9d1e3/icons/vscode-azurerm-tools.png</iconUrl>
     <licenseUrl>https://marketplace.visualstudio.com/items/msazurermtools.azurerm-vscode-tools/license</licenseUrl>
     <bugTrackerUrl>https://github.com/Microsoft/vscode-azurearmtools/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

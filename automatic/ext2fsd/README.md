@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a5d2740db65d1750e4312294f4163e348cd5a45/icons/ext2fsd.jpg" width="48" height="48"/> [ext2fsd](https://chocolatey.org/packages/ext2fsd)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8a5d2740db65d1750e4312294f4163e348cd5a45/icons/ext2fsd.jpg" width="48" height="48"/> [ext2fsd](https://chocolatey.org/packages/ext2fsd)
 
 
 Open source ext3/4 file system driver for Windows

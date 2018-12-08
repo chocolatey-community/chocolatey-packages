@@ -7,7 +7,7 @@
     <authors>Microsoft</authors>
     <owners>DarwinJS, chocolatey</owners>
     <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/15cb498f3d11b3687c99e98d077031ad85a62c96/icons/win10mct.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@15cb498f3d11b3687c99e98d077031ad85a62c96/icons/win10mct.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[This will allow you to Create Windows 10 installation media
 To get started, you will first need to have a license to install Windows 10.

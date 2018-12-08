@@ -26,7 +26,7 @@ WinPcap is the industry-standard tool for link-layer network access in Windows e
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/winpcap</packageSourceUrl>
     <docsUrl>https://www.winpcap.org/docs/default.htm</docsUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b689d60fd7922e46e600536569805cc1785b6bf1/icons/winpcap.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b689d60fd7922e46e600536569805cc1785b6bf1/icons/winpcap.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

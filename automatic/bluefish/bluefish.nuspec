@@ -9,7 +9,7 @@
     <title>Bluefish</title>
     <authors>Bluefish Dev Team</authors>
     <projectUrl>http://bluefish.openoffice.nl/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/bluefish.svg</iconUrl>
     <copyright>Copyright © 1998-2015 Olivier Sessink and others</copyright>
     <licenseUrl>http://bluefish.openoffice.nl/development.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

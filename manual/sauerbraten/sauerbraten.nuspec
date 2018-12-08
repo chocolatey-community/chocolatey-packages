@@ -12,7 +12,7 @@
     <projectSourceUrl>https://sourceforge.net/p/sauerbraten/code/HEAD/tree/</projectSourceUrl>
     <docsUrl>http://cubeengine.com/wiki/</docsUrl>
     <mailingListUrl>http://www.cubeengine.com/forum.php</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sauerbraten.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/sauerbraten.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 Cube 2: Sauerbraten is a free multiplayer &amp; singleplayer first person shooter, the successor of the Cube FPS.

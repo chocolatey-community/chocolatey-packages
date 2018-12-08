@@ -41,7 +41,7 @@ Clementine is a modern music player and library organizer. It is inspired by Ama
     </dependencies>
     <summary>Multiplatform music player</summary>
     <releaseNotes>https://raw.githubusercontent.com/clementine-player/Clementine/master/Changelog</releaseNotes>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/clementine.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/clementine.svg</iconUrl>
     <bugTrackerUrl>https://github.com/clementine-player/Clementine/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/clementine-player/Clementine</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clementine</packageSourceUrl>

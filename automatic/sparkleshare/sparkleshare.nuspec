@@ -9,7 +9,7 @@
     <title>SparkleShare</title>
     <authors>Linux Community,Hylke Bons</authors>
     <projectUrl>http://sparkleshare.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png</iconUrl>
     <copyright>Copyright (C) 2010  Hylke Bons</copyright>
     <licenseUrl>https://github.com/hbons/SparkleShare/tree/master/legal</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

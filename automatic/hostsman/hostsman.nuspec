@@ -11,7 +11,7 @@
     <tags>hostsman security hosts hostsfile freeware admin</tags>
     <licenseUrl>http://hostsman2.it-mate.co.uk/licenses/hostsman_4.txt</licenseUrl>
     <projectUrl>http://www.abelhadigital.com/hostsman</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d3ba6b8a6b663536b70f5d9a3e710bfca64c73f4/icons/hostsman.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d3ba6b8a6b663536b70f5d9a3e710bfca64c73f4/icons/hostsman.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/supertuxkart.png" width="48" height="48"/> [supertuxkart](https://chocolatey.org/packages/supertuxkart)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/supertuxkart.png" width="48" height="48"/> [supertuxkart](https://chocolatey.org/packages/supertuxkart)
 
 
 SuperTuxKart is a Free 3D kart racing game; we want to make the game fun more than we want to make it realistic. You can play with up to 4 friends on one PC, racing against each other or just try to beat the computer (a network multiplayer feature is planned).

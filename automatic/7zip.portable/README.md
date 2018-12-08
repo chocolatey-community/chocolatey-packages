@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/68b91a851cee97e55c748521aa6da6211dd37c98/icons/7zip.svg" width="48" height="48"/> [7zip.portable](https://chocolatey.org/packages/7zip.portable)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@68b91a851cee97e55c748521aa6da6211dd37c98/icons/7zip.svg" width="48" height="48"/> [7zip.portable](https://chocolatey.org/packages/7zip.portable)
 
 7-Zip is a file archiver with a high compression ratio.
 

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg" width="48" height="48"/> [qtox](https://chocolatey.org/packages/qtox)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg" width="48" height="48"/> [qtox](https://chocolatey.org/packages/qtox)
 
 
 qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.

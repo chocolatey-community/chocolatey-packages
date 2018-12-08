@@ -9,7 +9,7 @@
     <title>IETester</title>
     <authors>Core Services</authors>
     <projectUrl>http://my-debugbar.com/wiki/IETester/HomePage</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/ed166b4b5efd500ba039e8207c52a7f0b42c4ce3/icons/ietester.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ed166b4b5efd500ba039e8207c52a7f0b42c4ce3/icons/ietester.png</iconUrl>
     <copyright>2008–2017 Core Services</copyright>
     <licenseUrl>http://www.my-debugbar.com/wiki/IETester/HomePage</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -23,7 +23,7 @@ Install SideSync onto a PC and mobile device, and then connect two devices throu
     <copyright>1995–2017 SAMSUNG All Rights reserved.</copyright>
     <licenseUrl>https://www.samsung.com/us/common/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/19caae85d0eb96020c2aed7b02208349d611b980/icons/sidesync.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@19caae85d0eb96020c2aed7b02208349d611b980/icons/sidesync.png</iconUrl>
    <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

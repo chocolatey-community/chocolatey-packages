@@ -9,7 +9,7 @@
     <title>encfs4win</title>
     <authors>jetwhiz, freddy77</authors>
     <projectUrl>https://encfs.win</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4b6671aadbc36c1fbc086e426b9527480888ab7d/icons/encfs4win.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4b6671aadbc36c1fbc086e426b9527480888ab7d/icons/encfs4win.png</iconUrl>
     <copyright>What is the copyright</copyright>
     <licenseUrl>https://github.com/jetwhiz/encfs4win/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

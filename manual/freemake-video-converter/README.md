@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/2e8c2d8438bd429e4815b91eefd248b99b0bd84b/icons/freemake-video-converter.png" width="48" height="48"/> [freemake-video-converter](https://chocolatey.org/packages/freemake-video-converter)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@2e8c2d8438bd429e4815b91eefd248b99b0bd84b/icons/freemake-video-converter.png" width="48" height="48"/> [freemake-video-converter](https://chocolatey.org/packages/freemake-video-converter)
 
 Freemake Video Converter converts video between 500+ formats and gadgets free! Convert to MP4, MP3, AVI, WMV, MKV, iPhone, Android. Convert YouTube to anything.
 

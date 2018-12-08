@@ -29,7 +29,7 @@ The Krita developers are keen to support the artistic community that has grown a
     <tags>foss cross-platform admin krita sketching painting kde qt qt5</tags>
     <licenseUrl>https://github.com/KDE/krita/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg</iconUrl>
     <releaseNotes>See: https://krita.org/en/?post_type=post</releaseNotes>
   </metadata>
   <files>

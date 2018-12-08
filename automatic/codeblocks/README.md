@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png" width="48" height="48"/> [codeblocks](https://chocolatey.org/packages/codeblocks)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png" width="48" height="48"/> [codeblocks](https://chocolatey.org/packages/codeblocks)
 
 
 Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.

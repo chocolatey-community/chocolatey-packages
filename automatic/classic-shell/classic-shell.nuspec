@@ -9,7 +9,7 @@
     <authors>Ivo Beltchev</authors>
     <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>
     <projectUrl>http://www.classicshell.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[

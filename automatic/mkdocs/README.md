@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/45d7d88c15fb38a55f15ef9ecf39b356cdbadabd/icons/mkdocs.png" width="48" height="48"/> [mkdocs](https://chocolatey.org/packages/mkdocs)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@45d7d88c15fb38a55f15ef9ecf39b356cdbadabd/icons/mkdocs.png" width="48" height="48"/> [mkdocs](https://chocolatey.org/packages/mkdocs)
 
 
 MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.

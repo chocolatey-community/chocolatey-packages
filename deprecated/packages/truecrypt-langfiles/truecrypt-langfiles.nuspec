@@ -9,7 +9,7 @@
     <authors>Various (see http://www.truecrypt.org/localizations)</authors>
     <projectUrl>http://www.truecrypt.org/localizations</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/truecrypt.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4a49519947c3cff55c17a0b08266c56b0613e64/icons/truecrypt.png</iconUrl>
     <description>
 **Deprecated because parent software is no longer maintained**.
 

@@ -13,7 +13,7 @@
     <docsUrl>http://wiki.codeblocks.org/index.php/Main_Page</docsUrl>
     <mailingListUrl>http://forums.codeblocks.org/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/codeblocks/tickets/</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 Code::Blocks is a free C++ IDE built to meet the most demanding needs of its users. It is designed to be very extensible and fully configurable.

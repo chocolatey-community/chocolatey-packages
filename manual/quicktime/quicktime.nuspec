@@ -9,7 +9,7 @@
     <authors>Apple</authors>
     <licenseUrl>http://www.apple.com/legal/terms/site.html</licenseUrl>
     <projectUrl>http://support.apple.com/kb/DL837</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/quicktime.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/quicktime.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 What is Quicktime 7?

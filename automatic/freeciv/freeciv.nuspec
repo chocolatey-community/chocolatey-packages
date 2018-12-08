@@ -12,7 +12,7 @@
     <docsUrl>http://www.freeciv.org/wiki/</docsUrl>
     <bugTrackerUrl>http://gna.org/bugs/?group=freeciv</bugTrackerUrl>
     <projectSourceUrl>https://github.com/freeciv/freeciv-web</projectSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.

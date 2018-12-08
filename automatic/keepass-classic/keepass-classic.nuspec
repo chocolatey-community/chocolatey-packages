@@ -9,7 +9,7 @@
     <title>KeePass Classic Password Safe</title>
     <authors>Dominik Reichl</authors>
     <projectUrl>http://keepass.info/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
     <copyright>Copyright © 2003-2017 Dominik Reichl</copyright>
     <licenseUrl>http://keepass.info/help/v1/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

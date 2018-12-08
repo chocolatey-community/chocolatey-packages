@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png" width="48" height="48"/> [gobby](https://chocolatey.org/packages/gobby)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png" width="48" height="48"/> [gobby](https://chocolatey.org/packages/gobby)
 
 
 Gobby is a free collaborative editor. This means that it

@@ -20,7 +20,7 @@ Portable Document Format (PDF) is the de facto standard for the secure and relia
     <copyright>Copyright © Acro Software Inc.</copyright>
     <licenseUrl>http://www.cutepdf.com/Info/legal.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f5c1e4da40598a029269040ecb56fa8d90cf2985/icons/cutepdf.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f5c1e4da40598a029269040ecb56fa8d90cf2985/icons/cutepdf.png</iconUrl>
     <releaseNotes>[Software Updates](http://www.cutepdf.com/Support/updates.asp)</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cutepdf</packageSourceUrl>
     <dependencies>

@@ -26,7 +26,7 @@
     <copyright>Red Hat, Inc.</copyright>
     <licenseUrl>http://cygwin.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png</iconUrl>
     <dependencies>
       <dependency id="Cygwin" />
     </dependencies>

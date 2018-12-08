@@ -9,7 +9,7 @@
     <authors>Tracker Software</authors>
     <licenseUrl>http://www.tracker-software.com/PDFVLicense.pdf‎</licenseUrl>
     <projectUrl>http://www.tracker-software.com/product/pdf-xchange-viewer</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/PDFXChangeViewer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4a49519947c3cff55c17a0b08266c56b0613e64/icons/PDFXChangeViewer.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 **NOTE:** This package has been deprecated in favour of the pdfxchangeeditor package

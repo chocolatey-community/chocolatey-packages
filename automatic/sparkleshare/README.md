@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png" width="48" height="48"/> [sparkleshare](https://chocolatey.org/packages/sparkleshare)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png" width="48" height="48"/> [sparkleshare](https://chocolatey.org/packages/sparkleshare)
 
 
 SparkleShare is an Open Source collaboration and sharing tool that is designed to keep things simple and to stay out of your way.

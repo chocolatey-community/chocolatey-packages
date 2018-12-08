@@ -9,7 +9,7 @@
     <title>No-IP DUC (Dynamic Update Client)</title>
     <authors>No-IP</authors>
     <projectUrl>http://www.noip.com/downloads.php?page=win</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e10d54a324b6e69d75aaecd061772762d27c68ba/icons/no-ip-duc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e10d54a324b6e69d75aaecd061772762d27c68ba/icons/no-ip-duc.png</iconUrl>
     <copyright>©1999-2017 • No-IP.com • All Rights Reserved.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.noip.com/support/knowledgebase/installing-the-windows-4-x-dynamic-update-client-duc/</docsUrl>

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9e732d13804ce0097f9c52c080241edc560acbf9/icons/yo.png" width="48" height="48"/> [yo](https://chocolatey.org/packages/yo)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9e732d13804ce0097f9c52c080241edc560acbf9/icons/yo.png" width="48" height="48"/> [yo](https://chocolatey.org/packages/yo)
 
 
 Yeoman is a generic scaffolding system allowing the creation of any kind of app.

@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/932559dcf7cd36a4055adad2dc46859c595c1e4e/icons/vscode_icons.png" width="48" height="48"/> [vscode-icons](https://chocolatey.org/packages/vscode-icons)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@932559dcf7cd36a4055adad2dc46859c595c1e4e/icons/vscode_icons.png" width="48" height="48"/> [vscode-icons](https://chocolatey.org/packages/vscode-icons)
 
 Bring icons to your VS Code.
 

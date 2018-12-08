@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/736a00f718c84566b58be6146579ed1a6ce7648e/icons/sweet-home-3d.png" width="48" height="48"/> [sweet-home-3d](https://chocolatey.org/packages/sweet-home-3d)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@736a00f718c84566b58be6146579ed1a6ce7648e/icons/sweet-home-3d.png" width="48" height="48"/> [sweet-home-3d](https://chocolatey.org/packages/sweet-home-3d)
 
 
 Sweet Home 3D is a free interior design application that helps you draw the plan of your house, arrange furniture on it and visit the results in 3D.

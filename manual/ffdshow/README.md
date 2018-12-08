@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffdshow.svg" width="48" height="48"/> [ffdshow](https://chocolatey.org/packages/ffdshow)
+﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffdshow.svg" width="48" height="48"/> [ffdshow](https://chocolatey.org/packages/ffdshow)
 
 
 ffdshow tryouts is a DirectShow and Video for Windows codec with support for a wide range of audio and video formats, such as Xvid, DivX, and H.264. It includes a powerful filter set that can enhance the video quality with filters for resizing, deinterlacing, and displaying subtitles, as well as audio quality through normalization, down-/upmixing, and resampling.
