@@ -3,6 +3,7 @@
 $packageName = 'docker-kitematic'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$kitematicExe = Join-Path $toolsPath "Kitematic.exe"
 
 $packageArgs = @{
   PackageName    = $packageName
@@ -21,5 +22,13 @@ foreach ($file in $files) {
 $desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory))
 $link = Join-Path $desktop "Kitematic.lnk"
 if (!(Test-Path $link)) {
-    Install-ChocolateyShortcut -ShortcutFilePath "$link" -TargetPath "$toolsPath\Kitematic.exe" -WorkingDirectory "$toolsPath"
+    Install-ChocolateyShortcut -ShortcutFilePath "$link" -TargetPath $kitematicExe -WorkingDirectory "$toolsPath"
+}
+
+# Create sym-link for docker tray menu
+$kitematicDir = Join-Path $env:ProgramFiles "Docker\Kitematic"
+$kitematicLink = Join-Path $kitematicDir "kitematic.exe"
+New-Item -Path $kitematicDir -ItemType Directory -Force | Out-Null
+if (!(Test-Path $kitematicLink)) {
+	& cmd /c mklink $kitematicLink $kitematicExe
 }
