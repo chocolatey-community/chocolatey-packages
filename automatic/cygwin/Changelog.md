@@ -1,6 +1,6 @@
 # Package changelog for [cygwin](https://chocolatey.org/packages/cygwin)
 
-## Upcoming
+## Version: 2.11.2.20181212 (2018-12-12)
 - **BUGS:** Using cygwin x86 as the source tries to install x64 version of cygwin (thanks to [@OXINARF](https://github.com/OXINARF) for providing the fix in PR [#1165](https://github.com/chocolatey/chocolatey-coreteampackages/pull/1165))
 
 ## Version: 2.8.1 (2017-07-03)
