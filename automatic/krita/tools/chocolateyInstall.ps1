@@ -1,8 +1,8 @@
 ﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-file          = "$toolsDir\krita-x86-4.1.5-setup.exe"
-file64        = "$toolsDir\krita-x64-4.1.5-setup.exe"
+file          = "$toolsDir\krita-x86-4.1.7-setup.exe"
+file64        = "$toolsDir\krita-x64-4.1.7-setup.exe"
 fileType      = 'exe'
 packageName   = 'krita'
 softwareName  = 'Krita'
