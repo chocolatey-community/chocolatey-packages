@@ -34,6 +34,7 @@ function global:au_GetLatest {
         Version      = $choco_version
         URL32        = "https://www.voidtools.com/Everything-${version}.x86-Setup.exe"
         URL64        = "https://www.voidtools.com/Everything-${version}.x64-Setup.exe"
+        PackageName  = 'Everything'
     }
 }
 
