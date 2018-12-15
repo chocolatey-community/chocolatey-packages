@@ -2,14 +2,14 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>everything</id>
-    <version>1.4.1895.20180530</version>
+    <id>Everything</id>
+    <version>1.4.1922</version>
     <title>Everything</title>
     <authors>David Carpenter</authors>
     <owners>chocolatey, Mark Michaelis</owners>
     <licenseUrl>http://www.voidtools.com/License.txt</licenseUrl>
     <projectUrl>http://www.voidtools.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA["Everything" is an administrative tool that locates files and folders by filename instantly for Windows.
 Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything").
@@ -35,6 +35,8 @@ You type in a search filter to limit what files and folders are displayed.
 - `/quick-launch-shortcut` - Install Quick Launch shortcut.
 - `/run-on-system-startup` - Install "Everything" in  the system startup.
 - `/start-menu-shortcuts` - Install "Everything" shortcuts from the Start menu.
+
+Example: `choco install everything --params "/start-menu-shortcuts /run-on-system-startup"`
 
 ## Notes
 

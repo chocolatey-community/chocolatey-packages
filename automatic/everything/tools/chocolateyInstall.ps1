@@ -3,7 +3,7 @@
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName    = 'everything'
+  packageName    = 'Everything'
   fileType       = 'exe'
   file           = Get-Item "$toolsDir\*x86*.exe"
   file64         = Get-Item "$toolsDir\*x64*.exe"
