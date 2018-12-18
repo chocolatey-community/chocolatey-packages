@@ -93,7 +93,7 @@
 param(
   [string]$Name,
   [string]$IconName = $null,
-  [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
+  [string]$GithubRepository = $null,
   [string]$RelativeIconDir = "../icons",
   [string]$PackagesDirectory = "../automatic",
   [switch]$UseStopwatch,
@@ -101,6 +101,21 @@ param(
   [switch]$ThrowErrorOnIconNotFound,
   [switch]$Optimize
 )
+
+if (!$GithubRepository) {
+  $allRemotes = . git remote
+  $remoteName = if ($allRemotes | ? { $_ -eq 'upstream' }) { "upstream" }
+                elseif ($allRemotes | ? { $_ -eq 'origin' }) { 'origin' }
+                else { $allRemotes | select -first 1 }
+
+  if ($remoteName) { $remoteUrl = . git remote get-url $remoteName }
+
+  if ($remoteUrl) {
+    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$','' -join '/'
+  } else {
+    $GithubRepository = "USERNAME/REPOSITORY-NAME"
+  }
+}
 
 $counts = @{
   replaced = 0
