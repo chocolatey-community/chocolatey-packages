@@ -5,8 +5,8 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  file          = "$toolsDir\julia-1.0.2-win32.exe"
-  file64        = "$toolsDir\julia-1.0.2-win64.exe"
+  file          = "$toolsDir\julia-1.0.3-win32.exe"
+  file64        = "$toolsDir\julia-1.0.3-win64.exe"
 
   softwareName  = 'Julia*'
 

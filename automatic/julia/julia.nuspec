@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>julia</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>Julia programming language</title>
     <authors>Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah, Julia contributors</authors>
     <owners>chocolatey, FlorianRappl, drel</owners>
     <licenseUrl>https://github.com/JuliaLang/julia/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://julialang.org</projectUrl>
-    <releaseNotes>https://github.com/JuliaLang/julia/releases/tag/v1.0.2</releaseNotes>
+    <releaseNotes>https://github.com/JuliaLang/julia/releases/tag/v1.0.3</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/julia</packageSourceUrl>
     <projectSourceUrl>https://github.com/JuliaLang/julia</projectSourceUrl>
     <docsUrl>http://docs.julialang.org/</docsUrl>
