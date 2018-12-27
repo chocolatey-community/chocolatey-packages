@@ -28,10 +28,8 @@ function Get-InstallComponents( [HashTable]$pp )
 {
     $res = "icons", "assoc", "assoc_sh"
 
-    if ($pp.NoShellIntegration) {
-        Write-Host "Parameter: no git shell integration"
-    } else { $res += "ext", "ext\shellhere", "ext\guihere" }
-
+    $res += Get-ShellIntegrationComponents $pp
+    
     if (!$pp.NoGitLfs) {
         Write-Host "Using Git LFS"
         $res += 'gitlfs'
@@ -43,6 +41,22 @@ function Get-InstallComponents( [HashTable]$pp )
 
     if ($res.Length -eq 0) { return }
     return '/COMPONENTS="{0}"' -f ($res -join ",")
+}
+
+function Get-ShellIntegrationComponents( [HashTable]$pp )
+{
+    $shell = "ext", "ext\shellhere", "ext\guihere"
+    if ($pp.NoShellIntegration) {
+        Write-Host "Parameter: no git shell integration"
+        $shell.Clear()
+    } elseif ($pp.NoShellHereIntegration) {
+        $shell.Remove("ext\shellhere")
+    } elseif ($pp.NoGuiHereIntegration) {
+        $shell.Remove("ext\guihere")
+    }
+    if ($shell.Count = 1) { $shell.Clear() }
+    
+    return $shell
 }
 
 function Stop-GitSSHAgent()
