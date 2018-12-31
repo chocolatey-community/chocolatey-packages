@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = 'https://download.mono-project.com/archive/5.16.0/windows-installer/mono-5.16.0.220-gtksharp-2.12.45-win32-0.msi'
-  url64bit       = 'https://download.mono-project.com/archive/5.16.0/windows-installer/mono-5.16.0.220-x64-0.msi'
+  url            = 'https://download.mono-project.com/archive/5.18.0/windows-installer/mono-5.18.0.225-gtksharp-2.12.45-win32-0.msi'
+  url64bit       = 'https://download.mono-project.com/archive/5.18.0/windows-installer/mono-5.18.0.225-x64-0.msi'
   softwareName   = 'Mono for Windows*'
-  checksum       = '2016c9c658f5c3793ea733fc67210915df124ff32261509df5e0625d0964a21c'
+  checksum       = 'e0dcb04fa4bc2f5538b6307eb2afae5e599ed38a5e2d78b537e6eb8d9572d3c0'
   checksumType   = 'sha256'
-  checksum64     = '947ce174494d63dc19252006a0860126fe1edd4bd7587ca971c2479c60931976'
+  checksum64     = '8918670cf4c824e9c86b5e34802c4bbeaa299f6f7382530671854c10d1367f71'
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 3010, 1641)
