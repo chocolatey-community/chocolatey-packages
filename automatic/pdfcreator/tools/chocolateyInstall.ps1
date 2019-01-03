@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $installArgs = $('' +
-  '/NORESTART /LANG=english ' +
+  '/NORESTART /SUPPRESSMSGBOXES /SP- /LOG /LANG=english ' +
   '/COMPONENTS="program,ghostscript,comsamples,' +
   'languages,languages\bosnian,languages\catalan,languages\catalan_valencia,' +
   'languages\chinese_simplified,languages\chinese_traditional,' +
@@ -21,7 +21,7 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\PDFCreator-3_2_2-Setup.exe"
+  file           = "$toolsPath\PDFCreator-3_3_2-Setup.exe"
   softwareName   = 'PDFCreator'
   silentArgs     = $installArgs
   validExitCodes = @(0)
@@ -36,22 +36,30 @@ try {
   Write-Host "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.Status)"
   if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.Status -ne 'Running') {
     Set-Service $serviceName -StartupType Automatic -Status Running
-    Write-Host "Print Spooler service new state: Auto / Running"
+    Write-Host 'Print Spooler service new state: Auto / Running'
   }
 }
 catch {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-# silent install requires AutoHotKey
-$ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
-$ahkEXE = gci "$env:ChocolateyInstall\lib\autohotkey.portable" -Recurse -filter autohotkey.exe
-$ahkProc = Start-Process -FilePath $ahkEXE.FullName -ArgumentList "$ahkFile" -PassThru
-Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
-Write-Debug "Process ID:`t$($ahkProc.Id)"
+# silent install requires different methods for domain-joined systems
+if ((Get-WmiObject -Class win32_computersystem).partofdomain -eq $true) {
+   Write-Warning 'Silent install of PDFCreator is not supported on domain-joined systems like this one.'
+   Write-Warning 'Silent install will be attempted, but is less certain.'
+   $ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
+   $ahkEXE = Get-ChildItem "$env:ChocolateyInstall\lib\autohotkey.portable" -Recurse -filter autohotkey.exe
+   $ahkProc = Start-Process -FilePath $ahkEXE.FullName -ArgumentList "$ahkFile" -PassThru
+   Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+   Write-Debug "Process ID:`t$($ahkProc.Id)"
+} else {
+   $packageArgs.SilentArgs = "/VERYSILENT $($packageArgs.SilentArgs)"
+}
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { New-Item "$_.ignore" -Type file -Force | Out-Null}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object {$null = New-Item "$_.ignore" -Type file -Force}
 
-if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}
+if ($ahkFile) {
+   if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}
+}
