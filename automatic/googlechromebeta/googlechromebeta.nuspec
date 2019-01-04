@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>GoogleChromeBeta</id>
+    <id>GoogleChrome.Beta</id>
     <version>72.0.3626.17</version>
     <title>Google Chrome Beta</title>
     <owners>chocolatey</owners>
