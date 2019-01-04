@@ -1,7 +1,7 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://omahaproxy.appspot.com/all?os=win&amp;channel=beta'
+$releases = 'https://omahaproxy.appspot.com/all?os=win&channel=beta'
 $paddedUnderVersion = '57.0.2988'
 
 function global:au_BeforeUpdate {
