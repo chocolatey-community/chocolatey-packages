@@ -21,3 +21,9 @@ WebStorm - The smartest JavaScript IDE. Lightweight yet powerful IDE, perfectly 
 
 - Free 30 day Trial. Beyond that you need to purchase a license.
 
+## Package Parameters
+- `/InstallDir:`- Installation directory, defaults to the 'Program Files (x86)\WebStorm*' directory.
+
+**note** the InstallDir folder should be an empty folder.
+
+Example: `choco install webstorm --params "/InstallDir:C:\your\install\path"`
