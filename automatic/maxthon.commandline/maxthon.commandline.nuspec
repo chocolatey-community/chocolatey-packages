@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>maxthon.commandline</id>
-    <version>5.2.3.4000</version>
+    <version>5.2.6.1000</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/maxthon.commandline</packageSourceUrl>
     <owners>chocolatey, Maxthon International Limited</owners>
     <title>Maxthon (Portable)</title>
     <authors>Maxthon International Limited</authors>
     <projectUrl>http://www.maxthon.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/75a4f3acb5fdff5fb229650e2349925603a7743b/icons/maxthon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@75a4f3acb5fdff5fb229650e2349925603a7743b/icons/maxthon.png</iconUrl>
     <copyright>1999–2012 Maxthon International Limited. All Rights Reserved.</copyright>
     <licenseUrl>http://www.maxthon.com/user-agreement/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

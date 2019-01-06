@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>octave.portable</id>
-    <version>4.4.0</version>
+    <version>4.4.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/octave.portable</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>GNU Octave (Portable)</title>
@@ -30,7 +30,7 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 * Octave Forge, a central location for development of packages for GNU Octave, similar to Matlab's toolboxes.
 * Free software, runs on GNU/Linux, macOS, BSD, and Windows
 ]]></description>
-    <releaseNotes>https://www.gnu.org/software/octave/news/release/2018/04/30/octave-4.4.0-released.html</releaseNotes>
+    <releaseNotes>https://www.gnu.org/software/octave/news/release/2018/08/09/octave-4.4.1-released.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -10,11 +10,11 @@
     <authors>Panayotis Katsaloulis</authors>
     <projectUrl>http://www.jubler.org/index.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png</iconUrl>
-    <copyright>2005 Panayotis Katsaloulis</copyright>
-    <licenseUrl>https://sourceforge.net/p/jubler/code/ci/jubler/tree/LICENCE</licenseUrl>
+    <copyright>(C) 2005-2018 Panayotis Katsaloulis</copyright>
+    <licenseUrl>https://github.com/teras/Jubler/blob/master/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/jubler/code/ci/jubler/tree/</projectSourceUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/jubler/_list/tickets?source=navbar</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/teras/Jubler</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/teras/Jubler/issues</bugTrackerUrl>
     <tags>jubler admin subtitle editor video</tags>
     <summary>Jubler is a tool to edit text-based subtitles.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->

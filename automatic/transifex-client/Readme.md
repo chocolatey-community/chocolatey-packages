@@ -1,4 +1,4 @@
-# [<img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4c2d7c7377b05a3d0a2dd35cfc89ce0c77625051/icons/transifex-client.png" height="48" width="48" /> Transifex Command-Line Tool](https://chocolatey.org/packages/transifex-client)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4c2d7c7377b05a3d0a2dd35cfc89ce0c77625051/icons/transifex-client.png" height="48" width="48" /> Transifex Command-Line Tool](https://chocolatey.org/packages/transifex-client)
 
 The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.
 

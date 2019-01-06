@@ -1,28 +1,5 @@
 ﻿Import-Module AU
-
-function global:au_GetLatest {
-    $productName = 'DataGrip'
-    $releaseUrl = 'https://www.jetbrains.com/updates/updates.xml'
-    $downloadUrl = 'https://download.jetbrains.com/datagrip/datagrip-$($version).exe'
-
-    [xml] $updates = (New-Object System.Net.WebClient).DownloadString($releaseUrl)
-    $channels = $updates.products.product | ? name -eq $productName | select -expand channel
-    $build = $channels | ? status -eq 'release' | select -expand build
-    $versionInfo = $build `
-        | Sort-Object { [version] $_.fullNumber } `
-        | Where-Object { $_.version -notmatch 'EAP' } `
-        | Select-Object -Last 1
-
-    $version = $versionInfo.Version
-
-    if (!($version -match '\d+\.\d+')) {
-        $version = "$($version).$($versionInfo.ReleaseDate)"
-    }
-
-    $downloadUrl = $ExecutionContext.InvokeCommand.ExpandString($downloadUrl)
-
-    return @{ Url32 = $downloadUrl; Version = $version }
-}
+$releases = 'https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release'
 
 function global:au_SearchReplace {
     return @{
@@ -34,4 +11,14 @@ function global:au_SearchReplace {
     }
 }
 
-Update -ChecksumFor 32
+function global:au_GetLatest {
+    $json = Invoke-WebRequest $releases | ConvertFrom-Json
+    $url = $json.DG.downloads.windows.link
+    $version = $json.DG.version
+    $checksum = ((Invoke-RestMethod -Uri $json.DG.downloads.windows.checksumLink -UseBasicParsing).Split(" "))[0]
+
+    $Latest = @{ Url32 = $url; Version = $version; Checksum32 = $checksum; ChecksumType32 = 'sha256' }
+    return $Latest
+}
+
+update -ChecksumFor none

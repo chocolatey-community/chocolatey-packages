@@ -3,10 +3,10 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the software authors
-nuget package located on <https://www.nuget.org/packages/NuGet.CommandLine/>
+website located at <https://www.nuget.org/downloads>
 and can be verified by doing the following:
 
-1. Download the following <https://api.nuget.org/packages/nuget.commandline.4.6.2.nupkg>
+1. Download the following <https://dist.nuget.org/win-x86-commandline/v4.9.2/nuget.exe>
 2. Extract the downloaded nupkg file by using one of the following methods
   - Use the 7z utility: '7z.exe'
   - Using the powershell function 'Expand-Archive'
@@ -16,6 +16,6 @@ and can be verified by doing the following:
 4. The checksums should match the following:
 
   checksum type: sha256
-  checksum: D0B7080D6F00112464ACF1B016F12A357EEC61A9009D53B12E0834B0E2092396
+  checksum: DD283B92D03FAFF8F8816D631A8C859FEAE6C0CE260FE68AE7E61849A157821F
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/NuGet/NuGet.Client/blob/bf52f1045992f21eee205dc9a8356a4ce1072b91/LICENSE.txt>

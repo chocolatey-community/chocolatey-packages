@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://github.com/prey/prey-node-client/releases>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.8.2/prey-windows-1.8.2-x86.msi>
+  64-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.8.2/prey-windows-1.8.2-x64.msi>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: BD70CB2FBBBE95EE79979539C75F34BFC9F7C6A7C305106262C4D873B748C294
+  checksum64: D06E7A3E9568BAC452A0F3478A1F6B15E9C3D0551FF1EAFB67688CCAB67CB5AD
+
+The file 'LICENSE.txt' has been obtained from <https://github.com/prey/prey-node-client/blob/master/license.txt>

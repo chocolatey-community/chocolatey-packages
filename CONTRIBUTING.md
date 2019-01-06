@@ -53,19 +53,19 @@ Its **recommended to create embedded packages** because they don't depend on ven
 
 Binary files can not be generally checked in into this repository because that will bloat it too much.  The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
 
-For software that explicitelly doesn't allow redistribution via adequate license the one may **contact the vendor**, ask for the redistribution rights and provide proof in the package in the form of:
+For software that explicitly doesn't allow redistribution via adequate license then one may **contact the vendor**, ask for the redistribution rights and provide proof in the package in the form of:
 
 - PDF of a signed license
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal).
+As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal).
 
 **NOTE**: 300MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
 ### 1.1.5 Support multiple versions
 
-Packages should **support multiple versions** if possible - do not use URLs that are not version specific with non-embedded packages as they will install wrong version when user provides `--version` parameter to `choco install`. If this is not possible, add a note that package doesn't support multiple versions.
+Packages should **support multiple versions** if possible - do not use URLs that are not version specific with non-embedded packages as they will install wrong versions when users provide the `--version` parameter to `choco install`. If this is not possible, add a note that package doesn't support multiple versions.
 
 ### 1.1.6 Support multiple architectures
 
@@ -202,7 +202,7 @@ Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for t
 
 ### 2.2 Code style
 
-Do not commit code with obvious styling problems such as irregular indentation levels, very long lines, too many comments, too much of empty lines etc.
+Do not commit code with obvious styling problems such as irregular indentation levels, very long lines, too many comments, too many empty lines, etc.
 
 The project contains [.editorconfig](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/.editorconfig)
  file that can be used with many editors via [EditorConfig](http://editorconfig.org/) plugins.
@@ -211,7 +211,7 @@ Keep the package source files clean and remove obsolete or outdated code and unn
 
 # 3. Teamwork
 
-Good communiction is essential so please take a look at [etiquette](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication) regarding it.
+Good communication is essential so please take a look at [etiquette](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication) regarding it.
 
 ### 3.1 Single package per push request
 

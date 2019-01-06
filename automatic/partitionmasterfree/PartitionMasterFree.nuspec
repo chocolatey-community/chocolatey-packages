@@ -4,7 +4,7 @@
   <metadata>
     <id>partitionmasterfree</id>
     <title>EaseUS Partition Master (Free)</title>
-    <version>12.9</version>
+    <version>13.0.0.20181204</version>
     <authors>CHENGDU Yiwo Tech Development Co., Ltd</authors>
     <owners>Redsandro,chocolatey</owners>
     <summary>Free (for personal use) and Easy-to-use Disk Management Software.</summary>
@@ -15,7 +15,7 @@
     <copyright>2005-2013 CHENGDU Yiwo Tech Development Co., Ltd. All rights reserved.</copyright>
     <licenseUrl>http://www.easeus.com/license.htm</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/partitionmasterfree.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/partitionmasterfree.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/partitionmasterfree</packageSourceUrl>
   </metadata>
   <files>

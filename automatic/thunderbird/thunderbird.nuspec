@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>thunderbird</id>
-    <version>52.9.0</version>
+    <version>60.4.0</version>
     <title>Mozilla Thunderbird</title>
     <owners>chocolatey</owners>
     <authors>Mozilla</authors>
@@ -12,7 +12,7 @@
     <projectSourceUrl>https://dxr.mozilla.org/comm-central/source/</projectSourceUrl>
     <docsUrl>https://developer.mozilla.org/en-US/Thunderbird</docsUrl>
     <bugTrackerUrl>https://bugzilla.mozilla.org/</bugTrackerUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/thunderbird.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 Thunderbird is a free email application that's easy to set up and customize  and it's loaded with great features!

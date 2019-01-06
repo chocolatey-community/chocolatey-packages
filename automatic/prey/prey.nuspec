@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>prey</id>
-    <version>1.8.0</version>
+    <version>1.8.2</version>
     <title>Prey</title>
     <owners>chocolatey</owners>
     <authors>Fork Ltd</authors>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>http://preyproject.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
+    <licenseUrl>https://github.com/prey/prey-node-client/blob/master/license.txt</licenseUrl>
+    <projectUrl>https://preyproject.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@3954a1a1afd46d88381ec1e87c3e4cd3dad16066/icons/prey.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
 Prey lets you keep track of your laptop, phone and tablet whenever stolen or missing - easily and all in one place. It's lightweight, open source software that gives you full and remote control, 24/7.
 
@@ -18,17 +19,17 @@ Prey lets you keep track of your laptop, phone and tablet whenever stolen or mis
 
 - To pass your `API_KEY` you can use `choco install prey -y -ia "'/API_KEY=foobarr123'`
 - You may need to run `C:\Windows\Prey\current\bin\prey config gui -f` after installation to configure Prey.
-
 ]]></description>
     <summary>Prey is a lightweight application to track a laptop or mobile if it gets stolen or missing.</summary>
-    <releaseNotes>https://github.com/prey/prey-node-client/releases</releaseNotes>
-    <copyright />
-    <tags>prey anti-theft lockdown tracking admin</tags>
+    <releaseNotes>https://github.com/prey/prey-node-client/releases/tag/v1.8.2</releaseNotes>
+    <tags>prey anti-theft lockdown tracking admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/prey</packageSourceUrl>
     <projectSourceUrl>https://github.com/prey/prey-node-client</projectSourceUrl>
-    <docsUrl>http://help.preyproject.com/</docsUrl>
+    <docsUrl>https://help.preyproject.com/</docsUrl>
+    <bugTrackerUrl>https://github.com/prey/prey-node-client/issues</bugTrackerUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

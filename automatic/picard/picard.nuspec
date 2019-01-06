@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>picard</id>
-    <version>1.4.2</version>
+    <version>2.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/picard</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>MusicBrainz Picard</title>
     <authors>MusicBrainz</authors>
     <projectUrl>http://musicbrainz.org/doc/MusicBrainz_Picard</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/picard.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/picard.svg</iconUrl>
     <copyright>Copyright © 2004-2014 Robert Kaye, Lukáš Lalinský and others</copyright>
     <licenseUrl>https://github.com/metabrainz/picard/blob/master/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,7 +19,7 @@
     <bugTrackerUrl>https://tickets.metabrainz.org/projects/PICARD/issues/</bugTrackerUrl>
     <tags>musicbrainz picard audio tagger music admin foss cross-platform</tags>
     <summary>Official MusicBrainz audio tagger</summary>
-    <description>
+    <description><![CDATA[
 MusicBrainz Picard is a cross-platform (Linux/Mac OS X/Windows) application written in Python and is the official MusicBrainz tagger.
 
 Picard supports the majority of audio file formats, is capable of using audio fingerprints (AcoustIDs), performing CD lookups and disc ID submissions, and it has excellent Unicode support. Additionally, there are several plugins available that extend Picard's features.
@@ -33,7 +33,8 @@ Picard is named after Captain Jean-Luc Picard from the TV series Star Trek: The 
 - **AcoustID:** Picard uses [AcoustID](http://acoustid.org/) audio fingerprints, allowing files to be identified by the actual music, even if they have no metadata.
 - **CD Lookups:** Picard can lookup entire music CDs with a click.
 - **Plugin Support:** If you need a particular feature, you can choose from a selection of [available plugins](https://picard.musicbrainz.org/plugins/) or write your own.
-    </description>
+
+]]></description>
     <releaseNotes>http://picard.musicbrainz.org/changelog/</releaseNotes>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729.6161" />

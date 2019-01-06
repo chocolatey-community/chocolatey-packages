@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
    <metadata>
     <id>paint.net</id>
-    <version>4.0.21</version>
+    <version>4.1.5</version>
     <title>Paint.NET</title>
     <authors>Rick Brewster, dotPDN</authors>
     <projectUrl>http://www.getpaint.net/</projectUrl>
     <licenseUrl>http://www.getpaint.net/license.html</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b89548a8e0a21620abe8643335fd7ba0c5b03ca1/icons/paint.net.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b89548a8e0a21620abe8643335fd7ba0c5b03ca1/icons/paint.net.png</iconUrl>
     <docsUrl>https://forums.getpaint.net/index.php?/forum/18-tutorials-publishing-only/</docsUrl>
     <mailingListUrl>https://forums.getpaint.net/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

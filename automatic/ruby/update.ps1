@@ -24,11 +24,11 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $re    = '\.exe$'
-    $url   = $download_page.links | ? href -match $re | select -First 2 -expand href
+    $url   = $download_page.links | ? href -match $re | ? {$_ -notmatch 'devkit'} | select -First 2 -expand href
     $version = $url[0] -replace '\-([\d]+)','.$1' -replace 'rubyinstaller.' -split '/' | select -Last 1 -Skip 1
 
     @{
-        Version      = $version
+        Version      = Get-FixVersion -Version $version -OnlyFixBelowVersion "2.5.4"
         URL32        = $url -notmatch 'x64' | select -first 1
         URL64        = $url -match 'x64'    | select -first 1
     }

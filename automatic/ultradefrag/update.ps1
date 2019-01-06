@@ -1,8 +1,8 @@
 import-module au
 import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
 
-
-$releases = 'http://ultradefrag.sourceforge.net/en/index.html?download'
+$domain   = 'https://sourceforge.net'
+$releases = "$domain/projects/ultradefrag/files/stable-release/"
 
 function global:au_SearchReplace {
    @{
@@ -24,7 +24,11 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $re    = '\.exe$'
+    $releases_url = $download_page.Links | ? href -match '\d+\.[\d\.]+\/$' | select -expand href -first 1 | % { $domain + $_ }
+
+    $download_page = Invoke-WebRequest -Uri $releases_Url -UseBasicParsing
+
+    $re    = '\.exe\/download$'
     $url   = $download_page.links | ? href -match $re | % href
     $url32 = $url -match 'i386' | select -first 1
     $url64 = $url -match 'amd64' | select -first 1

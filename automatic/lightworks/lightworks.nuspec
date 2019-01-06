@@ -4,7 +4,7 @@
     <metadata>
         <id>lightworks</id>
         <title>Lightworks</title>
-        <version>14.0.0.20171007</version>
+        <version>14.5</version>
         <authors>EditShare LLC</authors>
         <owners>Redsandro</owners>
         <summary>Lightworks is a professional NLE for editing and mastering digital video.</summary>
@@ -35,7 +35,7 @@ For a feature comparison, see [www.lwks.com](https://www.lwks.com/index.php?opti
         <copyright></copyright>
         <licenseUrl>https://en.wikipedia.org/wiki/Freemium</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png</iconUrl>
         <dependencies>
             <dependency id="chocolatey-core.extension" version="1.3.3" />
         </dependencies>

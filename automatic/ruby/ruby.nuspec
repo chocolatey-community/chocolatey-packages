@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ruby</id>
-    <version>2.5.1.2</version>
+    <version>2.5.3.101</version>
     <title>Ruby</title>
     <authors>Yukihiro Matsumoto</authors>
     <owners>chocolatey, Rob Reynolds</owners>
@@ -32,7 +32,7 @@ Example: `choco install ruby --params "/NoPath /InstallDir:C:\your\install\path"
     <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-trunk/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://www.ruby-lang.org/en/downloads/releases/</releaseNotes>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/aad7c15bfbec43c3716f8a82bc3af22e1a55579d/icons/ruby.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@aad7c15bfbec43c3716f8a82bc3af22e1a55579d/icons/ruby.svg</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="chocolatey" version="0.10.5" />

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png" width="48" height="48"/> [ccleaner](https://chocolatey.org/packages/ccleaner)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png" width="48" height="48"/> [ccleaner](https://chocolatey.org/packages/ccleaner)
 
 
 The number-one tool for cleaning your Windows PC.

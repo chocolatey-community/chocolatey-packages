@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/3.2/>
+location on <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/3.3/>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/3.2/gnucash-3.2.setup.exe/download>
+1. Download the following <https://sourceforge.net/projects/gnucash/files/gnucash%20%28stable%29/3.3/gnucash-3.3.setup.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 0E06ACFE7A9746EACF5282BA27919625B51C3D51FD548E6A529F78FF759ED70F
+  checksum: 869A227120E20E805B5C0455B0312B826B4BB3E305D4A4B477C93ED9ABA1E668
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/Gnucash/gnucash/blob/7a0f0d57c809a2177d015ad4a961e2b1d34dfee6/LICENSE>

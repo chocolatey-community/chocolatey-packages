@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.3.8</version>
+    <version>3.2.25</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
     <authors>CoreOS</authors>
     <projectUrl>https://github.com/coreos/etcd</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
     <copyright>(c) 2017 CoreOS, Inc</copyright>
     <licenseUrl>https://github.com/coreos/etcd/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -39,7 +39,7 @@ Originally packaged by Robert Labrie (https://github.com/tnwinc/chocolatey-etcd)
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/coreos/etcd/releases/tag/v3.3.8</releaseNotes>
+    <releaseNotes>https://github.com/coreos/etcd/releases/tag/v3.2.25</releaseNotes>
     <dependencies>
       <dependency id="nssm" />
     </dependencies>

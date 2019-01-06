@@ -3,13 +3,13 @@
 $packageArgs = @{
   packageName            = 'libreoffice'
   fileType               = 'msi'
-  url                    = 'https://download.documentfoundation.org/libreoffice/stable/6.0.5/win/x86/LibreOffice_6.0.5_Win_x86.msi'
-  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/6.0.5/win/x86_64/LibreOffice_6.0.5_Win_x64.msi'
-  checksum               = 'd900ef96634d25dce711f03b2bb877592fe09716380e441e6ee3fc935019cd66'
-  checksum64             = '52e2ae72baa2e4251e9de71fcd1b1d8c360729f71a7172fae96dcf9d304cf5b5'
+  url                    = 'https://download.documentfoundation.org/libreoffice/stable/6.1.4/win/x86/LibreOffice_6.1.4_Win_x86.msi'
+  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/6.1.4/win/x86_64/LibreOffice_6.1.4_Win_x64.msi'
+  checksum               = 'd419309fbc82f4d0b85acb1d2cf46afbe80e037e671c97383626cf509040738a'
+  checksum64             = 'ce7d6e3e450d9c0eff1ab04936b5e4cefe5b201371926085de66ecf5a887db3e'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
-  silentArgs             = '/passive /norestart'
+  silentArgs             = '/passive /norestart /l*v "{0}\install.log"' -f "$Env:TEMP\chocolatey\$Env:ChocolateyPackageName\$Env:ChocolateyPackageVersion"
   validExitCodes         = @(0,3010)
   softwareName           = 'LibreOffice*'
 }

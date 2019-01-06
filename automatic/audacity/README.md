@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg" width="48" height="48"/> [audacity](https://chocolatey.org/packages/audacity)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg" width="48" height="48"/> [audacity](https://chocolatey.org/packages/audacity)
 
 
 Audacity is free, open source, cross-platform software for recording and editing sounds.

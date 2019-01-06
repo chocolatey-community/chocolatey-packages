@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/588d16b30aa063f71d41ce18849cb42a23367d05/icons/pspp.png" width="48" height="48"/> [pspp](https://chocolatey.org/packages/pspp)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@588d16b30aa063f71d41ce18849cb42a23367d05/icons/pspp.png" width="48" height="48"/> [pspp](https://chocolatey.org/packages/pspp)
 
 
 __GNU PSPP__ is a program for statistical analysis of sampled data. It is a Free replacement for the proprietary program __SPSS__.

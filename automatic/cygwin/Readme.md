@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png" width="48" height="48"/> [Cygwin](https://chocolatey.org/packages/Cygwin)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png" width="48" height="48"/> [Cygwin](https://chocolatey.org/packages/Cygwin)
 
 
 Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.

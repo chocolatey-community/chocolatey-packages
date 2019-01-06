@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png" width="48" height="48"/> [vagrant](https://chocolatey.org/packages/vagrant)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png" width="48" height="48"/> [vagrant](https://chocolatey.org/packages/vagrant)
 
 
 Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.

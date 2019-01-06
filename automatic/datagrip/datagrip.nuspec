@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>datagrip</id>
-    <version>2018.1.5</version>
+    <version>2018.3.1</version>
     <title>JetBrains DataGrip</title>
     <authors>JetBrains</authors>
     <licenseUrl>https://www.datagrip.org/terms.php</licenseUrl>
     <projectUrl>https://www.jetbrains.com/datagrip/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/04a664cc932597e990efa9772dfc16114f18bed8/icons/datagrip.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@04a664cc932597e990efa9772dfc16114f18bed8/icons/datagrip.png</iconUrl>
     <docsUrl>https://www.jetbrains.com/help/datagrip</docsUrl>
     <summary>Your Swiss Army Knife for Databases and SQL</summary>
     <releaseNotes>https://confluence.jetbrains.com/display/DBE/Public+DataGrip+Page</releaseNotes>
@@ -31,6 +31,12 @@ and various instruments for creating and modifying objects.
 - Refactorings that work in SQL files and schemas
 - Version control integration
 
+## Package Parameters
+- `/InstallDir:`- Installation directory, defaults to the 'Program Files (x86)\DataGrip*' directory.
+
+**note** the InstallDir folder should be an empty folder.
+
+Example: `choco install datagrip --params "/InstallDir:C:\your\install\path"`
 ]]></description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/datagrip</packageSourceUrl>

@@ -1,7 +1,7 @@
 ﻿Import-Module AU
 
 # Temporary to allow pushing version 1.0.5
-$releases = 'http://djv.sourceforge.net/index.html'
+$releases = 'http://djv.sourceforge.net/Download.html'
 $softwareName = 'djv-*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }

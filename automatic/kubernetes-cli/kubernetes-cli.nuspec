@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-cli</id>
-    <version>1.11.1</version>
+    <version>1.13.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/kubernetes-cli</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Kubernetes Command Line Interface (CLI)</title>
     <authors>Google</authors>
     <projectUrl>https://kubernetes.io</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5a8c40781821bbd2746754b7ce723938090bb7c6/icons/kubernetes-cli.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5a8c40781821bbd2746754b7ce723938090bb7c6/icons/kubernetes-cli.png</iconUrl>
     <copyright>(c) 2017 Kubernetes</copyright>
     <licenseUrl>https://github.com/kubernetes/kubernetes/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -60,7 +60,7 @@ Automatically mount the storage system of your choice, whether from local storag
 #### Batch execution
 In addition to services, Kubernetes can manage your batch and CI workloads, replacing containers that fail, if desired.
 ]]></description>
-    <releaseNotes>https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.1.md#v1111</releaseNotes>
+    <releaseNotes>https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.1.md#v1131</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

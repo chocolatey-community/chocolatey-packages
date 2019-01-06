@@ -3,10 +3,10 @@
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/30.0.0.134/install_flash_player_30_ppapi.msi'
+  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/31.0.0.153/install_flash_player_31_ppapi.msi'
   silentArgs    = '/quiet /norestart REMOVE_PREVIOUS=YES'
   softwareName  = 'Flash Player PPAPI'
-  checksum      = 'faf9b3d3ae777ca2b5e1e72ec3131a3edd47cbe0a46231dd8151b7a5d4359d0f'
+  checksum      = '7a6edabdcd4b008e8f4819a6e739f45752e55ad7a8f45ed4ef127f8d03dc60cc'
   checksumType  = 'sha256'
 }
 

@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/1a1a45ece68d4852cc454cf9354d9a441516fccc/icons/openssl.png" width="48" height="48"/> [OpenSSL.Light](https://chocolatey.org/packages/OpenSSL.Light)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@1a1a45ece68d4852cc454cf9354d9a441516fccc/icons/openssl.png" width="48" height="48"/> [OpenSSL.Light](https://chocolatey.org/packages/OpenSSL.Light)
 
 
 The OpenSSL Project is a collaborative effort to develop a robust, commercial-grade, full-featured, and Open Source toolkit implementing the Secure Sockets Layer (SSL v2/v3) and Transport Layer Security (TLS v1) protocols as well as a full-strength general purpose cryptography library. The project is managed by a worldwide community of volunteers that use the Internet to communicate, plan, and develop the OpenSSL toolkit and its related documentation.

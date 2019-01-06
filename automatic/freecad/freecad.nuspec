@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.17.13522.20180515</version>
+    <version>0.17.13541</version>
     <title>FreeCAD</title>
     <owners>chocolatey,purity</owners>
     <authors>Jürgen Riegel</authors>
     <licenseUrl>http://www.freecadweb.org/wiki/index.php?title=Licence</licenseUrl>
     <projectUrl>http://www.freecadweb.org/</projectUrl>
     <projectSourceUrl>https://github.com/FreeCAD/FreeCAD/</projectSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://www.freecadweb.org/tracker/my_view_page.php</bugTrackerUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->

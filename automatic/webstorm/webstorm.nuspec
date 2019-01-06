@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>webstorm</id>
-    <version>2018.1.5</version>
+    <version>2018.3.2</version>
     <title>JetBrains WebStorm</title>
     <authors>JetBrains</authors>
     <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
     <projectUrl>https://www.jetbrains.com/webstorm/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8edfc93894e9bdd11deb36d1cbbfe8a47a7b013a/icons/webstorm.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8edfc93894e9bdd11deb36d1cbbfe8a47a7b013a/icons/webstorm.png</iconUrl>
     <docsUrl>https://www.jetbrains.com/help/webstorm</docsUrl>
     <summary>WebStorm — The smartest JavaScript IDE</summary>
     <releaseNotes>https://www.jetbrains.com/webstorm/whatsnew/</releaseNotes>

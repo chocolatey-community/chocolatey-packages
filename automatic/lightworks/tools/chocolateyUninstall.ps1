@@ -12,7 +12,7 @@ $packageArgs = @{
 
 [array] $key = Get-UninstallRegistryKey $packageName
 if ($key.Count -eq 1) {
-    $key | % {
+    $key | ForEach-Object {
         $packageArgs.file = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
         Uninstall-ChocolateyPackage @packageArgs
     }
@@ -24,6 +24,6 @@ elseif ($key.Count -gt 1) {
     Write-Warning "$key.Count matches found!"
     Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
     Write-Warning "Please alert package maintainer the following keys were matched:"
-    $key | % {Write-Warning "- $_.DisplayName"}
+    $key | ForEach-Object {Write-Warning "- $_.DisplayName"}
 }
 

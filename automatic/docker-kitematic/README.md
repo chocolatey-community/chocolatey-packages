@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/abejenaru/chocolatey-packages/16e4ddf69bd7dfc07597b7b3aaa7d8372eeec7fb/icons/kitematic.png" width="48" height="48"/> [docker-kitematic](https://chocolatey.org/packages/docker-kitematic)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b422dcfaed67787575e481d92c68761506206fb3/icons/docker-kitematic.png" width="48" height="48"/> [docker-kitematic](https://chocolatey.org/packages/docker-kitematic)
 
 Kitematic is a simple application for managing Docker containers on Mac, Linux and Windows.
 

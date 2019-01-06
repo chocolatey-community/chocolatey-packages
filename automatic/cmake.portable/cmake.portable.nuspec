@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake.portable</id>
-    <version>3.12.0</version>
+    <version>3.13.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cmake.portable</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>CMake (Portable)</title>
     <authors>Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf</authors>
     <projectUrl>https://www.cmake.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5633c4413a8b71f75f379190546a0047c0e0b12b/icons/cmake.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5633c4413a8b71f75f379190546a0047c0e0b12b/icons/cmake.png</iconUrl>
     <copyright>© 2000 Kitware Inc</copyright>
     <licenseUrl>https://gitlab.kitware.com/cmake/cmake/blob/master/Copyright.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

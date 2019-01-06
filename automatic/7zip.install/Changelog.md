@@ -1,5 +1,9 @@
 # Package changelog
 
+## Version: 18.6 (2018-12-30)
+### Bugs
+- Added uninstallation of shim file (Issue [#1066][i1066])
+
 ## Version: 16.4.0.20170506 (2017-05-06)
 ### Bugs
 - Removed check and restart of explorer, this is no longer necessary as 7zip no longer closes explorer. (Issue [#714][i714])
@@ -25,3 +29,4 @@
 
 [i714]: https://github.com/chocolatey/chocolatey-coreteampackages/issues/714
 [i549]: https://github.com/chocolatey/chocolatey-coreteampackages/issues/549
+[i1066]: https://github.com/chocolatey/chocolatey-coreteampackages/issues/1066

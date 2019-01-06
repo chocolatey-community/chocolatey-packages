@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4ad26e5a5ab2b5280e4d57e5b14fcc9d4c6a22c5/icons/spotify.png" width="48" height="48"/> [spotify](https://chocolatey.org/packages/spotify)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4ad26e5a5ab2b5280e4d57e5b14fcc9d4c6a22c5/icons/spotify.png" width="48" height="48"/> [spotify](https://chocolatey.org/packages/spotify)
 
 
 - Music  

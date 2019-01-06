@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $pp = Get-PackageParameters
 $silentArgs = '/S /FULL=1'
@@ -8,11 +8,11 @@ $silentArgs += if ($pp.NoBootInterface)      { " /BOOT=0"; Write-Host 'Boot inte
 
 $packageArgs = @{
   packageName    = 'ultradefrag'
-  fileType       = 'exe'
-  url            = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.2.bin.i386.exe'
-  url64bit       = 'https://downloads.sourceforge.net/ultradefrag/ultradefrag-7.0.2.bin.amd64.exe'
-  checksum       = '69ea62c2987b869bcd21e7a7a7ae65d01ee9a853ace33b5bc973bbcbaa8a4123'
-  checksum64     = '34cfc8b7a2b43891e0a7527fc27549b2b3372330f82cf95d32c1744429d2820f'
+  fileType       = ''
+  url            = 'https://sourceforge.net/projects/ultradefrag/files/stable-release/7.1.1/ultradefrag-7.1.1.bin.i386.exe/download'
+  url64bit       = 'https://sourceforge.net/projects/ultradefrag/files/stable-release/7.1.1/ultradefrag-7.1.1.bin.amd64.exe/download'
+  checksum       = 'b73a848214a4d527b2d17054e134ed3732c082cee8cd90bd888973eff54ea953'
+  checksum64     = '6f9a0200c75d432af0f8a3585e5ad9aa6e41dbadeb29a365d7033d66770fbc48'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = $silentArgs

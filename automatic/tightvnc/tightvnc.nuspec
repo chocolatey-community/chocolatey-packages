@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tightvnc</id>
-    <version>2.8.8</version>
+    <version>2.8.11</version>
     <title>TightVNC</title>
     <owners>chocolatey</owners>
-    <authors>TightVNC Developers</authors>
+    <authors>GlavSoft LLC, TightVNC Developers</authors>
     <licenseUrl>http://www.tightvnc.com/licensing.php</licenseUrl>
     <projectUrl>http://www.tightvnc.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/tightvnc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tightvnc.png</iconUrl>
+    <copyright>Copyright © 2006–2018 GlavSoft LLC</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[
 TightVNC is a free remote control software package. With TightVNC, you can see the desktop of a remote machine and control it with your local mouse and keyboard, just like you would do it sitting in the front of that computer. TightVNC is:
 
 * free for both personal and commercial usage, with full source code available,
@@ -25,16 +27,17 @@ With TightVNC, you can:
 * make sure nothing wrong is happening on your computers when you are away.
 
 [Screenshots](http://www.tightvnc.com/screenshots.php).
-    </description>
+
+]]></description>
     <summary>Remote control software</summary>
     <releaseNotes>http://www.tightvnc.com/whatsnew.php</releaseNotes>
-    <copyright />
     <tags>remote control vnc foss cros-platform admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tightvnc</packageSourceUrl>
-    <projectSourceUrl>http://www.tightvnc.com/download/2.8.8/tightvnc-2.8.8-src-gpl.zip</projectSourceUrl>
+    <projectSourceUrl>https://www.tightvnc.com/download/2.8.11/tightvnc-2.8.11-src-gpl.zip</projectSourceUrl>
     <docsUrl>http://www.tightvnc.com/docs.php</docsUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

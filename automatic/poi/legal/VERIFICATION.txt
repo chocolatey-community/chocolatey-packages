@@ -1,0 +1,17 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from the github release page on <https://github.com/poooi/poi/releases>
+and can be verified like this:
+
+1. Go to <https://github.com/poooi/poi/releases/download/v9.0.4/poi-setup-9.0.4.exe>
+   to download the installer
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum: 943DC5E1622262056EB75448EE5B7CAED7D0055939E672005E951DD2D7A9E5AD
+
+File 'LICENSE.txt' is obtained from <https://github.com/poooi/poi/blob/master/LICENSE>

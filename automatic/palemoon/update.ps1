@@ -1,23 +1,17 @@
 import-module au
 
-$releasesx86 = 'https://www.palemoon.org/palemoon-win32.shtml'
-$releasesx64 = 'https://www.palemoon.org/palemoon-win64.shtml'
+$releasesx86 = 'https://www.palemoon.org/download.php?mirror=eu&bits=32&type=installer'
+$releasesx64 = 'https://www.palemoon.org/download.php?mirror=eu&bits=64&type=installer'
 
 function getReleaseInfo() {
   param([string]$releasesUrl)
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releasesUrl
+  $url = Get-RedirectedUrl $releasesUrl
 
-  $re = 'installer\.exe$'
-  $url = $download_page.links | ? href -match $re | select -First 1 -expand href
   $version = $url -split '[-]|\.win[32|64]' | select -last 1 -skip 1;
-
-  $download_page.content -match 'SHA-256\:\s*([a-f0-9]+)' | Out-Null
-  $checksum = $Matches[1]
 
   return @{
     url = $url
     version = $version
-    checksum = $checksum
   }
 }
 
@@ -41,12 +35,8 @@ function global:au_GetLatest {
   @{
     URL32 = $x86Info.url
     URL64 = $x64Info.url
-    Checksum32 = $x86Info.checksum
-    Checksum64 = $x64Info.checksum
-    ChecksumType32 = 'sha256'
-    ChecksumType64 = 'sha256'
     Version = $x86Info.version
   }
 }
 
-update -ChecksumFor none
+update

@@ -34,15 +34,21 @@ function global:au_GetLatest {
   $verRe = 'CAD\-|\.[\dA-Z]+\-WIN'
   [version]$version32 = $url32 -split "$verRe" | select -last 1 -skip 1
   [version]$version64 = $url64 -split "$verRe" | select -last 1 -skip 1
-  if ($version32 -ne $version64) {
+  if ($version32.ToString(2) -ne $version64.ToString(2)) {
     throw "32bit version do not match the 64bit version"
+  }
+
+  if ($version32 -gt $version64) {
+    $version = $version32
+  } else {
+    $version = $version64
   }
 
   @{
     URL32 = $url32
     URL64 = $url64
-    Version = $version32
-    ReleaseNotes = "https://www.freecadweb.org/wiki/Release_notes_$($version32.Major)$($version32.Minor)"
+    Version = $version
+    ReleaseNotes = "https://www.freecadweb.org/wiki/Release_notes_$($version.Major)$($version.Minor)"
   }
 }
 

@@ -4,7 +4,7 @@
   <metadata>
     <id>tortoisegit</id>
     <title>TortoiseGit</title>
-    <version>2.6.0.0</version>
+    <version>2.7.0.0</version>
     <authors>TortoiseGit and contributors</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>TortoiseGit provides overlay icons showing the file status, a powerful context menu for Git and much more!</summary>
@@ -60,7 +60,7 @@ TortoiseGit provides a flexible mechanism to integrate any web based bug trackin
     <copyright>© TortoiseGit</copyright>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://tortoisegit.org/docs/releasenotes/#Release_2.6.0.0</releaseNotes>
+    <releaseNotes>https://tortoisegit.org/docs/releasenotes/#Release_2.7.0.0</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20170201" />   <!-- https://github.com/chocolatey/chocolatey-coreteampackages/issues/807 -->
     </dependencies>

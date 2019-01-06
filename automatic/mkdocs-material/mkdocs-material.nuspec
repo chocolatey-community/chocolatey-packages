@@ -4,13 +4,13 @@
   <metadata>
     <id>mkdocs-material</id>
     <title>MkDocs Material Theme</title>
-    <version>2.9.1</version>
+    <version>3.2.0</version>
     <authors>Martin Donath</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://squidfunk.github.io/mkdocs-material/</projectUrl>
     <projectSourceUrl>https://github.com/squidfunk/mkdocs-material</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mkdocs-material</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8e38f985a1cce6494e76deb665e403fbb63e0ec9/icons/mkdocs-material.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8e38f985a1cce6494e76deb665e403fbb63e0ec9/icons/mkdocs-material.png</iconUrl>
     <licenseUrl>http://squidfunk.github.io/mkdocs-material/license/</licenseUrl>
     <docsUrl>http://squidfunk.github.io/mkdocs-material/</docsUrl>
     <bugTrackerUrl>https://github.com/squidfunk/mkdocs-material/issues</bugTrackerUrl>

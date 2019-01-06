@@ -7,8 +7,8 @@ $packageName = $env:ChocolateyPackageName
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'msi'
-  file           = "$toolsPath\cdbxp_setup_4.5.8.6795.msi"
-  file64         = "$toolsPath\cdbxp_setup_x64_4.5.8.6795.msi"
+  file           = "$toolsPath\cdbxp_setup_4.5.8.7041.msi"
+  file64         = "$toolsPath\cdbxp_setup_x64_4.5.8.7041.msi"
   softwareName   = 'cdburnerxp*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$packageName.$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 2010, 1641)
@@ -16,7 +16,7 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-ls $toolsPath\*.msi | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" '' } }
+Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {

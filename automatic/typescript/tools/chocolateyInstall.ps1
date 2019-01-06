@@ -4,4 +4,4 @@ Update-SessionEnvironment
 
 $npmPath = Get-Command npm | ForEach-Object { $_.Path }
 "Installing $env:chocolateyPackageName using nodejs..."
-Start-ChocolateyProcessAsAdmin $npmPath -statements install,"-g","typescript@2.9.2"
+Start-ChocolateyProcessAsAdmin $npmPath -statements install,"-g","typescript@3.2.2"

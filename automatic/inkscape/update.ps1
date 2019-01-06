@@ -28,7 +28,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $redirUrl = Get-RedirectedUrl "$domain/en/release/"
 
-  $version = $redirUrl -split '\/' | select -last 1 -skip 1
+  $version = $redirUrl -split '\/(inkscape-)?' | select -last 1 -skip 1
 
   $32bit_page = Invoke-WebRequest "$redirUrl/windows/32-bit/msi/dl/" -UseBasicParsing
   $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing

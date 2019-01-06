@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0798deaffb56c9b6ee759251c0948dec25b2b0f9/icons/activepresenter.png" width="48" height="48"/> [activepresenter](https://chocolatey.org/packages/activepresenter)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@0798deaffb56c9b6ee759251c0948dec25b2b0f9/icons/activepresenter.png" width="48" height="48"/> [activepresenter](https://chocolatey.org/packages/activepresenter)
 
 
 All the necessary tools for recording screen and creating engaging screencast videos in a free application.

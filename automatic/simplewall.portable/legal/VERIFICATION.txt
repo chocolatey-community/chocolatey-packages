@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The archive have been downloaded from the GitHub mirror and can be verified like this:
+
+1. Download the following archive(s):
+
+x86: https://github.com/henrypp/simplewall/releases/download/v.2.3.13/simplewall-2.3.13-bin.zip
+
+2. You can use one of the following methods to obtain the checksum(s):
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: 8A6D2EAABF2F75D0662A9DA49574122EDDEFCFEE737D33B25FA238AB7537FC5E
+
+The included 'LICENSE.txt' file have been obtained from:
+https://github.com/henrypp/simplewall/blob/master/LICENSE

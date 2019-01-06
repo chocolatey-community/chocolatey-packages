@@ -4,7 +4,7 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $releases = 'http://www.jubler.org/download.html'
 $softwareName = 'Jubler subtitle editor'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_AfterUpdate {
   Update-ChangelogVersion -version $Latest.Version

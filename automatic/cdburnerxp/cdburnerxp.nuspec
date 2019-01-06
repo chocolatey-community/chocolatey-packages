@@ -4,7 +4,7 @@
   <metadata>
     <id>cdburnerxp</id>
     <title>CDBurnerXP</title>
-    <version>4.5.8.6795</version>
+    <version>4.5.8.704100</version>
     <authors>Canneverbe Limited</authors>
     <owners>chocolatey, gep13</owners>
     <summary>CDBurnerXP - burn CDs and DVDs for free!</summary>
@@ -64,7 +64,7 @@ CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-
     <copyright>2002-2012 Canneverbe Limitied</copyright>
     <licenseUrl>https://cdburnerxp.se/help/intro/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/cdburnerxp.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/cdburnerxp.png</iconUrl>
     <releaseNotes>https://cdburnerxp.se/en/development?full </releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdburnerxp</packageSourceUrl>
     <mailingListUrl>https://forum.cdburnerxp.se</mailingListUrl>

@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png" width="48" height="48"/> [displayfusion](https://chocolatey.org/packages/displayfusion)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png" width="48" height="48"/> [displayfusion](https://chocolatey.org/packages/displayfusion)
 
 
 Multiple Monitors Made Easy! DisplayFusion will make your multi-monitor life much easier! With powerful features like Multi-Monitor Taskbars, TitleBar Buttons and fully customizable HotKeys, DisplayFusion will make managing your multiple monitors easy.
