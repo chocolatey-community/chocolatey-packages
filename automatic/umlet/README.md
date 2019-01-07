@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/umlet/umlet@b89451cc1026f1dc42884c2b5b8d824bf770d8e6/umlet-standalone/src/exe/img/umlet_logo.png" width="48" height="48"/> [UMLet](https://chocolatey.org/packages/umlet)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ffd1d8ff64623d0717093c09b2e7f810d7b5802d/icons/umlet.png" width="48" height="48"/> [UMLet](https://chocolatey.org/packages/umlet)
 
 Free UML Tool for Fast UML Diagrams.
 
