@@ -43,8 +43,10 @@ catch {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
+$ThisComputer = Get-WmiObject -Class win32_computersystem
+
 # silent install requires different methods for domain-joined systems
-if ((Get-WmiObject -Class win32_computersystem).partofdomain -eq $true) {
+if ($ThisComputer.partofdomain -eq $true) {
    Write-Warning 'Silent install of PDFCreator is not supported on domain-joined systems like this one.'
    Write-Warning 'Silent install will be attempted, but is less certain.'
    $ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
