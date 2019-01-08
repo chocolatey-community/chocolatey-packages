@@ -16,7 +16,7 @@ PDFCreator easily creates PDFs from any Windows program. Use it like a printer i
 - You are free to use PDFCreator at home or at work
 - You may access the source code and compile it on your own, as long as it stays under the AGPL
 
-### Install Options
+## Notes
 The installer has a few options that can be configured via the --ia switch:
 
 - `/NOICONS` - No desktop or Start Menu icons will be created
