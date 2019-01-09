@@ -12,4 +12,4 @@ For example: `--params '"/InstallDir:C:\tools\python2"'`
 
 ## Notes
 
-- Python package manager `pip` is not installed by default, but you can invoke it nevertheless using command `python -m pip` which will use `pip2` and adequate version of python if you also have python3 installed. For more details see [PYthon Windows FAQ](https://docs.python.org/3/faq/windows.html).
+- Python package manager `pip` is not installed by default, but you can invoke it nevertheless using command `python -m pip` which will use `pip2` and adequate version of python if you also have python3 installed. For more details see [Python on Windows FAQ](https://docs.python.org/3/faq/windows.html).
