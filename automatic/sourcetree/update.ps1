@@ -20,9 +20,22 @@ function global:au_GetLatest {
 
     # https://downloads.atlassian.com/software/sourcetree/windows/ga/SourcetreeEnterpriseSetup_2.5.5.msi
     $re32  = "SourcetreeEnterpriseSetup_(.*).msi"
-    $url32 = $download_page.links | Where-Object href -match $re32 | Select-Object -First 1 -expand href
 
-    $version32 = $Matches[1]
+    # There are multiple download links on the page.
+    # We need to find the one with the highest version number in case not all of them are the same.
+    $msiLinks = @()
+    $download_page.links | Where-Object href -match $re32 | ForEach-Object {
+        $msiLinks += New-Object PSObject -Property @{
+            'href' = $_.href
+            'versionString' = [regex]::Matches($_.href, $re32).Groups[1].Value
+            'version' = [version]([regex]::Matches($_.href, $re32).Groups[1]).Value
+        }
+    }
+
+    $newestMsi = $msiLinks | Sort-Object version -descending | Select-Object -First 1
+
+    $url32 = $newestMsi.href
+    $version32 = $newestMsi.versionString
     @{
         Version      = $version32
         URL32        = $url32
