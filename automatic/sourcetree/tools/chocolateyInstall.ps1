@@ -15,8 +15,8 @@ $packageArgs = @{
   fileType      = 'msi'
   silentArgs    = "/qn /norestart ACCEPTEULA=1 /l*v `"$env:TEMP\$env:ChocolateyPackageName.$env:ChocolateyPackageVersion.log`""
   validExitCodes= @(0,1641,3010)
-  url           = 'https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourcetreeEnterpriseSetup_3.0.8.msi'
-  checksum      = '270839714ed9c112c32e8d0439f1286595cdf6ed6d1d80d3c6810da62bb937b1'
+  url           = 'https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourcetreeEnterpriseSetup_3.0.15.msi'
+  checksum      = '26d85ec3692b523e0b8e52f58cfefbfb359818e273417ae977547753111f1b16'
   checksumType  = 'sha256'
   url64bit      = ''
   checksum64    = ''
