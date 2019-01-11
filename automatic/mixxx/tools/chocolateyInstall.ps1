@@ -3,18 +3,19 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName    = 'mixxx'
+  packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = Get-Item $toolsPath\*-win32.exe
-  file64         = Get-Item $toolsPath\*-win64.exe
+  url            = ''
+  url64bit       = ''
+
+  softwareName   = 'Mixxx *'
+
+  checksum       = ''
+  checksumType   = ''
+  checksum64     = ''
+  checksumType64 = ''
+
   silentArgs     = '/quiet'
   validExitCodes = @(0)
-  softwareName   = 'Mixxx *'
 }
-Install-ChocolateyInstallPackage @packageArgs
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' }}
-
-
-$installLocation = Get-AppInstallLocation $packageArgs.softwareName
-if (!$installLocation)  { Write-Warning "Can't find install location"; return }
-Write-Host "Installed to '$installLocation'"
+Install-ChocolateyPackage @packageArgs
