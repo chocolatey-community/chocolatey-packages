@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://c.1password.com/dist/1P/win6/1PasswordSetup-7.3.654.exe'
+  url            = 'https://c.1password.com/dist/1P/win6/1PasswordSetup-7.3.657.exe'
   softwareName   = '1Password*'
-  checksum       = 'cc36a194f45890c3d98eebfdaf1e040d95b12c12e91dc6aa3f5f097bd2019ba2'
+  checksum       = '2738348139c3a6506ca300d10b3162ccee7d55cf9d3e6ab13a62c9c77b5d631a'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
