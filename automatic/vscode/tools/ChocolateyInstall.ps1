@@ -31,3 +31,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+if ($pp.NoAutoUpdate) { Set-UpdateChannel 'none' }
