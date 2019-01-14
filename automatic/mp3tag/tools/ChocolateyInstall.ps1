@@ -1,17 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'mp3tag'
-$url32       = 'http://download.mp3tag.de/mp3tagv291setup.exe'
-$checksum32  = 'd887ae908ba31ee2f47b15d228cf594656aa217242ca38bf91b55c1133f1e346'
-$silentArgs  = '/S'
-
-$PSScriptRoot = Split-Path -parent $MyInvocation.MyCommand.Definition
-
-# The installer doesn’t like being renamed. The installation wouldn’t be
-# silent if it is renamed. Therefore the original filename is parsed
-# from the URL
-$installerPath = Join-Path $PSScriptRoot $url32.Split('/')[-1]
-$iniFile = Join-Path $PSScriptRoot 'Mp3tagSetup.ini'
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$iniFile = Join-Path $toolsPath 'Mp3tagSetup.ini'
 
 # Automatic language selection
 $LCID = (Get-Culture).LCID
@@ -29,18 +19,13 @@ language=$LCID
 New-Item $iniFile -type file -force -value $iniContent
 
 $packageArgs = @{
-  packageName            = $packageName
-  fileFullPath           = $installerPath
-  fileType               = 'EXE'
-  url                    = $url32
-  checksum               = $checksum32
-  checksumType           = 'sha256'
+  packageName    = $env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = "$toolsPath\"
+  silentArgs     = "/S"
+  validExitCodes = @(0)
 }
 
-Get-ChocolateyWebFile @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
 
-# Download the file to $PSScriptRoot.
-# Using Chocolatey’s Installer-ChocolateyPackage function isn’t a good idea here
-# because the path where the installer is downloaded could change and
-# the ini file needs to be in the same folder to work.
-Install-ChocolateyInstallPackage $packageName $fileType $silentArgs $installerPath
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
