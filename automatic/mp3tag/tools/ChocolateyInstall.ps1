@@ -1,15 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$pp = Get-PackageParameters
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $iniFile = Join-Path $toolsPath 'Mp3tagSetup.ini'
 
+$desktop = if ($pp.NoDesktopShortcut) { 0 } else { 1 }
+$explorer = if ($pp.NoContextMenu) { 0 } else { 1 }
 # Automatic language selection
 $LCID = (Get-Culture).LCID
 $iniContent = @"
 [shortcuts]
 startmenu=1
-desktop=1
-explorer=1
+desktop=$desktop
+explorer=$explorer
 
 [language]
 language=$LCID
