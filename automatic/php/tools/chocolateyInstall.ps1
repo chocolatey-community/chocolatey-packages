@@ -13,7 +13,7 @@ if ($installLocation) {
 
 $pp = Get-PackageParameters
 
-$downloadInfo = @{
+$filesInfo = @{
   filets32  = "$toolsPath\"
   filets64  = "$toolsPath\"
   filents32 = "$toolsPath\"
@@ -21,11 +21,11 @@ $downloadInfo = @{
 }
 
 if ($pp.ThreadSafe) {
-  $file32 = $downloadInfo.filets32
-  $file64 = $downloadInfo.filets64
+  $file32 = $filesInfo.filets32
+  $file64 = $filesInfo.filets64
 } else {
-  $file32 = $downloadInfo.filents32
-  $file64 = $downloadInfo.filents64
+  $file32 = $filesInfo.filents32
+  $file64 = $filesInfo.filents64
 }
 
 $packageArgs = @{
