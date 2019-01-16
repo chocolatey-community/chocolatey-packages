@@ -1,6 +1,6 @@
 ﻿Import-Module AU
 
-$releases = 'https://mpc-hc.org/downloads'
+$releases = 'https://github.com/clsid2/mpc-hc/releases'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -21,20 +21,16 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
-  Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
-}
-
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'x86\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
   $re = 'x64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-  $verRe = '_v|_x(86|64)'
+  $verRe = 'MPC-HC\.|\.x(86|64)'
   $version32 = $url32 -split "$verRe" | select -first 1 -skip 1
   $version64 = $url64 -split "$verRe" | select -first 1 -skip 1
   if ($version32 -ne $version64) {
@@ -44,7 +40,6 @@ function global:au_GetLatest {
     URL32        = $url32
     URL64        = $url64
     Version      = $version32
-    ReleaseNotes = "https://trac.mpc-hc.org/wiki/Changelog/${version32}"
   }
 }
 
