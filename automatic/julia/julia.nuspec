@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>julia</id>
-    <version>1.0.3</version>
+    <version>1.0.3.20190116</version>
     <title>Julia programming language</title>
     <authors>Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah, Julia contributors</authors>
     <owners>chocolatey, FlorianRappl, drel</owners>
