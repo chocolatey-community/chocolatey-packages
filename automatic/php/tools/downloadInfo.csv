@@ -1,2 +1,0 @@
-threadsafe|http://windows.php.net/downloads/releases/php-7.3.1-Win32-VC15-x86.zip|http://windows.php.net/downloads/releases/php-7.3.1-Win32-VC15-x64.zip|1abbaf8b35b0922d8d131c73a8bca5dbc936fee5232f6c4902985750f2ab448a|023322399a9e60c8dacaa9e939563958769cc3f42ac510e28f558b805bd20cbb
-not-threadsafe|http://windows.php.net/downloads/releases/php-7.3.1-nts-Win32-VC15-x86.zip|http://windows.php.net/downloads/releases/php-7.3.1-nts-Win32-VC15-x64.zip|5cc187873c08bcdc1b9a7f9b119a6340d3f0534967bc392ff7d8fa2978757124|15e70a10cab6c97e2bdd17135223200072d716ded5df316a2a7a3132a526ae6a
