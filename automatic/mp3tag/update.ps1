@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'http://www.mp3tag.de/en/download.html'
 
