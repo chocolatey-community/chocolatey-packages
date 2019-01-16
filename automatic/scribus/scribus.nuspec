@@ -9,7 +9,7 @@
     <title>Scribus</title>
     <authors>The Scribus Team</authors>
     <projectUrl>https://www.scribus.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c60e11994d4e9da90e4e5a974f54e284b8d92823/icons/scribus.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c60e11994d4e9da90e4e5a974f54e284b8d92823/icons/scribus.svg</iconUrl>
     <copyright>Copyright 2015-2016 The Scribus Team</copyright>
     <licenseUrl>https://sourceforge.net/p/scribus/code/ci/master/tree/Scribus/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
