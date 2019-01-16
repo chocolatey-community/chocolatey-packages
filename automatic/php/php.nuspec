@@ -36,6 +36,7 @@ For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

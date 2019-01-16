@@ -3,25 +3,45 @@ import-module au
 $releases = 'http://windows.php.net/download'
 
 function global:au_BeforeUpdate {
-  $Latest.ChecksumTS32 = Get-RemoteChecksum $Latest.URLTS32
-  $Latest.ChecksumTS64 = Get-RemoteChecksum $Latest.URLTS64
-  $Latest.ChecksumNTS32 = Get-RemoteChecksum $Latest.URLNTS32
-  $Latest.ChecksumNTS64 = Get-RemoteChecksum $Latest.URLNTS64
+  # threadsafe
+  $Latest.FileNameTS32 = $Latest.URLTS32 -split '/' | select -Last 1
+  iwr $Latest.URLTS32 -OutFile tools\$($Latest.FileNameTS32)
+  $Latest.ChecksumTS32 = Get-FileHash tools\$($Latest.FileNameTS32) | % Hash
 
-  $lines = @(
-    @('threadsafe'; $Latest.URLTS32; $Latest.URLTS64; $Latest.ChecksumTS32; $Latest.ChecksumTS64) -join '|'
-    @('not-threadsafe'; $Latest.URLNTS32; $Latest.URLNTS64; $Latest.ChecksumNTS32; $Latest.ChecksumNTS64) -join '|'
-  )
+  $Latest.FileNameTS64 = $Latest.URLTS64 -split '/' | select -Last 1
+  iwr $Latest.URLTS64 -OutFile tools\$($Latest.FileNameTS64)
+  $Latest.ChecksumTS64 = Get-FileHash tools\$($Latest.FileNameTS64) | % Hash
 
-  [System.IO.File]::WriteAllLines("$PSScriptRoot\tools\downloadInfo.csv", $lines);
+  # non-threadsafe
+  $Latest.FileNameNTS32 = $Latest.URLNTS32 -split '/' | select -Last 1
+  iwr $Latest.URLNTS32 -OutFile tools\$($Latest.FileNameNTS32)
+  $Latest.ChecksumNTS32 = Get-FileHash tools\$($Latest.FileNameNTS32) | % Hash
+
+  $Latest.FileNameNTS64 = $Latest.URLNTS64 -split '/' | select -Last 1
+  iwr $Latest.URLNTS64 -OutFile tools\$($Latest.FileNameNTS64)
+  $Latest.ChecksumNTS64 = Get-FileHash tools\$($Latest.FileNameNTS64) | % Hash
 }
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(^\s*location on\:?\s*)\<.*\>"                     = "`${1}<$releases>"
+      "(?i)(\s*32\-Bit Software \(threadsafe\).*)\<.*\>"      = "`${1}<$($Latest.URLTS32)>"
+      "(?i)(\s*64\-Bit Software \(threadsafe\).*)\<.*\>"      = "`${1}<$($Latest.URLTS64)>"
+      "(?i)(\s*32\-Bit Software \(non\-threadsafe\).*)\<.*\>" = "`${1}<$($Latest.URLNTS32)>"
+      "(?i)(\s*64\-Bit Software \(non\-threadsafe\).*)\<.*\>" = "`${1}<$($Latest.URLNTS64)>"
+      "(?i)(^\s*checksum\s*type\:).*"                         = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum(32)? \(threadsafe\)\:).*"            = "`${1} $($Latest.ChecksumTS32)"
+      "(?i)(^\s*checksum64 \(threadsafe\)\:).*"               = "`${1} $($Latest.ChecksumTS64)"
+      "(?i)(^\s*checksum(32)? \(non\-threadsafe\)\:).*"       = "`${1} $($Latest.ChecksumNTS32)"
+      "(?i)(^\s*checksum64 \(non\-threadsafe\)\:).*"          = "`${1} $($Latest.ChecksumNTS64)"
     }
-
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*filets32\s*=\s*`"[$]toolsPath\\).*"  = "`${1}$($Latest.FileNameTS32)`""
+      "(?i)(^\s*filets64\s*=\s*`"[$]toolsPath\\).*"  = "`${1}$($Latest.FileNameTS64)`""
+      "(?i)(^\s*filents32\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileNameNTS32)`""
+      "(?i)(^\s*filents64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileNameNTS64)`""
+    }
     "$($Latest.PackageName).nuspec" = @{
       "(\<releaseNotes\>).*?(\</releaseNotes\>)"                   = "`${1}$($Latest.ReleaseNotes)`$2"
       "(\<dependency .+?`")vcredist[^`"]+`"( version=`"[^`"]+`")?" = "`$1$($Latest.Dependency.Id)`" version=`"$($Latest.Dependency.Version)`""
