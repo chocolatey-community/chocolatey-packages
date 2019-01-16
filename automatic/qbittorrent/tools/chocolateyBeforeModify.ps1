@@ -5,7 +5,7 @@ if ($process) {
   Write-Host "Stopping qBittorrent process..."
   Stop-Process -InputObject $process
 
-  sleep -Seconds 3
+  Start-Sleep -Seconds 3
 
   $process = Get-Process -Name $processName
   if ($process) {
