@@ -7,5 +7,5 @@ Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio f
 - `/NoDesktopShortcut` - Do not create desktop shortcut for Mp3tag
 - `/NoContextMenu` - Do not add Mp3tag to context menu
 
-These parameters can be passed to the installer with the use of `--params`.
-For example: `--params '"/NoDesktopShortcut /NoContextMenu"'`
+These parameters can be passed to the installer with the use of `--package-parameters`.
+For example: `choco install --package-parameters='"/NoDesktopShortcut /NoContextMenu"'`
