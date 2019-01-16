@@ -1,13 +1,12 @@
 $ErrorActionPreference = 'Stop'
 
-$packageName         = 'mpc-hc'
 $softwareNamePattern = 'MPC-HC*'
 
 [array] $key = Get-UninstallRegistryKey $softwareNamePattern
 if ($key.Count -eq 1) {
     $key | ForEach-Object {
         $packageArgs = @{
-            packageName            = $packageName
+            packageName            = $env:ChocolateyPackageName
             silentArgs             = "/VERYSILENT /SUPPRESSMSGBOXES"
             fileType               = 'EXE'
             validExitCodes         = @(0)
