@@ -10,16 +10,19 @@ function global:au_SearchReplace {
       "(?i)^(\s*url\s*=\s*)'.*'" = "`${1}'$($Latest.URL32)'"
       "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
+      "(?i)^(\s*silentArgs\s*=\s*)`".*`"" = "`${1}`"$($Latest.SilentArgs)`""
     }
   }
 }
 
-function global:au_AfterUpdate {
+function global:au_BeforeUpdate {
   . "$PSScriptRoot/update_helper.ps1"
   if ($Latest.PackageName -eq '1password4') {
     removeDependencies ".\*.nuspec"
+    $Latest.SilentArgs = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`"'
   } else {
     addDependency ".\*.nuspec" 'dotnet4.6.2' '4.6.01590.20170129'
+    $Latest.SilentArgs = '-s -l=`"$($env:TEMP)`"'
   }
 }
 
