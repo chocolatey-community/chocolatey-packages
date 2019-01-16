@@ -1,4 +1,4 @@
-Mp3tag v2.91 Copyright ©1999-2018 Florian Heidenreich
+Mp3tag v2.91 Copyright Â©1999-2018 Florian Heidenreich
 
 Mp3tag v2.91 is designed for private use and commercial use without sale ("Freeware"), if the following rules are respected:
 

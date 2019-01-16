@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $pp = Get-PackageParameters
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
