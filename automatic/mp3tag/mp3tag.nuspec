@@ -27,6 +27,7 @@ For example: `choco install --package-parameters='"/NoDesktopShortcut /NoContext
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mp3tag</packageSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
