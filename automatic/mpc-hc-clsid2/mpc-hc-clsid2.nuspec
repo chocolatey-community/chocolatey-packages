@@ -5,7 +5,7 @@
     <id>mpc-hc-clsid2</id>
     <version>1.8.4</version>
     <title>MPC-HC (fork by clsid2)</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey,jack1142</owners>
     <authors>clsid2, MPC-HC Team</authors>
     <licenseUrl>https://github.com/clsid2/mpc-hc/blob/develop/COPYING.txt</licenseUrl>
     <projectUrl>https://github.com/clsid2/mpc-hc</projectUrl>
