@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mpc-hc-clsid2</id>
-    <version></version>
+    <version>1.8.4</version>
     <title>MPC-HC (fork by clsid2)</title>
     <owners>chocolatey</owners>
     <authors>clsid2, MPC-HC Team</authors>
