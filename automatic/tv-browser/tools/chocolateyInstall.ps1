@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
   softwareName   = 'TV-Browser*'
-  file           = "$toolsPath\"
+  file           = "$toolsPath\tvbrowser_4.0.1_win32.exe"
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
