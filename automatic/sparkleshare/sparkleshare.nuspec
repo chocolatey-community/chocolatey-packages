@@ -9,9 +9,9 @@
     <title>SparkleShare</title>
     <authors>Linux Community,Hylke Bons</authors>
     <projectUrl>http://sparkleshare.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/sparkleshare.png</iconUrl>
     <copyright>Copyright (C) 2010  Hylke Bons</copyright>
-    <licenseUrl>https://github.com/hbons/SparkleShare/tree/master/legal</licenseUrl>
+    <licenseUrl>https://github.com/hbons/SparkleShare/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/hbons/SparkleShare</projectSourceUrl>
     <docsUrl>https://github.com/hbons/SparkleShare/wiki</docsUrl>
@@ -53,9 +53,10 @@ For more information on usecases, see the docs.
 * Client side encryption
 * Free and Open Source
     </description>
-    <releaseNotes>https://github.com/hbons/SparkleShare/blob/master/News.txt</releaseNotes>
+    <releaseNotes>https://github.com/hbons/SparkleShare/blob/master/RELEASE_NOTES.txt</releaseNotes>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
