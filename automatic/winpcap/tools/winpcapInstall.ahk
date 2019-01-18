@@ -4,24 +4,16 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetTitleMatchMode, RegEx
 
-; uninstalling part
-
-ProgramFilesX86 := A_ProgramFiles . (A_PtrSize=8 ? " (x86)" : "")
-
-winpcapUninstaller = %A_ProgramFiles%\WinPcap\Uninstall.exe
-winpcapUninstallerx86 = %ProgramFilesX86%\WinPcap\Uninstall.exe
-
-IfExist, %winpcapUninstaller%
-{
-	Run, %winpcapUninstaller%
-	installed = 1
+if (%0% < 2) {
+	FileAppend, "Too few arguments given", *
+	exit
 }
-IfExist, %winpcapUninstallerx86%
-{
-	Run, %winpcapUninstallerx86%
-	installed = 1
-}
-if (installed = 1)
+
+operation = %1%
+file = %2%
+
+Run, %file%
+if (operation = "uninstall")
 {
 	WinWait, WinPcap [\d\.]+ Uninstall,, 30
 	IfWinExist
@@ -43,38 +35,37 @@ if (installed = 1)
 			BlockInput, Off
 		}
     exit
-}
+} else if (operation = "install") {
+	WinWait, WinPcap [\d\.]+ Setup,, 30
 
-; installing part
-winpcapInstaller = %1%
-Run, %winpcapInstaller%
-
-WinWait, WinPcap [\d\.]+ Setup,, 30
-
-Loop, 3
-{
-	gosub, setupForward
-}
-
-WinWait, WinPcap [\d\.]+ Setup, has been installed, 30
-	IfWinExist
+	Loop, 3
 	{
-		BlockInput, On
-		Sleep, 250
-		WinActivate
-		Send, {Enter}
-		BlockInput, Off
+		gosub, setupForward
 	}
 
-ExitApp
+	WinWait, WinPcap [\d\.]+ Setup, has been installed, 30
+		IfWinExist
+		{
+			BlockInput, On
+			Sleep, 250
+			WinActivate
+			Send, {Enter}
+			BlockInput, Off
+		}
 
-setupForward:
-	IfWinExist
-	{
-		BlockInput, On
-		Sleep, 250
-		WinActivate
-		Send, {Enter}
-		BlockInput, Off
-	}
-return
+	ExitApp
+
+	setupForward:
+		IfWinExist
+		{
+			BlockInput, On
+			Sleep, 250
+			WinActivate
+			Send, {Enter}
+			BlockInput, Off
+		}
+	return
+} else {
+	FileAppend, "Unsupported operation", *
+	exit
+}
