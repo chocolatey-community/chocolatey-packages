@@ -18,7 +18,7 @@ $params = @{
   file64         = "$toolsPath\"
 }
 
-Install-ChocolateyPackage @params
+Install-ChocolateyInstallPackage @params
 Write-Host "Installed to '$installDir'"
 
 if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
