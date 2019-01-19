@@ -34,7 +34,8 @@ function global:au_GetLatest {
     $result = $content -match "<strong>\s*Status:\s*</strong>\s*<strong>\s*([a-z]+)\s*</strong>"
 
     if (!$result) {
-      throw "mp3tag status not found on $releases"
+      Write-Host "mp3tag status not found on $releases"
+      return 'ignore'
     }
 
     $status = $Matches[1]
@@ -50,7 +51,8 @@ function global:au_GetLatest {
     if ($status -eq 'Beta') {
       $version += "-beta"
     } elseif ($status -ne 'Stable') {
-      throw "mp3tag status is not recognizable"
+      Write-Host "mp3tag status is not recognizable"
+      return 'ignore'
     }
 
     return @{ URL32 = $url32; Version = $version }
