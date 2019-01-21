@@ -17,7 +17,7 @@ Install-ChocolateyPackage @packageArgs
 
 
 Write-Host "Waiting 10 seconds for the application to start..."
-sleep -Seconds 10 # We'll wait until the partition master program has started, then we will close it.
+Start-Sleep -Seconds 10 # We'll wait until the partition master program has started, then we will close it.
 
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 

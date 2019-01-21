@@ -5,8 +5,8 @@ $pp = Get-PackageParameters
 
 $arguments = @{
     packageName = $env:chocolateyPackageName
-    file        = "$toolsDir\httpd-2.4.37-o102p-x86-vc14.zip"
-    file64      = "$toolsDir\httpd-2.4.37-o102p-x64-vc14.zip"
+    file        = "$toolsDir\httpd-2.4.38-o102q-x86-vc14.zip"
+    file64      = "$toolsDir\httpd-2.4.38-o102q-x64-vc14.zip"
     destination = if ($pp.installLocation) { $pp.installLocation } else { $env:APPDATA }
     port        = if ($pp.Port) { $pp.Port } else { 8080 }
     serviceName = if ($pp.NoService) { $null } elseif ($pp.serviceName) { $pp.serviceName } else { 'Apache' }

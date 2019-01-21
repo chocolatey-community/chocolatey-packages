@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $commonPackageArgs = @{
   fileType       = 'exe'
@@ -22,7 +22,7 @@ if ($pp.UninstallAdditions) {
 
 $uninstalled = $false
 
-$softwares | % {
+$softwares | ForEach-Object {
   $packageArgs = $_
 
   [array]$key = Get-UninstallRegistryKey @packageArgs
