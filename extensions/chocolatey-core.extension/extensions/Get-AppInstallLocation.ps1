@@ -40,7 +40,9 @@ function Get-AppInstallLocation {
     $ErrorActionPreference = "SilentlyContinue"
 
     Write-Verbose "Trying local and machine (x32 & x64) Uninstall keys"
-    $key = Get-UninstallRegistryKey $AppNamePattern | select -First 1
+    # Needed to pass in the correct wildcard pattern to 'Get-UninstallRegistryKey'
+    $unescapedAppNamePattern = [regex]::Unescape($AppNamePattern)
+    $key = Get-UninstallRegistryKey $unescapedAppNamePattern | select -First 1
     if ($key) {
         Write-Verbose "Trying Uninstall key property 'InstallLocation'"
         $location = $key.InstallLocation
