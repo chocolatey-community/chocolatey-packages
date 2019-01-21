@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 1.3.4
+- Bugfix `Get-AppInstallLocation`: Changed key to be forced as a single value (instead of array)
+
 ## 1.3.3
 
 - Bugfix `Get-AppInstallLocation`: fix path is directory

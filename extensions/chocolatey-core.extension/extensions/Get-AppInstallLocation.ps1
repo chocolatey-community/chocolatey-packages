@@ -40,8 +40,8 @@ function Get-AppInstallLocation {
     $ErrorActionPreference = "SilentlyContinue"
 
     Write-Verbose "Trying local and machine (x32 & x64) Uninstall keys"
-    [array] $key = Get-UninstallRegistryKey $AppNamePattern
-    if ($key.Count -eq 1) {
+    $key = Get-UninstallRegistryKey $AppNamePattern | select -First 1
+    if ($key) {
         Write-Verbose "Trying Uninstall key property 'InstallLocation'"
         $location = $key.InstallLocation
         if (is_dir $location) { return strip $location }
