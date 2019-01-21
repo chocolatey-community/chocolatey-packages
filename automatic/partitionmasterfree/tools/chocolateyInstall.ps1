@@ -6,7 +6,7 @@
   checksumType   = 'sha256'
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0)
-  softwareName   = 'EaseUS Partition Master (Free)'
+  softwareName   = 'EaseUS Partition Master*'
 }
 
 Write-Host "This package is not completely silent." -ForegroundColor "White"
