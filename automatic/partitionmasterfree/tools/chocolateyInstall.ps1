@@ -1,4 +1,4 @@
-$packageArgs = @{
+﻿$packageArgs = @{
   packageName    = 'partitionmasterfree'
   fileType       = 'EXE'
   url            = 'http://download.easeus.com/free/epm.exe'
@@ -11,5 +11,15 @@ $packageArgs = @{
 
 Write-Host "This package is not completely silent." -ForegroundColor "White"
 Write-Host "The application will launch after installation." -ForegroundColor "White"
+Write-Host "We will try to close the application." -ForegroundColor "White"
 
 Install-ChocolateyPackage @packageArgs
+
+
+Write-Host "Waiting 10 seconds for the application to start..."
+sleep -Seconds 10 # We'll wait until the partition master program has started, then we will close it.
+
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+
+. "$toolsDir\helpers.ps1"
+stopProcessIfExist
