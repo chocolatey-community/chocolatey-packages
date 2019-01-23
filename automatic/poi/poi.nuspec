@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>poi</id>
-    <version>9.0.4</version>
+    <version>10.1.0</version>
     <owners>chocolatey, drelatgithub</owners>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/poi</packageSourceUrl>
 
@@ -39,7 +39,7 @@ More information could be obtained [here](https://github.com/poooi/poi/blob/mast
     - Daily equipment improvement list for Akashi's Arsenal
     - Multiple panels for other DMM games
 ]]></description>
-    <releaseNotes>https://github.com/poooi/poi/releases/tag/v9.0.4</releaseNotes>
+    <releaseNotes>https://github.com/poooi/poi/releases/tag/v10.1.0</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

@@ -1,0 +1,29 @@
+# The following file is only used to request reviews from
+# specific users that is handling a certain package (or file)
+# and has write permission to the repository.
+# If you wishes to be requested as a reviewer and has write permission
+# to the repository, feel free to add yourself to the list
+
+# Global user/team to request review from (only used as a reference), hence commented out
+# *  @chocolatey/community-maintainers
+
+
+# Packages
+# Multiple users can be set for the same match
+
+
+*/calibre*        @gep13
+*/cdburnerxp*     @gep13
+*/poweriso*       @gep13
+*/rdcman*         @gep13
+*/wix*            @gep13
+*/gobby*          @AdmiringWorm
+*/gom-player*     @AdmiringWorm
+*/jubler*         @AdmiringWorm
+*/juju*           @AdmiringWorm
+*/transifex*      @AdmiringWorm
+*/waterfox*       @AdmiringWorm
+
+# Other
+# This can be any file other that won't be matched as a package
+# You can use the same matches as normally would be used in .gitignore/.gitattributes

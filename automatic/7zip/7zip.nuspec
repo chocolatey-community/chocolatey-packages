@@ -4,7 +4,7 @@
   <metadata>
     <id>7zip</id>
     <title>7-Zip</title>
-    <version>18.5.0.20180730</version>
+    <version>18.6</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
@@ -34,13 +34,13 @@ This means you may lose current work. If it doesn't automatically restart explor
     <tags>7zip zip archiver admin foss</tags>
     <licenseUrl>http://www.7-zip.org/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/68b91a851cee97e55c748521aa6da6211dd37c98/icons/7zip.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@68b91a851cee97e55c748521aa6da6211dd37c98/icons/7zip.svg</iconUrl>
     <docsUrl>http://www.7-zip.org/faq.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/sevenzip/discussion/45797/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
     <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
     <dependencies>
-      <dependency id="7zip.install" version="[18.5.0.20180730]" />
+      <dependency id="7zip.install" version="[18.6]" />
     </dependencies>
   </metadata>
   <files>

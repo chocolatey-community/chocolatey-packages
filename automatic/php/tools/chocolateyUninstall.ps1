@@ -1,7 +1,7 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$packageName = 'php'
+$packageName = $env:ChocolateyPackageName
 
 $installLocation = GetInstallLocation -libDirectory "$toolsPath\.."
 

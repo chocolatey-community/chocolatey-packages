@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>minikube</id>
-    <version>0.31.0</version>
+    <version>0.33.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/minikube</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Minikube: Run Kubernetes locally</title>
@@ -34,7 +34,7 @@ Minikube supports Kubernetes features such as:
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/kubernetes/minikube/blob/v0.31.0/CHANGELOG.md</releaseNotes>
+    <releaseNotes>https://github.com/kubernetes/minikube/blob/v0.33.1/CHANGELOG.md</releaseNotes>
     <dependencies>
       <dependency id="kubernetes-cli" />
     </dependencies>

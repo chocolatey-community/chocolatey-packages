@@ -19,10 +19,10 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'https://download.virtualbox.org/virtualbox/6.0.0/VirtualBox-6.0.0-127566-Win.exe'
-  url64bit               = 'https://download.virtualbox.org/virtualbox/6.0.0/VirtualBox-6.0.0-127566-Win.exe'
-  checksum               = 'e943e84158057da06e3355b0e170b82507cbe7080f5bbf06c9f4a7674ffa783c'
-  checksum64             = 'e943e84158057da06e3355b0e170b82507cbe7080f5bbf06c9f4a7674ffa783c'
+  url                    = 'https://download.virtualbox.org/virtualbox/6.0.2/VirtualBox-6.0.2-128162-Win.exe'
+  url64bit               = 'https://download.virtualbox.org/virtualbox/6.0.2/VirtualBox-6.0.2-128162-Win.exe'
+  checksum               = '42e9d4a3120585a3578072ecbf77dc707119ac19f4588e3fa327acfd52b21c87'
+  checksum64             = '42e9d4a3120585a3578072ecbf77dc707119ac19f4588e3fa327acfd52b21c87'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
@@ -38,8 +38,8 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 if (!$pp.NoExtensionPack) {
     Write-Host "Installing extension pack"
 
-    $url_ep       = 'https://download.virtualbox.org/virtualbox/6.0.0/Oracle_VM_VirtualBox_Extension_Pack-6.0.0.vbox-extpack'
-    $checksum_ep  = 'b99ef88b0ac1abebc7a6d7168dd5eec58c426f05acf69c4055defff175038f57'
+    $url_ep       = 'https://download.virtualbox.org/virtualbox/6.0.2/Oracle_VM_VirtualBox_Extension_Pack-6.0.2.vbox-extpack'
+    $checksum_ep  = 'ebfa750ddcb10dea7337d2c50f9434bbfe24bdf82132e23d5df47607cdb53229'
     $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | Select-Object -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `

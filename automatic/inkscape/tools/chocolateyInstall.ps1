@@ -5,24 +5,26 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\inkscape-0.92.3-x86.msi"
-  file64         = "$toolsPath\inkscape-0.92.3-x64.msi"
+  file           = "$toolsPath\inkscape-0.92.4-x86.msi"
+  file64         = "$toolsPath\inkscape-0.92.4-x64.msi"
   softwareName   = 'InkScape*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
 }
 
-[array]$key = Get-UninstallRegistrykey $packageArgs.softwareName
+[array]$key = Get-UninstallRegistrykey $packageArgs['softwareName']
 if ($key.Count -eq 1) {
-  if ($key.DisplayVersion -eq '') {
+  if ($key[0].DisplayVersion -eq '0.92.4') {
     Write-Host "Software already installed"
     return
   }
   else {
-    Uninstall-ChocolateyPackage -packageName $packageArgs.packageName `
-      -fileType $packageArgs.fileType `
-      -silentArgs "$($key.PSChildName) $($packageArgs.silentArgs)" `
-      -validExitCodes $packageArgs.validExitCodes `
+    # We need to do it this way, as PSChildName isn't available in POSHv2
+    $msiId = $key[0].UninstallString -replace '^.*MsiExec\.exe\s*\/I',''
+    Uninstall-ChocolateyPackage -packageName $packageArgs['packageName'] `
+      -fileType $packageArgs['fileType'] `
+      -silentArgs "$msiId $($packageArgs['silentArgs'] -replace 'MsiInstall','MsiUninstall')" `
+      -validExitCodes $packageArgs['validExitCodes'] `
       -file ''
   }
 }
@@ -38,7 +40,7 @@ Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 
 $packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
+$installLocation = Get-AppInstallLocation $packageArgs['softwareName']
 if ($installLocation) {
   Write-Host "$packageName installed to '$installLocation'"
 }
