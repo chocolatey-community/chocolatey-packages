@@ -54,7 +54,7 @@ function Get-ShellIntegrationComponents( [HashTable]$pp )
     } elseif ($pp.NoGuiHereIntegration) {
         $shell.Remove("ext\guihere")
     }
-    if ($shell.Count == 1) { $shell.Clear() }
+    if ($shell.Count -eq 1) { $shell.Clear() }
     
     return $shell
 }
