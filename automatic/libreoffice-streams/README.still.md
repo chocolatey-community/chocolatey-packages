@@ -5,5 +5,5 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 
 ## Notes
 
-- LibreOffice Still is the stable version that has undergone more testing (over a longer time). This version is recommended for more conservative users. If you want the latest version, install the [libreoffice](/packages/libreoffice-fresh) package instead.
+- LibreOffice Still is the stable version that has undergone more testing (over a longer time). This version is recommended for more conservative users. If you want the latest version, install the [libreoffice-fresh](/packages/libreoffice-fresh) package instead.
 - Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
