@@ -4,13 +4,13 @@
   <metadata>
     <id>gnupg</id>
     <version>2.2.12</version>
-    <packageSourceUrl>https://github.com/jtcmedia/chocolatey-packages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnupg</packageSourceUrl>
     <owners>chocolatey, ludicrousByte, wget</owners>
-    <title>GnuPG modern (Install)</title>
+    <title>GnuPG</title>
     <authors>Werner Koch, The GnuPG Project</authors>
     <projectUrl>https://www.gnupg.org/</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/jtcmedia/chocolatey-packages/gnupg-icon/icons/gnupg.png</iconUrl>
-    <copyright>Copyright 1998--2015 The GnuPG Project</copyright>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png</iconUrl>
+    <copyright>Copyright 1998-2019 The GnuPG Project</copyright>
     <licenseUrl>https://creativecommons.org/licenses/by-sa/3.0/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.gnupg.org/documentation/manuals/gnupg/</docsUrl>
