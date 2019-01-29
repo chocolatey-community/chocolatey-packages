@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName            = '360ts'
   fileType               = 'exe'
-  url                    = 'https://free.360totalsecurity.com/totalsecurity/360TS_Setup_10.2.0.1275.exe'
-  checksum               = 'c3a6f3ccdc639525f6ea3e7b89525eba45e8ca3ce0e5cac99a33a133a9cb731c'
+  url                    = 'https://free.360totalsecurity.com/totalsecurity/360TS_Setup_10.2.0.1280.exe'
+  checksum               = '05bbb2deb6f32aecfd2510104d9109de24480b51b449a824a334783f550880a8'
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
