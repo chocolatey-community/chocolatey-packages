@@ -19,3 +19,6 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 Write-Host "$packageName installed to '$installLocation'"
 
 Install-BinFile dot $installLocation\bin\dot.exe
+Install-BinFile circo $installLocation\bin\circo.exe
+Install-BinFile sfdp $installLocation\bin\sfdp.exe
+Install-BinFile twopi $installLocation\bin\twopi.exe
