@@ -3,8 +3,8 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'Skype*'
-  url            = 'https://download.skype.com/s4l/download/win/Skype-8.38.0.138.exe'
-  checksum       = '244696af41f9c3b6a33906a8bab7476cfa8e58f17e74672d87b68fb04e060b5a'
+  url            = 'https://download.skype.com/s4l/download/win/Skype-8.38.0.161.exe'
+  checksum       = 'a581f827f9c5950ce59bba1a4f47f242c15584344bbf0002fd1175b496ba3885'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
