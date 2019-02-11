@@ -18,4 +18,4 @@ $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
 Write-Host "$packageName installed to '$installLocation'"
 
-Install-BinFile dot $installLocation\bin\dot.exe
+@('dot','circo','sfdp','twopi') |% {Install-BinFile $_ "$installLocation\bin\$_.exe"}
