@@ -1,3 +1,3 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-@('dot','circo','sfdp','twopi') |% {Uninstall-BinFile $_}
+@('dot','circo','sfdp','twopi') |ForEach-Object {Uninstall-BinFile $_}
