@@ -1,5 +1,5 @@
 ﻿$packageName = 'flashplayeractivex'
-$version = '32.0.0.114'
+$version = '32.0.0.142'
 $majorVersion = '32'
 $registry = ( Get-UninstallRegistryKey -SoftwareName "Adobe Flash Player $majorVersion ActiveX" ).DisplayVersion
 $checking = ( $registry -eq $version )
@@ -29,10 +29,10 @@ if ($allRight) {
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'msi'
-  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/32.0.0.114/install_flash_player_32_active_x.msi'
+  url           = 'https://download.macromedia.com/pub/flashplayer/pdc/32.0.0.142/install_flash_player_32_active_x.msi'
   silentArgs    = '/quiet /norestart REMOVE_PREVIOUS=YES'
   softwareName  = 'Adobe Flash Player ActiveX'
-  checksum      = '3a7d98a2111e01c7d22d95093b674c783abb744c1b54043d14a71281c7659b05'
+  checksum      = '94e305e9ac0e09d4e90b1aadc67d523e7ea3a0137db107d578d39a7df87eafe8'
   checksumType  = 'sha256'
 }
   Install-ChocolateyPackage @packageArgs
