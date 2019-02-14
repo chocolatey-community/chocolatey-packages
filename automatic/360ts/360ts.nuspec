@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>360ts</id>
-    <version>10.2.0.1281</version>
+    <version>10.2.0.1284</version>
     <title>360 Total Security</title>
     <authors>Qihu 360 Software</authors>
     <owners>chocolatey,adgellida</owners>
