@@ -9,7 +9,7 @@ $packageArgs = @{
   checksum64             = '9b01f6f382dbb31367e12cfb0ad4c684546f00edb20054eeac121e7e036a5389'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
-  silentArgs             = '/passive /norestart /l*v "{0}\install.log"' -f "$Env:TEMP\chocolatey\$Env:ChocolateyPackageName\$Env:ChocolateyPackageVersion"
+  silentArgs             = ''
   validExitCodes         = @(0,3010)
   softwareName           = 'LibreOffice*'
 }

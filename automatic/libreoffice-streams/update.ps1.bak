@@ -1,8 +1,5 @@
 import-module au
 
-$freshReleases = 'https://www.libreoffice.org/download/libreoffice-fresh'
-$stillReleases = 'https://www.libreoffice.org/download/libreoffice-still'
-
 function global:au_BeforeUpdate {
   if ($Latest.Title -like '*Fresh*') {
     cp "$PSScriptRoot\README.fresh.md" "$PSScriptRoot\README.md" -Force
@@ -13,7 +10,7 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_SearchReplace {
-  @{
+  $filesToPatchHashTable = @{
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
@@ -24,58 +21,213 @@ function global:au_SearchReplace {
       "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
     }
   }
-}
 
-function GetFreshVersion() {
-  $download_page = Invoke-WebRequest -Uri $freshReleases -UseBasicParsing
-  $url = $download_page.links | ? href -match '\.msi$' | % href | select -First 1
-  $version = $url -split '/' | ? { [version]::TryParse($_, [ref]($__)) }
-
-  @{
-    PackageName = "libreoffice-fresh"
-    Title       = "LibreOffice Fresh"
-    Version     = $version
-    URL32       = "https://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
-    URL64       = "https://download.documentfoundation.org/libreoffice/stable/${version}/win/x86_64/LibreOffice_${version}_Win_x64.msi"
+  $linesToPatch = $filesToPatchHashTable[".\tools\chocolateyInstall.ps1"]
+  if ($Latest.FileType -eq "exe") {
+    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/S'"
+  } else {
+    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/passive /norestart /l*v `"`$Env:TEMP\chocolatey\`$Env:ChocolateyPackageName\`$Env:ChocolateyPackageVersion\install.log`"'"
   }
-}
+  $filesToPatchHashTable[".\tools\chocolateyInstall.ps1"] = $linesToPatch
 
-function GetStillVersions($freshVersion) {
-  # We need to test check for versions of still not matching the fresh edition
-  $freshRe = "[\/_]" + [regex]::Escape(($freshVersion -replace "^([\d]+\.[\d]+).*$", '$1'))
-  $download_page = Invoke-WebRequest -Uri $stillReleases -UseBasicParsing
-  $url = $download_page.links | ? { $_.href -match '\.msi$' -and $_.href -notmatch $freshRe } | % href | select -First 1
-  $version = $url -split '/' | ? { [version]::TryParse($_, [ref]($__)) }
-
-  if (!$version) {
-    return $null
-  }
-  else {
-
-    @{
-      PackageName = 'libreoffice-still'
-      Title       = 'LibreOffice Still'
-      Version     = $version
-      URL32       = "https://download.documentfoundation.org/libreoffice/stable/${version}/win/x86/LibreOffice_${version}_Win_x86.msi"
-      URL64       = "https://download.documentfoundation.org/libreoffice/stable/${version}/win/x86_64/LibreOffice_${version}_Win_x64.msi"
-    }
-  }
+  return $filesToPatchHashTable
 }
 
 function global:au_GetLatest {
-  $freshStream = GetFreshVersion
-  #$stillStream = GetStillVersions -freshVersion $freshStream.Version
 
-  $streams = [ordered] @{
-    fresh = $freshStream
+  function GetBuilds($url) {
+    $page = Invoke-WebRequest -Uri $url -UseBasicParsing
+    $linksArray = @($page.Links)
+    # ? outputs all items that conform with condition (here: TryParse returning
+    # a boolean). As if it was "foreach { if (...) {return ... } }"
+    # The returned values are still a string that must be parsed to a Version object.
+    return @($linksArray | % href | % {$_ -Split '/' } | ? { [version]::TryParse($_, [ref]($__)) })
   }
 
-  # Only add the still stream if a version not matching the major-minor version of fresh
-  if ($stillStream) {
-    $streams.Add('still', $stillStream)
+  function GetLatestBuilds($builds) {
+    # Declaring a [version] typed variable is needed because TryParse expects a
+    # reference. The object must thus exist.
+    [version]$buildVersion = New-Object -TypeName System.Version
+    foreach ($release in $builds) {
+      [void][version]::TryParse($release, [ref]$buildVersion)
+      if ($freshVersion -eq $null) {
+        [version]$freshVersion = $buildVersion
+      } elseif ("$($buildVersion.Major).$($buildVersion.Minor)" -ne
+                "$($previousRelease.Major).$($previousRelease.Minor)") {
+          [version]$stillVersion = $buildVersion
+          break
+      }
+      $previousRelease = $buildVersion
+    }
+    return @{fresh = $freshVersion; still = $stillVersion}
+  }
+
+  function GetBuildHash($url) {
+    [xml]$page = Invoke-WebRequest -Uri "$url.mirrorlist" -UseBasicParsing
+    return $page.html.body.div.div.ul.li[4].tt
+  }
+
+  function IsUrlValid($url) {
+    try {
+      $request = [System.Net.WebRequest]::Create($url)
+      $request.Method = "HEAD"
+      # GetResponse raises a WebException when there has been an issue.
+      $response = $request.GetResponse()
+      $status = [int]$response.StatusCode
+      $response.Close()
+      if ($status -eq 200) {
+        return $true
+      } else {
+        return $false
+      }
+    } catch {
+      return $false
+    }
+  }
+
+  function GetBranchVersion([version]$version) {
+    [version]$branchVersion = New-Object -TypeName System.Version
+    [void][version]::TryParse("$($version.Major).$($version.Minor)", [ref]$branchVersion)
+    return $branchVersion
+  }
+
+  function GetReleasesToBuildsMapping($builds) {
+    # Get correspondance between release and build versions. This step is
+    # needed to determinate the URL and get releases without CDN.
+    # e.g. 6.2.0 => 6.2.0.3
+    $releasesToBuildMapping = [ordered]@{}
+    [version]$buildVersion = New-Object -TypeName System.Version
+    foreach ($build in $builds) {
+      [void][version]::TryParse($build, [ref]$buildVersion)
+      $releaseId = "$($buildVersion.Major).$($buildVersion.Minor).$($buildVersion.Build)"
+      if ($candidateBuildVersion -ne $null) {
+        $candidateReleaseId = "$($candidateBuildVersion.Major).$($candidateBuildVersion.Minor).$($candidateBuildVersion.Build)"
+        if ($candidateReleaseId -ne $releaseId) {
+          $releasesToBuildMapping.add($candidateReleaseId, $candidateBuildVersion)
+        }
+      }
+      $candidateBuildVersion = $buildVersion
+    }
+    return $releasesToBuildMapping
+  }
+
+  function GetPossibleFilenameVariants($filenames, $releases, $release, $arch) {
+    [System.Collections.ArrayList]$possibleFilenameVariants = @()
+    foreach ($filename in $filenames) {
+      # Assume the filename is using the release id, e.g. 6.2.0
+      $replaceFilename = $filename -Replace "\[VERSION\]","$release" -Replace "\[ARCH\]","$arch"
+      [void]$possibleFilenameVariants.Add($replaceFilename)
+      # Assume the filename is using the build id instead, e.g. 6.2.0.3
+      $replaceFilename = $filename -Replace "\[VERSION\]","$($releases[$release])" -Replace "\[ARCH\]","$arch"
+      [void]$possibleFilenameVariants.Add($replaceFilename)
+    }
+    return $possibleFilenameVariants
+  }
+
+  function AddBuildsToStreams($streams, $releases, $url, $version, $possibleFilenames) {
+    foreach ($release in $releases.Keys) {
+      # The package variable needs to be a hashtable. Therefore, we cannot use
+      # an OrderedDictionary with the [ordered] keyword. The dictionary keys
+      # will unfortunately appear in random order.
+      $package = @{}
+      if ($releases.$release -lt $version) {
+        $package.PackageName = "libreoffice-still"
+        $package.Title = "LibreOffice Still"
+      } else {
+        $package.PackageName = "libreoffice-fresh"
+        $package.Title = "LibreOffice Fresh"
+      }
+      $package.Version = $release
+
+      $32bitsFilenameSchemas = GetPossibleFilenameVariants $possibleFilenames $releases $release "x86"
+      foreach ($32bitsFilenameSchema in $32bitsFilenameSchemas) {
+        if (IsUrlValid "${url}$($releases.$release)/win/x86/$32bitsFilenameSchema") {
+          $package.URL32 = "${url}$($releases.$release)/win/x86/$32bitsFilenameSchema"
+          $package.Checksum32 = GetBuildHash $package.URL32
+          break
+        }
+      }
+      # 32 bits packages are always been present. If this isn't, the version
+      # might have been unreleased or is not a stable realease (i.e. it ends
+      # with an improper name like rc1, test, etc.).
+      # Package won't be added to the streams
+      if ($package.URL32 -eq $null) {
+        continue
+      }
+
+      # Get package type to change installer parameters in au_SearchReplace
+      $package.FileType = $package.URL32 -Replace ".*",""
+
+      # Find 64 bits version if any. At the beginning of the LibreOffice
+      # project, there weren't 64 bits versions for Windows.
+      $64bitsFilenameSchemas = GetPossibleFilenameVariants $possibleFilenames $releases $release "x64"
+      foreach ($64bitsFilenameSchema in $64bitsFilenameSchemas) {
+        if (IsUrlValid "${url}$($releases.$release)/win/x86_64/$64bitsFilenameSchema") {
+          $package.URL64 = "${url}$($releases.$release)/win/x86_64/$64bitsFilenameSchema"
+          $package.Checksum64 = GetBuildHash $package.URL64
+        }
+      }
+
+      # Add package to streams
+      $streams["$release-$($package.PackageName)"] = $package
+
+      # Also add still versions to the fresh branch in order to keep the whole
+      # history in the fresh branch.
+      if ($releases.$release -lt $version) {
+        $package.PackageName = "libreoffice-fresh"
+        $package.Title = "LibreOffice Fresh"
+        $streams["$release-$($package.PackageName)"] = $package
+      }
+    }
+  }
+  
+  # Get latest releases for Fresh and Still branches and get releases with CDN.
+  # At TDF, all released builds in the stable folder are those that are being
+  # under CDN. We are thus assuming those under CDN are the latest versions.
+  # According to TDF's sysadmins, this is a right assumption.
+  $stableReleasesUrl = 'https://download.documentfoundation.org/libreoffice/stable/'
+  $releasesWithCDN = GetBuilds $stableReleasesUrl | Sort-Object -Descending
+  # Create a dummy release to build version mapping in order to reuse the same
+  # AddBuildsToStreams function below.
+  # e.g.: 6.2.0 => 6.2.0
+  $releasesWithCDNMapping = [ordered]@{}
+  foreach ($release in $releasesWithCDN) {
+    $releasesWithCDNMapping.Add($release, $release)
+  }
+
+  $oldReleasesUrl = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
+  $builds = GetBuilds $oldReleasesUrl | Sort-Object
+  $releasesWithoutCDNMapping = GetReleasesToBuildsMapping $builds
+
+  $latestVersion = GetLatestBuilds $releasesWithCDN
+  [version]$freshBranchVersion = GetBranchVersion $latestVersion.fresh
+  [version]$stillBranchVersion = GetBranchVersion $latestVersion.still
+
+  $possibleFilenames = @(
+    "LibreOffice_[VERSION]_Win_[ARCH].msi",
+    "LibO_[VERSION]_Win_[ARCH]_install_multi.msi",
+    "LibO_[VERSION]_Win_[ARCH]_install_multi.exe",
+    "LibO_[VERSION]_Win_[ARCH]_install_all_lang.msi",
+    "LibO_[VERSION]_Win_[ARCH]_install_all_lang.exe"
+  )
+
+  # Create updated Chocolatey streams
+  $streams = [ordered]@{}
+
+  # Add packages without CDN to Chocolatey streams
+  AddBuildsToStreams $streams $releasesWithoutCDNMapping $oldReleasesUrl $freshBranchVersion $possibleFilenames
+
+  # Add packages with CDN to Chocolatey streams
+  AddBuildsToStreams $streams $releasesWithCDNMapping $stableReleasesUrl $freshBranchVersion $possibleFilenames
+
+  # Sort streams in reverse order (latest versions above)
+  $sortedStreams = $streams.GetEnumerator() | Sort-Object -Property Name -Descending
+  $streams = [ordered]@{}
+  for ($i = 0; $i -lt $sortedStreams.count; $i++) {
+    $streams.Add($sortedStreams.Name[$i], $sortedStreams.Value[$i])
   }
 
   return @{ Streams = $streams }
 }
 
-update
+update -ChecksumFor none
