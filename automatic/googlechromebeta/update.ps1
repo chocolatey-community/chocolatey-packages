@@ -28,7 +28,7 @@ function global:au_GetLatest {
   @{
     URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/beta/googlechromebetastandaloneenterprise.msi'
     URL64 = 'https://dl.google.com/tag/s/dl/chrome/install/beta/googlechromebetastandaloneenterprise64.msi'
-    Version = Get-FixVersion $version -OnlyFixBelowVersion $paddedUnderVersion
+    Version = $(Get-FixVersion $version -OnlyFixBelowVersion $paddedUnderVersion) + "-beta"
     RemoteVersion = $version
   }
 }
