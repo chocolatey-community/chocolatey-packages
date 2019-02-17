@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 # This is the general install script for Mozilla products (Firefox and Thunderbird).
 # This file must be identical for all Choco packages for Mozilla products in this repository.
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
@@ -7,7 +7,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'thunderbird'
 $softwareName = 'Mozilla Thunderbird'
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '65.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '60.5.1')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
@@ -34,7 +34,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = ""
+    Url = "https://download.mozilla.org/?product=thunderbird-60.5.1-SSL&os=win&lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
@@ -43,7 +43,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = ""
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=thunderbird-60.5.1-SSL&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs
