@@ -1,13 +1,15 @@
 import-module au
 
-$releases = 'https://github.com/brave/brave-browser/releases'
+$releases = 'https://github.com/brave/brave-browser/releases?after=v0.61.7'
+$releases_b = 'https://github.com/brave/brave-browser/releases?after=v0.61.23'
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $download_page_b = Invoke-WebRequest -Uri $releases_b -UseBasicParsing
     $url32     = $download_page.links | ? { $_.href -match 'StandaloneSilentSetup32.exe$' } | select -First 1 -expand href
-    $url32_b   = $download_page.links | ? { $_.href -match 'SilentBetaSetup32.exe$' } | select -First 1 -expand href
+    $url32_b   = $download_page_b.links | ? { $_.href -match 'SilentBetaSetup32.exe$' } | select -First 1 -expand href
     $url64     = $download_page.links | ? { $_.href -match 'StandaloneSilentSetup.exe$' } | select -First 1 -expand href
-    $url64_b   = $download_page.links | ? { $_.href -match 'SilentBetaSetup.exe$' } | select -First 1 -expand href
+    $url64_b   = $download_page_b.links | ? { $_.href -match 'SilentBetaSetup.exe$' } | select -First 1 -expand href
     $version   = ($url32 -split '/' | select -Skip 1 -Last 1) -replace '^v',''
     $version_b = ($url32_b -split '/' | select -Skip 1 -Last 1) -replace '^v',''
 
