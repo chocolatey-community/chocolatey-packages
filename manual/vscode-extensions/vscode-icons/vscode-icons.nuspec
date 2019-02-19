@@ -20,7 +20,7 @@
     <tags>microsoft visualstudiocode vscode icons extension foss cross-platform</tags>
     <releaseNotes>https://marketplace.visualstudio.com/items/robertohuertasm.vscode-icons/changelog</releaseNotes>
     <dependencies>
-      <dependency id="vscode" version="1.8.1" />
+      <dependency id="vscode" version="1.18.1" />
     </dependencies>
   </metadata>
   <files>
