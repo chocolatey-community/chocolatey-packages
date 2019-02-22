@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://cdn.atomisystems.com/apdownloads/ActivePresenter_v7.5.4_setup.exe
+   x32: https://cdn.atomisystems.com/apdownloads/ActivePresenter_v7.5.5_setup.exe
 
    to download the installer.
 
@@ -15,8 +15,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 9218C48F14B6D31B9E7F65B396C19DE666EBA69B9A425634959029E4DE062B97
+   checksum32: 5B8F74CC74D51ADFC35EB8FF3633D5D6068B9F71B2FD1E305CE3296D638F90AC
 
 Using AU:
 
-   Get-RemoteChecksum https://cdn.atomisystems.com/apdownloads/ActivePresenter_v7.5.4_setup.exe
+   Get-RemoteChecksum https://cdn.atomisystems.com/apdownloads/ActivePresenter_v7.5.5_setup.exe
