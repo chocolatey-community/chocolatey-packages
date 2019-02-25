@@ -21,4 +21,4 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 # Lets remove the installer and ignore files as there is no more need for them
-Get-ChildItem $toolsDir\*.$fileType | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+Get-ChildItem $toolsDir\*.$packageArgs['fileType'] | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
