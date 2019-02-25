@@ -38,9 +38,10 @@ function global:au_GetLatest {
 
   $url64 = $downloadedPage.links | ? href -match 'Win64.msi$' | select -First 1 -expand href | % { appendBaseIfNeeded $_ }
   $version = $url32 -split '/' | select -last 1 -skip 1
+  $nuspecVersion = gc -Encoding UTF8 "$PSScriptRoot\*.nuspec" | ? { $_ -match '\<version' } | % { $_ -replace '^\s*\<version\>(.*)\<\/version\>.*',"`$1" }
 
-  if ($version -eq '2.4.0') {
-    # Custom handling as we have already pushed that version by a mistake
+  if ($version -eq '2.4.0' -and $nuspecVersion -notmatch '2.4.0.*') {
+    # Custom handling as we have already pushed that version by a mistake, and if we haven't already pushed a new release
     $version = $version + "." + (Get-Date -Format "yyyyMMdd")
   }
 
