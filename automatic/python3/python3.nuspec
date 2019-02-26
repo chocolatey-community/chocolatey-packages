@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3</id>
-    <version>3.7.2-rc1</version>
+    <version>3.8.0-a2</version>
     <title>Python 3.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
@@ -20,6 +20,7 @@ Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
 
 ## Notes
 
+- Python package manager `pip` is installed by default, but you can also invoke it using command `py -m pip` which will use `pip3` and adequate version of python if you also have python2 installed and/or pip2 on the `PATH`. For more details see [Python on Windows FAQ](https://docs.python.org/3/faq/windows.html).
 - For complete list of silent install options see the [Installing Without UI](https://docs.python.org/3/using/windows.html#installing-without-ui) page.
 ]]></description>
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
