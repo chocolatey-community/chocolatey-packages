@@ -1,7 +1,7 @@
 import-module au
 
 $releases = 'https://github.com/brave/brave-browser/releases?after=v0.61.7'
-$releases_b = 'https://github.com/brave/brave-browser/releases?after=v0.61.23'
+$releases_b = 'https://github.com/brave/brave-browser/releases'
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
