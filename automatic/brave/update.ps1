@@ -1,27 +1,25 @@
 import-module au
 
-$releases = 'https://github.com/brave/brave-browser/releases?after=v0.61.7'
-$releases_b = 'https://github.com/brave/brave-browser/releases'
+$releases = 'https://github.com/brave/brave-browser/releases'
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $download_page_b = Invoke-WebRequest -Uri $releases_b -UseBasicParsing
     $url32     = $download_page.links | ? { $_.href -match 'StandaloneSilentSetup32.exe$' } | select -First 1 -expand href
-    $url32_b   = $download_page_b.links | ? { $_.href -match 'SilentBetaSetup32.exe$' } | select -First 1 -expand href
     $url64     = $download_page.links | ? { $_.href -match 'StandaloneSilentSetup.exe$' } | select -First 1 -expand href
-    $url64_b   = $download_page_b.links | ? { $_.href -match 'SilentBetaSetup.exe$' } | select -First 1 -expand href
+    $url32_b   = $download_page.links | ? { $_.href -match 'SilentBetaSetup32.exe$' } | select -First 1 -expand href
+    $url64_b   = $download_page.links | ? { $_.href -match 'SilentBetaSetup.exe$' } | select -First 1 -expand href
     $version   = ($url32 -split '/' | select -Skip 1 -Last 1) -replace '^v',''
     $version_b = ($url32_b -split '/' | select -Skip 1 -Last 1) -replace '^v',''
 
     @{
         Streams = [ordered] @{
-            'stable' = @{
-                URL32   = 'https://github.com' + $url32
-                URL64   = 'https://github.com' + $url64
-                Version = $version
-                Title   = 'Brave Browser'
-                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
-            }
+#            'stable' = @{
+#                URL32   = 'https://github.com' + $url32
+#                URL64   = 'https://github.com' + $url64
+#                Version = $version
+#                Title   = 'Brave Browser'
+#                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
+#            }
            'beta' = @{
                 URL32   = 'https://github.com' + $url32_b
                 URL64   = 'https://github.com' + $url64_b
