@@ -93,14 +93,31 @@
 param(
   [string]$Name,
   [string]$IconName = $null,
-  [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
+  [string]$GithubRepository = $null,
   [string]$RelativeIconDir = "../icons",
   [string]$PackagesDirectory = "../automatic",
+  [ValidateSet('jsdelivr', 'staticaly','githack')]
+  [string]$template = 'jsdelivr',
   [switch]$UseStopwatch,
   [switch]$Quiet,
   [switch]$ThrowErrorOnIconNotFound,
   [switch]$Optimize
 )
+
+if (!$GithubRepository) {
+  $allRemotes = . git remote
+  $remoteName = if ($allRemotes | ? { $_ -eq 'upstream' }) { "upstream" }
+                elseif ($allRemotes | ? { $_ -eq 'origin' }) { 'origin' }
+                else { $allRemotes | select -first 1 }
+
+  if ($remoteName) { $remoteUrl = . git remote get-url $remoteName }
+
+  if ($remoteUrl) {
+    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$','' -join '/'
+  } else {
+    $GithubRepository = "USERNAME/REPOSITORY-NAME"
+  }
+}
 
 $counts = @{
   replaced = 0
@@ -244,7 +261,12 @@ function Replace-IconUrl{
 
   # Old rawgit url, just for history purposes
   # $url = "https://cdn.rawgit.com/$GithubRepository/$CommitHash/$iconPath"
-  $url = "https://cdn.jsdelivr.net/gh/${GithubRepository}@${CommitHash}/$iconPath"
+  $url = switch ($template) {
+    'jsdelivr' { "https://cdn.jsdelivr.net/gh/${GithubRepository}@${CommitHash}/$iconPath" }
+    'staticaly' { "https://cdn.staticaly.com/gh/${GithubRepository}/${CommitHash}/$iconPath" }
+    'githack' { "https://rawcdn.githack.com/${GithubRepository}/${CommitHash}/$iconPath" }
+    Default { throw "$template is Unsupported" }
+  }
 
   $nuspec = $nuspec -replace '<iconUrl>.*',"<iconUrl>$url</iconUrl>"
 

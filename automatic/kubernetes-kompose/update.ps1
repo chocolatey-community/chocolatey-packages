@@ -31,7 +31,7 @@ function global:au_GetLatest {
 
   return @{
     Version     = $version
-    URL64       = $domain + $url
+    URL64       = $url
     ReleaseURL  = "$domain/kubernetes/kompose/releases/tag/v${version}"
   }
 }

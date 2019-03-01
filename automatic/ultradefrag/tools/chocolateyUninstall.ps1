@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName         = 'ultradefrag'
 $softwareNamePattern = 'Ultra Defragmenter'

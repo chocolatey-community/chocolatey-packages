@@ -4,19 +4,21 @@ import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensio
 $domain   = 'https://sourceforge.net'
 $releases = "$domain/projects/ultradefrag/files/stable-release/"
 
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
+
 function global:au_SearchReplace {
    @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')"     = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum64)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-            "(?i)(^\s*fileType\s*=\s*)('.*')"     = "`$1'$($Latest.FileType)'"
+        ".\legal\VERIFICATION.txt"      = @{
+            "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+            "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+            "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+            "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+            "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+            "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
         }
-
-        "$($Latest.PackageName).nuspec" = @{
-            "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
+        ".\tools\chocolateyInstall.ps1" = @{
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
         }
     }
 }
@@ -38,11 +40,12 @@ function global:au_GetLatest {
         Version = $url -split '-|\.bin' | select -Last 1 -Skip 1
         URL32   = $url32
         URL64   = $url64
+        FileType = 'exe'
     }
 }
 
 try {
-    update
+    update -ChecksumFor none
 } catch {
     $ignore = "Unable to connect to the remote server"
     if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }

@@ -31,7 +31,7 @@ function global:au_GetLatest {
     @{
         URL32    = 'http://filehippo.com' + $url32
         BaseUrl  = $url
-        Version  = $version -split ' ' | select -Last 1
+        Version  = $version -split ' ' | ? { ($_ -as [version] -is [version]) } | select -First 1
         FileType = 'exe'
     }
 }

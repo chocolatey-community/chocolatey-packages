@@ -1,6 +1,6 @@
 # Package changelog
 
-## Upcoming
+## Version: 18.6 (2018-12-30)
 ### Bugs
 - Added uninstallation of shim file (Issue [#1066][i1066])
 

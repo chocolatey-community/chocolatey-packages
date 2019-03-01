@@ -4,7 +4,7 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'PDFCreator'
   fileType       = 'exe'
-  silentArgs     = '/VERYSILENT /NORESTART'
+  silentArgs     = '/VERYSILENT /NORESTART /SP-'
   validExitCodes = @(0)
 }
 

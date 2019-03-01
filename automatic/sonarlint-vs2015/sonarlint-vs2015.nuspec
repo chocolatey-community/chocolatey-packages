@@ -4,7 +4,7 @@
   <metadata>
     <id>sonarlint-vs2015</id>
     <title>SonarLint VSIX Extension</title>
-    <version>4.7.0.3891</version>
+    <version>4.8.0.4040</version>
     <authors>SonarSource (SonarSource SA)</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <projectSourceUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio</projectSourceUrl>

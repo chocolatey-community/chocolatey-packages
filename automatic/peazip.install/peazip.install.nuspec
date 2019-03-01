@@ -3,7 +3,7 @@
   <metadata>
     <id>peazip.install</id>
     <title>PeaZip (Install)</title>
-    <version>6.6.1</version>
+    <version>6.7.0</version>
     <authors>Giorgio Tani</authors>
     <owners>chocolatey,dtgm</owners>
     <summary>PeaZip is a free cross-platform file archiver.</summary>
@@ -17,7 +17,7 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
 ]]></description>
     <projectUrl>http://www.peazip.org/</projectUrl>
     <projectSourceUrl>https://osdn.net/projects/peazip/releases/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/peazip</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/peazip.install</packageSourceUrl>
     <docsUrl>http://www.peazip.org/peazip-help.html</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/peazip/tickets/</bugTrackerUrl>
     <tags>foss cross-platform file-manager file-encryption file-compression zip rar 7zip tar admin peazip</tags>

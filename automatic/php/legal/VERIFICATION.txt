@@ -1,0 +1,25 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <http://windows.php.net/download>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-7.3.2-Win32-VC15-x86.zip>
+  64-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-7.3.2-Win32-VC15-x64.zip>
+  32-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-7.3.2-nts-Win32-VC15-x86.zip>
+  64-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-7.3.2-nts-Win32-VC15-x64.zip>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: 
+  checksum32 (threadsafe): 96889B55D84755CB361D94872C97DD32955D0C2B8EDE831AABF3C71FCB3E18F3
+  checksum64 (threadsafe): E4391DCE3D431CCAF64372212A0DAFDCD8CF3D4AA79B684EA225CFE32FFDB238
+  checksum32 (non-threadsafe): F7136AC609D7AB5D2B2CDC6DCC332E4C28F13FCB20BC64E5273E0568CFF78D49
+  checksum64 (non-threadsafe): 37803F927A4F5BFCCF996D5FAB7092FB0FD01C9390DE501E5BCF89FF0F74595C
+
+The file 'LICENSE.txt' has been obtained from <http://www.php.net/license/3_01.txt>

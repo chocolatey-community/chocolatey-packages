@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mpc-hc-clsid2</id>
+    <version>1.8.4</version>
+    <title>MPC-HC (fork by clsid2)</title>
+    <owners>chocolatey,jack1142</owners>
+    <authors>clsid2, MPC-HC Team</authors>
+    <licenseUrl>https://github.com/clsid2/mpc-hc/blob/develop/COPYING.txt</licenseUrl>
+    <projectUrl>https://github.com/clsid2/mpc-hc</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@18bc5fef22a657d3632d88b1366126201b3b39bc/icons/mpc-hc.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://trac.mpc-hc.org/</docsUrl>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[
+MPC-HC is an extremely light-weight, open source media player for Windows. It supports all common video and audio file formats available for playback.
+
+## Features
+
+- It is written in C++.
+- Supports common video and audio formats.
+- MPC-HC can also be used as DVB player.
+- Supports GPU assisted decoding.
+- Translated in 41 languages.
+- 100% spyware free, there are no advertisements or toolbars.
+
+]]></description>
+    <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>
+    <copyright>clsid2, MPC-HC Team</copyright>
+    <tags>mpc-hc media player video audio music admin foss</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mpc-hc-clsid2</packageSourceUrl>
+    <projectSourceUrl>https://github.com/clsid2/mpc-hc</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/clsid2/mpc-hc/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/clsid2/mpc-hc/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

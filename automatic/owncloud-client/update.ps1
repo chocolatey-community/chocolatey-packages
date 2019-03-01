@@ -34,7 +34,7 @@ function global:au_GetLatest {
 
   $streams = @{}
   $urls32 | % {
-    $verRe = '[-]|\.msi$'
+    $verRe = '[-]|(?:\.[a-z]{2}\-[a-z]{2})?\.msi$'
     $version = $_ -split "$verRe" | select -last 1 -skip 1
     $version = Get-Version $version
     $kind = $_ -split '\/' | select -last 1 -skip 1

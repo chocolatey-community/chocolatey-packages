@@ -15,7 +15,9 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 - `/GitAndUnixToolsOnPath` - Puts gitinstall\bin on path. This setting will override `/GitOnlyOnPath`.
 - `/NoAutoCrlf` - Ensure _'Checkout as is, commit as is'_. This setting **only affects new installs**, it will not override an existing `.gitconfig`.
 - `/WindowsTerminal` - Makes `vim` use the regular Windows terminal instead of MinTTY terminal.
-- `/NoShellIntegration` - Disables shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
+- `/NoShellIntegration` - Disables open GUI and open shell integration ( _"Git GUI Here"_ and _"Git Bash Here"_ entries in context menus).
+- `/NoGuiHereIntegration` - Disables open GUI shell integration ( _"Git GUI Here"_ entry in context menus).
+- `/NoShellHereIntegration` - Disables open git bash shell integration ( _"Git Bash Here"_ entry in context menus)
 - `/NoCredentialManager` - Disable _Git Credential Manager_ by adding `$Env:GCM_VALIDATE='false'` user environment variable.
 - `/NoGitLfs` - Disable Git LFS installation.
 - `/SChannel` - Configure Git to use the Windows native SSL/TLS implementation (SChannel) instead of OpenSSL. This aligns Git HTTPS behavior with other Windows applications and system components and increases manageability in enterprise environments.
