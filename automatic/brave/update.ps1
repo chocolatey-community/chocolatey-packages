@@ -13,13 +13,13 @@ function global:au_GetLatest {
 
     @{
         Streams = [ordered] @{
-#            'stable' = @{
-#                URL32   = 'https://github.com' + $url32
-#                URL64   = 'https://github.com' + $url64
-#                Version = $version
-#                Title   = 'Brave Browser'
-#                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
-#            }
+            'stable' = @{
+                URL32   = 'https://github.com' + $url32
+                URL64   = 'https://github.com' + $url64
+                Version = $version
+                Title   = 'Brave Browser'
+                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
+            }
            'beta' = @{
                 URL32   = 'https://github.com' + $url32_b
                 URL64   = 'https://github.com' + $url64_b
