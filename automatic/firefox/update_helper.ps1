@@ -17,6 +17,7 @@ function GetVersionAndUrlFormats() {
   $version = $redirectedUrl -split '\/' | select -Last 1 -Skip 3
   if ($version.EndsWith('esr')) {
     $version = $version.TrimEnd('esr')
+    $url = $url -replace 'esr-latest',"${version}esr"
   }
 
   $result = @{
