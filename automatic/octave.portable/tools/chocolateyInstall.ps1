@@ -1,4 +1,4 @@
-﻿$version = '4.4.1'
+﻿$version = '5.1.0'
 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $progDir        = "$toolsDir\octave"
@@ -8,10 +8,10 @@ $osBitness      = Get-OSArchitectureWidth
 $packageArgs = @{
     PackageName     = 'octave.portable'
     UnzipLocation   = $toolsDir
-    Url             = 'https://ftp.gnu.org/gnu/octave/windows/octave-4.4.1-w32.zip'
-    Url64           = 'https://ftp.gnu.org/gnu/octave/windows/octave-4.4.1-w64.zip'
-    Checksum        = 'e2fe876c72feb396af2ff4c4a7a893cbd802634ac1f6cadd05f29fb8d4bf26e2'
-    Checksum64      = '69482931038a63fa258a58e23c4745015cbf0a6283dec92dfd866d8dfb7807c0'
+    Url             = 'https://ftp.gnu.org/gnu/octave/windows/octave-5.1.0-w32.7z'
+    Url64           = 'https://ftp.gnu.org/gnu/octave/windows/octave-5.1.0-w64.7z'
+    Checksum        = 'b7a8fb8c78c781285ab12f4dedbdc07fdc42c3a03da812ffe2eaa77d49872618'
+    Checksum64      = 'b13549ad2f69654e25d51c70aad9dfe0635007303d855550c7c6dc2f73af8035'
     ChecksumType    = 'sha256'
     ChecksumType64  = 'sha256'
 }
