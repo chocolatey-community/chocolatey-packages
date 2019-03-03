@@ -4,7 +4,7 @@
   <metadata>
     <id>SourceTree</id>
     <title>Sourcetree for Windows Enterprise</title>
-    <version>3.0.8</version>
+    <version>3.0.17</version>
     <authors>Atlassian</authors>
     <owners>chocolatey</owners>
     <projectUrl>http://www.sourcetreeapp.com</projectUrl>
@@ -47,7 +47,7 @@ Sourcetree simplifies how you interact with your Git repositories so you can foc
   - Does not prompt to install global ignore files.
   - Update notifications are disabled.
 ]]></description>
-    <releaseNotes>https://www.sourcetreeapp.com/update/windows/ga/ReleaseNotes_3.0.8.html</releaseNotes>
+    <releaseNotes>https://www.sourcetreeapp.com/update/windows/ga/ReleaseNotes_3.0.17.html</releaseNotes>
     <tags>git mercurial client admin freeware cross-platform</tags>
     <dependencies>
       <dependency id="dotnet4.7.1" version="4.7.2558.0" />

@@ -4,7 +4,7 @@ param($IncludeStream, [switch] $Force)
 Import-Module AU
 
 $domain   = 'https://github.com'
-$releases = "$domain/coreos/etcd/releases/latest"
+$releases = "$domain/coreos/etcd/releases"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -27,18 +27,22 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '-windows-amd64\.zip$'
-  $url = $download_page.links | ? href -match $re | % href | select -First 1
-
-  $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
-  $majorVersion = $version.Substring(0, 3)
+  $urls = $download_page.links | ? href -match $re | % href
 
   $streams = @{}
 
-  $streams.Add($majorVersion, @{
-    Version   = $version
-    URL64     = $domain + $url
-    ReleaseURL= "$domain/coreos/etcd/releases/tag/v${version}"
-  })
+  $urls | % {
+    $version = $_ -split '\/v?' | select -last 1 -skip 1
+    $majorVersion = $version -replace '^(\d+\.\d+).*',"`$1"
+
+    if (!$streams.ContainsKey($majorVersion)) {
+      $streams.Add($majorVersion, @{
+        Version = $version
+        URL64 = $domain + $_
+        ReleaseURL = "$domain/coreos/etcd/releases/tag/v${version}"
+      })
+    }
+  }
 
   return @{ Streams = $streams }
 }

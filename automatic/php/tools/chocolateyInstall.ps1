@@ -7,32 +7,38 @@ $installLocation = GetInstallLocation "$toolsPath\.."
 
 if ($installLocation) {
   Write-Host "Uninstalling previous version of php..."
-  UninstallPackage -libDirectory "$toolsPath\.." -packageName 'php'
+  UninstallPackage -libDirectory "$toolsPath\.." -packageName $env:ChocolateyPackageName
   Uninstall-ChocolateyPath $installLocation
 }
 
 $pp = Get-PackageParameters
 
-$downloadInfo = GetDownloadInfo -downloadInfoFile "$toolsPath\downloadInfo.csv" -parameters $pp
+$filesInfo = @{
+  filets32  = "$toolsPath\php-7.3.2-Win32-VC15-x86.zip"
+  filets64  = "$toolsPath\php-7.3.2-Win32-VC15-x64.zip"
+  filents32 = "$toolsPath\php-7.3.2-nts-Win32-VC15-x86.zip"
+  filents64 = "$toolsPath\php-7.3.2-nts-Win32-VC15-x64.zip"
+}
 
-if (!(UrlExists($downloadInfo.URL32))) {
-    Write-Host "Using archive urls"
-    $downloadInfo.URL32 = AddArchivePathToUrl($downloadInfo.URL32)
-    $downloadInfo.URL64 = AddArchivePathToUrl($downloadInfo.URL64) # Assuming the 64 bit version is archived simultaneously as the 32 bit one
+if ($pp.ThreadSafe) {
+  $file32 = $filesInfo.filets32
+  $file64 = $filesInfo.filets64
+} else {
+  $file32 = $filesInfo.filents32
+  $file64 = $filesInfo.filents64
 }
 
 $packageArgs = @{
-  packageName    = 'php'
-  url            = $downloadInfo.URL32
-  url64Bit       = $downloadInfo.URL64
-  checksum       = $downloadInfo.Checksum32
-  checksum64     = $downloadInfo.Checksum64
-  checksumType   = 'sha256'
-  checksumType64 = 'sha256'
+  packageName    = $env:ChocolateyPackageName
+  file           = $file32
+  file64         = $file64
 }
-$newInstallLocation = $packageArgs.unzipLocation = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
 
-Install-ChocolateyZipPackage @packageArgs
+$newInstallLocation = $packageArgs.Destination = GetNewInstallLocation $packageArgs.packageName $env:ChocolateyPackageVersion $pp
+
+Get-ChocolateyUnzip @packageArgs
+
+Get-ChildItem $toolsPath\*.zip | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 
 if (!$pp.DontAddToPath) { Install-ChocolateyPath $newInstallLocation 'Machine' }
 

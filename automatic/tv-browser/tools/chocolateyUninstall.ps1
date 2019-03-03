@@ -1,12 +1,11 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop'
 
-$uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'TV-Browser*'
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
     $packageArgs = @{
-      packageName    = 'tv-browser'
+      packageName    = $env:ChocolateyPackageName
       fileType       = 'EXE'
       silentArgs     = '/S'
       validExitCodes = @(0)

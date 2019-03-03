@@ -32,9 +32,11 @@ Maxima is a descendant of Macsyma, the legendary computer algebra system develop
     <releaseNotes>https://sourceforge.net/p/maxima/code/ci/master/tree/ChangeLog-5.41.md</releaseNotes>
     <docsUrl>http://maxima.sourceforge.net/documentation.html</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/maxima/_list/tickets</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
   <files>
-    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

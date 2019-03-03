@@ -26,6 +26,13 @@ More information:
 * [Privacy policy](http://www.gpg4win.org/privacy-policy.html)
 * Community: [Forum](http://wald.intevation.org/forum/forum.php?forum_id=21), [IRC](irc://irc.freenode.net/#gpg4win)
 
+## Parameters
+
+* `/Config` - Use the configuration/control with the specified path
+
+*Example*
+`choco install gpg4win --package-parameter="/Config:C:\gpg4win.ini`
+
 ## Notes
 
 Gpg4win is distributed in three editions and available by the following chocolatey packages:

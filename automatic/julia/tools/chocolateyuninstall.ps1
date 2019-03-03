@@ -11,10 +11,6 @@ $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {
-
-  $installLocation = Get-AppInstallLocation $packageArgs.softwareName
-  Uninstall-BinFile -Name "julia.exe" -Path $installLocation\bin\julia.exe
-
   $key | ForEach-Object {
     $packageArgs['file'] = "$($_.UninstallString)"
 

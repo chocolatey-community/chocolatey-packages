@@ -18,6 +18,7 @@ function global:au_SearchReplace {
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)(DisplayVersion\s*-eq\s*)'.*'"   = "`${1}'$($Latest.RemoteVersion)'"
     }
     "$($Latest.PackageName).nuspec" = @{
       "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"

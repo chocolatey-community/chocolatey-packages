@@ -7,13 +7,13 @@ location on <https://github.com/transifex/transifex-client/releases/latest>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.13.5/tx.py36.x64.exe>
+  64-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.13.6/tx.py36.x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: 
-  checksum64: A2A95F45DEFD665CFA65240BF1183E46C85E90910D31D303D98E7A980D8B2167
+  checksum64: A557D7F843EABB38A711688304B37C92DE076F559B671AF44DA1C18AC46A482C
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/transifex/transifex-client/blob/master/LICENSE>

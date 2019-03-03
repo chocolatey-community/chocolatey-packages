@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist2017</id>
-    <version>14.16.27012.6</version>
+    <version>14.16.27027.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vcredist2017</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2017</title>
@@ -21,7 +21,7 @@
 
 ## Notes
 
-[Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2017-sysrequirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
+[Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
 ]]></description>
     <releaseNotes>
 ##### Software
@@ -30,7 +30,7 @@
 14.11.25325.0: Initial package release for software version 14.11.25325.0.
     </releaseNotes>
     <dependencies>
-      <dependency id="vcredist140" version="[14.16.27012.6]" />
+      <dependency id="vcredist140" version="[14.16.27027.1]" />
     </dependencies>
   </metadata>
   <files />

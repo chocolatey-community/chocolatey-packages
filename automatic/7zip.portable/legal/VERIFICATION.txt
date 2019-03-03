@@ -6,16 +6,16 @@ The installer have been downloaded from their official download link listed on <
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <http://www.7-zip.org/a/7z1805.exe>
-  64-Bit: <http://www.7-zip.org/a/7z1805-x64.exe>
-  Extra : <http://www.7-zip.org/a/7z1805-extra.7z>
+  32-Bit: <http://www.7-zip.org/a/7z1900.exe>
+  64-Bit: <http://www.7-zip.org/a/7z1900-x64.exe>
+  Extra : <http://www.7-zip.org/a/7z1900-extra.7z>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32   : 647A9A621162CD7A5008934A08E23FF7C1135D6F1261689FD954AA17D50F9729
-  checksum64   : C1E42D8B76A86EA1890AD080E69A04C75A5F2C0484BDCD838DC8FA908DD4A84C
-  checksumExtra: A16ECC3765D4D439105511DE1FC2C97687B789774F91EAA880869763CC689080
+  checksum32   : 759AA04D5B03EBEEE13BA01DF554E8C962CA339C74F56627C8BED6984BB7EF80
+  checksum64   : 0F5D4DBBE5E55B7AA31B91E5925ED901FDF46A367491D81381846F05AD54C45E
+  checksumExtra: AF6ECA1C8578DF776189EE7785AB5D21525E42590F788C4E82E961A36C3A5306
 
 File 'LICENSE.txt' is obtained from <http://www.7-zip.org/license.txt>
