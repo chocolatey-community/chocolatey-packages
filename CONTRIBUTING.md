@@ -61,7 +61,7 @@ For software that explicitly doesn't allow redistribution via adequate license t
 
 As an example take a look at the [activepresenter](https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal).
 
-**NOTE**: 300MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
+**NOTE**: 200MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
 ### 1.1.5 Support multiple versions
 

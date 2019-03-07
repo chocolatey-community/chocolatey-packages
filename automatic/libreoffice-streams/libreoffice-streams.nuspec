@@ -4,16 +4,15 @@
   <metadata>
     <id>libreoffice-fresh</id>
     <title>LibreOffice Fresh</title>
-    <version>6.1.4</version>
+    <version>6.2.1</version>
     <authors>LibreOffice developers</authors>
     <owners>chocolatey</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
-    <description><![CDATA[
-LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
+    <description><![CDATA[LibreOffice is the free power-packed Open Source personal productivity suite for Windows, macOS and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
 
 ## Notes
 
-- This package installs the latest stable version of LibreOffice (Fresh) with the most recent features. For more conservative users it is recommended to install [libreoffice-fresh](/packages/libreoffice-fresh) instead.
+- This package installs LibreOffice Fresh which is the stable version of LibreOffice with the most recent bleeding-edge features. This version is recommended for technology enthusiasts, early adopters or power users. For more conservative users or for deployments in enterprise or corporate environments, it is recommended to install [libreoffice-still](/packages/libreoffice-still) instead.
 - Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
 ]]></description>
     <projectUrl>https://www.libreoffice.org/</projectUrl>

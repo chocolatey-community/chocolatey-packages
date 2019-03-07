@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png" width="48" height="48"/> [graphviz](https://chocolatey.org/packages/graphviz)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png" width="48" height="48"/> [graphviz](https://chocolatey.org/packages/graphviz)
 
 Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. It has important applications in networking, bioinformatics, software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
 

@@ -4,4 +4,4 @@ Microsoft Visual C++ Redistributable for Visual Studio 2017 installs run-time co
 
 ## Notes
 
-[Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2017-sysrequirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
+[Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2

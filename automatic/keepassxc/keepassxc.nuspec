@@ -6,7 +6,7 @@
   <metadata>
     <id>keepassxc</id>
     <title>KeePassXC</title>
-    <version>2.3.4</version>
+    <version>2.4.0-beta2</version>
     <authors>https://github.com/keepassxreboot/keepassxc/graphs/contributors</authors>
     <owners>wget, hans0</owners>
     <summary>KeePassXC is a community fork of KeePassX which aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository.</summary>
@@ -42,8 +42,8 @@ N/A
     <licenseUrl>https://github.com/keepassxreboot/keepassxc/blob/develop/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!-- Source: https://github.com/keepassxreboot/keepassxc/blob/develop/share/icons/application/scalable/apps/keepassxc.svgz -->
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg</iconUrl>
-    <releaseNotes>https://github.com/keepassxreboot/keepassxc/releases</releaseNotes>  
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg</iconUrl>
+    <releaseNotes>https://github.com/keepassxreboot/keepassxc/releases</releaseNotes>
     <!-- Specific to Chocolatey -->
     <projectSourceUrl>https://github.com/keepassxreboot/keepassxc/</projectSourceUrl>
     <docsUrl>https://keepassxc.org/docs/</docsUrl>

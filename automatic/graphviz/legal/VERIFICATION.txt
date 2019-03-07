@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://www.graphviz.org/pub/graphviz/stable/windows/graphviz-2.38.msi
+   x32: https://graphviz.gitlab.io/_pages/Download/windows/graphviz-2.38.msi
 
    to download the installer.
 

@@ -3,12 +3,18 @@ import-module $PSScriptRoot\..\..\extensions\chocolatey-core.extension\extension
 
 $releases = 'https://www.winpcap.org/install/'
 
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+
 function global:au_SearchReplace {
    @{
+        ".\legal\VERIFICATION.txt"      = @{
+            "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+            "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+            "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+            "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+        }
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+            "(?i)(^\s*[$]file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
         }
     }
 }
@@ -26,4 +32,4 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor None
