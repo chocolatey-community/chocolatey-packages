@@ -56,7 +56,7 @@ function Get-ShellIntegrationComponents( [HashTable]$pp )
         }
         if ($pp.NoGuiHereIntegration) {
             Write-Host "Parameter: no git gui here integration"
-            $shell.Remove("ext\guihere")
+            $shell = $shell -ne "ext\guihere"
         }
         if ($shell.Count -eq 1) { $shell.Clear() }
     }
