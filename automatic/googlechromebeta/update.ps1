@@ -24,6 +24,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $release_info = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $version = $release_info | % Content | ConvertFrom-Csv | % current_version
+  $version = "$version-beta"
 
   @{
     URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/beta/googlechromebetastandaloneenterprise.msi'
