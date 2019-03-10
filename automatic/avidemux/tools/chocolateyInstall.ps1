@@ -7,13 +7,13 @@ $silentArgs = @('/S')
 $packageArgs = @{
   packageName    = 'avidemux'
   fileType       = 'exe'
-  file           = "$toolsDir\"
-  file64         = "$toolsDir\"
+  file           = "$toolsDir\avidemux_2.7.2_win3.exe"
+  file64         = "$toolsDir\Avidemux_2.7.2%20VC%2B%2B%2064bits%20.exe"
   silentArgs     = $silentArgs
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm $toolsDir\*.exe
+Remove-Item $toolsDir\*.exe
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
