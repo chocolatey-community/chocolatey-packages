@@ -38,6 +38,11 @@ function global:au_GetLatest {
 
 
     $version = $url -split '/' | select -Last 1 -Skip 1
+
+    if ($download_page -match "$version( |\-)(alpha|beta|rc)([^\: ]*)") {
+      $version = "$version-$($Matches[2])$($Matches[3])"
+    }
+
     @{
         URL32        = "$url32"
         URL64        = "$url64"
