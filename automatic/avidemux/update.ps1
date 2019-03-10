@@ -31,8 +31,8 @@ function global:au_GetLatest {
   $url = $download_page.links | ? href -match 'avidemux/[0-9.]+/$' | % href | select -First 1 | % { 'https://sourceforge.net' + $_ }
 
   $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
-  $url32 = $download_page.Links | ? href -match "win32\.exe" | select -first 1 -expand href
-  $url64 = $download_page.Links | ? href -match "win64\.exe" | select -first 1 -expand href
+  $url32 = $download_page.Links | ? href -match "win32?\.exe" | select -first 1 -expand href
+  $url64 = $download_page.Links | ? href -match "(win64|64Bits.*)\.exe" | select -first 1 -expand href
 
 
   $version = $url -split '/' | select -Last 1 -Skip 1
