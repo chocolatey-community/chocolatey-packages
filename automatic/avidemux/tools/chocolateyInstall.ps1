@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
-$installerFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') { gi "$toolsDir\*win64.exe" } else { gi "$toolsDir\*win32.exe" }
 
 $silentArgs = @('/S')
 
 $packageArgs = @{
   packageName    = 'avidemux'
   fileType       = 'exe'
-  file           = $installerFile
+  file           = "$toolsDir\"
+  file64         = "$toolsDir\"
   silentArgs     = $silentArgs
   validExitCodes = @(0, 1223)
 }
