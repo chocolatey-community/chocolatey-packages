@@ -2,8 +2,8 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsDir\brave32.exe"
-  file64      = "$toolsDir\brave64.exe"
+  file        = "$toolsDir\BraveBrowserStandaloneSilentSetup32.exe"
+  file64      = "$toolsDir\BraveBrowserStandaloneSilentSetup.exe"
 }
 
 Install-ChocolateyInstallPackage @packageArgs
