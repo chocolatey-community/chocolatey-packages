@@ -3,6 +3,7 @@ import-module au
 $releases = 'http://windows.php.net/download'
 
 function global:au_BeforeUpdate {
+  rm -Recurse -Force "$PSScriptRoot\tools\*.zip"
   # threadsafe
   $Latest.FileNameTS32 = $Latest.URLTS32 -split '/' | select -Last 1
   iwr $Latest.URLTS32 -OutFile tools\$($Latest.FileNameTS32)
