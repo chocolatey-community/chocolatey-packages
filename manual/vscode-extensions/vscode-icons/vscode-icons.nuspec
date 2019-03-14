@@ -21,7 +21,7 @@
     <releaseNotes>https://marketplace.visualstudio.com/items/vscode-icons-team.vscode-icons/changelog</releaseNotes>
     <dependencies>
       <dependency id="vscode" version="1.18.1" />
-      <dependency id="chocolatey-vscode" version="1.0.0" />
+      <dependency id="chocolatey-vscode.extension" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>
