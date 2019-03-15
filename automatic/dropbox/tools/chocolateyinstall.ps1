@@ -1,4 +1,10 @@
-﻿$ErrorActionPreference  = 'Stop'
+$ErrorActionPreference  = 'Stop'
+
+. (Join-Path (Split-Path $MyInvocation.MyCommand.Definition -Parent) 'helpers.ps1')
+
+$PackageProps = getDropboxRegProps
+
+if ( ${env:ChocolateyPackageVersion} -ne $PackageProps.DisplayVersion ) {
 
 $packageArgs        = @{
     packageName     = $env:ChocolateyPackageName
@@ -13,6 +19,8 @@ $packageArgs        = @{
 
 Install-ChocolateyPackage @packageArgs
 
-if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {
-    Stop-Process -processname Dropbox
+} else {
+
+  Write-Output "${env:ChocolateyPackageName} ${PackageProps.DisplayVersion} is already installed."
+  
 }
