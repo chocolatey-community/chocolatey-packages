@@ -4,11 +4,11 @@ $packageArgs        = @{
 packageName = 'dropbox'
 FileType = 'exe'
 SilentArgs = '/S'
-File = (getDropboxRegProps).UninstallPath
+File = (getDropboxRegProps).UninstallString
 ValidExitCodes = ''
 IgnoredArguments = ''
 }
 
-if ($uninstallProps -and $uninstallProps.UninstallPath) {
+if ($uninstallProps -and $uninstallProps.UninstallString) {
     Uninstall-ChocolateyPackage @packageArgs
 }
