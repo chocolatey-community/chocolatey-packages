@@ -1,5 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
 
+$stop_dropbox = if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {$false} else {$true}
+
+
 $packageArgs        = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = "Dropbox*"
@@ -13,6 +16,6 @@ $packageArgs        = @{
 
 Install-ChocolateyPackage @packageArgs
 
-if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {
+if ($stop_dropbox -and (Get-Process -Name Dropbox -ErrorAction SilentlyContinue)) {
     Stop-Process -processname Dropbox
 }
