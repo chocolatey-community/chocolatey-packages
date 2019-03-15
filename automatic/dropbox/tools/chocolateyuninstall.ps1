@@ -1,10 +1,14 @@
 . (Join-Path (Split-Path $MyInvocation.MyCommand.Definition -Parent) 'helpers.ps1')
 
-$packageName = 'dropbox'
-$fileType = 'exe'
-$silentArgs = '/S'
-$uninstallProps = getDropboxRegProps
+$packageArgs        = @{
+packageName = 'dropbox'
+FileType = 'exe'
+SilentArgs = '/S'
+File = (getDropboxRegProps).UninstallPath
+ValidExitCodes = ''
+IgnoredArguments = ''
+}
 
-if ($uninstallProps -and $uninstallProps.UninstallString) {
-    Uninstall-ChocolateyPackage $packageName $fileType $silentArgs $uninstallerPath.UninstallString
+if ($uninstallProps -and $uninstallProps.UninstallPath) {
+    Uninstall-ChocolateyPackage @packageArgs
 }
