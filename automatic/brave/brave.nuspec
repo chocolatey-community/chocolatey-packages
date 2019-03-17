@@ -16,8 +16,7 @@
 
 * This is an **official release version** of Brave. It is in continuous development with new releases landing approximately every three weeks. 
 ]]></description>
-    <!-- IconUrl: Skip check -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages/icons/brave.svg</iconUrl>
     <summary>A browser that lets you browse safer and faster by blocking ads and trackers.</summary>
     <owners>chocolatey, Sanshiro</owners>
     <authors>Brave Software Inc.</authors>
