@@ -18,14 +18,14 @@ function global:au_GetLatest {
                 URL64   = 'https://github.com' + $url64
                 Version = $version
                 Title   = 'Brave Browser'
-                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
+                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages/icons/brave.svg'
             }
            'beta' = @{
                 URL32   = 'https://github.com' + $url32_b
                 URL64   = 'https://github.com' + $url64_b
                 Version = $version_b + '-beta'
                 Title   = 'Brave Browser (Beta)'
-                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg'
+                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages/icons/brave-beta.svg'
            }
         }
     }
