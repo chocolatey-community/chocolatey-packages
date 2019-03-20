@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>simplewall.portable</id>
-    <version>2.3.13</version>
+    <version>2.4.5</version>
     <authors>Henry++</authors>
     <summary>Simple tool to configure Windows Filtering Platform.</summary>
     <description><![CDATA[Simple tool to configure Windows Filtering Platform (WFP) which can configure network activity on your computer.
@@ -34,7 +34,7 @@ The lightweight application is less than a megabyte, and it is compatible with W
     <projectSourceUrl>https://github.com/henrypp/simplewall</projectSourceUrl>
     <licenseUrl>https://github.com/henrypp/simplewall/blob/master/LICENSE</licenseUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@71a47d708fd1ac175d0fc5184dc5b01624e2afda/icons/simplewall.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/simplewall.portable</packageSourceUrl>
     <releaseNotes>https://github.com/henrypp/simplewall/blob/master/CHANGELOG.md</releaseNotes>
     </metadata>
     <files>
