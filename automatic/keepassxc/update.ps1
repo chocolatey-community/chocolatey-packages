@@ -40,11 +40,6 @@ function global:au_GetLatest {
   $version = $url32 -split '/' | select -last 1 -skip 1
   $nuspecVersion = gc -Encoding UTF8 "$PSScriptRoot\*.nuspec" | ? { $_ -match '\<version' } | % { $_ -replace '^\s*\<version\>(.*)\<\/version\>.*',"`$1" }
 
-  if ($version -eq '2.4.0' -and $nuspecVersion -notmatch '2.4.0.*') {
-    # Custom handling as we have already pushed that version by a mistake, and if we haven't already pushed a new release
-    $version = $version + "." + (Get-Date -Format "yyyyMMdd")
-  }
-
   return @{
     url32          = $url32;
     url64          = $url64;
