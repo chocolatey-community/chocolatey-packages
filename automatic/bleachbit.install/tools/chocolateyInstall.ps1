@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$Installer = Get-ChildItem $toolsDir -filter "*.exe"
+$Installer = (Get-ChildItem $toolsDir -filter "*.exe").FullName
 
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
