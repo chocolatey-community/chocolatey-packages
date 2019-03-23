@@ -1,17 +1,18 @@
-﻿$packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  softwareName  = 'BleachBit'
-  fileType      = 'exe'
-  silentArgs    = '/S'
+﻿$ErrorActionPreference = 'Stop'
+
+$packageArgs = @{
+   packageName   = $env:ChocolateyPackageName
+   softwareName  = 'BleachBit*'
+   fileType      = 'EXE'
+   silentArgs    = '/S /allusers'
+   validExitCodes= @(0)
 }
 
-$uninstalled = $false
-
-[array]$key = Get-UninstallRegistryKey @packageArgs
+[array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
-    $packageArgs['file'] = "$($_.UninstallString)"
+    $packageArgs['file'] = ($_.UninstallString).split('"')[1]
 
     Uninstall-ChocolateyPackage @packageArgs
   }
