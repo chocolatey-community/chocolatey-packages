@@ -12,5 +12,13 @@ $packageArgs = @{
   validExitCodes = @(0)
   softwareName   = 'Gpg4Win *'
 }
+
+$pp = Get-PackageParameters
+
+if ($pp['Config']) {
+  Write-Host "Using passed configuration file..."
+  $packageArgs["silentArgs"] = "/S /C=$($pp["Config"])"
+}
+
 Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { touch "$_.ignore" '' }}

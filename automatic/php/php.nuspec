@@ -4,19 +4,22 @@
   <metadata>
     <id>php</id>
     <title>PHP (Hypertext Preprocessor)</title>
-    <version>7.0.33</version>
+    <version>7.3.3</version>
     <authors>PHP Authors</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
     <description><![CDATA[PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
+
+This product includes PHP software, freely available from
+     <http://www.php.net/software/>
 
 ## Package Parameters
 - `/DontAddToPath` - Do not add install directory to path
 - `/InstallDir`    - Override the installation directory (needs to be specified both during install and update, until it is remembered by choco)
 - `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
 
-These parameters can be passed to the installer with the use of --params.
-For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
+These parameters can be passed to the installer with the use of --package-parameters.
+For example: `choco install --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
 
 ]]></description>
     <projectUrl>http://www.php.net/</projectUrl>
@@ -24,18 +27,19 @@ For example: `--params '"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
     <tags>php development programming foss cross-platform admin</tags>
     <licenseUrl>http://us.php.net/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.0.33</releaseNotes>
+    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.3.3</releaseNotes>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg</iconUrl>
     <bugTrackerUrl>https://bugs.php.net/</bugTrackerUrl>
     <docsUrl>https://secure.php.net/docs.php</docsUrl>
     <projectSourceUrl>http://git.php.net</projectSourceUrl>
     <dependencies>
-      <dependency id="vcredist140" version="14.0.24215.1" />
+      <dependency id="vcredist140" version="14.11.25325.0" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="chocolatey" version="0.10.0" />
     </dependencies>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

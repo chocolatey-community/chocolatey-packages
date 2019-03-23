@@ -27,6 +27,7 @@ function GetResultInformation([string]$url32) {
     Version        = $version
     Checksum32     = $checksum32
     ChecksumType32 = $checksumType
+    PackageName    = 'PartitionMasterFree'
   }
 }
 

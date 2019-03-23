@@ -1,2 +1,3 @@
-Update-SessionEnvironment
-code --uninstall-extension robertohuertasm.vscode-icons
+$ErrorActionPreference = 'Stop'
+
+Uninstall-VsCodeExtension -extensionId 'vscode-icons-team.vscode-icons'

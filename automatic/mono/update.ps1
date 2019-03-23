@@ -21,6 +21,10 @@ function global:au_GetLatest {
   $re = 'mono.*win32[\-\d]+\.msi$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
+  # Temporary fix
+  $url32 = [uri]::EscapeUriString($url32)
+  $url32 = $url32 -replace '%E2%80%8B',''
+
   $re = 'mono.*x64[\-\d]+\.msi$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 

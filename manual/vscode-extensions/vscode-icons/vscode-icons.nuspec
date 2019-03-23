@@ -4,23 +4,24 @@
   <metadata>
     <id>vscode-icons</id>
     <title>Visual Studio Code Icons Extension</title>
-    <version>1.0.0.20180620</version>
-    <authors>Roberto Huertas</authors>
+    <version>1.0.0.20190314</version>
+    <authors>VSCode Icons Team, Roberto Huertas</authors>
     <owners>chocolatey, gep13</owners>
-    <projectUrl>https://marketplace.visualstudio.com/items?itemName=robertohuertasm.vscode-icons</projectUrl>
-    <projectSourceUrl>https://github.com/robertohuertasm/vscode-icons</projectSourceUrl>
+    <projectUrl>https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons</projectUrl>
+    <projectSourceUrl>https://github.com/vscode-icons/vscode-icons</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-icons</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/932559dcf7cd36a4055adad2dc46859c595c1e4e/icons/vscode_icons.png</iconUrl>
-    <licenseUrl>https://marketplace.visualstudio.com/items/robertohuertasm.vscode-icons/license</licenseUrl>
-    <docsUrl>https://github.com/robertohuertasm/vscode-icons/blob/master/README.md</docsUrl>
-    <bugTrackerUrl>https://github.com/robertohuertasm/vscode-icons/issues</bugTrackerUrl>
+    <licenseUrl>https://marketplace.visualstudio.com/items/vscode-icons-team.vscode-icons/license</licenseUrl>
+    <docsUrl>https://github.com/vscode-icons/vscode-icons/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/vscode-icons/vscode-icons/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Visual Studio Code Icons Extension</summary>
     <description>The description is automatically set from the associated README.md file during update</description>
     <tags>microsoft visualstudiocode vscode icons extension foss cross-platform</tags>
-    <releaseNotes>https://marketplace.visualstudio.com/items/robertohuertasm.vscode-icons/changelog</releaseNotes>
+    <releaseNotes>https://marketplace.visualstudio.com/items/vscode-icons-team.vscode-icons/changelog</releaseNotes>
     <dependencies>
-      <dependency id="vscode" version="1.8.1" />
+      <dependency id="vscode" version="1.18.1" />
+      <dependency id="chocolatey-vscode.extension" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>

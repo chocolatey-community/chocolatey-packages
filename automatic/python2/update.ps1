@@ -1,15 +1,22 @@
 import-module au
 
-$releases = 'https://www.python.org/downloads'
+$releases = 'https://www.python.org/downloads/'
+
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
    @{
+        ".\legal\VERIFICATION.txt"      = @{
+          "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+          "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+          "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
+          "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+          "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+          "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
+        }
         ".\tools\chocolateyInstall.ps1" = @{
-            "(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
-            "(^\s*url\s*=\s*)('.*')"         = "`$1'$($Latest.URL32)'"
-            "(^\s*url64bit\s*=\s*)('.*')"    = "`$1'$($Latest.URL64)'"
-            "(^\s*checksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum32)'"
-            "(^\s*checksum64\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum64)'"
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
         }
     }
 }
@@ -52,5 +59,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced by the virtual package python
-    update
+    update -ChecksumFor none
 }

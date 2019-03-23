@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://sourceforge.net/projects/scribus/files/scribus/>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://sourceforge.net/projects/scribus/files/scribus/1.4.8/scribus-1.4.8-windows.exe/download>
+  64-Bit software: <https://sourceforge.net/projects/scribus/files/scribus/1.4.8/scribus-1.4.8-windows-x64.exe/download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: EB8CDB9EA513393C5793D3A6B180B0B04BD9383385396E13DDC23487DAFDB0CA
+  checksum64: 1197587EBAF4622F348DA594F3D96442847024476F078B1C1B515A736A507181
+
+The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>

@@ -7,8 +7,8 @@
     <title>Python 2.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
-    <projectUrl>http://www.python.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
+    <projectUrl>https://www.python.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
     <licenseUrl>https://www.python.org/download/releases/2.7/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
@@ -33,6 +33,7 @@ For example: `--params '"/InstallDir:C:\tools\python2"'`
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

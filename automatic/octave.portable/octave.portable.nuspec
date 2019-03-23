@@ -3,17 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>octave.portable</id>
-    <version>4.4.1</version>
+    <version>5.1.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/octave.portable</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>GNU Octave (Portable)</title>
     <authors>John W. Eaton</authors>
-    <projectUrl>http://www.gnu.org/software/octave</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/aa4dfe9a33e28ea4a94616e84b3648527d4fa87f/icons/octave.png</iconUrl>
+    <projectUrl>https://www.gnu.org/software/octave</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@aa4dfe9a33e28ea4a94616e84b3648527d4fa87f/icons/octave.png</iconUrl>
     <copyright>(c) 1998-2017 John W. Eaton</copyright>
     <licenseUrl>https://www.gnu.org/software/octave/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>http://hg.savannah.gnu.org/hgweb/octave</projectSourceUrl>
+    <projectSourceUrl>https://hg.savannah.gnu.org/hgweb/octave</projectSourceUrl>
     <docsUrl>https://www.gnu.org/software/octave/doc/interpreter</docsUrl>
     <bugTrackerUrl>https://www.gnu.org/software/octave/bugs.html</bugTrackerUrl>
     <tags>octave matlab math numerical computations foss cross-platform</tags>
@@ -30,7 +30,7 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 * Octave Forge, a central location for development of packages for GNU Octave, similar to Matlab's toolboxes.
 * Free software, runs on GNU/Linux, macOS, BSD, and Windows
 ]]></description>
-    <releaseNotes>https://www.gnu.org/software/octave/news/release/2018/08/09/octave-4.4.1-released.html</releaseNotes>
+    <releaseNotes>https://www.gnu.org/software/octave/news/release/2019/03/01/octave-5.1-released.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

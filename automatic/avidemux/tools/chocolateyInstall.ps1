@@ -1,19 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
-$installerFile = if ((Get-ProcessorBits 64) -and $env:chocolateyForceX86 -ne 'true') { gi "$toolsDir\*win64.exe" } else { gi "$toolsDir\*win32.exe" }
 
 $silentArgs = @('/S')
 
 $packageArgs = @{
   packageName    = 'avidemux'
   fileType       = 'exe'
-  file           = $installerFile
+  file           = "$toolsDir\avidemux_2.7.2_win3.exe"
+  file64         = "$toolsDir\Avidemux_2.7.2%20VC%2B%2B%2064bits%20.exe"
   silentArgs     = $silentArgs
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-rm $toolsDir\*.exe
+Remove-Item $toolsDir\*.exe
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName

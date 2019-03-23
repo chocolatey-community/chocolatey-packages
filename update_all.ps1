@@ -96,11 +96,13 @@ $Options = [ordered]@{
 
     ForcedPackages = $ForcedPackages -split ' '
     UpdateIconScript = "$PSScriptRoot\scripts\Update-IconUrl.ps1"
+    UpdatePackageSourceScript = "$PSScriptRoot\scripts\Update-PackageSourceUrl.ps1"
     ModulePaths = @("$PSScriptRoot\scripts\au_extensions.psm1"; "Wormies-AU-Helpers")
     BeforeEach = {
         param($PackageName, $Options )
         $Options.ModulePaths | % { Import-Module $_ }
         . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
+        . $Options.UpdatePackageSourceScript $PackageName.ToLowerInvariant() -Quiet
         if (Test-Path tools) { Expand-Aliases -Directory tools }
 
         $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"

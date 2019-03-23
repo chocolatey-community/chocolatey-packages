@@ -16,18 +16,18 @@ function global:au_SearchReplace {
   $version = $Latest.RemoteVersion
 
   SearchAndReplace -PackageDirectory "$PSScriptRoot" `
-    -Data $Latest `
-    -Supports64Bit $false
+    -Data $Latest
 }
 
 function global:au_GetLatest {
-  $data  = GetVersionAndUrlFormats -UpdateUrl $releases -Product $product -Supports64Bit $false
+  $data  = GetVersionAndUrlFormats -UpdateUrl $releases -Product $product
 
   @{
     LocaleURL = "$releases"
     Version = $data.Version
     RemoteVersion = $data.Version
     Win32Format = $data.Win32Format
+    Win64Format = $data.Win64Format
     SoftwareName = 'Mozilla Thunderbird'
   }
 }

@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yumi-uefi</id>
-    <version>0.0.1.1</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/yumi</packageSourceUrl>
+    <version>0.0.1.3</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/yumi-uefi</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>YUMI UEFI (Your Universal Multiboot Installer)</title>
     <authors>Pendrivelinux</authors>

@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>clipboardfusion</id>
-    <version>5.4.1</version>
+    <version>5.5.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/clipboardfusion</packageSourceUrl>
     <owners>chocolatey, keithlammers, the-running-dev</owners>
     <title>ClipboardFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.clipboardfusion.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e08f6fc504b4cab24f3110b3346a1ebd656a5fee/icons/clipboardfusion.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e08f6fc504b4cab24f3110b3346a1ebd656a5fee/icons/clipboardfusion.png</iconUrl>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <licenseUrl>https://www.clipboardfusion.com/License/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

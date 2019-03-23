@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>PDFCreator</id>
-    <version>3.3.2</version>
+    <version>3.4.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
     <owners>chocolatey</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -44,7 +44,6 @@ The installer has a few options that can be configured via the --ia switch:
 Example use:
 
 `choco install pdfcreator --ia '"/NOICONS /TASKS=!winexplorer"'`
-
 ]]></description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

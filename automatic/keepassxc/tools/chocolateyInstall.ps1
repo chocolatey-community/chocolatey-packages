@@ -6,11 +6,11 @@ $packageArgs = @{
   packageName    = 'keepassxc'
   softwareName   = 'KeePassXC'
   fileType       = 'msi'
-  file           = "$toolsDir\KeePassXC-2.3.4-Win32.msi"
-  file64         = "$toolsDir\KeePassXC-2.3.4-Win64.msi"
-  checksum       = '2E9EB1AA0592E7CE135188C91FE404E075F138FD3F48A95552EC1B75D72798C5'
+  file           = "$toolsDir\KeePassXC-2.4.0-Win32.msi"
+  file64         = "$toolsDir\KeePassXC-2.4.0-Win64.msi"
+  checksum       = '38F49720EBB73BAEAB5DA89BA16C4BDCD84BC703939A06EF288F0739DF2E8D54'
   checksumType   = 'sha256'
-  checksum64     = 'A3DB8244E4EA142EB79FEDDA7EFCFBD738E7C9E05407B8A25F35948D17D1F63D'
+  checksum64     = '6939A4B64217BDDFB349431EC71B1878CA65D3EBEFAD4BA396CB19045FFB83E7'
   checksumType64 = 'sha256'
 
   # MSI
@@ -21,4 +21,4 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 # Lets remove the installer and ignore files as there is no more need for them
-Get-ChildItem $toolsDir\*.$fileType | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+Get-ChildItem $toolsDir\*.$packageArgs['fileType'] | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
