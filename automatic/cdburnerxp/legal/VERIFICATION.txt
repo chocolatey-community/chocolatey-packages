@@ -7,15 +7,15 @@ location on <https://cdburnerxp.se/en/download>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://download.cdburnerxp.se/msi/cdbxp_setup_4.5.8.7041.msi>
-  64-Bit software: <https://download.cdburnerxp.se/msi/cdbxp_setup_x64_4.5.8.7041.msi>
+  32-Bit software: <https://download.cdburnerxp.se/msi/cdbxp_setup_4.5.8.7042.msi>
+  64-Bit software: <https://download.cdburnerxp.se/msi/cdbxp_setup_x64_4.5.8.7042.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 04FD2C4C70EC85BB80AC8A5795CD84B484E2CF973134627E7B262AB56052EAAC
-  checksum64: DE5A6A9E4A1D4FC49E82CB7DC498E393864C733C3ACEBE80B0B3AD22446652F9
+  checksum32: F7FD12FC45B0FBA54A8E01BD9CFFCEE872B3EC34CE48E5E536C3BEB822A75F77
+  checksum64: 8C114FCF5B45C5A72D4C5133EDC33DA038DC36C266573119DF24FBBE185C30AF
 
 The file 'LICENSE.txt' has been obtained from <https://cdburnerxp.se/help/intro/license>
