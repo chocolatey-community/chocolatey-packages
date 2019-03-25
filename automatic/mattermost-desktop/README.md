@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png" width="48" height="48"/> [Mattermost Desktop](https://chocolatey.org/packages/mattermost-desktop)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png" width="48" height="48"/> [Mattermost Desktop](https://chocolatey.org/packages/mattermost-desktop)
 
 Native desktop application for Mattermost running on Windows.
 
