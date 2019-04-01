@@ -14,8 +14,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: F56A6166F8956C507CC2BFEC71339F3C467C0421FE6D16FBE4C52A36D79CE0EA
-   checksum64: 37445B39E2FC437688164866C495BD28890DED5D0DBF71615BF92776E57C5189
+   checksum32: 8B83F1D957F98F515F7274BDD6EDB1287A5557C1E89B96EDD17D308B36ED21E3
+   checksum64: 7F28BF4DC418ECC1368F28FF83C3A7C6AC816468501AF9EFD585FC5ABEC991AA
 
 File 'redistribution.pdf' presents written approval from Nir Softer that allows software
 redistribution
