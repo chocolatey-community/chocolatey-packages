@@ -26,4 +26,4 @@ if (-not (Test-Path $extractPath)) {
 }
 
 Get-ChocolateyUnzip $fileFullPath $extractPath
-Start-ChocolateyProcessAsAdmin "Copy-Item -Force '$extractPath\*.lngx' '$destination'"
+Start-ChocolateyProcessAsAdmin "Copy-Item -Force '$extractPath\*.lngx' '$destination\Languages\'"
