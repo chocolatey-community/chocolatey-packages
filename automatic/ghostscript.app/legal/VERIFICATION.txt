@@ -7,15 +7,15 @@ location on <https://ghostscript.com/download/gsdnld.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs925/gs925w32.exe>
-  64-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs925/gs925w64.exe>
+  32-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs927/gs927w32.exe>
+  64-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs927/gs927w64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 8CFB3CE926798538E0A056132F068C7AFD86FC55F55FB9B53DABFA80EC9EFEFC
-  checksum64: D9AAD0C72FE749179ABA0496D6E9D7F37E8487C987E2E7C789CEC0A09C0E2A5E
+  checksum32: 4CA8C330213B96DC6F18A099E6502E3B2EB89DE20FFB2C96D9DE01CCFB9039A3
+  checksum64: AF6F57EFAFC4703C7337D594BD6A78B0AF59D68ACA21C1B924A97535E6978867
 
 The file 'LICENSE.txt' has been obtained from <http://git.ghostscript.com/?p=ghostpdl.git;a=blob_plain;f=LICENSE;h=572496a331cefa0933a9e997374f5e7dde3b95c8;hb=HEAD>
