@@ -2,8 +2,8 @@
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$filePath32 = "$toolsPath\node-v11.13.0-x86.msi"
-$filePath64 = "$toolsPath\node-v11.13.0-x64.msi"
+$filePath32 = "$toolsPath\node-v6.17.1-x86.msi"
+$filePath64 = "$toolsPath\node-v6.17.1-x64.msi"
 $installFile = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true') {
                       Write-Host "Installing 64 bit version"; $filePath64 }
                else { Write-Host "Installing 32 bit version"; $filePath32 }
@@ -13,7 +13,7 @@ $packageArgs = @{
   FileType       = 'msi'
   SoftwareName   = 'Node.js'
   File           = $installFile
-  SilentArgs     = '/quiet ADDLOCAL=ALL REMOVE=NodeEtwSupport'
+  SilentArgs     = '/quiet ADDLOCAL=ALL REMOVE=NodeEtwSupport,NodePerfCtrSupport'
   ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
