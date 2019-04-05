@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The extension has been downloaded from their official download link listed on <https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio>
 and can be verified like this:
 
-1. Download <https://sonarsource.gallerycdn.vsassets.io/extensions/sonarsource/sonarlintforvisualstudio/4.8.0.4040/1548077506942/SonarLint.VSIX-4.8.0.4040-2015.vsix>
+1. Download <https://sonarsource.gallerycdn.vsassets.io/extensions/sonarsource/sonarlintforvisualstudio/4.9.0.4316/1554461319614/SonarLint.VSIX-4.9.0.4316-2015.vsix>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 5E9F72803AE723E823E9C98195F3B649AB46E1A1994B09B7BCDC5DF8141A07A4
+  checksum: 61A0BFAA4FF6D78244176E8DA0960E2063C0C64DBF20BDDAF25A55C421CE78BC
 
 File 'LICENSE.txt' is obtained from <https://marketplace.visualstudio.com/items/SonarSource.SonarLintforVisualStudio/license>
