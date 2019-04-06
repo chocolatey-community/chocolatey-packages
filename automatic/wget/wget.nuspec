@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Wget</id>
-    <version>1.20</version>
+    <version>1.20.3</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wget</packageSourceUrl>
     <owners>chocolatey, LudicrousByte</owners>
     <title>GNU Wget</title>
