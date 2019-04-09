@@ -20,4 +20,4 @@ if (!$destination) {
 }
 
 Get-ChocolateyUnzip $fileFullPath "$destination\Languages"
-rm "$extractPath\*.7z" -ea 0
+rm "$fileFullPath" -ea 0
