@@ -1,20 +1,13 @@
-﻿import-module au
+﻿Import-Module AU
 
 $releases = 'https://www.gimp.org/downloads/'
-$softwareName = 'GIMP'
-
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
-    }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
+      "(?i)^(\s*url\s*=\s*)'.*'" = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
     }
   }
 }
@@ -33,4 +26,4 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor 32

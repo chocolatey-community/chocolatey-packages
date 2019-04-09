@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gimp.svg" width="48" height="48"/> [GIMP](https://chocolatey.org/packages/gimp)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gimp.svg" height="48" width="48" /> ![GIMP](https://img.shields.io/chocolatey/v/gimp.svg?label=GIMP&style=for-the-badge)](https://chocolatey.org/packages/gimp)
 
 
 GIMP is a multi-platform photo manipulation tool. GIMP is an acronym for GNU Image Manipulation Program. The GIMP is suitable for a variety of image manipulation tasks, including photo retouching, image composition, and image construction.It can be used as a simple paint program, an expert quality photo retouching program, an online batch processing system, a mass production image renderer, an image format converter, etc.
