@@ -47,8 +47,8 @@ environment:
   api_key:
     secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
 
-  #Chocolatey version we want to use when checking for updates.
-  choco_version: '0.10.8'
+  #Chocolatey version we want to use when checking for updates (usually latest).
+  choco_version: '0.10.14--beta-20190402'
   choco_version_pr: '0.10.8' # Should be kept to the version available one year ago
   nupkg_cache_path: C:\packages
 
@@ -63,10 +63,10 @@ install:
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
     @{
       'chocolatey' = $chocoVersion
-      'wormies-au-helpers' = '0.3.1'
+      'wormies-au-helpers' = '0.3.2'
     }.GetEnumerator() | % {
       if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; iwr "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
-      if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade }
+      if ($_.Key -eq 'chocolatey') { cup $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade --pre }
       else { cinst $_.Key --version $_.Value --source ${env:nupkg_cache_path} --ignore-dependencies }
     }
     rm "$env:ChocolateyInstall\logs\*.log"
