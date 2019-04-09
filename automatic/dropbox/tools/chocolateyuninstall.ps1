@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName "Dropbox"
 

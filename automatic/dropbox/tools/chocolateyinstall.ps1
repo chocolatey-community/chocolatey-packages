@@ -1,18 +1,9 @@
 ﻿$ErrorActionPreference  = 'Stop'
+. "$PSScriptRoot\helper.ps1"
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName "Dropbox"
-$alreadyInstalled = $false
 $version = ''
 
-if ($key.Count -ne 0) {
-  $key | ForEach-Object {
-    if ($_.DisplayVersion -eq $version) {
-      $alreadyInstalled = $true
-    }
-  }
-}
-
-if (!$alreadyInstalled) {
+if (!(IsVersionAlreadyInstalled $version)) {
     $stop_dropbox = if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {$false} else {$true}
 
 
