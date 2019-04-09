@@ -7,25 +7,26 @@
     <title>KeePass 2.x language files</title>
     <owners>chocolatey</owners>
     <authors>KeePass Team</authors>
-    <licenseUrl>http://keepass.info/help/v2/license.html</licenseUrl>
-    <projectUrl>http://keepass.info/</projectUrl>
+    <licenseUrl>https://keepass.info/help/v2/license.html</licenseUrl>
+    <projectUrl>https://keepass.info/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/keepass.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 KeePass is a free, open source, light-weight and easy-to-use password manager.
 
-This package extracts a ZIP with all language files into the KeePass program folder. The language, however, must then be manually selected in the KeePass settings. Credits of the translation files: http://keepass.info/translations.html
+This package extracts a ZIP with all language files into the KeePass program folder. The language, however, must then be manually selected in the KeePass settings. Credits of the translation files: https://keepass.info/translations.html
     </description>
     <summary>Language files for KeePass 2.x.</summary>
     <releaseNotes></releaseNotes>
     <copyright />
     <tags>keepass password safe encryption language-file admin</tags>
     <dependencies>
-      <dependency id="keepass.install" version="2.30" />
+      <dependency id="keepass.install" version="2.41" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
+    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

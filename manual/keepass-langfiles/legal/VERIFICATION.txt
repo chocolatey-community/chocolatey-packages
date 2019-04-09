@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded archive have been created by downloading all
+language files located at: https://keepass.info/translations.html
+and been repacked into a single 7zip archive to provide easier
+distribution. All files should be equal to the ones located at
+the previously mentioned webpage.
+
+The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
+The keepass license is listed on <https://keepass.info/help/v2/license.html>
