@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>keepass-langfiles</id>
-    <version>2.33</version>
+    <version>2.41</version>
     <title>KeePass 2.x language files</title>
     <owners>chocolatey</owners>
     <authors>KeePass Team</authors>
@@ -26,7 +26,6 @@ This package extracts a ZIP with all language files into the KeePass program fol
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
   <files>
-    <file src="tools\keepass_2.x_langfiles.zip" target="tools\keepass_2.x_langfiles.zip" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

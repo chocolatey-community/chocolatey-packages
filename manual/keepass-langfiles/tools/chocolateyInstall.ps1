@@ -1,6 +1,6 @@
 ﻿$packageID = 'keepass-langfiles'
 $PSScriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$fileFullPath = Join-Path $PSScriptRoot 'keepass_2.x_langfiles.zip'
+$fileFullPath = Join-Path $PSScriptRoot 'keepass_2.x_langfiles.7z'
 
 function Get-KeePassInstallLocation {
   @(
