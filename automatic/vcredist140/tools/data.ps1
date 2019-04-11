@@ -11,7 +11,7 @@ $installData64 = @{
 }
 
 $uninstallData = @{
-  SoftwareName = 'Microsoft Visual C++ 2017 Redistributable*'
+  SoftwareName = 'Microsoft Visual C++ 2015-2019 Redistributable*'
 }
 
 $otherData = @{
