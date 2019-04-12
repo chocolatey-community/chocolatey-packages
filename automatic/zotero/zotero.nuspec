@@ -5,7 +5,7 @@
     <id>zotero</id>
     <title>Zotero</title>
     <owners>chocolatey</owners>
-    <version>5.0.65</version>
+    <version>5.0.66</version>
     <authors>Center for History and New Media, et. al.</authors>
     <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@53607633ce049d5d75ac668f4408faaeced36bc3/icons/zotero.png</iconUrl>
