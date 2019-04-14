@@ -10,7 +10,7 @@
     <authors>Microsoft</authors>
     <projectUrl>https://visualstudio.microsoft.com/vs/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d8a28da83b3b9bf058e1fbbeed5ce74329b73245/icons/vcredist140.png</iconUrl>
-    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/permissions</copyright>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/visualstudio/ide/getting-started-with-cpp-in-visual-studio</docsUrl>
