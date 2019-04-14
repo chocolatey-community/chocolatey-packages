@@ -1,21 +1,21 @@
 ﻿$installData32 = @{
-  Url = 'https://download.visualstudio.microsoft.com/download/pr/6ea9376d-6ab0-45ac-a305-d76274c006ed/6a1eef0ca6e0de1c1b41b6202d2208b2/vc_redist.x86.exe'
-  Checksum = '32907e5cb270b2e6733a21cd45bb059a6cdd22517c56b2fc93529bdb8e4d6f2b'
+  Url = 'https://download.visualstudio.microsoft.com/download/pr/092cda8f-872f-47fd-b549-54bbb8a81877/ddc5ec3f90091ca690a67d0d697f1242/vc_redist.x86.exe'
+  Checksum = '261f8122ce3e3da66fe4300e2a88325469251da85b62fbddb03ec49f97b62c14'
   ChecksumType = 'sha256'
 }
 
 $installData64 = @{
-  Url64 = 'https://download.visualstudio.microsoft.com/download/pr/46db022e-06ea-4d11-a724-d26d33bc63f7/2b635c854654745078d5577a8ed0f80d/vc_redist.x64.exe'
-  Checksum64 = '0cf2fe188d98330ee11b7a7a151cb87b44e2f3b30a4b6f8cd3735e0f9118d606'
+  Url64 = 'https://download.visualstudio.microsoft.com/download/pr/21614507-28c5-47e3-973f-85e7f66545a4/f3a2caa13afd59dd0e57ea374dbe8855/vc_redist.x64.exe'
+  Checksum64 = '14b07d8f4108a8b8b306af3f6fe6eb78814dfadebd500416fb24856ad668518e'
   ChecksumType64 = 'sha256'
 }
 
 $uninstallData = @{
-  SoftwareName = 'Microsoft Visual C++ 2017 Redistributable*'
+  SoftwareName = 'Microsoft Visual C++ 2015-2019 Redistributable*'
 }
 
 $otherData = @{
-  ThreePartVersion = [version]'14.16.27024'
+  ThreePartVersion = [version]'14.20.27508'
   FamilyRegistryKey = '14.0'
   PackageName = 'vcredist140'
 }
