@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.16.27027.20190414</version>
+    <version>14.20.27508.1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vcredist140</packageSourceUrl>
     <owners>chocolatey,jberezanski</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2015-2019</title>
@@ -32,7 +32,7 @@ On some systems, if KB2999226 is installed as a dependency of this package, the 
 ##### Software
 [Visual Studio 2019 Release Notes](https://docs.microsoft.com/en-us/visualstudio/releases/2019/release-notes)
 ##### Package
-14.16.27027.20190414: Added workaround for unreliable newer version detection logic.
+14.20.27508.1: First package release from the Visual Studio 2019 Release channel.
 </releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
