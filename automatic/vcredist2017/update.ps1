@@ -8,7 +8,7 @@ $x64Release = 'https://aka.ms/vs/15/release/VC_redist.x64.exe'
 function global:au_SearchReplace {
   @{
     ".\vcredist2017.nuspec" = @{
-      "(\<dependency .+? version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
+      "(\<dependency .+? version=)`"([^`"]+)`"" = "`$1`"$($Latest.Version)`""
     }
   }
 }
