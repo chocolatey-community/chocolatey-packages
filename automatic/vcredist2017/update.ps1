@@ -1,4 +1,5 @@
 Import-Module AU
+Import-Module Wormies-AU-Helpers
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts/au_extensions.psm1"
 
