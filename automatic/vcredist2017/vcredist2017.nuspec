@@ -25,12 +25,6 @@ This package is only a metapackage which points to the latest Visual C++ Redistr
 
 [Supported Operating Systems](https://www.visualstudio.com/en-us/productinfo/vs2017-system-requirements-vs): Windows 10, Windows 8.1 / Server 2012 R2 (with KB2919355), Windows 8 / Windows Server 2012, Windows 7 SP1 (with KB3033929) / Server 2008 R2 SP1, Windows Vista SP2 / Server 2008 SP2, Windows XP SP3 / Windows Server 2003 SP2
 ]]></description>
-    <releaseNotes>
-##### Software
-[Visual Studio 2017 Release Notes](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)
-##### Package
-14.16.27027.20190415: Fixed dependency on vcredist140 so that this package no longer prevents updating vcredist140 to a later version.
-    </releaseNotes>
     <dependencies>
       <dependency id="vcredist140" version="14.16.27033" />
     </dependencies>
