@@ -1,8 +1,8 @@
 import-module au
 import-module "$PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1"
 
-$releases32 = 'https://vscode-update.azurewebsites.net/api/update/win32/stable/VERSION'
-$releases64 = 'https://vscode-update.azurewebsites.net/api/update/win32-x64/stable/VERSION'
+$releases32 = 'https://vscode-update.azurewebsites.net/api/update/win32-user/stable/VERSION'
+$releases64 = 'https://vscode-update.azurewebsites.net/api/update/win32-x64-user/stable/VERSION'
 
 function global:au_SearchReplace {
     @{
