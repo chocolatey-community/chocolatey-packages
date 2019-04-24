@@ -52,5 +52,6 @@ function global:au_GetLatest {
     Filename32  = $filename
   }
 }
-
+Write-Host "ignored until fixed as updater blocks"
+return 'ignore'
 update -ChecksumFor none
