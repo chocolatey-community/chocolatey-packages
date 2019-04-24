@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.17/FreeCAD-0.17.13528.5c3f7bf-WIN-x86-installer.exe'
-  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.17/FreeCAD-0.17.13541.9948ee4-WIN-x64-installer.exe'
+  url            = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.18.1/FreeCAD-0.18.16110.f7dccfa-WIN-x32-installer.exe'
+  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.18.1/FreeCAD-0.18.16110.f7dccfa-WIN-x64-installer.exe'
   softwareName   = 'FreeCAD*'
-  checksum       = '688aac826ae59c7995ac4a9dd5b8c2ced00127058794bd56d985095a889f6a30'
+  checksum       = 'd5d30471d0c79b9588f1504e606e146f61512b17371577f6bb12b32bc6cac2a0'
   checksumType   = 'sha256'
-  checksum64     = '88bd9dd9f34d0d804b7380079cb2f32fe19e3b78fa0f9bcbf3d848d2fa17eee9'
+  checksum64     = '1a4e842ce39850a2efeec3ed16ca59e4c8a720c16999ce0724e22a20c5db5540'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
