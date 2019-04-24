@@ -7,8 +7,8 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*"   = "`$1$($Latest.FileName32)`""
-            "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`$1$($Latest.FileName64)`""
+            "(?i)(.*FileFullPath\s*=\s*`"[$]toolsDir\\).*`""   = "`$1$($Latest.FileName32)`""
+            "(?i)(.*FileFullPath64\s*=\s*`"[$]toolsDir\\).*`"" = "`$1$($Latest.FileName64)`""
         }
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
