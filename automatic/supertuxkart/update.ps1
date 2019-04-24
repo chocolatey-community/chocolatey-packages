@@ -21,8 +21,8 @@ function global:au_GetLatest {
   $version = $urls[0] -split '/' | select -Last 1 -Skip 2
 
   @{
-    URL32    = $urls -match 'win64|64bit' | select -first 1
-    URL64    = $urls -match 'win32|32bit' | select -first 1
+    URL32    = $urls -match 'win32|32bit' | select -first 1
+    URL64    = $urls -match 'win64|64bit' | select -first 1
     Version  = $version
     FileType = 'exe'
   }
