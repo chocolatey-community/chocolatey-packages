@@ -2,11 +2,12 @@
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\julia-1.1.0-win32.exe" -FileFullPath64 "$toolsDir\julia-1.1.0-win64.exe"  -Destination "$toolsDir"
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  file          = "$toolsDir\julia-1.1.0-win32.exe"
-  file64        = "$toolsDir\julia-1.1.0-win64.exe"
+  file          = "$toolsDir\julia-installer.exe"
 
   softwareName  = 'Julia*'
 
