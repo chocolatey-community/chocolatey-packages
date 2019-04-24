@@ -33,17 +33,23 @@ function global:au_GetLatest {
     $url = $download_page.links | ? href -match 'avidemux/[0-9.]+/$' | % href | select -First 1 | % { 'https://sourceforge.net' + $_ }
 
     $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
-    $url32 = $download_page.Links | ? href -match "win32?\.exe" | select -first 1 -expand href
-    $url64 = $download_page.Links | ? href -match "(win64|64Bits.*)\.exe" | select -first 1 -expand href
+    $allUrls = $download_page.Links | ? href -match "\.exe\/download$" | select -expand href
+    if ($allUrls.Count -le 1) {
+        Write-Host "Only 1 installer found, skipping update..."
+        return "ignore"
+    }
+    $url32 = $allUrls | ? { $_ -match "win32?\.exe" } | select -first 1
+    $url64 = $allUrls | ? { $_ -match "(win64|64Bits.*)\.exe" } | select -first 1
 
 
     $version = $url -split '/' | select -Last 1 -Skip 1
 
     if ($download_page -match "$version( |\-)(alpha|beta|rc)([^\: ]*)") {
-      $version = "$version-$($Matches[2])$($Matches[3])"
+        $version = "$version-$($Matches[2])$($Matches[3])"
     }
 
-    @{
+
+    return @{
         URL32        = "$url32"
         URL64        = "$url64"
         Version      = $version
