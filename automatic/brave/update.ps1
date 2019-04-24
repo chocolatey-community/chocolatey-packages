@@ -8,6 +8,12 @@ function global:au_GetLatest {
     $url64     = $download_page.links | ? { $_.href -match 'StandaloneSilentSetup.exe$' } | select -First 1 -expand href
     $url32_b   = $download_page.links | ? { $_.href -match 'SilentBetaSetup32.exe$' } | select -First 1 -expand href
     $url64_b   = $download_page.links | ? { $_.href -match 'SilentBetaSetup.exe$' } | select -First 1 -expand href
+
+    if (!$url32 -and !$url32_b) {
+      Write-Host "No stable and no beta release is available (Nightly not supported)..."
+      return "ignore"
+    }
+
     $version   = ($url32 -split '/' | select -Skip 1 -Last 1) -replace '^v',''
     $version_b = ($url32_b -split '/' | select -Skip 1 -Last 1) -replace '^v',''
 
