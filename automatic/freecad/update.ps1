@@ -25,7 +25,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-  $re = 'x86.*\.exe$'
+  $re = 'x(86|32).*\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
   $re = 'x64.*\.exe$'
