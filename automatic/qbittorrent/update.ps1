@@ -21,7 +21,16 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  try {
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  } catch {
+    if ($_ -match "Unable to connect to the remote server") {
+      Write-Host "qbittorrent.org is down, skipping package update..."
+      return "ignore"
+    } else {
+      throw $_
+    }
+  }
 
   $re    = 'setup\.exe\/download$'
   $urls  = $download_page.links | ? href -match $re | select -First 2 -expand href
