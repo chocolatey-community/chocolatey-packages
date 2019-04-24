@@ -23,16 +23,16 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: chocolatey-community/chocolatey-coreteampackages
   github_api_key:
-    secure: um25UyBlvM1Ysokz1/2YUU2io57AkQEr7c8k788q8pNTCu7up9+r7fHT6V05b/CM
+    secure: 7tqvwsSAEGnwr0bYwegIsNBje1pqjdhHEoclLBQOR5HF0SOGw48Ls1OBpAimSlsf
 
   # Gitter Integration
   gitter_webhook:
-    secure: 7ytVP4w9e1d7o3dlorRpYp3plrOdmu/fxQh6F8kWljmtexgQVkcL0gbZw5tsNy13kQqga0/oE1eYuOPbLyD4iw==
+    secure: x42idfQsl++Vm+HZbKkU/jfa0TJcXFuZz45TMlevdnA/si/dz3B3GoGE0ZhdI1uVcfvOHKPteiTlcqpRZXJ5SQ==
 
   # Mail credentials - for error notifications
   mail_user: gep13choco@gmail.com
   mail_pass:
-    secure: cNxrznDt/+dNmID+W+sdT8Ywen5jmdE34otdfYKLr3WtHb4V1e+2IA/l1fSVE9glaWffFU1WZy62p34/aLMhvw==
+    secure: 5PmhObpDGICgHcaw+xElQOUbl4w6ouQ49lE8lGjFCW9MDNJxNsts7xN7nkidFEjZhCyyYbycXR6rsQhqlDbJkw==
   mail_server: smtp.gmail.com
   mail_port: 587
   mail_enablessl: true
@@ -45,7 +45,7 @@ environment:
 
   #Chocolatey API key - to push updated packages
   api_key:
-    secure: GLpgZqYKDuf8yWaYGP5KmoHoS4OllLg6lo/ROK9DhSOkaNx7YAv4E1Tn4N3e7Gcn
+    secure: zPuYvdxGda6DUGRCwTJL5FQCWF3U+1bSLE2mEr+VfpfV08NXlXX2uFLizkhQuJYW
 
   #Chocolatey version we want to use when checking for updates (usually latest).
   choco_version: '0.10.14-beta-20190402'
@@ -59,7 +59,7 @@ init:
 
 install:
 - ps: |
-    $chocoVersion = if (($Env.APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($ENV:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) { $Env:choco_version } else { $Env:choco_version_pr }
+    $chocoVersion = if (($Env:APPVEYOR_PULL_REQUEST_NUMBER -eq $null) -or ($ENV:APPVEYOR_PULL_REQUEST_NUMBER -eq '')) { $Env:choco_version } else { $Env:choco_version_pr }
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
     @{
       'chocolatey' = $chocoVersion
