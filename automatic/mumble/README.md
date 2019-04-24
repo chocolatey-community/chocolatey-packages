@@ -20,3 +20,8 @@ Mumble is free and open-source software, is cross-platform, and is released unde
 - Very stable server software
 - Many other options
 
+## Package Parameters
+
+- `/IncludeAll` - Will install everything available in the installer (including the Murmur server)
+
+Example `choco install mumble --package-parameters="/IncludeAll"`
