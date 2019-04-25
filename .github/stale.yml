@@ -29,7 +29,6 @@ staleLabel: "Pending closure"
 # Comment to post when marking as stale. Set to `false` to disable
 markComment: >
   Is this still relevant? If so, what is blocking it? Is there anything you can do to help move it forward?
-  If no progress is being made within 30 days, this issue will unfortunately be closed.
 
 # Comment to post when removing the stale label.
 # unmarkComment: >
