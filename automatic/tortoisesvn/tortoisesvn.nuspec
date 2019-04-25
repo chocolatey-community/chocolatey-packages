@@ -4,7 +4,7 @@
   <metadata>
     <id>tortoisesvn</id>
     <title>TortoiseSVN</title>
-    <version>1.11.1.28492</version>
+    <version>1.12.0.28568</version>
     <authors>TortoiseSVN Team</authors>
     <owners>chocolatey, dtgm</owners>
     <summary>Subversion® source control management client implemented as File Explorer shell extension</summary>
@@ -55,7 +55,7 @@ TortoiseSVN provides a flexible mechanism to integrate any web based bug trackin
 * A custom crash report tool is included in every TortoiseSVN release which helps us fix the bugs much faster, even if you can't remember exactly what you did to trigger it.
 ]]></description>
     <tags>svn subversion scm version-control admin foss</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tortoisesvn</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/tortoisesvn</packageSourceUrl>
     <projectUrl>http://tortoisesvn.net/</projectUrl>
     <projectSourceUrl>https://sourceforge.net/p/tortoisesvn/code/HEAD/tree/</projectSourceUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tortoisesvn/tickets/</bugTrackerUrl>
@@ -63,7 +63,7 @@ TortoiseSVN provides a flexible mechanism to integrate any web based bug trackin
     <copyright>© 2004 TortoiseSVN Team</copyright>
     <licenseUrl>https://sourceforge.net/p/tortoisesvn/code/HEAD/tree/trunk/src/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@81c6df0de9bb542ecc516c813101d10525c74e51/icons/tortoisesvn.png</iconUrl>
     <releaseNotes>http://tortoisesvn.net/Changelog.txt</releaseNotes>
     <dependencies>
       <dependency id="kb2999226" version="1.0.20181019" />
