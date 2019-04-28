@@ -6,14 +6,14 @@ The installer have been downloaded from the Github release page <https://github.
 and can be verified like this:
 
 1.  Download the following installers:
-    32-Bit: <https://github.com/keeweb/keeweb/releases/download/v1.8.1/KeeWeb-1.8.1.win.ia32.exe>
-    64-Bit: <https://github.com/keeweb/keeweb/releases/download/v1.8.1/KeeWeb-1.8.1.win.x64.exe>
+    32-Bit: <https://github.com/keeweb/keeweb/releases/download/v1.8.2/KeeWeb-1.8.2.win.ia32.exe>
+    64-Bit: <https://github.com/keeweb/keeweb/releases/download/v1.8.2/KeeWeb-1.8.2.win.x64.exe>
 2.  You can use one of the following methods to obtain the checksum
     - Use powershell function 'Get-Filehash'
     - Use chocolatey utility 'checksum.exe'
 
     checksum type: sha256
-    checksum32: E6F21F89A2C92332257C8A88E14EE76ED9768979B9BD62E3A9277C39F2BAD5F3
-    checksum64: 4AE0D3EB11A5867DF5672A8339793973EAE3AF13FA8802B52E493D952480ACA1
+    checksum32: 854217DEC9D11CE8D3FCB752154BA613189B51A8D63C58B27D9786AB7E4A553A
+    checksum64: AF308265F960CF13D652B6E7266A57856583E5EC53FF9C206D1744D17E8B8749
 
 File 'LICENSE.txt' is obtained from <https://github.com/keeweb/keeweb/blob/26d6844b65e78217d3b3eb6cfa4ed5e226404320/LICENSE>
