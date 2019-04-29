@@ -2,8 +2,8 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>libreoffice-fresh</id>
-    <title>LibreOffice Fresh</title>
+    <id>libreoffice-still</id>
+    <title>LibreOffice Still</title>
     <version>6.2.3</version>
     <authors>LibreOffice developers</authors>
     <owners>chocolatey</owners>
@@ -12,7 +12,8 @@
 
 ## Notes
 
-- This package installs LibreOffice Fresh which is the stable version of LibreOffice with the most recent bleeding-edge features. This version is recommended for technology enthusiasts, early adopters or power users. For more conservative users or for deployments in enterprise or corporate environments, it is recommended to install [libreoffice-still](/packages/libreoffice-still) instead.
+- This package installs LibreOffice Still which is the stable version of LibreOffice that has undergone more testing (over a longer time). This version is recommended for more conservative users or for deployments in enterprise or corporate environments. If you want the latest version with the most recent bleeding-edge features, install [libreoffice-fresh](/packages/libreoffice-fresh) instead.
+- For business deployments, The Document Foundation (the foundation behind the LibreOffice project) strongly recommends [support from certified partners](https://www.libreoffice.org/get-help/professional-support/) which also offer long-term support versions of LibreOffice.
 - Older versions of this package are likely broken because the LibreOffice team removes the download links for older versions after each update.
 ]]></description>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
@@ -20,12 +21,12 @@
     <copyright></copyright>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
     <dependencies>
       <dependency id="kb2919355" version="1.0.20160915" />
     </dependencies>
     <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/libreoffice-streams</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/libreoffice-streams</packageSourceUrl>
     <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
     <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
   </metadata>
