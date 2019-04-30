@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c4b46cad1e6a8071b53bb3b797940cabae7f4152/icons/wps-office-free.png" width="48" height="48"/> [wps-office-free](https://chocolatey.org/packages/wps-office-free)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c4b46cad1e6a8071b53bb3b797940cabae7f4152/icons/wps-office-free.png" width="48" height="48"/> [wps-office-free](https://chocolatey.org/packages/wps-office-free)
 
 
 WPS Office Free the perfect free office software. Your dream solution for a low-budget, no-commitment, free productivity office suite.
