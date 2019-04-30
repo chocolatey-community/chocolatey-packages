@@ -19,40 +19,29 @@ function global:au_BeforeUpdate {
 function global:au_GetLatest {
   $json = Invoke-WebRequest -UseBasicParsing -Uri $releases | ConvertFrom-Json
 
-  $versions = $json."nuget.exe" | Sort-Object uploaded -Descending
-  $preRelease = $versions | ? stage -EQ 'EarlyAccessPreview' | select -First 1
-  $stableRelease46 = $versions | ? stage -EQ 'ReleasedAndBlessed' | ? version -like '4.6.*' | select -First 1
-  $stableRelease47 = $versions | ? stage -EQ 'ReleasedAndBlessed' | ? version -like '4.7.*' | select -First 1
-  $stableRelease48 = $versions | ? stage -EQ 'ReleasedAndBlessed' | ? version -like '4.8.*' | select -First 1
-  $stableRelease49 = $versions | ? stage -EQ 'ReleasedAndBlessed' | ? version -like '4.9.*' | select -First 1
-  $stableRelease = $versions | ? stage -EQ 'ReleasedAndBlessed' | select -First 1
+  $versions = $json."nuget.exe"
 
-  $streams = @{
-    'pre'    = @{
-      Version = $preRelease.version
-      URL32   = $preRelease.url
-    }
-    'stable46' = @{
-      Version = $stableRelease46.version
-      URL32   = $stableRelease46.url
-    }
-    'stable47' = @{
-      Version = $stableRelease47.version
-      URL32   = $stableRelease47.url
-    }
-    'stable48' = @{
-      Version = $stableRelease48.version
-      URL32   = $stableRelease48.url
-    }
-    'stable49' = @{
-      Version = $stableRelease49.version
-      URL32   = $stableRelease49.url
-    }
-    'stable' = @{
-      Version = $stableRelease.version
-      URL32   = $stableRelease.url
+  $streams = @{}
+
+  $versions | Sort-Object uploaded -Descending | % {
+    $versionTwoPart = $_.version -replace '^(\d+\.\d+).*$','$1'
+
+    if (!$streams.ContainsKey("$versionTwoPart")) {
+      $streams.Add($versionTwoPart, @{
+        Version = $_.Version
+        URL32   = $_.url
+      })
     }
   }
+
+  $preKey = $streams.Keys | ? { $_ -match '-' } | sort -Descending | select -First 1
+  $stableKey = $streams.Keys | ? { $_ -notmatch '-' } | sort -Descending | select -First 1
+  if ($preKey) {
+    $streams.Add('pre', $streams[$preKey])
+    $streams.Remove($preKey)
+  }
+  $streams.Add('stable', $streams[$stableKey])
+  $streams.Remove($stableKey)
 
 
   return @{ Streams = $streams }
