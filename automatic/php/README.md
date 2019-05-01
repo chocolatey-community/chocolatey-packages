@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg" width="48" height="48"/> [php](https://chocolatey.org/packages/php)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg" width="48" height="48"/> [php](https://chocolatey.org/packages/php)
 
 PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
