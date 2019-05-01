@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gitextensions</id>
-    <version>3.0.2</version>
+    <version>3.1-RC1</version>
     <title>Git Extensions</title>
     <authors>Henk Westhuis</authors>
     <owners>chocolatey ferventcoder</owners>
     <licenseUrl>https://github.com/gitextensions/gitextensions/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>http://gitextensions.github.io/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a6a2ac897a7b02a2889d5834d0133d7b8464799c/icons/gitextensions.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a6a2ac897a7b02a2889d5834d0133d7b8464799c/icons/gitextensions.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[## Features
 
@@ -40,7 +40,7 @@
     <releaseNotes>https://github.com/gitextensions/gitextensions/blob/master/GitUI/Resources/ChangeLog.md</releaseNotes>
     <tags>foss cross-platform gitextensions git gui admin</tags>
     <projectSourceUrl>https://github.com/gitextensions/gitextensions</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gitextensions</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gitextensions</packageSourceUrl>
     <docsUrl>https://git-extensions-documentation.readthedocs.org/en/latest/</docsUrl>
     <mailingListUrl>http://groups.google.com/group/gitextensions</mailingListUrl>
     <bugTrackerUrl>http://github.com/gitextensions/gitextensions/issues</bugTrackerUrl>
