@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>juju</id>
-    <version>2.6-beta2</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/juju</packageSourceUrl>
+    <version>2.6-rc1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/juju</packageSourceUrl>
     <owners>AdmiringWorm,chocolatey</owners>
     <title>Juju</title>
     <authors>Canonical Ltd.</authors>
     <projectUrl>https://jujucharms.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png</iconUrl>
     <copyright>2015 Juju Canonical Ltd.</copyright>
     <licenseUrl>https://github.com/juju/juju/blob/staging/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
