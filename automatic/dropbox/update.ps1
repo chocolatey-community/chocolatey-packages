@@ -35,7 +35,7 @@ param(
 		Title = $Title
 		URL32 = $url32
     Version = $version
-		RemoteVersion = $version
+		RemoteVersion = $beta
 	}
 } 
 
