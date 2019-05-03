@@ -5,7 +5,6 @@
 $version = '72.3.127-beta'
 
 if (!(IsVersionAlreadyInstalled $version)) {
-    if ( $version -match "beta" ) { $version = $version -replace("-beta","") }
     $stop_dropbox = if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) {$false} else {$true}
 
 
