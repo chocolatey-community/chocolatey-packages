@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/chrome.svg" width="48" height="48"/> [Google Chrome Beta](https://chocolatey.org/packages/googlechromebeta)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/chrome.svg" width="48" height="48"/> [Google Chrome Beta](https://chocolatey.org/packages/googlechromebeta)
 
 
 Chrome is a fast, simple, and secure web browser, built for the modern web.
