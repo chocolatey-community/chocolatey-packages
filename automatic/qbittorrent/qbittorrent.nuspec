@@ -4,7 +4,7 @@
   <metadata>
     <id>qbittorrent</id>
     <title>qBittorrent</title>
-    <version>4.1.5.20190116</version>
+    <version>4.1.6</version>
     <authors>Christophe Dumez</authors>
     <owners>chocolatey,nconrads</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
@@ -53,14 +53,14 @@ it for the BitTorrent protocol itself.
 ]]></description>
     <projectUrl>http://www.qbittorrent.org/index.php</projectUrl>
     <projectSourceUrl>https://github.com/qbittorrent/qBittorrent</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/qbittorrent</packageSourceUrl>
     <docsUrl>https://github.com/qbittorrent/qBittorrent/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/qbittorrent/qBittorrent/issues</bugTrackerUrl>
     <tags>qbittorrent torrent sharing p2p foss cross-platform admin</tags>
     <licenseUrl>https://github.com/qbittorrent/qBittorrent/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright ©2006-2016 The qBittorrent project</copyright>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png</iconUrl>
     <releaseNotes>http://www.qbittorrent.org/news.php</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
