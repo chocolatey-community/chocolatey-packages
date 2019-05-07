@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>tor-browser</id>
-    <version>8.0.8</version>
+    <version>8.0.9</version>
     <title>Tor Browser Bundle</title>
     <owners>chocolatey</owners>
     <authors>Tor Project</authors>
     <licenseUrl>https://www.torproject.org/docs/faq.html.en#DistributingTor</licenseUrl>
     <projectUrl>https://www.torproject.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tor-browser.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tor-browser.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 The Tor software protects you by bouncing your communications around a distributed network of relays run by volunteers all around the world: it prevents somebody watching your Internet connection from learning what sites you visit, it prevents the sites you visit from learning your physical location, and it lets you access sites which are blocked.
@@ -22,7 +22,7 @@ This package puts the Tor Browser Bundle into `$env:ChocolateyBinRoot\tor-browse
     <summary>Protect your privacy with the Tor Browser Bundle</summary>
     <releaseNotes>https://blog.torproject.org/category/tags/tor-browser</releaseNotes>
     <tags>tor browser privacy anonymity security relay network foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tor-browser</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/tor-browser</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
