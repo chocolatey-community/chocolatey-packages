@@ -6,7 +6,9 @@ Python 3.x is a programming language that lets you work more quickly and integra
 
 - `/InstallDir` - Installation directory
 
-Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
+Examples:
+* `choco install python3 --params "/InstallDir:C:\your\install\path"`
+* `choco install python3 --params "PrependPath=1"`  # set $PATH in "headless" environments
 
 ## Notes
 
