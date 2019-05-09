@@ -4,6 +4,7 @@ language: c  # "language: csharp" is not yet supported on Travis CI Windows
 matrix:
   include:
     - install: choco install mono
+      script: mono --version
     - install: choco install python3 --params "PrependPath=1"
       script: py --version
 script: true
