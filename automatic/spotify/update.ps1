@@ -1,7 +1,7 @@
 Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$downloadUrl = 'https://download.spotify.com/SpotifyFullSetup.exe'
+$downloadUrl = 'https://download.scdn.com/SpotifyFullSetup.exe'
 $padUnderVersion = '1.0.75'
 
 function global:au_SearchReplace {
