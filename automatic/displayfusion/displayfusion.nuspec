@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>displayfusion</id>
-    <version>9.5-Beta1</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/displayfusion</packageSourceUrl>
+    <version>9.5-Beta2</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/displayfusion</packageSourceUrl>
     <owners>chocolatey, keithlammers, the-running-dev</owners>
     <title>DisplayFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.displayfusion.com</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f56efd049430c377faefa58416806532ec0461b9/icons/displayfusion.png</iconUrl>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <licenseUrl>https://www.displayfusion.com/License/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
