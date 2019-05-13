@@ -1,0 +1,6 @@
+# https://docs.travis-ci.com/user/reference/windows/
+os: windows
+language: bash  # language: java is not yet supported on Travis CI Windows
+install: choco install ant
+env: PATH="/c/Program Files/ant/bin:$PATH"
+script: ant -version
