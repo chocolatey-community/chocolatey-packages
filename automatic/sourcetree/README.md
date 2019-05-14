@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@bcc3ae1af3d3d1794526ec01a1f3cd1af7dd80a9/icons/sourcetree.svg" width="48" height="48"/> [SourceTree](https://chocolatey.org/packages/SourceTree)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@bcc3ae1af3d3d1794526ec01a1f3cd1af7dd80a9/icons/sourcetree.svg" width="48" height="48"/> [SourceTree](https://chocolatey.org/packages/SourceTree)
 
 
 A free Git client for Windows.
