@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bleachbit.install</id>
-    <version>2.2</version>
+    <version>2.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bleachbit.install</packageSourceUrl>
     <owners>chocolatey,dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
