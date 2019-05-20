@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bleachbit.install</id>
-    <version>2.2</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bleachbit.install</packageSourceUrl>
+    <version>2.2.0.20190520</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bleachbit.install</packageSourceUrl>
     <owners>chocolatey,dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>BleachBit (Install)</title>
     <authors>Andrew Ziem</authors>
     <projectUrl>https://www.bleachbit.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
     <licenseUrl>https://github.com/bleachbit/bleachbit/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.bleachbit.org/</docsUrl>
