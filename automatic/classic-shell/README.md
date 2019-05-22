@@ -1,12 +1,13 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/5c233ebee7980ad20558f79748a56f8ff71aa06c/icons/classic-shell.png" width="48" height="48"/> [classic-shell](https://chocolatey.org/packages/classic-shell)
 
 
-## ARCHIVED
+**ARCHIVED**
 
 This embedded package is [archived][ticket] because the software is no longer maintained.  
 Automatic AU updater is disabled. Package is not (re)moved in order to continue providing metadata resources for published versions. Package can be treated as any other manual package.
 
 [ticket]: https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1283
+
 ---
 
 Classic Shell is a collection of usability enhancements for Windows. The main features are:
