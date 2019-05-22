@@ -7,3 +7,8 @@ The Tor Browser Bundle lets you use Tor on Windows without needing to install an
 
 This package puts the Tor Browser Bundle into `$env:ChocolateyBinRoot\tor-browser`.
 
+## Notes
+
+- Starting from version 8.5, support for 64 bit editons of tor browser is now also included.
+  There is currently no check to see if a 32bit edition is already installed. Use the `--x86` argument
+  if there is a wish to keep using the 32bit edition (otherwise, uninstall this package before installing the new version).

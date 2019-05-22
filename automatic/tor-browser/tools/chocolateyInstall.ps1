@@ -7,10 +7,12 @@ $data = GetDownloadInformation -toolsPath $toolsDir
 $destinationFolder = GetInstallDirectory -toolsPath $toolsDir
 
 $packageArgs = @{
-  PackageName = 'tor-browser'
+  PackageName  = 'tor-browser'
   FileFullPath = Join-Path $env:TEMP "tor-browserInstall.exe"
-  Url = $data.URL
-  Checksum = $data.Checksum
+  Url          = $data.URL32
+  Url64        = $data.URL64
+  Checksum     = $data.Checksum
+  Checksum64   = $data.Checksum64
   ChecksumType = 'sha256'
 }
 
@@ -24,9 +26,9 @@ Remove-Item  $packageArgs.FileFullPath -Force -ea 0
 
 # Create .ignore files for exeâ€™s
 Get-ChildItem -Path $destinationFolder -Recurse | Where-Object {
-  $_.Extension -eq '.exe'} | ForEach-Object {
+  $_.Extension -eq '.exe' } | ForEach-Object {
   New-Item $($_.FullName + '.ignore') -Force -ItemType file
-# Suppress output of New-Item
+  # Suppress output of New-Item
 } | Out-Null
 
 $desktop = [System.Environment]::GetFolderPath('Desktop')
@@ -37,8 +39,8 @@ Install-ChocolateyShortcut `
   -WorkingDirectory "$toolsDir\tor-browser\Browser"
 
 # set NTFS modify file permissions to $toolsDir\tor-browser\ for user account that installed the package
-$WhoAmI=whoami
+$WhoAmI = whoami
 $Acl = Get-Acl "$toolsDir\tor-browser"
-$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI,"Modify",'ContainerInherit,ObjectInherit', 'None', "Allow")
+$Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI, "Modify", 'ContainerInherit,ObjectInherit', 'None', "Allow")
 $Acl.SetAccessRule($Ar)
 Set-Acl "$toolsDir\tor-browser" $Acl
