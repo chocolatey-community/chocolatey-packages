@@ -1,0 +1,8 @@
+{
+  // THe following is needed to force vscode-powershell
+  // to use the same settings as the editor config file.
+  "editor.tabSize": 2,
+  "[powershell]": {
+    "files.encoding": "utf8bom",
+  }
+}
