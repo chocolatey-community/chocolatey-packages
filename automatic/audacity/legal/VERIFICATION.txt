@@ -18,4 +18,4 @@ Package can be verified like this:
    checksum32: 351BBF5A30E65E2A77D28CF5384057BBC2B25880C682BE755908307951E43B01
 
 File 'LICENSE.txt' obtained from:
-   http://www.audacityteam.org/about/license/#license
+   https://www.audacityteam.org/about/license/#license

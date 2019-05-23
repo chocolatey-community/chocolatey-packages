@@ -10,4 +10,4 @@ Audacity is free, open source, cross-platform software for recording and editing
 - Cut, copy, splice or mix sounds together.
 - Change the speed or pitch of a recording.
 - Add new effects with LADSPA plug-ins.
-- And more! See [full list of features](http://www.audacityteam.org/about/features).
+- And more! See [full list of features](https://www.audacityteam.org/about/features).
