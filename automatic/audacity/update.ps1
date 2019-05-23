@@ -1,38 +1,38 @@
-import-module au
+﻿import-module au
 
-$releases = 'http://filehippo.com/download_audacity'
+$releases = 'https://filehippo.com/download_audacity/post_download/'
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(^\s*packageName\s*=\s*)('.*')"= "`$1'$($Latest.PackageName)'"
-        }
-
-        ".\legal\VERIFICATION.txt" = @{
-          "(?i)(\s+x32:).*"            = "`${1} $($Latest.BaseURL)"
-          "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
-        }
-
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
     }
+
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(\s+x32:).*"     = "`${1} $($Latest.BaseURL)"
+      "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
+    }
+
+  }
 }
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $url = $download_page.Content -split "`n" | sls 'href=".+download_audacity/download/[^"]+'
-    $url = $url -split '"' | select -Index 1
-    $version = $download_page.Content -split "`n" | sls 'class="title-text"'
-    $version = $version -split '"' | select -Last 1 -Skip 1
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  if ($download_page.Content -match '"softwareVersion"\s*:\s*"Audacity ([\d\.]+)"') {
+    $version = $Matches[1]
+  }
 
-    $download_page = Invoke-WebRequest $url -UseBasicParsing
-    $url32 = $download_page.Content -split "`n" | sls 'id="download-link"'
-    $url32 = $url32 -split '"' | select -Index 1
-    @{
-        URL32    = 'http://filehippo.com' + $url32
-        BaseUrl  = $url
-        Version  = $version -split ' ' | ? { ($_ -as [version] -is [version]) } | select -First 1
-        FileType = 'exe'
-    }
+  if ($download_page -match "downloadIframe.src\s*=\s*['`"](https[^'`"]+)['`"]") {
+    $url32 = $Matches[1]
+  }
+
+  @{
+    URL32    = $url32
+    BaseUrl  = $releases
+    Version  = $version -split ' ' | ? { ($_ -as [version] -is [version]) } | select -First 1
+    FileType = 'exe'
+  }
 }
 update -ChecksumFor none
