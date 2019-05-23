@@ -14,27 +14,35 @@ function global:au_GetLatest {
       return "ignore"
     }
 
-    $version   = ($url32 -split '/' | select -Skip 1 -Last 1) -replace '^v',''
-    $version_b = ($url32_b -split '/' | select -Skip 1 -Last 1) -replace '^v',''
+  $version   = $url32 -split '/v?' | select -Skip 1 -Last 1
+  $version_b = $url32_b -split '/v?' | select -Skip 1 -Last 1
 
-    @{
-        Streams = [ordered] @{
-            'stable' = @{
-                URL32   = 'https://github.com' + $url32
-                URL64   = 'https://github.com' + $url64
-                Version = $version
-                Title   = 'Brave Browser'
-                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
-            }
-           'beta' = @{
-                URL32   = 'https://github.com' + $url32_b
-                URL64   = 'https://github.com' + $url64_b
-                Version = $version_b + '-beta'
-                Title   = 'Brave Browser (Beta)'
-                IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg'
-           }
-        }
+  $streams = @{
+    'stable' = @{
+      URL32   = 'https://github.com' + $url32
+      URL64   = 'https://github.com' + $url64
+      Version = $version
+      Title   = 'Brave Browser'
+      IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
     }
+  }
+
+
+  if ($version_b) {
+    # if there is no beta version, this means it is a nightly release. We skip those as it misbehaves with beta versioning
+    $streams.Add('beta', @{
+        URL32   = 'https://github.com' + $url32_b
+        URL64   = 'https://github.com' + $url64_b
+        Version = $version_b + '-beta'
+        Title   = 'Brave Browser (Beta)'
+        IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg'
+      })
+  }
+  else {
+    $streams.Add('beta', 'ignore')
+  }
+
+  @{ streams = $streams }
 }
 
 function global:au_BeforeUpdate {
