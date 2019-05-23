@@ -8,21 +8,18 @@ $destinationFolder = GetInstallDirectory -toolsPath $toolsDir
 
 $packageArgs = @{
   PackageName  = 'tor-browser'
-  FileFullPath = Join-Path $env:TEMP "tor-browserInstall.exe"
+  FileType     = 'exe'
   Url          = $data.URL32
   Url64        = $data.URL64
   Checksum     = $data.Checksum
   Checksum64   = $data.Checksum64
   ChecksumType = 'sha256'
+  SilentArgs   = "/S","/D=$destinationFolder"
 }
 
-Get-ChocolateyWebFile @packageArgs
+"Using Language code: '$($data.Locale)'"
 
-Write-Output "Installing $($packageArgs.PackageName) with language code: '$($data.Locale)'..."
-
-Start-Process -Wait $packageArgs.FileFullPath -ArgumentList '/S', "/D=$destinationFolder"
-
-Remove-Item  $packageArgs.FileFullPath -Force -ea 0
+Install-ChocolateyPackage @packageArgs
 
 # Create .ignore files for exeâ€™s
 Get-ChildItem -Path $destinationFolder -Recurse | Where-Object {
