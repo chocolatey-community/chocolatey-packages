@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@d8a28da83b3b9bf058e1fbbeed5ce74329b73245/icons/vcredist140.png" width="48" height="48"/> [Microsoft Visual C++ Redistributable for Visual Studio 2015-2019](https://chocolatey.org/packages/vcredist140)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@d8a28da83b3b9bf058e1fbbeed5ce74329b73245/icons/vcredist140.png" width="48" height="48"/> [Microsoft Visual C++ Redistributable for Visual Studio 2015-2019](https://chocolatey.org/packages/vcredist140)
 
 Microsoft Visual C++ Redistributable for Visual Studio 2015-2019 installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015-2019 and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2015-2019 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
 
