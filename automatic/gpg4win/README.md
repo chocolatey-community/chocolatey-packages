@@ -31,7 +31,7 @@ More information:
 * `/Config` - Use the configuration/control with the specified path
 
 *Example*
-`choco install gpg4win --package-parameter="/Config:C:\gpg4win.ini`
+`choco install gpg4win --package-parameters="/Config:C:\gpg4win.ini"`
 
 ## Notes
 
