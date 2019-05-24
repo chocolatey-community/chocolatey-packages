@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>msys2</id>
-    <version>20180531.0.0</version>
+    <version>20190523.0.0</version>
     <title>MSYS2</title>
     <authors>Alexpux, martell, mingwandroid, elieux, renatosilva, niXman</authors>
     <owners>chocolatey, userzimmermann, petemounce</owners>
     <licenseUrl>https://github.com/userzimmermann/choco-packages/blob/master/msys2/NOTICE</licenseUrl>
     <projectUrl>http://msys2.github.io</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@b7fd5a569573c45748462808cd80dc4b456f79c1/icons/msys2.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[MSYS2 is a software distro and building platform for Windows.
 
@@ -22,17 +22,19 @@ It features a package management system to provide easy installation of packages
 - `/NoPath`     - Do not add msys installation directory to system PATH.
 - `/NoUpdate`   - Do not automatically update with Pacman according to the [official instructions](https://msys2.github.io).
 
+Example: `choco install msys2 --params "/NoUpdate /InstallDir:C:\your\install\path"`
+
 ## Notes
 
 - MSYS2 itself will not be installed again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. Manually delete the installation folder to force complete reinstallation.
 
 ### Ruby integration
 
-This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems. 
+This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems.
 
-- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`). 
-- Its system update is the same as initialization done with this package (`ridk install 2`). 
-- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`). 
+- The ruby installer comes with `ridk` function which offers interactive GUI installation wizard of msys2 and hence [can't be used unattended](https://github.com/oneclick/rubyinstaller2/issues/79) (`ridk install 1`).
+- Its system update is the same as initialization done with this package (`ridk install 2`).
+- Ruby installer offers unattended setup of MSYS2 and MINGW development toolchain (`ridk install 3`).
 
 You can also just install the msys2 package without system update and use `ridk` afterwards:
 
@@ -47,7 +49,7 @@ ridk install 2 3                  # use ruby's ridk to update the system and ins
     <copyright>MSYS2 Copyright (c) 2013, Алексей</copyright>
     <tags>msys2 msys cygwin mingw gnu linux unix posix arch pacman bash makepkg gcc shell cli foss development</tags>
     <projectSourceUrl>https://github.com/Alexpux/MSYS2-packages</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/msys2</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/msys2</packageSourceUrl>
     <docsUrl>https://github.com/msys2/msys2/wiki</docsUrl>
     <dependencies>
       <dependency id="chocolatey" version="0.10.8" />
