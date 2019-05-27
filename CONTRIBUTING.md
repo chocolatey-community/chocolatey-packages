@@ -9,7 +9,7 @@ This repository presents **the latest and highest package standards**. The purpo
 
 * **Stable** - Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.1.4](#114-embed-a-package-if-allowed)).
 * **High quality** - Packages should be resilient and should provide parameters where adequate.
-* **Free** - Packages shold be generally usable by anybody without any special prerequisites.
+* **Free** - Packages should be generally usable by anybody without any special prerequisites.
 
 To achieve those goals we are using the following priorities when adding new or maintaing existing packages:
 
