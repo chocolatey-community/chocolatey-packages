@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://repo.msys2.org/distrib/i686/msys2-base-i686-20190523.tar.xz
-   x64: http://repo.msys2.org/distrib/x86_64/msys2-base-x86_64-20190523.tar.xz
+   x32: http://repo.msys2.org/distrib/i686/msys2-base-i686-20190524.tar.xz
+   x64: http://repo.msys2.org/distrib/x86_64/msys2-base-x86_64-20190524.tar.xz
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 708D59A34C8141EB426534388A054524E7E959CCDB374014949F4C6FB2ABE3F9
-   checksum64: CAC5244838F4373303FD24CEFB5BBA2A92641C79ECA39C27031ADFCCD9DB9773
+   checksum32: 7A463AFAE8BF6CE8262F010A9A1648D056AD5CEFC66D6EB69FE948C57D4CCB53
+   checksum64: 168E156FA9F00D90A8445676C023C63BE6E82F71487F4E2688AB5CB13B345383
 
 File 'LICENSE.txt' is obtained from:
    https://raw.githubusercontent.com/Alexpux/MSYS2-packages/master/LICENSE
