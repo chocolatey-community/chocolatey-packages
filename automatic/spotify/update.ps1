@@ -1,8 +1,8 @@
 Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$downloadUrl = 'https://download.scdn.co/SpotifyFullSetup.exe'
-$padUnderVersion = '1.0.75'
+$releases = 'https://www.spotify.com/en/download/windows/'
+$padUnderVersion = '1.1.8'
 
 function global:au_SearchReplace {
   return @{
@@ -48,6 +48,8 @@ function GetETagIfChanged() {
 }
 
 function global:au_GetLatest {
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $downloadUrl = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href
   $etag = GetETagIfChanged -uri $downloadUrl
 
   if ($etag) {
