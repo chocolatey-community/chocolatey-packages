@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png" width="48" height="48"/> [wget](https://chocolatey.org/packages/wget)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@46ec3b4a65a31782b27c114c92155810d2f781a0/icons/wget.png" width="48" height="48"/> [wget](https://chocolatey.org/packages/wget)
 
 GNU Wget is a free software package for retrieving files using HTTP, HTTPS and FTP, the most widely-used Internet protocols. It is a non-interactive commandline tool, so it may easily be called from scripts, cron jobs, terminals without X-Windows support, etc.
 
