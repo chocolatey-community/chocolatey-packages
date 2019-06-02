@@ -14,7 +14,7 @@ Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*Setup*.exe
 
 $packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
+$installLocation = Get-AppInstallLocation 'everything$'
 if (!$installLocation) { Write-Warning "Can't find $PackageName install location"; exit }
 
 Write-Host "$packageName installed to '$installLocation'"
