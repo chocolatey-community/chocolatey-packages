@@ -6,7 +6,7 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType64)"
       "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
     }
 
