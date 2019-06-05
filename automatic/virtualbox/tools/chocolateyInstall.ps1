@@ -35,8 +35,9 @@ $packageName = $packageArgs.packageName
 $installLocation = Get-VirtualBoxIntallLocation
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location, can't install extension pack"; return }
 
-if (!$pp.NoExtensionPack) {
+if ($pp.ExtensionPack) {
     Write-Host "Installing extension pack"
+    Write-Warning "*** THIS IS A COMMERCIAL EXTENSION AND CAN INCURE SIGNIFICANT FINANCIAL COSTS ***"
 
     $url_ep       = 'https://download.virtualbox.org/virtualbox/6.0.8/Oracle_VM_VirtualBox_Extension_Pack-6.0.8.vbox-extpack'
     $checksum_ep  = '6d89127c7f043fa96592da96ca87ac5ee9a7afd347d788380f91b695b67d7954'
