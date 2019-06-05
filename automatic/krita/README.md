@@ -4,12 +4,12 @@ Krita is the full-featured free digital painting studio for artists who want to 
 
 ## Features
 
-Krita has several features that are unique or a first among free software painting applications: 
+* support for colorspaces other than RGB, like CMYK
+* support for HDR painting
+* painting assistants
+* a perspective grid
 
-* support for colorspaces other than RGB, like CMYK,
-* support for HDR painting,
-* painting assistants,
-* a perspective grid.
+## Notes
 
-The Krita developers are keen to support the artistic community that has grown around Krita.
+- This package embeds x64 bit version for improved stability and longevity of the package, but downloads x32 bit version. It wasn't possible due to packages size limitations to add both versions in the single package.
 
