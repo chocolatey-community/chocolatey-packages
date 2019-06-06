@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gpg4win</id>
-    <version>3.1.7</version>
+    <version>3.1.8</version>
     <title>Gpg4win</title>
     <authors>g10 Code GmbH</authors>
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://www.gpg4win.org/license.html</licenseUrl>
     <projectUrl>http://www.gpg4win.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[Gpg4win (GNU Privacy Guard for Windows) is the full suite of programs for file encryption and digital signatures.
 
@@ -41,7 +41,7 @@ More information:
 * `/Config` - Use the configuration/control with the specified path
 
 *Example*
-`choco install gpg4win --package-parameter="/Config:C:\gpg4win.ini`
+`choco install gpg4win --package-parameters="/Config:C:\gpg4win.ini"`
 
 ## Notes
 
@@ -80,7 +80,7 @@ The documentation for beginner and advanced users, available in English and Germ
     <copyright>© 2006 g10 Code GmbH</copyright>
     <tags>gui cli foss cross-platfrom security signature encryption certificate gpg gnupg gpa gpgol gpgex clawsmail admin</tags>
     <projectSourceUrl>http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpg4win.git;a=tree</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gpg4win</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gpg4win</packageSourceUrl>
     <docsUrl>http://www.gpg4win.org/documentation.html</docsUrl>
     <mailingListUrl>http://www.gpg4win.org/community.html#main</mailingListUrl>
     <bugTrackerUrl>https://bugs.gnupg.org/</bugTrackerUrl>
