@@ -7,8 +7,8 @@ $packageArgs = @{
     silentArgs    = "/S"    
     softwareName  = 'Krita'
 
-    url           = 'https://download.kde.org/stable/krita/4.2.0/krita-x86-4.2.0-setup.exe'
-    checksum      = 'FC2A4C1E7644CB764C07806215885F243436686F2A9E5A782968BF2F420DBB97'
+    url           = 'https://download.kde.org/stable/krita/4.2.1/krita-x86-4.2.1-setup.exe'
+    checksum      = '69EA1E5455353A600D956140820027A58D9159FFAEC602340CBB2A884F254347'
     checksumType  = 'sha256'
     file64        = Get-Item $toolsDir\*.exe
 }
