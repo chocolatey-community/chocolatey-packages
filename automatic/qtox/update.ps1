@@ -1,10 +1,7 @@
 ﻿import-module au
 
+$releases = "https://github.com/qTox/qTox/releases"
 $softwareName = 'qTox'
-
-function global:au_BeforeUpdate {
-    Get-RemoteFiles -Purge -FileNameBase "setup-$($softwareName)-$($Latest.Version)"
-}
 
 function global:au_SearchReplace {
   @{
@@ -25,29 +22,20 @@ function global:au_SearchReplace {
   }
 }
 
-function parseUrlAndVersion() {
-  param($releaseUrl)
-
-  $download_page = Invoke-WebRequest -Uri $releaseUrl -UseBasicParsing
-  $url = $download_page.Links | ? href -match "setup-qtox(?:64|32)\-([\d\.]+)\.exe$" | select -first 1 -expand href
-  $version = $url -split '-|\.exe$' | select -last 1 -Skip 1
-
-  return @{ URL = $releaseUrl + $url; Version = $version.TrimStart('\.') }
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase "setup-$($softwareName)-$($Latest.Version)" }
 
 function global:au_GetLatest {
-  $data32 = parseUrlAndVersion "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86_stable_release/"
-  $data64 = parseUrlAndVersion "https://build.tox.chat/view/qtox/job/qTox_pkg_windows_x86-64_stable_release/"
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  if ($data32.Version -ne $data64.Version) {
-    throw "32bit and 64bit version do not match. Please Investigate..."
-  }
+  $re      = '\.exe$'
+  $domain  = $releases -split '(?<=//.+)/' | select -First 1
+  $url     = $download_page.links | ? href -match $re | select -First 2 -Expand href | % { $domain + $_ }
+  $version = $url[0] -split '/' | select -Last 1 -Skip 1
 
   @{
-    URL32    = $data32.URL
-    URL64    = $data64.URL
-    Version  = $data32.Version
-    FileType = 'exe'
+    URL32    = $url -notmatch '_64-' | select -First 1
+    URL64    = $url -match '_64-'    | select -First 1
+    Version  = $version.Substring(1)    
   }
 }
 
