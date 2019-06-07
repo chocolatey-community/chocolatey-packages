@@ -17,15 +17,16 @@ Start-Job -ScriptBlock { param($cache_dir)
   $seconds = 0; $max_seconds = 600
 
   while ($seconds -lt $max_seconds) {
+    sleep 1; $seconds++
+    
     $logFilePath = ls $cache_dir\*.log -Recurse | select -First 1    
-    if (!$logFilePath) { sleep 1;  $seconds++; continue }
+    if (!$logFilePath) { continue }
     
     $log = Get-Content $logFilePath
     if ($log -like '*Installation successful!') {
       ps $env:ChocolateyPackageName -ea 0 | kill
       exit
     }
-    sleep 1
   }
 } -ArgumentList (Get-PackageCacheLocation)
 Install-ChocolateyPackage @packageArgs
