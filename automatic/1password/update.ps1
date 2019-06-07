@@ -1,8 +1,5 @@
-[CmdletBinding()]
-param($IncludeStream, [switch] $Force)
-
 Import-Module AU
-
+import-module $PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1
 
 function global:au_SearchReplace {
   @{
