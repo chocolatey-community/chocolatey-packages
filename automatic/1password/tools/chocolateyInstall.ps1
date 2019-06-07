@@ -25,6 +25,7 @@ Start-Job -ScriptBlock { param($cache_dir)
       ps $env:ChocolateyPackageName -ea 0 | kill
       exit
     }
+    sleep 1
   }
 } -ArgumentList (Get-PackageCacheLocation)
 Install-ChocolateyPackage @packageArgs
