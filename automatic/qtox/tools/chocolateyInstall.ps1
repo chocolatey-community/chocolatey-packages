@@ -5,11 +5,11 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'qtox'
   fileType       = 'exe'
-  file           = gi $toolsPath\*_x32.exe
-  file64         = gi $toolsPath\*_x64.exe
+  file           = Get-Item $toolsPath\*_x32.exe
+  file64         = Get-Item $toolsPath\*_x64.exe
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = 'qTox'
 }
 Install-ChocolateyInstallPackage @packageArgs
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" "" }}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" "" }}
