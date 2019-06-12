@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://get.videolan.org/vlc/3.0.6/win32/vlc-3.0.6-win32.exe
-   x64: http://get.videolan.org/vlc/3.0.6/win64/vlc-3.0.6-win64.exe
+   x32: http://get.videolan.org/vlc/3.0.7.1/win32/vlc-3.0.7.1-win32.exe
+   x64: http://get.videolan.org/vlc/3.0.7.1/win64/vlc-3.0.7.1-win64.exe
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: E75697CAE485A9206A416AAA3B3EB18C9010056D1FCB53E3658BE086C7080724
-   checksum64: A16CF11836F258A564A30670BCC7F1315A1860367A3FFF43825E1806D23AF332
+   checksum32: C1B6C6E123BFDA45FA5E505659F9C4943BC9B6B276974205FEC2FFF86102A558
+   checksum64: EB00FF6CC951B6BD64D3E8A6604F5A9361D8CAD0180C85C498DEEA81A9622C99
 
 Using AU:
 
-   Get-RemoteChecksum http://get.videolan.org/vlc/3.0.6/win64/vlc-3.0.6-win64.exe
+   Get-RemoteChecksum http://get.videolan.org/vlc/3.0.7.1/win64/vlc-3.0.7.1-win64.exe
 
 File 'LICENSE.txt' obtained from:
    http://svn.videolan.org/filedetails.php?repname=VideoLAN+Server&path=%2Ftrunk%2FCOPYING
