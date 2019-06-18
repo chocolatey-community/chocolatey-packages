@@ -4,13 +4,13 @@
   <metadata>
     <id>sonarlint-vs2015</id>
     <title>SonarLint for Visual Studio 2015</title>
-    <version>4.9.0.4316</version>
+    <version>4.10.0.9879</version>
     <authors>SonarSource (SonarSource SA)</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <projectSourceUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio</projectSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9d190bd5283df93c69ff06df0b78a289af483aa2/icons/sonarlint-vs2015.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@9d190bd5283df93c69ff06df0b78a289af483aa2/icons/sonarlint-vs2015.png</iconUrl>
     <projectUrl>http://www.sonarlint.org/visualstudio/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sonarlint-vs2015</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/sonarlint-vs2015</packageSourceUrl>
     <licenseUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>SonarLint provides on-the-fly feedback to developers on new bugs and quality issues injected into C# and VB.Net code. In addition the connected mode allows to enforce governance policies by reporting the same issues in Visual Studio and in SonarQube server.</summary>
