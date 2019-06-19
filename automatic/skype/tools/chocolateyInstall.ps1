@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$terminateSkypeProcess = 'Get-Process -Name "Skype" | Stop-Process -Force'
+
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'Skype*'
@@ -11,3 +13,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+Start-ChocolateyProcessAsAdmin -Statements $terminateSkypeProcess
