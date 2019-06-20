@@ -29,7 +29,7 @@ function global:au_GetLatest {
     if ($version32 -ne $version64) { throw "x32 and x64 versions are not the same" }
 
     @{
-        Version      = "$version32.0.0"
+        Version      = "$version32.0.1"
         URL32        = $url32
         URL64        = $url64
     }
