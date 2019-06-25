@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>musescore</id>
-    <version>3.0.5</version>
+    <version>3.2</version>
     <title>MuseScore</title>
     <owners>chocolatey</owners>
     <authors>MuseScore developers</authors>
     <licenseUrl>https://github.com/musescore/MuseScore/blob/master/LICENSE.GPL</licenseUrl>
     <projectUrl>https://musescore.org/en</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/musescore.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/musescore.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
@@ -19,13 +19,13 @@ MuseScore runs on Windows, MacOS, and Linux, and is available in over 40 differe
 
 ]]></description>
     <summary>Free music composition &amp; notation software</summary>
-    <releaseNotes>https://musescore.org/en/handbook/developers-handbook/release-notes/release-notes-musescore-305</releaseNotes>
+    <releaseNotes>https://musescore.org/en/handbook/developers-handbook/release-notes/release-notes-musescore-32</releaseNotes>
     <copyright>MuseScore BVBA</copyright>
     <mailingListUrl>https://musescore.org/en/forum</mailingListUrl>
     <bugTrackerUrl>https://musescore.org/en/project/issues/musescore</bugTrackerUrl>
     <docsUrl>https://musescore.org/en/handbook</docsUrl>
     <tags>musescore music cross-platform foss composition notation sheet admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/musescore</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/musescore</packageSourceUrl>
     <projectSourceUrl>https://github.com/musescore/MuseScore</projectSourceUrl>
   </metadata>
   <files>
