@@ -11,5 +11,5 @@ This product includes PHP software, freely available from
 - `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
 
 These parameters can be passed to the installer with the use of --package-parameters.
-For example: `choco install --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
+For example: `choco install php --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
 
