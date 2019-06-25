@@ -49,6 +49,6 @@ function Get-JavaSiteUpdates {
 	  Title        = $Title
 	  Version		   = $version
 	  URL32		     = $yes
-	  ReleaseNotes = "https://www.sourcetreeapp.com/update/windows/ga/ReleaseNotes_$version.html"
+	  ReleaseNotes = "https://product-downloads.atlassian.com/software/sourcetree/windows/ga/ReleaseNotes_$version.html"
   }
 }
