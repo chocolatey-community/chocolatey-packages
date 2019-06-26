@@ -4,7 +4,7 @@
   <metadata>
     <id>vagrant</id>
     <title>Vagrant (Install)</title>
-    <version>2.2.4</version>
+    <version>2.2.5</version>
     <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
     <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
     <summary>Vagrant - Development environments made easy.</summary>
@@ -15,7 +15,7 @@ To achieve its magic, Vagrant stands on the shoulders of giants. Machines are pr
 
 ]]></description>
     <projectUrl>https://www.vagrantup.com</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vagrant</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vagrant</packageSourceUrl>
     <projectSourceUrl>https://github.com/mitchellh/vagrant</projectSourceUrl>
     <docsUrl>https://docs.vagrantup.com/docs</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/vagrant-up</mailingListUrl>
@@ -24,7 +24,7 @@ To achieve its magic, Vagrant stands on the shoulders of giants. Machines are pr
     <copyright>Copyright 2015 HashiCorp</copyright>
     <licenseUrl>https://github.com/mitchellh/vagrant/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png</iconUrl>
     <releaseNotes>[CHANGELOG](https://github.com/mitchellh/vagrant/blob/master/CHANGELOG.md)</releaseNotes>
     <!--<provides>vagrant</provides>-->
   </metadata>
