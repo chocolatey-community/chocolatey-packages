@@ -25,7 +25,7 @@ if ($app -and ([version]$app.DisplayVersion -ge [version]$version) -and ($env:Ch
   return;
 }
 
-Install-ChocolateyZipPackage = @packageArgs
+Install-ChocolateyZipPackage @packageArgs
 
 $msiFileList = (Get-ChildItem -Path $packageArgs.unzipLocation -Filter '*.msi' | Where-Object {
   $_.Name -notmatch 'AppleSoftwareUpdate*.msi'
