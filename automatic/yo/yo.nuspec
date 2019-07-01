@@ -4,7 +4,7 @@
   <metadata>
     <id>yo</id>
     <title>Yeoman</title>
-    <version>2.0.6</version>
+    <version>3.0.0</version>
     <authors>The Yeoman Team</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <summary>CLI tool for running Yeoman generators</summary>
@@ -25,12 +25,12 @@ Yeoman is always the right choice for your scaffolding needs.
     <projectSourceUrl>https://github.com/yeoman/yo</projectSourceUrl>
     <docsUrl>http://yeoman.io/learning/</docsUrl>
     <bugTrackerUrl>https://github.com/yeoman/yo/issues</bugTrackerUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/yo</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/yo</packageSourceUrl>
     <tags>nodejs node javascript web foss cross-platform cli</tags>
     <licenseUrl>https://opensource.org/licenses/bsd-license.php/</licenseUrl>
     <copyright>© Google</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9e732d13804ce0097f9c52c080241edc560acbf9/icons/yo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@9e732d13804ce0097f9c52c080241edc560acbf9/icons/yo.png</iconUrl>
     <releaseNotes>https://github.com/yeoman/yo/releases</releaseNotes>
     <dependencies>
       <dependency id="nodejs" version="0.12.0" />
