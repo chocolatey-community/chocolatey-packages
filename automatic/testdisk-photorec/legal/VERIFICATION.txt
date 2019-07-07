@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://www.cgsecurity.org/wiki/TestDisk_Download>
 and can be verified by doing the following:
 
-1. Download the following <https://www.cgsecurity.org/testdisk-7.0.win.zip>
+1. Download the following <https://www.cgsecurity.org/testdisk-7.1.win.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 3C1FDBACA0AC686677F88B6BBF18D04C82F2C4047488C2E52DA8E2347574B320
+  checksum: 1231CCFD46815E324F3C541B1E4A0A569A0A16B5C7D320C8C049C36595785224
 
 The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/gpl.txt>
