@@ -4,8 +4,8 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$packageName = 'Firefox'
-$softwareName = 'Mozilla Firefox'
+$packageName = 'FirefoxESR'
+$softwareName = 'Mozilla Firefox*ESR'
 
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '68.0')
 
@@ -34,7 +34,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
     Checksum = $checksums.Win32
     ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=firefox-68.0-ssl&os=win&lang=${locale}"
+    Url = "https://download.mozilla.org/?product=firefox-esr-next-68.0-ssl&os=win&lang=${locale}"
 
     silentArgs = '-ms'
     validExitCodes = @(0)
@@ -43,7 +43,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-68.0-ssl&os=win64&lang=${locale}"
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-esr-next-68.0-ssl&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs
