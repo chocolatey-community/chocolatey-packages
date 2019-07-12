@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>seafile-client</id>
-    <version>6.2.11</version>
+    <version>7.0.1</version>
     <title>Seafile (Windows Client)</title>
     <owners>chocolatey</owners>
     <authors>Seafile Ltd.</authors>
@@ -13,7 +13,7 @@
     <bugTrackerUrl>https://github.com/haiwen/seafile-client/issues</bugTrackerUrl>
     <docsUrl>https://www.seafile.com/en/help/</docsUrl>
     <mailingListUrl>https://forum.seafile.com/</mailingListUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@65cff22d071fb30b82b8f2bdee89211b541520c7/icons/seafile-client.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@65cff22d071fb30b82b8f2bdee89211b541520c7/icons/seafile-client.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
@@ -29,7 +29,7 @@ Seafile allows users to create groups with file syncing, wiki, and discussion to
     <releaseNotes>https://seacloud.cc/group/3/wiki/client-changelog</releaseNotes>
     <copyright>Copyright ©2016 Seafile Ltd.</copyright>
     <tags>seafile-client seafile syncing sharing admin foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/seafile-client</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/seafile-client</packageSourceUrl>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
