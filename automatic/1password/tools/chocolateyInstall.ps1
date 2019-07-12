@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://c.1password.com/dist/1P/win6/1PasswordSetup-7.3.701.BETA.exe'
+  url            = 'https://c.1password.com/dist/1P/win6/1PasswordSetup-7.3.702.BETA.exe'
   softwareName   = '1Password*'
-  checksum       = '3727447b1c9df9280f49c84847770bbc909d710b52a01c3cceebaa7a2d20618c'
+  checksum       = 'b2bd43ce885e4a97227e22c14630d8774fe3b9448fcd318df73aff5f94305c7b'
   checksumType   = 'sha256'
   silentArgs     = '--log_path .'
   validExitCodes = @(0)
