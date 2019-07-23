@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4982c6e79743c6da967833471a94d7b64c11464/icons/git-lfs.png" width="48" height="48"/> [git-lfs.install](https://chocolatey.org/packages/git-lfs.install)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@e4982c6e79743c6da967833471a94d7b64c11464/icons/git-lfs.png" width="48" height="48"/> [git-lfs.install](https://chocolatey.org/packages/git-lfs.install)
 
 
 Git Large File Storage (LFS) replaces large files such as audio samples, videos, datasets, and graphics with text pointers inside Git, while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
