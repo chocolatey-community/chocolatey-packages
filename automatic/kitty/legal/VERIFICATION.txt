@@ -3,9 +3,9 @@ in verifying that this package's contents are trustworthy.
 
 The files are downloaded from the following locations:
 
-1) genpass.exe http://www.9bis.net/kitty/?file=genpass.exe
-2) kageant.exe http://www.9bis.net/kitty/?file=kageant.exe
-3) kitty.exe http://www.9bis.net/kitty/?file=kitty.exe
-4) klink.exe http://www.9bis.net/kitty/?file=klink.exe
-5) kscp.exe http://www.9bis.net/kitty/?file=kscp.exe
-6) ksftp.exe http://www.9bis.net/kitty/?file=ksftp.exe
+1) genpass.exe http://www.9bis.net/kitty/files/genpass.exe
+2) kageant.exe http://www.9bis.net/kitty/files/kageant.exe
+3) kitty.exe http://www.9bis.net/kitty/files/kitty.exe
+4) klink.exe http://www.9bis.net/kitty/files/klink.exe
+5) kscp.exe http://www.9bis.net/kitty/files/kscp.exe
+6) ksftp.exe http://www.9bis.net/kitty/files/ksftp.exe
