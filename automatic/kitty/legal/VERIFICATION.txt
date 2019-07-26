@@ -6,6 +6,7 @@ The files are downloaded from the following locations:
 1) genpass.exe http://www.9bis.net/kitty/files/genpass.exe
 2) kageant.exe http://www.9bis.net/kitty/files/kageant.exe
 3) kitty.exe http://www.9bis.net/kitty/files/kitty.exe
-4) klink.exe http://www.9bis.net/kitty/files/klink.exe
-5) kscp.exe http://www.9bis.net/kitty/files/kscp.exe
-6) ksftp.exe http://www.9bis.net/kitty/files/ksftp.exe
+4) kittygen.exe http://www.9bis.net/kitty/files/kittygen.exe
+5) klink.exe http://www.9bis.net/kitty/files/klink.exe
+6) kscp.exe http://www.9bis.net/kitty/files/kscp.exe
+7) ksftp.exe http://www.9bis.net/kitty/files/ksftp.exe
