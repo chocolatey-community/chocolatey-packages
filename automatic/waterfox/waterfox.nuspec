@@ -10,8 +10,8 @@
     <authors>Alex Kontos</authors>
     <projectUrl>https://www.waterfoxproject.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png</iconUrl>
-    <copyright>Copyright © 2011-2016 Waterfox</copyright>
-    <licenseUrl>https://github.com/MrAlex94/Waterfox/blob/master/LICENSE.md</licenseUrl>
+    <copyright>© 2019 Waterfox Ltd.</copyright>
+    <licenseUrl>https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/MrAlex94/Waterfox</projectSourceUrl>
     <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>

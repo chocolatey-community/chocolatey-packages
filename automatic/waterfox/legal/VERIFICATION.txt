@@ -13,4 +13,4 @@ and can be verified like this:
   checksum type: sha256
   checksum: 11A6283EA313B15C460C445C686C25E2FCD0BF392045D306A01BF5EED99C9D7B
 
-File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/52d00fdbd7fb755c209a2fcf45eb857b2c0ec3de/LICENSE.md>
+File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE>
