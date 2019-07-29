@@ -4,8 +4,8 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $pp = Get-PackageParameters
 
-$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut 0"; Write-Host "Desktop shortcut won't be created" }
-$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar 0"; Write-Host "Opera won't be pinned to taskbar" }
+$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut=0"; Write-Host "Desktop shortcut won't be created" }
+$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar=0"; Write-Host "Opera won't be pinned to taskbar" }
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -16,7 +16,7 @@ $packageArgs = @{
   checksum64     = '301ea4ece36b68631c90b26c8c3e3f54e4ec23e826febd594398cca508e75819'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
-  silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0' + $parameters
+  silentArgs     = '/install /silent /launchopera=0 /setdefaultbrowser=0 /allusers=1' + $parameters
   validExitCodes = @(0)
 }
 
