@@ -5,7 +5,7 @@ $packageArgs = @{
   fileType       = 'exe'
   url            = 'http://www.alldup.info/download/AllDupSetup.exe'
   softwareName   = 'AllDup*'
-  checksum       = '2a56b053c21143ce2b84db0ac8083b56cddeb95bc4cdd17d04f2333f98327092'
+  checksum       = 'b9e4dc45eb4b3dde2ab81e20fd5c60c25cf902d663ec3bdd41ecc8451eb0da96'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
