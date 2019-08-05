@@ -27,7 +27,7 @@ function global:au_BeforeUpdate {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $download_page.RawContent -match '"softwareVersion">([0-9.]+)<' | Out-Null
-    @{ Version = $Matches[1] }
+    @{ Version = $Matches[1] + "00" }
 }
 
 update -NoCheckUrl -ChecksumFor none
