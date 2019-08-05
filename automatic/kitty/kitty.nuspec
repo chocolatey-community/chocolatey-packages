@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>kitty</id>
-    <version>0.71.0.7</version>
+    <version>0.71.0.701</version>
     <title>KiTTY</title>
     <authors>Cyril Dupont</authors>
     <owners>chocolatey, Andre-Patrick Bubel, Miodrag Milic</owners>
@@ -19,7 +19,7 @@ Sessions filter, portability, predefined command shortcuts, session launcher, au
 
 ## Package parameters
 
-- `/Portable` - Set kitty to use [portable](http://www.9bis.net/kitty/?page=Portability&amp;zone=en) mode.
+- `/Portable` - Set kitty to use [portable](https://www.9bis.net/kitty/#!pages/Portability.md) mode.
 
 Example: `choco install kitty --params "/Portable"`
 
