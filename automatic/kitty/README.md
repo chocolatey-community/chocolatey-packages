@@ -8,7 +8,7 @@ Sessions filter, portability, predefined command shortcuts, session launcher, au
 
 ## Package parameters
 
-- `/Portable` - Set kitty to use [portable](http://www.9bis.net/kitty/?page=Portability&amp;zone=en) mode.
+- `/Portable` - Set kitty to use [portable](https://www.9bis.net/kitty/#!pages/Portability.md) mode.
 
 Example: `choco install kitty --params "/Portable"`
 
