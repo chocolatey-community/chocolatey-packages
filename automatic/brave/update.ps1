@@ -38,7 +38,7 @@ function global:au_GetLatest {
 
   if (!$url64)   { $streams.stable = 'ignore'; Write-Host "No stable release is available" }
   if (!$url64_b) { $streams.beta   = 'ignore'; Write-Host "No beta release is available"   }
-  else if (!$url32_b) { $streams.beta = "ignore"; Write-Host "No 32bit beta release is available" }
+  elseif (!$url32_b) { $streams.beta = "ignore"; Write-Host "No 32bit beta release is available" }
   @{ streams = $streams }
 }
 
