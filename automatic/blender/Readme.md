@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg" width="48" height="48"/> [blender](https://chocolatey.org/packages/blender)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg" width="48" height="48"/> [blender](https://chocolatey.org/packages/blender)
 
 
 Blender is a free and open-source professional-grade 3D computer graphics and video compositing program.
