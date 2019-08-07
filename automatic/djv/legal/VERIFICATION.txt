@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <http://djv.sourceforge.net/Download.html>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/djv/files/djv-beta/2.0.2/DJV-2.0.2-win64.exe/download>
+1. Download the following <https://sourceforge.net/projects/djv/files/djv-beta/2.0.3/DJV-2.0.3-win64.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: F090F7CF79D2C6F481E748A9E8AF3BB31F4967ED94D5FFFA43EF6EF58986240C
+  checksum: 3340A0EBB4E66842B23FF39A670F92970F454F9D36A00397AB66E0C945FAA650
 
 The file 'LICENSE.txt' has been obtained from <http://djv.sourceforge.net/djvLegal.html>
