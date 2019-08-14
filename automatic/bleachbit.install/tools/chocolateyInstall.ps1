@@ -1,13 +1,16 @@
-﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$Installer = (Get-ChildItem $toolsDir -filter "*.exe").FullName
 
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  softwareName  = "BleachBit"
-  file          = "$toolsDir\BleachBit-2.0-setup.exe"
-  fileType      = "exe"
-  silentArgs    = "/S"
+   packageName   = $env:ChocolateyPackageName
+   file          = $Installer
+   fileType      = "exe"
+   silentArgs    = "/S /allusers"
+   validExitCodes= @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Get-ChildItem -Path $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+New-Item "$Installer.ignore" -Type file -Force | Out-Null

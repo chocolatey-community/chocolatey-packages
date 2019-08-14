@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png" width="48" height="48"/>  [kitty](https://chocolatey.org/packages/kitty)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png" width="48" height="48"/>  [kitty](https://chocolatey.org/packages/kitty)
 
 KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY.
 
@@ -8,7 +8,7 @@ Sessions filter, portability, predefined command shortcuts, session launcher, au
 
 ## Package parameters
 
-- `/Portable` - Set kitty to use [portable](http://www.9bis.net/kitty/?page=Portability&amp;zone=en) mode.
+- `/Portable` - Set kitty to use [portable](https://www.9bis.net/kitty/#!pages/Portability.md) mode.
 
 Example: `choco install kitty --params "/Portable"`
 

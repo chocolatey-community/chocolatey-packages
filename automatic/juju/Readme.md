@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png" width="48" height="48"/> [juju](https://chocolatey.org/packages/juju)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png" width="48" height="48"/> [juju](https://chocolatey.org/packages/juju)
 
 
 The Canonical Distribution of Kubernetes works across all major public clouds and private infrastructure, enabling your teams to operate Kubernetes clusters on demand, anywhere.

@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop'
 $packageName = $otherData.PackageName
 $installerType = 'exe'
 $silentArgs = '/quiet /norestart'
-$validExitCodes = @(0, 3010)
+$validExitCodes = @(0, 1638, 3010)
 $force = $Env:chocolateyPackageParameters -like '*Force*'
 
 Write-Verbose 'Checking Service Pack requirements'

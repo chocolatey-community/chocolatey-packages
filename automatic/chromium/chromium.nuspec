@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromium</id>
-    <version>74.0.3687.0-snapshots</version>
+    <version>78.0.3883.0-snapshots</version>
     <title>Chromium Snapshots</title>
     <owners>chocolatey</owners>
     <authors>The Chromium Authors</authors>
     <projectUrl>http://www.chromium.org/Home</projectUrl>
     <projectSourceUrl>https://chromium.googlesource.com/chromium/src</projectSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ea8c584d7d199602a04ce8b9258774e9be247d31/icons/chromium.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@ea8c584d7d199602a04ce8b9258774e9be247d31/icons/chromium.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Chromium is an open-source browser project that aims to build a safer, faster, and more stable way for all Internet users to experience the web. This site contains design documents, architecture overviews, testing information, and more to help you learn to build and work with the Chromium source code.
@@ -25,7 +25,7 @@
     <mailingListUrl>https://www.chromium.org/developers/discussion-groups</mailingListUrl>
     <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
     <tags>chromium admin google cross-platform foss chrome browser</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey" version="0.10.5" />
     </dependencies>

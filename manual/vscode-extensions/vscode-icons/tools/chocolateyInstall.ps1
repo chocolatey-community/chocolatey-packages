@@ -1,2 +1,3 @@
-Update-SessionEnvironment
-code --install-extension robertohuertasm.vscode-icons
+$ErrorActionPreference = 'Stop'
+
+Install-VsCodeExtension -extensionId 'vscode-icons-team.vscode-icons'

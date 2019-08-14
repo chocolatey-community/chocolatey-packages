@@ -4,7 +4,7 @@
   <metadata>
     <id>nodejs.install</id>
     <title>Node JS (Install)</title>
-    <version>11.8.0</version>
+    <version>12.8.0</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
@@ -22,11 +22,11 @@ While this package now provides both **Current** and **LTS** releases of Node.js
     <projectSourceUrl>https://github.com/nodejs/node</projectSourceUrl>
     <docsUrl>https://nodejs.org/en/docs/</docsUrl>
     <bugTrackerUrl>https://github.com/nodejs/node/issues</bugTrackerUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nodejs.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/nodejs.install</packageSourceUrl>
     <tags>nodejs node javascript npm admin foss cross-platform</tags>
     <licenseUrl>https://github.com/nodejs/node/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

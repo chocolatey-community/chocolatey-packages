@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-kitematic</id>
-    <version>0.17.6</version>
-    <packageSourceUrl>https://github.com/abejenaru/chocolatey-packages</packageSourceUrl>
+    <version>0.17.7</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/docker-kitematic</packageSourceUrl>
     <owners>Andrei Bejenaru</owners>
     <title>Kitematic: Visual client for Docker</title>
     <authors>Kitematic, Docker</authors>
@@ -35,7 +35,7 @@ Automatically map ports, visually change environment variables, configuring volu
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/docker/kitematic/releases/tag/v0.17.6</releaseNotes>
+    <releaseNotes>https://github.com/docker/kitematic/releases/tag/v0.17.7</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

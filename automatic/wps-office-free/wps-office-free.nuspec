@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>wps-office-free</id>
-    <version>10.2.0.763500</version>
+    <version>11.2.0.8893</version>
     <title>WPS Office Free</title>
     <owners>chocolatey</owners>
     <authors>Kingsoft Software</authors>
     <projectUrl>https://www.wps.com/office-free</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c4b46cad1e6a8071b53bb3b797940cabae7f4152/icons/wps-office-free.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c4b46cad1e6a8071b53bb3b797940cabae7f4152/icons/wps-office-free.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 WPS Office Free the perfect free office software. Your dream solution for a low-budget, no-commitment, free productivity office suite.
@@ -43,7 +43,7 @@ This makes your document editing as easy and natural as web browsing.
 ]]></description>
     <summary>WPS Office Free is a free office productivity suite which is smaller and faster than most other office suites.</summary>
     <tags>kingsoft wps office admin freeware trial</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/wps-office-free</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/wps-office-free</packageSourceUrl>
     <licenseUrl>https://www.wps.com/eula</licenseUrl>
   </metadata>
   <files>

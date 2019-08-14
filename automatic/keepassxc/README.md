@@ -1,4 +1,4 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg" width="48" height="48"/> [KeepassXC](https://chocolatey.org/packages/keepassxc)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@4315dbe8325d644de2026206bdc5c16a11c1f5cc/icons/keepassxc.svg" width="48" height="48"/> [KeepassXC](https://chocolatey.org/packages/keepassxc)
 
 KeePassXC is a fork of [KeePassX](https://www.keepassx.org/) that [aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository](https://github.com/keepassxreboot/keepassx/issues/43).
 

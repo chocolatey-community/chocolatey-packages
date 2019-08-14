@@ -64,7 +64,7 @@ function GetStillVersions($freshVersion) {
 
 function global:au_GetLatest {
   $freshStream = GetFreshVersion
-  $stillStream = GetStillVersions -freshVersion $freshStream.Version
+  #$stillStream = GetStillVersions -freshVersion $freshStream.Version
 
   $streams = [ordered] @{
     fresh = $freshStream

@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dropbox</id>
-    <version>66.3.77-beta</version>
+    <version>79.4.143</version>
     <title>Dropbox</title>
     <authors>Dropbox</authors>
     <owners>chocolatey,ferventcoder,the-running-dev</owners>
     <licenseUrl>https://www.dropbox.com/terms</licenseUrl>
     <projectUrl>https://www.dropbox.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@797be4455d8f66a1989713e741137ed8293dd322/icons/dropbox.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@797be4455d8f66a1989713e741137ed8293dd322/icons/dropbox.svg</iconUrl>
     <mailingListUrl>https://www.dropboxforum.com/</mailingListUrl>
     <docsUrl>https://www.dropbox.com/help</docsUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -47,7 +47,7 @@ Dropbox is a free service that lets you bring all your photos, docs, and videos 
 ]]></description>
     <summary>Dropbox is a free service that lets you bring all your photos, docs, and videos anywhere.</summary>
     <tags>dropbox virtual files file admin freeware cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/dropbox</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/dropbox</packageSourceUrl>
     <dependencies>
       <dependency id="kb2919355" version="1.0.20160915" />
     </dependencies>

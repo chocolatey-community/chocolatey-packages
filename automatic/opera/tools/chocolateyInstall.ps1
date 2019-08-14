@@ -4,23 +4,23 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $pp = Get-PackageParameters
 
-$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut 0"; Write-Host "Desktop shortcut won't be created" }
-$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar 0"; Write-Host "Opera won't be pinned to taskbar" }
+$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut=0"; Write-Host "Desktop shortcut won't be created" }
+$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar=0"; Write-Host "Opera won't be pinned to taskbar" }
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://get.geo.opera.com/pub/opera/desktop/58.0.3135.47/win/Opera_58.0.3135.47_Setup.exe'
-  url64          = 'https://get.geo.opera.com/pub/opera/desktop/58.0.3135.47/win/Opera_58.0.3135.47_Setup_x64.exe'
-  checksum       = '96ff3336ddfb91c4925857d26afa0525b90644f1bb7b883d49895e738a9a4787'
-  checksum64     = '227ba7799eedddec97833266226da224a3bdb0d8f8e5ac787396e0212a9613c2'
+  url            = 'https://get.geo.opera.com/pub/opera/desktop/62.0.3331.99/win/Opera_62.0.3331.99_Setup.exe'
+  url64          = 'https://get.geo.opera.com/pub/opera/desktop/62.0.3331.99/win/Opera_62.0.3331.99_Setup_x64.exe'
+  checksum       = 'd54083619d70594791f814aa615ba81563e38f9a9c52aacddb4aa803f2a2cd2f'
+  checksum64     = '301ea4ece36b68631c90b26c8c3e3f54e4ec23e826febd594398cca508e75819'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
-  silentArgs     = '/install /silent /launchopera 0 /setdefaultbrowser 0' + $parameters
+  silentArgs     = '/install /silent /launchopera=0 /setdefaultbrowser=0 /allusers=1' + $parameters
   validExitCodes = @(0)
 }
 
-$version = '58.0.3135.47'
+$version = '62.0.3331.99'
 if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $version)) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
 } else {

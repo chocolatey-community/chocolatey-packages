@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ffmpeg</id>
-    <version>4.0.1</version>
+    <version>4.2</version>
     <title>FFmpeg</title>
     <owners>chocolatey</owners>
     <authors>FFmpeg Contributors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
     <projectUrl>http://www.ffmpeg.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffmpeg.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffmpeg.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
@@ -28,7 +28,7 @@ Security is a high priority and code review is always done with security in mind
     <copyright />
     <language>en-US</language>
     <tags>ffmpeg libavcodec foss cli audio video convert cross-platform audio video media</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
     <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
     <dependencies>

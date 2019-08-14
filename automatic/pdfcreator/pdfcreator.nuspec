@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>PDFCreator</id>
-    <version>3.3.2</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
+    <version>3.5.1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
     <owners>chocolatey</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>PDF Creator</title>
     <authors>pdfforge</authors>
     <projectUrl>http://www.pdfforge.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6e52bf3b9392bc72475a3e254eab23578ccb9d0e/icons/PDFCreator.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6e52bf3b9392bc72475a3e254eab23578ccb9d0e/icons/PDFCreator.png</iconUrl>
     <licenseUrl>https://github.com/pdfforge/PDFCreator/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/pdfforge/PDFCreator</projectSourceUrl>
@@ -44,7 +44,6 @@ The installer has a few options that can be configured via the --ia switch:
 Example use:
 
 `choco install pdfcreator --ia '"/NOICONS /TASKS=!winexplorer"'`
-
 ]]></description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

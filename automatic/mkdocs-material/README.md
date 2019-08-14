@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8e38f985a1cce6494e76deb665e403fbb63e0ec9/icons/mkdocs-material.png" width="48" height="48"/> [mkdocs-material](https://chocolatey.org/packages/mkdocs-material)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@8e38f985a1cce6494e76deb665e403fbb63e0ec9/icons/mkdocs-material.png" width="48" height="48"/> [mkdocs-material](https://chocolatey.org/packages/mkdocs-material)
 
 
 Material is a theme for [MkDocs](http://www.mkdocs.org/), an excellent static site generator geared towards project documentation. It is built using Google's [material design](https://www.google.com/design/spec/material-design) guidelines, full responsive, optimized for touch and pointer devices as well as all sorts of screen sizes.

@@ -2,24 +2,7 @@
 
 $releases = 'https://marketplace.visualstudio.com/items?itemName=SonarSource.SonarLintforVisualStudio'
 
-function global:au_BeforeUpdate {
-  Remove-Item "$PSScriptRoot\tools\*.vsix"
-
-  $client = New-Object System.Net.WebClient
-  try
-  {
-    $filePath = "$PSScriptRoot\tools\$($Latest.FileName32)"
-
-    $client.DownloadFile($Latest.URL32, "$filePath")
-  }
-  finally
-  {
-    $client.Dispose()
-  }
-
-  $Latest.ChecksumType = "sha256"
-  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | ForEach-Object Hash
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameBase $Latest.FileName }
 
 function global:au_SearchReplace {
   @{
@@ -31,25 +14,23 @@ function global:au_SearchReplace {
     }
     'tools\chocolateyInstall.ps1' = @{
       "(PackageName\s*=\s*)`"([^*]+)`"" = "`$1`"$($Latest.PackageName)`""
-      "(^[$]filePath\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
+      "(^[$]filePath\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName).$($Latest.FileType)`""
     }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $json = $download_page.AllElements | ? class -eq 'vss-extension' | Select-Object -expand innerHtml | ConvertFrom-Json | Select-Object -expand versions
-  $url = $json.files | ? source -match "\.vsix$" | Select-Object -expand source -first 1
-
-  $filename = [IO.Path]::GetFilename($url)
-
-  $version = $json.version | Select-Object -first 1
+  $re      = 'SonarLintforVisualStudio/.+?/vspackage$'
+  $url     = $download_page.links | ? href -match $re | % { "https://marketplace.visualstudio.com" + $_.href  }
+  $version = $url -split '/' | select -Last 1 -Skip 1
 
   @{
     Version   = $version
     URL32     = $url
-    Filename32  = $filename
+    Filename  = "SonarLint.VSIX-${version}-2015"
+    FileType  = 'vsix'
   }
 }
 

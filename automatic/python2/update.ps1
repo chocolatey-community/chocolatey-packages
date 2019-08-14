@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'https://www.python.org/downloads'
+$releases = 'https://www.python.org/downloads/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 

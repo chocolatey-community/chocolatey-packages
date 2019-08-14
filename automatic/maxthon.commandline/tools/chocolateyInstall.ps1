@@ -4,8 +4,8 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
-  url          = 'http://dl.maxthon.com/mx5/maxthon_portable_5.2.6.1000.7z'
-  checksum     = 'bfc0a8e09260d9363434dcf41faa669c7fa1a77698a410887c695e42b20ced33'
+  url          = 'http://dl.maxthon.com/mx5/maxthon_portable_5.2.7.5000.7z'
+  checksum     = '913f3e413dced372fdb1f51863c02735dc1f0f375c0c905bb4ce134616291b1b'
   checksumType = 'sha256'
   destination  = $toolsDir
 }

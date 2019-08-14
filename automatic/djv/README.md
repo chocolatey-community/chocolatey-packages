@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@efc9e0914779661ad7aa88e9dbde0333cfb81f12/icons/djv.png" width="48" height="48"/> [djv](https://chocolatey.org/packages/djv)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@efc9e0914779661ad7aa88e9dbde0333cfb81f12/icons/djv.png" width="48" height="48"/> [djv](https://chocolatey.org/packages/djv)
 
 
 DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.

@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winscp.install</id>
-    <version>5.13.7</version>
+    <version>5.15.3</version>
     <title>WinSCP (Install)</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>
     <licenseUrl>https://winscp.net/docs/license</licenseUrl>
     <projectUrl>https://winscp.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[WinSCP is an open source free SFTP client, SCP client, FTPS client and FTP client for Windows. Its main function is file transfer between a local and a remote computer. Beyond this, WinSCP offers scripting and basic file manager functionality.
 
@@ -33,11 +33,11 @@
 
 ]]></description>
     <summary>Open source free SFTP client, SCP client, FTPS client and FTP client</summary>
-    <releaseNotes>https://winscp.net/download/WinSCP-5.13.7-ReadMe.txt</releaseNotes>
+    <releaseNotes>https://winscp.net/download/WinSCP-5.15.3-ReadMe.txt</releaseNotes>
     <copyright>© 2000 Martin Přikryl</copyright>
     <tags>scp cli ssh sftp ftp remote file client foss admin</tags>
     <projectSourceUrl>https://sourceforge.net/p/winscp/code/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/winscp.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/winscp.install</packageSourceUrl>
     <docsUrl>https://winscp.net/docs/</docsUrl>
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>

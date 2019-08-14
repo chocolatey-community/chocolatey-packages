@@ -5,7 +5,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist2008</id>
-    <version>9.0.30729.6161</version>
+    <version>9.0.30729.6163</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2008</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>Microsoft Visual C++ 2008 SP1 Redistributable Package</title>

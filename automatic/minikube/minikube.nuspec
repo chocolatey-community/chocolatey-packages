@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>minikube</id>
-    <version>0.33.1</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/minikube</packageSourceUrl>
+    <version>1.3.1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/minikube</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Minikube: Run Kubernetes locally</title>
     <authors>Google</authors>
     <projectUrl>https://kubernetes.io</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@0d3be7b221c8110f562a0059a8818238a1cb46ec/icons/minikube.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@0d3be7b221c8110f562a0059a8818238a1cb46ec/icons/minikube.png</iconUrl>
     <copyright>(c) 2017 Kubernetes</copyright>
     <licenseUrl>https://github.com/kubernetes/minikube/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -34,7 +34,7 @@ Minikube supports Kubernetes features such as:
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/kubernetes/minikube/blob/v0.33.1/CHANGELOG.md</releaseNotes>
+    <releaseNotes>https://github.com/kubernetes/minikube/blob/v1.3.1/CHANGELOG.md</releaseNotes>
     <dependencies>
       <dependency id="kubernetes-cli" />
     </dependencies>

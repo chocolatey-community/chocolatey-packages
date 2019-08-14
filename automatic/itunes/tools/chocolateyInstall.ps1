@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$version = '12.9.3.3'
+$version = '12.9.6.3'
 
 $packageArgs = @{
   packageName    = 'iTunes'
   fileType       = 'msi'
-  url            = 'https://secure-appldnld.apple.com/itunes12/041-31290-20190124-BBE902D6-D788-11E8-B555-8E91F34A5CAA/iTunesSetup.exe'
-  url64bit       = 'https://secure-appldnld.apple.com/itunes12/041-31291-20190124-BBE902D6-D788-11E8-B555-8E91F34A5CAA/iTunes64Setup.exe'
+  url            = 'https://secure-appldnld.apple.com/itunes12/041-91766-20190722-23A63A14-ACCD-11E9-B9B0-EE33FA8CF68F/iTunesSetup.exe'
+  url64bit       = 'https://secure-appldnld.apple.com/itunes12/041-91768-20190722-23A74ABC-ACCD-11E9-B0FC-EF33FA8CF68F/iTunes64Setup.exe'
   softwareName   = 'iTunes'
-  checksum       = '26E775D83DBC9DB0D522EA487EB93F1E2A298924FA869B40C6129FE14582DF6B'
+  checksum       = '45D4C8C5ADC70A7F25DB4E548E5D1820884B24F241C0C3DE47FBDAD599CEDDB6'
   checksumType   = 'sha256'
-  checksum64     = '265cc69f9e05ce167f62c1735af302d50ca5291080244d496da7a8414df7ba2d'
+  checksum64     = '7238cc7daf90a9afaf189888a04e2741484971486cc4c29b867c778f294211c3'
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 2010, 1641)
@@ -25,7 +25,7 @@ if ($app -and ([version]$app.DisplayVersion -ge [version]$version) -and ($env:Ch
   return;
 }
 
-Install-ChocolateyZipPackage = @packageArgs
+Install-ChocolateyZipPackage @packageArgs
 
 $msiFileList = (Get-ChildItem -Path $packageArgs.unzipLocation -Filter '*.msi' | Where-Object {
   $_.Name -notmatch 'AppleSoftwareUpdate*.msi'

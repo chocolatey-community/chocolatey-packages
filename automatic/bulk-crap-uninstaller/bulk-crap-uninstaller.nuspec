@@ -5,7 +5,7 @@
     <id>bulk-crap-uninstaller</id>
     <title>Bulk Crap Uninstaller</title>
     <owners>chocolatey</owners>
-    <version>4.12.2</version>
+    <version>4.14</version>
     <authors>Marcin Szeniak</authors>
     <summary>Bulk Crap Uninstaller is an open source program uninstaller.</summary>
     <description><![CDATA[Bulk Crap Uninstaller is a free (as in speech) program uninstaller. It excels at removing large amounts of applications with minimal user input. It can clean up leftovers, detect orphaned applications, run uninstallers according to premade lists, and much more!
@@ -60,9 +60,9 @@ Even though BCU was made with IT pros in mind, by default it is so straight-forw
     <copyright>Marcin Szeniak 2017</copyright>
     <licenseUrl>https://github.com/Klocman/Bulk-Crap-Uninstaller/blob/master/Licence.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png</iconUrl>
-    <releaseNotes>https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/tag/v4.12.2</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@11b6ffab0e41ca0e687b1202046aa0248682e8be/icons/bulk-crap-uninstaller.png</iconUrl>
+    <releaseNotes>https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/tag/v4.14</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bulk-crap-uninstaller</packageSourceUrl>
     <projectSourceUrl>https://github.com/Klocman/Bulk-Crap-Uninstaller</projectSourceUrl>
     <dependencies>
       <dependency id="dotnet3.5" version="3.5.20160716" />

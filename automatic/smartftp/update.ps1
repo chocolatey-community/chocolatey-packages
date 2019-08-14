@@ -2,6 +2,11 @@ import-module au
 
 $releases = 'https://www.smartftp.com/download'
 
+function global:au_BeforeUpdate {
+  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType
+  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $Latest.ChecksumType
+}
+
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
@@ -27,7 +32,8 @@ function global:au_GetLatest {
         Version      = $version
         URL32        = 'https://www.smartftp.com/get/SmartFTP86.msi'
         URL64        = 'https://www.smartftp.com/get/SmartFTP64.msi'
+        ChecksumType = 'sha256'
     }
 }
 
-update
+update -ChecksumFor none

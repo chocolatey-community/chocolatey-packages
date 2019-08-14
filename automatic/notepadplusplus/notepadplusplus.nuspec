@@ -4,7 +4,7 @@
   <metadata>
     <id>notepadplusplus</id>
     <title>Notepad++</title>
-    <version>7.6.3</version>
+    <version>7.7.1</version>
     <authors>Don Ho</authors>
     <owners>chocolatey</owners>
     <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>
@@ -38,13 +38,13 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
     <projectUrl>https://notepad-plus-plus.org/</projectUrl>
     <tags>notepad notepadplusplus notepad-plus-plus editor text development foss</tags>
     <releaseNotes>https://notepad-plus-plus.org/news</releaseNotes>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8a927ff286164545446171f26f19b436622e69b5/icons/notepadplusplus.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/notepadplusplus</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@8a927ff286164545446171f26f19b436622e69b5/icons/notepadplusplus.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/notepadplusplus</packageSourceUrl>
     <projectSourceUrl>https://github.com/notepad-plus-plus/notepad-plus-plus</projectSourceUrl>
     <mailingListUrl>https://notepad-plus-plus.org/community/</mailingListUrl>
     <bugTrackerUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="notepadplusplus.install" version="[7.6.3]" />
+      <dependency id="notepadplusplus.install" version="[7.7.1]" />
     </dependencies>
     <licenseUrl>https://github.com/notepad-plus-plus/notepad-plus-plus/blob/master/LICENSE</licenseUrl>
   </metadata>

@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://nmap.org/dist/nmap-7.70-setup.exe
+   x32: https://nmap.org/dist/nmap-7.80-setup.exe
 
    to download the installer.
 
@@ -15,11 +15,11 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 7828197E66F5F6EFB0C89D21CDF3C34769DA525437147EEA72CF713A6D4E7A11
+   checksum32: 3B4D726BD366E7439367FA78A186DFA9B641D3B2AD354FD915581B6567480F94
 
 Using AU:
 
-   Get-RemoteChecksum https://nmap.org/dist/nmap-7.70-setup.exe
+   Get-RemoteChecksum https://nmap.org/dist/nmap-7.80-setup.exe
 
 File 'LICENSE.txt' is obtained from:
     https://svn.nmap.org/nmap-releases/nmap-7.31/COPYING

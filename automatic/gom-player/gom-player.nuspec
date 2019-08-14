@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gom-player</id>
-    <version>2.3.37.5298</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gom-player</packageSourceUrl>
+    <version>2.3.43.5305</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gom-player</packageSourceUrl>
     <owners>chocolatey, AdmiringWorm</owners>
     <title>GOM Player (Install)</title>
     <authors>Gretech Corp</authors>
     <projectUrl>https://www.gomlab.com/gomplayer-media-player/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@af726b9663646bcef6e18d9e7b2d84e03e4aa878/icons/gom-player.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@af726b9663646bcef6e18d9e7b2d84e03e4aa878/icons/gom-player.png</iconUrl>
     <copyright>Copyright © Gretech Corp. All Rights Reserved.</copyright>
     <licenseUrl>https://www.gomlab.com/terms/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

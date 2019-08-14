@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg" width="48" height="48"/> [smartftp](https://chocolatey.org/packages/smartftp)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg" width="48" height="48"/> [smartftp](https://chocolatey.org/packages/smartftp)
 
 SmartFTP is a fast and reliable FTP, FTPS, SFTP, HTTP, Amazon S3, WebDAV, Google Drive, Google Cloud Storage, Microsoft OneDrive, Backblaze B2, Telnet, Terminal client with lots of features and a modern user interface.
 

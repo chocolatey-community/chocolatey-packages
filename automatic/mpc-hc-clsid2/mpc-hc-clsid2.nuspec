@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mpc-hc-clsid2</id>
-    <version>1.8.4</version>
+    <version>1.8.7</version>
     <title>MPC-HC (fork by clsid2)</title>
     <owners>chocolatey,jack1142</owners>
     <authors>clsid2, MPC-HC Team</authors>
     <licenseUrl>https://github.com/clsid2/mpc-hc/blob/develop/COPYING.txt</licenseUrl>
     <projectUrl>https://github.com/clsid2/mpc-hc</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@18bc5fef22a657d3632d88b1366126201b3b39bc/icons/mpc-hc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@18bc5fef22a657d3632d88b1366126201b3b39bc/icons/mpc-hc.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://trac.mpc-hc.org/</docsUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
@@ -29,7 +29,7 @@ MPC-HC is an extremely light-weight, open source media player for Windows. It su
     <summary>Media Player Classic – Home Cinema (MPC-HC)</summary>
     <copyright>clsid2, MPC-HC Team</copyright>
     <tags>mpc-hc media player video audio music admin foss</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mpc-hc-clsid2</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/mpc-hc-clsid2</packageSourceUrl>
     <projectSourceUrl>https://github.com/clsid2/mpc-hc</projectSourceUrl>
     <bugTrackerUrl>https://github.com/clsid2/mpc-hc/issues</bugTrackerUrl>
     <releaseNotes>https://github.com/clsid2/mpc-hc/releases</releaseNotes>

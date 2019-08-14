@@ -1,7 +1,6 @@
 ﻿import-module au
 
-$domain   = 'https://bitbucket.org'
-$releases = "$domain/hbons/sparkleshare/downloads"
+$releases   = 'http://www.sparkleshare.org/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -26,8 +25,6 @@ function global:au_GetLatest {
   $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
 
   $version  = $url -split '[-]|.msi' | select -Last 1 -Skip 1
-
-  $url = $domain + $url
 
   @{
     URL32 = $url

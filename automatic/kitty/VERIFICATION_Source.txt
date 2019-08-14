@@ -1,0 +1,9 @@
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The following files have been downloaded from the specified urls, and should
+be equal to the checksums specified in this file.
+
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Filename     | Checksum                                                         | Url                                                                     |
+| ------------ | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |

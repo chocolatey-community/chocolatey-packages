@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png" width="48" height="48"/> [qbittorrent](https://chocolatey.org/packages/qbittorrent)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/qbittorrent.png" width="48" height="48"/> [qbittorrent](https://chocolatey.org/packages/qbittorrent)
 
 qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
 The program uses libtorrent-rasterbar library for the torrent back-end (network communication) functionality.

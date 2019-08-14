@@ -3,7 +3,7 @@
   <metadata>
     <id>filezilla</id>
     <title>FileZilla</title>
-    <version>3.40.0</version>
+    <version>3.44.1</version>
     <authors>Tim Kosse, other FileZilla committers</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>FileZilla – The free FTP solution</summary>
@@ -37,13 +37,13 @@ FileZilla Client is a fast and reliable cross-platform FTP, FTPS and SFTP client
 ]]></description>
     <projectUrl>http://filezilla-project.org</projectUrl>
     <projectSourceUrl>https://filezilla-project.org/sourcecode.php</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/filezilla</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/filezilla</packageSourceUrl>
     <tags>filezilla cross-platform foss ftp admin</tags>
     <licenseUrl>https://filezilla-project.org/license.php</licenseUrl>
     <docsUrl>https://wiki.filezilla-project.org/Documentation</docsUrl>
     <releaseNotes>https://filezilla-project.org/changelog.php</releaseNotes>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@938aeca0853717399b72289f38b9dddad0417640/icons/filezilla.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@938aeca0853717399b72289f38b9dddad0417640/icons/filezilla.svg</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

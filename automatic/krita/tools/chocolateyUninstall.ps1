@@ -1,6 +1,6 @@
 ﻿$packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'Krita'
+  softwareName  = 'Krita*'
   fileType      = 'exe'
   silentArgs    = '/S'
 }

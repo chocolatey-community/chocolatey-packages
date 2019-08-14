@@ -56,11 +56,27 @@
 
 param(
   [string]$Name,
-  [string]$GithubRepository = "chocolatey/chocolatey-coreteampackages",
+  [string]$GithubRepository = $null,
   [string]$PackagesDirectory = "../automatic",
   [switch]$UseStopwatch,
   [switch]$Quiet
 )
+
+if (!$GithubRepository) {
+  $allRemotes = . git remote
+  $remoteName = if ($allRemotes | ? { $_ -eq 'upstream' }) { "upstream" }
+                elseif ($allRemotes | ? { $_ -eq 'origin' }) { 'origin' }
+                else { $allRemotes | select -first 1 }
+
+  if ($remoteName) { $remoteUrl = . git remote get-url $remoteName }
+
+  if ($remoteUrl) {
+    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$','' -join '/'
+  } else {
+    Write-Warning "Unable to get repository and user, setting dummy values..."
+    $GithubRepository = "USERNAME/REPOSITORY-NAME"
+  }
+}
 
 $counts = @{
   replaced = 0

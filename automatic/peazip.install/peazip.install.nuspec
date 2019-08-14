@@ -3,7 +3,7 @@
   <metadata>
     <id>peazip.install</id>
     <title>PeaZip (Install)</title>
-    <version>6.6.1</version>
+    <version>6.8.1</version>
     <authors>Giorgio Tani</authors>
     <owners>chocolatey,dtgm</owners>
     <summary>PeaZip is a free cross-platform file archiver.</summary>
@@ -17,14 +17,14 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
 ]]></description>
     <projectUrl>http://www.peazip.org/</projectUrl>
     <projectSourceUrl>https://osdn.net/projects/peazip/releases/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/peazip</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/peazip.install</packageSourceUrl>
     <docsUrl>http://www.peazip.org/peazip-help.html</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/peazip/tickets/</bugTrackerUrl>
     <tags>foss cross-platform file-manager file-encryption file-compression zip rar 7zip tar admin peazip</tags>
     <licenseUrl>http://www.peazip.org/peazip-tos-privacy.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © PeaZip srl</copyright>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a09d7c32df1ac4b8028df11d2b2b5196b8de2435/icons/peazip.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a09d7c32df1ac4b8028df11d2b2b5196b8de2435/icons/peazip.svg</iconUrl>
     <releaseNotes>[PeaZip changelog](http://www.peazip.org/changelog.html)</releaseNotes>
   </metadata>
   <files>
