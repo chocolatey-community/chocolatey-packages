@@ -16,16 +16,18 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = Get-Item "$toolsDir\*.exe"
   silentArgs     = $silentArgs
+  softwareName   = 'AutoHotkey*'
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*.exe
 
-$packageName = $packageArgs.packageName
-$installLocation = Get-AppInstallLocation $packageName
+$installLocation = Get-AppInstallLocation $packageArgs.softwareName
+$packageName = $packageArgs.softwareName
 if ($installLocation)  {
+    $installName = 'AutoHotkey'
     Write-Host "$packageName installed to '$installLocation'"
-    Register-Application "$installLocation\$packageName.exe"
-    Write-Host "$packageName registered as $packageName"
+    Register-Application "$installLocation\$installName.exe"
+    Write-Host "$packageName registered as $installName"
 }
-else { Write-Warning "Can't find $PackageName install location" }
+else { Write-Warning "Can't find $packageName install location" }
