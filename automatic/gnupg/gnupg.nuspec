@@ -18,7 +18,7 @@
     <bugTrackerUrl>https://bugs.gnupg.org/gnupg/index</bugTrackerUrl>
     <tags>gnupg-modern gnupg admin pgp openpgp encrypt rfc4880 security aes rsa signature</tags>
     <summary>GnuPG is a complete and free implementation of the OpenPGP standard as defined by RFC4880 (also known as PGP)</summary>
-    <description>
+    <description><![CDATA[
 
 #### This is the modern version of GnuPG (2.2 branch). If you want the stable version (2.0 branch) install [Gpg4win](https://chocolatey.org/packages/Gpg4win).
 
@@ -44,7 +44,7 @@ However, even when used on the command line it provides all functionality needed
     Clears signed patch files which can still be processed by patch.
     and many more things….
 
-    </description>
+]]></description>
     <releaseNotes>
 * [Release Announcements](https://www.gnupg.org/index.html)
     </releaseNotes>
