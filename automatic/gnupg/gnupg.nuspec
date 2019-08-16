@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gnupg</id>
-    <version>2.2.12</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnupg</packageSourceUrl>
+    <version>2.2.17</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gnupg</packageSourceUrl>
     <owners>chocolatey, ludicrousByte, wget</owners>
     <title>GnuPG</title>
     <authors>Werner Koch, The GnuPG Project</authors>
     <projectUrl>https://www.gnupg.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png</iconUrl>
     <copyright>Copyright 1998-2019 The GnuPG Project</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
