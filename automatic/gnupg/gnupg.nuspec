@@ -16,7 +16,7 @@
     <docsUrl>https://www.gnupg.org/documentation/manuals/gnupg/</docsUrl>
     <mailingListUrl>https://lists.gnupg.org/pipermail/gnupg-users/</mailingListUrl>
     <bugTrackerUrl>https://bugs.gnupg.org/gnupg/index</bugTrackerUrl>
-    <tags>gnupg-modern gnupg admin pgp openpgp encrypt rfc4880 security aes rsa signature</tags>
+    <tags>admin aes cli cross-platform encrypt foss gnupg gnupg-modern openpgp pgp rfc4880 rsa security signature</tags>
     <summary>GnuPG is a complete and free implementation of the OpenPGP standard as defined by RFC4880 (also known as PGP)</summary>
     <description><![CDATA[GnuPG itself is a commandline tool without any graphical stuff. It is the real
 crypto engine which can be used directly from a command prompt, from shell
@@ -61,5 +61,6 @@ of this tool will always be a superset of those provided by any frontends.
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
