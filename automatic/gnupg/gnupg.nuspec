@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gnupg</id>
-    <version>2.2.12</version>
+    <version>2.2.17</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gnupg</packageSourceUrl>
     <owners>chocolatey, ludicrousByte, wget</owners>
     <title>GnuPG</title>
@@ -43,7 +43,7 @@ However, even when used on the command line it provides all functionality needed
     Integrated support for HKP keyservers (wwwkeys.pgp.net).
     Clears signed patch files which can still be processed by patch.
     and many more things….
-    
+
     </description>
     <releaseNotes>
 * [Release Announcements](https://www.gnupg.org/index.html)
