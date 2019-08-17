@@ -50,7 +50,7 @@ function Install-VsCodeExtension {
         Write-Verbose "Visual Studio Code installation found at $installLocation"
     
         Write-Host "Installing Visual Studio Code extension $extensionId in $installLocation..."
-        Start-ChocolateyProcessAsAdmin -ExeToRun $installLocation -Statements "--install-extension",$extensionId    
+        Start-ChocolateyProcessAsAdmin -ExeToRun $installLocation -Statements "--install-extension",$extensionId -Elevated:$false
     }
 
     Write-Verbose "Locating Visual Studio Code system level installation directory..."

@@ -32,7 +32,7 @@ function Uninstall-VsCodeExtension {
         Write-Verbose "Visual Studio Code installation found at $installLocation"
     
         Write-Host "Uninstalling Visual Studio Code extension $extensionId from $installLocation..."
-        Start-ChocolateyProcessAsAdmin -ExeToRun $installLocation -Statements "--uninstall-extension",$extensionId    
+        Start-ChocolateyProcessAsAdmin -ExeToRun $installLocation -Statements "--uninstall-extension",$extensionId -Elevated:$false
     }
 
     Write-Verbose "Locating Visual Studio Code system level installation directory..."
