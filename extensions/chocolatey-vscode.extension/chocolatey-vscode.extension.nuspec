@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-vscode.extension</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>Chocolatey Visual Studio Code servicing extension</title>
     <summary>Helper functions useful for developing packages for installing Visual Studio Code extensions.</summary>
     <authors>chocolatey</authors>
