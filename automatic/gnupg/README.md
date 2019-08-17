@@ -26,5 +26,5 @@ However, even when used on the command line it provides all functionality needed
 
 ## Notes
 
-- This is the modern version of GnuPG (2.2 branch). If you want the stable version (2.0 branch) install [Gpg4win](https://chocolatey.org/packages/Gpg4win)
-- Versions 2.1.16 to 2.2.12 of this tool are availalbe as [gnupg-modern](https://chocolatey.org/packages/gnupg-modern) package (non embedded).
+- This is the modern version of GnuPG (2.2 branch). If you want the stable version (2.0 branch) install adequate version of [Gpg4win](https://chocolatey.org/packages/Gpg4win)
+- Versions 2.1.16 to 2.2.12 of this tool are availalbe as [gnupg-modern](https://chocolatey.org/packages/gnupg-modern) package (non embedded)
