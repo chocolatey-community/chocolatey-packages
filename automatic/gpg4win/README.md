@@ -64,3 +64,6 @@ The central certiï¬cate administration of Gpg4win, which ensures uniform use
 * [Compendium](http://www.gpg4win.org/doc/en/gpg4win-compendium.html)
 The documentation for beginner and advanced users, available in English and German.
 
+### [gnupg](https://chocolatey.org/packages/gnupg)
+
+* This is the modern version of GnuPG, a commandline tool without any graphical stuff.
