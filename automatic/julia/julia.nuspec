@@ -2,18 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>julia</id>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <title>Julia programming language</title>
     <authors>Jeff Bezanson, Alan Edelman, Stefan Karpinski, Viral B. Shah, Julia contributors</authors>
     <owners>chocolatey, FlorianRappl, drel</owners>
     <licenseUrl>https://github.com/JuliaLang/julia/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>https://julialang.org</projectUrl>
-    <releaseNotes>https://github.com/JuliaLang/julia/releases/tag/v1.1.0</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/julia</packageSourceUrl>
+    <releaseNotes>https://github.com/JuliaLang/julia/releases/tag/v1.2.0</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/julia</packageSourceUrl>
     <projectSourceUrl>https://github.com/JuliaLang/julia</projectSourceUrl>
     <docsUrl>http://docs.julialang.org/</docsUrl>
     <bugTrackerUrl>https://github.com/JuliaLang/julia/issues</bugTrackerUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b6cf0f7f72e8e037e6aa1e7ca15ec35a492f959f/icons/julia.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@b6cf0f7f72e8e037e6aa1e7ca15ec35a492f959f/icons/julia.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[[Julia](https://julialang.org/) is a high-level, high-performance dynamic programming language for technical computing, with syntax that is familiar to users of other technical computing environments. It provides a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive mathematical function library. The library, largely written in Julia itself, also integrates mature, best-of-breed C and Fortran libraries for linear algebra, random number generation, signal processing, and string processing. In addition, the Julia developer community is contributing a number of external packages through Julia’s built-in package manager at a rapid pace. IJulia, a collaboration between the IPython and Julia communities, provides a powerful browser-based graphical notebook interface to Julia.
 
