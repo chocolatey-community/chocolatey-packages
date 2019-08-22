@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>googlechromebeta</id>
-    <version>77.0.3865.35-beta</version>
+    <version>77.0.3865.42-beta</version>
     <title>Google Chrome Beta</title>
     <owners>chocolatey,nsleigh</owners>
     <authors>Google Inc.</authors>
