@@ -3,7 +3,7 @@
   <metadata>
     <id>peazip.install</id>
     <title>PeaZip (Install)</title>
-    <version>6.9.0</version>
+    <version>6.9.1</version>
     <authors>Giorgio Tani</authors>
     <owners>chocolatey,dtgm</owners>
     <summary>PeaZip is a free cross-platform file archiver.</summary>
