@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@31eebb648daf450ee49dfdaa5cb613009d86d862/icons/tribler.png" width="48" height="48"/> [tribler](https://chocolatey.org/packages/tribler)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@31eebb648daf450ee49dfdaa5cb613009d86d862/icons/tribler.png" width="48" height="48"/> [tribler](https://chocolatey.org/packages/tribler)
 
 
 Tribler is an open source anonymous peer-to-peer decentralized BitTorrent client. Tribler is based on the BitTorrent protocol and uses an overlay network for content searching, which makes the program operate independent of external websites and renders it immune to limiting external action, for example, government restraint.
