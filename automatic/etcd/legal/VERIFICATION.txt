@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/coreos/etcd/releases/tag/v3.3.13>
+location on <https://github.com/coreos/etcd/releases/tag/v3.4.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://github.com/etcd-io/etcd/releases/download/v3.3.13/etcd-v3.3.13-windows-amd64.zip>
+  software: <https://github.com/etcd-io/etcd/releases/download/v3.4.0/etcd-v3.4.0-windows-amd64.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: 
-  checksum: 718953A44005B2F53075699204C63E2D0A8227A52060EFF178C7047D42BC3CB1
+  checksum: 6447C94D837A281EB9D4CD79A86C937C11BE454DB499C9CEC6C1E215536E58DE
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/coreos/etcd/blob/3381177341c11aa9d89b6172699d64ddc2146a11/LICENSE>
