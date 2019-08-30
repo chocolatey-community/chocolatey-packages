@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mono</id>
-    <version>6.0.0.319</version>
+    <version>6.0.0.327</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/mono</packageSourceUrl>
     <title>Mono</title>
     <authors>Miguel de Icaza,  other Mono committers</authors>
