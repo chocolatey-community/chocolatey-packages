@@ -7,12 +7,12 @@ and can be verified like this:
 
 
 1. Download the following installers:
-  x32: https://sourceforge.net/projects/screencloud/files/1.4.0/windows/ScreenCloud-1.4.0-x86.msi/download
+  x32: https://sourceforge.net/projects/screencloud/files/1.5.0/windows/ScreenCloud-1.5.0-x86.msi/download
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 0D40A9C4E03FAE36D07E2C5037BFAA07A011FDFB8176B7154D3EE0557F7AABD9
+  checksum32: B531385A3C48EA84B6750943AD3DCA16EF94C89F51BE87E386BF709B003A43B5
 
 File 'LICENSE.txt' is obtained from <https://github.com/olav-st/screencloud/blob/master/LICENSE>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-azuredatastudio.extension</id>
+    <version>1.0.0</version>
+    <title>Chocolatey Azure Data Studio servicing extension</title>
+    <summary>Helper functions useful for developing packages for installing Azure Data Studio extensions.</summary>
+    <authors>chocolatey</authors>
+    <owners>chocolatey, pascalberger</owners>
+    <description>
+This package provides helper functions useful for developing packages for installing Azure Data Studio extensions.
+These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+    </description>
+    <tags>chocolatey extension azure-data-studio foss</tags>
+    <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
+    <copyright>© Chocolatey Core Team Package Contributors</copyright>
+    <licenseUrl>https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-azuredatastudio.extension</packageSourceUrl>
+    <docsUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-azuredatastudio.extension/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/chocolatey/chocolatey-coreteampackages/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/extensions/chocolatey-azuredatastudio.extension/CHANGELOG.md</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="extensions\**" target="extensions" />
+  </files>
+</package>

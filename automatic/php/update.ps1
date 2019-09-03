@@ -94,8 +94,8 @@ function CreateStream {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url32Bits = $download_page.links | ? href -match 'nts.*x86\.zip$' | ? href -notmatch 'debug' | select -expand href
-  $url64Bits = $download_page.links | ? href -match 'nts.*x64\.zip$' | ? href -notmatch 'debug' | select -expand href
+  $url32Bits = $download_page.links | ? href -match 'nts.*x86\.zip$' | ? href -notmatch 'debug|devel' | select -expand href
+  $url64Bits = $download_page.links | ? href -match 'nts.*x64\.zip$' | ? href -notmatch 'debug|devel' | select -expand href
 
   $streams = @{ }
 

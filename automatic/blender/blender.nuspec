@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>blender</id>
-    <version>2.79.2</version>
+    <version>2.80</version>
     <title>Blender</title>
     <owners>chocolatey, Redsandro</owners>
     <authors>Blender Foundation</authors>
@@ -12,7 +12,7 @@
     <projectSourceUrl>https://git.blender.org/gitweb/</projectSourceUrl>
     <bugTrackerUrl>https://developer.blender.org/maniphest/</bugTrackerUrl>
     <mailingListUrl>https://wiki.blender.org/index.php/Dev:Doc/Contact#Mailing_Lists</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
@@ -53,7 +53,7 @@ Blender is a free and open-source professional-grade 3D computer graphics and vi
       <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
       <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/blender</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/blender</packageSourceUrl>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

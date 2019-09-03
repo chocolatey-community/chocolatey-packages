@@ -15,7 +15,7 @@ branches:
 
 environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
-  au_version: 
+  au_version: master
   au_push: true
   # Use 1 to test all, or N to split testing into N groups
   au_test_groups: 4
@@ -48,8 +48,8 @@ environment:
     secure: zPuYvdxGda6DUGRCwTJL5FQCWF3U+1bSLE2mEr+VfpfV08NXlXX2uFLizkhQuJYW
 
   #Chocolatey version we want to use when checking for updates (usually latest).
-  choco_version: '0.10.14-beta-20190402'
-  choco_version_pr: '0.10.8' # Should be kept to the version available one year ago
+  choco_version: '0.10.15'
+  choco_version_pr: '0.10.11' # Should be kept to the version available one year ago
   nupkg_cache_path: C:\packages
 
 init:

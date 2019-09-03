@@ -14,9 +14,9 @@ Remove-Item ($toolsDir + '\*.' + $packageArgs.fileType)
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
-if ($installLocation)  {
-    Write-Host "$packageName installed to '$installLocation'"
-    Register-Application "$installLocation\$packageName.exe"
-    Write-Host "$packageName registered as $packageName"
+if ($installLocation) {
+  Write-Host "$packageName installed to '$installLocation'"
+  Register-Application "$installLocation\$packageName.exe"
+  Write-Host "$packageName registered as $packageName"
 }
 else { Write-Warning "Can't find $PackageName install location" }

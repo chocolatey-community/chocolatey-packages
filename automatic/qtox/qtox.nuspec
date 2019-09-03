@@ -4,12 +4,11 @@
   <metadata>
     <id>qtox</id>
     <title>qTox</title>
-    <version>1.14.1</version>
+    <version>1.16.3</version>
     <authors>qTox developers</authors>
     <owners>chocolatey</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
-    <description><![CDATA[
-qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.
+    <description><![CDATA[qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.
 
 ## Features
 
@@ -28,6 +27,7 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
 * Auto-updates on Windows and Mac, packages on Linux
 * And many more options!
 
+![screenshot](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/master/automatic/qtox/screenshot.png?raw=true)
 ]]></description>
     <projectUrl>https://qtox.github.io</projectUrl>
     <projectSourceUrl>https://github.com/qTox/qTox</projectSourceUrl>
@@ -35,11 +35,11 @@ qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design g
     <bugTrackerUrl>https://github.com/qTox/qTox/issues</bugTrackerUrl>
     <mailingListUrl>https://lists.tox.chat/listinfo</mailingListUrl>
     <tags>qtox tox chat voip foss cross-platform admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/qtox</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/qtox</packageSourceUrl>
     <copyright>qTox contributors</copyright>
     <licenseUrl>https://github.com/qTox/qTox/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@d12c934ca6454cc6fe10e5a708c6a32e2f59c55e/icons/qtox.svg</iconUrl>
     <releaseNotes>https://github.com/qTox/qTox/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
   <files>

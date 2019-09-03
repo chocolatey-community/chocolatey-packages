@@ -3,17 +3,17 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>apache-httpd</id>
-    <version>2.4.38</version>
+    <version>2.4.41</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
     <owners>chocolatey</owners>
     <licenseUrl>http://www.apache.org/licenses</licenseUrl>
     <projectUrl>http://httpd.apache.org</projectUrl>
     <docsUrl>http://httpd.apache.org/docs/2.4</docsUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@2bdf6f7e33ec1a8126829fbbc87b83e4473b3634/icons/apache-httpd.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2bdf6f7e33ec1a8126829fbbc87b83e4473b3634/icons/apache-httpd.png</iconUrl>
     <bugTrackerUrl>http://httpd.apache.org/bug_report.html</bugTrackerUrl>
     <releaseNotes>http://httpd.apache.org/docs/2.4/new_features_2_4.html</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/apache-httpd</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/apache-httpd</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>The Apache HTTP Server Project is a collaborative software development effort aimed at creating a robust, commercial-grade, featureful, and freely-available source code implementation of an HTTP (Web) server.</summary>
     <description><![CDATA[

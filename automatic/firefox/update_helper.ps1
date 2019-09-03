@@ -11,7 +11,7 @@ function GetVersionAndUrlFormats() {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $UpdateUrl
 
   $re = "download.mozilla.*product=$Product.*(&amp;|&)os=win(&amp;|&)lang=en-US"
-  $url = $download_page.links | ? href -match $re | ? href -NotMatch 'stub' | select -first 1 -expand href
+  $url = $download_page.links | ? href -match $re | ? href -NotMatch 'stub|next' | select -first 1 -expand href
   $redirectedUrl = Get-RedirectedUrl $url
   $url = $url -replace 'en-US','${locale}' -replace '&amp;','&'
   $version = $redirectedUrl -split '\/' | select -Last 1 -Skip 3

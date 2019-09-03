@@ -7,8 +7,8 @@ $silentArgs = @('/S')
 $packageArgs = @{
   packageName    = 'avidemux'
   fileType       = 'exe'
-  file           = "$toolsDir\avidemux_2.7.2_win3.exe"
-  file64         = "$toolsDir\Avidemux_2.7.2%20VC%2B%2B%2064bits%20.exe"
+  file           = "$toolsDir\avidemux_2.7.4_win32.exe"
+  file64         = "$toolsDir\Avidemux_2.7.4%20VC%2B%2B%2064bits.exe"
   silentArgs     = $silentArgs
   validExitCodes = @(0, 1223)
 }

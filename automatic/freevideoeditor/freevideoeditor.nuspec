@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freevideoeditor</id>
-    <version>6.3.3</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freevideoeditor</packageSourceUrl>
+    <version>6.3.8</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/freevideoeditor</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>VSDC Free Video Editor</title>
     <authors>Flash-Integro LLC</authors>
     <projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@80d7b106a3d2edf543944581b2634972157df3de/icons/freevideoeditor.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@80d7b106a3d2edf543944581b2634972157df3de/icons/freevideoeditor.png</iconUrl>
     <copyright>www.videosoftdev.com, Flash-Integro LLC</copyright>
     <licenseUrl>http://www.videosoftdev.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

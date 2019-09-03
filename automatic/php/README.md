@@ -2,8 +2,7 @@
 
 PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
-This product includes PHP software, freely available from
-     <http://www.php.net/software/>
+This product includes PHP software, freely available from [http://www.php.net/software/](http://www.php.net/software/)
 
 ## Package Parameters
 - `/DontAddToPath` - Do not add install directory to path
@@ -11,5 +10,5 @@ This product includes PHP software, freely available from
 - `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
 
 These parameters can be passed to the installer with the use of --package-parameters.
-For example: `choco install --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
+For example: `choco install php --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
 

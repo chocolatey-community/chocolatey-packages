@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win](https://chocolatey.org/packages/gpg4win)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win](https://chocolatey.org/packages/gpg4win)
 
 Gpg4win (GNU Privacy Guard for Windows) is the full suite of programs for file encryption and digital signatures.
 
@@ -31,7 +31,7 @@ More information:
 * `/Config` - Use the configuration/control with the specified path
 
 *Example*
-`choco install gpg4win --package-parameter="/Config:C:\gpg4win.ini`
+`choco install gpg4win --package-parameters="/Config:C:\gpg4win.ini"`
 
 ## Notes
 
@@ -64,3 +64,6 @@ The central certiï¬cate administration of Gpg4win, which ensures uniform use
 * [Compendium](http://www.gpg4win.org/doc/en/gpg4win-compendium.html)
 The documentation for beginner and advanced users, available in English and German.
 
+### [gnupg](https://chocolatey.org/packages/gnupg)
+
+* This is the modern version of GnuPG, a commandline tool without any graphical stuff.

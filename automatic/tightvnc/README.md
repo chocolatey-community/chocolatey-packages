@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tightvnc.png" width="48" height="48"/> [tightvnc](https://chocolatey.org/packages/tightvnc)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tightvnc.png" width="48" height="48"/> [tightvnc](https://chocolatey.org/packages/tightvnc)
 
 
 TightVNC is a free remote control software package. With TightVNC, you can see the desktop of a remote machine and control it with your local mouse and keyboard, just like you would do it sitting in the front of that computer. TightVNC is:

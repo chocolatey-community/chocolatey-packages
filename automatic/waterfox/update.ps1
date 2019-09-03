@@ -1,6 +1,6 @@
 ﻿import-module au
 
-$releases = 'https://www.waterfoxproject.org/downloads'
+$releases = 'https://www.waterfox.net/releases/'
 $softwareName = 'Waterfox*'
 
 function global:au_BeforeUpdate {

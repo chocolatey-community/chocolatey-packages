@@ -2,20 +2,14 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The embedded software have been downloaded from the listed download
-location on <https://github.com/eranif/codelite/releases/latest>
-and can be verified by doing the following:
-
 1. Download the following:
-  32-Bit software: <https://github.com/eranif/codelite/releases/download/12.0/codelite-x86-12.0.0.exe.7z>
-  64-Bit software: <https://github.com/eranif/codelite/releases/download/12.0/codelite-amd64-12.0.0.exe.7z>
+  64-Bit software: <https://github.com/eranif/codelite/releases/download/13.0/codelite-amd64-13.0.0.exe.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: sha256
-  checksum32: BEBE472C43DFA1E0F0277C5534BD8C5B8141733126C873478C00DC5F990BE9DA
-  checksum64: 51CC36BF92945EE079C1525F4E7A24E842271795AFDD406233872AEF6F956AF1
+  checksum type: 
+  checksum64: 3FC4ED1EC9296D0B6B68ED9C6BA342CCB72357C9D35D5D4822F9763ABF5861EB
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/eranif/codelite/blob/5c29b6cb2a48dbf2d9b243a173c540cf85d70f4f/LICENSE>

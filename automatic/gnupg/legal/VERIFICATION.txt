@@ -1,0 +1,23 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer have been downloaded from the official source listed on <https://www.gnupg.org/download/index.html#binary>
+and can be verified like this:
+
+1. Download the following installer:
+  32-bit: <https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.2.17_20190709.exe>
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: E5C99867591C1F72190F5540040BA027233F8CF5ACC9ED627DBA89A2461B57E0
+
+License files are obtained from:
+- LICENSE.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING;h=ccbbaf61b794c7aaea10dffb486095fdc8f3a44a;hb=refs/heads/master>
+- LICENSE.CC0.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING.CC0;h=02ba3668dc4df90b379980ad8d1e67171decd419;hb=refs/heads/master>
+- LICENSE.GPL2.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING.GPL2;h=d159169d1050894d3ea3b98e1c965c4058208fe1;hb=refs/heads/master>
+- LICENSE.LGPL3.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING.LGPL3;h=4cd69205cbe0489459bcb39f6694ac6eb9b46d82;hb=refs/heads/master>
+- LICENSE.LGPL21.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING.LGPL21;h=4ad3268b40388de002fd1a52286dc18938d8b2ce;hb=refs/heads/master>
+- LICENSE.other.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING.other;h=797f78c97197dd794e27d8dc9a92a5a6c31d3eef;hb=refs/heads/master>

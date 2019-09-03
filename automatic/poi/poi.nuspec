@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>poi</id>
-    <version>10.2.4</version>
+    <version>10.3.0</version>
     <owners>chocolatey, drelatgithub</owners>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/poi</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/poi</packageSourceUrl>
 
     <title>poi</title>
     <authors>POI Contributors</authors>
     <projectUrl>https://poi.io</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@5be34cac264309fd6bdaaa122aea08dd4ad32bb0/icons/poi.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@5be34cac264309fd6bdaaa122aea08dd4ad32bb0/icons/poi.png</iconUrl>
     <copyright>Copyright (c) 2015-2018 poi contributors</copyright>
     <licenseUrl>https://cdn.rawgit.com/poooi/poi/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -39,7 +39,7 @@ More information could be obtained [here](https://github.com/poooi/poi/blob/mast
     - Daily equipment improvement list for Akashi's Arsenal
     - Multiple panels for other DMM games
 ]]></description>
-    <releaseNotes>https://github.com/poooi/poi/releases/tag/v10.2.4</releaseNotes>
+    <releaseNotes>https://github.com/poooi/poi/releases/tag/v10.3.0</releaseNotes>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

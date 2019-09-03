@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName = 'ScreenCloud-1.4.0-x86.msi'
+$fileName = 'ScreenCloud-1.5.0-x86.msi'
 
 $packageArgs = @{
     packageName    = 'screencloud'

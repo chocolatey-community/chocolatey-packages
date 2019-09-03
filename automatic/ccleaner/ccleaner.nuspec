@@ -4,7 +4,7 @@
   <metadata>
     <id>ccleaner</id>
     <title>CCleaner</title>
-    <version>5.56.7144</version>
+    <version>5.61.7392</version>
     <authors>Piriform</authors>
     <owners>maartenba, tonigellida</owners>
     <summary>
@@ -25,8 +25,8 @@ This package installs CCleaner without additional adware.
     <copyright></copyright>
     <licenseUrl>https://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ccleaner</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ccleaner</packageSourceUrl>
     <releaseNotes>https://www.piriform.com/ccleaner/version-history</releaseNotes>
   </metadata>
   <files>

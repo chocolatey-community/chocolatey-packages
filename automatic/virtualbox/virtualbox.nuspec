@@ -4,36 +4,48 @@
   <metadata>
     <id>virtualbox</id>
     <title>VirtualBox</title>
-    <version>6.0.6</version>
+    <version>6.0.10</version>
     <authors>Oracle Corporation</authors>
     <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
     <description><![CDATA[VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
 
+## Features
+
+- Supports 64 bit versions of Windows, Mac OSX, Linux and Solaris
+- Portability
+- No hardware virtualization required
+- Guest Additions: shared folders, seamless windows, 3D virtualization
+- Great hardware support: SMP, USB devices, ACPI, multiscreen, ISCSI, PXE network boot
+- Multigeneration branched snapshots
+- VM groups
+- Clean architecture and unprecedented modularity
+- Remote machine display
+
 ## Package parameters
 
-### Installation/Upgrading
 - `/CurrentUser`       - Install for current user only
 - `/NoDesktopShortcut` - Do not create desktop shortcut
 - `/NoQuickLaunch`     - Do not create quick launch icon
 - `/NoRegister`        - Do not register virtualbox file extensions
 - `/NoPath`            - Do not add virtualbox install directory to the PATH
-- `/NoExtensionPack`   - Do not install extension pack
+- `/KeepExtensions`    - Do not uninstall installed virtualbox extensions (only when uninstalling package)
+- `/ExtensionPack`     - Install extension pack - **THIS IS COMMERCIAL EXTENSION AND CAN INCURE [SIGNIFICANT COSTS](https://web.archive.org/web/20171201035409/https://www.virtualbox.org/wiki/Licensing_FAQ)**
 
-### Uninstalling
-- `/KeepExtensions`    - Do not uninstall installed virtualbox extensions
+Example: `choco install virtualbox --params "/NoDesktopShortcut /ExtensionPack"`
 
-Example: `choco install virtualbox --params "/NoDesktopShortcut /NoExtensionPack"`
+
+![screenshot](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/master/automatic/virtualbox/screenshot.png?raw=true)
 ]]></description>
     <projectUrl>https://www.virtualbox.org/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/virtualbox</packageSourceUrl>
     <projectSourceUrl>https://www.virtualbox.org/browser/trunk</projectSourceUrl>
     <tags>virtualbox virtualization virtual oracle admin foss cross-platform</tags>
     <docsUrl>https://www.virtualbox.org/manual</docsUrl>
     <copyright>Copyright (C) 2009-2016 Oracle Corporation</copyright>
     <licenseUrl>https://www.virtualbox.org/wiki/VirtualBox_PUEL</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c9f08adeb0cc2dcda323211894358e69d3af323c/icons/virtualbox.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c9f08adeb0cc2dcda323211894358e69d3af323c/icons/virtualbox.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

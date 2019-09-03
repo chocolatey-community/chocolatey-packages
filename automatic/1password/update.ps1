@@ -1,8 +1,5 @@
-[CmdletBinding()]
-param($IncludeStream, [switch] $Force)
-
 Import-Module AU
-
+import-module $PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1
 
 function global:au_SearchReplace {
   @{
@@ -52,7 +49,7 @@ param (
 function global:au_GetLatest {
   $streams = [ordered] @{
     OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4
-    OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
+    #OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
   }
 
   return @{ Streams = $streams }

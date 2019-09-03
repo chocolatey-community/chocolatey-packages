@@ -3,6 +3,7 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts/au_extensions.psm1"
 
 $softwareName = 'iTunes'
+$padUnderVersion = '12.9.6'
 
 function global:au_SearchReplace {
   @{
@@ -34,7 +35,7 @@ function GetResultInformation([string]$url32, [string]$url64) {
   return @{
     URL32          = $url32
     URL64          = $url64
-    Version        = $version
+    Version        = Get-FixVersion $version -OnlyFixBelowVersion $padUnderVersion
     RemoteVersion  = $version
     Checksum32     = $checksum32
     ChecksumType32 = $checksumType

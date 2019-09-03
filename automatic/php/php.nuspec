@@ -4,14 +4,13 @@
   <metadata>
     <id>php</id>
     <title>PHP (Hypertext Preprocessor)</title>
-    <version>7.3.5</version>
+    <version>7.3.9</version>
     <authors>PHP Authors</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>PHP – widely-used general-purpose scripting language that is especially suited for Web development and can be embedded into HTML.</summary>
     <description><![CDATA[PHP is an HTML-embedded scripting language. Much of its syntax is borrowed from C, Java and Perl with a couple of unique PHP-specific features thrown in. The goal of the language is to allow web developers to write dynamically generated pages quickly.
 
-This product includes PHP software, freely available from
-     <http://www.php.net/software/>
+This product includes PHP software, freely available from [http://www.php.net/software/](http://www.php.net/software/)
 
 ## Package Parameters
 - `/DontAddToPath` - Do not add install directory to path
@@ -19,7 +18,7 @@ This product includes PHP software, freely available from
 - `/ThreadSafe`    - Install the thread safe version of php that is compatible with Apache.
 
 These parameters can be passed to the installer with the use of --package-parameters.
-For example: `choco install --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
+For example: `choco install php --package-parameters='"/ThreadSafe ""/InstallDir:C:\PHP"""'`.
 
 ]]></description>
     <projectUrl>http://www.php.net/</projectUrl>
@@ -27,7 +26,7 @@ For example: `choco install --package-parameters='"/ThreadSafe ""/InstallDir:C:\
     <tags>php development programming foss cross-platform admin</tags>
     <licenseUrl>http://us.php.net/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.3.5</releaseNotes>
+    <releaseNotes>https://secure.php.net/ChangeLog-7.php#7.3.9</releaseNotes>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@4e147ce52b1a2a7ac522ffbce6d176f257de6ac1/icons/php.svg</iconUrl>
     <bugTrackerUrl>https://bugs.php.net/</bugTrackerUrl>
     <docsUrl>https://secure.php.net/docs.php</docsUrl>

@@ -3,20 +3,28 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>sonarlint-vs2015</id>
-    <title>SonarLint VSIX Extension</title>
-    <version>4.9.0.4316</version>
+    <title>SonarLint for Visual Studio 2015</title>
+    <version>4.12.0.0</version>
     <authors>SonarSource (SonarSource SA)</authors>
     <owners>chocolatey, Pascal Berger</owners>
     <projectSourceUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio</projectSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@9d190bd5283df93c69ff06df0b78a289af483aa2/icons/sonarlint-vs2015.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@9d190bd5283df93c69ff06df0b78a289af483aa2/icons/sonarlint-vs2015.png</iconUrl>
     <projectUrl>http://www.sonarlint.org/visualstudio/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sonarlint-vs2015</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/sonarlint-vs2015</packageSourceUrl>
     <licenseUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>SonarLint provides on-the-fly feedback to developers on new bugs and quality issues injected into C# and VB.Net code. In addition the connected mode allows to enforce governance policies by reporting the same issues in Visual Studio and in SonarQube server.</summary>
     <description><![CDATA[
 SonarLint is a Visual Studio 2015 extension that provides on-the-fly feedback to developers on new bugs and quality issues injected into C# and VB.NET code. SonarLint for Visual Studio is based on and benefits from the .NET Compiler Platform ("Roslyn") and its code analysis API to provide a fully-integrated user experience in Visual Studio 2015. With version 2.0 you can now establish a connection to a SonarQube server and bind your Visual Studio solution to a SonarQube project. This operation automatically updates the rulesets of the solution and attaches the required Roslyn analyzers to the solution.
 
+
+## Features
+
+- On-the-fly feedback
+- Support C#, VB.Net, Javascript and C/C++.
+- Support for standalone analysis.
+- Support for connected mode for C# and VB.Net projects.
+- [Connected mode] Suppression of issues marked as False Positive or Won't Fix on SonarQube
 ]]></description>
     <tags>sonarlint sonarqube sonarsource visualstudio extension foss</tags>
     <releaseNotes>http://www.sonarlint.org/visualstudio/#News</releaseNotes>

@@ -6,7 +6,7 @@
     <metadata>
         <id>mattermost-desktop</id>
         <title>Mattermost Desktop</title>
-        <version>4.2.1</version>
+        <version>4.2.3</version>
         <authors>https://github.com/mattermost/desktop/graphs/contributors</authors>
         <owners>wget, hans0</owners>
         <summary>Native desktop application for Mattermost running on Windows</summary>
@@ -33,13 +33,13 @@ N/A
         <licenseUrl>https://github.com/mattermost/desktop/blob/master/LICENSE.txt</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <!-- Source: https://github.com/mattermost/desktop/blob/master/src/assets/appicon.png -->
-        <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png</iconUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@25863e73cbe9e5352936b5f63634afb7739c877e/icons/mattermost-desktop.png</iconUrl>
         <releaseNotes>https://github.com/mattermost/desktop/releases</releaseNotes>  
         <!-- Specific to Chocolatey -->
         <projectSourceUrl>https://github.com/mattermost/desktop</projectSourceUrl>
         <docsUrl>https://docs.mattermost.com/</docsUrl>
         <bugTrackerUrl>https://github.com/mattermost/desktop/issues</bugTrackerUrl>
-        <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mattermost-desktop</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/mattermost-desktop</packageSourceUrl>
   </metadata>
   <files>
       <file src="tools\**" target="tools" />

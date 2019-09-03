@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>avidemux</id>
-    <version>2.7.2-Beta</version>
+    <version>2.7.4</version>
     <title>Avidemux</title>
     <authors>Mean, Gruntster, Fahr</authors>
     <owners>chocolatey, purity</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://avidemux.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/avidemux.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/avidemux.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 Avidemux is a free video editor designed for simple cutting, filtering and encoding tasks. It supports many file types, including AVI, DVD compatible MPEG files, MP4 and ASF, using a variety of codecs. Tasks can be automated using projects, job queue and powerful scripting capabilities.
@@ -26,10 +26,10 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
  - Subtitle processing
 ]]></description>
     <summary>Video editor</summary>
-    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.7.2/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.7.4/</releaseNotes>
     <copyright>2001-2016 Mean</copyright>
     <tags>video editor foss cross-platform cutting filtering encoding admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
     <mailingListUrl>https://www.avidemux.org/admForum/</mailingListUrl>
     <docsUrl>https://www.avidemux.org/admWiki/doku.php</docsUrl>
     <dependencies>

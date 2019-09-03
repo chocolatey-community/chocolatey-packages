@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mixxx</id>
-    <version>2.2.1</version>
+    <version>2.2.2</version>
     <title>Mixxx</title>
     <owners>chocolatey</owners>
     <authors>Mixxx Development Team</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://mixxx.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/mixxx.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/mixxx.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[Mixxx is free DJ software for Windows, Mac OS X and Linux. It's easy to use so you can start mixing your favorite songs in no time, even if you've never DJed before. Mixxx offers a variety of features for experienced DJs and beginners alike, such as automatic beat and key detection, master sync, hotcues, looping, 4 decks, effects and many more. You can perform with Mixxx using MIDI and HID controllers, CD players, vinyl turntables or even just your computer's keyboard and mouse.
 
@@ -46,7 +46,7 @@
     <releaseNotes>http://mixxxblog.blogspot.it/</releaseNotes>
     <copyright />
     <tags>DJ audio mixing party mp3 media cross-platform foss admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/mixxx</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/mixxx</packageSourceUrl>
     <projectSourceUrl>https://github.com/mixxxdj/mixxx</projectSourceUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/mixxx</bugTrackerUrl>
     <docsUrl>http://www.mixxx.org/manual/latest/</docsUrl>

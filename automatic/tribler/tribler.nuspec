@@ -4,7 +4,7 @@
   <metadata>
     <id>tribler</id>
     <title>Tribler</title>
-    <version>7.2.2</version>
+    <version>7.3.0</version>
     <authors>The Tribler Team</authors>
     <owners>chocolatey, Redsandro</owners>
     <summary>Tribler is an open source anonymous decentralized BitTorrent client.</summary>
@@ -38,9 +38,9 @@ Watch before the download is finished. Tribler streams it for you.
     <tags>tribler bittorrent admin foss cross-platform</tags>
     <licenseUrl>https://github.com/Tribler/tribler/blob/next/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@31eebb648daf450ee49dfdaa5cb613009d86d862/icons/tribler.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@31eebb648daf450ee49dfdaa5cb613009d86d862/icons/tribler.png</iconUrl>
     <releaseNotes>https://github.com/Tribler/tribler/releases/tag/v7.0.2</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tribler</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/tribler</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

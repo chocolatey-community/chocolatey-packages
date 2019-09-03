@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>free-virtual-keyboard</id>
-    <version>4.1</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/free-virtual-keyboard</packageSourceUrl>
+    <version>4.2</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/free-virtual-keyboard</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Free Virtual Keyboard</title>
     <authors>Comfort Software Group</authors>
     <projectUrl>http://freevirtualkeyboard.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a0565cd6b355c37eeee58202b0410530d5381901/icons/free-virtual-keyboard.png</iconUrl>
     <copyright>Comfort Software Group. All rights reserved.</copyright>
     <licenseUrl>http://www.freevirtualkeyboard.com/virtualkeyboard.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -29,7 +29,7 @@ Free Virtual Keyboard works on any Windows based UMPC with a passive touchscreen
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/fa61e4661273bf0df8b3c36dc07491e00c0aa145/automatic/free-virtual-keyboard/screenshot.png)
 
 ]]></description>
-    <releaseNotes>https://freevirtualkeyboard.blogspot.com/2018/01/free-virtual-keyboard-41.html</releaseNotes>
+    <releaseNotes>https://freevirtualkeyboard.blogspot.com/2019/05/free-virtual-keyboard-42-has-been.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

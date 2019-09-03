@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gimp</id>
-    <version>2.10.10</version>
+    <version>2.10.12</version>
     <title>GIMP</title>
     <owners>chocolatey</owners>
     <authors>GIMP Team</authors>
@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://www.gimp.org/</projectUrl>
     <projectSourceUrl>https://git.gnome.org/browse/gimp</projectSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gimp.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gimp.svg</iconUrl>
     <docsUrl>https://www.gimp.org/docs/</docsUrl>
     <mailingListUrl>https://www.gimp.org/mail_lists.html</mailingListUrl>
     <bugTrackerUrl>https://www.gimp.org/bugs/</bugTrackerUrl>
@@ -37,7 +37,7 @@ GIMP is expandable and extensible. It is designed to be augmented with plug-ins 
     <releaseNotes>https://www.gimp.org/release-notes</releaseNotes>
     <copyright>GIMP Team</copyright>
     <tags>gimp design publishing editor images graphics photo art png jpg gif admin foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gimp</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gimp</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,18 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = Split-Path $MyInvocation.MyCommand.Definition
-$embedded_path = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Installing 64 bit version"; Get-Item "$toolsDir\*_x64.exe"
-} else { Write-Host "Installing 32 bit version"; Get-Item "$toolsDir\*_x32.exe" }
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName    = 'qtox'
   fileType       = 'exe'
-  softwareName   = 'qTox'
-  file           = $embedded_path
+  file           = Get-Item $toolsPath\*_x32.exe
+  file64         = Get-Item $toolsPath\*_x64.exe
   silentArgs     = '/S'
   validExitCodes = @(0)
+  softwareName   = 'qTox'
 }
-
 Install-ChocolateyInstallPackage @packageArgs
-Remove-Item -force -ea 0 $toolsDir\*.exe, $toolsDir\*.ignore
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" "" }}

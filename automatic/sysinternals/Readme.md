@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@8a042fbe6c07391d0c2da13f638b1fdde474850f/icons/sysinternals.png" width="48" height="48"/> [sysinternals](https://chocolatey.org/packages/sysinternals)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@8a042fbe6c07391d0c2da13f638b1fdde474850f/icons/sysinternals.png" width="48" height="48"/> [sysinternals](https://chocolatey.org/packages/sysinternals)
 
 
 The Sysinternals Troubleshooting Utilities have been rolled up into a single suite of tools.

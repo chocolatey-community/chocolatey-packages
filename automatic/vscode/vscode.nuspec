@@ -4,13 +4,13 @@
   <metadata>
     <id>vscode</id>
     <title>Visual Studio Code</title>
-    <version>1.33.1</version>
+    <version>1.37.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
     <projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/vscode</packageSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/icons/vscode.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vscode</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png</iconUrl>
     <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
     <docsUrl>https://code.visualstudio.com/docs</docsUrl>
     <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
