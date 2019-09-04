@@ -14,6 +14,8 @@ Example: `choco install sysinternals --params "/InstallDir:C:\your\install\path"
 
 ## Notes
 
+- This package supports only latest version.
 - This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to the PATH.
-- This package now downloads the nano edition of sysinternals on nano servers.
-- To have GUI for the tools, install [nirlauncher](https://chocolatey.org/packages/nirlauncher) package and use `/Sysinternals` option.
+- This package downloads the nano edition of sysinternals suite when installing it on a nano server.
+- To have GUI for the tools, install [nirlauncher](https://chocolatey.org/packages/nirlauncher) package and use `/Sysinternals` package parameter.
+
