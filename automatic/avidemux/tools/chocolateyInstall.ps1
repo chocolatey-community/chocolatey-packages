@@ -12,6 +12,11 @@ $packageArgs = @{
   silentArgs     = $silentArgs
   validExitCodes = @(0, 1223)
 }
+
+if ((Get-OSArchitectureWidth 64) -and ($env:chocolateyForceX86 -ne $true)) {
+  $packageArgs.silentArgs = "--script $toolsDir\avidemux.qs"
+}
+
 Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*.exe
 

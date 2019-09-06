@@ -15,6 +15,11 @@ if ($key.Count -eq 1) {
             file                   = ''
         }
         $packageArgs.file = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
+        if ($_.DisplayName -match "64bits") {
+          $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+          $packageArgs.silentArgs = "--script $toolsDir\avidemux.qs"
+        }
+
         Uninstall-ChocolateyPackage @packageArgs
     }
 }

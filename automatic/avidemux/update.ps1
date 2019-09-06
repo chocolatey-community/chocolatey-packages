@@ -29,20 +29,21 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $allReleases = $download_page.links | ? href -Match 'avidemux/[0-9\.]+/$' | % { "https://sourceforge.net" + $_.href }
 
-    $url = $download_page.links | ? href -match 'avidemux/[0-9.]+/$' | % href | select -First 1 | % { 'https://sourceforge.net' + $_ }
-
-    $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
-    $allUrls = $download_page.Links | ? href -match "\.exe\/download$" | select -expand href
-    if ($allUrls.Count -le 1) {
-        Write-Host "Only 1 installer found, skipping update..."
-        return "ignore"
+    foreach ($release in $allReleases) {
+      $download_page = Invoke-WebRequest -Uri $release -UseBasicParsing
+      $allUrls = $download_page.Links | ? href -match "\.exe\/download$" | select -expand href
+      if ($allUrls.Count -ge 2) {
+        break
+      }
     }
+
     $url32 = $allUrls | ? { $_ -match "win32?\.exe" } | select -first 1
     $url64 = $allUrls | ? { $_ -match "(win64|64Bits.*)\.exe" } | select -first 1
 
 
-    $version = $url -split '/' | select -Last 1 -Skip 1
+    $version = $release -split '/' | select -Last 1 -Skip 1
 
     if ($download_page -match "$version( |\-)(alpha|beta|rc)([^\: ]*)") {
         $version = "$version-$($Matches[2])$($Matches[3])"
@@ -53,7 +54,7 @@ function global:au_GetLatest {
         URL32        = "$url32"
         URL64        = "$url64"
         Version      = $version
-        ReleaseNotes = "$url"
+        ReleaseNotes = "$release"
         FileType     = 'exe'
     }
 }
