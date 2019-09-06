@@ -28,7 +28,7 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
     <summary>Video editor</summary>
     <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.7.4/</releaseNotes>
     <copyright>2001-2016 Mean</copyright>
-    <tags>video editor foss cross-platform cutting filtering encoding admin</tags>
+    <tags>video editor foss cross-platform cutting filtering encoding admin multimedia</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
     <mailingListUrl>https://www.avidemux.org/admForum/</mailingListUrl>
     <docsUrl>https://www.avidemux.org/admWiki/doku.php</docsUrl>
