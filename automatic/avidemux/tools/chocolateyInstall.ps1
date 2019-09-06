@@ -13,7 +13,7 @@ $packageArgs = @{
   validExitCodes = @(0, 1223)
 }
 
-if ((Get-OSArchitectureWidt 64) -and ($env:chocolateyForceX86 -ne $true)) {
+if ((Get-OSArchitectureWidth 64) -and ($env:chocolateyForceX86 -ne $true)) {
   $packageArgs.silentArgs = "--script $toolsDir\avidemux.qs"
 }
 
