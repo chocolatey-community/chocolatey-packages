@@ -21,15 +21,12 @@ Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 # Find the executable of current installed version
-$executableLocation = $null
-Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName'] | ForEach-Object {
-  if(($_.DisplayName -split "\s+" | select -last 1) -eq $packageVersion) {
-    $executableLocation = $_.DisplayIcon
-    break
-  }
+[array]$keysCurrentVersion = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName'] | Where-Object {
+  ($_.DisplayName -split "\s+" | select -last 1) -eq $packageVersion
 }
 
-if (!$executableLocation)  { Write-Warning "Can't find Julia install location"; return }
+if ($keysCurrentVersion.Count -eq 0)  { Write-Warning "Can't find Julia install location"; return }
+$executableLocation = $($keysCurrentVersion | select -First 1).DisplayIcon
 Write-Host "Julia installed to '$executableLocation'"
 
 Install-BinFile 'julia' $executableLocation
