@@ -13,14 +13,23 @@ $packageArgs = @{
   silentArgs    = '/S'
   validExitCodes= @(0)
 }
+$packageVersion = "1.2.0"
 
 Install-ChocolateyInstallPackage @packageArgs
 
 # Lets remove the installer as there is no more need for it
 Get-ChildItem $toolsDir\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
-$installLocation = Get-AppInstallLocation $packageArgs.softwareName
-if (!$installLocation)  { Write-Warning "Can't find Julia install location"; return }
-Write-Host "Julia installed to '$installLocation'"
+# Find the executable of current installed version
+$executableLocation = $null
+Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName'] | ForEach-Object {
+  if(($_.DisplayName -split "\s+" | select -last 1) -eq $packageVersion) {
+    $executableLocation = $_.DisplayIcon
+    break
+  }
+}
 
-Install-BinFile 'julia' $installLocation\bin\julia.exe
+if (!$executableLocation)  { Write-Warning "Can't find Julia install location"; return }
+Write-Host "Julia installed to '$executableLocation'"
+
+Install-BinFile 'julia' $executableLocation
