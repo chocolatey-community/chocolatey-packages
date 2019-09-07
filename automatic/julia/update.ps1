@@ -9,7 +9,7 @@ function global:au_SearchReplace {
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*"   = "`$1$($Latest.FileName32)`""
             "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`$1$($Latest.FileName64)`""
-            "(?i)(^[$]packageVersion\s*=\s*)"          = "`$1`"$($Latest.Version)`""
+            "(?i)(^[$]packageVersion\s*=\s*).*"        = "`$1`"$($Latest.Version)`""
         }
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
