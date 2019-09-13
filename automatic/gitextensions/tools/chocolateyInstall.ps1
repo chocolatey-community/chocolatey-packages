@@ -6,7 +6,7 @@ $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     softwareName   = 'Git Extensions*'
     fileType       = 'msi'
-    file           = "$toolsDir\GitExtensions-3.2.0.6581.msi"
+    file           = "$toolsDir\GitExtensions-3.2.1.6628.msi"
     silentArgs     = '/quiet /norestart ADDDEFAULT=ALL REMOVE=AddToPath'
     validExitCodes = @(0, 3010, 1641)
 }
