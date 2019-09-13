@@ -27,6 +27,7 @@ PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms,
 
 ## Notes
 
+- This meta package depends on [putty.portable](https://chocolatey.org/packages/putty.portable) rather then [putty.install](https://chocolatey.org/packages/putty.install) for historical reasons. Since this may violate expectation of certain users, consider installing later directly. 
 - Support for putty 64bit have been added to the package when running chocolatey 0.10.4+, to keep using 32bit version of putty please pass `--x86` when installing/upgrading putty.install *(64bit installation may fail if 32bit is already installed)*
 - Use of PuTTY, PSCP, PSFTP and Plink is illegal in countries where encryption is outlawed.
 - We believe it is legal to use PuTTY, PSCP, PSFTP and Plink in England and Wales and in many other countries, but we are not lawyers, and so if in doubt you should seek legal advice before downloading it.
