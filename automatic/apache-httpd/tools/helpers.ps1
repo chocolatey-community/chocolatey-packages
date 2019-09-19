@@ -4,8 +4,8 @@ function Assert-TcpPortIsOpen {
         [Parameter(Position = 0, Mandatory, ValueFromPipeline)][ValidateNotNullOrEmpty()][int] $portNumber
     )
 
-    $process = Get-NetTCPConnection -State Listen -LocalPort $portNumber -ErrorAction SilentlyContinue | `
-        Select-Object -First 1 -ExpandProperty OwningProcess | `
+    $process = ( netstat -aon | foreach { if ( $_ -match ":$portNumber" ) { $_ } } )-split " " | `
+        Select-Object -last 1 | `
         Select-Object @{Name = "Id"; Expression = {$_} } | `
         Get-Process | `
         Select-Object Name, Path
