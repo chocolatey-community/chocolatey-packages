@@ -4,7 +4,7 @@ function Assert-TcpPortIsOpen {
         [Parameter(Position = 0, Mandatory, ValueFromPipeline)][ValidateNotNullOrEmpty()][int] $portNumber
     )
 
-    $process = ( netstat -aon | foreach { if ( $_ -match ":$portNumber" ) { $_ } } )-split " " | `
+    $process = (( netstat -aon ) -match ":$portNumber" ) -split " " | `
         Select-Object -last 1 | `
         Select-Object @{Name = "Id"; Expression = {$_} } | `
         Get-Process | `
