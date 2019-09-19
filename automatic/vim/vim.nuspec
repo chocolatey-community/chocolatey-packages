@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <metadata>
+    <id>vim</id>
+    <title>Vim</title>
+    <version>8.1.2056</version>
+    <authors>Bram Moolenaar, Vim Community</authors>
+    <owners>Rob Reynolds, matsuhav</owners>
+    <summary>Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor 'Vi', with a more complete feature set. It's useful whether you're already using vi or using a different editor.</summary>
+    <description><![CDATA[Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
+
+Vim is often called a programmer’s editor, and so useful for programming that many consider it an entire IDE. It’s not just for programmers, though. Vim is perfect for all kinds of text editing, from composing email to editing configuration files.
+
+This package provides official nightly build.
+
+The software is installed to chocolatey tools directory.
+
+#### Parameters
+Some parameters can be set.
+
+ * `/RestartExplorer` - Restart explorer to unlock `GVimExt.dll` used for context menu popup feature.
+ * `/NoDefaultVimrc` - Don't create default `_vimrc` file.
+ * `/NoContextmenu` - Don't create `Edit with Vim` in context menu.
+ * `/NoDesktopShortcuts` - Don't create shortcuts on the desktop.
+
+See https://github.com/vim/vim-win32-installer for more information.
+]]></description>
+    <releaseNotes></releaseNotes>
+    <projectUrl>https://www.vim.org</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/</packageSourceUrl>
+    <tags>vim editor vi gvim admin vim-win32-installer</tags>
+    <licenseUrl>https://vimhelp.org/uganda.txt.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/chocolatey-community/chocolatey-coreteampackages/master/icons/vim.svg</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+<!-- character encoding: “UTF-8” -->
