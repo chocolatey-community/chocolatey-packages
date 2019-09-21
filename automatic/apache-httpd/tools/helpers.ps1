@@ -48,7 +48,7 @@ function Assert-TcpPortIsOpen {
     )
 
     $process = Get-TCPConnections -portNumber $portNumber | `
-        Select-Object -last 1 | `
+        Select-Object -First 1 -ExpandProperty OwningProcess | `
         Select-Object @{Name = "Id"; Expression = {$_} } | `
         Get-Process | `
         Select-Object Name, Path
