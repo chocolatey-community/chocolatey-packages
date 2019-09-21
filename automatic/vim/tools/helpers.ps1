@@ -30,10 +30,3 @@ function Get-Statement()
   }
   return $options, $createvimrc, $installpopup, $installicons -join ' '
 }
-function Set-NoShim()
-{
-  $noshimfiles = 'diff', 'gvim', 'install', 'tee', 'uninstal', 'vim', 'vimrun', 'winpty-agent', 'xxd'
-  foreach ($noshimfile in $noshimfiles) {
-    New-Item "$installDir\vim\vim$shortversion\$noshimfile.exe.ignore" -type file -force | Out-Null
-  }
-}
