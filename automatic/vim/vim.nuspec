@@ -23,7 +23,7 @@ Vim is often called a programmer’s editor, and so useful for programming that 
 
 ## Package parameters
 
-- `/InstallDir` - Specify install directory. By default, the software is installed in `$ChocolateyToolsLocation`, `C:\tools`.You can include spaces. See example.
+- `/InstallDir` - Specify install directory. By default, the software is installed in `$ChocolateyToolsLocation`, `C:\tools`.You can include spaces. See the example below.
 - `/RestartExplorer` - Restart explorer to unlock `GVimExt.dll` used for context menu popup feature.
 - `/NoDefaultVimrc` - Don't create default `_vimrc` file.
 - `/NoContextmenu` - Don't create `Edit with Vim` in context menu.
@@ -34,7 +34,6 @@ Example: `choco install vim --params '/NoDesktopShortcuts /InstallDir:C:\path\to
 ## Notes
 
 - The package uses the zip build to install to provide installation options.
-- The software is installed to chocolatey tools directory. By default, it is `C:\ProgramData\chocolatey\lib\vim\tools\vim`.
 - All compilation of the software is automated and performed on Appveyor. The building status is open.
 - This package provides an official build. Similar package `vim-tux` is from a well-known unofficial vim building project. Unlike `vim-tux`, this package can be set installation parameters.
 - See https://github.com/vim/vim-win32-installer for more information.
