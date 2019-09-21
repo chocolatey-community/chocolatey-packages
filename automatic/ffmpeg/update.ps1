@@ -24,11 +24,11 @@ function global:au_GetLatest {
   $urlPre = "$releases/win32/static/"
   $download_page = Invoke-WebRequest -Uri "$releases/win32/static/" -UseBasicParsing -Header @{ Referer = $releases }
   $version       = $download_page.links | ? href -match '\.(zip|7z)$' | % { $_.href -split '-' | select -Index 1} | ? { $__=$null; [version]::TryParse($_, [ref] $__) } | sort -desc | select -First 1
-  $url32         = $download_page.links | ? href -match "\-${version}\-" | % href | % { $urlPre + $_ }
+  $url32         = $download_page.links | ? href -match "\-${version}\-" | % href | Select -Last 1 | % { $urlPre + $_ }
 
   $urlPre    = $urlPre -replace 'win32','win64'
   $download_page = Invoke-WebRequest -Uri "$releases/win64/static/" -UseBasicParsing -Header @{ Referer = $releases }
-  $url64         = $download_page.links | ? href -match "\-${version}\-" | % href | % { $urlPre + $_ }
+  $url64         = $download_page.links | ? href -match "\-${version}\-" | % href | Select -Last 1 | % { $urlPre + $_ }
 
   @{ URL32 = $url32; URL64=$url64; Version = $version }
 }
