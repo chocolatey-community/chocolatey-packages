@@ -16,12 +16,13 @@ Vim is often called a programmer’s editor, and so useful for programming that 
 
 ## Package parameters
 
+- `/InstallDir` - Specify install directory. By default, the software is installed in `$ChocolateyToolsLocation`, `C:\tools`.You can include spaces. See example.
 - `/RestartExplorer` - Restart explorer to unlock `GVimExt.dll` used for context menu popup feature.
 - `/NoDefaultVimrc` - Don't create default `_vimrc` file.
 - `/NoContextmenu` - Don't create `Edit with Vim` in context menu.
 - `/NoDesktopShortcuts` - Don't create shortcuts on the desktop.
 
-Example: `choco install vim --params "/NoDesktopShortcuts"`
+Example: `choco install vim --params '/NoDesktopShortcuts /InstallDir:C:\path\to\your dir'`
 
 ## Notes
 

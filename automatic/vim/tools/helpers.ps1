@@ -1,22 +1,30 @@
-﻿function Get-Statement($params)
+﻿function Get-InstallDir()
+{
+  if ($pp['InstallDir']) {
+    Write-Debug '/InstallDir found.'
+    return $pp['InstallDir']
+  }
+  return Get-ToolsLocation
+}
+function Get-Statement()
 {
   $options      = '-create-batfiles vim gvim evim view gview vimdiff gvimdiff -install-openwith -add-start-menu'
   $createvimrc  = '-create-vimrc -vimrc-remap no -vimrc-behave default -vimrc-compat all'
   $installpopup = '-install-popup'
   $installicons = '-install-icons'
-  if ($params['RestartExplorer'] -eq 'true') {
+  if ($pp['RestartExplorer'] -eq 'true') {
     Write-Debug '/RestartExplorer found.'
     Get-Process explorer | Stop-Process -Force
   }
-  if ($params['NoDefaultVimrc'] -eq 'true') {
+  if ($pp['NoDefaultVimrc'] -eq 'true') {
     Write-Debug '/NoDefaultVimrc found.'
     $createvimrc = ''
   }
-  if ($params['NoContextmenu'] -eq 'true') {
+  if ($pp['NoContextmenu'] -eq 'true') {
     Write-Debug '/NoContextmenu found.'
     $installpopup = ''
   }
-  if ($params['NoDesktopShortcuts'] -eq 'true') {
+  if ($pp['NoDesktopShortcuts'] -eq 'true') {
     Write-Debug '/NoDesktopShortcuts found.'
     $installicons = ''
   }
@@ -26,6 +34,6 @@ function Set-NoShim()
 {
   $noshimfiles = 'diff', 'gvim', 'install', 'tee', 'uninstal', 'vim', 'vimrun', 'winpty-agent', 'xxd'
   foreach ($noshimfile in $noshimfiles) {
-    New-Item "$toolsDir\vim\vim$shortversion\$noshimfile.exe.ignore" -type file -force | Out-Null
+    New-Item "$installDir\vim\vim$shortversion\$noshimfile.exe.ignore" -type file -force | Out-Null
   }
 }

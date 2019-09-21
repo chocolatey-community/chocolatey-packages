@@ -1,28 +1,27 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortversion = '81'
+$pp = Get-PackageParameters
 
 . $toolsDir\helpers.ps1
+$installDir = Get-InstallDir
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  unzipLocation  = $toolsDir
+  unzipLocation  = $installDir
   file           = "$toolsDir\gvim_8.1.2058_x86.zip"
   file64         = "$toolsDir\gvim_8.1.2058_x64.zip"
 }
 
-$pp = Get-PackageParameters
 $installArgs = @{
-  statement = Get-Statement $pp
-  exeToRun  = "$toolsDir\vim\vim$shortversion\install.exe"
+  statement = Get-Statement
+  exeToRun  = "$installDir\vim\vim$shortversion\install.exe"
 }
 
-Write-Debug '$packageArgs'
-Write-Debug $packageArgs
-Write-Debug '$installArgs'
-Write-Debug $installArgs
+'$installDir', ($installDir | Out-String), '$packageArgs', ($packageArgs | Out-String), '$installArgs', ($installArgs | Out-String) | % { Write-Debug $_ }
 
 Install-ChocolateyZipPackage @packageArgs
 Start-ChocolateyProcessAsAdmin @installArgs
-Copy-Item "$toolsDir\vim\vim$shortversion\vimtutor.bat" $env:windir
+Copy-Item "$installDir\vim\vim$shortversion\vimtutor.bat" $env:windir
 Set-NoShim
+Set-Content -Path "$toolsDir\installDir" -Value $installDir
