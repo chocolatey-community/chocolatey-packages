@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wesnoth</id>
-    <version>1.14.9</version>
+    <version>1.15.1-beta</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/wesnoth</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>The Battle for Wesnoth</title>
