@@ -21,3 +21,4 @@ If you are looking for subtitles, GOM Player just made that amazingly simple. GO
 - **Codec Finder:** Some uncommon video types aren't supported by GOM Player by default. When you try to watch these videos, GOM Player's Codec Finder service will search for the one you're missing and direct you to a place where you can read more and/or download the missing codec.
 - **Connect with GOM Remote:** You can control GOM Player with GOM Remote. This includes all basic functions, such as moving forward/back, play, and pause. This also includes advanced functions, such as opening files, searching, and PC power control.
 
+![](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/634d8a9910f0a9b6f730870c085f372b97be2e5f/automatic/gom-player/screenshot.jpg)
