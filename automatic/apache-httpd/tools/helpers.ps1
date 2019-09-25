@@ -1,44 +1,26 @@
 
 function Get-TCPConnections {
-param(
-[int]$portNumber
-)
-$ListeningPort = @()
-
-$GetPorts =  netstat -nao | Select-String ":$portNumber  " | Select -First 2
-
-    Foreach ($Port in $GetPorts) {
-
-    $a = $Port -split '\s\s*'
-
-    if ( $a[2] -match ":$portNumber" ) {
-
-    $Ports = New-Object System.Object
-
-    $LA = $a[2] -split":"
-
-    $FA = $a[3] -split":"
-
-    $Ports | Add-Member -MemberType NoteProperty -Name 'LocalAddress' -Value $LA[0]
-
-    $Ports | Add-Member -MemberType NoteProperty -Name 'LocalPort' -Value $LA[1]
-
-    $Ports | Add-Member -MemberType NoteProperty -Name 'RemoteAddress' -Value $FA[0]
-
-    $Ports | Add-Member -MemberType NoteProperty -Name 'RemotePort' -Value $FA[1]
-
-    $Ports | Add-Member -MemberType NoteProperty -Name 'State' -Value $a[4]
-
-    $Ports | Add-Member -MemberType NoteProperty -Name 'OwningProcess' -Value $a[5]
-
-    }
-
-    $ListeningPort += $Ports
-
-  }
-
+    param(
+    [int]$portNumber
+    )
+    $ListeningPort = @()
+    $GetPorts =  netstat -nao | Select-String ":$portNumber  " | Select -First 2
+        Foreach ($Port in $GetPorts) {
+        $a = $Port -split '\s\s*'
+          if ( $a[2] -match ":$portNumber" ) {
+          $Ports = New-Object System.Object
+          $LA = $a[2] -split":"
+          $FA = $a[3] -split":"
+          $Ports | Add-Member -MemberType NoteProperty -Name 'LocalAddress' -Value $LA[0]
+          $Ports | Add-Member -MemberType NoteProperty -Name 'LocalPort' -Value $LA[1]
+          $Ports | Add-Member -MemberType NoteProperty -Name 'RemoteAddress' -Value $FA[0]
+          $Ports | Add-Member -MemberType NoteProperty -Name 'RemotePort' -Value $FA[1]
+          $Ports | Add-Member -MemberType NoteProperty -Name 'State' -Value $a[4]
+          $Ports | Add-Member -MemberType NoteProperty -Name 'OwningProcess' -Value $a[5]
+          }
+        $ListeningPort += $Ports
+       }
  return $ListeningPort
- 
 }
 
 function Assert-TcpPortIsOpen {
