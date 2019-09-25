@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png" width="48" height="48"/> [gnupg](https://chocolatey.org/packages/gnupg-modern)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png" width="48" height="48"/> [gnupg](https://chocolatey.org/packages/gnupg)
 
 GnuPG itself is a commandline tool without any graphical stuff. It is the real crypto engine which can be used directly from a command prompt, from shell scripts or by other programs. Therefore it can be considered as a backend for other applications.
 
