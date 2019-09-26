@@ -35,7 +35,7 @@ function global:au_GetLatest {
     @{
         Version      = $version
         URL32        = $url -match 'win32' | select -first 1
-        URL64        = $url | { $_ -notmatch 'win32' -and $_ -match $version } | select -first 1
+        URL64        = $url | ? { $_ -notmatch 'win32' -and $_ -match $version } | select -first 1
         ReleaseNotes = $releaseNotes
     }
 }
