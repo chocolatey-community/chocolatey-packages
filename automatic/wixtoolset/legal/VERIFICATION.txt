@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from their github project
-located at <https://github.com/wixtoolset/wix3/releases/tag/wix3111rtm>
+located at <https://github.com/wixtoolset/wix3/releases/tag/wix3112rtm>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/wixtoolset/wix3/releases/download/wix3111rtm/wix311.exe>
+1. Download the following <https://github.com/wixtoolset/wix3/releases/download/wix3112rtm/wix311.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 7CAECC9FFDCDECA09E211AA20C8DD2153DA12A1647F8B077836B858C7B4CA265
+  checksum: 32BB76C478FCB356671D4AAF006AD81CA93EEA32C22A9401B168FC7471FECCD2
 
 The file 'LICENSE.txt' have been obtained from <https://github.com/wixtoolset/wix3/blob/a83b2130299ef95c9b0ec5c6d80bf34cc4722dfb/LICENSE.TXT>
