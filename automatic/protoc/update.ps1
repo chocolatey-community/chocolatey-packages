@@ -33,8 +33,8 @@ function global:au_GetLatest {
     $version = $Matches[1]
 
     @{
-        URL32   = $url32
-        URL64   = $url64
+        URL32   = "https://github.com/$url32"
+        URL64   = "https://github.com/$url64"
         Version = $version
         ReleaseNotes = "${releases}/tag/v${version}"
     }

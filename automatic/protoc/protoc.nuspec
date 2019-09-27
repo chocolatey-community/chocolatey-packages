@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>protoc</id>
-    <version>TO-BE-REPLACED</version>
+    <version>0.0.1</version>
     <title>Protocol Buffers</title>
     <authors>Google</authors>
     <owners>chocolatey, keen, jordigg, drel</owners>
