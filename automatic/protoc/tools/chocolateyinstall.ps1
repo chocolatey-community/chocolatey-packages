@@ -12,4 +12,4 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 
-# Install-BinFile 'protoc' $executableLocation
+Install-BinFile 'protoc' "$toolsDir\bin\protoc.exe"
