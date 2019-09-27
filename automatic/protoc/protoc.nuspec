@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>protoc</id>
+    <version>TO-BE-REPLACED</version>
+    <title>Protocol Buffers</title>
+    <authors>Google</authors>
+    <owners>chocolatey, keen, jordigg, drel</owners>
+    <licenseUrl>https://github.com/protocolbuffers/protobuf/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://developers.google.com/protocol-buffers/</projectUrl>
+    <releaseNotes>TO-BE-REPLACED</releaseNotes>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/protoc</packageSourceUrl>
+    <projectSourceUrl>https://github.com/protocolbuffers/protobuf</projectSourceUrl>
+    <docsUrl>https://developers.google.com/protocol-buffers/</docsUrl>
+    <bugTrackerUrl>https://github.com/protocolbuffers/protobuf/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. You can find protobuf's documentation on the Google Developers site.
+
+## Features
+
+- Flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
+- You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages. 
+- You can even update your data structure without breaking deployed programs that are compiled against the "old" format.]]></description>
+    <summary>Google's data interchange format</summary>
+    <tags>protoc protobuf foss cross-platform</tags>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
