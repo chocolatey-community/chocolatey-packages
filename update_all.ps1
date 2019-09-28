@@ -22,7 +22,8 @@ $Options = [ordered]@{
       'The connection was closed unexpectedly.'
       'package version already exists'
       'already exists on a Simple OData Server'             # https://github.com/chocolatey/chocolatey.org/issues/613
-      'Conflict'      
+      'Conflict'
+      'A system shutdown has already been scheduled'        # https://gist.github.com/choco-bot/a14b1e5bfaf70839b338eb1ab7f8226f#wps-office-free
     )
     RepeatOn      = @(                                      #Error message parts on which to repeat package updater
       'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
