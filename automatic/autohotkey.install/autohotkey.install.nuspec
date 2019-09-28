@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey.install</id>
-    <version>1.1.30.03</version>
+    <version>1.1.31.00</version>
     <title>AutoHotkey (Install)</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
     <licenseUrl>http://ahkscript.org/docs/license.htm</licenseUrl>
     <projectUrl>http://ahkscript.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/autohotkey.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/autohotkey.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description><![CDATA[
 AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
@@ -51,7 +51,7 @@ If no paramater is specified then UNICODE 32-bit or 64-bit will automatically be
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes>https://autohotkey.com/docs/AHKL_ChangeLog.htm</releaseNotes>
     <tags>automation hotkeys scripting windows foss admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autohotkey.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/autohotkey.install</packageSourceUrl>
     <projectSourceUrl>https://github.com/Lexikos/AutoHotkey_L</projectSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
