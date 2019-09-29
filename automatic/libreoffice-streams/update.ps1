@@ -38,7 +38,7 @@ function global:au_GetLatest {
   # Send a generic request to the LibreOffice update service
   function UpdateService.GetLatestVersion($userAgent) {
     $url = "https://update.libreoffice.org/check.php"
-    $answer = Invoke-WebRequest $url -UserAgent $userAgent
+    $answer = Invoke-WebRequest $url -UserAgent $userAgent -UseBasicParsing
     [xml]$xmlAnswer = $answer.Content
     return $xmlAnswer.description.version
   }
@@ -210,7 +210,8 @@ function global:au_GetLatest {
     return $null
   }
 
-  
+  # Generate an array with all the LibreOffice versions that exist from one
+  # branch to another with checksum and valid links ath the time.
   function GetBigArrayMapping($fromBranch, $toBranch) {
 
     # Principle:
@@ -341,6 +342,7 @@ function global:au_GetLatest {
     return $streams
   }
 
+  #$streams = BuildStreams "6.1" "6.2"
   $streams = BuildStreams "6.1" "6.2"
 
   return @{ Streams = $streams }
