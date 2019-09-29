@@ -1,15 +1,14 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop'
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName    = $env:ChocolateyPackageName
-  FileFullPath   = "$toolsDir\TO-BE-REPLACED"
-  FileFullPath64 = "$toolsDir\TO-BE-REPLACED"
-
-  Destination    = $toolsDir
+  PackageName    = $Env:ChocolateyPackageName
+  FileFullPath   = "$toolsPath\TO-BE-REPLACED"
+  FileFullPath64 = "$toolsPath\TO-BE-REPLACED"
+  Destination    = $toolsPath
 }
-
 Get-ChocolateyUnzip @packageArgs
+rm $toolsPath\*.zip -ea 0
 
-Install-BinFile 'protoc' "$toolsDir\bin\protoc.exe"
+Install-BinFile 'protoc' "$toolsPath\bin\protoc.exe"
