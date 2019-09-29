@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/chocolatey-community/chocolatey-coreteampackages/master/icons/vim.svg" width="48" height="48"/> [vim](https://chocolatey.org/packages/vim)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6f5bf8702fdf3944c2d2c26454d531e32dc7d272/icons/vim.svg" width="48" height="48"/> [vim](https://chocolatey.org/packages/vim)
 
 Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
 
