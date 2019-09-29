@@ -300,11 +300,11 @@ function global:au_GetLatest {
       if ($row.Branch -lt $toBranch) {
         $package.PackageName = "libreoffice-still"
         $package.Title = "LibreOffice Still"
-        $package.StreamName = "$($row.Version)-still"
+        $package.StreamName = "$($row.Version).still"
       } else {
         $package.PackageName = "libreoffice-fresh"
         $package.Title = "LibreOffice Fresh"
-        $package.StreamName = "$($row.Version)-fresh"
+        $package.StreamName = "$($row.Version).fresh"
       }
       $package.Version = $row.Version
       $package.URL64 = $row.URL64
@@ -328,7 +328,7 @@ function global:au_GetLatest {
       if ($row.Branch -lt $toBranch) {
         $package.PackageName = "libreoffice-fresh"
         $package.Title = "LibreOffice Fresh"
-        $package.StreamName = "$($row.Version)-fresh"
+        $package.StreamName = "$($row.Version).fresh"
         $streams["$($package.StreamName)"] = $package
       }
     }
