@@ -2,7 +2,7 @@
 $installDir = Get-Content -Path "$toolsDir\installDir"
 $shortversion = '81'
 $statement = '-nsis'
-$exeToRun  = "$installDir\vim\vim$shortversion\uninstal.exe"
+$exeToRun  = "$installDir\vim\vim$shortversion\uninstall.exe"
 # From vim-tux.install.  Make input.
 Set-Content -Path "$env:TEMP\vimuninstallinput" -Value 'y'
 Join-Path $env:windir 'vimtutor.bat' | Remove-Item
