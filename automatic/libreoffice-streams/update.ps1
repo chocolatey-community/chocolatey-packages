@@ -300,9 +300,11 @@ function global:au_GetLatest {
       if ($row.Branch -lt $toBranch) {
         $package.PackageName = "libreoffice-still"
         $package.Title = "LibreOffice Still"
+        $package.StreamName = "$($row.Version)-still"
       } else {
         $package.PackageName = "libreoffice-fresh"
         $package.Title = "LibreOffice Fresh"
+        $package.StreamName = "$($row.Version)-fresh"
       }
       $package.Version = $row.Version
       $package.URL64 = $row.URL64
@@ -316,7 +318,7 @@ function global:au_GetLatest {
       $package.FileType = $package.URL32 -Replace ".*",""
 
       # Add package to streams
-      $streams["$($row.Version)-$($package.PackageName)"] = $package
+      $streams["$($package.StreamName)"] = $package
 
       # Also add still versions to the fresh branch in order to keep the whole
       # history in the fresh branch as well.
@@ -326,7 +328,8 @@ function global:au_GetLatest {
       if ($row.Branch -lt $toBranch) {
         $package.PackageName = "libreoffice-fresh"
         $package.Title = "LibreOffice Fresh"
-        $streams["$($row.Version)-$($package.PackageName)"] = $package
+        $package.StreamName = "$($row.Version)-fresh"
+        $streams["$($package.StreamName)"] = $package
       }
     }
 
