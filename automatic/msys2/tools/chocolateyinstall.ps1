@@ -18,7 +18,7 @@ if (!(Test-Path $install_dir)) {
         Destination    = $install_dir
     }
     Get-ChocolateyUnzip @packageArgs
-    Remove-Item $toolsPath\*.xz -ea 0
+    Remove-Item $toolsDir\*.xz -ea 0
 
     $tarFile = Get-Item "$install_dir\*.tar"
     Get-ChocolateyUnzip $tarFile $install_dir
@@ -35,19 +35,20 @@ if ($proxy = Get-EffectiveProxy) {
 
 #https://github.com/msys2/msys2/wiki/MSYS2-installation
 Write-Host "Starting initialization via msys2_shell.cmd"
-Start-Process "$install_dir\msys2_shell.cmd" -Wait -ArgumentList '-c', exit
+Start-Process -FilePath "$install_dir\msys2_shell.cmd" -NoNewWindow -Wait -ArgumentList "-defterm","-no-start","-c","`"ps -ef|grep '\?'|grep -v grep|awk '{print `$2}'|xargs -r kill`""
+Get-Process | Where-Object Path -ilike "$install_dir*" | Stop-Process -Force
 
 if (!$pp.NoPath) {  Install-ChocolateyPath $pp.InstallDir }
 
 if (!$pp.NoUpdate) {
     Write-Host "Repeating system update until there are no more updates or max 5 iterations"
     $ErrorActionPreference = 'Continue'     #otherwise bash warnings will exit
-    Set-Alias bash "$install_dir\usr\bin\bash.exe"
     while (!$done) {
         Write-Host "`n================= SYSTEM UPDATE $((++$i)) =================`n"
-        bash -lc 'pacman --noconfirm -Syuu | tee /update.log'
+        Start-Process -FilePath "$install_dir\msys2_shell.cmd" -NoNewWindow -Wait -ArgumentList "-defterm","-no-start","-c","`"pacman --noconfirm -Syuu | tee /update.log; ps -ef|grep '\?'|grep -v grep|awk '{print `$2}'|xargs -r kill`""
         $done = (Get-Content $install_dir\update.log) -match 'there is nothing to do' | Measure-Object | ForEach-Object { $_.Count -eq 2 }
         $done = $done -or ($i -ge 5)
+        Get-Process | Where-Object Path -ilike "$install_dir*" | Stop-Process -Force
     }
     Remove-Item $install_dir\update.log -ea 0
 }
