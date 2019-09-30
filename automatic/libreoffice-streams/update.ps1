@@ -236,12 +236,11 @@ function global:au_GetLatest {
 
       if ($release -lt $fromVersion) {
         continue
-      } elseif ($branch -gt $toVersion) {
+      } elseif ($release -gt $toVersion) {
         break
       }
 
       $row = $table.NewRow()
-      $row.Branch = $branch
       $row.Version = $release
       $row.Build = $releasesMapping.$release
 
@@ -286,7 +285,13 @@ function global:au_GetLatest {
       # The package variable needs to be a hashtable. Therefore, we cannot use
       # an OrderedDictionary. Tradeoff: The dictionary keys will unfortunately
       # appear in random order.
-      $package = $row
+      # $row is a DataRow, we have to convert manually to a hashtable.
+      $package = @{}
+      $package.Version = $row.Version
+      $package.URL64 = $row.URL64
+      $package.Checksum64 = $row.Checksum64
+      $package.URL32 = $row.URL32
+      $package.Checksum32 = $row.Checksum32
       $package.FileType = $package.URL32 -Replace ".*",""
       if ($branch -eq "still") {
         $package.PackageName = "libreoffice-still"
@@ -305,13 +310,14 @@ function global:au_GetLatest {
 
   $stillVersionFrom = ((Get-Content .\libreoffice-streams.json) | ConvertFrom-Json).still
   $stillVersionTo = GetLatestStillVersionFromLibOUpdateChecker
+  
   $freshVersionFrom = ((Get-Content .\libreoffice-streams.json) | ConvertFrom-Json).fresh
   $freshVersionTo = GetLatestFreshVersionFromLibOUpdateChecker
-  
+ 
   $streams = New-Object -TypeName System.Collections.Specialized.OrderedDictionary
   AddLibOVersionsToStreams $streams "still" $stillVersionFrom $stillVersionTo
   AddLibOVersionsToStreams $streams "fresh" $freshVersionFrom $freshVersionTo
-
+  
   return @{ Streams = $streams }
 }
 
