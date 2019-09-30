@@ -38,7 +38,7 @@ function global:au_GetLatest {
   # Send a generic request to the LibreOffice update service
   function GetLatestVersionFromLibOUpdateChecker($userAgent) {
     $url = "https://update.libreoffice.org/check.php"
-    $request = [System.Net.HttpWebRequest]::Create("$url")
+    $request = [System.Net.WebRequest]::Create($url)
     $request.UserAgent = $userAgent
     $s = $request.GetResponse().GetResponseStream()
     $sr = New-Object -TypeName System.IO.StreamReader($s)
@@ -69,8 +69,13 @@ function global:au_GetLatest {
   # Get all the links from a MirrorBrain instance without the copyright
   # and owner links
   function GetAllBuildsFromMirrorBrainUrl($url) {
-    $page = Invoke-WebRequest -Uri $url -UseBasicParsing
-    $linksArray = @($page.Links)
+
+    $request = [System.Net.WebRequest]::Create($url)
+    $s = $request.GetResponse().GetResponseStream()
+    $sr = New-Object -TypeName System.IO.StreamReader($s)
+    $answer = $sr.ReadToEnd()
+    [xml]$xmlAnswer = [System.Net.WebUtility]::HtmlDecode($answer)
+    $linksArray =  $xmlAnswer.GetElementsByTagName("a")
     # ? outputs all items that conform with condition (here: TryParse returning
     # a boolean). As if it was "foreach { if (...) {return ... } }"
     # The returned values are still a string that must be parsed to a Version object.
@@ -99,6 +104,15 @@ function global:au_GetLatest {
     if ([string]::IsNullOrEmpty($url)) {
       return $null
     }
+
+    # We are not using the $url/sha256 suffix because that file is missing
+    # from downloadarchive :/
+    #$request = [System.Net.WebRequest]::Create("$url.mirrorlist")
+    #$s = $request.GetResponse().GetResponseStream()
+    #$sr = New-Object -TypeName System.IO.StreamReader($s)
+    #$answer = $sr.ReadToEnd()
+    
+
     [xml]$page = Invoke-WebRequest -Uri "$url.mirrorlist" -UseBasicParsing
     return $page.html.body.div.div.ul.li[4].tt
   }
@@ -217,11 +231,9 @@ function global:au_GetLatest {
   # version to another with checksums and valid links at the time.
   function GetLibOVersions($fromVersion, $toVersion) {
 
-    # Define table
+    # Define table and columns
     # src.: https://blogs.msdn.microsoft.com/rkramesh/2012/02/01/creating-table-using-powershell/
     $table = New-Object System.Data.DataTable
-
-    # Define and add columns
     $table.columns.add($(New-Object System.Data.DataColumn Branch))
     $table.columns.add($(New-Object System.Data.DataColumn Version))
     $table.columns.add($(New-Object System.Data.DataColumn Build))
