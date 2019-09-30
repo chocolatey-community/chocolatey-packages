@@ -38,8 +38,11 @@ function global:au_GetLatest {
   # Send a generic request to the LibreOffice update service
   function GetLatestVersionFromLibOUpdateChecker($userAgent) {
     $url = "https://update.libreoffice.org/check.php"
-    $answer = Invoke-WebRequest $url -UserAgent $userAgent -UseBasicParsing
-    [xml]$xmlAnswer = $answer.Content
+    $request = [System.Net.HttpWebRequest]::Create("$url")
+    $request.UserAgent = $userAgent
+    $s = $request.GetResponse().GetResponseStream()
+    $sr = New-Object -TypeName System.IO.StreamReader($s)
+    [xml]$xmlAnswer = $sr.ReadToEnd()
     return $xmlAnswer.description.version
   }
 
