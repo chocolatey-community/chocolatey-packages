@@ -334,7 +334,8 @@ function global:au_GetLatest {
     }
 
     # Sort streams in reverse order (latest versions above) in order to comply
-    # with assumption made by AU, the chocolatey extension to auto update
+    # with assumption made by AU that streams are expected to be sorted
+    # starting with the most recent one.
     $sortedStreams = $streams.GetEnumerator() | Sort-Object -Property Name -Descending
     $streams = [ordered]@{}
     for ($i = 0; $i -lt $sortedStreams.count; $i++) {
