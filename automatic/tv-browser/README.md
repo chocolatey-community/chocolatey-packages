@@ -1,9 +1,28 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/tv-browser.svg" width="48" height="48"/> [tv-browser](https://chocolatey.org/packages/tv-browser)
 
 
-TV-Browser is a digital TV guide.
+TV-Browser is a digital TV guide. It gets the daily TV program from the internet and shows it clearly aranged like a printed TV guide. An internet connection is only necessary during the data update.
 
-TV-Browser gets the daily TV program from the internet and shows it clearly aranged like a printed TV guide. An internet connection is only necessary during the data update.
+## Features
+
+- Blog this! - Simply do a Blog entry by one mouse click.
+- Calendar Export - Exports programs to a scheduler such as "Outlook".
+- Clipboard - To collect broadcasts and forwards cluster to plugins.
+- Send e-mail - Send program info via e-mail.
+- Favorite programs - Manages your favourite programs.
+- View List - Displays the available program data in a list.
+- Genres - Shows the program genres in the tree view.
+- Growl - Growl-Plugin
+- Marker Plugin - Easy mark programs or add additional lists for marking programs with different priorities.
+- News - TV-Browser news.
+- Print program - Prints the TV program.
+- Program information - Shows detailed information about one program.
+- Recording Control - Enables TV-Browser to control external applications or devices e.g. for recording. List with examples.
+- Reminder - To remind on a program, you want to see.
+- Search - Search for programs.
+- Showview number calculator - To generate the "Showview" numbers.
+- TV Rater - To rate broadcasts and to see reviews from other users.
+- WebPlugin - Hand over broadcastings to web pages (e.g. for searching by "Google") 
 
 ## Notes
 
