@@ -1,8 +1,3 @@
-$pp = Get-PackageParameters
-
-Set-PackageParameters
-$InstallPath = $pp.InstallDir
-
 function Set-PackageParameters {
     $is64 = (Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true'
     $dir_name = if ($is64) { 'msys64' } else { 'msys32' }
@@ -89,3 +84,8 @@ function Set-Msys2Proxy {
     Write-Host "Using CLI proxy:" $proxy
     $Env:http_proxy = $Env:https_proxy = $proxy
 }
+
+$pp = Get-PackageParameters
+
+Set-PackageParameters
+$InstallPath = $pp.InstallDir
