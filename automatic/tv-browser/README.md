@@ -28,3 +28,4 @@ TV-Browser is a digital TV guide. It gets the daily TV program from the internet
 
 - You can not use TV-Browser to watch TV.
 
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/automatic/tv-browser/screenshot.png)
