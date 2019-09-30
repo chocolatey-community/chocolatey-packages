@@ -3,25 +3,28 @@
   <metadata>
     <!-- IconUrl: Skip check -->
     <id>protoc</id>
-    <version>0.0.1</version>
+    <version>3.9.2</version>
     <title>Protocol Buffers</title>
     <authors>Google</authors>
     <owners>chocolatey, keen, jordigg, drel</owners>
     <licenseUrl>https://github.com/protocolbuffers/protobuf/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://developers.google.com/protocol-buffers/</projectUrl>
-    <releaseNotes>TO-BE-REPLACED</releaseNotes>
+    <releaseNotes>https://github.com/protocolbuffers/protobuf/releases/tag/v3.9.2</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/protoc</packageSourceUrl>
     <projectSourceUrl>https://github.com/protocolbuffers/protobuf</projectSourceUrl>
     <docsUrl>https://developers.google.com/protocol-buffers/</docsUrl>
     <bugTrackerUrl>https://github.com/protocolbuffers/protobuf/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description><![CDATA[Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data. You can find protobuf's documentation on the Google Developers site.
+    <description><![CDATA[Protocol Buffers (a.k.a., protobuf) are Google's language-neutral, platform-neutral, extensible mechanism for serializing structured data.
+
+This is chocolatey package for the prebuilt [Protocol Buffers Compiler](https://developers.google.com/protocol-buffers/docs/downloads).
 
 ## Features
 
 - Flexible, efficient, automated mechanism for serializing structured data – think XML, but smaller, faster, and simpler.
-- You define how you want your data to be structured once, then you can use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages. 
-- You can even update your data structure without breaking deployed programs that are compiled against the "old" format.]]></description>
+- Define how you want your data to be structured once, then use special generated source code to easily write and read your structured data to and from a variety of data streams and using a variety of languages. 
+- Update your data structure without breaking deployed programs that are compiled against the "old" format.
+]]></description>
     <summary>Google's data interchange format</summary>
     <tags>protoc protobuf foss cross-platform</tags>
     <dependencies>
