@@ -39,6 +39,7 @@ TV-Browser is a digital TV guide. It gets the daily TV program from the internet
 
 - You can not use TV-Browser to watch TV.
 
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/automatic/tv-browser/screenshot.png)
 ]]></description>
     <summary>TV-Browser is a digital TV guide.</summary>
     <releaseNotes />
@@ -46,8 +47,8 @@ TV-Browser is a digital TV guide. It gets the daily TV program from the internet
     <tags>foss cross-platform tv-browser tv television guide admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/tv-browser</packageSourceUrl>
     <dependencies>
-      <dependency id="javaruntime"/>
-      <!-- cinst adoptopenjdk -ia ADDLOCAL=FeatureMain,FeatureJavaHome,FeatureEnvironment,FeatureOracleJavaSoft -->
+      <dependency id="adoptopenjdk11jre" />
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
   <files>
