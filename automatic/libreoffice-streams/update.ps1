@@ -36,36 +36,36 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
 
   # Send a generic request to the LibreOffice update service
-  function UpdateService.GetLatestVersion($userAgent) {
+  function GetLatestVersionFromLibOUpdateChecker($userAgent) {
     $url = "https://update.libreoffice.org/check.php"
     $answer = Invoke-WebRequest $url -UserAgent $userAgent -UseBasicParsing
     [xml]$xmlAnswer = $answer.Content
     return $xmlAnswer.description.version
   }
 
-  # Send a request to the LibreOffice update service to get the latest stable
+  # Send a request to the LibreOffice update service to get the latest Still
   # version
-  function UpdateService.GetLatestStableVersion() {
+  function GetLatestStillVersionFromLibOUpdateChecker() {
     # We are taking the build UUID of 3.5.7. This is needed because the update
     # service is determining which branch to take depending on the third dot
     # number. If the latest fresh release has a third dot number greater or
     # equal to the third dot number we specified (here 7), the fresh branch is
-    # returned, otherwise this is the stable branch.
+    # returned, otherwise this is the Still branch.
     # src.: https://web.archive.org/web/20190806174607/https://cgit.freedesktop.org/libreoffice/website/tree/check.php?h=update&id=c0c4940e998a0f5fbeb57910b1dfe6778226c51b#n665
-    return UpdateService.GetLatestVersion "LibreOffice 0 (3215f89-f603614-ab984f2-7348103-1225a5b; Chocolatey; x86; )"
+    return GetLatestVersionFromLibOUpdateChecker "LibreOffice 0 (3215f89-f603614-ab984f2-7348103-1225a5b; Chocolatey; x86; )"
   }
 
   # Send a request to the LibreOffice update service to get the latest fresh
   # version
-  function UpdateService.GetLatestFreshVersion() {
+  function GetLatestFreshVersionFromLibOUpdateChecker() {
     # We are taking the build UUID of 3.5.0.1 here for the same explanation
     # as before.
-    return UpdateService.GetLatestVersion "LibreOffice 0 (b6c8ba5-8c0b455-0b5e650-d7f0dd3-b100c87; Chocolatey; x86; )"
+    return GetLatestVersionFromLibOUpdateChecker "LibreOffice 0 (b6c8ba5-8c0b455-0b5e650-d7f0dd3-b100c87; Chocolatey; x86; )"
   }
 
   # Get all the links from a MirrorBrain instance without the copyright
   # and owner links
-  function MirrorBrain.GetAllBuildsFromUrl($url) {
+  function GetAllBuildsFromMirrorBrainUrl($url) {
     $page = Invoke-WebRequest -Uri $url -UseBasicParsing
     $linksArray = @($page.Links)
     # ? outputs all items that conform with condition (here: TryParse returning
@@ -74,7 +74,7 @@ function global:au_GetLatest {
     return @($linksArray | % href | % {$_ -Split '/' } | ? { [version]::TryParse($_, [ref]($__)) })
   }
 
-  function MirrorBrain.GetLatestVersion($builds) {
+  function GetAllBuildsFromMirrorBrainBuilds($builds) {
     # Declaring a [version] typed variable is needed because TryParse expects a
     # reference. The object must thus exist.
     [version]$buildVersion = New-Object -TypeName System.Version
@@ -92,7 +92,7 @@ function global:au_GetLatest {
     return @{fresh = $freshVersion; still = $stillVersion}
   }
 
-  function GetBuildHash($url) {
+  function GetBuildHashFromMirrorBrainUrl($url) {
     if ([string]::IsNullOrEmpty($url)) {
       return $null
     }
@@ -124,12 +124,12 @@ function global:au_GetLatest {
     return $branchVersion
   }
 
-  function GetReleasesToBuildsMapping($builds) {
-    # Get correspondance between release and build versions. This step is
-    # needed to determinate the URL and get releases without CDN.
-    # e.g. 6.2.0 => 6.2.0.3
-    $mapping = [ordered]@{}
-    [version]$buildVersion = New-Object -TypeName System.Version
+  # Get correspondance between release and build versions
+  # e.g. 6.2.0 => 6.2.0.3
+  function BuildLibOReleasesToBuildsMapping($builds) {
+
+    $mapping = New-Object -TypeName System.Collections.Specialized.OrderedDictionary  
+    $buildVersion = New-Object -TypeName System.Version
 
     # The last one is never populated, prevent this by adding one additional
     # different item in order for the loop to work properly.
@@ -146,7 +146,6 @@ function global:au_GetLatest {
 
       $previousReleaseId = $releaseId
       $previousBuildId = $build
-
     }
 
     return $mapping
@@ -188,7 +187,7 @@ function global:au_GetLatest {
 
     [System.Collections.ArrayList]$filenames = @()
 
-    # Test all possible URL variants with filename patterns and arch patterns
+    # Build all possible URL variants with filename patterns and arch patterns
     foreach ($filename in $filenamePatterns) {
       foreach ($archPattern in $filenameArchPatterns) {
         # Replace template URL by assuming the release id is used, e.g. 6.2.0
@@ -198,6 +197,7 @@ function global:au_GetLatest {
       }
     }
 
+    # test all the filename variants we crafted
     foreach ($filename in $filenames) {
       $completeUrl = "${urlFolder}${filename}"
       Write-Host "Testing $completeUrl..."
@@ -211,13 +211,8 @@ function global:au_GetLatest {
   }
 
   # Generate an array with all the LibreOffice versions that exist from one
-  # branch to another with checksum and valid links ath the time.
-  function GetBigArrayMapping($fromBranch, $toBranch) {
-
-    # Principle:
-    # All builds are located on the stable release, we are just replacing the
-    # build URLs from the stable server with URLs from CDN servers when
-    # available.
+  # version to another with checksums and valid links at the time.
+  function GetLibOVersions($fromVersion, $toVersion) {
 
     # Define table
     # src.: https://blogs.msdn.microsoft.com/rkramesh/2012/02/01/creating-table-using-powershell/
@@ -232,23 +227,20 @@ function global:au_GetLatest {
     $table.columns.add($(New-Object System.Data.DataColumn Url32))
     $table.columns.add($(New-Object System.Data.DataColumn Checksum32))
 
+    # Get all versions from the downloadarchive according to the limits
+    # specified above.
     $url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
-    $builds = MirrorBrain.GetAllBuildsFromUrl $url | Sort-Object
-    $releasesMapping = GetReleasesToBuildsMapping $builds
-
+    $builds = GetAllBuildsFromMirrorBrainUrl $url | Sort-Object
+    $releasesMapping = BuildLibOReleasesToBuildsMapping $builds
     foreach ($release in $releasesMapping.Keys) {
 
-      # Check limits
-      $branch = GetBranchVersion $release
-      if ($branch -lt $fromBranch) {
+      if ($release -lt $fromVersion) {
         continue
-      } elseif ($branch -gt $toBranch) {
+      } elseif ($branch -gt $toVersion) {
         break
       }
 
-      # Create a row
       $row = $table.NewRow()
-
       $row.Branch = $branch
       $row.Version = $release
       $row.Build = $releasesMapping.$release
@@ -256,20 +248,22 @@ function global:au_GetLatest {
       # Find 64 bits version if any. At the beginning of the LibreOffice
       # project, there weren't 64 bits versions for Windows.
       $row.Url64 = GetFilename $url $releasesMapping $release "x64"
-      $row.Checksum64 = GetBuildHash $row.Url64
-      
-      $row.Url32 = GetFilename $url $releasesMapping $release "x86"
-      $row.Checksum32 = GetBuildHash $row.Url32
+      $row.Checksum64 = GetBuildHashFromMirrorBrainUrl $row.Url64
 
-      # Add the row to the table
+      $row.Url32 = GetFilename $url $releasesMapping $release "x86"
+      $row.Checksum32 = GetBuildHashFromMirrorBrainUrl $row.Url32
+
       $table.Rows.Add($row)
     }
 
-    # At TDF, all released builds in the stable folder are those that are being
-    # under CDN. Change link to those in CDN instead.
+    # If versions are under CDN use the links from the CDN instead.
+    # We assume, all released builds in the stable folder are those that are
+    # being under CDN.
     $url = 'https://download.documentfoundation.org/libreoffice/stable/'
-    $builds = MirrorBrain.GetAllBuildsFromUrl $url | Sort-Object
-    $releasesMapping = [ordered]@{}
+    $builds = GetAllBuildsFromMirrorBrainUrl $url | Sort-Object
+    # $releasesMapping is an ordered dictionnary containing
+    # mapping like 6.2.0 => 6.2.0.3
+    $releasesMapping = New-Object -TypeName System.Collections.Specialized.OrderedDictionary  
     foreach ($release in $builds) {
       $releasesMapping.Add($release, $release)
     }
@@ -285,69 +279,38 @@ function global:au_GetLatest {
     return $table
   }
 
-  function BuildStreams($fromBranch, $toBranch) {
+  function AddLibOVersionsToStreams($streams, $branch, $from, $to) {
 
-    $table = GetBigArrayMapping $fromBranch $toBranch
-
-    # Create an OrderedDictionary dictionary for the streams
-    $streams = [ordered]@{}
-    
-    foreach ($row in $table) {
+    $versions = GetLibOVersions $from $to
+    foreach ($row in $versions) {
       # The package variable needs to be a hashtable. Therefore, we cannot use
-      # an OrderedDictionary with the [ordered] keyword. The dictionary keys
-      # will unfortunately appear in random order.
-      $package = @{}
-      if ($row.Branch -lt $toBranch) {
+      # an OrderedDictionary. Tradeoff: The dictionary keys will unfortunately
+      # appear in random order.
+      $package = $row
+      $package.FileType = $package.URL32 -Replace ".*",""
+      if ($branch -eq "still") {
         $package.PackageName = "libreoffice-still"
         $package.Title = "LibreOffice Still"
-        $package.StreamName = "$($row.Version).still"
       } else {
         $package.PackageName = "libreoffice-fresh"
         $package.Title = "LibreOffice Fresh"
-        $package.StreamName = "$($row.Version).fresh"
       }
-      $package.Version = $row.Version
-      $package.URL64 = $row.URL64
-      $package.Checksum64 = $row.Checksum64
-      $package.URL32 = $row.URL32
-      $package.Checksum32 = $row.Checksum32
-
-      # Remove package type. Msi installers do not need a chocolatey filetype.
-      # This change is needed to detect the installer arguments and change
-      # installer parameters in au_SearchReplace.
-      $package.FileType = $package.URL32 -Replace ".*",""
-
+      
       # Add package to streams
-      $streams["$($package.StreamName)"] = $package
-
-      # Also add still versions to the fresh branch in order to keep the whole
-      # history in the fresh branch as well.
-      # If the limits are branch 6.1 and 6.2, this adds the 6.1 version to
-      # the fresh branch as well, because with the condition from above, this
-      # was only adding to the still branch.
-      if ($row.Branch -lt $toBranch) {
-        $package.PackageName = "libreoffice-fresh"
-        $package.Title = "LibreOffice Fresh"
-        $package.StreamName = "$($row.Version).fresh"
-        $streams["$($package.StreamName)"] = $package
-      }
-    }
-
-    # Sort streams in reverse order (latest versions above) in order to comply
-    # with assumption made by AU that streams are expected to be sorted
-    # starting with the most recent one.
-    $sortedStreams = $streams.GetEnumerator() | Sort-Object -Property Name -Descending
-    $streams = [ordered]@{}
-    for ($i = 0; $i -lt $sortedStreams.count; $i++) {
-      Write-Host "DEBUG:::: $($sortedStreams.Name[$i])"
-      $streams.Add($sortedStreams.Name[$i], $sortedStreams.Value[$i])
+      $streams.Add("$($package.Version).$branch", $package)
     }
 
     return $streams
   }
 
-  #$streams = BuildStreams "6.1" "6.2"
-  $streams = BuildStreams "6.1" "6.2"
+  $stillVersionFrom = ((Get-Content .\libreoffice-streams.json) | ConvertFrom-Json).still
+  $stillVersionTo = GetLatestStillVersionFromLibOUpdateChecker
+  $freshVersionFrom = ((Get-Content .\libreoffice-streams.json) | ConvertFrom-Json).fresh
+  $freshVersionTo = GetLatestFreshVersionFromLibOUpdateChecker
+  
+  $streams = New-Object -TypeName System.Collections.Specialized.OrderedDictionary
+  AddLibOVersionsToStreams $streams "still" $stillVersionFrom $stillVersionTo
+  AddLibOVersionsToStreams $streams "fresh" $freshVersionFrom $freshVersionTo
 
   return @{ Streams = $streams }
 }
