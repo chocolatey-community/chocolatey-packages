@@ -1,10 +1,10 @@
-function Set-PackageParameters {
-    $is64 = (Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true'
-    $dir_name = if ($is64) { 'msys64' } else { 'msys32' }
+$pp = Get-PackageParameters
 
-    if (!$pp.InstallDir) { $pp.InstallDir = "{0}\{1}" -f (Get-ToolsLocation), $dir_name  }
-    $pp | Export-Clixml $toolsPath\pp.xml
-}
+$is64 = (Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true'
+$dir_name = if ($is64) { 'msys64' } else { 'msys32' }
+if (!$pp.InstallDir) { $pp.InstallDir = "{0}\{1}" -f (Get-ToolsLocation), $dir_name  }
+$pp | Export-Clixml $toolsPath\pp.xml
+$InstallPath = $pp.InstallDir
 
 function Invoke-Msys2Shell($Arguments) {
     if (![string]::IsNullOrWhiteSpace($Arguments)) { $Arguments += "; " }
@@ -15,7 +15,7 @@ function Invoke-Msys2Shell($Arguments) {
         NoNewWindow  = $true
         Wait         = $true
         ArgumentList = "-defterm", "-no-start", "-c", "`"$Arguments`""
-    }    
+    }
     Write-Host "Invoking msys2 shell command:" $params.ArgumentList
     Start-Process @params
 }
@@ -84,8 +84,3 @@ function Set-Msys2Proxy {
     Write-Host "Using CLI proxy:" $proxy
     $Env:http_proxy = $Env:https_proxy = $proxy
 }
-
-$pp = Get-PackageParameters
-
-Set-PackageParameters
-$InstallPath = $pp.InstallDir
