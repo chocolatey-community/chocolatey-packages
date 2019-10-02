@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/tv-browser.svg" width="48" height="48"/> [tv-browser](https://chocolatey.org/packages/tv-browser)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tv-browser.svg" width="48" height="48"/> [tv-browser](https://chocolatey.org/packages/tv-browser)
 
 
 TV-Browser is a digital TV guide. It gets the daily TV program from the internet and shows it clearly aranged like a printed TV guide. An internet connection is only necessary during the data update.
