@@ -1,8 +1,8 @@
 ﻿import-module au
 Import-Module $env:chocolateyInstall\helpers\chocolateyInstaller.psm1
 
-$domain   = 'https://www.torproject.org'
-$releases = "$domain/download/languages/"
+$releases = "https://www.torproject.org/download/languages/"
+$domain   = $releases -split '(?<=//.+)/' | select -First 1
 
 function GetChecksum() {
   param($url)
@@ -38,7 +38,7 @@ function global:au_GetLatest {
   $allExes          = $download_page.Links | ? href -match "\.exe$" | select -expand href
   $usUrl            = $allExes | ? { $_ -match "torbrowser-install.*en-US\.exe$" } | select -First 1
   $version          = $usUrl -split '\/' | select -last 1 -skip 1
-  [array]$all64Urls = $allExes | ? { $_ -match $version -and $_ -match "Win64" }
+  [array]$all64Urls = $allExes | ? { $_ -match $version -and $_ -match "Win64" } | % { $domain + $_}
   if ($all64Urls.Count -eq 0) {
     throw "Missing urls was found for either 32 bit or 64 bit"
   }
