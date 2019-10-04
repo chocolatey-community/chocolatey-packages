@@ -1,7 +1,7 @@
 import-module au
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://download.calibre-ebook.com/3.html'
+$releases = 'https://download.calibre-ebook.com/4.html'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -30,7 +30,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
     $versionHyperlink = $download_page.links | select -First 1
-    if ($versionHyperlink.Title -notmatch 'Release (3[\d\.]+)' ) { throw "Calibre version 3.x not found on $releases" }
+    if ($versionHyperlink.Title -notmatch 'Release (4[\d\.]+)' ) { throw "Calibre version 3.x not found on $releases" }
 
     $version = $versionHyperlink.InnerText
     $url32   = 'https://download.calibre-ebook.com/<version>/calibre-<version>.msi'
