@@ -18,7 +18,7 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
 
-Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
+Example: `choco install vscode.install --params "/NoDesktopIcon /DontAddToPath"`
 
 ## Notes
 
@@ -26,5 +26,5 @@ Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
 * For disabling the auto-update functionality see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
 
 
-![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/vscode/screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/automatic/vscode/screenshot.png)
 

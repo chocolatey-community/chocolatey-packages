@@ -1,22 +1,6 @@
-<?xml version="1.0"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>vscode</id>
-    <title>Visual Studio Code</title>
-    <version>1.39.1</version>
-    <authors>Microsoft</authors>
-    <owners>chocolatey</owners>
-    <projectUrl>https://code.visualstudio.com</projectUrl>
-    <projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vscode</packageSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png</iconUrl>
-    <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
-    <docsUrl>https://code.visualstudio.com/docs</docsUrl>
-    <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Visual Studio Code</summary>
-    <description><![CDATA[
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" width="48" height="48"/> [vscode.install](https://chocolatey.org/packages/vscode)
+
+
 Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
 
 ## Features
@@ -34,7 +18,7 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
 
-Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
+Example: `choco install vscode.install --params "/NoDesktopIcon /DontAddToPath"`
 
 ## Notes
 
@@ -44,11 +28,3 @@ Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
 
 ![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/automatic/vscode/screenshot.png)
 
-]]></description>
-    <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
-    <dependencies>
-      <dependency id="vscode.install" version="[1.39.1]" />
-    </dependencies>
-    <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
-  </metadata>
-</package>
