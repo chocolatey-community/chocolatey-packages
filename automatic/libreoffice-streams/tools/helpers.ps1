@@ -274,7 +274,8 @@ function GetLibOVersionsIntervalOnly($fromVersion, $toVersion) {
 }
 
 function GetLibOExactVersion($version) {
-    return ,GetLibOVersions $version $version
+    $versions = GetLibOVersions $version $version
+    return ,$versions
 }
 
 function AddLibOVersionsToStreams($streams, $branch, $from, $to) {
