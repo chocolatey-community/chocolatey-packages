@@ -30,7 +30,7 @@ function global:au_SearchReplace {
   if ($Latest.FileType -eq "exe") {
     $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/S'"
   } else {
-    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/qn /norestart /l*v `"`$(`$env:TEMP)\$($Latest.PackageName).`$(`$env:chocolateyPackageVersion).MsiInstall.log`"'"
+    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/qn /passive /norestart /l*v `"{0}\install.log`"' -f `"`$Env:TEMP\chocolatey\`$Env:ChocolateyPackageName\`$Env:ChocolateyPackageVersion`"'"
   }
   $filesToPatchHashTable[".\tools\chocolateyInstall.ps1"] = $linesToPatch
 
