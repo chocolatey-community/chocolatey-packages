@@ -1,5 +1,8 @@
 import-module au
 
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\tools\"
+. $toolsDir\helpers.ps1
+
 function global:au_BeforeUpdate {
   if ($Latest.Title -like '*Fresh*') {
     cp "$PSScriptRoot\README.fresh.md" "$PSScriptRoot\README.md" -Force
@@ -40,9 +43,6 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-
-  $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\tools\"
-  . $toolsDir\helpers.ps1
 
   $global:streamsJson = (Get-Content .\libreoffice-streams.json) | ConvertFrom-Json
 
