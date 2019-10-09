@@ -33,6 +33,11 @@ function global:au_SearchReplace {
   return $filesToPatchHashTable
 }
 
+function global:au_AfterUpdate {
+  # Patch the json stream file
+  $global:streamsJson | ConvertTo-Json | Set-Content .\libreoffice-streams.json
+}
+
 function global:au_GetLatest {
 
   # Send a generic request to the LibreOffice update service
@@ -107,14 +112,12 @@ function global:au_GetLatest {
 
     # We are not using the $url/sha256 suffix because that file is missing
     # from downloadarchive :/
-    #$request = [System.Net.WebRequest]::Create("$url.mirrorlist")
-    #$s = $request.GetResponse().GetResponseStream()
-    #$sr = New-Object -TypeName System.IO.StreamReader($s)
-    #$answer = $sr.ReadToEnd()
-    
+    $request = [System.Net.WebRequest]::Create("$url.sha256")
+    $s = $request.GetResponse().GetResponseStream()
+    $sr = New-Object -TypeName System.IO.StreamReader($s)
+    $answer = $sr.ReadToEnd()
 
-    [xml]$page = Invoke-WebRequest -Uri "$url.mirrorlist" -UseBasicParsing
-    return $page.html.body.div.div.ul.li[4].tt
+    return $answer.Split(" ")[0]
   }
 
   function IsUrlValid($url) {
@@ -234,7 +237,6 @@ function global:au_GetLatest {
     # Define table and columns
     # src.: https://blogs.msdn.microsoft.com/rkramesh/2012/02/01/creating-table-using-powershell/
     $table = New-Object System.Data.DataTable
-    $table.columns.add($(New-Object System.Data.DataColumn Branch))
     $table.columns.add($(New-Object System.Data.DataColumn Version))
     $table.columns.add($(New-Object System.Data.DataColumn Build))
     $table.columns.add($(New-Object System.Data.DataColumn Url64))
@@ -276,7 +278,7 @@ function global:au_GetLatest {
     $url = 'https://download.documentfoundation.org/libreoffice/stable/'
     $builds = GetAllBuildsFromMirrorBrainUrl $url | Sort-Object
     # $releasesMapping is an ordered dictionnary containing
-    # mapping like 6.2.0 => 6.2.0.3
+    # mappings like 6.2.0 => 6.2.0.3
     $releasesMapping = New-Object -TypeName System.Collections.Specialized.OrderedDictionary  
     foreach ($release in $builds) {
       $releasesMapping.Add($release, $release)
@@ -290,13 +292,35 @@ function global:au_GetLatest {
       }
     }
 
-    return $table
+    # Powershell doesn't have all the enumerable tools implemented with the
+    # .NET collections reponsible of the proper unrolling arrays/collections,
+    # which means if we want our DataTable to be returned under this type,
+    # we need to wrap the collection into a dummy array with a heading comma
+    # operator.
+    # src.: https://stackoverflow.com/a/1918455/3514658
+    return ,$table
+  }
+
+  function GetLibOVersionsIntervalOnly($fromVersion, $toVersion) {
+    
+    $versions = GetLibOVersions $from $to
+
+    # Discard the first version since it is the current one that has already
+    # been pushed to Chocolatey.
+    if ($versions.Rows.Count -gt 0) {
+      $versions.Rows[0].Delete()
+    }
+
+    # Casting needed for the same reason as above
+    return ,$versions
   }
 
   function AddLibOVersionsToStreams($streams, $branch, $from, $to) {
 
-    $versions = GetLibOVersions $from $to
+    $versions = GetLibOVersionsIntervalOnly $from $to
+
     foreach ($row in $versions) {
+
       # The package variable needs to be a hashtable. Therefore, we cannot use
       # an OrderedDictionary. Tradeoff: The dictionary keys will unfortunately
       # appear in random order.
@@ -316,23 +340,30 @@ function global:au_GetLatest {
         $package.Title = "LibreOffice Fresh"
       }
       
-      # Add package to streams
+      # Add package to streams. By adding the branch name to the hashtable
+      # key name, we are hacking the way AU streams are working here
+      # (bypassing hashtables key unicity) in order to avoid gaps when
+      # updating LibreOffice versions.
       $streams.Add("$($package.Version).$branch", $package)
     }
 
     return $streams
   }
 
-  $stillVersionFrom = ((Get-Content .\libreoffice-streams.json) | ConvertFrom-Json).still
+  $global:streamsJson = (Get-Content .\libreoffice-streams.json) | ConvertFrom-Json
+
+  $stillVersionFrom = $global:streamsJson.still
   $stillVersionTo = GetLatestStillVersionFromLibOUpdateChecker
-  
-  $freshVersionFrom = ((Get-Content .\libreoffice-streams.json) | ConvertFrom-Json).fresh
+  $freshVersionFrom = $global:streamsJson.fresh
   $freshVersionTo = GetLatestFreshVersionFromLibOUpdateChecker
- 
+
+  $global:streamsJson.still = $stillVersionTo
+  $global:streamsJson.fresh = $freshVersionTo
+
   $streams = New-Object -TypeName System.Collections.Specialized.OrderedDictionary
   AddLibOVersionsToStreams $streams "still" $stillVersionFrom $stillVersionTo
   AddLibOVersionsToStreams $streams "fresh" $freshVersionFrom $freshVersionTo
-  
+
   return @{ Streams = $streams }
 }
 
