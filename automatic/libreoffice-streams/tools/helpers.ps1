@@ -159,7 +159,7 @@ function GetFilename($url, $releasesMapping, $release, $arch) {
   # No need to go further if the folder doesn't even exist. i.e. typically
   # the case when only 32 bits version are available.
   if (!(IsUrlValid "$urlFolder")) {
-    Write-Host "$urlFolder doesn't exist"
+    Write-Debug "$urlFolder doesn't exist"
     return $null
   }
 
@@ -178,10 +178,10 @@ function GetFilename($url, $releasesMapping, $release, $arch) {
   # test all the filename variants we crafted
   foreach ($filename in $filenames) {
     $completeUrl = "${urlFolder}${filename}"
-    Write-Host "Testing $completeUrl..."
+    Write-Debug "Testing $completeUrl..."
     # As soon we have a valid URL, break the loop and go to the next release
     if (IsUrlValid "$completeUrl") {
-      Write-Host "Testing $completeUrl is valid."
+      Write-Debug "Testing $completeUrl is valid."
       return "$completeUrl"
     }
   }
