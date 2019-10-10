@@ -29,7 +29,7 @@ Example: `choco install kitty --params "/Portable"`
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/kitty/screenshot.png)
 ]]></description>
-    <summary>kitty</summary>
+    <summary>KiTTY is a fork of PuTTY, the Telnet and SSH client for Windows, with many extra features</summary>
     <releaseNotes>See https://github.com/cyd01/KiTTY/releases</releaseNotes>
     <copyright>Cyril Dupont</copyright>
     <tags>foss telnet ssh ftp network remote</tags>
