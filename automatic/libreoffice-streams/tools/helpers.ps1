@@ -77,12 +77,6 @@ function IsUrlValid($url) {
   }
 }
 
-function GetBranchVersion([version]$version) {
-  [version]$branchVersion = New-Object -TypeName System.Version
-  [void][version]::TryParse("$($version.Major).$($version.Minor)", [ref]$branchVersion)
-  return $branchVersion
-}
-
 # Get correspondance between release and build versions
 # e.g. 6.2.0 => 6.2.0.3
 function BuildLibOReleasesToBuildsMapping($builds) {
@@ -256,7 +250,7 @@ function GetLibOVersionsIntervalOnly($fromVersion, $toVersion) {
 
 function GetLibOExactVersion($version) {
     $versions = GetLibOVersions $version $version
-    return $exactVersion.Rows[0]
+    return $versions.Rows[0]
 }
 
 function AddLibOVersionsToStreams($streams, $branch, $from, $to) {
