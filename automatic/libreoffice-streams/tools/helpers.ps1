@@ -177,6 +177,11 @@ function GetLibOVersions($fromVersion, $toVersion) {
   $table.columns.add($(New-Object System.Data.DataColumn Url32))
   $table.columns.add($(New-Object System.Data.DataColumn Checksum32))
 
+  $latestStillVersion = GetLatestStillVersionFromLibOUpdateChecker
+  $latestStillBranch  = $latestStillVersion.Split(".")[0,1] -Join '.'
+  $latestFreshVersion = GetLatestFreshVersionFromLibOUpdateChecker
+  $latestFreshBranch  = $latestFreshVersion.Split(".")[0,1] -Join '.'
+
   # Get all versions from the downloadarchive according to the limits
   # specified above.
   $url = 'https://downloadarchive.documentfoundation.org/libreoffice/old/'
@@ -184,10 +189,20 @@ function GetLibOVersions($fromVersion, $toVersion) {
   $releasesMapping = BuildLibOReleasesToBuildsMapping $builds
   foreach ($release in $releasesMapping.Keys) {
 
+    $releaseBranch = $release.Split(".")[0,1] -Join '.'
+
+    # These first 2 conditions ensures if the loop continue that we are in
+    # the interval, since the array is properly sorted (lower to greater).
     if ($release -lt $fromVersion) {
       continue
     } elseif ($release -gt $toVersion) {
       break
+    # Imagine we ask to generate released builds from 6.2.7 to 6.3.2.
+    # There might be on the server builds 6.2.8 and 6.3.3, the later might
+    # not have been released by TDF yet. Avoid this.
+    } elseif (($releaseBranch -eq $latestStillBranch -and $release -gt $latestStillVersion) -or
+              ($releaseBranch -eq $latestFreshBranch -and $release -gt $latestFreshVersion)) {
+      continue
     }
 
     $row = $table.NewRow()
@@ -205,9 +220,9 @@ function GetLibOVersions($fromVersion, $toVersion) {
     $table.Rows.Add($row)
   }
 
-  # If versions are under CDN use the links from the CDN instead.
-  # We assume, all released builds in the stable folder are those that are
-  # being under CDN.
+  # If versions are under CDN replace the links with the ones from the CDN
+  # instead. We assume, all released builds in the stable folder are those
+  # that are being under CDN.
   $url = 'https://download.documentfoundation.org/libreoffice/stable/'
   $builds = GetAllBuildsFromMirrorBrainUrl $url | Sort-Object
   # $releasesMapping is an ordered dictionnary containing
@@ -234,7 +249,7 @@ function GetLibOVersions($fromVersion, $toVersion) {
   return ,$table
 }
 
-function GetLibOVersionsIntervalOnly($fromVersion, $toVersion) {
+function GetLibOVersionsWithoutFromVersion($fromVersion, $toVersion) {
 
   $versions = GetLibOVersions $from $to
 
@@ -255,7 +270,7 @@ function GetLibOExactVersion($version) {
 
 function AddLibOVersionsToStreams($streams, $branch, $from, $to) {
 
-  $versions = GetLibOVersionsIntervalOnly $from $to
+  $versions = GetLibOVersionsWithoutFromVersion $from $to
 
   foreach ($row in $versions) {
 
