@@ -32,7 +32,6 @@ function GetLatestFreshVersionFromLibOUpdateChecker() {
 # Get all the links from a MirrorBrain instance without the copyright
 # and owner links
 function GetAllBuildsFromMirrorBrainUrl($url) {
-
   $request = [System.Net.WebRequest]::Create($url)
   $s = $request.GetResponse().GetResponseStream()
   $sr = New-Object -TypeName System.IO.StreamReader($s)
@@ -43,24 +42,6 @@ function GetAllBuildsFromMirrorBrainUrl($url) {
   # a boolean). As if it was "foreach { if (...) {return ... } }"
   # The returned values are still a string that must be parsed to a Version object.
   return @($linksArray | % href | % {$_ -Split '/' } | ? { [version]::TryParse($_, [ref]($__)) })
-}
-
-function GetAllBuildsFromMirrorBrainBuilds($builds) {
-  # Declaring a [version] typed variable is needed because TryParse expects a
-  # reference. The object must thus exist.
-  [version]$buildVersion = New-Object -TypeName System.Version
-  foreach ($release in $builds) {
-    [void][version]::TryParse($release, [ref]$buildVersion)
-    if ($freshVersion -eq $null) {
-      [version]$freshVersion = $buildVersion
-    } elseif ("$($buildVersion.Major).$($buildVersion.Minor)" -ne
-              "$($previousRelease.Major).$($previousRelease.Minor)") {
-        [version]$stillVersion = $buildVersion
-        break
-    }
-    $previousRelease = $buildVersion
-  }
-  return @{fresh = $freshVersion; still = $stillVersion}
 }
 
 function GetBuildHashFromMirrorBrainUrl($url) {
@@ -175,7 +156,7 @@ function GetFilename($url, $releasesMapping, $release, $arch) {
     }
   }
 
-  # test all the filename variants we crafted
+  # Test all the filename variants we crafted
   foreach ($filename in $filenames) {
     $completeUrl = "${urlFolder}${filename}"
     Write-Debug "Testing $completeUrl..."
@@ -260,7 +241,7 @@ function GetLibOVersions($fromVersion, $toVersion) {
 }
 
 function GetLibOVersionsIntervalOnly($fromVersion, $toVersion) {
-  
+
   $versions = GetLibOVersions $from $to
 
   # Discard the first version since it is the current one that has already
@@ -275,7 +256,7 @@ function GetLibOVersionsIntervalOnly($fromVersion, $toVersion) {
 
 function GetLibOExactVersion($version) {
     $versions = GetLibOVersions $version $version
-    return ,$versions
+    return $exactVersion.Rows[0]
 }
 
 function AddLibOVersionsToStreams($streams, $branch, $from, $to) {

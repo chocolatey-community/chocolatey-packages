@@ -6,22 +6,22 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName            = 'libreoffice'
   version                = ''
-  fileType               = 'msi'
+  fileType               = ''
   url                    = ''
   url64bit               = ''
   checksum               = ''
   checksum64             = ''
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
-  silentArgs             = '/passive /norestart /l*v "$Env:TEMP\chocolatey\$Env:ChocolateyPackageName\$Env:ChocolateyPackageVersion\install.log"'
+  silentArgs             = ''
   validExitCodes         = @(0,3010)
   softwareName           = 'LibreOffice*'
 }
 
 if (-not (IsUrlValid $packageArgs.url)) {
   $exactVersion = GetLibOExactVersion $packageArgs.version
-  $packageArgs.url = $exactVersion.Rows[0].Url32
-  $packageArgs.url64bit = $exactVersion.Rows[0].Url64
+  $packageArgs.url = $exactVersion.Url32
+  $packageArgs.url64bit = $exactVersion.Url64
 }
 
 Install-ChocolateyPackage @packageArgs

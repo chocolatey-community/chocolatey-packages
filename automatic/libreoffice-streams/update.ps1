@@ -15,11 +15,12 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   $filesToPatchHashTable = @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-      "(?i)(^\s*version\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')"    = "`$1'$($Latest.FileType)'"
+      "(?i)(^\s*url\s*=\s*)('.*')"         = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*url64bit\s*=\s*)('.*')"    = "`$1'$($Latest.URL64)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksum64\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum64)'"
+      "(?i)(^\s*version\s*=\s*)('.*')"     = "`$1'$($Latest.Version)'"
     }
     ".\libreoffice-streams.nuspec"  = @{
       "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
@@ -39,20 +40,20 @@ function global:au_SearchReplace {
 
 function global:au_AfterUpdate {
   # Patch the json stream file
-  $global:streamsJson | ConvertTo-Json | Set-Content .\libreoffice-streams.json
+  $global:chocolateyCoreteampackagesLibreofficeStreamJson | ConvertTo-Json | Set-Content .\libreoffice-streams.json
 }
 
 function global:au_GetLatest {
 
-  $global:streamsJson = (Get-Content .\libreoffice-streams.json) | ConvertFrom-Json
+  $global:chocolateyCoreteampackagesLibreofficeStreamJson = (Get-Content .\libreoffice-streams.json) | ConvertFrom-Json
 
-  $stillVersionFrom = $global:streamsJson.still
+  $stillVersionFrom = $global:chocolateyCoreteampackagesLibreofficeStreamJson.still
   $stillVersionTo = GetLatestStillVersionFromLibOUpdateChecker
-  $freshVersionFrom = $global:streamsJson.fresh
+  $freshVersionFrom = $global:chocolateyCoreteampackagesLibreofficeStreamJson.fresh
   $freshVersionTo = GetLatestFreshVersionFromLibOUpdateChecker
 
-  $global:streamsJson.still = $stillVersionTo
-  $global:streamsJson.fresh = $freshVersionTo
+  $global:chocolateyCoreteampackagesLibreofficeStreamJson.still = $stillVersionTo
+  $global:chocolateyCoreteampackagesLibreofficeStreamJson.fresh = $freshVersionTo
 
   $streams = New-Object -TypeName System.Collections.Specialized.OrderedDictionary
   AddLibOVersionsToStreams $streams "still" $stillVersionFrom $stillVersionTo
