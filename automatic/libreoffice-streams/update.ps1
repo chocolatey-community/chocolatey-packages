@@ -15,12 +15,12 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   $filesToPatchHashTable = @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*fileType\s*=\s*)('.*')"    = "'$($Latest.FileType)'"
-      "(?i)(^\s*url\s*=\s*)('.*')"         = "'$($Latest.URL32)'"
-      "(?i)(^\s*url64bit\s*=\s*)('.*')"    = "'$($Latest.URL64)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"    = "'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksum64\s*=\s*)('.*')"  = "'$($Latest.Checksum64)'"
-      "(?i)(^\s*version\s*=\s*)('.*')"     = "'$($Latest.Version)'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')"    = "`$1'$($Latest.FileType)'"
+      "(?i)(^\s*url\s*=\s*)('.*')"         = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*url64bit\s*=\s*)('.*')"    = "`$1'$($Latest.URL64)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksum64\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum64)'"
+      "(?i)(^\s*version\s*=\s*)('.*')"     = "`$1'$($Latest.Version)'"
     }
     ".\libreoffice-streams.nuspec"  = @{
       "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
@@ -29,9 +29,9 @@ function global:au_SearchReplace {
 
   $linesToPatch = $filesToPatchHashTable[".\tools\chocolateyInstall.ps1"]
   if ($Latest.FileType -eq "exe") {
-    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "'/S'"
+    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/S'"
   } else {
-    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "'/qn /passive /norestart /l*v `"{0}\install.log`"' -f `"`$Env:TEMP\chocolatey\`$Env:ChocolateyPackageName\`$Env:ChocolateyPackageVersion`""
+    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/qn /passive /norestart /l*v `"{0}\install.log`"' -f `"`$Env:TEMP\chocolatey\`$Env:ChocolateyPackageName\`$Env:ChocolateyPackageVersion`""
   }
   $filesToPatchHashTable[".\tools\chocolateyInstall.ps1"] = $linesToPatch
 
