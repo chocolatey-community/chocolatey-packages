@@ -3,34 +3,35 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Ghostscript.app</id>
-    <version>9.27</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ghostscript.app</packageSourceUrl>
+    <version>9.50</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ghostscript.app</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Ghostscript (Install)</title>
     <authors>Artifex</authors>
     <projectUrl>http://ghostscript.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ghostscript.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ghostscript.svg</iconUrl>
     <copyright>Artifex Software, Inc</copyright>
     <licenseUrl>http://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>http://git.ghostscript.com/?p=ghostpdl.git;a=summary</projectSourceUrl>
-    <docsUrl>http://www.ghostscript.com/doc/9.27/Readme.htm</docsUrl>
+    <docsUrl>http://www.ghostscript.com/doc/9.50/Readme.htm</docsUrl>
     <bugTrackerUrl>https://bugs.ghostscript.com/</bugTrackerUrl>
     <tags>ghostscript.app ghostscript postscript admin foss cross-platform</tags>
     <summary>an interpreter for the PostScript language and for PDF.</summary>
-    <description><![CDATA[
-Ghostscript is a package of software that provides:
+    <description><![CDATA[Ghostscript is a high-performance Postscript and PDF interpreter and rendering engine with the most comprehensive set of page description languages (PDL’s) on the market today and technology conversion capabilities covering PDF, PostScript, PCL and XPS languages.
 
-Ghostscript is written entirely in C, with special care taken to make it run properly on a wide variety of systems, including MS Windows, Apple MacOS, the wide variety of Unix and Unix-like platforms and VMS systems.
+Ghostscript has been under active development for over 20 years, and offers an extremely versatile feature set and can be deployed across a wide range of platforms, modules, end uses (embedding in hardware, as an engine in document management systems, providing cloud solution integration and as an engine in leading PDF generators and tools).
+
 
 ## Features
-* An interpreter for the PostScriptâ„¢ language, with the ability to convert PostScript language files to many raster formats, view them on displays, and print them on printers that don't have PostScript language capability built in;
-* An interpreter for Portable Document Format (PDF) files, with the same abilities;
-* The ability to convert PostScript language files to PDF (with some limitations) and vice versa; and
+
+* An interpreter for the PostScript language, with the ability to convert PostScript language files to many raster formats, view them on displays, and print them on printers that don't have PostScript language capability built in
+* An interpreter for Portable Document Format (PDF) files, with the same abilities
+* The ability to convert PostScript language files to PDF (with some limitations) and vice versa
 * A set of C procedures (the Ghostscript library) that implement the graphics and filtering (data compression / decompression / conversion) capabilities that appear as primitive operations in the PostScript language and in PDF.
 
 ]]></description>
-    <releaseNotes>https://ghostscript.com/doc/9.27/History9.htm</releaseNotes>
+    <releaseNotes>https://ghostscript.com/doc/9.50/History9.htm</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

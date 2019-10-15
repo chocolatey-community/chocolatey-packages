@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ghostscript.svg" width="48" height="48"/> [Ghostscript.app](https://chocolatey.org/packages/Ghostscript.app)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ghostscript.svg" width="48" height="48"/> [Ghostscript.app](https://chocolatey.org/packages/Ghostscript.app)
 
 Ghostscript is a high-performance Postscript and PDF interpreter and rendering engine with the most comprehensive set of page description languages (PDL’s) on the market today and technology conversion capabilities covering PDF, PostScript, PCL and XPS languages.
 
