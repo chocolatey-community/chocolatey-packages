@@ -13,7 +13,7 @@ $packageArgs = @{
   checksum64             = ''
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
-  silentArgs             = ''
+  silentArgs             = ""
   validExitCodes         = @(0,3010)
   softwareName           = 'LibreOffice*'
 }
