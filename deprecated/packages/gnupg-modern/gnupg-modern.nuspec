@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>gnupg-modern</id>
+    <version>2.2.17</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <owners>chocolatey, ludicrousByte, wget</owners>
+    <title>[Deprecated] GnuPG modern (Install)</title>
+    <authors>Werner Koch, The GnuPG Project</authors>
+    <projectUrl>https://www.gnupg.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png</iconUrl>
+    <copyright>Copyright 1998--2015 The GnuPG Project</copyright>
+    <licenseUrl>https://creativecommons.org/licenses/by-sa/3.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.gnupg.org/documentation/manuals/gnupg/</docsUrl>
+    <mailingListUrl>https://lists.gnupg.org/pipermail/gnupg-users/</mailingListUrl>
+    <bugTrackerUrl>https://bugs.gnupg.org/gnupg/index</bugTrackerUrl>
+    <tags>admin aes cli cross-platform encrypt foss gnupg gnupg-modern openpgp pgp rfc4880 rsa security signature</tags>
+    <summary>GnuPG is a complete and free implementation of the OpenPGP standard as defined by RFC4880 (also known as PGP)</summary>
+    <description><![CDATA[## This package has been renamed to [**gnupg**](/packages/gnupg).
+
+#### This is the modern version of GnuPG (2.2 branch). If you want the stable version (2.0 branch) install [Gpg4win](https://chocolatey.org/packages/Gpg4win).
+
+GnuPG itself is a commandline tool without any graphical stuff. It is the real crypto engine which can be used directly from a command prompt, from shell scripts or by other programs. Therefore it can be considered as a backend for other applications.
+
+However, even when used on the command line it provides all functionality needed - this includes an interactive menu system. The set of commands of this tool will always be a superset of those provided by any frontends.
+
+    Full replacement of PGP.
+    Does not use any patented algorithms.
+    GPLed, written from scratch.
+    Can be used as a filter program.
+    Full OpenPGP implementation (see RFC4880 at RFC Editor).
+    Better functionality than PGP and some security enhancements over PGP 2.
+    Decrypts and verifies PGP 5, 6 and 7 messages.
+    Supports ElGamal, DSA, RSA, AES, 3DES, Blowfish, Twofish, CAST5, MD5, SHA-1, RIPE-MD-160 and TIGER.
+    Easy implementation of new algorithms using extension modules.
+    The User ID is forced to be in a standard format.
+    Supports key and signature expiration dates.
+    English, Danish, Dutch, Esperanto, Estonian, French, German, Japanese, Italian, Polish, Portuguese (Brazilian), Portuguese (Portuguese), Russian, Spanish, Swedish and Turkish language support.
+    Online help system.
+    Optional anonymous message receivers.
+    Integrated support for HKP keyservers (wwwkeys.pgp.net).
+    Clears signed patch files which can still be processed by patch.
+    and many more things….
+
+    ]]></description>
+    <releaseNotes>
+* [Release Announcements](https://www.gnupg.org/index.html)
+    </releaseNotes>
+    <dependencies>
+      <dependency id="gnupg" version="2.2.17" />
+    </dependencies>
+  </metadata>
+</package>
