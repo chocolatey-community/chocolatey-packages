@@ -17,7 +17,7 @@ $packageArgs = @{
   validExitCodes         = @(0,3010)
   softwareName           = 'LibreOffice*'
 }
-
+Write-Host "DEBUG SILENT ARGS: $($packageArgs.silentArgs)"
 if (-not (IsUrlValid $packageArgs.url)) {
   $exactVersion = GetLibOExactVersion $packageArgs.version
   $packageArgs.url = $exactVersion.Url32
