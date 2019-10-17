@@ -280,7 +280,6 @@ function AddLibOVersionsToStreams($streams, $branch, $from, $to) {
     # $row is a DataRow, we have to convert manually to a hashtable.
     $package = @{}
     $package.Version = $row.Version
-    $package.Branch = $branch
     $package.URL64 = $row.URL64
     $package.Checksum64 = $row.Checksum64
     $package.URL32 = $row.URL32

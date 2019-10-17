@@ -15,6 +15,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   $filesToPatchHashTable = @{
     ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')" = "`$1'$($Latest.PackageName)'"
       "(?i)(^\s*fileType\s*=\s*)('.*')"    = "`$1'$($Latest.FileType)'"
       "(?i)(^\s*url\s*=\s*)('.*')"         = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*url64bit\s*=\s*)('.*')"    = "`$1'$($Latest.URL64)'"
@@ -31,7 +32,7 @@ function global:au_SearchReplace {
   if ($Latest.FileType -eq "exe") {
     $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/S'"
   } else {
-    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/qn /passive /norestart /l*v `"`$(`$env:TEMP)\chocolatey\`$(`$env:ChocolateyPackageName)\$($Latest.branch)\`$(`$env:ChocolateyPackageVersion)\install.log`"'"
+    $linesToPatch["(?i)(^\s*silentArgs\s*=\s*)('.*')"] = "`$1'/qn /passive /norestart /l*v `"`$(`$env:TEMP)\chocolatey\`$(`$env:ChocolateyPackageName)\`$(`$env:ChocolateyPackageVersion)\install.log`"'"
   }
   $filesToPatchHashTable[".\tools\chocolateyInstall.ps1"] = $linesToPatch
 
