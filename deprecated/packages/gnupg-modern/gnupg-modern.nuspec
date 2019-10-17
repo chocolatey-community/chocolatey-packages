@@ -9,7 +9,6 @@
     <title>[Deprecated] GnuPG modern (Install)</title>
     <authors>Werner Koch, The GnuPG Project</authors>
     <projectUrl>https://www.gnupg.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@901944b6fe60360ef2764c9fc53fe69dee99abd5/icons/gnupg.png</iconUrl>
     <copyright>Copyright 1998--2015 The GnuPG Project</copyright>
     <licenseUrl>https://creativecommons.org/licenses/by-sa/3.0/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
