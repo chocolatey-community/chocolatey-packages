@@ -1,4 +1,4 @@
-# Send a generic request to the LibreOffice update service
+﻿# Send a generic request to the LibreOffice update service
 function GetLatestVersionFromLibOUpdateChecker($userAgent) {
   $url = "https://update.libreoffice.org/check.php"
   $request = [System.Net.WebRequest]::Create($url)
@@ -41,7 +41,7 @@ function GetAllBuildsFromMirrorBrainUrl($url) {
   # ? outputs all items that conform with condition (here: TryParse returning
   # a boolean). As if it was "foreach { if (...) {return ... } }"
   # The returned values are still a string that must be parsed to a Version object.
-  return @($linksArray | % href | % {$_ -Split '/' } | ? { [version]::TryParse($_, [ref]($__)) })
+  return @($linksArray | ForEach-Object href | ForEach-Object {$_ -Split '/' } | Where-Object { [version]::TryParse($_, [ref]($__)) })
 }
 
 function GetBuildHashFromMirrorBrainUrl($url) {
