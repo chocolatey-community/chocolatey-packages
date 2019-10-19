@@ -1,16 +1,6 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>gpg4win-light</id>
-    <version>2.3.4.20191019</version>
-    <title>Gpg4win Light</title>
-    <authors>g10 Code GmbH</authors>
-    <owners>chocolatey, dtgm</owners>
-    <licenseUrl>https://www.gpg4win.org/license.html</licenseUrl>
-    <projectUrl>http://www.gpg4win.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description><![CDATA[**NOTE**: This GPG distribution is no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools.
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win-light](https://chocolatey.org/packages/gpg4win-light)
+
+**NOTE**: This GPG distribution is no longer maintained. Instead, use [gpg4win](https://chocolatey.org/packages/gpg4win) which is since v3.0 significantly lighter than what it was previously or [gnupg](https://chocolatey.org/packages/gnupg) which provides the modern command line version of GnuPG without any graphical tools.
 
 ---
 
@@ -71,19 +61,3 @@ The central certificate administration of Gpg4win, which ensures uniform user na
 * [Compendium](http://www.gpg4win.org/doc/en/gpg4win-compendium.html)
 The documentation for beginner and advanced users, available in English and German.
 
-]]></description>
-    <summary>GNU Privacy Guard suite of programs for encryption and digital signatures</summary>
-    <releaseNotes>http://www.gpg4win.org/change-history.html</releaseNotes>
-    <copyright>© 2006 g10 Code GmbH</copyright>
-    <tags>gui cli foss cross-platfrom security signature encryption certificate gpg gnupg gpa gpgol gpgex clawsmail admin</tags>
-    <projectSourceUrl>http://git.gnupg.org/cgi-bin/gitweb.cgi?p=gpg4win.git;a=tree</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gpg4win-light</packageSourceUrl>
-    <docsUrl>http://www.gpg4win.org/documentation.html</docsUrl>
-    <mailingListUrl>http://www.gpg4win.org/community.html#main</mailingListUrl>
-    <bugTrackerUrl>https://bugs.gnupg.org/</bugTrackerUrl>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-    <file src="legal\**" target="legal" />
-  </files>
-</package>
