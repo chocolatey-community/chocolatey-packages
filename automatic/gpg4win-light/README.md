@@ -1,5 +1,9 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win-light](https://chocolatey.org/packages/gpg4win-light)
 
+**NOTE**: This GPG distribution is no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools.
+
+---
+
 Gpg4win-light (GNU Privacy Guard for Windows) is a suite of programs for file encryption and digital signatures, excluding the documentation and Kleopatra, the GUI certificate manager and encryption/signature tool.
 
 Gpg4win enables users to securely transport emails and files with the help of encryption and digital signatures. Encryption protects the contents against an unwanted party reading it. Digital signatures allow authors of files to sign them prior to distribution so a user may verify the file has not been tampered with and comes from a specific sender.

@@ -1,5 +1,9 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla)
 
+**NOTE**: This GPG distribution is no longer maintained. Instead, use [gpg4win](https://chocolatey.org/packages/gpg4win) which is since v3.0 significantly lighter than what it was previously or [gnupg](https://chocolatey.org/packages/gnupg) which provides the modern command line version of GnuPG without any graphical tools.
+
+---
+
 Gpg4win-vanilla (GNU Privacy Guard for Windows) only installs the actual file encryption and digital signature command-line tool gpg.exe.
 
 Gpg4win enables users to securely transport emails and files with the help of encryption and digital signatures. Encryption protects the contents against an unwanted party reading it. Digital signatures allow authors of files to sign them prior to distribution so a user may verify the file has not been tampered with and comes from a specific sender.
