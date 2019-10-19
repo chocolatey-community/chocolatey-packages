@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win-light](https://chocolatey.org/packages/gpg4win-light)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png" width="48" height="48"/> [gpg4win-light](https://chocolatey.org/packages/gpg4win-light)
 
 **NOTE**: This GPG distribution is no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools.
 
