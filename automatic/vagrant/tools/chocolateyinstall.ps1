@@ -1,5 +1,3 @@
-Import-Module "$PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\Get-EffectiveProxy.ps1"
-
 $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
