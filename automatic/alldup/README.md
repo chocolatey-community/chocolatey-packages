@@ -26,3 +26,6 @@ AllDup is a freeware tool for searching and removing file duplicates on your com
 - Search through an unlimited number of files and folders
 - Convenient search result list
 - Fast search algorithm
+
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/alldup/screenshot.png)

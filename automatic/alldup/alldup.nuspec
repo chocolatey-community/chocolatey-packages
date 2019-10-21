@@ -46,5 +46,6 @@ AllDup is a freeware tool for searching and removing file duplicates on your com
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
