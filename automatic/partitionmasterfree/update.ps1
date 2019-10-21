@@ -1,7 +1,7 @@
 ﻿import-module au
 import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$releases = 'http://www.partition-tool.com/easeus-partition-manager/history.htm'
+$exec = "http://download.easeus.com/free/epm_e1125.exe"
 
 function global:au_SearchReplace {
   @{
@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 function GetResultInformation([string]$url32) {
   $url32 = Get-RedirectedUrl $url32
 
-  $dest = "$env:TEMP\epm.exe"
+  $dest = Join-Path $env:TEMP ($exec -split '/' | select -Last 1)  
   $checksumType = 'sha256'
   Get-WebFile $url32 $dest
   $version = Get-Version (Get-Item $dest | % { $_.VersionInfo.ProductVersion })
@@ -32,9 +32,7 @@ function GetResultInformation([string]$url32) {
 }
 
 function global:au_GetLatest {
-  $exec = "http://download.easeus.com/free/epm.exe"
-  Update-OnETagChanged -execUrl $exec `
-    -OnEtagChanged {
+  Update-OnETagChanged -execUrl $exec -OnEtagChanged {
     GetResultInformation $exec
   } -OnUpdated { @{ URL32 = $exec } }
 }
