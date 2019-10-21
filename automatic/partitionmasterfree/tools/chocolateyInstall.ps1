@@ -1,8 +1,8 @@
 ﻿$packageArgs = @{
   packageName    = 'partitionmasterfree'
   fileType       = 'EXE'
-  url            = 'http://download.easeus.com/free/epm.exe'
-  checksum       = 'b7f82106978ee2f633796c3f6273d8b8a981d27c9419552292055329cb00cbfe'
+  url            = 'http://download.easeus.com/free/epm_e1125.exe'
+  checksum       = '9e30af92f4785b3a9b64c0761e91ccafd2c81a1b5d1e476dbacd14ae53bba535'
   checksumType   = 'sha256'
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /RESTARTEXITCODE=3010 /SP-'
   validExitCodes = @(0, 3010)
