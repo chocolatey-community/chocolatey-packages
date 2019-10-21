@@ -20,3 +20,5 @@ Write-Host "$packageName installed to '$installLocation'"
 
 Register-Application "$installLocation\$packageName.exe"
 Write-Host "$packageName registered as $packageName"
+
+Remove-Process -PathFilter alldup.exe -WaitFor 10 | Out-Null

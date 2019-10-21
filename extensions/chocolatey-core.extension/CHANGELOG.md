@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.4
+
+- Added `Ensure-NoProcess` function to ensure that process is stopped in reliable way
+
 ## 1.3.3
 
 - Bugfix `Get-AppInstallLocation`: fix path is directory

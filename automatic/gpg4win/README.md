@@ -34,4 +34,5 @@ More information:
 
 ## Notes
 
-- Gpg4win was until version 3.0 distributed in three editions and was also available as the [gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla) and [gpg4win-light](https://chocolatey.org/packages/gpg4win-light) packages. Those two distributions are no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools.
+- Gpg4win was until version 3.0 distributed in three editions and was also available as the [gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla) and [gpg4win-light](https://chocolatey.org/packages/gpg4win-light) packages. Those two distributions are no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools. 
+ 
