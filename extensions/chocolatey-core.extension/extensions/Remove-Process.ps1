@@ -101,4 +101,3 @@ function Remove-Process {
     }
     $proc
 }
-Remove-Process -PathFilter alldup.exe
