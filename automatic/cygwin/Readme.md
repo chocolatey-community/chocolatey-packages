@@ -1,6 +1,5 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/Cygwin.png" width="48" height="48"/> [Cygwin](https://chocolatey.org/packages/Cygwin)
 
-
 Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
 ## Package parameters
@@ -17,6 +16,7 @@ Example: `choco install cygwin --params "/InstallDir:C:\your\install\path /NoSta
 
 ## Notes
 
+- [Cygwin setup command line arguments](https://cygwin.com/faq/faq.html#faq.setup.cli)
 - This package provides only the last version of Cygwin.
 - For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
 
