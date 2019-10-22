@@ -4,13 +4,12 @@
   <metadata>
     <id>Cygwin</id>
     <title>Cygwin</title>
-    <version>3.0.7</version>
+    <version>3.0.7.20191022</version>
     <authors>Red Hat, Inc.</authors>
     <owners>Chocolatey</owners>
     <summary>A Linux environment for Windows.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description><![CDATA[
-Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
+    <description><![CDATA[Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.
 
 ## Package parameters
 
@@ -26,6 +25,7 @@ Example: `choco install cygwin --params "/InstallDir:C:\your\install\path /NoSta
 
 ## Notes
 
+- [Cygwin setup command line arguments](https://cygwin.com/faq/faq.html#faq.setup.cli)
 - This package provides only the last version of Cygwin.
 - For better functionality, it is recommended you install the [cyg-get package](/packages/cyg-get). Use the cyg-get utility to add packages to your Cygwin installation.
 
