@@ -1,14 +1,15 @@
 $ErrorActionPreference = 'Stop'
 
-$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  PackageName   = 'pencil'
-  FileFullPath  = Get-Item "$toolsPath\pencil.exe"
-  Destination   = $toolsPath
-  SoftwareName  = 'Pencil*'
-  FileType      = 'EXE'
-  SilentArgs    = '/S' # NSIS
-  ValidExitCodes= @(0)
+  packageName    = $Env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = Get-Item $toolsPath\*-i386.exe
+  file64         = Get-Item $toolsPath\*_64.exe
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+  softwareName   = 'Pencil*'
 }
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" "" }}

@@ -4,6 +4,7 @@ Pencil is an open-source GUI prototyping tool that's available for ALL platforms
 Pencil is built for the purpose of providing a free and open-source GUI prototyping tool that people can easily install and use to create mockups in popular desktop platforms.
 
 ## Features
+
 * Easy GUI Prototyping: Various built-in shapes collection are available for drawing different types of user interface ranging from desktop to mobile platforms. Pencil is shipped with Android and iOS UI stencils pre-installed.
 * Built-in Shape Collections: Built-in collections include general-purpose shapes, flowchart elements, desktop/web UI shapes, Android and iOS GUI shapes, and many other collections created by the community.
 * Diagram Drawing Support: Pencil supports connectors which can be used to "wire" shapes together in a diagram. A collection of flowchart shapes are also available for drawing diagrams.

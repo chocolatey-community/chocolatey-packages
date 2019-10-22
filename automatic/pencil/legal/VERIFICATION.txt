@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/evolus/pencil/releases/tag/v3.0.4>
+location on <https://github.com/evolus/pencil/blob/master/RELEASE/RELEASE-NOTE-310.md>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <http://pencil.evolus.vn/dl/V3.0.4/Pencil-Setup-3.0.4.exe>
+  software: <http://pencil.evolus.vn/dl/V3.1.0.ga/pencil-3.1.0.ga-i386.exe>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -16,7 +16,10 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
 
-  checksum type: sha256
-  checksum: 324167CEAA1214AB84E73654E6A1539F787F9772B5A1D6BA0BBDDC7F4C77D186
+  checksum32 type: sha256
+  checksum32: 7788A1EBC5195BDA109BB7B29630C740D887FD24D4F153C54D6F7E25BFF6795F
+
+  checksum64 type: sha256
+  checksum64: 0762EE37817F748C43F5E913B2778712B2BA33241253718876620658DF98BCD9
 
 The file 'LICENSE.md' has been obtained from <https://github.com/evolus/pencil/blob/634622963ba4098f97c1cc7e7eabdd482bb1dcc9/LICENSE.md>
