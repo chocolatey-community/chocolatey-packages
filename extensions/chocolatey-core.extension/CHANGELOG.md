@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 1.4
+## 1.3.4
 
 - Added `Remove-Process` function to ensure that process is stopped in reliable way
 
