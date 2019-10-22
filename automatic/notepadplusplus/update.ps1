@@ -21,10 +21,10 @@ function global:au_GetLatest {
 
     @{
         Version = Split-Path (Split-Path $url_i[0]) -Leaf
-        URL32_i = $url_i -notmatch 'x64'
-        URL64_i = $url_i -match 'x64'
-        URL32_p = $url_p -notmatch 'x64' -notmatch 'minimalist'
-        URL64_p = $url_p -match 'x64' -notmatch 'minimalist'
+        URL32_i = $url_i -notmatch 'x64' | select -First 1
+        URL64_i = $url_i -match 'x64'  | select -First 1
+        URL32_p = $url_p -notmatch 'x64' -notmatch 'minimalist'  | select -First 1
+        URL64_p = $url_p -match 'x64' -notmatch 'minimalist'  | select -First 1
     }
 }
 
