@@ -4,8 +4,8 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $pp = Get-PackageParameters
 
-$parameters += if ($pp.NoDesktopShortcut)     { " /desktopshortcut=0"; Write-Host "Desktop shortcut won't be created" }
-$parameters += if ($pp.NoTaskbarShortcut)     { " /pintotaskbar=0"; Write-Host "Opera won't be pinned to taskbar" }
+$parameters += if ($pp.NoDesktopShortcut) { " /desktopshortcut=0"; Write-Host "Desktop shortcut won't be created" }
+$parameters += if ($pp.NoTaskbarShortcut) { " /pintotaskbar=0"; Write-Host "Opera won't be pinned to taskbar" }
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -23,6 +23,7 @@ $packageArgs = @{
 $version = '64.0.3417.61'
 if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $version)) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
-} else {
+}
+else {
   Install-ChocolateyPackage @packageArgs
 }
