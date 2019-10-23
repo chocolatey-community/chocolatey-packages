@@ -4,6 +4,13 @@ import-module "$PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensio
 $releases32 = 'https://vscode-update.azurewebsites.net/api/update/win32/stable/VERSION'
 $releases64 = 'https://vscode-update.azurewebsites.net/api/update/win32-x64/stable/VERSION'
 
+if ($MyInvocation.InvocationName -ne '.') {
+  function global:au_BeforeUpdate {
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+  }
+}
+
 function global:au_SearchReplace {
     @{
         'tools\chocolateyInstall.ps1' = @{
@@ -33,5 +40,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
-    update
+    update -ChecksumFor none
 }
