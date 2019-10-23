@@ -32,18 +32,18 @@ function global:au_GetLatest {
     # Sanitize string by spliting on spaces, and taking the longest
     # Example of unnsanitized string
     # > - https://releases.mattermost.com/desktop/4.3.0/mattermost-desktop-v4.3.0-x64.msi (beta)
-    $msiUrl = ([string]$_).Split("`n")[0].Split(' ').where{$_.length -gt 10 }
+    $msiUrl = ([string]$_).Split("`n")[0].Split(' ').where{ $_.length -gt 10 }.trim()
     ([string]$_).Split("`n")[1] -match '.*`(?<hash>.*)`.*' | Out-Null
     $digest = $matches['hash']
 
     if ($msiUrl -like '*x64*') {
-      $msiUrl64 = [string]$msiUrl
+      $msiUrl64 = $msiUrl
       $msiFilename64 = Split-Path -leaf $msiUrl
       $digest64 = $digest
     } else {
-      $msiUrl32 = [string]$msiUrl
-      $digest32 = $digest
+      $msiUrl32 = $msiUrl
       $msiFilename32 = Split-Path -leaf $msiUrl
+      $digest32 = $digest
     }
   }
 
