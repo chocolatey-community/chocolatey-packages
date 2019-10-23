@@ -26,17 +26,14 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $versionSort = { [version]$_.href.TrimEnd('/') }
-    $versionLink = $download_page.links | ? href -match '^[\d]+[\d\.]+\/$' | sort $versionSort | select -Last 1
-
-    [version] $version = $versionLink.href -replace '/', ''
-
-    $url = "https://get.geo.opera.com/pub/opera/desktop/$version/win/"
-    try {
-      $download_page = Invoke-WebRequest -Uri $url -UseBasicParsing
-    } catch {
-        if ($_ -match 'not found') { Write-Host 'Windows version can not be found'; return 'ignore'}
-        throw $_
-    }
+    $download_page = $download_page.links | ? href -match '^[\d]+[\d\.]+\/$' | sort $versionSort -Descending | % {
+      [version] $version = $_.href -replace '/', ''
+      $url = "https://get.geo.opera.com/pub/opera/desktop/$version/win/"
+      try {
+        $result = Invoke-WebRequest -Uri $url -UseBasicParsing
+        return $result
+      } catch {}
+    } | select -First 1
 
     $url32 = $download_page.Links | ? href -NotMatch 'x64' | ? href -Match 'Setup\.exe$' | select -First 1 -expand href | % { $url + $_ }
     $url64 = $download_page.Links | ? href -Match "(x64.*Setup|Setup_x64)\.exe$" | select -First 1 -expand href | % { $url + $_ }
