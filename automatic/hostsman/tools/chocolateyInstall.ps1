@@ -1,14 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$fileName = 'HostsMan_Setup.exe'
 
 $packageArgs = @{
-  packageName  = $env:ChocolateyPackageName
-  fileType     = 'zip'
-  file         = "$toolsPath\HostsMan_4.7.105.zip"
-  destination  = $toolsPath
-  softwareName = 'hostsman*'
+  packageName    = $Env:ChocolateyPackageName
+  fileType       = 'exe'
+  file           = gi $toolsPath\$fileName
+  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  validExitCodes = @(0)
+  softwareName   = 'Hostsman*'
 }
-
-Get-ChocolateyUnzip @packageArgs
-Remove-Item $toolsPath\*.zip -ea 0
+Install-ChocolateyInstallPackage @packageArgs
+rm $toolsPath\$fileName -ea 0; if (Test-Path $toolsPath\$fileName) { sc "$toolsPath\$fileName.ignore" "" }
