@@ -1,6 +1,5 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@00a000c7e5d8cc0d8416468e164eef281f843bff/icons/vscode.png" width="48" height="48"/> [vscode](https://chocolatey.org/packages/vscode)
 
-
 Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
 
 ## Features
@@ -18,13 +17,11 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
 
-Example: `choco install vscode.install --params "/NoDesktopIcon /DontAddToPath"`
+Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
 
 ## Notes
 
 * The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
 * For disabling the auto-update functionality see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
 
-
-![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/automatic/vscode/screenshot.png)
-
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6dc510f16b69a2134e901f2576e991c462a18e9b/automatic/vscode/screenshot.png)
