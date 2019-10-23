@@ -48,10 +48,7 @@ function GetETagIfChanged() {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  # $downloadUrl = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href
-  $download_page.Content -match "https://.+?exe" | Out-Null
-  $downloadUrl = $Matches[0]
+  $downloadUrl = 'https://download.scdn.co/SpotifySetup.exe'
   $etag = GetETagIfChanged -uri $downloadUrl
 
   if ($etag) {
