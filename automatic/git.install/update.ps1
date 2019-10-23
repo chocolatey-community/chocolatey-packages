@@ -6,6 +6,11 @@ $releases = "$domain/git-for-windows/git/releases/latest"
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
     @{
+        ".\tools\chocolateyInstall.ps1" = @{
+            "(^[$]fileName32\s*=\s*)('.*')" = "`$1'$($Latest.FileName32)'"
+            "(^[$]fileName64\s*=\s*)('.*')" = "`$1'$($Latest.FileName64)'"
+        }
+
         ".\legal\verification.txt" = @{
             "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"

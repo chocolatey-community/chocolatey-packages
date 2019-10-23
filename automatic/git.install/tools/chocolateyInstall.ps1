@@ -8,16 +8,18 @@ Set-InstallerRegistrySettings $pp
 
 Stop-GitSSHAgent
 
+$fileName32 = 'Git-2.23.0-32-bit.exe'
+$fileName64 = 'Git-2.23.0-64-bit.exe'
 $packageArgs = @{
     PackageName    = 'git.install'
     FileType       = 'exe'
     SoftwareName   = 'Git version *'
-    File           = Get-Item $toolsPath\*-32-bit.exe
-    File64         = Get-Item $toolsPath\*-64-bit.exe
+    File           = Get-Item $toolsPath\$fileName32
+    File64         = Get-Item $toolsPath\$fileName64
     SilentArgs     = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG", (Get-InstallComponents $pp)
 }
 Install-ChocolateyInstallPackage @packageArgs
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+Get-ChildItem $toolsPath\$fileName32, $toolsPath\$fileName64 | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.SoftwareName
