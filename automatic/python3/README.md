@@ -4,7 +4,7 @@ Python 3.x is a programming language that lets you work more quickly and integra
 
 ## Package Parameters
 
-- `/InstallDir` - Installation directory
+- `/InstallDir` - Installation directory. **NOTE**: If you have pre-existing python3 installation, this parameter is ignored and existing python install location will be used
 
 Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
 
