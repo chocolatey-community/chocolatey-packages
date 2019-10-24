@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bleachbit</id>
-    <version>2.2.0.20190520</version>
+    <version>3.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bleachbit</packageSourceUrl>
     <owners>chocolatey,dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -43,7 +43,7 @@ BleachBit has many useful features designed to help you easily [clean](https://w
 ]]></description>
     <releaseNotes>https://www.bleachbit.org/news</releaseNotes>
     <dependencies>
-      <dependency id="bleachbit.install" version="[2.2.0.20190520]" />
+      <dependency id="bleachbit.install" version="[3.0]" />
     </dependencies>
     </metadata>
     <files />
