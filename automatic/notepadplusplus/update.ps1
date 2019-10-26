@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $tags = "https://github.com/notepad-plus-plus/notepad-plus-plus/tags"
     $release = Invoke-WebRequest $tags -UseBasicParsing
-    $new = (( $release.links -match "v\d+\.\d+\.\d+" ) -split " " | select -First 10 | Select -Last 1 )
+    $new = (( $release.links -match "\/v\d+\.\d+(\.\d+)?" ) -split " " | select -First 10 | Select -Last 1 )
     $new = $new.Substring(0,$new.Length-1)
     $releases = "https://notepad-plus-plus.org/downloads/$new"
     $download_page = Invoke-WebRequest $releases -UseBasicParsing
