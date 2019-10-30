@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$version = '12.10.1.4'
+$version = '12.10.2.3'
 
 $packageArgs = @{
   packageName    = 'iTunes'
   fileType       = 'msi'
-  url            = 'http://updates-http.cdn-apple.com/2019/windows/061-27906-20191004-E74901A4-E6F7-11E9-979F-9DA916B72188/iTunesSetup.exe'
-  url64bit       = 'http://updates-http.cdn-apple.com/2019/windows/061-27904-20191004-E748B8A2-E6F7-11E9-8931-E55C44AC54BE/iTunes64Setup.exe'
+  url            = 'http://updates-http.cdn-apple.com/2019/windows/061-30719-20191029-880E8B50-FA6B-11E9-A9F5-D674B62FDC30/iTunesSetup.exe'
+  url64bit       = 'http://updates-http.cdn-apple.com/2019/windows/061-30715-20191029-880EDD94-FA6B-11E9-8A90-D774B62FDC30/iTunes64Setup.exe'
   softwareName   = 'iTunes'
-  checksum       = 'C550F65F67E399ABB6AB794242885FFDA69F71342B4530023DA5A9F81B4AB6AA'
+  checksum       = '8C9C766FF21D4F0856078EA57CB6AC5B870911C915AC32847481685B2012DB89'
   checksumType   = 'sha256'
-  checksum64     = '253d2fd290d2cbd7d12ded916ed4af9d62bdce807ad85cca131b4875c057c373'
+  checksum64     = '27c3c389aadd3926b654f00cbb78075aa1c7afb166dd04e95ca4abb3c80c1d6c'
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 2010, 1641)
