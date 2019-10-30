@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>alldup</id>
-    <version>4.4.8.20191021</version>
+    <version>4.4.8.20191030</version>
     <title>AllDup</title>
     <owners>chocolatey</owners>
     <authors>Michael Thummerer Software Design</authors>
@@ -11,8 +11,7 @@
     <projectUrl>http://www.alldup.de/en_index.php</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/alldup.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description><![CDATA[
-AllDup is a freeware tool for searching and removing file duplicates on your computer. The fast search algorithm find duplicates of any file type, e. g. text, pictures, music or movies. The powerful search engine enables you to find duplicates with a combination of the following criteria: File Name, File Extension, File Size, File Content, Last Modified Date, Create Date, File Attributes and Hard Links
+    <description><![CDATA[AllDup is a freeware tool for searching and removing file duplicates on your computer. The fast search algorithm find duplicates of any file type, e. g. text, pictures, music or movies. The powerful search engine enables you to find duplicates with a combination of the following criteria: File Name, File Extension, File Size, File Content, Last Modified Date, Create Date, File Attributes and Hard Links
 
 
 ## Features
@@ -37,7 +36,6 @@ AllDup is a freeware tool for searching and removing file duplicates on your com
 - Search through an unlimited number of files and folders
 - Convenient search result list
 - Fast search algorithm
-
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/alldup/screenshot.png)
 ]]></description>
