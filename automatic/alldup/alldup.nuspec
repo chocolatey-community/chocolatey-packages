@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>alldup</id>
-    <version>4.4.8</version>
+    <version>4.4.8.20191021</version>
     <title>AllDup</title>
     <owners>chocolatey</owners>
     <authors>Michael Thummerer Software Design</authors>
@@ -37,12 +37,18 @@ AllDup is a freeware tool for searching and removing file duplicates on your com
 - Search through an unlimited number of files and folders
 - Convenient search result list
 - Fast search algorithm
+
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/alldup/screenshot.png)
 ]]></description>
     <summary>Tool for searching and removing file duplicates</summary>
     <releaseNotes>http://www.alldup.de/alldup_help/alldup_version.htm</releaseNotes>
     <copyright>Michael Thummerer Software Design</copyright>
     <tags>alldup find delete files duplicates freeware admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/alldup</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

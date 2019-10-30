@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.4
+
+- Added `Remove-Process` function to ensure that process is stopped in reliable way
+
 ## 1.3.3
 
 - Bugfix `Get-AppInstallLocation`: fix path is directory
