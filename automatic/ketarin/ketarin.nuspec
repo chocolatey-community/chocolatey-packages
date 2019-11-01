@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ketarin</id>
-    <version>1.8.10</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ketarin</packageSourceUrl>
+    <version>1.8.11</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ketarin</packageSourceUrl>
     <owners>chocolatey, Canneverbe Limited</owners>
     <title>Ketarin</title>
     <authors>Canneverbe Limited</authors>
     <projectUrl>https://ketarin.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@2963b7e22c35b0dfb637bb1d65ab74eb298bc66c/icons/ketarin.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2963b7e22c35b0dfb637bb1d65ab74eb298bc66c/icons/ketarin.png</iconUrl>
     <copyright>©2008 - 2017 Canneverbe Limited (Impressum)</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
