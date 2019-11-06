@@ -13,11 +13,11 @@ function global:au_GetLatest {
     $tags = "https://github.com/notepad-plus-plus/notepad-plus-plus/tags"
     $release = Invoke-WebRequest $tags -UseBasicParsing
     $new = (( $release.links -match "\/v\d+\.\d+(\.\d+)?" ) -split " " | select -First 10 | Select -Last 1 )
-    $new = $new.Substring(0,$new.Length-1)
-    $releases = "https://notepad-plus-plus.org/downloads/$new"
+    $new = $new.Substring(1,$new.Length-2)
+    $releases = "http://download.notepad-plus-plus.org/repository/$($new -replace "^(\d+)\..*$","`$1").x/$new/"
     $download_page = Invoke-WebRequest $releases -UseBasicParsing
-    $url_i         = $download_page.Links | ? href -match '.exe$' | Select-Object -Last 2 | % href
-    $url_p         = $download_page.Links | ? href -match '.7z$' | % href
+    $url_i         = $download_page.Links | ? href -match '.exe$' | Select-Object -Last 2 | % { $releases + $_.href }
+    $url_p         = $download_page.Links | ? href -match '.7z$' | % { $releases + $_.href }
 
     @{
         Version = Split-Path (Split-Path $url_i[0]) -Leaf
