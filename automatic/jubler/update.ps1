@@ -37,7 +37,7 @@ function global:au_GetLatest {
   $re    = 'jubler.*\.exe'
   $urls   = $download_page.links | ? href -match $re | select -First 2 -expand href
 
-  $version  = $urls[0] -split '[-]|[_\.](?:32|64)' | select -Last 1 -Skip 1
+  $version  = $urls[0] -split '\/v?' | select -Last 1 -Skip 1
 
   @{
     URL32 = $urls -notmatch "64\.exe" | select -first 1
