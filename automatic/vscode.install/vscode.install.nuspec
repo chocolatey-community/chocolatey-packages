@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode.install</id>
     <title>Visual Studio Code (Install)</title>
-    <version>1.39.2</version>
+    <version>1.40.0</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
@@ -16,8 +16,7 @@
     <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Visual Studio Code</summary>
-    <description><![CDATA[
-Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
+    <description><![CDATA[Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
 
 ## Features
 
@@ -34,16 +33,14 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
 
-Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
+Example: `choco install vscode.install --params "/NoDesktopIcon /DontAddToPath"`
 
 ## Notes
 
 * The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
 * For disabling the auto-update functionality see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
 
-
-![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f5cbd85b89a3b01bb440a9f09d0f5d1405aad0ce/automatic/vscode/screenshot.png)
-
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6dc510f16b69a2134e901f2576e991c462a18e9b/automatic/vscode/screenshot.png)
 ]]></description>
     <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
