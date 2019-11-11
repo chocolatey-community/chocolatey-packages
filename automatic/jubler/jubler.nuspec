@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>jubler</id>
-    <version>6.0.2</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/jubler</packageSourceUrl>
+    <version>7.0.0-alpha1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/jubler</packageSourceUrl>
     <owners>chocolatey, AdmiringWorm</owners>
     <title>Jubler Subtitle Editor</title>
     <authors>Panayotis Katsaloulis</authors>
     <projectUrl>http://www.jubler.org/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png</iconUrl>
     <copyright>(C) 2005-2018 Panayotis Katsaloulis</copyright>
     <licenseUrl>https://github.com/teras/Jubler/blob/master/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

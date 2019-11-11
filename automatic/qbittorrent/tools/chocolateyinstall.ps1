@@ -6,8 +6,8 @@ $packageArgs = @{
   packageName    = 'qbittorrent'
   fileType       = 'exe'
   softwareName   = 'qBittorrent*'
-  file           = "$toolsDir\qbittorrent_4.1.9_setup.exe"
-  file64         = "$toolsDir\qbittorrent_4.1.9_x64_setup.exe"
+  file           = "$toolsDir\qbittorrent_4.1.9.1_setup.exe"
+  file64         = "$toolsDir\qbittorrent_4.1.9.1_x64_setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
