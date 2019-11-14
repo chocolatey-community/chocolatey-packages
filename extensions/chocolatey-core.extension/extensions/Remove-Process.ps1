@@ -8,20 +8,20 @@
 
 .EXAMPLE
     notepad; Remove-Process notepad -PathFilter 'system32'
-    
+
     Close main window of notepad that has 'system32' word in its path
 
 .EXAMPLE
     Remove-Process notepad -WaitFor 30
-    notepad; notepad  #in another shell 
-    
+    notepad; notepad  #in another shell
+
     Close all instances of notepad but wait for them up to 30 seconds to start
 
 .OUTPUTS
     Array of closeed processes with details about each one.
 
 .NOTES
-    https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1364 
+    https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1364
 #>
 
 function Remove-Process {
@@ -37,23 +37,23 @@ function Remove-Process {
         [int] $WaitFor,
 
         # Close/Kill child processes, by default they are filtered out as
-        # parent-child relationship usually have its own heartbeat feature 
+        # parent-child relationship usually have its own heartbeat feature
         [switch] $WithChildren
     )
 
     function getp {
-        foreach ($p in Get-Process) { 
+        foreach ($p in Get-Process) {
             $b1 = if ($NameFilter) { $p.ProcessName -match $NameFilter }
             $b2 = if ($PathFilter) { $p.Path        -match $PathFilter }
             $b  = if (($b1 -ne $null) -and ($b2 -ne $null)) { $b1 -and $b2 } else { $b1 -or $b2 }
             if (!$b) { continue }
-    
-            $w = Get-WmiObject win32_process -Filter "ProcessId = $($p.Id)" 
+
+            $w = Get-WmiObject win32_process -Filter "ProcessId = $($p.Id)"
             [PSCustomObject]@{
                 Id          = $p.Id
                 ParentId    = $w.ParentProcessId
                 Name        = $p.ProcessName
-                Path        = $p.Path 
+                Path        = $p.Path
                 CommandLine = $w.CommandLine
                 Process     = $p
                 Username    = $w.GetOwner().Domain + "\"+ $w.GetOwner().User
@@ -71,12 +71,12 @@ function Remove-Process {
     # Process might spawn multiple children, typical for browsers; remove all children as parent will handle them
     if (!$WithChildren) {
         Write-Verbose "Remove all children processes"
-        $proc = $proc | ? { $_.ParentId -notin $proc.Id }
+        $proc = $proc | ? { $_.ParentId -notcontains $proc.Id }
     }
 
-    foreach ($p in $proc)  { 
+    foreach ($p in $proc)  {
         Write-Verbose "Trying to close app '$($p.Name)' run by user '$($p.Username)'"
-        
+
         if ( $p.Process.CloseMainWindow() ) {
             # wait for app to shut down for some time, max 5s
             for ($i=0; $i -lt 5; $i++) {

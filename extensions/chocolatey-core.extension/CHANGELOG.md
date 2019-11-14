@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.5
+
+- Bugfix `Remove-Process`: Fixed Powershell v2 compatibility issue
+
 ## 1.3.4
 
 - Added `Remove-Process` function to ensure that process is stopped in reliable way
