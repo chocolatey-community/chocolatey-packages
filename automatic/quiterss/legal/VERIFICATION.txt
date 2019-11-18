@@ -5,13 +5,13 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from the alternative sourceforge mirror listed on https://quiterss.org/en/download
 and can be verified like this:
 
-1. Download the following installer: https://quiterss.org/files/0.18.12/QuiteRSS-0.18.12-Setup.exe
+1. Download the following installer: https://quiterss.org/files/0.19.1/QuiteRSS-0.19.1-Setup.exe
 
 2. You can use one of the following methods to obtain the checksums:
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
-  checksum: CB23F619B351B54A34D3BB21A7A37265F21BAA2AF4E8B614374EEE61055B97D3
+  checksum: 52AF9FEDD63846B9777473E54E7FFBD74A0404C81949242A7AFFB12CBDAC0662
   checksum type: sha256
 
 File 'LICENSE.txt' is obtained from https://github.com/QuiteRSS/quiterss/blob/master/COPYING

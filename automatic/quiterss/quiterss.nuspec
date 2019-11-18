@@ -3,7 +3,7 @@
   <metadata>
     <id>quiterss</id>
     <title>QuiteRSS</title>
-    <version>0.18.12</version>
+    <version>0.19.1</version>
     <owners>chocolatey,dtgm</owners>
     <summary>QuiteRSS is a free news feeds reader written on Qt/C++.</summary>
     <description><![CDATA[QuiteRSS is a open-source cross-platform RSS/Atom news feeds reader.
@@ -33,14 +33,14 @@
     <authors>QuiteRSS Team</authors>
     <projectUrl>https://quiterss.org/</projectUrl>
     <projectSourceUrl>https://github.com/QuiteRSS/quiterss</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/quiterss</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/quiterss</packageSourceUrl>
     <docsUrl>https://github.com/QuiteRSS/quiterss/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/QuiteRSS/quiterss/issues</bugTrackerUrl>
     <tags>foss cross-platform admin quiterss rss atom qt5 qt feedreader news reader</tags>
     <licenseUrl>https://github.com/QuiteRSS/quiterss/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © QuiteRSS Team</copyright>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9dc4c118fa0eafd9e4b94b2676ae79b140146a95/icons/quiterss.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@9dc4c118fa0eafd9e4b94b2676ae79b140146a95/icons/quiterss.png</iconUrl>
     <releaseNotes>[QuiteRSS Changelog](https://github.com/QuiteRSS/quiterss/blob/master/CHANGELOG)</releaseNotes>
   </metadata>
   <files>
