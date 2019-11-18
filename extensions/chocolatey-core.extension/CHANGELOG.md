@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.4.0
+
+- `Get-AvailableDriveLetter`: Add support for common arguments (Verbose, Debug and ErrorAction) outside of chocolatey.
+- `Get-EffectiveProxy`: Add support for common arguments (Verbose, Debug and ErrorAction) outside of chocolatey.
+- `Get-WebContent`: Add support for `WhatIf` argument outside of chocolatey.
+- `Register-Application`: Add support for `WhatIf` argument outside of chocolatey.
+- `Remove-Process`: Add support for common arguments (Verbose, Debug, ErrorAction and WhatIf) outside of chocolatey.
+
 ## 1.3.5
 
 - Bugfix `Remove-Process`: Fixed Powershell v2 compatibility issue
@@ -17,6 +25,7 @@
 - Bugfix `Get-AppInstallLocation`: now checks if path is directory
 
 ## 1.3.1
+
 - Bugfix in `Get-AppInstallLocation`: Removed extra `$location` parameter from Split-Path when parsing the registry UninstallString.
 
 ## 1.3.0

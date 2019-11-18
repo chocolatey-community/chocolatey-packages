@@ -37,7 +37,7 @@
   Get-WebFile
 #>
 function Get-WebContent {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param(
         # Url to download
         [string]$Url,
@@ -51,15 +51,23 @@ function Get-WebContent {
     )
 
     $filePath =  get_temp_filepath
-    Get-WebFile -Url $Url -FileName $filePath -Options $Options 3>$null
+    if ($PSCmdlet.ShouldProcess("Download '$Url' to '$filePath'")) {
+      Get-WebFile -Url $Url -FileName $filePath -Options $Options 3>$null
+      $fileContent = Get-Content $filePath -ReadCount 0 | Out-String
+    } else {
+      $fileContent = $null
+    }
 
-    $fileContent = Get-Content $filePath -ReadCount 0 | Out-String
-    Remove-Item $filePath
+    if ($PSCmdlet.ShouldProcess("Remove file '$filePath'")) {
+      Remove-Item $filePath
+    }
 
     $fileContent
 }
 
 function get_temp_filepath() {
+    [CmdletBinding()]
+    param()
     $tempDir = Get-PackageCacheLocation
     $fileName = [System.IO.Path]::GetRandomFileName()
     Join-Path $tempDir $fileName

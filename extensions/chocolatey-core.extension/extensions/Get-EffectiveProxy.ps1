@@ -18,6 +18,8 @@
     [String] in the form of http://<proxy>:<port>
 #>
 function Get-EffectiveProxy(){
+  [CmdletBinding()]
+  param()
 
     # Try chocolatey proxy environment vars
     if ($env:chocolateyProxyLocation) {
@@ -30,7 +32,7 @@ function Get-EffectiveProxy(){
         Write-Verbose "Using `$Env:http_proxy"
         return $env:http_proxy
     }
-    
+
     # Try to get IE proxy
     $key = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings"
     $r = Get-ItemProperty $key
@@ -38,7 +40,7 @@ function Get-EffectiveProxy(){
         Write-Verbose "Using IE proxy settings"
         return "http://" + $r.ProxyServer
     }
-    
+
     # Try chocolatey config file
     [xml] $cfg = gc $env:ChocolateyInstall\config\chocolatey.config
     $p = $cfg.chocolatey.config | % { $_.add } | ? { $_.key -eq 'proxy' } | select -Expand value
@@ -48,7 +50,7 @@ function Get-EffectiveProxy(){
     }
 
     # Try winhttp proxy
-    (netsh.exe winhttp show proxy) -match 'Proxy Server\(s\)' | set proxy 
+    (netsh.exe winhttp show proxy) -match 'Proxy Server\(s\)' | set proxy
     $proxy = $proxy -split ' :' | select -Last 1
     $proxy = $proxy.Trim()
     if ($proxy) {

@@ -25,6 +25,7 @@
 #>
 
 function Remove-Process {
+    [CmdletBinding(SupportsShouldProcess)]
     param(
         # RegEx expression of process name, returned by Get-Process function
         [string] $NameFilter,
@@ -77,7 +78,7 @@ function Remove-Process {
     foreach ($p in $proc)  {
         Write-Verbose "Trying to close app '$($p.Name)' run by user '$($p.Username)'"
 
-        if ( $p.Process.CloseMainWindow() ) {
+        if ( $PSCmdlet.ShouldProcess("Closing process '$($p.Name)'") -and $p.Process.CloseMainWindow() ) {
             # wait for app to shut down for some time, max 5s
             for ($i=0; $i -lt 5; $i++) {
                 Start-Sleep 1
@@ -89,13 +90,13 @@ function Remove-Process {
         # Return value of CloseMainWindow() 'True' is not reliable
         # so if process is still active kill it
         $p2 = ps -PID $p.id -ea 0
-        if (($p.Process.Name -eq $p2.Name) -and ($p.Process.StartTime -eq $p2.StartTime)) {
+        if (($p.Process.Name -eq $p2.Name) -and ($p.Process.StartTime -eq $p2.StartTime) -and $PSCmdlet.ShouldProcess("Stopping process '$($p.Name)'")) {
             $p | Stop-Process -ea STOP
             Start-Sleep 1 # Running to fast here still gets the killed process in next line
         }
 
         $p2 = ps -PID $p.id -ea 0
-        if (($p.Process.Name -eq $p2.Name) -and ($p.Process.StartTime -eq $p2.StartTime)) {
+        if (!($WhatIfPreference) -and ($p.Process.Name -eq $p2.Name) -and ($p.Process.StartTime -eq $p2.StartTime)) {
             Write-Warning "Process '$($p.Name)' run by user '$($p.Username)' can't be closed"
         }
     }

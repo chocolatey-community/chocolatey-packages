@@ -24,7 +24,7 @@
 
 #>
 function Register-Application{
-    [CmdletBinding()]
+    [CmdletBinding(SupportsShouldProcess)]
     param(
         # Full path of the executable to register.
         [Parameter(Mandatory=$true)]
@@ -47,6 +47,8 @@ function Register-Application{
     $appPathKey = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\$Name"
     if ($User) { $appPathKey = "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\$Name" }
 
-    If (!(Test-Path $AppPathKey)) { New-Item "$AppPathKey" | Out-Null }
-    Set-ItemProperty -Path $AppPathKey -Name "(Default)" -Value $ExePath
+    If (!(Test-Path $AppPathKey) -and $PSCmdlet.ShouldProcess("Create new key: '$AppPathKey'")) { New-Item "$AppPathKey" | Out-Null }
+    if ($PSCmdlet.ShouldProcess("Set key '$appPathKey' default value to '$ExePath'")) {
+      Set-ItemProperty -Path $AppPathKey -Name "(Default)" -Value $ExePath
+    }
 }
