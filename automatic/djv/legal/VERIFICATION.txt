@@ -15,4 +15,4 @@ and can be verified by doing the following:
   checksum type: sha256
   checksum: 3340A0EBB4E66842B23FF39A670F92970F454F9D36A00397AB66E0C945FAA650
 
-The file 'LICENSE.txt' has been obtained from <https://darbyjohnston.github.io/DJV/legal.html>
+The file 'LICENSE.md' has been obtained from <https://darbyjohnston.github.io/DJV/legal.html>
