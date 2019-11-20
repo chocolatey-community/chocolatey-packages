@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/cdburnerxp.png" width="48" height="48"/> [cdburnerxp](https://chocolatey.org/packages/cdburnerxp)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/cdburnerxp.png" width="48" height="48"/> [cdburnerxp](https://chocolatey.org/packages/cdburnerxp)
 
 
 CDBurnerXP is a free application to burn CDs and DVDs, including Blu-Ray and HD-DVDs. It also includes the feature to burn and create ISOs, as well as a multilanguage interface. Everyone, even companies, can use it for free. It does not include adware or similar malicious components.
