@@ -71,7 +71,7 @@ function Remove-Process {
     # Process might spawn multiple children, typical for browsers; remove all children as parent will handle them
     if (!$WithChildren) {
         Write-Verbose "Remove all children processes"
-        $proc = $proc | ? { $_.ParentId -notcontains $proc.Id }
+        $proc = $proc | ? { $proc.Id -notcontains $_.ParentId }
     }
 
     foreach ($p in $proc)  {
