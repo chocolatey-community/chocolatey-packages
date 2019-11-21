@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>360tse</id>
-    <version>8.8.0.1118</version>
-    <title>360 Total Security Essential</title>
+    <id>360ts</id>
+    <version>10.6.0.1256</version>
+    <title>360 Total Security</title>
     <authors>Qihu 360 Software</authors>
     <owners>chocolatey,adgellida</owners>
     <licenseUrl>http://www.360totalsecurity.com/en/about.html</licenseUrl>
@@ -12,14 +12,19 @@
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@b92d42be38598e16e7e526b3b8b43c3220439cd4/icons/360ts.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
-360 Total Security Essential as the name implies is just pure anti-virus - providing comprehensive protection against the latest security threats with a combined virus detection engine.
+A feature-packed software solution that provides users with a powerful antivirus, a junk cleaner and a system booster within the same interface
 
 ## Features
 
-- Superior Threat Detection: Total integration of award-winning anti-virus engines from 360 Cloud Engine,360 QVMII, Avira and Bitdefender to provide you with the ultimate in Virus detection and protection capabilities.
-- Layered Protection: Multiple shields guarantee a secure and peaceful digital experience. Your experience will be worry free from phishing, Trojan and data theft.
-- Premium Features: You can execute risky programs in the Sandbox, threats will be kept separate from your system and isolated.Automatic updates and theme support.
-- Real Time Protection and Timely Updates: 360 Cloud Security provides real-time protection with the latest virus definition updates and threat indexes provided seamlessly so that your PC is always up to date and secure.
+- 360 Total Security offers your PC complete protection from Viruses, Trojans and other emerging threats.
+- Whether you are shopping online, downloading files or chatting with your friends you can be sure that 360 Total Security is there to keep you safe and your computer optimized.
+- Clean-up utility is just one click away to keep your PC in optimal condition.
+- Full Check: Quickly check the overall condition of your computers' health and safety with one click.
+- Virus Scan: Integrating award winning antivirus engines from 360 Cloud Scan Engine,360 QVMII AI Engine, Avira and Bitdefender to provide you with the ultimate in Virus detection and protection capabilities.
+- Speedup: Manage and optimize your system services, boot up items and plugins - Shorten your boot time and get going sooner!
+- Cleanup: Cleanup frees your disk space by removing junk files and plugin, which can improve system performance - With cleanup you can decide which areas and files to clean.
+- Protection: Protection offers 4 different user selectable modes - Performance/Balanced/Security and Custom. Each mode offers a different level of protection from malware, phishing attacks and backdoors.
+- Top-rated tools:  WiFi Security Check,  Sandbox,  Patch Up
 
 ## Notes
 
