@@ -24,7 +24,7 @@
 
 #>
 function Register-Application{
-    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding(SupportsShouldProcess=$true)]
     param(
         # Full path of the executable to register.
         [Parameter(Mandatory=$true)]

@@ -37,7 +37,7 @@
   Get-WebFile
 #>
 function Get-WebContent {
-    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding(SupportsShouldProcess=$true)]
     param(
         # Url to download
         [string]$Url,

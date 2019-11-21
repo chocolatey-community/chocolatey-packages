@@ -25,7 +25,7 @@
 #>
 
 function Remove-Process {
-    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding(SupportsShouldProcess=$true)]
     param(
         # RegEx expression of process name, returned by Get-Process function
         [string] $NameFilter,
