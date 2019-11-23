@@ -1,4 +1,7 @@
 $language = (Get-Culture).Parent.Name
+$pp       = Get-PackageParameters
+$exePath  = Join-Path "$(Split-Path -parent $MyInvocation.MyCommand.Definition)" 'BeCyIconGrabber.exe'
+$iconName = 'BeCyIconGrabber.lnk'
 
 $packageArgs = @{
   packageName = 'becyicongrabber'
@@ -14,3 +17,9 @@ if ($language -eq 'de') {
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
+if (!$pp['nostart']) {
+	$startIcon = (Join-Path ([environment]::GetFolderPath([environment+specialfolder]::Programs)) $iconName)
+	Write-Host -ForegroundColor green 'Adding ' $startIcon
+	Install-ChocolateyShortcut -ShortcutFilePath $startIcon -TargetPath $exePath
+}
