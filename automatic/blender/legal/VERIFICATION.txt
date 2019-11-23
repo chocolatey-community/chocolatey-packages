@@ -7,7 +7,6 @@ location on <https://www.blender.org/download/> (the listed mirrors may differ f
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://mirror.clarkson.edu/blender/release/Blender2.80/blender-2.80-windows32.msi>
   64-Bit software: <https://mirror.clarkson.edu/blender/release/Blender2.80/blender-2.80-windows64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -15,7 +14,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 6ED829DC52704398CEE1A2481F546813C0B4D724AEB077959946EBF7234EF406
   checksum64: E71084ED45AE96D6CFEF9CACACA1A876F09C5B4915872FC6AC0252B7A93B26C5
 
 The file 'LICENSE.txt' has been obtained from <http://download.blender.org/release/GPL3-license.txt>
