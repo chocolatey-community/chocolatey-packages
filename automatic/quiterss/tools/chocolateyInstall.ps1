@@ -1,7 +1,7 @@
 ﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-file          = "$toolsDir\QuiteRSS-0.19.1-Setup.exe"
+file          = "$toolsDir\QuiteRSS-0.19.2-Setup.exe"
 fileType      = 'exe'
 packageName   = 'quiterss'
 softwareName  = 'QuiteRSS'
