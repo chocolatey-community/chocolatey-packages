@@ -32,7 +32,7 @@ function global:au_GetLatest {
   $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
 
   if ($version64 -match '[a-z]$') {
-    [char]$letter = $version32[$version64.Length - 1]
+    [char]$letter = $version64[$version64.Length - 1]
     [int]$num = $letter - [char]'a'
     $num++
     $version64 = $version64 -replace $letter,".$num"
