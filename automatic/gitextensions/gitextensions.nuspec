@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gitextensions</id>
-    <version>3.3-RC1</version>
+    <version>3.3</version>
     <title>Git Extensions</title>
     <authors>Henk Westhuis</authors>
     <owners>chocolatey ferventcoder</owners>
