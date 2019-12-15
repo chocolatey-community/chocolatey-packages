@@ -1,6 +1,6 @@
 ﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = Get-Content -Path "$toolsDir\installDir"
-$shortversion = '81'
+$shortversion = '82'
 $statement = '-nsis'
 $exeToRun  = "$installDir\vim\vim$shortversion\uninstall.exe"
 # From vim-tux.install.  Make input.
