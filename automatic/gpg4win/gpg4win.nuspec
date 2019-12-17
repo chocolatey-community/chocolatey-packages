@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>gpg4win</id>
-    <version>3.1.10.20191019</version>
+    <version>3.1.11</version>
     <title>Gpg4win</title>
     <authors>g10 Code GmbH</authors>
     <owners>chocolatey, dtgm</owners>
@@ -44,7 +44,8 @@ More information:
 
 ## Notes
 
-- Gpg4win was until version 3.0 distributed in three editions and was also available as the [gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla) and [gpg4win-light](https://chocolatey.org/packages/gpg4win-light) packages. Those two distributions are no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools.
+- Gpg4win was until version 3.0 distributed in three editions and was also available as the [gpg4win-vanilla](https://chocolatey.org/packages/gpg4win-vanilla) and [gpg4win-light](https://chocolatey.org/packages/gpg4win-light) packages. Those two distributions are no longer maintained. Instead, use [gnupg](https://chocolatey.org/packages/gnupg) package which provides the modern command line version of GnuPG without any graphical tools. 
+ 
 ]]></description>
     <summary>GNU Privacy Guard suite of programs for encryption and digital signatures</summary>
     <releaseNotes>http://www.gpg4win.org/change-history.html</releaseNotes>
