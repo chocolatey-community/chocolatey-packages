@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
-  packageName            = '360ts'
+  packageName            = '360tse'
   fileType               = 'exe'
-  url                    = 'https://free.360totalsecurity.com/totalsecurity/360TS_Setup_10.6.0.1285.exe'
-  checksum               = '52f4d02a0813422710183c9f58131e251765083cf968a99c647fcfb5ff2fc7c1'
+  url                    = 'https://free.360totalsecurity.com/totalsecurity/360TSE_Setup_8.8.0.1119.exe'
+  checksum               = 'b6b7bfc5e429b97ebc1857b6bb73119bf48ce4657328e5aabea7933bb2564b65'
   checksumType           = 'sha256'
   silentArgs             = '/S'
   validExitCodes         = @(0)
-  softwareName           = '360 Total Security'
+  softwareName           = '360 Total Security Essential'
 }
 Install-ChocolateyPackage @packageArgs
