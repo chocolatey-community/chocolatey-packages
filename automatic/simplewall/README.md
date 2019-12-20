@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@71a47d708fd1ac175d0fc5184dc5b01624e2afda/icons/simplewall.png" width="48" height="48"/> [simplewall](https://chocolatey.org/packages/simplewall)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@71a47d708fd1ac175d0fc5184dc5b01624e2afda/icons/simplewall.png" width="48" height="48"/> [simplewall](https://chocolatey.org/packages/simplewall)
 
 Simple tool to configure Windows Filtering Platform (WFP) which can configure network activity on your computer.
 

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>blender</id>
-    <version>2.80</version>
+    <version>2.81.1</version>
     <title>Blender</title>
     <owners>chocolatey, Redsandro</owners>
     <authors>Blender Foundation</authors>
@@ -11,7 +11,7 @@
     <projectUrl>https://www.blender.org</projectUrl>
     <projectSourceUrl>https://git.blender.org/gitweb/</projectSourceUrl>
     <bugTrackerUrl>https://developer.blender.org/maniphest/</bugTrackerUrl>
-    <mailingListUrl>https://wiki.blender.org/index.php/Dev:Doc/Contact#Mailing_Lists</mailingListUrl>
+    <mailingListUrl>https://wiki.blender.org/wiki/Communication/Contact#Mailing_Lists</mailingListUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
@@ -44,7 +44,7 @@ Blender is a free and open-source professional-grade 3D computer graphics and vi
 
 ]]></description>
     <summary>Blender is 3D creation for everyone, free to use for any purpose.</summary>
-    <releaseNotes>https://wiki.blender.org/index.php/Dev:Ref/Release_Notes</releaseNotes>
+    <releaseNotes>https://wiki.blender.org/wiki/Reference/Release_Notes</releaseNotes>
     <copyright>Blender Foundation</copyright>
     <tags>blender 3d rendering foss cross-platform modeling animation admin</tags>
     <dependencies>

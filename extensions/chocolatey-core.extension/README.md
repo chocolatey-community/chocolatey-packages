@@ -43,4 +43,8 @@ To get the help for the specific function use `man`:
     man Get-UninstallRegistryKey
 
 
+## Notes
+
+- There is [a known bug](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/784) in the function `Get-AppInstallLocation` with parameter `$AppNamePattern` which is internally used both as wildcard and regex patterns. This usually doesn't create any problems, but may do so if application contains regex symbols in the name, such as [notepad++](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1198).
+
 

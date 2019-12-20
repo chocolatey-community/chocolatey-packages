@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>freeciv</id>
-    <version>2.6.0</version>
+    <version>2.6.1</version>
     <title>Freeciv</title>
     <owners>chocolatey purity</owners>
     <authors>Freeciv Contributors</authors>
@@ -12,7 +12,7 @@
     <docsUrl>http://www.freeciv.org/wiki/</docsUrl>
     <bugTrackerUrl>http://gna.org/bugs/?group=freeciv</bugTrackerUrl>
     <projectSourceUrl>https://github.com/freeciv/freeciv-web</projectSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.
@@ -23,10 +23,10 @@ You can play online against other players (multiplayer) or play by yourself agai
 
 ]]></description>
     <summary>Freeciv is a Free and Open Source empire-building strategy game inspired by the history of human civilization.</summary>
-    <releaseNotes>http://www.freeciv.org/wiki/NEWS-2.6.0</releaseNotes>
+    <releaseNotes>http://www.freeciv.org/wiki/NEWS-2.6.1</releaseNotes>
     <copyright />
     <tags>freeciv game strategy civilization admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/freeciv</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/freeciv</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

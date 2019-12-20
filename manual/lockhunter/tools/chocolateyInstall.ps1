@@ -1,15 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
-  packageName            = 'lockhunter'
+  packageName            = $env:chocolateyPackageName
   fileType               = 'EXE'
-  url                    = 'https://lockhunter.com/exe/lockhuntersetup_3-2-3.exe'
-  url64Bit               = 'https://lockhunter.com/exe/lockhuntersetup_3-2-3.exe'
-  checksum               = '59E7051CB079BE49AC2BB4DD44CBDB6D4E11B6466D779465C7D1A3CA59272663'
-  checksum64             = '59E7051CB079BE49AC2BB4DD44CBDB6D4E11B6466D779465C7D1A3CA59272663'
+  url                    = 'https://lockhunter.com/assets/exe/lockhuntersetup_3-3-4.exe'
+  checksum               = 'A91CA5B5D4517666F65A43E39DA56FDD6C13E1BCB9F22FAD1790ACC5326680C6'
   checksumType           = 'sha256'
-  checksumType64         = 'sha256'
-  silentArgs             = '/VERYSILENT'
+  silentArgs             = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes         = @(0)
   softwareName           = 'LockHunter*'
 }

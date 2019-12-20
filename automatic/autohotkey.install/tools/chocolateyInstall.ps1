@@ -3,19 +3,15 @@
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 $pp = Get-PackageParameters
-
-if (!$pp['DefaultVer']){
-  if ((Get-OSArchitectureWidth 64) -and ($env:chocolateyForceX86 -ne 'true')) {$pp['DefaultVer'] = 'x64' }
-  else {$pp['DefaultVer'] = 'U32' }
+if (!$pp.DefaultVer){
+  $pp.DefaultVer = if ((Get-OSArchitectureWidth 64) -and ($Env:chocolateyForceX86 -ne 'true')) { 'U64' } else { 'U32' }
 }
-
-$silentArgs = "/S /$($pp['DefaultVer'])"
 
 $packageArgs = @{
   packageName    = 'autohotkey.install'
   fileType       = 'exe'
   file           = Get-Item "$toolsDir\*.exe"
-  silentArgs     = $silentArgs
+  silentArgs     = "/S /$($pp.DefaultVer)"
   softwareName   = 'AutoHotkey*'
   validExitCodes = @(0, 1223)
 }

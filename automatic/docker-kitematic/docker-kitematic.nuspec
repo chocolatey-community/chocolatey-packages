@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>docker-kitematic</id>
-    <version>0.17.7</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/docker-kitematic</packageSourceUrl>
+    <version>0.17.9</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/docker-kitematic</packageSourceUrl>
     <owners>Andrei Bejenaru</owners>
     <title>Kitematic: Visual client for Docker</title>
     <authors>Kitematic, Docker</authors>
     <projectUrl>https://kitematic.com</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@b422dcfaed67787575e481d92c68761506206fb3/icons/docker-kitematic.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@b422dcfaed67787575e481d92c68761506206fb3/icons/docker-kitematic.png</iconUrl>
     <copyright>(c) 2017 Docker</copyright>
     <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -35,7 +35,7 @@ Automatically map ports, visually change environment variables, configuring volu
 
 #### Note: Windows support is limited to 64bit systems.
 ]]></description>
-    <releaseNotes>https://github.com/docker/kitematic/releases/tag/v0.17.7</releaseNotes>
+    <releaseNotes>https://github.com/docker/kitematic/releases/tag/v0.17.9</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

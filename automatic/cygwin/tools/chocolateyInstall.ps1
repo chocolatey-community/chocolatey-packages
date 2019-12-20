@@ -1,13 +1,15 @@
-﻿# https://cygwin.com/faq/faq.html#faq.setup.cli
+﻿$ErrorActionPreference = 'Stop'
 
-$ErrorActionPreference = 'Stop'
-$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $pp = Get-PackageParameters
+$toolsLocation = Get-ToolsLocation
+
+#https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1291
+mkdir $toolsLocation -ea 0 | Out-Null
 
 $cygwin_root = (Get-ItemProperty 'HKLM:\SOFTWARE\Cygwin\setup' -ea 0).rootdir
 if (!$cygwin_root) {
-    $cygwin_root = if ($pp.InstallDir) { $pp.InstallDir } else { (Get-ToolsLocation) + '\cygwin' }
+    $cygwin_root = if ($pp.InstallDir) { $pp.InstallDir } else { "$toolsLocation\cygwin" }
 } else { Write-Host 'Existing installation detected, ignoring InstallDir argument' }
 
 if (!$pp.Proxy) {

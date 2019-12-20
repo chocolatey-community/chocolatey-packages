@@ -13,8 +13,8 @@ if ( $pp.InstallDir ) {
 $packageArgs = @{
     packageName    = 'python3'
     fileType       = 'exe'
-    file           = "$toolsPath\python-3.8.0b4.exe"
-    file64         = "$toolsPath\python-3.8.0b4-amd64.exe"
+    file           = "$toolsPath\python-3.9.0a2.exe"
+    file64         = "$toolsPath\python-3.9.0a2-amd64.exe"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
     validExitCodes = @(0)
     softwareName   = 'Python*'
@@ -22,7 +22,12 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' }}
 
-Write-Host "Installed to: '$installDir'"
+$installLocation = Get-AppInstallLocation python
+if ($installLocation -ne $installDir) { 
+    Write-Warning "Provided python InstallDir was ignored by the python installer"
+    Write-Warning "Its probable that you had pre-existing python installation"
+    Write-Warning "Installed to: $installLocation"
+ } else { Write-Host "Installed to: '$installDir'" }
 
 if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
     Write-Warning "Environment variable PYTHONHOME points to different version: $Env:PYTHONHOME"

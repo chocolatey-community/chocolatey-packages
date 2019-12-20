@@ -1,6 +1,5 @@
 ﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d3ba6b8a6b663536b70f5d9a3e710bfca64c73f4/icons/hostsman.png" width="48" height="48"/> [hostsman](https://chocolatey.org/packages/hostsman)
 
-
 __HostsMan__ is a freeware application that lets you manage your Hosts file with ease.
 
 ## Features
@@ -13,3 +12,5 @@ __HostsMan__ is a freeware application that lets you manage your Hosts file with
 - Exclusion list
 - No Spyware, no adware, no viruses, 100% freeware, clean and simple.
 
+
+![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/hostsman/screenshot.png)

@@ -3,17 +3,17 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://www.tvbrowser.org/index.php?id=tv-browser>
+location on <https://www.tvbrowser.org/index.php?id=windows>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://sourceforge.net/projects/tvbrowser/files/TV-Browser%20Releases%20%28Java%208%20and%20higher%29/4.0.1/tvbrowser_4.0.1_win32.exe/download>
+  32-Bit software: <https://sourceforge.net/projects/tvbrowser/files/TV-Browser%20Releases%20%28Java%2011%20and%20higher%29/4.2/tvbrowser-lite_4.2_win.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 84859D71AC6829BF28E19AFF727B66CB3979C167C07C20A6B2DB4294DB6B2725
+  checksum32: BE01BF37715EEF3CD05E8929DA62439E85E523F666A1001352ECE4E4564CE77C
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl.txt>

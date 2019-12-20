@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>maxthon.commandline</id>
-    <version>5.2.7.5000</version>
+    <version>5.3.8.2000</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/maxthon.commandline</packageSourceUrl>
     <owners>chocolatey, Maxthon International Limited</owners>
     <title>Maxthon (Portable)</title>

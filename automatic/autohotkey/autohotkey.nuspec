@@ -3,49 +3,43 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey</id>
-    <version>1.1.30.03</version>
+    <version>1.1.32.00</version>
     <title>AutoHotkey</title>
     <owners>chocolatey</owners>
     <authors>Lexikos</authors>
     <licenseUrl>http://ahkscript.org/docs/license.htm</licenseUrl>
     <projectUrl>http://ahkscript.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/autohotkey.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/autohotkey.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description><![CDATA[
-AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
+    <description><![CDATA[AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.
 
-**You can use AutoHotkey to**:
+## Features
 
-- Automate almost anything by sending keystrokes and mouse clicks.
-- You can write a mouse or keyboard macro by hand or a macro recorder.
-- Remap keys and buttons on your keyboard, joystick, and mouse.
-- Create hotkeys for keyboard, joystick, and mouse.
-- Essentially any key, button or combination can become a hotkey.
-- Expand abbreviations as you type them.
-- Retrieve and change the clipboard's contents.
-- Convert any AHK script into an executable file that can be run on computers where AutoHotkey is not installed.
-
-**You can also**:
-
-- Create custom data-entry forms, user interfaces and menu bars.
-- See GUI for details (you can use a Gui editor).
-- Automate data entry jobs by reading data from text files, XML, CSV, Excel and various database formats.
-- Read signals from hand-held remote controls via the WinLIRC client script.
-- Use the Component Object Model (COM).
-- Use array/associative array/OOP (Objects).
-- Use variadic functions.
-- Use DLL calls and Windows Messages.
-- Use Perl Compatible Regular Expressions (PCRE).
-- Use interactive debugging features and more.
-
+- Automate almost anything by sending keystrokes and mouse clicks
+- Write a mouse or keyboard macro by hand or a macro recorder
+- Remap keys and buttons on your keyboard, joystick, and mouse
+- Create hotkeys for keyboard, joystick, and mouse
+- Essentially any key, button or combination can become a hotkey
+- Expand abbreviations as you type them
+- Retrieve and change the clipboard's contents
+- Convert any AHK script into an executable file that can be run on computers where AutoHotkey is not installed
+- Create custom data-entry forms, user interfaces and menu bars
+- Automate data entry jobs by reading data from text files, XML, CSV, Excel and various database formats
+- Read signals from hand-held remote controls via the WinLIRC client script
+- Supports Component Object Model (COM)
+- Supports advanced programming constructs such as arrays, objects, hashtables, variadic functions etc.
+- DLL calls and Windows Messages
+- Perl Compatible Regular Expressions (PCRE).
+- Interactive debugging features
+- Much more ...
 ]]></description>
     <summary>AutoHotkey is a free, open source macro-creation and automation software utility that allows users to automate repetitive tasks. It is driven by a custom scripting language that is aimed specifically at providing keyboard shortcuts, otherwise known as hotkeys.</summary>
     <releaseNotes></releaseNotes>
     <tags>automation hotkeys scripting windows foss admin</tags>
     <dependencies>
-      <dependency id="autohotkey.install" version="1.1.30.03" />
+      <dependency id="autohotkey.install" version="1.1.32.00" />
     </dependencies>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/autohotkey</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/autohotkey</packageSourceUrl>
     <projectSourceUrl>https://github.com/Lexikos/AutoHotkey_L</projectSourceUrl>
   </metadata>
   <files>

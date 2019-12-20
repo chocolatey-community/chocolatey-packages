@@ -1,10 +1,6 @@
-﻿[CmdletBinding()]
-param($IncludeStream, [switch]$Force)
-Import-Module AU
+﻿Import-Module AU
 
-$releases = 'http://hostsman2.it-mate.co.uk/'
-
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+$releases = 'http://www.abelhadigital.com/hostsman'
 
 function global:au_SearchReplace {
   @{
@@ -14,8 +10,9 @@ function global:au_SearchReplace {
       "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
     }
+
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*[$]fileName\s*=\s*)('.*')"= "`$1'$($Latest.FileName)'"
     }
   }
 }
@@ -23,24 +20,25 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = '4[\.\d]+\.zip$'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { 'http://hostsman2.it-mate.co.uk/' + $_ } | sort -Descending
+  # <a class="btn btn-primary btn-lg btn-download" href="https://drive.google.com/uc?export=download&amp;id=0B0N7Pu7pijFBejcxNXlLZVVMSnM">                
+  if ($download_page.Content -match '<a .+btn-primary.+btn-download.+ href="([^"]+)"') {
+    $url = $Matches[1]
+  } else { throw "Can't find download link"}
 
-  $streams = @{}
-  $urls32 | % {
-    $verRe = '[_]|\.zip'
-    $version = $_ -split "$verRe" | select -last 1 -skip 1
-    $version = Get-Version $version
-
-    if (!($streams.ContainsKey($version.ToString(2)))) {
-      $streams.Add($version.ToString(2), @{
-        Version = $version.ToString()
-        URL32   = $_
-      })
-    }
+  iwr $url -OutFile hostsman.zip
+  $hash = Get-FileHash hostsman.zip | % Hash
+  set-alias 7z $Env:chocolateyInstall\tools\7z.exe
+  rm tools\*.exe -ea 0
+  7z x $PSScriptRoot\hostsman.zip -otools
+  $setupFile = gi tools\*.exe
+    
+  @{
+    Version = $setupFile.VersionInfo.FileVersion.Trim()
+    URL32 = $url 
+    FileName = $setupFile.Name
+    Checksum32 = $hash
+    ChecksumType32 = 'sha256'
   }
-
-  return @{ Streams = $streams }
 }
 
-update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
+update -ChecksumFor none 

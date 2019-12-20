@@ -3,27 +3,26 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>djv</id>
-    <version>2.0.3</version>
+    <version>2.0.5</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/djv</packageSourceUrl>
     <owners>chocolatey, Redsandro</owners>
     <title>DJV Imaging</title>
     <authors>Darby Johnston</authors>
-    <projectUrl>http://djv.sourceforge.net/</projectUrl>
+    <projectUrl>https://darbyjohnston.github.io/DJV/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@efc9e0914779661ad7aa88e9dbde0333cfb81f12/icons/djv.png</iconUrl>
     <copyright>2004–2014 Darby Johnston</copyright>
-    <licenseUrl>http://djv.sourceforge.net/djvLegal.html</licenseUrl>
+    <licenseUrl>https://darbyjohnston.github.io/DJV/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/djv/git/ci/master/tree/</projectSourceUrl>
-    <docsUrl>http://djv.sourceforge.net/djvDocumentation.html</docsUrl>
+    <projectSourceUrl>https://github.com/darbyjohnston/DJV</projectSourceUrl>
+    <docsUrl>https://darbyjohnston.github.io/DJV/documentation.html</docsUrl>
     <mailingListUrl>http://sourceforge.net/p/djv/discussion/</mailingListUrl>
-    <bugTrackerUrl>http://sourceforge.net/p/djv/_list/tickets</bugTrackerUrl>
+    <bugTrackerUrl>https://github.com/darbyjohnston/DJV/issues</bugTrackerUrl>
     <tags>djv video movie player cineon dpx openexr quicktime admin foss cross-platform</tags>
     <summary>DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description><![CDATA[
-DJV Imaging provides professional movie playback software for film production, VFX, and computer animation.
+    <description><![CDATA[DJV provides professional review software for VFX, animation, and film production. Playback high resolution, high bit-depth, image sequences and videos, with frame accurate control and color management. Available for Linux, Apple macOS, and Microsoft Windows. Source code is provided under a BSD style open source license.
 
-## Features:
+## Features
 
 * Support for Linux, Apple OS X, and Microsoft Windows
 * Plays both image sequences and movies
@@ -35,12 +34,7 @@ DJV Imaging provides professional movie playback software for film production, V
 ## Notes
 
 * This package no longer support 32-bit Operating Systems, install version 1.0.5.20170203 or earlier if you have a need for 32-bit.
-
 ]]></description>
-    <releaseNotes>http://djv.sourceforge.net/djvChangeList.html</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

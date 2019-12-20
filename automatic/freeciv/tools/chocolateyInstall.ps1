@@ -5,9 +5,9 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'Freeciv*'
 
-  checksum       = '971f161c8730ada48929d5b2a5d5cc463f252ca42b4d1bdffb4988292b214842'
+  checksum       = '0e4571054de5b0218b536c8b9fe236bec5b35d356f296dd4ae11d7acd7a566f6'
   checksumType   = 'sha256'
-  url            = 'http://files.freeciv.org/packages/windows/Freeciv-2.6.0-win32-gtk3-setup.exe'
+  url            = 'http://files.freeciv.org/packages/windows/Freeciv-2.6.1-win32-gtk3-setup.exe'
 
   silentArgs     = '/S'
   validExitCodes = @(0)

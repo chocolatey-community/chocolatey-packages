@@ -4,25 +4,26 @@
   <metadata>
     <id>cutepdf</id>
     <title>CutePDF Writer</title>
-    <version>3.2</version>
+    <version>4.0</version>
     <authors>Acro Software Inc.</authors>
     <owners>chocolatey,Redsandro,Thilas</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
-    <description>
+    <description><![CDATA[
 Portable Document Format (PDF) is the de facto standard for the secure and reliable distribution and exchange of electronic documents and forms around the world.  CutePDF Writer is the free version of commercial PDF converter software. CutePDF Writer installs itself as a "printer subsystem". This enables virtually any Windows applications (must be able to print) to convert to professional quality PDF documents - with just a push of a button!
 
 ## Notes
 
 - Free software for commercial and non-commercial use.
-    </description>
+
+]]></description>
     <projectUrl>http://www.cutepdf.com/products/cutepdf/writer.asp</projectUrl>
     <tags>PDF Printer Converter Office freeware admin</tags>
     <copyright>Copyright © Acro Software Inc.</copyright>
     <licenseUrl>http://www.cutepdf.com/Info/legal.asp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/f5c1e4da40598a029269040ecb56fa8d90cf2985/icons/cutepdf.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f5c1e4da40598a029269040ecb56fa8d90cf2985/icons/cutepdf.png</iconUrl>
     <releaseNotes>[Software Updates](http://www.cutepdf.com/Support/updates.asp)</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cutepdf</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/cutepdf</packageSourceUrl>
     <dependencies>
       <dependency id="ghostscript.app" version="8.15" />
     </dependencies>

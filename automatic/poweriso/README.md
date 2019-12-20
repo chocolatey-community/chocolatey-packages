@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/poweriso.png" width="48" height="48"/> [poweriso](https://chocolatey.org/packages/poweriso)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c8d48758cdc18d43e6c1525824720377c8b9ba24/icons/poweriso.png" width="48" height="48"/> [poweriso](https://chocolatey.org/packages/poweriso)
 
 PowerISO is a powerful CD / DVD / BD image file processing tool, which allows you to open, extract, burn, create, edit, compress, encrypt, split and convert ISO files, and mount ISO files with internal virtual drive. It can process almost all CD / DVD / BD image files including ISO and BIN files. PowerISO provides an all-in-one solution. You can do every thing with your ISO files and disc image files.
 

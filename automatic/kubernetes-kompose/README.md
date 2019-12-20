@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@e4e529ccc804ac6fac259a658e395e38b42b24f3/icons/kubernetes-kompose.png" width="48" height="48"/> [kubernetes-kompose](https://chocolatey.org/packages/kubernetes-kompose)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@e4e529ccc804ac6fac259a658e395e38b42b24f3/icons/kubernetes-kompose.png" width="48" height="48"/> [kubernetes-kompose](https://chocolatey.org/packages/kubernetes-kompose)
 
 ## Kubernetes + Compose = Kompose
 Kompose is a conversion tool for Docker Compose to container orchestrators such as Kubernetes (or OpenShift).

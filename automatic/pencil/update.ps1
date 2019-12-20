@@ -3,23 +3,19 @@ param([switch] $Force)
 
 Import-Module AU
 
-$domain   = 'https://github.com'
-$releases = "$domain/evolus/pencil/releases/latest"
+$releases = "http://pencil.evolus.vn/Downloads.html"
 
-function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -NoSuffix -FileNameBase "pencil"
-
-  # Don't create shim for installer
-  New-Item "tools\pencil.exe.ignore" -type file -force | Out-Null
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseURL)>"
       "(?i)(^\s*software.*)\<.*\>"        = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum\:).*"            = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum32\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum64\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
+      "(?i)(^\s*checksum32\:).*"            = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum64\:).*"            = "`${1} $($Latest.Checksum64)"
     }
 
     "$($Latest.PackageName).nuspec" = @{
@@ -30,16 +26,19 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $domain = $releases -split '(?<=//.+)/' | select -First 1
 
-  $re = '\.zip$'
-  $url = $download_page.links | ? href -match $re | % href | select -First 1
+  $re = '\.exe$'
+  $url = $download_page.links | ? href -match $re | % { $domain + $_.href }
 
-  $version = ( Split-Path $url -Leaf).Substring(1).Replace(".zip", "")
+  $version = $url[0] -split '/' | select -last 1 -Skip 1
+  $version = $version.Substring(1) -replace '\.\w+$'
 
-  return @{
+  @{
     Version     = $version
-    URL32       = "http://pencil.evolus.vn/dl/V${version}/Pencil-Setup-${version}.exe"
-    ReleaseURL  = "$domain/evolus/pencil/releases/tag/v${version}"
+    URL32       = $url -match 'i386' | select -first 1
+    URL64       = $url -notmatch 'i386' | select -first 1
+    ReleaseURL  = $download_page.links.href | ? { $_ -like "*github*/release/*"} | select -first 1
   }
 }
 

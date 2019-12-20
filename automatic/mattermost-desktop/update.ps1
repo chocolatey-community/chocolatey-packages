@@ -1,7 +1,5 @@
 import-module au
 
-$releases = 'https://github.com/mattermost/desktop/releases'
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
@@ -16,51 +14,48 @@ function global:au_SearchReplace {
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)(^\s*checksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksum64\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum64)'"
     }
   }
 }
 
 function global:au_GetLatest {
 
-  $downloadedPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  # Get latest published version
+  $jsonAnswer = (Invoke-WebRequest -Uri "https://api.github.com/repos/mattermost/desktop/releases/latest" -UseBasicParsing).Content | ConvertFrom-Json
 
-  $url32 = $downloadedPage.links | ? href -match '32.exe$' | select -First 1 -expand href
-  $url32SegmentSize = $([System.Uri]$url32).Segments.Length
-  $filename32 = $([System.Uri]$url32).Segments[$url32SegmentSize - 1]
+  $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
 
-  $url64 = $downloadedPage.links | ? href -match '64.exe$' | select -First 1 -expand href
-  $url64SegmentSize = $([System.Uri]$url64).Segments.Length
-  $filename64 = $([System.Uri]$url64).Segments[$url64SegmentSize - 1]
+  # Split the body description on line and takes likes with .msi with the next line as context
+  $jsonAnswer.Body.Split("`n") | Select-String '\.msi' -Context 0,1 | ForEach-Object {
+    # Sanitize string by spliting on spaces, and taking the longest
+    # Example of unnsanitized string
+    # > - https://releases.mattermost.com/desktop/4.3.0/mattermost-desktop-v4.3.0-x64.msi (beta)
+    $msiUrl = ([string]$_).Split("`n")[0].Split(' ').where{ $_.length -gt 10 }.trim()
+    ([string]$_).Split("`n")[1] -match '.*`(?<hash>.*)`.*' | Out-Null
+    $digest = $matches['hash']
 
-  $version = [regex]::match($url32,'/([A-Za-z]+-)+([0-9]+.[0-9]+.[0-9]+).*exe').Groups[2].Value
+    if ($msiUrl -like '*x64*') {
+      $msiUrl64 = $msiUrl
+      $msiFilename64 = Split-Path -leaf $msiUrl
+      $digest64 = $digest
+    } else {
+      $msiUrl32 = $msiUrl
+      $msiFilename32 = Split-Path -leaf $msiUrl
+      $digest32 = $digest
+    }
+  }
 
-  # Since upstream is providing hashes, let's rely on these instead.
-  # i.e. this adds some added value as we are making sure the hashes are
-  # really those computed by upstream. We are not simply relying on the hashs
-  # provided by the cmdlet Get-RemoteFiles.
-  $hashesText = $downloadedPage.AllElements | Where tagName -eq 'ul' | Where innerText -match '.exe' | Select -First 1 -expand innerText
-	$i = 0;
-	foreach ($line in $hashesText) {
-		if ($line -cmatch $url32) { 
-			$hash32Parsed = $hashesText[$i+2] -Split ":";
-			$hash32 = $hash32Parsed[1].trim();
-		}
-		if ($line -cmatch $url64) { 
-			$hash64Parsed = $hashesText[$i+2] -Split ":";
-			$hash64 = $hash64Parsed[1].trim();
-		}
-		$i++;
-	}
-  
   return @{
-    url32 = $url32;
-    url64 = $url64;
-    checksum32 = $hash32;
-    checksum64 = $hash64;
+    url32 = $msiUrl32;
+    url64 = $msiUrl64;
+    checksum32 = $digest32;
+    checksum64 = $digest64;
     checksumType32 = 'SHA256';
     checksumType64 = 'SHA256';
-    filename32 = $filename32;
-    filename64 = $filename64;
+    filename32 = $msiFilename32;
+    filename64 = $msiFilename64;
     version = $version;
   }
 }

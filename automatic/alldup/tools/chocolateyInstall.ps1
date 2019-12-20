@@ -1,14 +1,24 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageArgs = @{
-  packageName    = $env:ChocolateyPackageName
-  fileType       = 'exe'
-  url            = 'http://www.alldup.info/download/AllDupSetup.exe'
-  softwareName   = 'AllDup*'
-  checksum       = 'b9e4dc45eb4b3dde2ab81e20fd5c60c25cf902d663ec3bdd41ecc8451eb0da96'
-  checksumType   = 'sha256'
-  silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
-  validExitCodes = @(0)
-}
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-Install-ChocolateyPackage @packageArgs
+$packageArgs = @{
+  packageName    = $Env:ChocolateyPackageName
+  fileType       = $fileType
+  file           = Get-Item $toolsPath\*.exe
+  silentArgs     = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG="{0}/InnoInstall.log"' -f (Get-PackageCacheLocation)
+  validExitCodes = @(0)
+  softwareName   = 'AllDup*'
+}
+Install-ChocolateyInstallPackage @packageArgs
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" "" }}
+
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation "$packageName*"
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
+Write-Host "$packageName installed to '$installLocation'"
+
+Register-Application "$installLocation\$packageName.exe"
+Write-Host "$packageName registered as $packageName"
+
+Remove-Process -PathFilter alldup.exe -WaitFor 10 | Out-Null

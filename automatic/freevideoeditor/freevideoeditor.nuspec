@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freevideoeditor</id>
-    <version>6.3.8</version>
+    <version>6.4.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/freevideoeditor</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>VSDC Free Video Editor</title>

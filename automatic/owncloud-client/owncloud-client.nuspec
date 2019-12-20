@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>owncloud-client</id>
-    <version>2.5.4.11654</version>
+    <version>2.6.0.13018</version>
     <title>ownCloud Windows Client</title>
     <owners>chocolatey</owners>
     <authors>ownCloud developers</authors>
@@ -13,7 +13,7 @@
     <bugTrackerUrl>https://github.com/owncloud/client/issues</bugTrackerUrl>
     <mailingListUrl>https://mailman.owncloud.org/mailman/listinfo/</mailingListUrl>
     <docsUrl>https://doc.owncloud.org/</docsUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/owncloud.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/owncloud.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
@@ -26,7 +26,7 @@ This package installs the ownCloud Sync Client on your computer.
     <releaseNotes>https://owncloud.org/changelog/desktop/</releaseNotes>
     <copyright>What is the copyright</copyright>
     <tags>owncloud-client owncloud cloud sync webdav caldav carddav admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/owncloud-client</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/owncloud-client</packageSourceUrl>
     <dependencies>
       <!--<dependency id="vcredist2013" version="12.0.30501.0" />-->
     </dependencies>

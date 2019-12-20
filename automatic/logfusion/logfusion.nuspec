@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logfusion</id>
-    <version>6.2.1</version>
+    <version>6.3</version>
     <title>LogFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.logfusion.ca</projectUrl>
     <licenseUrl>https://www.logfusion.ca/License/</licenseUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cb12fa392bf8b8ee1cffabb8084994ee01516a49/icons/logfusion.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@cb12fa392bf8b8ee1cffabb8084994ee01516a49/icons/logfusion.png</iconUrl>
     <docsUrl>https://www.logfusion.ca/Help/</docsUrl>
     <mailingListUrl>https://www.logfusion.ca/Discussions/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -26,7 +26,7 @@ Real-Time Log Monitoring Made Easy! LogFusion is a powerful realtime log monitor
 ]]></description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>logfusion log logs parsing tail monitoring trial freeware</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/logfusion</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/logfusion</packageSourceUrl>
     <owners>chocolatey,keithlammers,the-running-dev</owners>
     <dependencies>
       <dependency id="dotnet4.6.1" version="4.6.01055.20170308" />

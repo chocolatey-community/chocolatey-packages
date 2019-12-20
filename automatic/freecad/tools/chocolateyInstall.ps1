@@ -60,3 +60,4 @@ Install-ChocolateyPackage @packageArgs
 
 # Exporting Package Parameters to json file in toolsdir
 $packageParams | ConvertTo-Json | Out-File  ( "$toolsDir\pp.json" )
+

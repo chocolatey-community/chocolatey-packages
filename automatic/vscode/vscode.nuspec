@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode</id>
     <title>Visual Studio Code</title>
-    <version>1.37.1</version>
+    <version>1.41.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
@@ -16,8 +16,7 @@
     <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Visual Studio Code</summary>
-    <description><![CDATA[
-Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
+    <description><![CDATA[Build and debug modern web and cloud applications. Code is free and available on your favorite platform - Linux, Mac OSX, and Windows.
 
 ## Features
 
@@ -41,18 +40,12 @@ Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
 * The package uses default install options except that it adds context menu entries and Visual Studio Code isn't started after installation.
 * For disabling the auto-update functionality see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
 
-
-![screenshot](https://rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/vscode/screenshot.png)
-
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6dc510f16b69a2134e901f2576e991c462a18e9b/automatic/vscode/screenshot.png)
 ]]></description>
     <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="dotnet4.5.2" version="4.5.2.20140902" />
+      <dependency id="vscode.install" version="[1.41.1]" />
     </dependencies>
     <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>

@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/minishift/minishift/releases/tag/v1.34.1>
+location on <https://github.com/minishift/minishift/releases/tag/v1.34.2>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://github.com/minishift/minishift/releases/download/v1.34.1/minishift-1.34.1-windows-amd64.zip>
+  software: <https://github.com/minishift/minishift/releases/download/v1.34.2/minishift-1.34.2-windows-amd64.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: 
-  checksum: 1501FEBF587B9B7BC39CC44ABE1D581C5AEB9C33C024E1E3A8F2D6A291C43880
+  checksum: 573733FD82FFFBE7A6FAEF6C3EE77840DF738B6701BDF6014ACD443D97EB74D5
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/minishift/minishift/blob/eff0477aa242432aaba284febf9496ebe6cd2371/LICENSE>

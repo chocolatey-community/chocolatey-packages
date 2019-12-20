@@ -5,14 +5,14 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://downloads.mixxx.org/mixxx-2.2.2/mixxx-2.2.2-win32.exe'
-  url64bit       = 'https://downloads.mixxx.org/mixxx-2.2.2/mixxx-2.2.2-win64.exe'
+  url            = 'https://downloads.mixxx.org/mixxx-2.2.3/mixxx-2.2.3-win32.exe'
+  url64bit       = 'https://downloads.mixxx.org/mixxx-2.2.3/mixxx-2.2.3-win64.exe'
 
   softwareName   = 'Mixxx *'
 
-  checksum       = 'ba12135dcbabfb3d46364a591b79cd485698168d9f46ae6d49d80ea69d9528df8a093b8f013f1110f0e9cc82fa68afda14b73bf380c3e400e8eb31f4aba66cac'
+  checksum       = '616143ceb66c3bd6f2ddb22f69533612feed4d28e3312a2b708fef908b6a8747014bab84c986a4562a4fe8cb2ee5c55428bb39c13232e84a498751751f5e7b38'
   checksumType   = 'sha512'
-  checksum64     = '10b751c63b9ff7d2e18bad12e00d0e327c0e0d3ade6de957a9e7cff848c7b0cf82402134fdf4865181d8292bd4b927492bf690286bb9955e8e16da9fc15c0655'
+  checksum64     = '32cf658920e15d4ad7603b943133da3d562b6ced67791a0eebd1fd78356a0c4763c78abbc82c95111a10eff9e7873dbd8e5dbbf85f05155e20f208953ec5a067'
   checksumType64 = 'sha512'
 
   silentArgs     = '/quiet'

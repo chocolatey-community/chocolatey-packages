@@ -5,7 +5,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  file          = "$toolsDir\poi-setup-10.3.0.exe"
+  file          = "$toolsDir\poi-setup-10.5.0-beta.1.exe"
 
   softwareName  = 'poi*'
 

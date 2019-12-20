@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3</id>
-    <version>3.8.0-b4</version>
+    <version>3.9.0-a2</version>
     <title>Python 3.x</title>
     <owners>chocolatey</owners>
     <authors>Python Software Foundation</authors>
@@ -14,7 +14,7 @@
 
 ## Package Parameters
 
-- `/InstallDir` - Installation directory
+- `/InstallDir` - Installation directory. **NOTE**: If you have pre-existing python3 installation, this parameter is ignored and existing python install location will be used
 
 Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
 
