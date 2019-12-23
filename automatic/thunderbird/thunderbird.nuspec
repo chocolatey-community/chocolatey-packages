@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>thunderbird</id>
-    <version>68.3.1</version>
+    <version>0.0</version>
     <title>Mozilla Thunderbird</title>
     <owners>chocolatey</owners>
     <authors>Mozilla</authors>
     <licenseUrl>http://www.mozilla.org/en-US/legal/eula/thunderbird.html</licenseUrl>
-    <projectUrl>https://www.mozilla.org/en/thunderbird/</projectUrl>
+    <projectUrl>https://www.mozilla.org/en-US/about/legal/terms/thunderbird/</projectUrl>
     <projectSourceUrl>https://dxr.mozilla.org/comm-central/source/</projectSourceUrl>
     <docsUrl>https://developer.mozilla.org/en-US/Thunderbird</docsUrl>
     <bugTrackerUrl>https://bugzilla.mozilla.org/</bugTrackerUrl>
