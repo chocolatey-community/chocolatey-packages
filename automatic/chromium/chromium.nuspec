@@ -23,7 +23,7 @@
     <copyright>Copyright (c) 2013 The Chromium OS Author</copyright>
     <bugTrackerUrl>https://bugs.chromium.org/p/chromium/issues/list</bugTrackerUrl>
     <mailingListUrl>https://www.chromium.org/developers/discussion-groups</mailingListUrl>
-    <licenseUrl>https://www.chromium.org/chromium-os/licenses</licenseUrl>
+    <licenseUrl>https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/LICENSE</licenseUrl>
     <tags>chromium admin google cross-platform foss chrome browser</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/chromium</packageSourceUrl>
     <dependencies>
