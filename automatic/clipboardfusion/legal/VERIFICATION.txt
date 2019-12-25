@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.clipboardfusion.com/Download/>
 and can be verified by doing the following:
 
-1. Download the following <https://binaryfortressdownloads.com/Download/BFSFiles/104/ClipboardFusionSetup-5.7.exe>
+1. Download the following <https://binaryfortressdownloads.com/Download/BFSFiles/104/ClipboardFusionSetup-5.7c.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 32A8DC6BC77398E948F51136A9C8B67BD2F31D19606DC6A28F2B5EB371829EDB
+  checksum: FEC8661A82001F4F102201DADD6E80B0D18477F2908FF861251CCD5154A7F3E7
 
 The file 'LICENSE.txt' has been obtained from <https://www.clipboardfusion.com/License/>
