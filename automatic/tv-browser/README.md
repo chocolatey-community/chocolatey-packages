@@ -1,6 +1,5 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/tv-browser.svg" width="48" height="48"/> [tv-browser](https://chocolatey.org/packages/tv-browser)
 
-
 TV-Browser is a digital TV guide. It gets the daily TV program from the internet and shows it clearly aranged like a printed TV guide. An internet connection is only necessary during the data update.
 
 ## Features
@@ -22,10 +21,10 @@ TV-Browser is a digital TV guide. It gets the daily TV program from the internet
 - Search - Search for programs.
 - Showview number calculator - To generate the "Showview" numbers.
 - TV Rater - To rate broadcasts and to see reviews from other users.
-- WebPlugin - Hand over broadcastings to web pages (e.g. for searching by "Google") 
+- WebPlugin - Hand over broadcastings to web pages (e.g. for searching by "Google")
 
 ## Notes
 
 - You can not use TV-Browser to watch TV.
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/automatic/tv-browser/screenshot.png)
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@bdc73d9cab4ce6feaf3c3a02973667fe63ed5907/automatic/tv-browser/screenshot.png)
