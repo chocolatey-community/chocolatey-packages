@@ -24,3 +24,4 @@ Install-ChocolateyZipPackage @packageArgs
 Start-ChocolateyProcessAsAdmin @installArgs
 Copy-Item "$installDir\vim\vim$shortversion\vimtutor.bat" $env:windir
 Set-Content -Path "$toolsDir\installDir" -Value $installDir
+Create-SymbolicLink
