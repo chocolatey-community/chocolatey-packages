@@ -36,7 +36,7 @@ function global:au_GetLatest {
   $url   = $download_page.links | ? href -match $re   | select -First 1 -expand href
   $url64 = $download_page.links | ? href -match $re64 | select -First 1 -expand href
   $version = $url -split '/' | Select-Object -Last 1 -Skip 1 | % { $_.Trim('v') }
-  $shortversion = $version.Substring(0, 1) + $version.Substring(2, 1)
+  $shortversion = $version.Split('.')[0] + $version.Split('.')[1]
 
   @{
     URL32 = $url
