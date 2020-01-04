@@ -9,7 +9,7 @@ if ((Get-OSArchitectureWidth 32) -or $env:chocolateyForceX86 -eq $true) {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\Texmaker_5.0.3_Win_x64.msi"
+  file           = "$toolsPath\Texmaker_5.0.4_Win_x64.msi"
   softwareName   = 'Texmaker*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)

@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>texmaker</id>
-    <version>5.0.3</version>
-    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/texmaker</packageSourceUrl>
+    <version>5.0.4</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/texmaker</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Texmaker</title>
     <authors>Pascal Brachet,Joël Amblard</authors>
     <projectUrl>http://www.xm1math.net/texmaker/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@fc7e378fe2fb55d56be7493fba9613a920ca6c34/icons/texmaker.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@fc7e378fe2fb55d56be7493fba9613a920ca6c34/icons/texmaker.png</iconUrl>
     <copyright>© 2003/2015 - Pascal Brachet</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
