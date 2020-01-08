@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.zotero.org/download/> (The listed url gets redirected to another one)
 and can be verified by doing the following:
 
-1. Download the following <https://download.zotero.org/client/release/5.0.79/Zotero-5.0.79_setup.exe>
+1. Download the following <https://download.zotero.org/client/release/5.0.81/Zotero-5.0.81_setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: F4802FA2150302FBCDF33C5A662275BDAC5C5D56C8E7D9DB8D4EE7E1DA0D5777
+  checksum: 3E137A836D9B86C24EB601A55B95925E775F550972B5F6FDB62E39F50C716731
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/zotero/zotero/blob/929288f9811a5026053ae154ca08cc4a9da13c52/COPYING>

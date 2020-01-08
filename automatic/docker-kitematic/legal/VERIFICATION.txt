@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/docker/kitematic/releases/tag/v0.17.9>
+location on <https://github.com/docker/kitematic/releases/tag/v0.17.10>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://github.com/docker/kitematic/releases/download/v0.17.9/Kitematic-0.17.9-Windows.zip>
+  software: <https://github.com/docker/kitematic/releases/download/v0.17.10/Kitematic-0.17.10-Windows.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: 
-  checksum: 6281BE8DD5A4C48A2CC5BE9B07AE8B80A7A87139ED18A7C4F1F71B5E2C7CE9D7
+  checksum: C9089EFA30770B94C5415F177440A92B66F64822ABC0CA725D29F482E9C8BC09
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/docker/kitematic/blob/d72145f6182f7c7bd8735587294e7f6477187c1b/LICENSE>
