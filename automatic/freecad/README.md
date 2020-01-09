@@ -48,7 +48,7 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 - modular MSI installer. FreeCAD's installer allows flexible installations on Windows systems. Packages for Ubuntu systems are also maintained.
 
 ## Package parameters
-
+** Used only for Portable or Pre Releases Currently **
 - `/UnzipLocation` - This is the location inside the Chocolatey lib folder specific to this package.
 - `/WorkingDirectory` - This will use the same location as the Unziplocation unless designated to be different.
 - `/TargetPath` - This is the location of the FreeCAD.exe file when unziped from the archive file.
@@ -58,7 +58,7 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 - `/Shortcut` - This is set to place the Shortcut only if listed in the Package Parameters ( ex: /Shortcut ). The default is to not place any Shortcut.
 - `/WindowStyle` - The normal window setting for most Applications is as a Window. Maximised Window would be 3.
 
-Example: `choco install freecad --params "'/UnzipLocation:C:\FreeCAD' /Shortcut"`
+Example: `choco install freecad --params "/UnzipLocation:'C:\FreeCAD' /Shortcut"`
 
 
 
