@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.python.org/downloads/windows/'
 
