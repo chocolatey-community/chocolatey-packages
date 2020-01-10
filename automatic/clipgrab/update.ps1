@@ -28,7 +28,7 @@ function global:au_GetLatest {
   $version = $url -split "$verRe" | select -last 1 -skip 2
   @{
     URL32 = $url
-    Version = $version
+    Version = Get-Version $version
   }
 }
 
