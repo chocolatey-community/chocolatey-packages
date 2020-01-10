@@ -3,12 +3,12 @@ Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 function global:au_GetLatest {
     $downloadEndPointUrl = 'https://www.binaryfortress.com/Data/Download/?package=logfusion&log=117'
-    $versionRegEx = 'LogFusionSetup-([0-9\.\-]+)\.exe'
+    $versionRegEx = 'LogFusionSetup-([0-9\.\-]+)[a-z]?\.exe'
 
     $downloadUrl = Get-RedirectedUrl $downloadEndPointUrl
     $versionInfo = $downloadUrl -match $versionRegEx
 
-    if ($matches) {
+    if ($versionInfo) {
         $version = $matches[1]
     }
 
