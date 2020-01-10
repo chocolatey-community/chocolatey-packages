@@ -27,11 +27,11 @@ Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 . "$toolsPath/helpers.ps1"
-$installLocation = Get-AppInstallLocation python | % { $_.TrimEnd('\') }
+$installLocation = Get-AppInstallLocation python | ForEach-Object { $_.TrimEnd('\') }
 
 if (!$installLocation) {
   Update-SessionEnvironment
-  $installLocation = Get-RegistryKeyValue -key "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion\InstallPath" -subKey "(default)" | % { $_.TrimEnd('\') }
+  $installLocation = Get-RegistryKeyValue -key "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion\InstallPath" -subKey "(default)" | ForEach-Object { $_.TrimEnd('\') }
 }
 if ($installLocation -ne $installDir) {
   Write-Warning "Provided python InstallDir was ignored by the python installer"

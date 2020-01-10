@@ -4,7 +4,7 @@
     [string]$subKey
   )
 
-  Get-ItemProperty -Path $key | % { $_."$subKey" }
+  Get-ItemProperty -Path $key | ForEach-Object { $_."$subKey" }
 }
 
 function Get-LocalizedWellKnownPrincipalName {
