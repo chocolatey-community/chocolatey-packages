@@ -56,7 +56,6 @@
     <licenseUrl>https://www.smartftp.com/static/Products/Client/License.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@128baf7c0c572f390b16f649bae4c4b2fbeac28f/icons/smartftp.svg</iconUrl>
-    <bugTrackerUrl>https://www.smartftp.com/forums/index.php?/forum/14-support/</bugTrackerUrl>
     <dependencies>
       <dependency id="vcredist140" version="14.12.25810.0" />
     </dependencies>
