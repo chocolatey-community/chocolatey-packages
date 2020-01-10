@@ -1,4 +1,13 @@
-﻿function Get-LocalizedWellKnownPrincipalName {
+﻿function Get-RegistryKeyValue {
+  param(
+    [string]$key,
+    [string]$subKey
+  )
+
+  Get-ItemProperty -Path $key | % { $_."$subKey" }
+}
+
+function Get-LocalizedWellKnownPrincipalName {
   param (
     [Parameter(Mandatory = $true)]
     [Security.Principal.WellKnownSidType] $WellKnownSidType
