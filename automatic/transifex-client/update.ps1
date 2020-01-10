@@ -1,20 +1,20 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://github.com/transifex/transifex-client/releases/latest'
+$releases = 'https://github.com/transifex/transifex-client/releases'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameBase tx }
 
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"        = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
     ".\$($Latest.PackageName).nuspec" = @{
-      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
+      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseUrl)`${2}"
     }
   }
 }
@@ -28,9 +28,9 @@ function global:au_GetLatest {
   $version = $urls[0] -split "$verRe" | select -last 1 -skip 1
 
   @{
-    URL64        = [uri]($urls | ? { $_ -match 'x64' })
-    Version      = [version]$version
-    ReleaseNotes = Get-RedirectedUrl $releases
+    URL64      = [uri]($urls | ? { $_ -match $version -and $_ -match '3\d+\.x64' } | select -First 1)
+    Version    = [version]$version
+    ReleaseUrl = "$releases/tag/$version"
   }
 }
 
