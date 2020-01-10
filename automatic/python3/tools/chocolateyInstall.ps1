@@ -16,9 +16,9 @@ else {
 
 $packageArgs = @{
   packageName    = 'python3'
-  fileType       = 'msi'
-  file           = "$toolsPath\python-3.2.5.msi"
-  file64         = "$toolsPath\python-3.2.5.amd64.msi"
+  fileType       = 'exe'
+  file           = "$toolsPath\python-3.5.4.exe"
+  file64         = "$toolsPath\python-3.5.4-amd64.exe"
   silentArgs     = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
   validExitCodes = @(0)
   softwareName   = 'Python*'
