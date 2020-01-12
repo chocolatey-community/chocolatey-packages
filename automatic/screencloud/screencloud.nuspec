@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>screencloud</id>
-    <version>1.5.0</version>
+    <version>1.5.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/screencloud</packageSourceUrl>
     <owners>chocolatey, p3lim</owners>
     <title>screencloud (Install)</title>
