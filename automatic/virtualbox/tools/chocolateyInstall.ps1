@@ -19,10 +19,10 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1.2-135662-Win.exe'
-  url64bit               = 'https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1.2-135662-Win.exe'
-  checksum               = '5ab4e6b8c1098c4c01ffea3f095198595853ce6014964d7268c47d1657c04231'
-  checksum64             = '5ab4e6b8c1098c4c01ffea3f095198595853ce6014964d7268c47d1657c04231'
+  url                    = 'https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1.2-135663-Win.exe'
+  url64bit               = 'https://download.virtualbox.org/virtualbox/6.1.2/VirtualBox-6.1.2-135663-Win.exe'
+  checksum               = '703e7c9bcbdda0cd0040049dfcc754c0fb858b6d786a6033dc5d68f21b5fff99'
+  checksum64             = '703e7c9bcbdda0cd0040049dfcc754c0fb858b6d786a6033dc5d68f21b5fff99'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
