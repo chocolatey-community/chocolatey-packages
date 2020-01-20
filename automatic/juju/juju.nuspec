@@ -11,7 +11,7 @@
     <projectUrl>https://jujucharms.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png</iconUrl>
     <copyright>2015 Juju Canonical Ltd.</copyright>
-    <licenseUrl>https://github.com/juju/juju/blob/staging/LICENCE</licenseUrl>
+    <licenseUrl>https://github.com/juju/juju/blob/develop/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/juju/juju</projectSourceUrl>
     <docsUrl>https://jujucharms.com/docs</docsUrl>
