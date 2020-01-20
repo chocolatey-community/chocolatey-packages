@@ -26,7 +26,7 @@ Seafile allows users to create groups with file syncing, wiki, and discussion to
 
 ]]></description>
     <summary>File Syncing and Collaboration for Teams</summary>
-    <releaseNotes>https://seacloud.cc/group/3/wiki/client-changelog</releaseNotes>
+    <releaseNotes>https://download.seafile.com/published/seafile-manual/changelog/client-changelog.md</releaseNotes>
     <copyright>Copyright ©2016 Seafile Ltd.</copyright>
     <tags>seafile-client seafile syncing sharing admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/seafile-client</packageSourceUrl>
