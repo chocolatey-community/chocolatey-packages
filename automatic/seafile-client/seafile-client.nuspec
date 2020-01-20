@@ -11,7 +11,7 @@
     <projectUrl>https://www.seafile.com/en/home/</projectUrl>
     <projectSourceUrl>https://github.com/haiwen/seafile-client</projectSourceUrl>
     <bugTrackerUrl>https://github.com/haiwen/seafile-client/issues</bugTrackerUrl>
-    <docsUrl>https://www.seafile.com/en/help/</docsUrl>
+    <docsUrl>https://download.seafile.com/published/seafile-user-manual/home.md</docsUrl>
     <mailingListUrl>https://forum.seafile.com/</mailingListUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@65cff22d071fb30b82b8f2bdee89211b541520c7/icons/seafile-client.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
