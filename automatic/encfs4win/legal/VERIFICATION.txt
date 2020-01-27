@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://github.com/jetwhiz/encfs4win/releases>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/jetwhiz/encfs4win/releases/download/v1.10.1/encfs-installer.exe>
+1. Download the following <https://github.com/jetwhiz/encfs4win/releases/download/v1.11.0-beta.2/encfs-installer.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: A7ECA4BBF92E99D2F51EFF1CA3751F2738FB6F5AD39707C00C93167AEBB9C63E
+  checksum: 8B8A180FD66BCB3B70DDC3FC7BBC1EAEE6349B43E8032ED13E6B8732682BF795
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/jetwhiz/encfs4win/blob/21bd66bddf75fb7bda018a52d51a42ff8b24348a/COPYING>
