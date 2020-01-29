@@ -26,7 +26,7 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $installer_exe = $download_page.Links | ? href -match 'audacity-win-.*.exe' | select -First 1 -expand href
+  $installer_exe = $download_page.Links | ? href -match 'audacity-win-.*.exe$' | select -First 1 -expand href
   if ($installer_exe) {
     $version = $installer_exe -split '-|.exe' | select -Skip 2 -First 1
   }
