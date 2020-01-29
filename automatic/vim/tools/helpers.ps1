@@ -35,6 +35,6 @@ function Get-Statement()
 # Use rmdir because Powershell cannot unlink directory symlink
 function Create-SymbolicLink()
 {
-  Get-ChildItem -Path "$installDir\vim" -Exclude "vim$shortversion" -Attributes Directory+!ReparsePoint | % { Remove-Item $_ -Recurse ; New-Item -Path $_ -ItemType Directory }
-  Get-ChildItem -Path "$installDir\vim" -Exclude "vim$shortversion" -Attributes Directory | % { $_.Name } | % { cmd /c rmdir "$installDir\vim\$_" ; cmd /c mklink /d "$installDir\vim\$_"  "$installDir\vim\vim$shortversion" }
+  Get-ChildItem -Path "$installDir\vim" -Exclude "vim$shortversion" -Attributes Directory+!ReparsePoint | ForEach-Object { Remove-Item $_ -Recurse ; New-Item -Path $_ -ItemType Directory }
+  Get-ChildItem -Path "$installDir\vim" -Exclude "vim$shortversion" -Attributes Directory | ForEach-Object { $_.Name } | ForEach-Object { cmd /c rmdir "$installDir\vim\$_" ; cmd /c mklink /d "$installDir\vim\$_"  "$installDir\vim\vim$shortversion" }
 }
