@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sonarlint-vs2019</id>
+    <title>SonarLint for Visual Studio 2019</title>
+    <version>4.16.0.14364</version>
+    <authors>SonarSource</authors>
+    <owners>chocolatey, christianbumann</owners>
+    <projectSourceUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio</projectSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages/icons/sonarlint-vs2019.png</iconUrl>
+    <projectUrl>http://www.sonarlint.org/visualstudio/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/sonarlint-vs2019</packageSourceUrl>
+    <licenseUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>SonarLint provides on-the-fly feedback to developers on new bugs and quality issues injected into C# and VB.Net code. In addition the connected mode allows to enforce governance policies by reporting the same issues in Visual Studio and in SonarQube server.</summary>
+    <description><![CDATA[## Overview
+SonarLint spots bugs and quality issues as fast as you code.
+
+- 5 languages supported: C#, VB .Net, C, C++ and Javascript.
+- Open source, Roslyn based code analyzers.
+- Deep code analysis algorithms using pattern matching and dataflow analysis
+- Hundreds of rules, and growing.
+- Comes with explanations to resolve detected issues.
+
+## Get started in seconds
+Simply open a file within a project or a solution, start coding, and you will start seeing issues detected by SonarLint.
+
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages/automatic/sonarlint-vs2019/screenshot.png)
+
+Visit SonarLint website: https://vs.sonarlint.org
+
+## Smart code analysis, on the fly
+**Detect quality issues as you code**
+SonarLint gives immediate feedback on bugs, code smells and vulnerabilities.
+
+**Remain focused and productive**
+SonarLint lists issues found in all the files that you updated. It subtly points out these issues so that you can still focus on coding.
+
+**Get clear explanations to fix issues**
+SonarLint provides you with all the information you need to understand and fix issues.
+
+## Fully integrated in Visual Studio
+SonarLint leverages the .NET Compiler Platform (Roslyn) to offer a fully integrated Visual Studio experience.
+
+Check the rules to see what SonarLint can do for you:
+
+C#          [See rules](https://rules.sonarsource.com/csharp)
+VB.NET      [See rules](https://rules.sonarsource.com/vbnet)
+C           [See rules](https://rules.sonarsource.com/c)
+C++         [See rules](https://rules.sonarsource.com/cpp)
+JavaScript  [See rules](https://rules.sonarsource.com/javascript)
+
+## SonarQube and SonarCloud connected mode
+SonarLint can be connected to a SonarQube server or SonarCloud to share rulesets, get event notifications and use a resolution flow.
+Learn more about [SonarQube](https://www.sonarqube.org).
+]]></description>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
