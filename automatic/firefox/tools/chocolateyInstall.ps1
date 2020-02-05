@@ -7,6 +7,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'Firefox'
 $softwareName = 'Mozilla Firefox'
 
+$PackageParameters = Get-PackageParameters
+
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '72.0.1')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
@@ -17,26 +19,64 @@ if (Get-32bitOnlyInstalled -product $softwareName) {
   )
 }
 
+$args = ""
+
+# Command Line Options from the Firefox Installer
+# https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html
+
+if ($PackageParameters['InstallDirectoryPath']) {
+  $args = $args + " /InstallDirectoryPath=" + $PackageParameters['InstallDirectoryPath']
+}
+
+if ($PackageParameters['InstallDirectoryName']) {
+  $args = $args + " /InstallDirectoryName=" + $PackageParameters['InstallDirectoryName']
+}
+
+if ($PackageParameters['TaskbarShortcut']) {
+  $args = $args + " /TaskbarShortcut=" + $PackageParameters['TaskbarShortcut']
+}
+
+if ($PackageParameters['DesktopShortcut']) {
+  $args = $args + " /DesktopShortcut=" + $PackageParameters['DesktopShortcut']
+}
+
+if ($PackageParameters['StartMenuShortcut']) {
+  $args = $args + " /StartMenuShortcut=" + $PackageParameters['StartMenuShortcut']
+}
+
+if ($PackageParameters['MaintenanceService']) {
+  $args = $args + " /MaintenanceService=" + $PackageParameters['MaintenanceService']
+}
+
+if ($PackageParameters['RemoveDistributionDir']) {
+  $args = $args + " /RemoveDistributionDir=" + $PackageParameters['RemoveDistributionDir']
+}
+
+if ($PackageParameters['PreventRebootRequired']) {
+  $args = $args + " /PreventRebootRequired=" + $PackageParameters['PreventRebootRequired']
+}
+
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
     "Firefox is already installed. " +
     'No need to download and re-install.'
   )
-} else {
+}
+else {
   $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
   $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
   $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
-    packageName = $packageName
-    fileType = 'exe'
-    softwareName = "$softwareName*"
+    packageName    = $packageName
+    fileType       = 'exe'
+    softwareName   = "$softwareName*"
 
-    Checksum = $checksums.Win32
-    ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=firefox-72.0.1-ssl&os=win&lang=${locale}"
+    Checksum       = $checksums.Win32
+    ChecksumType   = 'sha512'
+    Url            = "https://download.mozilla.org/?product=firefox-72.0.1-ssl&os=win&lang=${locale}"
 
-    silentArgs = '-ms'
+    silentArgs     = "$($args) -ms"
     validExitCodes = @(0)
   }
 

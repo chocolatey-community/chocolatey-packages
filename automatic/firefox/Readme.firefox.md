@@ -17,7 +17,22 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Package Parameters
 
-- `l=<locale>` - Install given Firefox locale. For example `choco install Firefox --params "l=en-GB"`. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `l=<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+
+Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
+- `/InstallDirectoryPath=<path>`
+- `/InstallDirectoryName=<path>`
+- `/TaskbarShortcut=<true/false>`
+- `/DesktopShortcut=<true/false>`
+- `/StartMenuShortcut=<true/false>`
+- `/MaintenanceService=<true/false>`
+- `/RemoveDistributionDir=<true/false>`
+- `/PreventRebootRequired=<true/false>`
+
+### Examples
+`choco install Firefox --params "l=en-GB"`\
+`choco install Firefox --params "/TaskbarShortcut=true /DesktopShortcut=false /MaintenanceService=false"`\
+`choco install Firefox --params "l=en-GB /RemoveDistributionDir=false"`
 
 ## Notes
 
