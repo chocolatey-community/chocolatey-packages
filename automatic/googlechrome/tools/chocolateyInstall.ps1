@@ -1,7 +1,7 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$version = '79.0.3945.130'
+$version = '80.0.3987.100'
 if ($version -eq (Get-ChromeVersion)) {
   Write-Host "Google Chrome $version is already installed."
   return
@@ -12,8 +12,8 @@ $packageArgs = @{
   fileType               = 'MSI'
   url                    = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
   url64bit               = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'
-  checksum               = '9d8adb60b39a179ad7ba7095b5167cb14c9421960af80489f30668baaa1b92ad'
-  checksum64             = '217ee287e893b644e9d783ba8586cf0f8f5347212e9915f2bf12cb6f8215402b'
+  checksum               = 'abac9d2b449744d57d409a7a0690f9d19bf47756a4e96e3f0a1aa0a5dfc12b84'
+  checksum64             = 'c5761e03b31216d30d54fecf0f1cdcb67a532da9ee9c0ee17f3461e6833dc08f'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
