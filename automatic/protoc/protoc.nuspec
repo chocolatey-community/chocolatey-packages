@@ -3,13 +3,13 @@
   <metadata>
     <!-- IconUrl: Skip check -->
     <id>protoc</id>
-    <version>3.11.3</version>
+    <version>3.11.4</version>
     <title>Protocol Buffers</title>
     <authors>Google</authors>
     <owners>chocolatey, keen, jordigg, drel</owners>
     <licenseUrl>https://github.com/protocolbuffers/protobuf/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://developers.google.com/protocol-buffers/</projectUrl>
-    <releaseNotes>https://github.com/protocolbuffers/protobuf/releases/tag/v3.11.3</releaseNotes>
+    <releaseNotes>https://github.com/protocolbuffers/protobuf/releases/tag/v3.11.4</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/protoc</packageSourceUrl>
     <projectSourceUrl>https://github.com/protocolbuffers/protobuf</projectSourceUrl>
     <docsUrl>https://developers.google.com/protocol-buffers/</docsUrl>
