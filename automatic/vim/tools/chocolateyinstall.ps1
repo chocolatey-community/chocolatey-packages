@@ -9,8 +9,8 @@ $installDir = Get-InstallDir
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $installDir
-  file          = "$toolsDir\gvim_8.2.0132_x86.zip"
-  file64        = "$toolsDir\gvim_8.2.0132_x64.zip"
+  file          = "$toolsDir\gvim_8.2.0260_x86.zip"
+  file64        = "$toolsDir\gvim_8.2.0260_x64.zip"
 }
 
 $installArgs = @{
@@ -22,5 +22,6 @@ $installArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 Start-ChocolateyProcessAsAdmin @installArgs
-Copy-Item "$installDir\vim\vim$shortversion\vimtutor.bat" $env:windir
+Copy-Item -Path "$installDir\vim\vim$shortversion\vimtutor.bat" -Destination $env:windir
 Set-Content -Path "$toolsDir\installDir" -Value $installDir
+Create-SymbolicLink

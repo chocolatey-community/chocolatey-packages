@@ -21,9 +21,9 @@ function global:au_SearchReplace {
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*Url\s*=\s*)''"                    = "`${1}'$($Latest.URL32)'"
-      "(?i)(^\s*Checksum\s*=\s*)''"               = "`${1}'$($Latest.Checksum32)'"
-      "(?i)(^\s*ChecksumType\s*=\s*)''"           = "`${1}'$($Latest.ChecksumType32)'"
+      "(?i)(^\s*Url\s*=\s*)'.*'"                  = "`${1}'$($Latest.URL32)'"
+      "(?i)(^\s*Checksum\s*=\s*)'.*'"             = "`${1}'$($Latest.Checksum32)'"
+      "(?i)(^\s*ChecksumType\s*=\s*)'.*'"         = "`${1}'$($Latest.ChecksumType32)'"
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
   }

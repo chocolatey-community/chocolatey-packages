@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>wps-office-free</id>
-    <version>11.2.0.9127</version>
+    <version>11.2.0.9150</version>
     <title>WPS Office Free</title>
     <owners>chocolatey</owners>
     <authors>Kingsoft Software</authors>
@@ -42,7 +42,7 @@ This makes your document editing as easy and natural as web browsing.
 
 ]]></description>
     <summary>WPS Office Free is a free office productivity suite which is smaller and faster than most other office suites.</summary>
-    <tags>kingsoft wps office admin freeware trial</tags>
+    <tags>kingsoft wps office pdf reader admin freeware trial multilanguage MUI cloud</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/wps-office-free</packageSourceUrl>
     <licenseUrl>https://www.wps.com/eula</licenseUrl>
   </metadata>

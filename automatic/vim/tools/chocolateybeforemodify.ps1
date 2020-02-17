@@ -1,5 +1,5 @@
 ﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installDir = Get-Content -Path "$toolsDir\installDir"
+$installDir = Get-Content "$toolsDir\installDir"
 $shortversion = '82'
 try {
   # Is dlls locked?

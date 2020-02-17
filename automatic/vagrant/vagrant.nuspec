@@ -4,7 +4,7 @@
   <metadata>
     <id>vagrant</id>
     <title>Vagrant (Install)</title>
-    <version>2.2.6</version>
+    <version>2.2.7</version>
     <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
     <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
     <summary>Vagrant - Development environments made easy.</summary>
@@ -17,7 +17,7 @@ To achieve its magic, Vagrant stands on the shoulders of giants. Machines are pr
     <projectUrl>https://www.vagrantup.com</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vagrant</packageSourceUrl>
     <projectSourceUrl>https://github.com/mitchellh/vagrant</projectSourceUrl>
-    <docsUrl>https://docs.vagrantup.com/docs</docsUrl>
+    <docsUrl>https://www.vagrantup.com/docs/</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/vagrant-up</mailingListUrl>
     <bugTrackerUrl>https://github.com/mitchellh/vagrant/issues</bugTrackerUrl>
     <tags>vagrant admin sandbox virtual machine testing VM VirtualBox VMware cross-platform foss cli</tags>
