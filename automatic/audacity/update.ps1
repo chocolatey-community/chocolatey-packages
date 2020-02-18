@@ -1,6 +1,6 @@
 ﻿import-module au
 
-$releases = 'https://filehippo.com/download_audacity/post_download/'
+$releases = 'https://fossies.org/windows/misc/'
 
 function global:au_SearchReplace {
   @{
@@ -16,22 +16,35 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName }
+function global:au_BeforeUpdate {
+  $Latest.Options.Headers  = @{
+                                'Referer'    = $Latest.URL32 + "/";
+                                'User-Agent' = $Latest.Options.Headers.'User-Agent'
+                              }
+  Get-RemoteFiles -Purge -FileNameBase $Latest.PackageName
+}
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  if ($download_page.Content -match '"softwareVersion"\s*:\s*"Audacity ([\d\.]+)"') {
-    $version = $Matches[1]
+  $installer_exe = $download_page.Links | ? href -match 'audacity-win-.*.exe$' | select -First 1 -expand href
+  if ($installer_exe) {
+    $version = $installer_exe -split '-|.exe' | select -Skip 2 -First 1
   }
 
-  if ($download_page -match "downloadIframe.src\s*=\s*['`"](https[^'`"]+)['`"]") {
-    $url32 = $Matches[1]
+  if ($version) {
+    $url32 = $releases + "audacity-win-" + $version + ".exe"
+  }
+
+  $HTTPheaders = @{
+    'Referer'    = $releases;
+    'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
   }
 
   @{
     URL32    = $url32
     BaseUrl  = $releases
-    Version  = $version -split ' ' | ? { ($_ -as [version] -is [version]) } | select -First 1
+    Options  = @{ Headers  = $HTTPheaders }
+    Version  = $version
     FileType = 'exe'
   }
 }
