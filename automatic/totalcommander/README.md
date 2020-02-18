@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a37f40763d259eab20d0462b72cba86a108441d9/icons/totalcommander.png" width="48" height="48"/> [totalcommander](https://chocolatey.org/packages/totalcommander)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a37f40763d259eab20d0462b72cba86a108441d9/icons/totalcommander.png" width="48" height="48"/> [totalcommander](https://chocolatey.org/packages/totalcommander)
 
 
 Total Commander is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.
