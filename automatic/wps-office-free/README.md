@@ -24,9 +24,11 @@ Quickly access Cover Pages, Content Pages, and your Header and Footer, or Split 
 Avoid the hassle caused by switching between multiple document windows.
 The tab bar that appears above the editable area allows you to switch between documents by Ctrl + Tab.
 This makes your document editing as easy and natural as web browsing.
+* **MultiLanguage:**
+Supports 12 languages and All Office File Formats.
+* **New Feature:**
+We support read and write PDF files!
 
 ## Notes
-
-- This Package only installs the english version of WPS Office Free.
-- This Package uses the `common` edition of WPS Office, which is not compatible with GDPR.
+- Our latest version is already compatible with GDPR, users can revoke the collection of personal information at any time.
 
