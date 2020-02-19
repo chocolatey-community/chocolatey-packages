@@ -18,7 +18,7 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Package Parameters
 
-- `l:<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/l:<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
 
 Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
 - `/InstallDir:<path>`
@@ -30,9 +30,9 @@ Command-line options for installer configuration. See the [official page](https:
 - `/NoAutoUpdate` Sets a policies.json file to not update Firefox and does not install the Maintenance Service
 
 ### Examples
-`choco install Firefox --params "l:en-GB"`\
+`choco install Firefox --params "/l:en-GB"`\
 `choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`\
-`choco install Firefox --params "l:en-GB /RemoveDistributionDir"`
+`choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
 - Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.

@@ -43,17 +43,31 @@ if ($PackageParameters.NoDesktopShortcut) {
   $args = $args + " /DesktopShortcut=false"
 }
 
-if ($PackageParameters.NoStartMenuShortcut {
+if ($PackageParameters.NoStartMenuShortcut) {
   $args = $args + " /StartMenuShortcut=false"
 }
 
-if ($PackageParameters.NoMaintenanceService {
+if ($PackageParameters.NoMaintenanceService) {
   $args = $args + " /MaintenanceService=false"
 }
 
-if ($PackageParameters.RemoveDistributionDir {
+if ($PackageParameters.RemoveDistributionDir) {
   $args = $args + " /RemoveDistributionDir=true"
 }
+
+if ($PackageParameters.NoAutoUpdate) {
+  $args = $args + " /MaintenanceService=false"
+
+  ## ToDo write policies.json file in distribution directory
+  ## with content
+  ## {
+  ##   "policies": {
+  ##     "DisableAppUpdate": true
+  ##   }
+  ## }
+  ## Do not overwrite file if it exists unless RemoveDistributionDir is set
+}
+
 
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(

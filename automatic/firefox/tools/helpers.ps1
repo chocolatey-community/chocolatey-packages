@@ -26,15 +26,14 @@ function GetLocale {
   #$availableLocales = Get-WebContent $localeUrl 2>$null
   $availableLocales = Get-Content $localeFile | ForEach-Object { $_ -split '\|' | Select-Object -first 1 } | Select-Object -Unique
 
-  $packageParameters = $env:chocolateyPackageParameters
+  $PackageParameters = Get-PackageParameters
 
-  $packageParameters = if ($packageParameters -ne $null) { $packageParameters } else { "" }
-
-  $argumentMap = ConvertFrom-StringData $packageParameters
-  $localeFromPackageParameters = $argumentMap.Item('l')
-  Write-Verbose "User chooses '$localeFromPackageParameters' as a locale..."
-  $localeFromPackageParametersTwoLetter = $localeFromPackageParameters -split '\-' | Select-Object -first 1
-  Write-Verbose "With fallback to '$localeFromPackageParametersTwoLetter' as locale..."
+  if ($PackageParameters['l']) {
+    $localeFromPackageParameters =  $PackageParameters['l']
+    Write-Verbose "User chooses '$localeFromPackageParameters' as a locale..."
+    $localeFromPackageParametersTwoLetter = $localeFromPackageParameters -split '\-' | Select-Object -first 1
+    Write-Verbose "With fallback to '$localeFromPackageParametersTwoLetter' as locale..."
+    }
 
   $uninstallPath = GetUninstallPath -product $product
 
