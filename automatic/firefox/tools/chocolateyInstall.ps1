@@ -7,9 +7,13 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'Firefox'
 $softwareName = 'Mozilla Firefox'
 
+<<<<<<< HEAD
 $PackageParameters = Get-PackageParameters
 
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '73.0')
+=======
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '73.0.1')
+>>>>>>> upstream/master
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
@@ -81,6 +85,7 @@ else {
   $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
+<<<<<<< HEAD
     packageName    = $packageName
     fileType       = 'exe'
     softwareName   = "$softwareName*"
@@ -88,13 +93,24 @@ else {
     ChecksumType   = 'sha512'
     Url            = "https://download.mozilla.org/?product=firefox-73.0-ssl&os=win&lang=${locale}"
     silentArgs     = "$($args) -ms"
+=======
+    packageName = $packageName
+    fileType = 'exe'
+    softwareName = "$softwareName*"
+
+    Checksum = $checksums.Win32
+    ChecksumType = 'sha512'
+    Url = "https://download.mozilla.org/?product=firefox-73.0.1-ssl&os=win&lang=${locale}"
+
+    silentArgs = '-ms'
+>>>>>>> upstream/master
     validExitCodes = @(0)
   }
 
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-73.0-ssl&os=win64&lang=${locale}"
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-73.0.1-ssl&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs

@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.ghisler.com/amazons3.php'
+$releases = 'https://www.ghisler.com/download.htm'
 
 function global:au_SearchReplace {
     @{
@@ -21,8 +21,8 @@ function global:au_BeforeUpdate {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
     $re = 'x32_64.exe'
-    $url = $download_page.links | ? href -match $re | % href
-    $download_page.RawContent -match 'Download Total Commander ([0-9][0-9.a]+) ' | Out-Null
+    $url = $download_page.links | ? href -match $re | % href | select -First 1
+    $download_page.RawContent -match 'Download\s+version\s+([0-9][0-9.a]+)\s+' | Out-Null
     $version = $Matches[1] -replace 'a', '.01'
 
     # Put combined installer as URL32 and installerzip as URL64 so I can use Get-RemoteFiles to download both later
