@@ -81,25 +81,13 @@ else {
   $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
-<<<<<<< HEAD
     packageName    = $packageName
     fileType       = 'exe'
     softwareName   = "$softwareName*"
     Checksum       = $checksums.Win32
     ChecksumType   = 'sha512'
-    Url            = "https://download.mozilla.org/?product=firefox-73.0-ssl&os=win&lang=${locale}"
+    Url            = "https://download.mozilla.org/?product=firefox-73.0.1-ssl&os=win&lang=${locale}"
     silentArgs     = "$($args) -ms"
-=======
-    packageName = $packageName
-    fileType = 'exe'
-    softwareName = "$softwareName*"
-
-    Checksum = $checksums.Win32
-    ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=firefox-73.0.1-ssl&os=win&lang=${locale}"
-
-    silentArgs = '-ms'
->>>>>>> upstream/master
     validExitCodes = @(0)
   }
 
