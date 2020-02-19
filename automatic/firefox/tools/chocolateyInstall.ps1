@@ -7,13 +7,9 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'Firefox'
 $softwareName = 'Mozilla Firefox'
 
-<<<<<<< HEAD
 $PackageParameters = Get-PackageParameters
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '73.0')
-=======
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '73.0.1')
->>>>>>> upstream/master
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
