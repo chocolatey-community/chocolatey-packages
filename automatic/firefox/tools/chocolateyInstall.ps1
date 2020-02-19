@@ -21,39 +21,38 @@ if (Get-32bitOnlyInstalled -product $softwareName) {
 
 $args = ""
 
-# Command Line Options from the Firefox Installer
+# Command Line Options from the Firefox installer
 # https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html
 
-if ($PackageParameters['InstallDirectoryPath']) {
-  $args = $args + " /InstallDirectoryPath=" + $PackageParameters['InstallDirectoryPath']
+# Always prevent Firefox installer to require a reboot
+$args = $args + " /PreventRebootRequired=true"
+
+# Prevent RemoveDistributionDir by default
+$args = $args + " /RemoveDistributionDir=false"
+
+
+if ($PackageParameters['InstallDir']) {
+  $args = $args + " /InstallDirectoryPath=" + $PackageParameters['InstallDir']
 }
 
-if ($PackageParameters['InstallDirectoryName']) {
-  $args = $args + " /InstallDirectoryName=" + $PackageParameters['InstallDirectoryName']
+if ($PackageParameters.NoTaskbarShortcut) {
+  $args = $args + " /TaskbarShortcut=false"
 }
 
-if ($PackageParameters['TaskbarShortcut']) {
-  $args = $args + " /TaskbarShortcut=" + $PackageParameters['TaskbarShortcut']
+if ($PackageParameters.NoDesktopShortcut) {
+  $args = $args + " /DesktopShortcut=false"
 }
 
-if ($PackageParameters['DesktopShortcut']) {
-  $args = $args + " /DesktopShortcut=" + $PackageParameters['DesktopShortcut']
+if ($PackageParameters.NoStartMenuShortcut {
+  $args = $args + " /StartMenuShortcut=false"
 }
 
-if ($PackageParameters['StartMenuShortcut']) {
-  $args = $args + " /StartMenuShortcut=" + $PackageParameters['StartMenuShortcut']
+if ($PackageParameters.NoMaintenanceService {
+  $args = $args + " /MaintenanceService=false"
 }
 
-if ($PackageParameters['MaintenanceService']) {
-  $args = $args + " /MaintenanceService=" + $PackageParameters['MaintenanceService']
-}
-
-if ($PackageParameters['RemoveDistributionDir']) {
-  $args = $args + " /RemoveDistributionDir=" + $PackageParameters['RemoveDistributionDir']
-}
-
-if ($PackageParameters['PreventRebootRequired']) {
-  $args = $args + " /PreventRebootRequired=" + $PackageParameters['PreventRebootRequired']
+if ($PackageParameters.RemoveDistributionDir {
+  $args = $args + " /RemoveDistributionDir=true"
 }
 
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
