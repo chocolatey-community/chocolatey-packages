@@ -57,15 +57,6 @@ if ($PackageParameters.RemoveDistributionDir) {
 
 if ($PackageParameters.NoAutoUpdate) {
   $args = $args + " /MaintenanceService=false"
-
-  ## ToDo write policies.json file in distribution directory
-  ## with content
-  ## {
-  ##   "policies": {
-  ##     "DisableAppUpdate": true
-  ##   }
-  ## }
-  ## Do not overwrite file if it exists unless RemoveDistributionDir is set
 }
 
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
@@ -99,9 +90,16 @@ else {
   Install-ChocolateyPackage @packageArgs
 }
 
-if (-Not(Test-Path "C:\Program Files\Mozilla Firefox\distribution\policies.json" -ErrorAction SilentlyContinue) -and ($PackageParameters.NoAutoUpdate) ) {
-  if (-Not(Test-Path "C:\Program Files\Mozilla Firefox\distribution"  -ErrorAction SilentlyContinue)) {
-    new-item "C:\Program Files\Mozilla Firefox\distribution\" -itemtype directory
+if ($PackageParameters['InstallDir']) {
+  $installPath = $PackageParameters['InstallDir']
+}
+else {
+  $installPath = "C:\Program Files\Mozilla Firefox"
+}
+
+if (-Not(Test-Path ($installPath + "\distribution\policies.json") -ErrorAction SilentlyContinue) -and ($PackageParameters.NoAutoUpdate) ) {
+  if (-Not(Test-Path ($installPath + "\distribution") -ErrorAction SilentlyContinue)) {
+    new-item ($installPath + "\distribution") -itemtype directory
   }
 
   $policies = @{
@@ -109,6 +107,6 @@ if (-Not(Test-Path "C:\Program Files\Mozilla Firefox\distribution\policies.json"
       "DisableAppUpdate" = $true
     }
   }
-  $policies | ConvertTo-Json | Out-File -FilePath "C:\Program Files\Mozilla Firefox\distribution\policies.json" -Encoding ascii
+  $policies | ConvertTo-Json | Out-File -FilePath ($installPath + "\distribution\policies.json") -Encoding ascii
 
 }
