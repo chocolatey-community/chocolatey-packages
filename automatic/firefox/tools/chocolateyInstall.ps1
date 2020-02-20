@@ -87,7 +87,7 @@ else {
     Checksum       = $checksums.Win32
     ChecksumType   = 'sha512'
     Url            = "https://download.mozilla.org/?product=firefox-73.0.1-ssl&os=win&lang=${locale}"
-    silentArgs     = "$($args) -ms"
+    silentArgs     = "$($args) /S"
     validExitCodes = @(0)
   }
 
