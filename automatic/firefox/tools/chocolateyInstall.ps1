@@ -68,7 +68,6 @@ if ($PackageParameters.NoAutoUpdate) {
   ## Do not overwrite file if it exists unless RemoveDistributionDir is set
 }
 
-
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Output $(
     "Firefox is already installed. " +
@@ -98,4 +97,18 @@ else {
   }
 
   Install-ChocolateyPackage @packageArgs
+}
+
+if (-Not(Test-Path "C:\Program Files\Mozilla Firefox\distribution\policies.json" -ErrorAction SilentlyContinue) -and ($PackageParameters.NoAutoUpdate) ) {
+  if (-Not(Test-Path "C:\Program Files\Mozilla Firefox\distribution"  -ErrorAction SilentlyContinue)) {
+    new-item "C:\Program Files\Mozilla Firefox\distribution\" -itemtype directory
+  }
+
+  $policies = @{
+    policies = @{
+      "DisableAppUpdate" = $true
+    }
+  }
+  $policies | ConvertTo-Json | Out-File -FilePath "C:\Program Files\Mozilla Firefox\distribution\policies.json" -Encoding ascii
+
 }
