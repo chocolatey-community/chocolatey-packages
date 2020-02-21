@@ -8,8 +8,8 @@ Set-InstallerRegistrySettings $pp
 
 Stop-GitSSHAgent
 
-$fileName32 = 'Git-2.25.0-32-bit.exe'
-$fileName64 = 'Git-2.25.0-64-bit.exe'
+$fileName32 = 'Git-2.25.1-32-bit.exe'
+$fileName64 = 'Git-2.25.1-64-bit.exe'
 $packageArgs = @{
     PackageName    = 'git.install'
     FileType       = 'exe'
