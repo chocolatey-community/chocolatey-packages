@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+1.  Download the installer:
+
+    x32: https://nodejs.org/dist/v10.15.3/node-v10.15.3-x86.msi
+    x64: https://nodejs.org/dist/v10.15.3/node-v10.15.3-x64.msi
+
+2.  You can use one of the following methods to obtain the checksum: 
+    - Use powershell function 'Get-FileHash'
+    - Use Chocolatey utility 'checksum.exe'
+    - Using AU:
+        Get-RemoteChecksum https://nodejs.org/dist/v10.15.3/node-v10.15.3-x64.msi
+    
+    
+    checksum32: E73398CDE3E054DA7A0A05A86AA512A47A24B961B0659BE30A0F01606CA234A9
+    checksum64: 46B3D03C96DE0B9E7D3A204C67772759283221F5E58AC225DF813076A65E2738

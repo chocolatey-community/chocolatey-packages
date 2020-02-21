@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>awscli</id>
+    <version>1.18.4</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/awscli</packageSourceUrl>
+    <owners>chocolatey, LudicrousByte, dtgm</owners>
+    <title>AWS Command Line Interface (Install)</title>
+    <authors>Amazon Web Services</authors>
+    <projectUrl>https://aws.amazon.com/cli/</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/jtcmedia/chocolatey-packages/464457cc57f33f6243c27246755e4ac08ca3a9fb/icons/awscli.png</iconUrl>
+    <copyright>© 2012-2020 Amazon.com, Inc.</copyright>
+    <licenseUrl>https://github.com/aws/aws-cli/blob/develop/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/aws/aws-cli</projectSourceUrl>
+    <docsUrl>https://docs.aws.amazon.com/cli/latest/userguide/</docsUrl>
+    <mailingListUrl>https://forums.aws.amazon.com/forum.jspa?forumID=150</mailingListUrl>
+    <bugTrackerUrl>https://github.com/aws/aws-cli/issues</bugTrackerUrl>
+    <tags>awscli aws cli foss cloud amazon web services s3 admin</tags>
+    <summary>The AWS CLI is an open source tool built on top of the AWS SDK for Python (Boto) that provides commands for interacting with AWS services.</summary>
+    <description>
+    
+The AWS CLI is an open source tool built on top of the AWS SDK for Python (Boto) that provides commands for interacting with AWS services. With minimal configuration, you can start using all of the functionality provided by the AWS Management Console from your favorite terminal program.
+
+* Linux shells – Use common shell programs such as Bash, Zsh, and tsch to run commands in Linux, macOS, or Unix.
+
+* Windows command line – On Microsoft Windows, run commands in either PowerShell or the Windows Command Processor.
+
+* Remotely – Run commands on Amazon EC2 instances through a remote terminal such as PuTTY or SSH, or with Amazon EC2 systems manager.
+
+The AWS CLI provides direct access to AWS services' public APIs. Explore a service's capabilities with the AWS CLI, and develop shell scripts to manage your resources. Or take what you've learned to develop programs in other languages with the AWS SDK.
+
+In addition to the low level, API equivalent commands, the AWS CLI also provides customizations for several services. Customizations are higher level commands that simplify using a service with a complex API. For example, the aws s3 set of commands provide a familiar syntax for managing files in Amazon S3.
+
+    </description>
+    <releaseNotes>
+* [ChangeLog](https://github.com/aws/aws-cli/blob/develop/CHANGELOG.rst)
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
