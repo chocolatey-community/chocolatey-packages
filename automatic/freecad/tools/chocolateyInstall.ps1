@@ -23,7 +23,7 @@ if ( $packageArgs.filetype -eq '7z' ) {
   if ($packageArgs.url64 -match "Conda") { $packageArgs.Remove("url"); $packageArgs.Remove("checksum"); $packageArgs.Remove("checksumType"); }
   if ($pp.UnzipLocation) { $packageArgs.Add( "UnzipLocation", $pp.UnzipLocation ) }
   Install-ChocolateyZipPackage @packageArgs
-  if ($pp.Shortcut) { $pp.Remove("Shortcut"); Install-ChocolateyShortcut @pp }
+  if ($pp.NoShortcut) { $pp.Remove("Shortcut"); Install-ChocolateyShortcut @pp }
   $files = get-childitem $pp.WorkingDirectory -Exclude $packageArgs.softwareName -include *.exe -recurse
   foreach ($file in $files) {
     New-Item "$file.ignore" -type file -force | Out-Null # Generate an ignore file(s)

@@ -14,14 +14,14 @@ param(
   $url64 = $download_page.Links | ? href -match $re64 | select -first 1 -expand href
   $checking = (($url64.Split('\/'))[-1]) -replace($re64,''); $version = ( Get-Version $checking ).Version
   switch ($kind) {
-      'portable' {
-          $PackageName  = "$Title.$kind"
-          $Title = "$Title (Portable)"
-      }
-      default {
-          $PackageName  = "$Title"
-          $Title = "$Title"
-      }
+		'portable' {
+			$PackageName  = "$Title.$kind"
+			$Title = "$Title (Portable)"
+		}
+		default {
+			$PackageName  = "$Title"
+			$Title = "$Title"
+		}
   }
   # Check if version is using a revision and build correctly
   if ( ($version.Build) -match "\d{5}" ) {
@@ -33,7 +33,7 @@ param(
 	  Title        = $Title
 	  URL64        = $PreUrl + $url64
 	  Version      = $vert
-      fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
+    fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
 	  ReleaseNotes = "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)"
 	}
   if (![string]::IsNullOrEmpty($url32)) { $package.Add( "URL32", $PreUrl + $url32 ) }

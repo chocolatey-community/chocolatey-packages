@@ -30,5 +30,5 @@ if ( $packageArgs.fileType -match 'exe' ) {
 $pp = ( Get-Content "$PSScriptRoot\pp.json" ) | ConvertFrom-Json 
 if ($pp.ShortcutFilePath) { Remove-Item -Path $pp.ShortcutFilePath }
 if ($pp.UnzipLocation) { Remove-Item  -Path $pp.UnzipLocation -ErrorAction SilentlyContinue -Recurse -Force }
-Write-Information "All files Removed"  
+Write-Information "All files Removed"
 }

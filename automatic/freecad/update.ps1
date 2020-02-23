@@ -1,4 +1,5 @@
 import-module au
+
  if(!$PSScriptRoot){ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
 . "$PSScriptRoot\update_helper.ps1"
  
@@ -9,7 +10,7 @@ $softwareName = 'FreeCAD'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*packageName\s*=\s*)'.*'"	  = "`$1'$($Latest.PackageName)'"
+      "(?i)(^\s*packageName\s*=\s*)'.*'"	    = "`$1'$($Latest.PackageName)'"
       "(?i)(^\s*fileType\s*=\s*)('.*')"       = "`$1'$($Latest.fileType)'"
       "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*url64\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
@@ -20,9 +21,9 @@ function global:au_SearchReplace {
       "(?i)(^\s*softwareName\s*=\s*)'.*'"     = "`$1'$($softwareName)'"
     }
     ".\freecad.nuspec" = @{
-	  "(?i)(^\s*\<id\>).*(\<\/id\>)"                     = "`${1}$($Latest.PackageName)`${2}"
-	  "(?i)(^\s*\<title\>).*(\<\/title\>)"               = "`${1}$($Latest.Title)`${2}"
-	  "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
+			"(?i)(^\s*\<id\>).*(\<\/id\>)"                     = "`${1}$($Latest.PackageName)`${2}"
+			"(?i)(^\s*\<title\>).*(\<\/title\>)"               = "`${1}$($Latest.Title)`${2}"
+			"(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`$1'$($Latest.PackageName)'"
@@ -33,10 +34,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate {
-    Get-RemoteFiles -Purge -FileNameBase "$($Latest.PackageName)"
+  Get-RemoteFiles -Purge -FileNameBase "$($Latest.PackageName)"
 	$types = @("7z","exe","json")
 	foreach ($file in $types) {
-	Remove-Item ".\tools\*.${file}" -Force # Removal of downloaded files	
+		Remove-Item ".\tools\*.${file}" -Force # Removal of downloaded files
 	}
 }
 
@@ -45,7 +46,7 @@ function global:au_GetLatest {
   $streams = [ordered] @{
     dev = Get-FreeCad -Title "${softwareName}" -kind "dev"
     stable = Get-FreeCad -Title "${softwareName}"
-	portable = Get-FreeCad -Title "${softwareName}" -kind "portable"
+		portable = Get-FreeCad -Title "${softwareName}" -kind "portable"
   }
   return @{ Streams = $streams }
 }
