@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://www.python.org/ftp/python/3.7.6/python-3.7.6.exe
-   x64: https://www.python.org/ftp/python/3.7.6/python-3.7.6-amd64.exe
+   x32: https://www.python.org/ftp/python/3.8.2/python-3.8.2.exe
+   x64: https://www.python.org/ftp/python/3.8.2/python-3.8.2-amd64.exe
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: D6CBECF7CC2A06008C3B44E76708A7A3A12CB7513AA309B59EB89B6536BDBD4B
-   checksum64: A66B5B9CA035E343F55AB2A94E363C4F0D8AB07F036C40A1C464A97840D1538C
+   checksum32: 03AC5754A69C9C11C08D1F4D694C14625A4D27348AD4DD2D1253E2547819DB2C
+   checksum64: 8E400E3F32CDCB746E62E0DB4D3AE4CBA1F927141EBC4D0D5A4006B0DAEE8921
 
 File 'license.txt' is obtained from:
    https://www.python.org/download/releases/3.4.0/license/
