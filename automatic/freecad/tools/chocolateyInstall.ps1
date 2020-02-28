@@ -21,7 +21,7 @@ if ( $packageArgs.filetype -eq '7z' ) {
   # Checking for Package Parameters
   $pp = ( Get-UserPackageParams -scrawl )
   if ($packageArgs.url64 -match "Conda") { $packageArgs.Remove("url"); $packageArgs.Remove("checksum"); $packageArgs.Remove("checksumType"); }
-  if ($pp.UnzipLocation) { $packageArgs.Add( "UnzipLocation", $pp.UnzipLocation ) }
+  if ($pp.InstallDir) { $packageArgs.Add( "UnzipLocation", $pp.InstallDir ) }
   Install-ChocolateyZipPackage @packageArgs
   if ($pp.Shortcut) { $pp.Remove("Shortcut"); Install-ChocolateyShortcut @pp }
   $files = get-childitem $pp.WorkingDirectory -Exclude $packageArgs.softwareName -include *.exe -recurse

@@ -24,10 +24,10 @@ param(
 )
 $folderName = ( Get-FileName -thePackage $packageArgs )
 $New_pp = @{}
-	if ([string]::IsNullOrEmpty($pp.UnzipLocation)) {
-		$New_pp.add( "UnzipLocation", "$toolsDir" )
+	if ([string]::IsNullOrEmpty($pp.InstallDir)) {
+		$New_pp.add( "InstallDir", "$toolsDir" )
 	} else {
-		$New_pp.add( "UnzipLocation", $pp.UnzipLocation )
+		$New_pp.add( "InstallDir", $pp.InstallDir )
 	}
 	if ([string]::IsNullOrEmpty($pp.WindowStyle)) {
 		$New_pp.add( "WindowStyle", 1 )
@@ -35,12 +35,13 @@ $New_pp = @{}
 		$New_pp.add( "WindowStyle", $pp.WindowStyle )
 	}
 	if ([string]::IsNullOrEmpty($pp.WorkingDirectory)) {
-		$New_pp.add( "WorkingDirectory", $New_pp.UnzipLocation+"\$folderName" )
+		$New_pp.add( "WorkingDirectory", $New_pp.InstallDir+"\$folderName" )
 	} else {
 		$New_pp.add( "WorkingDirectory", $pp.WorkingDirectory )
 	}
 	if ([string]::IsNullOrEmpty($pp.Description)) {
-		$New_pp.add( "Description", "FreeCAD Development ${env:ChocolateyPackageVersion}" )
+		$Naming = @{$true="";$false="Development"}[ ($folderName -match "0.18.4")]
+		$New_pp.add( "Description", "FreeCAD $Naming ${env:ChocolateyPackageVersion}" )
 	} else { 
 		$New_pp.add( "Description", $pp.Description )
 	}
