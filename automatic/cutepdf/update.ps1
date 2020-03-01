@@ -1,26 +1,37 @@
 ﻿import-module au
 
-$download_page_url = 'http://www.cutepdf.com/Products/CutePDF/writer.asp'
-$url = 'http://www.cutepdf.com/download/CuteWriter.exe'
+ . "$PSScriptRoot\update_helper.ps1"
+  $url = 'http://www.cutepdf.com/download/CuteWriter.exe'
+  $PackageFileName = ( $url -split('\/') )[-1]
 
 function global:au_SearchReplace {
-  @{
-    'tools\ChocolateyInstall.ps1' = @{
-      "(^[$]checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-      "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-    }
-  }
+	@{
+		'tools\ChocolateyInstall.ps1' = @{
+      "(?i)^(\s*url\s*=\s*)'.*'"          = "`${1}'$($Latest.URL32)'"
+      "(?i)^(\s*checksum\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum32)'"
+      "(?i)^(\s*checksumType\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType32)'"
+		}
+	 }
+}
+
+function global:au_AfterUpdate {
+  "$($Latest.ETAG)|$($Latest.Version)" | Out-File "$PSScriptRoot\info" -Encoding utf8
 }
 
 function global:au_GetLatest {
-  $page = Invoke-WebRequest $download_page_url
-  $html = $page.parsedHTML
-
-  $download_link = $html.body.getElementsByTagName("a") | where {$_.href -like "*../../download/CuteWriter.exe"}  | Select-Object -first 1
-  $version_row = $download_link.parentElement.parentElement.nextSibling.outerHTML
-  $version = $version_row.SubString($version_row.IndexOf("Ver. "), $version_row.LastIndexOf(";") - $version_row.IndexOf("Ver. ")).Replace("Ver. ","")
-
-  return @{ URL = $url; Version = $version }
+  $url32 = Get-RedirectedUrl $url
+  $etag = GetETagIfChanged $url32
+  if ($etag) {
+    $result = GetResultInformation -url32 $url32 -file $PackageFileName
+    $result["ETAG"] = $etag
+  }
+  else {
+    $result = @{
+      URL32   = $url32
+      Version = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -First 1 | % { $_ -split '\|' } | select -Last 1
+    }
+  }
+  return $result
 }
 
 update -NoCheckUrl -ChecksumFor 32
