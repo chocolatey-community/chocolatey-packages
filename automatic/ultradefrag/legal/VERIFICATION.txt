@@ -7,15 +7,15 @@ location on <https://sourceforge.net/projects/ultradefrag/files/stable-release/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://sourceforge.net/projects/ultradefrag/files/stable-release/7.1.3/ultradefrag-7.1.3.bin.i386.exe/download>
-  64-Bit software: <https://sourceforge.net/projects/ultradefrag/files/stable-release/7.1.3/ultradefrag-7.1.3.bin.amd64.exe/download>
+  32-Bit software: <https://sourceforge.net/projects/ultradefrag/files/stable-release/7.1.4/ultradefrag-7.1.4.bin.i386.exe/download>
+  64-Bit software: <https://sourceforge.net/projects/ultradefrag/files/stable-release/7.1.4/ultradefrag-7.1.4.bin.amd64.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 8617A7EB043F72A72BD4DA44347CA163848C348D6C17BBF6960ED4F31D350013
-  checksum64: DC1E5DF113B68506BDC6EA71A821B90D315CD817608377D2E60B1E556ACF4995
+  checksum32: 56531C5E7CFDD114E071B1EE99C6C884CACECB4BB4E76043879B1E342319D179
+  checksum64: 0A6F2DB7D9E669E4B33704C4C668CA5B232E261F7FAB0581D6EF0E99F0EE9A72
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>

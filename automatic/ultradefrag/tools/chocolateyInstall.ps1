@@ -11,8 +11,8 @@ $silentArgs += if ($pp.NoBootInterface)      { " /BOOT=0"; Write-Host 'Boot inte
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\ultradefrag-7.1.3.bin.i386.exe"
-  file64         = "$toolsPath\ultradefrag-7.1.3.bin.amd64.exe"
+  file           = "$toolsPath\ultradefrag-7.1.4.bin.i386.exe"
+  file64         = "$toolsPath\ultradefrag-7.1.4.bin.amd64.exe"
   silentArgs     = $silentArgs
   validExitCodes = @(0)
   softwareName   = 'Ultra Defragmenter'
