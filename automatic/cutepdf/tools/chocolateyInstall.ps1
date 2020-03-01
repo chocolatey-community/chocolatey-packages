@@ -1,6 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-
 $packageArgs = @{
   packageName   = 'cutepdf'
   fileType      = 'exe'
