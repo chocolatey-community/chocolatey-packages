@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>wps-office-free</id>
-    <version>11.2.0.9150</version>
+    <version>11.2.0.9169</version>
     <title>WPS Office Free</title>
     <owners>chocolatey</owners>
     <authors>Kingsoft Software</authors>
@@ -40,9 +40,7 @@ Supports 12 languages and All Office File Formats.
 We support read and write PDF files!
 
 ## Notes
-
-- This Package only installs the english version of WPS Office Free.
-- This Package uses the `common` edition of WPS Office, which is not compatible with GDPR.
+- Our latest version is already compatible with GDPR, users can revoke the collection of personal information at any time.
 
 ]]></description>
     <summary>WPS Office Free is a free office productivity suite which is smaller and faster than most other office suites.</summary>
