@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 # This is the general install script for Mozilla products (Firefox and Thunderbird).
 # This file must be identical for all Choco packages for Mozilla products in this repository.
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
@@ -94,7 +94,7 @@ if ($PackageParameters['InstallDir']) {
   $installPath = $PackageParameters['InstallDir']
 }
 else {
-  $installPath = "C:\Program Files\Mozilla Firefox"
+  $installPath = Get-AppInstallLocation "Mozilla Firefox"
 }
 
 if (-Not(Test-Path ($installPath + "\distribution\policies.json") -ErrorAction SilentlyContinue) -and ($PackageParameters.NoAutoUpdate) ) {
