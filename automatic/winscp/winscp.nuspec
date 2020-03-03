@@ -36,7 +36,7 @@
     <releaseNotes>https://winscp.net/download/WinSCP-5.17.1-ReadMe.txt</releaseNotes>
     <copyright>© 2000 Martin Přikryl</copyright>
     <tags>scp cli ssh sftp ftp remote file client foss admin</tags>
-    <projectSourceUrl>https://sourceforge.net/p/winscp/code/</projectSourceUrl>
+    <projectSourceUrl>https://github.com/winscp/winscp</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/winscp</packageSourceUrl>
     <docsUrl>https://winscp.net/docs/</docsUrl>
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
