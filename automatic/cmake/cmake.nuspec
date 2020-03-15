@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake</id>
-    <version>3.16.4</version>
+    <version>3.17.0-rc3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/cmake</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>CMake</title>
@@ -16,7 +16,7 @@
     <projectSourceUrl>https://gitlab.kitware.com/cmake/cmake</projectSourceUrl>
     <docsUrl>https://www.cmake.org/documentation/</docsUrl>
     <mailingListUrl>https://cmake.org/mailing-lists/</mailingListUrl>
-    <bugTrackerUrl>https://public.kitware.com/Bug/</bugTrackerUrl>
+    <bugTrackerUrl>https://gitlab.kitware.com/cmake/cmake/issues</bugTrackerUrl>
     <tags>cmake compiler make build foss cross-platform</tags>
     <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
@@ -44,7 +44,7 @@ For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'`
 * [News](https://blog.kitware.com/tag/CMake/)
 * [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
     <dependencies>
-      <dependency id="cmake.install" version="[3.16.4]" />
+      <dependency id="cmake.install" version="[3.17.0-rc3]" />
     </dependencies>
   </metadata>
   <files />

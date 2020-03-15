@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>simplewall.portable</id>
-    <version>3.1</version>
+    <version>3.1.1</version>
     <authors>Henry++</authors>
     <summary>Simple tool to configure Windows Filtering Platform.</summary>
     <description><![CDATA[Simple tool to configure Windows Filtering Platform (WFP) which can configure network activity on your computer.

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake.install</id>
-    <version>3.16.4</version>
+    <version>3.17.0-rc3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/cmake.install</packageSourceUrl>
     <owners>chocolatey, dtgm</owners>
     <title>CMake (Install)</title>
@@ -16,7 +16,7 @@
     <projectSourceUrl>https://gitlab.kitware.com/cmake/cmake</projectSourceUrl>
     <docsUrl>https://www.cmake.org/documentation/</docsUrl>
     <mailingListUrl>https://cmake.org/mailing-lists/</mailingListUrl>
-    <bugTrackerUrl>https://public.kitware.com/Bug/</bugTrackerUrl>
+    <bugTrackerUrl>https://gitlab.kitware.com/cmake/cmake/issues</bugTrackerUrl>
     <tags>cmake compiler make build foss cross-platform</tags>
     <summary>Cross-platform, open-source build system including CMake, CTest, CPack, and CMake-GUI</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
