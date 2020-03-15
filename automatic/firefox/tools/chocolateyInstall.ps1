@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 # This is the general install script for Mozilla products (Firefox and Thunderbird).
 # This file must be identical for all Choco packages for Mozilla products in this repository.
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
@@ -6,6 +6,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageName = 'Firefox'
 $softwareName = 'Mozilla Firefox'
+
+$pp = Get-PackageParameters
 
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '74.0')
 
@@ -17,26 +19,51 @@ if (Get-32bitOnlyInstalled -product $softwareName) {
   )
 }
 
-if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
+$sa = ""
+
+# Command Line Options from the Firefox installer
+# https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html
+
+# Always prevent Firefox installer to require a reboot
+$sa += " /PreventRebootRequired=true"
+
+# Prevent RemoveDistributionDir by default
+$sa += " /RemoveDistributionDir=false"
+
+
+$sa += if ($pp.InstallDir) { " /InstallDirectoryPath=" + $pp.InstallDir }
+
+$sa += if ($pp.NoTaskbarShortcut) { " /TaskbarShortcut=false" }
+
+$sa += if ($pp.NoDesktopShortcut) { " /DesktopShortcut=false" }
+
+$sa += if ($pp.NoStartMenuShortcut) { " /StartMenuShortcut=false" }
+
+$sa += if ($pp.NoMaintenanceService) { " /MaintenanceService=false" }
+
+$sa += if ($pp.RemoveDistributionDir) { " /RemoveDistributionDir=true" }
+
+$sa += if ($pp.NoAutoUpdate) { " /MaintenanceService=false" }
+
+if ($alreadyInstalled -and $env:ChocolateyForce) {
   Write-Output $(
     "Firefox is already installed. " +
     'No need to download and re-install.'
   )
-} else {
+}
+else {
   $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
   $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
   $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
   $packageArgs = @{
-    packageName = $packageName
-    fileType = 'exe'
-    softwareName = "$softwareName*"
-
-    Checksum = $checksums.Win32
-    ChecksumType = 'sha512'
-    Url = "https://download.mozilla.org/?product=firefox-74.0-ssl&os=win&lang=${locale}"
-
-    silentArgs = '-ms'
+    packageName    = $packageName
+    fileType       = 'exe'
+    softwareName   = "$softwareName*"
+    Checksum       = $checksums.Win32
+    ChecksumType   = 'sha512'
+    Url            = "https://download.mozilla.org/?product=firefox-74.0-ssl&os=win&lang=${locale}"
+    silentArgs     = "$sa /S"
     validExitCodes = @(0)
   }
 
@@ -47,4 +74,25 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   }
 
   Install-ChocolateyPackage @packageArgs
+}
+
+if ($pp.InstallDir) {
+  $installPath = $pp.InstallDir
+}
+else {
+  $installPath = Get-AppInstallLocation $softwareName
+}
+
+if (-Not(Test-Path ($installPath + "\distribution\policies.json") -ErrorAction SilentlyContinue) -and ($pp.NoAutoUpdate) ) {
+  if (-Not(Test-Path ($installPath + "\distribution") -ErrorAction SilentlyContinue)) {
+    new-item ($installPath + "\distribution") -itemtype directory
+  }
+
+  $policies = @{
+    policies = @{
+      "DisableAppUpdate" = $true
+    }
+  }
+  $policies | ConvertTo-Json | Out-File -FilePath ($installPath + "\distribution\policies.json") -Encoding ascii
+
 }

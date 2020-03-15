@@ -4,16 +4,40 @@
 Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Features
-- **Freedom is fast:** Go anywhere you want on the Web with a quickness.
-- **Freedom is personal:** Enjoy the most built-in privacy tools of any browser.
-- **Freedom is yours:** people, not profit.
+
+**This Package installs Firefox ESR**
+- A powerful, new engine that’s built for rapidfire performance.
+- Better, faster page loading that uses less computer memory.
+- Gorgeous design and smart features for intelligent browsing.
+- Instantly import your online info and favorites from any other browser.
+- The most powerful private browsing mode with added tracking protection.
+- Firefox Quantum features: screenshots, pocket, gaming & VR, library.
+- Customization Features - addons & extensions, themes, toolbar.
+- Synced across devices - passwords, bookmarks, tabs and more.
+- Ad tracker blocking
+
+## Package Parameters
+
+- `/l:<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+
+Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
+- `/InstallDir:<path>`
+- `/NoTaskbarShortcut` Do not create Taskbar Shortcut
+- `/NoDesktopShortcut` Do not create Desktop Shortcut
+- `/NoStartMenuShortcut` Do not create Start Menu Shortcut
+- `/NoMaintenanceService` Do not install Maintenance Service
+- `/RemoveDistributionDir` Remove Distribution directory on installation/update. (This is the default behavior of the Firefox Installer, but not for this Chocolatey Package)
+- `/NoAutoUpdate` Sets a policies.json file to not update Firefox and does not install the Maintenance Service
+
+### Examples
+`choco install Firefox --params "/l:en-GB"`\
+`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`\
+`choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
 - Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
 - Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) package.
-- This package installs Firefox ESR in the first language which matches this list:
-1. Install arguments override parameter if present, e.g. `choco install Firefox -packageParameters "l=en-GB"`.
-To get a list of all available locales have a look at this file: https://releases.mozilla.org/pub/firefox/releases/latest-esr/README.txt.
-2. If Firefox is already installed: the same language as the already installed Firefox.
-3. The Windows system language where the Firefox package gets installed.
-4. If Firefox does not support the system language, it will fall back to â€œen-USâ€
+- If locale package parameter is not present, this package installs Firefox ESR in the first language which matches this list:
+  1. If Firefox ESR is already installed it uses the same language as the already installed one.
+  1. The Windows system language.
+  1. If Firefox ESR does not support the system language, it will fall back to `en-US`.

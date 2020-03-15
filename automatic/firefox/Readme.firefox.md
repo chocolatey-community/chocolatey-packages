@@ -17,7 +17,21 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Package Parameters
 
-- `l=<locale>` - Install given Firefox locale. For example `choco install Firefox --params "l=en-GB"`. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/l:<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+
+Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
+- `/InstallDir:<path>`
+- `/NoTaskbarShortcut` Do not create Taskbar Shortcut
+- `/NoDesktopShortcut` Do not create Desktop Shortcut
+- `/NoStartMenuShortcut` Do not create Start Menu Shortcut
+- `/NoMaintenanceService` Do not install Maintenance Service
+- `/RemoveDistributionDir` Remove Distribution directory on installation/update. (This is the default behavior of the Firefox Installer, but not for this Chocolatey Package)
+- `/NoAutoUpdate` Sets a policies.json file to not update Firefox and does not install the Maintenance Service
+
+### Examples
+`choco install Firefox --params "/l:en-GB"`\
+`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`\
+`choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
 
