@@ -7,7 +7,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName = 'Firefox'
 $softwareName = 'Mozilla Firefox'
 
-$PackageParameters = Get-PackageParameters
+$pp = Get-PackageParameters
 
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '73.0.1')
 
@@ -19,47 +19,33 @@ if (Get-32bitOnlyInstalled -product $softwareName) {
   )
 }
 
-$args = ""
+$sa = ""
 
 # Command Line Options from the Firefox installer
 # https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html
 
 # Always prevent Firefox installer to require a reboot
-$args = $args + " /PreventRebootRequired=true"
+$sa += " /PreventRebootRequired=true"
 
 # Prevent RemoveDistributionDir by default
-$args = $args + " /RemoveDistributionDir=false"
+$sa += " /RemoveDistributionDir=false"
 
 
-if ($PackageParameters['InstallDir']) {
-  $args = $args + " /InstallDirectoryPath=" + $PackageParameters['InstallDir']
-}
+$sa += if ($pp.InstallDir) { " /InstallDirectoryPath=" + $pp.InstallDir }
 
-if ($PackageParameters.NoTaskbarShortcut) {
-  $args = $args + " /TaskbarShortcut=false"
-}
+$sa += if ($pp.NoTaskbarShortcut) { " /TaskbarShortcut=false" }
 
-if ($PackageParameters.NoDesktopShortcut) {
-  $args = $args + " /DesktopShortcut=false"
-}
+$sa += if ($pp.NoDesktopShortcut) { " /DesktopShortcut=false" }
 
-if ($PackageParameters.NoStartMenuShortcut) {
-  $args = $args + " /StartMenuShortcut=false"
-}
+$sa += if ($pp.NoStartMenuShortcut) { " /StartMenuShortcut=false" }
 
-if ($PackageParameters.NoMaintenanceService) {
-  $args = $args + " /MaintenanceService=false"
-}
+$sa += if ($pp.NoMaintenanceService) { " /MaintenanceService=false" }
 
-if ($PackageParameters.RemoveDistributionDir) {
-  $args = $args + " /RemoveDistributionDir=true"
-}
+$sa += if ($pp.RemoveDistributionDir) { " /RemoveDistributionDir=true" }
 
-if ($PackageParameters.NoAutoUpdate) {
-  $args = $args + " /MaintenanceService=false"
-}
+$sa += if ($pp.NoAutoUpdate) { " /MaintenanceService=false" }
 
-if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
+if ($alreadyInstalled -and $env:ChocolateyForce) {
   Write-Output $(
     "Firefox is already installed. " +
     'No need to download and re-install.'
@@ -77,7 +63,7 @@ else {
     Checksum       = $checksums.Win32
     ChecksumType   = 'sha512'
     Url            = "https://download.mozilla.org/?product=firefox-73.0.1-ssl&os=win&lang=${locale}"
-    silentArgs     = "$($args) /S"
+    silentArgs     = "$sa /S"
     validExitCodes = @(0)
   }
 
@@ -90,14 +76,14 @@ else {
   Install-ChocolateyPackage @packageArgs
 }
 
-if ($PackageParameters['InstallDir']) {
-  $installPath = $PackageParameters['InstallDir']
+if ($pp.InstallDir) {
+  $installPath = $pp.InstallDir
 }
 else {
-  $installPath = Get-AppInstallLocation "Mozilla Firefox"
+  $installPath = Get-AppInstallLocation $softwareName
 }
 
-if (-Not(Test-Path ($installPath + "\distribution\policies.json") -ErrorAction SilentlyContinue) -and ($PackageParameters.NoAutoUpdate) ) {
+if (-Not(Test-Path ($installPath + "\distribution\policies.json") -ErrorAction SilentlyContinue) -and ($pp.NoAutoUpdate) ) {
   if (-Not(Test-Path ($installPath + "\distribution") -ErrorAction SilentlyContinue)) {
     new-item ($installPath + "\distribution") -itemtype directory
   }
