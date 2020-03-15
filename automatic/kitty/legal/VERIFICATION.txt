@@ -7,12 +7,12 @@ be equal to the checksums specified in this file.
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Filename     | Checksum                                                         | Url                                                                     |
 | ------------ | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| kitty.exe    | F7507A50DD07DD6E6BA3967924F7FB9FC678F3A03D3444AFAB644674D51A7E69 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/kitty.exe    |
-| kageant.exe  | 5D3D1F39F984FB3A9387F1F23A75AEC9D5A0A53E9A6C0490578A4D6D9BFF678C | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/kageant.exe  |
-| klink.exe    | 7E0ECC7CCCFA378CE3109B1C927575331FD7845A59AE1C84621AD1EF643602D1 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/klink.exe    |
-| cygtermd.exe | 3130B430DDF0491DE931F2735F4B2DB548FE1E70C94E707E4100958556A8753D | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/cygtermd.exe |
-| ksftp.exe    | CAF407BEE9A09EE1099AA1A309140A26FD22DF796450F4E82BD2161F64B0C0AD | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/ksftp.exe    |
-| kittygen.exe | 836E74A0A2CBD15CDB5EC5A31C458D0856E1EB0728E6B30274CB3D79174E76DE | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/kittygen.exe |
-| kscp.exe     | 5F417B59C26410C2552A9113369F13F309E0F5421C7387747070B303438DDC20 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/kscp.exe     |
-| genpass.exe  | 13673F67164C1D0431FFDB8DA93C97E64E18F0458EB7D30EBD52EE18F72EF94E | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.6/genpass.exe  |
+| kitty.exe    | 6B0E741BD09D95B35A2DBF3F6C57463CE5D19CE74CEFE8CCACE08C46ACBFE5A3 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/kitty.exe    |
+| kageant.exe  | 52D6922F8E7F0E776B3CC34782278CFD85BB2A84C2D4B8D9C59138BF5E28A1AD | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/kageant.exe  |
+| klink.exe    | 846609FE4D0C07870B68F9F9C962BBFCE98132EDC074647443CC0C99331ABB06 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/klink.exe    |
+| cygtermd.exe | 3130B430DDF0491DE931F2735F4B2DB548FE1E70C94E707E4100958556A8753D | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/cygtermd.exe |
+| ksftp.exe    | 4055693A9A2ECCD19A0D0C56708ED361096D7E444B8B6F52EA8E116793D1EBF2 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/ksftp.exe    |
+| kittygen.exe | 2A394A6760E7A105F52CEDF838CD163B3C855E099876932023C0E1956335925F | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/kittygen.exe |
+| kscp.exe     | 6743DAA0165865E79051D19EF3A0BE7601E50F54BC0A971A2895247B678DC400 | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/kscp.exe     |
+| genpass.exe  | 13673F67164C1D0431FFDB8DA93C97E64E18F0458EB7D30EBD52EE18F72EF94E | https://github.com/cyd01/KiTTY/releases/download/v0.73.2.7/genpass.exe  |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------|
