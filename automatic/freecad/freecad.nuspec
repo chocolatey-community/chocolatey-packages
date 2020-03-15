@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.0</version>
+    <version>0.19.0.20052-dev</version>
     <title>FreeCAD</title>
     <owners>chocolatey,purity</owners>
     <authors>Jürgen Riegel</authors>
@@ -33,9 +33,10 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 - `/NoShortcut` - This will not set a Shortcut on the Desktop.
 - `/WindowStyle` - The normal window setting for most Applications is as a Window. Maximised Window would be 3.
 
-Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`]]></description>
+Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
+]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.18</releaseNotes>
+    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.19</releaseNotes>
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
