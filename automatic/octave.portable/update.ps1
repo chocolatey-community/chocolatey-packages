@@ -61,10 +61,10 @@ function global:au_GetLatest {
   $releaseNotes = $releases_page.links | ? href -match $re | select -First 1 -expand href | % { New-Object uri([uri]$releases_url, $_) }
 
   return @{
-    Version      = $version32
+    Version      = $version32.Replace('_', '.')
     URL32        = $url32
     URL64        = $url64
-    ReleaseNotes = "${releaseNotes}"
+    ReleaseNotes = "$releaseNotes"
   }
 }
 
