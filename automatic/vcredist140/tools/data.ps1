@@ -1,12 +1,12 @@
 ﻿$installData32 = @{
-  Url = 'https://download.visualstudio.microsoft.com/download/pr/9307e627-aaac-42cb-a32a-a39e166ee8cb/E59AE3E886BD4571A811FE31A47959AE5C40D87C583F786816C60440252CD7EC/VC_redist.x86.exe'
-  Checksum = 'e59ae3e886bd4571a811fe31a47959ae5c40d87c583f786816c60440252cd7ec'
+  Url = 'https://download.visualstudio.microsoft.com/download/pr/8c211be1-c537-4402-82e7-a8fb5ee05e8a/AC96016F1511AE3EB5EC9DE04551146FE351B7F97858DCD67163912E2302F5D6/VC_redist.x86.exe'
+  Checksum = 'ac96016f1511ae3eb5ec9de04551146fe351b7f97858dcd67163912e2302f5d6'
   ChecksumType = 'sha256'
 }
 
 $installData64 = @{
-  Url64 = 'https://download.visualstudio.microsoft.com/download/pr/3b070396-b7fb-4eee-aa8b-102a23c3e4f4/40EA2955391C9EAE3E35619C4C24B5AAF3D17AEAA6D09424EE9672AA9372AEED/VC_redist.x64.exe'
-  Checksum64 = '40ea2955391c9eae3e35619c4c24b5aaf3d17aeaa6d09424ee9672aa9372aeed'
+  Url64 = 'https://download.visualstudio.microsoft.com/download/pr/8c211be1-c537-4402-82e7-a8fb5ee05e8a/B6C82087A2C443DB859FDBEAAE7F46244D06C3F2A7F71C35E50358066253DE52/VC_redist.x64.exe'
+  Checksum64 = 'b6c82087a2c443db859fdbeaae7f46244d06c3f2a7f71c35e50358066253de52'
   ChecksumType64 = 'sha256'
 }
 
@@ -15,7 +15,7 @@ $uninstallData = @{
 }
 
 $otherData = @{
-  ThreePartVersion = [version]'14.24.28127'
+  ThreePartVersion = [version]'14.25.28508'
   FamilyRegistryKey = '14.0'
   PackageName = 'vcredist140'
 }
