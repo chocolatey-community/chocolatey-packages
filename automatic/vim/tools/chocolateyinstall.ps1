@@ -9,8 +9,8 @@ $installDir = Get-InstallDir
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $installDir
-  file          = "$toolsDir\gvim_8.2.0390_x86.zip"
-  file64        = "$toolsDir\gvim_8.2.0390_x64.zip"
+  file          = "$toolsDir\gvim_8.2.0397_x86.zip"
+  file64        = "$toolsDir\gvim_8.2.0397_x64.zip"
 }
 
 $installArgs = @{
