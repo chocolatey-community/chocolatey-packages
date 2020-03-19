@@ -1,0 +1,22 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software can be verified by doing the following:
+
+1. Download the following:
+  32-bit software: <https://github.com/derailed/k9s/releases/download/v0.17.7/k9s_Windows_i386.tar.gz>
+  64-bit software: <https://github.com/derailed/k9s/releases/download/v0.17.7/k9s_Windows_x86_64.tar.gz>
+
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+  - Using powershell function 'Get-RemoteChecksum' incluse in AU module
+
+3. The checksums should match the following:
+  checksum type: sha256
+  checksum32: 5BABCFFFFA4425872988E4869FDA3DDC20AF8447594B74F53D3DE31FFCBE72B9
+  checksum64: A2BDAD476932BB4DB1E36AA0C8635F4AAF9E67DE6D978C1C58BC751CF5553C9B
+
+The file 'LICENSE.txt' has been obtained from <https://raw.githubusercontent.com/derailed/k9s/2e05367256a7b2777b011da7213cf636c9ae4d17/LICENSE>
