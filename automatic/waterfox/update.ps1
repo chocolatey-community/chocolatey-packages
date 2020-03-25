@@ -1,9 +1,15 @@
-﻿import-module au
-
+import-module au
 $releases = 'https://www.waterfox.net/releases/'
 $softwareName = 'Waterfox*'
 
 function global:au_BeforeUpdate {
+  if ($Latest.Title -like '*Classic*') {
+    cp "$PSScriptRoot\readme.classic.md" "$PSScriptRoot\readme.md" -Force
+  }
+  else {
+    cp "$PSScriptRoot\readme.current.md" "$PSScriptRoot\readme.md" -Force
+  }
+  
   $Latest.ChecksumType64 = 'sha256'
   $fileName = $Latest.URL64 -split '/' | select -last 1
   $fileName = ($fileName -replace '%20',' ').TrimEnd('.exe')
@@ -25,13 +31,20 @@ function global:au_SearchReplace {
       "(?i)(^\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
     }
+    ".\waterfox.nuspec"  = @{
+      "(?i)(^\s*\<id\>).*(\<\/id\>)" = "`${1}$($Latest.PackageName)`${2}"
+      "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
+    }
   }
 }
 
-function global:au_GetLatest {
+function Get-Waterfox {
+param(
+    [string]$build
+)
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = '(?:Waterfox)%20([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2})(%20Setup\-\d+\.[ex]+)|(?:Waterfox)%20([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2})(%20Setup)(?!\-\d+)(\.[ex]+)'
+  $re    = "(?:Waterfox%20$build%20)([\d]{0,4}[\.][\d]{0,2})(%20Setup\.[ex]+)|(?:Waterfox%20$build%20)([\d]{0,4}[\.][\d]{0,2}[\.][\d]{0,2})(%20Setup\.[ex]+)"
   $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
   if (!$url) {
     $re = 'Setup\.exe$' # If we didn't get a url with the previous regex, we use a much simpler way
@@ -39,9 +52,19 @@ function global:au_GetLatest {
   }
 
   $version  = $url -split '%20| ' | select -Last 1 -Skip 1
-
+  if ($build -eq 'Classic') { $build = 'Classic'; $dash = '-' } else { $build=$dash = '' }
   # We need to replace the space in the url, otherwise we'll get an invalid url error.
-  return @{ URL64 = ($url -replace ' ','%20'); Version = $version }
+  return @{ PackageName = "Waterfox$dash$build" ; Title = "Waterfox $build" ; URL64 = ($url -replace ' ','%20'); Version = $version }
+}
+
+function global:au_GetLatest {
+
+  $streams = [ordered] @{
+    classic = Get-Waterfox -build "Classic"
+    current = Get-Waterfox -build "Current"
+  }
+
+  return @{ Streams = $streams }
 }
 
 update -ChecksumFor none
