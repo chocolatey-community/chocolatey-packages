@@ -1,11 +1,16 @@
-﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. $toolsPath\helpers.ps1
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsDir\BraveBrowserStandaloneSilentSetup32.exe"
-  file64      = "$toolsDir\BraveBrowserStandaloneSilentSetup.exe"
+  file        = "$toolsPath\BraveBrowserStandaloneSilentSetup32.exe"
+  file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
 }
 
-Install-ChocolateyInstallPackage @packageArgs
+if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
+  Write-Host "Skipping installation because version $alreadyInstalled is already installed."
+} else {
+  Install-ChocolateyInstallPackage @packageArgs
+}
 
-Remove-Item $toolsDir\*.exe -ea 0
+Remove-Item $toolsPath\*.exe -ea 0
