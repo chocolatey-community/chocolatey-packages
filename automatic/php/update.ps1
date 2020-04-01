@@ -56,7 +56,7 @@ function Get-Dependency() {
   $dep = $url -split '\-' | select -last 1 -skip 1
 
   $result = @{
-    'vc15' = @{ Id = 'vcredist140'; Version = '14.11.25325.0' }
+    'vc15' = @{ Id = 'vcredist140'; Version = '14.16.27012.6' }
     'vc14' = @{ Id = 'vcredist140'; Version = '14.0.24215.1' }
     'vc11' = @{ Id = 'vcredist2012'; Version = '11.0.61031' }
   }.GetEnumerator() | ? Key -eq $dep | select -first 1 -expand Value
