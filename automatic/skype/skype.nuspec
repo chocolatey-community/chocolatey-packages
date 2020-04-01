@@ -17,7 +17,7 @@ The package have the following known issues.
     <projectUrl>http://www.skype.com</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/skype</packageSourceUrl>
     <tags>Skype VOIP voice over ip video conferencing admin</tags>
-    <licenseUrl>http://www.skype.com/intl/en-us/legal/eula/</licenseUrl>
+    <licenseUrl>https://www.microsoft.com/servicesagreement#14e_Skype</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@040c834d483de9e38ceeef0fd8283d803be082bf/icons/skype.png</iconUrl>
   </metadata>
