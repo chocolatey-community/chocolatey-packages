@@ -1,10 +1,10 @@
-
+﻿
 function Get-TCPConnections {
     param(
     [int]$portNumber
     )
     $ListeningPort = @()
-    $GetPorts =  netstat -nao | Select-String ":$portNumber  " | Select -First 2
+    $GetPorts =  netstat -nao | Select-String ":$portNumber  " | Select-Object -First 2
         Foreach ($Port in $GetPorts) {
         $a = $Port -split '\s\s*'
           if ( $a[2] -match ":$portNumber" ) {
