@@ -3,7 +3,7 @@
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  packageName    = 'zotero-standalone'
+  packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
   silentArgs     = '/S'
   validExitCodes = @(0)
