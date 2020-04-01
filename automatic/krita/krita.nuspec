@@ -35,7 +35,7 @@
     <projectUrl>https://krita.org/</projectUrl>
     <projectSourceUrl>https://github.com/KDE/krita</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/krita</packageSourceUrl>
-    <docsUrl>https://docs.krita.org/Main_Page</docsUrl>
+    <docsUrl>https://docs.krita.org/en/index.html</docsUrl>
     <bugTrackerUrl>https://bugs.kde.org/buglist.cgi</bugTrackerUrl>
     <tags>admin foss multimedia cross-platform krita sketching painting kde qt</tags>
     <licenseUrl>https://github.com/KDE/krita/blob/master/COPYING</licenseUrl>
