@@ -10,7 +10,7 @@ $packageArgs = @{
 
   softwareName  = 'Julia*'
 
-  silentArgs    = '/VERYSILENT'
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
 }
 $packageVersion = "1.4.0"
