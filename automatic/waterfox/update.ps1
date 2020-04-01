@@ -1,4 +1,5 @@
-import-module au
+﻿import-module au
+
 $releases = 'https://www.waterfox.net/releases/'
 $softwareName = 'Waterfox*'
 
@@ -32,7 +33,6 @@ function global:au_SearchReplace {
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`${1}'$($Latest.PackageName)'"
     }
     ".\waterfox.nuspec"  = @{
-      "(?i)(^\s*\<id\>).*(\<\/id\>)" = "`${1}$($Latest.PackageName)`${2}"
       "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
     }
   }
@@ -53,8 +53,9 @@ param(
 
   $version  = $url -split '%20| ' | select -Last 1 -Skip 1
   if ($build -eq 'Classic') { $build = 'Classic'; $dash = '-' } else { $build=$dash = '' }
+	$namePackage = @{$true="waterfox$dash$build";$false="Waterfox$dash$build"}[ ($build -eq 'Classic') ]
   # We need to replace the space in the url, otherwise we'll get an invalid url error.
-  return @{ PackageName = "Waterfox$dash$build" ; Title = "Waterfox $build" ; URL64 = ($url -replace ' ','%20'); Version = $version }
+  return @{ PackageName = $namePackage ; Title = "Waterfox $build" ; URL64 = ($url -replace ' ','%20'); Version = $version }
 }
 
 function global:au_GetLatest {
