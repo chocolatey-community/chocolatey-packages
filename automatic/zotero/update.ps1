@@ -1,8 +1,8 @@
-import-module au
+﻿import-module au
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://www.zotero.org/download/client/dl?channel=release&platform=win32'
-$softwareName = 'Zotero Standalone *'
+$softwareName = 'Zotero'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
