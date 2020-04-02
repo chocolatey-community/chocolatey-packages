@@ -3,12 +3,12 @@
 $packageArgs = @{
   packageName   = 'cutepdf'
   fileType      = 'exe'
-  url           = ''
+  url           = 'http://www.cutepdf.com/download/CuteWriter.exe'
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup Package
   validExitCodes= @(0)
   softwareName  = 'cutepdf*'
-  checksum      = ''
-  checksumType  = 'sha256'
+  checksum      = '88490EB055EB1F594B30436CD299D5F0C1B425978128424EBF3D3124B6B9E42CC9E0E8FC556B1FA3589A1E76E4E23D99D4647DADA4EED0A0CE598C4357E8996A'
+  checksumType  = 'sha512'
 }
 
 # Make sure Print Spooler service is up and running
