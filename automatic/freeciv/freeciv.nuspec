@@ -10,7 +10,7 @@
     <licenseUrl>https://github.com/freeciv/freeciv-web/blob/develop/LICENSE.txt</licenseUrl>
     <projectUrl>http://www.freeciv.org/</projectUrl>
     <docsUrl>http://www.freeciv.org/wiki/</docsUrl>
-    <bugTrackerUrl>http://gna.org/bugs/?group=freeciv</bugTrackerUrl>
+    <bugTrackerUrl>https://www.hostedredmine.com/projects/freeciv</bugTrackerUrl>
     <projectSourceUrl>https://github.com/freeciv/freeciv-web</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freeciv.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
