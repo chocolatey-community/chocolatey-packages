@@ -23,7 +23,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $url32 = Get-RedirectedUrl 'http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download'
+  $url32 = Get-RedirectedUrl 'http://download.pdfforge.org/download/pdfcreator/PDFCreatorLegacy-stable?download'
   $version32 = $url32 -split '\/' | select -last 1 -skip 1
 
   return @{
