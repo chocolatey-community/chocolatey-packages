@@ -1,5 +1,9 @@
 # Changelog
 
+## 2020-04-02
+
+- Added stopping of the gpg agent to prevent failures during upgrade
+
 ## 2018-06-13
 - Added example of calling choco with parameters
 
