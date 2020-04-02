@@ -1,4 +1,4 @@
-﻿# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png" width="48" height="48"/> [waterfox](https://chocolatey.org/packages/waterfox)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png" width="48" height="48"/> [waterfox](https://chocolatey.org/packages/waterfox)
 
 ## Waterfox aka Waterfox Current
 Use this version of Waterfox if you want the latest and greatest the web has to offer, want to use all WebExtensions and a few bootstrap extensions.

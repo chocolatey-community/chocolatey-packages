@@ -10,7 +10,7 @@ function global:au_BeforeUpdate {
   else {
     cp "$PSScriptRoot\readme.current.md" "$PSScriptRoot\readme.md" -Force
   }
-  
+
   $Latest.ChecksumType64 = 'sha256'
   $fileName = $Latest.URL64 -split '/' | select -last 1
   $fileName = ($fileName -replace '%20',' ').TrimEnd('.exe')
@@ -53,7 +53,7 @@ param(
 
   $version  = $url -split '%20| ' | select -Last 1 -Skip 1
   if ($build -eq 'Classic') { $build = 'classic'; $dash = '-' } else { $build=$dash = '' }
-	$namePackage = @{$true="waterfox$dash$build";$false="Waterfox$dash$build"}[ ($build -eq 'Classic') ]
+  $namePackage = @{$true="waterfox$dash$build";$false="Waterfox$dash$build"}[ ($build -eq 'Classic') ]
   # We need to replace the space in the url, otherwise we'll get an invalid url error.
   return @{ PackageName = $namePackage ; Title = "Waterfox $build" ; URL64 = ($url -replace ' ','%20'); Version = $version }
 }

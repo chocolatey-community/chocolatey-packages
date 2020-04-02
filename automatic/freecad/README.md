@@ -9,8 +9,8 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 - Import/export to standard formats such as STEP, IGES, OBJ, STL, DXF, SVG, STL, DAE, IFC or OFF, NASTRAN, VRML in addition to FreeCAD's native FCStd file format.
 - A Robot simulation module that allows you to study robot movements in a graphical environment.
 - A technical drawing module with options for detail views, cross sectional views, dimensioning and others, allowing you to generate 2D views of existing 3D models.
-- A Rendering module that can export 3D objects for rendering with external renderers. 
-- A Path module dedicated to mechanical machining for Computer Aided Manufacturing (CAM). 
+- A Rendering module that can export 3D objects for rendering with external renderers.
+- A Path module dedicated to mechanical machining for Computer Aided Manufacturing (CAM).
 
 ## Package parameters
 #### Used only for Portable or Pre Releases Currently
