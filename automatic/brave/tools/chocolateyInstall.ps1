@@ -7,6 +7,9 @@ $packageArgs = @{
   file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
 }
 
+Write-Host "Checking already installed version..."
+CheckInstalledVersion
+
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "Skipping installation because version $alreadyInstalled is already installed."
 } else {
