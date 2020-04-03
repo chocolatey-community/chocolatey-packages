@@ -53,9 +53,9 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     "tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*"   = "`${1}$($Latest.FileName32)`""
-      "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName64)`""
-      "(?i)([$]softwareVersion\s*=\s*)'.*'"     = "`${1}'$($Latest.RemoteVersion)'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)([$]softwareVersion\s*=\s*)'.*'"       = "`${1}'$($Latest.RemoteVersion)'"
     }
     "legal\VERIFICATION.txt"      = @{
       "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
