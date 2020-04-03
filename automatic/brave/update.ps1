@@ -5,45 +5,47 @@ $releases = 'https://github.com/brave/brave-browser/releases'
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $domain    = $releases -split '(?<=//.+)/' | select -First 1
-  $url32     = $download_page.links | ? href -match 'StandaloneSilentSetup32.exe$' | select -First 1 -expand href
-  $url64     = $download_page.links | ? href -match 'StandaloneSilentSetup.exe$'   | select -First 1 -expand href
-  $url32_b   = $download_page.links | ? href -match 'SilentBetaSetup32.exe$'       | select -First 1 -expand href
-  $url64_b   = $download_page.links | ? href -match 'SilentBetaSetup.exe$'         | select -First 1 -expand href
-  $version   = $url32   -split '/v?' | select -Skip 1 -Last 1
+  $domain = $releases -split '(?<=//.+)/' | select -First 1
+  $url32 = $download_page.links | ? href -match 'StandaloneSilentSetup32.exe$' | select -First 1 -expand href
+  $url64 = $download_page.links | ? href -match 'StandaloneSilentSetup.exe$' | select -First 1 -expand href
+  $url32_b = $download_page.links | ? href -match 'SilentBetaSetup32.exe$' | select -First 1 -expand href
+  $url64_b = $download_page.links | ? href -match 'SilentBetaSetup.exe$' | select -First 1 -expand href
+  $version = $url32 -split '/v?' | select -Skip 1 -Last 1
   $version_b = $url32_b -split '/v?' | select -Skip 1 -Last 1
 
   $streams = @{
     stable = @{
-      URL32   = $domain + $url32
-      URL64   = $domain + $url64
-      Version = $version
-      Title   = 'Brave Browser'
-      IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
+      URL32         = $domain + $url32
+      URL64         = $domain + $url64
+      Version       = $version
+      RemoteVersion = $version
+      Title         = 'Brave Browser'
+      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
     }
 
     beta   = @{
-        URL32   = $domain + $url32_b
-        URL64   = $domain + $url64_b
-        Version = $version_b + '-beta'
-        Title   = 'Brave Browser (Beta)'
-        IconUrl = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg'
-      }
+      URL32         = $domain + $url32_b
+      URL64         = $domain + $url64_b
+      Version       = $version_b + '-beta'
+      RemoteVersion = $version_b
+      Title         = 'Brave Browser (Beta)'
+      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg'
+    }
   }
 
   if (!$url64 -and !$url64_b) {
-     Write-Host "No stable and no beta release is available (Nightly not supported)..."
-     return "ignore"
+    Write-Host "No stable and no beta release is available (Nightly not supported)..."
+    return "ignore"
   }
 
-  if (!$url64)   { $streams.stable = 'ignore'; Write-Host "No stable release is available" }
-  if (!$url64_b) { $streams.beta   = 'ignore'; Write-Host "No beta release is available"   }
+  if (!$url64) { $streams.stable = 'ignore'; Write-Host "No stable release is available" }
+  if (!$url64_b) { $streams.beta = 'ignore'; Write-Host "No beta release is available" }
   elseif (!$url32_b) { $streams.beta = "ignore"; Write-Host "No 32bit beta release is available" }
   @{ streams = $streams }
 }
 
 function global:au_BeforeUpdate {
-  $stream_readme = if ($Latest.Title -like '*Beta*') {'README-beta.md'} else {'README-release.md'}
+  $stream_readme = if ($Latest.Title -like '*Beta*') { 'README-beta.md' } else { 'README-release.md' }
   cp $stream_readme $PSScriptRoot\README.md -Force
   Get-RemoteFiles -Purge -NoSuffix
 }
@@ -53,6 +55,7 @@ function global:au_SearchReplace {
     "tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*"   = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)([$]softwareVersion\s*=\s*)'.*'"     = "`${1}'$($Latest.RemoteVersion)'"
     }
     "legal\VERIFICATION.txt"      = @{
       "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"

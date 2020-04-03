@@ -3,16 +3,22 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsDir\BraveBrowserSilentBetaSetup32.exe"
-  file64      = "$toolsDir\BraveBrowserSilentBetaSetup.exe"
+  file        = "$toolsPath\BraveBrowserSilentBetaSetup32.exe"
+  file64      = "$toolsPath\BraveBrowserSilentBetaSetup.exe"
 }
 
-Write-Host "Checking already installed version..."
-CheckInstalledVersion
+[version]$softwareVersion = ''
 
-if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
-  Write-Host "Skipping installation because version $alreadyInstalled is already installed."
-} else {
+Write-Host "Checking already installed version..."
+$installedVersion = Get-InstalledVersion
+
+if ($installedVersion -and ($softwareVersion -lt $installedVersion)) {
+  Write-Warning "Skipping installation because a later version than $softwareVersion is installed."
+}
+elseif ($installedVersion -and ($softwareVersion -eq $installedVersion)) {
+  Write-Warning "Skipping installation because version $softwareVersion is already installed."
+}
+else {
   Install-ChocolateyInstallPackage @packageArgs
 }
 
