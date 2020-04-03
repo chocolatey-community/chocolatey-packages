@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>74.0</version>
+    <version>74.0.1</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <projectSourceUrl>https://hg.mozilla.org/mozilla-central/</projectSourceUrl>
@@ -31,7 +31,21 @@
 
 ## Package Parameters
 
-- `l=<locale>` - Install given Firefox locale. For example `choco install Firefox --params "l=en-GB"`. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/l:<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+
+Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
+- `/InstallDir:<path>`
+- `/NoTaskbarShortcut` Do not create Taskbar Shortcut
+- `/NoDesktopShortcut` Do not create Desktop Shortcut
+- `/NoStartMenuShortcut` Do not create Start Menu Shortcut
+- `/NoMaintenanceService` Do not install Maintenance Service
+- `/RemoveDistributionDir` Remove Distribution directory on installation/update. (This is the default behavior of the Firefox Installer, but not for this Chocolatey Package)
+- `/NoAutoUpdate` Sets a policies.json file to not update Firefox and does not install the Maintenance Service
+
+### Examples
+`choco install Firefox --params "/l:en-GB"`\
+`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`\
+`choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
 
@@ -44,7 +58,7 @@
 ]]></description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
-    <releaseNotes>https://www.mozilla.org/en-US/firefox/74.0/releasenotes/</releaseNotes>
+    <releaseNotes>https://www.mozilla.org/en-US/firefox/74.0.1/releasenotes/</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/firefox</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
