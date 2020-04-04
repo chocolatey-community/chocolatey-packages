@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>k9s</id>
-    <version>0.17.7.20200318</version>
+    <version>0.19.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/k9s</packageSourceUrl>
     <owners>Matteo Dell'Aquila (moebius87),chocolatey</owners>
     <title>k9s: Kubernetes CLI To Manage Your Clusters In Style!</title>
     <authors>Fernand Galiana (derailed)</authors>
     <projectUrl>https://k9scli.io/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@4556ad100324fb3ef0a8931b2137cab0d5bc588f/icons/k9s.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@833f8152a28aa2c249d380342337ae0514742fd6/icons/k9s.png</iconUrl>
     <copyright>(c) 2020 Imhotep Software LLC.</copyright>
     <licenseUrl>https://raw.githubusercontent.com/derailed/k9s/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -53,7 +53,7 @@ Customize/Arrange which columns to display on a per resource basis.
 * Resource Graph Traversals
   * K9s provides for easy traversal of Kubernetes resources and their associated resources.
 ]]></description>
-    <releaseNotes>https://github.com/derailed/k9s/blob/v0.17.7/change_logs/release_v0.17.7.md</releaseNotes>
+    <releaseNotes>https://github.com/derailed/k9s/blob/v0.19.0/change_logs/release_v0.19.0.md</releaseNotes>
     <dependencies>
       <dependency id="kubernetes-cli" />
     </dependencies>
