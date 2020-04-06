@@ -6,7 +6,7 @@
     <metadata>
         <id>keeweb</id>
         <title>KeeWeb</title>
-        <version>1.12.3</version>
+        <version>1.13.1</version>
         <authors>antelle</authors>
         <owners>wget</owners>
         <summary>Free cross-platform password manager compatible with KeePass</summary>
