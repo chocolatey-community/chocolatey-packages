@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>datagrip</id>
-    <version>2019.3.4</version>
+    <version>2020.1</version>
     <title>JetBrains DataGrip</title>
     <authors>JetBrains</authors>
     <licenseUrl>https://www.datagrip.org/terms.php</licenseUrl>
