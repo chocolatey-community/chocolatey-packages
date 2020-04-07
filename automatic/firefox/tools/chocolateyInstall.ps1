@@ -9,7 +9,7 @@ $softwareName = 'Mozilla Firefox'
 
 $pp = Get-PackageParameters
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '74.0.1')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '75.0')
 
 if (Get-32bitOnlyInstalled -product $softwareName) {
   Write-Output $(
@@ -62,7 +62,7 @@ else {
     softwareName   = "$softwareName*"
     Checksum       = $checksums.Win32
     ChecksumType   = 'sha512'
-    Url            = "https://download.mozilla.org/?product=firefox-74.0.1-ssl&os=win&lang=${locale}"
+    Url            = "https://download.mozilla.org/?product=firefox-75.0-ssl&os=win&lang=${locale}"
     silentArgs     = "$sa /S"
     validExitCodes = @(0)
   }
@@ -70,7 +70,7 @@ else {
   if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
     $packageArgs.Checksum64 = $checksums.Win64
     $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-74.0.1-ssl&os=win64&lang=${locale}"
+    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-75.0-ssl&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs
