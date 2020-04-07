@@ -44,7 +44,7 @@ This webapp is a browser and desktop password manager compatible with KeePass da
         <projectUrl>https://keeweb.info/</projectUrl>
         <tags>keeweb keypass password admin foss cross-platform</tags>
         <copyright>2016 Antelle</copyright>
-        <licenseUrl>https://github.com/keeweb/keeweb/blob/master/LICENSE.txt</licenseUrl>
+        <licenseUrl>https://github.com/keeweb/keeweb/blob/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <!-- Source: https://github.com/keeweb/keeweb/raw/master/graphics/128x128.png -->
         <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@88bbbf93f61ceb6787fbdf191a9542dddfcb2c2c/icons/keeweb.png</iconUrl>
