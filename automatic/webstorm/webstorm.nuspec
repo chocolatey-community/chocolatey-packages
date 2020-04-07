@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>webstorm</id>
-    <version>2019.3.3</version>
+    <version>2020.1</version>
     <title>JetBrains WebStorm</title>
     <authors>JetBrains</authors>
     <licenseUrl>http://www.jetbrains.com/webstorm/buy/buy.jsp</licenseUrl>
