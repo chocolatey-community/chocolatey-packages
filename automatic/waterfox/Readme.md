@@ -1,6 +1,8 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png" width="48" height="48"/> [waterfox](https://chocolatey.org/packages/waterfox)
 
-## How and why Waterfox is here...
+Use this version of Waterfox if you have your browser set up with various NPAPI plugins and bootstrap extensions that have not been updated as WebExtensions or for [Waterfox Current](https://chocolatey.org/packages/waterfox)
+
+**How and why Waterfox is here...**  
 Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
 He had a fascination for the web and wanted to help expand on the ideals of what Mozilla had for a free and open web.
 And so he decided to make Waterfox, a 64-Bit browser based on Mozilla's free and open source platform.
@@ -15,6 +17,7 @@ There is no plugin whitelist, you can run whichever extensions you like and abso
 telemetry is sent back to Mozilla or the Waterfox project.
 
 ## Features
+
 - Built with Clang-cl on Windows
 - No Adobe DRM
 - No Pcket
