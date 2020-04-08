@@ -3,7 +3,7 @@
   <metadata>
     <id>peazip</id>
     <title>PeaZip</title>
-    <version>7.1.0</version>
+    <version>7.2.0</version>
     <authors>Giorgio Tani</authors>
     <owners>chocolatey,dtgm</owners>
     <summary>PeaZip is a free cross-platform file archiver.</summary>
@@ -27,7 +27,7 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a09d7c32df1ac4b8028df11d2b2b5196b8de2435/icons/peazip.svg</iconUrl>
     <releaseNotes>[PeaZip changelog](http://www.peazip.org/changelog.html)</releaseNotes>
     <dependencies>
-      <dependency id="peazip.install" version="[7.1.0]" />
+      <dependency id="peazip.install" version="[7.2.0]" />
     </dependencies>
   </metadata>
 </package>
