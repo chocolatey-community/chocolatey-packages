@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubernetes-cli</id>
-    <version>1.18.0</version>
+    <version>1.18.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/kubernetes-cli</packageSourceUrl>
     <owners>chocolatey,Andrei Bejenaru</owners>
     <title>Kubernetes Command Line Interface (CLI)</title>
@@ -60,7 +60,7 @@ Automatically mount the storage system of your choice, whether from local storag
 #### Batch execution
 In addition to services, Kubernetes can manage your batch and CI workloads, replacing containers that fail, if desired.
 ]]></description>
-    <releaseNotes>https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.1.md#v1180</releaseNotes>
+    <releaseNotes>https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.1.md#v1181</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
