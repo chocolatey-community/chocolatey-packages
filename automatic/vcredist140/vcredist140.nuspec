@@ -11,10 +11,10 @@
     <projectUrl>https://visualstudio.microsoft.com/vs/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@d8a28da83b3b9bf058e1fbbeed5ce74329b73245/icons/vcredist140.png</iconUrl>
     <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/permissions</copyright>
-    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <licenseUrl>https://visualstudio.microsoft.com/license-terms/mlt031619/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/visualstudio/ide/getting-started-with-cpp-in-visual-studio</docsUrl>
-    <bugTrackerUrl>https://visualstudio.uservoice.com/forums/121579-visual-studio</bugTrackerUrl>
+    <bugTrackerUrl>https://developercommunity.visualstudio.com/</bugTrackerUrl>
     <tags>microsoft visual c++ redistributable 140 2015 2017 2019 admin</tags>
     <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2015-2019</summary>
     <description><![CDATA[Microsoft Visual C++ Redistributable for Visual Studio 2015-2019 installs run-time components of Visual C++ libraries. These components are required to run C++ applications that are developed using Visual Studio 2015-2019 and link dynamically to Visual C++ libraries. The packages can be used to run such applications on a computer even if it does not have Visual Studio 2015-2019 installed. These packages also install run-time components of C Runtime (CRT), Standard C++, MFC, C++ AMP, and OpenMP libraries.
