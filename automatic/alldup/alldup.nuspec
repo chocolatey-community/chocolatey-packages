@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>alldup</id>
-    <version>4.4.22</version>
+    <version>4.4.24</version>
     <title>AllDup</title>
     <owners>chocolatey</owners>
     <authors>Michael Thummerer Software Design</authors>

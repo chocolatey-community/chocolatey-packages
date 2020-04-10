@@ -6,7 +6,7 @@
   <metadata>
     <id>keepassxc</id>
     <title>KeePassXC</title>
-    <version>2.5.3</version>
+    <version>2.5.4</version>
     <authors>https://github.com/keepassxreboot/keepassxc/graphs/contributors</authors>
     <owners>wget, hans0</owners>
     <summary>KeePassXC is a community fork of KeePassX which aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository.</summary>

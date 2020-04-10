@@ -6,14 +6,14 @@ The installer have been downloaded from the Github release page <https://github.
 and can be verified like this:
 
 1.  Download the following installers:
-    32-Bit: <https://github.com/keepassxreboot/keepassxc/releases/download/2.5.3/KeePassXC-2.5.3-Win32.msi>
-    64-Bit: <https://github.com/keepassxreboot/keepassxc/releases/download/2.5.3/KeePassXC-2.5.3-Win64.msi>
+    32-Bit: <https://github.com/keepassxreboot/keepassxc/releases/download/2.5.4/KeePassXC-2.5.4-Win32.msi>
+    64-Bit: <https://github.com/keepassxreboot/keepassxc/releases/download/2.5.4/KeePassXC-2.5.4-Win64.msi>
 2.  You can use one of the following methods to obtain the checksum
     - Use powershell function 'Get-Filehash'
     - Use chocolatey utility 'checksum.exe'
 
     checksum type: sha256
-    checksum32: 33E66248999441B519A57FE11C991697EB6E15AE0E9CF732C30676C3697C7BAD
-    checksum64: 84213446E87725C0361730C4B01B8667D4E8A0726D85FE21697BF328EB1FEF96
+    checksum32: C6A37CD95213273E7F3DA2C3D0DF79389B3D851626D5D47143A5A1EFA953913A
+    checksum64: 01BF1B593EFC4A9B92E0CA7148414F6D4F0E63521AEFA64D1F8CAA0327D35E91
 
 File 'LICENSE.txt' is obtained from <https://github.com/keepassxreboot/keepassxc/blob/470a74ee24793eaccab0ae371a7ee970b95bfeb9/COPYING>
