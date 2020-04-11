@@ -6,12 +6,21 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $domain = $releases -split '(?<=//.+)/' | select -First 1
-  $url32 = $download_page.links | ? href -match 'StandaloneSilentSetup32.exe$' | select -First 1 -expand href
-  $url64 = $download_page.links | ? href -match 'StandaloneSilentSetup.exe$' | select -First 1 -expand href
   $url32_b = $download_page.links | ? href -match 'SilentBetaSetup32.exe$' | select -First 1 -expand href
   $url64_b = $download_page.links | ? href -match 'SilentBetaSetup.exe$' | select -First 1 -expand href
-  $version = $url32 -split '/v?' | select -Skip 1 -Last 1
   $version_b = $url32_b -split '/v?' | select -Skip 1 -Last 1
+
+  for ($i = 0; $i -lt 10; $i++) {
+    $url32 = $download_page.links | ? href -match 'StandaloneSilentSetup32.exe$' | select -First 1 -expand href
+    $url64 = $download_page.links | ? href -match 'StandaloneSilentSetup.exe$' | select -First 1 -expand href
+    $version = $url32 -split '/v?' | select -Skip 1 -Last 1
+    if ($url32 -and $url64) {
+      break
+    }
+    $nextUrl = $download_page.Links | ? outerHTML -match "Next" | % href
+    if (!$nextUrl) { break }
+    $download_page = Invoke-WebRequest -Uri $nextUrl -UseBasicParsing
+  }
 
   $streams = @{
     stable = @{
