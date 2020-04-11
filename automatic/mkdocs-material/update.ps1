@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://pypi.python.org/pypi/mkdocs-material'
 
@@ -8,9 +8,9 @@ function global:au_SearchReplace {
       "(^[$]version\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
     }
         ".\mkdocs-material.nuspec" = @{
-          "(\<dependency .+?`"mkdocs`" version=)`"([^`"]+)`"" = "`$1`"$($Latest.MkDocsDep)`""
+          "(\<dependency .+?`"mkdocs`" version=)`"([^`"]*)`"" = "`$1`"$($Latest.MkDocsDep)`""
         }
-     }
+    }
 }
 
 function global:au_GetLatest {
@@ -20,9 +20,11 @@ function global:au_GetLatest {
     $url = $download_page.links | ? href -match $re | select -first 1 -expand href
     $version = $url -split '\/' | select -last 1 -skip 1
 
-    $download_page = Invoke-WebRequest -UseBasicParsing -Uri "https://squidfunk.github.io/mkdocs-material/getting-started/"
-    if ($download_page.content -match "Requires MkDocs.*=\s*([\d\.]+)\.") {
+    $download_page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/squidfunk/mkdocs-material/raw/${version}/requirements.txt"
+    if ($download_page.content -match "mkdocs>=(\d+\.[\d\.]+)") {
       $dependencyVersion = $matches[1]
+    } else {
+      throw "Mkdocs dependency version was not found"
     }
 
     return @{ Version = $version; MkDocsDep = $dependencyVersion }
