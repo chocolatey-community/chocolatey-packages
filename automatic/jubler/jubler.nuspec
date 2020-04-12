@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>jubler</id>
-    <version>7.0.0-alpha1</version>
+    <version>7.0.0-alpha3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/jubler</packageSourceUrl>
     <owners>chocolatey, AdmiringWorm</owners>
     <title>Jubler Subtitle Editor</title>
