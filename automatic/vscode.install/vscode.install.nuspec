@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode.install</id>
     <title>Visual Studio Code (Install)</title>
-    <version>1.43.2</version>
+    <version>1.44.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
