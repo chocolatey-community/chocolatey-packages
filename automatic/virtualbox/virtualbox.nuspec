@@ -4,7 +4,7 @@
   <metadata>
     <id>virtualbox</id>
     <title>VirtualBox</title>
-    <version>6.0.18</version>
+    <version>6.1.6</version>
     <authors>Oracle Corporation</authors>
     <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
