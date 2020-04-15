@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>InkScape</id>
-    <version>0.92.4</version>
+    <version>0.92.5</version>
     <title>Inkscape</title>
     <owners>chocolatey</owners>
     <authors>Inkscape developers</authors>
     <licenseUrl>https://git.launchpad.net/inkscape/tree/COPYING</licenseUrl>
     <projectUrl>https://inkscape.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@84a3a84e256daa3255c4a896eefbf8f5589fb842/icons/InkScape.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[
@@ -38,10 +38,10 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
     <mailingListUrl>https://inkscape.org/en/community/mailing-lists/</mailingListUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/inkscape</bugTrackerUrl>
     <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
-    <releaseNotes>https://inkscape.org/release/inkscape-0.92.4/#left-column</releaseNotes>
+    <releaseNotes>https://inkscape.org/release/inkscape-0.92.5/#left-column</releaseNotes>
     <copyright>inkscape.org</copyright>
     <tags>inkscape editor foss cross-platform svg vector-graphics icons graphics export drawing art admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/inkscape</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/inkscape</packageSourceUrl>
     <projectSourceUrl>https://git.launchpad.net/inkscape/tree/</projectSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
