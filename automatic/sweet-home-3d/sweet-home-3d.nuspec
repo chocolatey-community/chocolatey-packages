@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sweet-home-3d</id>
-    <version>6.2</version>
+    <version>6.3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/sweet-home-3d</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>Sweet Home 3D</title>
