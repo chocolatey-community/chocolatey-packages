@@ -14,8 +14,8 @@ $params = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
   silentArgs     = $installArgs
-  file           = "$toolsPath\python-2.7.17.msi"
-  file64         = "$toolsPath\python-2.7.17.amd64.msi"
+  file           = "$toolsPath\python-2.7.18.msi"
+  file64         = "$toolsPath\python-2.7.18.amd64.msi"
 }
 
 Install-ChocolateyInstallPackage @params

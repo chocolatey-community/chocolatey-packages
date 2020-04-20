@@ -7,15 +7,15 @@ location on <https://www.python.org/downloads/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://www.python.org/ftp/python/2.7.17/python-2.7.17.msi>
-  64-Bit software: <https://www.python.org/ftp/python/2.7.17/python-2.7.17.amd64.msi>
+  32-Bit software: <https://www.python.org/ftp/python/2.7.18/python-2.7.18.msi>
+  64-Bit software: <https://www.python.org/ftp/python/2.7.18/python-2.7.18.amd64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: A4E3A321517C6B0C2693D6F712A0D18C82600B3D0C759C299B3D14384A17F863
-  checksum64: 3B934447E3620E51D2DAF5B2F258C9B617BCC686CA2F777A49AA3B47893ABF1B
+  checksum32: D901802E90026E9BAD76B8A81F8DD7E43C7D7E8269D9281C9E9DF7A9C40480A9
+  checksum64: B74A3AFA1E0BF2A6FC566A7B70D15C9BFABBA3756FB077797D16FFFA27800C05
 
 The file 'LICENSE.txt' has been obtained from <https://www.python.org/download/releases/2.7/license>
