@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>winscp</id>
-    <version>5.17.2.20200316</version>
+    <version>5.17.4</version>
     <title>WinSCP</title>
     <authors>Martin Přikryl</authors>
     <owners>chocolatey, dtgm</owners>
@@ -33,7 +33,7 @@
 
 ]]></description>
     <summary>Open source free SFTP client, SCP client, FTPS client and FTP client</summary>
-    <releaseNotes>https://winscp.net/download/WinSCP-5.17.2-ReadMe.txt</releaseNotes>
+    <releaseNotes>https://winscp.net/download/WinSCP-5.17.4-ReadMe.txt</releaseNotes>
     <copyright>© 2000 Martin Přikryl</copyright>
     <tags>scp cli ssh sftp ftp remote file client foss admin</tags>
     <projectSourceUrl>https://github.com/winscp/winscp</projectSourceUrl>
@@ -42,7 +42,7 @@
     <mailingListUrl>https://winscp.net/forum/index.php</mailingListUrl>
     <bugTrackerUrl>https://winscp.net/tracker/</bugTrackerUrl>
     <dependencies>
-      <dependency id="winscp.install" version="[5.17.2.20200316]" />
+      <dependency id="winscp.install" version="[5.17.4]" />
     </dependencies>
   </metadata>
   <files></files>
