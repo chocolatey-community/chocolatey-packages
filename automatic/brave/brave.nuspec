@@ -14,7 +14,7 @@
 
 ## Notes
 
-* This is an **official release version** of Brave. It is in continuous development with new releases landing approximately every three weeks. 
+* This is an **official release version** of Brave. It is in continuous development with new releases landing approximately every three weeks.
 ]]></description>
     <!-- IconUrl: Skip check -->
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave.svg</iconUrl>
@@ -24,7 +24,7 @@
     <tags>foss cross-platform admin brave brave-browser bravebrowser web browser web-browser chromium adblock adblocker privacy</tags>
     <projectUrl>https://brave.com/</projectUrl>
     <projectSourceUrl>https://github.com/brave/brave-browser</projectSourceUrl>
-    <releaseNotes>https://github.com/brave/brave-browser/blob/master/CHANGELOG.md</releaseNotes>
+    <releaseNotes>https://github.com/brave/brave-browser/blob/master/CHANGELOG_DESKTOP.md</releaseNotes>
     <licenseUrl>https://github.com/brave/brave-browser/blob/master/LICENSE</licenseUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/brave</packageSourceUrl>
   </metadata>
