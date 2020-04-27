@@ -48,4 +48,5 @@ Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
     </dependencies>
     <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
   </metadata>
+  <files />
 </package>
