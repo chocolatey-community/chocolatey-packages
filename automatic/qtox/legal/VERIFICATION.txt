@@ -7,15 +7,15 @@ The embedded software have been downloaded from the listed download
 locations and can be verified by doing the following:
 
 1. Download the following
-  32-Bit software: <https://github.com/qTox/qTox/releases/download/v1.16.3/setup-qtox-i686-release.exe>
-  64-Bit software: <https://github.com/qTox/qTox/releases/download/v1.16.3/setup-qtox-x86_64-release.exe>
+  32-Bit software: <https://github.com/qTox/qTox/releases/download/v1.17.2/setup-qtox-i686-release.exe>
+  64-Bit software: <https://github.com/qTox/qTox/releases/download/v1.17.2/setup-qtox-x86_64-release.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: SHA256
-  checksum32: D4A50995124B6663C4AA7398520F023E7A76CBA9A179371AF5C9E45396B3C551
-  checksum64: E4A36D89739768AFEDF539CD049BFC7EB19022A2F9C40E52B50081604B0AB027
+  checksum32: 53D457384F8A03867581D6AD5D9E83ADEF4ABC42F61687A89A7AB3D301F8C222
+  checksum64: 5B55ED202476154939D8DFC44D45E0E38C2BCA9C102DBFC1046CB2172FEAE35F
 
 The file 'LICENSE.txt' has been obtained from <https://raw.githubusercontent.com/qTox/qTox/master/LICENSE>
