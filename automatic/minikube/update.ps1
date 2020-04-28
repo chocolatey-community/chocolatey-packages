@@ -38,6 +38,7 @@ function global:au_GetLatest {
     URL64       = "https://storage.googleapis.com/minikube/releases/v${version}/minikube-windows-amd64.exe"
     ReleaseNotes= "$domain/kubernetes/minikube/blob/v${version}/CHANGELOG.md"
     ReleaseURL  = "$domain/kubernetes/minikube/releases/tag/v${version}"
+    PackageName = 'Minikube' # Casing is not in all lowercase on chocolatey.org
   }
 }
 
