@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gimp</id>
-    <version>2.10.14</version>
+    <version>2.10.18.2</version>
     <title>GIMP</title>
     <owners>chocolatey</owners>
     <authors>GIMP Team</authors>
