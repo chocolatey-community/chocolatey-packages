@@ -17,10 +17,10 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Package Parameters
 
-- `/l:<locale>` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
 
 Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
-- `/InstallDir:<path>`
+- `/InstallDir:PATH`
 - `/NoTaskbarShortcut` Do not create Taskbar Shortcut
 - `/NoDesktopShortcut` Do not create Desktop Shortcut
 - `/NoStartMenuShortcut` Do not create Start Menu Shortcut
