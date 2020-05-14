@@ -1,6 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
-. "$toolsDir\helpers.ps1"
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName   = 'renamemaster'
@@ -13,8 +12,9 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-ChocolateyPinnedItem "$toolsDir\RenameMaster.exe"
-
-Install-ChocolateyExplorerMenuItem 'openRenameMaster' 'Rename Master...' "$toolsDir\RenameMaster.exe"
+$executable = Join-Path  $toolsDir "RenameMaster.exe"
+$startMenu = [Environment]::GetFolderPath("CommonPrograms")
+$startMenuLink = Join-Path $startMenu "Rename Master.lnk"
+Install-ChocolateyShortcut $startMenuLink $executable
 
 Remove-Item "$toolsDir\setup.exe" -Force -ea 0
