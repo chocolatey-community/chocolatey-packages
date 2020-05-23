@@ -35,7 +35,7 @@ function Update-MSys2 {
     $logPath      = Join-Path $InstallPath update.log
     $stopSentence = 'there is nothing to do'
     $cntSentence  = 2
-    $shellArgs    = "pacman --noconfirm -Syuu | tee -a /update.log"
+    $shellArgs    = "pacman --noconfirm -Syuu --disable-download-timeout | tee -a /update.log"
     $max          = 5  
 
     Write-Host "Repeating system update until there are no more updates or max $max iterations"
