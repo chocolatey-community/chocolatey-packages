@@ -7,7 +7,6 @@ location on <https://inkscape.org/release/inkscape-0.92.5/windows>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://inkscape.org/gallery/item/18065/inkscape-0.92.5-x86.msi>
   64-Bit software: <https://inkscape.org/gallery/item/18066/inkscape-0.92.5-x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -15,7 +14,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 316A6BA14F813922FCAE941470C233BBAAA5F7BE90DB20329958A286A606D0D6
   checksum64: ADBEC9685C813CA81B3594C679837C42725811938BE99A47D675A4547CC4D675
 
 The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/gpl-2.0.txt>

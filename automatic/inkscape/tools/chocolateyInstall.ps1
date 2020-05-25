@@ -5,7 +5,9 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file           = "$toolsPath\inkscape-0.92.5-x86.msi"
+  url            = ''
+  checksum       = ''
+  checksumType   = ''
   file64         = "$toolsPath\inkscape-0.92.5-x64.msi"
   softwareName   = 'InkScape*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
@@ -14,13 +16,13 @@ $packageArgs = @{
 
 [array]$key = Get-UninstallRegistrykey $packageArgs['softwareName']
 if ($key.Count -eq 1) {
-  if ($key[0].DisplayVersion -eq '0.92.5') {
+  if ($key[0].DisplayVersion -eq '1.0') {
     Write-Host "Software already installed"
     return
   }
   else {
     # We need to do it this way, as PSChildName isn't available in POSHv2
-    $msiId = $key[0].UninstallString -replace '^.*MsiExec\.exe\s*\/I',''
+    $msiId = $key[0].UninstallString -replace '^.*MsiExec\.exe\s*\/I', ''
     Uninstall-ChocolateyPackage -packageName $packageArgs['packageName'] `
       -fileType $packageArgs['fileType'] `
       -silentArgs "$msiId $($packageArgs['silentArgs'] -replace 'MsiInstall','MsiUninstall')" `
@@ -35,7 +37,12 @@ elseif ($key.Count -gt 1) {
   Write-Warning "Please uninstall InkScape before installing this package."
 }
 
-Install-ChocolateyInstallPackage @packageArgs
+if ((Get-ProcessorBits 32) -or ($env:chocolateyForceX86 -eq $true)) {
+  Install-ChocolateyPackage @packageArgs
+}
+else {
+  Install-ChocolateyInstallPackage @packageArgs
+}
 
 Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 

@@ -1,24 +1,28 @@
-import-module au
+﻿import-module au
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain = 'https://inkscape.org'
 
-function global:au_BeforeUpdate { Get-RemoteFIles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix
+
+  rm "tools/$($Latest.FileName32)" # Embedding 32bit will make the package too large
+}
 
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.UpdateUrl)>"
-      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*url\s*=\s*)'.*'"                  = "`${1}'$($Latest.URL32)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"           = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksumType\s*=\s*)'.*'"         = "`${1}'$($Latest.ChecksumType32)'"
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
-      "(?i)(DisplayVersion\s*-eq\s*)'.*'"   = "`${1}'$($Latest.RemoteVersion)'"
+      "(?i)(DisplayVersion\s*-eq\s*)'.*'"         = "`${1}'$($Latest.RemoteVersion)'"
     }
     "$($Latest.PackageName).nuspec" = @{
       "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
