@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png" width="48" height="48"/> [lightworks](https://chocolatey.org/packages/lightworks)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@11eb42db9030a5a8d735fd56e2ad8bf62d365cff/icons/lightworks.png" width="48" height="48"/> [lightworks](https://chocolatey.org/packages/lightworks)
 
 
 __Lightworks__ is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K.
