@@ -8,7 +8,7 @@ param(
 switch -w ( $a ) {
 
 	'wps-office-free' {
-		$PackageUrl = "https://www.wps.com/en-US/office/windows/"
+		$PackageUrl = "https://pc.wps.com/"
 	}
 	
 }
