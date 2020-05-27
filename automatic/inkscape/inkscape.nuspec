@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>InkScape</id>
-    <version>0.92.5</version>
+    <version>1.0</version>
     <title>Inkscape</title>
     <owners>chocolatey</owners>
     <authors>Inkscape developers</authors>
@@ -38,7 +38,7 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
     <mailingListUrl>https://inkscape.org/en/community/mailing-lists/</mailingListUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/inkscape</bugTrackerUrl>
     <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
-    <releaseNotes>https://inkscape.org/release/inkscape-0.92.5/#left-column</releaseNotes>
+    <releaseNotes>https://inkscape.org/release/inkscape-1.0/#left-column</releaseNotes>
     <copyright>inkscape.org</copyright>
     <tags>inkscape editor foss cross-platform svg vector-graphics icons graphics export drawing art admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/inkscape</packageSourceUrl>

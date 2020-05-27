@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://osdn.net/frs/redir.php?m=pumath&f=%2Fstorage%2Fg%2Ft%2Fto%2Ftortoisesvn%2F1.13.1%2FApplication%2FTortoiseSVN-1.13.1.28686-win32-svn-1.13.0.msi>
-  64-Bit: <https://osdn.net/frs/redir.php?m=gigenet&f=%2Fstorage%2Fg%2Ft%2Fto%2Ftortoisesvn%2F1.13.1%2FApplication%2FTortoiseSVN-1.13.1.28686-x64-svn-1.13.0.msi>
+  32-Bit: <https://osdn.net/frs/redir.php?m=gigenet&f=%2Fstorage%2Fg%2Ft%2Fto%2Ftortoisesvn%2F1.14.0%2FApplication%2FTortoiseSVN-1.14.0.28885-win32-svn-1.14.0.msi>
+  64-Bit: <https://osdn.net/frs/redir.php?m=xtom_us&f=%2Fstorage%2Fg%2Ft%2Fto%2Ftortoisesvn%2F1.14.0%2FApplication%2FTortoiseSVN-1.14.0.28885-x64-svn-1.14.0.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 621559CAE76A50A4FEDC366640507A8E8AD2888586A606B2669A49474D43F348
-  checksum64: 9BBECA021B786CFEF1E13D46C3A9A1F3D37D94245F51801165BB561EAFCD41E5
+  checksum32: 13EB78432308C71E50B66BE5FA250C10181C1897D33D9F07767DE992BA592022
+  checksum64: 7A386ADBBF9CE26E892F044128F21C70B13695CE7931456C12868776BC680582
 
 File 'LICENSE.txt' is obtained from <https://sourceforge.net/p/tortoisesvn/code/23615/tree/trunk/src/COPYING.txt>

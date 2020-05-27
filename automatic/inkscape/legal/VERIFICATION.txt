@@ -3,17 +3,17 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://inkscape.org/release/inkscape-0.92.5/windows>
+location on <https://inkscape.org/release/inkscape-1.0/windows>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://inkscape.org/gallery/item/18066/inkscape-0.92.5-x64.msi>
+  64-Bit software: <https://inkscape.org/gallery/item/18474/inkscape-1.0-x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: ADBEC9685C813CA81B3594C679837C42725811938BE99A47D675A4547CC4D675
+  checksum64: 0CD3EFA6A6B61F7906152A2D7A221EE1B69598649FC8CA6482BE9C3BF6DB8679
 
 The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/gpl-2.0.txt>

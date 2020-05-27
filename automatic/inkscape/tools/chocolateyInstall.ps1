@@ -5,10 +5,10 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = ''
-  checksum       = ''
-  checksumType   = ''
-  file64         = "$toolsPath\inkscape-0.92.5-x64.msi"
+  url            = 'https://inkscape.org/gallery/item/18475/inkscape-1.0-x86.msi'
+  checksum       = 'C0D5F7F58D42611FBCFF2AC232C48AAD6574D8A1D9A25B18D0A081969B1FDEAC'
+  checksumType   = 'sha256'
+  file64         = "$toolsPath\inkscape-1.0-x64.msi"
   softwareName   = 'InkScape*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
@@ -37,7 +37,7 @@ elseif ($key.Count -gt 1) {
   Write-Warning "Please uninstall InkScape before installing this package."
 }
 
-if ((Get-ProcessorBits 32) -or ($env:chocolateyForceX86 -eq $true)) {
+if ((Get-OSArchitectureWidth 32) -or ($env:chocolateyForceX86 -eq $true)) {
   Install-ChocolateyPackage @packageArgs
 }
 else {
