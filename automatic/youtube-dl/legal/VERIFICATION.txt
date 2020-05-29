@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official download link listed on <https://github.com/rg3/youtube-dl/releases/latest>
 and can be verified like this:
 
-1. Download <https://github.com/ytdl-org/youtube-dl/releases/download/2020.05.08/youtube-dl.exe>
+1. Download <https://github.com/ytdl-org/youtube-dl/releases/download/2020.05.29/youtube-dl.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha512
-  checksum: 5eae48df2e37dd07c97c4682e6b6dbda00bbdcd0e175f053f6d891b274276b99ab437bda64d811661b1ab7fdc0a55287f57fe31ba8f20ee83c45b6bba9caf945
+  checksum: 285abc831b5b6e037229a5614db6b38dcf27fa4ed4be240c8ac5c5bcb8b29d384e414e9a9d195143f5cd6dcf02e812a8e676b68cb77c0e11b125e13a0970f53a
 
 File 'LICENSE.txt' is obtained from <https://github.com/rg3/youtube-dl/blob/b7769a05eca3611e492f7a75f1c40cddd2019ef1/LICENSE>

@@ -6,7 +6,7 @@ in verifying that this package's contents are trustworthy.
 The embedded software can be verified by doing the following:
 
 1. Download the following:
-  64-bit software: <https://github.com/derailed/k9s/releases/download/v0.19.7/k9s_Windows_x86_64.tar.gz>
+  64-bit software: <https://github.com/derailed/k9s/releases/download/v0.20.1/k9s_Windows_x86_64.tar.gz>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -15,6 +15,6 @@ The embedded software can be verified by doing the following:
 
 3. The checksums should match the following:
   checksum type: sha256
-  checksum64: 2D399D7FD4291BC9E16030743BF81F0A78FB7719544712B8F4645F41D99DCC0C
+  checksum64: A0C7D96A0660954FA9B1620C24EB11754A4359DC303F83A4E7601C35E2D44052
 
 The file 'LICENSE.txt' has been obtained from <https://raw.githubusercontent.com/derailed/k9s/2e05367256a7b2777b011da7213cf636c9ae4d17/LICENSE>
