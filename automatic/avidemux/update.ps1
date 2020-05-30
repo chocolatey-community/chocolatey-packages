@@ -35,15 +35,20 @@ function global:au_GetLatest {
       $download_page = Invoke-WebRequest -Uri $release -UseBasicParsing
       $allUrls = $download_page.Links | ? href -match "\.exe\/download$" | select -expand href
       if ($allUrls.Count -ge 2) {
+        if(!$url32) {
+          $url32 = $allUrls | ? { $_ -match "win32?\.exe" } | select -first 1
+        }
+        if(!$url64) {
+          $url64 = $allUrls | ? { $_ -match "(win64|64Bits.*)\.exe" } | select -first 1
+        }
         break
       }
+      $url32 = $allUrls | ? { $_ -match "win32?\.exe" } | select -first 1
+      $url64 = $allUrls | ? { $_ -match "(win64|64Bits.*)\.exe" } | select -first 1
     }
 
-    $url32 = $allUrls | ? { $_ -match "win32?\.exe" } | select -first 1
-    $url64 = $allUrls | ? { $_ -match "(win64|64Bits.*)\.exe" } | select -first 1
 
-
-    $version = $release -split '/' | select -Last 1 -Skip 1
+    $version = ($allReleases |  select -first 1).Split('/') | select -Last 1 -Skip 1
 
     if ($download_page -match "$version( |\-)(alpha|beta|rc)([^\: ]*)") {
         $version = "$version-$($Matches[2])$($Matches[3])"
