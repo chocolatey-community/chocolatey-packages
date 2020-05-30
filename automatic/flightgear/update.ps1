@@ -2,7 +2,7 @@
 
 # We can't use https for the url, otherwise powershell throws an error and closes the window.
 # Oddly it works when choco auto redirects http to https
-$downloads = 'http://ftp.igh.cnrs.fr/pub/flightgear/ftp'
+$downloads = 'https://sourceforge.net/projects/flightgear/files'
 $changelog = 'http://wiki.flightgear.org/Changelog_'
 $versions = 'http://www.flightgear.org/'
 
@@ -10,8 +10,6 @@ function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*url\s*=\s*)('.*')"            = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"       = "`$1'$(Get-RemoteChecksum -Url $Latest.URL32)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')"   = "`$1'sha256'"
       "(?i)(^[$]version\s*=\s*)('.*')"        = "`$1'$($Latest.RemoteVersion)'"
     }
     ".\$($Latest.PackageName).nuspec" = @{
@@ -32,7 +30,7 @@ function global:au_GetLatest {
     throw "Cannot obtain the latest version from FlightGear's homepage, please update the `"update.ps1`" script."
   }
 
-  $url = "$downloads/release-$short_version/FlightGear-$version.exe"
+  $url = "$downloads/release-$short_version/FlightGear-$version.exe/download"
 
   $releaseNotes = "$changelog$short_version"
 
