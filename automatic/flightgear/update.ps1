@@ -2,8 +2,9 @@
 
 # We can't use https for the url, otherwise powershell throws an error and closes the window.
 # Oddly it works when choco auto redirects http to https
-$releases = 'http://ftp.igh.cnrs.fr/pub/flightgear/ftp/Windows/'
-$changelogs = 'http://www.flightgear.org/'
+$downloads = 'http://ftp.igh.cnrs.fr/pub/flightgear/ftp'
+$changelog = 'http://wiki.flightgear.org/Changelog_'
+$versions = 'http://www.flightgear.org/'
 
 function global:au_SearchReplace {
   @{
@@ -20,16 +21,20 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $version_page = Invoke-WebRequest -UseBasicParsing -Uri $versions
+  $re = "(?i)Current stable release: (?<stable>[0-9\.]+)"
+  if($version_page.Content -match $re)
+  {
+    $version = $Matches.stable
+    $short_version =  $version.Substring(0, $version.LastIndexOf("."))
+  } else
+  {
+    throw "Cannot obtain the latest version from FlightGear's homepage, please update the `"update.ps1`" script."
+  }
 
-  $re    = '^FlightGear.*\.exe$'
-  $fileName   = $download_page.links | ? href -match $re | select -Last 1 -expand href
-  $url = if ($fileName) { $releases + $fileName }
+  $url = "$downloads/release-$short_version/FlightGear-$version.exe"
 
-  $version  = $url -split '[-]|.exe' | select -Last 1 -Skip 1
-
-  $changelog_page = Invoke-WebRequest -UseBasicParsing $changelogs
-  $releaseNotes = $changelog_page.links | ? href -match 'Changelog_[0-9\.]+$' | select -first 1 -expand href
+  $releaseNotes = "$changelog$short_version"
 
   @{
     URL32 = $url
