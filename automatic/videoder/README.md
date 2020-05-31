@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/videoder/main/master/public/images/toolbar_icon.png" width="48" height="48"/> [Videoder](https://chocolatey.org/packages/videoder)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6c3b84f069ec5a206359ddabc8c86e437339b3ef/icons/videoder.png" width="48" height="48"/> [Videoder](https://chocolatey.org/packages/videoder)
 
 Videoder is a free and easy-to-use tool downloading videos from various sites.
 It is capable of downloading and converting into different video and audio formats in a single click.

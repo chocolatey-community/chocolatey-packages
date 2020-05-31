@@ -7,15 +7,15 @@ location on <http://www.jubler.org/download.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/teras/Jubler/releases/download/v7.0.0/Jubler-7.0.0.32.exe>
-  64-Bit software: <https://github.com/teras/Jubler/releases/download/v7.0.0/Jubler-7.0.0.64.exe>
+  32-Bit software: <https://github.com/teras/Jubler/releases/download/v7.0.3/Jubler-7.0.3.x32.exe>
+  64-Bit software: <https://github.com/teras/Jubler/releases/download/v7.0.3/Jubler-7.0.3.x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 92918E35261A20792F93492670A1EC786471E6B0EEEBAA4BBC6706BBFBB741EA
-  checksum64: 8842FE33C04CD0D10E6984493536357FFAC3D2A7CBB838C5B7C26F6114099241
+  checksum32: D87DC5CCBADAD1EF277D0069F4951C9DCC06DF1F0AB5AD496FCAFC20CF6E8613
+  checksum64: 799AB85C4D8F5D68E83D42F45C5EE9A78625D09843504668E101178BCB056D0E
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/jubler/code/ci/jubler/tree/LICENCE?format=raw>
