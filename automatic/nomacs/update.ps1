@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://download.nomacs.org/versions'
+$releases = 'https://github.com/nomacs/nomacs/releases'
 
 function global:au_SearchReplace {
    @{
