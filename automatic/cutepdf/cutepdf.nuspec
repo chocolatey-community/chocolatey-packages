@@ -4,7 +4,7 @@
   <metadata>
     <id>cutepdf</id>
     <title>CutePDF Writer</title>
-    <version>4.0.0.201</version>
+    <version>4.0.0.300</version>
     <authors>Acro Software Inc.</authors>
     <owners>chocolatey,Redsandro,Thilas</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
