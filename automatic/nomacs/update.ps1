@@ -22,7 +22,7 @@ function global:au_BeforeUpdate  { Get-RemoteFiles -NoSuffix -Purge }
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $url     = $download_page.links | ? href -like '*/nomacs-*' | % href | select -First 1
-    $version = $url -split '-|\.zip' | select -Last 1 -Skip 1
+    $version = $url -split '\/' | select -Last 1 -Skip 1
     @{
         Version      = $version
         URL64        = 'http://download.nomacs.org/nomacs-setup-x64.msi'
