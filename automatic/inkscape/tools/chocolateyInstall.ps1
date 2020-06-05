@@ -49,7 +49,7 @@ Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs['softwareName']
 if ($installLocation) {
-  Install-BinFile 'inkscape' $installLocation\inkscape.exe
+  Install-BinFile 'inkscape' $installLocation\bin\inkscape.exe
   Write-Host "$packageName installed to '$installLocation'"
 }
 else { Write-Warning "Can't find $PackageName install location" }
