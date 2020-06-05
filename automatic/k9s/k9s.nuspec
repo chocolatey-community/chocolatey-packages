@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>k9s</id>
-    <version>0.20.2</version>
+    <version>0.20.4</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/k9s</packageSourceUrl>
     <owners>Matteo Dell'Aquila (moebius87),chocolatey</owners>
     <title>k9s: Kubernetes CLI To Manage Your Clusters In Style!</title>
@@ -53,7 +53,7 @@ Customize/Arrange which columns to display on a per resource basis.
 * Resource Graph Traversals
   * K9s provides for easy traversal of Kubernetes resources and their associated resources.
 ]]></description>
-    <releaseNotes>https://github.com/derailed/k9s/blob/v0.20.2/change_logs/release_v0.20.2.md</releaseNotes>
+    <releaseNotes>https://github.com/derailed/k9s/blob/v0.20.4/change_logs/release_v0.20.4.md</releaseNotes>
     <dependencies>
       <dependency id="kubernetes-cli" />
     </dependencies>
