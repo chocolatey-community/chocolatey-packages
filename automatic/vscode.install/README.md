@@ -15,6 +15,7 @@ Build and debug modern web and cloud applications. Code is free and available on
 * `/NoQuicklaunchIcon` - Don't add an icon to the QuickLaunch area.
 * `/NoContextMenuFiles` - Don't add an _Open with Code_ entry to the context menu for files.
 * `/NoContextMenuFolders` - Dont't add an _Open with Code_ entry to the context menu for folders.
+* `/DontAssociateWithFiles` - Dont't associate Visual Studio Code with supported files.
 * `/DontAddToPath` - Don't add Visual Studio Code to the system PATH.
 
 Example: `choco install vscode.install --params "/NoDesktopIcon /DontAddToPath"`

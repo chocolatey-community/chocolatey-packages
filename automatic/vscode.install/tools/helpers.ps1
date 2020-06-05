@@ -4,6 +4,7 @@ function Get-MergeTasks {
     $t += ', ' + '!'*$pp.NoQuicklaunchIcon    + 'quicklaunchicon'
     $t += ', ' + '!'*$pp.NoContextMenuFiles   + 'addcontextmenufiles'
     $t += ', ' + '!'*$pp.NoContextMenuFolders + 'addcontextmenufolders'
+    $t += ', ' + '!'*$pp.DontAssociateWithFiles + 'associatewithfiles'
     $t += ', ' + '!'*$pp.DontAddToPath        + 'addtopath'
 
     Write-Host "Merge Tasks: $t"
