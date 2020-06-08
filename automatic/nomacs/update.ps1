@@ -5,9 +5,7 @@ $releases = 'https://github.com/nomacs/nomacs/releases'
 function global:au_SearchReplace {
    @{
         ".\legal\VERIFICATION.txt" = @{
-            "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
             "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
-            "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
             "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
         }
 
@@ -25,8 +23,7 @@ function global:au_GetLatest {
     $version = $url -split '\/' | select -Last 1 -Skip 1
     @{
         Version      = $version
-        URL64        = 'http://download.nomacs.org/nomacs-setup-x64.msi'
-        URL32        = 'http://download.nomacs.org/nomacs-setup-x86.msi'
+        URL64        = "https://github.com/${url}"
         ReleaseNotes = "https://github.com/nomacs/nomacs/releases/tag/${version}"
     }
 }
