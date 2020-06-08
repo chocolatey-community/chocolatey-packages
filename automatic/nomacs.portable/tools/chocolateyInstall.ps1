@@ -4,7 +4,7 @@ if ((Get-OSArchitectureWidth 32) -or ($env:chocolateyForceX86 -eq 'true')) {
    throw "This package doesn't support 32bit architecture"
 }
 
-$fileName  = 'nomacs-3.12.1.zip'
+$fileName  = 'nomacs-portable-win.zip'
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $zip_path = "$toolsPath\$fileName"
 Get-ChildItem $toolsPath\* | Where-Object { $_.PSIsContainer } | Remove-Item -Force -Recurse

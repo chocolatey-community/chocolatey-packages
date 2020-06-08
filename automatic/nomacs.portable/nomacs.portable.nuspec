@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nomacs.portable</id>
-    <version>3.12.1</version>
+    <version>3.14.2</version>
     <title>nomacs Image Lounge</title>
     <owners>chocolatey</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://nomacs.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@bcd6e5bad67c9a360b1e9bc9a1ccfedfd4e57fdd/icons/nomacs.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@bcd6e5bad67c9a360b1e9bc9a1ccfedfd4e57fdd/icons/nomacs.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 nomacs is a free image viewer for windows, linux, and mac systems, which is licensed under the GNU General Public License v3. nomacs is small, fast and able to handle the most common image formats including RAW images. Additionally it is possible to synchronize multiple viewers. A synchronization of viewers running on the same computer or via LAN is possible. It allows to compare images and spot the differences (e.g. schemes of architects to show the progress).
@@ -55,10 +55,10 @@ See detailed nomacs [features page](http://nomacs.org/features/).
 
 ]]></description>
     <summary>Open source image viewer</summary>
-    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.12.1</releaseNotes>
+    <releaseNotes>https://github.com/nomacs/nomacs/releases/tag/3.14.2</releaseNotes>
     <copyright>Markus Diem, Stefan Fiel, Florian Kleber</copyright>
     <tags>admin image editor viewer jpg png svg foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/nomacs</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/nomacs.portable</packageSourceUrl>
     <projectSourceUrl>https://github.com/nomacs/nomacs</projectSourceUrl>
     <docsUrl>http://nomacs.org/documentation</docsUrl>
   </metadata>
