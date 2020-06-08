@@ -2,6 +2,8 @@
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
+. $toolsDir\chocolateyUninstall.ps1
+
 $silentArgs = @('/S')
 
 $packageArgs = @{
