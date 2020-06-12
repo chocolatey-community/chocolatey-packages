@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>InkScape</id>
-    <version>1.0</version>
+    <version>1.0.0.20200612</version>
     <title>Inkscape</title>
     <owners>chocolatey</owners>
     <authors>Inkscape developers</authors>
