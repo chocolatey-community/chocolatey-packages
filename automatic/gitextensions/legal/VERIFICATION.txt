@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  url: <https://github.com/gitextensions/gitextensions/releases/download/v3.4/GitExtensions-3.4.0.9381-096b4d567.msi>
+  url: <https://github.com/gitextensions/gitextensions/releases/download/v3.4.1/GitExtensions-3.4.1.9675-f49b4d059.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 8C99610FBC6CB8D7C40F6F7C29DB53EC1A77D4F9D56299554793886D254C8F51
+  checksum: A192378EE61CBE83326B53368C7E946385AD3E170A68207EB26A96884E08E35F
 
 The included license file have been downloaded from <https://github.com/gitextensions/gitextensions/blob/0a4730ccdf7e36c0078813101a3ee70e825e93ec/LICENSE.md>
