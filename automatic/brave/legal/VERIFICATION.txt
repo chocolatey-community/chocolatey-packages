@@ -6,16 +6,16 @@ The installer have been downloaded from the GitHub mirror and can be verified li
 
 1. Download the following installer(s):
 
-x86: https://github.com/brave/brave-browser/releases/download/v1.11.66/BraveBrowserSilentBetaSetup32.exe
-x86_64: https://github.com/brave/brave-browser/releases/download/v1.11.66/BraveBrowserSilentBetaSetup.exe
+x86: https://github.com/brave/brave-browser/releases/download/v1.10.93/BraveBrowserStandaloneSilentSetup32.exe
+x86_64: https://github.com/brave/brave-browser/releases/download/v1.10.93/BraveBrowserStandaloneSilentSetup.exe
 
 2. You can use one of the following methods to obtain the checksum(s):
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
 checksum type: sha256
-checksum32: F2DE5916E516C131A82567D31358C0E43DFC45E87FEDDB8EF2313A0C6F3A4CF2
-checksum64: FE14F5F277A593FAAF57B8370979143B48CE793E9A24B53BC4901BA81CA872B1
+checksum32: 127B0D0A62C6E8C451CC14FD32A100A75E27D36F62D03A99F2D86B9F02317BF3
+checksum64: F668C6405041C4071B98A9109484A45D9A1E44986AFCEC73CB9AA3AB0316D635
 
 The included 'LICENSE.txt' file have been obtained from:
 https://github.com/brave/brave-browser/blob/master/LICENSE
