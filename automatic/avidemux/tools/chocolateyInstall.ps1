@@ -2,12 +2,13 @@
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
+. $toolsDir\chocolateyUninstall.ps1
+
 $silentArgs = @('/S')
 
 $packageArgs = @{
   packageName    = 'avidemux'
   fileType       = 'exe'
-  file           = "$toolsDir\avidemux_2.7.4_win32.exe"
   file64         = "$toolsDir\Avidemux_2.7.4%20VC%2B%2B%2064bits.exe"
   silentArgs     = $silentArgs
   validExitCodes = @(0, 1223)
