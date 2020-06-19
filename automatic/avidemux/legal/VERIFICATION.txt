@@ -7,7 +7,6 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://sourceforge.net/projects/avidemux/files/avidemux/2.7.4/avidemux_2.7.4_win32.exe/download
    x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.7.4/Avidemux_2.7.4%20VC%2B%2B%2064bits.exe/download
 
    to download the installer.
@@ -16,7 +15,6 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 5C4C73841E88FF098216FD325D0A0CED2DD3D395CA39CE9160D1AE1B70C841F1
    checksum64: 21E9BCA46E9E22E078435F2C463B51A639FC7DC0A8A7A0D1003FD70DE3C25C2E
 
 Using AU:
