@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.7.4/Avidemux_2.7.4%20VC%2B%2B%2064bits.exe/download
+   x64: https://sourceforge.net/projects/avidemux/files/avidemux/2.7.5/Avidemux_2.7.5%20VC%2B%2B%2064bits%20.exe/download
 
    to download the installer.
 
@@ -15,11 +15,11 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 21E9BCA46E9E22E078435F2C463B51A639FC7DC0A8A7A0D1003FD70DE3C25C2E
+   checksum64: 5AE5ACC9039D87674D117A102FD1A1C6D1AA3BDDA44789CBD7B758E110647477
 
 Using AU:
 
-   Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.7.4/Avidemux_2.7.4%20VC%2B%2B%2064bits.exe/download
+   Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.7.5/Avidemux_2.7.5%20VC%2B%2B%2064bits%20.exe/download
 
 The included license have been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 and should be the correct license as mentioned on their project page <http://avidemux.sourceforge.net/>
