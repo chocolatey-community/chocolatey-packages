@@ -6,7 +6,7 @@
     <metadata>
         <id>keeweb</id>
         <title>KeeWeb</title>
-        <version>1.15.5</version>
+        <version>0.0</version>
         <authors>antelle</authors>
         <owners>wget</owners>
         <summary>Free cross-platform password manager compatible with KeePass</summary>
@@ -48,7 +48,7 @@ This webapp is a browser and desktop password manager compatible with KeePass da
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <!-- Source: https://github.com/keeweb/keeweb/raw/master/graphics/128x128.png -->
         <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@88bbbf93f61ceb6787fbdf191a9542dddfcb2c2c/icons/keeweb.png</iconUrl>
-        <releaseNotes>https://github.com/keeweb/keeweb/releases</releaseNotes>  
+        <releaseNotes>https://github.com/keeweb/keeweb/releases</releaseNotes>
         <!-- Specific to Chocolatey -->
         <projectSourceUrl>https://github.com/keeweb/keeweb</projectSourceUrl>
         <docsUrl>https://github.com/keeweb/keeweb/wiki</docsUrl>
