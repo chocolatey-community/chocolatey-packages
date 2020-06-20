@@ -34,7 +34,7 @@ function global:au_GetLatest {
     $url32SegmentSize = $([System.Uri]$url32).Segments.Length
     $filename32 = $([System.Uri]$url32).Segments[$url32SegmentSize - 1]
 
-    $url64 = $downloadedPage.links | ? href -match '64.exe$' | select -First 1 -expand href
+    $url64 = $downloadedPage.links | ? href -match 'x64.exe$' | select -First 1 -expand href
     if ($url64.Authority -cnotmatch $baseUrl) {
         $url64 = $scheme + '://' + $baseUrl + $url64
     }
