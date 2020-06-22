@@ -5,11 +5,12 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
   @{
     ".\legal\verification.txt"      = @{
-      "(?i)(32-Bit.+)\<.*\>"      = "`${1}<$($Latest.URL32)>"
-      "(?i)(64-Bit.+)\<.*\>"      = "`${1}<$($Latest.URL64)>"
-      "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType64)"
-      "(?i)(checksum32:\s+).*"    = "`${1}$($Latest.Checksum32)"
-      "(?i)(checksum64:\s+).*"    = "`${1}$($Latest.Checksum64)"
+      "(?i)(32-Bit.+)\<.*\>"                       = "`${1}<$($Latest.URL32)>"
+      "(?i)(64-Bit.+)\<.*\>"                       = "`${1}<$($Latest.URL64)>"
+      "(?i)(checksum type:\s+).*"                  = "`${1}$($Latest.ChecksumType64)"
+      "(?i)(checksum32:\s+).*"                     = "`${1}$($Latest.Checksum32)"
+      "(?i)(checksum64:\s+).*"                     = "`${1}$($Latest.Checksum64)"
+      "(?i)(downloaded.*release page\:?\s*)\<.*\>" = "`${1}<$($Latest.web_url)>"
     }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*"   = "`${1}$($Latest.FileName32)`""
@@ -69,6 +70,7 @@ function global:au_GetLatest {
     filename32     = $filename32;
     filename64     = $filename64;
     version        = $version;
+    web_url        = $jsonAnswer.html_url
   }
 }
 
