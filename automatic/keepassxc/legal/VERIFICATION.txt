@@ -16,4 +16,4 @@ and can be verified like this:
   checksum32: 01BF1B593EFC4A9B92E0CA7148414F6D4F0E63521AEFA64D1F8CAA0327D35E91
   checksum64: 01BF1B593EFC4A9B92E0CA7148414F6D4F0E63521AEFA64D1F8CAA0327D35E91
 
-File 'LICENSE.txt' is obtained from <https://github.com/keepassxreboot/keepassxc/blob/470a74ee24793eaccab0ae371a7ee970b95bfeb9/COPYING>
+File 'LICENSE.txt' is obtained from <https://github.com/keepassxreboot/keepassxc/blob/dcca5aa0f0ee2f2b8685787c01f934cb2b506ef7/COPYING>
