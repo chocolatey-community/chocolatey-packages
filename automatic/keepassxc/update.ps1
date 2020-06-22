@@ -50,12 +50,14 @@ function Get-Hash($url, $filename) {
 }
 
 function global:au_GetLatest {
-
-  $jsonAnswer = (
-    Invoke-WebRequest `
-      -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" `
-      -Headers @{"Authorization" = "token $env:github_api_key" } `
-      -UseBasicParsing).Content | ConvertFrom-Json
+  $headers = @{}
+  if (Test-Path Env\:github_api_key) {
+    $headers["Authorization"] = "token $env:github_api_key"
+  }
+  $jsonAnswer = Invoke-RestMethod `
+    -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" `
+    -Headers $headers `
+    -UseBasicParsing
   $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
   $jsonAnswer.assets | Where { $_.name -Match "(Win32|Win64).msi$" } | ForEach-Object {
     if ($_.browser_download_url -cmatch 'Win64') {
