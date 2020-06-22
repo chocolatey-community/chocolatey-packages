@@ -1,7 +1,5 @@
 import-module au
 
-$releases = 'https://github.com/keepassxreboot/keepassxc/releases'
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
@@ -22,28 +20,53 @@ function global:au_SearchReplace {
   }
 }
 
-function appendBaseIfNeeded([string]$url) {
-  if ($url -and !$url.StartsWith("http")) {
-    return New-Object uri([uri]$releases, $url)
+# Since upstream is providing hashes, let's rely on these instead.
+# i.e. this adds some added value as we are making sure the hashes are
+# really those computed by upstream. We are not simply relying on the hashs
+# provided by the cmdlet Get-RemoteFiles.
+function Get-Hash($url, $filename) {
+  $downloadedPage = Invoke-WebRequest -Uri "$url.DIGEST" -UseBasicParsing
+  $downloadedPage = [System.Text.Encoding]::UTF8.GetString($downloadedPage.Content)
+  $downloadedPage = $downloadedPage.Split([Environment]::NewLine)
+  foreach ($line in $downloadedPage) {
+    $parsed = $line -split ' |\n' -replace '\*',''
+    if ($parsed[1] -Match $filename) {
+      return $parsed[0]
+    }
   }
-  else {
-    return $url
-  }
+  return ""
 }
 
 function global:au_GetLatest {
-  $downloadedPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url32 = $downloadedPage.links | ? href -match 'Win32.msi$' | select -First 1 -expand href | % { appendBaseIfNeeded $_ }
+  $jsonAnswer = (
+    Invoke-WebRequest -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" `
+                      -Headers @{"Authorization"="token $env:github_api_key"} `
+                      -UseBasicParsing).Content | ConvertFrom-Json
+  $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
+  $jsonAnswer.assets | Where { $_.name -Match "(Win32|Win64).msi$" } | ForEach-Object {
+    if ($_.browser_download_url -cmatch 'Win64') {
+      $url64 = $_.browser_download_url
+      $filename64 = $_.name
+      $hash64 = Get-Hash $url64 $filename64
 
-  $url64 = $downloadedPage.links | ? href -match 'Win64.msi$' | select -First 1 -expand href | % { appendBaseIfNeeded $_ }
-  $version = $url32 -split '/' | select -last 1 -skip 1
-  $nuspecVersion = gc -Encoding UTF8 "$PSScriptRoot\*.nuspec" | ? { $_ -match '\<version' } | % { $_ -replace '^\s*\<version\>(.*)\<\/version\>.*',"`$1" }
+    } elseif ($_.browser_download_url -cmatch 'Win32') {
+      $url32 = $_.browser_download_url
+      $filename32 = $_.name
+      $hash32 = Get-Hash $url32 $filename32
+    }
+  }
 
   return @{
-    url32          = $url32;
-    url64          = $url64;
-    version        = $version;
+    url32 = $url32;
+    url64 = $url64;
+    checksum32 = $hash32;
+    checksum64 = $hash64;
+    checksumType32 = 'SHA256';
+    checksumType64 = 'SHA256';
+    filename32 = $filename32;
+    filename64 = $filename64;
+    version = $version;
   }
 }
 
