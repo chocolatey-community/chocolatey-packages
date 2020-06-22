@@ -39,7 +39,10 @@ function Get-Hash($url, $filename) {
 
 function global:au_GetLatest {
 
-  $jsonAnswer = (Invoke-WebRequest -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" -UseBasicParsing).Content | ConvertFrom-Json
+  $jsonAnswer = (
+    Invoke-WebRequest -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" `
+                      -Headers @{"Authorization"="token $env:github_api_key"} `
+                      -UseBasicParsing).Content | ConvertFrom-Json
   $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
   $jsonAnswer.assets | Where { $_.name -Match "(Win32|Win64).msi$" } | ForEach-Object {
     if ($_.browser_download_url -cmatch 'Win64') {
