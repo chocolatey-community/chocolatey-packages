@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -29,7 +29,7 @@ function Get-Hash($url, $filename) {
   $downloadedPage = [System.Text.Encoding]::UTF8.GetString($downloadedPage.Content)
   $downloadedPage = $downloadedPage.Split([Environment]::NewLine)
   foreach ($line in $downloadedPage) {
-    $parsed = $line -split ' |\n' -replace '\*',''
+    $parsed = $line -split ' |\n' -replace '\*', ''
     if ($parsed[1] -Match $filename) {
       return $parsed[0]
     }
@@ -40,9 +40,10 @@ function Get-Hash($url, $filename) {
 function global:au_GetLatest {
 
   $jsonAnswer = (
-    Invoke-WebRequest -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" `
-                      -Headers @{"Authorization"="token $env:github_api_key"} `
-                      -UseBasicParsing).Content | ConvertFrom-Json
+    Invoke-WebRequest `
+      -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" `
+      -Headers @{"Authorization" = "token $env:github_api_key" } `
+      -UseBasicParsing).Content | ConvertFrom-Json
   $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
   $jsonAnswer.assets | Where { $_.name -Match "(Win32|Win64).msi$" } | ForEach-Object {
     if ($_.browser_download_url -cmatch 'Win64') {
@@ -50,7 +51,8 @@ function global:au_GetLatest {
       $filename64 = $_.name
       $hash64 = Get-Hash $url64 $filename64
 
-    } elseif ($_.browser_download_url -cmatch 'Win32') {
+    }
+    elseif ($_.browser_download_url -cmatch 'Win32') {
       $url32 = $_.browser_download_url
       $filename32 = $_.name
       $hash32 = Get-Hash $url32 $filename32
@@ -58,15 +60,15 @@ function global:au_GetLatest {
   }
 
   return @{
-    url32 = $url32;
-    url64 = $url64;
-    checksum32 = $hash32;
-    checksum64 = $hash64;
+    url32          = $url32;
+    url64          = $url64;
+    checksum32     = $hash32;
+    checksum64     = $hash64;
     checksumType32 = 'SHA256';
     checksumType64 = 'SHA256';
-    filename32 = $filename32;
-    filename64 = $filename64;
-    version = $version;
+    filename32     = $filename32;
+    filename64     = $filename64;
+    version        = $version;
   }
 }
 
