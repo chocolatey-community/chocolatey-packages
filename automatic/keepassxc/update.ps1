@@ -20,39 +20,37 @@ function global:au_SearchReplace {
   }
 }
 
+# Since upstream is providing hashes, let's rely on these instead.
+# i.e. this adds some added value as we are making sure the hashes are
+# really those computed by upstream. We are not simply relying on the hashs
+# provided by the cmdlet Get-RemoteFiles.
+function Get-Hash($url, $filename) {
+  $downloadedPage = Invoke-WebRequest -Uri "$url.DIGEST" -UseBasicParsing
+  $downloadedPage = [System.Text.Encoding]::UTF8.GetString($downloadedPage.Content)
+  $downloadedPage = $downloadedPage.Split([Environment]::NewLine)
+  foreach ($line in $downloadedPage) {
+    $parsed = $line -split ' |\n' -replace '\*',''
+    if ($parsed[1] -Match $filename) {
+      return $parsed[0]
+    }
+  }
+  return ""
+}
+
 function global:au_GetLatest {
 
   $jsonAnswer = (Invoke-WebRequest -Uri "https://api.github.com/repos/keepassxreboot/keepassxc/releases/latest" -UseBasicParsing).Content | ConvertFrom-Json
   $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
   $jsonAnswer.assets | Where { $_.name -Match "(Win32|Win64).msi$" } | ForEach-Object {
-    if ($_.browser_download_url -Match 'x64') {
+    if ($_.browser_download_url -cmatch 'Win64') {
       $url64 = $_.browser_download_url
       $filename64 = $_.name
-      # Since upstream is providing hashes, let's rely on these instead.
-      # i.e. this adds some added value as we are making sure the hashes are
-      # really those computed by upstream. We are not simply relying on the hashs
-      # provided by the cmdlet Get-RemoteFiles.
-      $downloadedPage = Invoke-WebRequest -Uri "$url64.DIGEST" -UseBasicParsing
-      $downloadedPage = [System.Text.Encoding]::UTF8.GetString($downloadedPage.Content)
-      $downloadedPage = $downloadedPage.Split([Environment]::NewLine)
-      foreach ($line in $downloadedPage) {
-        $parsed = $line -split ' |\n' -replace '\*',''
-        if ($parsed[1] -Match $filename64) {
-          $hash64 = $parsed[0]
-        }
-      }
-    } else {
+      $hash64 = Get-Hash $url64 $filename64
+
+    } elseif ($_.browser_download_url -cmatch 'Win32') {
       $url32 = $_.browser_download_url
       $filename32 = $_.name
-      $downloadedPage = Invoke-WebRequest -Uri "$url64.DIGEST" -UseBasicParsing
-      $downloadedPage = [System.Text.Encoding]::UTF8.GetString($downloadedPage.Content)
-      $downloadedPage = $downloadedPage.Split([Environment]::NewLine)
-      foreach ($line in $downloadedPage) {
-        $parsed = $line -split ' |\n' -replace '\*',''
-        if ($parsed[1] -Match $filename32) {
-          $hash32 = $parsed[0]
-        }
-      }
+      $hash32 = Get-Hash $url32 $filename32
     }
   }
 
