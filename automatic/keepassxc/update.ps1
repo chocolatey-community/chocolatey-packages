@@ -1,6 +1,17 @@
 ﻿import-module au
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix
+
+  $url32Hash = Get-Hash -url $Latest.URL32 -filename $Latest.FileName32
+  if ($url32Hash -ne $Latest.Checksum32) {
+    throw "File checksum of downloaded 32bit executable do not match expected upstream checksum"
+  }
+  $url64Hash = Get-Hash -url $Latest.URL64 -filename $Latest.FileName64
+  if ($url64Hash -ne $Latest.Checksum64) {
+    throw "File checksum of downloaded 64bit executable do not match expected upstream checksum"
+  }
+}
 
 function global:au_SearchReplace {
   @{
@@ -49,26 +60,18 @@ function global:au_GetLatest {
   $jsonAnswer.assets | Where { $_.name -Match "(Win32|Win64).msi$" } | ForEach-Object {
     if ($_.browser_download_url -cmatch 'Win64') {
       $url64 = $_.browser_download_url
-      $filename64 = $_.name
-      $hash64 = Get-Hash $url64 $filename64
 
     }
     elseif ($_.browser_download_url -cmatch 'Win32') {
       $url32 = $_.browser_download_url
-      $filename32 = $_.name
-      $hash32 = Get-Hash $url32 $filename32
     }
   }
 
   return @{
     url32          = $url32;
     url64          = $url64;
-    checksum32     = $hash32;
-    checksum64     = $hash64;
     checksumType32 = 'SHA256';
     checksumType64 = 'SHA256';
-    filename32     = $filename32;
-    filename64     = $filename64;
     version        = $version;
     web_url        = $jsonAnswer.html_url
   }
