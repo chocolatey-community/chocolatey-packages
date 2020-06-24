@@ -2,7 +2,7 @@
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 
-$releases = 'https://download.jitsi.org/jitsi/msi/'
+$releases = 'https://desktop.jitsi.org/Main/Download.html#stableline'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -27,17 +27,17 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'jitsi-[\d\.]+\-x86'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { $releases + $_ }
+  $urls32 = $download_page.Links | ? href -match $re | select -expand href
 
   $re = 'jitsi-[\d\.]+\-x64'
-  $urls64 = $download_page.links | ? href -match $re | select -expand href | % { $releases + $_ }
+  $urls64 = $download_page.links | ? href -match $re | select -expand href
 
   $streams = @{}
   $urls32 | % {
     $verRe = '-'
     $version = $_ -split "$verRe" | select -last 1 -skip 1
     $version = Get-Version $version
-    $url64 = $urls64 | ? { $_ -match "$version" | select -last 1 }
+    $url64 = $urls64 | ? { $_ -match "$version" } | select -last 1
     if (!($url64)) { throw "URL64 was not found for version $version" }
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
