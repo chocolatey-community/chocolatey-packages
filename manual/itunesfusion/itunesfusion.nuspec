@@ -24,7 +24,7 @@ Sync iTunes with almost any device! iTunesFusion (formerly iTunes Sync) makes it
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>itunesfusion itunes sync android mp3 usb</tags>
     <owners>chocolatey,keithlammers,the-running-dev</owners>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/itunesfusion</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/manual/itunesfusion</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="iTunes" version="12.6" />

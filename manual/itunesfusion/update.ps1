@@ -29,4 +29,5 @@ function global:au_SearchReplace {
   }
 }
 
+$global:au_Force = $true # Just to allow forced updates
 Update -ChecksumFor 32
