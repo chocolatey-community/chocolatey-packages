@@ -4,8 +4,13 @@ $installerType = 'exe'
 
 $silentArgs = '/S'
 # It seems weird, but actually the uninstaller always returns 2 as exit code.
+#  Uninstalling keeweb...
+#  WARNING: Setup was cancelled.
+#  WARNING: Exit code '2' was considered valid by script, but not as a Chocolatey success code. Returning '0'.
+#  0
+#  keeweb has been uninstalled.
 # We cannot rely on choco autouninstaller feature, otherwise the uninstall
-# process will be considered as a failure (tests will fail).
+# process will be considered as a failure (and tests performed by Chocolatey will fail).
 $validExitCodes = @(2)
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
