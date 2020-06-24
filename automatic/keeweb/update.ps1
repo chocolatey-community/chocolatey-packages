@@ -37,7 +37,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $headers = @{}
-  if (Test-Path Env\:github_api_key) {
+  if (Test-Path Env:\github_api_key) {
     $headers["Authorization"] = "token $env:github_api_key"
   }
   $jsonAnswer = Invoke-RestMethod `

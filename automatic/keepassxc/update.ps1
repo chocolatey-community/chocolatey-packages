@@ -51,7 +51,7 @@ function Get-Hash($url, $filename) {
 
 function global:au_GetLatest {
   $headers = @{}
-  if (Test-Path Env\:github_api_key) {
+  if (Test-Path Env:\github_api_key) {
     $headers["Authorization"] = "token $env:github_api_key"
   }
   $jsonAnswer = Invoke-RestMethod `
