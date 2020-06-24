@@ -1,9 +1,20 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.piriform.com/ccleaner/download/standard'
 
 function global:au_BeforeUpdate {
-  $Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.URL32 -Algorithm $Latest.ChecksumType32
+  $tmpFile = "$env:TEMP\ccleaner.exe"
+  Invoke-WebRequest -Uri $Latest.URL32 -OutFile $tmpFile -UseBasicParsing
+
+  $Latest.Checksum32 = Get-FileHash $tmpFile -Algorithm $Latest.ChecksumType32 | % Hash
+  [version]$fileVersion = Get-Item $tmpFile | % { $_.VersionInfo.FileVersion }
+
+  if ($fileVersion.ToString(2) -ne $Latest.RemoteVersion.ToString(2)) {
+    # We only care about major and minor parts
+    throw "Executable have not yet been updated"
+  }
+
+  rm $tmpFile -Force
 }
 
 function global:au_SearchReplace {
@@ -27,7 +38,7 @@ function global:au_GetLatest {
   $download_page.Content -match "\<h6\>v((?:[\d]\.)[\d\.]+)"
   $version = $Matches[1]
 
-  @{ URL32 = $url -replace 'http:', 'https:'; Version = $version ; ChecksumType32 = 'sha256'  }
+  @{ URL32 = $url -replace 'http:', 'https:'; Version = $version ; RemoteVersion = [version]$version ; ChecksumType32 = 'sha256' }
 }
 
 update -ChecksumFor none
