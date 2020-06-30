@@ -27,3 +27,4 @@ This repository is maintained by a group of volunteers - _core community package
 
 **Disclaimer**: This repository may contain packages that may not be officially sanctioned by Chocolatey staff, and that is okay. Typically if there is a legal issue, then Chocolatey staff will step in. If you want to speak directly to the Chocolatey team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website".
  
+ 
