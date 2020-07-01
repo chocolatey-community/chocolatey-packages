@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com//nomacs/nomacs/releases/download/3.14.2/nomacs-portable-win.zip
+   x64: https://github.com//nomacs/nomacs/releases/download/3.15.0/nomacs-portable-win.zip
 
    to download the zip.
 
@@ -15,4 +15,4 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 0805866D99AA3033E2A81B8DB5439098EAF42A2ED379A9EF5E1251047BB42743
+   checksum64: 2A6B52D29722714F022B9C783037BD77837216DA317C97424999552911CB3DC8
