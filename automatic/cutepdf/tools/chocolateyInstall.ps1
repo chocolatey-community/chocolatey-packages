@@ -11,6 +11,29 @@ $packageArgs = @{
   checksumType  = 'SHA512'
 }
 
+# Uninstall any previous versions because the installer will fail if a recent older version is installed.
+[array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
+if ($key.Count -eq 1) {
+  $key | % { 
+	$installSilentArgs = $packageArgs['silentArgs']
+	$installFile = $packageArgs['file']
+	$packageArgs['silentArgs'] = '/uninstall /s'
+    $packageArgs['file'] = "$($_.UninstallString.Split('/') | select -First 1)"
+	
+    Uninstall-ChocolateyPackage @packageArgs
+	
+	$packageArgs['silentArgs'] = $installSilentArgs
+	$packageArgs['file'] = $installFile
+  }
+} elseif ($key.Count -eq 0) {
+  Write-Host "CutePDF does not have any older versions that need to be uninstalled"
+} elseif ($key.Count -gt 1) {
+  Write-Warning "$($key.Count) matches found!"
+  Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+  Write-Warning "Please alert package maintainer the following keys were matched:"
+  $key | % {Write-Warning "- $($_.DisplayName)"}
+}
+
 # Make sure Print Spooler service is up and running
 try {
   $serviceName = 'Spooler'
