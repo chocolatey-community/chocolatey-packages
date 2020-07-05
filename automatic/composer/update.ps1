@@ -5,8 +5,9 @@ $releases = 'https://github.com/composer/windows-setup/releases'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]fileName\s*=\s*)('.*')"     = "`$1'$($Latest.FileName32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+      "([$]fileName\s*=\s*)('.*')"      = "`$1'$($Latest.FileName32)'"
+      "(?i)(checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
+      "(?i)(checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
     }
 
     "$($Latest.PackageName).nuspec" = @{
@@ -14,8 +15,9 @@ function global:au_SearchReplace {
     }
 
     ".\legal\VERIFICATION.txt"      = @{
-      "(?i)(\s+x32:).*"     = "`${1} $($Latest.URL32)"
-      "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(x32:).*"              = "`${1} $($Latest.URL32)"
+      "(?i)(checksum32:).*"       = "`${1} $($Latest.Checksum32)"
+      "(?i)(checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
     }
   }
 }
