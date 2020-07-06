@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>avidemux</id>
-    <version>2.7.5</version>
+    <version>2.7.6</version>
     <title>Avidemux</title>
     <authors>Mean, Gruntster, Fahr</authors>
     <owners>chocolatey, purity</owners>
@@ -26,7 +26,7 @@ Avidemux is available for Linux, BSD, Mac OS X and Microsoft Windows under the G
  - Subtitle processing
 ]]></description>
     <summary>Video editor</summary>
-    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.7.5/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/avidemux/files/avidemux/2.7.6/</releaseNotes>
     <copyright>2001-2016 Mean</copyright>
     <tags>video editor foss cross-platform cutting filtering encoding admin multimedia</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/avidemux</packageSourceUrl>
