@@ -6,11 +6,11 @@ $packageArgs = @{
   packageName    = 'keepassxc'
   softwareName   = 'KeePassXC'
   fileType       = 'msi'
-  file           = "$toolsDir\KeePassXC-2.5.4-Win64.msi"
-  file64         = "$toolsDir\KeePassXC-2.5.4-Win64.msi"
-  checksum       = '01BF1B593EFC4A9B92E0CA7148414F6D4F0E63521AEFA64D1F8CAA0327D35E91'
+  file           = "$toolsDir\KeePassXC-2.6.0-Win32.msi"
+  file64         = "$toolsDir\KeePassXC-2.6.0-Win64.msi"
+  checksum       = 'E0E440BAE570DC49431DF456E0F882B9344E8C24CCAD0FEC8B88D21BFFDA40DC'
   checksumType   = 'sha256'
-  checksum64     = '01BF1B593EFC4A9B92E0CA7148414F6D4F0E63521AEFA64D1F8CAA0327D35E91'
+  checksum64     = '9C3924B39773B4DD15D52D97CDF5D66117259742BBE753C84207EB8A82BAB5FB'
   checksumType64 = 'sha256'
 
   # MSI
