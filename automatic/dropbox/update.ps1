@@ -20,26 +20,27 @@ function global:au_BeforeUpdate {
   
 function GetDropbox {
 param(
-	[string]$nu_version,
-	[string]$Title,
+  [string]$nu_version,
+  [string]$Title,
   [string]$kind
 )
-
   $build = @{$true='-beta';$false=''}[( $kind -match '-' )]
   $oldversion = ($nu_version -replace($build,''));
   $beta = ( drpbx-compare $oldversion -build ($build -replace('-','')) )
+  $beta = ( Get-Version $beta ).Version
   # URL no longer valid as of 02/23/2018 $url = "https://dl-web.dropbox.com/u/17/Dropbox%20${beta}.exe"
   $url32 = Get-RedirectedUrl "https://www.dropbox.com/download?build=${beta}&plat=win&type=full"
-  $version = $beta + $build
-	@{
-		Title = $Title
-		URL32 = $url32
-    Version = $version
-		RemoteVersion = $beta
-	}
-} 
+  $version = -join ($beta , $build)
+  @{
+    Title         = $Title
+    URL32         = $url32
+    Version       = $version
+    RemoteVersion = $beta
+  }
+}
 
-$stable = (( Get-RedirectedUrl 'https://www.dropbox.com/download?full=1&plat=win' ) -replace '.*(?:([\d]{2,4}[\.]{1}[\d]{1,4}[\.]{1}[\d]{2,4})).*', '$1')
+$vers = (Get-Version (( Get-RedirectedUrl 'https://www.dropbox.com/download?full=1&plat=win') -replace('%20',''))).Version
+$stable = -join ( $vers.Major, "." , $vers.Minor, "." , $vers.Build )
 
 function global:au_GetLatest {
   $streams = [ordered] @{
@@ -51,4 +52,3 @@ function global:au_GetLatest {
 }
 
 update -ChecksumFor none
-
