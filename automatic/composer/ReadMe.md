@@ -1,4 +1,4 @@
-# <img src="https://rawcdn.githack.com/composer/windows-setup/80f687d4ec2c5a199770c131525fd08ff93d0366/chocolatey/composer-logo.png" width="48" height="48"/> [composer](https://chocolatey.org/packages/composer)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f7ae3543e4bce2cbb3525fe2ada977031e43781c/icons/composer.png" width="48" height="48"/> [composer](https://chocolatey.org/packages/composer)
 
 Composer Setup downloads and installs the latest version of Composer, the PHP Dependency Manager, so you can use it easily from the command line.
 
