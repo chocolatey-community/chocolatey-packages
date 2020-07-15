@@ -4,7 +4,7 @@
   <metadata>
     <id>sysinternals</id>
     <title>Sysinternals</title>
-    <version>2020.6.24</version>
+    <version>2020.7.15</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
     <owners>chocolatey, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
