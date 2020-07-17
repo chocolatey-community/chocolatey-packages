@@ -6,7 +6,7 @@ The embedded software have been downloaded from the software authors
 website located at <https://www.nuget.org/downloads>
 and can be verified by doing the following:
 
-1. Download the following <https://dist.nuget.org/win-x86-commandline/v5.7.0-preview3/nuget.exe>
+1. Download the following <https://dist.nuget.org/win-x86-commandline/v5.7.0-preview4/nuget.exe>
 2. Extract the downloaded nupkg file by using one of the following methods
   - Use the 7z utility: '7z.exe'
   - Using the powershell function 'Expand-Archive'
@@ -16,6 +16,6 @@ and can be verified by doing the following:
 4. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 207EBE0ACD852FB5D8CB3D4EE93A841C261BB517663023373158DAD9A632B316
+  checksum: 03A51A941AF0A66423916903E64CF7C17F4B9A090CDE66B87E6C0748F8B12BCF
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/NuGet/NuGet.Client/blob/bf52f1045992f21eee205dc9a8356a4ce1072b91/LICENSE.txt>
