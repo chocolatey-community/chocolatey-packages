@@ -7,7 +7,7 @@ param(
 )
 $fileName = ((($thePackage.url64 -split('/'))[-1]) -replace( "\.$($thePackage.fileType)", '' ) )
  if ($fileName -match "portable") { 
-	if (Get-Command Get-Version){ $version = ( Get-Version $fileName ).Version;
+	if (Get-Command Get-Version -ErrorAction "Continue"){ $version = ( Get-Version $fileName ).Version;
     [version]$version = ( ( ($version.Major),($version.Minor),($version.Build) ) -join "." )
 	} else {
 		$version = ((($thePackage.url64 -split('/'))[-2]) -replace( "[A-z]", '' ) )
