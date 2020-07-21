@@ -28,12 +28,12 @@ Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 Update-SessionEnvironment
-$installLocation = Get-RegistryKeyValue -key "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion\InstallPath" -subKey "(default)" | ForEach-Object { $_.TrimEnd('\') }
+$installLocation = Get-InstallLocation -twoPartVersion $twoPartVersion
 
 if ($installLocation -ne $installDir) {
   Write-Warning "Provided python InstallDir was ignored by the python installer"
   Write-Warning "Its probable that you had pre-existing python installation"
-  Write-Warning "Installed to: $installLocation"
+  Write-Warning "Installed to: '$installLocation'"
 }
 else { Write-Host "Installed to: '$installDir'" }
 

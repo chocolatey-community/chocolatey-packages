@@ -1,4 +1,21 @@
-﻿function Get-RegistryKeyValue {
+﻿function Get-InstallLocation {
+  param(
+    [string]$twoPartVersion,
+    [switch]$is32Bit
+  )
+
+  $regKey = "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion\InstallPath"
+  if (Get-OSArchitectureWidth -compare 32) {
+    $regKey = "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion-32\InstallPath"
+  }
+  elseif ($is32Bit -or ($env:ChocolateyForceX86 -eq $true)) {
+    $regKey = "HKLM:\SOFTWARE\WOW6432Node\Python\PythonCore\$twoPartVersion-32\InstallPath"
+  }
+
+  return Get-RegistryKeyValue -key $regKey -subKey "(default)" | % { $_.TrimEnd('/', '\') }
+}
+
+function Get-RegistryKeyValue {
   param(
     [string]$key,
     [string]$subKey
