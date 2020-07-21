@@ -29,7 +29,6 @@ Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/python3</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.5" />
       <dependency id="vcredist2015" version="14.0.24215.20170201" />
     </dependencies>
   </metadata>
