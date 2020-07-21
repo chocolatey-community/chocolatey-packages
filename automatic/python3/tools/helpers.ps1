@@ -12,7 +12,7 @@
     $regKey = "HKLM:\SOFTWARE\WOW6432Node\Python\PythonCore\$twoPartVersion-32\InstallPath"
   }
 
-  return Get-RegistryKeyValue -key $regKey -subKey "(default)" | % { $_.TrimEnd('/', '\') }
+  return Get-RegistryKeyValue -key $regKey -subKey "(default)" | ForEach-Object { $_.TrimEnd('/', '\') }
 }
 
 function Get-RegistryKeyValue {
@@ -22,6 +22,37 @@ function Get-RegistryKeyValue {
   )
 
   Get-ItemProperty -Path $key | ForEach-Object { $_."$subKey" }
+}
+
+function Install-Python {
+  param(
+    [string]$toolsPath,
+    [string]$installdir,
+    [switch]$only32Bit
+  )
+
+  $prependPath = '1'
+  if ($only32Bit) {
+    $prependPath = '0'
+  }
+
+  $packageArgs = @{
+    packageName    = 'python3'
+    fileType       = 'exe'
+    file           = "$toolsPath\python-3.8.5.exe"
+    silentArgs     = '/quiet InstallAllUsers=1 PrependPath={0} TargetDir="{1}"' -f $prependPath, $installDir
+    validExitCodes = @(0)
+    softwareName   = 'Python 3*'
+  }
+
+  if (!$only32Bit) {
+    $packageArgs['file64'] = "$toolsPath\python-3.8.5-amd64.exe"
+  }
+  else {
+    $packageArgs['packageName'] = '32-bit python3'
+  }
+
+  Install-ChocolateyInstallPackage @packageArgs
 }
 
 function Get-LocalizedWellKnownPrincipalName {

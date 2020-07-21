@@ -15,16 +15,16 @@ else {
   $installDir = $defaultFolder
 }
 
-$packageArgs = @{
-  packageName    = 'python3'
-  fileType       = 'exe'
-  file           = "$toolsPath\python-3.9.0b5.exe"
-  file64         = "$toolsPath\python-3.9.0b5-amd64.exe"
-  silentArgs     = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
-  validExitCodes = @(0)
-  softwareName   = 'Python 3*'
+Install-Python -toolsPath $toolsPath -installDir $installDir
+
+if ($pp.InstallDir32) {
+  Install-Python -toolsPath $toolsPath -installDir $pp.InstallDir32 -only32Bit
+
+  $installed32BitLocation = Get-InstallLocation -twoPartVersion $twoPartVersion -is32Bit
+
+  Write-Host "32-Bit Python installed to: '$installed32BitLocation'"
 }
-Install-ChocolateyInstallPackage @packageArgs
+
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
 Update-SessionEnvironment
@@ -33,9 +33,9 @@ $installLocation = Get-InstallLocation -twoPartVersion $twoPartVersion
 if ($installLocation -ne $installDir) {
   Write-Warning "Provided python InstallDir was ignored by the python installer"
   Write-Warning "Its probable that you had pre-existing python installation"
-  Write-Warning "Installed to: '$installLocation'"
+  Write-Warning "Python installed to: '$installLocation'"
 }
-else { Write-Host "Installed to: '$installDir'" }
+else { Write-Host "Python installed to: '$installDir'" }
 
 if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
   Write-Warning "Environment variable PYTHONHOME points to different version: $Env:PYTHONHOME"
@@ -43,6 +43,6 @@ if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
 
 . "$toolsPath/helpers.ps1"
 Protect-InstallFolder `
-  -packageName $packageArgs["packageName"] `
+  -packageName "python3" `
   -defaultInstallPath $defaultFolder `
   -folder $installLocation

@@ -4,14 +4,14 @@ $releases = 'https://www.python.org/downloads/windows/'
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*packageName\s*=\s*)('.*')"            = "`$1'$($Latest.PackageName)'"
-      "(?i)(^\s*fileType\s*=\s*)('.*')"               = "`$1'$($Latest.FileType)'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\)(.*)`""   = "`$1$($Latest.FileName32)`""
-      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
+    ".\tools\helpers.ps1"      = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')"              = "`$1'$($Latest.PackageName)'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')"                 = "`$1'$($Latest.FileType)'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\)(.*)`""     = "`$1$($Latest.FileName32)`""
+      "(?i)(\['file64'\]\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
     }
 
-    ".\legal\VERIFICATION.txt"      = @{
+    ".\legal\VERIFICATION.txt" = @{
       "(?i)(\s+x32:).*"     = "`${1} $($Latest.URL32)"
       "(?i)(\s+x64:).*"     = "`${1} $($Latest.URL64)"
       "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"

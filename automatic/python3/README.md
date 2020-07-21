@@ -5,6 +5,7 @@ Python 3.x is a programming language that lets you work more quickly and integra
 ## Package Parameters
 
 - `/InstallDir` - Installation directory. **NOTE**: If you have pre-existing python3 installation, this parameter is ignored and existing python install location will be used
+- `/InstallDir32:` - Installation directory for 32bit python on 64bit Operating Systems. **NOTE**: Do only use this parameter if you wish to install 32bit python alongside 64bit python. 32Bit python will not be added on PATH.
 
 Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
 
