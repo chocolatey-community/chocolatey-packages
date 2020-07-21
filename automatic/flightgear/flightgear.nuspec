@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>flightgear</id>
-    <version>2016.4.1</version>
+    <version>2018.3.5</version>
     <title>FlightGear</title>
     <owners>chocolatey</owners>
     <authors>FlightGear Team</authors>
@@ -13,9 +13,9 @@
     <bugTrackerUrl>https://sourceforge.net/p/flightgear/codetickets/</bugTrackerUrl>
     <docsUrl>http://wiki.flightgear.org/Main_Page</docsUrl>
     <mailingListUrl>https://forum.flightgear.org/</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/flightgear.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/flightgear.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <description><![CDATA[
 FlightGear is an open-source flight simulator.
 It supports a variety of popular platforms (Windows, Mac, Linux, etc.) and is developed by skilled volunteers from around the world.
 Source code for the entire project is available and licensed under the GNU General Public License.
@@ -26,18 +26,19 @@ and last but certainly not least as a fun, realistic, and challenging desktop fl
 
 ### Notes
 * If [kb2919355](https://chocolatey.org/packages/kb2919355) hasn't been installed previously,
-  and you are running on Windows 8.1 or Windows Server 2012 R2.
-  Then it must be installed and a reboot must occur before trying to install FlightGear.
-  Otherwise installation may fail.
-    </description>
+and you are running on Windows 8.1 or Windows Server 2012 R2.
+Then it must be installed and a reboot must occur before trying to install FlightGear.
+Otherwise installation may fail.
+
+]]></description>
     <summary>
 FlightGear is an open-source flight simulator.  It supports a variety of popular platforms (Windows, Mac, Linux, etc.)
 and is developed by skilled volunteers from around the world.
     </summary>
-    <releaseNotes>http://wiki.flightgear.org/Changelog_2016.4</releaseNotes>
+    <releaseNotes>http://wiki.flightgear.org/Changelog_2018.3</releaseNotes>
     <copyright />
     <tags>flightgear flight simulator game admin foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
     <dependencies>
       <dependency id="vcredist2010" version="10.0.40219.2" />
       <dependency id="kb2999226" version="1.0.20170509" />
