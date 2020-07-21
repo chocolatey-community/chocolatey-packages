@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference = 'STOP'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+. "$toolsPath/helpers.ps1"
 
 $pp = Get-PackageParameters
 $twoPartVersion = $Env:ChocolateyPackageVersion -replace "^(\d+\.\d+).*", "`$1"
@@ -21,18 +22,14 @@ $packageArgs = @{
   file64         = "$toolsPath\python-3.9.0b5-amd64.exe"
   silentArgs     = '/quiet InstallAllUsers=1 PrependPath=1 TargetDir="{0}"' -f $installDir
   validExitCodes = @(0)
-  softwareName   = 'Python*'
+  softwareName   = 'Python 3*'
 }
 Install-ChocolateyInstallPackage @packageArgs
 Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
 
-. "$toolsPath/helpers.ps1"
-$installLocation = Get-AppInstallLocation python | ForEach-Object { $_.TrimEnd('\') }
+Update-SessionEnvironment
+$installLocation = Get-RegistryKeyValue -key "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion\InstallPath" -subKey "(default)" | ForEach-Object { $_.TrimEnd('\') }
 
-if (!$installLocation) {
-  Update-SessionEnvironment
-  $installLocation = Get-RegistryKeyValue -key "HKLM:\SOFTWARE\Python\PythonCore\$twoPartVersion\InstallPath" -subKey "(default)" | ForEach-Object { $_.TrimEnd('\') }
-}
 if ($installLocation -ne $installDir) {
   Write-Warning "Provided python InstallDir was ignored by the python installer"
   Write-Warning "Its probable that you had pre-existing python installation"
