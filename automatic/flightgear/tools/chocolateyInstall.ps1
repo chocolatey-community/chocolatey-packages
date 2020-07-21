@@ -10,9 +10,6 @@ $packageArgs = @{
 
   softwareName = $softwareName
 
-  checksum     = '8B1851999233047E3DA451AFB2739C5024E914E92011B3F5F37E42CDB5ED1F64'
-  checksumType = ''
-
   silentArgs   = '/VERYSILENT'
   validExitCodes = @(0)
 }
