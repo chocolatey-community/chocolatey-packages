@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yumi-uefi</id>
-    <version>0.0.2.4</version>
+    <version>0.0.2.5</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/yumi-uefi</packageSourceUrl>
     <owners>chocolatey</owners>
     <title>YUMI UEFI (Your Universal Multiboot Installer)</title>
