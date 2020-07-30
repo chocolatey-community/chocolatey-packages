@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>PDFCreator</id>
-    <version>4.1.0</version>
+    <version>4.1.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/pdfcreator</packageSourceUrl>
     <owners>chocolatey</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
