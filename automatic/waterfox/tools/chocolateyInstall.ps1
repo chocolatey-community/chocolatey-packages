@@ -10,7 +10,7 @@ $packageArgs = @{
   packageName   = 'waterfox-classic'
   fileType      = 'exe'
   softwareName  = 'Waterfox*'
-  file          = "$toolsDir\Waterfox Classic 2020.07 Setup_x64.exe"
+  file          = "$toolsDir\Waterfox Classic 2020.07.1 Setup_x64.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }
