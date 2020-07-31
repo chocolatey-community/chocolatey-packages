@@ -1,4 +1,4 @@
-import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
+﻿import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $localeChecksumFile = 'LanguageChecksums.csv'
 
 function GetVersionAndUrlFormats() {
@@ -13,21 +13,21 @@ function GetVersionAndUrlFormats() {
   $re = "download.mozilla.*product=$Product.*(&amp;|&)os=win(&amp;|&)lang=en-US"
   $url = $download_page.links | ? href -match $re | ? href -NotMatch 'stub|next' | select -first 1 -expand href
   $redirectedUrl = Get-RedirectedUrl $url
-  $url = $url -replace 'en-US','${locale}' -replace '&amp;','&'
+  $url = $url -replace 'en-US', '${locale}' -replace '&amp;', '&'
   $version = $redirectedUrl -split '\/' | select -Last 1 -Skip 3
   if ($version.EndsWith('esr')) {
     $version = $version.TrimEnd('esr')
-    $url = $url -replace 'esr-latest',"${version}esr"
+    $url = $url -replace 'esr-latest', "${version}esr"
   }
 
   $result = @{
-    Version = $version
-    Win32Format = $url -replace 'latest',$version
+    Version     = $version
+    Win32Format = $url -replace 'latest', $version
   }
 
   if ($Supports64Bit) {
     $result += @{
-      Win64Format = $url -replace 'os=win','os=win64' -replace 'win32','win64' -replace 'latest',$version
+      Win64Format = $url -replace 'os=win', 'os=win64' -replace 'win32', 'win64' -replace 'latest', $version
     }
   }
   return $result
@@ -43,14 +43,19 @@ function CreateChecksumsFile() {
   )
   if ($ExtendedRelease) {
     $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/$Product/releases/${Version}esr/SHA512SUMS"
-  } else {
+  }
+  else {
     $allChecksums = Invoke-WebRequest -UseBasicParsing -Uri "https://releases.mozilla.org/pub/$Product/releases/$Version/SHA512SUMS"
   }
 
   $reOpts = [System.Text.RegularExpressions.RegexOptions]::Multiline `
     -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
-  $checksumRows = [regex]::Matches("$allChecksums", "^([a-f\d]+)\s*win(32|64)\/([a-z\-]+)\/$ExecutableName$", $reOpts) | % {
+  $checksumRows = [regex]::Matches("$allChecksums", "^(?:b')?([a-f\d]+)'?\s*win(32|64)\/([a-z\-]+)\/$ExecutableName\s*$", $reOpts) | % {
     return "$($_.Groups[3].Value)|$($_.Groups[2].Value)|$($_.Groups[1].Value)"
+  }
+
+  if (!$checksumRows) {
+    throw "Unable to extract any valid checksums, please look into the reason. A upstream change may be the cause..."
   }
 
   $checksumRows | Out-File "$ToolsDirectory\$localeChecksumFile" -Encoding utf8
@@ -73,15 +78,15 @@ function SearchAndReplace() {
 
   if ($Supports64Bit) {
     $installReplacements += @{
-    '(?i)(\.Url64\s*=\s*)(".*")'              = "`$1`"$($Data.Win64Format)`""
+      '(?i)(\.Url64\s*=\s*)(".*")' = "`$1`"$($Data.Win64Format)`""
     }
   }
 
   $result = @{
-    "$PackageDirectory\tools\chocolateyInstall.ps1" = $installReplacements
+    "$PackageDirectory\tools\chocolateyInstall.ps1"   = $installReplacements
     "$PackageDirectory\tools\chocolateyUninstall.ps1" = @{
-      "(?i)(^[$]packageName\s*=\s*)('.*')"      = "`$1'$($Data.PackageName)'"
-      "(?i)(-SoftwareName\s*)('.*')"            = "`$1'$($Data.SoftwareName)*'"
+      "(?i)(^[$]packageName\s*=\s*)('.*')" = "`$1'$($Data.PackageName)'"
+      "(?i)(-SoftwareName\s*)('.*')"       = "`$1'$($Data.SoftwareName)*'"
     }
   }
 
