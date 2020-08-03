@@ -7,15 +7,15 @@ location on <https://github.com/clsid2/mpc-hc/releases>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/clsid2/mpc-hc/releases/download/1.9.6/MPC-HC.1.9.6.x86.exe>
-  64-Bit software: <https://github.com/clsid2/mpc-hc/releases/download/1.9.6/MPC-HC.1.9.6.x64.exe>
+  32-Bit software: <https://github.com/clsid2/mpc-hc/releases/download/1.9.7/MPC-HC.1.9.7.x86.exe>
+  64-Bit software: <https://github.com/clsid2/mpc-hc/releases/download/1.9.7/MPC-HC.1.9.7.x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 59B41668F4151412D7FD52B886CF0AA58DA1523A10FECB474B208F2E653D6776
-  checksum64: 813F1D2F1519A116335CF4C62378A7BD8CF06AE5D289C6A10D00CDAB35D4A4F6
+  checksum32: 7BF9DC966D990F352BEDB53E4137C13D9AA67C56799A291AAAAF59B17C5F7F28
+  checksum64: 1852830CF1BF855B745DBC191B65698598D0686A7784DC797EB1AFB4742F9084
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl.txt>

@@ -5,8 +5,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\MPC-HC.1.9.6.x86.exe"
-  file64         = "$toolsPath\MPC-HC.1.9.6.x64.exe"
+  file           = "$toolsPath\MPC-HC.1.9.7.x86.exe"
+  file64         = "$toolsPath\MPC-HC.1.9.7.x64.exe"
   softwareName   = 'MPC-HC*'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
