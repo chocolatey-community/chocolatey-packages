@@ -11,6 +11,13 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
+if ($env:ChocolateyPackageName -eq "1password4") {
+  $cache_dir = Get-PackageCacheLocation
+}
+else {
+  $cache_dir = Join-Path -Path $env:LocalAppData -ChildPath "1password\logs\setup"
+}
+
 # Installer blocks at the end and never returns. Successifull installation is visible in the log file
 Start-Job -ScriptBlock { param($cache_dir)
   Remove-Item $cache_dir\*.log -Recurse -ea 0
@@ -18,15 +25,15 @@ Start-Job -ScriptBlock { param($cache_dir)
 
   while ($seconds -lt $max_seconds) {
     Start-Sleep 1; $seconds++
-    
-    $logFilePath = Get-ChildItem $cache_dir\*.log -Recurse | Select-Object -First 1    
+
+    $logFilePath = Get-ChildItem $cache_dir\*.log -Recurse | Select-Object -First 1
     if (!$logFilePath) { continue }
-    
+
     $log = Get-Content $logFilePath
-    if ($log -like '*Installation successful!') {
+    if ($log -like '*Installation successful!' -or $log -like '*Installation completed successfully!*') {
       Get-Process $env:ChocolateyPackageName -ea 0 | Stop-Process
       exit
     }
   }
-} -ArgumentList (Get-PackageCacheLocation)
+} -ArgumentList ($cache_dir)
 Install-ChocolateyPackage @packageArgs
