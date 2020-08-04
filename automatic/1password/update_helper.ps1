@@ -1,4 +1,4 @@
-function LoadXml([string]$Path) {
+﻿function LoadXml([string]$Path) {
   $Path = Resolve-Path $Path
   $nu = New-Object xml
   $nu.PSBase.PreserveWhitespace = $true
