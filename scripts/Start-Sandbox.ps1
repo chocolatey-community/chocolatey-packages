@@ -24,43 +24,18 @@ Remove-Variable sandbox
 
 $repositoryFolder = Get-Item $(git rev-parse --show-toplevel)
 
-$tempFolder = Join-Path -Path $PSScriptRoot -ChildPath 'Test-Sandbox_Temp'
+$tempFolder = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath 'Start-Sandbox'
 
-New-Item $tempFolder -ItemType Directory -ea 0 | Out-Null
-
-Get-ChildItem $tempFolder -Recurse | Remove-Item -Force
-
-# Create Bootstrap script
-
-$bootstrapPs1Content = @"
-clear
-Write-Host '--> Installing Chocolatey'
-Write-Host
-iwr -useb 'https://chocolatey.org/install.ps1' | iex
-Write-Host
-Write-Host '--> Enabling automatic confirmation for Chocolatey'
-Write-Host
-choco feature enable -n=allowGlobalConfirmation
-Write-Host
-"@
-if (-Not [string]::IsNullOrWhiteSpace($args)) {
-  $bootstrapPs1Content += @"
-
-Write-Host '--> Running the following command:'
-Write-Host '    $ $args'
-Write-Host
-$args
-Write-Host
-"@
+if (Test-Path -Path $tempFolder) {
+  Remove-Item -Path $tempFolder -Recurse -Force 
 }
 
-$bootstrapPs1FileName = 'Bootstrap.ps1'
-$bootstrapPs1Content | Out-File (Join-Path -Path $tempFolder -ChildPath $bootstrapPs1FileName)
+New-Item $tempFolder -ItemType Directory | Out-Null
 
 # Create Wsb file
 
 $repositoryFolderInSandbox = Join-Path -Path 'C:\Users\WDAGUtilityAccount\Desktop' -ChildPath (Split-Path -Path $repositoryFolder -Leaf)
-$bootstrapPs1InSandbox = Join-Path -Path "scripts/Test-Sandbox_Temp" -ChildPath $bootstrapPs1FileName
+$bootstrapPs1InSandbox = 'scripts\Bootstrap-Sandbox.ps1'
 
 $sandboxTestWsbContent = @"
 <Configuration>
@@ -70,7 +45,7 @@ $sandboxTestWsbContent = @"
     </MappedFolder>
   </MappedFolders>
   <LogonCommand>
-  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$repositoryFolderInSandbox' -ArgumentList '-ExecutionPolicy Bypass -NoExit -File $bootstrapPs1InSandbox'</Command>
+  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$repositoryFolderInSandbox' -ArgumentList '-ExecutionPolicy Bypass -NoExit -File $bootstrapPs1InSandbox $args'</Command>
   </LogonCommand>
 </Configuration>
 "@
