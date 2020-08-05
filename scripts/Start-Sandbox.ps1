@@ -50,22 +50,35 @@ New-Item $tempFolder -ItemType Directory | Out-Null
 # Create Bootstrap script
 
 $bootstrapPs1Content = @"
-Write-Host '--> Installing Chocolatey'
-Write-Host
+Write-Host @'
+--> Installing Chocolatey
+
+'@
 Invoke-WebRequest -useb 'https://chocolatey.org/install.ps1' | Invoke-Expression
-Write-Host
-Write-Host '--> Enabling automatic confirmation for Chocolatey'
-Write-Host
+Write-Host @'
+
+--> Enabling automatic confirmation for Chocolatey
+
+'@
 choco feature enable -n=allowGlobalConfirmation
 Write-Host
-if (-Not [String]::IsNullOrWhiteSpace('$Script')) {
-  Write-Host '--> Running the following script:'
-  Write-Host "    $ $Script"
-  Write-Host
-  $Script
-  Write-Host
-}
 "@
+
+if (-Not [String]::IsNullOrWhiteSpace($Script)) {
+  $bootstrapPs1Content += @"
+
+Write-Host @'
+--> Running the following script:
+
+{
+$Script
+}
+
+'@
+
+$Script
+"@
+}
 
 $bootstrapPs1FileName = 'Bootstrap.ps1'
 $bootstrapPs1Content | Out-File (Join-Path -Path $tempFolder -ChildPath $bootstrapPs1FileName)
@@ -109,7 +122,11 @@ Write-Host @"
 if (-Not [String]::IsNullOrWhiteSpace($Script)) {
   Write-Host @"
     - Running the following script:
+
+{
 $Script
+}
+
 "@
 }
 
