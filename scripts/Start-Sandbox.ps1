@@ -99,14 +99,18 @@ $sandboxTestWsbFileName = 'SandboxTest.wsb'
 $sandboxTestWsbFile = Join-Path -Path $tempFolder -ChildPath $sandboxTestWsbFileName
 $sandboxTestWsbContent | Out-File $sandboxTestWsbFile
 
-Write-Host '--> Starting Windows Sandbox, and:'
-Write-Host '    - Mounting the following directories:'
-Write-Host "      - $tempFolder"
-Write-Host "      - $mapFolder"
-Write-Host '    - Installing Chocolatey'
+Write-Host @"
+--> Starting Windows Sandbox, and:
+    - Mounting the following directories:
+      - $tempFolder
+      - $mapFolder
+    - Installing Chocolatey
+"@
 if (-Not [String]::IsNullOrWhiteSpace($Script)) {
-  Write-Host '    - Running the following command:'
-  Write-Host "      $ $Script"
+  Write-Host @"
+    - Running the following script:
+$Script
+"@
 }
 
 WindowsSandbox $SandboxTestWsbFile
