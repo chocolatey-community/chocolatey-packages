@@ -1,8 +1,9 @@
 $ErrorActionPreference = 'Stop'
 
-# Close Code Insiders before installing
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-. $toolsPath\chocolateyBeforeModify.ps1
+. $toolsPath\helpers.ps1
+
+Close-VSCodeInsiders
 
 $pp = Get-PackageParameters
 function Get-MergeTasks {
