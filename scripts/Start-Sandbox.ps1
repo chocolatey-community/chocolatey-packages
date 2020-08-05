@@ -1,18 +1,34 @@
-﻿# Check if Windows Sandbox is enabled
+﻿# Parse arguments
 
-if (-Not (Test-Path "$env:windir\System32\WindowsSandbox.exe")) {
+Param(
+  [Parameter(Position=0)]
+  [ScriptBlock] $Script,
+  [String] $MapFolder = $pwd
+)
+
+$ErrorActionPreference = "Stop"
+
+$mapFolder = [System.IO.Path]::GetFullPath($MapFolder)
+
+if (-Not (Test-Path -Path $mapFolder -PathType Container)) {
+  Write-Error -Category InvalidArgument -Message 'The provided MapFolder is not a folder.'
+}
+
+# Check if Windows Sandbox is enabled
+
+if (-Not (Get-Command 'WindowsSandbox' -ErrorAction SilentlyContinue)) {
   Write-Error -Category NotInstalled -Message @'
 Windows Sandbox does not seem to be available. Check the following URL for prerequisites and further details:
 https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-sandbox/windows-sandbox-overview
 
 You can run the following command in an elevated PowerShell for enabling Windows Sandbox:
-Enable-WindowsOptionalFeature -Online -FeatureName 'Containers-DisposableClientVM'
-'@ -ErrorAction Stop
+$ Enable-WindowsOptionalFeature -Online -FeatureName 'Containers-DisposableClientVM'
+'@
 }
 
-# Closing Windows Sandbox
+# Close Windows Sandbox
 
-$sandbox = Get-Process WindowsSandboxClient -ErrorAction SilentlyContinue
+$sandbox = Get-Process 'WindowsSandboxClient' -ErrorAction SilentlyContinue
 if ($sandbox) {
   Write-Host '--> Closing Windows Sandbox'
   $sandbox | Stop-Process
@@ -22,30 +38,60 @@ Remove-Variable sandbox
 
 # Initialize Temp Folder
 
-$repositoryFolder = Get-Item $(git rev-parse --show-toplevel)
-
-$tempFolder = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath 'Start-Sandbox'
+$tempFolderName = 'Start-Sandbox'
+$tempFolder = Join-Path -Path ([System.IO.Path]::GetTempPath()) -ChildPath $tempFolderName
 
 if (Test-Path -Path $tempFolder) {
-  Remove-Item -Path $tempFolder -Recurse -Force 
+  Remove-Item -Path $tempFolder -Recurse -Force
 }
 
 New-Item $tempFolder -ItemType Directory | Out-Null
 
+# Create Bootstrap script
+
+$bootstrapPs1Content = @"
+Clear-Host
+Write-Host '--> Installing Chocolatey'
+Write-Host
+Invoke-WebRequest -useb 'https://chocolatey.org/install.ps1' | Invoke-Expression
+Write-Host
+Write-Host '--> Enabling automatic confirmation for Chocolatey'
+Write-Host
+choco feature enable -n=allowGlobalConfirmation
+Write-Host
+if (-Not [String]::IsNullOrWhiteSpace('$Script')) {
+  Write-Host '--> Running the following script:'
+  Write-Host "    $ $Script"
+  Write-Host
+  $Script
+  Write-Host
+}
+"@
+
+$bootstrapPs1FileName = 'Bootstrap.ps1'
+$bootstrapPs1Content | Out-File (Join-Path -Path $tempFolder -ChildPath $bootstrapPs1FileName)
+
 # Create Wsb file
 
-$repositoryFolderInSandbox = Join-Path -Path 'C:\Users\WDAGUtilityAccount\Desktop' -ChildPath (Split-Path -Path $repositoryFolder -Leaf)
-$bootstrapPs1InSandbox = 'scripts\Bootstrap-Sandbox.ps1'
+$desktopInSandbox = 'C:\Users\WDAGUtilityAccount\Desktop'
+$bootstrapPs1InSandbox = Join-Path -Path $desktopInSandbox -ChildPath (Join-Path -Path $tempFolderName -ChildPath $bootstrapPs1FileName)
+
+
+$mapFolderInSandbox = Join-Path -Path $desktopInSandbox -ChildPath (Split-Path -Path $mapFolder -Leaf)
 
 $sandboxTestWsbContent = @"
 <Configuration>
   <MappedFolders>
     <MappedFolder>
-      <HostFolder>$repositoryFolder</HostFolder>
+      <HostFolder>$tempFolder</HostFolder>
+      <ReadOnly>true</ReadOnly>
+    </MappedFolder>
+    <MappedFolder>
+      <HostFolder>$mapFolder</HostFolder>
     </MappedFolder>
   </MappedFolders>
   <LogonCommand>
-  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$repositoryFolderInSandbox' -ArgumentList '-ExecutionPolicy Bypass -NoExit -File $bootstrapPs1InSandbox $args'</Command>
+  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$mapFolderInSandbox' -ArgumentList '-ExecutionPolicy Bypass -NoExit -File $bootstrapPs1InSandbox'</Command>
   </LogonCommand>
 </Configuration>
 "@
@@ -55,12 +101,13 @@ $sandboxTestWsbFile = Join-Path -Path $tempFolder -ChildPath $sandboxTestWsbFile
 $sandboxTestWsbContent | Out-File $sandboxTestWsbFile
 
 Write-Host '--> Starting Windows Sandbox, and:'
-Write-Host '    - Mounting the following directory:'
-Write-Host "      $repositoryFolder"
+Write-Host '    - Mounting the following directories:'
+Write-Host "      - $tempFolder"
+Write-Host "      - $mapFolder"
 Write-Host '    - Installing Chocolatey'
-if (-Not [string]::IsNullOrWhiteSpace($args)) {
+if (-Not [String]::IsNullOrWhiteSpace($Script)) {
   Write-Host '    - Running the following command:'
-  Write-Host "      $ $args"
+  Write-Host "      $ $Script"
 }
 
 WindowsSandbox $SandboxTestWsbFile
