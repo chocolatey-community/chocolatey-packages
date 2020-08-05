@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://www.dotpdn.com/files/paint.net.4.2.12.install.zip
+   x32: https://www.dotpdn.com/files/paint.net.4.2.13.install.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: C9CE61ADE9F6A2C737700B2A563F0597B600B7CFB78D6D33AD76BB37862FFC1A
+   checksum32: 6467DABD49B94B0F10C54E2CA2C02DE1C1826C28E8DA544103B96A1DA0C6F594
 
 File 'license.txt' is obtained from:
    https://www.getpaint.net/license.html
