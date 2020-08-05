@@ -50,7 +50,6 @@ New-Item $tempFolder -ItemType Directory | Out-Null
 # Create Bootstrap script
 
 $bootstrapPs1Content = @"
-Clear-Host
 Write-Host '--> Installing Chocolatey'
 Write-Host
 Invoke-WebRequest -useb 'https://chocolatey.org/install.ps1' | Invoke-Expression
@@ -91,7 +90,7 @@ $sandboxTestWsbContent = @"
     </MappedFolder>
   </MappedFolders>
   <LogonCommand>
-  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$mapFolderInSandbox' -ArgumentList '-ExecutionPolicy Bypass -NoExit -File $bootstrapPs1InSandbox'</Command>
+  <Command>PowerShell Start-Process PowerShell -WindowStyle Maximized -WorkingDirectory '$mapFolderInSandbox' -ArgumentList '-ExecutionPolicy Bypass -NoExit -NoLogo -File $bootstrapPs1InSandbox'</Command>
   </LogonCommand>
 </Configuration>
 "@
