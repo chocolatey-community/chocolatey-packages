@@ -4,7 +4,7 @@
   <metadata>
     <id>composer</id>
     <title>Composer Setup</title>
-    <version>5.1.0.20200713</version>
+    <version>6.0.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/composer</packageSourceUrl>
     <owners>chocolatey, John Stevenson</owners>
     <authors>Nils Adermann, Jordi Boggiano and community contributors</authors>
@@ -44,7 +44,7 @@ This package has a dependency on the Chocolatey PHP package. If this is not foun
 
 If you encounter any problems with the installation, you can run it interactively using the `--notsilent` option.
 ]]></description>
-    <releaseNotes>https://github.com/composer/windows-setup/releases/tag/v5.1.0</releaseNotes>
+    <releaseNotes>https://github.com/composer/windows-setup/releases/tag/v6.0.0</releaseNotes>
     <dependencies>
       <dependency id="php" version="5.5.0" />
     </dependencies>
