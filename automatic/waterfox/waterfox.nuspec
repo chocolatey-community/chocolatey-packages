@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>waterfox-classic</id>
-    <version>2020.07.1</version>
+    <version>2020.07.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/waterfox</packageSourceUrl>
     <owners>chocolatey,tonigellida,admiringworm</owners>
     <title>Waterfox classic</title>
