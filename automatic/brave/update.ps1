@@ -29,7 +29,7 @@ function global:au_GetLatest {
       Version       = $version
       RemoteVersion = $version
       Title         = 'Brave Browser'
-      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave.svg'
+      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg'
     }
 
     beta   = @{
@@ -38,7 +38,7 @@ function global:au_GetLatest {
       Version       = $version_b + '-beta'
       RemoteVersion = $version_b
       Title         = 'Brave Browser (Beta)'
-      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg'
+      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave-beta.svg'
     }
   }
 
