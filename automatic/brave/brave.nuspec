@@ -17,7 +17,7 @@
 * Beta is an early preview for new versions of Brave. This build showcases the newest advances and it’s ready for daily use. Brave Beta automatically sends crash reports, but you can turn this off if you’d like.
 ]]></description>
     <!-- IconUrl: Skip check -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca30653/icons/brave-beta.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave-beta.svg</iconUrl>
     <summary>A browser that lets you browse safer and faster by blocking ads and trackers.</summary>
     <owners>chocolatey, Sanshiro</owners>
     <authors>Brave Software Inc.</authors>
