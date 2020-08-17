@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
@@ -20,7 +20,7 @@ function Get-MergeTasks {
 }
 
 $packageArgs = @{
-  packageName    = "$env.ChocolateyPackageName"
+  packageName    = "$env:ChocolateyPackageName"
   fileType       = 'exe'
   url            = 'https://az764295.vo.msecnd.net/insider/d487078dc7fc1c276657cadb61b4f63833a8df55/VSCodeSetup-ia32-1.46.0-insider.exe'
   url64bit       = 'https://az764295.vo.msecnd.net/insider/d487078dc7fc1c276657cadb61b4f63833a8df55/VSCodeSetup-x64-1.46.0-insider.exe'
