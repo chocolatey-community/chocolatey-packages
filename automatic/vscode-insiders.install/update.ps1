@@ -6,18 +6,19 @@ $releases64 = 'https://update.code.visualstudio.com/api/update/win32-x64/insider
 
 if ($MyInvocation.InvocationName -ne '.') {
   function global:au_BeforeUpdate {
-    $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
-    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+    $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $Latest.ChecksumType
   }
 }
 
 function global:au_SearchReplace {
   @{
     'tools\chocolateyInstall.ps1' = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+      "(?i)(^\s*url\s*=\s*)('.*')"               = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*url64bit\s*=\s*)('.*')"          = "`$1'$($Latest.URL64)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"          = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksum64\s*=\s*)('.*')"        = "`$1'$($Latest.Checksum64)'"
+      "(?i)(^\s*checksumType(64)?\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType)'"
     }
   }
 }
@@ -36,9 +37,10 @@ function global:au_GetLatest {
   $date = $(Get-Date -Format "yyyyMMdd" $(Get-Date 01.01.1970).AddMilliseconds($json32.timestamp))
 
   @{
-    Version = "$version.$date"
-    URL32   = $json32.Url
-    URL64   = $json64.Url
+    Version      = "$version.$date"
+    URL32        = $json32.Url
+    URL64        = $json64.Url
+    ChecksumType = 'sha512'
   }
 }
 
