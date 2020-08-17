@@ -2,20 +2,20 @@
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 
-$releases = 'https://owncloud.org/download/#install-clients'
+$releases = 'https://owncloud.com/desktop-app/'
 $softwareName = 'ownCloud'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"        = @{
+    ".\legal\VERIFICATION.txt"      = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(\s*1\..+)\<.*\>"              = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
     }
-    ".\tools\chocolateyInstall.ps1"   = @{
+    ".\tools\chocolateyInstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'"       = "`${1}'$softwareName'"
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
     }
