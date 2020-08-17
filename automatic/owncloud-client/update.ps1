@@ -23,7 +23,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Update-Metadata -key "title" -value $Latest.Title
+  Update-Metadata -data @{
+    title   = $Latest.Title
+    docsUrl = "https://doc.owncloud.org/desktop/$($Latest.Version.ToString(2))/"
+  }
 }
 
 function global:au_GetLatest {
@@ -41,7 +44,7 @@ function global:au_GetLatest {
 
     if (!($streams.ContainsKey($kind))) {
       $streams.Add($kind, @{
-          Version = $version.ToString()
+          Version = $version
           URL32   = $_
           Title   = if ($_ -match 'testing') { "ownCloud Windows Client (Technical Preview)" } else { "ownCloud Windows Client" }
         })
