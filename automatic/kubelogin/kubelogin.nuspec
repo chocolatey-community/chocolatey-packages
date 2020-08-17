@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kubelogin</id>
+    <version>1.20.0.20200817</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/kubelogin</packageSourceUrl>
+    <owners>chocolatey,jetersen</owners>
+    <title>Kubelogin (CLI)</title>
+    <authors>int128</authors>
+    <projectUrl>https://github.com/int128/kubelogin</projectUrl>
+    <licenseUrl>https://github.com/int128/kubelogin/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/int128/kubelogin</projectSourceUrl>
+    <docsUrl>https://github.com/int128/kubelogin/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/int128/kubelogin/issues</bugTrackerUrl>
+    <tags>kubernetes kubectl kubelogin authentication oidc cli foss</tags>
+    <summary>Kubernetes OIDC authentication</summary>
+    <description><![CDATA[kubelogin is a small command-line utility that allows you to easily login into your kubernetes cluster using OpenID Connect (OIDC).
+
+]]></description>
+    <releaseNotes>https://github.com/int128/kubelogin/releases/tag/v1.20.0</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
