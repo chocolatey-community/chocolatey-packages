@@ -7,10 +7,10 @@
     <title>Defraggler</title>
     <owners>chocolatey</owners>
     <authors>Piriform</authors>
-    <licenseUrl>http://www.piriform.com/legal/software-license/defraggler</licenseUrl>
-    <projectUrl>http://www.piriform.com/defraggler</projectUrl>
+    <licenseUrl>https://www.ccleaner.com/legal/end-user-license-agreement</licenseUrl>
+    <projectUrl>https://www.ccleaner.com/defraggler</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/defraggler.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description><![CDATA[
 Use Defraggler to defrag your entire hard drive, or individual files. This compact and portable Windows application supports NTFS and FAT32 file systems.
 
@@ -32,7 +32,7 @@ Example: `choco install defraggler --params "/UseSystemLocale"`
     <summary>Use Defraggler to defrag your entire hard drive, or individual files - unique in the industry.</summary>
     <tags>defragment freeware defrag admin disk</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/defraggler</packageSourceUrl>
-    <releaseNotes>http://www.piriform.com/defraggler/version-history</releaseNotes>
+    <releaseNotes>https://www.ccleaner.com/defraggler/version-history</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
