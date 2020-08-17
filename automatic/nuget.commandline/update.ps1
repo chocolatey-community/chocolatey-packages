@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = "https://dist.nuget.org/tools.json"
 
@@ -24,13 +24,13 @@ function global:au_GetLatest {
   $streams = @{}
 
   $versions | Sort-Object uploaded -Descending | % {
-    $versionTwoPart = $_.version -replace '^(\d+\.\d+).*$','$1'
+    $versionTwoPart = $_.version -replace '^(\d+\.\d+).*$', '$1'
 
     if (!$streams.ContainsKey("$versionTwoPart")) {
       $streams.Add($versionTwoPart, @{
-        Version = $_.Version
-        URL32   = $_.url
-      })
+          Version = Get-Version $_.Version
+          URL32   = $_.url
+        })
     }
   }
 
