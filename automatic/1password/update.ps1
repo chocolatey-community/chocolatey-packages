@@ -40,7 +40,7 @@ function Get-LatestOPW {
   )
 
   $url32 = Get-RedirectedUrl $url
-  $verRe = '[-]|\.exe$'
+  $verRe = 'Setup-|word-|\.exe$'
   $version = $url32 -split $verRe | select -last 1 -skip 1
   $version = $version -replace ('\.BETA', ' beta')
   $version = Get-Version $version
