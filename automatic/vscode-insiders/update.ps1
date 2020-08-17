@@ -1,4 +1,4 @@
-. "$PSScriptRoot\..\vscode-insiders.install\update.ps1"
+﻿. "$PSScriptRoot\..\vscode-insiders.install\update.ps1"
 
 function global:au_SearchReplace {
   @{
