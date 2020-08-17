@@ -45,7 +45,7 @@ $sa += if ($pp.RemoveDistributionDir) { " /RemoveDistributionDir=true" }
 
 $sa += if ($pp.NoAutoUpdate) { " /MaintenanceService=false" }
 
-if ($alreadyInstalled -and $env:ChocolateyForce) {
+if ($alreadyInstalled -and !$env:ChocolateyForce) {
   Write-Output $(
     "Firefox is already installed. " +
     'No need to download and re-install.'
