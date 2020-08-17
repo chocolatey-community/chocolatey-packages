@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubelogin</id>
-    <version>1.20.0.20200817</version>
+    <version>1.20.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/kubelogin</packageSourceUrl>
     <owners>chocolatey,jetersen</owners>
     <title>Kubelogin (CLI)</title>
@@ -18,6 +18,24 @@
     <summary>Kubernetes OIDC authentication</summary>
     <description><![CDATA[kubelogin is a small command-line utility that allows you to easily login into your kubernetes cluster using OpenID Connect (OIDC).
 
+Here is an example users block config in your `~/.kube/config` file
+
+```yaml
+users:
+- name: oidc
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - get-token
+      - --oidc-issuer-url=https://dex.company.io/dex
+      - --oidc-client-id=kubelogin
+      - --oidc-client-secret=SomeClientSecretYouBothShare
+      - --oidc-extra-scope=profile
+      - --oidc-extra-scope=email
+      - --oidc-extra-scope=groups
+      command: kubelogin
+```
 ]]></description>
     <releaseNotes>https://github.com/int128/kubelogin/releases/tag/v1.20.0</releaseNotes>
   </metadata>
