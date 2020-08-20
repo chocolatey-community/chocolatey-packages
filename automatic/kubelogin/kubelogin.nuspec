@@ -13,6 +13,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/int128/kubelogin</projectSourceUrl>
     <docsUrl>https://github.com/int128/kubelogin/blob/master/README.md</docsUrl>
+    <!-- IconUrl: Skip check -->
     <bugTrackerUrl>https://github.com/int128/kubelogin/issues</bugTrackerUrl>
     <tags>kubernetes kubelogin authentication oidc cli foss</tags>
     <summary>Kubernetes OIDC authentication</summary>
