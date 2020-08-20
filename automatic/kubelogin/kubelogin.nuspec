@@ -13,8 +13,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/int128/kubelogin</projectSourceUrl>
     <docsUrl>https://github.com/int128/kubelogin/blob/master/README.md</docsUrl>
+    <!-- IconUrl: Skip check -->
     <bugTrackerUrl>https://github.com/int128/kubelogin/issues</bugTrackerUrl>
-    <tags>kubernetes kubelogin authentication oidc cli foss</tags>
+    <tags>kubernetes kubelogin authentication oidc cli foss cross-platform</tags>
     <summary>Kubernetes OIDC authentication</summary>
     <description><![CDATA[kubelogin is a small command-line utility that allows you to easily login into your kubernetes cluster using OpenID Connect (OIDC).
 
