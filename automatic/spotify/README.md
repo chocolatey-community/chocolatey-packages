@@ -6,13 +6,13 @@ Spotify is a digital music service that gives you access to millions of songs.
 
 - Music<br>
 There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.
-- Playlists<br> 
+- Playlists<br>
 You'll find readymade playlists to match your mood, put together by music fans and experts.
-- New Releases<br>  
+- New Releases<br>
 Hear this week's latest singles and albums, and check out what's hot in the Top 50.
-- Search<br>  
+- Search<br>
 Know what you want to listen to? Just search and hit play.
-- Browse<br>  
+- Browse<br>
 Check out the latest charts, brand new releases and great playlists for right now.
-- Discover<br>  
+- Discover<br>
 Enjoy new music every Monday with your own personal playlist. Or sit back and enjoy Radio.
