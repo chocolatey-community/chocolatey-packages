@@ -9,8 +9,9 @@ It does not contain non-troubleshooting tools like the BSOD Screen Saver or NotM
 
 - `/InstallDir` - Installation directory, by default Chocolatey tools directory.
 - `/InstallationPath` - the same as `InstallDir`
+- `/NoStartMenu` - Set to true to prevent installation of a menu item.
 
-Example: `choco install sysinternals --params "/InstallDir:C:\your\install\path"`
+Example: `choco install sysinternals --params "/InstallDir:C:\your\install\path /NoStartMenu"`
 
 ## Notes
 
@@ -18,4 +19,4 @@ Example: `choco install sysinternals --params "/InstallDir:C:\your\install\path"
 - This package by default installs to tools directory which will create shims for all applications. When you install to different directory, shims are not created but directory is added to the PATH.
 - This package downloads the nano edition of sysinternals suite when installing it on a nano server.
 - To have GUI for the tools, install [nirlauncher](https://chocolatey.org/packages/nirlauncher) package and use `/Sysinternals` package parameter.
-
+- Only tools that have a GUI are added to the start menu.
