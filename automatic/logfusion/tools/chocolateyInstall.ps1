@@ -3,8 +3,8 @@
 $arguments          = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = 'LogFusion'
-    url             = 'https://binaryfortressdownloads.com/Download/BFSFiles/117/LogFusionSetup-6.4.1.exe'
-    checksum        = 'f35d2c5002e006e5a43760f34136ecd6ddd3171159987db6a266c5fc0a124142'
+    url             = 'https://binaryfortressdownloads.com/Download/BFSFiles/117/LogFusionSetup-6.5.exe'
+    checksum        = 'bc98824ada055e6cf3ecea087d92ee00b6c276a48ab4120b41204de47abad8b5'
     fileType        = 'exe'
     checksumType    = 'sha256'
     silentArgs      = '/VERYSILENT /LAUNCHAFTER=0'
