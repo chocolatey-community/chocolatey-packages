@@ -5,15 +5,15 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  file          = "$toolsDir\julia-1.5.0-win32.exe"
-  file64        = "$toolsDir\julia-1.5.0-win64.exe"
+  file          = "$toolsDir\julia-1.5.1-win32.exe"
+  file64        = "$toolsDir\julia-1.5.1-win64.exe"
 
   softwareName  = 'Julia*'
 
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
 }
-$packageVersion = "1.5.0"
+$packageVersion = "1.5.1"
 
 Install-ChocolateyInstallPackage @packageArgs
 

@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName   = 'bluefish'
   fileType      = 'exe'
   softwareName  = 'Bluefish*'
-  file          = "$toolsPath\Bluefish-2.2.10-setup.exe"
+  file          = "$toolsPath\Bluefish-2.2.11-setup.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }
