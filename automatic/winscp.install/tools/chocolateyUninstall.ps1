@@ -3,6 +3,7 @@
 $packageName = 'winscp'
 
 Uninstall-BinFile $packageName
+Uninstall-BinFile "${packageName}.com"
 
 [array] $key = Get-UninstallRegistryKey "packageName*"
 if ($key.Count -eq 1) {

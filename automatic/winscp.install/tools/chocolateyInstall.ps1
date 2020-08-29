@@ -18,6 +18,7 @@ if (!$installLocation)  { Write-Warning "Can't find $packageName install locatio
 Write-Host "$packageName installed to '$installLocation'"
 
 Install-BinFile $packageName "$installLocation\$packageName.exe"
+Install-BinFile "${packageName}.com" "${installLocation}\${packageName}.com"
 
 Register-Application "$installLocation\$packageName.exe"
 Write-Host "$packageName registered as $packageName"
