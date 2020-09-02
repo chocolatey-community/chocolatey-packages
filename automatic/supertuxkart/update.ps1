@@ -1,6 +1,6 @@
 import-module au
-
 $releases = 'https://supertuxkart.net/Download'
+
 
 function global:au_SearchReplace {
   @{
@@ -16,8 +16,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
+  $regex = "\.exe\/download$|\.exe$|\/download$"
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $urls = $download_page.links | ? href -match "\.exe\/download$" | % href
+  $urls = $download_page.links | ? href -match $regex | % href
   $version = $urls[0] -split '/' | select -Last 1 -Skip 2
 
   @{
