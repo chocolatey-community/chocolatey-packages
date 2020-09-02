@@ -1,6 +1,6 @@
 import-module au
-$releases = 'https://supertuxkart.net/Download'
 
+$releases = 'https://supertuxkart.net/Download'
 
 function global:au_SearchReplace {
   @{
@@ -19,12 +19,11 @@ function global:au_GetLatest {
   $regex = "\.exe$"
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $urls = $download_page.links | ? href -match $regex | % href
-  $version = $urls[0] -split '/' | select -Last 1 -Skip 2
-
+  
   @{
     URL32    = $urls -match 'win32|32bit' | select -first 1
     URL64    = $urls -match 'win64|64bit' | select -first 1
-    Version  = $version
+    Version  = Get-Version ($urls -match 'win32|32bit' | select -first 1)
     FileType = 'exe'
   }
 }
