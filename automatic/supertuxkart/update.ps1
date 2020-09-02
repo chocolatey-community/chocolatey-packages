@@ -16,7 +16,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $regex = "\.exe\/download$|\.exe$|\/download$"
+  $regex = "\.exe$"
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $urls = $download_page.links | ? href -match $regex | % href
   $version = $urls[0] -split '/' | select -Last 1 -Skip 2
