@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spotify</id>
-    <version>1.1.40.509</version>
+    <version>1.1.41.634</version>
     <title>Spotify</title>
     <authors>Spotify</authors>
     <projectUrl>http://spotify.com</projectUrl>
@@ -18,17 +18,17 @@
 
 ## Features
 
-- Music<br>
+- Music  
 There are millions of songs on Spotify. Play your favorites, discover new tracks, and build the perfect collection.
-- Playlists<br>
+- Playlists  
 You'll find readymade playlists to match your mood, put together by music fans and experts.
-- New Releases<br>
+- New Releases  
 Hear this week's latest singles and albums, and check out what's hot in the Top 50.
-- Search<br>
+- Search  
 Know what you want to listen to? Just search and hit play.
-- Browse<br>
+- Browse  
 Check out the latest charts, brand new releases and great playlists for right now.
-- Discover<br>
+- Discover  
 Enjoy new music every Monday with your own personal playlist. Or sit back and enjoy Radio.
 ]]></description>
     <summary>Spotify is a new way to listen to music</summary>
