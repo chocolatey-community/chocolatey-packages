@@ -213,23 +213,15 @@ Keep the package source files clean and remove obsolete or outdated code and unn
 
 Good communication is essential so please take a look at [etiquette](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication) regarding it.
 
-### 3.1 Single package per push request
+### 3.1 Single package per pull request
 
 All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
 
-### 3.2 Pull request expires after 6 months
+### 3.2 Open issues and pull request expires after 6 months
 
-PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
+Issues and PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
-### 3.3 Open issue expires after 6 months
-
-Issues that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
-
-### 3.4 Pull request one package
-
-Do not mix multiple packages in single pull request unless in specific special cases that fix common problem.
-
-### 3.5 Understanding labels
+### 3.3 Understanding labels
 
 Most of the labels are self describing, here are few that require explanation:
 
