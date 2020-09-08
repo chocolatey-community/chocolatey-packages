@@ -1,10 +1,12 @@
 ﻿import-module au
+. "$PSScriptRoot\update_helper.ps1"
 
 $GraphvizURL = "https://www2.graphviz.org/Packages/<branch>/windows/10/<build>/Release/Win32/"
 
 function global:au_BeforeUpdate {
     rm "$PSScriptRoot\tools\*.zip"
     rm "$PSScriptRoot\tools\*.exe"
+	  Set-ReadMeFile -keys "PackageName" -new_info "$($Latest.PackageName)"
     Get-RemoteFiles -Purge -NoSuffix
 }
 
