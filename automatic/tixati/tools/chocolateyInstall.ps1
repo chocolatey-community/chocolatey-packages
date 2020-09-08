@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'tixati'
-$fileName = 'tixati-2.74-1.install.exe'
+$fileName = 'tixati-2.75-1.install.exe'
 $download_dir = "$Env:TEMP\chocolatey\$packageName\$Env:ChocolateyPackageVersion"
 
 $packageArgs = @{
   packageName    = $packageName
   fileFullPath   = "$download_dir\$fileName"
-  url            = 'https://download1.tixati.com/download/tixati-2.74-1.win32-install.exe'
-  url64bit       = 'https://download1.tixati.com/download/tixati-2.74-1.win64-install.exe'
-  checksum       = 'f008f0301f4c62bc3347692f9f15559ca3465bf40d4dc34cc7bb78b7d9462db2'
-  checksum64     = '42dea61b1470adcf5aaa79a954edc0f54f752afbfd7f3d2447e0fe90076f943b'
+  url            = 'https://download1.tixati.com/download/tixati-2.75-1.win32-install.exe'
+  url64bit       = 'https://download1.tixati.com/download/tixati-2.75-1.win64-install.exe'
+  checksum       = 'fd330379932c0bd8fd49beaacc05f85a0d41dbcdd51ca4d010df8b6e144034b7'
+  checksum64     = '2bf040d9a1bb965ed3486aa0ad0f37feb6bad8aaf3fc3c012381524e4ebd8446'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
 }
