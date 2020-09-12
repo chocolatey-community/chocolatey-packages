@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode-insiders.install</id>
     <title>Visual Studio Code Insiders (Install)</title>
-    <version>1.50.0.20200911</version>
+    <version>1.50.0.20200912</version>
     <authors>Microsoft</authors>
     <owners>chocolatey</owners>
     <projectUrl>https://code.visualstudio.com/insiders</projectUrl>
