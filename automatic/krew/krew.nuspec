@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>krew</id>
-    <version>0.0.0</version>
+    <version>0.4.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/krew</packageSourceUrl>
     <owners>chocolatey,jetersen</owners>
     <title>krew (CLI)</title>
@@ -17,7 +17,7 @@
     <bugTrackerUrl>https://github.com/kubernetes-sigs/krew/issues</bugTrackerUrl>
     <tags>kubernetes krew package manager cli foss cross-platform</tags>
     <summary>Krew is the package manager for kubectl plugins</summary>
-    <description><![CDATA[Krew is a small command-line utility to setup kubectl plugins.
+    <description><![CDATA[Krew is a small command-line utility that is a package manager for kubectl plugins.
 
 Once installed, you usually want to run `krew install krew`.
 ]]></description>
