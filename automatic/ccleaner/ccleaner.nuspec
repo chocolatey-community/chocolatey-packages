@@ -6,7 +6,7 @@
     <title>CCleaner</title>
     <version>5.71.7971</version>
     <authors>Piriform</authors>
-    <owners>maartenba, tonigellida</owners>
+    <owners>chocolatey-community,maartenba, tonigellida</owners>
     <summary>
   The number-one tool for cleaning your Windows PC.
   </summary>

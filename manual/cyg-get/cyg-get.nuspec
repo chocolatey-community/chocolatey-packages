@@ -6,7 +6,7 @@
     <title>cyg-get</title>
     <version>1.2.1</version>
     <authors>Red Hat, Inc.</authors>
-    <owners>micahlmartin</owners>
+    <owners>chocolatey-community,micahlmartin</owners>
     <summary>A utility to install Cygwin packages.</summary>
     <description>
       A utility to install Cygwin (http://cygwin.com) packages and their dependencies.

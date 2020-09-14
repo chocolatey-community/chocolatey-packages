@@ -6,7 +6,7 @@
     <version>1.0.0</version>
     <title>ZenHub for GitHub</title>
     <authors>zenhub</authors>
-    <owners>gep13 chocolatey</owners>
+    <owners>chocolatey-community,gep13</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/zenhub-for-github/ogcgkffhplmphkaahpmffcafajaocjbd</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/t1YTSCMqAqg71faORFTtQ6hy2zCO5S43q6UQcjh3xZ7roSCuOtepxgAKXzJ8EwUef6Hpt0Ociw=s26-h26-e365-rw</iconUrl>
     <projectSourceUrl>https://www.zenhub.com/</projectSourceUrl>

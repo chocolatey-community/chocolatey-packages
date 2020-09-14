@@ -6,10 +6,10 @@
     <title>Pale Moon browser</title>
     <version>28.13.0</version>
     <authors>Moonchild Productions</authors>
-    <owners>Redsandro,chocolatey</owners>
+    <owners>chocolatey-community,Redsandro</owners>
     <summary>A Firefox-based web browser optimized for modern hardware.</summary>
     <description><![CDATA[
-Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use. 
+Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use.
 
 Pale Moon offers you a browsing experience in a browser completely built from its own, independently developed source that has been forked off from Firefox/Mozilla code a number of years ago, with carefully selected features and optimizations to improve the browser's stability and user experience, while offering full customization and a growing collection of extensions and themes to make the browser truly your own.
 

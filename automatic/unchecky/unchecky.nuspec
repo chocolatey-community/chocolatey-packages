@@ -6,7 +6,7 @@
     <title>Unchecky</title>
     <version>1.2</version>
     <authors>RaMMicHaeL</authors>
-    <owners>Redsandro</owners>
+    <owners>chocolatey-community,Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
     <description><![CDATA[
 Have you ever felt, while installing software, that the installer tries to push additional unwanted programs at all cost? Ever missed a checkbox, and spent hours afterwards removing adware? Ever opened your browser after an installation, only to find out that you have a new homepage, a new search engine, or even a new browser?

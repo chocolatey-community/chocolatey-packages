@@ -6,7 +6,7 @@
     <version>1.0.0</version>
     <title>github.expandinizr</title>
     <authors>TheCodeJunkie</authors>
-    <owners>gep13 chocolatey</owners>
+    <owners>chocolatey-community,gep13</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/githubexpandinizr/cbehdjjcilgnejbpnjhobkiiggkedfib</projectUrl>
     <iconUrl>https://lh6.googleusercontent.com/629YrRMzim_zZBoOhsXlz8xdA58BrD2t-04iabdDhB9YqCqeCbPdQimDDR6o17zdPnmRPMW1Vnc=s26-h26-e365-rw</iconUrl>
     <projectSourceUrl>https://github.com/thecodejunkie/github.expandinizr</projectSourceUrl>
@@ -18,7 +18,7 @@
     <description>
 ## Features
 
-Currently enhances the following: 
+Currently enhances the following:
 * Removes the truncating of file and directory names in the repository browser
 * Really long file and directory names will word-wrap
 * Fully expands the website, with breakpoints at 1400px, 1600px and 1800px
@@ -31,13 +31,13 @@ Chrome extension that improves the GitHub experience.
     </summary>
     <tags>foss github expandinizr chrome extension</tags>
     <releaseNotes>
-https://github.com/thecodejunkie/github.expandinizr#changelog    
-    </releaseNotes>    
+https://github.com/thecodejunkie/github.expandinizr#changelog
+    </releaseNotes>
     <dependencies>
       <dependency id="googlechrome" version="10.0.0" />
-    </dependencies> 
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>

@@ -15,7 +15,7 @@
 * Preview window with an integrated image viewer.
 ]]></description>
     <title>Lightscreen</title>
-    <owners>dimqua</owners>
+    <owners>chocolatey-community,dimqua</owners>
     <tags>admin foss cross-platform lightscreen screenshot tool</tags>
     <projectUrl>http://lightscreen.com.ar/</projectUrl>
     <projectSourceUrl>https://github.com/ckaiser/Lightscreen</projectSourceUrl>

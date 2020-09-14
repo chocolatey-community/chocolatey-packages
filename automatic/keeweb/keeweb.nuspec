@@ -8,7 +8,7 @@
         <title>KeeWeb</title>
         <version>1.15.7</version>
         <authors>antelle</authors>
-        <owners>wget</owners>
+        <owners>chocolatey-community,wget</owners>
         <summary>Free cross-platform password manager compatible with KeePass</summary>
         <description><![CDATA[Free cross-platform password manager compatible with KeePass.
 

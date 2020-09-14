@@ -6,7 +6,7 @@
     <title>GMER</title>
     <version>2.2.19882.20161107</version>
     <authors>Avast</authors>
-    <owners>Redsandro</owners>
+    <owners>chocolatey-community,Redsandro</owners>
     <summary>GMER is one of the most respected specialized antirootkit applications available.</summary>
     <description>
 GMER is one of the most respected specialized antirootkit applications available. The author now works for Avast.

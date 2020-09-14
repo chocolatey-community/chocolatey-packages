@@ -8,7 +8,7 @@
     <title>KeePassXC</title>
     <version>2.6.1</version>
     <authors>https://github.com/keepassxreboot/keepassxc/graphs/contributors</authors>
-    <owners>wget, hans0</owners>
+    <owners>chocolatey-community,wget, hans0</owners>
     <summary>KeePassXC is a community fork of KeePassX which aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository.</summary>
     <description><![CDATA[KeePassXC is a fork of [KeePassX](https://www.keepassx.org/) that [aims to incorporate stalled pull requests, features, and bug fixes that have never made it into the main KeePassX repository](https://github.com/keepassxreboot/keepassx/issues/43).
 

@@ -6,7 +6,7 @@
         <title>Lightworks</title>
         <version>2020.1</version>
         <authors>EditShare LLC</authors>
-        <owners>Redsandro</owners>
+        <owners>chocolatey-community,Redsandro</owners>
         <summary>Lightworks is a professional NLE for editing and mastering digital video.</summary>
         <description><![CDATA[
 __Lightworks__ is Academy and Emmy award-winning, professional Non-Linear Editing (NLE) software supporting resolutions up to 4K.

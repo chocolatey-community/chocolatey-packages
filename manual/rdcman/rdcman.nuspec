@@ -6,7 +6,7 @@
     <version>2.7.1406.20160916</version>
     <title>Remote Desktop Connection Manager</title>
     <authors>Julian Burger</authors>
-    <owners>Anthony Mastrean</owners>
+    <owners>chocolatey-community,Anthony Mastrean</owners>
     <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=44989</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cfd84d3d546b3479bb2c5ece367867ba6e495c30/icons/rdcman.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

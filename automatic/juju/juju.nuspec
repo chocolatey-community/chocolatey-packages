@@ -5,7 +5,7 @@
     <id>juju</id>
     <version>2.8.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/juju</packageSourceUrl>
-    <owners>AdmiringWorm,chocolatey</owners>
+    <owners>chocolatey-community,AdmiringWorm</owners>
     <title>Juju</title>
     <authors>Canonical Ltd.</authors>
     <projectUrl>https://jujucharms.com/</projectUrl>

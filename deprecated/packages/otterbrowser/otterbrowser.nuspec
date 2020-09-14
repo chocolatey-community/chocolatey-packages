@@ -5,7 +5,7 @@
     <version>0.9.03.20171117</version>
     <title>[Deprecated] Otter Browser</title>
     <authors>Emdek</authors>
-    <owners>tonigellida</owners>
+    <owners>chocolatey-community,tonigellida</owners>
     <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
     <projectUrl>http://otter-browser.org/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

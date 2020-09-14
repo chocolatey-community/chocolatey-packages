@@ -6,7 +6,7 @@
     <version>0.6.0.20160211</version>
     <title>[Deprecated] Dokan Library</title>
     <authors>Hiroki Asakawa</authors>
-    <owners>Hiroki Asakawa</owners>
+    <owners>chocolatey-community,Hiroki Asakawa</owners>
     <licenseUrl>https://dokan.googlecode.com/svn/trunk/dokan/readme.txt</licenseUrl>
     <projectUrl>https://code.google.com/p/dokan/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -6,7 +6,7 @@
     <version>1.3.4531.20160211</version>
     <title>[Deprecated] ffdshow tryouts (forced 32-bit)</title>
     <authors>http://ffdshow-tryout.sourceforge.net/wiki/credits</authors>
-    <owners>http://ffdshow-tryout.sourceforge.net/wiki/credits</owners>
+    <owners>chocolatey-community,http://ffdshow-tryout.sourceforge.net/wiki/credits</owners>
     <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
     <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>
     <iconUrl>http://cdn.rawgit.com/TomOne/chocolatey-packages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffdshow.svg</iconUrl>
