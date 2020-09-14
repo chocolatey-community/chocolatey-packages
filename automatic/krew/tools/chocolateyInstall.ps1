@@ -4,9 +4,5 @@ $packageName = 'krew'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$packageArgs = @{
-  Name = $packageName
-  Path = "$toolsPath\$packageName.exe"
-}
-
-Install-BinFile @packageArgs
+Install-BinFile $packageName "$toolsPath\$packageName.exe"
+Install-ChocolateyPath "%USERPROFILE%\.krew\bin" Machine
