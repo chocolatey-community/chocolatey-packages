@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>krew</id>
-    <version>0.4.0</version>
+    <version>0.0.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/krew</packageSourceUrl>
     <owners>chocolatey,jetersen</owners>
     <title>krew (CLI)</title>
