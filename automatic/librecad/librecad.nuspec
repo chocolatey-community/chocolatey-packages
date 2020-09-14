@@ -5,7 +5,7 @@
     <id>librecad</id>
     <version>2.2.0-rc1</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/librecad</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>LibreCAD</title>
     <authors>LibreCAD community</authors>
     <projectUrl>http://librecad.org/cms/home.html</projectUrl>

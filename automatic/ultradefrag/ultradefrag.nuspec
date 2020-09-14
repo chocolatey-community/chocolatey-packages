@@ -4,7 +4,7 @@
   <metadata>
     <id>ultradefrag</id>
     <title>UltraDefrag</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <version>7.1.4</version>
     <authors>Dmitri Arkhangelski et al.</authors>
     <summary>UltraDefrag is a powerful Open Source Defragmentation tool for the Windows Platform</summary>

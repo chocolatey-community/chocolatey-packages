@@ -5,7 +5,7 @@
     <id>xpdf-utils</id>
     <version>3.4.0.20170430</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/xpdf-utils</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Xpdf utils</title>
     <authors>Glyph &amp; Cog, LLC</authors>
     <projectUrl>http://www.foolabs.com/xpdf/home.html</projectUrl>

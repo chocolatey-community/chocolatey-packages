@@ -5,7 +5,7 @@
     <id>freecad</id>
     <version>0.19.0.22411-dev</version>
     <title>FreeCAD</title>
-    <owners>chocolatey,purity</owners>
+    <owners>chocolatey-community,purity</owners>
     <authors>Jürgen Riegel</authors>
     <licenseUrl>http://www.freecadweb.org/wiki/index.php?title=Licence</licenseUrl>
     <projectUrl>http://www.freecadweb.org/</projectUrl>

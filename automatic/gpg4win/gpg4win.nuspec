@@ -5,7 +5,7 @@
     <version>3.1.13</version>
     <title>Gpg4win</title>
     <authors>g10 Code GmbH</authors>
-    <owners>chocolatey, dtgm</owners>
+    <owners>chocolatey-community, dtgm</owners>
     <licenseUrl>https://www.gpg4win.org/license.html</licenseUrl>
     <projectUrl>http://www.gpg4win.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f1fbac85edfe6ace114f8ad50023739b2494bb31/icons/gpg4win.png</iconUrl>

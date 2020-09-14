@@ -5,7 +5,7 @@
     <id>ontopreplica</id>
     <version>3.5.1.20170427</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/ontopreplica</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>OnTopReplica (Install)</title>
     <authors>Lck</authors>
     <projectUrl>https://github.com/LorenzCK/OnTopReplica</projectUrl>

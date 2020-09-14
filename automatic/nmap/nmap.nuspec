@@ -6,7 +6,7 @@
     <version>7.80</version>
     <title>Nmap</title>
     <authors>Fyodor</authors>
-    <owners>chocolatey zippy1981 ferventcoder</owners>
+    <owners>chocolatey-community zippy1981 ferventcoder</owners>
     <licenseUrl>http://nmap.org/svn/COPYING</licenseUrl>
     <projectUrl>http://nmap.org/</projectUrl>
     <projectSourceUrl>https://svn.nmap.org/</projectSourceUrl>

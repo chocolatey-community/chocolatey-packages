@@ -5,7 +5,7 @@
     <id>owncloud-client</id>
     <version>2.6.3.14058</version>
     <title>ownCloud Windows Client</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>ownCloud developers</authors>
     <licenseUrl>https://github.com/owncloud/client/blob/master/COPYING</licenseUrl>
     <projectUrl>https://owncloud.org/</projectUrl>

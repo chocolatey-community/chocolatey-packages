@@ -6,7 +6,7 @@
     <id>bleachbit</id>
     <version>3.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bleachbit</packageSourceUrl>
-    <owners>chocolatey,dtgm</owners>
+    <owners>chocolatey-community,dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>BleachBit</title>
     <authors>Andrew Ziem</authors>

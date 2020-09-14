@@ -5,7 +5,7 @@
     <id>flightgear</id>
     <version>2018.3.6</version>
     <title>FlightGear</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>FlightGear Team</authors>
     <licenseUrl>http://wiki.flightgear.org/GNU_General_Public_License</licenseUrl>
     <projectUrl>http://www.flightgear.org/</projectUrl>

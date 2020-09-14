@@ -4,7 +4,7 @@
   <metadata>
     <id>Brackets</id>
     <title>Brackets</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <version>1.14</version>
     <authors>Adobe</authors>
     <summary>Brackets open-source code editor built with the web for the web.</summary>

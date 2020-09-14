@@ -5,7 +5,7 @@
     <id>haali-media-splitter</id>
     <version>1.13.138.1401</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/haali-media-splitter</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Haali Media Splitter</title>
     <authors>Mike Matsnev</authors>
     <projectUrl>http://haali.su/mkv/</projectUrl>

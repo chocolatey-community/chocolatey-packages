@@ -4,7 +4,7 @@
   <metadata>
     <id>speccy</id>
     <title>Speccy</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <version>1.32.740.20200817</version>
     <authors>Piriform LTD</authors>
     <summary>Speccy will give you detailed statistics on every piece of hardware in your computer.</summary>

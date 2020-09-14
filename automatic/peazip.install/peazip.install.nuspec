@@ -5,7 +5,7 @@
     <title>PeaZip (Install)</title>
     <version>7.4.1</version>
     <authors>Giorgio Tani</authors>
-    <owners>chocolatey,dtgm</owners>
+    <owners>chocolatey-community,dtgm</owners>
     <summary>PeaZip is a free cross-platform file archiver.</summary>
     <description><![CDATA[A cross-platform file archiver and file manager utility.
 

@@ -6,7 +6,7 @@
     <title>[Deprecated] LibreOffice Still</title>
     <version>5.3.7.20180111</version>
     <authors>LibreOffice developers</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>DEPRECATED: Use libreoffice-still instead.</summary>
     <description>
 

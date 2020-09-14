@@ -5,7 +5,7 @@
     <id>jitsi</id>
     <version>2.10.5550.20180405</version>
     <title>Jitsi</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Emil Ivov and others</authors>
     <licenseUrl>https://github.com/jitsi/jitsi/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://jitsi.org/</projectUrl>

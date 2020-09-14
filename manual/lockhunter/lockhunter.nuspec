@@ -6,7 +6,7 @@
     <title>LockHunter</title>
     <version>3.3.4</version>
     <authors>Igor Tkachenko, Nikolay Duylovskiy, Crystal Rich Ltd</authors>
-    <owners>chocolatey, Rob Reynolds</owners>
+    <owners>chocolatey-community, Rob Reynolds</owners>
     <copyright>2016 Crystal Rich Ltd</copyright>
     <summary>LockHunter is a foolproof file unlocker</summary>
     <description>LockHunter is a foolproof file unlocker. It is a free tool to delete files blocked by something you do not know. LockHunter is useful for fighting against malware, and other programs that are blocking files without a reason. Unlike other similar tools it deletes files into the recycle bin so you may restore them if deleted by mistake.

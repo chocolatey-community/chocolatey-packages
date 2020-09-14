@@ -6,7 +6,7 @@
     <version>2.7.0.1</version>
     <title>Ruby</title>
     <authors>Yukihiro Matsumoto</authors>
-    <owners>chocolatey, Rob Reynolds</owners>
+    <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>Ruby - A dynamic, open source programming language with a focus on simplicity and productivity.</summary>
     <description><![CDATA[Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 

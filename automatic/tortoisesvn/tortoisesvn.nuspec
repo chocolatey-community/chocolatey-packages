@@ -6,7 +6,7 @@
     <title>TortoiseSVN</title>
     <version>1.14.0.28885</version>
     <authors>TortoiseSVN Team</authors>
-    <owners>chocolatey, dtgm</owners>
+    <owners>chocolatey-community, dtgm</owners>
     <summary>Subversion® source control management client implemented as File Explorer shell extension</summary>
     <description><![CDATA[
 TortoiseSVN is a really easy to use Revision control / version control / source control software for Windows. It is based on [Apache Subversion (SVN)](http://subversion.apache.org/).

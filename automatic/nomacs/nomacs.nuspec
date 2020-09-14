@@ -5,7 +5,7 @@
     <id>nomacs</id>
     <version>3.17.2206</version>
     <title>nomacs Image Lounge</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Markus Diem, Stefan Fiel, Florian Kleber</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://nomacs.org/</projectUrl>

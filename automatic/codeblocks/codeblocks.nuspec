@@ -6,7 +6,7 @@
     <version>20.03</version>
     <title>Code::Blocks</title>
     <authors>The Code::Blocks Team</authors>
-    <owners>chocolatey purity</owners>
+    <owners>chocolatey-community purity</owners>
     <licenseUrl>http://www.codeblocks.org/license</licenseUrl>
     <projectUrl>http://www.codeblocks.org/</projectUrl>
     <projectSourceUrl>http://svn.code.sf.net/p/codeblocks/code/</projectSourceUrl>

@@ -6,7 +6,7 @@
     <title>Light Alloy Video Player</title>
     <version>4.10.2</version>
     <authors>Vortex Group, LLC.</authors>
-    <owners>chocolatey, Redsandro</owners>
+    <owners>chocolatey-community, Redsandro</owners>
     <summary>Video Player with built-in codecs</summary>
     <description>
 Complete aesthetically pleasing video player with built-in codecs.

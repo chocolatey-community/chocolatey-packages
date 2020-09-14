@@ -5,7 +5,7 @@
     <id>chocolatey-uninstall.extension</id>
     <version>1.2.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>[Deprecated] Chocolatey Uninstall Extension</title>
     <authors>dtgm,ferventcoder,chocolatey</authors>
     <copyright>© 2016 Chocolatey Core Team Package Contributors</copyright>

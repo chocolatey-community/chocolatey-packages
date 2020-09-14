@@ -5,7 +5,7 @@
     <id>aptana-studio</id>
     <version>3.7.2</version>
     <title>Aptana Studio</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Aptana Inc.</authors>
     <licenseUrl>http://www.aptana.com/legal</licenseUrl>
     <projectUrl>http://www.aptana.org/</projectUrl>

@@ -5,7 +5,7 @@
     <id>keepass-langfiles</id>
     <version>2.41</version>
     <title>KeePass 2.x language files</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>KeePass Team</authors>
     <licenseUrl>https://keepass.info/help/v2/license.html</licenseUrl>
     <projectUrl>https://keepass.info/</projectUrl>

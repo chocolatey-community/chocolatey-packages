@@ -5,7 +5,7 @@
     <id>universal-extractor</id>
     <version>1.6.1.20161126</version>
     <title>Universal Extractor</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Jared Breland</authors>
     <summary>Decompress and extract files from installers or archives</summary>
     <projectUrl>http://legroom.net/software/uniextract</projectUrl>

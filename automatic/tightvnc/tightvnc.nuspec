@@ -5,7 +5,7 @@
     <id>tightvnc</id>
     <version>2.8.27</version>
     <title>TightVNC</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>GlavSoft LLC, TightVNC Developers</authors>
     <licenseUrl>http://www.tightvnc.com/licensing.php</licenseUrl>
     <projectUrl>http://www.tightvnc.com/</projectUrl>

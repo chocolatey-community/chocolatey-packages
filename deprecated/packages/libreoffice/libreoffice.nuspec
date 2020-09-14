@@ -6,7 +6,7 @@
     <title>[Deprecated] LibreOffice Fresh</title>
     <version>5.4.4.20180111</version>
     <authors>LibreOffice developers</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>DEPRECATED: Use libreoffice-fresh instead.</summary>
     <description>
 

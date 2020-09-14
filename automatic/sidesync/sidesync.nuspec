@@ -6,7 +6,7 @@
     <title>Samsung SideSync</title>
     <version>4.7.5.203</version>
     <authors>Samsung</authors>
-    <owners>chocolatey, Redsandro</owners>
+    <owners>chocolatey-community, Redsandro</owners>
     <summary>Samsung SideSync enables the screens, windows, and data to be shared easily between your Samsung PC and Galaxy phone or tablet.</summary>
     <description><![CDATA[Using SideSync, you can conveniently share the screen and data between your PC and mobile device. Receive alarms of your phone through PC and use various features of your phone on the computer. Enjoy the smarter and more convenient life with SideSync.
 

@@ -6,7 +6,7 @@
     <title>qTox</title>
     <version>1.17.2</version>
     <authors>qTox developers</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>Powerful Tox chat client that follows the Tox design guidelines.</summary>
     <description><![CDATA[qTox is a powerful [Tox](https://tox.chat/) client that follows the Tox design guidelines while running on all major platforms.
 

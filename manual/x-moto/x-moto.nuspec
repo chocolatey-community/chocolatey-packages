@@ -5,7 +5,7 @@
     <id>x-moto</id>
     <version>0.5.11.20170430</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/x-moto</packageSourceUrl>
-    <owners>chocolatey, chocolatey purity</owners>
+    <owners>chocolatey-community, chocolatey purity</owners>
     <title>X-Moto</title>
     <authors>X-Moto Contributors</authors>
     <projectUrl>https://xmoto.tuxfamily.org/</projectUrl>

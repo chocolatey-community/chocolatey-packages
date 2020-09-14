@@ -6,7 +6,7 @@
     <title>VLC media player</title>
     <version>3.0.11</version>
     <authors>VideoLAN Organization</authors>
-    <owners>chocolatey, Rob Reynolds</owners>
+    <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>
     <licenseUrl>http://www.videolan.org/legal.html</licenseUrl>
     <description><![CDATA[

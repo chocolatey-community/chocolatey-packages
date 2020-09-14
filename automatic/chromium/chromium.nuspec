@@ -5,7 +5,7 @@
     <id>chromium</id>
     <version>87.0.4264.0-snapshots</version>
     <title>Chromium Snapshots</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>The Chromium Authors</authors>
     <projectUrl>http://www.chromium.org/Home</projectUrl>
     <projectSourceUrl>https://chromium.googlesource.com/chromium/src</projectSourceUrl>

@@ -5,7 +5,7 @@
     <id>pencil</id>
     <version>3.1.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/pencil</packageSourceUrl>
-    <owners>chocolatey,Andrei Bejenaru</owners>
+    <owners>chocolatey-community,Andrei Bejenaru</owners>
     <title>Pencil</title>
     <authors>Evolus</authors>
     <projectUrl>http://pencil.evolus.vn</projectUrl>

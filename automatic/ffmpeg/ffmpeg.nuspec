@@ -5,7 +5,7 @@
     <id>ffmpeg</id>
     <version>4.3.1.20200831</version>
     <title>FFmpeg</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>FFmpeg Contributors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
     <projectUrl>http://www.ffmpeg.org/</projectUrl>

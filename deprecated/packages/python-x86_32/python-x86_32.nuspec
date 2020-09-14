@@ -5,7 +5,7 @@
     <id>python-x86_32</id>
     <version>3.5.2.20170425</version>
     <title>[DEPRECATED] Python (32-bit)</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>

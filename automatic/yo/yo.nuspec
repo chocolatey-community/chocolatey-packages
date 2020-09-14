@@ -6,7 +6,7 @@
     <title>Yeoman</title>
     <version>3.1.1</version>
     <authors>The Yeoman Team</authors>
-    <owners>chocolatey, Pascal Berger</owners>
+    <owners>chocolatey-community, Pascal Berger</owners>
     <summary>CLI tool for running Yeoman generators</summary>
     <description><![CDATA[
 Yeoman is a generic scaffolding system allowing the creation of any kind of app.

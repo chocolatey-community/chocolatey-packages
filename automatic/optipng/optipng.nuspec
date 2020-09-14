@@ -7,7 +7,7 @@
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/optipng</packageSourceUrl>
     <title>OptiPNG: Advanced PNG Optimizer</title>
     <authors>Cosmin Truta</authors>
-    <owners>chocolatey, ferventcoder</owners>
+    <owners>chocolatey-community, ferventcoder</owners>
     <licenseUrl>http://optipng.sourceforge.net/license.txt</licenseUrl>
     <projectUrl>http://optipng.sourceforge.net/</projectUrl>
     <!-- IconUrl: Skip check -->

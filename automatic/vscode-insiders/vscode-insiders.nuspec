@@ -6,7 +6,7 @@
     <title>Visual Studio Code Insiders</title>
     <version>1.50.0.20200912</version>
     <authors>Microsoft</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <projectUrl>https://code.visualstudio.com/insiders</projectUrl>
     <projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vscode-insiders</packageSourceUrl>

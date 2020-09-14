@@ -5,7 +5,7 @@
     <id>clipboardfusion</id>
     <version>5.8.5-Beta3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/clipboardfusion</packageSourceUrl>
-    <owners>chocolatey, keithlammers, the-running-dev</owners>
+    <owners>chocolatey-community, keithlammers, the-running-dev</owners>
     <title>ClipboardFusion</title>
     <authors>Binary Fortress Software</authors>
     <projectUrl>https://www.clipboardfusion.com</projectUrl>

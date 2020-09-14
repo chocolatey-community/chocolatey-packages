@@ -5,7 +5,7 @@
     <id>texmaker</id>
     <version>5.0.4</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/texmaker</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Texmaker</title>
     <authors>Pascal Brachet,Joël Amblard</authors>
     <projectUrl>http://www.xm1math.net/texmaker/</projectUrl>

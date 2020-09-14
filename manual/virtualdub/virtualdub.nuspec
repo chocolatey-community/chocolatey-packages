@@ -5,7 +5,7 @@
     <id>virtualdub</id>
     <version>1.10.4.3549101</version>
     <title>VirtualDub</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Avery Lee</authors>
     <licenseUrl>http://www.virtualdub.org/gpl.html</licenseUrl>
     <projectUrl>http://www.virtualdub.org/</projectUrl>

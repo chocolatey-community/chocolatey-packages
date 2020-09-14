@@ -6,7 +6,7 @@
     <title>qBittorrent</title>
     <version>4.2.4</version>
     <authors>Christophe Dumez</authors>
-    <owners>chocolatey,nconrads</owners>
+    <owners>chocolatey-community,nconrads</owners>
     <summary>qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.</summary>
     <description><![CDATA[qBittorrent is a free software cross-platform BitTorrent client GUI written with Qt4.
 The program uses libtorrent-rasterbar library for the torrent back-end (network communication) functionality.

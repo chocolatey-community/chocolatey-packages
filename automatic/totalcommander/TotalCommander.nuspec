@@ -6,7 +6,7 @@
     <title>Total Commander</title>
     <version>9.50</version>
     <authors>Christian Ghisler</authors>
-    <owners>chocolatey, dtgm</owners>
+    <owners>chocolatey-community, dtgm</owners>
     <summary>File manager and explorer replacement</summary>
     <description><![CDATA[
 Total Commander is a file manager for Windows, a tool like the Explorer or file manager, which comes with windows.

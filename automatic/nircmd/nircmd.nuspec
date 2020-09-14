@@ -5,7 +5,7 @@
     <id>nircmd</id>
     <version>2.86</version>
     <title>NirCmd</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Nir Sofer</authors>
     <licenseUrl>http://www.nirsoft.net/utils/nircmd.html</licenseUrl>
     <projectUrl>http://www.nirsoft.net/utils/nircmd.html</projectUrl>

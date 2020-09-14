@@ -5,7 +5,7 @@
     <id>vcredist2017</id>
     <version>14.16.27033</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vcredist2017</packageSourceUrl>
-    <owners>chocolatey,jberezanski</owners>
+    <owners>chocolatey-community,jberezanski</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2017</title>
     <authors>Microsoft</authors>
     <projectUrl>https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/</projectUrl>

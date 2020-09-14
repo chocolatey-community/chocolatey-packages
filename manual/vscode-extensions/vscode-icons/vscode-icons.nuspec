@@ -6,7 +6,7 @@
     <title>Visual Studio Code Icons Extension</title>
     <version>1.0.0.20190314</version>
     <authors>VSCode Icons Team, Roberto Huertas</authors>
-    <owners>chocolatey, gep13</owners>
+    <owners>chocolatey-community, gep13</owners>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons</projectUrl>
     <projectSourceUrl>https://github.com/vscode-icons/vscode-icons</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-icons</packageSourceUrl>

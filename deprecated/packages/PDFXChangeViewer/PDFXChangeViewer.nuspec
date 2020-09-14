@@ -5,7 +5,7 @@
     <id>PDFXChangeViewer</id>
     <version>2.5.317.20161116</version>
     <title>[Deprecated] PDF-XChange Viewer</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Tracker Software</authors>
     <licenseUrl>http://www.tracker-software.com/PDFVLicense.pdf‎</licenseUrl>
     <projectUrl>http://www.tracker-software.com/product/pdf-xchange-viewer</projectUrl>

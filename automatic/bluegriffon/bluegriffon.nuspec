@@ -5,7 +5,7 @@
     <id>bluegriffon</id>
     <version>3.0.1</version>
     <title>BlueGriffon</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Daniel Glazman</authors>
     <licenseUrl>https://github.com/therealglazou/bluegriffon/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://bluegriffon.org/</projectUrl>

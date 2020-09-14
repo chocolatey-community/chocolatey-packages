@@ -6,7 +6,7 @@
     <title>[DEPRECATED] Disable Git Credential Manager</title>
     <version>1.0.0</version>
     <authors>chocolatey</authors>
-    <owners>chocolatey, Pascal Berger</owners>
+    <owners>chocolatey-community, Pascal Berger</owners>
     <projectUrl>https://github.com/chocolatey/chocolatey-coreteampackages</projectUrl>
     <projectSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/git-disable-gcm</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/git-disable-gcm</packageSourceUrl>

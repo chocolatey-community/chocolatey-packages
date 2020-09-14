@@ -5,7 +5,7 @@
     <id>testdisk-photorec</id>
     <version>7.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/testdisk-photorec</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>TestDisk and PhotoRec</title>
     <authors>CGSecurity</authors>
     <projectUrl>http://www.cgsecurity.org/wiki/TestDisk</projectUrl>

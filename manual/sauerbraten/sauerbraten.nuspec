@@ -5,7 +5,7 @@
     <id>sauerbraten</id>
     <version>2013.02.03.20161112</version>
     <title>Cube 2: Sauerbraten</title>
-    <owners>chocolatey,purity</owners>
+    <owners>chocolatey-community,purity</owners>
     <authors>Cube 2: Sauerbraten development team</authors>
     <licenseUrl>http://sauerbraten.org/README.html#license</licenseUrl>
     <projectUrl>http://sauerbraten.org/</projectUrl>

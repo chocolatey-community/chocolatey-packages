@@ -7,7 +7,7 @@
     <title>Chocolatey Core Extensions</title>
     <summary>Helper functions extending core choco functionality</summary>
     <authors>chocolatey</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <description>
 This package provides helper functions installed as a Chocolatey extension.
 These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.

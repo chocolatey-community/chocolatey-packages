@@ -5,7 +5,7 @@
     <id>hedgewars</id>
     <version>1.0.0</version>
     <title>Hedgewars</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Hedgewars Team</authors>
     <tags>hedgewars game foss cross-platform turn-based strategy artillery admin</tags>
     <licenseUrl>https://hg.hedgewars.org/hedgewars/file/90e43d1bcd5b/COPYING</licenseUrl>

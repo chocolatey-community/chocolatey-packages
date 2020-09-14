@@ -5,7 +5,7 @@
     <id>autohotkey.install</id>
     <version>1.1.33.02</version>
     <title>AutoHotkey (Install)</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Lexikos</authors>
     <licenseUrl>http://ahkscript.org/docs/license.htm</licenseUrl>
     <projectUrl>http://ahkscript.org/</projectUrl>

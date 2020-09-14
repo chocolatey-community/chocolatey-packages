@@ -5,7 +5,7 @@
     <id>keepass-classic</id>
     <version>1.38</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/keepass-classic</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>KeePass Classic Password Safe</title>
     <authors>Dominik Reichl</authors>
     <projectUrl>http://keepass.info/index.html</projectUrl>

@@ -5,7 +5,7 @@
     <id>ffdshow</id>
     <version>1.3.4531</version>
     <title>ffdshow tryouts</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>http://ffdshow-tryout.sourceforge.net/wiki/credits</authors>
     <licenseUrl>http://ffdshow-tryout.sourceforge.net/wiki/credits</licenseUrl>
     <projectUrl>http://ffdshow-tryout.sourceforge.net/</projectUrl>

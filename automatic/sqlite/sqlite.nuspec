@@ -5,7 +5,7 @@
     <id>SQLite</id>
     <version>3.33.0</version>
     <title>SQLite</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>D. Richard Hipp, SQLite contributors</authors>
     <licenseUrl>http://www.sqlite.org/copyright.html</licenseUrl>
     <projectUrl>http://www.sqlite.org</projectUrl>

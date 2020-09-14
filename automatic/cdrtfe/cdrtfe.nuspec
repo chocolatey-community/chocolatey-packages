@@ -5,7 +5,7 @@
     <id>cdrtfe</id>
     <version>1.5.8</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/cdrtfe</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>cdrtfe</title>
     <authors>cdrtfe team</authors>
     <projectUrl>http://cdrtfe.sourceforge.net/</projectUrl>

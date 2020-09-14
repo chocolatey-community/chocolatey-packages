@@ -5,7 +5,7 @@
     <id>videoder</id>
     <version>1.0.9</version>
     <title>Videoder</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Videoder team</authors>
     <licenseUrl>https://www.videoder.com/terms</licenseUrl>
     <projectUrl>https://www.videoder.com</projectUrl>

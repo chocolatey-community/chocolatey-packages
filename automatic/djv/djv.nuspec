@@ -5,7 +5,7 @@
     <id>djv</id>
     <version>2.0.8</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/djv</packageSourceUrl>
-    <owners>chocolatey, Redsandro</owners>
+    <owners>chocolatey-community, Redsandro</owners>
     <title>DJV Imaging</title>
     <authors>Darby Johnston</authors>
     <projectUrl>https://darbyjohnston.github.io/DJV/</projectUrl>

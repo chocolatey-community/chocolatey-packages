@@ -5,7 +5,7 @@
     <id>gobby</id>
     <version>0.5.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gobby</packageSourceUrl>
-    <owners>chocolatey, AdmiringWorm</owners>
+    <owners>chocolatey-community, AdmiringWorm</owners>
     <title>Gobby</title>
     <authors>aburgm</authors>
     <projectUrl>https://gobby.github.io/</projectUrl>

@@ -5,7 +5,7 @@
     <version>2.38.0.20190211</version>
     <title>Graphviz - Graph Visualization Software</title>
     <authors>Arif Bilgin, graphviz committers</authors>
-    <owners>chocolatey, Jason Denizac, Friedrich von Never</owners>
+    <owners>chocolatey-community, Jason Denizac, Friedrich von Never</owners>
     <licenseUrl>https://www.graphviz.org/License.php</licenseUrl>
     <projectUrl>https://www.graphviz.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png</iconUrl>

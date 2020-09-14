@@ -5,7 +5,7 @@
     <id>keyfinder</id>
     <version>2.0.10.13</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keyfinder</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>The Magical Jelly Bean Keyfinder</title>
     <authors>Magical Jelly Bean</authors>
     <projectUrl>http://www.magicaljellybean.com/keyfinder/</projectUrl>

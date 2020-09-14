@@ -5,7 +5,7 @@
     <id>clipgrab</id>
     <version>3.8.14</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/clipgrab</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Clipgrab</title>
     <authors>Philipp Schmieder Medien</authors>
     <projectUrl>https://clipgrab.org/</projectUrl>

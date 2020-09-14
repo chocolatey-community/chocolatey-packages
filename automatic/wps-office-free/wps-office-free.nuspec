@@ -5,7 +5,7 @@
     <id>wps-office-free</id>
     <version>11.2.0.9665</version>
     <title>WPS Office Free</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Kingsoft Software</authors>
     <projectUrl>https://www.wps.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c4b46cad1e6a8071b53bb3b797940cabae7f4152/icons/wps-office-free.png</iconUrl>

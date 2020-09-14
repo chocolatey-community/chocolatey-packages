@@ -4,7 +4,7 @@
   <metadata>
     <id>fiddler4</id>
     <title>Fiddler</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <version>4.6.20173.38786</version>
     <authors>Telerik</authors>
     <summary>Fiddler Web Debugging Proxy</summary>

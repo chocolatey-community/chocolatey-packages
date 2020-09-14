@@ -5,7 +5,7 @@
     <id>vp8-vfw</id>
     <version>1.2.0.20170430</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/vp8-vfw</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>VP8 Video for Windows codec</title>
     <authors>Optima SC Inc</authors>
     <projectUrl>http://www.optimasc.com/products/vp8vfw/index.html</projectUrl>

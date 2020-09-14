@@ -6,7 +6,7 @@
     <title>Winamp</title>
     <version>5.666</version>
     <authors>Nullsoft</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>Winamp is a media player for Windows</summary>
     <description>Winamp is a skinnable, multi-format media player.
 

@@ -5,7 +5,7 @@
     <id>free-virtual-keyboard</id>
     <version>4.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/free-virtual-keyboard</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Free Virtual Keyboard</title>
     <authors>Comfort Software Group</authors>
     <projectUrl>http://freevirtualkeyboard.com/</projectUrl>

@@ -5,7 +5,7 @@
     <id>blender</id>
     <version>2.90.0</version>
     <title>Blender</title>
-    <owners>chocolatey, Redsandro</owners>
+    <owners>chocolatey-community, Redsandro</owners>
     <authors>Blender Foundation</authors>
     <licenseUrl>https://www.blender.org/about/license/</licenseUrl>
     <projectUrl>https://www.blender.org</projectUrl>

@@ -5,7 +5,7 @@
     <version>3.4.3</version>
     <title>Git Extensions</title>
     <authors>Henk Westhuis</authors>
-    <owners>chocolatey ferventcoder</owners>
+    <owners>chocolatey-community ferventcoder</owners>
     <licenseUrl>https://github.com/gitextensions/gitextensions/blob/master/LICENSE.md</licenseUrl>
     <projectUrl>http://gitextensions.github.io/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a6a2ac897a7b02a2889d5834d0133d7b8464799c/icons/gitextensions.svg</iconUrl>

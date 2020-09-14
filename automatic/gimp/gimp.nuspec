@@ -5,7 +5,7 @@
     <id>gimp</id>
     <version>2.10.20.1</version>
     <title>GIMP</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>GIMP Team</authors>
     <licenseUrl>https://www.gimp.org/about/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -19,7 +19,7 @@
     <!-- IconUrl: Skip check -->
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg</iconUrl>
     <summary>A browser that lets you browse safer and faster by blocking ads and trackers.</summary>
-    <owners>chocolatey, Sanshiro</owners>
+    <owners>chocolatey-community, Sanshiro</owners>
     <authors>Brave Software Inc.</authors>
     <tags>foss cross-platform admin brave brave-browser bravebrowser web browser web-browser chromium adblock adblocker privacy</tags>
     <projectUrl>https://brave.com/</projectUrl>

@@ -5,7 +5,7 @@
     <id>maxthon.commandline</id>
     <version>5.3.8.2000</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/maxthon.commandline</packageSourceUrl>
-    <owners>chocolatey, Maxthon International Limited</owners>
+    <owners>chocolatey-community, Maxthon International Limited</owners>
     <title>Maxthon (Portable)</title>
     <authors>Maxthon International Limited</authors>
     <projectUrl>http://www.maxthon.com/</projectUrl>

@@ -6,7 +6,7 @@
     <version>2.4.46</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <licenseUrl>http://www.apache.org/licenses</licenseUrl>
     <projectUrl>http://httpd.apache.org</projectUrl>
     <docsUrl>http://httpd.apache.org/docs/2.4</docsUrl>

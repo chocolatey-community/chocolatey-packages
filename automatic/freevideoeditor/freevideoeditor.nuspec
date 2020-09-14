@@ -5,7 +5,7 @@
     <id>freevideoeditor</id>
     <version>6.5.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/freevideoeditor</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>VSDC Free Video Editor</title>
     <authors>Flash-Integro LLC</authors>
     <projectUrl>http://www.videosoftdev.com/free-video-editor</projectUrl>

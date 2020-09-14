@@ -5,7 +5,7 @@
     <id>alldup</id>
     <version>4.4.34</version>
     <title>AllDup</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Michael Thummerer Software Design</authors>
     <licenseUrl>http://www.alldup.de/alldup_help/alldup.htm</licenseUrl>
     <projectUrl>http://www.alldup.de/en_index.php</projectUrl>

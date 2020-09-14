@@ -5,7 +5,7 @@
     <id>musescore</id>
     <version>3.5</version>
     <title>MuseScore</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>MuseScore developers</authors>
     <licenseUrl>https://github.com/musescore/MuseScore/blob/master/LICENSE.GPL</licenseUrl>
     <projectUrl>https://musescore.org/en</projectUrl>

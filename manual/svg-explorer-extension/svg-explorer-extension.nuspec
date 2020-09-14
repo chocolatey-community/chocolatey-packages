@@ -5,7 +5,7 @@
     <id>svg-explorer-extension</id>
     <version>0.1.1.20170428</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/svg-explorer-extension</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>svg-explorer-extension</title>
     <authors>Tibold Kandrai</authors>
     <projectUrl>https://svgextension.codeplex.com/</projectUrl>

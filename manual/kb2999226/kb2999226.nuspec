@@ -6,7 +6,7 @@
     <version>1.0.20181019</version>
     <title>Update for Universal C Runtime in Windows (KB2999226)</title>
     <authors>Microsoft</authors>
-    <owners>chocolatey,RB</owners>
+    <owners>chocolatey-community,RB</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://support.microsoft.com/en-us/kb/2999226</licenseUrl>
     <projectUrl>https://support.microsoft.com/en-us/kb/2999226</projectUrl>

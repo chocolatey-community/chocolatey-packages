@@ -5,7 +5,7 @@
     <id>vcredist2015</id>
     <version>14.0.24215.20170201</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2015</packageSourceUrl>
-    <owners>chocolatey,pocki_c</owners>
+    <owners>chocolatey-community,pocki_c</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2015 Update 3 (with hotfix 2016-09-14)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://blogs.msdn.microsoft.com/vcblog/2016/06/28/visual-studio-2015-update-3-available-now/</projectUrl>

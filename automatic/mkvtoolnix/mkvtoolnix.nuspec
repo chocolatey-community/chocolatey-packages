@@ -5,7 +5,7 @@
     <id>mkvtoolnix</id>
     <version>50.0.0</version>
     <title>MKVToolNix</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Moritz Bunkus</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>https://www.bunkus.org/videotools/mkvtoolnix/</projectUrl>

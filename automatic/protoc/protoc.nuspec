@@ -6,7 +6,7 @@
     <version>4.0.0-rc-2</version>
     <title>Protocol Buffers</title>
     <authors>Google</authors>
-    <owners>chocolatey, keen, jordigg, drel</owners>
+    <owners>chocolatey-community, keen, jordigg, drel</owners>
     <licenseUrl>https://github.com/protocolbuffers/protobuf/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://developers.google.com/protocol-buffers/</projectUrl>
     <releaseNotes>https://github.com/protocolbuffers/protobuf/releases/tag/v4.0.0-rc-2</releaseNotes>

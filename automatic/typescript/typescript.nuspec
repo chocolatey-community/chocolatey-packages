@@ -5,7 +5,7 @@
     <id>typescript</id>
     <version>4.0.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/typescript</packageSourceUrl>
-    <owners>chocolatey, Microsoft</owners>
+    <owners>chocolatey-community, Microsoft</owners>
     <title>TypeScript</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.typescriptlang.org/</projectUrl>

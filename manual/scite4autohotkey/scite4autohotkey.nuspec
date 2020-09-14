@@ -5,7 +5,7 @@
     <id>scite4autohotkey</id>
     <version>3.0.06.20170428</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/scite4autohotkey</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>SciTE4AutoHotkey</title>
     <authors>fincs</authors>
     <projectUrl>https://fincs.ahk4.net/scite4ahk/</projectUrl>

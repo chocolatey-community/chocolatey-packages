@@ -5,7 +5,7 @@
     <id>pcwrunas</id>
     <version>0.4.0.20161129</version>
     <title>pcwRunAs</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>PC-Welt</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.pcwelt.de/downloads/pcwRunAs-1215998.html</projectUrl>

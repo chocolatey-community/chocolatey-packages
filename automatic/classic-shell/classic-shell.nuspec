@@ -5,7 +5,7 @@
     <id>classic-shell</id>
     <version>4.3.1.20180405</version>
     <title>Classic Shell</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Ivo Beltchev</authors>
     <licenseUrl>http://www.classicshell.net/faq/#general_oss</licenseUrl>
     <projectUrl>http://www.classicshell.net/</projectUrl>

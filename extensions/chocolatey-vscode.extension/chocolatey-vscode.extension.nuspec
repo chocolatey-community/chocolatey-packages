@@ -7,7 +7,7 @@
     <title>Chocolatey Visual Studio Code servicing extension</title>
     <summary>Helper functions useful for developing packages for installing Visual Studio Code extensions.</summary>
     <authors>chocolatey</authors>
-    <owners>chocolatey, pascalberger</owners>
+    <owners>chocolatey-community, pascalberger</owners>
     <description>
 This package provides helper functions useful for developing packages for installing Visual Studio Code extensions.
 These functions may be used in Chocolatey install/uninstall scripts by declaring this package a dependency in your package's nuspec.

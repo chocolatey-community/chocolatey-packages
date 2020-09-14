@@ -6,7 +6,7 @@
     <title>VirtualBox</title>
     <version>6.1.14</version>
     <authors>Oracle Corporation</authors>
-    <owners>chocolatey, Rob Reynolds, Mike Dellanoce</owners>
+    <owners>chocolatey-community, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
     <description><![CDATA[VirtualBox is a cross-platform virtualization application. It installs on existing Intel or AMD-based computers, whether they are running Windows, Mac, Linux or Solaris operating systems. It extends the capabilities of your existing computer so that it can run multiple operating systems (inside multiple virtual machines) at the same time.
 

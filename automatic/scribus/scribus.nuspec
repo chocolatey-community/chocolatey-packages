@@ -5,7 +5,7 @@
     <id>scribus</id>
     <version>1.4.8</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/scribus</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Scribus</title>
     <authors>The Scribus Team</authors>
     <projectUrl>https://www.scribus.net/</projectUrl>

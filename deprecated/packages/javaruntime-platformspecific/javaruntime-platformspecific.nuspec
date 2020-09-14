@@ -5,7 +5,7 @@
     <id>javaruntime-platformspecific</id>
     <version>7.0.79.20161125</version>
     <title>[Deprecated] Java Runtime (JRE)</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Oracle</authors>
     <licenseUrl>http://www.oracle.com/technetwork/java/javase/terms/license/index.html</licenseUrl>
     <projectUrl>http://www.java.com</projectUrl>

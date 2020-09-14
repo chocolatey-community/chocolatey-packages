@@ -6,7 +6,7 @@
     <title>Git</title>
     <version>2.28.0</version>
     <authors>The Git Development Community</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>Git for Windows offers a native set of tools that bring the full feature set of the Git SCM to Windows</summary>
     <description><![CDATA[
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.

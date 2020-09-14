@@ -6,7 +6,7 @@
     <title>Visual Studio Code Azure Resource Manager Tools Extension</title>
     <version>1.0.0.20180620</version>
     <authors>Microsoft</authors>
-    <owners>chocolatey, Pascal Berger</owners>
+    <owners>chocolatey-community, Pascal Berger</owners>
     <projectUrl>https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vscode-extensions/vscode-azurerm-tools</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/6182f6eb471a17f0aeee3e05dc9f1ad5d8c9d1e3/icons/vscode-azurerm-tools.png</iconUrl>

@@ -5,7 +5,7 @@
     <version>106.3.349-beta</version>
     <title>Dropbox</title>
     <authors>Dropbox</authors>
-    <owners>chocolatey,ferventcoder,the-running-dev</owners>
+    <owners>chocolatey-community,ferventcoder,the-running-dev</owners>
     <licenseUrl>https://www.dropbox.com/terms</licenseUrl>
     <projectUrl>https://www.dropbox.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@797be4455d8f66a1989713e741137ed8293dd322/icons/dropbox.svg</iconUrl>

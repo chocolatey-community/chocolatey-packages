@@ -5,7 +5,7 @@
     <id>bluefish</id>
     <version>2.2.11</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bluefish</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>Bluefish</title>
     <authors>Bluefish Dev Team</authors>
     <projectUrl>http://bluefish.openoffice.nl/index.html</projectUrl>

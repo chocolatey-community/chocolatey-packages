@@ -26,7 +26,7 @@ and move your mouse, and even execute complicated macros and scripts.
 ]]></description>
     <copyright>Copyright © 2017 Binary Fortress Software</copyright>
     <tags>voice control macros games trial admin</tags>
-    <owners>chocolatey,keithlammers,the-running-dev</owners>
+    <owners>chocolatey-community,keithlammers,the-running-dev</owners>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/voicebot</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />

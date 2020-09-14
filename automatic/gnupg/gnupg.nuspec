@@ -5,7 +5,7 @@
     <id>gnupg</id>
     <version>2.2.23</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gnupg</packageSourceUrl>
-    <owners>chocolatey, ludicrousByte, wget</owners>
+    <owners>chocolatey-community, ludicrousByte, wget</owners>
     <title>GnuPG</title>
     <authors>Werner Koch, The GnuPG Project</authors>
     <projectUrl>https://www.gnupg.org/</projectUrl>

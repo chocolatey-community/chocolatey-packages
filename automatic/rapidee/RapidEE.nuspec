@@ -4,7 +4,7 @@
     <id>rapidee</id>
     <version>9.2.937</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/rapidee</packageSourceUrl>
-    <owners>chocolatey, Raphx</owners>
+    <owners>chocolatey-community, Raphx</owners>
     <title>RapidEE</title>
     <authors>Oleg Danilov</authors>
     <projectUrl>http://www.rapidee.com/</projectUrl>

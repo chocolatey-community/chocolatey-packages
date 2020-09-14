@@ -5,7 +5,7 @@
     <id>pyhoca-gui</id>
     <version>0.5.0.4001</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/pyhoca-gui</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>PyHoca-GUI</title>
     <authors>Mike Gabriel and Dick Kniep</authors>
     <projectUrl>http://wiki.x2go.org/doku.php/doc:usage:pyhoca-gui</projectUrl>

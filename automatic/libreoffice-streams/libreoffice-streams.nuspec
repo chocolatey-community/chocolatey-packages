@@ -6,7 +6,7 @@
     <title>LibreOffice Fresh</title>
     <version>6.4.6</version>
     <authors>LibreOffice developers</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
     <description><![CDATA[LibreOffice is the free power-packed Open Source personal productivity suite for Windows, macOS and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
 

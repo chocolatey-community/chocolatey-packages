@@ -5,7 +5,7 @@
     <id>{{PackageName}}</id>
     <version>{{PackageVersion}}</version>
     <title>Kingsoft Office Suite Free 2013</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Kingsoft</authors>
     <projectUrl>http://www.kingsoftstore.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/kingsoft-office-free.png</iconUrl>

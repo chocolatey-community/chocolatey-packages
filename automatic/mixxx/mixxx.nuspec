@@ -5,7 +5,7 @@
     <id>mixxx</id>
     <version>2.2.4</version>
     <title>Mixxx</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Mixxx Development Team</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://mixxx.org/</projectUrl>

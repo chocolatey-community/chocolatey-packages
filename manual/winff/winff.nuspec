@@ -5,7 +5,7 @@
     <id>winff</id>
     <version>1.5.5</version>
     <title>WinFF</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Matthew Weatherford,Ian Stoffberg</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://winff.org/html_new/</projectUrl>

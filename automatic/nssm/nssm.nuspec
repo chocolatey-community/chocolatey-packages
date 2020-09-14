@@ -5,7 +5,7 @@
     <version>2.24.101.20180116</version>
     <title>NSSM - the Non-Sucking Service Manager</title>
     <authors>Iain Patterson</authors>
-    <owners>chocolatey, dtgm</owners>
+    <owners>chocolatey-community, dtgm</owners>
     <licenseUrl>https://git.nssm.cc/?p=nssm.git;a=blob;f=README.txt;h=12db7e88a4cd83edb7023b2b92e7d3d5eabf1175;hb=HEAD#l882</licenseUrl>
     <projectUrl>http://nssm.cc/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e5fb8d88f655ec82c1b56702686d9627cfc3ac2e/icons/nssm.png</iconUrl>

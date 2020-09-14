@@ -5,7 +5,7 @@
     <id>mpc-hc</id>
     <version>1.7.13.20180702</version>
     <title>MPC-HC</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>MPC-HC Team</authors>
     <licenseUrl>https://github.com/mpc-hc/mpc-hc/blob/develop/COPYING.txt</licenseUrl>
     <projectUrl>https://mpc-hc.org/</projectUrl>

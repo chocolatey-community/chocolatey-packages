@@ -5,7 +5,7 @@
     <id>assaultcube</id>
     <version>1.2.0.201</version>
     <title>AssaultCube</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>AssaultCube developers</authors>
     <licenseUrl>http://assault.cubers.net/docs/license.html</licenseUrl>
     <projectUrl>http://assault.cubers.net/</projectUrl>

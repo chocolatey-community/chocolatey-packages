@@ -5,7 +5,7 @@
     <id>keepassx</id>
     <version>2.0.3</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/keepassx</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>KeePassX Password Manager</title>
     <authors>KeePassX Team</authors>
     <projectUrl>http://www.keepassx.org/</projectUrl>

@@ -6,7 +6,7 @@
     <title>TortoiseGit</title>
     <version>2.10.0.2</version>
     <authors>TortoiseGit and contributors</authors>
-    <owners>chocolatey, dtgm</owners>
+    <owners>chocolatey-community, dtgm</owners>
     <summary>TortoiseGit provides overlay icons showing the file status, a powerful context menu for Git and much more!</summary>
     <description><![CDATA[
 TortoiseGit is a Windows Shell Interface to Git and based on TortoiseSVN.

@@ -6,7 +6,7 @@
     <title>Tribler</title>
     <version>7.5.2</version>
     <authors>The Tribler Team</authors>
-    <owners>chocolatey, Redsandro</owners>
+    <owners>chocolatey-community, Redsandro</owners>
     <summary>Tribler is an open source anonymous decentralized BitTorrent client.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[

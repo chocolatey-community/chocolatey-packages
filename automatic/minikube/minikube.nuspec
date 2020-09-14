@@ -5,7 +5,7 @@
     <id>Minikube</id>
     <version>1.13.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/minikube</packageSourceUrl>
-    <owners>chocolatey,Andrei Bejenaru</owners>
+    <owners>chocolatey-community,Andrei Bejenaru</owners>
     <title>Minikube: Run Kubernetes locally</title>
     <authors>Google</authors>
     <projectUrl>https://kubernetes.io</projectUrl>

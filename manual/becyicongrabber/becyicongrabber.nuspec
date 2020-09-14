@@ -5,7 +5,7 @@
     <id>becyicongrabber</id>
     <version>2.30.0.20161027</version>
     <title>BeCyIconGrabber</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Benjamin Bentmann</authors>
     <licenseUrl>http://www.becyhome.de/becyicongrabber/description_eng.htm</licenseUrl>
     <projectUrl>http://www.becyhome.de/download_eng.htm#becyicongrabber</projectUrl>

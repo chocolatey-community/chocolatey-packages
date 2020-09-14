@@ -6,7 +6,7 @@
     <title>Sysinternals</title>
     <version>2020.7.15</version>
     <authors>Mark Russinovich, Bryce Cogswell</authors>
-    <owners>chocolatey, Rob Reynolds</owners>
+    <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>Sysinternals - utilities to help you manage, troubleshoot and diagnose your Windows systems and applications.</summary>
 <description><![CDATA[
 The Sysinternals Troubleshooting Utilities have been rolled up into a single suite of tools.

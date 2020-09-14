@@ -5,7 +5,7 @@
     <id>waterfox-classic</id>
     <version>2020.08.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/waterfox</packageSourceUrl>
-    <owners>chocolatey,tonigellida,admiringworm</owners>
+    <owners>chocolatey-community,tonigellida,admiringworm</owners>
     <title>Waterfox classic</title>
     <authors>Alex Kontos</authors>
     <projectUrl>https://www.waterfoxproject.org/</projectUrl>

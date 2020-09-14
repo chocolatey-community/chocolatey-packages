@@ -5,7 +5,7 @@
     <id>tsremux</id>
     <version>0.23.2</version>
     <title>TsRemux</title>
-    <owners>chocolatey purity</owners>
+    <owners>chocolatey-community purity</owners>
     <authors>TsRemux Contributors</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <projectUrl>http://www.videohelp.com/tools/TsRemux</projectUrl>

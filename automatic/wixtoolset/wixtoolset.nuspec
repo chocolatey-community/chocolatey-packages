@@ -5,7 +5,7 @@
     <id>wixtoolset</id>
     <version>3.11.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/wixtoolset</packageSourceUrl>
-    <owners>chocolatey, Gary Ewan Park</owners>
+    <owners>chocolatey-community, Gary Ewan Park</owners>
     <title>WiX Toolset</title>
     <authors>Rob Mensching, Bob Arnson</authors>
     <projectUrl>http://wixtoolset.org/</projectUrl>

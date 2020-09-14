@@ -5,7 +5,7 @@
     <id>encfs4win</id>
     <version>1.11.0-beta2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/encfs4win</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>encfs4win</title>
     <authors>jetwhiz, freddy77</authors>
     <projectUrl>https://encfs.win</projectUrl>

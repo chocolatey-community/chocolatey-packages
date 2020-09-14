@@ -6,7 +6,7 @@
     <version>1.3.1.20170212</version>
     <title>Clementine</title>
     <tags>clementine music mp3 audio media foss cross-platform podcast ogg flac transcode player admin</tags>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>David Sansome, John Maguire and Arnaud Bienner</authors>
     <licenseUrl>https://github.com/clementine-player/Clementine/blob/master/COPYING</licenseUrl>
     <projectUrl>http://www.clementine-player.org/</projectUrl>

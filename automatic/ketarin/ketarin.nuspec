@@ -5,7 +5,7 @@
     <id>ketarin</id>
     <version>1.8.11</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ketarin</packageSourceUrl>
-    <owners>chocolatey, Canneverbe Limited</owners>
+    <owners>chocolatey-community, Canneverbe Limited</owners>
     <title>Ketarin</title>
     <authors>Canneverbe Limited</authors>
     <projectUrl>https://ketarin.org/</projectUrl>

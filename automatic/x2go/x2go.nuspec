@@ -5,7 +5,7 @@
     <id>x2go</id>
     <version>4.1.2.0</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/x2go</packageSourceUrl>
-    <owners>chocolatey, Redsandro</owners>
+    <owners>chocolatey-community, Redsandro</owners>
     <title>X2go Client</title>
     <authors>X2go Team</authors>
     <projectUrl>http://wiki.x2go.org/doku.php</projectUrl>

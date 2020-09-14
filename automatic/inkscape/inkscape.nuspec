@@ -5,7 +5,7 @@
     <id>InkScape</id>
     <version>1.0.1</version>
     <title>Inkscape</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Inkscape developers</authors>
     <licenseUrl>https://git.launchpad.net/inkscape/tree/COPYING</licenseUrl>
     <projectUrl>https://inkscape.org/</projectUrl>

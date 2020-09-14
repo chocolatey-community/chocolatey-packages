@@ -5,7 +5,7 @@
     <id>supertuxkart</id>
     <version>1.2</version>
     <title>SuperTuxKart</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>SuperTuxKart developers</authors>
     <licenseUrl>https://supertuxkart.net/Licensing</licenseUrl>
     <projectUrl>https://supertuxkart.net</projectUrl>

@@ -5,7 +5,7 @@
     <id>prey</id>
     <version>1.9.5</version>
     <title>Prey</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Fork Ltd</authors>
     <licenseUrl>https://github.com/prey/prey-node-client/blob/master/license.txt</licenseUrl>
     <projectUrl>https://preyproject.com/</projectUrl>

@@ -6,7 +6,7 @@
     <title>Cygwin</title>
     <version>3.1.6</version>
     <authors>Red Hat, Inc.</authors>
-    <owners>Chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>A Linux environment for Windows.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Cygwin is a collection of tools which provide a Linux look and feel environment for Windows. Cygwin is also a DLL (cygwin1.dll) which acts as a Linux API layer providing substantial Linux API functionality.

@@ -5,7 +5,7 @@
     <id>defraggler</id>
     <version>2.22.995.20200817</version>
     <title>Defraggler</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Piriform</authors>
     <licenseUrl>https://www.ccleaner.com/legal/end-user-license-agreement</licenseUrl>
     <projectUrl>https://www.ccleaner.com/defraggler</projectUrl>

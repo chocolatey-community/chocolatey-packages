@@ -6,7 +6,7 @@
     <title>Vagrant (Install)</title>
     <version>2.2.10</version>
     <authors>Mitchell Hashimoto, John Bender, HashiCorp</authors>
-    <owners>chocolatey, Rob Reynolds, Patrick Wyatt</owners>
+    <owners>chocolatey-community, Rob Reynolds, Patrick Wyatt</owners>
     <summary>Vagrant - Development environments made easy.</summary>
 <description><![CDATA[
 Vagrant provides easy to configure, reproducible, and portable work environments built on top of industry-standard technology and controlled by a single consistent workflow to help maximize the productivity and flexibility of you and your team.

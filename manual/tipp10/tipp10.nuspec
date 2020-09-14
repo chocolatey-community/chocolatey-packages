@@ -5,7 +5,7 @@
     <id>tipp10</id>
     <version>2.1.0.20170126</version>
     <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/manual/tipp10</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>TIPP10</title>
     <authors>Tom Thielicke IT Solutions</authors>
     <projectUrl>https://www.tipp10.com/en/</projectUrl>

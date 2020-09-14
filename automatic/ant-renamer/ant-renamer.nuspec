@@ -5,7 +5,7 @@
     <id>ant-renamer</id>
     <version>2.12.0.20170526</version>
     <title>Ant Renamer</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Antoine Potten</authors>
     <licenseUrl>http://www.gnu.org/licenses/gpl.txt</licenseUrl>
     <projectUrl>http://www.antp.be/software/renamer</projectUrl>

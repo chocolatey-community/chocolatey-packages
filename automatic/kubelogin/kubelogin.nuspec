@@ -5,7 +5,7 @@
     <id>kubelogin</id>
     <version>1.20.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/kubelogin</packageSourceUrl>
-    <owners>chocolatey,jetersen</owners>
+    <owners>chocolatey-community,jetersen</owners>
     <title>Kubelogin (CLI)</title>
     <authors>int128</authors>
     <projectUrl>https://github.com/int128/kubelogin</projectUrl>

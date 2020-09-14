@@ -7,7 +7,7 @@
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/mono</packageSourceUrl>
     <title>Mono</title>
     <authors>Miguel de Icaza,  other Mono committers</authors>
-    <owners>chocolatey, Miguel de Icaza, other Mono committers</owners>
+    <owners>chocolatey-community, Miguel de Icaza, other Mono committers</owners>
     <licenseUrl>https://www.mono-project.com/docs/faq/licensing/</licenseUrl>
     <projectUrl>https://www.mono-project.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c34f28fa8b47318d55fc0eb48dc53161af85e43b/icons/mono.png</iconUrl>

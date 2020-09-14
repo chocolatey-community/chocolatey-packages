@@ -6,7 +6,7 @@
     <version>4.7.105.20180405</version>
     <title>HostsMan</title>
     <authors>abelhadigital.com</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>HostsMan is a freeware application that lets you manage your Hosts file with ease.</summary>
     <tags>security hosts hostsfile freeware network admin</tags>
     <licenseUrl>http://www.abelhadigital.com/licenses/hm-license.pdf</licenseUrl>

@@ -5,7 +5,7 @@
     <id>thunderbird</id>
     <version>78.2.2</version>
     <title>Mozilla Thunderbird</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Mozilla</authors>
     <licenseUrl>https://www.mozilla.org/en-US/about/legal/terms/thunderbird/</licenseUrl>
     <projectUrl>https://www.mozilla.org/en/thunderbird/</projectUrl>

@@ -6,7 +6,7 @@
     <title>Git Large File Storage (Install)</title>
     <version>2.12.0</version>
     <authors>GitHub Inc</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <projectUrl>https://git-lfs.github.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@e4982c6e79743c6da967833471a94d7b64c11464/icons/git-lfs.png</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/git-lfs.install</packageSourceUrl>

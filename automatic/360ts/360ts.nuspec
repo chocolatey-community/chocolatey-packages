@@ -6,7 +6,7 @@
     <version>10.8.0.1118</version>
     <title>360 Total Security</title>
     <authors>Qihu 360 Software</authors>
-    <owners>chocolatey,adgellida</owners>
+    <owners>chocolatey-community,adgellida</owners>
     <licenseUrl>http://www.360totalsecurity.com/en/about.html</licenseUrl>
     <projectUrl>http://www.360totalsecurity.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@b92d42be38598e16e7e526b3b8b43c3220439cd4/icons/360ts.png</iconUrl>

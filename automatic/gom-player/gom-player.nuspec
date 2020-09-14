@@ -5,7 +5,7 @@
     <id>gom-player</id>
     <version>2.3.55.5139</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gom-player</packageSourceUrl>
-    <owners>chocolatey, AdmiringWorm</owners>
+    <owners>chocolatey-community, AdmiringWorm</owners>
     <title>GOM Player (Install)</title>
     <authors>Gretech Corp</authors>
     <projectUrl>https://www.gomlab.com/gomplayer-media-player/</projectUrl>

@@ -5,7 +5,7 @@
     <id>ext2fsd</id>
     <version>0.69.0.20171118</version>
     <title>Ext2Fsd</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Matt</authors>
     <licenseUrl>https://sourceforge.net/p/ext2fsd/code/ci/master/tree/Ext3Fsd/COPYRIGHT.TXT</licenseUrl>
     <projectUrl>http://www.ext2fsd.com/</projectUrl>

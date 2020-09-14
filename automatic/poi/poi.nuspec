@@ -4,7 +4,7 @@
   <metadata>
     <id>poi</id>
     <version>10.6.0</version>
-    <owners>chocolatey, drelatgithub</owners>
+    <owners>chocolatey-community, drelatgithub</owners>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/poi</packageSourceUrl>
 
     <title>poi</title>

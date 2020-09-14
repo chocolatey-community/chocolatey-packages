@@ -5,7 +5,7 @@
     <id>Opera</id>
     <version>70.0.3728.178</version>
     <title>Opera</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Opera</authors>
     <projectUrl>http://www.opera.com/browser/</projectUrl>
     <licenseUrl>http://www.opera.com/eula/computers</licenseUrl>

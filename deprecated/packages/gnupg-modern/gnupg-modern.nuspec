@@ -5,7 +5,7 @@
     <id>gnupg-modern</id>
     <version>2.2.17</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
-    <owners>chocolatey, ludicrousByte, wget</owners>
+    <owners>chocolatey-community, ludicrousByte, wget</owners>
     <title>[Deprecated] GnuPG modern (Install)</title>
     <authors>Werner Koch, The GnuPG Project</authors>
     <projectUrl>https://www.gnupg.org/</projectUrl>

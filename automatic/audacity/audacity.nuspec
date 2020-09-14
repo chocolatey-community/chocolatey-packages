@@ -4,7 +4,7 @@
   <metadata>
     <id>audacity</id>
     <title>Audacity</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <version>2.4.1</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>

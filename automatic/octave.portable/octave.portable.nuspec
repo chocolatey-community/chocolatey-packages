@@ -5,7 +5,7 @@
     <id>octave.portable</id>
     <version>5.1.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/octave.portable</packageSourceUrl>
-    <owners>chocolatey,Andrei Bejenaru</owners>
+    <owners>chocolatey-community,Andrei Bejenaru</owners>
     <title>GNU Octave (Portable)</title>
     <authors>John W. Eaton</authors>
     <projectUrl>https://www.gnu.org/software/octave</projectUrl>

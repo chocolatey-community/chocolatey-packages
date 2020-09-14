@@ -5,7 +5,7 @@
     <id>wesnoth</id>
     <version>1.14.14</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/wesnoth</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>The Battle for Wesnoth</title>
     <authors>David White and others</authors>
     <projectUrl>http://www.wesnoth.org/</projectUrl>

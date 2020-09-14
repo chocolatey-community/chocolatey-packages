@@ -6,7 +6,7 @@
     <title>Mendeley Desktop</title>
     <version>1.19.6</version>
     <authors>Mendeley Ltd.</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>Empowering researches to organize their references</summary>
     <description><![CDATA[
 Mendeley is a platform that allows scholars from all over the world to collaborate, and opens up science for everyone.

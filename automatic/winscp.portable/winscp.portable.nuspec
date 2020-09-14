@@ -5,7 +5,7 @@
     <version>5.17.6</version>
     <title>WinSCP (Portable)</title>
     <authors>Martin Přikryl</authors>
-    <owners>chocolatey, dtgm</owners>
+    <owners>chocolatey-community, dtgm</owners>
     <licenseUrl>https://winscp.net/docs/license</licenseUrl>
     <projectUrl>https://winscp.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6528e6936f5dc088aa67e03532d06101cdf4ed70/icons/winscp.png</iconUrl>

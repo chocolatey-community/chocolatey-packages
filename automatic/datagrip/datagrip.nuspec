@@ -40,7 +40,7 @@ Example: `choco install datagrip --params "/InstallDir:C:\your\install\path"`
 ]]></description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/datagrip</packageSourceUrl>
-    <owners>chocolatey,Xuanwo,the-running-dev</owners>
+    <owners>chocolatey-community,Xuanwo,the-running-dev</owners>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

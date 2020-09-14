@@ -7,7 +7,7 @@
     <title>Active Presenter</title>
     <version>8.2.0</version>
     <authors>Atomi Systems</authors>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <summary>Screen Recording and Interactive eLearning Authoring Tool</summary>
     <description><![CDATA[
 All the necessary tools for recording screen and creating engaging screencast videos in a free application.

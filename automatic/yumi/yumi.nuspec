@@ -5,7 +5,7 @@
     <id>yumi</id>
     <version>2.0.7.4</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/yumi</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>YUMI (Your Universal Multiboot Installer)</title>
     <authors>Pendrivelinux</authors>
     <projectUrl>http://www.pendrivelinux.com/yumi-multiboot-usb-creator/</projectUrl>

@@ -5,7 +5,7 @@
     <id>freeciv</id>
     <version>2.6.2</version>
     <title>Freeciv</title>
-    <owners>chocolatey purity</owners>
+    <owners>chocolatey-community purity</owners>
     <authors>Freeciv Contributors</authors>
     <licenseUrl>https://github.com/freeciv/freeciv-web/blob/develop/LICENSE.txt</licenseUrl>
     <projectUrl>http://www.freeciv.org/</projectUrl>

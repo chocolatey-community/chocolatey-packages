@@ -5,7 +5,7 @@
     <id>youtube-dl</id>
     <version>2020.09.14</version>
     <title>youtube-dl</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Ricardo Garcia and others</authors>
     <licenseUrl>https://github.com/rg3/youtube-dl/blob/master/LICENSE</licenseUrl>
     <projectUrl>http://rg3.github.io/youtube-dl/</projectUrl>

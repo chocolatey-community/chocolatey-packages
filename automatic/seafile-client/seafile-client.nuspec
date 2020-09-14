@@ -5,7 +5,7 @@
     <id>seafile-client</id>
     <version>7.0.9</version>
     <title>Seafile (Windows Client)</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Seafile Ltd.</authors>
     <licenseUrl>https://github.com/haiwen/seafile-client/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://www.seafile.com/en/home/</projectUrl>

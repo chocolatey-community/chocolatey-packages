@@ -5,7 +5,7 @@
     <id>wincdemu</id>
     <version>4.1.0.20171221</version>
     <title>WinCDEmu</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Sysprogs OÜ</authors>
     <licenseUrl>https://www.gnu.org/licenses/lgpl.html</licenseUrl>
     <projectUrl>http://wincdemu.sysprogs.org/</projectUrl>

@@ -5,7 +5,7 @@
     <id>tv-browser</id>
     <version>4.2.1</version>
     <title>TV-Browser</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>TV-Browser Developers</authors>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>http://www.tvbrowser.org/index.php</projectUrl>

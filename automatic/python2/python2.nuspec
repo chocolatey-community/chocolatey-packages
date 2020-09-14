@@ -5,7 +5,7 @@
     <id>python2</id>
     <version>2.7.18</version>
     <title>Python 2.x</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>https://www.python.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>

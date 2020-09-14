@@ -6,7 +6,7 @@
     <title>CDBurnerXP</title>
     <version>4.5.8.712800</version>
     <authors>Canneverbe Limited</authors>
-    <owners>chocolatey, gep13</owners>
+    <owners>chocolatey-community, gep13</owners>
     <summary>CDBurnerXP - burn CDs and DVDs for free!</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[

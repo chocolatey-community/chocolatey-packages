@@ -9,7 +9,7 @@
     <projectUrl>http://spotify.com</projectUrl>
     <docsUrl>https://support.spotify.com</docsUrl>
     <mailingListUrl>https://community.spotify.com</mailingListUrl>
-    <owners>chocolatey,ferventcoder</owners>
+    <owners>chocolatey-community,ferventcoder</owners>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/spotify</packageSourceUrl>
     <licenseUrl>https://www.spotify.com/us/legal/end-user-agreement/</licenseUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@4ad26e5a5ab2b5280e4d57e5b14fcc9d4c6a22c5/icons/spotify.png</iconUrl>

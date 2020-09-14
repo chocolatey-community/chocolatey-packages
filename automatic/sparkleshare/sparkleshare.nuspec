@@ -5,7 +5,7 @@
     <id>sparkleshare</id>
     <version>1.5.0.20161115</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/sparkleshare</packageSourceUrl>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <title>SparkleShare</title>
     <authors>Linux Community,Hylke Bons</authors>
     <projectUrl>http://sparkleshare.org/</projectUrl>

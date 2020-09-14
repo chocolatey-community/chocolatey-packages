@@ -5,7 +5,7 @@
     <id>mp3tag</id>
     <version>3.02.1-beta</version>
     <title>Mp3tag</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Florian Heidenreich</authors>
     <licenseUrl>http://help.mp3tag.de/misc_license.html</licenseUrl>
     <projectUrl>http://www.mp3tag.de/en/index.html</projectUrl>

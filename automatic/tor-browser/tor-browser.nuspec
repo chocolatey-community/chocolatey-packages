@@ -5,7 +5,7 @@
     <id>tor-browser</id>
     <version>9.5.4</version>
     <title>Tor Browser Bundle</title>
-    <owners>chocolatey</owners>
+    <owners>chocolatey-community</owners>
     <authors>Tor Project</authors>
     <licenseUrl>https://www.torproject.org/docs/faq.html.en#DistributingTor</licenseUrl>
     <projectUrl>https://www.torproject.org/</projectUrl>
