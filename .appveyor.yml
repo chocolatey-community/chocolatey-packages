@@ -54,7 +54,7 @@ environment:
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
-- git config --global user.name "Chocolatey"
+- git config --global user.name "Chocolatey Community"
 - git config --global core.safecrlf false
 
 install:

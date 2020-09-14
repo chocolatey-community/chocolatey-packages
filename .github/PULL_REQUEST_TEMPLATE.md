@@ -28,7 +28,7 @@
 - [ ] My code follows the code style of this repository.
 - [ ] My change requires a change to documentation (this usually means the notes in the description of a package).
 - [ ] I have updated the documentation accordingly (this usually means the notes in the description of a package).
-- [ ] All files are up to date with the latest [Contributing Guidelines](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/CONTRIBUTING.md)
+- [ ] All files are up to date with the latest [Contributing Guidelines](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/master/CONTRIBUTING.md)
 - [ ] The added/modified package passed install/uninstall in the chocolatey test environment.
 - [ ] The changes only affect a single package (not including meta package).
 
@@ -39,4 +39,4 @@
   - [ ] Issue 1 link
   - [ ] Issue 2 Link
 - [ ] *Include the link to the opened PR that removes the package from the original location*
-- [ ] The [migration guidelines](https://github.com/chocolatey/chocolatey-coreteampackages/wiki/Package-migration-process) have been followed
+- [ ] The [migration guidelines](https://github.com/chocolatey-community/chocolatey-coreteampackages/wiki/Package-migration-process) have been followed

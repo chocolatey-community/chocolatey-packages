@@ -27,6 +27,6 @@
 ## Version: 16.04 (2017-01-18)
 - Migrated to the Core Team Repository
 
-[i714]: https://github.com/chocolatey/chocolatey-coreteampackages/issues/714
-[i549]: https://github.com/chocolatey/chocolatey-coreteampackages/issues/549
-[i1066]: https://github.com/chocolatey/chocolatey-coreteampackages/issues/1066
+[i714]: https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/714
+[i549]: https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/549
+[i1066]: https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1066
