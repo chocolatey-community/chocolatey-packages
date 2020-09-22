@@ -4,7 +4,7 @@
     <metadata>
         <id>lightworks</id>
         <title>Lightworks</title>
-        <version>2020.1</version>
+        <version>2020.1.1</version>
         <authors>EditShare LLC</authors>
         <owners>chocolatey-community,Redsandro</owners>
         <summary>Lightworks is a professional NLE for editing and mastering digital video.</summary>
