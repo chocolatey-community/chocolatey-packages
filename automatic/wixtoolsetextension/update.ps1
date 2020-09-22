@@ -7,7 +7,7 @@ $PreURL = "https://marketplace.visualstudio.com"
 function global:au_BeforeUpdate {
 	  Set-ReadMeFile -keys "PackageName,Title,Year" -new_info "$($Latest.PackageName),$($Latest.Title),$($Latest.Year)"
     # Sleep is here due to the possible return of (429) from the URL32 if called too soon.
-    sleep ( Get-Random (5..10) )
+    sleep ( Get-Random (10..20) )
     Get-RemoteFiles -Purge -NoSuffix -verbose
 }
 
@@ -44,14 +44,13 @@ $page = Invoke-WebRequest -UseBasicParsing -Uri $release
 $urls = $page.links
     foreach ( $link in $urls.href ) {
         if ( $link -match "${regex}${year}" ) {
-            # write-host "match -$link-"
             $name = ( $matches[0] ).ToLower()
             $title = ( $name -replace ‘(......)’,’$1 ’).trim(‘ ’)
             $releaseurl = $link
             $new_link = $PreUrl + (( Invoke-WebRequest -UseBasicParsing -Uri ( $releaseurl ) ).links | where { $_ -match "download" } ).href
             $version = Get-Version $new_link
             # Sleep is here due to the possible return of (429) from the URL32 if called too soon.
-            sleep ( Get-Random (5..10) )
+            sleep ( Get-Random (10..20) )
             $url32 = ( Get-RedirectedUrl $new_link -ErrorAction Continue )
         }
     }
