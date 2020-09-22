@@ -1,0 +1,10 @@
+﻿# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png" width="48" height="48"/> [<PackageName>](https://chocolatey.org/packages/<PackageName>)
+
+WiX Toolset Visual Studio Extension (aka: Votive)
+
+<title> provides integration for the WiX Toolset into Visual Studio <year>. You will still need to install the Latest WiX Toolset build tools.
+
+Visual Studio <year> integration for the WiX Toolset - the most powerful set of tools available to create your Windows installation experience.
+
+## Note
+Visual Studio <year> or higher needs to be installed 

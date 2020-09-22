@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 . "$PSScriptRoot\update_helper.ps1"
 
 $wix_ext_url = "https://marketplace.visualstudio.com/items?itemName=WixToolset.WiXToolset"

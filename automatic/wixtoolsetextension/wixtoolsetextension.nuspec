@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>test</id>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/wixtoolset</packageSourceUrl>
+    <owners>chocolatey</owners>
+    <title>test</title>
+    <authors>Rob Mensching, Bob Arnson</authors>
+    <projectUrl>http://wixtoolset.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
+    <copyright>2009 - 2016 Outercurve Foundation</copyright>
+    <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/wixtoolset/wix3</projectSourceUrl>
+    <docsUrl>http://wixtoolset.org/documentation/</docsUrl>
+    <mailingListUrl>http://wixtoolset.org/documentation/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/wixtoolset/issues/</bugTrackerUrl>
+    <tags>wixtoolset wix toolset visual studio extension admin</tags>
+    <summary>Visual Studio integration for the WiX Toolset</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description></description>
+    <dependencies>
+      <dependency id="wixtoolset" version="3.11.2" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
