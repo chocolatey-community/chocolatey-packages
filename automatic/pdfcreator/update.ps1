@@ -23,8 +23,11 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $url32 = Get-RedirectedUrl 'http://download.pdfforge.org/download/pdfcreator/PDFCreatorLegacy-stable?download'
-  $version32 = $url32 -split '\/' | select -last 1 -skip 1
+  $download_page = Invoke-WebRequest -Uri "https://download.pdfforge.org/download/pdfcreator/" -UseBasicParsing
+  $stableReleaseLink = $download_page.Links | ? href -match "/download/pdfcreator/PDFCreator-stable" | % outerHTML
+  $stableReleaseLink = $stableReleaseLink.Substring(60).Replace("-Setup.exe</a>","")
+  $version32 = $stableReleaseLink.Replace("_",".")
+  $url32 = "https://download.pdfforge.org/download/pdfcreator/$version32/PDFCreator-$stableReleaseLink-Setup.exe"
 
   return @{
     URL32       = $url32
