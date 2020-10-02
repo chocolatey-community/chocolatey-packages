@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode-insiders</id>
     <title>Visual Studio Code Insiders</title>
-    <version>1.50.0.20201001</version>
+    <version>1.50.0.20201002</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community</owners>
     <projectUrl>https://code.visualstudio.com/insiders</projectUrl>
@@ -47,7 +47,7 @@ Example: `choco install vscode-insiders --params "/NoDesktopIcon /DontAddToPath"
 ]]></description>
     <tags>microsoft visualstudiocode visualstudiocode-insiders vscode vscode-insiders development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="vscode-insiders.install" version="[1.50.0.20201001]" />
+      <dependency id="vscode-insiders.install" version="[1.50.0.20201002]" />
     </dependencies>
     <releaseNotes>https://code.visualstudio.com/updates/#_preview-features</releaseNotes>
   </metadata>
