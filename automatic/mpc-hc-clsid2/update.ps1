@@ -27,8 +27,7 @@ function global:au_GetLatest {
   $re = 'x86\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-  $re = 'x64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $url64 = $url32 -replace "x86","x64"
 
   $verRe = 'MPC-HC\.|\.x(86|64)'
   $version32 = $url32 -split "$verRe" | select -first 1 -skip 1
