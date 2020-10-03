@@ -3,7 +3,7 @@ import-module au
 $releases = 'http://windows.php.net/downloads/releases/'
 # Change the release url above with this one when
 # version 5.5.x is only available from the archive section
-# Fallback to the archive version in ./tools/chocolateyInstall.ps1
+# Fallback to the archive version in ./tools/chocolateyinstall.ps1
 # can also be removed then
 #$releases = 'http://windows.php.net/downloads/releases/archives/'
 
