@@ -6,15 +6,15 @@ The installer have been downloaded from the alternative GitHub mirror listed on 
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/peazip/PeaZip/releases/download/7.4.1/peazip-7.4.1.WINDOWS.exe>
-  64-Bit: <https://github.com/peazip/PeaZip/releases/download/7.4.1/peazip-7.4.1.WIN64.exe>
+  32-Bit: <https://github.com/peazip/PeaZip/releases/download/7.4.2/peazip-7.4.2.WINDOWS.exe>
+  64-Bit: <https://github.com/peazip/PeaZip/releases/download/7.4.2/peazip-7.4.2.WIN64.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 8A577515B16AAC778BABF4A0ECD1D3836FA7F6397608ACC6835308031FE995B0
-  checksum64: B056E521EBFA54B083806DEB44E79AB6D1CF796EB480C44A3235B6D3131A83F4
+  checksum32: C567EAE0045D5D0179DAA00121E295882562A8E712CAECDC2A33D5BBCD8F22EA
+  checksum64: 3D24DF1C087DCEABB74BB51E70B40750CDDA9C19DD61EFEED2A5C568A8FB0EF0
 
 The included 'LICENSE.txt' file have been obtained from <https://www.gnu.org/licenses/lgpl-3.0.txt>
 and should be the correct license as mentioned on their project page <http://peazip.org/peazip-tos-privacy.html>.
