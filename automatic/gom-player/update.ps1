@@ -39,4 +39,5 @@ function global:au_GetLatest {
   }
 }
 
+# Fixes checksum by including global:au_BeforeUpdate
 update -ChecksumFor none
