@@ -1,8 +1,15 @@
 ﻿Import-Module AU
 
 $releases     = 'https://www.gomlab.com/gomplayer-media-player/'
-$versions     = 'https://www.gomlab.com/ajax/update.gom?page=1&lang=eng&product=GOMPLAYER'
+$versions     = 'https://www.gomlab.com/ajax/update.gom?page=1&lang=eng&product=GOMPLAYER&update_lang=eng'
 $softwareName = 'GOM Player'
+
+function global:au_BeforeUpdate {
+  # We need this, otherwise the checksum won't get created
+  # Since windows 8 or later is skipped.
+  $Latest.ChecksumType32 = 'sha256'
+  $Latest.Checksum32     = Get-RemoteChecksum $Latest.URL32
+}
 
 function global:au_SearchReplace {
   @{
@@ -32,4 +39,5 @@ function global:au_GetLatest {
   }
 }
 
-update -ChecksumFor 32
+# Fixes checksum by including global:au_BeforeUpdate
+update -ChecksumFor none
