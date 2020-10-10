@@ -48,10 +48,13 @@ function GetBuildHashFromMirrorBrainUrl($url) {
   if ([string]::IsNullOrEmpty($url)) {
     return $null
   }
-
+  # Better patching of the url variable for not more 404 errors
+  $url = "${url}" + ".sha256"
+  Write-Host "url -$url-"
+  
   # We are not using the $url/sha256 suffix because that file is missing
   # from downloadarchive :/
-  $request = [System.Net.WebRequest]::Create("$url.sha256")
+  $request = [System.Net.WebRequest]::Create($url)
   $s = $request.GetResponse().GetResponseStream()
   $sr = New-Object -TypeName System.IO.StreamReader($s)
   $answer = $sr.ReadToEnd()
