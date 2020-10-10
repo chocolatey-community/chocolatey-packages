@@ -36,7 +36,6 @@ function global:au_GetLatest {
   $re = 'x86\.exe$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
-  $url32 =
   @{
     URL32        = $url32
     URL64        = $url64
