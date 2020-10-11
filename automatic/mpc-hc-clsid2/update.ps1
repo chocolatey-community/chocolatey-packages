@@ -29,7 +29,7 @@ function global:au_GetLatest {
   $versionHtml = $releasesPage.Links | ? title -match $re | select -first 1
   $version = $versionHtml.title
 
-  $download_page = Invoke-WebRequest -Uri "$($releases)/tag/$($version)"
+  $download_page = Invoke-WebRequest -Uri "$($releases)/tag/$($version)" -UseBasicParsing
   $re = 'x64\.exe$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
 
