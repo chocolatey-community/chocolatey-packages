@@ -5,7 +5,7 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'nmap'
   fileType       = 'exe'
-  file           = "$toolsDir\nmap-7.90-setup.exe"
+  file           = "$toolsDir\nmap-7.91-setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
