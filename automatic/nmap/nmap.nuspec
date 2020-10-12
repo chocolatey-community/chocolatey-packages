@@ -8,7 +8,7 @@
     <authors>Fyodor</authors>
     <owners>chocolatey-community zippy1981 ferventcoder</owners>
     <licenseUrl>https://svn.nmap.org/nmap/LICENSE</licenseUrl>
-    <projectUrl>http://nmap.org/</projectUrl>
+    <projectUrl>https://nmap.org/</projectUrl>
     <projectSourceUrl>https://svn.nmap.org/</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a0850d2be498cbb87f9f0fd7c84bc1eafd4e58ba/icons/nmap.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
