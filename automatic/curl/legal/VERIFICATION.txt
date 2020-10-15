@@ -7,8 +7,8 @@ Package can be verified like this:
 1. Go to https://curl.haxx.se/download.html, scroll down to Windows and look for 
    binaries provided by Viktor Szakáts
 
-   x32: https://bintray.com/artifact/download/vszakats/generic/curl-7.72.0-win32-mingw.zip
-   x64: https://bintray.com/artifact/download/vszakats/generic/curl-7.72.0-win64-mingw.zip
+   x32: https://bintray.com/artifact/download/vszakats/generic/curl-7.73.0-win32-mingw.zip
+   x64: https://bintray.com/artifact/download/vszakats/generic/curl-7.73.0-win64-mingw.zip
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: EA7FDD69F264C7FA404504F57AC1A157F628887B4BC0EC3E568D74F637685935
-   checksum64: 815F8B8A55E38352DD188F712193D9EEE81B1ADEF297137D11A1F7E0113423E9
+   checksum32: 12255FB029CCDA1A8AE7D24F17453A224FD561A5046FBB24FDC1263165134B97
+   checksum64: 2E1FFDB6C25C8648A1243BB3A268120BE442399B1C93D7DA309BBA235ECDAB9A
 
 File 'LICENSE.txt' obtained from:
    https://github.com/curl/curl/blob/028391df5d84d9fae3433afdee9261d565900355/COPYING
