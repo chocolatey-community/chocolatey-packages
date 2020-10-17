@@ -72,7 +72,7 @@ param(
 )
 
 $release_url = $release -replace("<build>", $build) -replace("<branch>", $branch )
-$packagename = @{$true="graphviz-$build";$false="graphviz"}[ ($build -eq "cmake") ]
+$packagename = @{$true="graphviz-$build";$false="graphviz"}[ ($build -eq "msbuild") ]
 $title = "graphviz $build ($branch)"; $ext = @{$true="exe";$false="zip"}[ ($build -eq "cmake") ]
 $page = Invoke-WebRequest -UseBasicParsing $release_url
 $url = $release_url + ( $page.links | Select -last 1 -ExpandProperty href)
@@ -96,7 +96,7 @@ return $data
 }
 
 function global:au_GetLatest {
-$builds = "cmake","msbuild"; $branches = "stable","development"
+$builds = "cmake"; $branches = "stable","development"
 $streams = [ordered] @{ }
   foreach( $type in $builds ) {
     foreach( $branch in $branches ) {
