@@ -1,42 +1,15 @@
-﻿import-module au
+import-module au
 . "$PSScriptRoot\update_helper.ps1"
 
 $GraphvizURL = "https://www2.graphviz.org/Packages/<branch>/windows/10/<build>/Release/Win32/"
 
 function global:au_BeforeUpdate {
-    rm "$PSScriptRoot\tools\*.zip"
-    rm "$PSScriptRoot\tools\*.exe"
 	  Set-ReadMeFile -keys "PackageName" -new_info "$($Latest.PackageName)"
     Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {
-  if ( [string]::IsNullOrEmpty($Latest.URL64) ) {
-	      cp "$PSScriptRoot\ver32.tmp" "$PSScriptRoot\legal\VERIFICATION.txt" -Force
-	      cp "$PSScriptRoot\install32.tmp" "$PSScriptRoot\tools\chocolateyInstall.ps1" -Force
-        if (Test-Path "$PSScriptRoot\tools\chocolateyUninstall.ps1"){
-            rm "$PSScriptRoot\tools\chocolateyUninstall.ps1" -Force
-        }
-   @{
-			"$PSScriptRoot\tools\chocolateyInstall.ps1" = @{
-				"(?i)(^\s*packageName\s*=\s*)('.*')"    = "`$1'$($Latest.PackageName)'"
-				"(?i)(^[$]file\s*=\s*)('.*')"           = "`$1'$($Latest.FileName32)'"
-				"(?i)(^\s*softwareName\s*=\s*)('.*')"   = "`$1'$($Latest.Title)'"
-			}
-			"$PSScriptRoot\graphviz.nuspec" = @{
-				"(?i)(^\s*\<id\>).*(\<\/id\>)"       = "`${1}$($Latest.PackageName)`${2}"
-				"(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
-			}
-      "$PSScriptRoot\legal\VERIFICATION.txt" = @{
-        "(?i)(\s+x32:).*"     = "`${1} $($Latest.URL32)"
-        "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
-      }
-    }
-	} else {
-	      cp "$PSScriptRoot\ver64.tmp" "$PSScriptRoot\legal\VERIFICATION.txt" -Force
-	      cp "$PSScriptRoot\install64.tmp" "$PSScriptRoot\tools\chocolateyInstall.ps1" -Force
-	      cp "$PSScriptRoot\uninstall64.tmp" "$PSScriptRoot\tools\chocolateyUninstall.ps1" -Force
-   @{
+  @{
 			"$PSScriptRoot\tools\chocolateyInstall.ps1" = @{
 				"(?i)(^\s*packageName\s*=\s*)('.*')"    = "`$1'$($Latest.PackageName)'"
 				"(?i)(^[$]file\s*=\s*)('.*')"           = "`$1'$($Latest.FileName32)'"
@@ -58,8 +31,7 @@ function global:au_SearchReplace {
         "(?i)(\s+x64:).*"     = "`${1} $($Latest.URL64)"
         "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
       }
-    }
-	}
+  }
 }
 
 function Get-LatestGraphviz {
