@@ -14,3 +14,5 @@ $file = $registry.UninstallString
 $packageArgs.Add( "File", $file )
 # Now to Uninstall the Package
 Uninstall-ChocolateyPackage @packageArgs
+
+@('dot') |ForEach-Object {Install-BinFile $_ "$installLocation\bin\$_.exe"}
