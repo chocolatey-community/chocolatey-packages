@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official download link listed on <https://www.waterfox.net/releases/>
 and can be verified like this:
 
-1. Download <https://cdn.waterfox.net/releases/win64/installer/Waterfox%20Classic%202020.09%20Setup.exe>
+1. Download <https://cdn.waterfox.net/releases/win64/installer/Waterfox%20Classic%202020.10%20Setup.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 14CA2EA74055DE37114C066619D5906F035CCFF40CC020A9CFF36803870D03A1
+  checksum: D46F149511B3571AEA0F63709C4587680BF38284406CDC490146B02C78B7DD84
 
 File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE>
