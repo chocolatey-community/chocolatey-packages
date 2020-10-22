@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$version = '12.10.9.3'
+$version = '12.10.10.2'
 
 $packageArgs = @{
   packageName    = 'iTunes'
   fileType       = 'msi'
-  url            = 'https://secure-appldnld.apple.com/itunes12/001-37027-20200915-5CBE9AC0-F7A0-11EA-96A7-8DB5DD073FF6/iTunesSetup.exe'
-  url64bit       = 'https://secure-appldnld.apple.com/itunes12/001-37026-20200915-5CBD39A0-F7A0-11EA-BB8F-8EB5DD073FF6/iTunes64Setup.exe'
+  url            = 'https://secure-appldnld.apple.com/itunes12/001-50021-20201019-A1CAB6C2-1239-11EB-AE89-F95946985FC9/iTunesSetup.exe'
+  url64bit       = 'https://secure-appldnld.apple.com/itunes12/001-50023-20201019-A1CA6082-1239-11EB-990E-FA5946985FC9/iTunes64Setup.exe'
   softwareName   = 'iTunes'
-  checksum       = '0365234E61110F191196C559E96541DEDC5C3D358A52347D0EE90FA7338B4214'
+  checksum       = '99A5CE0367C1177C16131FE30CF9B2C45382917FEDBA88D02077E7C62BD2076D'
   checksumType   = 'sha256'
-  checksum64     = '2a4bae8cc0c0287d9d7a5359082760f00b5038d27a565b46bda81518a0bdd5d7'
+  checksum64     = '23a82361bfbbf4a2069839b8819e293d7a9fa25072333394887248a1f20acc01'
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart"
   validExitCodes = @(0, 2010, 1641)
