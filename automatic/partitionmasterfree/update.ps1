@@ -1,7 +1,7 @@
 ﻿import-module au
 import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$exec = "http://download.easeus.com/free/epm_e1125.exe"
+$exec = "https://down.easeus.com/product/epm_free"
 
 function global:au_SearchReplace {
   @{
