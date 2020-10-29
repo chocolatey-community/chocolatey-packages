@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x86: https://download.kde.org/stable/krita/4.4.0/krita-x86-4.4.0-setup.exe
-   x64: https://download.kde.org/stable/krita/4.4.0/krita-x64-4.4.0-setup.exe
+   x86: https://download.kde.org/stable/krita/4.4.1/krita-x86-4.4.1-setup.exe
+   x64: https://download.kde.org/stable/krita/4.4.1/krita-x64-4.4.1-setup.exe
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-    checksum32: 68CFB26D1C6369332FB1747421A0028179E6E7F96B84593BE033151F065A6086
-    checksum64: 1BFE467CB5CE4E3AD69EC2CA18A35A708FBAA9ED7A4E4C04B73AA17E172BD20E
+    checksum32: CDE368CD4983293E18E92826A4A7EF40CD1CC39B07E18AE545345474A48982F0
+    checksum64: 93DF0091FF3B4C2EEBB75AF7FF5BAB9D38AF57F92A157EDD4FE09C1F9FA10C0D
 
    Checksums type: sha256
 
