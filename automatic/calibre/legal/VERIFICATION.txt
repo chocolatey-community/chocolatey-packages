@@ -8,7 +8,7 @@ and can be verified by doing the following:
 
 1. Download the following:
   32-Bit software: NOT INCLUDED IN PACKAGE
-  64-Bit software: <https://download.calibre-ebook.com/5.4.0/calibre-64bit-5.4.0.msi>
+  64-Bit software: <https://download.calibre-ebook.com/5.4.1/calibre-64bit-5.4.1.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
@@ -16,6 +16,6 @@ and can be verified by doing the following:
 
   checksum type: sha256
   checksum32: NOT INCLUDED IN PACKAGE
-  checksum64: 23CAFF2D88E15E71CF319086F408BE1BA85AC5CCBFBF0F499181315A517CA0B9
+  checksum64: DCC64678C3D4218F685A7B80AD67E8DEE3E9389B22CF878F40DAE786E806D9CF
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kovidgoyal/calibre/blob/89c271759db5c71202251895f6793e4c1ec65ee6/LICENSE>
