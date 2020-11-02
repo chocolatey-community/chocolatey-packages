@@ -35,6 +35,7 @@ function global:au_GetLatest {
   ($download_page.Content -match "\(v(2[0-9]{3}[.].*)\)")
   $version  = $Matches[1]
   
+  #Update checksum automatically from self-contained executable
   $checksum = Get-RemoteChecksum -Algorithm "sha512" $url
   
   return @{
