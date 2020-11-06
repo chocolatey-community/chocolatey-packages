@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>flightgear</id>
-    <version>2018.3.6</version>
+    <version>2020.3.2</version>
     <title>FlightGear</title>
     <owners>chocolatey-community</owners>
     <authors>FlightGear Team</authors>
@@ -35,7 +35,7 @@ Otherwise installation may fail.
 FlightGear is an open-source flight simulator.  It supports a variety of popular platforms (Windows, Mac, Linux, etc.)
 and is developed by skilled volunteers from around the world.
     </summary>
-    <releaseNotes>http://wiki.flightgear.org/Changelog_2018.3</releaseNotes>
+    <releaseNotes>http://wiki.flightgear.org/Changelog_2020.3</releaseNotes>
     <copyright />
     <tags>flightgear flight simulator game admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/flightgear</packageSourceUrl>
