@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.bennewitz.com/bluefish/stable/binaries/win32/>
 and can be verified by doing the following:
 
-1. Download the following <https://www.bennewitz.com/bluefish/stable/binaries/win32/Bluefish-2.2.11-setup.exe>
+1. Download the following <https://www.bennewitz.com/bluefish/stable/binaries/win32/Bluefish-2.2.12-setup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: D9084DD04154B5DD8F2473CA0B5A8FB15955B076765792919BF9183DDC87B806
+  checksum: 56460CBB35D3433E50A1343FF18336E7FA5380B600C21401691FD2664BD9516E
 
 The file 'LICENSE.txt' has been obtained from <https://sourceforge.net/p/bluefish/code/HEAD/tree/trunk/bluefish/COPYING>

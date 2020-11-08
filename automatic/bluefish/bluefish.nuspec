@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>bluefish</id>
-    <version>2.2.11</version>
+    <version>2.2.12</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bluefish</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>Bluefish</title>
