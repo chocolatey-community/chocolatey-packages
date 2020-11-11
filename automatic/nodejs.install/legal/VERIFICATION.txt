@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://nodejs.org/dist/v15.1.0/node-v15.1.0-x86.msi>
-  64-Bit: <https://nodejs.org/dist/v15.1.0/node-v15.1.0-x64.msi>
+  32-Bit: <https://nodejs.org/dist/v15.2.0/node-v15.2.0-x86.msi>
+  64-Bit: <https://nodejs.org/dist/v15.2.0/node-v15.2.0-x64.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 70302F55F1E9C2AB24E01DD8EF1739F4B760582AD65C2E6F15FC7B14F43C19E2
-  checksum64: 5F98B3247DE94A5104DA88295152B3A9FE9EA22410D1C2D10AC123FE58BB8050
+  checksum32: 24F91E8D930E24426B31FEE27B7F9BB75553A0819E82AF65286B29F45A2CF0D0
+  checksum64: 3A395DBC33D6F1877C6B63391B15BBBF79E41AE10954523788A262BBAC866DBA
 
 File 'LICENSE.txt' is obtained from <https://github.com/nodejs/node/blob/03023fa7ae060c082a014f792d5d1f481a599460/LICENSE>
