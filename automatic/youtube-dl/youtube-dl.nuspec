@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>youtube-dl</id>
-    <version>2020.09.20</version>
+    <version>2020.11.01.1</version>
     <title>youtube-dl</title>
     <owners>chocolatey-community</owners>
     <authors>Ricardo Garcia and others</authors>
-    <licenseUrl>https://github.com/rg3/youtube-dl/blob/master/LICENSE</licenseUrl>
-    <projectUrl>http://rg3.github.io/youtube-dl/</projectUrl>
-    <projectSourceUrl>https://github.com/rg3/youtube-dl</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/rg3/youtube-dl/issues</bugTrackerUrl>
-    <docsUrl>https://github.com/rg3/youtube-dl/blob/master/README.md#readme</docsUrl>
+    <licenseUrl>http://web.archive.org/web/20200916114358/https://github.com/ytdl-org/youtube-dl/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://youtube-dl.org/</projectUrl>
+    <projectSourceUrl>https://github.com/ytdl-org/youtube-dl</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/ytdl-org/youtube-dl/issues</bugTrackerUrl>
+    <docsUrl>http://web.archive.org/web/20200815214757if_/https://raw.githubusercontent.com/ytdl-org/youtube-dl/master/README.md</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[
 youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites. It is written in Python and it's not platform specific. It should work in your Unix box, in Windows or in Mac OS X. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
@@ -23,8 +23,8 @@ youtube-dl is a small command-line program to download videos from YouTube.com a
 ]]></description>
     <summary>youtube-dl is a small command-line program to download videos from YouTube.com and a few more sites.</summary>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a42da86c9cc480a5f3f23677e0d73d88416a3b3c/icons/y-dl.svg</iconUrl>
-    <releaseNotes>https://github.com/rg3/youtube-dl/blob/master/ChangeLog</releaseNotes>
-    <copyright>Copyright © 2006-2016 Ricardo Garcia Gonzalez</copyright>
+    <releaseNotes>http://web.archive.org/web/20200930200424/https://github.com/ytdl-org/youtube-dl/blob/master/ChangeLog</releaseNotes>
+    <copyright>Public domain</copyright>
     <language>en-US</language>
     <tags>youtube-dl cli foss cross-platform video multimedia ffmpeg youtube download</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/youtube-dl</packageSourceUrl>

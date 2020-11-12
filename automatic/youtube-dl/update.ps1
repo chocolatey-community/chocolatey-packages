@@ -1,8 +1,8 @@
 import-module au
 import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
-$domain   = 'https://github.com'
-$releases = "$domain/rg3/youtube-dl/releases/latest"
+$domain   = 'https://youtube-dl.org'
+$releases = "$domain/"
 
 function global:au_BeforeUpdate {
   if (Test-Path "$PSScriptRoot\tools") {
@@ -13,13 +13,6 @@ function global:au_BeforeUpdate {
   $Latest.FileName = Get-WebFileName $Latest.URL32 'youtube-dl.exe'
   $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
   Get-WebFile $Latest.URL32 $filePath
-
-  # Let us check if the checksum actually matches
-  $actualChecksum = Get-FileHash -Algorithm $Latest.ChecksumType32 $filePath | % Hash
-
-  if ($actualChecksum -ne $Latest.Checksum32) {
-    throw "The downloaded file do not match the provided checksum.`Actual Checksum is: $actualChecksum"
-  }
 }
 
 function global:au_SearchReplace {
@@ -37,14 +30,14 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re    = '\.exe$'
-  $url   = $domain + ($download_page.Links | ? href -match $re | select -First 1 -expand href)
+  $url   = $domain + "/" + ($download_page.Links | ? href -match $re | select -First 1 -expand href)
   $filename = $url.Substring($url.LastIndexOf('/') + 1)
-  $version  = $url -split '\/' | select -skip 1 -last 1
-
-  $checksumAsset = $domain + ($download_page.Links | ? href -match "SHA2\-512SUMS$" | select -first 1 -expand href)
-  $checksum_page = Invoke-WebRequest -Uri $checksumAsset -UseBasicParsing
-  $checksum = [regex]::Match($checksum_page, "([a-f\d]+)\s*$([regex]::Escape($filename))").Groups[1].Value
-
+  ($download_page.Content -match "\(v(2[0-9]{3}[.].*)\)")
+  $version  = $Matches[1]
+  
+  #Update checksum automatically from self-contained executable
+  $checksum = Get-RemoteChecksum -Algorithm "sha512" $url
+  
   return @{
     Version = $version
     URL32 = $url
