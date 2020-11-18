@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>wps-office-free</id>
-    <version>11.2.0.9739</version>
+    <version>11.2.0.9747</version>
     <title>WPS Office Free</title>
     <owners>chocolatey-community</owners>
     <authors>Kingsoft Software</authors>
