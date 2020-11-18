@@ -11,6 +11,6 @@ and can be verified like this:
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha512
-  checksum: ad4de081ddfa52e8e7403aeebb6ccc0288ff0d6d54027c026a53cbc6f18a0e9261559daa76df3318e7b96e6efe026999c87b74c2c3fa82b0d16e3a221864ba1e
+  checksum: 7b099dbe44d3c3d72abac3190634c2de9153c5f3d16d291ae85d9b6a3d8aa7873643f7853223b2305f328e716a3dea88c08a16902a8fb768909715df4e1b1da2
 
 File 'LICENSE.txt' is obtained from <https://github.com/rg3/youtube-dl/blob/b7769a05eca3611e492f7a75f1c40cddd2019ef1/LICENSE>
