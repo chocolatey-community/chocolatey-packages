@@ -18,11 +18,10 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 
-function global:au_GetLatest {
-  $urlPre = "$releases/packages/"
+function global:au_GetLatest   {
   $download_page = Invoke-WebRequest -Uri "$releases/packages/" -UseBasicParsing -Header @{ Referer = $releases }
   $version       = $download_page.links | ? href -match 'essentials_build\.(zip|7z)$' | % { $_.href -split '-' | select -Index 1} | ? { $__=$null; [version]::TryParse($_, [ref] $__) } | sort -desc | select -First 1
-  $url64         = $download_page.links | ? href -match "\-${version}\-.*\-essentials_build.*"  | % href | Select -Last 1 | % { $urlPre + $_ }
+  $url64         = $download_page.links | ? href -match "\-${version}\-.*\-essentials_build.*" | Select -Expand href -Last 1
 
   @{ URL64=$url64; Version = $version }
 }
