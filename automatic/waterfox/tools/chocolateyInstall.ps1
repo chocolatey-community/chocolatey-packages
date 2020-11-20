@@ -7,10 +7,10 @@ if ((Get-OSArchitectureWidth -Compare 32) -or $env:chocolateyForceX86 -eq $true)
 }
 
 $packageArgs = @{
-  packageName   = 'waterfox-classic'
+  packageName   = 'Waterfox'
   fileType      = 'exe'
   softwareName  = 'Waterfox*'
-  file          = "$toolsDir\Waterfox Classic 2020.10 Setup_x64.exe"
+  file          = "$toolsDir\Waterfox G3.0.0.1 Setup_x64.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }
