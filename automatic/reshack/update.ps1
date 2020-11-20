@@ -15,8 +15,9 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
-    $download_page.AllElements | ? tagName -eq 'strong' | ? InnerText -match '^Version' | % InnerText | set version
-    $version = $version -split ' ' | select -Last 1
+    $re = '<h3>Download version (.+?):</h3>'
+    $download_page.Content -match $re | Out-Null
+    $version = $Matches[1].Trim()
     $url =  $download_page.Links | ? href -match 'exe' | % href | Select -First 1
     $url = "$releases/$url"
 
