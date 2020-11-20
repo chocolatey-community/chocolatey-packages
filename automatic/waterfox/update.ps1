@@ -54,6 +54,8 @@ param(
   $version  = $url -split '%20| ' | select -Last 1 -Skip 1
   if ($build -eq 'Classic') { $build = 'classic'; $dash = '-' } else { $build=$dash = '' }
   $namePackage = @{$true="waterfox$dash$build";$false="Waterfox$dash$build"}[ ($build -eq 'Classic') ]
+
+  $version = $version.Replace('G', (Get-Date).ToString('yyMM'))
   # We need to replace the space in the url, otherwise we'll get an invalid url error.
   return @{ PackageName = $namePackage ; Title = "Waterfox $build" ; URL64 = ($url -replace ' ','%20'); Version = $version }
 }
