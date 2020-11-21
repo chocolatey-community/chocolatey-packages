@@ -9,27 +9,28 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_SearchReplace {
-@{
-  "$PSScriptRoot\tools\chocolateyInstall.ps1" = @{
-    "(?i)(^\s*packageName\s*=\s*)('.*')"    = "`$1'$($Latest.PackageName)'"
-    "(?i)(^[$]file\s*=\s*)('.*')"           = "`$1'$($Latest.FileName32)'"
-    "(?i)(^[$]file64\s*=\s*)('.*')"         = "`$1'$($Latest.FileName64)'"
-    "(?i)(^\s*softwareName\s*=\s*)('.*')"   = "`$1'$($Latest.Title)'"
-    "(?i)(^\s*fileType\s*=\s*)('.*')"       = "`$1'$($Latest.FileType)'"
-  }
-    "$PSScriptRoot\tools\chocolateyUninstall.ps1" = @{
-    "(?i)(^\s*packageName\s*=\s*)('.*')"    = "`$1'$($Latest.PackageName)'"
-    "(?i)(^\s*fileType\s*=\s*)('.*')"       = "`$1'$($Latest.FileType)'"
-  }
-  "$PSScriptRoot\graphviz.nuspec" = @{
-    "(?i)(^\s*\<id\>).*(\<\/id\>)"       = "`${1}$($Latest.PackageName)`${2}"
-    "(?i)(^\s*\<title\>).*(\<\/title\>)" = "`${1}$($Latest.Title)`${2}"
-  }
-  "$PSScriptRoot\legal\VERIFICATION.txt" = @{
-    "(?i)(\s+x32:).*"     = "`${1} $($Latest.URL32)"
-    "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
-    "(?i)(\s+x64:).*"     = "`${1} $($Latest.URL64)"
-    "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
+  @{
+    "$PSScriptRoot\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')"      = "`$1'$($Latest.PackageName)'"
+      "(?i)(^[$]file\s*=\s*)('.*')"             = "`$1'$($Latest.FileName32)'"
+      "(?i)(^[$]file64\s*=\s*)('.*')"           = "`$1'$($Latest.FileName64)'"
+      "(?i)(^\s*softwareName\s*=\s*)('.*')"     = "`$1'$($Latest.Title)'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')"         = "`$1'$($Latest.FileType)'"
+    }
+      "$PSScriptRoot\tools\chocolateyUninstall.ps1" = @{
+      "(?i)(^\s*packageName\s*=\s*)('.*')"      = "`$1'$($Latest.PackageName)'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')"         = "`$1'$($Latest.FileType)'"
+    }
+    "$PSScriptRoot\graphviz.nuspec" = @{
+      "(?i)(^\s*\<id\>).*(\<\/id\>)"            = "`${1}$($Latest.PackageName)`${2}"
+      "(?i)(^\s*\<title\>).*(\<\/title\>)"      = "`${1}$($Latest.Title)`${2}"
+    }
+    "$PSScriptRoot\legal\VERIFICATION.txt" = @{
+      "(?i)(\s+x32:).*"                         = "`${1} $($Latest.URL32)"
+      "(?i)(checksum32:).*"                     = "`${1} $($Latest.Checksum32)"
+      "(?i)(\s+x64:).*"                         = "`${1} $($Latest.URL64)"
+      "(?i)(checksum64:).*"                     = "`${1} $($Latest.Checksum64)"
+    }
   }
 }
 
