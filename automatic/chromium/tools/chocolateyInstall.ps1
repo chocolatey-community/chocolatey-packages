@@ -27,4 +27,12 @@ Install-ChocolateyInstallPackage @packageArgs
 } else {
 Write-Host "Chromium $version is already installed."
 }
-Remove-Item $toolsDir\*.exe -ea 0 -force
+# Detritus Package Cleanup
+$detritus = @("exe","tmp","ignore")
+foreach ( $type in $detritus ) {
+	if ( $type -eq "tmp" ) {
+		Remove-Item "$toolsDir\*.${type}" -ea 0 -Force -Recurse
+	} else {
+		Remove-Item "$toolsDir\*.${type}" -ea 0 -force
+	}
+}
