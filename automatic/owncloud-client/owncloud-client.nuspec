@@ -27,7 +27,7 @@
 - Self-managed, on-premises
 
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/owncloud-client/screenshot.jpg)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/owncloud-client/screenshot.png)
 ]]></description>
     <summary>ownCloud Sync Client for Windows</summary>
     <releaseNotes>https://owncloud.org/changelog/desktop/</releaseNotes>
