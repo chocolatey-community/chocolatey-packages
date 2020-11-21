@@ -11,4 +11,4 @@ ownCloud gives you universal access to your files through a web interface or Web
 - Self-managed, on-premises
 
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/owncloud-client/screenshot.jpg)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/owncloud-client/screenshot.png)
