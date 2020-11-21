@@ -1,17 +1,17 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$file = ''
-$file64 = ''
+$file = 'graphviz-install-2.44.1-win32.exe'
+$file64 = 'graphviz-install-2.44.1-win64.exe'
 
 $packageArgs = @{
-  packageName    = ''
-  fileType       = ''
+  packageName    = 'graphviz'
+  fileType       = 'exe'
   file           = "$toolsPath\$file"
   file64         = "$toolsPath\$file64"
   silentArgs     = '/S'
   validExitCodes = @(0)
-  softwareName   = ''
+  softwareName   = 'graphviz cmake (stable)'
 }
 
 Install-ChocolateyPackage @packageArgs

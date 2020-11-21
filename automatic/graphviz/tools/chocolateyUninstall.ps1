@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 # All arguments for the Uninstallation of this package
 $packageArgs = @{
-  PackageName    = ''
-  FileType       = ''
+  PackageName    = 'graphviz'
+  FileType       = 'exe'
   SilentArgs     = "/S"
   validExitCodes = @(0)
 }
