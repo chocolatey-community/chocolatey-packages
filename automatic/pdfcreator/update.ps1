@@ -1,8 +1,11 @@
 ﻿Import-Module AU
 
+$releases     = 'http://download.pdfforge.org/download/pdfcreator/list'
 $softwareName = 'PDFCreator'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix -FileNameBase $Latest.FileName32
+}
 
 function global:au_SearchReplace {
   @{
@@ -23,14 +26,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $url32 = Get-RedirectedUrl 'http://download.pdfforge.org/download/pdfcreator/PDFCreatorLegacy-stable?download'
-  $version32 = $url32 -split '\/' | select -last 1 -skip 1
-
-  return @{
-    URL32       = $url32
-    Version     = $version32
-    PackageName = 'PDFCreator'
-  }
+    $download_page = Invoke-WebRequest $releases
+    $re = "\.exe$"
+    $url = $download_page.Links | ? href -match $re | select -Expand href -First 1
+    $domain  = $releases -split '(?<=//.+)/' | select -First 1
+    $version = $url -split '/' | select -Last 1 -Skip 1
+    @{
+        URL32       = "http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download"
+        Version     = $version
+        PackageName = $softwareName
+        FileName32  = $url -split 'file=' | select -Last 1
+        FileType    = 'exe'
+    }
 }
 
 update -ChecksumFor none
