@@ -1,12 +1,8 @@
 import-module au
-. "$PSScriptRoot\update_helper.ps1"
 
 $GraphvizURL = "https://www2.graphviz.org/Packages/<branch>/windows/10/<build>/Release/Win32/"
 
-function global:au_BeforeUpdate {
-    Set-ReadMeFile -keys "PackageName" -new_info "$($Latest.PackageName)"
-    Get-RemoteFiles -Purge -NoSuffix
-}
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
@@ -35,47 +31,49 @@ function global:au_SearchReplace {
 }
 
 function Get-LatestGraphviz {
-param(
-    [string]$release,
-    [ValidateSet('cmake','msbuild')]
-    [string]$build,
-    [ValidateSet('stable','development')]
-    [string]$branch = "stable"
-)
+  param(
+      [string]$release,
 
-$release_url = $release -replace("<build>", $build) -replace("<branch>", $branch )
-$packagename = @{$true="graphviz-$build";$false="graphviz"}[ ($build -eq "msbuild") ]
-$title = "graphviz $build ($branch)"; $ext = @{$true="exe";$false="zip"}[ ($build -eq "cmake") ]
-$page = Invoke-WebRequest -UseBasicParsing $release_url
-$url = $release_url + ( $page.links | Select -last 1 -ExpandProperty href)
-$version = Get-Version ( $url -replace("\-win32\.$ext","") )
-$version = @{$true="$version";$false="$version-$branch"}[ ($branch -eq "stable") ]
-$data = @{
-    PackageName  = $packagename
-    Title        = $title
-    URL32        = $url
-    Version      = $version
-}
+      [ValidateSet('cmake','msbuild')]
+      [string]$build,
 
-if ($ext -eq "exe") {
-    $release_url = $release_url -replace("Win32","x64")
-    $page = Invoke-WebRequest -UseBasicParsing $release_url
-    $url64 = $release_url + ( $page.links | Select -last 1 -ExpandProperty href)
-    $data.Add( "URL64", $url64 )
-}
+      [ValidateSet('stable','development')]
+      [string]$branch = "stable"
+  )
 
-return $data
+  $release_url = $release -replace("<build>", $build) -replace("<branch>", $branch )
+  $packagename = @{$true="graphviz-$build";$false="graphviz"}[ ($build -eq "msbuild") ]
+  $title = "graphviz $build ($branch)"; $ext = @{$true="exe";$false="zip"}[ ($build -eq "cmake") ]
+  $page = Invoke-WebRequest -UseBasicParsing $release_url
+  $url = $release_url + ( $page.links | Select -last 1 -ExpandProperty href)
+  $version = Get-Version ( $url -replace("\-win32\.$ext","") )
+  $version = @{$true="$version";$false="$version-$branch"}[ ($branch -eq "stable") ]
+  $data = @{
+      PackageName  = $packagename
+      Title        = $title
+      URL32        = $url
+      Version      = $version
+  }
+
+  if ($ext -eq "exe") {
+      $release_url = $release_url -replace("Win32","x64")
+      $page = Invoke-WebRequest -UseBasicParsing $release_url
+      $url64 = $release_url + ( $page.links | Select -last 1 -ExpandProperty href)
+      $data.Add( "URL64", $url64 )
+  }
+
+  return $data
 }
 
 function global:au_GetLatest {
-$builds = "cmake"; $branches = "stable","development"
-$streams = [ordered] @{ }
-  foreach( $type in $builds ) {
-    foreach( $branch in $branches ) {
-    $streams.add( "${type}_${branch}" , ( Get-LatestGraphviz -release $GraphvizURL -build $type -branch $branch ) )
+  $builds = "cmake"; $branches = "stable","development"
+  $streams = [ordered] @{ }
+    foreach( $type in $builds ) {
+      foreach( $branch in $branches ) {
+        $streams.add( "${type}_${branch}" , ( Get-LatestGraphviz -release $GraphvizURL -build $type -branch $branch ) )
+      }
     }
-  }
-  return @{ Streams = $streams }
+    return @{ Streams = $streams }
 }
 
 update -ChecksumFor none

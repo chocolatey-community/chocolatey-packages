@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png" width="48" height="48"/> <PackageName>](https://chocolatey.org/packages/<PackageName>)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@00f392142cdbdbda147d3cc3ccb1cb593afb996d/icons/graphviz.png" width="48" height="48"/> graphviz](https://chocolatey.org/packages/graphviz)
 
 Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks. It has important applications in networking, bioinformatics, software engineering, database and web design, machine learning, and in visual interfaces for other technical domains.
 
@@ -10,4 +10,6 @@ Graphviz has many useful features for concrete diagrams, such as options for col
 
 ## Notes
 
-- Starting from version _2.44_ this package contains cmake builds of graphwiz. If you encounter problem with missing executables for the time being continue using the last msbuild version _2.38_.
+- Starting from version _2.44_ this package contains cmake builds of Graphviz. If you encounter problem with missing executables for the time being continue using the last msbuild version _2.38_.
+
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/graphviz/screenshot.svg)
