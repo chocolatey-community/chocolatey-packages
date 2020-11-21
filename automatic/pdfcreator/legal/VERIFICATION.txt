@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <>
+location on <http://download.pdfforge.org/download/pdfcreator/list>
 and can be verified by doing the following:
 
-1. Download the following <https://lime.download.pdfforge.org/pdfcreator/4.1.2/PDFCreator-4_1_2-Setup_legacy.exe>
+1. Download the following <http://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 8A993CD05524175A428D384937A2E65C22C60CA81AE36E76CE8F97459926927D
+  checksum: 27EA7A6A894E019CFBB24B6AACB2F323F09E9DF1186F9657B1EFCF3BEDF95891
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/pdfforge/PDFCreator/blob/dbbe3558157f5861bff35dcb37b328b679b0ccfd/LICENSE>
