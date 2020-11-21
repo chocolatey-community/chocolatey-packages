@@ -10,6 +10,6 @@ Graphviz has many useful features for concrete diagrams, such as options for col
 
 ## Notes
 
-- Starting from version _2.44_ this package contains cmake builds of Graphviz. If you encounter problem with missing executables for the time being continue using the last msbuild version _2.38_.
+- Starting from version _2.44_ this package contains cmake builds of Graphviz. If you encounter problems with missing executables for the time being continue using the last msbuild version _2.38_.
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/graphviz/screenshot.svg)
