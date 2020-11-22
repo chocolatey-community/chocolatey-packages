@@ -12,6 +12,6 @@ $packageArgs = @{
   softwareName   = 'EaseUS Partition Master*'
 }
 Install-ChocolateyInstallPackage @packageArgs
-ls $toolsPath\*.exe | % { rm $_ -ea 0; if (Test-Path $_) { sc "$_.ignore" "" }}
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" "" }}
 
 Ensure-NotRunning

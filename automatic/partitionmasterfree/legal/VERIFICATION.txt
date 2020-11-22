@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://download3.easeus.com/free/epm_free_install.exe
+   x32: https://down.easeus.com/product/epm_free
 
    to download the installer.
 
