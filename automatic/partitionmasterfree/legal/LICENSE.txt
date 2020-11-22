@@ -1,0 +1,25 @@
+License Agreement
+
+Please read this document carefully. This is a legal agreement between you (either an individual or an entity) and CHENGDU Yiwo® Tech Development Co., Ltd, the developer of our products. This Agreement supersedes any prior version license and governs your use of the SOFTWARE.
+
+CHENGDU Yiwo® Tech Development Co., Ltd exclusively owns all copyrights of our products.
+
+Anyone may use the free or trial version of our products. Before deciding upon the purchase, you may use the free or trial for evaluation. After the trial is expired, you should purchase full version.
+
+Once registered, the user is granted an exclusive license to use. Our products on one computer, for any legal purpose, at a time. You need a license for a machine on which the program is installed. The registered our products software may not be rented or leased but can be permanently transferred, if the person who receiving it agrees to the terms of this license. If the software is update, the transfer must include the update and all previous versions.
+
+Our products free or trial version may be freely distributed, if the distribution package is not modified. No person or company may charge a fee for the distribution of our products free or trial version without written permission from the copyright holder.
+
+OUR PRODUCTS IS DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED. YOU USE AT YOUR OWN RISK. THE AUTHOR WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.
+
+You may not use, copy, emulate, clone, rent, lease, sell, modify, de-compile, disassemble, otherwise reverse engineer, or transfer the licensed program, or any subset of the licensed program, except as provided for in this agreement. Any such unauthorized use shall result in immediate and automatic termination of this license and may result in criminal and/or civil prosecution.
+
+COPYRIGHT. The SOFTWARE is owned by CHENGDU Yiwo® Tech Development Co., Ltd and is protected by International copyright laws and treaty provisions.
+
+EaseUS is trademark of CHENGDU Yiwo Tech Development Co., Ltd. All other trademarks are the property of their respective owners.
+
+SOFTWARE SUPPORT. Support will only be provided by e-mail and only on the most current version. Queries regarding the installation and use of the SOFTWARE should be submitted by e-mail to support@easeus.com. If you have questions about buying or updating our products, please Email us at sales@easeus.com or sales@easeus.com. Requests for additional features and enhancements should be submitted by e-mail to advice@easeus.com. We will attempt to implement all reasonable requests but is not obliged to implement it.
+
+RESERVATION. CHENGDU Yiwo® Tech Development Co., Ltd reserves the right to change the license agreement of the software. CHENGDU Yiwo® Tech Development Co., Ltd has the right to change the product as it sees fit CHENGDU Yiwo® Tech Development Co., Ltd reserves the right to change prices without notice. CHENGDU Yiwo® Tech Development Co., Ltd reserves all rights that are not expressly granted here.
+
+Installing and using our products signifies acceptance of these terms and conditions of the license. If you do not agree with the terms of this license you must remove our products files from your storage devices and cease to use our products.
