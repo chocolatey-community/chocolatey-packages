@@ -1,5 +1,3 @@
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-. "$toolsDir\helpers.ps1"
-
-stopProcessIfExist -sleepAfter
+Get-Process "main" -ea 0 | Where-Object { $_.MainWindowTitle -ilike 'EaseUS Partition Master*' } | Stop-Process
