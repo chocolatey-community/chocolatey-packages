@@ -11,19 +11,22 @@ function global:au_SearchReplace {
         ".\legal\VERIFICATION.txt" = @{
           "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
           "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
-          "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL64)"
         }
     }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest   {
   $download_page = Invoke-WebRequest -Uri "$releases/packages/" -UseBasicParsing -Header @{ Referer = $releases }
-  $version       = $download_page.links | ? href -match 'essentials_build\.(zip|7z)$' | % { $_.href -split '-' | select -Index 1} | ? { $__=$null; [version]::TryParse($_, [ref] $__) } | sort -desc | select -First 1
-  $url64         = $download_page.links | ? href -match "\-${version}\-.*\-essentials_build.*" | Select -Expand href -Last 1
+  $re = 'essentials_build\.7z$'
+  $url64 = $download_page.links | ? href -match $re | Select -Expand href -Last 1
+  $version = ($url64 -split '/ffmpeg-')[-1] -split '-' | select -First 1
 
-  @{ URL64=$url64; Version = $version }
+  @{
+    URL64 = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z";
+    Version = $version
+  }
 }
 
 update -ChecksumFor none
