@@ -5,9 +5,7 @@ $releases = 'https://nmap.org/download.html'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*packageName\s*=\s*)('.*')"         = "`$1'$($Latest.PackageName)'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\)(.*`")" = "`$1$($Latest.FileName32)`""
-      "(?i)(^\s*fileType\s*=\s*)('.*')"            = "`$1'$($Latest.FileType)'"
+      "(?i)(^\s*[$]?file\s*=\s*`"[$]toolsPath\\)(.*`")" = "`$1$($Latest.FileName32)`""
     }
 
     "$($Latest.PackageName).nuspec" = @{
