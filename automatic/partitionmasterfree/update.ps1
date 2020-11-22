@@ -1,45 +1,46 @@
 ﻿import-module au
-Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
-Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$exec = "https://down.easeus.com/product/epm_free"
+$downloadUrl = "https://down.easeus.com/product/epm_free"
 
 function global:au_SearchReplace {
   @{
+    ".\legal\VERIFICATION.txt" = @{
+      "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
+      "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
+    }
+
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
+      '(?i)(^\s*file\s*=\s*)(".*")'   = "`$1`"`$toolsPath\$($Latest.FileName32)`""
     }
   }
 }
 
-function GetResultInformation([string]$url32) {
-    $url32 = Get-RedirectedUrl $url32
-    $dest = Join-Path $env:TEMP ($exec -split '/' | select -Last 1)
-    $checksumType = 'sha256'
-    Get-WebFile $url32 $dest
-    $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion }
-    $version = if ($version) { Get-Version $version } else {
-      $re = "What's new in version (.+?)</p>"
-      $version = Invoke-WebRequest https://www.easeus.com/partition-manager/epm-free.html
-      if ($version -match $re) { $Matches[1].Trim() } else { throw "Can't find version" }
-    }
-    $checksum32 = Get-FileHash $dest -Algorithm $checksumType | % { $_.Hash.ToLowerInvariant() }
-
-    return @{
-        URL32          = $url32
-        Version        = $version
-        Checksum32     = $checksum32
-        ChecksumType32 = 'sha256'
-        PackageName    = 'PartitionMasterFree'
-    }
-}
-
 function global:au_GetLatest {
-    Update-OnETagChanged -execUrl $exec -OnEtagChanged {
-        GetResultInformation $exec
-    } -OnUpdated { @{ URL32 = $exec } }
+    Remove-Item $PSScriptRoot\tools\*.exe
+
+    $downloaderPath = "$PSScriptRoot\tools\downloader.exe"
+    Invoke-WebRequest $downloadUrl -OutFile $downloaderPath
+
+    & $PSScriptRoot\installer_download.ahk $downloaderPath
+    for ($i=0; $i -lt 60; $i++) {
+      Start-Sleep 1
+      $installer = ls -Exclude downloader.exe tools\*.exe | select -First 1
+      if ($installer) { Get-Process EDownloader -ea 0 | kill; break }
+    }
+    if (!$installer) { throw "Can't download installer via AHK"}
+    Remove-Item $downloaderPath
+
+    $version = (Get-Item $installer).VersionInfo.ProductVersion
+
+    $checksumType = 'sha256'
+    @{
+        URL32          = $downloadUrl
+        Version        = Get-Version $version
+        Checksum32     = Get-FileHash $installer -Algorithm $checksumType | % { $_.Hash.ToLowerInvariant() }
+        ChecksumType32 = $checksumType
+        PackageName    = 'PartitionMasterFree'
+        FileName32     = $installer.Name
+    }
 }
 
 update -ChecksumFor none

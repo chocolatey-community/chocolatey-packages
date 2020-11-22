@@ -25,7 +25,6 @@ EaseUS Partition Master Free Edition is a partition solution and disk management
 
 ## Notes
 
-- **Only the latest package version works as vendor doesn't kep versioned downloads and doesn't allow redistribution**
 - Install is not completely silent, the application is launched after installation (we will try to close the application).
 - Uninstall is not completely silent, a browser window is opened during uninstallation.
 
