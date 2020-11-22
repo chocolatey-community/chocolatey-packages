@@ -4,7 +4,7 @@
   <metadata>
     <id>PartitionMasterFree</id>
     <title>EaseUS Partition Master (Free)</title>
-    <version>13.5</version>
+    <version>14.5</version>
     <authors>CHENGDU Yiwo Tech Development Co., Ltd</authors>
     <owners>chocolatey-community,Redsandro</owners>
     <summary>Free (for personal use) and Easy-to-use Disk Management Software.</summary>
@@ -33,10 +33,11 @@
 
 ## Notes
 
-- Uninstall is not completely silent, a browser window is opened during uninstallation.
+- **Only the latest package version works as vendor doesn't kep versioned downloads and doesn't allow redistribution**
 - Install is not completely silent, the application is launched after installation (we will try to close the application).
+- Uninstall is not completely silent, a browser window is opened during uninstallation.
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/partitionmasterfree/screenshot.jpg)
+![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/partitionmasterfree/screenshot.png)
 ]]></description>
     <projectUrl>http://www.partition-tool.com/personal.htm</projectUrl>
     <tags>disk partition manager system admin</tags>
