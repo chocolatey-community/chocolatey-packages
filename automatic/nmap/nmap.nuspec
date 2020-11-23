@@ -28,9 +28,6 @@
     <tags>nmap foss cross-platform  port scanner network infosec</tags>
     <docsUrl>https://nmap.org/docs.html</docsUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/nmap</packageSourceUrl>
-    <dependencies>
-      <dependency id="autohotkey.install" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
