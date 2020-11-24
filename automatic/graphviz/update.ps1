@@ -7,7 +7,6 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
     @{
         ".\tools\chocolateyInstall.ps1" = @{
-          "(?i)(^\s*softwareName\s*=\s*)('.*')" = "`$1'$($Latest.Title)'"
           '(?i)(^\s*file\s*=\s*)(".*")'         = "`$1`"`$toolsPath\$($Latest.FileName32)`""
           '(?i)(^\s*file64\s*=\s*)(".*")'       = "`$1`"`$toolsPath\$($Latest.FileName64)`""
         }
@@ -41,7 +40,6 @@ function Get-LatestGraphviz {
   $version = @{$true="$version";$false="$version-$branch"}[ ($branch -eq "stable") ]
   $data = @{
       PackageName  = $packagename
-      Title        = $title
       URL32        = $url
       Version      = $version
   }
