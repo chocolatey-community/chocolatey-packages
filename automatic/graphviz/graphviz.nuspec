@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>graphviz</id>
-    <version>2.44.1</version>
-    <title>graphviz cmake (stable)</title>
+    <version>2.44.1.20201124</version>
+    <title>Graphviz</title>
     <authors>Arif Bilgin, graphviz committers</authors>
     <owners>chocolatey, Jason Denizac, Friedrich von Never</owners>
     <licenseUrl>https://www.graphviz.org/license/</licenseUrl>
@@ -20,20 +20,20 @@ Graphviz has many useful features for concrete diagrams, such as options for col
 
 ## Notes
 
-- Starting from version _2.44_ this package contains cmake builds of Graphviz. If you encounter problem with missing executables for the time being continue using the last msbuild version _2.38_.
+- Starting from version _2.44.1_ this package contains cmake builds of Graphviz. If you encounter problems with missing executables for the time being continue using the last msbuild version _2.38_.
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/graphviz/screenshot.svg)
 ]]></description>
     <summary>Graph visualization is a way of representing structural information as diagrams of abstract graphs and networks</summary>
     <releaseNotes>https://gitlab.com/graphviz/graphviz/-/blob/master/CHANGELOG.md</releaseNotes>
-    <tags>admin drawing graph foss cross-platform visualization</tags>
+    <tags>admin drawing graph foss cli documentation cross-platform visualization</tags>
     <projectSourceUrl>https://gitlab.com/graphviz/graphviz</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/graphviz</packageSourceUrl>
     <docsUrl>https://graphviz.org/documentation/</docsUrl>
     <mailingListUrl>https://forum.graphviz.org/</mailingListUrl>
     <bugTrackerUrl>https://gitlab.com/graphviz/graphviz/-/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.4" />
+      <dependency id="chocolatey-core.extension" version="1.3.5" />
     </dependencies>
   </metadata>
   <files>
