@@ -20,7 +20,7 @@ Graphviz has many useful features for concrete diagrams, such as options for col
 
 ## Notes
 
-- Starting from version _2.44.1_ this package contains cmake builds of Graphviz. If you encounter problems with missing executables for the time being continue using the last msbuild version _2.38_.
+- Starting from version [2.44.1](https://chocolatey.org/packages/Graphviz/2.44.1.20201124) this package contains cmake builds of Graphviz. If you encounter problems with missing executables for the time being continue using the last msbuild version [2.38](https://chocolatey.org/packages/Graphviz/2.38.0.20190211). You can also try to use alternative syntax, for example instead calling `neato.exe` directly, use `dot.exe -Kneato` instead. For more details see [this topic](https://github.com/chocolatey-community/chocolatey-coreteampackages/pull/1535#issuecomment-704700216).
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/graphviz/screenshot.svg)
 ]]></description>
