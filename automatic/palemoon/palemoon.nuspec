@@ -4,7 +4,7 @@
   <metadata>
     <id>palemoon</id>
     <title>Pale Moon browser</title>
-    <version>28.15.0</version>
+    <version>28.16.0</version>
     <authors>Moonchild Productions</authors>
     <owners>chocolatey-community,Redsandro</owners>
     <summary>A Firefox-based web browser optimized for modern hardware.</summary>
