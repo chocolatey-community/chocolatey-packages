@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$filePath = "$toolsPath\SonarLint.VSIX-4.27.0.22695-2015.vsix"
+$filePath = "$toolsPath\SonarLint.VSIX-4.28.0.24595-2015.vsix"
 
 $vsixUrl =  "file://" + $filePath.Replace("\", "/")
 
