@@ -10,5 +10,3 @@ $packageArgs = @{
 }
 Get-ChocolateyUnzip @packageArgs
 Remove-Item $toolsPath\*.zip -ea 0
-
-Install-BinFile 'protoc' "$toolsPath\bin\protoc.exe"

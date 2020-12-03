@@ -3,7 +3,7 @@
   <metadata>
     <!-- IconUrl: Skip check -->
     <id>protoc</id>
-    <version>4.0.0-rc-2</version>
+    <version>0.0.0</version>
     <title>Protocol Buffers</title>
     <authors>Google</authors>
     <owners>chocolatey-community, keen, jordigg, drel</owners>
