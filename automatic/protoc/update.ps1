@@ -27,8 +27,8 @@ function global:au_GetLatest {
 
 
     $download_page = Invoke-WebRequest -Uri "$releases" -UseBasicParsing
-    $url32 = $download_page.links | ? href -match '/protoc-(.+)-win32\.zip$' | % href | select -First 1
-    $url64 = $download_page.links | ? href -match '/protoc-(.+)-win64\.zip$' | % href | select -First 1
+    $url32 = $download_page.links | ? href -match '/protoc-(\d+\.\d+\.\d+)-win32\.zip$' | % href | select -First 1
+    $url64 = $download_page.links | ? href -match '/protoc-(\d+\.\d+\.\d+)-win64\.zip$' | % href | select -First 1
 
     $version = $Matches[1]
 
