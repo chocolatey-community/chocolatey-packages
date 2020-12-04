@@ -49,6 +49,6 @@ if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) 
 
 Install-ChocolateyPackage @packageArgs
 if ($tbProcess) {
-  Write-Host "Stopping running thunderbird process"
+  Write-Host "Restarting thunderbird process"
   Start-Process $tbProcess
 }
