@@ -17,7 +17,7 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   return
 }
 
-$tbProcess = Get-Process thunderbird
+$tbProcess = Get-Process thunderbird -ea 0
 if ($tbProcess) {
   Write-Host "Stopping running thunderbird process"
   Stop-Process $tbProcess
