@@ -28,12 +28,11 @@ function global:au_GetLatest {
   $re = '\.msi$'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = '\/v?'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = $url32 -split "-" | select -last 1 -skip 1
   @{
     URL32        = $url32
     Version      = $version32
-    ReleaseNotes = "https://musescore.org/en/handbook/developers-handbook/release-notes/release-notes-musescore-$($version32 -replace '\.')"
+    ReleaseNotes = "https://musescore.org/en/handbook/developers-handbook/release-notes/release-notes-musescore-$($version32 -replace '\..+')"
   }
 }
 
