@@ -4,6 +4,7 @@ Maxthon is a state-of-the-art, multi-platform web browser that regularly outperf
 and fans who believe surfing the web should be fast and fun.
 
 ## Features
+
 - Tabbed document interface
 - Saves open tabs in case of program shutdown or system crash
 - Undo for any tabs accidentally closed
