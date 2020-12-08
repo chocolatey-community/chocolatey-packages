@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>maxthon.commandline</id>
-    <version>5.3.8.2000</version>
+    <version>6.1.0.2000</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/maxthon.commandline</packageSourceUrl>
     <owners>chocolatey-community, Maxthon International Limited</owners>
     <title>Maxthon (Portable)</title>
@@ -22,6 +22,7 @@
 and fans who believe surfing the web should be fast and fun.
 
 ## Features
+
 - Tabbed document interface
 - Saves open tabs in case of program shutdown or system crash
 - Undo for any tabs accidentally closed
