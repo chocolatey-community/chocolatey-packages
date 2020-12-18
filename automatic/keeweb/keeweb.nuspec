@@ -6,7 +6,7 @@
     <metadata>
         <id>keeweb</id>
         <title>KeeWeb</title>
-        <version>1.16.3</version>
+        <version>1.16.4</version>
         <authors>antelle</authors>
         <owners>chocolatey-community,wget</owners>
         <summary>Free cross-platform password manager compatible with KeePass</summary>
