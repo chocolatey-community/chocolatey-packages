@@ -28,23 +28,16 @@ $keep = @(
   'nsupdate.exe'
 )
 
-$keepExtensions = @(
-  '.md',
-  ''
-)
-
 Install-ChocolateyZipPackage @packageArgs
-Remove-Item -Force "$toolsPath\*.zip" -ea 0
+Remove-Item -Force "$toolsDir\*.zip" -ea 0
 Get-ChildItem $contentDir `
   | Where-Object {
     if ($keep -contains $_) {
       return $false
     }
 
-    if ($keepExtensions -contains $_.Extension) {
-      return $false
-    }
-
-    return $true
+    return $_.Extension -eq '.exe'
   } `
-  | Remove-Item -Force -Recurse
+  | ForEach-Object {
+    New-Item "$($_.FullName).ignore" -ItemType File -ea 0
+  } > $null

@@ -19,7 +19,7 @@ BIND is by far the most widely used DNS software on the Internet, providing a ro
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages</packageSourceUrl>
     <bugTrackerUrl>https://www.isc.org/community/report-bug/</bugTrackerUrl>
     <mailingListUrl>https://www.isc.org/community/mailing-list/</mailingListUrl>
-    <tags>bind isc dig</tags>
+    <tags>bind cli cross-platform dig foss isc</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="vcredist2012" version="[11.0,)" />
