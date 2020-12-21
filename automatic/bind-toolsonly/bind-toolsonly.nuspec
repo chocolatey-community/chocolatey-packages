@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>bind-toolsonly</id>
+    <title>BIND Tools</title>
+    <version>9.16.10</version>
+    <authors>ISC</authors>
+    <owners>chocolatey-community</owners>
+    <summary>The most widely used Name Server Software.</summary>
+    <description>
+BIND is open source software that implements the Domain Name System (DNS) protocols for the Internet. It is a reference implementation of those protocols, but it is also production-grade software, suitable for use in high-volume and high-reliability applications.  The name BIND stands for “Berkeley Internet Name Domain”, because the software originated in the early 1980s at the University of California at Berkeley.
+
+BIND is by far the most widely used DNS software on the Internet, providing a robust and stable platform on top of which organizations can build distributed computing systems with the knowledge that those systems are fully compliant with published DNS standards.
+    </description>
+    <projectUrl>https://www.isc.org/bind</projectUrl>
+    <releaseNotes>https://downloads.isc.org/isc/bind9/9.16.10/doc/arm/html/notes.html</releaseNotes>
+    <docsUrl>https://downloads.isc.org/isc/bind9/9.16.10/doc/arm/html/</docsUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages</packageSourceUrl>
+    <bugTrackerUrl>https://www.isc.org/community/report-bug/</bugTrackerUrl>
+    <mailingListUrl>https://www.isc.org/community/mailing-list/</mailingListUrl>
+    <tags>bind isc dig</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="vcredist2012" version="[11.0,)" />
+    </dependencies>
+  </metadata>
+</package>
