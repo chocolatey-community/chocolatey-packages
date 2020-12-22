@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://owncloud.com/desktop-app/>
 and can be verified by doing the following:
 
-1. Download the following <https://download.owncloud.com/desktop/ownCloud/stable/2.7.3.2877/win/ownCloud-2.7.3.2877.x64.msi>
+1. Download the following <https://download.owncloud.com/desktop/ownCloud/stable/2.7.4.2934/win/ownCloud-2.7.4.2934.x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 984C6AB66F5234C867C0C37729E6BE0E678CA2E3D664003D137AEB99C04A4F59
+  checksum: CCE8A7535BAD5F03C5A19D715E51299F12F310C42A0F80C3861C19220953A952
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/owncloud/client/blob/06936bc603c91b1c5f10442901bcfeb765b17243/COPYING>
