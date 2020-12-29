@@ -10,7 +10,7 @@
 
 ### Description
 
-This repository contains chocolatey packages, most of which are [automatic](https://chocolatey.org/docs/automatic-packages).
+This repository contains chocolatey packages, most of which are [automatic](https://docs.chocolatey.org/en-us/create/automatic-packages).
 
 These packages are managed and maintained by the Chocolatey community package maintainers core team, and also supported by you (the community)! To get a package added here, the official [Chocolatey Community Account](http://chocolatey.org/profiles/chocolatey-community) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
 
