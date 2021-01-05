@@ -33,9 +33,9 @@ The following sections present complete set of guideliness, please read them car
 
 ### 1.1.1 Conform to guidelines
 
-Conform with the [official package creation guidelines](https://chocolatey.org/docs/create-packages) and take a look at [quick start guide](https://chocolatey.org/docs/CreatePackagesQuickStart) on how to create packages.
+Conform with the [official package creation guidelines](https://docs.chocolatey.org/en-us/create/create-packages) and take a look at [quick start guide](https://docs.chocolatey.org/en-us/create/create-packages-quick-start) on how to create packages.
 
-You should also know how to [deprecate a package](https://chocolatey.org/docs/how-to-deprecate-a-chocolatey-package).
+You should also know how to [deprecate a package](https://docs.chocolatey.org/en-us/community-repository/maintainers/deprecate-a-chocolatey-package).
 
 ### 1.1.2 Manual or automatic
 
@@ -59,7 +59,7 @@ For software that explicitly doesn't allow redistribution via adequate license t
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://chocolatey.org/docs/legal).
+As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://docs.chocolatey.org/en-us/information/legal).
 
 **NOTE**: 200MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
@@ -198,7 +198,7 @@ Do not create brittle scripts that work only when user doesn't interfer. All scr
 
 ### 2.1 Encoding
 
-Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for the `*.ps1` files. See [character encodings](https://chocolatey.org/docs/create-packages#character-encoding).
+Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for the `*.ps1` files. See [character encodings](https://docs.chocolatey.org/en-us/create/create-packages#character-encoding).
 
 ### 2.2 Code style
 
