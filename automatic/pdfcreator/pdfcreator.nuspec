@@ -12,8 +12,8 @@
     <authors>pdfforge</authors>
     <projectUrl>http://www.pdfforge.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6e52bf3b9392bc72475a3e254eab23578ccb9d0e/icons/PDFCreator.png</iconUrl>
-    <licenseUrl>https://github.com/pdfforge/PDFCreator/blob/master/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://www.pdfforge.org/pdfcreator/license</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/pdfforge/PDFCreator</projectSourceUrl>
     <docsUrl>http://docs.pdfforge.org/pdfcreator/latest/en/</docsUrl>
     <tags>pdfcreator pdf editor printer foss notsilent</tags>
