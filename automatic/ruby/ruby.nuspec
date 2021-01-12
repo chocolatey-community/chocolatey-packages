@@ -27,7 +27,7 @@ Example: `choco install ruby --params "/NoPath /InstallDir:C:\your\install\path"
     <tags>ruby admin language programming development dynamic cross-platform foss</tags>
     <licenseUrl>http://www.ruby-lang.org/en/about/license.txt</licenseUrl>
     <projectUrl>http://www.ruby-lang.org</projectUrl>
-    <projectSourceUrl>https://bugs.ruby-lang.org/projects/ruby-trunk/repository</projectSourceUrl>
+    <projectSourceUrl>https://git.ruby-lang.org/ruby.git/tree</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ruby</packageSourceUrl>
     <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-trunk/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
