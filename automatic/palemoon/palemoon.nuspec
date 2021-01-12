@@ -9,7 +9,7 @@
     <owners>chocolatey-community,Redsandro</owners>
     <summary>A Firefox-based web browser optimized for modern hardware.</summary>
     <description><![CDATA[
-Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use.
+Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use. 
 
 Pale Moon offers you a browsing experience in a browser completely built from its own, independently developed source that has been forked off from Firefox/Mozilla code a number of years ago, with carefully selected features and optimizations to improve the browser's stability and user experience, while offering full customization and a growing collection of extensions and themes to make the browser truly your own.
 
@@ -41,7 +41,7 @@ This browser, even though fairly close to Gecko-based browsers like Mozilla Fire
     <copyright>2009-2016 Moonchild Productions</copyright>
     <licenseUrl>https://repo.palemoon.org/MoonchildProductions/Pale-Moon/src/branch/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@bceb375ac10f0c0a67e2735df00560519a078c8c/icons/palemoon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@d1b8b6861269e2381fa4e8ca92b1856149b0e4c8/icons/palemoon.png</iconUrl>
     <releaseNotes>https://www.palemoon.org/releasenotes.shtml</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/palemoon</packageSourceUrl>
   </metadata>
