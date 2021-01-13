@@ -9,7 +9,7 @@
     <owners>chocolatey-community</owners>
     <projectUrl>http://www.sourcetreeapp.com</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@bcc3ae1af3d3d1794526ec01a1f3cd1af7dd80a9/icons/sourcetree.svg</iconUrl>
-    <licenseUrl>https://www.atlassian.com/end-user-agreement/</licenseUrl>
+    <licenseUrl>https://www.atlassian.com/legal/software-license-agreement</licenseUrl>
     <docsUrl>https://confluence.atlassian.com/get-started-with-sourcetree</docsUrl>
     <bugTrackerUrl>https://jira.atlassian.com/projects/SRCTREE/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/sourcetree</packageSourceUrl>
