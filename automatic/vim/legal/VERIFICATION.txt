@@ -5,11 +5,11 @@ in verifying that this package's contents are trustworthy.
 The embedded software have been downloaded from GitHub and can be verified like this:
 
 1. Download the following zips:
-  32-Bit: <https://github.com/vim/vim-win32-installer/releases/download/v8.2.2366/gvim_8.2.2366_x86.zip>
-  64-Bit: <https://github.com/vim/vim-win32-installer/releases/download/v8.2.2366/gvim_8.2.2366_x64.zip>
+  32-Bit: <https://github.com/vim/vim-win32-installer/releases/download/v8.2.2374/gvim_8.2.2374_x86.zip>
+  64-Bit: <https://github.com/vim/vim-win32-installer/releases/download/v8.2.2374/gvim_8.2.2374_x64.zip>
 2. You can use one of the following methods to obtain the SHA256 checksum:
   - Use powershell function 'Get-FileHash'
   - Use Chocolatey utility 'checksum.exe'
 
-  checksum32: 4A311B1A55A34187D764626A90F0E097D58030FEF6F05C8D75987C174776A576
-  checksum64: A4FB0D613EA98C9DE508B11498381592079B27283175289F11D34926B230B02D
+  checksum32: 7EAED86C91E3F6AF991CECABAA08FAB2230B1D06719D008EA3711D4E468243F6
+  checksum64: E1CF2CF15E4B5708EFFED6D81719F5AFFAD46EA2B2C8A1BA3BDA975DE6CC73BF
