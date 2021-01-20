@@ -4,15 +4,15 @@ in verifying that this package's contents are trustworthy.
 The following files have been downloaded from the specified urls, and should
 be equal to the checksums specified in this file.
 
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Filename     | Checksum                                                         | Url                                                                     |
-| ------------ | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| kitty.exe    | BDC5BE425143C1A0EDDA98B25A54A0B34EAE8E7202520306295B0E629A9B3D5E | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/kitty.exe    |
-| kageant.exe  | 83FE89AF0A36D849847F12E563E4BF69D5B33D8E02B1C80D68B01C04209C14FD | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/kageant.exe  |
-| klink.exe    | 3B49558DA830317970FEEBDE0DE460742B316E225ACD8D8FB9FF5966C86A7F95 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/klink.exe    |
-| cygtermd.exe | 3130B430DDF0491DE931F2735F4B2DB548FE1E70C94E707E4100958556A8753D | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/cygtermd.exe |
-| ksftp.exe    | C2835499CE26D764A05331E9E06D14566A834D57FA26CBBB7BB225BEE97C2ED0 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/ksftp.exe    |
-| kittygen.exe | 637C6AF9FFF26F8091347ADA2D061FEA8804E6D88E334AEB0677FD3BA7DC76E3 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/kittygen.exe |
-| kscp.exe     | 851BB0278CCF74F82218B354A977CA60BB0DC5789E630C9CBEDBAC3F6946369F | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/kscp.exe     |
-| genpass.exe  | 8FC5549E3E498E3490909067D9CC154777D16834E6AC9FF12E14EC6A217CF8DB | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.4/genpass.exe  |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       Filename       |                                 Checksum                         |                                       Url                                       |
+| -------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| kageant.exe          | BB7E6B63D532F379DF5E1ACF0593AE28354DEAD89739F66DC6CE26F3C96668C2 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/kageant.exe          |
+| klink.exe            | 9DD6FFF9FA8CCFA3182105CAC6E9C385280601FD5706896C4F33E0E169E748B8 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/klink.exe            |
+| kitty_nocompress.exe | FA589000B6CDEBE4BAE402ADC5640FB166E58A2026D56FB3CA6A3C502E59B94B | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/kitty_nocompress.exe |
+| cygtermd.exe         | 3130B430DDF0491DE931F2735F4B2DB548FE1E70C94E707E4100958556A8753D | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/cygtermd.exe         |
+| ksftp.exe            | AC7B73370C675761647ABB7410203B16F1300F98C780F53EFF35BF2B56B22F17 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/ksftp.exe            |
+| kittygen.exe         | 0B7A49F83C9CBC30FB1D11000D277A9A0F13CDAEC1DF62E2030ACCE4FB1F5DFB | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/kittygen.exe         |
+| kscp.exe             | 7C03F3C15C52A4BB86426E0EE4FF658B48BAE9E6926760975C58761AF243EF02 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/kscp.exe             |
+| genpass.exe          | 8FC5549E3E498E3490909067D9CC154777D16834E6AC9FF12E14EC6A217CF8DB | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.5/genpass.exe          |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
