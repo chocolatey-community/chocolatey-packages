@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$version = '2020.3.5'
+$version = '2020.3.6'
 $softwareName = "FlightGear v$version"
 
 $packageArgs = @{
   packageName = 'flightgear'
   fileType    = 'exe'
-  url         = 'https://sourceforge.net/projects/flightgear/files/release-2020.3/FlightGear-2020.3.5.exe/download'
+  url         = 'https://sourceforge.net/projects/flightgear/files/release-2020.3/FlightGear-2020.3.6.exe/download'
 
   softwareName = $softwareName
 
