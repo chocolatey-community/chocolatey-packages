@@ -7,8 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://www2.graphviz.org/Packages/stable/windows/10/cmake/Release/Win32/graphviz-install-2.44.1-win32.exe
-   x64: https://www2.graphviz.org/Packages/stable/windows/10/cmake/Release/x64/graphviz-install-2.44.1-win64.exe
+   x64: https://gitlab.com/graphviz/graphviz/-/package_files/6164164/download
 
    to download the installer.
 
@@ -16,8 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: EF16B9D616EBEE92841A758D45C87BA1D15898DACA4BE01EB5211E7702A9A5E1
-   checksum64: 41D70C2462A08A06D077770CBBE4C2A731E31796C0FCCCC33BBD60CEC1DACF80
+   checksum64: DEE9679971BC6031DCBA2FDD0482243DFE0B652867B075B613931351E0703796
 
 
 File 'license.txt' is a copy of file 'share\license.rtf' obtained from the installation directory
