@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>owncloud-client</id>
-    <version>2.7.4.2934</version>
+    <version>2.7.5.3180</version>
     <title>ownCloud Windows Client</title>
     <owners>chocolatey-community</owners>
     <authors>ownCloud developers</authors>
