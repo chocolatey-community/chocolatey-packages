@@ -17,7 +17,10 @@ Remove-Item $toolsPath\*.exe -ea 0
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
-if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return 1 }
 Write-Host "$packageName installed to '$installLocation'"
 
-'dot' | ForEach-Object { Install-BinFile $_ "$installLocation\bin\$_.exe" }
+Get-ChildItem "$installLocation\bin" -Filter "*.exe" | ForEach {
+    Write-Debug "File to be shimmed: $($_.Name)"
+    Install-BinFile $_.BaseName $_.FullName
+}
