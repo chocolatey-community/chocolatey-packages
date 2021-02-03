@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$version = '11.2.0.9967'
+$version = '11.2.0.9984'
 $packageName = 'wps-office-free'
 $regName = $packageName -replace('\-',' ')
 $regName = $regName -replace('free','*')
@@ -8,11 +8,11 @@ $registry = Get-UninstallRegistryKey -SoftwareName $regName
 $packageArgs = @{
   packageName    = 'wps-office-free'
   fileType       = 'exe'
-  url            = 'https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/11.2.0.9967/WPSOffice_11.2.0.9967.exe'
+  url            = 'https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/11.2.0.9984/WPSOffice_11.2.0.9984.exe'
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = $regName
-  checksum       = '33913a8702efe3c749ee2bb588bf757d318384a8449abe221875bc9ba6915149'
+  checksum       = '5edb7bb48d46ed2790eb7340a7f880345bb64053a235ec296d83c6336e674ce7'
   checksumType   = 'sha256'
 }
 
