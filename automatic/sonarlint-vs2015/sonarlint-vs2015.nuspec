@@ -4,7 +4,7 @@
   <metadata>
     <id>sonarlint-vs2015</id>
     <title>SonarLint for Visual Studio 2015</title>
-    <version>4.30.0.26640</version>
+    <version>4.31.0.27307</version>
     <authors>SonarSource (SonarSource SA)</authors>
     <owners>chocolatey-community, Pascal Berger</owners>
     <projectSourceUrl>https://github.com/SonarSource-VisualStudio/sonarlint-visualstudio</projectSourceUrl>
