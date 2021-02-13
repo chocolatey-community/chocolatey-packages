@@ -1,11 +1,11 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = $env:chocolateyPackageName
-    FileFullPath   = "$toolsPath\*-win32-*.zip"
-    FileFullPath64 = "$toolsPath\*-win64-*.zip"
+    FileFullPath   = "$toolsPath\curl-7.75.0_2-win32-mingw.zip"
+    FileFullPath64 = "$toolsPath\curl-7.75.0_2-win32-mingw.zip"
     Destination    = $toolsPath
 }
 

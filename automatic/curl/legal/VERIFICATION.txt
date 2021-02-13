@@ -4,10 +4,10 @@ in verifying that this package's contents are trustworthy.
 
 Package can be verified like this:
 
-1. Go to https://curl.haxx.se/download.html, and look for the official binaries provided.
+1. Go to https://curl.se/windows/, and look for the official binaries provided.
 
-   x32: https://bintray.com/artifact/download/vszakats/generic/curl-7.73.0-win32-mingw.zip
-   x64: https://bintray.com/artifact/download/vszakats/generic/curl-7.73.0-win64-mingw.zip
+   x32: https://curl.se/windows/dl-7.75.0_2/curl-7.75.0_2-win32-mingw.zip
+   x64: https://curl.se/windows/dl-7.75.0_2/curl-7.75.0_2-win64-mingw.zip
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -15,8 +15,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 12255FB029CCDA1A8AE7D24F17453A224FD561A5046FBB24FDC1263165134B97
-   checksum64: 2E1FFDB6C25C8648A1243BB3A268120BE442399B1C93D7DA309BBA235ECDAB9A
+   checksum32: 9EAE9FCE19AA82C37D3E3182DCAAD2D6F7F34AC30C3ADBA40328D29981C444DA
+   checksum64: 92BABFC32EFF8B4D9E18AFB5FBEBA00B23747A7B11E62972FAD3491A650DB9B5
 
 File 'LICENSE.txt' obtained from:
    https://github.com/curl/curl/blob/835c2634212257d41c1a30c6cc0ad3ed60bb9aca/COPYING
