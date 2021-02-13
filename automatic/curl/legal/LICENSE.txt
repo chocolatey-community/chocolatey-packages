@@ -1,10 +1,10 @@
-﻿From: https://github.com/curl/curl/blob/028391df5d84d9fae3433afdee9261d565900355/COPYING
+﻿From: https://github.com/curl/curl/blob/835c2634212257d41c1a30c6cc0ad3ed60bb9aca/COPYING
 
 LICENSE
 
 COPYRIGHT AND PERMISSION NOTICE
 
-Copyright (c) 1996 - 2017, Daniel Stenberg, <daniel@haxx.se>, and many
+Copyright (c) 1996 - 2021, Daniel Stenberg, <daniel@haxx.se>, and many
 contributors, see the THANKS file.
 
 All rights reserved.
