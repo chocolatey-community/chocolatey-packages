@@ -23,7 +23,7 @@ if ($key.Count -eq 1) {
         }
 
         # Get all file names installed with the package
-        Get-ChildItem "$installLocation\bin" -Filter "*.exe" | ForEach { 
+        Get-ChildItem "$installLocation\bin" -Filter "*.exe" | ForEach-Object { 
             Write-Debug "Removing shimmed file: $($_.Name)..."
             Uninstall-BinFile $_.Name 
         }
