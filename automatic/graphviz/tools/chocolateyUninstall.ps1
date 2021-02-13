@@ -12,19 +12,19 @@ if ($key.Count -eq 1) {
             fileType               = 'EXE'
             validExitCodes         = @(0)
             file                   = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
-            softwareName           = 'Graphviz*'
         }
 
-        $installLocation = Get-AppInstallLocation $packageArgs.softwareName
+        $installLocation = $key.UninstallString
         Write-Debug "$packageName installed in: $installLocation"
         
         if (!$installLocation) { 
-            Write-Warning "Can't find $packageName install location"; return 1
+            Write-Warning "Can't find $packageName install location"
+	    return
         }
 
         # Get all file names installed with the package
         Get-ChildItem "$installLocation\bin" -Filter "*.exe" | ForEach { 
-            Write-Debug "Shimmed file: $($_.Name)..."
+            Write-Debug "Removing shimmed file: $($_.Name)..."
             Uninstall-BinFile $_.Name 
         }
 

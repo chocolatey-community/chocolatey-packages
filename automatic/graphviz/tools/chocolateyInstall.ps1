@@ -16,7 +16,7 @@ Remove-Item $toolsPath\*.exe -ea 0
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
-if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return 1 }
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
 Write-Host "$packageName installed to '$installLocation'"
 
 Get-ChildItem "$installLocation\bin" -Filter "*.exe" | ForEach {
