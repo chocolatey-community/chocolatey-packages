@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.codeblocks.org/downloads/26'
+$releases = 'https://www.codeblocks.org/downloads/binaries'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
 
@@ -13,9 +13,10 @@ function global:au_SearchReplace {
       "(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
     }
     ".\legal\verification.txt"      = @{
-      "(?i)(1\..+)\<.*\>"         = "`${1}<$($Latest.URL32)>"
-      "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
-      "(?i)(checksum:\s+).*"      = "`${1}$($Latest.Checksum32)"
+      "(?i)(mirror listed on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(1\..+)\<.*\>"               = "`${1}<$($Latest.URL32)>"
+      "(?i)(checksum type:\s+).*"       = "`${1}$($Latest.ChecksumType32)"
+      "(?i)(checksum:\s+).*"            = "`${1}$($Latest.Checksum32)"
     }
   }
 }
@@ -32,7 +33,7 @@ function global:au_GetLatest {
 
   $version = $url -split '[-]|mingw' | select -Last 1 -Skip 2
 
-  $changelog = $download_page.links | ? title -match "^changelog$" | select -first 1 -expand href
+  $changelog = $download_page.links | ? href -match "\/changelogs\/$version" | select -first 1 | % { [uri]::new([uri]$releases, $_.href) }
   $fileName = $url -split '/' | select -last 1
 
   return @{
