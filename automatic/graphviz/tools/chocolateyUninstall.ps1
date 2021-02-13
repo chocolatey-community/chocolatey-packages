@@ -13,6 +13,21 @@ if ($key.Count -eq 1) {
             validExitCodes         = @(0)
             file                   = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
         }
+
+        $installLocation = (Get-Item $key.UninstallString).DirectoryName
+        Write-Debug "$packageName installed in: $installLocation"
+        
+        if (!$installLocation) { 
+            Write-Warning "Can't find $packageName install location"
+	    return
+        }
+
+        # Get all file names installed with the package
+        Get-ChildItem "$installLocation\bin" -Filter "*.exe" | ForEach { 
+            Write-Debug "Removing shimmed file: $($_.Name)..."
+            Uninstall-BinFile $_.Name 
+        }
+
         Uninstall-ChocolateyPackage @packageArgs
     }
 }
@@ -25,5 +40,3 @@ elseif ($key.Count -gt 1) {
     Write-Warning "Please alert package maintainer the following keys were matched:"
     $key | ForEach-Object {Write-Warning "- $($_.DisplayName)"}
 }
-
-Uninstall-BinFile 'dot.exe'
