@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gobby</id>
-    <version>0.5.0</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/gobby</packageSourceUrl>
+    <version>0.6.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/gobby</packageSourceUrl>
     <owners>chocolatey-community, AdmiringWorm</owners>
     <title>Gobby</title>
     <authors>aburgm</authors>
     <projectUrl>https://gobby.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@74185247d8733e647a66959c185695c3dd5d4165/icons/gobby.png</iconUrl>
     <copyright>Copyright © 2008-2014 Armin Burgmeier</copyright>
     <licenseUrl>https://github.com/gobby/gobby/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,8 +18,7 @@
     <bugTrackerUrl>https://github.com/gobby/gobby/issues</bugTrackerUrl>
     <tags>gobby admin collaboration editor foss cross-platform</tags>
     <summary>Gobby is a multi-platform collaborative text editor. It allows multiple users to edit the same document together over the internet in real-time.</summary>
-    <description>
-Gobby is a free collaborative editor. This means that it
+    <description><![CDATA[Gobby is a free collaborative editor. This means that it
 provides you with the possibility to edit files simultaneously
 with other users over a network. The platforms on which you could use
 Gobby are so far Microsoft Windows, Linux, Mac OS X and other
@@ -28,24 +27,22 @@ nicely into the GNOME desktop environment if you want it to.
 
 ## Features
 
-* Realtime collaboration through encrypted connections (including PFS)
-* Each user has its own colour to be identified by others
-* Local group Undo
-* Group chat
-* Shows cursors and selections of remote users
-* Sidebar with all the others having joined the session
-* Syntax highlighting, auto indentation, configurable tab
-  width
-* Multiple documents in one session
-* Zeroconf support (optional)
-* Unicode support
-* Internationalisation
-* Highly configurable dedicated server
-* Sophisticated Access Control Lists (ACLs)
-* Cross-platform: Microsoft Windows, Linux, Mac OS X, other
-  flavours of Unix
-* Free software, licenced under the terms of the ISC license
-    </description>
+- Realtime collaboration through encrypted connections (including PFS)
+- Each user has its own colour to be identified by others
+- Local group Undo
+- Group chat
+- Shows cursors and selections of remote users
+- Sidebar with all the others having joined the session
+- Syntax highlighting, auto indentation, configurable tab width
+- Multiple documents in one session
+- Zeroconf support (optional)
+- Unicode support
+- Internationalisation
+- Highly configurable dedicated server
+- Sophisticated Access Control Lists (ACLs)
+- Cross-platform: Microsoft Windows, Linux, Mac OS X, other flavours of Unix
+- Free software, licenced under the terms of the ISC license
+]]></description>
     <releaseNotes>https://github.com/gobby/gobby/blob/master/NEWS</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
