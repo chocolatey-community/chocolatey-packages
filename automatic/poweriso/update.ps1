@@ -24,8 +24,8 @@ function global:au_GetLatest {
 
     @{
         Version = $version
-        Url32   = "http://www.poweriso.com/PowerISO6.exe"
-        Url64   = "http://www.poweriso.com/PowerISO6-x64.exe"
+        Url32   = "https://www.poweriso.com/PowerISO6.exe"
+        Url64   = "https://www.poweriso.com/PowerISO6-x64.exe"
     }
 }
 
