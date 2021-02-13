@@ -22,7 +22,7 @@ function global:au_GetLatest {
   $re = '\/mx\d+\/portable-formal-32\/dl'
   $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { Get-RedirectedUrl $_ }
 
-  $verRe = '_|\.7z$'
+  $verRe = '_|\.7z|\.zip$'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
   @{
     URL32        = $url32
