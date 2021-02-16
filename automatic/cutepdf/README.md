@@ -5,5 +5,4 @@ Portable Document Format (PDF) is the de facto standard for the secure and relia
 
 ## Notes
 
-- Free software for commercial and non-commercial use.
-
+- Free software for commercial and non-commercial use
