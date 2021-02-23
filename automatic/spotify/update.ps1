@@ -48,7 +48,7 @@ function GetETagIfChanged() {
 }
 
 function global:au_GetLatest {
-  $downloadUrl = 'https://download.scdn.co/SpotifySetup.exe'
+  $downloadUrl = 'https://github.com/chocolatey-community/chocolatey-coreteampackages/pull/1619#issuecomment-784153093'
   $etag = GetETagIfChanged -uri $downloadUrl
 
   if ($etag) {
