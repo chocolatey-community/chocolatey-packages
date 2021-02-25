@@ -17,8 +17,8 @@ function global:au_SearchReplace {
     }
 
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*FileFullPath\s*=\s*`"`[$]toolsPath\\).*`""  = "`${1}$($Latest.FileName32)`""
-      "(?i)(^\s*FileFullPath64\s*\s*`"`[$]toolsPath\\).*`"" = "`${1}$($Latest.FileName64)`""
+      "(?i)(^\s*FileFullPath\s*=\s*`"`[$]toolsPath\\).*`""   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*FileFullPath64\s*=\s*`"`[$]toolsPath\\).*`"" = "`${1}$($Latest.FileName64)`""
     }
   }
 }
