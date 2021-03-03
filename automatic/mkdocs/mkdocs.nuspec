@@ -31,7 +31,7 @@ MkDocs is a fast, simple and downright gorgeous static site generator that's gea
     <releaseNotes>http://www.mkdocs.org/about/release-notes/</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="Python" version="2.6" />
+      <dependency id="Python" version="3.5" />
     </dependencies>
   </metadata>
   <files>
