@@ -13,3 +13,4 @@ Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
 
 - Python package manager `pip` is installed by default, but you can also invoke it using command `py -m pip` which will use `pip3` and adequate version of python if you also have python2 installed and/or pip2 on the `PATH`. For more details see [Python on Windows FAQ](https://docs.python.org/3/faq/windows.html).
 - For complete list of silent install options see the [Installing Without UI](https://docs.python.org/3/using/windows.html#installing-without-ui) page.
+- Some packages require working C++ SDK to build C-based Python modules. One way to do so is to install [visualstudio2019-workload-vctools](https://chocolatey.org/packages/visualstudio2019-workload-vctools). See [GitHub issue #1518](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1518) for more details.
