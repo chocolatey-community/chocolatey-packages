@@ -7,15 +7,15 @@ location on <https://github.com/henrypp/chromium/releases/> (the listed mirrors 
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win/863197/mini_installer.exe>
-  64-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/863204/mini_installer.exe>
+  32-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win/863632/mini_installer.exe>
+  64-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/863619/mini_installer.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 1D6F802F51AFFBD46EC0440D132E6C7CEA4FFE6FB55C87446E565BD794817909
-  checksum64: 4687EE7CFA11AC3B1394536730AB96721507306711D559AA29AC5F7D21067A8A
+  checksum32: 79FC9E2070771DB531BBBA339AC869847A58CDE8B1D7DC905EC4DB9F60B2BCB5
+  checksum64: F91766A318940AA652172AB44C6286D34A86E402223CD4EBDEE690576726C232
 
 The file 'LICENSE.txt' has been obtained from <https://chromium.googlesource.com/chromium/src.git/+/master/LICENSE>
