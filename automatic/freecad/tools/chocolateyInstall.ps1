@@ -5,13 +5,13 @@
 
 $packageArgs = @{
   packageName    = 'freecad'
-  fileType       = '7z'
-  url            = ''
-  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.19.1/FreeCAD_0.19.24276-Win-Conda_vc14.x-x86_64.7z'
+  fileType       = 'exe'
+  url            = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.18.4/FreeCAD-0.18.4.980bf90-WIN-x32-installer.exe'
+  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.19.1/FreeCAD-0.19.1.a88db11-WIN-x64-installer.exe'
   softwareName   = 'FreeCAD'
-  checksum       = ''
-  checksumType   = ''
-  checksum64     = 'FF061F07E05FEEF3AAC8D66CB67DF6A4CC28D0C45DAACA655629F680399DC13A'
+  checksum       = 'A3C00E00E5321D9786C56D58C501F8A8E43BA9D25F7147CD8B9C869D744BE514'
+  checksumType   = 'sha256'
+  checksum64     = 'AF568DC09CDD141E8A0760ABB16587F215F12F5260868B9AC7101D0A2E56F6A7'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
