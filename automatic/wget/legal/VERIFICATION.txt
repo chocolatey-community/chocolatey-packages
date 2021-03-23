@@ -12,7 +12,7 @@ in verifying that this package's contents are trustworthy.
     - Use Chocolatey utility 'checksum.exe'
 
     checksum32: 11782DC3E3FE6C56C2193453063F9F637F4462072C703CE17FCFBAC86B1A7A49
-    checksum64: F0FFE6AAF61CCB4DBEF8DF7578FA061C8D6059CA72429DD25DEF6B64FE56B934
+    checksum64: A56163475D344F9D78C28BECF33015DF468DDC6785C4B3D33C80095006CB5438
 
     Using AU:
         Get-RemoteChecksum https://eternallybored.org/misc/wget/releases/wget-1.21.1-win64.zip
