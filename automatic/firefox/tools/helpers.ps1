@@ -42,7 +42,7 @@ function GetLocale {
 
   $systemLocalizeAndCountry = (Get-UICulture).Name
   $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
-  Write-Verbose "System locale is: '$locale'..."
+  Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
   $fallbackLocale = 'en-US'
 
   $locales = $localeFromPackageParameters,$localeFromPackageParametersTwoLetter, `
@@ -52,7 +52,7 @@ function GetLocale {
     foreach ($locale in $locales) {
       $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -first 1
       if ($localeMatch -and $locale -ne $null) {
-        Write-Verbose "Using locale '$locale'..."
+        Write-Host "Using locale '$locale'..."
         break
       }
     }
