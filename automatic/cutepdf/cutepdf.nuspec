@@ -4,7 +4,7 @@
   <metadata>
     <id>cutepdf</id>
     <title>CutePDF Writer</title>
-    <version>4.0.0.401</version>
+    <version>4.0.1.100</version>
     <authors>Acro Software Inc.</authors>
     <owners>chocolatey-community,Redsandro,Thilas</owners>
     <summary>Free PDF printer driver with no watermarks.</summary>
@@ -13,8 +13,7 @@ Portable Document Format (PDF) is the de facto standard for the secure and relia
 
 ## Notes
 
-- Free software for commercial and non-commercial use.
-
+- Free software for commercial and non-commercial use
 ]]></description>
     <projectUrl>http://www.cutepdf.com/products/cutepdf/writer.asp</projectUrl>
     <tags>PDF Printer Converter Office freeware admin</tags>

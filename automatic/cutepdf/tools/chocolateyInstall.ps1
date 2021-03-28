@@ -7,14 +7,14 @@ $packageArgs = @{
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup Package
   validExitCodes= @(0)
   softwareName  = 'cutepdf*'
-  checksum      = '3AF8BB48A174551B57BC6538E915C77271E8515DFDCB0C05CDE4E5093A32940CF31DF6149D74BFCD7AECE0386DDBEE9C1F8E8F79928EEEA10811CB66234F46F2'
+  checksum      = 'F013830853068ADB163C36CE01ACFCE24B3A5552716F69289B82D2D62E5BAA893BF113E6666888BB2C0D691216061B47A18BFADA137058A93709FDF6CC7747B6'
   checksumType  = 'SHA512'
 }
 
 # Uninstall any previous versions because the installer will fail if a recent older version is installed.
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 if ($key.Count -eq 1) {
-  $key | % { 
+  $key | ForEach-Object { 
 	$installSilentArgs = $packageArgs['silentArgs']
 	$installFile = $packageArgs['file']
 	$packageArgs['silentArgs'] = '/uninstall /s'
@@ -31,7 +31,7 @@ if ($key.Count -eq 1) {
   Write-Warning "$($key.Count) matches found!"
   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
   Write-Warning "Please alert package maintainer the following keys were matched:"
-  $key | % {Write-Warning "- $($_.DisplayName)"}
+  $key | ForEach-Object {Write-Warning "- $($_.DisplayName)"}
 }
 
 # Make sure Print Spooler service is up and running
