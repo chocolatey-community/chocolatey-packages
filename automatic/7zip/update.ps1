@@ -1,6 +1,6 @@
 import-module au
 
-$domain   = 'http://www.7-zip.org/'
+$domain = 'http://www.7-zip.org/'
 $releases = "${domain}download.html"
 
 function global:au_SearchReplace {
@@ -21,11 +21,13 @@ function global:au_GetLatest {
       $streamName = "pre"
       $version = "$($Matches[1])"
       $versionFull = "$version-$($Matches[2])"
-    } elseif ($Matches[1]) {
+    }
+    elseif ($Matches[1]) {
       $streamName = "stable"
       $version = $Matches[1]
       $versionFull = $version
-    } else {
+    }
+    else {
       return
     }
     if ($streams.ContainsKey($streamName)) { return }
@@ -33,10 +35,10 @@ function global:au_GetLatest {
     $URLS = $download_page.links | ? href -match "7z$($version -replace '\.','')" | select -expand href
 
     $streams["$streamName"] = @{
-      URL32 = $domain + ($URLS | ? { $_ -notmatch "x64" } | select -first 1)
-      URL64 = $domain + ($URLS | ? { $_ -match "x64" } | select -first 1)
+      URL32     = $domain + ($URLS | ? { $_ -notmatch "x64" } | select -first 1)
+      URL64     = $domain + ($URLS | ? { $_ -match "x64" } | select -first 1)
       URL_EXTRA = $domain + ($URLS | ? { $_ -match "extra" } | select -first 1)
-      Version = (Get-Version $versionFull).ToString()
+      Version   = (Get-Version $versionFull).ToString()
     }
   }
 
@@ -44,5 +46,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
-  update -ChecksumFor none
+  update -ChecksumFor none -NoCheckUrl # NoCheckUrl is now required due to server misconfiguration
 }

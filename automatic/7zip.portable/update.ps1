@@ -14,23 +14,24 @@ function global:au_BeforeUpdate {
     $client.DownloadFile($Latest.URL_EXTRA, $filePath)
     $Latest.ChecksumExtra = Get-FileHash $filePath | % Hash
 
-  } catch { throw $_ }
+  }
+  catch { throw $_ }
   finally { $client.Dispose(); }
 }
 
 function global:au_SearchReplace {
   @{
     ".\legal\verification.txt" = @{
-      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(32-Bit.+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(Extra.+)\<.*\>"  = "`${1}<$($Latest.URL_EXTRA)>"
+      "(?i)(listed on\s*)\<.*\>"  = "`${1}<$releases>"
+      "(?i)(32-Bit.+)\<.*\>"      = "`${1}<$($Latest.URL32)>"
+      "(?i)(64-Bit.+)\<.*\>"      = "`${1}<$($Latest.URL64)>"
+      "(?i)(Extra.+)\<.*\>"       = "`${1}<$($Latest.URL_EXTRA)>"
       "(?i)(checksum type\s*:).*" = "`${1} $($Latest.ChecksumType)"
-      "(?i)(checksum32\s*:).*" = "`${1} $($Latest.Checksum32)"
-      "(?i)(checksum64\s*:).*" = "`${1} $($Latest.Checksum64)"
+      "(?i)(checksum32\s*:).*"    = "`${1} $($Latest.Checksum32)"
+      "(?i)(checksum64\s*:).*"    = "`${1} $($Latest.Checksum64)"
       "(?i)(checksumExtra\s*:).*" = "`${1} $($Latest.ChecksumExtra)"
     }
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -NoCheckUrl
