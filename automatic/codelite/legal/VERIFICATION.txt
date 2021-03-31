@@ -3,13 +3,15 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 1. Download the following:
-  64-Bit software: <https://github.com/eranif/codelite/releases/download/13.0/codelite-amd64-13.0.0.exe.7z>
+  32-Bit software <>
+  64-Bit software <>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: 
-  checksum64: 3FC4ED1EC9296D0B6B68ED9C6BA342CCB72357C9D35D5D4822F9763ABF5861EB
+  checksum type: sha256
+  checksum32:
+  checksum64:
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/eranif/codelite/blob/5c29b6cb2a48dbf2d9b243a173c540cf85d70f4f/LICENSE>
