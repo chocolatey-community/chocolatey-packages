@@ -14,7 +14,7 @@
     <licenseUrl>https://github.com/eranif/codelite/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/eranif/codelite</projectSourceUrl>
-    <docsUrl>http://codelite.org/LiteEditor/Documentation</docsUrl>
+    <docsUrl>https://wiki.codelite.org/</docsUrl>
     <mailingListUrl>http://forums.codelite.org/</mailingListUrl>
     <bugTrackerUrl>https://github.com/eranif/codelite/issues</bugTrackerUrl>
     <tags>codelite c c++ php node foss cross-platform ide development programming admin</tags>
