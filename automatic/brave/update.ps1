@@ -17,7 +17,7 @@ function global:au_GetLatest {
     if ($url32 -and $url64) {
       break
     }
-    $nextUrl = $download_page.Links | ? outerHTML -match "Next" | % href
+    $nextUrl = $download_page.Links | ? { $_.outerHTML -match "Next" -and $_.href -notmatch "join" } | % href
     if (!$nextUrl) { break }
     $download_page = Invoke-WebRequest -Uri $nextUrl -UseBasicParsing
   }
