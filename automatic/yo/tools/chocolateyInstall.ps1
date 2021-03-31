@@ -1,5 +1,5 @@
 ﻿Update-SessionEnvironment
 
-$version = '3.1.1'
+$version = '4.0.0-beta.0'
 
 npm install -g yo@$version
