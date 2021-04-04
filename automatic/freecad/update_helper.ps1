@@ -9,7 +9,7 @@ param(
   $try = (($download_page.Links | ? href -match "CAD\-|\.[\dA-Z]+\-WIN" | select -First 1 -expand href).Split("/")[-1]).Split(".")[-1]
   $ext = @{$true='7z';$false='exe'}[( $kind -match 'dev' ) -or ( $portable -match 'portable' )]
   $re32 = "(WIN)\-x32\-($portable)\.$ext";
-  $re64 =  @{$true="(WIN|Win)\-(Conda|x64)(\-|_)$portable+(\.$ext)$";$false="(WIN)\-x64\-($portable)\.$ext$"}[( $kind -match 'dev' )]
+  $re64 =  @{$true="(WIN|Win)\-(Conda|x64)(\-|_)$portable+(\.$ext)$";$false="(WIN)\-x64\-($portable)(\-[0-9])?\.$ext$"}[( $kind -match 'dev' )]
   $url32 = $download_page.Links | ? href -match $re32 | select -first 1 -expand href
   $url64 = $download_page.Links | ? href -match $re64 | select -first 1 -expand href
   $checking = (($url64.Split('\/'))[-1]) -replace($re64,'') -replace('\-','.'); $version = ( Get-Version $checking ).Version
