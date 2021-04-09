@@ -20,7 +20,7 @@ Security is a high priority and code review is always done with security in mind
 
 ## Notes
 
-* This package is for the stable static ffmpeg version.
+* This package is for the stable static essentials ffmpeg version.
 
 ]]></description>
     <summary>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.</summary>

@@ -9,5 +9,5 @@ Security is a high priority and code review is always done with security in mind
 
 ## Notes
 
-* This package is for the stable static ffmpeg version.
+* This package is for the stable static essentials ffmpeg version.
 
