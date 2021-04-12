@@ -18,9 +18,6 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest   {
-  $download_page = Invoke-WebRequest -Uri "$releases/packages/" -UseBasicParsing -Header @{ Referer = $releases }
-  $re = 'full_build\.7z$'
-  $url64 = $download_page.links | ? href -match $re | Select -Expand href -Last 1
   $version = Invoke-WebRequest -Uri "$releases/release-version"
 
   @{
