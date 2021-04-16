@@ -2,11 +2,11 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>waterfox-classic</id>
-    <version>2021.03</version>
+    <id>Waterfox</id>
+    <version>21043.2.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/waterfox</packageSourceUrl>
     <owners>chocolatey-community,tonigellida,admiringworm</owners>
-    <title>Waterfox classic</title>
+    <title>Waterfox </title>
     <authors>Alex Kontos</authors>
     <projectUrl>https://www.waterfoxproject.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png</iconUrl>
@@ -16,7 +16,7 @@
     <projectSourceUrl>https://github.com/MrAlex94/Waterfox</projectSourceUrl>
     <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>
     <summary>Waterfox is basically a 64-bit version of Firefox.</summary>
-    <description><![CDATA[Use this version of Waterfox if you have your browser set up with various NPAPI plugins and bootstrap extensions that have not been updated as WebExtensions or for [Waterfox Current](https://chocolatey.org/packages/waterfox)
+    <description><![CDATA[Use this version of Waterfox if you want the latest and greatest the web has to offer, want to use all WebExtensions and a few bootstrap extensions.
 
 **How and why Waterfox is here...**  
 Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
