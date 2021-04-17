@@ -5,9 +5,9 @@ $releases = 'https://pypi.python.org/pypi/mkdocs'
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
-            "(^[$]version\s*=\s*)('.*')" = "`$1'$($Latest.Version)'"
+            "(^[$]version\s*=\s*)('.*')" = "`$1'$($Latest.PyPIVersion)'"
         }
-     }
+    }
 }
 
 function global:au_GetLatest {
@@ -17,7 +17,7 @@ function global:au_GetLatest {
     $url = $download_page.links | ? href -match $re | select -first 1 -expand href
     $version = $url -split '\/' | select -last 1 -skip 1
 
-    return @{ Version = $version }
+    return @{ Version = $version; PyPIVersion = $version }
 }
 
 update -ChecksumFor none
