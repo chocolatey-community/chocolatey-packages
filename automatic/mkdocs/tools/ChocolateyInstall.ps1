@@ -13,10 +13,10 @@ function FindPython {
     $allowed_python_versions
   )
   # see https://www.python.org/dev/peps/pep-0514/#structure
-  # we are querying machine regsitry only because chocolatey
+  # we are querying machine registry only because chocolatey
   # installs python in admin mode only.
-  $avaiable_installation = Get-ChildItem -Path Registry::HKEY_LOCAL_MACHINE\Software\Python\PythonCore | Select-Object Name
-  foreach ($install in $avaiable_installation) {
+  $available_installation = Get-ChildItem -Path HKLM:\Software\Python\PythonCore | Select-Object Name
+  foreach ($install in $available_installation) {
     $name_install = $install.Name
     $install_version = ($name_install -split '\\')[-1]
     if ($allowed_python_versions.Contains($install_version)) {
