@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://gitlab.com/graphviz/graphviz/-/package_files/8184046/download
+   x64: https://gitlab.com/graphviz/graphviz/-/package_files/9574245/download
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 7784C930475F1AC3FC0C1108DC90D69E605BCA8D2D597C8CFB395613D133D764
+   checksum64: A10AD83A61A1445AA1754E869C01F56706374A8A7E3329471A0D84F8FAC9AAAD
 
 
 File 'license.txt' is a copy of file 'share\license.rtf' obtained from the installation directory
