@@ -19,10 +19,10 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1.18-142142-Win.exe'
-  url64bit               = 'https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1.18-142142-Win.exe'
-  checksum               = 'c04e452b2f3f79d25d3084eb10c9aa9dd71c2efb33fad0282c7e8b206b3324df'
-  checksum64             = 'c04e452b2f3f79d25d3084eb10c9aa9dd71c2efb33fad0282c7e8b206b3324df'
+  url                    = 'https://download.virtualbox.org/virtualbox/6.1.20/VirtualBox-6.1.20-143896-Win.exe'
+  url64bit               = 'https://download.virtualbox.org/virtualbox/6.1.20/VirtualBox-6.1.20-143896-Win.exe'
+  checksum               = '9e969c60ab0a92f54c45b910d18c0cfb0937009dabc0c3382a51329d699e29f9'
+  checksum64             = '9e969c60ab0a92f54c45b910d18c0cfb0937009dabc0c3382a51329d699e29f9'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
@@ -39,8 +39,8 @@ if ($pp.ExtensionPack) {
     Write-Host "Installing extension pack"
     Write-Warning "*** THIS IS A COMMERCIAL EXTENSION AND CAN INCURE SIGNIFICANT FINANCIAL COSTS ***"
 
-    $url_ep       = 'https://download.virtualbox.org/virtualbox/6.1.18/Oracle_VM_VirtualBox_Extension_Pack-6.1.18.vbox-extpack'
-    $checksum_ep  = 'd609e35accff5c0819ca9be47de302abf094dc1b6d4c54da8fdda639671f267e'
+    $url_ep       = 'https://download.virtualbox.org/virtualbox/6.1.20/Oracle_VM_VirtualBox_Extension_Pack-6.1.20.vbox-extpack'
+    $checksum_ep  = '15bdee9c0385ddd4cdbbe0e446c0180ad4ae21554ddd52f8b44783aebd4aeef4'
     $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | Select-Object -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
