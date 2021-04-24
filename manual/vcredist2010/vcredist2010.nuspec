@@ -14,7 +14,7 @@
 NOTE: This will install both the x86 and x64 versions on a 64bit OS.  the x86 version will only be installed on 32bit OS's</description>
     <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
     <releaseNotes />
-    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</copyright>
     <tags>visual c++ redistributable 2010 studio admin</tags>
   </metadata>
 </package>
