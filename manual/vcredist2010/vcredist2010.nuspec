@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>10.0.40219.1</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</licenseUrl>
+    <projectUrl>http://www.microsoft.com/download/en/confirmation.aspx?id=8328</projectUrl>
+    <id>vcredist2010</id>
+    <title>Microsoft Visual C++ 2010 Redistributable Package</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Microsoft Visual C++ 2010 SP1 Redistributable Package (x6 &amp; x864) installs runtime components of Visual C++ Libraries required to run 64-bit and 32-bit applications developed with Visual C++ SP1 on a computer that does not have Visual C++ 2010 SP1 installed. 
+
+NOTE: This will install both the x86 and x64 versions on a 64bit OS.  the x86 version will only be installed on 32bit OS's</description>
+    <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
+    <releaseNotes />
+    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <tags>visual c++ redistributable 2008 studio</tags>
+  </metadata>
+</package>
