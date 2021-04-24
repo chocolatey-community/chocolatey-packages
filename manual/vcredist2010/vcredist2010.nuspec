@@ -4,17 +4,24 @@
     <version>10.0.40219.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community,MarkRobertJohnson</owners>
-    <licenseUrl>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</licenseUrl>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <projectUrl>http://www.microsoft.com/download/en/confirmation.aspx?id=8328</projectUrl>
     <id>vcredist2010</id>
     <title>Microsoft Visual C++ 2010 Redistributable Package</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The Microsoft Visual C++ 2010 SP1 Redistributable Package (x6 &amp; x864) installs runtime components of Visual C++ Libraries required to run 64-bit and 32-bit applications developed with Visual C++ SP1 on a computer that does not have Visual C++ 2010 SP1 installed. 
+    <description>The Microsoft Visual C++ 2010 SP1 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run 64-bit and 32-bit applications developed with Visual C++ SP1 on a computer that does not have Visual C++ 2010 SP1 installed. This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries.
 
-NOTE: This will install both the x86 and x64 versions on a 64bit OS.  the x86 version will only be installed on 32bit OS's</description>
-    <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
+## Notes
+
+- This will install **both the 32 and 64 bit versions** on a 64 bit OS.  The 32 bit version will only be installed on a 32 bit OS.
+- [Latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+</description>
+    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2010</summary>
     <releaseNotes />
     <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</copyright>
     <tags>visual c++ redistributable 2010 studio admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
