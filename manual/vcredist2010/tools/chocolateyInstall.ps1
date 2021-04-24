@@ -1,12 +1,12 @@
 ﻿$params = @{
   PackageName    = 'vcredist2010'
   FileType       = 'exe'
-  Url            = 'http://download.microsoft.com/download/C/6/D/C6D0FD4E-9E53-4897-9B91-836EBA2AACD3/vcredist_x86.exe'
-  Url64bit       = 'http://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe'
-  Checksum       = ''
-  Checksum64     = ''
-  ChecksumType   = ''
-  ChecksumType64 = ''
+  Url            = 'https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x86.exe'
+  Url64bit       = 'https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe'
+  Checksum       = '67313B3D1BC86E83091E8DE22981F14968F1A7FB12EB7AD467754C40CD94CC3D'
+  Checksum64     = 'CC7EC044218C72A9A15FCA2363BAED8FC51095EE3B2A7593476771F9EBA3D223'
+  ChecksumType   = 'sha256'
+  ChecksumType64 = 'sha256'
   SilentArgs     = '/Q /NORESTART'
   ValidExitCodes = @(0,3010) # http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
 }
