@@ -3,7 +3,7 @@
   <metadata>
     <version>10.0.40219.1</version>
     <authors>Microsoft</authors>
-    <owners>Microsoft</owners>
+    <owners>chocolatey-community,MarkRobertJohnson</owners>
     <licenseUrl>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</licenseUrl>
     <projectUrl>http://www.microsoft.com/download/en/confirmation.aspx?id=8328</projectUrl>
     <id>vcredist2010</id>
@@ -15,6 +15,6 @@ NOTE: This will install both the x86 and x64 versions on a 64bit OS.  the x86 ve
     <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
     <releaseNotes />
     <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
-    <tags>visual c++ redistributable 2008 studio</tags>
+    <tags>visual c++ redistributable 2010 studio admin</tags>
   </metadata>
 </package>
