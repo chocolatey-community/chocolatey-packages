@@ -7,8 +7,8 @@
   Checksum64     = ''
   ChecksumType   = ''
   ChecksumType64 = ''
-  SilentArgs     = '/Q'
-  ValidExitCodes = @(0)
+  SilentArgs     = '/Q /NORESTART'
+  ValidExitCodes = @(0,3010) # http://msdn.microsoft.com/en-us/library/aa368542(VS.85).aspx
 }
 Install-ChocolateyPackage @params
 
