@@ -14,9 +14,7 @@ param(
   $re64 =  @{$true="(WIN|Win)\-(LPv\d+\.\d+\.\d+|Conda|x64)(\-|_)($portable)(\-|.)?(\d+)?(\.$ext)$";$false="(WIN)\-x64\-($portable)(\-|.)?(\d)?\.$ext$"}[( $kind -match 'dev' )]
   $url32 = $download_page.Links | ? href -match $re32 | select -first 1 -expand href
   $url64 = $download_page.Links | ? href -match $re64 | select -first 1 -expand href
-  Write-Warning "url64 -${PreUrl}${url64}-"
   $checking = (($url64.Split('\/'))[-1]) -replace($re64,'') -replace('\-','.'); $version = ( Get-Version $checking ).Version
-  Write-Host "version check -$checking-"
   # Version Matching for all kind except dev since it is only 64bit
   if ($kind -ne 'dev'){ 
       $32bitchk = (($url32.Split('\/'))[-1]) -replace($re32,'') -replace('\-','.'); $ver32 = ( Get-Version $32bitchk ).Version
