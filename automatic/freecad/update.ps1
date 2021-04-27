@@ -5,6 +5,7 @@ if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -P
 
 $PreUrl = 'https://github.com'
 $releases = "$PreUrl/FreeCAD/FreeCAD/releases"
+$dev_releases = "$PreUrl/FreeCAD/FreeCAD-Bundle/releases/tag/weekly-builds"
 $softwareName = 'FreeCAD'
 
 function global:au_SearchReplace {
@@ -44,7 +45,7 @@ function global:au_BeforeUpdate {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $streams = [ordered] @{
-    dev      = Get-FreeCad -Title "${softwareName}" -kind "dev"
+    dev      = Get-FreeCad -Title "${softwareName}" -uri $dev_releases -kind "dev"
     stable   = Get-FreeCad -Title "${softwareName}"
     portable = Get-FreeCad -Title "${softwareName}" -kind "portable"
   }
