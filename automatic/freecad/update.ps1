@@ -43,7 +43,6 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $streams = [ordered] @{
     dev      = Get-FreeCad -Title "${softwareName}" -uri $dev_releases -kind "dev"
     stable   = Get-FreeCad -Title "${softwareName}"
