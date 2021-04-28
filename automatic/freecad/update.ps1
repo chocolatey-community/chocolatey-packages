@@ -44,7 +44,7 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
   $streams = [ordered] @{
-    dev      = Get-FreeCad -Title "${softwareName}" -uri $dev_releases -kind "dev"
+    dev      = Get-FreeCad -Title "${softwareName}" -uri $dev_releases -kind "dev" -filler 2
     stable   = Get-FreeCad -Title "${softwareName}"
     portable = Get-FreeCad -Title "${softwareName}" -kind "portable"
   }
