@@ -2,10 +2,10 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>ffmpeg</id>
-    <version>4.3.2</version>
+    <id>ffmpeg-full</id>
+    <version>0.0</version>
     <title>FFmpeg</title>
-    <owners>chocolatey-community</owners>
+    <owners>chocolatey-community, VuiMuich</owners>
     <authors>FFmpeg Contributors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
     <projectUrl>http://www.ffmpeg.org/</projectUrl>
@@ -20,7 +20,7 @@ Security is a high priority and code review is always done with security in mind
 
 ## Notes
 
-* This package is for the stable static essentials ffmpeg version.
+* This package is for the stable static full ffmpeg version.
 * With version 4.4 the format of the version-number changed up until the next two releases it is expected that the flag `--version` is broken
 
 ]]></description>
@@ -28,8 +28,8 @@ Security is a high priority and code review is always done with security in mind
     <releaseNotes>https://ffmpeg.org/index.html#news</releaseNotes>
     <copyright />
     <language>en-US</language>
-    <tags>ffmpeg libavcodec foss cli audio video convert cross-platform audio video media</tags>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ffmpeg</packageSourceUrl>
+    <tags>ffmpeg libavcodec foss cli audio video convert cross-platform audio video media full</tags>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/ffmpeg-full</packageSourceUrl>
     <projectSourceUrl>https://git.ffmpeg.org/ffmpeg.git</projectSourceUrl>
     <docsUrl>https://ffmpeg.org/ffmpeg.html</docsUrl>
   </metadata>

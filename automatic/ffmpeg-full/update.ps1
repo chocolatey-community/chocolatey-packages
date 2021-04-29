@@ -21,7 +21,7 @@ function global:au_GetLatest   {
   $version = Invoke-WebRequest -Uri "$releases/release-version"
 
   @{
-    URL64 = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z";
+    URL64 = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z";
     Version = $version
   }
 }

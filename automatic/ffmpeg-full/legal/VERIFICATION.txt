@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.7z
+   x64: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: D77782FA3EA48A52A52BFF35637CEE14143480473A590E6EB3CB97D80488A513
+   checksum64: 3B18EA042DCC0865435F1A03D2C363F7BFD7CF8B52A3081253BC9D6AFD1D823F
 
 File 'LICENSE.txt' is obtained from:
    https://git.ffmpeg.org/gitweb/ffmpeg.git/blob_plain/HEAD:/COPYING.GPLv3
