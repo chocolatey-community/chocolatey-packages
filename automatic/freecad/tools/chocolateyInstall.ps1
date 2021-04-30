@@ -24,9 +24,12 @@ if ( $packageArgs.filetype -eq '7z' ) {
   if ($pp.InstallDir) { $packageArgs.Add( "UnzipLocation", $pp.InstallDir ) }
   Install-ChocolateyZipPackage @packageArgs
   if ($pp.Shortcut) { $pp.Remove("Shortcut"); Install-ChocolateyShortcut @pp }
-  $files = get-childitem $pp.WorkingDirectory -Exclude $packageArgs.softwareName -include *.exe -recurse
+  $files = get-childitem $pp.WorkingDirectory -filter "*.exe" -recurse
   foreach ($file in $files) {
-    New-Item "$file.ignore" -type file -force | Out-Null # Generate an ignore file(s)
+    if ( $file -notmatch "freecad" ) {
+      $file = $file.Fullname
+      New-Item "$file.ignore" -type "file" -force | Out-Null # Generate an ignore file(s)
+	}
   }
 } else {
   Install-ChocolateyPackage @packageArgs
