@@ -4,7 +4,7 @@
   <metadata>
     <id>ffmpeg-full</id>
     <version>0.0</version>
-    <title>FFmpeg</title>
+    <title>FFmpeg Full</title>
     <owners>chocolatey-community, VuiMuich</owners>
     <authors>FFmpeg Contributors</authors>
     <licenseUrl>http://www.ffmpeg.org/legal.html</licenseUrl>
