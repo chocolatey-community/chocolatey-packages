@@ -10,4 +10,4 @@ Security is a high priority and code review is always done with security in mind
 ## Notes
 
 * This package is for the stable static essentials ffmpeg version.
-
+* With version 4.4 the format of the version-number changed up until the next two releases it is expected that the flag `--version` is broken
