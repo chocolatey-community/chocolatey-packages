@@ -19,8 +19,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $urls = @(
-    "https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=0"
-    "https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=1"
+    "https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=0" # This URL redirects to the stable version
+    #"https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=1" # This URL now returns a 404 causing the update to fail
   )
 
   $streams = @{}
