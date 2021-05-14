@@ -51,6 +51,6 @@ Example: `choco install virtualbox --params "/NoDesktopShortcut /ExtensionPack"`
     </dependencies>
   </metadata>
   <files>
-    <file src="tools\**" />
+    <file src="tools\**" target="tools" />
   </files>
 </package>
