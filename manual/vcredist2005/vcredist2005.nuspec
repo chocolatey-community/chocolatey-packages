@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>8.0.50727.763</version>
+    <version>8.0.50727.619501</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2005</packageSourceUrl>
     <authors>Microsoft</authors>
     <owners>chocolatey-community,MarkRobertJohnson</owners>
@@ -10,9 +10,14 @@
     <id>vcredist2005</id>
     <title>Microsoft Visual C++ 2005 Redistributable Package</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The Microsoft Visual C++ 2005 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run applications developed with Visual C++ on a computer that does not have Visual C++ 2005 installed. 
+    <description>
+The Microsoft Visual C++ 2005 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run applications developed with Visual C++ on a computer that does not have Visual C++ 2005 installed. 
 
-NOTE: This will install both the x86 and x64 versions on a 64bit OS.  the x86 version will only be installed on 32bit OS's</description>
+## Notes
+
+- This will install **both the 32 and 64 bit versions** on a 64 bit OS. The 32 bit version will only be installed on a 32 bit OS.
+- [Latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+</description>
     <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
     <releaseNotes>
     - MFC Security Update: A security issue has been identified leading to a vulnerability in MFC applications that are built with Visual Studio 2010 and ship the Microsoft Visual C++ 2010 Service Pack 1 Redistributable Package.
