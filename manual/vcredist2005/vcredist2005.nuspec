@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>8.0.50727.763</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <licenseUrl>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</licenseUrl>
+    <projectUrl>http://www.microsoft.com/download/en/details.aspx?id=21254</projectUrl>
+    <id>vcredist2005</id>
+    <title>Microsoft Visual C++ 2005 Redistributable Package</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Microsoft Visual C++ 2005 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run applications developed with Visual C++ on a computer that does not have Visual C++ 2005 installed. 
+
+NOTE: This will install both the x86 and x64 versions on a 64bit OS.  the x86 version will only be installed on 32bit OS's</description>
+    <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
+    <releaseNotes>* Oops, wrong package name in chocolateyInstall.ps1</releaseNotes>
+    <copyright>http://www.microsoft.com/about/legal/en/us/IntellectualProperty/Copyright/Default.aspx</copyright>
+    <tags>visual c++ redistributable 2005 studio</tags>
+  </metadata>
+</package>
