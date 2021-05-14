@@ -1,4 +1,5 @@
 Import-Module AU
+. "$PSScriptRoot\..\..\scripts\Set-DescriptionFromReadme.ps1"
 
 function global:au_SearchReplace {
   @{
@@ -41,6 +42,10 @@ function global:au_GetLatest {
     Checksum64       = Get-RemoteChecksumFast -Url $url64 -Algorithm $checksumType
     ChecksumType64   = $checksumType
   }
+}
+
+function global:au_AfterUpdate {
+  Set-DescriptionFromReadme -SkipFirst 1
 }
 
 update -ChecksumFor none
