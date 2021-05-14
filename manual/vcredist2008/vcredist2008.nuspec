@@ -30,7 +30,7 @@ This package installs runtime components of C Runtime (CRT), Standard C++, ATL, 
 </description>
     <releaseNotes>
     - MFC Security Update: A security issue has been identified leading to MFC application vulnerability in DLL planting due to MFC not specifying the full path to system/localization DLLs. You can protect your computer by installing this update from Microsoft. After you install this item, you may have to restart.
-    - KB Article: [KB2538243](http://support.microsoft.com/kb/2538243)
+    - KB Article: [KB2538241](http://support.microsoft.com/kb/2538241)
     - Security bulletin: [MS11-025](http://technet.microsoft.com/security/Bulletin/MS11-025)
     - Microsoft published: 6/7/2011
     </releaseNotes>
