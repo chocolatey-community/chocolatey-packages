@@ -18,13 +18,11 @@
     <bugTrackerUrl>https://bugs.launchpad.net/juju</bugTrackerUrl>
     <tags>juju admin console cloud services foss cross-platform cli</tags>
     <summary>Model-driven operations for hybrid cloud services commandline</summary>
-    <description><![CDATA[
-The Canonical Distribution of Kubernetes works across all major public clouds and private infrastructure, enabling your teams to operate Kubernetes clusters on demand, anywhere.
+    <description><![CDATA[The Canonical Distribution of Kubernetes works across all major public clouds and private infrastructure, enabling your teams to operate Kubernetes clusters on demand, anywhere.
 
 Juju is an application and service modelling tool that enables you to quickly model, configure, deploy and manage applications in the cloud with only a few commands. Use it to deploy hundreds of preconfigured services, OpenStack, or your own code to any public or private cloud.
-
 ]]></description>
-    <releaseNotes>https://jujucharms.com/docs/stable/reference-release-notes</releaseNotes>
+    <releaseNotes>https://discourse.charmhub.io/t/juju-2-9-0-release-notes/4525</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
