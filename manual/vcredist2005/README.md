@@ -1,6 +1,6 @@
 ﻿# [vcredist2005](https://chocolatey.org/packages/vcredist2005)
 
-The Microsoft Visual C++ 2005 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run applications developed with Visual C++ on a computer that does not have Visual C++ 2005 installed. 
+The Microsoft Visual C++ 2005 Redistributable Package (x86 & x64) installs runtime components of Visual C++ Libraries required to run applications developed with Visual C++ on a computer that does not have Visual C++ 2005 installed.
 
 ## Notes
 

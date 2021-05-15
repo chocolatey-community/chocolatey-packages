@@ -11,12 +11,7 @@
     <title>Microsoft Visual C++ 2005 Redistributable Package</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-The Microsoft Visual C++ 2005 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run applications developed with Visual C++ on a computer that does not have Visual C++ 2005 installed. 
-
-## Notes
-
-- This will install **both the 32 and 64 bit versions** on a 64 bit OS. The 32 bit version will only be installed on a 32 bit OS.
-- [Latest supported Visual C++ downloads](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)
+AUTO Imported from README.md
 </description>
     <summary>This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries. For libraries that support side-by-side deployment model (CRT, SCL, ATL, MFC, OpenMP) t</summary>
     <releaseNotes>
@@ -26,7 +21,7 @@ The Microsoft Visual C++ 2005 Redistributable Package (x86 &amp; x64) installs r
     - Microsoft published: 8/9/2011
     </releaseNotes>
     <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</copyright>
-    <tags>visual c++ redistributable 2005 studio admin</tags>
+    <tags>visual c++ redistributable 2005 studio vcredist2005 freeware admin</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
