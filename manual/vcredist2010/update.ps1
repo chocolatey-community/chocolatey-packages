@@ -21,9 +21,9 @@ function Get-RemoteChecksumFast([string] $Url, $Algorithm='sha256', $Headers)
 }
 
 function global:au_GetLatest {
-  $downloadId = 26368
-  $softwareVersionString = '9.0.30729.6161'
-  $packageRevisionString = '04' # three previous revisions for this software version were published as .6161, .6162 and .6163
+  $downloadId = 26999
+  $softwareVersionString = '10.0.40219.325'
+  $packageRevisionString = '02'
   $packageVersion = [version]"${softwareVersionString}${packageRevisionString}"
 
   $confirmationPageUrl = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=${downloadId}"

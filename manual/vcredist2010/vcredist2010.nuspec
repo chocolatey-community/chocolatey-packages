@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>10.0.40219.325</version>
+    <version>10.0.40219.32502</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2010</packageSourceUrl>
     <authors>Microsoft</authors>
     <owners>chocolatey-community,MarkRobertJohnson</owners>
@@ -10,7 +10,8 @@
     <id>vcredist2010</id>
     <title>Microsoft Visual C++ 2010 Redistributable Package</title>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>The Microsoft Visual C++ 2010 SP1 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run 64-bit and 32-bit applications developed with Visual C++ SP1 on a computer that does not have Visual C++ 2010 SP1 installed. This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries.
+    <description>
+The Microsoft Visual C++ 2010 SP1 Redistributable Package (x86 &amp; x64) installs runtime components of Visual C++ Libraries required to run 64-bit and 32-bit applications developed with Visual C++ SP1 on a computer that does not have Visual C++ 2010 SP1 installed. This package installs runtime components of C Runtime (CRT), Standard C++, ATL, MFC, OpenMP and MSDIA libraries.
 
 ## Notes
 
