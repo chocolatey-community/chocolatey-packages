@@ -8,13 +8,13 @@
     <owners>chocolatey-community,AdmiringWorm</owners>
     <title>Juju</title>
     <authors>Canonical Ltd.</authors>
-    <projectUrl>https://jujucharms.com/</projectUrl>
+    <projectUrl>https://juju.is/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@aec5c9771a5f607dc5549f803405aa8d3cb87a7d/icons/juju.png</iconUrl>
-    <copyright>2015 Juju Canonical Ltd.</copyright>
+    <copyright>© 2021 Canonical Ltd. Ubuntu and Canonical are registered trademarks of Canonical Ltd.</copyright>
     <licenseUrl>https://github.com/juju/juju/blob/develop/LICENCE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/juju/juju</projectSourceUrl>
-    <docsUrl>https://jujucharms.com/docs</docsUrl>
+    <docsUrl>https://juju.is/docs</docsUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/juju</bugTrackerUrl>
     <tags>juju admin console cloud services foss cross-platform cli</tags>
     <summary>Model-driven operations for hybrid cloud services commandline</summary>
