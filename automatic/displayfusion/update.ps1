@@ -24,15 +24,16 @@ function global:au_GetLatest {
   )
 
   $streams = @{}
-  try {
-    $urls | % {
-      $url = Get-RedirectedUrl $_ 3>$null
+  $urls | % {
+    $releaseUrl = $_
+    try {
+      $url = Get-RedirectedUrl $releaseUrl 3>$null
       $verRe = 'Setup-|\.exe$'
       $version = $url -split "$verRe" | select -last 1 -skip 1
       if (!$version) { return }
       $version = Get-Version $version
 
-      if (($_ -match 'beta=1') -and !$version.PreRelease) {
+      if (($releaseUrl -match 'beta=1') -and !$version.PreRelease) {
         $version += "-beta"
         $version.PreRelease = "beta"
       }
@@ -51,7 +52,15 @@ function global:au_GetLatest {
           })
       }
     }
-  } catch {}
+    catch {
+      if (($releaseUrl -match 'beta=1')) {
+        $streams.Add("unstable", "ignore")
+      }
+      else {
+        throw
+      }
+    }
+  }
 
   return @{ Streams = $streams }
 }
