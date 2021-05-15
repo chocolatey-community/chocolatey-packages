@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <version>8.0.50727.619501</version>
+    <version>0.0</version>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2005</packageSourceUrl>
     <authors>Microsoft</authors>
     <owners>chocolatey-community,MarkRobertJohnson</owners>
