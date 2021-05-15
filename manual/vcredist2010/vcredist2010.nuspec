@@ -21,7 +21,7 @@ AUTO Imported from README.md
     - Microsoft published: 8/9/2011
     </releaseNotes>
     <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</copyright>
-    <tags>visual c++ redistributable 2010 studio admin</tags>
+    <tags>microsoft visual c++ redistributable 2010 studio vcredist2010 freeware admin</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
