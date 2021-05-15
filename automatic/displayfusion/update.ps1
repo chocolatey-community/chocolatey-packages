@@ -20,34 +20,45 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $urls = @(
     "https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=0" # This URL redirects to the stable version
-    #"https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=1" # This URL now returns a 404 causing the update to fail
+    "https://www.binaryfortress.com/Data/Download/?package=displayfusion&log=101&beta=1" # This URL returns a 404 when the beta is removed
   )
 
   $streams = @{}
   $urls | % {
-    $url = Get-RedirectedUrl $_ 3>$null
-    $verRe = 'Setup-|\.exe$'
-    $version = $url -split "$verRe" | select -last 1 -skip 1
-    if (!$version) { return }
-    $version = Get-Version $version
+    $releaseUrl = $_
+    try {
+      $url = Get-RedirectedUrl $releaseUrl 3>$null
+      $verRe = 'Setup-|\.exe$'
+      $version = $url -split "$verRe" | select -last 1 -skip 1
+      if (!$version) { return }
+      $version = Get-Version $version
 
-    if (($_ -match 'beta=1') -and !$version.PreRelease) {
-      $version += "-beta"
-      $version.PreRelease = "beta"
-    }
+      if (($releaseUrl -match 'beta=1') -and !$version.PreRelease) {
+        $version += "-beta"
+        $version.PreRelease = "beta"
+      }
 
-    if ($version.PreRelease) {
-      $key = "unstable"
-    }
-    else {
-      $key = "stable"
-    }
+      if ($version.PreRelease) {
+        $key = "unstable"
+      }
+      else {
+        $key = "stable"
+      }
 
-    if (!($streams.ContainsKey($key))) {
-      $streams.Add($key, @{
-          Version = $version.ToString()
-          URL32   = $url
-        })
+      if (!($streams.ContainsKey($key))) {
+        $streams.Add($key, @{
+            Version = $version.ToString()
+            URL32   = $url
+          })
+      }
+    }
+    catch {
+      if (($releaseUrl -match 'beta=1')) {
+        $streams.Add("unstable", "ignore")
+      }
+      else {
+        throw
+      }
     }
   }
 
