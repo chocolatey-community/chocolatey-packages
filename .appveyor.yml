@@ -112,7 +112,10 @@ build_script:
 
                     if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
                     pushd $package_dir
-                      if (Test-Path update.ps1 -ea 0) { ./update.ps1 }
+                      if (Test-Path update.ps1 -ea 0) {
+                        gc .\update.ps1 | sls '^import-module au' | select -first 1 | % { Write-Warning "Package '$package' uses AU, so it probably should be placed in 'automatic' and forced with '[AU ...]', not '[PUSH ...]'." }
+                        ./update.ps1
+                      }
                       choco pack; Push-Package -All;
                     popd
                 }
