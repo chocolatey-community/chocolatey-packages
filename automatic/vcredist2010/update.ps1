@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 
 function global:au_SearchReplace {
   @{
@@ -19,9 +19,11 @@ function Get-RemoteChecksumFast([string] $Url, $Algorithm = 'sha256', $Headers) 
 }
 
 function global:au_GetLatest {
+  # ===== These variables need to be updated manually =====
   $downloadId = 26999
   $softwareVersionString = '10.0.40219.325'
   $packageRevisionString = '03'
+  # =======================================================
   $packageVersion = [version]"${softwareVersionString}${packageRevisionString}"
 
   $confirmationPageUrl = "https://www.microsoft.com/en-us/download/confirmation.aspx?id=${downloadId}"
