@@ -27,6 +27,7 @@
 */composer*       @johnstevenson
 */krew*           @jetersen
 */kubelogin*      @jetersen
+*/ffmpeg-full*    @VuiMuich
 
 # Other
 # This can be any file other that won't be matched as a package

@@ -4,7 +4,7 @@
   <metadata>
     <id>vlc</id>
     <title>VLC media player</title>
-    <version>3.0.12</version>
+    <version>3.0.14</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>

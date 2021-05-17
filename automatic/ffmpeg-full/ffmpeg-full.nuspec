@@ -21,7 +21,6 @@ Security is a high priority and code review is always done with security in mind
 ## Notes
 
 * This package is for the stable static full ffmpeg version.
-* With version 4.4 the format of the version-number changed up until the next two releases it is expected that the flag `--version` is broken
 
 ]]></description>
     <summary>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.</summary>

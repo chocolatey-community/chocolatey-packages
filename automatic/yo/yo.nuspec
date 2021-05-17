@@ -4,7 +4,7 @@
   <metadata>
     <id>yo</id>
     <title>Yeoman</title>
-    <version>4.0.0-beta0</version>
+    <version>4.1.0</version>
     <authors>The Yeoman Team</authors>
     <owners>chocolatey-community, Pascal Berger</owners>
     <summary>CLI tool for running Yeoman generators</summary>

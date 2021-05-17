@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 6A0CFED327B00CF8FEFEF4BD5C8BA85B5364F3E56345772410572F2D821CA14D
+   checksum32: 2FA8E586A339D9DA8DCF49C21F4CD1CBAA24691B1DCC0D02F6C9F451AC8BEA47
 
 File 'LICENSE.txt' obtained from:
    https://www.audacityteam.org/about/license/#license

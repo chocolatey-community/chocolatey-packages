@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>0.0</version>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/manual/vcredist2010</packageSourceUrl>
+    <authors>Microsoft</authors>
+    <owners>chocolatey-community,MarkRobertJohnson</owners>
+    <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=26999</projectUrl>
+    <id>vcredist2010</id>
+    <title>Microsoft Visual C++ 2010 Redistributable Package</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+AUTO Imported from README.md
+</description>
+    <summary>Run-time components that are required to run C++ applications that are built by using Visual Studio 2010</summary>
+    <releaseNotes>
+    - MFC Security Update: A security issue has been identified leading to a vulnerability in MFC applications that are built with Visual Studio 2010 and ship the Microsoft Visual C++ 2010 Service Pack 1 Redistributable Package.
+    - KB Article: [KB2538243](https://support.microsoft.com/kb/2565063)
+    - Security bulletin: [MS11-025](https://technet.microsoft.com/en-us/security/Bulletin/MS11-025)
+    - Microsoft published: 8/9/2011
+    </releaseNotes>
+    <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</copyright>
+    <tags>microsoft visual c++ redistributable 2010 studio vcredist2010 freeware admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
