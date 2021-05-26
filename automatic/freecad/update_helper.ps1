@@ -27,7 +27,8 @@ param(
       $32bitchk = (($url32.Split('\/'))[-1]) -replace($re32,'') -replace('\-','.'); $ver32 = ( Get-Version $32bitchk ).Version
 	  if ($ver32 -ne $version) {
 	    Write-Warning "ver32 -$ver32- version -$version-"
-	    $url32 = $null
+# This is commented due to the added Notes in the Readme
+#	    $url32 = $null
 	  }
   }
   switch ($kind) {
