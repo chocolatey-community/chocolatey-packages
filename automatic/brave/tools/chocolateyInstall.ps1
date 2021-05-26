@@ -7,7 +7,7 @@ $packageArgs = @{
   file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
 }
 
-[version]$softwareVersion = '1.25.66'
+[version]$softwareVersion = '1.25.68'
 
 Write-Host "Checking already installed version..."
 $installedVersion = Get-InstalledVersion
