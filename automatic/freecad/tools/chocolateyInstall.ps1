@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
- if(!$PSScriptRoot){ $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
+if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
 . "$PSScriptRoot\helper.ps1"
 
 $packageArgs = @{
@@ -29,8 +29,9 @@ if ( $packageArgs.filetype -eq '7z' ) {
     if ( $file -notmatch "freecad" ) {
       $file = $file.Fullname
       New-Item "$file.ignore" -type "file" -force | Out-Null # Generate an ignore file(s)
-	}
+    }
   }
-} else {
+}
+else {
   Install-ChocolateyPackage @packageArgs
 }
