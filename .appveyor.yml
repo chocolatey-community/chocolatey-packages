@@ -23,7 +23,7 @@ environment:
   # Github token to commit pushed packages to repository
   github_user_repo: chocolatey-community/chocolatey-coreteampackages
   github_api_key:
-    secure: 7tqvwsSAEGnwr0bYwegIsNBje1pqjdhHEoclLBQOR5HF0SOGw48Ls1OBpAimSlsf
+    secure: kp3pFdeqA90uVX4Yy2F5obA/O+P1428LrtCiuYZQYUMkSYi6yWTdmv35tOoce1k8
 
   # Gitter Integration
   gitter_webhook:
