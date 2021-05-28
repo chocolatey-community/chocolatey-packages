@@ -4,6 +4,10 @@ FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD,
 
 FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant 3D scene representation model provided by the Coin 3D library, and a broad Python API. The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX and Linux platforms.
 
+### Notes
+
+This package may install a 32bit version that is not the same version number as the 64bit version.
+
 ## Features
 
 - A full parametric model,and modular architecture that allows plugin extensions (modules) to add functionality to the core application.
