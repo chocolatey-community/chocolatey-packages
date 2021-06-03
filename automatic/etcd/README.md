@@ -1,22 +1,27 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png" width="48" height="48"/> [etcd](https://chocolatey.org/packages/etcd)
 
-etcd is a distributed reliable key-value store for the most critical data of a distributed system, with a focus on being:
-  * _Simple_: well-defined, user-facing API (gRPC)
-  * _Secure_: automatic TLS with optional client cert authentication
-  * _Fast_: benchmarked 10,000 writes/sec
-  * _Reliable_: properly distributed using Raft
+**etcd** is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to
+be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network
+partitions and can tolerate machine failure, even in the leader node.
 
-etcd is written in Go and uses the Raft consensus algorithm to manage a highly-available replicated log.
+## Features
 
-etcd is used in production by many companies, and the development team stands behind it in critical deployment scenarios, where etcd is frequently teamed with applications such as Kubernetes, locksmith, vulcand, Doorman, and many others. Reliability is further ensured by rigorous testing.
+* **Simple interface** Read and write values using standard HTTP tools, such as curl
+* **Key-value storage** Store data in hierarchically organized directories, as in a standard filesystem
+* **Watch for changes** Watch specific keys or directories for changes and react to changes in values
+* Optional SSL client certificate authentication
+* Benchmarked at 1000s of writes/s per instance
+* Optional TTLs for keys expiration
+* Properly distributed via Raft protocol  
 
-This package installs **etcd** as a service, and makes **etcdctl** (the command line client) available in the path.
+## Package Parameters
 
-The package will pass package parameters to the etcd service.
+* The package will pass package parameters to the etcd service  
 Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/tokengoeshere"`
 
-The service is managed with NSSM, you can change the service parameters easily by running `nssm edit etcd`
+## Notes
 
-Originally packaged by Robert Labrie (https://github.com/tnwinc/chocolatey-etcd)
-
-#### Note: Windows support is limited to 64bit systems.
+* This package installs **etcd** as a service, and makes **etcdctl** (the command line client) available in the path
+* The service is managed with NSSM, you can change the service parameters easily by running `nssm edit etcd`
+* Windows support is limited to 64-bit systems
+* Originally packaged by Robert Labrie (https://github.com/robertlabrie)

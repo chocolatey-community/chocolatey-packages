@@ -16,7 +16,7 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
 
-  checksum type: 
+  checksum type: sha256
   checksum: DC7556283E2C815FFBAE5BF745A6470465C226A9AA33E847DF78920B5DB412D9
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/coreos/etcd/blob/3381177341c11aa9d89b6172699d64ddc2146a11/LICENSE>
+The file 'LICENSE.txt' has been obtained from <https://github.com/etcd-io/etcd/commit/3381177341c11aa9d89b6172699d64ddc2146a11/LICENSE>
