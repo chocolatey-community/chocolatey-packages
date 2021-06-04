@@ -50,4 +50,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force -NoCheckChocoVersion -NoCheckUrl
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
