@@ -25,24 +25,28 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'windows64\.msi\/$'
+  #regex to find download url, it should match any url that ends with a 64 bit windows msi
+  $re = '\/[^/]*windows.*64.*\.msi\/$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = '[-]'
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+  # this should get the version number based on Blender's version numbering as of 03-Jun-2020
+  $version64 = $url64 -match '\d\.\d\d\.\d+' | Foreach {$Matches[0]}
 
+  <# if block to replace a leter at end of version64 with '.1' should no longer be needed,
+  see https://wiki.blender.org/wiki/Process/LTS#Version_Communication
   if ($version64 -match '[a-z]$') {
     [char]$letter = $version64[$version64.Length - 1]
     [int]$num = $letter - [char]'a'
     $num++
     $version64 = $version64 -replace $letter,".$num"
   }
-
+  #>
   @{
     URL64 = Get-ActualUrl $url64
     Version = $version64
   }
 }
+
 
 function Get-ActualUrl() {
   param([string]$url)
