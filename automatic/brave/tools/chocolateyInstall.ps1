@@ -3,11 +3,11 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\BraveBrowserStandaloneSilentSetup32.exe"
-  file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
+  file        = "$toolsPath\BraveBrowserStandaloneSilentBetaSetup32.exe"
+  file64      = "$toolsPath\BraveBrowserStandaloneSilentBetaSetup.exe"
 }
 
-[version]$softwareVersion = '1.25.70'
+[version]$softwareVersion = '1.26.54'
 
 Write-Host "Checking already installed version..."
 $installedVersion = Get-InstalledVersion
