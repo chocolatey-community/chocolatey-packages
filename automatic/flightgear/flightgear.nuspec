@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>flightgear</id>
-    <version>2020.3.8</version>
+    <version>2020.3.9</version>
     <title>FlightGear</title>
     <owners>chocolatey-community</owners>
     <authors>FlightGear Team</authors>
