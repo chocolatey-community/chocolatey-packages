@@ -1,11 +1,9 @@
-# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/firefox.png" width="48" height="48"/> [FirefoxESR](https://chocolatey.org/packages/FirefoxESR)
-
+# <img src="https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/edba4a5849ff756e767cba86641bea97ff5721fe/icons/firefox.png" width="48" height="48"/> [Firefox](https://chocolatey.org/packages/Firefox)
 
 Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Features
 
-**This Package installs Firefox ESR**
 - A powerful, new engine that’s built for rapidfire performance.
 - Better, faster page loading that uses less computer memory.
 - Gorgeous design and smart features for intelligent browsing.
@@ -14,7 +12,8 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 - Firefox Quantum features: screenshots, pocket, gaming & VR, library.
 - Customization Features - addons & extensions, themes, toolbar.
 - Synced across devices - passwords, bookmarks, tabs and more.
-- Ad tracker blocking
+- Ad tracker blocking.
+- Password manager.
 
 ## Package Parameters
 
@@ -35,9 +34,10 @@ Command-line options for installer configuration. See the [official page](https:
 `choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
+
 - Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
-- Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) package.
-- If locale package parameter is not present, this package installs Firefox ESR in the first language which matches this list:
-  1. If Firefox ESR is already installed it uses the same language as the already installed one.
+- Looking for Firefox Extended Support Release? Install the [FirefoxESR](/packages/FirefoxESR) package.
+- If locale package parameter is not present, this package installs Firefox in the first language which matches this list:
+  1. If Firefox is already installed it uses the same language as the already installed one.
   1. The Windows system language.
-  1. If Firefox ESR does not support the system language, it will fall back to `en-US`.
+  1. If Firefox does not support the system language, it will fall back to `en-US`.
