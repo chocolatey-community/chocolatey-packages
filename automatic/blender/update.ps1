@@ -25,11 +25,11 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'windows64\.msi\/$'
+  $re = 'windows-x64\.msi\/$'
   $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
 
-  $verRe = '[-]'
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+  $verRe = '-'
+  $version64 = $url64 -split "$verRe" | select -First 1 -Skip 1
 
   if ($version64 -match '[a-z]$') {
     [char]$letter = $version64[$version64.Length - 1]
