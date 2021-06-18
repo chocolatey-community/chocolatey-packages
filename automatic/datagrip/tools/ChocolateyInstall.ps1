@@ -19,8 +19,8 @@ New-Item -ItemType Directory -Force -Path $installDir
 $arguments              = @{
     packageName         = $env:ChocolateyPackageName
     softwareName        = 'JetBrains DataGrip*'
-    url                 = 'https://download.jetbrains.com/datagrip/datagrip-2021.1.2.exe'
-    checksum            = '4e980b3f48cd300eed69f5595c7a19eb0a6ebb128e91240e6d3996f6da7df287'
+    url                 = 'https://download.jetbrains.com/datagrip/datagrip-2021.1.3.exe'
+    checksum            = '0613bd6d3d4ae62107f9bbb0e446d156022679f3a106d18ea2753abb0612c32f'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = $silentArgs
