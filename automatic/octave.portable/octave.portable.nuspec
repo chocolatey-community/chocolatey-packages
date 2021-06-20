@@ -5,16 +5,17 @@
     <id>octave.portable</id>
     <version>6.2.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/octave.portable</packageSourceUrl>
-    <owners>chocolatey-community,Andrei Bejenaru</owners>
+    <owners>chocolatey-community,dgalbraith,Andrei Bejenaru</owners>
     <title>GNU Octave (Portable)</title>
     <authors>John W. Eaton</authors>
     <projectUrl>https://www.gnu.org/software/octave</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@aa4dfe9a33e28ea4a94616e84b3648527d4fa87f/icons/octave.png</iconUrl>
-    <copyright>(c) 1998-2017 John W. Eaton</copyright>
+    <copyright>Copyright 1998-2021 John W. Eaton</copyright>
     <licenseUrl>https://www.gnu.org/software/octave/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://hg.savannah.gnu.org/hgweb/octave</projectSourceUrl>
     <docsUrl>https://www.gnu.org/software/octave/doc/interpreter</docsUrl>
+    <mailingListUrl>https://octave.discourse.group</mailingListUrl>
     <bugTrackerUrl>https://www.gnu.org/software/octave/bugs.html</bugTrackerUrl>
     <tags>octave matlab math numerical computations foss cross-platform</tags>
     <summary>Scientific Programming Language, largely compatible with Matlab</summary>
