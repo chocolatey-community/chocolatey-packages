@@ -12,3 +12,17 @@ Octave has extensive tools for solving common numerical linear algebra problems,
 * Drop-in compatible with many Matlab scripts
 * Octave Forge, a central location for development of packages for GNU Octave, similar to Matlab's toolboxes.
 * Free software, runs on GNU/Linux, macOS, BSD, and Windows
+
+## Package parameters
+
+The following package parameters can be set:
+
+* `/DesktopIcon` - Add icons for Octave to the Desktop. By default no icons are added.
+* `/StartMenu`   - Add icons for Octave to the Start Menu. By default no icons are added.
+* `/LocalUser`   - Install only for local user. By default any Octave shortcuts will be installed for all users.
+
+Example: `choco install octave.install --params "/DesktopIcon /StartMenu /LocalUser"`
+
+## Notes
+
+* The package makes Octave available through the `octave` (GUI) and  `octave-cli` (CLI) shims following installation
