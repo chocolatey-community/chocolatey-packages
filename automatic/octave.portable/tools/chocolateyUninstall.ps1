@@ -1,14 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$progDir  = "$toolsDir\octave"
-
-# Remove desktop shortcut
-$desktop = $([System.Environment]::GetFolderPath([System.Environment+SpecialFolder]::DesktopDirectory))
-$link = Join-Path $desktop "Octave.lnk"
-If (Test-Path $link) {
-  Remove-Item "$link"
-}
+$osBitness = Get-OSArchitectureWidth
+$path      = "$progDir\mingw$osBitness\bin\octave.bat"
 
 # Unlink batch
-Uninstall-BinFile -Name "octave" -Path "$progDir\bin\octave-cli.exe"
+Uninstall-BinFile -Name 'octave'     -Path $path
+Uninstall-BinFile -Name 'octave-cli' -Path $path
