@@ -6,7 +6,8 @@ GNU Octave is a high-level language, primarily intended for numerical computatio
 
 Octave has extensive tools for solving common numerical linear algebra problems, finding the roots of nonlinear equations, integrating ordinary functions, manipulating polynomials, and integrating ordinary differential and differential-algebraic equations. It is easily extensible and customizable via user-defined functions written in Octave’s own language, or using dynamically loaded modules written in C++, C, Fortran, or other languages.
 
-### Features:
+## Features
+
 * Powerful mathematics-oriented syntax with built-in plotting and visualization tools
 * Drop-in compatible with many Matlab scripts
 * Octave Forge, a central location for development of packages for GNU Octave, similar to Matlab's toolboxes.

@@ -34,6 +34,7 @@ function global:au_SearchReplace {
     }
 
     "$($Latest.PackageName).nuspec" = @{
+      "(<copyright>.*?-)\d{4}(.*?<\/copyright>)" = "`${1}$($Latest.UpdateYear)`${2}"
       "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
     }
   }
@@ -42,29 +43,30 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'octave-.*-.*w(64|32)\.7z$'
-  $urls = $download_page.links | ? href -match $re | select -First 2 -expand href | % { New-Object uri([uri]$releases, $_) }
+  $re   = 'octave-.*-.*w(64|32)\.7z$'
+  $urls = $download_page.links | where-object href -match $re | select-object -First 2 -expand href | foreach-object{ New-Object uri([uri]$releases, $_) }
 
-  $url32 = $urls -match "w32" | select -first 1
-  $url64 = $urls -match "w64" | select -first 1
+  $url32 = $urls -match "w32" | select-object -first 1
+  $url64 = $urls -match "w64" | select-object -first 1
 
-  $version32 = $url32 -split '[-]' | select -Last 1 -Skip 1
-  $version64 = $url64 -split '[-]' | select -Last 1 -Skip 1
+  $version32 = $url32 -split '[-]' | select-object -Last 1 -Skip 1
+  $version64 = $url64 -split '[-]' | select-object -Last 1 -Skip 1
 
   if ($version32 -ne $version64) {
     throw "32bit and 64bit versions do not match. Please Investigate."
   }
 
-  $releases_url = "https://www.gnu.org/software/octave/news.html"
+  $releases_url  = "https://www.gnu.org/software/octave/news.html"
   $releases_page = Invoke-WebRequest -Uri $releases_url -UseBasicParsing
-  $re = 'octave-.*-released'
-  $releaseNotes = $releases_page.links | ? href -match $re | select -First 1 -expand href | % { New-Object uri([uri]$releases_url, $_) }
+  $re            = 'octave-.*-released'
+  $releaseNotes  = $releases_page.links | where-object href -match $re | select-object -First 1 -expand href | foreach-object { New-Object uri([uri]$releases_url, $_) }
 
   return @{
     Version      = $version32.Replace('_', '.')
     URL32        = $url32
     URL64        = $url64
-    ReleaseNotes = "$releaseNotes"
+    ReleaseNotes = $releaseNotes
+    UpdateYear   = (Get-Date).ToString('yyyy')
   }
 }
 

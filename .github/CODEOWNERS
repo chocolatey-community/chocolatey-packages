@@ -12,22 +12,23 @@
 # Multiple users can be set for the same match
 
 
-*/calibre*        @gep13 @AdmiringWorm
-*/cdburnerxp*     @gep13
-*/poweriso*       @gep13
-*/rdcman*         @gep13
-*/wix*            @gep13
-*/gobby*          @AdmiringWorm
-*/gom-player*     @AdmiringWorm
-*/jubler*         @AdmiringWorm
-*/juju*           @AdmiringWorm
-*/transifex*      @AdmiringWorm
-*/waterfox*       @AdmiringWorm
-*/k9s*            @moebius87
-*/composer*       @johnstevenson
-*/krew*           @jetersen
-*/kubelogin*      @jetersen
-*/ffmpeg-full*    @VuiMuich
+*/calibre*            @gep13 @AdmiringWorm
+*/cdburnerxp*         @gep13
+*/poweriso*           @gep13
+*/rdcman*             @gep13
+*/wix*                @gep13
+*/gobby*              @AdmiringWorm
+*/gom-player*         @AdmiringWorm
+*/jubler*             @AdmiringWorm
+*/juju*               @AdmiringWorm
+*/transifex*          @AdmiringWorm
+*/waterfox*           @AdmiringWorm
+*/k9s*                @moebius87
+*/composer*           @johnstevenson
+*/krew*               @jetersen
+*/kubelogin*          @jetersen
+*/ffmpeg-full*        @VuiMuich
+*/octave.portable*    @dgalbraith
 
 # Other
 # This can be any file other that won't be matched as a package
