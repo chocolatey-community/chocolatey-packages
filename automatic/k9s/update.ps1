@@ -3,10 +3,8 @@ param([switch] $Force)
 
 Import-Module AU
 
-$domain   = 'https://github.com'
+$domain = 'https://github.com'
 $releases = "$domain/derailed/k9s/releases/latest"
-
-$filename64 = 'k9s_Windows_x86_64.tar.gz'
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
@@ -36,8 +34,9 @@ function global:au_GetLatest {
 
   $checksumAsset = $domain + ($download_page.Links | ? href -match "checksums\.txt$" | select -first 1 -expand href)
   $checksum_page = Invoke-WebRequest -Uri $checksumAsset -UseBasicParsing
+  $filename64 = -join('k9s_v', $version, '_Windows_x86_64.tar.gz')
   $checksum64 = [regex]::Match($checksum_page, "([a-f\d]+)\s*$([regex]::Escape($filename64))").Groups[1].Value
-  
+
   return @{
     Version        = $version
     URL64          = "$domain/derailed/k9s/releases/download/v${version}/${filename64}"

@@ -6,14 +6,14 @@ The installer have been downloaded from the GitHub mirror and can be verified li
 
 1. Download the following installer(s):
 
-x86: https://github.com/ckaiser/Lightscreen/releases/download/v2.4/LightscreenSetup-2.4.exe
+x86: https://github.com/ckaiser/Lightscreen/releases/download/v2.5/LightscreenSetup-2.5.exe
 
 2. You can use one of the following methods to obtain the checksum(s):
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: D39248F0B76C0F18C690B7B35D4218174D4FD36284AC8BCF0F1D1748F177A7C7
+  checksum32: 626479BFD6B160DF9BE29FF169937575E371B50D258C2AD51BF4DCBD8E8251AA
 
 The included 'LICENSE.txt' file have been obtained from:
 https://github.com/ckaiser/Lightscreen/blob/master/LICENSE

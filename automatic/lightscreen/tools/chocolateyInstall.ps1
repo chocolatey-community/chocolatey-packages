@@ -3,7 +3,7 @@
 $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
   softwareName = "Lightscreen*"
-  file         = "$toolsDir\LightscreenSetup-2.4.exe"
+  file         = "$toolsDir\LightscreenSetup-2.5.exe"
   fileType     = "exe"
   silentArgs   = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LAUNCHAFTER=0"
 }
