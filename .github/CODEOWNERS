@@ -28,6 +28,7 @@
 */krew*               @jetersen
 */kubelogin*          @jetersen
 */ffmpeg-full*        @VuiMuich
+*/etcd*               @dgalbraith
 */octave.portable*    @dgalbraith
 
 # Other

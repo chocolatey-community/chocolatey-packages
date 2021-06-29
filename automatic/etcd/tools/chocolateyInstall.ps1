@@ -15,7 +15,6 @@ Get-ChocolateyUnzip @packageArgs
 
 Copy-Item "$installLocation\etcd-*-windows-amd64\*" $installLocation -Recurse -Force
 Remove-Item "$installLocation\etcd-*-windows-amd64" -Recurse -Force
-# Install-ChocolateyPath "$installLocation"
 
 # older versions of etcd didn't put .exe on the binary
 if (Test-Path "$installLocation\etcd") {
