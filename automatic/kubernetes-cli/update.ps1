@@ -19,7 +19,8 @@ function global:au_SearchReplace {
     }
 
     "$($Latest.PackageName).nuspec" = @{
-      "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
+      "(\<copyright\>.*?)\d{4}(.*?\<\/copyright\>)" = "`${1}$($Latest.ReleaseYear)`${2}"
+      "(\<releaseNotes\>).*?(\</releaseNotes\>)"    = "`${1}$($Latest.ReleaseNotes)`${2}"
     }
   }
 }
@@ -27,7 +28,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $url = Get-RedirectedUrl $releases
 
-  $version = $url -split '\/v' | select -last 1
+  $version = $url -split '\/v' | Select-Object -last 1
   $majorVersion = $version.Substring(0, 3)
 
   $streams = @{}
@@ -37,7 +38,8 @@ function global:au_GetLatest {
     URL32       = "https://dl.k8s.io/v${version}/kubernetes-client-windows-386.tar.gz"
     URL64       = "https://dl.k8s.io/v${version}/kubernetes-client-windows-amd64.tar.gz"
     ReleaseNotes= "https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-${majorVersion}.md#v$($version -replace '\.','')"
-    ReleaseURL  = "$releases"
+    ReleaseURL  = $releases
+    ReleaseYear = (Get-Date).ToString('yyyy')
   })
 
   return @{ Streams = $streams }
