@@ -16,7 +16,7 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
 
-  checksum type: 
+  checksum type: sha256
   checksum: 0A01F3EB0CB810B61A4D7AAA5B59824E829F2E9042F061FF27F3C419822F08D3
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kubernetes/kompose/blob/34d72c757906dd05499fedbe214850b41ea712b1/LICENSE>
