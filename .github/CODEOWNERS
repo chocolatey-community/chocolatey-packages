@@ -29,6 +29,7 @@
 */kubelogin*          @jetersen
 */ffmpeg-full*        @VuiMuich
 */etcd*               @dgalbraith
+*/kubernetes-kompose* @dgalbraith
 */octave.portable*    @dgalbraith
 
 # Other
