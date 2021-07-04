@@ -5,26 +5,29 @@
     <id>minishift</id>
     <version>1.34.3.20210527</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/minishift</packageSourceUrl>
-    <owners>chocolatey-community,Andrei Bejenaru</owners>
+    <owners>chocolatey-community,dgalbraith,Andrei Bejenaru</owners>
     <title>Minishift: Run OpenShift 3.x locally</title>
     <authors>RedHat, Minishift contributors</authors>
-    <projectUrl>https://www.openshift.org/minishift</projectUrl>
+    <projectUrl>https://www.okd.io/minishift</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@d2ba3846157215dd14199887818129eea17950eb/icons/minishift.png</iconUrl>
-    <copyright>(c) 2017 RedHat</copyright>
+    <copyright>Copyright 2016-2020 The Kubernetes Authors All rights reserved.</copyright>
     <licenseUrl>https://github.com/minishift/minishift/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/minishift/minishift</projectSourceUrl>
-    <docsUrl>https://docs.openshift.org/latest/minishift</docsUrl>
+    <docsUrl>https://docs.okd.io/3.11/minishift/index.html</docsUrl>
     <bugTrackerUrl>https://github.com/minishift/minishift/issues</bugTrackerUrl>
+    <mailingListUrl>https://lists.minishift.io/admin/lists/minishift.lists.minishift.io</mailingListUrl>
     <tags>openshift kubernetes docker rkt containers devops development cli foss</tags>
-    <summary>Minishift is a tool that helps you run OpenShift 3.x locally.</summary>
+    <summary>Minishift is a tool that helps you run OpenShift 3.x locally</summary>
     <description><![CDATA[## Run OpenShift 3.x locally
 
-Minishift is a tool that helps you run OpenShift locally by running a single-node OpenShift 3.x cluster inside a VM. You can try out OpenShift or develop with it, day-to-day, on your local host.
+Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine.
+With Minishift you can try out OKD or develop with it, day-to-day, on your local machine.
 
-Minishift uses libmachine for provisioning VMs, and OpenShift Origin for running the cluster. The code base is forked from the Minikube project.
+Minishift uses [libmachine](https://github.com/docker/machine/tree/master/libmachine) for provisioning virtual machines,
+and OKD3 for running the cluster.
 
-#### Note: Minishift runs OpenShift 3.x clusters. Due to different installation methods, OpenShift 4.x clusters are not supported. To run OpenShift 4.x locally, use CodeReady Containers.
+### Note: Minishift runs OpenShift 3.x clusters. Due to different installation methods, OpenShift 4.x clusters are not supported. To run OpenShift 4.x locally, use CodeReady Containers
 ]]></description>
     <releaseNotes>https://github.com/minishift/minishift/releases/tag/v1.34.3</releaseNotes>
   </metadata>

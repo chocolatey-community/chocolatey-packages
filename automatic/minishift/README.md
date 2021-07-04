@@ -2,8 +2,10 @@
 
 ## Run OpenShift 3.x locally
 
-Minishift is a tool that helps you run OpenShift locally by running a single-node OpenShift 3.x cluster inside a VM. You can try out OpenShift or develop with it, day-to-day, on your local host.
+Minishift is a tool that helps you run OKD locally by launching a single-node OKD cluster inside a virtual machine.
+With Minishift you can try out OKD or develop with it, day-to-day, on your local machine.
 
-Minishift uses libmachine for provisioning VMs, and OpenShift Origin for running the cluster. The code base is forked from the Minikube project.
+Minishift uses [libmachine](https://github.com/docker/machine/tree/master/libmachine) for provisioning virtual machines,
+and OKD3 for running the cluster.
 
-#### Note: Minishift runs OpenShift 3.x clusters. Due to different installation methods, OpenShift 4.x clusters are not supported. To run OpenShift 4.x locally, use CodeReady Containers.
+### Note: Minishift runs OpenShift 3.x clusters. Due to different installation methods, OpenShift 4.x clusters are not supported. To run OpenShift 4.x locally, use CodeReady Containers

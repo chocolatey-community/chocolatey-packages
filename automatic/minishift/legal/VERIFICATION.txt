@@ -16,7 +16,7 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
 
-  checksum type: 
+  checksum type: sha256
   checksum: C86FF71252AA40F06EE3EE95964B3525A4E8922D7EC9C639E2C0624317507619
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/minishift/minishift/blob/eff0477aa242432aaba284febf9496ebe6cd2371/LICENSE>

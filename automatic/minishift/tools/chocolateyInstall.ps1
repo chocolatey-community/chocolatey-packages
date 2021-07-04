@@ -11,4 +11,5 @@ $packageArgs = @{
   FileFullPath64 = Get-Item $toolsPath\minishift-*-windows-amd64.zip
   Destination    = $toolsPath
 }
+
 Get-ChocolateyUnzip @packageArgs
