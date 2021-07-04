@@ -16,7 +16,7 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
 
-  checksum type: 
+  checksum type: sha256
   checksum: 74C961877798531AB8E53E2590BFAE3CEE7690D0C2E0614FDB44339E065124B5
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kubernetes/minikube/blob/9cf84c2acdd84b98349dce91aac76a933d4ea388/LICENSE>
