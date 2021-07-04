@@ -29,6 +29,7 @@
 */kubelogin*          @jetersen
 */ffmpeg-full*        @VuiMuich
 */etcd*               @dgalbraith
+*/minikube*           @dgalbraith
 */octave.portable*    @dgalbraith
 
 # Other
