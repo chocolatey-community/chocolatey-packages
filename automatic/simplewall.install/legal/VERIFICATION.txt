@@ -6,14 +6,14 @@ The installer have been downloaded from the GitHub mirror and can be verified li
 
 1. Download the following installer(s):
 
-x86: https://github.com/henrypp/simplewall/releases/download/v.3.3.4/simplewall-3.3.4-setup.exe
+x86: https://github.com/henrypp/simplewall/releases/download/v.3.3.5/simplewall-3.3.5-setup.exe
 
 2. You can use one of the following methods to obtain the checksum(s):
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 1DD98AD7B4CD3437BBD0B583DD0B7F30C7C67DD9C91C62EEBEC7A726283F717B
+  checksum32: C58F7446BC7F9565ABC00B08239A2FFBB27ED913E2C770A45653A890F8B1A4E5
 
 The included 'LICENSE.txt' file have been obtained from:
 https://github.com/henrypp/simplewall/blob/master/LICENSE
