@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official download link listed on <https://www.waterfox.net/releases/>
 and can be verified like this:
 
-1. Download <https://cdn.waterfox.net/releases/win64/installer/Waterfox%20G3.2.3.1%20Setup.exe>
+1. Download <https://cdn.waterfox.net/releases/win64/installer/Waterfox%20Classic%202021.07%20Setup.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 8F35A21EF0858FA21B6F5FDF375A7E4F8B099B4F455453EB949F5AB46D396FEC
+  checksum: 34E41B845E9205645923520AB7B76A04AE914A16BB29DEAAC5EBEB0ED0040C0C
 
 File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE>
