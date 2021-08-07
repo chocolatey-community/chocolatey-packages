@@ -1,39 +1,53 @@
-import-module au
+Import-Module au
 
-$releases = 'http://www.mixxx.org/download'
+$releases = 'https://www.mixxx.org/download'
+
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_SearchReplace {
-   @{
-        ".\legal\VERIFICATION.txt" = @{
-            "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
-            "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
-            "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
-            "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
-        }
-        "tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
-            "(?i)(^\s*url64bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
-            "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-            "(?i)(^\s*checksumType\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-            "(?i)(^\s*checksumType64\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType64)'"
-        }
+  @{
+    '.\legal\VERIFICATION.txt'    = @{
+      '(?i)(Go to)\s*<.*>'  = "`${1} <$releases>"
+      '(?i)(\s+x64:).*'     = "`${1} $($Latest.URL64)"
+      '(?i)(checksum64:).*' = "`${1} $($Latest.Checksum64)"
     }
+    'tools\chocolateyInstall.ps1' = @{
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+    }
+  }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-    $re    = 'win..\.exe$'
-    $url   = $download_page.links | ? href -match $re | select -First 2 -Expand href
-    $version = $url[0] -split '/' | select -Last 1 -Skip 1
-    @{  
-        Version = $version.Replace('mixxx-', '')
-        URL32   = $url | ? { $_ -like '*win32*' } | select -First 1
-        URL64   = $url | ? { $_ -like '*win64*' } | select -First 1
-        ChecksumType32 = 'sha512'
-        ChecksumType64 = 'sha512'
+  $re = 'win..\.msi$'
+  $urls = $download_page.links | Where-Object href -Match $re | Select-Object -ExpandProperty href
+
+  $streams = @{}
+
+  $urls | ForEach-Object {
+    if ($_ -match 'snapshots') {
+      $splits = $_ -split '-' | Select-Object -Skip 1
+      $version = ($splits | Select-Object -First 3) -join '-'
+      $key = $splits | Select-Object -Skip 1 -First 1
     }
+    else {
+      $version = $_ -split '/' | Select-Object -Last 1 -Skip 1
+      $key = 'stable'
+    }
+
+    if (!$streams.ContainsKey($key)) {
+      $streams.Add($key, @{
+          Version        = $version.Replace('mixxx-', '')
+          URL64          = $_
+          ChecksumType64 = 'sha512'
+        })
+    }
+  }
+
+  return @{Streams = $streams }
 }
 
-update
+update -ChecksumFor none
