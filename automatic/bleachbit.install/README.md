@@ -5,20 +5,20 @@ When your computer is getting full, BleachBit quickly frees disk space. When you
 BleachBit has many useful features designed to help you easily [clean](https://www.bleachbit.org/features/cleaner) your computer to free space and maintain privacy.
 
 ## Features
-* Delete your private files so completely that "even God can't read them" according to South Carolina Representative [Trey Gowdy](https://www.bleachbit.org/news/bleachbit-stifles-investigation-hillary-clinton).
-* Simple operation: read the descriptions, check the boxes you want, click preview, and click delete.
-* Multi-platform: Linux and Windows
-* [Free of charge](https://www.bleachbit.org/features/cost) and no money trail
-* Free to share, learn, and modify (open source)
-* No adware, spyware, malware, backdoors, browser toolbars, or "value-added software"
-* [Translated](https://www.bleachbit.org/features/translations) to 64 languages besides American English
-* Shred files to hide their contents and prevent data recovery
-* Shred any file (such as a spreadsheet on your desktop)
-* Overwrite free disk space to hide previously deleted files
-* Portable app for Windows: run without installation
-* [Command line interface](https://docs.bleachbit.org/doc/command-line-interface.html) for scripting and automation
-* [CleanerML](https://docs.bleachbit.org/doc/cleanerml.html) allows anyone to write a new cleaner using XML
-* Automatically import and update [winapp2.ini](https://www.bleachbit.org/documentation/winapp2_ini) cleaner files (a separate download) giving Windows users access to 2500+ additional cleaners
-* Frequent software updates with new features
-* Advanced wiping on Windows (requires BleachBit 2.0 with administrator access and local file system)
 
+- Delete your private files so completely that "even God can't read them" according to South Carolina Representative [Trey Gowdy](https://www.bleachbit.org/news/bleachbit-stifles-investigation-hillary-clinton).
+- Simple operation: read the descriptions, check the boxes you want, click preview, and click delete.
+- Multi-platform: Linux and Windows
+- [Free of charge](https://www.bleachbit.org/features/cost) and no money trail
+- Free to share, learn, and modify (open source)
+- No adware, spyware, malware, backdoors, browser toolbars, or "value-added software"
+- [Translated](https://www.bleachbit.org/features/translations) to 64 languages besides American English
+- Shred files to hide their contents and prevent data recovery
+- Shred any file (such as a spreadsheet on your desktop)
+- Overwrite free disk space to hide previously deleted files
+- Portable app for Windows: run without installation
+- [Command line interface](https://docs.bleachbit.org/doc/command-line-interface.html) for scripting and automation
+- [CleanerML](https://docs.bleachbit.org/doc/cleanerml.html) allows anyone to write a new cleaner using XML
+- Automatically import and update [winapp2.ini](https://www.bleachbit.org/documentation/winapp2_ini) cleaner files (a separate download) giving Windows users access to 2500+ additional cleaners
+- Frequent software updates with new features
+- Advanced wiping on Windows (requires BleachBit 2.0 with administrator access and local file system)
