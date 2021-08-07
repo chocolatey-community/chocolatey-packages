@@ -5,12 +5,18 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'audacity'
   fileType       = 'exe'
-  file           = Get-Item "$toolsDir\*.exe"
+  file           = "$toolsDir\"
+  file64         = "$toolsDir\"
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0, 1223)
 }
 Install-ChocolateyInstallPackage @packageArgs
-Remove-Item ($toolsDir + '\*.' + $packageArgs.fileType)
+Get-ChildItem "$toolsDir\*.$($packageArgs.fileType)" | ForEach-Object {
+  Remove-Item $_ -ea 0
+  if (Test-Path $_) {
+    Set-Content "$_.ignore"
+  }
+}
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageName
