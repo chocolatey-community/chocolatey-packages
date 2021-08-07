@@ -42,6 +42,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg</iconUrl>
     <releaseNotes>See: https://krita.org/en/?post_type=post</releaseNotes>
+    <dependencies>
+      <dependency id="kb2999226" version="1.0.20181019" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
