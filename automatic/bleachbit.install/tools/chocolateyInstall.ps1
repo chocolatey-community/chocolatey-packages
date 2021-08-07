@@ -4,7 +4,7 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  file           = "$toolsDir\"
+  file           = "$toolsDir\BleachBit-4.4.0-setup.exe"
   fileType       = 'exe'
   silentArgs     = '/S /allusers'
   validExitCodes = @(0)
