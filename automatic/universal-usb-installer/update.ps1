@@ -8,11 +8,11 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameBase
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
+    '.\legal\VERIFICATION.txt' = @{
+      '(?i)(^\s*location on\:?\s*)\<.*\>' = "`${1}<$releases>"
+      '(?i)(\s*1\..+)\<.*\>'              = "`${1}<$($Latest.URL32)>"
+      '(?i)(^\s*checksum\s*type\:).*'     = "`${1} $($Latest.ChecksumType32)"
+      '(?i)(^\s*checksum(32)?\:).*'       = "`${1} $($Latest.Checksum32)"
     }
   }
 }
@@ -20,13 +20,15 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
-  if ($url32.StartsWith('//')) { $url32 = 'https:' + $url32 }
+  $url32 = $download_page.Links | Where-Object href -Match $re | Select-Object -First 1 -expand href
+  if ($url32.StartsWith('/')) {
+    $url32 = [uri]::new([uri]$releases, $url32)
+  }
 
   $verRe = '[-]|\.exe$'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = $url32 -split "$verRe" | Select-Object -Last 1 -Skip 1
   @{
-    URL32 = $url32
+    URL32   = $url32
     Version = Get-FixVersion $version32 -OnlyFixBelowVersion $padVersionUnder
   }
 }
