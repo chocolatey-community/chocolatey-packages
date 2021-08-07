@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>transifex-client</id>
-    <version>0.13.6</version>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/transifex-client</packageSourceUrl>
+    <version>0.14.3</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/transifex-client</packageSourceUrl>
     <owners>chocolatey-community,AdmiringWorm</owners>
     <title>Transifex Command-Line Tool</title>
     <authors>The Transifex Team</authors>
     <projectUrl>https://www.transifex.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@4c2d7c7377b05a3d0a2dd35cfc89ce0c77625051/icons/transifex-client.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@4c2d7c7377b05a3d0a2dd35cfc89ce0c77625051/icons/transifex-client.png</iconUrl>
     <licenseUrl>https://github.com/transifex/transifex-client/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/transifex/transifex-client</projectSourceUrl>
@@ -18,8 +18,7 @@
     <tags>transifex-client transifex translation cli cross-platform foss</tags>
     <summary>The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>
-      <![CDATA[The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.
+    <description><![CDATA[The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.
 
 You can use the command line tool to create new resources, map locale files to translations, and synchronize your Transifex project with your local repository. Translators and localization managers can use it to handle large volumes of translation files. The Transifex Command-line Tool can help to enable continuous integration workflows and can be run from CI servers like Jenkins and Bamboo.
 
@@ -27,9 +26,8 @@ You can use the command line tool to create new resources, map locale files to t
 - This package uses the Python 3.x version of the transifex-client
 - This package only provides the 64-bit executable due to a number of positives on VirusTotal.
   The Software Authors believe them to be false positives, but I as the package maintainer am not convinced.
-]]>
-    </description>
-    <releaseNotes>https://github.com/transifex/transifex-client/releases/tag/0.13.6</releaseNotes>
+]]></description>
+    <releaseNotes>https://github.com/transifex/transifex-client/releases/tag/0.14.3</releaseNotes>
     <dependencies>
       <dependency id="python" version="3.7.0" />
     </dependencies>

@@ -3,17 +3,17 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/transifex/transifex-client/releases/latest>
+location on <https://github.com/transifex/transifex-client/releases/tag/0.14.3>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.13.6/tx.py36.x64.exe>
+  64-Bit software: <https://github.com/transifex/transifex-client/releases/download/0.14.3/tx.py37-x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: 
-  checksum64: A557D7F843EABB38A711688304B37C92DE076F559B671AF44DA1C18AC46A482C
+  checksum type: sha256
+  checksum64: E3D57673FFDF939E3491D15CC0108F2CD7C480D3497E9AC87CC8FBE780B277D1
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/transifex/transifex-client/blob/master/LICENSE>
