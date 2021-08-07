@@ -1,46 +1,35 @@
-import-module au
+Import-Module au
 
 $releases = 'https://krita.org/en/download/krita-desktop/'
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $url64   = $download_page.links | ? href -match 'x64.*-setup.exe$' | select -First 1 -expand href
-    $url32   = $download_page.links | ? href -match 'x86.*-setup.exe$' | select -First 1 -expand href
-    $version64 = $url64 -split '-' | select -Last 1 -Skip 1
-    $version32 = $url32 -split '-' | select -Last 1 -Skip 1
-
-  if ($version32 -ne $version64) {
-    throw "32-bit and 64-bit version do not match. Please investigate."
-  }
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $url64 = $download_page.links | Where-Object href -Match 'x64.*-setup.exe$' | Select-Object -First 1 -expand href
+  $version64 = $url64 -split '-' | Select-Object -Last 1 -Skip 1
 
   return @{
-        URL32   = $url32
-        URL64   = $url64
-        Version = $version64
-    }
+    URL64   = $url64
+    Version = $version64
+  }
 }
 
 function global:au_BeforeUpdate {
-    Get-RemoteFiles -Purge -NoSuffix 
-    rm tools\*-x86-*   # https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1289#issuecomment-498815481
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {
-   @{
+  @{
 
-    ".\tools\chocolateyInstall.ps1" = @{
-        "(?i)(^\s*url\s*=\s*)('.*')"       = "`$1'$($Latest.URL32)'"
-        "(?i)(^\s*checksum\s*=\s*)('.*')"  = "`$1'$($Latest.Checksum32)'"
-        }
-
-    ".\legal\VERIFICATION.txt" = @{
-        "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
-        "(?i)(x64:).*"        = "`${1} $($Latest.URL64)"
-        "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
-        "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
-        "(?i)(type:).*"       = "`${1} $($Latest.ChecksumType32)"
-        }
+    '.\tools\chocolateyInstall.ps1' = @{
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName64)`""
     }
+
+    '.\legal\VERIFICATION.txt'      = @{
+      '(?i)(x64:).*'        = "`${1} $($Latest.URL64)"
+      '(?i)(checksum64:).*' = "`${1} $($Latest.Checksum64)"
+      '(?i)(type:).*'       = "`${1} $($Latest.ChecksumType64)"
+    }
+  }
 
 }
 
