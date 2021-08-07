@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-if ([System.Environment]::OSVersion.Version -lt (new-object 'Version' 6, 3)) {
+if ([System.Environment]::OSVersion.Version -lt (new-object 'Version' 10, 0, 14393)) {
   $packageName = 'smartftp'
-  $errorMessage = 'Your Windows version is not suitable for this package. This package is only for Windows 8.1 or higher'
+  $errorMessage = 'Your Windows version is not suitable for this package. This package is only for Windows 10 Version 1607 or higher'
   Write-Output $packageName $errorMessage
   throw $errorMessage
 }
