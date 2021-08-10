@@ -36,6 +36,7 @@ function global:au_GetLatest {
     $releasesUrl = "$releases/$_"
     $versionWithHash = Invoke-WebRequest -Uri "$releasesUrl/version.txt" -UseBasicParsing | % Content
     $version = $versionWithHash -replace '(\d+.\d+-\w+)-\w+', '$1'
+    $version = $version -replace '(-\w+)\.', '$1'
     if (!$version) { $version = $versionWithHash }
 
     $url = "$releasesUrl/AutoHotkey_${versionWithHash}.zip"
