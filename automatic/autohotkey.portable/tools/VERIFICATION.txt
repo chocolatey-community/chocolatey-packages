@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://autohotkey.com/download/2.0//AutoHotkey_2.0-a138-7538f26f.zip
-   x64: https://autohotkey.com/download/2.0//AutoHotkey_2.0-a138-7538f26f.zip
+   x32: https://autohotkey.com/download/2.0//AutoHotkey_2.0-beta.1.zip
+   x64: https://autohotkey.com/download/2.0//AutoHotkey_2.0-beta.1.zip
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 22AE73CC4228FCD212DBB9F2895DF6D25E68336025607BEBE91FACFCAFB44617
-   checksum64: 22AE73CC4228FCD212DBB9F2895DF6D25E68336025607BEBE91FACFCAFB44617
+   checksum32: 93C9FA6807DAD1B0592A19FC180EB33B2932DC372582E59089928FD7B9161DC9
+   checksum64: 93C9FA6807DAD1B0592A19FC180EB33B2932DC372582E59089928FD7B9161DC9
 
 Using AU:
 
-   Get-RemoteChecksum https://autohotkey.com/download/2.0//AutoHotkey_2.0-a138-7538f26f.zip
+   Get-RemoteChecksum https://autohotkey.com/download/2.0//AutoHotkey_2.0-beta.1.zip
 
 File 'license.txt' is obtained from:
    https://github.com/AutoHotkey/AutoHotkey/blob/26daaddf714135a6fcc730fe250bd1d41a9d3c53/license.txt

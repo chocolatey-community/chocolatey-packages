@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$fileName  = 'AutoHotkey_2.0-a138-7538f26f.zip'
+$fileName  = 'AutoHotkey_2.0-beta.1.zip'
 $toolsPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $zip_path = "$toolsPath\$fileName"
 Remove-Item $toolsPath\* -Recurse -Force -Exclude $fileName
