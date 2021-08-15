@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>nmap</id>
-    <version>7.92</version>
+    <version>7.92.0.20210815</version>
     <title>Nmap</title>
     <authors>Fyodor</authors>
     <owners>chocolatey-community zippy1981 ferventcoder</owners>
