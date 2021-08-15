@@ -1,4 +1,6 @@
 #SingleInstance, force
+SetTitleMatchMode, RegEx
+
 Run, %1%
 WinWait, Nmap Setup
 Sleep, 100
@@ -9,12 +11,12 @@ Sleep, 100
 ControlSend,, !i
 
 loop {
-    IfWinExist, Npcap 1.00 Setup, already installed
+    IfWinExist, Npcap [0-9.]+ Setup, already installed
     {
         Sleep, 100
         ControlSend,, {Enter}
     }
-    IfWinExist, Npcap 1.00 Setup, License Agreement
+    IfWinExist, Npcap [0-9.]+ Setup, License Agreement
     {
         Sleep, 100
         ControlSend,, {Enter}
@@ -23,7 +25,7 @@ loop {
         Sleep, 100
         ControlSend,, {Enter}
     }
-     IfWinExist, Npcap 1.00 Setup, Installation Complete
+     IfWinExist, Npcap [0-9.]+ Setup, Installation Complete
     {
         Sleep, 100
         ControlSend,, {Enter}
