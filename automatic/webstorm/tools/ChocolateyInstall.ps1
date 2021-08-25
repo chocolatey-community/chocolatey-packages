@@ -19,8 +19,8 @@ New-Item -ItemType Directory -Force -Path $installDir
 $arguments              = @{
     packageName         = $env:ChocolateyPackageName
     softwareName        = 'JetBrains WebStorm*'
-    url                 = 'https://download.jetbrains.com/webstorm/WebStorm-2021.2.exe'
-    checksum            = '50f9f819151b356402782654eb254b1e5175730b90082f453bb80da25d91a00c'
+    url                 = 'https://download.jetbrains.com/webstorm/WebStorm-2021.2.1.exe'
+    checksum            = 'b6856d57bab7f571514f3dd3646d7b6e824f383a4e2583b1e1d08ec1f9a6d20b'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = $silentArgs
