@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vlc</id>
     <title>VLC media player</title>
@@ -38,6 +38,9 @@ Example: `choco install --params "/Language:fr"` *Will set the language of VLC t
     <projectUrl>http://www.videolan.org/vlc/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vlc</packageSourceUrl>
     <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
+    <bugTrackerUrl>https://code.videolan.org/videolan/vlc/-/issues/</bugTrackerUrl>
+    <docsUrl>https://wiki.videolan.org/Documentation:Documentation/</docsUrl>
+    <mailingListUrl>https://forum.videolan.org/</mailingListUrl>
     <tags>vlc foss cross-platform multimedia audio video mp3 dvd avi media player admin</tags>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
     <dependencies>

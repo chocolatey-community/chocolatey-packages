@@ -2,14 +2,11 @@
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
-$installerFile = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Installing x64 bit version"; Get-Item "$toolsDir\*_x64.exe"
-} else { Write-Host "Installing x32 bit version"; Get-Item "$toolsDir\*_x32.exe" }
-
 $packageArgs = @{
   packageName    = 'vlc'
   fileType       = 'exe'
-  file           = $installerFile
+  file           = Get-Item "$toolsDir\*_x64.exe"
+  file64         = Get-Item "$toolsDir\*_x32.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
