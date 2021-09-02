@@ -2,6 +2,8 @@
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 #Remove old versions
+$filter = [system.text.regularexpressions.regex]::escape((Join-Path $toolsDir "vlc"))
+Remove-Process -PathFilter $filter | Out-Null
 Get-ChildItem -Path $toolsDir | Where-Object { $_.PSIsContainer } | Remove-Item -EA 0 | Out-Null
 
 $packageArgs = @{
