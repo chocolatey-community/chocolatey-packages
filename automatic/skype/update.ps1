@@ -1,7 +1,7 @@
 import-module au
 Import-Module "$env:ChocolateyInstall/helpers/chocolateyInstaller.psm1"
 
-$release = 'https://go.skype.com/skype.download'
+$release = 'https://go.skype.com/msi-download'
 
 function global:au_BeforeUpdate {
   $checksumType = $Latest.ChecksumType32 = 'sha256'
@@ -21,7 +21,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $url32 = Get-RedirectedUrl -url $release
-  $version = $url32 -split '\-|\.exe$' | select -Last 1 -Skip 1
+  $version = $url32 -split '\-|\.msi$' | select -Last 1 -Skip 1
   return @{
     URL32 = $url32
     Version = $version
