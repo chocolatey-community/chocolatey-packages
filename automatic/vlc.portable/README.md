@@ -14,6 +14,13 @@ VLC is a free and open source cross-platform multimedia player and framework tha
 - Runs on all platforms - Windows, Linux, Mac OS X, Unix, iOS, Android ...
 - Completely Free - no spyware, no ads and no user tracking.
 
+## Package parameters
+
+- `/Language:en` - Two letter language code: nl, en, fr ...
+
+
+Example: `choco install --params "/Language:fr"` *Will set the language of VLC to french*
+
 ## Notes
 
 - Related packages: [vlc-skins](https://chocolatey.org/packages/vlc-skins) [vlc-nightly](https://chocolatey.org/packages/vlc-nightly)

@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName         = 'vlc'
+$packageName         = 'vlc.install'
 $softwareNamePattern = 'VLC media player'
 
 
