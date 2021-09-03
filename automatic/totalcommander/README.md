@@ -30,17 +30,15 @@ But Total Commander uses a different approach: it has two fixed windows, which m
 
 The following package parameters can be set:
 
-* `/LocalUser` - Install only for local user. By default it will be installed for all users.
 * `/DesktopIcon` - Add an icon for Total Commander to the Desktop. By default no icon is added.
 * `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory.
 * `/DefaultFM`   - Use TC as default file manager instead of Explorer. Use `/DefaultFM:explorer` to return to Explorer.
 * `/ShellExtension` - Add Total Commander in shell context menu for directories.
 
-These parameters can be passed to the installer with the use of `--params`. For example: `--params '/LocalUser /DesktopIcon'`.
+These parameters can be passed to the installer with the use of `--params`. For example: `--params '/DesktopIcon'`.
 
 ## Notes
 
 - This package sets system environment variable `COMMANDER_PATH` which points to the Total Commander install directory.
 - This package contain combined Total Commander installer which contains both x32 and x64 bit versions.
 - Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
-

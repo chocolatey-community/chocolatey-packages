@@ -1,34 +1,9 @@
-﻿function Set-TCParameters() {
-    $localUser   = 'UserName='  + $(if ($pp.LocalUser)   { '' }  else { '*' })
-    $desktopIcon = 'mkdesktop=' + $(if ($pp.DesktopIcon) { '1' } else { '0' })
-    $installPath = 'Dir='       + $(if ($pp.InstallPath) { $pp.InstallPath } else { '%ProgramFiles%\totalcmd' })
-
-    $installInf = Join-Path $tcmdWork "INSTALL.INF"
-    (Get-Content $installInf)   -Replace 'UserName=',        $localUser `
-                                -Replace 'auto=0',           'auto=1' `
-                                -Replace 'hidden=0',         'hidden=1' `
-                                -Replace 'mkdesktop=1',      $desktopIcon `
-                                -Replace 'Dir=c:\\totalcmd', $installPath | Set-Content $installInf
-}
-
-function Extract-TCFiles() {
-    Write-Verbose "Extract EXE to change install options"
-    $parameters = @{
-      packageName = "$($env:chocolateyInstall) setup"
-      fileFullPath = Get-Item $toolsPath\*.exe
-      destination = $tcmdWork
-    }
-    Get-ChocolateyUnzip @parameters
-
-    Write-Verbose "Extract installer"
-    $parameters["packageName"] = "$($env:chocolateyPackageName) installer"
-    $parameters["fileFullPath"] = Get-Item $toolsPath\*.zip
-    Get-ChocolateyUnzip @parameters
-
-    if ($is64) {
-        Move-Item $tcmdWork\INSTALL64.exe  $tcmdWork\INSTALL.exe -Force
-        Move-Item $tcmdWork\INSTALL64.inf  $tcmdWork\INSTALL.inf -Force
-    }
+﻿function Get-TCInstallArgs() {
+    $s = '/AHUG'
+    $s += if ($pp.DesktopIcon) { 'D' } else { '' }
+    $s += " "
+    $s += if ($pp.InstallPath) { $pp.InstallPath } else { '%ProgramFiles%\totalcmd' }
+    $s
 }
 
 function Set-TCShellExtension() {
