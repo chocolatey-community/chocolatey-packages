@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://docs.microsoft.com/en-us/sysinternals/license-terms</licenseUrl>
     <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>
-    <tags>remote desktop rdp connect admin</tags>
+    <tags>remote desktop rdp connect freeware admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/rdcman</packageSourceUrl>
     <releaseNotes>
 Starting from 2.8, RDCMan is published by Microsoft as a portable zip package, instead of an MSI installer. As a consequence, no Start Menu icon is created when this package is installed.
