@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>rdcman</id>
-    <version>2.7.1406.20160916</version>
+    <version>0.0</version>
     <title>Remote Desktop Connection Manager</title>
     <authors>Julian Burger</authors>
     <owners>chocolatey-community,Anthony Mastrean</owners>
-    <projectUrl>http://www.microsoft.com/en-us/download/details.aspx?id=44989</projectUrl>
+    <projectUrl>https://docs.microsoft.com/en-us/sysinternals/downloads/rdcman</projectUrl>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cfd84d3d546b3479bb2c5ece367867ba6e495c30/icons/rdcman.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://gist.github.com/jberezanski/d50e5bf9ce0e1f25aea4</licenseUrl>
+    <licenseUrl>https://docs.microsoft.com/en-us/sysinternals/license-terms</licenseUrl>
     <description>RDCMan manages multiple remote desktop connections. It is useful for managing server labs where you need regular access to each machine such as automated checkin systems and data centers. It is similar to the built-in MMC Remote Desktops snap-in, but more flexible.</description>
-    <tags>remote desktop rdp connect admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
+    <tags>remote desktop rdp connect freeware admin</tags>
+    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/automatic/rdcman</packageSourceUrl>
     <releaseNotes>
-2.7.1406.20160916: added checksum and switched to HTTPS
+Starting from 2.8, RDCMan is published by Microsoft as a portable zip package, instead of an MSI installer. As a consequence, no Start Menu icon is created when this package is installed.
     </releaseNotes>
   </metadata>
 </package>
