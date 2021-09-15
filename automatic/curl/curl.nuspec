@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>curl</id>
-    <version>7.78.0</version>
+    <version>7.79.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/curl</packageSourceUrl>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <title>cURL</title>
@@ -23,7 +23,7 @@
 
 Supports DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET and TFTP. curl supports SSL certificates, HTTP POST, HTTP PUT, FTP uploading, HTTP form based upload, proxies, HTTP/2, HTTP/3, cookies, user+password authentication (Basic, Plain, Digest, CRAM-MD5, NTLM, Negotiate and Kerberos), file transfer resume, proxy tunneling and more.
 ]]></description>
-    <releaseNotes>https://curl.se/changes.html</releaseNotes>
+    <releaseNotes>/changes.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
