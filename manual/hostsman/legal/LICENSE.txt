@@ -1,0 +1,90 @@
+﻿Software License AGREEMENT
+
+Software Products:
+HostsMan and accompanying documentation ("Freeware").
+
+Licensor: abelhadigital.com.
+
+THIS IS A LEGAL AGREEMENT BETWEEN YOU, AN END USER, AND LICENSOR.
+
+BY DOWNLOADING AND INSTALLING THE FREEWARE, YOU ARE AGREEING TO BE BOUND BY THE
+TERMS OF THIS AGREEMENT.  IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO
+NOT INSTALL AND DELETE ANY COPIES OF THE FREEWARE THAT YOU HAVE DOWNLOADED.
+
+THIS FREEWARE IS PROVIDED TO YOU FREE OF CHARGE. OBTAINING A LICENSE TO THIS
+FREEWARE FROM ANY PARTY OTHER THAN LICENSOR AND/OR PAYING A FEE FOR SUCH LICENSE
+IS STRICTLY FORBIDDEN. IF YOU ARE AWARE OF ANY UNAUTHORIZED THIRD PARTY
+DISTRIBUTING THIS FREEWARE AND/OR CHARGING A FEE FOR THIS FREEWARE, PLEASE
+REPORT SUCH VIOLATIONS TO YOUR CONSUMER PROTECTION AUTHORITIES.
+
+DISTRIBUTION ON INTERNET AND CD-ROM
+
+1. The Licensor grants you the right to make this freeware available on an
+internet site for the purpose of downloading, as long as NO FEE IS CHARGED for
+said download.
+
+2. The Licensor grants you the royalty-free right to reproduce and distribute
+this freeware as part of a CD-ROM to be enclosed with the print issue of any
+magazine, book or printed publication, as long as said CD-ROM and printed
+publication contain material that would have been distributed regardless of the
+inclusion of this freeware, and NO EXTRA FEE IS CHARGED for inclusion of this
+freeware.
+
+3. You are not allowed to distribute merged hosts files without permission from
+the respective vendors.
+
+LICENSE TERMS AND CONDITIONS
+
+I. Grant of license
+
+This Agreement permits you to use a copy of the Freeware acquired with this
+license on any computer ("License"). The Freeware is "in use" on a computer when
+it is loaded into the temporary memory or installed into the permanent memory
+(e.g. hard disk, CD ROM, or other storage device) of that computer, except that
+a copy installed on a network server for the sole purpose of distribution to
+other computers is not considered "in use".
+
+II. Copyright
+
+The Freeware is owned by Licensor and is protected by copyright laws,
+international treaty provisions, and other national laws. You agree that you
+have no right, title or interest in the Freeware, except as set forth in
+Subsection I.
+
+III. Other restrictions
+
+You may not rent, lease or sell the Freeware to any third party. You may not
+reverse engineer, decompile or disassemble the Freeware.
+
+IV. Warranties
+
+YOU ACKNOWLEDGE THAT YOU HAVE LICENSED THIS FREEWARE FREE OF CHARGE AND THAT
+LICENSOR MAKES NO WARRANTIES TO YOU IN CONNECTION WITH THIS LICENSE, INCLUDING
+BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, TITLE AND NON-INFRINGEMENT. YOU AGREE TO DEFEND, INDEMNIFY
+AND HOLD HARMLESS LICENSOR FROM ANY AND ALL CLAIMS OF INFRINGEMENT (INCLUDING
+THOSE MADE BY THIRD PARTIES) RESULTING IN WHOLE OR IN PART FROM YOUR USE OF THE
+FREEWARE.
+
+V. No liability for consequential damages
+
+In no event shall Licensor be liable for any damages whatsoever (including,
+without limitation, damages for loss of business profits, business interruption,
+loss of business information, or other pecuniary loss) arising out of the use
+of or inability to use the Freeware, even if Licensor has been advised of the
+possibility of such damages.
+
+VI. Governing Law
+
+This Agreement shall be governed by and interpreted in accordance with the laws
+of Portugal. If any dispute shall arise pursuant to any provision of this
+Agreement, said dispute shall be settled by binding arbitration in accordance
+with the rules and regulations of the courts, located in Portugal. If any term
+or provision of this Agreement shall be declared invalid in arbitration or by a
+court of competent jurisdiction, such invalidity shall be limited solely to the
+specific term or provision invalidated, and the remainder of this Agreement
+shall remain in full force and effect, according to its terms. Any provision
+declared invalid shall be modified to the fullest extent possible to reflect the
+parties intent as of the Effective Date.
+
+Copyright © 1997-2012 abelhadigital.com. All rights reserved.
