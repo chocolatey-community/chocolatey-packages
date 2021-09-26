@@ -17,4 +17,8 @@ An active and growing online community provides friendly help, tutorials, and pl
 - Special Effects
 - Powerful Tools
 
+## Notes
+
+- Since version 4.3 this package embeds x64 bit version of the software
+
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/paint.net/screenshot.png)

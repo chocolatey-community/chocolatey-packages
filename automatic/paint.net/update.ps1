@@ -1,26 +1,35 @@
 ﻿Import-Module AU
 
+$releases = 'https://github.com/paintdotnet/release/releases'
+
 function global:au_SearchReplace {
   @{
       ".\legal\VERIFICATION.txt" = @{
-        "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
-        "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
+        "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
+        "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
       }
   }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix
+
+  Set-Alias 7z $Env:chocolateyInstall\tools\7z.exe
+  7z e tools\*.zip -otools *.exe -r -y
+  rm tools\*.zip -ea 0
+}
 
 function global:au_GetLatest {
-    $releaseUrl = 'https://www.getpaint.net/index.html'
-    $versionRegEx = 'paint\.net\s+([0-9\.]+)'
-    $urlString = 'https://www.dotpdn.com/files/paint.net.$version.install.zip'
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $domain  = $releases -split '(?<=//.+)/' | select -First 1
+    $re = 'paint.net.+.install.x64.zip'
+    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $version = $url -split '/' | select -Last 1 -Skip 1
 
-    $releasePage = Invoke-WebRequest -Uri $releaseUrl -UseBasicParsing
-    $version = ([regex]::match($releasePage.Content, $versionRegEx).Groups[1].Value)
-    $url = $ExecutionContext.InvokeCommand.ExpandString($urlString)
-
-    return @{ Url32 = $url; Version = $version }
+    @{
+        Version = $version.Substring(1)
+        Url64   = $domain + $url
+    }
 }
 
 update -ChecksumFor none

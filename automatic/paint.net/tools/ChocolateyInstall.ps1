@@ -3,17 +3,9 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-    PackageName    = $env:ChocolateyPackageName
-    FileFullPath   = Get-Item $toolsPath\*.zip
-    Destination    = $toolsPath
-}
-Get-ChocolateyUnzip @packageArgs
-Remove-Item $toolsPath\*.zip -ea 0
-
-$packageArgs = @{
   PackageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = Get-Item $toolsPath\*.exe
+  file64         = Get-Item $toolsPath\*.exe
   silentArgs     = '/auto'
   validExitCodes = @(0, 1641, 3010)
   softwareName   = 'Paint.NET*'
