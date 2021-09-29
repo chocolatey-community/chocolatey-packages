@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>k9s</id>
-    <version>0.24.15</version>
+    <version>0.24.10</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/k9s</packageSourceUrl>
     <owners>chocolatey-community,Matteo Dell'Aquila (moebius87)</owners>
     <title>k9s: Kubernetes CLI To Manage Your Clusters In Style!</title>
