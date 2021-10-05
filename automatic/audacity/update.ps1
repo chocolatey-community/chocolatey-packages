@@ -30,10 +30,10 @@ function global:au_GetLatest {
 
   $installers = $download_page.Links | Where-Object href -Match 'github.*\.exe$' | Select-Object -ExpandProperty href
 
-  $url64 = $installers | Where-Object { $_ -match 'x64' } | Select-Object -First 1
+  $url64 = $installers | Where-Object { $_ -match '-64bit' } | Select-Object -First 1
   $version = $url64 -split '/' | Select-Object -Last 1 -Skip 1
   $version = $version.Replace('Audacity-', '')
-  $url32 = $installers | Where-Object { $_ -match "x86" } | Select-Object -First 1
+  $url32 = $installers | Where-Object { $_ -match "-32bit" } | Select-Object -First 1
 
   @{
     URL32   = $url32
