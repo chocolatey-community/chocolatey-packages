@@ -26,7 +26,7 @@
     <licenseUrl>https://audacityteam.org/about/license#license</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/audacity/audacity/blob/master/CHANGELOG.txt</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/audacity</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
