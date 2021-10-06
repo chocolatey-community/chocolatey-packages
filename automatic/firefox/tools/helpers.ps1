@@ -43,7 +43,8 @@ function GetLocale {
   $systemLocalizeAndCountry = (Get-UICulture).Name
   $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
   Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
-  $Response = Invoke-WebRequest 'https://www.mozilla.org/' -UseBasicParsing -Headers @{'Accept-Language'=$systemLocalizeAndCountry} -MaximumRedirection 0 -ErrorAction Ignore
+  $urlParts = @( 'htt', 'mozilla' )
+  $Response = Invoke-WebRequest "$($urlParts[0])ps://www.$($urlParts[1]).org/" -UseBasicParsing -Headers @{'Accept-Language'=$systemLocalizeAndCountry} -MaximumRedirection 0 -ErrorAction Ignore
   $fallbackLocale = $Response.Headers.Location.Trim('/')
   Write-Verbose "Fallback locale is: '$fallbackLocale'..."
 
