@@ -41,8 +41,13 @@ if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
   Write-Warning "Environment variable PYTHONHOME points to different version: $Env:PYTHONHOME"
 }
 
-. "$toolsPath/helpers.ps1"
-Protect-InstallFolder `
-  -packageName "python3" `
-  -defaultInstallPath $defaultFolder `
-  -folder $installLocation
+if ($pp.NoLockdown) {
+  Write-Warning "NoLockdown parameter found. Not changing permissions. Please ensure your installation is secure."
+} else {
+  . "$toolsPath/helpers.ps1"
+  Protect-InstallFolder `
+    -packageName "python3" `
+    -defaultInstallPath $defaultFolder `
+    -folder $installLocation  
+}
+
