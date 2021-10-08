@@ -14,7 +14,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   #https://the.earth.li/~sgtatham/putty/latest/x86/putty-0.67-installer.msi
-  $url32Installer = $download_page.links | ? href -match '\.msi$' | ? href -notmatch '64bit' | select -First 1 -expand href
+  $url32Installer = $download_page.links | ? href -match '\.msi$' | ? href -notmatch '64bit|arm' | select -First 1 -expand href
   $url64Installer = $download_page.links | ? href -match '64bit.*\.msi$' | select -First 1 -expand href
 
   $version = $url32Installer -split '\-' | select -last 1 -skip 1
