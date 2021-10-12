@@ -43,6 +43,7 @@ function GetLocale {
   $systemLocalizeAndCountry = (Get-UICulture).Name
   $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
 
+  $fallbackLocale = 'en-US'
   if ([string]::IsNullOrEmpty($localeFromPackageParameters) -or [string]::IsNullOrEmpty($localeFromPackageParametersTwoLetter)) {
     Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
     $urlParts = @( 'htt', 'mozilla' )
