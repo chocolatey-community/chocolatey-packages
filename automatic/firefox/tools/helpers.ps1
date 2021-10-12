@@ -42,11 +42,17 @@ function GetLocale {
 
   $systemLocalizeAndCountry = (Get-UICulture).Name
   $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
-  Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
-  $urlParts = @( 'htt', 'mozilla' )
-  $Response = Invoke-WebRequest "$($urlParts[0])ps://www.$($urlParts[1]).org/" -UseBasicParsing -Headers @{'Accept-Language'=$systemLocalizeAndCountry} -MaximumRedirection 0 -ErrorAction Ignore
-  $fallbackLocale = $Response.Headers.Location.Trim('/')
-  Write-Verbose "Fallback locale is: '$fallbackLocale'..."
+
+  if ([string]::IsNullOrEmpty($localeFromPackageParameters) -or [string]::IsNullOrEmpty($localeFromPackageParametersTwoLetter)) {
+    Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
+    $urlParts = @( 'htt', 'mozilla' )
+    $Response = Invoke-WebRequest "$($urlParts[0])ps://www.$($urlParts[1]).org/" -UseBasicParsing -Headers @{'Accept-Language'=$systemLocalizeAndCountry} -MaximumRedirection 0 -ErrorAction Ignore
+    $fallbackLocale = $Response.Headers.Location.Trim('/')
+    Write-Verbose "Fallback locale is: '$fallbackLocale'..."
+  }
+  else {
+    Write-Verbose "Locale was passed as a package parameter. Will not query external website."
+  }
 
   $locales = $localeFromPackageParameters,$localeFromPackageParametersTwoLetter, `
     $alreadyInstalledLocale, $systemLocalizeAndCountry, $systemLocaleTwoLetter, `
