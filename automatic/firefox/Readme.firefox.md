@@ -17,7 +17,7 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Package Parameters
 
-- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales. Note that by providing this parameter the package will not check mozilla.org for a locale.
 
 Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
 - `/InstallDir:PATH`
