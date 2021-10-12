@@ -6,13 +6,13 @@
 [![](http://transparent-favicon.info/favicon.ico)](#)[![](http://transparent-favicon.info/favicon.ico)](#)
 [Update status](https://gist.github.com/choco-bot/a14b1e5bfaf70839b338eb1ab7f8226f)
 [![](http://transparent-favicon.info/favicon.ico)](#)
-[chocolatey.org profile](https://chocolatey.org/profiles/chocolatey-community)
+[community.chocolatey.org profile](https://community.chocolatey.org/profiles/chocolatey-community)
 
 ### Description
 
 This repository contains chocolatey packages, most of which are [automatic](https://docs.chocolatey.org/en-us/create/automatic-packages).
 
-These packages are managed and maintained by the Chocolatey community package maintainers core team, and also supported by you (the community)! To get a package added here, the official [Chocolatey Community Account](http://chocolatey.org/profiles/chocolatey-community) has to have push access to the package on [chocolatey.org](http://chocolatey.org).
+These packages are managed and maintained by the Chocolatey community package maintainers core team, and also supported by you (the community)! To get a package added here, the official [Chocolatey Community Account](http://community.chocolatey.org/profiles/chocolatey-community) has to have push access to the package on [community.chocolatey.org](http://community.chocolatey.org).
 
 **All packages in this repo should be in conformity with the [contributing guidelines](CONTRIBUTING.md).** Contributions that follow the guideliness are welcome.
 All packages in this repo are expected to be installable with any version of Chocolatey being made available in the past 12 months, unless a dependency on Chocolatey has been added.
