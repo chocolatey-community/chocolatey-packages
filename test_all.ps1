@@ -34,11 +34,11 @@ $options = [ordered]@{
     )
 
     RepeatOn = @(                                      #Error message parts on which to repeat package updater
-        'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-coreteampackages/issues/718
+        'Could not create SSL/TLS secure channel'             # https://github.com/chocolatey/chocolatey-packages/issues/718
         'Could not establish trust relationship'              # -||-
         'Unable to connect'
         'The remote name could not be resolved'
-        'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-coreteampackages/issues/721
+        'Choco pack failed with exit code 1'                  # https://github.com/chocolatey/chocolatey-packages/issues/721
         'The operation has timed out'
         'Internal Server Error'
         'An exception occurred during a WebClient request'

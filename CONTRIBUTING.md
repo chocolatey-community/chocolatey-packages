@@ -51,7 +51,7 @@ _Embedded_ packages include the packaged software directly in the nupkg archive 
 
 Its **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding.
 
-Binary files can not be generally checked in into this repository because that will bloat it too much.  The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
+Binary files can not be generally checked in into this repository because that will bloat it too much.  The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
 
 For software that explicitly doesn't allow redistribution via adequate license then one may **contact the vendor**, ask for the redistribution rights and provide proof in the package in the form of:
 
@@ -59,7 +59,7 @@ For software that explicitly doesn't allow redistribution via adequate license t
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://docs.chocolatey.org/en-us/information/legal).
+As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://docs.chocolatey.org/en-us/information/legal).
 
 **NOTE**: 200MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
@@ -77,9 +77,9 @@ Packages should **support multiple versions** if possible - do not use URLs that
 
 Remember, code is written for humans, not for computers. Otherwise we'd all write assembly. So it's better to be able to reason about code than it is to take shortcuts that make code harder to decipher.
 
-If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/virtualbox/tools)).
+If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/virtualbox/tools)).
 
-Chocolatey extension [chocolatey-core.extension](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/extensions/chocolatey-core.extension) provides functions that can make the code even more understandable.
+Chocolatey extension [chocolatey-core.extension](https://github.com/chocolatey-community/chocolatey-packages/tree/master/extensions/chocolatey-core.extension) provides functions that can make the code even more understandable.
 
 ### 1.1.8 Set `softwareName`
 
@@ -153,7 +153,7 @@ Keep any exisiting owners and add `chocolatey-community` user before all others.
 
 ### 1.2.5 Provide icon
 
-Packages **must have an icon** if one is available. The icon must be named the same as the package and is placed in the [icons](https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/icons) directory.
+Packages **must have an icon** if one is available. The icon must be named the same as the package and is placed in the [icons](https://github.com/chocolatey-community/chocolatey-packages/tree/master/icons) directory.
 
 If the package name ends with either `.install` or `.portable` those suffixes may be ignored in the icon name.
 
@@ -165,7 +165,7 @@ When icon is added to this folder **it will automatically be set** in the _nuspe
 
 ### 1.3.1 Use `UseBasicParsing` [Optional]
 
-If you use `Invoke-WebRequest` to download a web page, try to use `UseBasicParsing` if possible. Otherwise, the script will require IE engine installed on Windows Server used to run the updater and may also break due to the _accept cookie_ popup (see [#382](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/382)).
+If you use `Invoke-WebRequest` to download a web page, try to use `UseBasicParsing` if possible. Otherwise, the script will require IE engine installed on Windows Server used to run the updater and may also break due to the _accept cookie_ popup (see [#382](https://github.com/chocolatey-community/chocolatey-packages/issues/382)).
 
 ### 1.3.2 Do not download large files
 
@@ -204,7 +204,7 @@ Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for t
 
 Do not commit code with obvious styling problems such as irregular indentation levels, very long lines, too many comments, too many empty lines, etc.
 
-The project contains [.editorconfig](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/master/.editorconfig)
+The project contains [.editorconfig](https://github.com/chocolatey-community/chocolatey-packages/blob/master/.editorconfig)
  file that can be used with many editors via [EditorConfig](http://editorconfig.org/) plugins.
 
 Keep the package source files clean and remove obsolete or outdated code and unnecessary comments. Comment non-obvious code so that others can easily understand what it does.
@@ -219,21 +219,21 @@ All contributors should issue pull request containing single package. In special
 
 ### 3.2 Open issues and pull request expires after 6 months
 
-Issues and PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
+Issues and PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
 ### 3.3 Understanding labels
 
 Most of the labels are self describing, here are few that require explanation:
 
-- [Push required](https://github.com/chocolatey-community/chocolatey-coreteampackages/pulls?utf8=%E2%9C%93&q=label%3A%224%20-%20Push%20required%22%20)
+- [Push required](https://github.com/chocolatey-community/chocolatey-packages/pulls?utf8=%E2%9C%93&q=label%3A%224%20-%20Push%20required%22%20)
 Package is done when its pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if its not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
-- [Wontfix](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3Awontfix%20)
+- [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3Awontfix%20)
 Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benfit.
-- [Unresolved](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20)
+- [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20)
 The issue is unresolved - no feedback, no interest and it probably expired.
-- [Triaging](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues?utf8=%E2%9C%93&q=label%3ATriaging%20)
+- [Triaging](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3ATriaging%20)
 Team is checking, confirming and measuring out the request.
-- [Pending closure](https://github.com/chocolatey-community/chocolatey-coreteampackages/labels/Pending%20closure)
+- [Pending closure](https://github.com/chocolatey-community/chocolatey-packages/labels/Pending%20closure)
 The issue is approaching end of issue life time. This is annoucement that issue will soon get closed in few weeks unless there is some new activity.
-- [Waiting feedback](https://github.com/chocolatey-community/chocolatey-coreteampackages/labels/Waiting%20feedback)
+- [Waiting feedback](https://github.com/chocolatey-community/chocolatey-packages/labels/Waiting%20feedback)
 The team is waiting for somebody to respond. Until that happens, there will be no activity.
