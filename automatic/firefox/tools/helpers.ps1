@@ -1,4 +1,4 @@
-﻿function GetUninstallPath() {
+function GetUninstallPath() {
   param(
     [Parameter(Mandatory = $true)]
     [string]$product
@@ -25,6 +25,7 @@ function GetLocale {
   )
   #$availableLocales = Get-WebContent $localeUrl 2>$null
   $availableLocales = Get-Content $localeFile | ForEach-Object { $_ -split '\|' | Select-Object -First 1 } | Select-Object -Unique
+  Write-Debug "$($availableLocales.Count) locales are stored.`n$availableLocales"
 
   $PackageParameters = Get-PackageParameters
 
@@ -60,6 +61,7 @@ function GetLocale {
     $fallbackLocale
 
   foreach ($locale in $locales) {
+    Write-Debug "Testing locale $locale of whether we have the information or not"
     $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -First 1
     if ($localeMatch -and $locale -ne $null) {
       Write-Host "Using locale '$locale'..."
