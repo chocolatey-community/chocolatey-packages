@@ -12,7 +12,7 @@
     $uninstallPaths += $(Get-ChildItem $regUninstallDirWow64).Name
   }
 
-  $uninstallPath = $uninstallPaths -match "$product [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select-Object -first 1
+  $uninstallPath = $uninstallPaths -match "$product [\d\.]+ \([^\s]+ [a-zA-Z\-]+\)" | Select-Object -First 1
   return $uninstallPath
 }
 
@@ -24,20 +24,20 @@ function GetLocale {
     [string]$product
   )
   #$availableLocales = Get-WebContent $localeUrl 2>$null
-  $availableLocales = Get-Content $localeFile | ForEach-Object { $_ -split '\|' | Select-Object -first 1 } | Select-Object -Unique
+  $availableLocales = Get-Content $localeFile | ForEach-Object { $_ -split '\|' | Select-Object -First 1 } | Select-Object -Unique
 
   $PackageParameters = Get-PackageParameters
 
   if ($PackageParameters['l']) {
-    $localeFromPackageParameters =  $PackageParameters['l']
+    $localeFromPackageParameters = $PackageParameters['l']
     Write-Verbose "User chooses '$localeFromPackageParameters' as a locale..."
-    $localeFromPackageParametersTwoLetter = $localeFromPackageParameters -split '\-' | Select-Object -first 1
+    $localeFromPackageParametersTwoLetter = $localeFromPackageParameters -split '\-' | Select-Object -First 1
     Write-Verbose "With fallback to '$localeFromPackageParametersTwoLetter' as locale..."
-    }
+  }
 
   $uninstallPath = GetUninstallPath -product $product
 
-  $alreadyInstalledLocale = $uninstallPath -replace ".+\s([a-zA-Z\-]+)\)",'$1'
+  $alreadyInstalledLocale = $uninstallPath -replace '.+\s([a-zA-Z\-]+)\)', '$1'
   Write-Verbose "Installed locale is: '$alreadyInstalledLocale'..."
 
   $systemLocalizeAndCountry = (Get-UICulture).Name
@@ -47,27 +47,27 @@ function GetLocale {
   if ([string]::IsNullOrEmpty($localeFromPackageParameters) -or [string]::IsNullOrEmpty($localeFromPackageParametersTwoLetter)) {
     Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
     $urlParts = @( 'htt', 'mozilla' )
-    $Response = Invoke-WebRequest "$($urlParts[0])ps://www.$($urlParts[1]).org/" -UseBasicParsing -Headers @{'Accept-Language'=$systemLocalizeAndCountry} -MaximumRedirection 0 -ErrorAction Ignore
+    $Response = Invoke-WebRequest "$($urlParts[0])ps://www.$($urlParts[1]).org/" -UseBasicParsing -Headers @{'Accept-Language' = $systemLocalizeAndCountry } -MaximumRedirection 0 -ErrorAction Ignore
     $fallbackLocale = $Response.Headers.Location.Trim('/')
     Write-Verbose "Fallback locale is: '$fallbackLocale'..."
   }
   else {
-    Write-Verbose "Locale was passed as a package parameter. Will not query external website."
+    Write-Verbose 'Locale was passed as a package parameter. Will not query external website.'
   }
 
-  $locales = $localeFromPackageParameters,$localeFromPackageParametersTwoLetter, `
+  $locales = $localeFromPackageParameters, $localeFromPackageParametersTwoLetter, `
     $alreadyInstalledLocale, $systemLocalizeAndCountry, $systemLocaleTwoLetter, `
     $fallbackLocale
 
-    foreach ($locale in $locales) {
-      $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -first 1
-      if ($localeMatch -and $locale -ne $null) {
-        Write-Host "Using locale '$locale'..."
-        break
-      }
+  foreach ($locale in $locales) {
+    $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -First 1
+    if ($localeMatch -and $locale -ne $null) {
+      Write-Host "Using locale '$locale'..."
+      break
     }
+  }
 
-    return $locale
+  return $locale
 }
 
 function AlreadyInstalled() {
@@ -111,8 +111,8 @@ function Get-32bitOnlyInstalled() {
 
   if (
     $installedVersions -match 'x86' `
-    -and $installedVersions -notmatch 'x64' `
-    -and $systemIs64bit
+      -and $installedVersions -notmatch 'x64' `
+      -and $systemIs64bit
   ) {
     return $true
   }
@@ -127,11 +127,11 @@ function GetChecksums() {
   )
   Write-Debug "Loading checksums from: $checksumFile"
   $checksumContent = Get-Content $checksumFile
-  $checksum32 = ($checksumContent -match "$language\|32") -split '\|' | Select-Object -last 1
-  $checksum64 = ($checksumContent -match "$language\|64") -split '\|' | Select-Object -last 1
+  $checksum32 = ($checksumContent -match "$language\|32") -split '\|' | Select-Object -Last 1
+  $checksum64 = ($checksumContent -match "$language\|64") -split '\|' | Select-Object -Last 1
 
   return @{
-    "Win32" = $checksum32
-    "Win64" = $checksum64
+    'Win32' = $checksum32
+    'Win64' = $checksum64
   }
 }
