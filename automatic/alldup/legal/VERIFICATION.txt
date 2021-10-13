@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://www.alldup.info/download/AllDupSetup.exe
+   x32: https://www.alldup.info/download/AllDupSetup.exe
 
    to download the installer.
 
@@ -15,6 +15,6 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 5C7B3F3ADF1DD3706F9D2CF0D9CDE7FBF394EA0F86EC71C10FF047EDB5A627CD
+   checksum32: 34A938CB7DEC8687817553B0BDB385C5E3B08D7E9BD8018B0F6879D968F0FD8E
 
 File 'Redistribution.pdf' is from personal email communication
