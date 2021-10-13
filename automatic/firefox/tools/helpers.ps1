@@ -42,6 +42,7 @@ function GetLocale {
   Write-Verbose "Installed locale is: '$alreadyInstalledLocale'..."
 
   $systemLocalizeAndCountry = (Get-UICulture).Name
+  $systemLocaleThreeLetter = (Get-UICulture).ThreeLetterWindowsLanguageName
   $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
 
   # Never change the fallback locale here, this is the absolute
@@ -69,8 +70,8 @@ function GetLocale {
   Write-Verbose "Absolute Fallback locale is: '$fallbackLocale'..."
 
   $locales = $localeFromPackageParameters, $localeFromPackageParametersTwoLetter, `
-    $alreadyInstalledLocale, $systemLocalizeAndCountry, $systemLocaleTwoLetter, `
-    $mozillaFallback, $fallbackLocale
+    $alreadyInstalledLocale, $systemLocalizeAndCountry, $systemLocaleThreeLetter, `
+    $systemLocaleTwoLetter, $mozillaFallback, $fallbackLocale
 
   foreach ($locale in $locales) {
     Write-Debug "Testing locale $locale of whether we have the information or not"
