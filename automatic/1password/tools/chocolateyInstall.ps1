@@ -37,4 +37,6 @@ Start-Job -ScriptBlock { param($cache_dir)
   }
 } -ArgumentList ($cache_dir)
 Install-ChocolateyPackage @packageArgs
-Start-Process $env:LOCALAPPDATA\1Password\app\7\1Password.exe -ArgumentList @("setup", "--silent") -Wait
+if ($env:ChocolateyPackageName -ne "1password4") {
+  Start-Process $env:LOCALAPPDATA\1Password\app\7\1Password.exe -ArgumentList @("setup", "--silent") -Wait
+}
