@@ -48,7 +48,7 @@ function GetLocale {
   # value we always expect to fall back to when nothing else is
   # found.
   $fallbackLocale = $mozillaFallback = 'en-US'
-  if ([string]::IsNullOrEmpty($localeFromPackageParameters)) {
+  if ($PackageParameters['UseMozillaFallback']) {
     Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
     # We need to use web content instead of web headers here, due to
     # web header helper does not allow custom headers.
@@ -64,9 +64,6 @@ function GetLocale {
     else {
       Write-Warning 'No fallback found using the Mozilla website.'
     }
-  }
-  else {
-    Write-Verbose 'Locale was passed as a package parameter. Will not query external website.'
   }
 
   Write-Verbose "Absolute Fallback locale is: '$fallbackLocale'..."
