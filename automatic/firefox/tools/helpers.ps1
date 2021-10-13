@@ -44,21 +44,36 @@ function GetLocale {
   $systemLocalizeAndCountry = (Get-UICulture).Name
   $systemLocaleTwoLetter = (Get-UICulture).TwoLetterISOLanguageName
 
-  $fallbackLocale = 'en-US'
-  if ([string]::IsNullOrEmpty($localeFromPackageParameters) -or [string]::IsNullOrEmpty($localeFromPackageParametersTwoLetter)) {
+  # Never change the fallback locale here, this is the absolute
+  # value we always expect to fall back to when nothing else is
+  # found.
+  $fallbackLocale = $mozillaFallback = 'en-US'
+  if ([string]::IsNullOrEmpty($localeFromPackageParameters)) {
     Write-Verbose "System locale is: '$systemLocalizeAndCountry'..."
+    # We need to use web content instead of web headers here, due to
+    # web header helper does not allow custom headers.
     $urlParts = @( 'htt', 'mozilla' )
-    $Response = Invoke-WebRequest "$($urlParts[0])ps://www.$($urlParts[1]).org/" -UseBasicParsing -Headers @{'Accept-Language' = $systemLocalizeAndCountry } -MaximumRedirection 0 -ErrorAction Ignore
-    $fallbackLocale = $Response.Headers.Location.Trim('/')
-    Write-Verbose "Fallback locale is: '$fallbackLocale'..."
+    $Response = Get-WebContent -url "$($urlParts[0])ps://www.$($urlParts[1]).org/" -Options @{ Headers = @{ 'Accept-Language' = $systemLocalizeAndCountry } } -ErrorAction Ignore 2>$null
+    # The lang attribute on the html element will be the closest
+    # supported language when comparing to the system locale.
+    # As such we use that as an additional fallback when possible.
+    if ($Response -match 'lang="(?<locale>[^"]+)"') {
+      $mozillaFallback = $Matches['locale']
+      Write-Verbose "Mozilla fallback locale is: '$mozillaFallback'..."
+    }
+    else {
+      Write-Warning 'No fallback found using the Mozilla website.'
+    }
   }
   else {
     Write-Verbose 'Locale was passed as a package parameter. Will not query external website.'
   }
 
+  Write-Verbose "Absolute Fallback locale is: '$fallbackLocale'..."
+
   $locales = $localeFromPackageParameters, $localeFromPackageParametersTwoLetter, `
     $alreadyInstalledLocale, $systemLocalizeAndCountry, $systemLocaleTwoLetter, `
-    $fallbackLocale
+    $mozillaFallback, $fallbackLocale
 
   foreach ($locale in $locales) {
     Write-Debug "Testing locale $locale of whether we have the information or not"
