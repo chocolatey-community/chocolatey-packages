@@ -7,15 +7,15 @@ location on <https://cmake.org/download/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/Kitware/CMake/releases/download/v3.21.3/cmake-3.21.3-windows-i386.msi>
-  64-Bit software: <https://github.com/Kitware/CMake/releases/download/v3.21.3/cmake-3.21.3-windows-x86_64.msi>
+  32-Bit software: <https://github.com/Kitware/CMake/releases/download/v3.22.0-rc1/cmake-3.22.0-rc1-windows-i386.msi>
+  64-Bit software: <https://github.com/Kitware/CMake/releases/download/v3.22.0-rc1/cmake-3.22.0-rc1-windows-x86_64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 41B7FD02E5E7DCAD69DC83B5A9BCF1275ADDF2003BC58C9E8F3698FD6CF0D167
-  checksum64: 548EE0A0EEE2B1B4DED36EB935362D24BF7537DCE6F93F42C4D34C6F83EED6DE
+  checksum32: 367691E7392B60BC468E753B75D581EE525BC6DA0E82A411576464F218F38873
+  checksum64: 60ABD189195B419176FFB38FBD09264FB037D7A6A08F42C29BFF9DE138BF2700
 
 The file 'LICENSE.txt' has been obtained from <https://gitlab.kitware.com/cmake/cmake/blob/master/Copyright.txt>
