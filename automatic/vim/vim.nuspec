@@ -3,7 +3,7 @@
   <metadata>
     <id>vim</id>
     <title>Vim</title>
-    <version>8.2.3499</version>
+    <version>8.2.3506</version>
     <authors>Bram Moolenaar, Vim Community</authors>
     <owners>chocolatey-community, Rob Reynolds, matsuhav</owners>
     <summary>Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor 'Vi', with a more complete feature set. It's useful whether you're already using vi or using a different editor.</summary>
@@ -41,7 +41,7 @@ Example: `choco install vim --params "'/NoDesktopShortcuts /InstallDir:C:\path\t
 ]]></description>
     <releaseNotes>https://github.com/vim/vim-win32-installer/releases</releaseNotes>
     <projectUrl>https://www.vim.org</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vim</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/vim</packageSourceUrl>
     <tags>vim editor vi gvim cli admin cross-platform foss vim-win32-installer</tags>
     <licenseUrl>https://vimhelp.org/uganda.txt.html</licenseUrl>
     <projectSourceUrl>https://github.com/vim/vim</projectSourceUrl>
@@ -49,7 +49,7 @@ Example: `choco install vim --params "'/NoDesktopShortcuts /InstallDir:C:\path\t
     <mailingListUrl>https://www.vim.org/maillist.php</mailingListUrl>
     <bugTrackerUrl>https://github.com/vim/vim/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@6f5bf8702fdf3944c2d2c26454d531e32dc7d272/icons/vim.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@6f5bf8702fdf3944c2d2c26454d531e32dc7d272/icons/vim.svg</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
