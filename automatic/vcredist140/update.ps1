@@ -20,6 +20,12 @@ function global:au_SearchReplace {
   }
 }
 
+function Get-RemoteChecksumFast([string] $Url, $Algorithm='sha256', $Headers)
+{
+    $ProgressPreference = 'SilentlyContinue'
+    & (Get-Command -Name Get-RemoteChecksum).ScriptBlock.GetNewClosure() @PSBoundParameters
+}
+
 function GetResultInformation([string]$url32, [string]$url64) {
   $url32 = Get-RedirectedUrl $url32
   $url64 = Get-RedirectedUrl $url64
@@ -37,7 +43,7 @@ function GetResultInformation([string]$url32, [string]$url64) {
     VersionThreePart = $version.ToString(3)
     Checksum32       = $checksum32
     ChecksumType32   = $checksumType
-    Checksum64       = Get-RemoteChecksum $url64 -Algorithm $checksumType
+    Checksum64       = Get-RemoteChecksumFast $url64 -Algorithm $checksumType
     ChecksumType64   = $checksumType
   }
 }
