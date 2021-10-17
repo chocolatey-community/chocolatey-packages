@@ -1,27 +1,12 @@
-﻿function Get-InstallKey()
+﻿function Get-InstallOptions( [HashTable]$pp )
 {
-    $keyName = 'Git_is1'
-    $installKey = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -eq 'true') {
-             "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$keyName"
-    } else { "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$keyName" }
-
-    $userInstallKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\$keyName"
-    if (Test-Path $userInstallKey) { $installKey = $userInstallKey }
-
-    mkdir $installKey -ea 0 | Out-Null
-    $installKey
-}
-
-function Set-InstallerRegistrySettings( [HashTable]$pp )
-{
-    $installkey = Get-InstallKey
-    $ino = "Inno Setup CodeFile:"
-
-    if ($pp.GitOnlyOnPath)         { New-ItemProperty $InstallKey -Name "$ino Path Option"          -Value "Cmd"            -Force }
-    if ($pp.GitAndUnixToolsOnPath) { New-ItemProperty $InstallKey -Name "$ino Path Option"          -Value "CmdTools"       -Force }
-    if ($pp.WindowsTerminal)       { New-ItemProperty $InstallKey -Name "$ino Bash Terminal Option" -Value "ConHost"        -Force }
-    if ($pp.NoAutoCrlf)            { New-ItemProperty $InstallKey -Name "$ino CRLF Option"          -Value "CRLFCommitAsIs" -Force }
-    if ($pp.SChannel)              { New-ItemProperty $InstallKey -Name "$ino CURL Option"          -Value "WinSSL"         -Force }
+    $options = @()
+    if ($pp.GitOnlyOnPath)             { $options += "/o:PathOption=Cmd" }
+    elseif ($pp.GitAndUnixToolsOnPath) { $options += "/o:PathOption=CmdTools" }
+    if ($pp.WindowsTerminal)           { $options += "/o:BashTerminalOption=ConHost" }
+    if ($pp.NoAutoCrlf)                { $options += "/o:CRLFOption=CRLFCommitAsIs" }
+    if ($pp.SChannel)                  { $options += "/o:CURLOption=WinSSL" }
+    return $options
 }
 
 function Get-InstallComponents( [HashTable]$pp )
@@ -35,7 +20,7 @@ function Get-InstallComponents( [HashTable]$pp )
         $res += 'gitlfs'
     }
 
-    # Make our install work properly when running under SYSTEM account (Chef Cliet Service, Puppet Service, etc)
+    # Make our install work properly when running under SYSTEM account (Chef Client Service, Puppet Service, etc)
     $isSystem = ([System.Security.Principal.WindowsIdentity]::GetCurrent()).IsSystem
     if ( !$isSystem ) { $res += "icons\quicklaunch" }
 
