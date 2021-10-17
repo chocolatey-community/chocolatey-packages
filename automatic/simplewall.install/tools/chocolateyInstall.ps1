@@ -3,7 +3,7 @@
 $packageArgs = @{
   packageName  = $env:ChocolateyPackageName
   softwareName = "simplewall*"
-  file         = "$toolsDir\simplewall-3.5.1-setup.exe"
+  file         = "$toolsDir\simplewall-3.5.3-setup.exe"
   fileType     = "exe"
   silentArgs   = "/S"
 }

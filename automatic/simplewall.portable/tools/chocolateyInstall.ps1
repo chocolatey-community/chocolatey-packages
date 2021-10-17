@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsDir\simplewall-3.5.1-bin.zip"
+  file        = "$toolsDir\simplewall-3.5.3-bin.zip"
   destination = $toolsDir
 }
 
