@@ -4,8 +4,9 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts/au_extensions.psm1"
 
 $channels = @(
-  @{ VSMajor = 16; VSYear = 2019 }
-  @{ VSMajor = 15; VSYear = 2017 }
+  @{ VSMajor = 17; VSYear = 2022; IsPrerelease = $true }
+  @{ VSMajor = 16; VSYear = 2019; IsPrerelease = $false }
+  @{ VSMajor = 15; VSYear = 2017; IsPrerelease = $false }
 )
 
 function global:au_SearchReplace {
@@ -73,6 +74,12 @@ function global:au_GetLatest {
 
     $channelLatestInfo['VSRange'] = 'Visual Studio 2015-{0}' -f $channelInfo.VSYear
     $channelLatestInfo['SoftwareName'] = 'Microsoft Visual C++ 2015-{0} Redistributable*' -f $channelInfo.VSYear
+    if ($channelInfo.IsPrerelease) {
+      if ($channelLatestInfo['Version'] -like '*-*') {
+        throw ('Latest version determined for channel {0} already has the prerelease suffix. This is unexpected.' -f $channelInfo.VSMajor)
+      }
+      $channelLatestInfo['Version'] = $channelLatestInfo['Version'] + '-prerelease'
+    }
 
     Write-Verbose "Stream: $streamName latest: $($channelLatestInfo['Version'])"
     $latestInfo.Streams.Add($streamName, $channelLatestInfo)
