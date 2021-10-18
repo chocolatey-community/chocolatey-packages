@@ -9,7 +9,7 @@ if ((Get-OSArchitectureWidth 32) -or ($env:chocolateyForceX86 -eq 'true')) {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  file64         = "$toolsPath\mixxx-2.4-alpha-942-gf83869ba54-win64.msi"
+  file64         = "$toolsPath\mixxx-2.4-alpha-946-g581803a5af-win64.msi"
 
   softwareName   = 'Mixxx *'
 
