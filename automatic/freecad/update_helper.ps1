@@ -7,7 +7,7 @@ function Get-FreeCad {
     [string]$uri = $releases
   )
   $download_page = Invoke-WebRequest -Uri $uri -UseBasicParsing
-  $mobile = @{$true = "portable"; $false = "installer" }[($kind -eq 'portable')]; $portable = @{$true = "vc(17|14)\.x\-x86(\-|_)64"; $false = "$mobile" }[($kind -eq 'dev')]
+  $mobile = @{$true = "portable1"; $false = "installer1" }[($kind -eq 'portable')]; $portable = @{$true = "vc(17|14)\.x\-x86(\-|_)64"; $false = "$mobile" }[($kind -eq 'dev')]
   $try = (($download_page.Links | ? href -match "CAD\-|\.[\dA-Z]+\-WIN" | select -First 1 -expand href).Split("/")[-1]).Split(".")[-1]
   $ext = @{$true = '7z'; $false = 'exe' }[( $kind -match 'dev' ) -or ( $portable -match 'portable' )]
   $re32 = "(WIN)\-x32\-($portable)\.$ext";
