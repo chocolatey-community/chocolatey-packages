@@ -50,7 +50,7 @@ function Get-FreeCad {
     PackageName  = ($PackageName).ToLower()
     Title        = $Title
     URL64        = $PreUrl + $url64
-    Version      = $vert
+    Version      = @{$true="${vert}";$false=(Get-FixVersion $vert)}[($kind -eq 'dev')]
     fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
     ReleaseNotes = "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)"
   }
