@@ -70,7 +70,7 @@ function global:au_GetLatest {
       -execUrl $x64Release `
       -saveFile ('.\info-{0}.txt' -f $streamName) `
       -OnEtagChanged { GetResultInformation $x86Release $x64Release } `
-      -OnUpdated { @{ URL32 = $x86Release; URL64 = $x64Release } }
+      -OnUpdated { GetResultInformation $x86Release $x64Release }
 
     $channelLatestInfo['VSRange'] = 'Visual Studio 2015-{0}' -f $channelInfo.VSYear
     $channelLatestInfo['SoftwareName'] = 'Microsoft Visual C++ 2015-{0} Redistributable*' -f $channelInfo.VSYear
