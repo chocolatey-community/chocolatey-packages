@@ -4,7 +4,7 @@ Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts/au_extensions.psm1"
 
 $channels = @(
-  @{ VSMajor = 17; VSYear = 2022; IsPrerelease = $true }
+  @{ VSMajor = 17; VSYear = 2022; IsPrerelease = $false }
   @{ VSMajor = 16; VSYear = 2019; IsPrerelease = $false }
   @{ VSMajor = 15; VSYear = 2017; IsPrerelease = $false }
 )
