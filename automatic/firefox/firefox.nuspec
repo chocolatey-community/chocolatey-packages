@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>78.15.0.20211014</version>
+    <version>94.0</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <projectSourceUrl>https://hg.mozilla.org/mozilla-central/</projectSourceUrl>
@@ -10,15 +10,13 @@
     <bugTrackerUrl>https://bugzilla.mozilla.org/</bugTrackerUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@8a7376cf4e5b7cde0eb1c6a608529601bfcd9546/icons/firefox.svg</iconUrl>
     <licenseUrl>https://www.mozilla.org/en-US/MPL/2.0/</licenseUrl>
-    <id>FirefoxESR</id>
+    <id>Firefox</id>
     <title>Mozilla Firefox</title>
     <owners>chocolatey-community</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Features
-
-**This Package installs Firefox ESR**
 
 - A powerful, new engine that’s built for rapidfire performance.
 - Better, faster page loading that uses less computer memory.
@@ -28,11 +26,13 @@
 - Firefox Quantum features: screenshots, pocket, gaming & VR, library.
 - Customization Features - addons & extensions, themes, toolbar.
 - Synced across devices - passwords, bookmarks, tabs and more.
-- Ad tracker blocking
+- Ad tracker blocking.
+- Password manager.
 
 ## Package Parameters
 
-- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales. Note that by providing this parameter the package will not check mozilla.org for a locale.
+- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website.
 
 Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
 
@@ -43,7 +43,6 @@ Command-line options for installer configuration. See the [official page](https:
 - `/NoMaintenanceService` Do not install Maintenance Service
 - `/RemoveDistributionDir` Remove Distribution directory on installation/update. (This is the default behavior of the Firefox Installer, but not for this Chocolatey Package)
 - `/NoAutoUpdate` Sets a policies.json file to not update Firefox and does not install the Maintenance Service
-- `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website
 
 ### Examples
 
@@ -54,16 +53,16 @@ Command-line options for installer configuration. See the [official page](https:
 ## Notes
 
 - Looking for Firefox Developer Edition? Install the [firefox-dev](/packages/firefox-dev) package.
-- Looking for Firefox for Personal Use? Install the [Firefox](/packages/Firefox) package.
-- If locale package parameter is not present, this package installs Firefox ESR in the first language which matches this list:
-  1. If Firefox ESR is already installed it uses the same language as the already installed one.
+- Looking for Firefox Extended Support Release? Install the [FirefoxESR](/packages/FirefoxESR) package.
+- If locale package parameter is not present, this package installs Firefox in the first language which matches this list:
+  1. If Firefox is already installed it uses the same language as the already installed one.
   1. The Windows system language.
   1. Language Culture code specified on Mozilla website (only when `/UseMozillaFallback` is specified).
-  1. If Firefox ESR does not support the system language, it will fall back to `en-US`.
+  1. If Firefox does not support the system language, it will fall back to `en-US`.
 ]]></description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
-    <releaseNotes>https://www.mozilla.org/en-US/firefox/78.15.0/releaseNotes/</releaseNotes>
+    <releaseNotes>https://www.mozilla.org/en-US/firefox/94.0/releasenotes/</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/firefox</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
