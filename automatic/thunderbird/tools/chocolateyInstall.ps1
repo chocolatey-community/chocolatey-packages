@@ -17,11 +17,15 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   return
 }
 
-$tbProcess = Get-Process thunderbird -ea 0
-if ($tbProcess) {
-  Write-Host "Stopping running thunderbird process"
-  Stop-Process $tbProcess
-  $tbProcess = $tbProcess.Path
+$pp = Get-PackageParameters
+
+if (!$pp.NoRestart) {
+  $tbProcess = Get-Process thunderbird -ea 0
+  if ($tbProcess) {
+    Write-Host "Stopping running thunderbird process"
+    Stop-Process $tbProcess
+    $tbProcess = $tbProcess.Path
+  }
 }
 
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
@@ -48,7 +52,7 @@ if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) 
 }
 
 Install-ChocolateyPackage @packageArgs
-if ($tbProcess) {
+if (!$pp.NoRestart -And $tbProcess) {
   Write-Host "Restarting thunderbird process"
   Start-Process $tbProcess
 }

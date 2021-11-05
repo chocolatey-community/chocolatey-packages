@@ -5,11 +5,13 @@ Thunderbird is a free email application that's easy to set up and customize and 
 ## Package Parameters
 
 - `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/thunderbird/releases/latest/README.txt) for a complete list of available locales.
+- /NoRestart - Do not attempt to restart the Thunderbird process
 - `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website.
 
 ### Examples
 
 `choco install thunderbird --params "/l=en-GB"`  
+`choco install thunderbird --params "/NoRestart"`
 `choco install thunderbird --params "/UseMozillaFallback"`
 
 ## Notes
