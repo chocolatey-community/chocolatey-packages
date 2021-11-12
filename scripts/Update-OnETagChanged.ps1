@@ -31,15 +31,26 @@ function Update-OnETagChanged() {
   else {
 	  if ($kind) {
 		$existingInfo = ( Get-Content $saveFile -Raw | ConvertFrom-Json )
-		if ($existingInfo.$kind -ne $etag) {
+    # Conversion of stored etag to have double quotes like web ETag
+        $existingETag = $existingInfo.$kind -replace("'",'"')
+		if ($existingETag -ne $etag) {
 		  $result = . $OnETagChanged
 		  $saveResult = $true
 		}
 		else {
 		  $result = . $OnUpdated
-		  $result["ETAG"] = $existingInfo.$kind
+		  $result["ETAG"] = $existingETag
 		  $saveResult = $false
 		}
+        if ($saveResult) {
+        # Conversion of ETag to have single quotes
+        $etag = $etag -replace('"', "'")
+            foreach($line in $existingInfo){
+	            $existingInfo.$kind = $line.$kind -replace("([W]\/)?('((\d+)?(\w)?(\-)?)+')" , $etag)
+            }
+        $result = $etag
+        $existingInfo | ConvertTo-Json -depth 32 | Set-Content $saveFile
+        }
 	  }
 	  else {
 	    $existingInfo = (Get-Content $saveFile -Encoding UTF8 -TotalCount 1) -split '\|'
@@ -53,21 +64,12 @@ function Update-OnETagChanged() {
 		  $result["ETAG"] = $existingInfo[0]
 		  $saveResult = $false
 		}
-	  }	
-  }
-
-  if (($saveResult) -and ($kind)) {
-    # etag needs to be modified before updating info
-    $etag = $etag -replace('"', "'")
-	foreach($line in $existingInfo){
-		$existingInfo.$kind = $line.$kind -replace("([W]\/)?('((\d+)?(\w)?(\-)?)+')" , $etag)
-	}
-    $result = $etag
-    $existingInfo | ConvertTo-Json -depth 32 | Set-Content $saveFile
-  }
-  else {
-    $result["ETAG"] = $etag
-    "$($result["ETAG"])|$($result["Version"])" | Out-File $saveFile -Encoding utf8 -NoNewline
+        if ($saveResult) {
+        $result["ETAG"] = $etag
+        "$($result["ETAG"])|$($result["Version"])" | Out-File $saveFile -Encoding utf8 -NoNewline
+        }
+	  }
+Write-Warning "existingETag -$existingETag-`r`netag -$etag-"
   }
   if ($boule) {
 	return $saveResult
