@@ -1,37 +1,4 @@
 
-function Get-HeadersIfChanged() {
-param(
-    [string]$url,
-    [string]$file,
-    [ValidateSet("portable", "stable", "dev")]
-    [string]$kind
-)
-# Check for the info file and if not create it
-  if (!(Test-Path $file)) {
-	New-Item $file -ItemType file
-  }
-# Read file when existing and not forced else info is null
-  if (($global:au_Force -ne $true) -and (Test-Path $file)) {
-    $existingETag = ( Get-Content $file -Raw | ConvertFrom-Json )
-  }  else {
-    $existingETag = @{}
-  }
-# Retrieve info from file
-  $etag = Invoke-WebRequest -Method Head -Uri $url -UseBasicParsing
-  # $etag = $etag | Foreach { $_.Headers.ETag }
-  $etag = $etag | Foreach { $_.Headers["Content-Length"] }
-# Compare web info to file and return true
-  if ($etag -ne $existingETag.$kind) {
-    foreach($line in $existingETag){
-        $existingETag.$kind = $line.$kind -replace("(\d+)" , $etag)
-    }
-    $existingETag | ConvertTo-Json -depth 32| set-content $file
-	return $true
-  }  
-# Return info if different
-  return $false
-}
-
 function Get-FreeCad {
 param(
     [string]$Title,
@@ -80,7 +47,7 @@ param(
   }
   $vert = @{$true = "$version-$kind"; $false = "$version" }[( $kind -eq 'dev' )]
 # The url64 should always be valid
-$test = (Get-HeadersIfChanged -url "${PreUrl}${url64}" -file "${PSScriptRoot}\freecad.info" -kind $kind)
+$test = (Update-OnETagChanged -execUrl "${PreUrl}${url64}" -saveFile "${PSScriptRoot}\freecad.info" -kind $kind -OnETagChanged { @{} } -OnUpdated { @{} } -boule )
 if (($test -eq $true) -and ($kind -ne 'dev')) {
 	$vert = (Get-FixVersion $vert)
 }
