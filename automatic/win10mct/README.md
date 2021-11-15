@@ -12,3 +12,11 @@ You can then download and run the media creation tool. For more information on h
 
 ## Notes
 - Does not support Windows 10 Enterprise.
+
+## Package Parameters
+The following package parameters can be set:
+
+ * `/StartShortcut` - Add a start menu shortcut
+ * `/DesktopShortcut` - Add a desktop shortcut
+
+Example: `choco install win10mct --params "/NoStartShortcut /DesktopShortcut"`

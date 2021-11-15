@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://cdrtfe.sourceforge.io/cdrtfe/download_en.html>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/cdrtfe/files/cdrtfe/cdrtfe%201.5.8/cdrtfe-1.5.8.exe>
+1. Download the following <https://sourceforge.net/projects/cdrtfe/files/cdrtfe/cdrtfe%201.5.9/cdrtfe-1.5.9.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 531C8DDFEBA23150229DE16175A6510FF5E3531E2338AF152A3B9F44E7BA889E
+  checksum: D6683FCE47B9C85D2077B1BE3B424A4A42BE989830F52783673E01E9D06A8470
 
 The file 'LICENSE.txt' has been obtained from <https://cdrtfe.sourceforge.io/cdrtfe/source_en.html>

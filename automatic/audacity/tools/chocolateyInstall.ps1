@@ -5,8 +5,8 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'audacity'
   fileType       = 'exe'
-  file           = "$toolsDir\audacity-win-3.0.4-x86.exe"
-  file64         = "$toolsDir\audacity-win-3.0.4-x64.exe"
+  file           = "$toolsDir\audacity-win-3.1.1-32bit.exe"
+  file64         = "$toolsDir\audacity-win-3.1.1-64bit.exe"
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0, 1223)
 }
