@@ -9,7 +9,7 @@ if ($key.Count -eq 1) {
     $packageArgs = @{
       packageName    = $packageName
       fileType       = 'EXE'
-      silentArgs     = @{"1password4" = '/SILENT'; "1password" = 'uninstall' }[$env:ChocolateyPackageName]
+      silentArgs     = 'uninstall'
       validExitCodes = @(0)
       file           = "$($_.UninstallString -replace ' uninstall')"
     }
