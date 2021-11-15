@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = '1Password'
+$packageName = $env:ChocolateyPackageName
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName '1Password*'
 
