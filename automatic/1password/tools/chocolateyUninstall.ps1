@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = '1Password'
+$packageName = $env:ChocolateyPackageName
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName '1Password*'
 
@@ -11,7 +11,7 @@ if ($key.Count -eq 1) {
       fileType       = 'EXE'
       silentArgs     = @{"1password4" = '/SILENT'; "1password" = 'uninstall' }[$env:ChocolateyPackageName]
       validExitCodes = @(0)
-      file           = "$($_.UninstallString)".Replace(" uninstall", "")
+      file           = "$($_.UninstallString -replace ' uninstall')"
     }
 
     Uninstall-ChocolateyPackage @packageArgs
