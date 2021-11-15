@@ -14,10 +14,10 @@ if ($installLocation) {
 $pp = Get-PackageParameters
 
 $filesInfo = @{
-  filets32  = "$toolsPath\php-8.0.11-Win32-vs16-x86.zip"
-  filets64  = "$toolsPath\php-8.0.11-Win32-vs16-x64.zip"
-  filents32 = "$toolsPath\php-8.0.11-nts-Win32-vs16-x86.zip"
-  filents64 = "$toolsPath\php-8.0.11-nts-Win32-vs16-x64.zip"
+  filets32  = "$toolsPath\php-7.3.32-Win32-VC15-x86.zip"
+  filets64  = "$toolsPath\php-7.3.32-Win32-VC15-x64.zip"
+  filents32 = "$toolsPath\php-7.3.32-nts-Win32-VC15-x86.zip"
+  filents64 = "$toolsPath\php-7.3.32-nts-Win32-VC15-x64.zip"
 }
 
 if ($pp.ThreadSafe) {

@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@d1b8b6861269e2381fa4e8ca92b1856149b0e4c8/icons/palemoon.png" width="48" height="48"/> [palemoon](https://chocolatey.org/packages/palemoon)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@d1b8b6861269e2381fa4e8ca92b1856149b0e4c8/icons/palemoon.png" width="48" height="48"/> [palemoon](https://chocolatey.org/packages/palemoon)
 
 
 Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use. 

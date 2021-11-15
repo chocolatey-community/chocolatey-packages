@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Opera</id>
-    <version>80.0.4170.16</version>
+    <version>81.0.4196.37</version>
     <title>Opera</title>
     <owners>chocolatey-community</owners>
     <authors>Opera</authors>
     <projectUrl>http://www.opera.com/browser/</projectUrl>
     <licenseUrl>http://www.opera.com/eula/computers</licenseUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@b7466aa44fbbc7e8022c05be2d866e63cd915c8d/icons/opera.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@b7466aa44fbbc7e8022c05be2d866e63cd915c8d/icons/opera.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.
 
@@ -22,9 +22,9 @@ These parameters can be passed to the installer with the use of `--params`.
 For example: `--params '"/NoDesktopShortcut /NoTaskbarShortcut"'`
 ]]></description>
     <summary>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.</summary>
-    <releaseNotes>https://blogs.opera.com/desktop/changelog-for-80/#b4170.16</releaseNotes>
+    <releaseNotes>https://blogs.opera.com/desktop/changelog-for-81/#b4196.37</releaseNotes>
     <tags>browser opera cross-platform internet admin</tags>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/opera</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/opera</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

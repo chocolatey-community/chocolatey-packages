@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bleachbit</id>
-    <version>4.4.0.20210807</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/bleachbit</packageSourceUrl>
+    <version>4.4.2</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/bleachbit</packageSourceUrl>
     <owners>chocolatey-community,dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>BleachBit</title>
     <authors>Andrew Ziem</authors>
     <projectUrl>https://www.bleachbit.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
     <licenseUrl>https://github.com/bleachbit/bleachbit/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.bleachbit.org/</docsUrl>
@@ -43,7 +43,7 @@ BleachBit has many useful features designed to help you easily [clean](https://w
 ]]></description>
     <releaseNotes>https://www.bleachbit.org/news</releaseNotes>
     <dependencies>
-      <dependency id="bleachbit.install" version="[4.4.0.20210807]" />
+      <dependency id="bleachbit.install" version="[4.4.2]" />
     </dependencies>
     </metadata>
     <files />

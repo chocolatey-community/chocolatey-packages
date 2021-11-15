@@ -17,9 +17,11 @@ Bringing together all kinds of awesomeness to make browsing better for you.
 
 ## Package Parameters
 
-- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales. Note that by providing this parameter the package will not check mozilla.org for a locale.
+- `/l:LOCALE` - Install given Firefox locale. See the [official page](https://releases.mozilla.org/pub/firefox/releases/latest/README.txt) for a complete list of available locales.
+- `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website.
 
 Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
+
 - `/InstallDir:PATH`
 - `/NoTaskbarShortcut` Do not create Taskbar Shortcut
 - `/NoDesktopShortcut` Do not create Desktop Shortcut
@@ -29,8 +31,9 @@ Command-line options for installer configuration. See the [official page](https:
 - `/NoAutoUpdate` Sets a policies.json file to not update Firefox and does not install the Maintenance Service
 
 ### Examples
-`choco install Firefox --params "/l:en-GB"`\
-`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`\
+
+`choco install Firefox --params "/l:en-GB"`  
+`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`  
 `choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
@@ -40,4 +43,5 @@ Command-line options for installer configuration. See the [official page](https:
 - If locale package parameter is not present, this package installs Firefox in the first language which matches this list:
   1. If Firefox is already installed it uses the same language as the already installed one.
   1. The Windows system language.
+  1. Language Culture code specified on Mozilla website (only when `/UseMozillaFallback` is specified).
   1. If Firefox does not support the system language, it will fall back to `en-US`.
