@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@833f8152a28aa2c249d380342337ae0514742fd6/icons/k9s.png" width="48" height="48"> [k9s](https://chocolatey.org/packages/k9s)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@833f8152a28aa2c249d380342337ae0514742fd6/icons/k9s.png" width="48" height="48"> [k9s](https://chocolatey.org/packages/k9s)
 
 K9s provides a terminal UI to interact with your Kubernetes clusters.
 The aim of this project is to make it easier to navigate, observe and manage
