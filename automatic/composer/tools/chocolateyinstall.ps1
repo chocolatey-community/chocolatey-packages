@@ -2,13 +2,13 @@
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
-$fileName = 'Composer-Setup.6.2.0.exe'
+$fileName = 'Composer-Setup.6.3.0.exe'
 
 $packageArgs = @{
   packageName  = 'composer'
   fileType     = 'exe'
   file         = Get-Item $toolsPath\$fileName
-  checksum     = '1ED7DD2E67450705F0C1A1A2B8F8CB87DB29C36CA4CA8B2D2304864B8ECBB0E5'
+  checksum     = '10826B503BA6823F14893F0627823017EE1778881222EA9960A7E268739D6956'
   checksumType = 'sha256'
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   softwareName = 'composer*'

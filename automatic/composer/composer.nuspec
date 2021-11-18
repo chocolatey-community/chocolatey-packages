@@ -4,12 +4,12 @@
   <metadata>
     <id>composer</id>
     <title>Composer Setup</title>
-    <version>6.2.0</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/composer</packageSourceUrl>
+    <version>6.3.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/composer</packageSourceUrl>
     <owners>chocolatey-community, John Stevenson</owners>
     <authors>Nils Adermann, Jordi Boggiano and community contributors</authors>
     <projectUrl>https://getcomposer.org</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@f7ae3543e4bce2cbb3525fe2ada977031e43781c/icons/composer.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@f7ae3543e4bce2cbb3525fe2ada977031e43781c/icons/composer.png</iconUrl>
     <copyright>© 2011-Present Nils Adermann, Jordi Boggiano</copyright>
     <licenseUrl>https://github.com/composer/composer/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -44,7 +44,7 @@ This package has a dependency on the Chocolatey PHP package. If this is not foun
 
 If you encounter any problems with the installation, you can run it interactively using the `--notsilent` option.
 ]]></description>
-    <releaseNotes>https://github.com/composer/windows-setup/releases/tag/v6.2.0</releaseNotes>
+    <releaseNotes>https://github.com/composer/windows-setup/releases/tag/v6.3.0</releaseNotes>
     <dependencies>
       <dependency id="php" version="5.5.0" />
     </dependencies>
