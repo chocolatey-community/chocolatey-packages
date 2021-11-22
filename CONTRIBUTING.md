@@ -211,7 +211,7 @@ Keep the package source files clean and remove obsolete or outdated code and unn
 
 # 3. Teamwork
 
-Good communication is essential so please take a look at [etiquette](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication) regarding it.
+Good communication is essential so please take a look at [Code of Conduct](https://github.com/chocolatey/.github/blob/main/CODE_OF_CONDUCT.md) regarding it.
 
 ### 3.1 Single package per pull request
 
