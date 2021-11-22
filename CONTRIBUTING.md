@@ -227,9 +227,9 @@ Most of the labels are self describing, here are few that require explanation:
 
 - [5 - Push required](https://github.com/chocolatey-community/chocolatey-packages/labels/5%20-%20Push%20required)
 Package is done when its pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if its not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
-- [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3Awontfix%20)
+- [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/labels/Wontfix)
 Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benfit.
-- [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20)
+- [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/labels/Unresolved)
 The issue is unresolved - no feedback, no interest and it probably expired.
 - [0 - _Triaging](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20_Triaging)
 Team is checking, confirming and measuring out the request.
