@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/paintdotnet/release/releases/download/v4.3.2/paint.net.4.3.2.install.x64.zip
+   x64: https://github.com/paintdotnet/release/releases/download/v4.3.3/paint.net.4.3.3.install.x64.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 70464B26AF13495E385B84EAE5F856B69E08B62EFEDD0F5D8C07A33FA72D4AF1
+   checksum64: 8B0A56021C43A14A99E2870B3FE105764CBAD1FC5EA34AD4EB9E658F2D78E3EC
 
 File 'license.txt' is obtained from:
    https://www.getpaint.net/license.html
