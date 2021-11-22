@@ -225,15 +225,15 @@ Issues and PRs that remain open for 6 months without any feedback may be closed 
 
 Most of the labels are self describing, here are few that require explanation:
 
-- [Push required](https://github.com/chocolatey-community/chocolatey-packages/pulls?utf8=%E2%9C%93&q=label%3A%224%20-%20Push%20required%22%20)
+- [5 - Push required](https://github.com/chocolatey-community/chocolatey-packages/labels/5%20-%20Push%20required)
 Package is done when its pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if its not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
 - [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3Awontfix%20)
 Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benfit.
 - [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20)
 The issue is unresolved - no feedback, no interest and it probably expired.
-- [Triaging](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3ATriaging%20)
+- [0 - _Triaging](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20_Triaging)
 Team is checking, confirming and measuring out the request.
 - [Pending closure](https://github.com/chocolatey-community/chocolatey-packages/labels/Pending%20closure)
 The issue is approaching end of issue life time. This is annoucement that issue will soon get closed in few weeks unless there is some new activity.
-- [Waiting feedback](https://github.com/chocolatey-community/chocolatey-packages/labels/Waiting%20feedback)
+- [0 - Waiting on user](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20Waiting%20on%20User)
 The team is waiting for somebody to respond. Until that happens, there will be no activity.
