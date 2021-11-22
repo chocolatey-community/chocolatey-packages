@@ -213,15 +213,19 @@ Keep the package source files clean and remove obsolete or outdated code and unn
 
 Good communication is essential so please take a look at [Code of Conduct](https://github.com/chocolatey/.github/blob/main/CODE_OF_CONDUCT.md) regarding it.
 
-### 3.1 Single package per pull request
+### 3.1 Update CODEOWNERS
+
+If you are submitting or making changes to a package and want to ensure that you can review any further changes, add your name to the [CODEOWNERS](https://github.com/chocolatey-community/chocolatey-packages/blob/master/.github/CODEOWNERS) file.
+
+### 3.2 Single package per pull request
 
 All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
 
-### 3.2 Open issues and pull request expires after 6 months
+### 3.3 Open issues and pull request expires after 6 months
 
 Issues and PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
-### 3.3 Understanding labels
+### 3.4 Understanding labels
 
 Most of the labels are self describing, here are few that require explanation:
 
