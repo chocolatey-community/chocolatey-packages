@@ -211,29 +211,33 @@ Keep the package source files clean and remove obsolete or outdated code and unn
 
 # 3. Teamwork
 
-Good communication is essential so please take a look at [etiquette](https://github.com/chocolatey/choco/blob/master/README.md#etiquette-regarding-communication) regarding it.
+Good communication is essential so please take a look at [Code of Conduct](https://github.com/chocolatey/.github/blob/main/CODE_OF_CONDUCT.md) regarding it.
 
-### 3.1 Single package per pull request
+### 3.1 Update CODEOWNERS
+
+If you are submitting or making changes to a package and want to ensure that you can review any further changes, add your name to the [CODEOWNERS](https://github.com/chocolatey-community/chocolatey-packages/blob/master/.github/CODEOWNERS) file.
+
+### 3.2 Single package per pull request
 
 All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
 
-### 3.2 Open issues and pull request expires after 6 months
+### 3.3 Open issues and pull request expires after 6 months
 
 Issues and PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
-### 3.3 Understanding labels
+### 3.4 Understanding labels
 
 Most of the labels are self describing, here are few that require explanation:
 
-- [Push required](https://github.com/chocolatey-community/chocolatey-packages/pulls?utf8=%E2%9C%93&q=label%3A%224%20-%20Push%20required%22%20)
+- [5 - Push required](https://github.com/chocolatey-community/chocolatey-packages/labels/5%20-%20Push%20required)
 Package is done when its pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if its not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
-- [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3Awontfix%20)
+- [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/labels/Wontfix)
 Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benfit.
-- [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20)
+- [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/labels/Unresolved)
 The issue is unresolved - no feedback, no interest and it probably expired.
-- [Triaging](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3ATriaging%20)
+- [0 - _Triaging](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20_Triaging)
 Team is checking, confirming and measuring out the request.
 - [Pending closure](https://github.com/chocolatey-community/chocolatey-packages/labels/Pending%20closure)
 The issue is approaching end of issue life time. This is annoucement that issue will soon get closed in few weeks unless there is some new activity.
-- [Waiting feedback](https://github.com/chocolatey-community/chocolatey-packages/labels/Waiting%20feedback)
+- [0 - Waiting on user](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20Waiting%20on%20User)
 The team is waiting for somebody to respond. Until that happens, there will be no activity.
