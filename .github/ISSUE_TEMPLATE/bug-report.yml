@@ -1,0 +1,112 @@
+name: Package Bug Report
+description: Something went wrong with the installation of a package? Or did you find an unexpected behavior?
+title: "(packageName) "
+labels: ["01 - _Triaging", "Bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to fill out this bug report! Please fill out out the necessary information as complete as you can. Remember, it is better to include too much information, than too little.
+        Additionall, make sure that the issue title starts with the name of the package you was seeing the issue with inside paranthesis.
+
+        **Do NOT report Security related issues here, instead use the Report Abuse on the package page instead. See https://docs.chocolatey.org/en-us/information/security#report-issue**
+  - type: dropdown
+    id: choco-version
+    attributes:
+      label: Chocolatey Version
+      description: |
+        What version of Chocolatey do you have installed on the machine that this Bug occured (Check all versions that apply, if there are any other versions you know of that are affected please add this to the Additional Details box further down)?
+        Do mind that versions older than the latest version that was available 1 year ago will not be supported.
+      multiple: true
+      options:
+        - 0.11.3
+        - 0.11.2
+        - 0.11.1
+        - 0.11.0
+        - 0.10.15
+    validations:
+      required: true
+  - type: dropdown
+    id: choco-license
+    attributes:
+      label: Chocolatey License
+      description: |
+        Select the license that you are using for Chocolatey when you discovered this bug (Open Source users should select None).
+      options:
+        - Professional
+        - Business
+        - Architect
+        - MSP
+    validations:
+      required: false
+  - type: input
+    id: package-version
+    attributes:
+      label: Package Version
+      description: |
+        Which version of the package did you find this bug for?
+      placeholder: ex 5.0.0 or 4.0.0 -> 4.1.0 for upgrades.
+    validations:
+      required: true
+  - type: textarea
+    id: current-behaviour
+    attributes:
+      label: Current Behaviour
+      description: Please provide a concise description of what you are experiencing.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected Behaviour
+      description: Please provide a concise description of what you expected to happen.
+    validations:
+      required: false
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps To Reproduce
+      description: |
+        How can we reproduce the behaviour that you are seeing, please include the exact steps that is needed.
+        If no steps are included, and we are unable to reproduce the issue it may be closed without notice.
+      placeholder: |
+        1. In this environment...
+        2. Run '...'
+        3. See error...
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        What environment did you encounter the bug in? Operating System, .NET Version, PowerShell Version and the shell/terminal emulator used (ie. PowerShell, CMD).
+      value: |
+        - Operating System:
+        - .NET Version:
+        - PowerShell Version:
+        - Shell:
+      render: markdown
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Chocolatey Log
+      description: |
+        Include the log that have been created by Chocolatey. If possible it is prefered to be a link to a file located at https://gist.github.com instead of embedded directly inside the issue.
+
+        Tip: For standard installations, the Chocolatey log file is located in `C:\ProgramData\chocolatey\logs\chocolatey.log`.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: additional-details
+    attributes:
+      label: Anything else?
+      description: |
+        Links? References? Anything that will give us more context about the issue you are encountering?
+
+        Tip: You cat attach images by clicking this area to highlight it and then drag files in.
+    validations:
+      required: false

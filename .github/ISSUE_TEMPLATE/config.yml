@@ -1,0 +1,15 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Request a new Feature or Enhancement to package.
+    # This annoying url is used so it can pre-fill some parts of the new discussion that needs to be created.
+    # Follow the link to see what will be displayed.
+    url: https://github.com/chocolatey-community/chocolatey-packages/discussions/new?category=ideas&title=(packageName)&body=%3C%21--%20Please%20update%20the%20title%20with%20a%20summary%20of%20the%20feature%20or%20enhancement%20you%20wish%20to%20see.%20The%20discussion%20needs%20to%20be%20prefixed%20with%20the%20package%20name%20inside%20parentheses.%20Give%20as%20many%20details%20to%20the%20feature%20or%20enhancement%20as%20you%20can%2C%20and%20why%20it%20should%20be%20included.%20Think%20of%20it%20as%20trying%20to%20persuade%20someone%20to%20include%2C%20or%20do%20something.%0A%0AIf%20you%20are%20willing%20to%20submit%20a%20pull%20request%20to%20add%20the%20feature%20or%20enhancement%2C%20include%20this%20as%20well%20but%20do%20not%20start%20working%20on%20a%20pull%20request%20until%20a%20repository%20maintainer%20has%20approved%20the%20inclusion%20%28by%20creating%20an%20issue%20with%20a%20reference%20to%20this%20discussion%29.%20Remember%20to%20remove%20this%20comment%20once%20you%20are%20done.%0A%0AREMEMBER%20TO%20REMOVE%20THIS%20COMMENT%20BEFORE%20CONTINUING%20--%3E
+    about: Open a discussion to request a feature or enhancement be implemented for a specific package.
+  - name: Request a new package being migrated to this repository.
+    # This same annoying url is used here as well to pre-fill some parts of the new discussion that needs to be created.
+    # Follow the link to see what will be displayed.
+    url: https://github.com/chocolatey-community/chocolatey-packages/discussions/new?category=ideas&title=(packageName)%20Migrate%20package&body=%3C%21--%20DO%20NOT%20OPEN%20A%20DISCUSSION%20ABOUT%20MIGRATING%20A%20PACKAGE%20WITHOUT%20HAVING%20PERMISSIONS%20FROM%20THE%20MAINTAINER%20OF%20THE%20PACKAGE.%20IF%20THE%20PACKAGE%20MAINTAINER%20IS%20UNRESPONSIVE%2C%20FOLLOW%20THE%20NORMAL%20PACKAGE%20TRIAGE%20DOCUMENTATION.%0A%0AInclude%20details%20of%20why%20it%20should%20be%20migrated%20to%20this%20repository%2C%20who%20will%20be%20responsible%20for%20keeping%20it%20up%20to%20date%20and%20who%20will%20fix%20any%20issues%20that%20get%20reported%20%28either%20by%20users%2C%20or%20the%20automated%20checks%20on%20the%20Community%20Repository%29%20--%3E
+    about: Open a discussion about moving a package you own, or have permission to move over to this repository.
+  - name: Ask a Question
+    url: https://github.com/chocolatey-community/chocolatey-packages/discussions/categories/q-a
+    about: Do you have a question about a specific package, or maybe the repository itself?
