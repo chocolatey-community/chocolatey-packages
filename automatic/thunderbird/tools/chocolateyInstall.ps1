@@ -19,9 +19,11 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
 $tbProcess = Get-Process thunderbird -ea 0
 if ($tbProcess) {
-  Write-Host "Stopping running thunderbird process"
+  Write-Host 'Stopping running thunderbird process'
   Stop-Process $tbProcess
-  $tbProcess = $tbProcess.Path
+  # We make an assumption that the first unique item found
+  # will be have the path to the process we want to restart.
+  $tbProcess = $tbProcess.Path | Select-Object -Unique -First 1
 }
 
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
