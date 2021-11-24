@@ -1,6 +1,6 @@
 # Chocolatey Community Chocolatey Packages
 
-[![Join the chat at https://gitter.im/chocolatey/chocolatey-coreteampackages](https://badges.gitter.im/chocolatey/chocolatey-coreteampackages.svg)](https://gitter.im/chocolatey/chocolatey-coreteampackages?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Discord](https://img.shields.io/discord/778552361454141460?logo=Discord)](https://ch0.co/community)
 [![AppVeyor build branch status](https://img.shields.io/appveyor/ci/chocolateycommunity/chocolatey-packages/master.svg?logo=appveyor)](https://ci.appveyor.com/project/chocolateycommunity/chocolatey-packages)
 [![Open Source Helpers](https://www.codetriage.com/chocolatey-community/chocolatey-coreteampackages/badges/users.svg)](https://www.codetriage.com/chocolatey-community/chocolatey-coreteampackages)
 [![](http://transparent-favicon.info/favicon.ico)](#)[![](http://transparent-favicon.info/favicon.ico)](#)
