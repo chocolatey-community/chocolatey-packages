@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>librecad</id>
-    <version>2.2.0-rc2</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/librecad</packageSourceUrl>
+    <version>2.2.0-rc3</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/librecad</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>LibreCAD</title>
     <authors>LibreCAD community</authors>
     <projectUrl>http://librecad.org/cms/home.html</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/librecad.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/librecad.svg</iconUrl>
     <copyright>What is the copyright</copyright>
     <licenseUrl>https://github.com/LibreCAD/LibreCAD/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
