@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.20.0.26155-dev</version>
+    <version>0.19.3</version>
     <title>FreeCAD</title>
     <owners>chocolatey-community,purity</owners>
     <authors>Jürgen Riegel</authors>
@@ -43,7 +43,7 @@ This package may install a 32bit version that is not the same version number as 
 Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
 ]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.20</releaseNotes>
+    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.19</releaseNotes>
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
