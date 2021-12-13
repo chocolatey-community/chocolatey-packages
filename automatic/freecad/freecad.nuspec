@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>freecad</id>
-    <version>0.19.3</version>
-    <title>FreeCAD</title>
+    <id>freecad.portable</id>
+    <version>0.19.3.6530</version>
+    <title>FreeCAD (Portable)</title>
     <owners>chocolatey-community,purity</owners>
     <authors>Jürgen Riegel</authors>
     <licenseUrl>http://www.freecadweb.org/wiki/index.php?title=Licence</licenseUrl>

@@ -4,14 +4,14 @@ if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -P
 . "$PSScriptRoot\helper.ps1"
 
 $packageArgs = @{
-  packageName    = 'freecad'
-  fileType       = 'exe'
-  url            = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.18.4/FreeCAD-0.18.4.980bf90-WIN-x32-installer.exe'
-  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.19.3/FreeCAD-0.19.3-WIN-x64-installer-1.exe'
+  packageName    = 'freecad.portable'
+  fileType       = '7z'
+  url            = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.18.4/FreeCAD-0.18.4.980bf90-WIN-x32-portable.7z'
+  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/0.19.3/FreeCAD-0.19.3.6530e36-WIN-x64-portable.7z'
   softwareName   = 'FreeCAD'
-  checksum       = 'A3C00E00E5321D9786C56D58C501F8A8E43BA9D25F7147CD8B9C869D744BE514'
+  checksum       = 'E043B4DDF4402BA50312B914FCF3ED114BA48FFC7B38F347DFDDA2254E1E7874'
   checksumType   = 'sha256'
-  checksum64     = 'D4CC7869B7BB1C3E5C7B4FE75A578BC825D191D4CD4054FA015D7AE83C6F51F7'
+  checksum64     = '8B7CA7385F269E3253EF82408330190654CEE46A0EE6BB42C391A560CB01393C'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
