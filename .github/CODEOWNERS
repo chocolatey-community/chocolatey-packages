@@ -12,6 +12,7 @@
 # Multiple users can be set for the same match
 
 */ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
+*/brave*              @AdmiringWorm
 */calibre*            @gep13 @AdmiringWorm
 */cdburnerxp*         @gep13
 */poweriso*           @gep13
@@ -30,6 +31,8 @@
 */ffmpeg-full*        @VuiMuich
 */etcd*               @dgalbraith
 */octave.portable*    @dgalbraith
+*/thunderbird*        @majkinetor @gep13
+*/git.portable*       @jeterson
 
 # Other
 # This can be any file other that won't be matched as a package
