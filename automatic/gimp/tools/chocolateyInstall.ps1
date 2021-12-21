@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.28-setup.exe'
+  url            = 'https://download.gimp.org/mirror/pub/gimp/v2.10/windows/gimp-2.10.30-setup.exe'
   softwareName   = 'GIMP'
-  checksum       = '2c2e081ce541682be1abdd8bc6df13768ad9482d68000b4a7a60c764d6cec74e'
+  checksum       = '5b8db574966d2427fa02202b591173905f64806559e37fbdca4654e55b568c8e'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /RESTARTEXITCODE=3010 /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
