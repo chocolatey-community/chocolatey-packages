@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg" width="48" height="48"/> [Krita](https://chocolatey.org/packages/krita)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@a23613fa38ece047b7d7a943e6f141e4aa1ef1e3/icons/krita.svg" width="48" height="48"/> [Krita](https://chocolatey.org/packages/krita)
 
 Krita is a FREE and open source painting tool designed for concept artists, illustrators, matte and texture artists, and the VFX industry. Krita has been in development for over 10 years and has had an explosion in growth recently. It offers many common and innovative features to help the amateur and professional alike. See below for some of the highlighted features.
 
