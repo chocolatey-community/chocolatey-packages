@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://mkvtoolnix.download/windows/releases/63.0.0/mkvtoolnix-32-bit-63.0.0-setup.exe
-   x64: https://mkvtoolnix.download/windows/releases/63.0.0/mkvtoolnix-64-bit-63.0.0-setup.exe
+   x32: https://mkvtoolnix.download/windows/releases/64.0.0/mkvtoolnix-32-bit-64.0.0-setup.exe
+   x64: https://mkvtoolnix.download/windows/releases/64.0.0/mkvtoolnix-64-bit-64.0.0-setup.exe
 
    to download the installer.
 
@@ -16,5 +16,5 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 264E1FE89FD252DA520D7F1661C41E40303FC42D9B7078C16F7A96D4D9192AA3
-   checksum64: AD8A42F066459AF48B420A0D649815BAD5507FA33148A9D579597C957A8C23F1
+   checksum32: AFB2D2BEABD9A4FCF0C88F1BAB94076C6513B4A9580D296FFEA69612808AE41F
+   checksum64: 6E7966D6C5645E9D3385890FE56E7EFFA10E4F7DDFED4BA68927802721F31226
