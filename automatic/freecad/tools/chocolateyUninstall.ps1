@@ -3,7 +3,7 @@
 if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
 
 $packageArgs = @{
-  packageName    = 'freecad.portable'
+  packageName    = 'freecad'
   softwareName   = 'FreeCAD'
   fileType       = '7z'
   silentArgs     = '/S'

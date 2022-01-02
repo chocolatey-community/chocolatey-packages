@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>freecad.portable</id>
-    <version>0.19.3.6530</version>
-    <title>FreeCAD (Portable)</title>
+    <id>freecad</id>
+    <version>0.20.0.26845-dev</version>
+    <title>FreeCAD</title>
     <owners>chocolatey-community,purity</owners>
     <authors>Jürgen Riegel</authors>
     <licenseUrl>http://www.freecadweb.org/wiki/index.php?title=Licence</licenseUrl>
@@ -43,7 +43,7 @@ This package may install a 32bit version that is not the same version number as 
 Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
 ]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.19</releaseNotes>
+    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.20</releaseNotes>
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
