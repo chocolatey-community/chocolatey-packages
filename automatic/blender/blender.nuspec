@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>blender</id>
-    <version>3.0.0</version>
+    <version>2.93.6</version>
     <title>Blender</title>
     <owners>chocolatey-community, Redsandro</owners>
     <authors>Blender Foundation</authors>
@@ -56,7 +56,6 @@ Blender is a free and open-source professional-grade 3D computer graphics and vi
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/blender</packageSourceUrl>
   </metadata>
   <files>
-    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
