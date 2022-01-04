@@ -1,6 +1,6 @@
 ﻿Import-Module AU
 
-$releases     = 'https://ghostscript.com/download/gsdnld.html'
+$releases     = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/latest'
 
 function global:au_SearchReplace {
   [version]$version = $Latest.RemoteVersion
@@ -17,17 +17,21 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'w32\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  # Linux version uses the correct version as we expect, so we use that
+  # version as the base.
 
-  $re = 'w64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $linuxTarbal = $download_page.Links | ? href -match 'ghostscript-.*.tar.gz' | select -First 1 -ExpandProperty href
 
-  $verRe = 'Ghostscript\s*([\d]+\.[\d\.]+) for Windows'
-  $Matches = $null
-  $download_page.Content -match $verRe | Out-Null
-  if ($Matches) {
-    $version = $Matches[1]
+  $version = $linuxTarbal -split '-|\.tar' | select -Last 1 -Skip 1
+
+  $re = "gs$($version -replace '\.')w32\.exe$"
+  $url32 = $download_page.Links | ? href -match $re | % { [uri]::new($download_page.BaseResponse.ResponseUri, $_.href) } | select -first 1
+
+  $re = "gs$($version -replace '\.')w64\.exe$"
+  $url64 = $download_page.links | ? href -match $re | % { [uri]::new($download_page.BaseResponse.ResponseUri, $_.href) } | select -first 1
+
+  if (!$url32 -or !$url64) {
+    throw "Either 32bit or 64bit URL is missing, please verify this is correct!"
   }
 
   @{
