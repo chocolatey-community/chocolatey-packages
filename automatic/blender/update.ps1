@@ -9,12 +9,6 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType64)"
-      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
-    }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
       "(?i)(^\s*url64bit\s*=\s*)'.*'" = "`${1}'$($Latest.URL64)'"
