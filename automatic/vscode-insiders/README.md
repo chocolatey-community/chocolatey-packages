@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@ae1af716af9c16500e7f6f45d650f1dbf3d372fd/icons/vscode-insiders.png" width="48" height="48"/> [vscode-insiders](https://chocolatey.org/packages/vscode-insiders)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ae1af716af9c16500e7f6f45d650f1dbf3d372fd/icons/vscode-insiders.png" width="48" height="48"/> [vscode-insiders](https://chocolatey.org/packages/vscode-insiders)
 
 Visual Studio Code Insiders is the pre-release build of Visual Studio Code.
 

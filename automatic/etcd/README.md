@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png" width="48" height="48"/> [etcd](https://chocolatey.org/packages/etcd)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png" width="48" height="48"/> [etcd](https://chocolatey.org/packages/etcd)
 
 **etcd** is a strongly consistent, distributed key-value store that provides a reliable way to store data that needs to
 be accessed by a distributed system or cluster of machines. It gracefully handles leader elections during network

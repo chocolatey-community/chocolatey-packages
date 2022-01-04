@@ -4,7 +4,7 @@
   <metadata>
     <id>libreoffice-still</id>
     <title>LibreOffice Still</title>
-    <version>7.1.0</version>
+    <version>7.1.8</version>
     <authors>LibreOffice developers</authors>
     <owners>chocolatey-community</owners>
     <summary>LibreOffice is the free power-packed Open Source personal productivity suite for Windows, Macintosh and Linux, that gives you six feature-rich applications for all your document production and data processing needs.</summary>
@@ -21,12 +21,12 @@
     <copyright></copyright>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
     <dependencies>
       <dependency id="kb2919355" version="1.0.20160915" />
     </dependencies>
     <releaseNotes>https://www.libreoffice.org/download/release-notes</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/libreoffice-streams</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/libreoffice-streams</packageSourceUrl>
     <projectSourceUrl>https://www.libreoffice.org/about-us/source-code</projectSourceUrl>
     <docsUrl>https://www.libreoffice.org/get-help/documentation</docsUrl>
   </metadata>

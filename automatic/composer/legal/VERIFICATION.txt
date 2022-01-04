@@ -8,13 +8,13 @@ The installer can also be verified like this:
 
 1. Download the installer from:
 
-  x32: https://github.com/composer/windows-setup/releases/download/v6.2.0/Composer-Setup.6.2.0.exe
+  x32: https://github.com/composer/windows-setup/releases/download/v6.3.0/Composer-Setup.6.3.0.exe
 
 2. You can use one of the following methods to obtain the checksum:
   - Use powershell function 'Get-FileHash'
   - Use Chocolatey utility 'checksum.exe'
 
-  checksum32: 1ED7DD2E67450705F0C1A1A2B8F8CB87DB29C36CA4CA8B2D2304864B8ECBB0E5
+  checksum32: 10826B503BA6823F14893F0627823017EE1778881222EA9960A7E268739D6956
   checksum type: sha256
 
 

@@ -4,13 +4,13 @@
   <metadata>
     <id>vscode-insiders</id>
     <title>Visual Studio Code Insiders</title>
-    <version>1.62.0.20211012</version>
+    <version>1.64.0.20220104</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community</owners>
     <projectUrl>https://code.visualstudio.com/insiders</projectUrl>
     <projectSourceUrl>https://github.com/Microsoft/vscode</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vscode-insiders</packageSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@ae1af716af9c16500e7f6f45d650f1dbf3d372fd/icons/vscode-insiders.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/vscode-insiders</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ae1af716af9c16500e7f6f45d650f1dbf3d372fd/icons/vscode-insiders.png</iconUrl>
     <licenseUrl>https://code.visualstudio.com/License</licenseUrl>
     <docsUrl>https://code.visualstudio.com/docs</docsUrl>
     <bugTrackerUrl>https://github.com/Microsoft/vscode/issues</bugTrackerUrl>
@@ -47,7 +47,7 @@ Example: `choco install vscode-insiders --params "/NoDesktopIcon /DontAddToPath"
 ]]></description>
     <tags>microsoft visualstudiocode visualstudiocode-insiders vscode vscode-insiders development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="vscode-insiders.install" version="[1.62.0.20211012]" />
+      <dependency id="vscode-insiders.install" version="[1.64.0.20220104]" />
     </dependencies>
     <releaseNotes>https://code.visualstudio.com/updates/#_preview-features</releaseNotes>
   </metadata>

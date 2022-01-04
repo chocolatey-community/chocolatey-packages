@@ -3,7 +3,7 @@
   <metadata>
     <id>skype</id>
     <title>Skype</title>
-    <version>8.77.0.90</version>
+    <version>8.79.0.95</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community,Rob Reynolds</owners>
     <summary>Skype - VOIP</summary>
@@ -15,11 +15,11 @@ The package have the following known issues.
 - A desktop shortcut is automatically created.
 ]]></description>
     <projectUrl>http://www.skype.com</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/skype</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/skype</packageSourceUrl>
     <tags>Skype VOIP voice over ip video conferencing admin</tags>
     <licenseUrl>https://www.microsoft.com/servicesagreement#14e_Skype</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@040c834d483de9e38ceeef0fd8283d803be082bf/icons/skype.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@040c834d483de9e38ceeef0fd8283d803be082bf/icons/skype.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

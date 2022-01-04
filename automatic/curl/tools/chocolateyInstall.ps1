@@ -4,8 +4,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = $env:chocolateyPackageName
-    FileFullPath   = "$toolsPath\curl-7.79.1-win32-mingw.zip"
-    FileFullPath64 = "$toolsPath\curl-7.79.1-win64-mingw.zip"
+    FileFullPath   = "$toolsPath\curl-7.80.0-win32-mingw.zip"
+    FileFullPath64 = "$toolsPath\curl-7.80.0-win64-mingw.zip"
     Destination    = $toolsPath
 }
 

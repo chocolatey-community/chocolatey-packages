@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>picard</id>
-    <version>2.6.4</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/picard</packageSourceUrl>
+    <version>2.7.1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/picard</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>MusicBrainz Picard</title>
     <authors>MusicBrainz</authors>
     <projectUrl>http://musicbrainz.org/doc/MusicBrainz_Picard</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@c0ad49fb5e8519b7bf9538ebe63ae95dbddec633/icons/picard.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@c0ad49fb5e8519b7bf9538ebe63ae95dbddec633/icons/picard.svg</iconUrl>
     <copyright>Copyright © 2004-2014 Robert Kaye, Lukáš Lalinský and others</copyright>
     <licenseUrl>https://github.com/metabrainz/picard/blob/master/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

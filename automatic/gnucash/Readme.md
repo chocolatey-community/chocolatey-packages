@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gnucash.svg" width="48" height="48"/> [gnucash](https://chocolatey.org/packages/gnucash)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gnucash.svg" width="48" height="48"/> [gnucash](https://chocolatey.org/packages/gnucash)
 
 *GnuCash* is personal and small-business financial-accounting software,
 freely licensed under the [GNU](http://www.gnu.org/) GPL and available for GNU/Linux, BSD, Solaris, Mac OS X and Microsoft Windows.
