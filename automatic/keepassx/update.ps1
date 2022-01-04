@@ -29,9 +29,7 @@ function global:au_GetLatest {
   $verRe = '\/'
   $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
 
-  if ($url32.StartsWith('/')) {
-    $url32 = $domain + $url32
-  }
+  $url32 = [uri]::new([uri]$releases, $url32)
 
   @{
     URL32 = $url32
