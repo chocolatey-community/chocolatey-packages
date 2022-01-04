@@ -24,23 +24,24 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $releasesPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = "^((?:\d+\.){2}\d+)$"
+  $re = "tag\/((?:\d+\.){2}\d+)$"
 
-  $versionHtml = $releasesPage.Links | ? title -match $re | select -first 1
-  $version = $versionHtml.title
+  $versionLink = $releasesPage.Links | Where-Object href -match $re | Select-Object -First 1
+  $version = $versionLink.href -split '\/' | Select-Object -Last 1
 
   $download_page = Invoke-WebRequest -Uri "$($releases)/tag/$($version)" -UseBasicParsing
+
   $re = 'x64\.exe$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $url64 = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { 'https://github.com' + $_ }
 
   $re = 'x86\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { 'https://github.com' + $_ }
 
   @{
-    URL32        = $url32
-    URL64        = $url64
-    Version      = $version
+    URL32   = $url32
+    URL64   = $url64
+    Version = $version
   }
 }
 
-update -ChecksumFor none
+Update-Package -ChecksumFor none
