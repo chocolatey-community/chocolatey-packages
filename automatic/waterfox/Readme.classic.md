@@ -26,3 +26,7 @@ telemetry is sent back to Mozilla or the Waterfox project.
 - Run every Add-On (even unsigned ones!)
 - Windows XP 64-Bit Support
 - More under the hood changes...
+
+## Notes
+
+- Waterfox Classic has many unpatched [security advisories](https://github.com/WaterfoxCo/Waterfox-Classic/wiki/Unpatched-Security-Advisories). Use at your own discretion.
