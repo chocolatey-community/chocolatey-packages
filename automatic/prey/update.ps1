@@ -36,7 +36,7 @@ function global:au_GetLatest {
 
   $streams = @{}
   $urls32 | % {
-    $verRe = '\/v?'
+    $verRe = '\/[v\.]{0,2}'
     $version = $_ -split "$verRe" | select -last 1 -skip 1
     $version = Get-Version $version
     $url64 = $urls64 | ? { $_ -match "${verRe}$version" } | select -First 1
