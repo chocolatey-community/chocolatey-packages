@@ -24,7 +24,7 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate() {
   $release_page = Invoke-WebRequest -Uri ($ghReleasesFmt -f $($Latest.RemoteVersion)) -UseBasicParsing
 
-  $release_notes = $release_page.Links | ? href -match "release-notes" | select -First 1 -expand href
+  $release_notes = $release_page.Links | ? href -match "release-notes|roadmap-releases" | select -First 1 -expand href
 
   Update-Metadata -key "releaseNotes" -value $release_notes
 }
