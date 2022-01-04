@@ -4,7 +4,7 @@ if (!$PSScriptRoot) {
 }
 . "$PSScriptRoot\helper.ps1"
 
-$version = '139.3.4817'
+$version = '140.3.1852'
 
 if (!(IsVersionAlreadyInstalled $version)) {
   $stop_dropbox = if (Get-Process -Name Dropbox -ErrorAction SilentlyContinue) { $false } else { $true }
@@ -13,8 +13,8 @@ if (!(IsVersionAlreadyInstalled $version)) {
   $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     softwareName   = "Dropbox"
-    url            = 'https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20139.3.4817%20Offline%20Installer.exe'
-    checksum       = '9772bc0d7664ff1d327a6d00aa0076c83c6e2affcb25bd02299495474b9c54f5'
+    url            = 'https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20140.3.1852%20Offline%20Installer.exe'
+    checksum       = '8beef6f27cb44fa6ad9a4e77912859a891369363fffe166ccb22cf4694314abc'
     fileType       = 'exe'
     checksumType   = 'sha256'
     silentArgs     = '/s'
