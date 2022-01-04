@@ -32,6 +32,13 @@ function global:au_GetLatest {
   $urls32 | % {
     $verRe = '[-]|\.exe|\.msi|\.zip'
     $version = $_ -split "$verRe" | select -last 1 -skip 1
+
+    if ($version -eq '1.4.1') {
+      # The URL for this version redirects back to a HTML page
+      # and can not be used.
+      return
+    }
+
     # Can't get Get-Version to work in this case
     #$version = Get-Version $version
     $versionTwoPart = $version -replace '^([\d]+\.[\d]+).*$','$1'
