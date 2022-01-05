@@ -3,8 +3,8 @@
 $arguments          = @{
     packageName     = $env:ChocolateyPackageName
     softwareName    = 'VoiceBot'
-    url             = 'https://binaryfortressdownloads.com/Download/BFSFiles/123/VoiceBotSetup-3.8.1.exe'
-    checksum        = '9f25e219189e09964dc387ec1c0a76c8443eaa21c52fd8d2142ee647ad2bbadc'
+    url             = 'https://binaryfortressdownloads.com/Download/BFSFiles/123/VoiceBotSetup-3.8.2.exe'
+    checksum        = 'ed051b09d1960fd6ffe21419a106282a3966bddc928459a6c06aaa030194f795'
     fileType        = 'exe'
     checksumType    = 'sha256'
     silentArgs      = '/VERYSILENT /LAUNCHAFTER=0'
