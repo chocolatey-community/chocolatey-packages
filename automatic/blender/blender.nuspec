@@ -56,7 +56,6 @@ Blender is a free and open-source professional-grade 3D computer graphics and vi
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/blender</packageSourceUrl>
   </metadata>
   <files>
-    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
