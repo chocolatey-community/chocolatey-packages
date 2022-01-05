@@ -10,4 +10,5 @@ Security is a high priority and code review is always done with security in mind
 ## Notes
 
 * This package is for the stable static full ffmpeg version.
-
+* For a list of libraries included, go to https://www.gyan.dev/ffmpeg/builds/#libraries
+* (provides everything included in the 'essentials' build with additional libraries)
