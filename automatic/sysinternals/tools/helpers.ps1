@@ -1,6 +1,6 @@
 function Accept-Eula() {
 
-$ShellRunAs = 'ShellRunas - Sysinternals: www.sysinternals.com'
+$ShellRunas = 'ShellRunas - Sysinternals: www.sysinternals.com'
 $tools = `
 "AccessChk",        "Active Directory Explorer", "ADInsight",  "Autologon",       "AutoRuns",
 "BGInfo",           "CacheSet",                  "ClockRes",   "Coreinfo",        "Ctrl2cap",
@@ -12,7 +12,7 @@ $tools = `
 "PsInfo",           "PsKill",                    "PsList",     "PsLoggedon",      "PsLoglist",
 "PsPasswd",         "PsService",                 "PsShutdown", "PsSuspend",       "RamMap",
 "RegDelNull",       "Regjump",                   "Regsize",    "RootkitRevealer", "Share Enum",
-$ShellRunAs,        "SigCheck",                  "Streams",    "Strings",         "Sync",
+$ShellRunas,        "SigCheck",                  "Streams",    "Strings",         "Sync",
 "System Monitor",   "TCPView",                   "VMMap",      "VolumeID",        "Whois",
 "Winobj",           "ZoomIt"
 
