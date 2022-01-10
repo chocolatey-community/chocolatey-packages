@@ -10,5 +10,6 @@ Security is a high priority and code review is always done with security in mind
 ## Notes
 
 * This package is for the stable static essentials ffmpeg version.
-* For a list of libraries included, go to https://www.gyan.dev/ffmpeg/builds/#libraries
+  For a list of libraries included, go to https://www.gyan.dev/ffmpeg/builds/#libraries
+  note that the list of libraries at the URL above will give those for the most recent version and may differ slightly from this package version
 * With version 4.4 the format of the version-number changed up until the next two releases it is expected that the flag `--version` is broken
