@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ffmpeg-full</id>
-    <version>4.4.1</version>
+    <version>5.0</version>
     <title>FFmpeg Full</title>
     <owners>chocolatey-community, VuiMuich</owners>
     <authors>FFmpeg Contributors</authors>
@@ -21,7 +21,10 @@ Security is a high priority and code review is always done with security in mind
 ## Notes
 
 * This package is for the stable static full ffmpeg version.
-
+  For a list of libraries included, go to https://www.gyan.dev/ffmpeg/builds/#libraries
+  (provides everything included in the 'essentials' build with additional libraries)
+  note that the list of libraries at the URL above will give those for the most recent version and may differ slightly from this package version
+  
 ]]></description>
     <summary>FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video. It includes libavcodec – the leading audio/video codec library.</summary>
     <releaseNotes>https://ffmpeg.org/index.html#news</releaseNotes>
