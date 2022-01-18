@@ -1,29 +1,31 @@
 name: Package Bug Report
 description: Something went wrong with the installation of a package? Or did you find an unexpected behavior?
 title: "(packageName) "
-labels: ["01 - _Triaging", "Bug"]
+labels: ["Bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to fill out this bug report! Please fill out out the necessary information as complete as you can. Remember, it is better to include too much information, than too little.
-        Additionall, make sure that the issue title starts with the name of the package you was seeing the issue with inside paranthesis.
+        **Do NOT report Security related issues here, instead use the Report Abuse on the package page instead. See https://docs.chocolatey.org/en-us/information/security#report-issue**.
 
-        **Do NOT report Security related issues here, instead use the Report Abuse on the package page instead. See https://docs.chocolatey.org/en-us/information/security#report-issue**
+        Thank you for taking the time to fill out this bug report! Please fill out out the necessary information as complete as you can. Remember, it is better to include too much information, than too little. Additionally, make sure that the issue title starts with the name of the package you were seeing the issue with inside paranthesis (e.g. `(putty)`).
   - type: dropdown
     id: choco-version
     attributes:
       label: Chocolatey Version
       description: |
-        What version of Chocolatey do you have installed on the machine that this Bug occured (Check all versions that apply, if there are any other versions you know of that are affected please add this to the Additional Details box further down)?
+        What version of Chocolatey do you have installed on the machine where this bug occurred (check all versions that apply, if there are any other versions you know of that are affected please add this to the Additional Details box further down)?
         Do mind that versions older than the latest version that was available 1 year ago will not be supported.
       multiple: true
       options:
+        - 0.12.1
+        - 0.12.0
         - 0.11.3
         - 0.11.2
         - 0.11.1
         - 0.11.0
         - 0.10.15
+        - Other (note in the comments)
     validations:
       required: true
   - type: dropdown
@@ -81,9 +83,14 @@ body:
       label: Environment
       description: |
         What environment did you encounter the bug in? Operating System, .NET Version, PowerShell Version and the shell/terminal emulator used (ie. PowerShell, CMD).
+
+        NOTE: _PowerShell Core is not supported_.
+
+        TIP:
+        - To get the Operating System, run `[System.Environment]::OSVersion.ToString()` in a PowerShell session.
+        - To get the PowerShell Version, run `$PSVersionTable` in a PowerShell session.
       value: |
         - Operating System:
-        - .NET Version:
         - PowerShell Version:
         - Shell:
       render: markdown
@@ -94,9 +101,9 @@ body:
     attributes:
       label: Chocolatey Log
       description: |
-        Include the log that have been created by Chocolatey. If possible it is prefered to be a link to a file located at https://gist.github.com instead of embedded directly inside the issue.
+        Include the log that has been created by Chocolatey. If possible, it is prefered that this be a link to a file located at https://gist.github.com instead of embedded directly inside the issue. Remember to remove any **sensitive information** from the log before posting.
 
-        Tip: For standard installations, the Chocolatey log file is located in `C:\ProgramData\chocolatey\logs\chocolatey.log`.
+        Tip: For standard installations, the Chocolatey log file is located at `C:\ProgramData\chocolatey\logs\chocolatey.log`.
       render: shell
     validations:
       required: true
@@ -107,6 +114,6 @@ body:
       description: |
         Links? References? Anything that will give us more context about the issue you are encountering?
 
-        Tip: You cat attach images by clicking this area to highlight it and then drag files in.
+        Tip: You can attach images by clicking this area to highlight it and then drag files in.
     validations:
       required: false
