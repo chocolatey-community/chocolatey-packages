@@ -24,4 +24,4 @@ Using AU:
    Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.1.0-1/rubyinstaller-3.1.0-1-x64.7z
 
 File 'license.txt' is obtained from:
-   https://raw.githubusercontent.com/oneclick/rubyinstaller/master/LICENSE.txt
+   https://raw.githubusercontent.com/oneclick/rubyinstaller2/master/LICENSE.txt

@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ruby.portable</id>
     <version>2.3.0</version>
     <title>Ruby (Portable)</title>
     <authors>Yukihiro Matsumoto</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
-    <summary>Ruby – A dynamic, open source programming language with a focus on simplicity and productivity.</summary>
+    <summary>Ruby – A dynamic, open source programming language focusing on simplicity and productivity.</summary>
     <description><![CDATA[
-Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+Ruby is a dynamic, open source programming language focusing on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
 ## Notes
 
-- To install ruby development kit ruby installer provides `ridk` command. It provides easy way to install msys2 via `ridk install 1`, however, the installation is interactive. To accomplish unattended install, use [msys2](https://chocolatey.org/packages/msys2) package.
-]]></description>
-    <licenseUrl>http://www.ruby-lang.org/en/about/license.txt</licenseUrl>
-    <projectUrl>http://www.ruby-lang.org</projectUrl>
+- To install ruby development kit ruby installer provides `ridk` command. It provides an easy way to install msys2 via `ridk install 1`, however, the installation is interactive. To accomplish unattended install, use [msys2](https://chocolatey.org/packages/msys2) package.
+]]>    </description>
+    <licenseUrl>https://www.ruby-lang.org/en/about/license.txt</licenseUrl>
+    <projectUrl>https://www.ruby-lang.org</projectUrl>
     <projectSourceUrl>https://git.ruby-lang.org/ruby.git/tree</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/ruby.portable</packageSourceUrl>
-    <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-trunk/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-master/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes>https://www.ruby-lang.org/en/downloads/releases/</releaseNotes>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@aad7c15bfbec43c3716f8a82bc3af22e1a55579d/icons/ruby.svg</iconUrl>
