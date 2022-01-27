@@ -1,6 +1,6 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@aad7c15bfbec43c3716f8a82bc3af22e1a55579d/icons/ruby.svg" width="48" height="48"/> [ruby](https://chocolatey.org/packages/ruby)
 
-Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+Ruby is a dynamic, open source programming language focusing on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
 This package provides a self-contained [Windows-based installer](https://rubyinstaller.org) that includes the Ruby language, an execution environment, important documentation, and more.
 
@@ -9,7 +9,7 @@ This package provides a self-contained [Windows-based installer](https://rubyins
 - `/InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
 - `/NoPath`     - Do not add ruby bin folder to machine PATH.
 
-Example: `choco install ruby --params "/NoPath /InstallDir:C:\your\install\path"`
+Example: `choco install ruby --package-parameters="'/NoPath  ""/InstallDir:C:\your\install\path""'"`
 
 ## Notes
 
