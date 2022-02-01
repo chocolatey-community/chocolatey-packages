@@ -23,14 +23,15 @@ function global:au_GetLatest {
   }
 
   $streams = @{
-    stable = @{
-      URL32         = $domain + $url32
-      URL64         = $domain + $url64
-      Version       = $version
-      RemoteVersion = $version
-      Title         = 'Brave Browser'
-      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg'
-    }
+    #stable = @{
+    #  URL32         = $domain + $url32
+    #  URL64         = $domain + $url64
+    #  Version       = $version
+    #  RemoteVersion = $version
+    #  Title         = 'Brave Browser'
+    #  IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg'
+    #}
+    stable = 'ignore' # Temporarily disabled while investigation of how to continue parsing stable versions
 
     beta   = @{
       URL32         = $domain + $url32_b
