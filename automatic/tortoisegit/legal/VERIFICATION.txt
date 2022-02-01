@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://download.tortoisegit.org/tgit/2.12.0.0/TortoiseGit-2.12.0.0-32bit.msi>
-  64-Bit: <https://download.tortoisegit.org/tgit/2.12.0.0/TortoiseGit-2.12.0.0-64bit.msi>
+  32-Bit: <https://download.tortoisegit.org/tgit/2.13.0.0/TortoiseGit-2.13.0.0-32bit.msi>
+  64-Bit: <https://download.tortoisegit.org/tgit/2.13.0.0/TortoiseGit-2.13.0.0-64bit.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 2CDDBE4B3792A3CD0B15E91298CC2DE46EC1C859485934117CA41C3D6728E3A3
-  checksum64: EB5D8A986E74E9AF582138617048FA7A7876EAF833999F7B271DD4C919CA0FEE
+  checksum32: 1402498CEA1DB9F3290D119CAE308D1F726650BEFF516A2B7D94A62DC13FE2E2
+  checksum64: 5AE28426FAD5088AD266D941D51A72D1FAB57A98479904AD47F946EDC4D13AB9
 
 File 'LICENSE.txt' is obtained from <https://github.com/TortoiseGit/TortoiseGit/blob/dbc64c57d98067249d07bdf20411703b25fd889a/src/gpl.txt>
