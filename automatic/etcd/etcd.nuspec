@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.5.1</version>
+    <version>3.5.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
     <authors>etcd Authors</authors>
     <projectUrl>https://etcd.io</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
-    <copyright>(c) 2013-2021 etcd Authors</copyright>
+    <copyright>(c) 2013-2022 etcd Authors</copyright>
     <licenseUrl>https://github.com/etcd-io/etcd/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/etcd-io/etcd</projectSourceUrl>
@@ -45,7 +45,7 @@ Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/t
 * Windows support is limited to 64-bit systems
 * Originally packaged by Robert Labrie (https://github.com/robertlabrie)
 ]]></description>
-    <releaseNotes>https://github.com/etcd-io/etcd/releases/tag/v3.5.1</releaseNotes>
+    <releaseNotes>https://github.com/etcd-io/etcd/releases/tag/v3.5.2</releaseNotes>
     <dependencies>
       <dependency id="nssm" version="2.24.101" />
     </dependencies>
