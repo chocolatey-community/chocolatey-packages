@@ -12,4 +12,4 @@ Mono is a software platform designed to allow developers to easily create cross 
 - [Comprehensive Technology Coverage][]: Bindings and managed implementations of many popular libraries and protocols.
 
 ## Notes
-- Starting from package version 5.8.0.127 and onwards 64bit is supported, unfortunately the 64bit version does not contain the GTK# runtime. Please either install the 32bit edition (`chocol install mono --x86`), or the [gtksharp](https://chocolatey.org/packages/gtksharp) package if this is needed.
+- Starting from package version 5.8.0.127 and onwards 64bit is supported, unfortunately the 64bit version does not contain the GTK# runtime. Please either install the 32bit edition (`choco install mono --x86`), or the [gtksharp](https://chocolatey.org/packages/gtksharp) package if this is needed.
