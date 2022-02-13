@@ -7,13 +7,13 @@ location on <https://community.mp3tag.de/t/mp3tag-development-build-status/455>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <http://download.mp3tag.de/mp3tagv312setup.exe>
+  32-Bit software: <http://download.mp3tag.de/mp3tagv312asetup.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 187171A770989C1A29EC7010EFD43BAB537DBC94D385F8C6DE9E077CD31F1507
+  checksum32: 854FF25014DFEEA5D8179E87F7FECA575A9129AEA46B39EAC74013B3A244A2B9
 
 The file 'LICENSE.txt' has been obtained from <http://help.mp3tag.de/misc_license.html>
