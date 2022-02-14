@@ -1,0 +1,51 @@
+name: 'Stale Issue and PR Cleanup'
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v4.1.0
+        id: stale
+        with:
+          days-before-stale: 60
+          days-before-close: 14
+          days-before-pr-close: 30
+          exempt-all-issue-allignees: true
+          exempt-draft-pr: true
+          stale-issue-label: Pending closure
+          stale-pr-label: '0 - Waiting on User'
+          only-pr-labels: '0 - Waiting on User'
+          close-issue-label: Unresolved
+          close-pr-label: 'Unresolved'
+          exempt-issue-labels: 'Security / CVE,0 - Backlog,1 - Ready for work,2 - Working, 3 - Review, 5 - Push required'
+          exempt-pr-labels: 'Security / CVE'
+          labels-to-remove-when-unstale: '0 - Wating on User,Pending closure'
+          stale-issue-message: |
+            Is this still relevant? If so, what is blocking it? Is there anything you can do to help move it forward?
+            This issue will be closed in 14 days if it continues to be inactive.
+          close-issue-message: |
+            Dear contributor,
+
+            As this issue seems to have been inactive for quite some time now, I've automatically closed it.
+            If you feel this is a valid issue, please feel free to re-open the issue if/when a pull request
+            has been added.
+            Thank you for your contribution.
+
+          close-pr-message: |
+            Dear contributor,
+
+            As this PR seems to have been inactive for 30 days after changes or additional information
+            was requested, I've automatically closed it.
+            If you feel the changes are still valid, please re-open the PR once all changes or additional information
+            that was requested has been added.
+            Thank you for your contribution.
+      - name: Print outputs
+        run: echo ${{ join(steps.stale.outputs.*, ',') }}
