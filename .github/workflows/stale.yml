@@ -33,17 +33,17 @@ jobs:
           close-issue-message: |
             Dear contributor,
 
-            because this issue seems to have been inactive for quite some time now, I've automatically closed it.
-            If you still feel this is a valid issue, please feel free to re-open the issue if/when a pull request
-            have been added.
+            As this issue seems to have been inactive for quite some time now, I've automatically closed it.
+            If you feel this is a valid issue, please feel free to re-open the issue if/when a pull request
+            has been added.
             Thank you for your contribution.
 
           close-pr-message: |
             Dear contributor,
 
-            because this PR seems to have been inactive for 30 days after changes or additional information
+            As this PR seems to have been inactive for 30 days after changes or additional information
             was requested, I've automatically closed it.
-            If you still feel the changes are still valid, please re-open the PR once all changes or additional information
+            If you feel the changes are still valid, please re-open the PR once all changes or additional information
             that was requested has been added.
             Thank you for your contribution.
       - name: Print outputs
