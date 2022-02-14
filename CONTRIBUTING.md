@@ -223,7 +223,9 @@ All contributors should issue pull request containing single package. In special
 
 ### 3.3 Open issues and pull request expires after 6 months
 
-Issues and PRs that remain open for 6 months without any feedback may be closed with label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
+Issues that remain open for 2 months without any activity will be marked as pending closure, if addition 14 days goes by without any activity the issue will be closed with the label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
+
+Pull Requests that have changes requested, and/or is marked with the label [0 - Waiting on User](https://github.com/chocolatey-community/chocolatey-packages/issues?q=is%3Aopen+label%3A%220+-+Waiting+on+User%22+sort%3Aupdated-desc) will be closed after 30 days of inactivity.
 
 ### 3.4 Understanding labels
 
