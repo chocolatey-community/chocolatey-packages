@@ -18,9 +18,10 @@ jobs:
           days-before-stale: 60
           days-before-close: 14
           days-before-pr-close: 30
-          exempt-all-issue-allignees:
-          exempt-draft-pr:
+          exempt-all-issue-allignees: true
+          exempt-draft-pr: true
           stale-issue-label: Pending closure
+          stale-pr-label: '0 - Waiting on User'
           only-pr-labels: '0 - Waiting on User'
           close-issue-label: Unresolved
           close-pr-label: 'Unresolved'
