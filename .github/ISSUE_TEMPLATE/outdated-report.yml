@@ -1,0 +1,48 @@
+name: Package Outdated Report
+description: A package is outdated and no new version have been submitted for moderation.
+title: "(packageName) "
+labels: ["Outdated"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report an outdated package. To validate the request please fill out the necessary items.
+
+        Make sure that the title of the issue starts with the package identifier that is outdated, inside parenthesis (e.g. `(putty)`).
+  - type: checkboxes
+    attributes:
+      label: Checklist
+      description: Before continuing, make sure that you have done the following.
+      options:
+        - label: |
+            I have checked the moderation queue that no new version has been submitted (only visible when logged in), or the submitted package version has failed the automated checks.
+
+            Please navigate to the following [link](https://community.chocolatey.org/packages?q=&moderatorQueue=true&moderationStatus=all-statuses&prerelease=false&sortOrder=package-download-count) to view the moderation queue.
+          required: true
+        - label: I have verified that the new version is a stable release.
+          required: true
+        - label: I have looked to see if there are any Bug reports that prevents a new version being submitted and that no existing Outdated Reports have been created.
+          required: true
+        - label: I have verified the new version has a Windows binary (EXE or MSI installer, Zip or other archive, etc).
+          required: true
+  - type: input
+    id: package-version
+    attributes:
+      label: New Software Version
+      description: Please input the new software version that is available.
+    validations:
+      required: true
+  - type: input
+    id: download-location
+    attributes:
+      label: Download location
+      description: Please provide the link to where the binary for the package can be downloaded from (ie. the installer, Zip archive, etc).
+    validations:
+      required: false # We don't really expect users to know this, but it will be helpful.
+  - type: input
+    id: package-url
+    attributes:
+      label: Package Page
+      description: Please provide the Chocolatey Community Repository link to the package that is outdated.
+    validations:
+      required: false
