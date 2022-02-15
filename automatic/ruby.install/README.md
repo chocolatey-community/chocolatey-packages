@@ -14,4 +14,3 @@ Example: `choco install ruby --package-parameters="'/NoPath  ""/InstallDir:C:\yo
 ## Notes
 
 - To install ruby development kit ruby installer provides `ridk` command. It provides an easy way to install msys2 via `ridk install 1`, however, the installation is interactive. To accomplish unattended install, use [msys2](https://chocolatey.org/packages/msys2) package.
-
