@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ruby.portable</id>
-    <version>2.3.0</version>
+    <version>3.1.0.1</version>
     <title>Ruby (Portable)</title>
     <authors>Yukihiro Matsumoto</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
@@ -14,7 +14,7 @@ Ruby is a dynamic, open source programming language focusing on simplicity and p
 ## Notes
 
 - To install ruby development kit ruby installer provides `ridk` command. It provides an easy way to install msys2 via `ridk install 1`, however, the installation is interactive. To accomplish unattended install, use [msys2](https://chocolatey.org/packages/msys2) package.
-]]>    </description>
+]]></description>
     <licenseUrl>https://www.ruby-lang.org/en/about/license.txt</licenseUrl>
     <projectUrl>https://www.ruby-lang.org</projectUrl>
     <projectSourceUrl>https://git.ruby-lang.org/ruby.git/tree</projectSourceUrl>

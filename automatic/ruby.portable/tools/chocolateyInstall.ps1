@@ -2,8 +2,8 @@
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  File        = "$toolsPath\"
-  File64      = "$toolsPath\"
+  File        = "$toolsPath\rubyinstaller-3.1.0-1-x86.7z"
+  File64      = "$toolsPath\rubyinstaller-3.1.0-1-x64.7z"
   Destination = "$toolsDir\ruby"
   PackageName = $env:ChocolateyPackageName
 }
