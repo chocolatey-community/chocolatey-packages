@@ -11,7 +11,7 @@
 # Packages
 # Multiple users can be set for the same match
 
-
+*/ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
 */calibre*            @gep13 @AdmiringWorm
 */cdburnerxp*         @gep13
 */poweriso*           @gep13
