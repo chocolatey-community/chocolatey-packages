@@ -221,7 +221,7 @@ If you are submitting or making changes to a package and want to ensure that you
 
 All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
 
-### 3.3 Open issues and pull request expires after 6 months
+### 3.3 Open issues and pull request expiration
 
 Issues that remain open for 2 months without any activity will be marked as pending closure, if addition 14 days goes by without any activity the issue will be closed with the label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
 
