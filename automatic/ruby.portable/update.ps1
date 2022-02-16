@@ -26,7 +26,10 @@ function GetStreams() {
   $streams = @{ }
 
   $re64 = 'x64\.7z$'
-  $x64releaseUrls = $releaseUrls | ? href -match $re64
+  # Temporarily limit the amount of URLs to use until we have at least
+  # one approved version. Then slowly increase the limit so we do not
+  # overwhelm anything.
+  $x64releaseUrls = $releaseUrls | ? href -match $re64 | select -First 1
 
   $x64releaseUrls | % {
     $version = $_ -replace '\-([\d]+)', '.$1' -replace 'rubyinstaller.' -replace 'ruby.' -split '/' | select -Last 1 -Skip 1
