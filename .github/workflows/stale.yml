@@ -47,5 +47,3 @@ jobs:
             If you feel the changes are still valid, please re-open the PR once all changes or additional information
             that was requested has been added.
             Thank you for your contribution.
-      - name: Print outputs
-        run: echo ${{ join(steps.stale.outputs.*, ',') }}
