@@ -11,14 +11,20 @@ function global:au_GetLatest {
   $version_b = $url32_b -split '/v?' | select -Skip 1 -Last 1
 
   for ($i = 0; $i -lt 10; $i++) {
+    # We currently have disabled stable updates, as such we break early
+    break
+
     $url32 = $download_page.links | ? href -match 'StandaloneSilentSetup32.exe$' | select -First 1 -expand href
     $url64 = $download_page.links | ? href -match 'StandaloneSilentSetup.exe$' | select -First 1 -expand href
     $version = $url32 -split '/v?' | select -Skip 1 -Last 1
     if ($url32 -and $url64) {
       break
     }
-    $nextUrl = $download_page.Links | ? { $_.outerHTML -match "Next" -and $_.href -notmatch "join" } | % href
+    $nextUrl = $download_page.Links | ? { $_.outerHTML -match "Next" -and $_.href -notmatch "join" } | select -First 1 -expand href
     if (!$nextUrl) { break }
+
+    $nextUrl = [uri]::new([uri]$releases, $nextUrl)
+
     $download_page = Invoke-WebRequest -Uri $nextUrl -UseBasicParsing
   }
 
