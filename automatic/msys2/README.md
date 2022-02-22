@@ -18,6 +18,8 @@ Example: `choco install msys2 --params "/NoUpdate /InstallDir:C:\your\install\pa
 
 - MSYS2 itself will not be installed again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. Manually delete the installation folder to force complete reinstallation.
 
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to. **
+
 ### Ruby integration
 
 This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems.
