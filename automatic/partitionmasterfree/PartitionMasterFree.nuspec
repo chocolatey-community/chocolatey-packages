@@ -4,7 +4,7 @@
   <metadata>
     <id>PartitionMasterFree</id>
     <title>EaseUS Partition Master (Free)</title>
-    <version>16.0</version>
+    <version>16.6</version>
     <authors>CHENGDU Yiwo Tech Development Co., Ltd</authors>
     <owners>chocolatey-community,Redsandro</owners>
     <summary>EaseUS Partition Master Free Edition is a partition solution and disk management utility</summary>
@@ -43,8 +43,8 @@
     <copyright>2005-2013 CHENGDU Yiwo Tech Development Co., Ltd. All rights reserved.</copyright>
     <licenseUrl>http://www.easeus.com/license.htm</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/partitionmasterfree.png</iconUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/partitionmasterfree</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@1698c7d42b18ac8be736b6afa75a96321c426cd0/icons/partitionmasterfree.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/partitionmasterfree</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
