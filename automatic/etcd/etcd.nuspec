@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.5.2</version>
+    <version>3.6.0-alpha0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
@@ -45,7 +45,7 @@ Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/t
 * Windows support is limited to 64-bit systems
 * Originally packaged by Robert Labrie (https://github.com/robertlabrie)
 ]]></description>
-    <releaseNotes>https://github.com/etcd-io/etcd/releases/tag/v3.5.2</releaseNotes>
+    <releaseNotes>https://github.com/etcd-io/etcd/releases/tag/v3.6.0-alpha.0</releaseNotes>
     <dependencies>
       <dependency id="nssm" version="2.24.101" />
     </dependencies>
