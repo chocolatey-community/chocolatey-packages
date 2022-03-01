@@ -28,6 +28,7 @@
 - [ ] My code follows the code style of this repository.
 - [ ] My change requires a change to documentation (this usually means the notes in the description of a package).
 - [ ] I have updated the documentation accordingly (this usually means the notes in the description of a package).
+- [ ] I have updated the package description and it is less than 4000 characters.
 - [ ] All files are up to date with the latest [Contributing Guidelines](https://github.com/chocolatey-community/chocolatey-packages/blob/master/CONTRIBUTING.md)
 - [ ] The added/modified package passed install/uninstall in the chocolatey test environment.
 - [ ] The changes only affect a single package (not including meta package).
