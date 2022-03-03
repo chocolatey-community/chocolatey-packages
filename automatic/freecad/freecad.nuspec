@@ -18,10 +18,6 @@
 
 FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open Inventor-compliant 3D scene representation model provided by the Coin 3D library, and a broad Python API. The interface is built with Qt. FreeCAD runs exactly the same way on Windows, Mac OSX and Linux platforms.
 
-### Notes
-
-This package may install a 32bit version that is not the same version number as the 64bit version.
-
 ## Features
 
 - A full parametric model,and modular architecture that allows plugin extensions (modules) to add functionality to the core application.
@@ -41,6 +37,11 @@ This package may install a 32bit version that is not the same version number as 
 - `/WindowStyle` - The normal window setting for most Applications is as a Window. Maximised Window would be 3.
 
 Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
+
+### Notes
+
+- This package may install a 32bit version that is not the same version number as the 64bit version.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>A parametric 3D CAD modeler</summary>
     <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.20</releaseNotes>
