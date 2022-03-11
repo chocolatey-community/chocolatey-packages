@@ -6,19 +6,6 @@ At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX com
 
 It features a package management system to provide easy installation of packages, Pacman. It brings many powerful features such as dependency resolution and simple complete system upgrades, as well as straight-forward package building.
 
-## Package parameters
-
-- `/InstallDir` - Path to installation directory, by default msys will be installed in `Get-ToolsLocation`.
-- `/NoPath`     - Do not add msys installation directory to system PATH.
-- `/NoUpdate`   - Do not automatically update with Pacman according to the [official instructions](https://msys2.github.io).
-
-Example: `choco install msys2 --params "/NoUpdate /InstallDir:C:\your\install\path"`
-
-## Notes
-
-- MSYS2 itself will not be installed again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. Manually delete the installation folder to force complete reinstallation.
-- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
-
 ### Ruby integration
 
 This package can be used with [ruby](https://chocolatey.org/packages/ruby) package to provide native building environment for gems.
@@ -35,3 +22,16 @@ cinst msys2 --params "/NoUpdate"  # install msys2 without system update
 Update-SessionEnvironment         # refresh environment vars
 ridk install 2 3                  # use ruby's ridk to update the system and install development toolchain
 ```
+
+## Package parameters
+
+- `/InstallDir` - Path to installation directory, by default msys will be installed in `Get-ToolsLocation`.
+- `/NoPath`     - Do not add msys installation directory to system PATH.
+- `/NoUpdate`   - Do not automatically update with Pacman according to the [official instructions](https://msys2.github.io).
+
+Example: `choco install msys2 --params "/NoUpdate /InstallDir:C:\your\install\path"`
+
+## Notes
+
+- MSYS2 itself will not be installed again on updating or reinstalling the Chocolatey package. Instead, the existing MSYS2 will be updated with Pacman. Manually delete the installation folder to force complete reinstallation.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
