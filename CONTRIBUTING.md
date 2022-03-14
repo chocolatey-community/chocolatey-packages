@@ -109,6 +109,8 @@ Packages should have uninstaller if auto uninstall doesn't work.
 
 Chocolatey supports PowerShell v2+ because it supports Windows 7+/Windows Server 2008+ (Windows Server 2003 is supported currently, but is deprecated and expected to be removed in a future version). Due to that, PowerShell v2 is expected to work when you run anything here.
 
+For a reference of which cmdlets are available in PowerShell v2, please see the following link: http://adamringenberg.com/powershell2/
+
 ### 1.1.13 Chocolatey compatibility
 
 Packages are expected to be compatible with the Chocolatey version available 12 months ago.
