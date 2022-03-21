@@ -1,7 +1,6 @@
 #SingleInstance, force
 SetTitleMatchMode, RegEx
 
-Run, %1%
 WinWait, Nmap Setup
 Sleep, 100
 ControlSend,, {Enter}
