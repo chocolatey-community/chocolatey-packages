@@ -25,8 +25,17 @@ Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {
   Write-Host "$packageName installed to '$installLocation'"
-  Register-Application "$installLocation\$packageName.exe"
-  Write-Host "$packageName registered as $packageName"
+  # We avoid globbing patterns when possible, and we want to ensure
+  # that the correct executable is registered. As such the path is hard
+  # coded.
+  $executable = "$installLocation\$packageName.exe"
+
+  if (!(Test-Path $executable)) {
+    $executable = "$installLocation\client\$packageName.exe"
+  }
+
+  Register-Application -ExePath $executable -Name $packageName
+  Write-Host "$executable registered as $packageName"
 }
 else {
   Write-Warning "Can't find $packageName install location"
