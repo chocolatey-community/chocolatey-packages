@@ -27,6 +27,12 @@ For existing packages that no longer fit above principles chocolatey-community u
 
 The following sections present complete set of guideliness, please read them carefully, especially since some of the rules are enforced and if broken will result in the failed PR build.
 
+<!-- markdownlint-disable -->
+<!-- START doctoc -->
+<!-- END doctoc -->
+
+<!-- markdownlint-enable -->
+
 # 1. Packages
 
 ## 1.1 Basics
