@@ -29,7 +29,7 @@
     <docsUrl>https://nmap.org/docs.html</docsUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/nmap</packageSourceUrl>
     <dependencies>
-      <dependency id="autohotkey.install" />
+      <dependency id="vcredist140" version="14.31.31103" />
     </dependencies>
   </metadata>
   <files>
