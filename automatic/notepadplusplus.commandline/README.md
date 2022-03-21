@@ -23,6 +23,7 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 
 ## Notes
 
-- To force the installation of x32 version, use the `--x86` argument with `choco install`.
-
-
+* To force the installation of x32 version, use the `--x86` argument with `choco install`.
+* Starting in v8.3.3.20220321 and above the Notepad++ process will be closed during upgrade and uninstalls.
+  This may in rare cases result in data loss if there are unsaved text files open. Make sure all files are
+  saved before upgrading or uninstalling this package.
