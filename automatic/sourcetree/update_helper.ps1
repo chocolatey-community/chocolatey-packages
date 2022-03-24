@@ -5,7 +5,7 @@ function Get-PackageName() {
 
   switch -w ( $a ) {
 	  'sourcetree' {
-		  $PackageUrl = "https://www.sourcetreeapp.com/enterprise"
+		  $PackageUrl = "https://www.atlassian.com/software/sourcetree"
 	  }
   }
 
@@ -20,35 +20,15 @@ function Get-JavaSiteUpdates {
   )
 
   $regex = '([\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,2}[\.][\d]{0,5})'
-  $url = Get-PackageName $Package
-  $ie = New-Object -comobject InternetExplorer.Application
-  $ie.Navigate2($url) 
-  $ie.Visible = $false
-
-  while($ie.ReadyState -ne $Wait) {
-    Start-Sleep -Seconds 20
-  }
-
-  foreach ( $_ in $ie.Document.getElementsByTagName("a") ) {
-    $url = $_.href;
-    if ( $url -match $regex) {
-      $yes = $url | Select-Object -last 1
-      $version = $Matches[0]
-      break;
-    }
-  }
-
-  $ie.quit()
-
-  if ( $version.endswith(".") ) {
-    $version = Get-Version $yes
-  }
+  $page = Invoke-WebRequest -Uri "https://www.atlassian.com/software/sourcetree" -UseBasicParsing
+  $url32 = $page.Links | ? href -match $regex | select -expand href | select -First 1
+  $version = (Get-Version $url32)
 
   @{
     PackageName  = $Package
 	  Title        = $Title
-	  Version		   = $version
-	  URL32		     = $yes
+	  Version	     = $version
+	  URL32		     = $url32
 	  ReleaseNotes = "https://product-downloads.atlassian.com/software/sourcetree/windows/ga/ReleaseNotes_$version.html"
   }
 }
