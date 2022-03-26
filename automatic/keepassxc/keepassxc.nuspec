@@ -49,6 +49,9 @@ N/A
     <docsUrl>https://keepassxc.org/docs/</docsUrl>
     <bugTrackerUrl>https://github.com/keepassxreboot/keepassxc/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/keepassxc</packageSourceUrl>
+    <dependencies>
+      <dependency id="vcredist140" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
