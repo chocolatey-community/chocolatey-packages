@@ -3,10 +3,6 @@
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 
-  $url32Hash = Get-Hash -url $Latest.URL32 -filename $Latest.FileName32
-  if ($url32Hash -ne $Latest.Checksum32) {
-    throw "File checksum of downloaded 32bit executable do not match expected upstream checksum"
-  }
   $url64Hash = Get-Hash -url $Latest.URL64 -filename $Latest.FileName64
   if ($url64Hash -ne $Latest.Checksum64) {
     throw "File checksum of downloaded 64bit executable do not match expected upstream checksum"
@@ -16,7 +12,6 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\legal\verification.txt"      = @{
-      "(?i)(32-Bit.+)\<.*\>"                       = "`${1}<$($Latest.URL32)>"
       "(?i)(64-Bit.+)\<.*\>"                       = "`${1}<$($Latest.URL64)>"
       "(?i)(checksum type:\s+).*"                  = "`${1}$($Latest.ChecksumType64)"
       "(?i)(checksum32:\s+).*"                     = "`${1}$($Latest.Checksum32)"
@@ -62,13 +57,9 @@ function global:au_GetLatest {
       $url64 = $_.browser_download_url
 
     }
-    elseif ($_.browser_download_url -cmatch 'Win32') {
-      $url32 = $_.browser_download_url
-    }
   }
 
   return @{
-    url32          = $url32;
     url64          = $url64;
     checksumType32 = 'SHA256';
     checksumType64 = 'SHA256';
