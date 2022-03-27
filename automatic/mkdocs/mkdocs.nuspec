@@ -4,13 +4,13 @@
   <metadata>
     <id>mkdocs</id>
     <title>MkDocs</title>
-    <version>1.2.3</version>
+    <version>1.3.0</version>
     <authors>Tom Christie</authors>
     <owners>chocolatey-community</owners>
     <projectUrl>http://www.mkdocs.org</projectUrl>
     <projectSourceUrl>https://github.com/mkdocs/mkdocs/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/mkdocs</packageSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@45d7d88c15fb38a55f15ef9ecf39b356cdbadabd/icons/mkdocs.png</iconUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/mkdocs</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@45d7d88c15fb38a55f15ef9ecf39b356cdbadabd/icons/mkdocs.png</iconUrl>
     <licenseUrl>https://github.com/mkdocs/mkdocs/blob/master/LICENSE</licenseUrl>
     <docsUrl>http://www.mkdocs.org</docsUrl>
     <bugTrackerUrl>https://github.com/mkdocs/mkdocs/issues</bugTrackerUrl>
