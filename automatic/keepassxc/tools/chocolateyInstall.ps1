@@ -6,7 +6,6 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'KeePassXC'
   fileType       = 'msi'
-  file           = "$toolsDir\KeePassXC-2.6.6-Win32.msi"
   file64         = "$toolsDir\KeePassXC-2.6.6-Win64.msi"
   # MSI
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
