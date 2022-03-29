@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake.portable</id>
-    <version>3.23.0-rc5</version>
+    <version>3.23.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/cmake.portable</packageSourceUrl>
     <owners>chocolatey-community, dtgm</owners>
     <title>CMake (Portable)</title>
