@@ -2,8 +2,8 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$filePath32 = "$toolsPath\gs9550w32.exe"
-$filePath64 = "$toolsPath\gs9550w64.exe"
+$filePath32 = "$toolsPath\gs9560w32.exe"
+$filePath64 = "$toolsPath\gs9560w64.exe"
 
 $filePath = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne $true) {
   Write-Host "Installing 64 bit version" ; $filePath64
