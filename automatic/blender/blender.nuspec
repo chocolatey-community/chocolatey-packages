@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>blender</id>
-    <version>3.1.0</version>
+    <version>3.1.2</version>
     <title>Blender</title>
     <owners>chocolatey-community, Redsandro</owners>
     <authors>Blender Foundation</authors>
@@ -42,6 +42,9 @@ Blender is a free and open-source professional-grade 3D computer graphics and vi
 * Excellent community support from forums and IRC.
 * Small executable size, optionally portable.
 
+### Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>Blender is 3D creation for everyone, free to use for any purpose.</summary>
     <releaseNotes>https://wiki.blender.org/wiki/Reference/Release_Notes</releaseNotes>
