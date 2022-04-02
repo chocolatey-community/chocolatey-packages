@@ -33,7 +33,7 @@ elseif ($version -ge [Version]'5.1' -and $version -lt [Version]'5.2' -and $os.Se
 }
 
 $runtimes = @{
-  'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = (Get-OSArchitectureWidth) -eq 64 }
+  'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = ((Get-OSArchitectureWidth) -eq 64) -and ($env:chocolateyForceX86 -ne 'true') }
   'x86' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData32; Applicable = $true }
 }
 
