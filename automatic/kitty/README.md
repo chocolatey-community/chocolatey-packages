@@ -17,4 +17,7 @@ Example: `choco install kitty --params "/Portable"`
 - This package is know to have **false positives** on Virus Total for some of its executables which is no cause for concern. For more details see [GitHub issue](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1563).
 - Package can not get updated or uninstalled if any of the kitty processes is running. For safety reasons you need to manually shut them down.
 
-![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/kitty/screenshot.png)
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+
+![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@3edeb9d5a902846e538b23c5be2f4cb52a4c991a/automatic/kitty/screenshot.png
+)
