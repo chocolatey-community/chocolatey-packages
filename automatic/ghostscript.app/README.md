@@ -4,7 +4,6 @@ Ghostscript is a high-performance Postscript and PDF interpreter and rendering e
 
 Ghostscript has been under active development for over 20 years, and offers an extremely versatile feature set and can be deployed across a wide range of platforms, modules, end uses (embedding in hardware, as an engine in document management systems, providing cloud solution integration and as an engine in leading PDF generators and tools).
 
-
 ## Features
 
 * An interpreter for the PostScript language, with the ability to convert PostScript language files to many raster formats, view them on displays, and print them on printers that don't have PostScript language capability built in
@@ -12,3 +11,6 @@ Ghostscript has been under active development for over 20 years, and offers an e
 * The ability to convert PostScript language files to PDF (with some limitations) and vice versa
 * A set of C procedures (the Ghostscript library) that implement the graphics and filtering (data compression / decompression / conversion) capabilities that appear as primitive operations in the PostScript language and in PDF.
 
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**

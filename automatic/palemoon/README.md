@@ -1,7 +1,7 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@d1b8b6861269e2381fa4e8ca92b1856149b0e4c8/icons/palemoon.png" width="48" height="48"/> [palemoon](https://chocolatey.org/packages/palemoon)
 
 
-Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use. 
+Pale Moon is an Open Source, Goanna-based web browser available for Microsoft Windows and Linux (with other operating systems in development), focusing on efficiency and ease of use.
 
 Pale Moon offers you a browsing experience in a browser completely built from its own, independently developed source that has been forked off from Firefox/Mozilla code a number of years ago, with carefully selected features and optimizations to improve the browser's stability and user experience, while offering full customization and a growing collection of extensions and themes to make the browser truly your own.
 
@@ -24,3 +24,7 @@ This browser, even though fairly close to Gecko-based browsers like Mozilla Fire
 - Extensive and growing support for HTML5 and CSS3
 - Broad support for image formats: Supports WebP and JPEG-XR
 - Many customization and configuration options
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
