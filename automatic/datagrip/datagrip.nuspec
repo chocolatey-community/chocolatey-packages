@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>datagrip</id>
-    <version>2021.3.4</version>
+    <version>2022.1</version>
     <title>JetBrains DataGrip</title>
     <authors>JetBrains</authors>
     <licenseUrl>https://www.datagrip.org/terms.php</licenseUrl>
@@ -37,6 +37,10 @@ and various instruments for creating and modifying objects.
 **note** the InstallDir folder should be an empty folder.
 
 Example: `choco install datagrip --params "/InstallDir:C:\your\install\path"`
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <copyright>Copyright © 2017 JetBrains</copyright>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/datagrip</packageSourceUrl>
