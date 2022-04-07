@@ -11,7 +11,8 @@ $tools = `
 "PsInfo",           "PsKill",                    "PsList",     "PsLoggedon",      "PsLoglist",
 "PsPasswd",         "PsService",                 "PsShutdown", "PsSuspend",       "RamMap",
 "RegDelNull",       "Regjump",                   "Regsize",    "RootkitRevealer", "Share Enum",
-"ShellRunas",       "SigCheck",                  "Streams",    "Strings",         "Sync",
+"ShellRunas - Sysinternals: www.sysinternals.com",
+"EulaAccepted",       "SigCheck",                "Streams",    "Strings",         "Sync",
 "System Monitor",   "TCPView",                   "VMMap",      "VolumeID",        "Whois",
 "Winobj",           "ZoomIt"
 
