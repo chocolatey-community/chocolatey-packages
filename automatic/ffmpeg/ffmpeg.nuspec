@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ffmpeg</id>
-    <version>5.0</version>
+    <version>5.0.1</version>
     <title>FFmpeg</title>
     <owners>chocolatey-community</owners>
     <authors>FFmpeg Contributors</authors>
