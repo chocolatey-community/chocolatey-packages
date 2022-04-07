@@ -7,7 +7,7 @@ function global:au_GetLatest {
   # Beta releases
   $domainBeta = 'https://github.com'
   # Web url was provided at https://github.com/chocolatey-community/chocolatey-packages/issues/1791#issuecomment-1030152913
-  $releaseBetaVersion = (Invoke-WebRequest -Uri $releaseBetaUrl -UseBasicParsing).Content
+  $releaseBetaVersion = Invoke-RestMethod -Uri $releaseBetaUrl
   $url32_b = $domainBeta + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentBetaSetup32.exe' -f $releaseBetaVersion)
   $url64_b = $domainBeta + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentBetaSetup.exe' -f $releaseBetaVersion)
   $version_b = $releaseBetaVersion
@@ -15,7 +15,7 @@ function global:au_GetLatest {
   # Stable releases
   $domainStable = 'https://github.com'
   # Web url was provided at https://github.com/chocolatey-community/chocolatey-packages/issues/1791#issuecomment-1030152913
-  ($releaseStableVersion = Invoke-WebRequest -Uri $releaseStableUrl -UseBasicParsing).Content
+  $releaseStableVersion = Invoke-RestMethod -Uri $releaseStableUrl
   $url32 = $domainStable + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentSetup32.exe' -f $releaseStableVersion)
   $url64 = $domainStable + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentSetup.exe' -f $releaseStableVersion)
   $version = $releaseStableVersion
@@ -48,7 +48,7 @@ function global:au_GetLatest {
   # Just because we have a version returned does not mean there is a Windows version available
   # if the URL is valid, it won't throw
   try {
-    Invoke-WebRequest -Uri $url64 -UseBasicParsing -Method HEAD
+    Invoke-RestMethod -Uri $url64 -UseBasicParsing -Method HEAD
   }
   catch {
     $streams.stable = 'ignore'
@@ -58,7 +58,7 @@ function global:au_GetLatest {
   # Just because we have a version returned does not mean there is a Windows version available
   # if the URL is valid, it won't throw
   try {
-    Invoke-WebRequest -Uri $url64_b -UseBasicParsing -Method HEAD
+    Invoke-RestMethod -Uri $url64_b -UseBasicParsing -Method HEAD
   }
   catch {
     $streams.beta = 'ignore'
