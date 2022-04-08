@@ -3,25 +3,28 @@ import-module au
 $releases = 'https://www.gyan.dev/ffmpeg/builds'
 
 function global:au_SearchReplace {
-   @{
-        ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
-        }
-
-        ".\legal\VERIFICATION.txt" = @{
-          "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
-          "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
-        }
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*FileFullPath64\s*=\s*`"`[$]toolsPath\\).*`"" = "`${1}$($Latest.FileName64)`""
     }
+
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(\s+x64:).*"     = "`${1} $($Latest.URL64)"
+      "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
+    }
+  }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Copy-Item -Path "$PSScriptRoot\..\ffmpeg\tools\chocolateyInstall.ps1" -Destination "$PSScriptRoot\tools\chocolateyInstall.ps1" -Force
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
-function global:au_GetLatest   {
-  $version = Invoke-WebRequest -Uri "$releases/release-version"
+function global:au_GetLatest {
+  $version = Invoke-WebRequest -Uri "$releases/release-version" -UseBasicParsing
 
   @{
-    URL64 = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z";
+    URL64   = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full.7z";
     Version = $version
   }
 }
