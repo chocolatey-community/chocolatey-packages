@@ -4,7 +4,7 @@ $releases = "https://www.autoitscript.com/site/autoit/downloads"
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
     function global:au_BeforeUpdate {
-        Remove-Item "$PSScriptRoot\tools\*.exe"
+        Remove-Item "$PSScriptRoot\tools\*.exe" -ea 0
 
         $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
         Invoke-WebRequest $Latest.URL32 -OutFile $filePath
@@ -34,7 +34,7 @@ function global:au_GetLatest {
     $download_page.RawContent -match '\<td\>v([\d]+\.[\d\.]+)\<\/td\>' | Out-Null
     $version = $Matches[1]
 
-    $re = ".*exe$"
+    $re = "setup\.zip$"
     $url = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
     $filename = $url -split '/' | Select-Object -Last 1
