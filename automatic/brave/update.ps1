@@ -1,47 +1,38 @@
 ﻿import-module au
 
-$releases = 'https://github.com/brave/brave-browser/releases'
+$releaseStableUrl = 'https://brave-browser-downloads.s3.brave.com/latest/release.version'
+$releaseBetaUrl = 'https://brave-browser-downloads.s3.brave.com/latest/beta.version'
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  # Beta releases
+  $domainBeta = 'https://github.com'
+  # Web url was provided at https://github.com/chocolatey-community/chocolatey-packages/issues/1791#issuecomment-1030152913
+  $releaseBetaVersion = Invoke-RestMethod -Uri $releaseBetaUrl
+  $url32_b = $domainBeta + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentBetaSetup32.exe' -f $releaseBetaVersion)
+  $url64_b = $domainBeta + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentBetaSetup.exe' -f $releaseBetaVersion)
+  $version_b = $releaseBetaVersion
 
-  $domain = $releases -split '(?<=//.+)/' | select -First 1
-  $url32_b = $download_page.links | ? href -match 'SilentBetaSetup32.exe$' | select -First 1 -expand href
-  $url64_b = $download_page.links | ? href -match 'SilentBetaSetup.exe$' | select -First 1 -expand href
-  $version_b = $url32_b -split '/v?' | select -Skip 1 -Last 1
-
-  for ($i = 0; $i -lt 10; $i++) {
-    # We currently have disabled stable updates, as such we break early
-    break
-
-    $url32 = $download_page.links | ? href -match 'StandaloneSilentSetup32.exe$' | select -First 1 -expand href
-    $url64 = $download_page.links | ? href -match 'StandaloneSilentSetup.exe$' | select -First 1 -expand href
-    $version = $url32 -split '/v?' | select -Skip 1 -Last 1
-    if ($url32 -and $url64) {
-      break
-    }
-    $nextUrl = $download_page.Links | ? { $_.outerHTML -match "Next" -and $_.href -notmatch "join" } | select -First 1 -expand href
-    if (!$nextUrl) { break }
-
-    $nextUrl = [uri]::new([uri]$releases, $nextUrl)
-
-    $download_page = Invoke-WebRequest -Uri $nextUrl -UseBasicParsing
-  }
+  # Stable releases
+  $domainStable = 'https://github.com'
+  # Web url was provided at https://github.com/chocolatey-community/chocolatey-packages/issues/1791#issuecomment-1030152913
+  $releaseStableVersion = Invoke-RestMethod -Uri $releaseStableUrl
+  $url32 = $domainStable + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentSetup32.exe' -f $releaseStableVersion)
+  $url64 = $domainStable + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentSetup.exe' -f $releaseStableVersion)
+  $version = $releaseStableVersion
 
   $streams = @{
-    #stable = @{
-    #  URL32         = $domain + $url32
-    #  URL64         = $domain + $url64
-    #  Version       = $version
-    #  RemoteVersion = $version
-    #  Title         = 'Brave Browser'
-    #  IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg'
-    #}
-    stable = 'ignore' # Temporarily disabled while investigation of how to continue parsing stable versions
+    stable = @{
+      URL32         = $url32
+      URL64         = $url64
+      Version       = $version
+      RemoteVersion = $version
+      Title         = 'Brave Browser'
+      IconUrl       = 'https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg'
+    }
 
     beta   = @{
-      URL32         = $domain + $url32_b
-      URL64         = $domain + $url64_b
+      URL32         = $url32_b
+      URL64         = $url64_b
       Version       = $version_b + '-beta'
       RemoteVersion = $version_b
       Title         = 'Brave Browser (Beta)'
@@ -54,9 +45,26 @@ function global:au_GetLatest {
     return "ignore"
   }
 
-  if (!$url64) { $streams.stable = 'ignore'; Write-Host "No stable release is available" }
-  if (!$url64_b) { $streams.beta = 'ignore'; Write-Host "No beta release is available" }
-  elseif (!$url32_b) { $streams.beta = "ignore"; Write-Host "No 32bit beta release is available" }
+  # Just because we have a version returned does not mean there is a Windows version available
+  # if the URL is valid, it won't throw
+  try {
+    Invoke-RestMethod -Uri $url64 -UseBasicParsing -Method HEAD
+  }
+  catch {
+    $streams.stable = 'ignore'
+    Write-Host "No stable release is available"
+  }
+
+  # Just because we have a version returned does not mean there is a Windows version available
+  # if the URL is valid, it won't throw
+  try {
+    Invoke-RestMethod -Uri $url64_b -UseBasicParsing -Method HEAD
+  }
+  catch {
+    $streams.beta = 'ignore'
+    Write-Host "No beta release is available"
+  }
+
   @{ streams = $streams }
 }
 
