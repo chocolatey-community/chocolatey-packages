@@ -26,15 +26,15 @@ Write-Host "Download site: $($pp.Site)"
 
 $silentArgs = @(
   '--quiet-mode'
-  "--site $($pp.Site)"
+  "--site `"$($pp.Site)`""
   '--packages default'
-  "--root $cygwin_root"
-  "--local-package-dir $cygwin_root"
+  "--root `"$cygwin_root`""
+  "--local-package-dir `"$cygwin_root`""
 
   if (!$pp.DesktopIcon) { '--no-desktop' } else { Write-Host 'Desktop icon will be created' }
   if ($pp.NoStartMenu) { '--no-startmenu'; Write-Host 'No start menu items will be created' }
-  if ($pp.Proxy) { "--proxy $($pp.Proxy)"; Write-Host "Using proxy: $($pp.Proxy)" }
-  if ($pp.Pubkey) { "--pubkey $($pp.Pubkey)"; Write-Host "URL of extra public key file is provided" }
+  if ($pp.Proxy) { "--proxy `"$($pp.Proxy)`""; Write-Host "Using proxy: $($pp.Proxy)" }
+  if ($pp.Pubkey) { "--pubkey `"$($pp.Pubkey)`""; Write-Host "URL of extra public key file is provided" }
   if ($pp.NoAdmin) { '--no-admin'; Write-Host "Do not require running as administrator" }
 )
 
