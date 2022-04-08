@@ -4,7 +4,7 @@
   <metadata>
     <id>Cygwin</id>
     <title>Cygwin</title>
-    <version>3.3.4</version>
+    <version>3.3.4.20220408</version>
     <authors>Red Hat, Inc.</authors>
     <owners>chocolatey-community</owners>
     <summary>A Linux environment for Windows.</summary>
