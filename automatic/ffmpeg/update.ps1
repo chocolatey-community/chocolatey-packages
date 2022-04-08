@@ -5,7 +5,7 @@ $releases = 'https://www.gyan.dev/ffmpeg/builds'
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+          "(?i)(^\s*FileFullPath\s*=\s*`"`[$]toolsPath\\).*`""   = "`${1}$($Latest.FileName32)`""
         }
 
         ".\legal\VERIFICATION.txt" = @{
