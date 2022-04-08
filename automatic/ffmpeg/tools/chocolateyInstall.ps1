@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-    PackageName    = 'ffmpeg'
-    FileFullPath64 = Get-Item $toolsPath\*.7z
+  PackageName    = $env:ChocolateyPackageName
+  FileFullPath64 = "$toolsPath\ffmpeg-release-essentials.7z"
   Destination    = $toolsPath
 }
 
