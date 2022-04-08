@@ -9,32 +9,33 @@ mkdir $toolsLocation -ea 0 | Out-Null
 
 $cygwin_root = (Get-ItemProperty 'HKLM:\SOFTWARE\Cygwin\setup' -ea 0).rootdir
 if (!$cygwin_root) {
-    $cygwin_root = if ($pp.InstallDir) { $pp.InstallDir } else { "$toolsLocation\cygwin" }
-} else { Write-Host 'Existing installation detected, ignoring InstallDir argument' }
+  $cygwin_root = if ($pp.InstallDir) { $pp.InstallDir } else { "$toolsLocation\cygwin" }
+}
+else { Write-Host 'Existing installation detected, ignoring InstallDir argument' }
 
 if (!$pp.Proxy) {
-    $pp.Proxy = $Env:ChocolateyProxyLocation
-    if (!$pp.Proxy) {
-        $wc = New-Object System.Net.WebClient; $url = 'https://cygwin.com'
-        $pp.Proxy = if (!$wc.Proxy.IsBypassed($url)) { $wc.Proxy.GetProxy($url).Authority }
-    }
+  $pp.Proxy = $Env:ChocolateyProxyLocation
+  if (!$pp.Proxy) {
+    $wc = New-Object System.Net.WebClient; $url = 'https://cygwin.com'
+    $pp.Proxy = if (!$wc.Proxy.IsBypassed($url)) { $wc.Proxy.GetProxy($url).Authority }
+  }
 }
 
 if (!$pp.Site) { $pp.Site = 'http://mirrors.kernel.org/sourceware/cygwin/' }
 Write-Host "Download site: $($pp.Site)"
 
 $silentArgs = @(
-    '--quiet-mode'
-    "--site $($pp.Site)"
-    '--packages default'
-    "--root $cygwin_root"
-    "--local-package-dir $cygwin_root"
+  '--quiet-mode'
+  "--site $($pp.Site)"
+  '--packages default'
+  "--root $cygwin_root"
+  "--local-package-dir $cygwin_root"
 
-    if (!$pp.DesktopIcon) { '--no-desktop' } else {  Write-Host 'Desktop icon will be created' }
-    if ($pp.NoStartMenu)  { '--no-startmenu';        Write-Host 'No start menu items will be created' }
-    if ($pp.Proxy)        { "--proxy $($pp.Proxy)";  Write-Host "Using proxy: $($pp.Proxy)" }
-    if ($pp.Pubkey)       { "--pubkey $($pp.Pubkey)";Write-Host "URL of extra public key file is provided" }
-    if ($pp.NoAdmin)      { '--no-admin';            Write-Host "Do not require running as administrator" }
+  if (!$pp.DesktopIcon) { '--no-desktop' } else { Write-Host 'Desktop icon will be created' }
+  if ($pp.NoStartMenu) { '--no-startmenu'; Write-Host 'No start menu items will be created' }
+  if ($pp.Proxy) { "--proxy $($pp.Proxy)"; Write-Host "Using proxy: $($pp.Proxy)" }
+  if ($pp.Pubkey) { "--pubkey $($pp.Pubkey)"; Write-Host "URL of extra public key file is provided" }
+  if ($pp.NoAdmin) { '--no-admin'; Write-Host "Do not require running as administrator" }
 )
 
 $packageArgs = @{
