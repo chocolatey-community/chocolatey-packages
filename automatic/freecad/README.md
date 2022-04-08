@@ -1,4 +1,7 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg" width="48" height="48"/> [freecad](https://chocolatey.org/packages/freecad)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/freecad.svg" width="48" height="48"/> [freecad](https://chocolatey.org/packages/freecad)
+
+
+**This package installs the Latest Version of FreeCAD and may list a subversion determined by the version of the installer provided by FreeCAD. (Example: package version 0.19.4.2 uses installer number 2 for FreeCAD 0.19.4)**
 
 FreeCAD is a general purpose feature-based, parametric 3D modeler for CAD, MCAD, CAx, CAE and PLM, aimed directly at mechanical engineering and product design but also fits a wider range of uses in engineering, such as architecture or other engineering specialties. It is 100 % Open Source and extremely modular, allowing for very advanced extension and customization.
 
@@ -23,8 +26,3 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 - `/WindowStyle` - The normal window setting for most Applications is as a Window. Maximised Window would be 3.
 
 Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
-
-### Notes
-
-- This package may install a 32bit version that is not the same version number as the 64bit version.
-- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
