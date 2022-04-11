@@ -4,7 +4,7 @@
   <metadata>
     <id>poweriso</id>
     <title>PowerISO</title>
-    <version>8.1</version>
+    <version>8.2</version>
     <authors>Power Software Ltd</authors>
     <owners>chocolatey-community,gep13</owners>
     <summary>PowerISO is a powerful CD / DVD / BD image file processing tool.</summary>
