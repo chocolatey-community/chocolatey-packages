@@ -11,8 +11,12 @@ GIMP is expandable and extensible. It is designed to be augmented with plug-ins 
 - Original Artwork Creation: power and flexibility to transform images into unique creations.
 - Graphic Design Elements: gIMP is used for producing icons, graphical design elements, and art for user interface components and mockups.
 - Programming Algorithms: high quality framework for scripted image manipulation, with multi-language support such as C, C++, Perl, Python, Scheme, and more
-- Desktop Publishing Workflow: color management features to ensure high-fidelity color reproduction across digital and printed media. 
+- Desktop Publishing Workflow: color management features to ensure high-fidelity color reproduction across digital and printed media.
 - [More features...](https://www.gimp.org/features)
 
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/gimp/screenshot.jpg)
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
