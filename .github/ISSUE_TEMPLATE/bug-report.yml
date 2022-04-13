@@ -18,13 +18,15 @@ body:
         Do mind that versions older than the latest version that was available 1 year ago will not be supported.
       multiple: true
       options:
+        - 1.1.0
+        - 1.0.1
+        - 1.0.0
         - 0.12.1
         - 0.12.0
         - 0.11.3
         - 0.11.2
         - 0.11.1
         - 0.11.0
-        - 0.10.15
         - Other (note in the comments)
     validations:
       required: true
