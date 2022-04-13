@@ -28,8 +28,50 @@ For existing packages that no longer fit above principles chocolatey-community u
 The following sections present complete set of guideliness, please read them carefully, especially since some of the rules are enforced and if broken will result in the failed PR build.
 
 <!-- markdownlint-disable -->
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>Table of Contents</summary>
+
+- [1. Packages](#1-packages)
+  - [1.1 Basics](#11-basics)
+    - [1.1.1 Conform to guidelines](#111-conform-to-guidelines)
+    - [1.1.2 Manual or automatic](#112-manual-or-automatic)
+    - [1.1.3 Naming](#113-naming)
+    - [1.1.4 Embed a package if allowed](#114-embed-a-package-if-allowed)
+    - [1.1.5 Support multiple versions](#115-support-multiple-versions)
+    - [1.1.6 Support multiple architectures](#116-support-multiple-architectures)
+    - [1.1.7 Clean code](#117-clean-code)
+    - [1.1.8 Set `softwareName`](#118-set-softwarename)
+    - [1.1.9 Test locally](#119-test-locally)
+    - [1.1.10 Dependency versions](#1110-dependency-versions)
+    - [1.1.11 Provide uninstaller only if needed](#1111-provide-uninstaller-only-if-needed)
+    - [1.1.12 Ensure compatibility with PowerShell v2+](#1112-ensure-compatibility-with-powershell-v2)
+    - [1.1.13 Chocolatey compatibility](#1113-chocolatey-compatibility)
+  - [1.2 Metadata](#12-metadata)
+    - [1.2.1 Obligatory metadata](#121-obligatory-metadata)
+    - [1.2.2 Obligatory tags](#122-obligatory-tags)
+    - [1.2.3 Informative description](#123-informative-description)
+    - [1.2.4 Add chocolatey-community among owners](#124-add-chocolatey-community-among-owners)
+    - [1.2.5 Provide icon](#125-provide-icon)
+  - [1.3 AU Script](#13-au-script)
+    - [1.3.1 Use `UseBasicParsing` [Optional]](#131-use-usebasicparsing-optional)
+    - [1.3.2 Do not download large files](#132-do-not-download-large-files)
+    - [1.3.3 Specify correct `NuspecVersion`](#133-specify-correct-nuspecversion)
+  - [1.4 UI Automation](#14-ui-automation)
+    - [1.4.1 Work on all locales](#141-work-on-all-locales)
+    - [1.4.2 Avoid brittle scripts](#142-avoid-brittle-scripts)
+- [2. Source Files](#2-source-files)
+    - [2.1 Encoding](#21-encoding)
+    - [2.2 Code style](#22-code-style)
+- [3. Teamwork](#3-teamwork)
+    - [3.1 Update CODEOWNERS](#31-update-codeowners)
+    - [3.2 Single package per pull request](#32-single-package-per-pull-request)
+    - [3.3 Open issues and pull request expiration](#33-open-issues-and-pull-request-expiration)
+    - [3.4 Understanding labels](#34-understanding-labels)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <!-- markdownlint-enable -->
 

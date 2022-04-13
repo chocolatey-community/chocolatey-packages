@@ -9,9 +9,17 @@
 [community.chocolatey.org profile](https://community.chocolatey.org/profiles/chocolatey-community)
 
 <!-- markdownlint-disable -->
-<!-- START doctoc -->
-<!-- param::title: '**Table of Contents**' -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<details>
+<summary>Table of Contents</summary>
+
+- [Description](#description)
+- [Etiquette Regarding Communication](#etiquette-regarding-communication)
+- [Where This Fits into Chocolatey](#where-this-fits-into-chocolatey)
+
+</details>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <!-- markdownlint-enable -->
 
