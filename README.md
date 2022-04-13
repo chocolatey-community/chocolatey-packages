@@ -8,6 +8,13 @@
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [community.chocolatey.org profile](https://community.chocolatey.org/profiles/chocolatey-community)
 
+<!-- markdownlint-disable -->
+<!-- START doctoc -->
+<!-- param::title: '**Table of Contents**' -->
+<!-- END doctoc -->
+
+<!-- markdownlint-enable -->
+
 ### Description
 
 This repository contains Chocolatey packages, most of which are [automatically](https://docs.chocolatey.org/en-us/create/automatic-packages) updated.
