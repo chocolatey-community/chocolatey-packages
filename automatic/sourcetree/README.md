@@ -31,3 +31,4 @@ Sourcetree simplifies how you interact with your Git repositories so you can foc
   - Embedded Git and Mercurial are not supported.
   - Does not prompt to install global ignore files.
   - Update notifications are disabled.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
