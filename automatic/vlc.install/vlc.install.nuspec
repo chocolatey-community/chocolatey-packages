@@ -4,7 +4,7 @@
   <metadata>
     <id>vlc.install</id>
     <title>VLC media player (Install)</title>
-    <version>3.0.16</version>
+    <version>3.0.17.4</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>
@@ -36,13 +36,13 @@ Example: `choco install --params "/Language:fr"` *Will set the language of VLC t
 
 ]]></description>
     <projectUrl>http://www.videolan.org/vlc/</projectUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/vlc</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/vlc.install</packageSourceUrl>
     <projectSourceUrl>http://www.videolan.org/vlc/download-sources.html</projectSourceUrl>
     <bugTrackerUrl>https://code.videolan.org/videolan/vlc/-/issues/</bugTrackerUrl>
     <docsUrl>https://wiki.videolan.org/Documentation:Documentation/</docsUrl>
     <mailingListUrl>https://forum.videolan.org/</mailingListUrl>
     <tags>vlc foss cross-platform multimedia audio video mp3 dvd avi media player admin</tags>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

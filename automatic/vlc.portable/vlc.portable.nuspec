@@ -4,7 +4,7 @@
   <metadata>
     <id>vlc.portable</id>
     <title>VLC media player (Portable)</title>
-    <version>3.0.16</version>
+    <version>3.0.17.4</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>
