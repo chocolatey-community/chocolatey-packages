@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/git-for-windows/git/releases/download/v2.35.3.windows.1/PortableGit-2.35.3-32-bit.7z.exe>
-  64-Bit: <https://github.com/git-for-windows/git/releases/download/v2.35.3.windows.1/PortableGit-2.35.3-64-bit.7z.exe>
+  32-Bit: <https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/PortableGit-2.36.0-32-bit.7z.exe>
+  64-Bit: <https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/PortableGit-2.36.0-64-bit.7z.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: 
-  checksum32: BE28DEA2619F0D71872ADF3C3F0859838773B3785B7C36F520005E93E4FC1190
-  checksum64: 53091932DB9ED386A667A4B11B5760BB8EB2D44D556B67CB94FA2766DAA37182
+  checksum32: 27522261DE1666E99D2C9708351DE8E25638D6BC2F41E4D9A28BCEDE4C8EEC75
+  checksum64: 2257DF41991F07C33176E2AF8240181DAB44CC713AFE0FD95A0E12964FC46BDA
 
 File 'LICENSE.txt' is obtained from <https://github.com/git-for-windows/git/blob/703601d6780c32d33dadf19b2b367f2f79e1e34c/COPYING>

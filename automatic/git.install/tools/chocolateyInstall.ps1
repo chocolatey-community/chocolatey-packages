@@ -7,8 +7,8 @@ $pp = Get-PackageParameters
 
 Stop-GitSSHAgent
 
-$fileName32 = 'Git-2.35.3-32-bit.exe'
-$fileName64 = 'Git-2.35.3-64-bit.exe'
+$fileName32 = 'Git-2.36.0-32-bit.exe'
+$fileName64 = 'Git-2.36.0-64-bit.exe'
 $silentArgs = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG", (Get-InstallComponents $pp)
 $silentArgs += Get-InstallOptions $pp
 
