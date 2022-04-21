@@ -1,4 +1,9 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
+
+if (Test-Path "$env:TEMP\npp.running") {
+  $programRunning = Get-Content -Path "$env:TEMP\npp.running"
+  Remove-Item "$env:TEMP\npp.running"
+}
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
@@ -11,3 +16,8 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 Remove-Item $toolsPath\*.zip -ea 0
+
+if ($programRunning -and (Test-Path $programRunning)) {
+  Write-Host "Running stopped program"
+  Start-Process $programRunning
+}

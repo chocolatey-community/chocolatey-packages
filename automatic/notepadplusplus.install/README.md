@@ -6,7 +6,6 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 
 ## Features
 
-
 * Syntax Highlighting and Syntax Folding
 * User Defined Syntax Highlighting and Folding: [screenshot 1](https://notepad-plus-plus.org/assets/images/scsh/ulds_folder.gif), [screenshot 2](https://notepad-plus-plus.org/assets/images/scsh/ulds_keywords.gif), [screenshot 3](https://notepad-plus-plus.org/assets/images/scsh/ulds_comment.gif) and [screenshot 4](https://notepad-plus-plus.org/assets/images/scsh/ulds_op.gif)
 * PCRE (Perl Compatible Regular Expression) Search/Replace
@@ -24,5 +23,7 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 
 ## Notes
 
-- To force the installation of x32 version, use the `--x86` argument with `choco install`.
-
+* To force the installation of x32 version, use the `--x86` argument with `choco install`.
+* Starting in v8.3.3.20220321 and above the Notepad++ process will be closed during install, upgrade and uninstalls.
+  This may in rare cases result in data loss if there are unsaved text files open. Make sure all files are
+  saved before installing, upgrading or uninstalling this package.

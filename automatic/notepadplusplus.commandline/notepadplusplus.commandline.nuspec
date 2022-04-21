@@ -53,5 +53,6 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
   <files>
     <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
+    <file src="..\notepadplusplus.install\tools\chocolateyBeforeModify.ps1" target="tools" />
   </files>
 </package>
