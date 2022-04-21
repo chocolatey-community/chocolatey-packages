@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 if (Test-Path "$env:TEMP\npp.running") {
   $programRunning = Get-Content -Path "$env:TEMP\npp.running"
