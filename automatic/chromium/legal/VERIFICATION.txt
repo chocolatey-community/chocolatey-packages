@@ -8,7 +8,7 @@ and can be verified by doing the following:
 
 1. Download the following:
   32-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win/995482/mini_installer.exe>
-  64-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/995482/mini_installer.exe>
+  64-Bit software: <https://storage.googleapis.com/chromium-browser-snapshots/Win_x64/995483/mini_installer.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
@@ -16,6 +16,6 @@ and can be verified by doing the following:
 
   checksum type: sha256
   checksum32: DA768C21E88052DEEAE32C01CBED408FAE81662FAD3602B83F1D7CB653C142EC
-  checksum64: DD3380601F48EA20DDC7BCBA110E0EF7BE3FA307496298C24747D72B2BB93B0F
+  checksum64: 9529C7DBA76D5F3B37CFA3166C5932840160E73FA4636C9102E94DBB7CA3CC15
 
 The file 'LICENSE.txt' has been obtained from <https://chromium.googlesource.com/chromium/src.git/+/master/LICENSE>
