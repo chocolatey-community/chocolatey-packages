@@ -1,4 +1,4 @@
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $toolsLocation = Get-ToolsLocation
 $seleniumDir = "$toolsLocation\selenium"
 $driverPath = "$seleniumDir\geckodriver.exe"

@@ -1,4 +1,4 @@
-$toolsLocation = Get-ToolsLocation
+﻿$toolsLocation = Get-ToolsLocation
 $seleniumDir = "$toolsLocation\selenium"
 
 If (Test-Path -Path $seleniumDir) {
