@@ -8,6 +8,7 @@
     <owners>hans0</owners>
     <licenseUrl>https://www.mozilla.org/en-US/MPL/2.0/</licenseUrl>
     <projectUrl>https://github.com/mozilla/geckodriver</projectUrl>
+    <projectSourceUrl>https://hg.mozilla.org/mozilla-central/file/tip/testing/geckodriver</projectSourceUrl>
     <iconUrl>https://upload.wikimedia.org/wikipedia/fr/2/22/Mozillagecko-logo.gif</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based browsers.
@@ -24,11 +25,15 @@ The following package parameters can be set:
 
 To pass parameters, use `--params "''"` (e.g. `choco install selenium-gecko-driver [other options] --params="'/SkipShim'"`).</description>
     <summary>Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based browsers.</summary>
-    <releaseNotes>https://github.com/mozilla/geckodriver/releases</releaseNotes>
+    <releaseNotes>https://searchfox.org/mozilla-central/source/testing/geckodriver/CHANGES.md</releaseNotes>
     <copyright>Mozilla. All Rights Reserved.</copyright>
-    <tags>selenium gecko driver webdriver testing web-applications freeware</tags>
+    <tags>selenium-gecko-driver webdriver testing web-applications foss cross-platform selenium</tags>
     <packageSourceUrl>https://github.com/hansnull/chocolatey-selenium-gecko-driver-package</packageSourceUrl>
-    <docsUrl>https://github.com/mozilla/geckodriver/wiki</docsUrl>
+    <docsUrl>https://firefox-source-docs.mozilla.org/testing/geckodriver/</docsUrl>
     <bugTrackerUrl>https://github.com/mozilla/geckodriver/issues</bugTrackerUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
 </package>
