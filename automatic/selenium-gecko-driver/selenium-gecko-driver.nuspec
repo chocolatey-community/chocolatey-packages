@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>selenium-gecko-driver</id>
+    <version>0.30.0</version>
+    <title>Selenium Gecko Driver</title>
+    <authors>Mozilla</authors>
+    <owners>hans0</owners>
+    <licenseUrl>https://www.mozilla.org/en-US/MPL/2.0/</licenseUrl>
+    <projectUrl>https://github.com/mozilla/geckodriver</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/fr/2/22/Mozillagecko-logo.gif</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based browsers.
+
+This program provides the HTTP API described by the WebDriver protocol (http://w3c.github.io/webdriver/webdriver-spec.html#protocol) to communicate with Gecko browsers, such as Firefox.
+It translates calls into the Marionette (https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette) automation protocol by acting as a proxy between the local- and remote ends.
+
+geckodriver.exe file is located in &lt;Get-ToolsLocation&gt;/selenium directory.
+
+#### Package Parameters
+The following package parameters can be set:
+
+* `/SkipShim` - informs that the shim file should not be generated
+
+To pass parameters, use `--params "''"` (e.g. `choco install selenium-gecko-driver [other options] --params="'/SkipShim'"`).</description>
+    <summary>Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based browsers.</summary>
+    <releaseNotes>https://github.com/mozilla/geckodriver/releases</releaseNotes>
+    <copyright>Mozilla. All Rights Reserved.</copyright>
+    <tags>selenium gecko driver webdriver testing web-applications freeware</tags>
+    <packageSourceUrl>https://github.com/hansnull/chocolatey-selenium-gecko-driver-package</packageSourceUrl>
+    <docsUrl>https://github.com/mozilla/geckodriver/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/mozilla/geckodriver/issues</bugTrackerUrl>
+  </metadata>
+</package>
