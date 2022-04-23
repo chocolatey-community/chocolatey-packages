@@ -5,7 +5,7 @@ Proxy for using W3C WebDriver-compatible clients to interact with Gecko-based br
 This program provides the HTTP API described by the WebDriver protocol (http://w3c.github.io/webdriver/webdriver-spec.html#protocol) to communicate with Gecko browsers, such as Firefox.
 It translates calls into the Marionette (https://developer.mozilla.org/en-US/docs/Mozilla/QA/Marionette) automation protocol by acting as a proxy between the local- and remote ends.
 
-geckodriver.exe file is located in &lt;Get-ToolsLocation&gt;/selenium directory.
+geckodriver.exe file is located in `«Get-ToolsLocation»/selenium` directory (on default installations this will be `C:\tools\selenium`).
 
 ### Package Parameters
 The following package parameters can be set:
@@ -13,3 +13,7 @@ The following package parameters can be set:
 * `/SkipShim` - informs that the shim file should not be generated
 
 To pass parameters, use `--params "''"` (e.g. `choco install selenium-gecko-driver [other options] --params="'/SkipShim'"`).
+
+### Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
