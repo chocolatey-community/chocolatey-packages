@@ -9,7 +9,7 @@
     <licenseUrl>https://source.chromium.org/chromium/chromium/src/+/main:LICENSE</licenseUrl>
     <projectUrl>https://sites.google.com/chromium.org/driver/</projectUrl>
     <projectSourceUrl>https://source.chromium.org/chromium/chromium/src/+/master:chrome/test/chromedriver/</projectSourceUrl>
-    <iconUrl>https://raw.githubusercontent.com/</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/auto</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. ChromeDriver is a standalone server which implements WebDriver's wire protocol (https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) for Chromium.
 
@@ -28,7 +28,7 @@ Package changes:
    * automatically stop chromedriver processes before upgrading or uninstalling the package</releaseNotes>
     <copyright>Chromium and WebDriver teams. All Rights Reserved.</copyright>
     <tags>selenium-chrome-driver google-chrome driver webdriver testing web-applications freeware foss cross-platform</tags>
-    <packageSourceUrl>https://github.com/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/auto</packageSourceUrl>
     <bugTrackerUrl>https://bugs.chromium.org/p/chromedriver/issues/list</bugTrackerUrl>
   </metadata>
   <files>
