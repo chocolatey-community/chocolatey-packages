@@ -7,13 +7,15 @@ $driverPath = "$seleniumDir\chromedriver.exe"
 $parameters = Get-PackageParameters
 
 $packageArgs = @{
-  packageName   = 'selenium-chrome-driver'
-  url           = 'https://chromedriver.storage.googleapis.com/83.0.4103.39/chromedriver_win32.zip'
-  checksum      = '53c2e1f1b9f2a7571483284ea156958674501e8571cfe34be01282b4152e0770138d9aaef12876f109db9d77c1216362d0576aa40b4f19f039d4b97a15054c98'
-  checksumType  = 'sha512'
-  unzipLocation = $seleniumDir
+  packageName  = 'selenium-chrome-driver'
+  file         = "$toolsDir\"
+  checksum     = '53c2e1f1b9f2a7571483284ea156958674501e8571cfe34be01282b4152e0770138d9aaef12876f109db9d77c1216362d0576aa40b4f19f039d4b97a15054c98'
+  checksumType = 'sha512'
+  destination  = $seleniumDir
 }
-Install-ChocolateyZipPackage @packageArgs
+
+Get-ChocolateyUnzip @packageArgs
+Get-ChildItem $toolsDir\*.zip | ForEach-Object { Remove-Item $_ -ea 0 }
 
 Uninstall-BinFile -Name 'chromedriver'
 If ($parameters['SkipShim'] -ne 'true') {
