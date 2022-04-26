@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>umlet</id>
-    <version>14.3.0</version>
+    <version>15.0.0</version>
     <title>UMLet</title>
     <authors>umlet</authors>
     <owners>chocolatey-community,rgl</owners>
     <licenseUrl>https://github.com/umlet/umlet/blob/master/LICENCE.txt</licenseUrl>
     <projectUrl>https://www.umlet.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages@ffd1d8ff64623d0717093c09b2e7f810d7b5802d/icons/umlet.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ffd1d8ff64623d0717093c09b2e7f810d7b5802d/icons/umlet.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[Free UML Tool for Fast UML Diagrams.
 
@@ -27,7 +27,7 @@
     <releaseNotes>https://www.umlet.com/changes.htm</releaseNotes>
     <tags>foss cross-platform uml gui admin</tags>
     <projectSourceUrl>https://github.com/umlet/umlet</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/umlet</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/umlet</packageSourceUrl>
     <bugTrackerUrl>https://github.com/umlet/umlet/issues</bugTrackerUrl>
     <dependencies>
       <dependency id="jre8" version="8.0" />
