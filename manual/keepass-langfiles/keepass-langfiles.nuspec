@@ -15,6 +15,10 @@
 KeePass is a free, open source, light-weight and easy-to-use password manager.
 
 This package extracts a ZIP with all language files into the KeePass program folder. The language, however, must then be manually selected in the KeePass settings. Credits of the translation files: https://keepass.info/translations.html
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
     </description>
     <summary>Language files for KeePass 2.x.</summary>
     <releaseNotes></releaseNotes>
