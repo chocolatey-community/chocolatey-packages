@@ -6,6 +6,8 @@ Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js 
 This package runs the official Node JS installer, resulting in Node.exe and NPM being installed under Program Files, and added to the SYSTEM PATH environment variable.
 
 ## Notes
-While this package now provides both **Current** and **LTS** releases of Node.js, it is still recommended to use the [nodejs-lts][] package if only targeting the latest LTS release is required.
+
+- While this package now provides both **Current** and **LTS** releases of Node.js, it is still recommended to use the [nodejs-lts][] package if only targeting the latest LTS release is required.
+- - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 
 [nodejs-lts]: https://chocolatey.org/packages/nodejs-lts "Node.js LTS Package"
