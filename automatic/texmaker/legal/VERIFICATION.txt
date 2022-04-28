@@ -6,14 +6,14 @@ The embedded software have been downloaded from the listed download
 location on <http://www.xm1math.net/texmaker/download.html>
 and can be verified by doing the following:
 
-1. Download the following <http://www.xm1math.net/texmaker/assets/files/Texmaker_5.1.2_Win_x64.msi>
+1. Download the following <http://www.xm1math.net/texmaker/assets/files/Texmaker_5.1.3_Win_x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: A2AA5BA15693980255D38DB51D7B745A0415E61656F33F118107F9B8EB3D2594
+  checksum: 8D7FE379971F3664852E0AD755A853058F84DA4695B5879B7885D0FD490D263C
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 This license was mentioned on their project page to be the correct license.
