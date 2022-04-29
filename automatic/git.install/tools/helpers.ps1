@@ -16,11 +16,7 @@
 
     if($pp.Editor)
     {
-      $editors = @('Atom', 'Nano', 'Notepad', 'Notepad++', 'SublimeText', 'VIM', 'VisualStudioCode', 'VisualStudioCodeInsiders', 'VSCodium', 'Wordpad')
-      $knownEditor = $editors | ForEach-Object {
-        if ($_ -eq $pp.Editor) { $_ }
-      }
-      if ($knownEditor)
+      if (@('Atom', 'Nano', 'Notepad', 'Notepad++', 'SublimeText', 'VIM', 'VisualStudioCode', 'VisualStudioCodeInsiders', 'VSCodium', 'Wordpad') -contains $pp.Editor)
       {
         $options += "/o:EditorOption=" + $pp.Editor
       }
