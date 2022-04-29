@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'speccy'
-$url32       = 'https://download.ccleaner.com/spsetup132.exe?cc2020'
+$url32       = 'https://download.ccleaner.com/spsetup132.exe'
 $url64       = $url32
 $checksum32  = '1356cae1349d3a46692bcafeb9d275150d21ba024cc995d3d9368d906b41ac0a'
 $checksum64  = $checksum32
