@@ -16,7 +16,7 @@
 
     if($pp.Editor)
     {
-      if ($pp.Editor -in @('Atom', 'Nano', 'Notepad', 'Notepad++', 'SublimeText', 'VIM', 'VisualStudioCode', 'VisualStudioCodeInsiders', 'VSCodium', 'Wordpad'))
+      if (@('Atom', 'Nano', 'Notepad', 'Notepad++', 'SublimeText', 'VIM', 'VisualStudioCode', 'VisualStudioCodeInsiders', 'VSCodium', 'Wordpad') -contains $pp.Editor)
       {
         $options += "/o:EditorOption=" + $pp.Editor
       }
