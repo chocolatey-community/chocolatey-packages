@@ -20,10 +20,8 @@ Remove-Item -force "$toolsPath\kitty.exe" -ea 0
 
 $pp = Get-PackageParameters
 if ($pp.Portable) {
-
     # Replace kitty.exe with kitty_portable.exe
     Rename-Item "$toolsPath\kitty_portable.exe" "$toolsPath\kitty.exe"
-    # Remove kitty_nocompress.exe
     Remove-Item -force "$toolsPath\kitty_nocompress.exe" -ea 0
 
     Write-Host 'Setting portable mode'
@@ -35,6 +33,5 @@ if ($pp.Portable) {
 } else {
     # Replace kitty.exe with kitty_nocompress.exe to avoid AV false positives
     Rename-Item "$toolsPath\kitty_nocompress.exe" "$toolsPath\kitty.exe"
-    # Remove kitty_portable.exe
     Remove-Item -force "$toolsPath\kitty_portable.exe" -ea 0
 }
