@@ -33,19 +33,13 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-
   $assets = (Invoke-RestMethod $latestRelease).assets
-
   $fileName = $assets[0].name
-
   $version = $fileName.Replace("kitty-bin-", "").Replace(".zip", "")
-
   $result = @{
     Version = $version
   }
-
   $result["URL" + $fileName] = New-Object uri($assets[0].browser_download_url)
-
   return $result
 }
 
