@@ -11,10 +11,8 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 
-# Remove zip file
 Remove-Item -force "$toolsPath\*.zip" -ea 0
 
-# Remove kitty-beta.exe
 Remove-Item -force "$toolsPath\kitty-beta.exe" -ea 0
 
 # Remove kitty.exe to replace with either kitty_nocompress.exe or kitty_portable.exe
