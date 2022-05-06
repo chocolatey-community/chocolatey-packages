@@ -34,7 +34,7 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
 
-  $assets = ((Invoke-WebRequest -UseBasicParsing -Uri $latestRelease).Content | ConvertFrom-Json).assets
+  $assets = (Invoke-RestMethod $latestRelease).assets
 
   $fileName = $assets[0].name
 
