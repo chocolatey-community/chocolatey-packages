@@ -1,4 +1,4 @@
-﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 StopProcesses
@@ -10,9 +10,7 @@ $packageArgs = @{
   }
 
 Get-ChocolateyUnzip @packageArgs
-
 Remove-Item -force "$toolsPath\*.zip" -ea 0
-
 Remove-Item -force "$toolsPath\kitty-beta.exe" -ea 0
 
 # Remove kitty.exe to replace with either kitty_nocompress.exe or kitty_portable.exe
