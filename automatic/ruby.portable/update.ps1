@@ -3,7 +3,7 @@ import-module au
 $releases = 'https://rubyinstaller.org/downloads/archives/'
 
 function global:au_SearchReplace {
-  @{
+  @{ 
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
