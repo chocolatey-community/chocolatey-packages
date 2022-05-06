@@ -1,7 +1,6 @@
 import-module au
 
-$releases = 'https://github.com/cyd01/KiTTY/releases/latest'
-$padVersionUnder = '0.71.1'
+$latestRelease = 'https://api.github.com/repos/cyd01/KiTTY/releases/latest'
 
 function global:au_SearchReplace {
   @{ }
@@ -34,26 +33,18 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-  [array]$uncompressedFiles = $download_page.Links | ? { $_.href -match "_nocompress\.exe" } | % href
-  $allFiles = ($download_page.Links | ? { $_.href -match "\.exe$" -and $_.href -notmatch "nocompress|portable" } | ? {
-      $name = (Split-Path -Leaf $_.href) -replace "\.exe$", "_nocompress.exe"
-      !($uncompressedFiles | ? { $_.EndsWith($name) })
-    } | % href) + $uncompressedFiles
+  $assets = ((Invoke-WebRequest -UseBasicParsing -Uri $latestRelease).Content | ConvertFrom-Json).assets
 
-  #$allFiles = $download_page.Links | ? { $_.href -match "\.exe$" -and $_.href -NotMatch "nocompress|portable" } | % href
+  $fileName = $assets[0].name
 
-  $version = ($allFiles | select -First 1) -split "\/v?" | select -Last 1 -Skip 1
+  $version = $fileName.Replace("kitty-bin-", "").Replace(".zip", "")
 
   $result = @{
-    Version = Get-FixVersion $version -OnlyFixBelowVersion $padVersionUnder
+    Version = $version
   }
 
-  $allFiles | % {
-    $fileName = $_ -split "\/" | select -Last 1
-    $result["URL" + $fileName] = New-Object uri([uri]$releases, $_)
-  }
+  $result["URL" + $fileName] = New-Object uri($assets[0].browser_download_url)
 
   return $result
 }

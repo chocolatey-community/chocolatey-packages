@@ -1,4 +1,4 @@
-﻿Verification is intended to assist the Chocolatey moderators and community
+Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The following files have been downloaded from the specified urls, and should
@@ -7,12 +7,5 @@ be equal to the checksums specified in this file.
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       Filename       |                                 Checksum                         |                                       Url                                       |
 | -------------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| kageant.exe          | 776A2793E216043A388556D55C1B82C6088F4C0D28ECD472A0A09193F17EB14F | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/kageant.exe         |
-| klink.exe            | DB792C71DECD5B3702FFAA4EFFC5C6D4F5AA1E93B0F0B4209D3BC8D30DAC9BF4 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/klink.exe           |
-| kitty_nocompress.exe | 5E0F92A7F063428B8F2CCF64276080832C166D55693AF2AD1913CABF6C5E6984 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/kitty_nocompress.exe |
-| cygtermd.exe         | 3130B430DDF0491DE931F2735F4B2DB548FE1E70C94E707E4100958556A8753D | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/cygtermd.exe        |
-| ksftp.exe            | 4D81D8D46F585C48074F6AB8BCDA813A5E70C3A04A8D36EBA1092E3E64678CB3 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/ksftp.exe           |
-| kittygen.exe         | 79E27328FFC313B33011C659D76DD3CB492590ECAC5B08463D050542C4AE8FEA | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/kittygen.exe        |
-| kscp.exe             | 240FA93E052EBD09DE4C1DD96572EBB4EE123C0DEE54A6F91938F9CCFEB2A1D8 | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/kscp.exe            |
-| genpass.exe          | 8FC5549E3E498E3490909067D9CC154777D16834E6AC9FF12E14EC6A217CF8DB | https://github.com/cyd01/KiTTY/releases/download/v0.74.4.13/genpass.exe         |
+| kitty-bin-0.76.0.8.zip | 85BCCDF2FD2FE56C59277FFB829D9A8D8288915A8D12B5121EB4D9B2A3718051 | https://github.com/cyd01/KiTTY/releases/download/v0.76.0.8/kitty-bin-0.76.0.8.zip |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
