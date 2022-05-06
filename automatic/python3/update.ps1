@@ -23,7 +23,7 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { rm tools\*.msi, tools\*.exe -ea 0; Get-RemoteFiles -Purge -NoSuffix }
 
 function GetStreams() {
-  param($releaseUrls)
+  param($releaseUrls) 
   $streams = @{ }
 
   $releaseUrls | % {
