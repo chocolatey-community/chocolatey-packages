@@ -18,8 +18,7 @@ function global:au_GetLatest {
   $assets = (Invoke-RestMethod $latestRelease).assets
   $fileName = $assets[0].name
   $version = $fileName.Replace("kitty-bin-", "").Replace(".zip", "")
-  $wc = [System.Net.WebClient]::new()
-  $Hash = (Get-FileHash -InputStream ($wc.OpenRead($assets[0].browser_download_url)) | Select-Object -ExpandProperty hash).ToLower()
+  $Hash = Get-RemoteChecksum $assets[0].browser_download_url
 
   @{
     URL32      = $assets[0].browser_download_url
