@@ -10,11 +10,8 @@ $packageArgs = @{
   }
 
 Get-ChocolateyUnzip @packageArgs
-Remove-Item -force "$toolsPath\*.zip" -ea 0
-Remove-Item -force "$toolsPath\kitty-beta.exe" -ea 0
-
 # Remove kitty.exe to replace with either kitty_nocompress.exe or kitty_portable.exe
-Remove-Item -force "$toolsPath\kitty.exe" -ea 0
+Remove-Item -force "$toolsPath\*.zip", "$toolsPath\kitty-beta.exe", "$toolsPath\kitty.exe" -ea 0
 
 $pp = Get-PackageParameters
 if ($pp.Portable) {
