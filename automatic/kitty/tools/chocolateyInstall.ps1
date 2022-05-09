@@ -5,7 +5,7 @@ StopProcesses
 
 $packageArgs = @{
     PackageName    = 'kitty'
-    FileFullPath   = Get-Item $toolsPath\kitty-bin-*.zip
+    FileFullPath   = Get-Item $toolsPath\kitty-bin-0.76.0.8.zip
     Destination    = $toolsPath
   }
 
