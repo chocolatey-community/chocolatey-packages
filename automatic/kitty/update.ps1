@@ -9,6 +9,9 @@ function global:au_SearchReplace {
       "(?i)(^\s*SHA256\:).*"            = "`${1} $($Latest.Hash)"
       "(?i)(^\s*Get-RemoteChecksum ).*" = "`${1} $($Latest.URL32)"
     }
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(Get-Item) .*"           = "`${1} `$toolsPath`\$($Latest.ZipFile)"
+    }
   }
 }
 
@@ -24,6 +27,7 @@ function global:au_GetLatest {
     URL32      = $assets[0].browser_download_url
     Version    = $version
     Hash       = $Hash
+    ZipFile    = $fileName
   }
 }
 
