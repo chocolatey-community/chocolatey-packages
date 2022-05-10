@@ -5,7 +5,7 @@ StopProcesses
 
 $packageArgs = @{
     PackageName    = 'kitty'
-    FileFullPath   = Get-Item $toolsPath\kitty-bin-0.76.0.8.zip
+    FileFullPath   = "$toolsPath\kitty-bin-0.76.0.8.zip"
     Destination    = $toolsPath
   }
 
@@ -21,7 +21,7 @@ if ($pp.Portable) {
 
     Write-Host 'Setting portable mode'
     $iniPath = Join-Path $toolsPath 'kitty.ini'
-    if (Test-Path $iniPath) { $ini = Get-Content $iniPath -Encoding ascii -ea 0 | Out-String }    
+    if (Test-Path $iniPath) { $ini = Get-Content $iniPath -Encoding ascii -ea 0 | Out-String }
 
     # kitty ini file doesn't seem to have any other option now
     if ($ini -notmatch 'savemode=dir') { "[KiTTY]`nsavemode=dir" | Out-File -Encoding ascii $iniPath }

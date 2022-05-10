@@ -10,7 +10,7 @@ function global:au_SearchReplace {
       "(?i)(^\s*Get-RemoteChecksum ).*" = "`${1} $($Latest.URL32)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(Get-Item) .*"           = "`${1} `$toolsPath`\$($Latest.ZipFile)"
+      "(?i)(^\s*FileFullPath\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
     }
   }
 }
