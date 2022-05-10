@@ -1,4 +1,4 @@
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 StopProcesses

@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>kitty</id>
-    <version>0.0</version>
+    <version>0.76.0.8</version>
     <title>KiTTY</title>
     <authors>Cyril Dupont</authors>
     <owners>chocolatey-community, Andre-Patrick Bubel, Miodrag Milic</owners>
     <licenseUrl>https://raw.githubusercontent.com/chocolatey-community/chocolatey-coreteampackages/master/automatic/kitty/legal/LICENSE.TXT</licenseUrl>
     <projectUrl>https://www.9bis.net/kitty/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@8d5f606c792f368dcb854727252429e4aaa13516/icons/kitty.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[KiTTY is a fork of PuTTY (started from version 0.62 beta), the most popular Telnet and SSH client for Windows and Unix. It runs on Windows and it has an impressive collection of one of the most requested features that are missing from PuTTY.
 
@@ -38,7 +38,7 @@ Example: `choco install kitty --params "/Portable"`
     <copyright>Cyril Dupont</copyright>
     <tags>foss telnet ssh ftp network remote</tags>
     <projectSourceUrl>https://github.com/cyd01/KiTTY</projectSourceUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/kitty</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/kitty</packageSourceUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
