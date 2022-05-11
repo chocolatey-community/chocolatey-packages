@@ -9,8 +9,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\npp.8.4.portable.7z"
-  file64      = "$toolsPath\npp.8.4.portable.x64.7z"
+  file        = "$toolsPath\npp.8.4.1.portable.7z"
+  file64      = "$toolsPath\npp.8.4.1.portable.x64.7z"
   destination = $toolsPath
 }
 
