@@ -51,3 +51,5 @@ if ($MyInvocation.InvocationName -ne '.') {
   # run the update only if script is not sourced
   update -ChecksumFor none -NoCheckUrl
 }
+
+# Permission testing, ignore
