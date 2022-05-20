@@ -34,6 +34,8 @@ All packages in this repository are expected to be installable with any version 
 
 ### Etiquette Regarding Communication
 
+Please see our [Code Of Conduct](https://github.com/chocolatey-community/.github/blob/main/CODE_OF_CONDUCT.md).
+
 When requesting support, try to remember that we are all volunteers that have lives outside of open source and none of us are paid to ensure things work for you, so please be considerate of others' time when you are asking for things. Many of us have families that also need time as well and only have so much time to give on a daily basis. A little consideration and patience can go a long way. Thanks for understanding.
 
 ### Where This Fits into Chocolatey
@@ -41,5 +43,3 @@ When requesting support, try to remember that we are all volunteers that have li
 This repository is maintained by a group of volunteers. There may be some overlap with members of the Chocolatey Team.
 
 **Disclaimer**: This repository may contain packages that may not be officially sanctioned by Chocolatey, and that is okay. Typically if there is a legal issue, then a member of the Chocolatey Team will step in. If you want to speak directly to the Chocolatey Team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website".
-
-
