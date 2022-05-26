@@ -4,7 +4,7 @@ $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   fileType       = 'EXE'
   url            = 'https://lockhunter.com/assets/exe/lockhuntersetup_3-4-3.exe'
-  checksum       = '2c0d52dca3e5ce9cfc8062cb72c7235e3c6ff650242fcb7d46a892d602dd3dd1'
+  checksum       = '982dda5eec52dd54ff6b0b04fd9ba8f4c566534b78f6a46dada624af0316044e'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)

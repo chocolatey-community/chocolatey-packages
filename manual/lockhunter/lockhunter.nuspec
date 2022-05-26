@@ -4,7 +4,8 @@
   <metadata>
     <id>lockhunter</id>
     <title>LockHunter</title>
-    <version>3.4.3.147</version>
+    <!-- They had rolled back the actual version, so we use a date fix version to allow updating the package -->
+    <version>3.4.3.20220526</version>
     <authors>Igor Tkachenko, Nikolay Duylovskiy, Crystal Rich Ltd</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <copyright>2016 Crystal Rich Ltd</copyright>
