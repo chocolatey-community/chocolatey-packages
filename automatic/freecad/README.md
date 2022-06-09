@@ -28,4 +28,6 @@ Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
 
 ### Notes
 
+- **If you should get a *Code 2* error while installing FreeCAD. Installing over existing installations is *NOT RECOMMENDED*. It is better to reinstall FreeCAD.**
+
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
