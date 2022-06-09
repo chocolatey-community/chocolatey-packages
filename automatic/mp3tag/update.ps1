@@ -9,11 +9,14 @@ function global:au_SearchReplace {
         ".\legal\VERIFICATION.txt"      = @{
             "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
             "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
+            "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
             "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
             "(?i)(^\s*checksum(32)?\:).*"       = "`${1} $($Latest.Checksum32)"
+            "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
         }
         ".\tools\ChocolateyInstall.ps1" = @{
             "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
         }
     }
 }
@@ -26,22 +29,24 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest "https://community.mp3tag.de/posts/$id.json" -UseBasicParsing | ConvertFrom-Json
     $content = $download_page.raw
 
-    if ($content -notmatch "Version:[\* ]*(\d+\.[\d\.]+)([a-z])?") {
+    if ($content -notmatch "Version:[\* \|]*(\d+\.[\d\.]+)([a-z])?") {
         throw "mp3tag version not found on $releases"
     }
 
     $version = $Matches[1]
     $versionSuffix = $Matches[2]
 
-    if ($content -notmatch "Status:[\* ]*([a-z]+)") {
+    if ($content -notmatch "Status:[\* \|]*([a-z]+)") {
         Write-Host "mp3tag status not found on $releases"
         return 'ignore'
     }
 
     $status = $Matches[1]
     $url32 = 'http://download.mp3tag.de/mp3tagv<version>setup.exe'
+    $url64 = 'http://download.mp3tag.de/mp3tagv<version>-x64-setup.exe'
     $flatVersion = $version -replace '\.', ''
     $url32 = $url32 -replace '<version>', "$flatVersion$versionSuffix"
+    $url64 = $url64 -replace '<version>', "$flatVersion$versionSuffix"
 
     if ($versionSuffix) {
         [char]$letter = $versionSuffix
@@ -56,7 +61,7 @@ function global:au_GetLatest {
         return 'ignore'
     }
 
-    return @{ URL32 = $url32; Version = $version }
+    return @{ URL32 = $url32; URL64 = $url64; Version = $version }
 }
 
 update -ChecksumFor none
