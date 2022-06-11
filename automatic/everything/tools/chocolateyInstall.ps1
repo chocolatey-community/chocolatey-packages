@@ -34,3 +34,6 @@ Write-Host "Post install command line:" $cmd
 
 Write-Host "Starting $packageName"
 Start-Process "$installLocation\Everything.exe" -ArgumentList "-startup"
+
+Write-Warning "The Everything Command Line, es.exe has been removed from this package."
+Write-Warning "It now can be installed via the 'es' package"

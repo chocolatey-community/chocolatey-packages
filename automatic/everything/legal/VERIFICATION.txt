@@ -18,7 +18,6 @@ Package can be verified like this:
 
    checksum32: 80E10255B3C4A653EDC2AE162CC0BA78EA4D269F9B80F309007ED39046CAED53
    checksum64: 3FA21697C132FB04B9C2FE539CB86ACC995605323165520FF902924DD48D88B7
-   checksum es.exe: 5AE97E10B832B8B94427B685E3C733896524B2269D8E096D40194F3CCB05A073
 
 Using AU:
 
@@ -26,7 +25,4 @@ Using AU:
 
 File 'License.txt' is obtained from:
     https://www.voidtools.com/License.txt
-
-File 'es.exe' is obtained from:
-    https://www.voidtools.com/es.exe
 

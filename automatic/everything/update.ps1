@@ -14,16 +14,12 @@ function global:au_SearchReplace {
           "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
           "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
           "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
-          "(?i)(checksum es.exe:).*"   = "`${1} $($Latest.ChecksumEsExe)"
           "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL64)"
         }
     }
 }
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
-    iwr 'https://www.voidtools.com/ES-1.1.0.9.zip' -OutFile $env:TMP\ES-1.1.0.9.zip
-    7z x $env:TMP\ES-1.1.0.9.zip es.exe -o"$PSScriptRoot\tools"
-    $Latest.ChecksumEsExe = Get-FileHash $PSScriptRoot\tools\es.exe | % Hash
 }
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
