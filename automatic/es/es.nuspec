@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>es</id>
+    <version>0.0.1</version>
+    <title>Everything Command Line</title>
+    <authors>David Carpenter</authors>
+    <owners>chocolatey-community, TheCakeIsNaOH</owners>
+    <licenseUrl>http://www.voidtools.com/License.txt</licenseUrl>
+    <projectUrl>https://www.voidtools.com/support/everything/command_line_interface/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@cf277846cf6b5436461ebd5f21b00efd67ee9910/icons/everything.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[ES is a command line interface to search Everything from a command prompt.
+
+"Everything" is an administrative tool that locates files and folders by filename instantly for Windows.
+Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything").
+You type in a search filter to limit what files and folders are displayed.
+]]></description>
+    <summary>Everything Search Engine Command Line - locate files and folders by name instantly</summary>
+    <copyright>2022 David Carpenter</copyright>
+    <tags>everything file-system indexing freeware file search ntfs</tags>
+    <docsUrl>https://www.voidtools.com/support/everything/command_line_interface/</docsUrl>
+    <mailingListUrl>https://www.voidtools.com/forum/</mailingListUrl>
+    <bugTrackerUrl>https://www.voidtools.com/forum/viewforum.php?f=6</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/es</packageSourceUrl>
+    <dependencies>
+      <dependency id="everything" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
