@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>es</id>
-    <version>0.0.1</version>
+    <version>1.1.0.23</version>
     <title>Everything Command Line</title>
     <authors>David Carpenter</authors>
     <owners>chocolatey-community, TheCakeIsNaOH</owners>
@@ -16,6 +16,20 @@
 "Everything" is an administrative tool that locates files and folders by filename instantly for Windows.
 Unlike Windows search "Everything" initially displays every file and folder on your computer (hence the name "Everything").
 You type in a search filter to limit what files and folders are displayed.
+
+## Features
+
+- Search files with regex
+- Many switch with which to sort results
+- Small installation file
+- Quick file indexing
+- Quick searching
+- Minimal resource usage
+- [More ...](https://www.voidtools.com/faq/)
+
+## Notes
+
+- ES Requires Everything to be running to function
 ]]></description>
     <summary>Everything Search Engine Command Line - locate files and folders by name instantly</summary>
     <copyright>2022 David Carpenter</copyright>
