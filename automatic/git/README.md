@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg" width="48" height="48"/> [git](https://chocolatey.org/packages/git)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg" width="48" height="48"/> [git.install](https://chocolatey.org/packages/git.install)
 
 Git for Windows focuses on offering a lightweight, native set of tools that bring the full feature set of the Git SCM to Windows while providing appropriate user interfaces for experienced Git users and novices alike.
 
@@ -13,7 +13,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 See the [Git Package Parameters documentation page](https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md).
 
 Example for passing in package parameters:
-`choco install git --params "/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf`
+`choco install git.install --params "/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf`
 
 ## Notes
 
