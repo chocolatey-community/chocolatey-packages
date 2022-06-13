@@ -1,5 +1,9 @@
 # Changelog
 
+## 2022-06-13
+
+- Moved Package Arguments into its own markdown file to trim down the description link.
+
 ## 2020-04-02
 
 - Added stopping of the gpg agent to prevent failures during upgrade
