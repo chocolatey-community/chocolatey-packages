@@ -8,9 +8,20 @@ Thunderbird is a free email application that's easy to set up and customize and 
 - `/UseMozillaFallback` Makes a request to mozilla.org and reads the supported Language Culture code from the website.
 - `/NoStop` - Do not stop Thunderbird before running the install if it is running or attempt to restart it after install.
 
+Command-line options for installer configuration. See the [official page](https://firefox-source-docs.mozilla.org/browser/installer/windows/installer/FullConfig.html) for details and defaults.
+
+- `/InstallDir:PATH`
+- `/NoTaskbarShortcut` Do not create Taskbar Shortcut
+- `/NoDesktopShortcut` Do not create Desktop Shortcut
+- `/NoStartMenuShortcut` Do not create Start Menu Shortcut
+- `/NoMaintenanceService` Do not install Maintenance Service
+- `/RemoveDistributionDir` Remove Distribution directory on installation/update. (This is the default behavior of the Thunderbird Installer, but not for this Chocolatey Package)
+- `/NoAutoUpdate` Sets a policies.json file to not update Thunderbird and does not install the Maintenance Service
+
 ### Examples
 
-`choco install thunderbird --params "/l=en-GB"`  
+`choco install thunderbird --params "/l=en-GB"`
+`choco install thunderbird --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`    
 `choco install thunderbird --params "/UseMozillaFallback"`
 `choco install thunderbird --params "/NoStop"`
 
