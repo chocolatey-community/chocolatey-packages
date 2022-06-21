@@ -13,7 +13,7 @@
     <projectSourceUrl>https://git.gnome.org/browse/gimp</projectSourceUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/gimp.svg</iconUrl>
     <docsUrl>https://www.gimp.org/docs/</docsUrl>
-    <mailingListUrl>https://www.gimp.org/mail_lists.html</mailingListUrl>
+    <mailingListUrl>https://www.gimp.org/discuss.html#mailing-lists</mailingListUrl>
     <bugTrackerUrl>https://www.gimp.org/bugs/</bugTrackerUrl>
     <summary>GNU Image Manipulation Program</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
