@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software has been downloaded from the listed Google Cloud Storage download
-location on <https://github.com/kubernetes/minikube/releases/tag/v1.25.2>, Distribution section
+location on <https://github.com/kubernetes/minikube/releases/tag/v1.26.0>, Distribution section
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://storage.googleapis.com/minikube/releases/v1.25.2/minikube-windows-amd64.exe>
+  software: <https://storage.googleapis.com/minikube/releases/v1.26.0/minikube-windows-amd64.exe>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: 
-  checksum: 06C99A08EFB8EA540FB6AA6E4C5BCB35C7688A0B04F60D938366355BDD491EEE
+  checksum: 08C06E6DDFF4F2E47A2D094365AEB85A3AC8AD1B86361DB9B06A02F3668BD5A3
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kubernetes/minikube/blob/9cf84c2acdd84b98349dce91aac76a933d4ea388/LICENSE>
