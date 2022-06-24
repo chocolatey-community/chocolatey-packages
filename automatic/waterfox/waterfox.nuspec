@@ -2,21 +2,21 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>waterfox-classic</id>
-    <version>2022.06</version>
+    <id>Waterfox</id>
+    <version>22064.1.3.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/waterfox</packageSourceUrl>
     <owners>chocolatey-community,tonigellida,admiringworm</owners>
-    <title>Waterfox classic</title>
+    <title>Waterfox </title>
     <authors>Alex Kontos</authors>
-    <projectUrl>https://classic.waterfox.net/</projectUrl>
+    <projectUrl>https://www.waterfox.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png</iconUrl>
     <copyright>© 2019 Waterfox Ltd.</copyright>
     <licenseUrl>https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/WaterfoxCo/Waterfox-Classic</projectSourceUrl>
+    <projectSourceUrl>https://github.com/WaterfoxCo/Waterfox</projectSourceUrl>
     <tags>waterfox web-browser firefox 64-bit admin cross-platform foss</tags>
     <summary>Waterfox is basically a 64-bit version of Firefox.</summary>
-    <description><![CDATA[Use this version of Waterfox if you have your browser set up with various NPAPI plugins and bootstrap extensions that have not been updated as WebExtensions or for [Waterfox Current](https://chocolatey.org/packages/waterfox)
+    <description><![CDATA[Use this version of Waterfox if you want the latest and greatest the web has to offer, want to use all WebExtensions and a few bootstrap extensions.
 
 **How and why Waterfox is here...**  
 Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
@@ -42,10 +42,6 @@ telemetry is sent back to Mozilla or the Waterfox project.
 - Run every Add-On (even unsigned ones!)
 - Windows XP 64-Bit Support
 - More under the hood changes...
-
-## Notes
-
-- Waterfox Classic has many unpatched [security advisories](https://github.com/WaterfoxCo/Waterfox-Classic/wiki/Unpatched-Security-Advisories). Use at your own discretion.
 ]]></description>
     <releaseNotes>https://www.waterfoxproject.org/blog/</releaseNotes>
     <dependencies>
