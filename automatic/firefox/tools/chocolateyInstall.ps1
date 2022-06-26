@@ -30,6 +30,10 @@ $sa += " /PreventRebootRequired=true"
 # Prevent RemoveDistributionDir by default
 $sa += " /RemoveDistributionDir=false"
 
+# Prevent Install Ping by default
+# https://searchfox.org/mozilla-central/rev/26a6a38fb515dbab0bb459c40ec4b877477eefef/browser/installer/windows/nsis/installer.nsi#1039-1044
+$sa += " /LaunchedFromStub"
+
 
 $sa += if ($pp.InstallDir) { " /InstallDirectoryPath=" + $pp.InstallDir }
 
