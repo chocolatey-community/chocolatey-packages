@@ -3,20 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intunewinapputil</id>
-    <version>[[VERSION]]</version>
-    <packageSourceUrl>https://github.com/corbob/ChocoPackages/tree/master/packages/intunewinapputil</packageSourceUrl>
-    <owners>corbob</owners>
-    <title>intunewinapputil (Install)</title>
+    <version>1.8.4</version>
+    <packageSourceUrl>https://github.com/auto</packageSourceUrl>
+    <owners>chocolatey-community,corbob</owners>
+    <title>intunewinapputil</title>
     <authors>Microsoft</authors>
     <projectUrl>https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/corbob/ChocoPackages@master/icons/intunewinapputil.png</iconUrl>
-    <licenseUrl>https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/raw/v1.8.2/Microsoft%20License%20Terms%20For%20Win32%20Content%20Prep%20Tool.pdf</licenseUrl>
+    <iconUrl>https://raw.githubusercontent.com/auto</iconUrl>
+    <licenseUrl>https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/raw/master/Microsoft%20License%20Terms%20For%20Win32%20Content%20Prep%20Tool.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <tags>intunewinapputil intune intunewin</tags>
+    <tags>intunewinapputil intune intunewin cli freeware</tags>
     <summary>Manage Windows Apps (.intunewin) with Intune</summary>
-    <description># Microsoft Win32 Content Prep Tool
-
-      Manage Windows Apps (.intunewin) with Intune
+    <releaseNotes>https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool/releases</releaseNotes>
+    <description><![CDATA[      Manage Windows Apps (.intunewin) with Intune
 
       [See release notes for more information.](https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool/releases)
 
@@ -52,8 +51,8 @@
       - -o &lt;output_file&gt; Output folder for the generated .intunewin file.
       - -a &lt;catalog_folder&gt; Catalog folder for all catalog files. All files in this folder will be treated as catalog file for Win10 S mode.
 
-      **Note: The generated .intunewin file contains all compressed and encrypted source setup files and the encryption information to decrypt it. Please keep it in the safe place as your source setup files.**</description>
-    <releaseNotes>https://github.com/Microsoft/Microsoft-Win32-Content-Prep-Tool/releases</releaseNotes>
+      **Note: The generated .intunewin file contains all compressed and encrypted source setup files and the encryption information to decrypt it. Please keep it in the safe place as your source setup files.**
+]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
