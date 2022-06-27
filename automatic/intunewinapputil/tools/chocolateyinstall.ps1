@@ -1,7 +1,6 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url = '[[URL]]'
 # Remove any prior installations.
 $foldersToRemove = Get-ChildItem -Path $toolsDir\microsoft-Microsoft-Win32-Content-Prep-Tool-* -Directory
 foreach ($folder in $foldersToRemove) {
@@ -11,9 +10,9 @@ foreach ($folder in $foldersToRemove) {
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  url           = $url
+  url           = 'https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/archive/refs/tags/v1.8.4.zip'
   softwareName  = 'intunewinapputil*'
-  checksum      = '[[CHECKSUM]]'
+  checksum      = '13BD857841E026E3E6911DC9B84DAAE9F5637144B8DEEA7909E1BE690C9D2E9A'
   checksumType  = 'sha256'
 }
 
