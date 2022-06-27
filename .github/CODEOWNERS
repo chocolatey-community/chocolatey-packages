@@ -34,6 +34,7 @@
 */selenium-gecko-driver* @hansnull @chocolatey-community/chocolatey-team-maintainers
 */es*                 @TheCakeIsNaOH
 */selenium-chrome-driver* @chocolatey-community/chocolatey-team-maintainers
+*/intunewinapputil*   @chocolatey-community/chocolatey-team-maintainers
 
 # Other
 # This can be any file other that won't be matched as a package
