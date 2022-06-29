@@ -11,7 +11,7 @@ $softwareName = 'Mozilla Thunderbird'
 
 if (Get-32bitOnlyInstalled -product $softwareName) { Write-Host 'Detected the 32-bit version of Thunderbird on a 64-bit system. This package will continue to install the 32-bit version of Thunderbird unless the 32-bit version is uninstalled.' }
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '91.10.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '102.0')
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "Thunderbird is already installed. No need to download and re-install."
   return
@@ -37,7 +37,7 @@ $packageArgs = @{
 
   Checksum = $checksums.Win32
   ChecksumType = 'sha512'
-  Url = "https://download.mozilla.org/?product=thunderbird-91.10.0-SSL&os=win&lang=${locale}"
+  Url = "https://download.mozilla.org/?product=thunderbird-102.0-SSL&os=win&lang=${locale}"
 
   silentArgs = '-ms'
   validExitCodes = @(0)
@@ -46,7 +46,7 @@ $packageArgs = @{
 if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
   $packageArgs.Checksum64 = $checksums.Win64
   $packageArgs.ChecksumType64 = 'sha512'
-  $packageArgs.Url64 = "https://download.mozilla.org/?product=thunderbird-91.10.0-SSL&os=win64&lang=${locale}"
+  $packageArgs.Url64 = "https://download.mozilla.org/?product=thunderbird-102.0-SSL&os=win64&lang=${locale}"
 }
 
 Install-ChocolateyPackage @packageArgs
