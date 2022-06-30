@@ -5,10 +5,10 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'Sauerbraten'
 
-  checksum       = '3424EB2B7DA089B91D3F3B2259F737B4BD507E5C12B28EA1B7FC4D5777755B26'
+  checksum       = '89842b3fe5cf591b761b84948e97e3a68e2fa451f5a0afb102a9347efca0a41e'
   checksumType   = 'sha256'
-  url            = 'https://sourceforge.net/projects/sauerbraten/files/sauerbraten/2013_01_04/sauerbraten_2013_02_03_collect_edition_windows.exe/download'
-
+  url            = 'https://sourceforge.net/projects/sauerbraten/files/sauerbraten/2020_11_29/sauerbraten_2020_12_21_windows.exe/download'
+  
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
