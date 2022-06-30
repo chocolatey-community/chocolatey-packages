@@ -1,54 +1,78 @@
-﻿
+
 function Get-FreeCad {
-  param(
-    [string]$Title,
-    [string]$kind = 'stable',
-    [int]$filler = "0",
-    [string]$uri = $releases
-  )
+param(
+  [string]$Title,
+  [string]$kind = 'stable',
+  [int]$filler = "0",
+  [string]$uri = $releases,
+  [string]$ScriptLocation = $PSScriptRoot
+)
+  
   $download_page = Invoke-WebRequest -Uri $uri -UseBasicParsing
-  $mobile = @{$true = "portable"; $false = "installer" }[($kind -eq 'portable')]
-  $portable = @{$true = "vc(19|17|14)\.x\-x86(\-|_)64"; $false = "$mobile" }[($kind -eq 'dev')]
-  $ext = @{$true = '7z'; $false = 'exe' }[( $kind -match 'dev' ) -or ( $portable -match 'portable' )]
-  # cybrwshl use of (\-[0-9])? regex updated to (\-\d+)? for installer with possiblity of any number of digit(s) before extension
-  $re64 = @{$true = "(WIN|Win)\-(LPv\d+\.\d+\.\d+|Conda|x64)(\-|_)($portable)(\-|.)?(\d+)?(\.$ext)$"; $false = "(WIN)\-x64\-($portable)(\-|.)?(\d+)?\.$ext$" }[( $kind -match 'dev' )]
-  # FreeCad Website only makes mention of a 64-bit version for download as of 2022-2-16
-  $url64 = @{$true = ( $download_page.Links | Where-Object href -match $re64 | Select-Object -First 1 -ExpandProperty 'href' )`
-      ; $false     = ( $download_page.Links | Where-Object href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
-  }[($kind -eq 'dev')]
-  # Logic to find filler value from url
-  $fill = (($url64.Split('\/'))[-2]).Split('.')[-1]
-  if ( (!([string]::IsNullOrEmpty($fill) ) ) -and ($fill -is [int]) ) {
-    "fill -$fill-" | Write-Warning
-    if ($fill -ge $filler) { $filler = $fill }
-  }
-  "url64 -${PreUrl}${url64}-" | Write-Warning
-  $chking = (($url64.Split('\/'))[-1])
-  $checking = $chking -replace ($re64, '') -replace ('\-', '.')
-  "version check -$checking-" | Write-Warning
-  $version = ( Get-Version $checking ).Version
-  # Check if version is using a revision and build correctly
-  if ( ($version.Build) -match "\d{5}" ) {
-    [version]$version = ( ( ($version.Major), ($version.Minor), ($filler), ($version.Build) ) -join "." )
-  }
-  $vert = @{$true = "$version-$kind"; $false = "$version" }[( $kind -eq 'dev' )]
-  # Due to Non Uniform Releases of the package in the past
-  $NonUniformRegex = "(?:\-)(\d+)(?:.${ext})"
-  if (($chking -match $NonUniformRegex) -and ($kind -ne 'dev')) { if (!([string]::IsNullOrEmpty( $Matches[1] ))) { $digits = $Matches[1] } "digits -$digits-" | Write-Warning }
-  # If digits are found in the fileName they will be addded to the version number
-  # This approach is done due a four segment version needed for Get-FixVersion
-  if ((!([string]::IsNullOrEmpty($digits) ) ) -and ($digits -match "(\d+)")) { $vert = "${vert}.${digits}" }
-  "vert -$vert-" | Write-Warning
+
   switch ($kind) {
-    'portable' {
-      $PackageName = "$Title.$kind"
-      $Title = "$Title (Portable)"
+    'dev' {
+      $mobile = "Windows"
+      $ext = "7z"
+      $re64 = "(FreeCAD_weekly-builds)?((\-\d{2,6})+)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2})?(\.$ext)$"
+      $url64 = ( $download_page.Links | ? href -match $re64 | Select-Object -First 1 -ExpandProperty 'href' )
+      "url64 -$url64-" | Write-Warning
+      $PackageName  = "$Title"
+      $Title        = "$Title"
+      # Now to get the newest Revision from url64
+      $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
+      "veri -$veri-" | Write-Warning
+      $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
+      [version]$DevVersion = (( Get-Content "$ScriptLocation\freecad.json" | ConvertFrom-Json ).dev) -replace("-$kind",'')
+      # Catch to make sure version will be the latest version
+      if (( $DevVersion.Minor -lt ($year.Substring(0,2)) ) -and ( $DevVersion.Build -gt $filler )) { [version]$DevVersion = "0.20.${filler}" }
+      if (($DevRevision -match "\d{5}") -and ($DevRevision -le "29192")){
+        "Revision is less than it was on date 6/20/2022 which could mean a new version minor" | Write-Warning
+        "Going to increase the version minor by 1" | Write-Warning
+        [version]$version = ( ( ($DevVersion.Major),(($DevVersion.Minor + 1)),($DevVersion.Build),($DevRevision) ) -join "." )
+      } else {
+        "Standard Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
+        [version]$version = ( ( ($DevVersion.Major),($DevVersion.Minor),($DevVersion.Build),($DevRevision) ) -join "." )
+      }
+    $vert = "${version}-${kind}"
     }
-    default {
-      $PackageName = "$Title"
-      $Title = "$Title"
+    'portable' {
+      $mobile = "portable"
+      $ext = "zip"
+      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-(${mobile})(\-|.)?(\d+)?(\.${ext})$"
+      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
+      $vert = "$version"
+      $PackageName  = "$Title.$kind"
+      $Title        = "$Title (Portable)"
+      [version]$version = ( Get-Version (($url64.Split('\/'))[-1]) ).Version
+    }
+    'stable' {
+      $mobile = "installer"
+      $ext = "exe"
+      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-(${mobile})(\-|.)?(\d+)?(\.${ext})$"
+      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
+      $vert = "$version"
+      $PackageName  = "$Title"
+      $Title        = "$Title"
+      [version]$version = ( Get-Version (($url64.Split('\/'))[-1]) ).Version
     }
   }
+  
+  # check in place to prevent cross call talk from sequentional 
+  if ($kind -notmatch 'dev') {
+    # Check if version is using a revision and build correctly
+    if (($version.Build) -match "\d{1,5}") {
+      $vert = ( ( ($version.Major),($version.Minor),($filler),($version.Build) ) -join "." )
+    }
+    # This is to update the version when the fileName/url64 changes in the future
+    if (($version.Revision) -ne 0) {
+      # Due to the Get-Version rendering the revision as a negative
+      $revision = [math]::Abs( $version.Revision )
+      "Versioning update $revision for -$url64-" | Write-Warning
+      $vert = ( ( ($version.Major),($version.Minor),($version.Build),($revision) ) -join "." )
+    }
+  }
+  
  	$package = @{
     PackageName  = ($PackageName).ToLower()
     Title        = $Title
@@ -56,6 +80,7 @@ function Get-FreeCad {
     Version      = $vert
     fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
     ReleaseNotes = "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)"
-  }
-  return $package
+	}
+  
+return $package
 }
