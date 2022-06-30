@@ -48,7 +48,7 @@ environment:
     secure: zPuYvdxGda6DUGRCwTJL5FQCWF3U+1bSLE2mEr+VfpfV08NXlXX2uFLizkhQuJYW
 
   #Chocolatey version we want to use when checking for updates (usually latest).
-  choco_version: '1.0.0'
+  choco_version: '1.1.0'
   choco_version_pr: '0.10.15' # Should be kept to the version available one year ago
   nupkg_cache_path: C:\packages
 
