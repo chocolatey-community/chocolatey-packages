@@ -265,6 +265,9 @@ function GetLibOVersionsWithoutFromVersion($fromVersion, $toVersion) {
 
 function GetLibOExactVersion($version) {
     $versions = GetLibOVersions $version $version
+    if (($versions.Rows[0].Url64 -eq '') -or ($versions.Rows[0].Url32 -eq '')) {
+        Throw "Libreoffice update service did not return download URLs"
+    }
     return $versions.Rows[0]
 }
 
