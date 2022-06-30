@@ -85,14 +85,16 @@ else {
 
 if (-Not(Test-Path ($installPath + "\distribution\policies.json") -ErrorAction SilentlyContinue) -and ($pp.NoAutoUpdate) ) {
   if (-Not(Test-Path ($installPath + "\distribution") -ErrorAction SilentlyContinue)) {
-    new-item ($installPath + "\distribution") -itemtype directory
+    New-Item ($installPath + "\distribution") -ItemType directory
   }
 
-  $policies = @{
-    policies = @{
-      "DisableAppUpdate" = $true
-    }
-  }
-  $policies | ConvertTo-Json | Out-File -FilePath ($installPath + "\distribution\policies.json") -Encoding ascii
+  $policies = @"
+{
+    "policies":  {
+                     "DisableAppUpdate":  true
+                 }
+}
+"@
+  $policies | Out-File -FilePath ($installPath + "\distribution\policies.json") -Encoding ascii
 
 }
