@@ -1,4 +1,4 @@
-Get-Process -Name chromedriver -ErrorAction SilentlyContinue | Stop-Process
+﻿Get-Process -Name chromedriver -ErrorAction SilentlyContinue | Stop-Process
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $seleniumDir = "$(Get-ToolsLocation)\selenium"
@@ -8,7 +8,7 @@ $parameters = Get-PackageParameters
 
 $packageArgs = @{
   packageName  = 'selenium-chrome-driver'
-  file         = "$toolsDir\"
+  file         = "$toolsDir\chromedriver_win32.zip"
   checksum     = '53c2e1f1b9f2a7571483284ea156958674501e8571cfe34be01282b4152e0770138d9aaef12876f109db9d77c1216362d0576aa40b4f19f039d4b97a15054c98'
   checksumType = 'sha512'
   destination  = $seleniumDir
