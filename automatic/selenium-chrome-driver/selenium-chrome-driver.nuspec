@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>selenium-chrome-driver</id>
+    <version>83.0.4103.39</version>
+    <title>Selenium Chrome Driver</title>
+    <authors>Chromium and WebDriver teams</authors>
+    <owners>chocolatey-community,AdmiringWorm,agabrys</owners>
+    <licenseUrl>https://source.chromium.org/chromium/chromium/src/+/main:LICENSE</licenseUrl>
+    <projectUrl>https://sites.google.com/chromium.org/driver/</projectUrl>
+    <projectSourceUrl>https://source.chromium.org/chromium/chromium/src/+/master:chrome/test/chromedriver/</projectSourceUrl>
+    <iconUrl>https://raw.githubusercontent.com/auto</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. ChromeDriver is a standalone server which implements WebDriver's wire protocol (https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) for Chromium.
+
+chromedriver.exe file is located in &lt;Get-ToolsLocation&gt;/selenium directory.
+
+#### Package Parameters
+The following package parameters can be set:
+
+* `/SkipShim` - informs that the shim file should not be generated
+
+To pass parameters, use `--params "''"` (e.g. `choco install selenium-chrome-driver [other options] --params="'/SkipShim'"`).</description>
+    <summary>Chrome Driver is a WebDriver implementation that enables programmatic automation of Chrome products for desktop platforms. It is a part of the Selenium (http://code.google.com/p/selenium) project.</summary>
+    <releaseNotes>https://chromedriver.storage.googleapis.com/83.0.4103.39/notes.txt
+
+Package changes:
+   * automatically stop chromedriver processes before upgrading or uninstalling the package</releaseNotes>
+    <copyright>Chromium and WebDriver teams. All Rights Reserved.</copyright>
+    <tags>selenium-chrome-driver google-chrome driver webdriver testing web-applications freeware foss cross-platform</tags>
+    <packageSourceUrl>https://github.com/auto</packageSourceUrl>
+    <bugTrackerUrl>https://bugs.chromium.org/p/chromedriver/issues/list</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
