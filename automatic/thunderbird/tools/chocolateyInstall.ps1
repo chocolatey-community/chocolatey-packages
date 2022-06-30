@@ -9,6 +9,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageName  = 'thunderbird'
 $softwareName = 'Mozilla Thunderbird'
 
+$pp = Get-PackageParameters
+
 if (Get-32bitOnlyInstalled -product $softwareName) { Write-Host 'Detected the 32-bit version of Thunderbird on a 64-bit system. This package will continue to install the 32-bit version of Thunderbird unless the 32-bit version is uninstalled.' }
 
 $alreadyInstalled = (AlreadyInstalled -product $softwareName -version '102.0')
@@ -19,11 +21,15 @@ if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
 
 $tbProcess = Get-Process thunderbird -ea 0
 if ($tbProcess) {
-  Write-Host 'Stopping running thunderbird process'
-  Stop-Process $tbProcess
-  # We make an assumption that the first unique item found
-  # will be have the path to the process we want to restart.
-  $tbProcess = $tbProcess.Path | Select-Object -Unique -First 1
+  if ($pp.NoStop) {
+    Write-Warning "Not stopping running thunderbird process"  
+  } else {
+    Write-Host 'Stopping running thunderbird process'
+    Stop-Process $tbProcess
+    # We make an assumption that the first unique item found
+    # will be have the path to the process we want to restart.
+    $tbProcess = $tbProcess.Path | Select-Object -Unique -First 1
+  }
 }
 
 $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/issues/933
@@ -50,7 +56,7 @@ if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) 
 }
 
 Install-ChocolateyPackage @packageArgs
-if ($tbProcess) {
+if ($tbProcess -and !$pp.NoStop) {
   Write-Host "Restarting thunderbird process"
   Start-Process $tbProcess
 }
