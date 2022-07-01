@@ -5,7 +5,7 @@ $releases = 'https://www.apachehaus.com/cgi-bin/download.plx'
 function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix }
 
 function global:au_GetLatest {
-  $versionRegEx = 'httpd\-([\d\.]+).*\-x86\-(vc15).*\.zip'
+  $versionRegEx = 'httpd\-([\d\.]+).*\-x86\-(vs17).*\.zip'
 
   $downloadPage = Invoke-WebRequest $releases -UseBasicParsing
   $matches = [regex]::match($downloadPage.Content, $versionRegEx)
