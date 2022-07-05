@@ -19,6 +19,6 @@ Example: `choco install apache-httpd --params '"/installLocation:C:\HTTPD /port:
 
 ## Notes
 
-- This package will install the latest Apache binaries provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL 1.1.1g, brotli 1.0.7, nghttp 1.41.0, Zlib 1.2.10, PCRE 8.44, APR 1.7.0, APR-Util 1.6.1.
+- This package will install the latest Apache binaries provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL 1.1.1p, brotli 1.0.9, nghttp 1.47.0, Zlib 1.2.12, PCRE2 10.40.
 - The complete path of the package will be `$Env:AppData\Apache*`
 - Apache will be installed as a service under the default name 'Apache' (can be disabled with the `/noService` install parameter)
