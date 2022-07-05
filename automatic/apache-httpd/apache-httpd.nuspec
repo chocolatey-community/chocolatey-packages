@@ -3,7 +3,7 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>apache-httpd</id>
-    <version>2.4.53</version>
+    <version>2.4.54</version>
     <title>Apache HTTP Server Project</title>
      <authors>Apache Software Foundation</authors>
     <owners>chocolatey-community</owners>
@@ -35,13 +35,13 @@ Example: `choco install apache-httpd --params '"/installLocation:C:\HTTPD /port:
 
 ## Notes
 
-- This package will install the latest Apache binaries provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL 1.1.1p, brotli 1.0.9, nghttp 1.47.0, Zlib 1.2.12, PCRE2 10.40
+- This package will install the latest Apache binaries provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL 1.1.1p, brotli 1.0.9, nghttp 1.47.0, Zlib 1.2.12, PCRE2 10.40.
 - The complete path of the package will be `$Env:AppData\Apache*`
 - Apache will be installed as a service under the default name 'Apache' (can be disabled with the `/noService` install parameter)
 ]]></description>
     <tags>apache httpd webserver admin</tags>
     <dependencies>
-       <dependency id="vcredist140" version="14.32.31332"/>
+       <dependency id="vcredist140" version="14.32.31332" />
    </dependencies>
   </metadata>
   <files>
