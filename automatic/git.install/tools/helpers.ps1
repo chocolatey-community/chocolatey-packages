@@ -77,3 +77,11 @@ function Stop-GitSSHAgent()
     Write-Host "Killing any running git ssh-agent instances"
     Get-Process ssh-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"} | Stop-Process
 }
+
+function Stop-GitGPGAgent()
+{
+    if (!(Get-Process gpg-agent -ea 0)) { return }
+
+    Write-Host "Killing any running gpg-agent instances"
+    Get-Process gpg-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"} | Stop-Process -Force
+}

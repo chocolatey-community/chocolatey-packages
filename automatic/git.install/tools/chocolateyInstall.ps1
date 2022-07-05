@@ -6,6 +6,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $pp = Get-PackageParameters
 
 Stop-GitSSHAgent
+# Workaround for chocolateyBeforeModify.ps1 being bypassed if upgrading via metapackage (chocolatey/choco#1092)
+Stop-GitGPGAgent
 
 $fileName32 = 'Git-2.36.1-32-bit.exe'
 $fileName64 = 'Git-2.36.1-64-bit.exe'
