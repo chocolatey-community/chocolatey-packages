@@ -30,7 +30,6 @@
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/umlet</packageSourceUrl>
     <bugTrackerUrl>https://github.com/umlet/umlet/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="jre8" version="8.0" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
