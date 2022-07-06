@@ -7,15 +7,15 @@ location on <https://slproweb.com/products/Win32OpenSSL.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://slproweb.com/download/Win32OpenSSL_Light-3_0_4.exe>
-  64-Bit software: <https://slproweb.com/download/Win64OpenSSL_Light-3_0_4.exe>
+  32-Bit software: <https://slproweb.com/download/Win32OpenSSL_Light-3_0_5.exe>
+  64-Bit software: <https://slproweb.com/download/Win64OpenSSL_Light-3_0_5.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 413B6DFB2266A883B29EE2886FD0033A58D09F858F9798A2A160376E467BF74A
-  checksum64: 2A1CE5BCF953407A8DB7AD732F462C0DFA6151382729B11439B45A1EDD387648
+  checksum32: F334F6896E1E319FF086D98AE861E135CC251DC6199048939D0AC5284D1CF281
+  checksum64: EA67F11C85078DE285302DD8233D08B49AE4BF5FC4D18C1B622ABD059D018DD9
 
 The file 'LICENSE.txt' has been obtained from <https://www.openssl.org/source/license.txt>
