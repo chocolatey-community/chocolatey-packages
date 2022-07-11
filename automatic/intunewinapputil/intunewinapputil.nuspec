@@ -9,8 +9,8 @@
     <title>intunewinapputil</title>
     <authors>Microsoft</authors>
     <projectUrl>https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/auto</iconUrl>
-    <licenseUrl>https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/raw/master/Microsoft%20License%20Terms%20For%20Win32%20Content%20Prep%20Tool.pdf</licenseUrl>
+    <!-- IconUrl: Skip check -->
+    <licenseUrl>https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/blob/master/Microsoft%20License%20Terms%20For%20Win32%20Content%20Prep%20Tool.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>intunewinapputil intune intunewin cli freeware</tags>
     <summary>Manage Windows Apps (.intunewin) with Intune</summary>
