@@ -4,7 +4,7 @@
   <metadata>
     <id>virtualbox</id>
     <title>VirtualBox</title>
-    <version>6.1.34</version>
+    <version>6.1.36</version>
     <authors>Oracle Corporation</authors>
     <owners>chocolatey-community, Rob Reynolds, Mike Dellanoce</owners>
     <summary>VirtualBox is a general-purpose full virtualizer for x86 hardware, targeted at server, desktop and embedded use.</summary>
@@ -36,6 +36,10 @@ Example: `choco install virtualbox --params "/NoDesktopShortcut /ExtensionPack"`
 
 
 ![screenshot](https://github.com/chocolatey-community/chocolatey-coreteampackages/blob/master/automatic/virtualbox/screenshot.png?raw=true)
+
+## Notes
+
+**If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <projectUrl>https://www.virtualbox.org/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/virtualbox</packageSourceUrl>
