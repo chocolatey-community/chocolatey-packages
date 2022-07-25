@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName         = 'filezilla'
-$softwareNamePattern = 'FileZilla Client*'
+$softwareNamePattern = 'FileZilla 3*'
 
 [array] $key = Get-UninstallRegistryKey $softwareNamePattern
 if ($key.Count -eq 1) {
