@@ -30,5 +30,6 @@ Supports 12 languages and All Office File Formats.
 We support read and write PDF files!
 
 ## Notes
-- Our latest version is already compatible with GDPR, users can revoke the collection of personal information at any time.
 
+- Our latest version is already compatible with GDPR, users can revoke the collection of personal information at any time.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
