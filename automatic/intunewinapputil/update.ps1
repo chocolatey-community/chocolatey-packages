@@ -17,10 +17,6 @@ function global:au_GetLatest {
 
 }
 
-function global:au_BeforeUpdate {
-  Get-RemoteFiles -Purge -NoSuffix
-}
-
 function global:au_SearchReplace {
   @{
     "./tools/chocolateyInstall.ps1" = @{
@@ -31,4 +27,4 @@ function global:au_SearchReplace {
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor 32
