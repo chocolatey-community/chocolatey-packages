@@ -23,16 +23,14 @@ param(
       $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
       "veri -$veri-" | Write-Warning
       $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
-      [version]$DevVersion = (( Get-Content "$ScriptLocation\freecad.json" | ConvertFrom-Json ).dev) -replace("-$kind",'')
+      [version]$StableVersion = (( Get-Content "$ScriptLocation\freecad.json" | ConvertFrom-Json ).stable)
       # Catch to make sure version will be the latest version
-      if (( $DevVersion.Minor -lt ($year.Substring(0,2)) ) -and ( $DevVersion.Build -gt $filler )) { [version]$DevVersion = "0.20.${filler}" }
-      if (($DevRevision -match "\d{5}") -and ($DevRevision -le "29192")){
-        "Revision is less than it was on date 6/20/2022 which could mean a new version minor" | Write-Warning
+      if (( $StableVersion.Minor -ne ($year.Substring(2)) ) -and ( $StableVersion.Build -gt $filler )) {
         "Going to increase the version minor by 1" | Write-Warning
-        [version]$version = ( ( ($DevVersion.Major),(($DevVersion.Minor + 1)),($DevVersion.Build),($DevRevision) ) -join "." )
+        [version]$version = ( ( ($StableVersion.Major),(($StableVersion.Minor + 1)),($StableVersion.Build),($StableVersion) ) -join "." )
       } else {
         "Standard Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
-        [version]$version = ( ( ($DevVersion.Major),($DevVersion.Minor),($DevVersion.Build),($DevRevision) ) -join "." )
+        [version]$version = ( ( ($StableVersion.Major),($StableVersion.Minor),($StableVersion.Build),($StableVersion) ) -join "." )
       }
     $vert = "${version}-${kind}"
     }
