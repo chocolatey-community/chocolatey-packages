@@ -20,8 +20,7 @@ $installArgs = @{
 
 '$installDir', ($installDir | Out-String), '$packageArgs', ($packageArgs | Out-String), '$installArgs', ($installArgs | Out-String) | ForEach-Object { Write-Debug $_ }
 
-Install-ChocolateyZipPackage @packageArgs
-Start-ChocolateyProcessAsAdmin @installArgs
-Copy-Item -Path "$installDir\vim\vim$shortversion\vimtutor.bat" -Destination $env:windir
+Install-ChocolateyZipPackage @packageArgs | Write-Debug
+Start-ChocolateyProcessAsAdmin @installArgs | Write-Debug
 Set-Content -Path "$toolsDir\installDir" -Value $installDir
 Create-SymbolicLink
