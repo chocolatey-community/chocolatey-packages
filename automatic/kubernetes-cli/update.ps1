@@ -26,17 +26,16 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     # Only report the supported Kubernetes streams.
-    # NB Upstream Kubernetes only supports the last three minor versions.
-    #    However, they can also do pre-releases before a final version is
-    #    released, so we have to check for an extra changelogs/minor
-    #    version to be able to find all the supported streams.
-    # See https://github.com/kubernetes/sig-release/blob/master/release-engineering/versioning.md
-    $minor_versions_to_keep = 3
 
     $changelog_page = Invoke-WebRequest -Uri $changelogs -UseBasicParsing
+
+    # There is quite a few versions that do not exist on chocolatey.org
+    # and since the limit of pushed packages is 10, we need to limit the amount
+    # of streams that we parse. Once packages are approved we can increase/remove
+    # the limit.
     $minor_version_changelogs = $changelog_page.links `
       | Where-Object href -match "CHANGELOG-(?<version>\d+\.\d+)\.md`$" `
-      | Select-Object -Expand href -First ($minor_versions_to_keep+1)
+      | Select-Object -Expand href -First 10
 
     $streams = @{}
 
