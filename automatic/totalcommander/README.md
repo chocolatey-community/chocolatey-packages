@@ -41,5 +41,6 @@ These parameters can be passed to the installer with the use of `--params`. For 
 
 - For list of Total Commander plugin packages, see [tcps](https://community.chocolatey.org/packages/tcps) package.
 - This package sets system environment variable `COMMANDER_PATH` which points to the Total Commander install directory.
-- This package contain combined Total Commander installer which contains both x32 and x64 bit versions.
+- This package contains the combined Total Commander installer which contains both x32 and x64 bit versions.
 - Total Commander is a Shareware program. This means that you can test it for a period of 30 days. After testing the program, you must either [order the full version](http://www.ghisler.com/order.htm), or delete the program from your harddisk.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**

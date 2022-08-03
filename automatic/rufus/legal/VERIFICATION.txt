@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/pbatard/rufus/releases/download/v3.19/rufus-3.19.exe
+   x32: https://github.com/pbatard/rufus/releases/download/v3.20/rufus-3.20.exe
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 75827940E5D821F30951E641772696BAB6D97E37E3479F70E1CA4B8CB4D40132
+   checksum32: 042F0B284AF6E3316BAF6235A4F0141966A051873B5631C7E5A724CF1F5E7973
 
 
 File 'license.txt' is obtained from:
