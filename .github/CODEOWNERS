@@ -11,29 +11,30 @@
 # Packages
 # Multiple users can be set for the same match
 
-*/ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
-*/python*             @chocolatey-community/chocolatey-team-maintainers
-*/calibre*            @gep13 @AdmiringWorm
-*/cdburnerxp*         @gep13
-*/poweriso*           @gep13
-*/rdcman*             @gep13
-*/wix*                @gep13
-*/gobby*              @AdmiringWorm
-*/gom-player*         @AdmiringWorm
-*/jubler*             @AdmiringWorm
-*/juju*               @AdmiringWorm
-*/transifex*          @AdmiringWorm
-*/waterfox*           @AdmiringWorm
-*/k9s*                @moebius87
-*/composer*           @johnstevenson
-*/krew*               @jetersen
-*/kubelogin*          @jetersen
-*/ffmpeg-full*        @VuiMuich
-*/etcd*               @dgalbraith
-*/octave.portable*    @dgalbraith
-*/selenium-gecko-driver* @hansnull @chocolatey-community/chocolatey-team-maintainers
-*/es*                 @TheCakeIsNaOH
+*/calibre*                @gep13 @AdmiringWorm
+*/cdburnerxp*             @gep13
+*/composer*               @johnstevenson
+*/es*                     @TheCakeIsNaOH
+*/etcd*                   @dgalbraith
+*/ffmpeg-full*            @VuiMuich
+*/freecad                 @redbaron2
+*/gobby*                  @AdmiringWorm
+*/gom-player*             @AdmiringWorm
+*/jubler*                 @AdmiringWorm
+*/juju*                   @AdmiringWorm
+*/k9s*                    @moebius87
+*/krew*                   @jetersen
+*/kubelogin*              @jetersen
+*/octave.portable*        @dgalbraith
+*/poweriso*               @gep13
+*/python*                 @chocolatey-community/chocolatey-team-maintainers
+*/rdcman*                 @gep13
+*/ruby.portable*          @chocolatey-community/chocolatey-team-maintainers
 */selenium-chrome-driver* @chocolatey-community/chocolatey-team-maintainers
+*/selenium-gecko-driver*  @hansnull @chocolatey-community/chocolatey-team-maintainers
+*/transifex*              @AdmiringWorm
+*/waterfox*               @AdmiringWorm
+*/wix*                    @gep13
 
 # Other
 # This can be any file other that won't be matched as a package
