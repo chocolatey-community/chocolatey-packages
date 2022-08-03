@@ -70,18 +70,24 @@ function Get-ShellIntegrationComponents( [HashTable]$pp )
     return $shell
 }
 
+function Stop-GitProcess( [string]$ProcessName )
+{
+    $processes = Get-Process -Name $ProcessName -ErrorAction SilentlyContinue
+    if ($null -eq $processes) { return }
+
+    $installLocation = Get-AppInstallLocation 'Git'
+    if ($null -eq $installLocation) { return }
+
+    Write-Host "Killing any running git $ProcessName instances"
+    $processes | Where-Object {$_.Path -like "$installLocation\usr\bin\*"} | Stop-Process -Force
+}
+
 function Stop-GitSSHAgent()
 {
-    if (!(Get-Process ssh-agent -ea 0)) { return }
-
-    Write-Host "Killing any running git ssh-agent instances"
-    Get-Process ssh-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"} | Stop-Process
+    Stop-GitProcess 'ssh-agent'
 }
 
 function Stop-GitGPGAgent()
 {
-    if (!(Get-Process gpg-agent -ea 0)) { return }
-
-    Write-Host "Killing any running gpg-agent instances"
-    Get-Process gpg-agent | Where-Object {$_.Path -ilike "*\git\usr\bin\*"} | Stop-Process -Force
+    Stop-GitProcess 'gpg-agent'
 }
