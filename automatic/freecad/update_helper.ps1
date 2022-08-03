@@ -22,7 +22,7 @@ param(
       $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
       "veri -$veri-" | Write-Warning
       $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
-      "Standard Devlopment Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
+      "Standard Development Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
       [version]$version = ( ( ($DevRevision),($year),($month),($day) ) -join "." )
     $vert = "${version}-${kind}"
     }
@@ -70,7 +70,7 @@ param(
     Version      = $vert
     fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
     }
-   # Due to the dev package being pre-release software this is removed
+   # Due to the dev package being pre-release software ReleaseNotes are removed
     if ($kind -ne "dev") {
       $package.Add( "ReleaseNotes", "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)" )
     }
