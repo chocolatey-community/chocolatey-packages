@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $softwareName = 'Microsoft Visual Studio Code'
-$version = '1.69.2'
+$version = '1.70.0'
 if ($version -eq (Get-UninstallRegistryKey "$softwareName").DisplayVersion) {
   Write-Host "VS Code $version is already installed."
   return
@@ -16,14 +16,14 @@ Close-VSCode
 $packageArgs = @{
   packageName    = 'vscode.install'
   fileType       = 'exe'
-  url            = 'https://az764295.vo.msecnd.net/stable/3b889b090b5ad5793f524b5d1d39fda662b96a2a/VSCodeSetup-ia32-1.69.2.exe'
-  url64bit       = 'https://az764295.vo.msecnd.net/stable/3b889b090b5ad5793f524b5d1d39fda662b96a2a/VSCodeSetup-x64-1.69.2.exe'
+  url            = 'https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/VSCodeSetup-ia32-1.70.0.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/stable/da76f93349a72022ca4670c1b84860304616aaa2/VSCodeSetup-x64-1.70.0.exe'
 
   softwareName   = "$softwareName"
 
-  checksum       = '630e1c110048762707c49d0a9d87754b67eee215d9f99768ac871734bc05109a'
+  checksum       = '09a0eda1437312d6d0774fd425d97eb1042f7f570c3f79370765f3b3380c3e27'
   checksumType   = 'sha256'
-  checksum64     = '577444da696e8e6f067c109257096aa28e60647c6515e085f3636312ae3da1f1'
+  checksum64     = '516f9a854160193e2786830f90af5c628708a7a3d06d0b289befe2df99173573'
   checksumType64 = 'sha256'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
