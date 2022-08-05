@@ -1,7 +1,7 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$version = '104.0.5112.81-beta'
+$version = '105.0.5195.19-beta'
 if ($version -eq (Get-ChromeBetaVersion)) {
   Write-Host "Google Chrome Beta $version is already installed."
   return
@@ -12,8 +12,8 @@ $packageArgs = @{
   fileType               = 'MSI'
   url                    = 'https://dl.google.com/tag/s/dl/chrome/install/beta/googlechromebetastandaloneenterprise.msi'
   url64bit               = 'https://dl.google.com/tag/s/dl/chrome/install/beta/googlechromebetastandaloneenterprise64.msi'
-  checksum               = '46bc1ef9a4e9361b99b276ae8b7c0f351edeefa9cc304c7474a81d2b50a711b9'
-  checksum64             = '702f425abe8a1acd1b75cc2d4283d41748457898821a209c46e5c520eda03c74'
+  checksum               = '7814d6744ae915c58ed5da6bb31ffb78e752f9c6029319aaa4e18fe4a84a2288'
+  checksum64             = 'f9fb2ff7b6f47c7e2ba9075a655d1bd58957250aaf6ecb7f3ce1a90f2d95eb0b'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
