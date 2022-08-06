@@ -39,7 +39,7 @@ $sa += if ($pp.RemoveDistributionDir) { " /RemoveDistributionDir=true" }
 
 $sa += if ($pp.NoAutoUpdate) { " /MaintenanceService=false" }
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '102.1.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '102.1.1')
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "Thunderbird is already installed. No need to download and re-install."
   return
@@ -69,7 +69,7 @@ $packageArgs = @{
 
   Checksum = $checksums.Win32
   ChecksumType = 'sha512'
-  Url = "https://download.mozilla.org/?product=thunderbird-102.1.0-SSL&os=win&lang=${locale}"
+  Url = "https://download.mozilla.org/?product=thunderbird-102.1.1-SSL&os=win&lang=${locale}"
 
   silentArgs     = "$sa /S"
   validExitCodes = @(0)
@@ -78,7 +78,7 @@ $packageArgs = @{
 if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
   $packageArgs.Checksum64 = $checksums.Win64
   $packageArgs.ChecksumType64 = 'sha512'
-  $packageArgs.Url64 = "https://download.mozilla.org/?product=thunderbird-102.1.0-SSL&os=win64&lang=${locale}"
+  $packageArgs.Url64 = "https://download.mozilla.org/?product=thunderbird-102.1.1-SSL&os=win64&lang=${locale}"
 }
 
 Install-ChocolateyPackage @packageArgs
