@@ -138,7 +138,7 @@ This information is used for the licensed edition of chocolatey to detect if the
 
 ### 1.1.9 Test locally
 
-Before pull request **make sure package can install and uninstall correctly** using the [chocolatey test environment](https://github.com/majkinetor/chocolatey-test-environment). It is used as a reference machine to prevent _it works on my computer syndrome_. AU function `Test-Package -Vagrant` can speed this up.
+Before pull request **make sure package can install and uninstall correctly** using the [chocolatey test environment](https://github.com/chocolatey-community/chocolatey-test-environment). It is used as a reference machine to prevent _it works on my computer syndrome_. AU function `Test-Package -Vagrant` can speed this up.
 
 _Although all PR's are tested on appveyor, all packages are expected to have been locally tested before the PR was submitted_
 
