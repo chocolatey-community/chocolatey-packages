@@ -28,10 +28,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest https://www.piriform.com/ccleaner/version-history -UseBasicParsing
-  $Matches = $null
-  $download_page.Content -match '\<h6\>v((?:[\d]\.)[\d\.]+)'
-  $version = $Matches[1]
+  $download_page = Invoke-WebRequest 'https://www.ccleaner.com/auto?p=cc' -UseBasicParsing
+  $version = $download_page.Content.Split('|')[2]
 
   $url = 'https://download.ccleaner.com/ccsetup{0}.exe' -f ($version -replace '^(\d+)\.(\d+).*$', '$1$2')
 
