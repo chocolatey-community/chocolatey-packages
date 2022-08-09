@@ -19,7 +19,7 @@ param(
       $PackageName  = "$Title"
       $Title        = "$Title"
       # Now to get the newest Revision from url64
-      $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
+      $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2,5})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
       "veri -$veri-" | Write-Warning
       $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
       "Standard Development Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
