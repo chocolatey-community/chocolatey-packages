@@ -3,17 +3,17 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://download.calibre-ebook.com/5.html>
+location on <https://download.calibre-ebook.com/6.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://download.calibre-ebook.com/5.44.0/calibre-64bit-5.44.0.msi>
+  64-Bit software: <https://download.calibre-ebook.com/6.2.1/calibre-64bit-6.2.1.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: 708BA7DB84AE9DB684B643F81A4FB6B1C65F5E6DAC0ADC4721E6ED7D20677798
+  checksum64: C95AB094CDF954C7D54C887434B5D77DF121ED2A09BF1840712E7A1B23EB308A
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kovidgoyal/calibre/blob/89c271759db5c71202251895f6793e4c1ec65ee6/LICENSE>
