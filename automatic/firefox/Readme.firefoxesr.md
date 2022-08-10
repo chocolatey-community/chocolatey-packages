@@ -33,8 +33,8 @@ Command-line options for installer configuration. See the [official page](https:
 
 ### Examples
 
-`choco install Firefox --params "/l:en-GB"`  
-`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`  
+`choco install Firefox --params "/l:en-GB"`
+`choco install Firefox --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`
 `choco install Firefox --params "/l:en-GB /RemoveDistributionDir"`
 
 ## Notes
@@ -46,3 +46,4 @@ Command-line options for installer configuration. See the [official page](https:
   1. The Windows system language.
   1. Language Culture code specified on Mozilla website (only when `/UseMozillaFallback` is specified).
   1. If Firefox ESR does not support the system language, it will fall back to `en-US`.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
