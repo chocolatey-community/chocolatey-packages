@@ -5,13 +5,13 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from the github release page on <https://github.com/poooi/poi/releases>
 and can be verified like this:
 
-1. Go to <https://github.com/poooi/poi/releases/download/v10.9.0-beta.1/poi-setup-10.9.0-beta.1.exe>
+1. Go to <https://github.com/poooi/poi/releases/download/v10.9.0-beta.2/poi-setup-10.9.0-beta.2.exe>
    to download the installer
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: A2DA299FA54DD0F3A6BDDA35B8A06AAF9DC37A317F874E8E6A457238476C6662
+  checksum: 2F1FEA25A44D3A74BAAF8DBA0B2821E43A85AA2CF606EFAB96083DBA8D0C959B
 
 File 'LICENSE.txt' is obtained from <https://github.com/poooi/poi/blob/master/LICENSE>
