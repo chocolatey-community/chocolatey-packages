@@ -7,33 +7,23 @@ param(
   [string]$uri = $releases,
   [string]$ScriptLocation = $PSScriptRoot
 )
-  
   $download_page = Invoke-WebRequest -Uri $uri -UseBasicParsing
 
   switch ($kind) {
     'dev' {
       $mobile = "Windows"
       $ext = "7z"
-      $re64 = "(FreeCAD_weekly-builds)?((\-\d{2,6})+)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2})?(\.$ext)$"
+      $re64 = "(FreeCAD_weekly-builds)?((\-\d{2,6})+)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2,5})?(\.$ext)$"
       $url64 = ( $download_page.Links | ? href -match $re64 | Select-Object -First 1 -ExpandProperty 'href' )
       "url64 -$url64-" | Write-Warning
       $PackageName  = "$Title"
       $Title        = "$Title"
       # Now to get the newest Revision from url64
-      $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
+      $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2,5})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
       "veri -$veri-" | Write-Warning
       $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
-      [version]$DevVersion = (( Get-Content "$ScriptLocation\freecad.json" | ConvertFrom-Json ).dev) -replace("-$kind",'')
-      # Catch to make sure version will be the latest version
-      if (( $DevVersion.Minor -lt ($year.Substring(0,2)) ) -and ( $DevVersion.Build -gt $filler )) { [version]$DevVersion = "0.20.${filler}" }
-      if (($DevRevision -match "\d{5}") -and ($DevRevision -le "29192")){
-        "Revision is less than it was on date 6/20/2022 which could mean a new version minor" | Write-Warning
-        "Going to increase the version minor by 1" | Write-Warning
-        [version]$version = ( ( ($DevVersion.Major),(($DevVersion.Minor + 1)),($DevVersion.Build),($DevRevision) ) -join "." )
-      } else {
-        "Standard Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
-        [version]$version = ( ( ($DevVersion.Major),($DevVersion.Minor),($DevVersion.Build),($DevRevision) ) -join "." )
-      }
+      "Standard Development Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
+      [version]$version = ( ( ($DevRevision),($year),($month),($day) ) -join "." )
     $vert = "${version}-${kind}"
     }
     'portable' {
@@ -79,8 +69,11 @@ param(
     URL64        = $PreUrl + $url64
     Version      = $vert
     fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
-    ReleaseNotes = "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)"
-	}
-  
+    }
+   # Due to the dev package being pre-release software we are removing ReleaseNotes
+    if ($kind -ne "dev") {
+      $package.Add( "ReleaseNotes", "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)" )
+    }
+	
 return $package
 }
