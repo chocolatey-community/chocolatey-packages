@@ -53,18 +53,22 @@ function Get-LatestOPW {
   }
 }
 
-$releases_opw4 = 'https://app-updates.agilebits.com/download/OPW4'
-$kind_opw4 = '1password4'
-$releases_opw = 'https://app-updates.agilebits.com/download/OPW7/Y'
-$kind_opw = '1password'
+$releases = 'https://downloads.1password.com/win/1PasswordSetup-latest.exe'
 
 function global:au_GetLatest {
-  $streams = [ordered] @{
-    OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4
-    OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
-  }
+  $destination = Join-Path -Path $env:TEMP -ChildPath '1PasswordSetup-latest.exe'
+  Invoke-WebRequest -Uri $releases -UseBasicParsing -OutFile $destination
 
-  return @{ Streams = $streams }
+  (Get-ItemProperty $destination).VersionInfo.ProductVersion
+
+  $version = Get-Item $destination | ForEach-Object { [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
+  $checksum64 = Get-FileHash $destination | ForEach-Object Hash
+  Remove-Item $destination -ErrorAction:Stop
+  @{
+      Version    = $version
+      URL64      = $releases
+      Checksum64 = $checksum64
+  }
 }
 
-update -ChecksumFor 32 -IncludeStream $IncludeStream -Force:$Force
+update -ChecksumFor 64 -Force:$Force
