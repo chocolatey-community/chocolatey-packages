@@ -9,7 +9,7 @@
 
     <title>poi</title>
     <authors>POI Contributors</authors>
-    <projectUrl>https://poi.io</projectUrl>
+    <projectUrl>https://poi.moe</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@5be34cac264309fd6bdaaa122aea08dd4ad32bb0/icons/poi.png</iconUrl>
     <copyright>Copyright (c) 2015-2018 poi contributors</copyright>
     <licenseUrl>https://cdn.rawgit.com/poooi/poi/master/LICENSE</licenseUrl>
@@ -18,7 +18,7 @@
     <bugTrackerUrl>https://github.com/poooi/poi/issues</bugTrackerUrl>
     <tags>foss cross-platform poi kancolle yuudachi</tags>
     <summary>POI is a scalable KanColle browser and tool</summary>
-    <description><![CDATA[[poi](https://poi.io) is an open source Kancolle browser based on Electron. poi provides basic functionalities to enhance the gaming experience and is complemented by a variety of plugins. poi behaves the same as Chrome and does not modify game data, packets or implement bots/macros.
+    <description><![CDATA[[poi](https://poi.moe) is an open source Kancolle browser based on Electron. poi provides basic functionalities to enhance the gaming experience and is complemented by a variety of plugins. poi behaves the same as Chrome and does not modify game data, packets or implement bots/macros.
 
 More information could be obtained [here](https://github.com/poooi/poi/blob/master/README.md).
 
