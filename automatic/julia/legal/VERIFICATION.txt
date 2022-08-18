@@ -6,14 +6,14 @@ The installer have been downloaded from the Julia download page on <https://juli
 and can be verified like this:
 
 1. Download the following:
-  32-bit installer: <https://julialang-s3.julialang.org/bin/winnt/x86/1.7/julia-1.7.3-win32.exe>
-  64-bit installer: <https://julialang-s3.julialang.org/bin/winnt/x64/1.7/julia-1.7.3-win64.exe>
+  32-bit installer: <https://julialang-s3.julialang.org/bin/winnt/x86/1.8/julia-1.8.0-win32.exe>
+  64-bit installer: <https://julialang-s3.julialang.org/bin/winnt/x64/1.8/julia-1.8.0-win64.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 71999DF72F1886CA9E0240C17FF01C69769979B5CEC0A472C8E07EF7266D5303
-  checksum64: EF5915EAF35BB71359072E8C41F84FA73F1059FECB198E7FC838270D4BA5BBAE
+  checksum32: 06F650D3B60CBC3CA6D05B8B90B2674DAD139C7FDEF9334D17737BC098BBD2CF
+  checksum64: A1699278E4884578C10580CF19F8D42401ABCE78F459C416998221902EA26D38
 
 File 'LICENSE.txt' is obtained from <https://github.com/JuliaLang/julia/blob/master/LICENSE.md>
