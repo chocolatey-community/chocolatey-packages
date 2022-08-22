@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/mumble-voip/mumble/releases/tag/v1.4.230>
+location on <https://github.com/mumble-voip/mumble/releases/tag/v1.4.274>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/mumble-voip/mumble/releases/download/v1.4.230/mumble_client-1.4.230.x64.msi>
+1. Download the following <https://github.com/mumble-voip/mumble/releases/download/v1.4.274/mumble_client-1.4.274-x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: AC08A69B88442B5F0D5B4566C0241F4A6F12CEFF4406B0355FA78FF6630E73F6
+  checksum: ADC85D87ABCB22C7316C6FED84116AB7651519EEAA0C725C05EFFA1038958E61
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/mumble-voip/mumble/blob/master/LICENSE>
