@@ -1,6 +1,6 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@2171e76d9468526e4e792d20ac6b68e1a8fdc93a/icons/waterfox.png" width="48" height="48"/> [waterfox](https://chocolatey.org/packages/waterfox)
 
-Use this version of Waterfox if you have your browser set up with various NPAPI plugins and bootstrap extensions that have not been updated as WebExtensions or for [Waterfox Current](https://chocolatey.org/packages/waterfox)
+Use this version of Waterfox if you want the latest and greatest the web has to offer, want to use all WebExtensions and a few bootstrap extensions.
 
 **How and why Waterfox is here...**  
 Waterfox was started back in March 2011 by [Alex Kontos](https://github.com/MrAlex94), a 16 year old student.
@@ -26,7 +26,3 @@ telemetry is sent back to Mozilla or the Waterfox project.
 - Run every Add-On (even unsigned ones!)
 - Windows XP 64-Bit Support
 - More under the hood changes...
-
-## Notes
-
-- Waterfox Classic has many unpatched [security advisories](https://github.com/WaterfoxCo/Waterfox-Classic/wiki/Unpatched-Security-Advisories). Use at your own discretion.

@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from their official download link listed on <https://github.com/WaterfoxCo/Waterfox/releases/latest>
 and can be verified like this:
 
-1. Download <https://github.com/WaterfoxCo/Waterfox-Classic/releases/download/2022.08-classic/WaterfoxClassic2022.08.exe>
+1. Download <https://github.com/WaterfoxCo/Waterfox/releases/download/G4.1.5/Install.Waterfox.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: B6B395ED3EB5D81689FA98CB202791C96EC11339F26F45B9892B5DE8EDBFBA3C
+  checksum: 81DE8EC5DB0CD3F5AEAD6FF0DD227F0E054BB6B4B5983EB9314468213C6F4723
 
 File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE>
