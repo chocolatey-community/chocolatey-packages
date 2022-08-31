@@ -5,14 +5,14 @@ in verifying that this package's contents are trustworthy.
 The installer have been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/git-for-windows/git/releases/download/v2.37.2.windows.2/Git-2.37.2.2-32-bit.exe>
-  64-Bit: <https://github.com/git-for-windows/git/releases/download/v2.37.2.windows.2/Git-2.37.2.2-64-bit.exe>
+  32-Bit: <https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-32-bit.exe>
+  64-Bit: <https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/Git-2.37.3-64-bit.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: 
-  checksum32: 672569B7041024B1FDB5C29CC9A775658BE78F7D3AFEA025973E07954F5070FA
-  checksum64: 6F91F1BB28B222F30C13F905A5E9B0AD491E67C28A37A238000DEF19F86E0A2F
+  checksum32: 5CC8E503989F0A3B3A5529C19074B07D83D7A6BC163532EFA577BDDBDDFE3DA3
+  checksum64: B0442F1B8EA40B6F94EF9A611121D2C204F6AA7F29C54315D2CE59876C3D134E
 
 File 'LICENSE.txt' is obtained from <https://github.com/git-for-windows/git/blob/703601d6780c32d33dadf19b2b367f2f79e1e34c/COPYING>
