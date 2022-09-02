@@ -53,10 +53,10 @@ function Get-LatestOPW {
   }
 }
 
-$releases = 'https://downloads.1password.com/win/1PasswordSetup-latest.exe'
+$releases = 'https://downloads.1password.com/win/1PasswordSetup-8.8.0.exe'
 
 function global:au_GetLatest {
-  $destination = Join-Path -Path $env:TEMP -ChildPath '1PasswordSetup-latest.exe'
+  $destination = Join-Path -Path $env:TEMP -ChildPath '1PasswordSetup-8.8.0.exe'
   Invoke-WebRequest -Uri $releases -UseBasicParsing -OutFile $destination
 
   (Get-ItemProperty $destination).VersionInfo.ProductVersion
