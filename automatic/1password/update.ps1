@@ -62,13 +62,13 @@ function global:au_GetLatest {
   (Get-ItemProperty $destination).VersionInfo.ProductVersion
 
   $version = Get-Item $destination | ForEach-Object { [System.Diagnostics.FileVersionInfo]::GetVersionInfo($_).FileVersion }
-  $checksum64 = Get-FileHash $destination | ForEach-Object Hash
+  $checksum = Get-FileHash $destination | ForEach-Object Hash
   Remove-Item $destination -ErrorAction:Stop
   @{
-      Version    = $version
-      URL64      = $releases
-      Checksum64 = $checksum64
+      Version     = $version
+      URL         = $releases
+      Checksum    = $checksum
   }
 }
 
-update -ChecksumFor 64 -Force:$Force
+update -ChecksumFor 32 -Force:$Force
