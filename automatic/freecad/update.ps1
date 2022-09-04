@@ -36,7 +36,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -FileNameBase "$($Latest.PackageName)"
-  $types = @("7z", "exe", "json")
+  $types = @("7z", "exe", "json", "zip")
   foreach ($file in $types) {
     Remove-Item ".\tools\*.${file}" -Force # Removal of downloaded files
   }

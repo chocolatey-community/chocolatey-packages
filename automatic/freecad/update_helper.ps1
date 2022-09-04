@@ -24,7 +24,7 @@ param(
       $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
       "Standard Development Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
       [version]$version = ( ( ($DevRevision),($year),($month),($day) ) -join "." )
-    $vert = "${version}-${kind}"
+      $vert = "${version}-${kind}"
     }
     'portable' {
       $mobile = "portable"
