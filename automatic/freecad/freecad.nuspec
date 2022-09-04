@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>0.19.4.2</version>
+    <version>30256.2022.9.4-dev</version>
     <title>FreeCAD</title>
     <owners>chocolatey-community,purity</owners>
     <authors>Jürgen Riegel</authors>
@@ -42,10 +42,12 @@ Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
 
 ### Notes
 
+- **If you should get a *Code 2* error while installing FreeCAD. Installing over existing installations is *NOT RECOMMENDED*. It is better to reinstall FreeCAD.**
+
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>A parametric 3D CAD modeler</summary>
-    <releaseNotes>https://www.freecadweb.org/wiki/Release_notes_0.19</releaseNotes>
+    <releaseNotes></releaseNotes>
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
