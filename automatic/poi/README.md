@@ -1,6 +1,6 @@
 # <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@5be34cac264309fd6bdaaa122aea08dd4ad32bb0/icons/poi.png" width="48" height="48"/> [poi](https://chocolatey.org/packages/poi)
 
-[poi](https://poi.io) is an open source Kancolle browser based on Electron. poi provides basic functionalities to enhance the gaming experience and is complemented by a variety of plugins. poi behaves the same as Chrome and does not modify game data, packets or implement bots/macros.
+[poi](https://poi.moe) is an open source Kancolle browser based on Electron. poi provides basic functionalities to enhance the gaming experience and is complemented by a variety of plugins. poi behaves the same as Chrome and does not modify game data, packets or implement bots/macros.
 
 More information could be obtained [here](https://github.com/poooi/poi/blob/master/README.md).
 
