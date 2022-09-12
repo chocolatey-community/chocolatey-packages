@@ -48,7 +48,7 @@ function Get-Waterfox {
   param(
     [string]$build
   )
-  $re = '\.exe$'
+  $re = 'Setup\.exe$'
   if ($build -eq 'Classic') {
     $download_page = Invoke-WebRequest -Uri $releases_classic -UseBasicParsing
     $sourceUrl = 'https://github.com/WaterfoxCo/Waterfox-Classic'
@@ -62,7 +62,7 @@ function Get-Waterfox {
 
   $url = $download_page.links | ? href -match $re | select -First 1 -expand href
   if (!$url) {
-    $re = 'Setup\.exe$' # If we didn't get a url with the previous regex, we use a much simpler way
+    $re = '\.exe$' # If we didn't get a url with the previous regex, we use a much simpler way
     $url = $download_page.links | ? href -match $re | select -First 1 -expand href
   }
 
