@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Waterfox</id>
-    <version>22094.1.5</version>
+    <version>22094.1.5.20220912</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/waterfox</packageSourceUrl>
     <owners>chocolatey-community,tonigellida,admiringworm</owners>
     <title>Waterfox </title>
