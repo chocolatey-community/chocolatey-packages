@@ -5,7 +5,7 @@
     <title>Vim</title>
     <version>9.0.0447</version>
     <authors>Bram Moolenaar, Vim Community</authors>
-    <owners>chocolatey-community, Rob Reynolds, matsuhav</owners>
+    <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>Vim is an advanced text editor that seeks to provide the power of the de-facto Unix editor 'Vi', with a more complete feature set. It's useful whether you're already using vi or using a different editor.</summary>
     <description><![CDATA[Vim is a highly configurable text editor built to enable efficient text editing. It is an improved version of the vi editor distributed with most UNIX systems.
 

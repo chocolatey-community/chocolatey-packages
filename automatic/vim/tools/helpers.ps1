@@ -6,9 +6,10 @@
   }
   return Get-ToolsLocation
 }
+
 function Get-Statement()
 {
-  $options      = '-create-batfiles vim gvim evim view gview vimdiff gvimdiff -install-openwith -add-start-menu'
+  $options      = '-create-batfiles vim gvim evim view gview vimdiff gvimdiff vimtutor -install-openwith -add-start-menu'
   $createvimrc  = '-create-vimrc -vimrc-remap no -vimrc-behave default -vimrc-compat all'
   $installpopup = '-install-popup'
   $installicons = '-install-icons'
@@ -30,6 +31,7 @@ function Get-Statement()
   }
   return $options, $createvimrc, $installpopup, $installicons -join ' '
 }
+
 # Replace old ver dir with symlink
 # Use mklink because New-Item -ItemType SymbolicLink doesn't work in test-env
 # Use rmdir because Powershell cannot unlink directory symlink
