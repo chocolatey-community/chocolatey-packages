@@ -39,14 +39,14 @@ function Install-Python {
   $packageArgs = @{
     packageName    = 'python3'
     fileType       = 'exe'
-    file           = "$toolsPath\python-3.10.7.exe"
+    file           = "$toolsPath\python-3.11.0rc2.exe"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath={0} TargetDir="{1}"' -f $prependPath, $installDir
     validExitCodes = @(0)
     softwareName   = 'Python 3*'
   }
 
   if (!$only32Bit) {
-    $packageArgs['file64'] = "$toolsPath\python-3.10.7-amd64.exe"
+    $packageArgs['file64'] = "$toolsPath\python-3.11.0rc2-amd64.exe"
   }
   else {
     $packageArgs['packageName'] = '32-bit python3'

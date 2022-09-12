@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubelogin</id>
-    <version>1.25.2</version>
+    <version>1.25.3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/kubelogin</packageSourceUrl>
     <owners>chocolatey-community,jetersen</owners>
     <title>Kubelogin (CLI)</title>
@@ -38,7 +38,7 @@ users:
       command: kubelogin
 ```
 ]]></description>
-    <releaseNotes>https://github.com/int128/kubelogin/releases/tag/v1.25.2</releaseNotes>
+    <releaseNotes>https://github.com/int128/kubelogin/releases/tag/v1.25.3</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

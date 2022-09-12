@@ -8,7 +8,7 @@ location on <https://github.com/int128/kubelogin/releases/latest>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-bit software: <https://github.com/int128/kubelogin/releases/download/v1.25.2/kubelogin_windows_amd64.zip>
+  64-bit software: <https://github.com/int128/kubelogin/releases/download/v1.25.3/kubelogin_windows_amd64.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: 2DB37991462CA19ACDACA25EFF025AD9E13CA0F0943ED985505269963C26BAA4
+  checksum64: 0398922FB50411119FE110EBB4E0E15D8725890CE764B3996B0563C5478C4148
 
 File 'LICENSE.txt' is obtained from <https://github.com/kubernetes/kubernetes/blob/d30db1f9a915aa95402e1190461469a1889d92be/LICENSE>
