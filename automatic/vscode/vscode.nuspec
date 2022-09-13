@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode</id>
     <title>Visual Studio Code</title>
-    <version>1.71.0</version>
+    <version>1.71.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
@@ -44,7 +44,7 @@ Example: `choco install vscode --params "/NoDesktopIcon /DontAddToPath"`
 ]]></description>
     <tags>microsoft visualstudiocode vscode development editor ide javascript typescript admin foss cross-platform</tags>
     <dependencies>
-      <dependency id="vscode.install" version="[1.71.0]" />
+      <dependency id="vscode.install" version="[1.71.1]" />
     </dependencies>
     <releaseNotes>https://code.visualstudio.com/Updates</releaseNotes>
   </metadata>
