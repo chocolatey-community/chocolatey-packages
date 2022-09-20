@@ -1,20 +1,25 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
+$silentArgs     = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+$fileType   = 'msi'
 
 $packageArgs = @{
-  PackageName    = $env:ChocolateyPackageName
-  fileType       = 'exe'
-  file64         = Get-Item $toolsPath\*.exe
-  silentArgs     = '/auto'
-  validExitCodes = @(0, 1641, 3010)
-  softwareName   = 'Paint.NET*'
+  packageName = 'paint.net'
+  file        = gi $toolsPath\*_x32.zip
+  file64      = gi $toolsPath\*_x64.zip
+  destination = $toolsPath
+  softwareName = 'Paint.NET*'
 }
 
-Install-ChocolateyInstallPackage @packageArgs
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' }}
+Get-ChocolateyUnzip @packageArgs
+Remove-Item $toolsPath\*.zip -ea 0
 
-$packageName = $packageArgs.packageName
+$FileFullPath = Get-ChildItem $toolsPath -Recurse -Include *.msi | Sort-Object -Descending | Select-Object -First 1
+
+Install-ChocolateyInstallPackage -packageName 'paint.net' $fileType $silentArgs $FileFullPath
+
+
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
 Write-Host "$packageName installed to '$installLocation'"

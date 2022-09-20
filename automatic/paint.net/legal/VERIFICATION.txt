@@ -6,8 +6,9 @@ in verifying that this package's contents are trustworthy.
 Package can be verified like this:
 
 1. Go to
-
-   x64: https://github.com/paintdotnet/release/releases/download/v4.3.12/paint.net.4.3.12.install.x64.zip
+   
+   x32: https://github.com/paintdotnet/release/releases/download/v4.3.12/paint.net.4.3.12.winmsi.x86.zip
+   x64: https://github.com/paintdotnet/release/releases/download/v4.3.12/paint.net.4.3.12.winmsi.x64.zip
 
    to download the installer.
 
@@ -15,7 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: FE5A5A56867361819135C3544469260C46ED691396B677FA5E72C800FD313F24
+   checksum32: 7D61BA2A7AB38AB6828ED9D478C212566F97820DAB3E80A76AF37B7A2A11C8D8
+   checksum64: 9A36A6AA7D2BB09D14FC6100F8F34BDED46A0E87E449BE043E601A5F4F9D5D88
 
 File 'license.txt' is obtained from:
    https://www.getpaint.net/license.html
