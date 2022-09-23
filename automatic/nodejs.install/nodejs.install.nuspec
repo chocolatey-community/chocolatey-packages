@@ -4,7 +4,7 @@
   <metadata>
     <id>nodejs.install</id>
     <title>Node JS (Install)</title>
-    <version>18.9.0</version>
+    <version>18.9.1</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
