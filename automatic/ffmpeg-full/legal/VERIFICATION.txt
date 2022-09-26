@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 0472727DBFC7B60858310B147A1C4237CB87C54B488B76031DF383541C888EF0
+   checksum64: 037BDB2183189DC0EFA642B1FDE7D6B33C6114036FA06FAF35F777E8DF07D863
 
 File 'LICENSE.txt' is obtained from:
    https://git.ffmpeg.org/gitweb/ffmpeg.git/blob_plain/HEAD:/COPYING.GPLv3
