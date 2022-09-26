@@ -3,7 +3,7 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     packageName    = 'es'
-    FileFullPath   = "$toolsDir\ES-1.1.0.24.zip"
+    FileFullPath   = "$toolsDir\ES-1.1.0.26.zip"
     Destination    = $toolsDir
 }
 
