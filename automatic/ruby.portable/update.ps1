@@ -1,6 +1,7 @@
 import-module au
 
 $releases = 'https://rubyinstaller.org/downloads/archives/'
+$fixBelowVersion = '3.1.3'
 
 function global:au_SearchReplace {
   @{
@@ -45,7 +46,12 @@ function GetStreams() {
       Write-Host "Skipping due to missing installer: '$version'"; return
     }
 
-    $streams.$versionTwoPart = @{ URL32 = $url32 ; URL64 = $url64 ; Version = Get-FixVersion -Version $version -OnlyFixBelowVersion "2.5.4" }
+    $fixBelowVersion = switch ($versionTwoPart) {
+      '3.1' { '3.1.3' }
+      default { '0.0.0' }
+    }
+
+    $streams.$versionTwoPart = @{ URL32 = $url32 ; URL64 = $url64 ; Version = Get-FixVersion -Version $version -OnlyFixBelowVersion $fixBelowVersion }
   }
 
   Write-Host $streams.Count 'streams collected'
