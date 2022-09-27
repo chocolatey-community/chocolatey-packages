@@ -27,5 +27,6 @@ Example: `choco install vscode-insiders.install --params "/NoDesktopIcon /DontAd
 
 - The package uses default install options except that it adds context menu entries and Visual Studio Code Insiders isn't started after installation.
 - For disabling the auto-update functionality see the [Visual Studio Code Auto Update Deactivation package](https://chocolatey.org/packages/visualstudiocode-disableautoupdate).
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 
 ![screenshot](https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@ae1af716af9c16500e7f6f45d650f1dbf3d372fd/automatic/vscode-insiders/screenshot.png)
