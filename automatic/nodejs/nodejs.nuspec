@@ -4,7 +4,7 @@
   <metadata>
     <id>nodejs</id>
     <title>Node JS</title>
-    <version>18.9.1</version>
+    <version>18.10.0</version>
     <authors>Node.js Foundation</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>Node JS - Evented I/O for v8 JavaScript.</summary>
@@ -30,7 +30,7 @@ This package runs the official Node JS installer, resulting in Node.exe and NPM 
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ba5adf020e09cd0e51107206ef3ec390035a6e90/icons/nodejs.png</iconUrl>
     <dependencies>
-      <dependency id="nodejs.install" version="[18.9.1]" />
+      <dependency id="nodejs.install" version="[18.10.0]" />
     </dependencies>
   </metadata>
   <files>
