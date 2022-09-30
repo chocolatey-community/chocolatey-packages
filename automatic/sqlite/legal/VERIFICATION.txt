@@ -7,9 +7,9 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://sqlite.org/2022/sqlite-dll-win32-x86-3390300.zip
-   x64: https://sqlite.org/2022/sqlite-dll-win64-x64-3390300.zip
-   Toolsx32: https://sqlite.org/2022/sqlite-tools-win32-x86-3390300.zip
+   x32: https://sqlite.org/2022/sqlite-dll-win32-x86-3390400.zip
+   x64: https://sqlite.org/2022/sqlite-dll-win64-x64-3390400.zip
+   Toolsx32: https://sqlite.org/2022/sqlite-tools-win32-x86-3390400.zip
 
    to download the files.
 
@@ -17,9 +17,9 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 0A467C745638628346673A568047C466DF49432A453511551B02434BD2CCEA8C
-   checksum64: 8789C6D0B07A229B822B302C1B311D8A040D008A40EC8F96C2D6EEB2C57DFA15
-   checksumTools32: 3DF9F326536DD1DAD1C1516E9104C33C5EEF25B62004ADC435A329306E2FB22A
+   checksum32: FF0E21B873342E7036BEC78CD9A80CC075D286F24DBCCB07B95ED0B20508D2F7
+   checksum64: AB048420FCF936CD8D78904237D0BBCE604EBB4AE868C43716FAAA0B3C70C1F6
+   checksumTools32: 5FAF62F2C75B32ED9B795607FD29E82E6105BC8AEEB1E13DC80E67BE373C5ED3
 
 File 'license.txt' is obtained from the following URL (and converted to markdown):
    http://www.sqlite.org/copyright.html
