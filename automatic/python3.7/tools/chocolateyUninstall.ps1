@@ -1,3 +1,3 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 Uninstall-BinFile $env:ChocolateyPackageName
