@@ -13,6 +13,7 @@
 
 */ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
 */python*             @chocolatey-community/chocolatey-team-maintainers
+*/python3.*           @jack1142
 */calibre*            @gep13 @AdmiringWorm
 */cdburnerxp*         @gep13
 */poweriso*           @gep13
