@@ -4,7 +4,7 @@
     <id>python3.7</id>
     <version>3.7.9</version>
     <title>Python 3.7</title>
-    <owners>jack1142</owners>
+    <owners>chocolatey-community,jack1142</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>https://www.python.org</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
@@ -15,7 +15,7 @@ Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.]]></
     <licenseUrl>https://docs.python.org/3.7/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/python/cpython</projectSourceUrl>
-    <packageSourceUrl>https://github.com/jack1142/choco-auto/tree/main/automatic/python3.7</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3.7</packageSourceUrl>
     <docsUrl>https://docs.python.org/3.7/</docsUrl>
     <mailingListUrl>https://www.python.org/community/lists/</mailingListUrl>
     <bugTrackerUrl>https://github.com/python/cpython/issues</bugTrackerUrl>
