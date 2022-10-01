@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>python3.11</id>
+    <version>3.11.0-rc2</version>
+    <title>Python 3.11</title>
+    <owners>jack1142</owners>
+    <authors>Python Software Foundation</authors>
+    <projectUrl>https://www.python.org</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
+    <copyright>Copyright © 2001-2022 Python Software Foundation. All rights reserved.
+Copyright © 2000 BeOpen.com. All rights reserved.
+Copyright © 1995-2000 Corporation for National Research Initiatives. All rights reserved.
+Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.</copyright>
+    <licenseUrl>https://docs.python.org/3.11/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/python/cpython</projectSourceUrl>
+    <packageSourceUrl>https://github.com/jack1142/choco-auto/tree/main/automatic/python3.11</packageSourceUrl>
+    <docsUrl>https://docs.python.org/3.11/</docsUrl>
+    <mailingListUrl>https://www.python.org/community/lists/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/python/cpython/issues</bugTrackerUrl>
+    <tags>python3 python programming development foss cross-platform admin</tags>
+    <summary>Python 3.11 is a programming language that lets you work quickly and integrate systems more effectively.</summary>
+    <description>Python is an interpreted, interactive, object-oriented programming language. It incorporates modules, exceptions, dynamic typing, very high level dynamic data types, and classes. It supports multiple programming paradigms beyond object-oriented programming, such as procedural and functional programming. Python combines remarkable power with very clear syntax. It has interfaces to many system calls and libraries, as well as to various window systems, and is extensible in C or C++. It is also usable as an extension language for applications that need a programmable interface. Finally, Python is portable: it runs on many Unix variants including Linux and macOS, and on Windows.</description>
+    <releaseNotes>https://docs.python.org/3.11/whatsnew/3.11.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
