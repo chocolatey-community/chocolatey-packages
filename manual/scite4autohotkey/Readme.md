@@ -19,3 +19,4 @@ SciTE4AutoHotkey is a lightweight and easy to use [SciTE-based](http://www.scint
 
 - This package uses an AutoHotkey-script for unattended installation.
 - Installation pops up a message to update, unfortunately this have not been automated.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
