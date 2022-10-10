@@ -27,3 +27,4 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 * Starting in v8.3.3.20220321 and above the Notepad++ process will be closed during upgrade and uninstalls.
   This may in rare cases result in data loss if there are unsaved text files open. Make sure all files are
   saved before upgrading or uninstalling this package.
+* **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
