@@ -9,3 +9,7 @@ Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio f
 
 These parameters can be passed to the installer with the use of `--package-parameters`.
 For example: `choco install --package-parameters='"/NoDesktopShortcut /NoContextMenu"'`
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
