@@ -4,7 +4,7 @@
   <metadata>
     <id>vscode.install</id>
     <title>Visual Studio Code (Install)</title>
-    <version>1.72.0</version>
+    <version>1.72.1</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community</owners>
     <projectUrl>https://code.visualstudio.com</projectUrl>
