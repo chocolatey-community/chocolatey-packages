@@ -1,5 +1,6 @@
 import-module au
 import-module .\..\..\extensions\extensions.psm1
+Import-Module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 $releases = 'https://www.virtualbox.org/wiki/Download_Old_Builds'
 
@@ -15,6 +16,17 @@ function GetLatest {
     URL32         = $url
     URLep         = "${base_url}Oracle_VM_VirtualBox_Extension_Pack-${version}.vbox-extpack"
     Version       = $version
+  }
+}
+
+function global:au_AfterUpdate {
+  $nuspecPath = ".\$($Latest.PackageName).nuspec"
+
+  Clear-DependenciesList $nuspecPath
+  Add-Dependency $nuspecPath 'chocolatey-core.extension' '1.3.3'
+
+  if ([Version] $Latest.Stream -ge '7.0') {
+    Add-Dependency $nuspecPath 'vcredist140' '14.20.27508.1'
   }
 }
 
