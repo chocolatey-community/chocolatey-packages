@@ -36,6 +36,7 @@
 */selenium-chrome-driver* @chocolatey-community/chocolatey-team-maintainers
 */intunewinapputil*   @chocolatey-community/chocolatey-team-maintainers
 */freecad*            @redbaron2
+*/selenium-chromium-edge-driver* @chocolatey-community/chocolatey-team-maintainers @AdmiringWorm
 
 # Other
 # This can be any file other that won't be matched as a package

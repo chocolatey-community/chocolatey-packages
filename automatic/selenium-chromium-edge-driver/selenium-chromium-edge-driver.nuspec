@@ -6,7 +6,7 @@
     <version>0.0</version>
     <title>Selenium Chromium Edge Driver</title>
     <authors>Chromium and Microsoft teams</authors>
-    <owners>agabrys</owners>
+    <owners>chocolatey-community,agabrys,laurin1,AdmiringWorm</owners>
     <projectUrl>https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</projectUrl>
     <!-- Do not touch the icon URL, it will be updated automatically during the update check -->
     <iconUrl></iconUrl>

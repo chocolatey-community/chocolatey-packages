@@ -5,6 +5,9 @@ $releases = "https://developer.microsoft.com/en-us/microsoft-edge/tools/webdrive
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
   $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $Latest.ChecksumType64
+
+  $Latest.FileName32 = Split-Path -Leaf $Latest.URL32
+  $Latest.FileName64 = Split-Path -Leaf $Latest.URL64
 }
 
 function Get-EdgePackageVersion {
@@ -24,6 +27,10 @@ function global:au_SearchReplace {
       "(?i)^(\s*checksum64\s*=\s*)'.*'"     = "`${1}'$($Latest.Checksum64)'"
       "(?i)^(\s*checksumType\s*=\s*)'.*'"   = "`${1}'$($Latest.ChecksumType32)'"
       "(?i)^(\s*checksumType64\s*=\s*)'.*'" = "`${1}'$($Latest.ChecksumType64)'"
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
+      "(?i)(^\s*)'.*'(\s*# 32bit)" = "`${1}'$($Latest.FileName32)'`${2}"
+      "(?i)(^\s*)'.*'(\s*# 64bit)" = "`${1}'$($Latest.FileName64)'`${2}"
     }
   }
 }

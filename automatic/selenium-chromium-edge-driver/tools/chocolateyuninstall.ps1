@@ -1,19 +1,15 @@
-﻿$toolsLocation = Get-ToolsLocation
-$seleniumDir = "$toolsLocation\selenium"
-
-If (Test-Path -Path $seleniumDir) {
-  $driverPath = "$seleniumDir\msedgedriver.exe"
-  If (Test-Path -Path $driverPath) {
-    Remove-Item -Path $driverPath -Force
-  }
-
-  $directoryInfo = Get-ChildItem -Path $seleniumDir | Measure-Object
-  If ($directoryInfo.count -eq 0) {
-    Remove-Item -Path $seleniumDir -Force
-  }
-}
+﻿$ErrorActionPreference = 'Stop'
 
 Uninstall-BinFile -Name 'msedgedriver'
+
+$zipPackages = @(
+  '' # 32bit
+  '' # 64bit
+)
+
+$zipPackages | % {
+  Uninstall-ChocolateyZipPackage -PackageName $env:ChocolateyPackageName -ZipFileName $_
+}
 
 $menuPrograms = [environment]::GetFolderPath([environment+specialfolder]::Programs)
 $shortcutDir = "$menuPrograms\Selenium"
