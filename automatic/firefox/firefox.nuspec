@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <version>105.0.3</version>
+    <version>106.0</version>
     <authors>Mozilla</authors>
     <projectUrl>https://www.mozilla.org/en-US/firefox/new/</projectUrl>
     <projectSourceUrl>https://hg.mozilla.org/mozilla-central/</projectSourceUrl>
@@ -63,7 +63,7 @@ Command-line options for installer configuration. See the [official page](https:
 ]]></description>
     <summary>Bringing together all kinds of awesomeness to make browsing better for you</summary>
     <tags>browser mozilla firefox admin foss cross-platform</tags>
-    <releaseNotes>https://www.mozilla.org/en-US/firefox/105.0.3/releasenotes/</releaseNotes>
+    <releaseNotes>https://www.mozilla.org/en-US/firefox/106.0/releasenotes/</releaseNotes>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/firefox</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
