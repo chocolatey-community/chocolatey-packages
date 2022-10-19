@@ -13,3 +13,5 @@ Security is a high priority and code review is always done with security in mind
   For a list of libraries included, go to https://www.gyan.dev/ffmpeg/builds/#libraries
   note that the list of libraries at the URL above will give those for the most recent version and may differ slightly from this package version
 * With version 4.4 the format of the version-number changed up until the next two releases it is expected that the flag `--version` is broken
+* **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+
