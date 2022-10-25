@@ -28,7 +28,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $tags = Get-GitHubRelease -Owner $owner -Name $repository -Latest
+  $tags = Get-GitHubRelease -Owner $owner -Name $repository
 
   $re = '\.exe$'
   $url = $tags.assets.browser_download_url | Where-Object {$_ -match $re} | Select-Object -First 1
