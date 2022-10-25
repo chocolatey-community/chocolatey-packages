@@ -26,7 +26,7 @@ $packageArgs = @{
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
-  validExitCodes         = @(0)
+  validExitCodes         = @(0, 3010)
   softwareName           = 'Oracle VM VirtualBox *'
 }
 Install-ChocolateyPackage @packageArgs
