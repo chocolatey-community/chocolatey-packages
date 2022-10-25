@@ -4,7 +4,9 @@ param([switch] $Force)
 Import-Module AU
 
 $domain   = 'https://github.com'
-$releases = "$domain/kubernetes/minikube/releases/latest"
+$releases = "$domain/repos/kubernetes/minikube/releases/latest"
+$owner = "kubernetes"
+$repository = "minikube"
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix -FileNameBase "minikube"
@@ -26,10 +28,10 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $tags = Get-GitHubRelease -Owner $owner -Name $repository
 
   $re = '\.exe$'
-  $url = $download_page.links | ? href -match $re | % href | select -First 1
+  $url = $tags.assets.browser_download_url | Where-Object {$_ -match $re} | Select-Object -First 1
 
   $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
 
