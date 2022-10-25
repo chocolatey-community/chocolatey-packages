@@ -9,7 +9,11 @@ $validExitCodes = @(0, 1638, 3010)
 $force = $Env:chocolateyPackageParameters -like '*Force*'
 
 Write-Verbose 'Checking Service Pack requirements'
-$os = Get-WmiObject -Class Win32_OperatingSystem
+if ($null -ne (Get-Command -Name Get-CimInstance -ErrorAction SilentlyContinue)) {
+    $os = Get-CimInstance -ClassName Win32_OperatingSystem
+} else {
+    $os = Get-WmiObject -Class Win32_OperatingSystem
+}
 $version = [Version]$os.Version
 if ($version -ge [Version]'6.1' -and $version -lt [Version]'6.2' -and $os.ServicePackMajorVersion -lt 1)
 {
