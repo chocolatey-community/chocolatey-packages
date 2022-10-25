@@ -17,7 +17,7 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
-if ( $packageArgs.filetype -eq '7z' ) {
+if (( $packageArgs.filetype -eq '7z' ) -or ( $packageArgs.filetype -eq 'zip' )) {
   # Checking for Package Parameters
   $pp = ( Get-UserPackageParams -scrawl )
   if ($packageArgs.url64 -match "Conda") { $packageArgs.Remove("url"); $packageArgs.Remove("checksum"); $packageArgs.Remove("checksumType"); }
