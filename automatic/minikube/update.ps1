@@ -3,11 +3,6 @@ param([switch] $Force)
 
 Import-Module AU
 
-$domain   = 'https://github.com'
-$releases = "$domain/repos/kubernetes/minikube/releases/latest"
-$owner = "kubernetes"
-$repository = "minikube"
-
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix -FileNameBase "minikube"
 }
@@ -28,18 +23,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $tags = Get-GitHubRelease -Owner $owner -Name $repository
-
-  $re = '\.exe$'
-  $url = $tags.assets.browser_download_url | Where-Object {$_ -match $re} | Select-Object -First 1
-
-  $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
+  $LatestRelease = Get-GitHubRelease kubernetes minikube
 
   return @{
-    Version     = $version
-    URL64       = "https://storage.googleapis.com/minikube/releases/v${version}/minikube-windows-amd64.exe"
-    ReleaseNotes= "$domain/kubernetes/minikube/blob/v${version}/CHANGELOG.md"
-    ReleaseURL  = "$domain/kubernetes/minikube/releases/tag/v${version}"
+    Version     = $LatestRelease.tag_name.TrimStart("v")
+    URL64       = $LatestRelease.assets | Where-Object {$_.name -eq "minikube-windows-amd64.exe"} | Select-Object -ExpandProperty browser_download_url
+    ReleaseNotes= "https://github.com/kubernetes/minikube/blob/$($LatestRelease.tag_name)/CHANGELOG.md"
+    ReleaseURL  = $LatestRelease.html_url
     PackageName = 'Minikube' # Casing is not in all lowercase on chocolatey.org
   }
 }
