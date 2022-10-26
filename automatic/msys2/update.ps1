@@ -1,7 +1,5 @@
 import-module au
 
-$releases = 'https://github.com/msys2/msys2-installer/releases/latest'
-
 function global:au_SearchReplace {
    @{
         ".\legal\VERIFICATION.txt" = @{
@@ -14,18 +12,26 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest {
-    $re64 = 'msys2-base-x86_64-(\d+)\.tar\.xz$'
+    # We use this method because the nightly builds are published without prerelease
+    $ReleaseRequest = @{
+        Uri = "https://api.github.com/repos/msys2/msys2-installer/releases"
+    }
 
-    $baseUrl = $([System.Uri]$releases).Scheme + '://' + $([System.Uri]$releases).Authority
+    if (-not [string]::IsNullOrEmpty($env:github_api_key)) {
+        $ReleaseRequest.Headers = @{
+            Authorization = "Bearer $($env:github_api_key)"
+        }
+    }
 
-    $download_page = Invoke-WebRequest -Uri "$releases" -UseBasicParsing
-
-    $url64 = $download_page.Links | ? href -match $re64 | select -First 1 | % { "$baseUrl" + $_.href }
-    $version64 = [regex]::match($url64,$re64).Groups[1].Value
+    $LatestRelease = (Invoke-RestMethod @ReleaseRequest  |
+        Where-Object {$_.tag_name -notmatch "^nightly"} |
+        Sort-Object published_at)[0]
 
     @{
-        Version      = "$version64.0.0"
-        URL64        = $url64
+        URL64        = $LatestRelease.assets | Where-Object {
+            $_.name -match '^msys2-base-x86_64-(?<Version>\d+)\.tar\.xz$'
+        } | Select-Object -ExpandProperty browser_download_url
+        Version      = "$($Matches.Version).0.0"
     }
 }
 
