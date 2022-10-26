@@ -46,7 +46,7 @@ if ($pp.NoLockdown) {
 } else {
   . "$toolsPath/helpers.ps1"
   Protect-InstallFolder `
-    -packageName "python3" `
+    -packageName $env:ChocolateyPackageName `
     -defaultInstallPath $defaultFolder `
     -folder $installLocation  
 }

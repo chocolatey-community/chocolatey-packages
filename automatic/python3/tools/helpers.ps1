@@ -42,17 +42,28 @@ function Install-Python {
     file           = "$toolsPath\python-3.12.0a2.exe"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath={0} TargetDir="{1}"' -f $prependPath, $installDir
     validExitCodes = @(0)
-    softwareName   = 'Python 3*'
+  }
+
+  if ($packageArgs['packageName'] -eq 'python3') {
+    $minor_version = ''
+    $packageArgs['softwareName'] = 'Python 3*'
+  } else {
+    $minor_version = $packageArgs['packageName'].Substring('python3'.Length)
+    $packageArgs['softwareName'] = "Python 3.$minor_version.*"
   }
 
   if (!$only32Bit) {
     $packageArgs['file64'] = "$toolsPath\python-3.12.0a2-amd64.exe"
   }
   else {
-    $packageArgs['packageName'] = '32-bit python3'
+    $packageArgs['packageName'] = "32-bit $($packageArgs['packageName'])"
   }
 
   Install-ChocolateyInstallPackage @packageArgs
+  if ($minor_version) {
+    # create python3.x shim
+    Install-BinFile "python3.$minor_version" "$installDir\python.exe"
+  }
 }
 
 function Get-LocalizedWellKnownPrincipalName {
