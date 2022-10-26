@@ -3,9 +3,6 @@ param([switch] $Force)
 
 Import-Module AU
 
-$domain   = 'https://github.com'
-$releases = "$domain/minishift/minishift/releases/latest"
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
@@ -24,17 +21,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '-windows-amd64\.zip$'
-  $url = $download_page.links | ? href -match $re | % href | select -First 1
-
-  $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
+  $LatestRelease = Get-GitHubRelease minishift minishift
 
   return @{
-    Version     = $version
-    URL64       = $domain + $url
-    ReleaseURL  = "$domain/minishift/minishift/releases/tag/v${version}"
+    Version     = $LatestRelease.tag_name.TrimStart("v")
+    URL64       = $LatestRelease.assets | Where-Object {$_.name.EndsWith("-windows-amd64.zip")} | Select-Object -ExpandProperty browser_download_url
+    ReleaseURL  = $LatestRelease.html_url
   }
 }
 
