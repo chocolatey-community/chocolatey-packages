@@ -1,7 +1,5 @@
 import-module au
 
-$releases = 'https://github.com/protocolbuffers/protobuf/releases'
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
@@ -24,19 +22,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-
-
-    $download_page = Invoke-WebRequest -Uri "$releases" -UseBasicParsing
-    $url32 = $download_page.links | ? href -match '/protoc-(\d+\.\d+\.\d+)-win32\.zip$' | % href | select -First 1
-    $url64 = $download_page.links | ? href -match '/protoc-(\d+\.\d+\.\d+)-win64\.zip$' | % href | select -First 1
-
-    $version = $Matches[1]
+    $LatestRelease = Get-GitHubRelease protocolbuffers protobuf
 
     @{
-        URL32   = "https://github.com/$url32"
-        URL64   = "https://github.com/$url64"
-        Version = $version
-        ReleaseNotes = "${releases}/tag/v${version}"
+        URL32   = $LatestRelease.assets | Where-Object {$_.name -match 'protoc-(?<Version>(\d+\.?){2,3})-win32\.zip$'} | Select-Object -ExpandProperty browser_download_url
+        URL64   = $LatestRelease.assets | Where-Object {$_.name -match 'protoc-(?<Version>(\d+\.?){2,3})-win64\.zip$'} | Select-Object -ExpandProperty browser_download_url
+        Version = $LatestRelease.tag_name.TrimStart("v")
+        ReleaseNotes = $LatestRelease.html_url
     }
 }
 
