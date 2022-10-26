@@ -1,7 +1,5 @@
 ﻿import-module au
 
-$releases = 'https://github.com/composer/windows-setup/releases'
-
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -25,14 +23,12 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $re = '\.exe$'
-  $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
-  $version = ($url -split '/' | Select-Object -Last 1 -Skip 1).Replace('v', '')
+  $LatestRelease = Get-GitHubRelease composer windows-setup
+
   @{
-    URL32        = 'https://github.com' + $url
-    Version      = $version
-    ReleaseNotes = "https://github.com/composer/windows-setup/releases/tag/v${version}"
+    URL32        = $LatestRelease.assets | Where-Object {$_.name.EndsWith(".exe")} | Select-Object -ExpandProperty browser_download_url
+    Version      = $LatestRelease.tag_name.TrimStart("v")
+    ReleaseNotes = $LatestRelease.html_url
   }
 }
 
