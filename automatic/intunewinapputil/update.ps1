@@ -1,20 +1,12 @@
 ﻿Import-Module AU
 
-$releases = "https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/releases/latest"
-
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
-
-  $urlRegex = '\.zip'
-  $url = $download_page.Links | Where-Object href -Match $urlRegex | Select-Object -First 1 -ExpandProperty href
-
-  $version = ($url -split '\/v?' | Select-Object -Last 1).Replace('.zip', '')
+  $LatestRelease = Get-GitHubRelease microsoft Microsoft-Win32-Content-Prep-Tool
 
   @{
-    Url32   = "https://github.com$url"
-    Version = $version
+    Version = $LatestRelease.tag_name.TrimStart("v")
+    Url32   = "https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/archive/refs/tags/$($LatestRelease.tag_name).zip"
   }
-
 }
 
 function global:au_SearchReplace {
