@@ -1,7 +1,5 @@
 ﻿Import-Module AU
 
-$releases     = 'https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/latest'
-
 function global:au_SearchReplace {
   [version]$version = $Latest.RemoteVersion
   $docsUrl = "http://www.ghostscript.com/doc/$($version)/Readme.htm"
@@ -15,30 +13,25 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $LatestRelease = Get-GitHubRelease ArtifexSoftware ghostpdl-downloads
 
-  # Linux version uses the correct version as we expect, so we use that
-  # version as the base.
+  $Url32 = $LatestRelease.assets | Where-Object {$_.name -eq "$($LatestRelease.tag_name)w32.exe"} | Select-Object -ExpandProperty browser_download_url
+  $Url64 = $LatestRelease.assets | Where-Object {$_.name -eq "$($LatestRelease.tag_name)w64.exe"} | Select-Object -ExpandProperty browser_download_url
 
-  $linuxTarbal = $download_page.Links | ? href -match 'ghostscript-.*.tar.gz' | select -First 1 -ExpandProperty href
+  # Linux version easily exposes the correct version as we expect so we use
+  # that version as the base. Could use release name, but doesn't match pre-release.
+  $LinuxRelease = $LatestRelease.assets | Where-Object {$_.name -match "ghostscript-.+\.tar\.gz"} | Select-Object -ExpandProperty name
+  $Version = $LinuxRelease -replace "^ghostscript-(?<Version>.+)\.tar\.gz$", '${Version}'
 
-  $version = $linuxTarbal -split '-|\.tar' | select -Last 1 -Skip 1
-
-  $re = "gs$($version -replace '\.')w32\.exe$"
-  $url32 = $download_page.Links | ? href -match $re | % { [uri]::new($download_page.BaseResponse.ResponseUri, $_.href) } | select -first 1
-
-  $re = "gs$($version -replace '\.')w64\.exe$"
-  $url64 = $download_page.links | ? href -match $re | % { [uri]::new($download_page.BaseResponse.ResponseUri, $_.href) } | select -first 1
-
-  if (!$url32 -or !$url64) {
+  if (!$Url32 -or !$Url64) {
     throw "Either 32bit or 64bit URL is missing, please verify this is correct!"
   }
 
   @{
-    URL32 = $url32
-    URL64 = $url64
-    Version = $version
-    RemoteVersion = $version
+    URL32 = $Url32
+    URL64 = $Url64
+    Version = $Version
+    RemoteVersion = $Version
     PackageName = 'Ghostscript'
   }
 }
