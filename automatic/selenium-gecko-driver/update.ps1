@@ -1,8 +1,5 @@
 ﻿Import-Module AU
 
-$domain = 'https://github.com'
-$releases = "$domain/mozilla/geckodriver/releases/latest"
-
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 }
@@ -24,25 +21,13 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $releasesUrl = Get-RedirectedUrl $releases
-
-  $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
-
-  $url32 = $download_page.Links | ? href -match 'win32\.zip$' | select -First 1 -ExpandProperty href
-  $url64 = $download_page.Links | ? href -match 'win64\.zip$' | select -First 1 -ExpandProperty href
-
-  $version32 = $url32 -split '/' | select -last 1 -skip 1 | % { Get-Version $_ }
-  $version64 = $url64 -split '/' | select -last 1 -skip 1 | % { Get-Version $_ }
-
-  if ($version32 -ne $version64) {
-    throw "Version mismatch between 32bit and 64bit (32bit: $version32, 64bit: $version64)"
-  }
+  $LatestRelease = Get-GitHubRelease mozilla geckodriver
 
   @{
-    URL32       = $domain + $url32
-    URL64       = $domain + $url64
-    Version     = $version32
-    ReleasesUrl = $releasesUrl
+    URL32       = $LatestRelease.assets | Where-Object {$_.name.EndsWith('win32.zip')} | Select-Object -ExpandProperty browser_download_url
+    URL64       = $LatestRelease.assets | Where-Object {$_.name.EndsWith('win64.zip')} | Select-Object -ExpandProperty browser_download_url
+    Version     = $LatestRelease.tag_name.TrimStart("v")
+    ReleasesUrl = $LatestRelease.html_url
   }
 }
 
