@@ -1,31 +1,26 @@
 import-module au
 
-$releases = "https://github.com/github/git-lfs/releases"
-
 function global:au_SearchReplace {
    @{
         "$($Latest.PackageName).nuspec" = @{
-            "(<releaseNotes>https:\/\/github.com\/git-lfs\/git-lfs\/releases\/tag\/v)(.*)(<\/releaseNotes>)" = "`${1}$($Latest.Version.ToString())`$3"
+            "(<releaseNotes>)(.*)(<\/releaseNotes>)" = "`$1$($Latest.ReleaseUrl)`$3"
             "(\<dependency .+?`"$($Latest.PackageName).install`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
         }
     }
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $LatestRelease = Get-GitHubRelease github git-lfs
 
     #git-lfs-windows-1.4.4.exe
-    $re  = "git-lfs-windows-.+.exe"
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $LatestAsset = $LatestRelease.assets | Where-Object {$_.name -match "git-lfs-windows-(?<Version>.+).exe"}
 
-    $url32 = "https://github.com" + $url
-
-    $filenameVersionPart = $url -split '-' | select -Last 1
-    $version = Get-Version ([IO.Path]::GetFileNameWithoutExtension($filenameVersionPart))
-
-    $filename = $url -split '/' | select -Last 1
-
-    return @{ URL32 = $url32; Version = $version; FileName = $filename }
+    @{
+        URL32 = $LatestAsset.browser_download_url
+        Version = $LatestRelease.tag_name.TrimStart("v")
+        FileName = $LatestAsset.name
+        ReleaseUrl = $LatestRelease.html_url
+    }
 }
 
 if ($MyInvocation.InvocationName -ne '.') { # run the update only if script is not sourced
