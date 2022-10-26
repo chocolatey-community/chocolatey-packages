@@ -1,8 +1,6 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://github.com/transifex/transifex-client/releases'
-
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix -FileNameBase tx
   if (!(Test-Path "$PSScriptRoot\tools\x64")) {
@@ -26,19 +24,12 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = 'tx\.py37.*\.exe$'
-  $urls = $download_page.Links | Where-Object href -Match $re | Select-Object -First 2 -expand href | ForEach-Object { 'https://github.com' + $_ }
-
-  $verRe = '\/'
-  $version = $urls[0] -split "$verRe" | Select-Object -Last 1 -Skip 1
-  $url64 = ($urls | Where-Object { $_ -match $version -and $_ -match '3\d+[-.]x64' } | Select-Object -First 1)
+  $LatestRelease = Get-GitHubRelease transifex transifex-client
 
   @{
-    URL64      = [uri]$url64
-    Version    = [version]$version
-    ReleaseUrl = "$releases/tag/$version"
+    URL64      = $LatestRelease.assets | Where-Object {$_.name -eq "tx.py37-x64.exe"} | Select-Object -ExpandProperty browser_download_url
+    Version    = $LatestRelease.tag_name.TrimStart("v")
+    ReleaseUrl = $LatestRelease.html_url
   }
 }
 
