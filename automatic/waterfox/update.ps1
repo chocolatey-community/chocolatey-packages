@@ -1,7 +1,5 @@
 ﻿import-module au
 
-$releases = 'https://github.com/WaterfoxCo/Waterfox/releases/latest'
-$releases_classic = 'https://github.com/WaterfoxCo/Waterfox-Classic/releases/latest'
 $softwareName = 'Waterfox*'
 
 function global:au_BeforeUpdate {
@@ -46,55 +44,64 @@ function global:au_AfterUpdate {
 
 function Get-Waterfox {
   param(
-    [string]$build
+    [string]$Build
   )
-  $re = 'Setup\.exe$'
-  if ($build -eq 'Classic') {
-    $download_page = Invoke-WebRequest -Uri $releases_classic -UseBasicParsing
-    $sourceUrl = 'https://github.com/WaterfoxCo/Waterfox-Classic'
-    $projectUrl = 'https://classic.waterfox.net/'
-  }
-  else {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $sourceUrl = 'https://github.com/WaterfoxCo/Waterfox'
-    $projectUrl = 'https://www.waterfox.net/'
-  }
+  switch ($Build) {
+    "Classic" {
+      $LatestRelease = Get-GitHubRelease WaterfoxCo Waterfox-Classic
 
-  $url = $download_page.links | ? href -match $re | select -First 1 -expand href
-  if (!$url) {
-    $re = '\.exe$' # If we didn't get a url with the previous regex, we use a much simpler way
-    $url = $download_page.links | ? href -match $re | select -First 1 -expand href
-  }
+      @{
+        PackageName = "waterfox-classic"
+        Title = "Waterfox classic"
+        Url64 = $LatestRelease.assets | Where-Object {$_.name.EndsWith(".exe")} | Select-Object -ExpandProperty browser_download_url
+        Version = $LatestRelease.tag_name.TrimEnd("-classic")
+        SourceUrl = "https://github.com/WaterfoxCo/Waterfox-Classic"
+        ProjectUrl = "https://classic.waterfox.net/"
+      }
+    }
 
-  if ($url.StartsWith('/')) {
-    $url = [uri]::new($download_page.BaseResponse.ResponseUri, $url)
-  }
+    "Current" {
+      $LatestRelease = Get-GitHubRelease WaterfoxCo Waterfox
+      $TagVersion = $LatestRelease.tag_name
 
-  $version = $url -split '%20| |-classic\/|\/' | select -Last 1 -Skip 1
-  if ($build -eq 'Classic') {
-    $build = 'classic'
-    $dash = '-'
-  }
-  else { $build = $dash = '' }
-  $namePackage = @{$true = "waterfox$dash$build"; $false = "Waterfox$dash$build" }[ ($build -eq 'Classic') ]
-
-  $version = $version.Replace('G', (Get-Date).ToString('yyMM'))
-  # We need to replace the space in the url, otherwise we'll get an invalid url error.
-  return @{
-    PackageName = $namePackage
-    Title = "Waterfox $build"
-    URL64 = ($url -replace ' ', '%20')
-    Version = $version
-    SourceUrl = $sourceUrl
-    ProjectUrl = $projectUrl
+      @{
+        PackageName = "Waterfox"
+        Title = "Waterfox"
+        Url64 = if ($SetupAsset = $LatestRelease.assets | Where-Object {$_.name.EndsWith("Setup.exe")}) {
+          # As recently as G4.1.5 they have included Setup in the released assets
+          $SetupAsset.browser_download_url
+        } elseif ($LatestRelease.body -match "\[Download for Windows\]\((?<URL>.+)\)") {
+          # As recently as G5.0 Beta 5 they have included download links in the body
+          $Matches.URL
+        } else {
+          # They have many releases that contain no download links and no assets - let's give calculation a go!
+          try {
+            $TestCdn = @{
+              Uri = "https://cdn1.waterfox.net/waterfox/releases/$($TagVersion)/WINNT_x86_64/Waterfox%20Setup%20$($TagVersion).exe"
+              UseBasicParsing = $true
+              Method = "Head"
+              ErrorAction = "Stop"
+            }
+            if (Invoke-WebRequest @TestCdn) {
+              $TestCdn.Uri
+            }
+          } catch {
+            # We're giving up.
+            throw "Couldn't find or divine the URL for Waterfox $TagVersion from the GitHub release ('$($LatestRelease.html_url)')"
+          }
+        }
+        Version = $TagVersion.Replace('G', (Get-Date).ToString('yyMM'))
+        SourceUrl = "https://github.com/WaterfoxCo/Waterfox"
+        ProjectUrl = "https://www.waterfox.net/"
+      }
+    }
   }
 }
 
 function global:au_GetLatest {
-
   $streams = [ordered] @{
-    classic = Get-Waterfox -build "Classic"
-    current = Get-Waterfox -build "Current"
+    classic = Get-Waterfox -Build "Classic"
+    current = Get-Waterfox -Build "Current"
   }
 
   return @{ Streams = $streams }
