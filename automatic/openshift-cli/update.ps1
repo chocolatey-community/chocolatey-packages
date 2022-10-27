@@ -23,12 +23,19 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $LatestRelease = Get-GitHubRelease openshift origin
+  $StableReleaseUrl = "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/release.txt"
+  $LatestVersion = if ((Invoke-WebRequest -Uri $StableReleaseUrl -UseBasicParsing).Content -match "Version:\s+(?<Version>.+)") {
+    $Matches.Version
+  } else {
+    Write-Error "Could not identify latest version from '$StableReleaseUrl'" -ErrorAction Stop
+  }
+
+  # We could get the SHA256 value from /sha256sum.txt in the same directory, but we currently generate it
 
   return @{
-    Version    = $LatestRelease.tag_name.TrimStart("v")
-    URL64      = $LatestRelease.assets | Where-Object {$_.name.EndsWith("-windows.zip")} | Select-Object -ExpandProperty browser_download_url
-    ReleaseURL = $LatestRelease.html_url
+    Version    = $LatestVersion
+    URL64      = "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$LatestVersion/openshift-client-windows-$LatestVersion.zip"
+    ReleaseURL = "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$LatestVersion"
   }
 }
 
