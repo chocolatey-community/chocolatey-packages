@@ -13,10 +13,6 @@ function global:au_SearchReplace {
       "(?i)(\['file64'\]\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
     }
 
-    ".\legal\LICENSE.txt" = @{
-      "(?s)^.*$" = $Latest.License
-    }
-
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>"      = "`${1}<$release_files_url>"
       "(?i)(\s+x32:).*"                        = "`${1} $($Latest.URL32)"
@@ -75,8 +71,9 @@ function global:au_AfterUpdate($Package) {
     $xml_Copyright.RemoveAll()
     $xml_Copyright.AppendChild($cdata) | Out-Null
     $Package.NuspecXml.package.metadata.licenseUrl = $Latest.LicenseUrl
-    $Package.NuspecXml.package.metadata.title = $Latest.title
+    $Package.NuspecXml.package.metadata.title = $Latest.Title
     $Package.SaveNuspec()
+    $Latest.License | Out-File './legal/LICENSE.txt'
 }
 
 function GetStreams() {
