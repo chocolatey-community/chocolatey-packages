@@ -19,7 +19,8 @@ function global:au_SearchReplace {
       "(?i)(\s+x64:).*"                        = "`${1} $($Latest.URL64)"
       "(?i)(checksum32:).*"                    = "`${1} $($Latest.Checksum32)"
       "(?i)(checksum64:).*"                    = "`${1} $($Latest.Checksum64)"
-      "(?i)(\s*Documentation archive.*)\<.*\>" = "`${1}<$($Latest.ZipUrl)>"
+      "(?i)3.\d+(\s*Documentation archive\s*)\<.*\>" = "$($Latest.VersionTwoPart)`${1}<$($Latest.ZipUrl)>"
+      "(?i)(\s*can also be found at\s*)\<.*\>" = "`${1}<$($Latest.LicenseUrl)>"
     }
   }
 }
@@ -130,14 +131,15 @@ function GetStreams() {
     $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
     $license_url = "https://docs.python.org/$versionTwoPart/license.html"
     $streams[$versionTwoPart] = @{
-      URL32        = $urls['86']
-      URL64        = $urls['64']
-      Version      = $version
-      ZipName      = $zip_name
-      ZipUrl       = $zip_url
-      LicenseUrl   = $license_url
-      PackageName  = 'python3'
-      Title        = 'Python 3.x'
+      URL32          = $urls['86']
+      URL64          = $urls['64']
+      Version        = $version
+      VersionTwoPart = $versionTwoPart
+      ZipName        = $zip_name
+      ZipUrl         = $zip_url
+      LicenseUrl     = $license_url
+      PackageName    = 'python3'
+      Title          = 'Python 3.x'
     }
     $streams["$versionTwoPart-minor"] = $streams[$versionTwoPart].Clone()
     $streams["$versionTwoPart-minor"]['PackageName'] += $minor_version
