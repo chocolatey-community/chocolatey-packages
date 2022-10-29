@@ -23,14 +23,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = 'ownCloud-.+\.x64\.msi$'
-  $url = $download_page.Links | ? href -match $re | select -expand href
+  $updateEndpoint = 'https://updates.owncloud.com/client/?platform=win32&currentArch=x86_64&msi=true&version=0.0.0'
+  $xmlResponse = Invoke-RestMethod -Uri $updateEndpoint -UseBasicParsing
 
   @{
-    Version = $url -split "/" | select -last 1 -skip 2
-    URL64   = $url
+    Version = $xmlResponse.owncloudclient.version
+    URL64   = $xmlResponse.owncloudclient.downloadurl
   }
 }
 

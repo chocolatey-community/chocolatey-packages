@@ -7,17 +7,17 @@ $packageArgs = @{
   packageName    = 'freecad'
   fileType       = '7z'
   url            = ''
-  url64          = 'https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-30398-2022-09-18-conda-Windows-x86_64-py310.7z'
+  url64          = 'https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-30716-2022-10-27-conda-Windows-x86_64-py310.7z'
   softwareName   = 'FreeCAD'
   checksum       = ''
   checksumType   = ''
-  checksum64     = 'B10FBE0C7A439E9C7FF8564F7C2CB81B40C17ABEE531C62892D6A24331666CE6'
+  checksum64     = '719E00EEAB909E0E913887B5DD8B7FA6EB5827305EF15CE26567BE0EB2F39C64'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
 
-if ( $packageArgs.filetype -eq '7z' ) {
+if (( $packageArgs.filetype -eq '7z' ) -or ( $packageArgs.filetype -eq 'zip' )) {
   # Checking for Package Parameters
   $pp = ( Get-UserPackageParams -scrawl )
   if ($packageArgs.url64 -match "Conda") { $packageArgs.Remove("url"); $packageArgs.Remove("checksum"); $packageArgs.Remove("checksumType"); }

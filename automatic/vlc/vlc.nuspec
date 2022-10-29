@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vlc</id>
-    <title>VLC media player (Install)</title>
+    <title>VLC media player</title>
     <version>3.0.17.4</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>

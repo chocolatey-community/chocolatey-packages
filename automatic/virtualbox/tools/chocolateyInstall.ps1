@@ -19,14 +19,14 @@ $silentArgs += if ($pp.NoRegister)        { 'VBOX_REGISTERFILEEXTENSIONS=0';    
 $packageArgs = @{
   packageName            = 'virtualbox'
   fileType               = 'EXE'
-  url                    = 'https://download.virtualbox.org/virtualbox/6.1.40/VirtualBox-6.1.40-154048-Win.exe'
-  url64bit               = 'https://download.virtualbox.org/virtualbox/6.1.40/VirtualBox-6.1.40-154048-Win.exe'
-  checksum               = 'd805bce302279414d0f35234c0fd2504053ce3c19668ab4670a52a662bd77240'
-  checksum64             = 'd805bce302279414d0f35234c0fd2504053ce3c19668ab4670a52a662bd77240'
+  url                    = 'https://download.virtualbox.org/virtualbox/7.0.2/VirtualBox-7.0.2-154219-Win.exe'
+  url64bit               = 'https://download.virtualbox.org/virtualbox/7.0.2/VirtualBox-7.0.2-154219-Win.exe'
+  checksum               = '41d4f3ba691da9d0c0e7a269f8d3fff7c843c3f8249131dcf112cb149499ec73'
+  checksum64             = '41d4f3ba691da9d0c0e7a269f8d3fff7c843c3f8249131dcf112cb149499ec73'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = $silentArgs
-  validExitCodes         = @(0)
+  validExitCodes         = @(0, 3010)
   softwareName           = 'Oracle VM VirtualBox *'
 }
 Install-ChocolateyPackage @packageArgs
@@ -39,8 +39,8 @@ if ($pp.ExtensionPack) {
     Write-Host "Installing extension pack"
     Write-Warning "*** THIS IS A COMMERCIAL EXTENSION AND CAN INCURE SIGNIFICANT FINANCIAL COSTS ***"
 
-    $url_ep       = 'https://download.virtualbox.org/virtualbox/6.1.40/Oracle_VM_VirtualBox_Extension_Pack-6.1.40.vbox-extpack'
-    $checksum_ep  = '29cf8410e2514ea4393f63f5e955b8311787873679fc23ae9a897fb70ef3f84a'
+    $url_ep       = 'https://download.virtualbox.org/virtualbox/7.0.2/Oracle_VM_VirtualBox_Extension_Pack-7.0.2.vbox-extpack'
+    $checksum_ep  = 'f692008df0fe03c4d7397b3104e0ef71464385eb911858611c628fa32eb610a4'
     $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | Select-Object -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
