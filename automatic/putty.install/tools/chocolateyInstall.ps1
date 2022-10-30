@@ -6,8 +6,8 @@ $packageArgs = @{
     PackageName    = "putty.install"
     FileType       = "msi"
     SoftwareName   = "PuTTY"
-    File           = "$toolsPath\putty-0.77-installer.msi"
-    File64         = "$toolsPath\putty-64bit-0.77-installer.msi"
+    File           = "$toolsPath\putty-0.78-installer.msi"
+    File64         = "$toolsPath\putty-64bit-0.78-installer.msi"
     SilentArgs     = '/qn /norestart /l*v "{0}\install.log"' -f "$Env:TEMP\chocolatey\$Env:ChocolateyPackageName\$Env:ChocolateyPackageVersion"
     ValidExitCodes = @(0)
 }

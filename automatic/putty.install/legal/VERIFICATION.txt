@@ -7,14 +7,14 @@ and can be verified like this:
 
 
 1. Download the following installers:
-  32-Bit: <https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.77-installer.msi>
-  64-Bit: <https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.77-installer.msi>
+  32-Bit: <https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.78-installer.msi>
+  64-Bit: <https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.78-installer.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 96A49EC17E2DE11E54BC93B7875F329FBFC1C5093E0FD9388D9CF69AD0FD78A3
-  checksum64: 8ECE5F9D805FCF1D790F5E148D2A248DEA4813024659EB6C6468B47004BC805F
+  checksum32: 8B1EE5FCD40AC4122A62E405981DC6DFB26FB7BDBE23217DE0AA4B9659C492D5
+  checksum64: E64775374097F1B1C8FD4173F7D5BE4305B88CEC26A56D003113AFF2837AE08E
 
 File 'LICENSE.txt' is obtained from <http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html>
