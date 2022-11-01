@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>supertuxkart</id>
-    <version>1.3</version>
+    <version>1.4</version>
     <title>SuperTuxKart</title>
     <owners>chocolatey-community</owners>
     <authors>SuperTuxKart developers</authors>
