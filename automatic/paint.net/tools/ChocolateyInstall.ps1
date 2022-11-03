@@ -5,7 +5,7 @@ $silentArgs     = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackag
 $fileType   = 'msi'
 
 $packageArgs = @{
-  packageName = 'paint.net'
+  packageName = $env:ChocolateyPackageName
   file        = gi $toolsPath\*_x32.zip
   file64      = gi $toolsPath\*_x64.zip
   destination = $toolsPath
