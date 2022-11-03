@@ -16,9 +16,10 @@ Get-ChocolateyUnzip @packageArgs
 Remove-Item $toolsPath\*.zip -ea 0
 
 $FileFullPath = Get-ChildItem $toolsPath -Recurse -Include *.msi | Sort-Object -Descending | Select-Object -First 1
+$packageArgs.Remove('file64')
+$packageArgs['file'] = $FileFullPath
 
-Install-ChocolateyInstallPackage -packageName 'paint.net' $fileType $silentArgs $FileFullPath
-
+Install-ChocolateyInstallPackage @packageArgs
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
