@@ -26,4 +26,4 @@ Warning: the following parameters are experimental in the git installer and coul
 - `/PseudoConsoleSupport` - Enable experimental support for pseudo consoles. Allows running native console programs like Node or Python in a Git Bash window without using winpty, but it still has known bugs.
 - `/FSMonitor` - Enable experimental built-in file system monitor. Automatically run a built-in file system watcher, to speed up common operations such as `git status`, `git add`, `git commit`, etc in worktrees containing many files.
 
-Example: `choco install git.install --params "/GitAndUnixToolsOnPath /NoGitLfs /SChannel /NoAutoCrlf"`
+Example: `choco install git.install --params "'/GitAndUnixToolsOnPath /NoGitLfs /SChannel /NoAutoCrlf'"`

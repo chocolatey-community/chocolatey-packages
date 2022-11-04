@@ -13,7 +13,7 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
 See the [Git Package Parameters documentation page](https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md).
 
 Example for passing in package parameters:
-`choco install git.install --params "/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf`
+`choco install git.install --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"`
 
 ## Notes
 
