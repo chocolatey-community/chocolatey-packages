@@ -23,12 +23,12 @@ function global:au_SearchReplace {
  function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+    $latestrelease = Get-GitHubRelease -Owner "Klocman" -Name "Bulk-Crap-Uninstaller"
     $re      = '\.exe$'
-    $url     = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url     = $latestrelease.assets.browser_download_url | Where-Object { $_ -match $re } | select -First 1
     $version = ($url -split '/' | select -Last 1 -Skip 1).Replace('v','')
     @{
-        URL32        = 'https://github.com' + $url
+        URL32        = $url
         Version      = $version
         ReleaseNotes = "https://github.com/Klocman/Bulk-Crap-Uninstaller/releases/tag/v${version}"
     }
