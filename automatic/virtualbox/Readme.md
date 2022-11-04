@@ -22,7 +22,7 @@ VirtualBox is a cross-platform virtualization application. It installs on existi
 - `/NoRegister`        - Do not register virtualbox file extensions
 - `/NoPath`            - Do not add virtualbox install directory to the PATH
 - `/KeepExtensions`    - Do not uninstall installed virtualbox extensions (only when uninstalling package)
-- `/ExtensionPack`     - Install extension pack - **THIS IS COMMERCIAL EXTENSION AND CAN INCURE [SIGNIFICANT COSTS](https://web.archive.org/web/20171201035409/https://www.virtualbox.org/wiki/Licensing_FAQ)**
+- `/ExtensionPack`     - Install extension pack - **THIS IS COMMERCIAL EXTENSION AND CAN INCUR [SIGNIFICANT COSTS](https://web.archive.org/web/20171201035409/https://www.virtualbox.org/wiki/Licensing_FAQ)**
 
 Example: `choco install virtualbox --params "/NoDesktopShortcut /ExtensionPack"`
 
