@@ -1,0 +1,8 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
+
+To verify the files using the project source:
+
+1. Please go to the Jenkins mirrors page for Windows - http://mirrors.jenkins-ci.org/windows-stable/
+2. Click the version of the file or folder that matches this package version;
+3. Use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the built file (from the steps above) and the file from the package and compare them;
