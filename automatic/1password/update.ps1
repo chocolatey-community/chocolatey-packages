@@ -43,6 +43,8 @@ function Get-LatestOPW {
   $verRe = 'Setup-|word-|\.exe$'
   $version = $url32 -split $verRe | select -last 1 -skip 1
   $version = $version -replace ('\.BETA', ' beta')
+  $version = $version -replace ('\.NIGHTLY', 'nightly')
+  $version = $version -replace ('-', '.')
   $version = Get-Version $version
   $major = $version.ToString(1)
 
@@ -55,13 +57,15 @@ function Get-LatestOPW {
 
 $releases_opw4 = 'https://app-updates.agilebits.com/download/OPW4'
 $kind_opw4 = '1password4'
-$releases_opw = 'https://app-updates.agilebits.com/download/OPW7/Y'
+$releases_opw7 = 'https://app-updates.agilebits.com/download/OPW7/Y'
 $kind_opw = '1password'
+$releases_opw8 = 'https://app-updates.agilebits.com/download/OPW8/Y'
 
 function global:au_GetLatest {
   $streams = [ordered] @{
     OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4
-    OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
+    OPW7 = Get-LatestOPW -url $releases_opw7 -kind $kind_opw
+    OPW8 = Get-LatestOPW -url $releases_opw8 -kind $kind_opw
   }
 
   return @{ Streams = $streams }
