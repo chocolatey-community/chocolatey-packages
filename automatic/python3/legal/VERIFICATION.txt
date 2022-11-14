@@ -1,0 +1,23 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package can be verified like this:
+
+1. Go to
+
+   x32: https://www.python.org/ftp/python/3.11.0/python-3.11.0.exe
+   x64: https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe
+
+   to download the installer.
+
+2. You can use one of the following methods to obtain the SHA256 checksum:
+   - Use powershell function 'Get-FileHash'
+   - Use Chocolatey utility 'checksum.exe'
+
+   checksum32: 2D7B87EACDD5925AF4E0DB0EC155DD2B765AA27EFE609C0684CACC6FBF46F104
+   checksum64: B5884FA3F05F88BBB617D08584930770C00BBCF675F2865A9161C2358829B605
+
+File 'license.txt' is obtained from:
+   https://www.python.org/download/releases/3.4.0/license/
