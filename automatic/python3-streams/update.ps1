@@ -3,6 +3,7 @@
 Add-Type -Assembly System.IO.Compression
 
 $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
+$license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
 
 function global:au_SearchReplace {
   @{
@@ -42,6 +43,9 @@ function global:au_BeforeUpdate {
   # license text for legal/LICENSE.txt
   $license_entry = $zip.GetEntry("$($Latest.ZipName)/license.txt")
   $Latest.License = [System.IO.StreamReader]::new($license_entry.Open()).ReadToEnd()
+  if (!$Latest.License.Contains($license_statement)) {
+    throw "Python's license may have changed."
+  }
 
   # copyright information for nuspec
   $copyright_entry = $zip.GetEntry("$($Latest.ZipName)/copyright.txt")
