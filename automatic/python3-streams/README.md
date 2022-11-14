@@ -8,7 +8,7 @@ Python 3.x is a programming language that lets you work more quickly and integra
 - `/InstallDir32:` - Installation directory for 32bit python on 64bit Operating Systems. **NOTE**: Do only use this parameter if you wish to install 32bit python alongside 64bit python. 32Bit python will not be added on PATH.
 - `/NoLockdown` - Installation directory will not be locked down with Administrator only write permissions.
 
-Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
+Example: `choco install python3x --params "/InstallDir:C:\your\install\path"`
 
 ## Notes
 

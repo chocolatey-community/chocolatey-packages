@@ -2,8 +2,8 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>python3</id>
-    <version>3.12.0-a2</version>
+    <id>python3x</id>
+    <version></version>
     <title>Python 3.x</title>
     <owners>chocolatey-community,jack1142</owners>
     <authors>Python Software Foundation</authors>
@@ -19,7 +19,7 @@
 - `/InstallDir32:` - Installation directory for 32bit python on 64bit Operating Systems. **NOTE**: Do only use this parameter if you wish to install 32bit python alongside 64bit python. 32Bit python will not be added on PATH.
 - `/NoLockdown` - Installation directory will not be locked down with Administrator only write permissions.
 
-Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
+Example: `choco install python3x --params "/InstallDir:C:\your\install\path"`
 
 ## Notes
 
@@ -29,8 +29,9 @@ Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
 ]]></description>
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
     <tags>python programming development foss cross-platform admin</tags>
-    <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3</packageSourceUrl>
+    <licenseUrl></licenseUrl>
+    <copyright></copyright>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3-streams</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20170201" />
@@ -38,6 +39,6 @@ Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-    <file src="legal\**" target="legal" />  
+    <file src="legal\**" target="legal" />
   </files>
 </package>

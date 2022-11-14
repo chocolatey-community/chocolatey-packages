@@ -6,6 +6,10 @@ $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
 
 function global:au_SearchReplace {
   @{
+    ".\python3x.nuspec" = @{
+      "python3x"                             = $Latest.PackageName
+    }
+
     ".\tools\helpers.ps1"      = @{
       "(?i)(^\s*packageName\s*=\s*)('.*')"              = "`$1'$($Latest.PackageName)'"
       "(?i)(^\s*fileType\s*=\s*)('.*')"                 = "`$1'$($Latest.FileType)'"
@@ -46,35 +50,32 @@ function global:au_BeforeUpdate {
   $copyright = ''
   $reading_copyright = $false
   while (($line = $reader.ReadLine()) -ne $null) {
-      if (!$line) {
-          $copyright += "`n"
-          $reading_copyright = $false
-          continue
+    if (!$line) {
+      $copyright += "`n"
+      $reading_copyright = $false
+      continue
+    }
+    if ($line.StartsWith('Copyright')) {
+      if ($reading_copyright) {
+        $copyright += "`n"
       }
-      if ($line.StartsWith('Copyright')) {
-          if ($reading_copyright) {
-              $copyright += "`n"
-          }
-          $copyright += $line
-          $reading_copyright = $true
-      } elseif ($reading_copyright) {
-          $copyright += " $line"
-      } else {
-          break
-      }
+      $copyright += $line
+      $reading_copyright = $true
+    } elseif ($reading_copyright) {
+      $copyright += " $line"
+    } else {
+      break
+    }
   }
   $Latest.Copyright = $copyright.Trim()
 }
 
 function global:au_AfterUpdate($Package) {
-    $cdata = $Package.NuspecXml.CreateCDataSection($Latest.Copyright)
-    $xml_Copyright = $Package.NuspecXml.GetElementsByTagName('copyright')[0]
-    $xml_Copyright.RemoveAll()
-    $xml_Copyright.AppendChild($cdata) | Out-Null
-    $Package.NuspecXml.package.metadata.licenseUrl = $Latest.LicenseUrl
-    $Package.NuspecXml.package.metadata.title = $Latest.Title
-    $Package.SaveNuspec()
-    $Latest.License | Out-File './legal/LICENSE.txt'
+  Update-Metadata -data @{
+    copyright  = $Latest.Copyright
+    licenseUrl = $Latest.LicenseUrl
+    title      = $Latest.Title
+  }
 }
 
 function GetStreams() {
@@ -84,45 +85,45 @@ function GetStreams() {
   $re = '^python-(?<version>' + $version_re + ')(?<amd64>-amd64)?\.exe$'
   # collect URL pairs for all Python versions
   $all_versions = @{ }
-  foreach ($file in $release_files) {
-      $file_name = $file.url.Split('/')[-1]
-      if ($file_name -match $re) {
-          $version = $matches['version']
-          $amd64 = $matches['amd64']
-          if (!$all_versions.containsKey($version)) {
-              $all_versions[$version] = @{ }
-          }
-          if ($amd64) {
-              $all_versions[$version]['64'] = $file.url
-          } else {
-              $all_versions[$version]['86'] = $file.url
-          }
+  $release_files | ForEach-Object {
+    $file_name = $_.url.Split('/')[-1]
+    if ($file_name -match $re) {
+      $version = $matches['version']
+      $amd64 = $matches['amd64']
+      if (!$all_versions.containsKey($version)) {
+        $all_versions[$version] = @{ }
       }
+      if ($amd64) {
+        $all_versions[$version]['64'] = $_.url
+      } else {
+        $all_versions[$version]['86'] = $_.url
+      }
+    }
   }
 
   # find latest version of each Python minor (3.x) version
   $latest_versions = @{ }
-  foreach ($version_data in $all_versions.GetEnumerator()) {
+  $all_versions.GetEnumerator() | ForEach-Object {
     # skip release files that don't have both x64 and x86 installers
-    if ($version_data.Value.Count -ne 2) {
+    if ($_.Value.Count -ne 2) {
       continue
     }
-    $version = Get-Version $version_data.Name
+    $version = Get-Version $_.Name
     if ($latest_versions.ContainsKey($version.Version.Minor)) {
       $known_latest_version = Get-Version $latest_versions[$version.Version.Minor]
     } else {
       $known_latest_version = Get-Version '0.0.0'
     }
     if ($version -gt $known_latest_version) {
-      $latest_versions[$version.Version.Minor] = $version_data.Name
+      $latest_versions[$version.Version.Minor] = $_.Name
     }
   }
 
   # generate two version streams per version, one for python3 and one for python3x package
   $streams = @{ }
-  foreach ($version_data in $latest_versions.GetEnumerator()) {
-    $minor_version = $version_data.Name
-    $latest_version = $version_data.Value
+  $latest_versions.GetEnumerator() | ForEach-Object {
+    $minor_version = $_.Name
+    $latest_version = $_.Value
     $versionTwoPart = "3.$minor_version"
     $version = Get-Version $latest_version
 
@@ -138,12 +139,9 @@ function GetStreams() {
       ZipName        = $zip_name
       ZipUrl         = $zip_url
       LicenseUrl     = $license_url
-      PackageName    = 'python3'
-      Title          = 'Python 3.x'
+      PackageName    = "python3$minor_version"
+      Title          = "Python 3.$minor_version"
     }
-    $streams["$versionTwoPart-minor"] = $streams[$versionTwoPart].Clone()
-    $streams["$versionTwoPart-minor"]['PackageName'] += $minor_version
-    $streams["$versionTwoPart-minor"]['Title'] = "Python 3.$minor_version"
   }
 
   Write-Host $streams.Count 'streams collected'
