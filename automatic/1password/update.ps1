@@ -1,6 +1,5 @@
 ﻿Import-Module AU
 import-module $PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1
-Import-Module $PSScriptRoot\..\..\scripts\au_extensions.psm1
 
 function global:au_SearchReplace {
   @{
@@ -14,12 +13,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
+  . "$PSScriptRoot/update_helper.ps1"
   if ($Latest.PackageName -eq '1password4') {
-    Clear-DependenciesList ".\*.nuspec"
-    Add-Dependency ".\*.nuspec" "chocolatey-core.extension" "1.3.3"
+    removeDependencies ".\*.nuspec"
+    addDependency ".\*.nuspec" "chocolatey-core.extension" "1.3.3"
   }
   else {
-    Add-Dependency ".\*.nuspec" 'dotnet4.7.2' '4.7.2.20180712'
+    addDependency ".\*.nuspec" 'dotnet4.7.2' '4.7.2.20180712'
   }
 }
 
