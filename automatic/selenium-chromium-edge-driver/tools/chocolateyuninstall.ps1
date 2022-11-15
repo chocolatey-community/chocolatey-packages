@@ -3,11 +3,11 @@
 Uninstall-BinFile -Name 'msedgedriver'
 
 $zipPackages = @(
-  '' # 32bit
-  '' # 64bit
+  'edgedriver_win32.zip' # 32bit
+  'edgedriver_win64.zip' # 64bit
 )
 
-$zipPackages | % {
+$zipPackages | ForEach-Object {
   Uninstall-ChocolateyZipPackage -PackageName $env:ChocolateyPackageName -ZipFileName $_
 }
 

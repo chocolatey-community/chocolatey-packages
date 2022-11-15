@@ -1,4 +1,4 @@
-# <img src="" width="48" height="48"/> [Selenium Chromium Edge Driver](https://chocolatey.org/packages/selenium-chromium-edge-driver)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@61b9a911f150dda68e67c519f839f149231650b2/icons/selenium-chromium-edge-driver.png" width="48" height="48"/> [Selenium Chromium Edge Driver](https://chocolatey.org/packages/selenium-chromium-edge-driver)
 
 WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. MSEdgeDriver is a standalone server which implements WebDriver's wire protocol (https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) for Chromium.
 

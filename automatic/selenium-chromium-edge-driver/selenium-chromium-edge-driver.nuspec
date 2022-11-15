@@ -3,31 +3,37 @@
   <metadata>
     <id>selenium-chromium-edge-driver</id>
     <!-- Do not touch the version, it will be updated automatically during the update check -->
-    <version>0.0</version>
+    <version>107.0.1418.42</version>
     <title>Selenium Chromium Edge Driver</title>
     <authors>Chromium and Microsoft teams</authors>
     <owners>chocolatey-community,agabrys,laurin1,AdmiringWorm</owners>
     <projectUrl>https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</projectUrl>
     <!-- Do not touch the icon URL, it will be updated automatically during the update check -->
-    <iconUrl></iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@61b9a911f150dda68e67c519f839f149231650b2/icons/selenium-chromium-edge-driver.png</iconUrl>
     <licenseUrl>https://msedgedriver.azureedge.net/EULA</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!-- Do not touch the description, it is automatically updated from the Readme.md file. -->
-    <description>WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. MSEdgeDriver is a standalone server which implements WebDriver's wire protocol (https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) for Chromium.
+    <description><![CDATA[WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. MSEdgeDriver is a standalone server which implements WebDriver's wire protocol (https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) for Chromium.
 
-msedgedriver.exe file is located in &lt;Get-ToolsLocation&gt;/selenium directory.
+msedgedriver.exe file is located in `«Get-ToolsLocation»/selenium` directory.
 
-#### Package Parameters
+## Package Parameters
+
 The following package parameters can be set:
 
 * `/SkipShim` - informs that the shim file should not be generated
 
-To pass parameters, use `--params "''"` (e.g. `choco install selenium-chromium-edge-driver [other options] --params="'/SkipShim'"`).</description>
+To pass parameters, use `--params "''"` (e.g. `choco install selenium-chromium-edge-driver [other options] --params="'/SkipShim'"`).
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+]]></description>
     <summary>Microsoft Chromium Edge Driver is a WebDriver implementation that enables programmatic automation of Microsoft Edge (Chromium) products for desktop platforms. It is a part of the Selenium (http://code.google.com/p/selenium) project.</summary>
     <copyright>Chromium and Microsoft teams. All Rights Reserved.</copyright>
     <tags>selenium chromium microsoft-edge driver webdriver testing web-applications freeware</tags>
     <!-- Do not touch the source URL, it will be updated automatically during the update check -->
-    <packageSourceUrl>https://github.com/laurin1/chocolatey-packages/tree/master/selenium-chromium-edge-driver/x64</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/selenium-chromium-edge-driver</packageSourceUrl>
     <docsUrl>https://docs.microsoft.com/en-us/microsoft-edge/webdriver-chromium</docsUrl>
     <dependencies>
       <dependency id="kb2919355" version="1.0.20160915" />
