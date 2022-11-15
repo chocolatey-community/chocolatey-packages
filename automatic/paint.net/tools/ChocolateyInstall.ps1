@@ -1,8 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
-$silentArgs     = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
-$fileType   = 'msi'
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
@@ -10,6 +8,9 @@ $packageArgs = @{
   file64      = gi $toolsPath\*_x64.zip
   destination = $toolsPath
   softwareName = 'Paint.NET*'
+  fileType  = 'msi'
+  silentArgs = "/quiet /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  validExitCodes = @(0, 1641, 3010)
 }
 
 Get-ChocolateyUnzip @packageArgs
