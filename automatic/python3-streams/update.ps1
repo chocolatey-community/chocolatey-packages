@@ -8,7 +8,7 @@ $license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
 function global:au_SearchReplace {
   @{
     ".\python3-streams.nuspec" = @{
-      "python3x"                             = $Latest.PackageName
+      "python3\d*" = $Latest.PackageName
     }
 
     ".\tools\helpers.ps1"      = @{
