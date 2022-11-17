@@ -4,7 +4,7 @@
   <metadata>
     <id>notepadplusplus.install</id>
     <title>Notepad++ (Install)</title>
-    <version>8.4.5</version>
+    <version>8.4.7</version>
     <authors>Don Ho</authors>
     <owners>chocolatey-community</owners>
     <summary>Notepad++ is a free (as in "free speech" and also as in "free beer") source code editor and Notepad replacement that supports several languages.</summary>
@@ -36,6 +36,7 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 * Starting in v8.3.3.20220321 and above the Notepad++ process will be closed during install, upgrade and uninstalls.
   This may in rare cases result in data loss if there are unsaved text files open. Make sure all files are
   saved before installing, upgrading or uninstalling this package.
+* **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <projectUrl>https://notepad-plus-plus.org/</projectUrl>
     <tags>notepad notepadplusplus notepad-plus-plus editor text development foss</tags>
