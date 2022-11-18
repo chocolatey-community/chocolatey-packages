@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software has been downloaded from the listed download
-location on <https://github.com/kubernetes/kompose/releases/tag/v1.26.1>
+location on <https://github.com/kubernetes/kompose/releases/tag/v1.27.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://github.com/kubernetes/kompose/releases/download/v1.26.1/kompose-windows-amd64.exe>
+  software: <https://github.com/kubernetes/kompose/releases/download/v1.27.0/kompose-windows-amd64.exe>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: 
-  checksum: 5D6923F1DDFFCF08D8194D8CE6F7E74792D63F25FEE4A4140F5AB552FF40CD6E
+  checksum: DABBADD592D2ACE2D94D7B2C5F429D76D02EF6BEFE07C5088F4527A9D1F93E5C
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kubernetes/kompose/blob/34d72c757906dd05499fedbe214850b41ea712b1/LICENSE>
