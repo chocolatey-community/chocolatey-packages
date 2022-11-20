@@ -28,12 +28,6 @@ function global:au_SearchReplace {
       "(?i)(^\s*checksum64\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum64)'"
       "(?i)([$]softwareVersion\s*=\s*)'.*'"   = "`${1}'$($Latest.Version)'"
     }
-    "legal\VERIFICATION.txt"  = @{
-      "(?i)(x86:).*"          = "`${1} $($Latest.URL32)"
-      "(?i)(x86_64:).*"       = "`${1} $($Latest.URL64)"
-      "(?i)(checksum32:).*"   = "`${1} $($Latest.Checksum32)"
-      "(?i)(checksum64:).*"   = "`${1} $($Latest.Checksum64)"
-    }
     "brave.nuspec"                     = @{
       "(\<title\>).*(\<\/title\>)"     = "`${1}$($Latest.Title)`$2"
       "(\<iconUrl\>).*(\<\/iconUrl\>)" = "`${1}$($Latest.IconUrl)`$2"
