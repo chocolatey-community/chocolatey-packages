@@ -3,8 +3,12 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\BraveBrowserStandaloneSilentSetup32.exe"
-  file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
+  url                    = ''
+  url64bit               = ''
+  checksum               = ''
+  checksum64             = ''
+  checksumType           = 'sha256'
+  checksumType64         = 'sha256'
 }
 
 [version]$softwareVersion = '1.45.123'
@@ -19,7 +23,7 @@ elseif ($installedVersion -and ($softwareVersion -eq $installedVersion)) {
   Write-Warning "Skipping installation because version $softwareVersion is already installed."
 }
 else {
-  Install-ChocolateyInstallPackage @packageArgs
+  Install-ChocolateyPackage @packageArgs
 }
 
 Remove-Item $toolsPath\*.exe -ea 0
