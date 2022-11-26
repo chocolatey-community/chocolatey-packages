@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/7.0.2/windows_10_cmake_Release_graphviz-install-7.0.2-win64.exe
+   x64: https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/7.0.3/windows_10_cmake_Release_graphviz-install-7.0.3-win64.exe
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 79C6694AD4233FDE04B2442496CDB798D824D6121003B9C4F2C3159D274A4497
+   checksum64: D6DC57C5128DD2CC54A672C63A7D61651B7BD3DB7F66EE8CBC7F0E6D7D8DC1E5
 
 
 File 'license.txt' is a copy of file 'share\license.rtf' obtained from the installation directory
