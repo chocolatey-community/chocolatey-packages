@@ -5,8 +5,8 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'vlc.install'
   fileType       = 'exe'
-  file           = "$toolsDir\vlc-3.0.17.4-win32_x32.exe"
-  file64         = "$toolsDir\vlc-3.0.17.4-win64_x64.exe"
+  file           = "$toolsDir\vlc-3.0.18-win32_x32.exe"
+  file64         = "$toolsDir\vlc-3.0.18-win64_x64.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
