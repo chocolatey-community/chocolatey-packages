@@ -7,13 +7,13 @@ and can be verified like this:
 
 1. Download the following installers:
   32-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_setup.exe/download>
-  64-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.4.5/qbittorrent_4.4.5_x64_setup.exe/download>
+  64-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-4.5.0/qbittorrent_4.5.0_x64_setup.exe/download>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
   checksum32: FEC32F28BD20C917298BC774D206B8B7D7C2B7B1645BF1742B0EF8477C0866AB
-  checksum64: EFB0298FAE1578033A334BA3ADBE0E93EA15239D623A26CE11F230EB0AF8654A
+  checksum64: 14ceeccc4473e02417726cd01614b6c1cc9556ab3aa899118552af82d69db22a
 
 File 'LICENSE.txt' is obtained from <https://github.com/qbittorrent/qBittorrent/blob/0070dcf5509e43c2c3457c4e3f1ed0b1ae087e36/COPYING>
