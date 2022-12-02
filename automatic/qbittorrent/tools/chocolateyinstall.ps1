@@ -1,4 +1,9 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿$is64bit = Test-Path 'Env:ProgramFiles(x86)'
+if (-Not $is64bit) {
+  Write-Host "WARNING! qBittorrent is no longer available in 32-bit after version 4.4.5, pin the package version to 4.4.5 with command ``choco pin add --name=`"'qbittorrent'`" --version=`"'4.4.5'`"``"
+}
+
+$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 

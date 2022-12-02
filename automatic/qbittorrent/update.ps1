@@ -40,9 +40,10 @@ function global:au_GetLatest {
   $version   = $url32 -split '[_]' | select -Last 1 -Skip 1
   $version64 = $url64 -split '[_]' | select -Last 1 -Skip 2
 
-  if ($version -ne $version64) {
-    throw "32-bit and 64-bit version do not match. Please investigate."
-  }
+#  Beginning with v4.5.0, only 64-bit version is avalable, so this check is not needed anymore.
+#  if ($version -ne $version64) {
+#    throw "32-bit and 64-bit version do not match. Please investigate."
+#  }
 
   return @{
     URL32    = $url32
