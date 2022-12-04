@@ -1,9 +1,9 @@
-﻿$is64bit = Test-Path 'Env:ProgramFiles(x86)'
-if (-Not $is64bit) {
+﻿$ErrorActionPreference = 'Stop'
+
+$is32bit = Get-OSArchitectureWidth
+if ($is32bit -eq '32') {
   Write-Host "WARNING! qBittorrent is no longer available in 32-bit after version 4.4.5, pin the package version to 4.4.5 with command ``choco pin add --name=`"'qbittorrent'`" --version=`"'4.4.5'`"``"
 }
-
-$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
@@ -12,7 +12,7 @@ $packageArgs = @{
   fileType       = 'exe'
   softwareName   = 'qBittorrent*'
   file           = "$toolsDir\qbittorrent_4.4.5_setup.exe"
-  file64         = "$toolsDir\qbittorrent_4.5.0_x64_setup.exe"
+  file64         = "$toolsDir\qbittorrent_4.4.5_x64_setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)
 }
