@@ -1,10 +1,11 @@
-﻿import-module au
+import-module au
 
 Add-Type -Assembly System.IO.Compression
 
 $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
 $license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
 
+if ($MyInvocation.MyCommand -ne '.') {
 function global:au_SearchReplace {
   @{
     ".\python3-streams.nuspec" = @{
@@ -19,25 +20,22 @@ function global:au_SearchReplace {
     }
 
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>"      = "`${1}<$release_files_url>"
-      "(?i)(\s+x32:).*"                        = "`${1} $($Latest.URL32)"
-      "(?i)(\s+x64:).*"                        = "`${1} $($Latest.URL64)"
-      "(?i)(checksum32:).*"                    = "`${1} $($Latest.Checksum32)"
-      "(?i)(checksum64:).*"                    = "`${1} $($Latest.Checksum64)"
+        "(?i)(^\s*location on\:?\s*)\<.*\>"            = "`${1}<$release_files_url>"
+        "(?i)(\s+x32:).*"                              = "`${1} $($Latest.URL32)"
+        "(?i)(\s+x64:).*"                              = "`${1} $($Latest.URL64)"
+        "(?i)(checksum32:).*"                          = "`${1} $($Latest.Checksum32)"
+        "(?i)(checksum64:).*"                          = "`${1} $($Latest.Checksum64)"
       "(?i)3.\d+(\s*Documentation archive\s*)\<.*\>" = "$($Latest.VersionTwoPart)`${1}<$($Latest.ZipUrl)>"
-      "(?i)(\s*can also be found at\s*)\<.*\>" = "`${1}<$($Latest.LicenseUrl)>"
+        "(?i)(\s*can also be found at\s*)\<.*\>"       = "`${1}<$($Latest.LicenseUrl)>"
     }
-    ".\README.md" = @{
+      ".\README.md"              = @{
       "(?i)\[python\d+]\((.*)python\d+\)" = "[$($Latest.PackageName)](`$1$($Latest.PackageName))"
     }
   }
 }
+}
 
-function global:au_BeforeUpdate {
-  rm tools\*.msi, tools\*.exe -ea 0
-
-  Get-RemoteFiles -Purge -NoSuffix
-
+function SetCopyright {
   # download Python documentation archive
   $webrequest = [System.Net.HttpWebRequest]::Create($Latest.ZipUrl)
   $response_stream = $webrequest.GetResponse().GetResponseStream()
@@ -75,6 +73,13 @@ function global:au_BeforeUpdate {
     }
   }
   $Latest.Copyright = $copyright.Trim()
+}
+
+function global:au_BeforeUpdate {
+  rm tools\*.msi, tools\*.exe -ea 0
+
+  Get-RemoteFiles -Purge -NoSuffix
+  SetCopyright
 }
 
 function global:au_AfterUpdate($Package) {

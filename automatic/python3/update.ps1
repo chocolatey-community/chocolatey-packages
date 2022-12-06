@@ -1,12 +1,18 @@
 ﻿. $PSScriptRoot\..\python3-streams\update.ps1
 
-function global:au_SearchReplace {
-  @{
-    ".\README.md" = @{
-      "(?i)(install the package )\[python\d+]\((.*)python\d+" = "`$1[$($Latest.Dependency)(`$2$($Latest.Dependency)"
-      "(?i)(the package )``python\d+``( must also)"           = "`$1``$($Latest.Dependency)```$2"
+if ($MyInvocation.InvocationName -ne '.') {
+  function global:au_SearchReplace {
+    @{
+      ".\README.md" = @{
+        "(?i)(install the package )\[python\d+]\((.*)python\d+" = "`$1[$($Latest.Dependency)(`$2$($Latest.Dependency)"
+        "(?i)(the package )``python\d+``( must also)"           = "`$1``$($Latest.Dependency)```$2"
+      }
     }
   }
+}
+
+function global:au_BeforeUpdate {
+  SetCopyright
 }
 
 function global:au_AfterUpdate {
