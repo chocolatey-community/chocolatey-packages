@@ -27,6 +27,9 @@ function global:au_SearchReplace {
       "(?i)3.\d+(\s*Documentation archive\s*)\<.*\>" = "$($Latest.VersionTwoPart)`${1}<$($Latest.ZipUrl)>"
       "(?i)(\s*can also be found at\s*)\<.*\>" = "`${1}<$($Latest.LicenseUrl)>"
     }
+    ".\README.md" = @{
+      "(?i)\[python\d+]\((.*)python\d+\)" = "[$($Latest.PackageName)](`$1$($Latest.PackageName))"
+    }
   }
 }
 
