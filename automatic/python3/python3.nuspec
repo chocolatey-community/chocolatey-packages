@@ -35,8 +35,5 @@ Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
       <dependency id="vcredist2015" version="14.0.24215.20170201" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-    <file src="legal\**" target="legal" />  
-  </files>
+  <files></files>
 </package>

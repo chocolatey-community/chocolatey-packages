@@ -154,10 +154,14 @@ function GetStreams() {
   $streams
 }
 
-function global:au_GetLatest {
+function GetReleaseFilesStreams {
   $release_files = Invoke-RestMethod $release_files_url
 
-  @{ Streams = GetStreams $release_files }
+  GetStreams $release_files
+}
+
+function global:au_GetLatest {
+  @{ Streams = GetReleaseFilesStreams }
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
