@@ -37,4 +37,6 @@ function global:au_GetLatest {
   @{ Streams = $streams }
 }
 
-update -ChecksumFor none -NoCheckChocoVersion
+if ($MyInvocation.InvocationName -ne '.') {
+  update -ChecksumFor none
+}
