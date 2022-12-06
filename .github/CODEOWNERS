@@ -12,6 +12,7 @@
 # Multiple users can be set for the same match
 
 */ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
+*/python3-streams     @chocolatey-community/chocolatey-team-maintainers @Jackenmen
 */python*             @chocolatey-community/chocolatey-team-maintainers
 */calibre*            @gep13 @AdmiringWorm
 */cdburnerxp*         @gep13

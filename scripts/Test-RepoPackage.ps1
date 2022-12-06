@@ -374,11 +374,8 @@ function RunChocoProcess() {
   $packageName = $arguments[1] -split ' ' | select -first 1
   $pkgDir = Get-ChildItem -Path "$PSScriptRoot\.." -Filter "$packageName" -Recurse -Directory | select -first 1
   $nupkgFile = Get-ChildItem -Path $pkgDir.FullName -Filter "*.nupkg" | select -first 1
-
-  $pkgNameVersion = (Split-Path -Leaf $nupkgFile).Substring($packageName.Length) | % {
-      ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':'
-  }
-  $packageName += $pkgNameVersion | select -first 1
+  $pkgNameVersion = Split-Path -Leaf $nupkgFile | % { ($_ -replace '((\.\d+)+(-[^-\.]+)?).nupkg', ':$1').Replace(':.', ':') -split ':' }
+  $packageName = $pkgNameVersion | select -first 1
   $version     = $pkgNameVersion | select -last 1
   if ($packageName -ne $arguments[1]) { $args[1] = $packageName }
 

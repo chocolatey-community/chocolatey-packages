@@ -7,6 +7,7 @@
     <title>Python</title>
     <owners>chocolatey-community</owners>
     <authors>Python Software Foundation</authors>
+    <copyright>empty on purpose</copyright>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
