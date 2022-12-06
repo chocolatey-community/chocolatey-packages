@@ -123,9 +123,11 @@ function GetStreams() {
     }
   }
 
-  # generate two version streams per version, one for python3 and one for python3x package
   $streams = @{ }
-  $latest_versions.GetEnumerator() | ForEach-Object {
+
+  # Temporarily limit the amount of streams. This limit should be removed on
+  # first package approval (First stream is a pre-release)
+  $latest_versions.GetEnumerator() | Select-Object -First 2 | ForEach-Object {
     $minor_version = $_.Name
     $latest_version = $_.Value
     $versionTwoPart = "3.$minor_version"
