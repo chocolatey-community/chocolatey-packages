@@ -21,5 +21,5 @@ and can be verified by doing the following:
    checksum32: 4EAF6CDF229C1CD129CCADC701C2F09450288872AED4394D57E545F0610D86C4
    checksum64: EA5D760B4F7023F5AE60A369674A7E3F9FD2A7561D1D1F901E03F0F80C7C0F9C
 
-The file 'LICENSE.txt' has been obtained from Python 3.11 Documentation archive <https://docs.python.org/3.11/archives/python-3.11.0rc2-docs-text.zip>
-and can also be found at <https://docs.python.org/3.11/license.html>.
+The file 'LICENSE.txt' has been obtained from Python 3.12 Documentation archive <https://docs.python.org/3.12/archives/python-3.12.0a2-docs-text.zip>
+and can also be found at <https://docs.python.org/3.12/license.html>.

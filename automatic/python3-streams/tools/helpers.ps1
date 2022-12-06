@@ -37,7 +37,7 @@ function Install-Python {
   }
 
   $packageArgs = @{
-    packageName    = 'python3x'
+    packageName    = 'python312'
     fileType       = 'exe'
     file           = "$toolsPath\python-3.12.0a2.exe"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath={0} TargetDir="{1}"' -f $prependPath, $installDir
