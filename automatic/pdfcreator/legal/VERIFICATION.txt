@@ -13,6 +13,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 0A577EDE0F811E11594DF7A8EF3E88B5AC4356819248AC242028D44201E19FC5
+  checksum: 3066D8AEE375735AE180CD83974D6A72F98489736E59333798E458E383D2B718
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/pdfforge/PDFCreator/blob/dbbe3558157f5861bff35dcb37b328b679b0ccfd/LICENSE>
