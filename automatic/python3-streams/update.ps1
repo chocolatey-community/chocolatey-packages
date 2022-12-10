@@ -9,7 +9,7 @@ if ($MyInvocation.MyCommand -ne '.') {
 function global:au_SearchReplace {
   @{
     ".\python3-streams.nuspec" = @{
-      "python3\d*" = $Latest.PackageName
+      "python3(\d+|x)" = $Latest.PackageName
     }
 
     ".\tools\helpers.ps1"      = @{
