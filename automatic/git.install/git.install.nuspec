@@ -4,7 +4,7 @@
   <metadata>
     <id>git.install</id>
     <title>Git (Install)</title>
-    <version>2.38.1</version>
+    <version>2.39.0</version>
     <authors>The Git Development Community</authors>
     <owners>chocolatey-community</owners>
     <summary>Git for Windows offers a native set of tools that bring the full feature set of the Git SCM to Windows</summary>
@@ -21,7 +21,7 @@
 See the [Git Package Parameters documentation page](https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md).
 
 Example for passing in package parameters:
-`choco install git.install --params "/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf`
+`choco install git.install --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"`
 
 ## Notes
 

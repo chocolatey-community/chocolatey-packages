@@ -22,14 +22,14 @@ function Get-MergeTasks {
 $packageArgs = @{
   packageName    = "$env:ChocolateyPackageName"
   fileType       = 'exe'
-  url            = 'https://az764295.vo.msecnd.net/insider/f076d553210e9ea65e7bccbfa2f7a786c10fcab2/VSCodeSetup-ia32-1.75.0-insider.exe'
-  url64bit       = 'https://az764295.vo.msecnd.net/insider/f076d553210e9ea65e7bccbfa2f7a786c10fcab2/VSCodeSetup-x64-1.75.0-insider.exe'
+  url            = 'https://az764295.vo.msecnd.net/insider/d7b1e2a1c892511a125e4ceb9758ec8ddf907775/VSCodeSetup-ia32-1.75.0-insider.exe'
+  url64bit       = 'https://az764295.vo.msecnd.net/insider/d7b1e2a1c892511a125e4ceb9758ec8ddf907775/VSCodeSetup-x64-1.75.0-insider.exe'
 
   softwareName   = 'Microsoft Visual Studio Code Insiders'
 
-  checksum       = '2f350ce20a3968f68da507ca34d56003115a6d66d700d0132f074e8ac610e8a9ab81683fe688247ce7abc94a9beee130d73cf924dcbb8a0f2740d3c59c923ad2'
+  checksum       = 'd9556a940c94fda398b90365aa90d452888f56d1fcbcfa8dcb273653e8cb85a9b76c7f581782e2d74d8edb18fae6b7978f9b03d5e7c32bdebcb9c4aa799759fd'
   checksumType   = 'sha512'
-  checksum64     = 'ba406ad5ae79ecd96d1280dccc641b4692c5738463270b6f16ea08f7abc0edab2a60188e18ac7d52f2aae12235fffef124f2418f937bf75940ff66ebcebcd50e'
+  checksum64     = 'd020d9fd6671b9b0736a8e22e34507eff4c4a36baeecc19649504b99ae8e5ec3e5a85c4f0419c8da22a80863ed3518eb6e0c2f2a0f736ed60463d778c40b53be'
   checksumType64 = 'sha512'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
