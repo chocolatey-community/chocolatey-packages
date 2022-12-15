@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>python312</id>
-    <version>3.12.0-a2</version>
-    <title>Python 3.12</title>
+    <id>python311</id>
+    <version>3.11.1</version>
+    <title>Python 3.11</title>
     <owners>chocolatey-community,jack1142</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
@@ -18,11 +18,11 @@ Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.</cop
 
 ## Package Parameters
 
-- `/InstallDir` - Installation directory. **NOTE**: If you have pre-existing python312 installation, this parameter is ignored and existing python install location will be used
+- `/InstallDir` - Installation directory. **NOTE**: If you have pre-existing python3 installation, this parameter is ignored and existing python install location will be used
 - `/InstallDir32:` - Installation directory for 32bit python on 64bit Operating Systems. **NOTE**: Do only use this parameter if you wish to install 32bit python alongside 64bit python. 32Bit python will not be added on PATH.
 - `/NoLockdown` - Installation directory will not be locked down with Administrator only write permissions.
 
-Example: `choco install python312 --params "/InstallDir:C:\your\install\path"`
+Example: `choco install python311 --params "/InstallDir:C:\your\install\path"`
 
 ## Notes
 
@@ -32,7 +32,7 @@ Example: `choco install python312 --params "/InstallDir:C:\your\install\path"`
 ]]></description>
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
     <tags>python programming development foss cross-platform admin</tags>
-    <licenseUrl>https://docs.python.org/3.12/license.html</licenseUrl>
+    <licenseUrl>https://docs.python.org/3.11/license.html</licenseUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3-streams</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
