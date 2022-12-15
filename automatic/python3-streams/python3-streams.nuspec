@@ -22,7 +22,7 @@ Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.</cop
 - `/InstallDir32:` - Installation directory for 32bit python on 64bit Operating Systems. **NOTE**: Do only use this parameter if you wish to install 32bit python alongside 64bit python. 32Bit python will not be added on PATH.
 - `/NoLockdown` - Installation directory will not be locked down with Administrator only write permissions.
 
-Example: `choco install python312x --params "/InstallDir:C:\your\install\path"`
+Example: `choco install python312 --params "/InstallDir:C:\your\install\path"`
 
 ## Notes
 
@@ -33,7 +33,7 @@ Example: `choco install python312x --params "/InstallDir:C:\your\install\path"`
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
     <tags>python programming development foss cross-platform admin</tags>
     <licenseUrl>https://docs.python.org/3.12/license.html</licenseUrl>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python312-streams</packageSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3-streams</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20170201" />
