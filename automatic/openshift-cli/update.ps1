@@ -3,9 +3,6 @@ param([switch] $Force)
 
 Import-Module AU
 
-$domain   = 'https://github.com'
-$releases = "$domain/openshift/origin/releases/latest"
-
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix -FileNameBase "openshift-origin-client-tools"
 }
@@ -26,17 +23,19 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $StableReleaseUrl = "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/release.txt"
+  $LatestVersion = if ((Invoke-WebRequest -Uri $StableReleaseUrl -UseBasicParsing).Content -match "Version:\s+(?<Version>.+)") {
+    $Matches.Version
+  } else {
+    Write-Error "Could not identify latest version from '$StableReleaseUrl'" -ErrorAction Stop
+  }
 
-  $re = '-windows\.zip$'
-  $url = $download_page.links | ? href -match $re | % href | select -First 1
-
-  $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
+  # We could get the SHA256 value from /sha256sum.txt in the same directory, but we currently generate it
 
   return @{
-    Version   = $version
-    URL64     = $domain + $url
-    ReleaseURL= "${domain}/openshift/origin/releases/tag/v${version}"
+    Version    = $LatestVersion
+    URL64      = "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$LatestVersion/openshift-client-windows-$LatestVersion.zip"
+    ReleaseURL = "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/$LatestVersion"
   }
 }
 
