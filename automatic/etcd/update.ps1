@@ -3,45 +3,45 @@ param($IncludeStream, [switch] $Force)
 
 Import-Module AU
 
-$domain = 'https://github.com'
-$releases = "$domain/etcd-io/etcd/releases"
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt"      = @{
+    ".\legal\VERIFICATION.txt" = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseURL)>"
       "(?i)(^\s*software.*)\<.*\>"        = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
       "(?i)(^\s*checksum\:).*"            = "`${1} $($Latest.Checksum64)"
     }
+  }
+}
 
-    "$($Latest.PackageName).nuspec" = @{
-      "(\<copyright\>.*?-)\d{4}(.*?\</copyright\>)" = "`${1}$($Latest.ReleaseYear)`${2}"
-      "(\<releaseNotes\>).*?(\</releaseNotes\>)"    = "`${1}$($Latest.ReleaseURL)`${2}"
-    }
+function global:au_AfterUpdate {
+  Update-Metadata -data @{
+    'copyright'    = "(c) 2013-$($Latest.ReleaseYear) etcd Authors"
+    'releaseNotes' = "$($Latest.ReleaseNotes)"
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re   = '-windows-amd64\.zip$'
-  $urls = $download_page.links | where-object href -match $re | foreach-object href
+  $releases = Get-AllGitHubReleases 'etcd-io' 'etcd'
 
   $streams = @{}
+  $re = '-windows-amd64\.zip$'
 
-  $urls | foreach-object {
-    $version      = $_ -split '\/v?' | select-object -last 1 -skip 1
+  $releases | foreach-object {
+    $version      = $_.tag_name.TrimStart('v')
     $majorVersion = $version -replace '^(\d+\.\d+).*', "`$1"
 
     if (!$streams.ContainsKey($majorVersion)) {
+      $url = $_.assets | Where-Object name -Match $re | Select-Object -ExpandProperty browser_download_url
+
       $streams.Add($majorVersion, @{
-          Version     = Get-Version $version
-          URL64       = $domain + $_
-          ReleaseURL  = "$domain/etcd-io/etcd/releases/tag/v${version}"
-          ReleaseYear = (Get-Date).ToString('yyyy')
+          Version      = Get-Version $version
+          URL64        = $url
+          ReleaseURL   = $_.html_url
+          ReleaseYear  = (Get-Date).ToString('yyyy')
+          ReleaseNotes = $_.body
         }
       )
     }
@@ -50,4 +50,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
+Update-Package -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
