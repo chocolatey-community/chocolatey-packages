@@ -18,6 +18,17 @@ function GetLatest {
   }
 }
 
+function global:au_AfterUpdate {
+  $nuspecPath = ".\$($Latest.PackageName).nuspec"
+
+  Clear-DependenciesList $nuspecPath
+  Add-Dependency $nuspecPath 'chocolatey-core.extension' '1.3.3'
+
+  if ([Version] $Latest.Stream -ge '7.0') {
+    Add-Dependency $nuspecPath 'vcredist140' '14.20.27508.1'
+  }
+}
+
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{

@@ -5,6 +5,8 @@
 # but the file containing the functions is expected
 # to be named using the same name.
 $funcs = @(
+  'Add-Dependency'
+  'Clear-DependenciesList'
   'Get-GitHubRelease'
   'Set-DescriptionFromReadme'
   'Update-ChangelogVersion'
