@@ -11,7 +11,7 @@ function global:au_SearchReplace {
     }
 
     '.\legal\VERIFICATION.txt'      = @{
-      '(?i)(Go to.*)<.*>'   = "`${1} <$($releases)>"
+      '(?i)(Go to).*<.*>'   = "`${1} <$($releases)>"
       '(?i)(\s+x32:).*'     = "`${1} $($Latest.URL32)"
       '(?i)(\s+x64:).*'     = "`${1} $($Latest.URL64)"
       '(?i)(checksum32:).*' = "`${1} $($Latest.Checksum32)"
@@ -30,10 +30,10 @@ function global:au_GetLatest {
 
   $installers = $download_page.Links | Where-Object href -Match 'github.*\.exe$' | Select-Object -ExpandProperty href
 
-  $url64 = $installers | Where-Object { $_ -match '-64bit' } | Select-Object -First 1
+  $url64 = $installers | Where-Object { $_ -match '-64bit|-x64' } | Select-Object -First 1
   $version = $url64 -split '/' | Select-Object -Last 1 -Skip 1
   $version = $version.Replace('Audacity-', '')
-  $url32 = $installers | Where-Object { $_ -match "-32bit" } | Select-Object -First 1
+  $url32 = $installers | Where-Object { $_ -match "-32bit|-x32" } | Select-Object -First 1
 
   @{
     URL32   = $url32
