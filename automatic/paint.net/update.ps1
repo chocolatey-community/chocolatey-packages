@@ -1,6 +1,10 @@
-﻿Import-Module AU
+Import-Module AU
 
-$releases = 'https://github.com/paintdotnet/release/releases/latest'
+
+$domain   = 'https://github.com'
+$releases = "$domain/repos/paintdotnet/release/releases/latest"
+$owner = "paintdotnet"
+$repository = "release"
 
 function global:au_SearchReplace {
   @{
@@ -16,21 +20,22 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate {Get-RemoteFiles -Purge}
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $latest_tag = (($download_page.BaseResponse).ResponseUri -split '\/')[-1]
-    $expanded_assets = Invoke-WebRequest "https://github.com/paintdotnet/release/releases/expanded_assets/$($latest_tag)" -UseBasicParsing
+    $tags = Get-GitHubRelease -Owner $owner -RepositoryName $repository -Latest
 
-    $re = '*.winmsi.x64.zip'
-    $re32 = '*.winmsi.x86.zip'
 
-    $url = $expanded_assets.Links | ? {$_.href -like $re} | select -First 1 -expand href
-    $url32 = $expanded_assets.Links | ? {$_.href -like $re32} | select -First 1 -expand href
-    $version = $url -split '/' | select -Last 1 -Skip 1
+    $re = 'winmsi.x64.zip'
+    $re32 = 'winmsi.x86.zip'
 
-    @{
-        Version = $version.Substring(1)
+    $url = $tags.assets.browser_download_url | ? {$_ -match $re}
+    $url32 = $tags.assets.browser_download_url | ? {$_ -match $re32}
+    $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
+
+    return @{
+        Version = $version
         Url64   = "https://github.com" + $url
         Url     = "https://github.com" + $url32
+        ReleaseURL  = "$domain/paintdotnet/release/releases/tag/v${version}"
+        PackageName = 'paint.net'
     }
 }
 
