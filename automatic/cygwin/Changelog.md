@@ -3,6 +3,7 @@
 ## Upcoming
 
 - **BREAKING CHANGE:** Removed support for 32bit installation
+- **BREAKING CHANGE:** Remove dependencies used for compatibility
 
 ## Version: 3.0.7.20191022
 
