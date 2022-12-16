@@ -1,5 +1,4 @@
 Import-Module AU
-import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $softwareName = 'Git Extensions*'
 
