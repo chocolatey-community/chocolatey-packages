@@ -24,7 +24,7 @@ function global:au_GetLatest {
 
   $download_page = Invoke-WebRequest https://www.ccleaner.com/defraggler/version-history -UseBasicParsing
   $Matches = $null
-  $download_page.Content -match "\<h6\>v((?:[\d]\.)[\d\.]+)"
+  $download_page.Content -match "version-history__latest-version`"\>v((?:[\d]\.)[\d\.]+)"
   $version = $Matches[1]
 
   @{ URL32 = $url; Version = $version ; ChecksumType32 = 'sha256' }
