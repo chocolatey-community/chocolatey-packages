@@ -2,7 +2,7 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The installer have been downloaded from their official download link listed on <https://youtube-dl.org/>
+The installer has been downloaded from their official download link listed on <https://youtube-dl.org/>
 and can be verified like this:
 
 1. Download <https://youtube-dl.org/downloads/latest/youtube-dl.exe>
