@@ -1,31 +1,34 @@
 import-module au
 
-$releases = 'https://github.com/ckaiser/Lightscreen/releases'
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
+function global:au_SearchReplace {
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName32)`""
+    }
+    ".\legal\VERIFICATION.txt"      = @{
+      "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
+      "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
+      "(?i)(type:).*"       = "`${1} $($Latest.ChecksumType32)"
+    }
+  }
+}
+
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes
+}
+
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $url32  = $download_page.links | ? href -match '.exe$' | select -First 1 -expand href
-  $version   = $url32 -split '-|.exe' | select -Last 1 -Skip 1
+  $release = Get-GitHubRelease 'ckaiser' 'Lightscreen'
+  $version = $release.tag_name.TrimStart('v')
+  $url32 = $release.assets | Where-Object name -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
 
   return @{
-    URL32    = 'https://github.com' + $url32
-    Version  = $version
+    URL32        = $url32
+    Version      = Get-Version $version
+    ReleaseNotes = $release.body
   }
 }
 
-function global:au_SearchReplace {
-   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-        "(?i)(^\s*file\s*=\s*`"[$]toolsDir\\).*" = "`${1}$($Latest.FileName32)`""
-        }
-    ".\legal\VERIFICATION.txt" = @{
-        "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
-        "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
-        "(?i)(type:).*"       = "`${1} $($Latest.ChecksumType32)"
-        }
-  }
-}
-
-update -ChecksumFor none
+Update-Package -ChecksumFor none
