@@ -1,6 +1,6 @@
 # Package changelog for [cygwin](https://chocolatey.org/packages/cygwin)
 
-## Upcoming
+## Version: 3.4.1 (2022-12-16)
 
 - **BREAKING CHANGE:** Removed support for 32bit installation
 - **BREAKING CHANGE:** Remove dependencies used for compatibility
