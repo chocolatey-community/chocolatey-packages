@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>selenium-gecko-driver</id>
-    <version>0.31.0</version>
+    <version>0.32.0</version>
     <title>Selenium Gecko Driver</title>
     <authors>Mozilla</authors>
     <owners>chocolatey-community,hans0</owners>

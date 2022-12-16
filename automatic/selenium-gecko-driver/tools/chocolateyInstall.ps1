@@ -9,8 +9,8 @@ $packageArgs = @{
   packageName  = 'selenium-gecko-driver'
   softwareName = "Gecko WebDriver"
 
-  file         = "$toolsDir\geckodriver-v0.31.0-win32.zip"
-  file64       = "$toolsDir\geckodriver-v0.31.0-win64.zip"
+  file         = "$toolsDir\geckodriver-v0.32.0-win32.zip"
+  file64       = "$toolsDir\geckodriver-v0.32.0-win64.zip"
   destination  = $seleniumDir
 }
 
