@@ -1,12 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+if (Get-OSArchitectureWidth -Compare 32) {
+  throw "qBittorrent is no longer available in 32-bit after version 4.4.5, pin the package version to 4.4.5 with command ``choco pin add --name=`"'qbittorrent'`" --version=`"'4.4.5'`"``"
+}
+
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName    = 'qbittorrent'
   fileType       = 'exe'
   softwareName   = 'qBittorrent*'
-  file           = "$toolsDir\qbittorrent_4.4.5_setup.exe"
   file64         = "$toolsDir\qbittorrent_4.4.5_x64_setup.exe"
   silentArgs     = '/S'
   validExitCodes = @(0, 1223)

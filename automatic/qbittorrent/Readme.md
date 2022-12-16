@@ -39,6 +39,7 @@ it for the BitTorrent protocol itself.
 ## Notes
 
 - This version includes the 64-bit version of qbittorrent, if you wish to continue using the 32-bit version you need to pass `--x86` when calling `choco install/update`
+- Beginning with v4.5.0, only 64-bit version is offered. If you have the 32-bit version installed, pin the version to 4.4.5 with command `choco pin add --name="'qbittorrent'" --version="'4.4.5'"`
 
 ![qbittorrent screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/798547edb9c6cb22a4a58e08361da4450f0ab14c/automatic/qbittorrent/screenshot.png)
 
