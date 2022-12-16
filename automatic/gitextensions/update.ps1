@@ -19,27 +19,37 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri 'https://github.com/gitextensions/gitextensions/releases' -UseBasicParsing
+  $LatestRelease = Get-GitHubRelease -Owner "gitextensions" -Name "gitextensions"
 
-  $urls = $download_page.Links | ? href -match 'GitExtensions-(.+)\.msi$' | select -expand href | % { 'https://github.com' + $_ }
+  $re = 'GitExtensions-(.+)\.msi$'
+  $downloadUrl = $LatestRelease.assets.browser_download_url | Where-Object { $_ -match $re } | select -First 1
+  $releaseUrl = $LatestRelease.html_url
+  
+  $version = ($downloadUrl -split '\/' | select -last 1 -skip 1).Substring(1)
 
-  $streams = @{}
-  $urls | % {
-    $version = $_ -split '\/' | select -last 1 -skip 1
-    if ($version -match '\.[a-z][a-z\d]*$') {
-      $version = $version -replace '\.([a-z][a-z\d]*)$', "-`$1"
-    }
-    $version = Get-Version $version
+  $version = $version -replace ".RC", "-RC"
 
-    if (!($streams.ContainsKey($version.ToString(2)))) {
-      $streams.Add($version.ToString(2), @{
-          Version = $version.ToString()
-          URL32   = $_
-        })
-    }
+  if(($version.ToCharArray() | Where-Object {$_ -eq '.'} | Measure-Object).Count -eq 0) {
+    $version = $version + ".0.0"
+  } elseif(($version.ToCharArray() | Where-Object {$_ -eq '.'} | Measure-Object).Count -eq 1) {
+    $version = $version + ".0"
   }
 
-  return @{ Streams = $streams }
+  $pre = ""
+  if ($version -match '^.*(-.*?)\..*$') {
+    $pre = $version -replace '^.*(-.*?)\..*$', "`$1"
+    $version = $version -replace $pre, ""
+  }
+
+  $version = $version + $pre
+  
+  $version = Get-Version $version
+
+  return @{
+    Version        = $version
+    URL32          = $downloadUrl 
+    ReleaseURL     = $releaseUrl
+  }
 }
 
-Update-Package -ChecksumFor none
+update -ChecksumFor none
