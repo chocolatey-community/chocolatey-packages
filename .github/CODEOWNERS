@@ -11,6 +11,8 @@
 # Packages
 # Multiple users can be set for the same match
 
+# The following line is only valid for community day (December 16th) and should be removed afterwards
+* @chocolatey-community/chocolatey-team-maintainers
 */ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
 */python3-streams     @chocolatey-community/chocolatey-team-maintainers @Jackenmen
 */python*             @chocolatey-community/chocolatey-team-maintainers
