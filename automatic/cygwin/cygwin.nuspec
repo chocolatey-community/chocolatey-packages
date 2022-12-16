@@ -44,10 +44,6 @@ Example: `choco install cygwin --params "/InstallDir:C:\your\install\path /NoSta
     </releaseNotes>
     <mailingListUrl>https://cygwin.com/lists.html</mailingListUrl>
     <projectSourceUrl>https://cygwin.com/git/gitweb.cgi?p=newlib-cygwin.git</projectSourceUrl>
-    <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="chocolatey" version="0.10.5" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />

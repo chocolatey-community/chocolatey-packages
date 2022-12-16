@@ -1,5 +1,10 @@
 # Package changelog for [cygwin](https://chocolatey.org/packages/cygwin)
 
+## Upcoming
+
+- **BREAKING CHANGE:** Removed support for 32bit installation
+- **BREAKING CHANGE:** Remove dependencies used for compatibility
+
 ## Version: 3.0.7.20191022
 
 - **BUGS:** Fixed permission bug when package was installed when `$Env:ChocolateyToolsLocation` wasn't created yet [#1291](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1291)
