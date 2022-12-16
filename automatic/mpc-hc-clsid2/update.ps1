@@ -1,7 +1,5 @@
 ﻿Import-Module AU
 
-$releases = 'https://github.com/clsid2/mpc-hc/releases'
-
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
 function global:au_SearchReplace {
@@ -22,25 +20,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $releasesPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = "tag\/((?:\d+\.){2}\d+)$"
-
-  $versionLink = $releasesPage.Links | Where-Object href -match $re | Select-Object -First 1
-  $version = $versionLink.href -split '\/' | Select-Object -Last 1
-
-  $download_page = Invoke-WebRequest -Uri "$($releases)/tag/$($version)" -UseBasicParsing
-
-  $re = 'x64\.exe$'
-  $url64 = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { 'https://github.com' + $_ }
-
-  $re = 'x86\.exe$'
-  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { 'https://github.com' + $_ }
+  $LatestRelease = Get-GitHubRelease clsid2 mpc-hc
 
   @{
-    URL32   = $url32
-    URL64   = $url64
-    Version = $version
+    URL32   = $LatestRelease.assets | Where-Object {$_.name -match 'x64\.exe$'} | Select-Object -ExpandProperty browser_download_url
+    URL64   = $LatestRelease.assets | Where-Object {$_.name -match 'x86\.exe$'} | Select-Object -ExpandProperty browser_download_url
+    Version = $LatestRelease.tag_name.TrimStart("v")
   }
 }
 
