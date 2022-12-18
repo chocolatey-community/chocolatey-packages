@@ -133,9 +133,7 @@ function GetStreams() {
 
   $streams = @{ }
 
-  # Temporarily limit the amount of streams. This limit should be removed on
-  # first package approval (First stream is a pre-release)
-  $latest_versions.GetEnumerator() | Select-Object -First 2 | ForEach-Object {
+  $latest_versions.GetEnumerator() | ForEach-Object {
     $minor_version = $_.Name
     $latest_version = $_.Value
     $versionTwoPart = "3.$minor_version"
