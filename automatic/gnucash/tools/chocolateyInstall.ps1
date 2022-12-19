@@ -5,7 +5,7 @@ $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\gnucash-4.12.setup.exe"
+  file           = "$toolsPath\gnucash-4.13.setup.exe"
 
   softwareName   = 'GnuCash*'
 
