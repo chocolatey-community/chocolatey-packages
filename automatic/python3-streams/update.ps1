@@ -141,7 +141,11 @@ function GetStreams() {
 
     $urls = $all_versions[$latest_version]
     $zip_name = "python-$latest_version-docs-text"
-    $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
+    if ($version.Prerelease -eq "" -or $version.Prerelease.StartsWith("rc")) {
+      $zip_url = "https://www.python.org/ftp/python/doc/$latest_version/$zip_name.zip"
+    } else {
+      $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
+    }
     $license_url = "https://docs.python.org/$versionTwoPart/license.html"
     $streams[$versionTwoPart] = @{
       URL32          = $urls['86']
