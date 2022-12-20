@@ -5,7 +5,7 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
       "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
@@ -23,9 +23,10 @@ function global:au_GetLatest {
   $LatestRelease = Get-GitHubRelease clsid2 mpc-hc
 
   @{
-    URL32   = $LatestRelease.assets | Where-Object {$_.name -match 'x64\.exe$'} | Select-Object -ExpandProperty browser_download_url
-    URL64   = $LatestRelease.assets | Where-Object {$_.name -match 'x86\.exe$'} | Select-Object -ExpandProperty browser_download_url
-    Version = $LatestRelease.tag_name.TrimStart("v")
+    URL32      = $LatestRelease.assets | Where-Object {$_.name -match 'x86\.exe$'} | Select-Object -ExpandProperty browser_download_url
+    URL64      = $LatestRelease.assets | Where-Object {$_.name -match 'x64\.exe$'} | Select-Object -ExpandProperty browser_download_url
+    Version    = $LatestRelease.tag_name.TrimStart("v")
+    ReleaseUrl = $LatestRelease.html_url
   }
 }
 
