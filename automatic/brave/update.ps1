@@ -29,7 +29,7 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
   # CRUFT - The above function does not provide for ignoring one file so we need to delete the 32bit version.
   $toolsPath = Resolve-Path tools
-  rm -Force "$toolsPath\BraveBrowserStandaloneSilentBetaSetup32.exe"
+  rm -Force "$toolsPath\BraveBrowserStandaloneSilent*Setup32.exe"
 
 }
 
