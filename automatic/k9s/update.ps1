@@ -25,13 +25,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $LatestRelease = Get-GitHubRelease -Owner "derailed" -Name "k9s"
+  $latestRelease = Get-GitHubRelease -Owner "derailed" -Name "k9s"
 
   $re = '_Windows_x86_64\.tar.gz$'
-  $url = $latestrelease.assets.browser_download_url | Where-Object { $_ -match $re } | select -First 1
+  $asset = $latestRelease.assets | Where-Object { $_.name -match $re } | Select-Object -First 1
 
-  $version = (Split-Path ( Split-Path $url ) -Leaf).Substring(1)
-  $filename64 = Split-Path $url -Leaf
+  $version = if ($latestRelease.tag_name.StartsWith('v')) {
+      $latestRelease.tag_name.Substring(1)
+  }
+  else {
+      $latestRelease.tag_name
+  }
+  $filename64 = $asset.name
 
   $checksumAsset = $latestrelease.assets.browser_download_url | Where-Object { $_ -match "checksums\.txt$" } | select -First 1
   $checksum_page = Invoke-WebRequest -Uri $checksumAsset -UseBasicParsing
