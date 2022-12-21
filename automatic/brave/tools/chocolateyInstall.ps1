@@ -1,14 +1,16 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$packageArgs = @{
+$packageArgs64 = @{
+  packageName = $env:ChocolateyPackageName
+  file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
+}
+
+$packageArgs32 = @{
   packageName = $env:ChocolateyPackageName
   url                    = ''
-  url64bit               = ''
   checksum               = ''
-  checksum64             = ''
   checksumType           = 'sha256'
-  checksumType64         = 'sha256'
 }
 
 [version]$softwareVersion = '1.45.123'
@@ -23,7 +25,14 @@ elseif ($installedVersion -and ($softwareVersion -eq $installedVersion)) {
   Write-Warning "Skipping installation because version $softwareVersion is already installed."
 }
 else {
-  Install-ChocolateyPackage @packageArgs
+  if($env:PROCESSOR_ARCHITECTURE -eq "x86"){
+    Install-ChocolateyPackage @packageArgs32
+  }
+  else {
+    Install-ChocolateyInstallPackage @packageArgs64
+  }
+
+
 }
 
 Remove-Item $toolsPath\*.exe -ea 0
