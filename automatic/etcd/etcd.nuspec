@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.5.6</version>
+    <version>3.4.23</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
@@ -45,14 +45,14 @@ Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/t
 * Windows support is limited to 64-bit systems
 * Originally packaged by Robert Labrie (https://github.com/robertlabrie)
 ]]></description>
-    <releaseNotes>Please check out [CHANGELOG](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.5.md) for a full list of changes. And make sure to read [upgrade guide](https://github.com/etcd-io/website/blob/main/content/en/docs/v3.5/upgrades/upgrade_3_5.md) before upgrading etcd (there may be breaking changes).
+    <releaseNotes>Please check out [CHANGELOG](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.4.md) for a full list of changes. And make sure to read [upgrade guide](https://github.com/etcd-io/website/blob/main/content/en/docs/v3.4/upgrades/upgrade_3_4.md) before upgrading etcd (there may be breaking changes).
 
-For installation guides, please check out [play.etcd.io](http://play.etcd.io) and [operating etcd](https://github.com/etcd-io/etcd/tree/master/Documentation#operating-etcd-clusters). Latest support status for common architectures and operating systems can be found at [supported platforms](https://github.com/etcd-io/website/blob/main/content/en/docs/v3.5/op-guide/supported-platform.md).
+For installation guides, please check out [play.etcd.io](http://play.etcd.io) and [operating etcd](https://github.com/etcd-io/etcd/tree/master/Documentation#operating-etcd-clusters). Latest support status for common architectures and operating systems can be found at [supported platforms](https://github.com/etcd-io/website/blob/main/content/en/docs/v3.4/op-guide/supported-platform.md).
 
 ###### Linux
 
 ```bash
-ETCD_VER=v3.5.6
+ETCD_VER=v3.4.23
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -82,7 +82,7 @@ rm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz
 ###### macOS (Darwin)
 
 ```bash
-ETCD_VER=v3.5.6
+ETCD_VER=v3.4.23
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -106,13 +106,13 @@ etcd uses [`gcr.io/etcd-development/etcd`](https://gcr.io/etcd-development/etcd)
 
 ```bash
 rm -rf /tmp/etcd-data.tmp &amp;&amp; mkdir -p /tmp/etcd-data.tmp &amp;&amp; \
-  docker rmi gcr.io/etcd-development/etcd:v3.5.6 || true &amp;&amp; \
+  docker rmi gcr.io/etcd-development/etcd:v3.4.23 || true &amp;&amp; \
   docker run \
   -p 2379:2379 \
   -p 2380:2380 \
   --mount type=bind,source=/tmp/etcd-data.tmp,destination=/etcd-data \
-  --name etcd-gcr-v3.5.6 \
-  gcr.io/etcd-development/etcd:v3.5.6 \
+  --name etcd-gcr-v3.4.23 \
+  gcr.io/etcd-development/etcd:v3.4.23 \
   /usr/local/bin/etcd \
   --name s1 \
   --data-dir /etcd-data \
@@ -127,13 +127,12 @@ rm -rf /tmp/etcd-data.tmp &amp;&amp; mkdir -p /tmp/etcd-data.tmp &amp;&amp; \
   --logger zap \
   --log-outputs stderr
 
-docker exec etcd-gcr-v3.5.6 /bin/sh -c "/usr/local/bin/etcd --version"
-docker exec etcd-gcr-v3.5.6 /bin/sh -c "/usr/local/bin/etcdctl version"
-docker exec etcd-gcr-v3.5.6 /bin/sh -c "/usr/local/bin/etcdctl endpoint health"
-docker exec etcd-gcr-v3.5.6 /bin/sh -c "/usr/local/bin/etcdctl put foo bar"
-docker exec etcd-gcr-v3.5.6 /bin/sh -c "/usr/local/bin/etcdctl get foo"
-```
-</releaseNotes>
+docker exec etcd-gcr-v3.4.23 /bin/sh -c "/usr/local/bin/etcd --version"
+docker exec etcd-gcr-v3.4.23 /bin/sh -c "/usr/local/bin/etcdctl version"
+docker exec etcd-gcr-v3.4.23 /bin/sh -c "/usr/local/bin/etcdctl endpoint health"
+docker exec etcd-gcr-v3.4.23 /bin/sh -c "/usr/local/bin/etcdctl put foo bar"
+docker exec etcd-gcr-v3.4.23 /bin/sh -c "/usr/local/bin/etcdctl get foo"
+```</releaseNotes>
     <dependencies>
       <dependency id="nssm" version="2.24.101" />
     </dependencies>
