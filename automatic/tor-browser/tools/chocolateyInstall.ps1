@@ -3,21 +3,18 @@
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 . "$toolsDir\helpers.ps1"
 
-$data = GetDownloadInformation -toolsPath $toolsDir
 $destinationFolder = GetInstallDirectory -toolsPath $toolsDir
 
 $packageArgs = @{
   PackageName  = 'tor-browser'
   FileType     = 'exe'
-  Url          = $data.URL32
-  Url64        = $data.URL64
-  Checksum     = $data.Checksum
-  Checksum64   = $data.Checksum64
+  Url          = ''
+  Url64        = ''
+  Checksum     = ''
+  Checksum64   = ''
   ChecksumType = 'sha256'
   SilentArgs   = "/S","/D=$destinationFolder"
 }
-
-"Using Language code: '$($data.Locale)'"
 
 Install-ChocolateyPackage @packageArgs
 
