@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/int128/kubelogin/releases/latest>
+location on <https://github.com/int128/kubelogin/releases/tag/v1.26.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-bit software: <https://github.com/int128/kubelogin/releases/download/v1.25.4/kubelogin_windows_amd64.zip>
+  64-bit software: <https://github.com/int128/kubelogin/releases/download/v1.26.0/kubelogin_windows_amd64.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: F048B385AD4EF4A32E1C0F56F91AB6302FFD22A3688006F462070305CECFCA7F
+  checksum64: 717D6D277F9602717209209DF36F05EB6B66CC1483552C948BCBF4DC132E7DA2
 
 File 'LICENSE.txt' is obtained from <https://github.com/kubernetes/kubernetes/blob/d30db1f9a915aa95402e1190461469a1889d92be/LICENSE>
