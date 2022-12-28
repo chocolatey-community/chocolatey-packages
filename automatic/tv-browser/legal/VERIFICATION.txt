@@ -7,13 +7,13 @@ location on <https://www.tvbrowser.org/index.php?id=windows>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://sourceforge.net/projects/tvbrowser/files/TV-Browser%20Releases%20%28Java%2011%20and%20higher%29/4.2.6/tvbrowser-lite_4.2.6_win.exe/download>
+  32-Bit software: <https://sourceforge.net/projects/tvbrowser/files/TV-Browser%20Releases%20%28Java%2011%20and%20higher%29/4.2.7/tvbrowser-lite_4.2.7_win.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: FA8865CB4398F2A164A886EB511ABB10F323A08A40079FAA478CAEF2C920D004
+  checksum32: 914807A66DCC02CC9F2A509D9F3ADDF7B913CB0ED0481B7164597E0BC09DABDB
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/gpl.txt>
