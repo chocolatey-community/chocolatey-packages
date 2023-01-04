@@ -14,11 +14,9 @@ function global:au_SearchReplace {
 
 function global:au_AfterUpdate {
   . "$PSScriptRoot/update_helper.ps1"
-  if ($Latest.PackageName -eq '1password4') {
-    removeDependencies ".\*.nuspec"
-    addDependency ".\*.nuspec" "chocolatey-core.extension" "1.3.3"
-  }
-  else {
+  removeDependencies ".\*.nuspec"
+  addDependency ".\*.nuspec" "chocolatey-core.extension" "1.3.3"
+  if ($Latest.PackageName -eq '1password') {
     addDependency ".\*.nuspec" 'dotnet4.7.2' '4.7.2.20180712'
   }
 }
@@ -32,38 +30,74 @@ function global:au_BeforeUpdate {
   }
 }
 
-function Get-LatestOPW {
-  param (
-    [string]$url,
-    [string]$kind
-
+function Get-OPStream {
+  param(
+    [string]$uri,
+    [int]$majorVersion
   )
+  switch ($majorVersion) {
+    4 {
+      $PackageName = "1password4"
+      $StreamName = "OPW4"
+      $UriParseRegex = "(?<uri>https:.*1Password-(?<version>[0-9.]*)\.((?<prerelease>BETA)-)?(?<buildno>\d+)\.exe)$"
+    }
+    6 {
+      $PackageName = "1password"
+      $StreamName = "OPW6"
+      $UriParseRegex = "(?<uri>https:.*1PasswordSetup-(?<version>[0-9.]*)([-.](?<prerelease>BETA))?\.exe)$"
+    }
+    8 {
+      $PackageName = "1password"
+      $StreamName = "OPW"
+      $UriParseRegex = "(?<uri>https:.*1PasswordSetup-(?<version>[0-9.]*)(-((?<buildno>.*)\.)?(?<prerelease>(BETA|NIGHTLY)))?\.exe)$"
+    }
+  }
 
-  $url32 = Get-RedirectedUrl $url
-  $verRe = 'Setup-|word-|\.exe$'
-  $version = $url32 -split $verRe | select -last 1 -skip 1
-  $version = $version -replace ('\.BETA', ' beta')
-  $version = Get-Version $version
-  $major = $version.ToString(1)
+  if ($uri -notmatch $UriParseRegex) {
+    throw "URI [$uri] did not match Regex for version [$majorVersion]"
+  }
 
-  @{
-    URL32       = $url32
-    Version     = $version.ToString()
-    PackageName = $kind
+  $BaseVersionPart = $Matches.version
+  $PrereleasePart = ""
+  $BuildPart = ""
+
+  if ($Matches.ContainsKey("buildno")) {
+    $BuildPart = ".$($Matches.buildno)"
+  }
+  if ($Matches.ContainsKey("prerelease")) {
+    if ($Matches.prerelease -eq "NIGHTLY") {
+      return $null
+    }
+    $PrereleasePart = "-$($Matches.prerelease)"
+    $StreamName += $PrereleasePart
+  }
+
+  $Version = (Get-Version ($BaseVersionPart + $BuildPart + $PrereleasePart)).ToString()
+
+  return @{
+    Name = $StreamName
+    Stream = @{
+      URL32 = $uri
+      Version = $Version
+      PackageName = $PackageName
+    }
   }
 }
 
-$releases_opw4 = 'https://app-updates.agilebits.com/download/OPW4'
-$kind_opw4 = '1password4'
-$releases_opw = 'https://app-updates.agilebits.com/download/OPW7/Y'
-$kind_opw = '1password'
-
 function global:au_GetLatest {
-  $streams = [ordered] @{
-    OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4
-    OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
+  $streams = @{}
+  foreach($majorVersion in 4,6,8) {
+    $releasesUri = "https://app-updates.agilebits.com/product_history/OPW${majorVersion}"
+    $response = Invoke-WebRequest -UseBasicParsing -uri $releasesUri
+    $response.Links |
+      Where-Object href -match "https://c.1password.com" |
+        ForEach-Object {
+          $stream = Get-OPStream -uri $_.href -majorVersion $majorVersion
+          if (($null -ne $stream) -and !$streams.Contains($stream.Name)) {
+            $streams[$stream.Name] = $stream.Stream
+          }
+        }
   }
-
   return @{ Streams = $streams }
 }
 
