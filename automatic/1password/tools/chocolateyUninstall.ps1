@@ -6,12 +6,13 @@ $packageName = $env:ChocolateyPackageName
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
+    $_.QuietUninstallString -match '^(?<file>.*) (?<arg>((--)?uninstall|/SILENT))$' | Out-Null
     $packageArgs = @{
       packageName    = $packageName
       fileType       = 'EXE'
-      silentArgs     = 'uninstall'
+      silentArgs     = $Matches.arg
       validExitCodes = @(0)
-      file           = "$($_.UninstallString -replace ' uninstall')"
+      file           = $Matches.file
     }
 
     Uninstall-ChocolateyPackage @packageArgs
