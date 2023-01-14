@@ -4,7 +4,7 @@ if ($MyInvocation.InvocationName -ne '.') {
   function global:au_SearchReplace {
     @{
       ".\README.md" = @{
-        "(?i)(install the package )\[python\d+]\((.*)python\d+" = "`$1[$($Latest.Dependency)(`$2$($Latest.Dependency)"
+        "(?i)(install the package )\[python\d+]\((.*)python\d+" = "`$1[$($Latest.Dependency)](`$2$($Latest.Dependency)"
         "(?i)(the package )``python\d+``( must also)"           = "`$1``$($Latest.Dependency)```$2"
       }
     }
