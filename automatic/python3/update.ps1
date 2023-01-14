@@ -15,7 +15,8 @@ function global:au_BeforeUpdate {
   SetCopyright
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
+  Set-DescriptionFromReadme $Package -SkipFirst 2
   Update-Metadata -data @{
     dependency = "$($Latest.Dependency)|[$($Latest.Version)]"
     copyright  = $Latest.Copyright
@@ -38,5 +39,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
-  update -ChecksumFor none
+  update -ChecksumFor none -NoReadme
 }

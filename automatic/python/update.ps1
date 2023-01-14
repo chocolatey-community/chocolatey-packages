@@ -8,7 +8,8 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
+  Set-DescriptionFromReadme $Package -SkipFirst 2
   Update-Metadata -data @{
     dependency = "python3|[$($Latest.Version)]"
     copyright  = $Latest.Copyright
@@ -16,4 +17,4 @@ function global:au_AfterUpdate {
   }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -NoReadme
