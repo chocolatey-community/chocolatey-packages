@@ -17,7 +17,7 @@ function global:au_BeforeUpdate {
 
 function global:au_AfterUpdate {
   Update-Metadata -data @{
-    dependency = "$($Latest.Dependency)|$($Latest.Version)"
+    dependency = "$($Latest.Dependency)|[$($Latest.Version)]"
     copyright  = $Latest.Copyright
     licenseUrl = $Latest.LicenseUrl
   }
