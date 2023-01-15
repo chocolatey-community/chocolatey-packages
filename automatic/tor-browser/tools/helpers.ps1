@@ -1,42 +1,4 @@
-﻿function GetDownloadsData() {
-  param($filePath)
-
-  $data = Get-Content $filePath | ConvertFrom-Csv -Delimiter '|'
-  return $data
-}
-
-function GetLocaleData() {
-  param($downloadData)
-
-  $availableLocales = $downloadData | Select-Object -expand Locale
-
-  $pp = Get-PackageParameters
-  $preferredLocale = if ($pp.Locale) { $pp.Locale } else { (Get-Culture).Name }
-  $twoLetterLocale = (Get-Culture).TwoLetterISOLanguageName
-  $fallbackLocale = 'en-US'
-
-  $locales = $preferredLocale,$twoLetterLocale,$fallbackLocale
-
-  foreach ($locale in $locales) {
-    $localeMatch = $availableLocales | Where-Object { $_ -eq $locale } | Select-Object -first 1
-    if (!$localeMatch -and $locale -ne $null -and $locale.Count -eq 2) {
-      $localeMatch = $availableLocales | Where-Object { ($_ -split '-' | Select-Object -first 1) -eq $locale } | Select-Object -first 1
-    }
-    if ($localeMatch -and $locale -ne $null) { break }
-  }
-
-  return $downloadData | Where-Object { $_.Locale -eq $locale } | Select-Object -first 1
-}
-
-function GetDownloadInformation() {
-  param($toolsPath)
-  $dlData = GetDownloadsData "$toolsPath\LanguageChecksums.csv"
-  if (!$dlData) { throw "No URLs is available to download from!" }
-  $locale = GetLocaleData $dlData
-  return $locale
-}
-
-function GetInstallDirectory() {
+﻿function GetInstallDirectory() {
   param($toolsPath)
 
   $pp = Get-PackageParameters
