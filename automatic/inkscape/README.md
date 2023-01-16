@@ -21,3 +21,6 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
 * File formats: SVG, PNG, OpenDocument Drawing, DXF, sk1, PDF, EPS and PostScript export formats and more
 * Command line options for export and conversions
 
+## Notes
+
+* **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
