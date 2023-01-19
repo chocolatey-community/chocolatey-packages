@@ -12,17 +12,20 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $downloadPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe(\?[a-f\d]+)?$'
-  $url = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $url = $downloadPage.links | Where-Object href -match $re | Select-Object -First 1 -expand href
 
-  $download_page = Invoke-WebRequest https://www.ccleaner.com/speccy/version-history -UseBasicParsing
+  $downloadPage = Invoke-WebRequest -Uri 'https://www.ccleaner.com/speccy/version-history' -UseBasicParsing
   $Matches = $null
-  $download_page.Content -match "v((?:[\d]\.)[\d\.]+)\</span\>"
+  $downloadPage.Content -match "v((?:[\d]\.)[\d\.]+)\</span\>"
   $version = $Matches[1]
 
-  @{ URL32 = $url; Version = $version }
+  @{
+    URL32 = $url
+    Version = $version
+  }
 }
 
 update -ChecksumFor 32
