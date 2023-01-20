@@ -2,13 +2,9 @@
 
 function global:au_SearchReplace {
   [version]$version = $Latest.RemoteVersion
-  $docsUrl = "http://www.ghostscript.com/doc/$($version)/Readme.htm"
-  $releaseNotesUrl = "https://ghostscript.com/doc/$($version)/History$($version.Major).htm"
   @{
     ".\Ghostscript.nuspec" = @{
       "(\<dependency .+?`"$($Latest.PackageName).app`" version=)`"([^`"]+)`"" = "`$1`"[$($Latest.Version)]`""
-      "(?i)(^\s*\<docsUrl\>).*(\<\/docsUrl\>)" = "`${1}$docsUrl`${2}"
-      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" ` = "`${1}$releaseNotesUrl`${2}"
     }
   }
 }

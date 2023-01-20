@@ -10,8 +10,6 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   [version]$version = $Latest.RemoteVersion
-  $docsUrl = "http://www.ghostscript.com/doc/$($version)/Readme.htm"
-  $releaseNotesUrl = "https://ghostscript.com/doc/$($version)/History$($version.Major).htm"
   @{
     ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
@@ -28,10 +26,6 @@ function global:au_SearchReplace {
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-    }
-    ".\Ghostscript.app.nuspec" = @{
-      "(?i)(^\s*\<docsUrl\>).*(\<\/docsUrl\>)" = "`${1}$docsUrl`${2}"
-      "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" ` = "`${1}$releaseNotesUrl`${2}"
     }
   }
 }
