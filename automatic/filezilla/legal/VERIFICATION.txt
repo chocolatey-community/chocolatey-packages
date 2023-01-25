@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://dl2.cdn.filezilla-project.org/client/FileZilla_3.62.2_win32-setup.exe?h=VulY8ffA30IM-wwi2tsg5w&x=1669144166
-   x64: https://dl2.cdn.filezilla-project.org/client/FileZilla_3.62.2_win64-setup.exe?h=pMuZqVxgsBmSD2MrIrF9Aw&x=1669144166
+   x32: https://dl1.cdn.filezilla-project.org/client/FileZilla_3.63.0_win32-setup.exe?h=G0_y0o3zUITmJ74x9nRU-A&x=1674608980
+   x64: https://dl1.cdn.filezilla-project.org/client/FileZilla_3.63.0_win64-setup.exe?h=oH1eoEEDkJ9E-3sBOnZCvg&x=1674608980
 
    to download the installer.
 
@@ -16,8 +16,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: B7846A698F6D8645A1B4199382D401A743C8E8C375FA32D6ED8C668A6C83CD98
-   checksum64: EF3C2DFBE13AEEF9D04BF6FAEBEC26B97D614E52F24C63955BF7D36543253E07
+   checksum32: 214CA5FBF5E12759F58DD783A2627E1842008F649A6B20B27D6FF9C6F336FDE5
+   checksum64: 6A5F16C823B92BF78A191C9920EBEE505668BFE42C8747354C5943067E7AC172
 
 Using AU:
 
