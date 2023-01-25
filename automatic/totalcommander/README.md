@@ -30,9 +30,10 @@ But Total Commander uses a different approach: it has two fixed windows, which m
 
 The following package parameters can be set:
 
-* `/DesktopIcon` - Add an icon for Total Commander to the Desktop. By default no icon is added.
-* `/InstallPath` - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory.
-* `/DefaultFM`   - Use TC as default file manager instead of Explorer. Use `/DefaultFM:explorer` to return to Explorer.
+* `/NoDesktopIcon`  - Do not add an icon for Total Commander to the Desktop. By default an icon is added.
+* `/InstallPath`    - Use custom install path. By default Total Commander is installed to the `%ProgramFiles%\totalcmd` directory.
+* `/DefaultFM`      - Use TC as default file manager instead of Explorer. You cannot use this with `/ResetDefaultFM`.
+* `/ResetDefaultFM` - Use Explorer as the default file manager. You cannot use this with `/DefaultFM`.
 * `/ShellExtension` - Add Total Commander in shell context menu for directories.
 
 These parameters can be passed to the installer with the use of `--params`. For example: `--params '/DesktopIcon'`.
