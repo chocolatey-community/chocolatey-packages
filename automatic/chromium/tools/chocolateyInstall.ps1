@@ -2,7 +2,7 @@
 $scriptDir=$toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 . (Join-Path $scriptDir 'helper.ps1')
 
-$version = "111.0.5560.0-snapshots"
+$version = "109.0.5414.120"
 $hive = "hkcu"
 $chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $Chromium = $hive + ":" + $chromium_string
