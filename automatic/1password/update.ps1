@@ -84,6 +84,27 @@ function Get-OPStream {
   }
 }
 
+function Update-StreamsWithChecksums {
+  param(
+    $streams,
+    $resultVariable
+  )
+
+  foreach ($key in $streams.keys) {
+    $previousVersion = (Get-Variable -Scope Global $resultVariable).Value.Streams[$key].NuSpecVersion
+    if ( $global:au_Force -or ((Get-Version $streams[$key].Version) -gt (Get-Version $previousVersion))) {
+      $Checksum = Get-RemoteChecksum -Url $streams.$key.Url32 -Algorithm "sha256"
+
+      $streams[$key].Checksum32 = $Checksum
+      $streams[$key].ChecksumType32 = "sha256"
+    }
+  }
+
+  return $streams
+}
+
+$PackageResultVariableName = "OnePasswordPackage"
+
 function global:au_GetLatest {
   $streams = @{}
   foreach($majorVersion in 4,6,8) {
@@ -98,7 +119,10 @@ function global:au_GetLatest {
           }
         }
   }
+
+  $streams = Update-StreamsWithChecksums $streams $PackageResultVariableName
+
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor 32 -IncludeStream $IncludeStream -Force:$Force
+update -Result $PackageResultVariableName -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
