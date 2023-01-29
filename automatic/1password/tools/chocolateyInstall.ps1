@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
@@ -9,6 +9,22 @@ $packageArgs = @{
   checksumType   = 'sha256'
   silentArgs     = "--silent"
   validExitCodes = @(0)
+}
+
+# [System.Version] doesn't support "-BETA" pre-release parts, so remove them beforehand
+$safeVersion = $env:ChocolateyPackageVersion -replace "-.*$", ""
+
+if ( # The package version is greater than or equal to 8, and the Windows version is less than 10
+  ([Version]($safeVersion) -ge [Version]"8.0") -and
+  ([Version]($env:OS_VERSION) -lt [Version]"10.0")
+) {
+  throw -join @(
+    "ERROR! 1password 8.0+ is not supported on desktop versions of "
+    "Windows below 10, nor server versions of Windows below 2016. If you want "
+    "chocolatey to maintain your current version of 1password you can use the "
+    "command ``choco pin add --name=`"1password`" --version=`"7.9.832`"``. Note "
+    "that this will also prevent chocolatey from noticing newer versions of "
+    "1password 7.x if any are released.")
 }
 
 if ($env:ChocolateyPackageName -eq "1password4") {
