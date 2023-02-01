@@ -40,7 +40,7 @@ if ($pp.ExtensionPack) {
     Write-Warning "*** THIS IS A COMMERCIAL EXTENSION AND CAN INCURE SIGNIFICANT FINANCIAL COSTS ***"
 
     $url_ep       = 'https://download.virtualbox.org/virtualbox/7.0.6/Oracle_VM_VirtualBox_Extension_Pack-7.0.6.vbox-extpack'
-    $checksum_ep  = '21c3595361bb2365efe6139f1da724d362daa63fb92c38f686a01aa9200628b2'
+    $checksum_ep  = '292961aa8723b54f96f89f6d8abf7d8e29259d94b7de831dbffb9ae15d346434'
     $file_path_ep = (Get-PackageCacheLocation) + '\' + ($url_ep -split '/' | Select-Object -Last 1)
     Get-ChocolateyWebFile `
         -PackageName    'virtualbox-extensionpack' `
