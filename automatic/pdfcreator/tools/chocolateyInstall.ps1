@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $installArgs = $('' +
-  '/NORESTART /SUPPRESSMSGBOXES /SP- /LOG /LANG=english ' +
+  '/NORESTART /SUPPRESSMSGBOXES /SP- /LOG ' +
   '/COMPONENTS="program,ghostscript,comsamples,' +
   'languages,languages\bosnian,languages\catalan,languages\catalan_valencia,' +
   'languages\chinese_simplified,languages\chinese_traditional,' +
