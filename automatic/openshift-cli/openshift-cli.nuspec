@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/openshift/origin</projectSourceUrl>
     <docsUrl>https://docs.openshift.org/latest/welcome/index.html</docsUrl>
-    <mailingListUrl>https://lists.openshift.redhat.com/openshiftmm/listinfo</mailingListUrl>
     <bugTrackerUrl>https://github.com/openshift/origin/issues</bugTrackerUrl>
     <tags>openshift docker kubernetes containers development devops cli foss</tags>
     <summary>OpenShift Origin is a distribution of Kubernetes optimized for continuous application development and multi-tenant deployment. OpenShift Origin is the open source upstream project that powers OpenShift, Red Hat's container application platform.</summary>
