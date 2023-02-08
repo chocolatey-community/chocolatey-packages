@@ -4,9 +4,9 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   PackageName    = $env:ChocolateyPackageName
-  fileType       = 'exe'
-  file64         = Get-Item $toolsPath\*.exe
-  silentArgs     = '/auto'
+  fileType       = 'msi'
+  file64         = Get-Item $toolsPath\*.msi
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 1641, 3010)
   softwareName   = 'Paint.NET*'
 }

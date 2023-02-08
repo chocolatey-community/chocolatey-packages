@@ -22,7 +22,7 @@ function global:au_GetLatest {
 
     @{
         Version = $LatestRelease.tag_name.TrimStart("v")
-        Url64   = $LatestRelease.assets | Where-Object {$_.name -match 'paint.net.+.install.x64.zip'} | Select-Object -ExpandProperty browser_download_url
+        Url64   = $LatestRelease.assets | Where-Object {$_.name -match 'paint.net.+.winmsi.x64.zip'} | Select-Object -ExpandProperty browser_download_url
     }
 }
 
