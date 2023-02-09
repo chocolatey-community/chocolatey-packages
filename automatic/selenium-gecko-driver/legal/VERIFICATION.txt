@@ -3,20 +3,20 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/mozilla/geckodriver/releases/tag/v0.32.1>
+location on <https://github.com/mozilla/geckodriver/releases/tag/v0.32.2>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/mozilla/geckodriver/releases/download/v0.32.1/geckodriver-v0.32.1-win32.zip>
-  64-Bit software: <https://github.com/mozilla/geckodriver/releases/download/v0.32.1/geckodriver-v0.32.1-win64.zip>
+  32-Bit software: <https://github.com/mozilla/geckodriver/releases/download/v0.32.2/geckodriver-v0.32.2-win32.zip>
+  64-Bit software: <https://github.com/mozilla/geckodriver/releases/download/v0.32.2/geckodriver-v0.32.2-win64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 01F2BBE4065EB4698E4221088C948CEF60CB76AB22E5622B69872FEC32733191
-  checksum64: 8582B87A6BAA1F7156E66F2EFB1C591337943FE4EA1541E6AFBDFC0501F6E335
+  checksum32: BF2539BDAA5C79CCB0B1F17FE91C9876717BEA1A61CD0034644D798F9668B358
+  checksum64: 034341270AE7AE84B21EEF1710C504793467A395679E12EC426475256107DB26
 
 File 'LICENSE.txt' is obtained from: https://www.mozilla.org/media/MPL/2.0/index.48a3fe23ed13.txt
 which is mentioned in their GitHub repository to be the correct license here: https://github.com/mozilla/geckodriver#source-code
