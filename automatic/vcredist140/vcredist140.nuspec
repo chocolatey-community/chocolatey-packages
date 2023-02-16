@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vcredist140</id>
-    <version>14.34.31931</version>
+    <version>14.34.31938</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/vcredist140</packageSourceUrl>
     <owners>chocolatey-community,jberezanski</owners>
     <title>Microsoft Visual C++ Redistributable for Visual Studio 2015-2022</title>
