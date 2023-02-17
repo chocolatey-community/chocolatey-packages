@@ -4,8 +4,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   PackageName    = $Env:ChocolateyPackageName
-  FileFullPath   = "$toolsPath\protoc-21.12-win32.zip"
-  FileFullPath64 = "$toolsPath\protoc-21.12-win64.zip"
+  FileFullPath   = "$toolsPath\protoc-22.0-win32.zip"
+  FileFullPath64 = "$toolsPath\protoc-22.0-win64.zip"
   Destination    = $toolsPath
 }
 Get-ChocolateyUnzip @packageArgs
