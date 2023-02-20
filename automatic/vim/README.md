@@ -26,9 +26,9 @@ Example: `choco install vim --params "'/NoDesktopShortcuts /InstallDir:C:\path\t
 
 ## Notes
 
+- **Antivirus Detections**. Some files in the package are being picked up by VirusTotal as malicious. Please see these [GitHub issues](https://github.com/vim/vim-win32-installer/issues?q=is%3Aissue+is%3Aclosed+virus) for more information.
 - This package uses the ZIP build to install to provide installation parameters.
 - All compilation of the software is automated and performed on Appveyor. The building status is open.
 - This package provides an official build. Similar package `vim-tux` is from a well-known unofficial vim building project. Unlike `vim-tux`, this package can take some installation parameters.
-- See https://github.com/vim/vim-win32-installer for more information.
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 
