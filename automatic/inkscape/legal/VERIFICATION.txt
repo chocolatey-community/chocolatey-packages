@@ -7,13 +7,13 @@ location on <https://inkscape.org/release/inkscape-1.2.2/windows>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://inkscape.org/gallery/item/37366/inkscape-1.2.2_2022-12-01_b0a8486541-x64.msi>
+  64-Bit software: <https://inkscape.org/gallery/item/37366/inkscape-1.2.2_2022-12-09_732a01da63-x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: E9DF7540C0E2644DCBC2F14A98017E4A886ACB8313D5C8068E0E7950F5F2CB42
+  checksum64: 73D6A8F6B24D2AD1DAA800951F37822384B2AD4EFD4810090E24667D8011B9FD
 
 The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/gpl-2.0.txt>
