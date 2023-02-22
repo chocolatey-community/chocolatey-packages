@@ -41,7 +41,8 @@ Example: `choco install apache-httpd --params '"/installLocation:C:\HTTPD /port:
 ]]></description>
     <tags>apache httpd webserver admin</tags>
     <dependencies>
-       <dependency id="vcredist140" version="14.32.31332" />
+      <dependency id="chocolatey" version="1.2.0" />
+      <dependency id="vcredist140" version="14.32.31332" />
    </dependencies>
   </metadata>
   <files>
