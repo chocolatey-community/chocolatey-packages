@@ -50,7 +50,7 @@ function Assert-TcpPortIsOpen {
 }
 
 function Get-ApacheInstallOptions {
-    $configFile = Join-Path $env:chocolateyPackageFolder 'config.xml'
+    $configFile = Join-Path -Path (Get-ChocolateyPath -PathType 'PackagePath') -ChildPath 'config.xml'
     $config = Import-CliXml $configFile
 
     return $config
@@ -132,7 +132,7 @@ function Set-ApacheInstallOptions {
         ServiceName = $arguments.serviceName
     }
 
-    $configFile = Join-Path $env:chocolateyPackageFolder 'config.xml'
+    $configFile = Join-Path -Path (Get-ChocolateyPath -PathType 'PackagePath') -ChildPath 'config.xml'
     Export-Clixml -Path $configFile -InputObject $config
 }
 
