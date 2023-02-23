@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gom-player</id>
-    <version>2.3.83.5350</version>
+    <version>2.3.84.5351</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/gom-player</packageSourceUrl>
     <owners>chocolatey-community, AdmiringWorm</owners>
     <title>GOM Player (Install)</title>
