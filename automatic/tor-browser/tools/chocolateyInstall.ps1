@@ -10,8 +10,8 @@ $packageArgs = @{
   FileType     = 'exe'
   Url          = 'https://www.torproject.org/dist/torbrowser/12.0.3/torbrowser-install-12.0.3_ALL.exe'
   Url64        = 'https://www.torproject.org/dist/torbrowser/12.0.3/torbrowser-install-win64-12.0.3_ALL.exe'
-  Checksum     = '8cf1dafe65efe4a9a732191ab5fa962ae75513694cc802b462abf0ae40f64a3a'
-  Checksum64   = '94c66cde8a8f6744971553deba450b3e2bf2ad17f0d3129853591a050801a58c'
+  Checksum     = 'a880112bf2927fe02dfcb7550fb1780dfec8aa5e332d2cd9897c503a018ee02f'
+  Checksum64   = '8f9e526da7d1adaa5c6c7be88412e9e6c7eab9af1b5f080b0d674f5b35f5c4bf'
   ChecksumType = 'sha256'
   SilentArgs   = "/S","/D=$destinationFolder"
 }
