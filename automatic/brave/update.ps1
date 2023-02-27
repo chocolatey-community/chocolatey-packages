@@ -8,7 +8,6 @@ function global:au_GetLatest {
   $domainBeta = 'https://github.com'
   # Web url was provided at https://github.com/chocolatey-community/chocolatey-packages/issues/1791#issuecomment-1030152913
   $releaseBetaVersion = Invoke-RestMethod -Uri $releaseBetaUrl
-  $url32_b = $domainBeta + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentBetaSetup32.exe' -f $releaseBetaVersion)
   $url64_b = $domainBeta + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentBetaSetup.exe' -f $releaseBetaVersion)
   $version_b = $releaseBetaVersion
 
@@ -16,13 +15,11 @@ function global:au_GetLatest {
   $domainStable = 'https://github.com'
   # Web url was provided at https://github.com/chocolatey-community/chocolatey-packages/issues/1791#issuecomment-1030152913
   $releaseStableVersion = Invoke-RestMethod -Uri $releaseStableUrl
-  $url32 = $domainStable + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentSetup32.exe' -f $releaseStableVersion)
   $url64 = $domainStable + ('/brave/brave-browser/releases/download/v{0}/BraveBrowserStandaloneSilentSetup.exe' -f $releaseStableVersion)
   $version = $releaseStableVersion
 
   $streams = @{
     stable = @{
-      URL32         = $url32
       URL64         = $url64
       Version       = $version
       RemoteVersion = $version
@@ -31,7 +28,6 @@ function global:au_GetLatest {
     }
 
     beta   = @{
-      URL32         = $url32_b
       URL64         = $url64_b
       Version       = $version_b + '-beta'
       RemoteVersion = $version_b
@@ -77,14 +73,11 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     "tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
       "(?i)([$]softwareVersion\s*=\s*)'.*'"       = "`${1}'$($Latest.RemoteVersion)'"
     }
     "legal\VERIFICATION.txt"      = @{
-      "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
       "(?i)(x86_64:).*"     = "`${1} $($Latest.URL64)"
-      "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
       "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
     }
     "brave.nuspec"                = @{

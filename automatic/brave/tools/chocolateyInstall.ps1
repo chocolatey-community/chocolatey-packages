@@ -1,13 +1,17 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
+$is64 = (Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true'
+
+if (!$is64) {
+  throw 'Installation of 32-bit version is no longer supported by this package.'
+}
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\BraveBrowserStandaloneSilentSetup32.exe"
   file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
 }
 
-[version]$softwareVersion = '1.45.123'
+[version]$softwareVersion = '1.48.171'
 
 Write-Host "Checking already installed version..."
 $installedVersion = Get-InstalledVersion
