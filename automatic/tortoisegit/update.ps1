@@ -10,6 +10,9 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
+    "tools\chocolateyInstall.ps1" = @{
+      "(?i)([$]softwareVersion\s*=\s*)'.*'" = "`${1}'$($Latest.RemoteVersion)'"
+    }
     ".\tortoisegit.nuspec" = @{
       "(<releaseNotes>https:\/\/tortoisegit.org\/docs\/releasenotes\/#Release_)(.*)(<\/releaseNotes>)" = "`${1}$($Latest.Version.ToString())`$3"
     }
@@ -45,6 +48,7 @@ function global:au_GetLatest {
     URL32 = "https:" + $url32
     URL64 = "https:" + $url64
     Version = $version32
+    RemoteVersion = $version32
   }
 }
 
