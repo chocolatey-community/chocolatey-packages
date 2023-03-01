@@ -174,7 +174,9 @@ If a later version of Chocolatey is required, then a dependency on the earliest 
 
 ### 1.2.2 Obligatory tags
 
-Keep tags **lowercase**. Use `-` between words. The following tags are mandatory to use if they apply:
+Keep tags **lowercase** and separate them with spaces. For multi-word tags, use `-` between words (e.g. `cross-platform`).
+
+The following tags are mandatory to use if they apply:
 
 |tag|meaning|
 |---|---|
