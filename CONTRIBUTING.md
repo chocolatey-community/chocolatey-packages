@@ -7,13 +7,13 @@
 
 This repository presents **the latest and highest package standards**. The purpose of this repository is to provide packages that are:
 
-* **Stable** - Current and earlier versions should generally work so you could depend on them. The most stable packages are those that are embedded (see [1.1.4](#114-embed-a-package-if-allowed)).
+* **Stable** - Current and earlier versions should generally work, so you could depend on them. The most stable packages are those that are embedded (see [1.1.4](#114-embed-a-package-if-allowed)).
 * **High quality** - Packages should be resilient and should provide parameters where adequate.
 * **Free** - Packages should be generally usable by anybody without any special prerequisites.
 
-To achieve those goals we are using the following priorities when adding new or maintaing existing packages:
+To achieve those goals we are using the following priorities when adding new or maintaining existing packages:
 
-1. Cross platform FOSS packages.
+1. Cross-platform FOSS packages.
 1. Windows only FOSS packages.
 1. Freeware packages.
 1. Commercial packages with unrestricted trials.
@@ -25,7 +25,7 @@ The following rules also apply:
 
 For existing packages that no longer fit above principles chocolatey-community user will be removed from the list of the maintainers.
 
-The following sections present complete set of guideliness, please read them carefully, especially since some of the rules are enforced and if broken will result in the failed PR build.
+The following sections present complete set of guidelines, please read them carefully, especially since some rules are enforced and if broken will result in the failed PR build.
 
 <!-- markdownlint-disable -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -97,9 +97,9 @@ Both *package root directory* and  *nuspec file* should be named **the same as t
 
 _Embedded_ packages include the packaged software directly in the nupkg archive instead of downloading it. Only tools that allow redistribution in their license can be embedded and such packages must include two additional files in the directory `legal` - `VERIFICATION.txt` and `License.txt`.
 
-Its **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding.
+It's **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding.
 
-Binary files can not be generally checked in into this repository because that will bloat it too much.  The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
+Binary files can not be generally checked in into this repository because that will bloat it too much. The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
 
 For software that explicitly doesn't allow redistribution via adequate license then one may **contact the vendor**, ask for the redistribution rights and provide proof in the package in the form of:
 
@@ -107,7 +107,7 @@ For software that explicitly doesn't allow redistribution via adequate license t
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/activepresenter/legal) package. Embeding non-allowed binaries may have [legal repercussions](https://docs.chocolatey.org/en-us/information/legal).
+As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/activepresenter/legal) package. Embedding non-allowed binaries may have [legal repercussions](https://docs.chocolatey.org/en-us/information/legal).
 
 **NOTE**: 200MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
 
@@ -123,7 +123,7 @@ Packages should **support multiple versions** if possible - do not use URLs that
 
 ### 1.1.7 Clean code
 
-Remember, code is written for humans, not for computers. Otherwise we'd all write assembly. So it's better to be able to reason about code than it is to take shortcuts that make code harder to decipher.
+Remember, code is written for humans, not for computers. Otherwise, we'd all write assembly. So it's better to be able to reason about code than it is to take shortcuts that make code harder to decipher.
 
 If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/virtualbox/tools)).
 
@@ -140,12 +140,12 @@ This information is used for the licensed edition of chocolatey to detect if the
 
 Before pull request **make sure package can install and uninstall correctly** using the [chocolatey test environment](https://github.com/chocolatey-community/chocolatey-test-environment). It is used as a reference machine to prevent _it works on my computer syndrome_. AU function `Test-Package -Vagrant` can speed this up.
 
-_Although all PR's are tested on appveyor, all packages are expected to have been locally tested before the PR was submitted_
+_Although all PRs are tested on appveyor, all packages are expected to have been locally tested before the PR was submitted_
 
 ### 1.1.10 Dependency versions
 
 1. When taking a dependency **on an extension, specify the minimum version**.
-Without this, any version satisfies the dependency. That means unless someone upgrades the extension outside of their process or incidentally install some package that uses newer version explicitly set, it will not automatically upgrade to the latest version.
+Without this, any version satisfies the dependency. That means unless someone upgrades the extension outside their process or incidentally install some package that uses newer version explicitly set, it will not automatically upgrade to the latest version.
 1. When creating a dependency **for virtual package, use exact version** of the dependent package (.install or .portable) which should be the same as that of virtual package.
 1. When taking a dependency on **anything else, specify minimum or exact version**.
 
@@ -181,7 +181,7 @@ Keep tags **lowercase**. Use `-` between words. The following tags are mandatory
 | `foss` | for all free and open source packages|
 | `cross-platform` | for all packages available on other platforms then Windows|
 | `freeware` | for all freeware but not open source packages|
-| `trial` | for all propriatery commercial tools that require license|
+| `trial` | for all proprietary commercial tools that require license|
 | `cli` | for all command line tools|
 | `games` | for all games |
 
@@ -199,7 +199,7 @@ Description is maintained in the `README.md` file in the root of the package and
 
 ### 1.2.4 Add chocolatey-community among owners
 
-Keep any exisiting owners and add `chocolatey-community` user before all others.
+Keep any existing owners and add `chocolatey-community` user before all others.
 
 ### 1.2.5 Provide icon
 
@@ -219,15 +219,15 @@ If you use `Invoke-WebRequest` to download a web page, try to use `UseBasicParsi
 
 ### 1.3.2 Do not download large files
 
-Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger then few MB should never be downloaded within `au_GetLatest` function. Normally, the files are downloaded during the embeding process by the `au_BeforeUpdate`.
+Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger than few MB should never be downloaded within `au_GetLatest` function. Normally, the files are downloaded during the embedding process by the `au_BeforeUpdate`.
 
 ### 1.3.3 Specify correct `NuspecVersion`
 
 Since commit message is used to push packages to the community repository (CR), prior to commit of the AU package specify correct `NuspecVersion` in the nuspec file as follows:
 
-1. If you want to fix the exisiting CR package version for which no update is available at vendor specify the `NuspecVersion` the same as `RemoteVersion`.
+1. If you want to fix the existing CR package version for which no update is available at vendor specify the `NuspecVersion` the same as `RemoteVersion`.
 1. If you want to push new package version to CR and `RemoteVersion` doesn't exist on CR, set `NuspecVersion` to `0.0`. AU updater will then bring the version to correct one during the next AU run and commit it to the git repository.
-1. If you want to fix package that is pushed but not yet approved (for example it fails verifier) do the same as in first case but request in PR comment that you want version explicitelly set.
+1. If you want to fix package that is pushed but not yet approved (for example it fails verifier) do the same as in first case but request in PR comment that you want version explicitly set.
 
 __NOTE__: Automatic fix version doesn't work if package is using the _revision_ part of the version (4th number). In that case _explicit version_ must be used: `[AU package:version]`.
 ## 1.4 UI Automation
@@ -242,7 +242,7 @@ Script must work on every locale available for Windows, so be careful when using
 
 ### 1.4.2 Avoid brittle scripts
 
-Do not create brittle scripts that work only when user doesn't interfer. All script elements should be as precise as possible - for instance, instead of using [Send](https://autohotkey.com/docs/commands/Send.htm) function which will work correctly only if the desired window is active, use [ControlSend](https://autohotkey.com/docs/commands/ControlSend.htm) which doesn't require window activation or use [BlockInput](https://autohotkey.com/docs/commands/BlockInput.htm) for short period of time.
+Do not create brittle scripts that work only when user doesn't interfere. All script elements should be as precise as possible - for instance, instead of using [Send](https://autohotkey.com/docs/commands/Send.htm) function which will work correctly only if the desired window is active, use [ControlSend](https://autohotkey.com/docs/commands/ControlSend.htm) which doesn't require window activation or use [BlockInput](https://autohotkey.com/docs/commands/BlockInput.htm) for short period of time.
 
 # 2. Source Files
 
@@ -282,14 +282,14 @@ Pull Requests that have changes requested, and/or is marked with the label [0 - 
 Most of the labels are self describing, here are few that require explanation:
 
 - [5 - Push required](https://github.com/chocolatey-community/chocolatey-packages/labels/5%20-%20Push%20required)
-Package is done when its pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if its not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
+Package is done when it's pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if it's not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
 - [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/labels/Wontfix)
-Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benfit.
+Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benefit.
 - [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/labels/Unresolved)
-The issue is unresolved - no feedback, no interest and it probably expired.
+The issue is unresolved - no feedback, no interest, and it probably expired.
 - [0 - _Triaging](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20_Triaging)
 Team is checking, confirming and measuring out the request.
 - [Pending closure](https://github.com/chocolatey-community/chocolatey-packages/labels/Pending%20closure)
-The issue is approaching end of issue life time. This is annoucement that issue will soon get closed in few weeks unless there is some new activity.
+The issue is approaching end of issue lifetime. This is an announcement that the issue will soon get closed in a few weeks, unless there is some new activity.
 - [0 - Waiting on user](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20Waiting%20on%20User)
 The team is waiting for somebody to respond. Until that happens, there will be no activity.
