@@ -3,33 +3,39 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>transifex-client</id>
-    <version>0.14.4</version>
+    <version>0.14.4.20230307</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/transifex-client</packageSourceUrl>
     <owners>chocolatey-community,AdmiringWorm</owners>
-    <title>Transifex Command-Line Tool</title>
+    <title>[Deprecated] Transifex Command-Line Tool</title>
     <authors>The Transifex Team</authors>
     <projectUrl>https://www.transifex.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@4c2d7c7377b05a3d0a2dd35cfc89ce0c77625051/icons/transifex-client.png</iconUrl>
     <licenseUrl>https://github.com/transifex/transifex-client/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/transifex/transifex-client</projectSourceUrl>
     <docsUrl>https://docs.transifex.com/client</docsUrl>
     <bugTrackerUrl>https://github.com/transifex/transifex-client/issues</bugTrackerUrl>
-    <tags>transifex-client transifex translation cli cross-platform foss</tags>
+    <tags>deprecated</tags>
     <summary>The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description><![CDATA[The Transifex Command-line Tool enables you to manage your translations within a project without the need of an elaborate UI system.
+    <description><![CDATA[### New package name: **[transifex-cli](https://community.chocolatey.org/packages/transifex-cli)**
 
-You can use the command line tool to create new resources, map locale files to translations, and synchronize your Transifex project with your local repository. Translators and localization managers can use it to handle large volumes of translation files. The Transifex Command-line Tool can help to enable continuous integration workflows and can be run from CI servers like Jenkins and Bamboo.
+--
+`transifex-client` has been deprecated as the upstream maintainer has deprecated the Python version of the Transifex client along with the API endpoints it used.
+It exists only for backward compatibility to provide a transitional dummy package for existing users and scripts which may still use this package ID.]]></description>
+    <releaseNotes>#### New users
 
-# Notes
-- This package uses the Python 3.x version of the transifex-client
-- This package only provides the 64-bit executable due to a number of positives on VirusTotal.
-  The Software Authors believe them to be false positives, but I as the package maintainer am not convinced.
-]]></description>
-    <releaseNotes>https://github.com/transifex/transifex-client/releases/tag/0.14.4</releaseNotes>
+* Please don't install this package. Install **transifex-cli** instead.
+
+#### Existing users - Updating
+
+* Updating this package will automatically install the most recent version of the **transifex-cli** chocolatey package.
+* Please update any links, dependencies, or scripts that reference this package to the new package name **transifex-cli**
+
+#### Existing users - Post-update Cleanup (optional)
+
+`choco uninstall transifex-cli --whatif`</releaseNotes>
     <dependencies>
-      <dependency id="python" version="3.7.0" />
+      <dependency id="transifex-cli" />
     </dependencies>
   </metadata>
   <files>

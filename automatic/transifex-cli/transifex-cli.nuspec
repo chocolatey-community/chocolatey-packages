@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>transifex-cli</id>
+    <version>0.0.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/transifex-cli</packageSourceUrl>
+    <owners>chocolatey-community</owners>
+    <title>Transifex CLI</title>
+    <authors>The Transifex Team</authors>
+    <projectUrl>https://www.transifex.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@205b1eb773e72f9ddea5d540e41ac0b6ce1a6df2/icons/transifex-cli.png</iconUrl>
+    <licenseUrl>https://github.com/transifex/cli/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/transifex/cli</projectSourceUrl>
+    <docsUrl>https://developers.transifex.com/docs/cli</docsUrl>
+    <bugTrackerUrl>https://github.com/transifex/cli/issues</bugTrackerUrl>
+    <tags>transifex-cli transifex translation cli cross-platform foss</tags>
+    <summary>The Transifex CLI enables you to manage your translations within a project without the need of an elaborate UI system.</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description><![CDATA[The Transifex CLI enables you to manage your translations within a project without the need of an elaborate UI system.
+
+You can use the command line tool to create new resources, map locale files to translations, and synchronize your Transifex project with your local repository.
+Translators and localization managers can use it to handle large volumes of translation files.
+The Transifex CLI can help to enable continuous integration workflows and can be run from CI servers like Jenkins and Bamboo.
+
+## Notes
+
+- This package uses the Go version of the Transifex CLI
+]]></description>
+    <releaseNotes>https://github.com/transifex/cli/releases/tag/v1.6.4</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
