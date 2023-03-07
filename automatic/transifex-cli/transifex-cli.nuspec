@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>transifex-cli</id>
-    <version>1.6.4</version>
+    <version>0.0.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/transifex-cli</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>Transifex CLI</title>
     <authors>The Transifex Team</authors>
     <projectUrl>https://www.transifex.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@4c2d7c7377b05a3d0a2dd35cfc89ce0c77625051/icons/transifex-client.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@205b1eb773e72f9ddea5d540e41ac0b6ce1a6df2/icons/transifex-cli.png</iconUrl>
     <licenseUrl>https://github.com/transifex/cli/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/transifex/cli</projectSourceUrl>
