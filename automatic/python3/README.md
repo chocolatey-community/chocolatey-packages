@@ -7,3 +7,4 @@
   - This package depends on the latest major + minor version of python package.
   - This package do not support package parameters, please install the package [python3](https://community.chocolatey.org/packages/python3) directly when using package parameters.
   - To completely uninstall python, the package `python3` must also be uninstalled.
+  - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
