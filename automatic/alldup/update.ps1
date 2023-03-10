@@ -1,6 +1,6 @@
 import-module au
 
-$releases = 'http://www.alldup.de/en_download_alldup.php'
+$releases = 'https://www.alldup.info/en_download_alldup.php'
 
 
 function global:au_SearchReplace {
@@ -12,16 +12,21 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate {
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases
+  $downloadPage = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re = 'alldup.*\.exe$'
-  $url     = $download_page.links | ? href -match $re | select -First 1 -expand href
-  $version = $download_page.links | ? href -match "alldup_version\.php$" | select -first 1 -expand innerText
+  $re = 'AllDupSetup.exe$'
+  $url = $downloadPage.links | Where-Object href -match $re | Select-Object -First 1 -expand href
+  $downloadPage.links | Where-Object outerHTML -Match 'alldup_version\.php"\>[\d\.]+<' | Select-Object -First 1 | ForEach-Object { $_ -match '\>(?<version>[\d\.]+)<' }
 
-  @{ URL32 = $url; Version = $version }
+  @{
+    URL32 = $url
+    Version = $matches.version
+  }
 }
 
 update -ChecksumFor none
