@@ -22,8 +22,8 @@ if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'EXE'
-  url            = 'https://download.ccleaner.com/ccsetup609.exe'
-  checksum       = 'E31520F8D05A4555BEB5E104A38A297F863423FFDC5BEAEC7668481879ECB8A2'
+  url            = 'https://download.ccleaner.com/ccsetup610.exe'
+  checksum       = '126BE4B2257834ABDE3376F7BA89FF7B6F72190EAD8CF2594D3C9D4F73C38F1C'
   checksumType   = 'sha256'
   silentArgs     = "/S $locale"
   validExitCodes = @(0)
