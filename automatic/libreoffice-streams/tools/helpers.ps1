@@ -115,7 +115,8 @@ function GetFilename($url, $releasesMapping, $release, $arch) {
   )
   $filename64bitsPatterns = @(
     "x86_64",
-    "x64"
+    "x64",
+    "x86-64"
   )
   $filename32bitsPatterns = @(
     "x86"
