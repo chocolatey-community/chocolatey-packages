@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>selenium-chrome-driver</id>
-    <version>111.0.5563.64</version>
+    <version>112.0.5615.28</version>
     <title>Selenium Chrome Driver</title>
     <authors>Chromium and WebDriver teams</authors>
     <owners>chocolatey-community,AdmiringWorm,agabrys</owners>
@@ -31,13 +31,9 @@ To pass parameters, use `--params "''"` (e.g. `choco install selenium-chrome-dri
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>Chrome Driver is a WebDriver implementation that enables programmatic automation of Chrome products for desktop platforms. It is a part of the Selenium (http://code.google.com/p/selenium) project.</summary>
-    <releaseNotes>---------ChromeDriver 111.0.5563.64 (2023-03-08)---------
-Supports Chrome version 111
-Resolved issue 4216: Run ChromeDriver with custom BiDiMapper [Pri-]
-Resolved issue 4300: Window handle is interoperable between Classic and BiDi [Pri-]
-Resolved issue 4325: Handling of toJSON in jsonSerialize of call_function.js deviates from the standard. [Pri-]
-Resolved issue 4330: DCHECK fails at DevToolsClientImpl::AddListener [Pri-]
-Resolved issue 4357: ChromeDriver session issue with --headless and --user-data-dir options [Pri-1]
+    <releaseNotes>---------ChromeDriver 112.0.5615.28 (2023-03-16)---------
+Supports Chrome version 112
+Resolved issue 4357: Chromedriver version 110.0.5481.77 session issue with --headless and --user-data-dir options. [Pri-1]
 </releaseNotes>
     <copyright>Chromium and WebDriver teams. All Rights Reserved.</copyright>
     <tags>selenium-chrome-driver google-chrome driver webdriver testing web-applications freeware foss cross-platform</tags>
