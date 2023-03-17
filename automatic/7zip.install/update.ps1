@@ -15,7 +15,7 @@ function global:au_SearchReplace {
       "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
       "(?i)(32-Bit.+)\<.*\>"     = "`${1}<$($Latest.URL32)>"
       "(?i)(64-Bit.+)\<.*\>"     = "`${1}<$($Latest.URL64)>"
-      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType)"
+      "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType64)"
       "(?i)(checksum32:).*"      = "`${1} $($Latest.Checksum32)"
       "(?i)(checksum64:).*"      = "`${1} $($Latest.Checksum64)"
     }
