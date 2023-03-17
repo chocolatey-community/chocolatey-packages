@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>jenkins</id>
+        <version>2.222.4</version>
+        <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/jenkins</packageSourceUrl>
+        <owners>chocolatey-community,pauby,johnypony3</owners>
+        <title>Jenkins CI</title>
+        <authors>Kohsuke Kawaguchi</authors>
+        <projectUrl>https://www.jenkins.io/</projectUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/git@github.com:chocolatey-community/chocolatey-packages/icons/jenkins.png</iconUrl>
+        <copyright>Copyright (c) 2004-, Kohsuke Kawaguchi, Sun Microsystems, Inc., and a number of other of contributors</copyright>
+        <licenseUrl>https://github.com/jenkinsci/jenkins/blob/master/LICENSE.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <projectSourceUrl>https://github.com/jenkinsci/jenkins</projectSourceUrl>
+        <docsUrl>https://www.jenkins.io/doc</docsUrl>
+        <bugTrackerUrl>https://github.com/jenkinsci/jenkins/issues</bugTrackerUrl>
+        <tags>jenkins server foss cross-platform ci</tags>
+        <summary>Jenkins is an open source automation server which enables developers around the world to reliably build, test, and deploy their software.</summary>
+        <description></description>
+        <releaseNotes>http://jenkins-ci.org/changelog</releaseNotes>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+        <file src="legal\**" target="legal" />
+    </files>
+</package>
