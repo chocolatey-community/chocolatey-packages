@@ -28,7 +28,7 @@ function global:au_GetLatest {
 
   $re64 = 'windows_64$'
   $url64 = $download_page.links | ? href -match $re64 | select -First 1 -Expand href { % Get-RedirectedUrl $_  3>$null }
-  $version = $download_page.content -match "CodeLite ([\d\.]+) - Stable Release" | select -first 1 | % { $Matches[1] }
+  $version = $download_page.content -match "CodeLite ([\d\.]+) - Stable" | select -first 1 | % { $Matches[1] }
 
   @{
     URL64        = $url64
