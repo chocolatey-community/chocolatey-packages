@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/pauby/chocopackages@ae92e032839a27a3633db7018593b075df44269f/icons/jenkins.png" width="48" height="48"/> [Jenkins](https://chocolatey.org/packages/jenkins)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@c50597be672d029c1628f0a67b6e7a3775d511ce/icons/jenkins.png" width="48" height="48"/> [Jenkins](https://chocolatey.org/packages/jenkins)
 
 This is the LTS version of Jenkins.
 

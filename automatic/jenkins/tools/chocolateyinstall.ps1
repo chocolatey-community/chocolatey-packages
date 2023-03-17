@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $ToolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 Import-Module $ToolsDir\helpers.psm1
