@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>Ghostscript</id>
-    <version>10.0.0.20230317</version>
+    <version>10.01.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/ghostscript</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>Ghostscript</title>
@@ -32,7 +32,7 @@
 ]]></description>
     <releaseNotes>https://ghostscript.readthedocs.io/en/latest/News.html</releaseNotes>
     <dependencies>
-      <dependency id="ghostscript.app" version="[10.0.0.20230317]" />
+      <dependency id="ghostscript.app" version="[10.01.0]" />
     </dependencies>
   </metadata>
   <files>
