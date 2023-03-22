@@ -4,7 +4,7 @@ if ($MyInvocation.InvocationName -ne '.') {
   function global:au_SearchReplace {
     @{
       ".\README.md" = @{
-        "(?i)(install the package )\[python\d+]\((.*)python\d+" = "`$1[$($Latest.Dependency)(`$2$($Latest.Dependency)"
+        "(?i)(install the package )\[python\d+]\((.*)python\d+" = "`$1[$($Latest.Dependency)](`$2$($Latest.Dependency)"
         "(?i)(the package )``python\d+``( must also)"           = "`$1``$($Latest.Dependency)```$2"
       }
     }
@@ -15,9 +15,10 @@ function global:au_BeforeUpdate {
   SetCopyright
 }
 
-function global:au_AfterUpdate {
+function global:au_AfterUpdate($Package) {
+  Set-DescriptionFromReadme $Package -SkipFirst 2
   Update-Metadata -data @{
-    dependency = "$($Latest.Dependency)|$($Latest.Version)"
+    dependency = "$($Latest.Dependency)|[$($Latest.Version)]"
     copyright  = $Latest.Copyright
     licenseUrl = $Latest.LicenseUrl
   }
@@ -38,5 +39,5 @@ function global:au_GetLatest {
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
-  update -ChecksumFor none
+  update -ChecksumFor none -NoReadme
 }
