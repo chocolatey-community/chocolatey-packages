@@ -1,0 +1,44 @@
+title: "(packageName) Summary of feature or enhancement"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for wishing to improve packages that we host in this repository.
+
+        Before you fill out the template here, please make sure that the title contains a short summary of the the new enhancement or feature, that the title starts with `(packageName)`, and gives an idea of what the discussion is about.
+
+        **For Example, if you request a feature or an enhancement for the 7zip.install package, the title of the discussion should always start with `(7zip.install)`.**
+  - type: checkboxes
+    attributes:
+      label: Before starting, ensure that you have done the following.
+      options:
+        - label: I have verified that there is no other issue or discussion covering the feature or enhancement
+          required: true
+        - label: I have verified there is no open pull request for the feature or enhancement
+          required: true
+        - label: I have verified the package to improve is located in this repository
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What do you want to add?
+      description: Please explain what the feature or enhancement is about, and explain it in a way you would normally explain it to people if you had to convince them of why it would be a benefit to add this feature or enhancement.
+    validations:
+      required: true
+  - type: textarea
+    id: problem-related
+    attributes:
+      label: What problem will the feature/enhancement solve?
+      description: |
+        If the feature or enhancement is added, what problem will this improvement solve?
+
+        Please try explaining the problem as simply as you can, such that someone that does not know anything about the package or software could understand.
+  - type: checkboxes
+    attributes:
+      label: 'If the feature or enhancement is approved:'
+      options:
+        - label: I am willing to create a pull request to implement the feature or enhancement
+  - type: textarea
+    attributes:
+      label: Additional Context
+      description: Please include any other information here that you feel may be relevant to the feature or enhancement you want to implement that is not already covered.
