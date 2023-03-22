@@ -3,37 +3,33 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3</id>
-    <version>3.11.0</version>
+    <version>3.12.0-a6</version>
     <title>Python 3.x</title>
     <owners>chocolatey-community</owners>
     <authors>Python Software Foundation</authors>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>empty on purpose</copyright>
-    <description><![CDATA[Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.
+    <copyright>Copyright © 2001-2023 Python Software Foundation. All rights reserved.
+Copyright © 2000 BeOpen.com. All rights reserved.
+Copyright © 1995-2000 Corporation for National Research Initiatives. All rights reserved.
+Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.</copyright>
+    <description><![CDATA[  Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.
 
-## Package Parameters
+  ## Notes
 
-- `/InstallDir` - Installation directory. **NOTE**: If you have pre-existing python3 installation, this parameter is ignored and existing python install location will be used
-- `/InstallDir32:` - Installation directory for 32bit python on 64bit Operating Systems. **NOTE**: Do only use this parameter if you wish to install 32bit python alongside 64bit python. 32Bit python will not be added on PATH.
-- `/NoLockdown` - Installation directory will not be locked down with Administrator only write permissions.
-
-Example: `choco install python3 --params "/InstallDir:C:\your\install\path"`
-
-## Notes
-
-- Python package manager `pip` is installed by default, but you can also invoke it using command `py -m pip` which will use `pip3` and adequate version of python if you also have python2 installed and/or pip2 on the `PATH`. For more details see [Python on Windows FAQ](https://docs.python.org/3/faq/windows.html).
-- For complete list of silent install options see the [Installing Without UI](https://docs.python.org/3/using/windows.html#installing-without-ui) page.
-- Some packages require working C++ SDK to build C-based Python modules. One way to do so is to install [visualstudio2019-workload-vctools](https://chocolatey.org/packages/visualstudio2019-workload-vctools). See [GitHub issue #1518](https://github.com/chocolatey-community/chocolatey-coreteampackages/issues/1518) for more details.
+  - This package depends on the latest major + minor version of python package.
+  - This package do not support package parameters, please install the package [python312](https://community.chocolatey.org/packages/python312) directly when using package parameters.
+  - To completely uninstall python, the package `python312` must also be uninstalled.
+  - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>Python 3.x is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python 3.x and see almost immediate gains in productivity and lower maintenance costs.</summary>
     <tags>python programming development foss cross-platform admin</tags>
-    <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
+    <licenseUrl>https://docs.python.org/3.12/license.html</licenseUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
-      <dependency id="vcredist2015" version="14.0.24215.20170201" />
+      <dependency id="python312" version="[3.12.0-a6]" />
     </dependencies>
   </metadata>
   <files></files>

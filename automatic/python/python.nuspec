@@ -3,11 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python</id>
-    <version>3.12.0-a2</version>
+    <version>3.12.0-a6</version>
     <title>Python</title>
     <owners>chocolatey-community</owners>
     <authors>Python Software Foundation</authors>
-    <copyright>empty on purpose</copyright>
+    <copyright>Copyright © 2001-2023 Python Software Foundation. All rights reserved.
+Copyright © 2000 BeOpen.com. All rights reserved.
+Copyright © 1995-2000 Corporation for National Research Initiatives. All rights reserved.
+Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.</copyright>
     <projectUrl>http://www.python.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/python.svg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,16 +19,17 @@
 ## Notes
 
 - This package depends on the the latest major version of python package.
-- This package do not support package parameters, please install the package [python3](https://chocolatey.org/packages/python3) directly when using package parameters.
+- This package do not support package parameters, please install the package [python312](https://chocolatey.org/packages/python312) directly when using package parameters.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>Python is a programming language that lets you work more quickly and integrate your systems more effectively. You can learn to use Python and see almost immediate gains in productivity and lower maintenance costs.</summary>
     <tags>python programming development foss cross-platform admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
-      <dependency id="python3" version="[3.12.0-a2]" />
+      <dependency id="python3" version="[3.12.0-a6]" />
     </dependencies>
-    <licenseUrl>https://www.python.org/download/releases/3.4.0/license</licenseUrl>
+    <licenseUrl>https://docs.python.org/3.12/license.html</licenseUrl>
   </metadata>
   <files></files>
 </package>
