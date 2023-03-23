@@ -37,9 +37,9 @@ function Install-Python {
   }
 
   $packageArgs = @{
-    packageName    = 'python312'
+    packageName    = 'python311'
     fileType       = 'exe'
-    file           = "$toolsPath\python-3.12.0a6.exe"
+    file           = "$toolsPath\python-3.11.2.exe"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath={0} TargetDir="{1}"' -f $prependPath, $installDir
     validExitCodes = @(0)
   }
@@ -48,7 +48,7 @@ function Install-Python {
   $packageArgs['softwareName'] = "Python 3.$minor_version.*"
 
   if (!$only32Bit) {
-    $packageArgs['file64'] = "$toolsPath\python-3.12.0a6-amd64.exe"
+    $packageArgs['file64'] = "$toolsPath\python-3.11.2-amd64.exe"
   }
   else {
     $packageArgs['packageName'] = "32-bit $($packageArgs['packageName'])"
