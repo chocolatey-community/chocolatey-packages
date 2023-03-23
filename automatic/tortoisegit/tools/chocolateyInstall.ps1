@@ -8,15 +8,16 @@ $installedVersion = Get-InstalledVersion
 
 if ($installedVersion -and ($softwareVersion -eq $installedVersion) -and !$env:ChocolateyForce) {
   Write-Host "TortoiseGit v$installedVersion is already installed - skipping download and installation."
-} else {
+}
+else {
   $packageArgs = @{
-    PackageName = 'tortoisegit'
-    FileType = 'msi'
-    SoftwareName = 'TortoiseGit*'
-    File = "$toolsPath\"
-    File64 = "$toolsPath\"
-    SilentArgs = '/quiet /qn /norestart REBOOT=ReallySuppress'
-    ValidExitCodes = @(0,3010)
+    PackageName    = 'tortoisegit'
+    FileType       = 'msi'
+    SoftwareName   = 'TortoiseGit*'
+    File           = "$toolsPath\"
+    File64         = "$toolsPath\"
+    SilentArgs     = '/quiet /qn /norestart REBOOT=ReallySuppress'
+    ValidExitCodes = @(0, 3010)
   }
 
   Install-ChocolateyInstallPackage @packageArgs
