@@ -5,13 +5,16 @@ $releases = 'https://tortoisegit.org/download/'
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType = "sha256"
-  Get-RemoteFiles -Purge
+  Get-RemoteFiles -Purge -NoSuffix
 }
 
 function global:au_SearchReplace {
   @{
     "tools\chocolateyInstall.ps1" = @{
-      "(?i)([$]softwareVersion\s*=\s*)'.*'" = "`${1}'$($Latest.RemoteVersion)'"
+      "(?i)([$]softwareVersion\s*=\s*)'.*'"       = "`${1}'$($Latest.RemoteVersion)'"
+      "(?i)(^\s*fileType\s*=\s*)('.*')"           = "`$1'$($Latest.FileType)'"
+      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\tortoisegit.nuspec" = @{
       "(<releaseNotes>https:\/\/tortoisegit.org\/docs\/releasenotes\/#Release_)(.*)(<\/releaseNotes>)" = "`${1}$($Latest.Version.ToString())`$3"

@@ -3,28 +3,18 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$filePath32 = Resolve-Path "$toolsPath\*_x32.msi"
-$filePath64 = Resolve-Path "$toolsPath\*_x64.msi"
-
 [version] $softwareVersion = '2.14.0.0'
 $installedVersion = Get-InstalledVersion
 
 if ($installedVersion -and ($softwareVersion -eq $installedVersion) -and !$env:ChocolateyForce) {
   Write-Host "TortoiseGit v$installedVersion is already installed - skipping download and installation."
 } else {
-  $installFile = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true') {
-    Write-Host "Installing 64 bit version"
-    $filePath64
-  } else {
-    Write-Host "Installing 32 bit version"
-    $filePath32
-  }
-
   $packageArgs = @{
     PackageName = 'tortoisegit'
     FileType = 'msi'
     SoftwareName = 'TortoiseGit*'
-    File = $installFile
+    File = "$toolsPath\"
+    File64 = "$toolsPath\"
     SilentArgs = '/quiet /qn /norestart REBOOT=ReallySuppress'
     ValidExitCodes = @(0,3010)
   }
@@ -33,5 +23,4 @@ if ($installedVersion -and ($softwareVersion -eq $installedVersion) -and !$env:C
 }
 
 # Lets remove the installer as there is no more need for it.
-Remove-Item -Force $filePath32 -ea 0
-Remove-Item -Force $filePath64 -ea 0
+Remove-Item -Force "$toolsPath\*.msi" -ea 0
