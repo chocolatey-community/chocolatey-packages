@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>transifex-client</id>
-    <version>0.14.4.20230307</version>
+    <version>0.14.4.20230325</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/transifex-client</packageSourceUrl>
     <owners>chocolatey-community,AdmiringWorm</owners>
     <title>[Deprecated] Transifex Command-Line Tool</title>
@@ -35,7 +35,7 @@ It exists only for backward compatibility to provide a transitional dummy packag
 
 `choco uninstall transifex-cli --whatif`</releaseNotes>
     <dependencies>
-      <dependency id="transifex-cli" />
+      <dependency id="transifex-cli" version="1.6.5" />
     </dependencies>
   </metadata>
   <files>
