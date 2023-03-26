@@ -43,3 +43,6 @@
 # Other
 # This can be any file other that won't be matched as a package
 # You can use the same matches as normally would be used in .gitignore/.gitattributes
+
+extensions/chocolatey-azuredatastudio.extension/*      @pascalberger
+extensions/chocolatey-vscode.extension/*               @pascalberger
