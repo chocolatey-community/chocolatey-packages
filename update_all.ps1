@@ -107,7 +107,7 @@ $Options = [ordered]@{
         $Options.ModulePaths | % { Import-Module $_ }
         . $Options.UpdateIconScript $PackageName.ToLowerInvariant() -Quiet -ThrowErrorOnIconNotFound
         . $Options.UpdatePackageSourceScript $PackageName.ToLowerInvariant() -Quiet
-        if (Test-Path tools) { Expand-Aliases -Directory tools }
+        Expand-Aliases -Directory "$PWD"
 
         $pattern = "^${PackageName}(?:\\(?<stream>[^:]+))?(?:\:(?<version>.+))?$"
         $p = $Options.ForcedPackages | ? { $_ -match $pattern }
