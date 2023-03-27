@@ -2,7 +2,6 @@
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 
-$releases = 'https://github.com/LibreCAD/LibreCAD/releases'
 $softwareName = 'LibreCAD'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -10,7 +9,7 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
@@ -25,22 +24,31 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes
+}
 
-  $re = '\.exe$'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
+function global:au_GetLatest {
+  $releases = Get-AllGitHubReleases -Owner 'LibreCAD' -Name 'LibreCAD'
 
   $streams = @{}
-  $urls32 | % {
-    $verRe = '\/'
-    $version = $_ -split "$verRe" | select -last 1 -skip 1
-    $version = Get-Version $version
+  $releases | % {
+    if ($_.tag_name -eq 'latest') {
+      # This is the continuous build, ie nightly builds so we skip this one
+      return
+    }
 
-    if (!($streams.ContainsKey($version.ToString(2)))) {
-      $streams.Add($version.ToString(2), @{
-        Version = $version.ToString()
-        URL32   = $_
+    $version = Get-Version $_.tag_name
+
+    $url = $_.assets | ? browser_download_url -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
+    $streamName = $version.ToString(2)
+
+    if (!($streams.ContainsKey($streamName)) -and $url) {
+      $streams.Add($streamName, @{
+        Version      = $version
+        URL32        = $url
+        ReleaseNotes = $_.body
+        ReleaseUrl   = $_.html_url
       })
     }
   }
