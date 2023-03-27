@@ -32,6 +32,7 @@ With Burn, the WiX bootstrapper, you can create setup bundles that install prere
 The WiX SDK includes managed and native libraries that make it easier to write code that works with Windows Installer, including custom actions in both C# and C++.
 
 ]]></description>
+    <releaseNotes>Will be replaced by updater</releaseNotes>
     <dependencies>
       <dependency id="dotnet3.5" version="3.5.20160716" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />

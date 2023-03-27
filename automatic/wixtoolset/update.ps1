@@ -1,10 +1,10 @@
 ﻿Import-Module AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-#$redirectPage = 'http://wixtoolset.org/releases/v3-10-3-3007/' # Provided in case we need to update the latest stable
-$releases = 'http://wixtoolset.org/releases/'
+# We are currently tracking version 3. We only track version 3 as it looks like version 4 will be available as a .NET tool,
+# and possibly not through its own installer.
+
 $softwareName = 'WiX Toolset*'
-$padUnderVersion = '3.10.4'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -25,31 +25,22 @@ function global:au_SearchReplace {
     }
   }
 }
+
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes
+}
+
 function global:au_GetLatest {
+  $release = Get-GitHubRelease -Owner 'wixtoolset' -Name 'wix3'
 
-  $builder = New-Object System.UriBuilder($releases)
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $re = '(rc[\d]+|stable)$'
-  $builder.Path  = $download_page.Links | ? href -match $re | select -first 1 -expand href
-  $redirectPage = Get-RedirectedUrl $builder.ToString()
-  $preReleaseSuffix = if ($builder.Path.EndsWith('stable')) { '' }
-    else {
-      $index = $builder.Path.IndexOf('rc')
-      "-" + $builder.Path.Substring($index)
-    }
-
-  $downloadBuilder = New-Object System.UriBuilder($redirectPage)
-  $download_page = Invoke-WebRequest -Uri $redirectPage -UseBasicParsing
-  $downloadBuilder.Path = $download_page.Links | ? href -match "\.exe$" | select -first 1 -expand href
-
-  $verRe = '\/v?'
-  $version32 = ($builder.Path -split "$verRe" | select -last 1 -skip 1) -replace '\-','.'
-  if ($preReleaseSuffix) { $version32 += $preReleaseSuffix }
+  $url = $release.assets | ? browser_download_url -match "\.exe$" | Select-Object -First 1 -ExpandProperty browser_download_url
+  $version = $release.name -split 'v' | Select-Object -Last 1
 
   @{
-    URL32 = $downloadBuilder.Uri.ToString()
-    Version = $version32
-    ReleasesUrl = $redirectPage
+    URL32         = $url
+    Version       = Get-Version $version
+    ReleasesUrl   = $release.html_url
+    ReleaseNotes = $release.body
   }
 }
 
