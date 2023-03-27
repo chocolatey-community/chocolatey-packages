@@ -40,6 +40,7 @@
 */selenium-chromium-edge-driver* @chocolatey-community/chocolatey-team-maintainers @AdmiringWorm
 */jenkins*            @chocolatey-community/chocolatey-team-maintainers
 */brave*              @AdmiringWorm
+*/nexus-repository*   @chocolatey-community/chocolatey-team-maintainers
 
 # Other
 # This can be any file other that won't be matched as a package

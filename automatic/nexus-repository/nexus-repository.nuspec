@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>nexus-repository</id>
+    <title>Nexus Repository OSS</title>
+    <version>3.49.0.02</version>
+    <authors>Sonatype</authors>
+    <owners>chocolatey-community,DarwinJS</owners>
+    <summary>Free open source version of popular Nexus Repository for binary artifacts including first class Nuget support.</summary>
+    <description></description>
+    <projectUrl>http://www.sonatype.com/nexus-repository-oss</projectUrl>
+    <projectSourceUrl>https://github.com/sonatype/nexus-public</projectSourceUrl>
+    <docsUrl>http://books.sonatype.com/nexus-book/3.0/reference/index.html</docsUrl>
+    <tags>nexus-repository server freeware cross-platform maven nuget npm java rubygems docker eclipse p2 osgi obr apt yum rpm artifact bower ssl respository sonatype nexus admin</tags>
+    <copyright>Sonatype</copyright>
+    <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.jsdelivr.net/gh/git@github.com:chocolatey-community/chocolatey-packages/icons/nexus-repository.png</iconUrl>
+    <releaseNotes>https://help.sonatype.com/repomanager3/release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="temurinjre" version="11.0.12.7" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
