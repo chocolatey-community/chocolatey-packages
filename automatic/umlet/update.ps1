@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -15,17 +15,23 @@ function global:au_SearchReplace {
   }
 }
 
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes
+}
+
 function global:au_GetLatest {
-  $page = Invoke-WebRequest 'https://www.umlet.com/changes.htm' -UseBasicParsing
+  $changesUrl = 'https://umlet.com/changes'
+  $page = Invoke-WebRequest $changesUrl -UseBasicParsing
   $url = $page.Links `
-    | Where-Object href -Match 'umlet-standalone-(.+)\.zip$' `
-    | Select-Object -First 1 -Expand href `
-    | ForEach-Object {"https://www.umlet.com/$_"}
+  | Where-Object href -Match 'umlet-standalone-(.+)\.zip$' `
+  | Select-Object -First 1 -Expand href `
+  | ForEach-Object { "https://www.umlet.com/$_" }
   $version = $matches[1]
 
   @{
-    Version = $version
-    URL32   = $url
+    Version      = $version
+    URL32        = $url
+    ReleaseNotes = $changesUrl
   }
 }
 
