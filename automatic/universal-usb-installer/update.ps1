@@ -16,6 +16,18 @@ function global:au_SearchReplace {
     }
   }
 }
+
+function Convert-CharacterToNumber {
+  param(
+    [Parameter(Mandatory)]
+    [char] $character
+  )
+
+  $newNum = ([int]$character) + 1
+
+  $newNum - [int]([char]'a')
+}
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
@@ -27,6 +39,13 @@ function global:au_GetLatest {
 
   $verRe = '[-]|\.exe$'
   $version32 = $url32 -split "$verRe" | Select-Object -Last 1 -Skip 1
+
+  if ($version32 -match "^([\d\.]+)([a-z])$") {
+    $m1 = $Matches[1]
+    $num = Convert-CharacterToNumber $Matches[2]
+    $version32 = "${m1}$num"
+  }
+
   @{
     URL32   = $url32
     Version = Get-FixVersion $version32 -OnlyFixBelowVersion $padVersionUnder
