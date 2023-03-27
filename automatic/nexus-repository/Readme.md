@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@icons/nexus-repository.png" width="48" height="48"/> [Nexus Repository OSS](https://chocolatey.org/packages/nexus-repository)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@f459e946d7b1926ee89c2b415ec8507dffe99218/icons/nexus-repository.png" width="48" height="48"/> [Nexus Repository OSS](https://chocolatey.org/packages/nexus-repository)
 
 Free open source version of popular Nexus Repository for binary artifacts including first class Nuget support.
 

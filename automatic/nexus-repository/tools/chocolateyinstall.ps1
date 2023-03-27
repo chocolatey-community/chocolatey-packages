@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsDir\helpers.ps1
 
@@ -6,7 +6,7 @@ if (Get-OSArchitectureWidth 32) {
   throw "Sonatype Nexus Repository 3.0 and greater only supports 64-bit Windows."
 }
 
-$Version = '[[VERSION]]'
+$Version = '3.50.0-01'
 $NexusVersionedFolder = "nexus-$Version"
 $TargetFolder = "$env:ProgramData\nexus"
 $ExtractFolder = "$env:TEMP\NexusExtract"
@@ -55,8 +55,8 @@ if (Test-Path "$ExtractFolder") {
 $PackageArgs = @{
   packageName    = $env:ChocolateyPackageName
   unzipLocation  = $ExtractFolder
-  url64          = '[[URL]]'
-  checksum64     = '[[CHECKSUM]]'
+  url64          = 'https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.50.0-01-win64.zip'
+  checksum64     = '09d3295cefdb225dcc34f8cb0a62f4a3476526979f7b454abd9f12ab4c8503e8'
   checksumType64 = 'SHA256'
 }
 
