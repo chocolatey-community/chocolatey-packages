@@ -7,15 +7,15 @@ location on <>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10010/gs10010w32.exe>
-  64-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10010/gs10010w64.exe>
+  32-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10011/gs10011w32.exe>
+  64-Bit software: <https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs10011/gs10011w64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 55F1A47FA3DCA16A7D559929D5390C03A0B46A8915B6918C005A50E4F91C1413
-  checksum64: 8C9BF5B2CD3C92033926D5B58044308CEB8FB0A0BA49E31923C8FDBF8D814F16
+  checksum32: C9675B1D3ABF5C8870E808A06989298786F460E15C12188960B4F5965E500524
+  checksum64: 2263DC2B3107FDB1EAB65D9FBD2142CA799FBE071454D68917A8F0C1030404BE
 
 The file 'LICENSE.txt' has been obtained from <http://git.ghostscript.com/?p=ghostpdl.git;a=blob_plain;f=LICENSE;h=572496a331cefa0933a9e997374f5e7dde3b95c8;hb=HEAD>
