@@ -72,19 +72,20 @@ function global:au_BeforeUpdate {
   $stream_readme = if ($Latest.Title -like '*Beta*') { 'README-beta.md' } else { 'README-release.md' }
   cp $stream_readme $PSScriptRoot\README.md -Force
   Get-RemoteFiles -Purge -NoSuffix
+  rm "$PSScriptRoot\tools\$($Latest.FileName32)"
 }
 
 function global:au_SearchReplace {
   @{
     "tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+      "(?i)(^\s*url\s*=\s*)('.*')"                = "`$1'$($Latest.URL32)'"
+      "(?i)(^\s*checksum\s*=\s*)('.*')"           = "`$1'$($Latest.Checksum32)'"
+      "(?i)(^\s*checksumType\s*=\s*)('.*')"       = "`$1'$($Latest.ChecksumType32)'"
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
       "(?i)([$]softwareVersion\s*=\s*)'.*'"       = "`${1}'$($Latest.RemoteVersion)'"
     }
     "legal\VERIFICATION.txt"      = @{
-      "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
       "(?i)(x86_64:).*"     = "`${1} $($Latest.URL64)"
-      "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
       "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
     }
     "brave.nuspec"                = @{
