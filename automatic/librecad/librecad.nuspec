@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>librecad</id>
-    <version>2.2.0-rc4</version>
+    <version>2.2.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/librecad</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>LibreCAD</title>
@@ -24,7 +24,51 @@
 LibreCAD is a free Open Source CAD application for Windows, Apple and Linux. Support and documentation is free from our large, dedicated community of users, contributors and developers.
 
 ]]></description>
-    <releaseNotes>https://github.com/LibreCAD/LibreCAD/releases/tag/2.1.3</releaseNotes>
+    <releaseNotes>**Finally, here it is!**
+
+It took far too long to present this new stable LibreCAD version.
+Already announced several times, new obstacles kept appearing. But the main cause, however, is the loss of manpower in recent years.
+We no longer have the resources to maintain a stable and a development branch side by side.
+In addition, there were many problems in our parallel project [libdxfrw](https://github.com/LibreCAD/libdxfrw), which we also take care of.
+And there are also many invisible tasks to be dealt with, such as moving to a new cloud server, a new homepage, looking for financing our expenses, to name just a few.
+
+About 4800 commits have been made since the last stable version 2.1.3. Too much to go into detail.
+So here are a few notable changes in the new version 2.2.0:
+* many causes of crashes have been eliminated
+* eliminated DWG issues in libdxfrw, which caused several crashes
+* the performance of panning and zooming in large files has been significantly improved
+* the undo/redo engine has been completely revised due to several problems
+* adjustments for new compiler and Qt versions were required
+* extension of the command line, multi-line commands, paste and open command files
+* improvement of the print preview, with tiled printing and line widths adjustment
+* multiple selection and bulk actions in block and layer lists
+
+By expanding our [CI](https://en.wikipedia.org/wiki/Continuous_integration), we can now easily provide up-to-date binary packages that allow many users to easily test and bug hunt on Windows, MacOS and Linux.
+
+The new release also has an online manual which is hosted at [Read the Docs](https://librecad.readthedocs.io/).
+
+**This new stable version 2.2.0 finally replaces the previous stable 2.1.3.**
+
+Unfortunately, we have to disappoint people who are hoping for a soon release of LibreCAD 3. It is still a long way from productive use.
+Also there are still many contributions available for version 2.2 we wont waste. These can now be integrated into an unstable development branch. That means there will probably be one or two more feature release 2.2.x.
+There may be LibreCAD 3 releases in parallel in future, but for the time being, not with the features that LibreCAD 2.2 currently offers.
+
+At last, let me mention, that we recently resumed to accept financial contributions again. These are basically used to pay our expenses for hosting and domain services.
+This has become possible through [OpenCollective](https://opencollective.com/librecad) and by [GitHub Sponsors](https://github.com/sponsors/LibreCAD).
+
+MD5 sums:
+```
+f6c6d3aeb9586c3db16e3af0f60905ce  LibreCAD-2.2.0-x86_64.AppImage
+36a5be5acd623a13cdaf7ae8efb4279e  LibreCAD-2.2.0.dmg
+3fe516a5f9c4efe4ae4fb186cd008857  LibreCAD-Installer-2.2.0.exe
+```
+SHA256 hashes:
+```
+5b1cd348fa0ee8c1dc47fe56aef761b980582e58eafc6683207c40aadf30b74b  LibreCAD-2.2.0-x86_64.AppImage
+e17d81be0d943f99613d4c12e9a552e3257a41229a99933b7189ea3e896f5011  LibreCAD-2.2.0.dmg
+233809d3c7ebf2b9c32601354b29f16f1eb269fe529415828174b3068bce3fa4  LibreCAD-Installer-2.2.0.exe
+```
+</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
