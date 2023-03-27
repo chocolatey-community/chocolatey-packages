@@ -1,9 +1,11 @@
-﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsPath\BraveBrowserStandaloneSilentSetup32.exe"
+  url         = ''
+  checksum    = ''
+  checksumType= ''
   file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
 }
 
@@ -18,7 +20,9 @@ if ($installedVersion -and ($softwareVersion -lt $installedVersion)) {
 elseif ($installedVersion -and ($softwareVersion -eq $installedVersion)) {
   Write-Warning "Skipping installation because version $softwareVersion is already installed."
 }
-else {
+elseif ((Get-OSArchitectureWidth -compare 32) -or ($env:ChocolateyForceX86 -eq $true)) {
+  Install-ChocolateyPackage @packageArgs
+} else {
   Install-ChocolateyInstallPackage @packageArgs
 }
 
