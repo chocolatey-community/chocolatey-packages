@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/transifex/cli/releases/tag/v1.6.5>
+location on <https://github.com/transifex/cli/releases/tag/v1.6.6>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://github.com/transifex/cli/releases/download/v1.6.5/tx-windows-amd64.zip>
-  32-Bit software: <https://github.com/transifex/cli/releases/download/v1.6.5/tx-windows-386.zip>
+  64-Bit software: <https://github.com/transifex/cli/releases/download/v1.6.6/tx-windows-amd64.zip>
+  32-Bit software: <https://github.com/transifex/cli/releases/download/v1.6.6/tx-windows-386.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: B2B09BDB60ABB4767C2E651EAE6FB0188CF7A0309E8FE2C3FE5E8C1C2C652693
-  checksum32: 8E8B0C7DD0FEE2AB93402A58F8125734B91C1EDEA3D82B1A7F5758F7C0B3ADDC
+  checksum64: AC1197DA18CF7B2386591590D431F90B7CC6DBDBD02CB224D70457460E6C12C8
+  checksum32: B74B4EF3A956FCA10C751412430FDAD39159E15DDA479F09D5AADBA9326AB63B
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/transifex/cli/blob/master/LICENSE>
