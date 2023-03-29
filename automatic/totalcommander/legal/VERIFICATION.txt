@@ -7,7 +7,6 @@ The installer has been downloaded from TotalCommander website and can be verifie
 
 1. Download the following installers:
   setup: <https://totalcommander.ch/win/tcmd1052x32_64.exe>
-  installer: <http://ghisler.fileburst.com/addons/installer.zip>
 
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
@@ -15,6 +14,5 @@ The installer has been downloaded from TotalCommander website and can be verifie
 
   checksum type: sha256
   checksum-setup: B7A1454C9ABCEDF11A7581902557565BB0140245913382F18D6372E562590663
-  checksum-installer: 80DE9C2C49FC63965CF0E9BCB1A0E6D25187A1613BDE2086BDA79EFBDC8FCEB8
 
 File 'LICENSE.txt' is obtained from help file of the application.

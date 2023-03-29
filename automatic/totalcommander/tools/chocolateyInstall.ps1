@@ -1,34 +1,67 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$tcExeName = 'totalcmd.exe'
 . $toolsPath\helpers.ps1
 
+# Total Commander install switches
+# https://www.ghisler.ch/wiki/index.php?title=Installer#Description_of_switches_and_parameters
 $pp = Get-PackageParameters
 
-$env:chocolateyInstallArguments = Get-TCInstallArgs
-$env:chocolateyInstallOverride = 1
-$packageArgs = @{
-    PackageName    = 'totalcommander'
-    FileType       = 'exe'
-    File           = Get-Item $toolsPath\tc*.exe
-    SilentArgs     = ""
-    ValidExitCodes = @(0)
-    SoftwareName   = 'Total Commander*'
+# Add a desktop icon
+$installArgs = '/A1H1U1G1'
+if ($pp['NoDesktopIcon']) {
+  $installArgs += 'D0'
 }
-Install-ChocolateyInstallPackage @packageArgs
-Remove-Item $toolsPath\*.exe -ea 0
+else {
+  $installArgs += 'D1'
+}
 
-$packageName = $packageArgs.packageName
+# Installation path - this must be last
+if ($pp.InstallPath) {
+  $installArgs += " $($pp.InstallPath)"
+}
+
+$packageArgs = @{
+    packageName    = $env:ChocolateyPackageName
+    fileType       = 'exe'
+    file           = "$toolsPath\tcmd1052x32_64.exe"
+    silentArgs     = $installArgs
+    validExitCodes = @(0)
+    softwareName   = 'Total Commander*'
+}
+
+Install-ChocolateyInstallPackage @packageArgs
+Remove-Item -Path "$toolsPath\*.exe" -ErrorAction SilentlyContinue
+
+$packageName = $env:ChocolateyPackageName
 $installLocation = Get-TCInstallLocation
-if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
-Write-Host "$packageName installed to '$installLocation'"
+if (-not $installLocation)  {
+  Write-Warning "Can't find $packageName install location"
+  return
+}
+else {
+  Write-Host "$packageName installed to '$installLocation'"
+}
 
 Write-Host 'Setting system environment COMMANDER_PATH'
-Set-EnvironmentVariable 'COMMANDER_PATH' $installLocation Machine
+Set-EnvironmentVariable -Name 'COMMANDER_PATH' -Value $installLocation -Scope Machine
 
-if ($pp.ShellExtension)              { Set-TCShellExtension }
-if ($pp.DefaultFM -eq $true)         { Set-TCAsDefaultFM }
-if ($pp.DefaultFM -like 'explorer*') { Set-ExplorerAsDefaultFM }
+if ($pp.ShellExtension) {
+  Set-TCShellExtension
+}
 
-Register-Application "$installLocation\$tcExeName" tc
+if ($pp['DefaultFM'] -and $pp['ResetDefaultFM']) {
+  Write-Warning 'You have provided both the /DefaultFM and /ResetDefaultFM switches which are contradictory. Will not use either.'
+}
+else {
+  if ($pp['ResetDefaultFM'] -eq $true) {
+    Set-ExplorerAsDefaultFM
+  }
+  elseif ($pp['DefaultFM'] -eq $true) {
+    Set-TCAsDefaultFM
+  }
+}
+
+Register-Application -ExePath "$installLocation\$tcExeName" -Name 'tc'
 Write-Host "$packageName registered as tc"
