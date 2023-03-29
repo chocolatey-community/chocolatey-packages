@@ -1,0 +1,44 @@
+title: "(packageName) Request for migration"
+body:
+  - type: markdown
+    attributes:
+      value: We appreciate your interest in migrating a package to the Chocolatey Community Chocolatey Packages Repository.
+        Before we can start handling your request, there are a few questions we need you to answer.
+
+        Please also verify that you have looked to see if any existing migration requests have opened.
+
+        Please understand that it may take some time before we decide whether to accept or reject any package migration request.
+        Packages are only sometimes accepted, and each is considered in isolation based on its merits. A discussion between team repository maintainers will happen before making the decision.
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why should the package be migrated to this Chocolatey Community Chocolatey Packages Repository?
+      description: Please describe in detail why you believe the package should be migrated to this repository. The reason must include why the package cannot be in your source repository.
+    validations:
+      required: true
+  - type: input
+    id: ccr-link
+    attributes:
+      label: What is the link to the package hosted on Chocolatey Community Repository?
+    validations:
+      required: true
+  - type: input
+    id: source-link
+    attributes:
+      label: What is the link to the package source?
+      description: Please provide a link to the package source outside the Chocolatey Community Repository. The link will typically be a GitHub or GitLab URL.
+  - type: checkboxes
+    attributes:
+label: I will be responsible for creating a PR to migrate the package.
+          required: true
+label: I will be available to fix any issues with the package or the automatic updater!
+  - type: input
+    id: responsible
+    attributes:
+      label: Who will fix any issues with the package or the automatic updater?
+      description: If you have already marked the previous check box, feel free to ignore this one. Any other person or community mentioned here must confirm, through a comment, that they agree. We cannot reach out to the user or community on your behalf.
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Is there any other context you believe is relevant that we need to consider when deciding whether to accept or reject this package migration request?
