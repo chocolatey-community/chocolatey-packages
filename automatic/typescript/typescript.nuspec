@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>typescript</id>
-    <version>5.0.2</version>
+    <version>5.0.3</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/typescript</packageSourceUrl>
     <owners>chocolatey-community, Microsoft</owners>
     <title>TypeScript</title>
@@ -27,7 +27,7 @@ This package installs the command-line TypeScript compiler as a Node.js package.
 
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
-    <releaseNotes>https://github.com/Microsoft/TypeScript/issues?q=is%3Aissue+milestone%3A%22TypeScript+5.0.2%22+label%3A%22fixed%22+</releaseNotes>
+    <releaseNotes>https://github.com/Microsoft/TypeScript/issues?q=is%3Aissue+milestone%3A%22TypeScript+5.0.3%22+label%3A%22fixed%22+</releaseNotes>
     <dependencies>
       <dependency id="nodejs-lts" version="6.9.2" />
     </dependencies>
