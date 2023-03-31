@@ -23,4 +23,5 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
 
 ## Notes
 
+* The software cannot be installed while the same version is currently installed, even with `--force`. To install the same version of the software again, please uninstall the package and install it again.
 * **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
