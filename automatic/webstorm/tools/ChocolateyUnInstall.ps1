@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'WebStorm'
-$softwareName = 'JetBrains WebStorm*'
+$softwareName = 'WebStorm *'
 $installerType = 'exe'
 
 $silentArgs = '/S'
