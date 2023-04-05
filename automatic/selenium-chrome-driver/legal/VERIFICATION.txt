@@ -3,17 +3,17 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://chromedriver.storage.googleapis.com/index.html?path=112.0.5615.28/>
+location on <https://chromedriver.storage.googleapis.com/index.html?path=112.0.5615.49/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://chromedriver.storage.googleapis.com/112.0.5615.28/chromedriver_win32.zip>
+  32-Bit software: <https://chromedriver.storage.googleapis.com/112.0.5615.49/chromedriver_win32.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 0B19DDF77DA29B391BDACAB4883E39B97277B08B7C8C759A4E713D1EBF3D6AAE
+  checksum32: 9B8B7ABF017B870A52EC798D569AC035E7B3FF10F65CA548AE779DBD25EFE76B
 
 File 'LICENSE.txt' is obtained from: https://source.chromium.org/chromium/chromium/src/+/main:LICENSE
