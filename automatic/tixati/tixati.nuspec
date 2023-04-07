@@ -4,7 +4,7 @@
     <metadata>
         <id>tixati</id>
         <title>Tixati</title>
-        <version>3.16</version>
+        <version>3.17</version>
         <authors>Kevin Hearn</authors>
         <owners>chocolatey-community,Redsandro</owners>
         <summary>Tixati is a cross-platform BitTorrent client written in C++ that has been designed to be light on system resources.</summary>
@@ -30,6 +30,9 @@ __Tixati__ is one of the most advanced and flexible BitTorrent clients available
 * 100% compatible with the BitTorrent protocol
 * Windows and Linux-GTK native versions available
 
+## Notes
+
+* **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
         <projectUrl>http://www.tixati.com/</projectUrl>
         <tags>internet network download torrent p2p share admin freeware</tags>
