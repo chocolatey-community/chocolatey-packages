@@ -15,6 +15,6 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 99BD6C42A781A6F96063DD83D269CD8E26793F6655F8F441C461351A04533875
+   checksum32: 30DABC09490ABAAE1104FD71EF1979A28B2D5C82936E4E221AE633C3C5E4A2E0
 
 File 'Redistribution.pdf' is from personal email communication
