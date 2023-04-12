@@ -7,19 +7,19 @@ location on <http://windows.php.net/download>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-8.1.18-Win32-vs16-x86.zip>
-  64-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-8.1.18-Win32-vs16-x64.zip>
-  32-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-8.1.18-nts-Win32-vs16-x86.zip>
-  64-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-8.1.18-nts-Win32-vs16-x64.zip>
+  32-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-8.2.5-Win32-vs16-x86.zip>
+  64-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-8.2.5-Win32-vs16-x64.zip>
+  32-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-8.2.5-nts-Win32-vs16-x86.zip>
+  64-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-8.2.5-nts-Win32-vs16-x64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: 
-  checksum32 (threadsafe): 980F32D8287180072651CA937224A2546EBDCD67B2D8BDA53531FBC28877B341
-  checksum64 (threadsafe): AC2105FB10B315CEB3C9B8CE19C13589C0E7E63496CBBCC3283AAC9E4CF76FA9
-  checksum32 (non-threadsafe): 6108098C9F63747FBD9DA9CEFA49F88207FCAAF84E944C4DD03F46968B305C16
-  checksum64 (non-threadsafe): 3B3CD7B310DD28C5A2E71388318C4690A5D3792DDF1D89F7A94FFD1A325CE8E2
+  checksum32 (threadsafe): F11A1A8F8F949F3D2BBE8FCF9C157F370AC4A2BEE6090437E611164500CC9F22
+  checksum64 (threadsafe): 5D4B40A7D280A00D1349502E9ABEED54544E12522CDF368F029D83F921AC239B
+  checksum32 (non-threadsafe): BC1890B2A8AC865007FD35408907E26D07AB23F067ADC64F0E922FC367053ABA
+  checksum64 (non-threadsafe): 3BE89044CEFF1FF32D12B42721986E82152FB0289F05A5F22D108B7EE353B42A
 
 The file 'LICENSE.txt' has been obtained from <http://www.php.net/license/3_01.txt>
