@@ -3,7 +3,7 @@
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-[version] $softwareVersion = '2.14.0.0'
+[version] $softwareVersion = '2.14.0.1'
 $installedVersion = Get-InstalledVersion
 
 if ($installedVersion -and ($softwareVersion -eq $installedVersion) -and !$env:ChocolateyForce) {
@@ -14,8 +14,8 @@ else {
     PackageName    = 'tortoisegit'
     FileType       = 'msi'
     SoftwareName   = 'TortoiseGit*'
-    File           = "$toolsPath\"
-    File64         = "$toolsPath\"
+    File           = "$toolsPath\TortoiseGit-2.14.0.1-32bit.msi"
+    File64         = "$toolsPath\TortoiseGit-2.14.0.1-64bit.msi"
     SilentArgs     = '/quiet /qn /norestart REBOOT=ReallySuppress'
     ValidExitCodes = @(0, 3010)
   }
