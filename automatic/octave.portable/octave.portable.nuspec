@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>octave.portable</id>
-    <version>8.1.0</version>
+    <version>8.2.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/octave.portable</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru</owners>
     <title>GNU Octave (Portable)</title>
@@ -46,7 +46,7 @@ Example: `choco install octave.install --params "/DesktopIcon /StartMenu /LocalU
 
 * The package makes Octave available through the `octave` (GUI) and  `octave-cli` (CLI) shims following installation
 ]]></description>
-    <releaseNotes>https://www.gnu.org/news/release/2022/11/02/octave-7.3.0-released.html</releaseNotes>
+    <releaseNotes>https://www.gnu.org/news/release/2023/03/07/octave-8.1.0-released.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
