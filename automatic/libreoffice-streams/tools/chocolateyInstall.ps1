@@ -23,5 +23,7 @@ if (-not (IsUrlValid $packageArgs.url)) {
   $packageArgs.url = $exactVersion.Url32
   $packageArgs.url64bit = $exactVersion.Url64
 }
+$pp = Get-PackageParameters
+if ($pp['NoDesktopIcon']) { $packageArgs.silentArgs += 'CREATEDESKTOPLINK=0' }
 
 Install-ChocolateyPackage @packageArgs

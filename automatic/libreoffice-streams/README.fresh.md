@@ -2,6 +2,10 @@
 
 LibreOffice is the free power-packed Open Source personal productivity suite for Windows, macOS and Linux, that gives you six feature-rich applications for all your document production and data processing needs.
 
+## Package parameters
+* `/NoDesktopIcon` - Don't add a desktop icon.
+Example: `choco install libreoffice-fresh --params "/NoDesktopIcon"`
+
 ## Notes
 
 - This package relies on the update service provided by The Document Foundation to determine new updates. As their policy is to distribute to their website immediately and to the update service after 1 to 2 weeks, there will be a delay between a new software update and a new version release of the package.
