@@ -4,7 +4,7 @@ LibreOffice is the free power-packed Open Source personal productivity suite for
 
 ## Package parameters
 * `/NoDesktopIcon` - Don't add a desktop icon.
-Example: `choco install libreoffice-fresh --params "/NoDesktopIcon"`
+Example: `choco install libreoffice-streams --params "/NoDesktopIcon"`
 
 ## Notes
 
