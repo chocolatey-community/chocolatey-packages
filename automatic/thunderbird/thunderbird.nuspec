@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>thunderbird</id>
-    <version>102.10.0</version>
+    <version>102.10.1</version>
     <title>Mozilla Thunderbird</title>
     <owners>chocolatey-community</owners>
     <authors>Mozilla</authors>
