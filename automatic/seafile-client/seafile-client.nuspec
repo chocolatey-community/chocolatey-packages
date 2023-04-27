@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>seafile-client</id>
-    <version>9.0.1</version>
+    <version>9.0.2</version>
     <title>Seafile (Windows Client)</title>
     <owners>chocolatey-community</owners>
     <authors>Seafile Ltd.</authors>
