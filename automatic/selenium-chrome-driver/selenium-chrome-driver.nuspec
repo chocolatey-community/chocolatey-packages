@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>selenium-chrome-driver</id>
-    <version>113.0.5672.63</version>
+    <version>114.0.5735.16</version>
     <title>Selenium Chrome Driver</title>
     <authors>Chromium and WebDriver teams</authors>
     <owners>chocolatey-community,AdmiringWorm,agabrys</owners>
@@ -31,11 +31,8 @@ To pass parameters, use `--params "''"` (e.g. `choco install selenium-chrome-dri
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>Chrome Driver is a WebDriver implementation that enables programmatic automation of Chrome products for desktop platforms. It is a part of the Selenium (http://code.google.com/p/selenium) project.</summary>
-    <releaseNotes>---------ChromeDriver 113.0.5672.63 (2023-05-03)---------
-Supports Chrome version 113
-Resolved issue 4205: Same object ids in Classic and BiDi [Pri-1]
-Resolved issue 4302: Don't assume that Mapper is in the first tab in ExecuteGetWindowHandles [Pri-1]
-Resolved issue 4356: Chrome 110 not utilizing pref value "download.default_directory" [Pri-1]
+    <releaseNotes>---------ChromeDriver 114.0.5735.16 (2023-05-04)---------
+Supports Chrome version 114
 </releaseNotes>
     <copyright>Chromium and WebDriver teams. All Rights Reserved.</copyright>
     <tags>selenium-chrome-driver google-chrome driver webdriver testing web-applications freeware foss cross-platform</tags>
