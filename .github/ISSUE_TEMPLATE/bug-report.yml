@@ -18,6 +18,7 @@ body:
         Do mind that versions older than the latest version that was available 1 year ago will not be supported.
       multiple: true
       options:
+        - 1.4.0
         - 1.3.1
         - 1.3.0
         - 1.2.1
