@@ -41,7 +41,7 @@
     <tags>foss cross-platform gitextensions git gui admin</tags>
     <projectSourceUrl>https://github.com/gitextensions/gitextensions</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/gitextensions</packageSourceUrl>
-    <docsUrl>https://git-extensions-documentation.readthedocs.org/en/latest/</docsUrl>
+    <docsUrl>https://git-extensions-documentation.readthedocs.org/</docsUrl>
     <mailingListUrl>http://groups.google.com/group/gitextensions</mailingListUrl>
     <bugTrackerUrl>http://github.com/gitextensions/gitextensions/issues</bugTrackerUrl>
     <dependencies>
