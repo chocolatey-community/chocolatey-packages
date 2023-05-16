@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kubescape</id>
+    <version>2.3.3</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/kubescape</packageSourceUrl>
+    <owners>chocolatey-community</owners>
+    <title>kubescape: Kubernetes Security Platform</title>
+    <authors>Kubescape authors</authors>
+    <projectUrl>https://www.armosec.io/kubescape/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@master/icons/kubescape.png</iconUrl>
+    <licenseUrl>https://github.com/kubescape/kubescape/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/kubescape/kubescape</projectSourceUrl>
+    <docsUrl>https://hub.armosec.io/docs</docsUrl>
+    <bugTrackerUrl>https://github.com/kubescape/kubescape/issues</bugTrackerUrl>
+    <tags>kubescape kubernetes security devops vulnerability-detection nsa best-practice mitre-attack</tags>
+    <summary>Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters.</summary>
+    <description><![CDATA[An open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters.
+
+Kubescape was created by [ARMO](https://www.armosec.io/?utm_source=github&utm_medium=repository) and is a [Cloud Native Computing Foundation (CNCF) sandbox project](https://www.cncf.io/sandbox-projects/).
+
+## Features
+
+Kubescape is an open-source Kubernetes security platform. It includes risk analysis, security compliance, and misconfiguration scanning. Targeted at the DevSecOps practitioner or platform engineer, it offers an easy-to-use CLI interface, flexible output formats, and automated scanning capabilities. It saves Kubernetes users and admins precious time, effort, and resources.
+
+Kubescape scans clusters, YAML files, and Helm charts. It detects misconfigurations according to multiple frameworks (including [NSA-CISA](https://www.armosec.io/blog/kubernetes-hardening-guidance-summary-by-armo/?utm_source=github&utm_medium=repository), [MITRE ATT&CK®](https://www.microsoft.com/security/blog/2021/03/23/secure-containerized-environments-with-updated-threat-matrix-for-kubernetes/) and the [CIS Benchmark](https://www.armosec.io/blog/cis-kubernetes-benchmark-framework-scanning-tools-comparison/?utm_source=github&utm_medium=repository)).
+
+## Notes
+
+- [Running your first scan](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md#run-your-first-scan)
+- [Usage](https://github.com/kubescape/kubescape/blob/master/docs/getting-started.md#examples)
+- [Architecture](https://github.com/kubescape/kubescape/blob/master/docs/architecture.md)
+]]></description>
+    <releaseNotes>https://github.com/kubescape/kubescape/releases</releaseNotes>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

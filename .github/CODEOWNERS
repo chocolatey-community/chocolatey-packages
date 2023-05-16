@@ -42,6 +42,7 @@
 */brave*              @AdmiringWorm
 */nexus-repository*   @chocolatey-community/chocolatey-team-maintainers
 */totalcommander*     @pauby
+*/kubescape*          @chocolatey-community/chocolatey-team-maintainers @HollowMan6
 
 # Other
 # This can be any file other that won't be matched as a package
