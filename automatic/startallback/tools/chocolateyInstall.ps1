@@ -1,5 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+if ([System.Environment]::OSVersion.Version.Build -lt 16299) {
+  throw 'At least Windows 10 Version 1709 or Windows Server 2016 Version 1709 required'
+}
+
 $packageArgs = @{
   packageName            = 'startallback'
   fileType               = 'exe'
