@@ -1,7 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-if ([System.Environment]::OSVersion.Version.Build -lt 16299) {
-  throw 'At least Windows 10 Version 1709 or Windows Server 2016 Version 1709 required'
+if ([System.Environment]::OSVersion.Version -lt (new-object 'Version' 10, 0, 16299)) {
+  $packageName = 'startallback'
+  $errorMessage = 'Your Windows version is not suitable for this package. This package is only for Windows 10 Version 1709 or higher'
+  Write-Output $packageName $errorMessage
+  throw $errorMessage
 }
 
 $packageArgs = @{
