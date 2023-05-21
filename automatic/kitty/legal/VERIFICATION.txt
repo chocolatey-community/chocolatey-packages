@@ -5,17 +5,17 @@ in verifying that this package's contents are trustworthy.
 
 Package can be verified like this:
 
-1. Download the zip file: https://github.com/cyd01/KiTTY/releases/download/v0.76.1.9/kitty-bin-0.76.1.9.zip
+1. Download the zip file: https://github.com/cyd01/KiTTY/releases/download/v0.76.1.11/kitty-bin-0.76.1.11.zip
 
 2. You can use one of the following methods to obtain the SHA256 checksum:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   SHA256: 7ccd82e124c07ff88bad58046d60f917f1ad8938924ae71fd40f1ad9b7e33c4b
+   SHA256: 9d820eec20649a003d8146b11e1ff4c60b34128ca34d345e490388ad8088524a
 
 Using AU:
 
-   Get-RemoteChecksum  https://github.com/cyd01/KiTTY/releases/download/v0.76.1.9/kitty-bin-0.76.1.9.zip
+   Get-RemoteChecksum  https://github.com/cyd01/KiTTY/releases/download/v0.76.1.11/kitty-bin-0.76.1.11.zip
 
 File 'LICENSE.TXT' is obtained from:
    https://raw.githubusercontent.com/cyd01/KiTTY/master/LICENCE.TXT
