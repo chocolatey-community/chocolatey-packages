@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.smartftp.com/download'
 
@@ -24,10 +24,10 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re    = '\.exe$'
-    $url = $download_page.links | ? href -match $re
+    $url = $download_page.links | Where-Object href -match $re
 
-    $url   = $url | ? OuterHTML -match '64-bit' | select -First 1
-    $version = $url.OuterHTML -split ' ' | ? {  [version]::TryParse($_, [ref]($__)) }
+    $url   = $url | Where-Object OuterHTML -match '64-bit' | Select-Object -First 1
+    $version = $url.OuterHTML -split ' ' | Where-Object {  [version]::TryParse($_, [ref]($__)) }
     @{
         Version      = $version
         URL32        = 'https://www.smartftp.com/get/SmartFTP86.msi'
