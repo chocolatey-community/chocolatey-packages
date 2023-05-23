@@ -2,7 +2,6 @@
 param($IncludeStream, [switch]$Force)
 Import-Module AU
 
-$releases = 'https://github.com/jetwhiz/encfs4win/releases'
 $softwareName = 'encfs4win*'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -10,7 +9,7 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(\s*1\..+)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
       "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
@@ -22,30 +21,41 @@ function global:au_SearchReplace {
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
     }
-    "$($Latest.PackageName).nuspec" = @{
-        "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
     }
   }
+
+function global:au_AfterUpdate {
+  Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
+  $releases = Get-AllGitHubReleases -Owner 'jetwhiz' -Name 'encfs4win'
   $re = 'installer\.exe$'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
 
   $streams = @{}
-  $urls32 | % {
-    $verRe = '\/'
-    $rawTag = $_ -split "$verRe" | select -last 1 -skip 1
-    $version = Get-Version $rawTag
+  $releases | ForEach-Object {
+    $version = if ($_.name) {
+      Get-Version $_.name
+    }
+    else {
+      Get-Version $_.tag_name
+    }
 
-    if (!($streams.ContainsKey($version.ToString(2)))) {
-      $streams.Add($version.ToString(2), @{
-        Version = $version.ToString()
-        URL32   = $_
-        ReleaseNotes = "https://github.com/jetwhiz/encfs4win/releases/tag/${rawTag}"
-      })
+    $url = $_.assets | Where-Object browser_download_url -match $re | Select-Object -ExpandProperty browser_download_url
+    $streamName = $version.ToString(2)
+
+    if (!($streams.ContainsKey($streamName)) -and $url) {
+      if ($streamName -eq '1.9') {
+        # We'll ignore the 1.9.x versions as these are not compatible with the current code in the package
+        $streams.Add($streamName, 'ignore')
+      } else {
+        $streams.Add($streamName, @{
+            Version      = $version
+            URL32        = $url
+            ReleaseNotes = $_.body
+            ReleaseUrl   = $_.html_url
+        })
+      }
     }
   }
 
