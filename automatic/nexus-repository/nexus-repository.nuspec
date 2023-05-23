@@ -3,7 +3,7 @@
   <metadata>
     <id>nexus-repository</id>
     <title>Nexus Repository OSS</title>
-    <version>3.53.1.02</version>
+    <version>3.54.1.01</version>
     <authors>Sonatype</authors>
     <owners>chocolatey-community,DarwinJS</owners>
     <summary>Free open source version of popular Nexus Repository for binary artifacts including first class Nuget support.</summary>

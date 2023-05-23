@@ -6,7 +6,7 @@ if (Get-OSArchitectureWidth 32) {
   throw "Sonatype Nexus Repository 3.0 and greater only supports 64-bit Windows."
 }
 
-$Version = '3.53.1-02'
+$Version = '3.54.1-01'
 $NexusVersionedFolder = "nexus-$Version"
 $TargetFolder = "$env:ProgramData\nexus"
 $ExtractFolder = "$env:TEMP\NexusExtract"
@@ -55,8 +55,8 @@ if (Test-Path "$ExtractFolder") {
 $PackageArgs = @{
   packageName    = $env:ChocolateyPackageName
   unzipLocation  = $ExtractFolder
-  url64          = 'https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.53.1-02-win64.zip'
-  checksum64     = '20084e3fe17d8419f7338077e9a958e29d63487178f8dcc82d27a3e8667f4ce4'
+  url64          = 'https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.54.1-01-win64.zip'
+  checksum64     = 'e3da144e88c8c0e4eea3438ea3ad592132bbed6e4e9afe47fac0985d50f7a8fd'
   checksumType64 = 'SHA256'
 }
 
