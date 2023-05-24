@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx'
 
@@ -25,8 +25,8 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re      = '(?<!Nano)\.zip$'
-    $url     = $download_page.links | ? href -match $re | select -First 1 -Expand href
-    $urlNano = $download_page.links | ? href -match 'Nano\.zip$' | select -First 1 -Expand href
+    $url     = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -Expand href
+    $urlNano = $download_page.links | Where-Object href -match 'Nano\.zip$' | Select-Object -First 1 -Expand href
 
     # Previous version of this script extracted $updated from the html page content:
     # $updated = $download_page.Content -split "`n" | sls '(?<=Updated: )[^/<>]+' | % Matches | % Value

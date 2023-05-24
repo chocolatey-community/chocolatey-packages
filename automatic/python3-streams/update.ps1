@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 Add-Type -Assembly System.IO.Compression
 
@@ -51,7 +51,7 @@ function SetCopyright {
   # copyright information for nuspec
   $copyright_entry = $zip.GetEntry("$($Latest.ZipName)/copyright.txt")
   $reader = [System.IO.StreamReader]::new($copyright_entry.Open())
-  (1..5) | % {$reader.ReadLine()}  # skip header
+  (1..5) | ForEach-Object {$reader.ReadLine()}  # skip header
   $copyright = ''
   $reading_copyright = $false
   while (($line = $reader.ReadLine()) -ne $null) {
@@ -76,7 +76,7 @@ function SetCopyright {
 }
 
 function global:au_BeforeUpdate {
-  rm tools\*.msi, tools\*.exe -ea 0
+  Remove-Item tools\*.msi, tools\*.exe -ea 0
 
   Get-RemoteFiles -Purge -NoSuffix
   SetCopyright

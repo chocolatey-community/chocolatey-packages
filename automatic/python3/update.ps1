@@ -26,7 +26,7 @@ function global:au_AfterUpdate($Package) {
 
 function global:au_GetLatest {
   $streams = GetReleaseFilesStreams
-  $streams.Keys | % {
+  $streams.Keys | ForEach-Object {
     $item = $streams[$_]
     $pkgName = $item.PackageName
     $item.Remove('PackageName') | Out-Null
