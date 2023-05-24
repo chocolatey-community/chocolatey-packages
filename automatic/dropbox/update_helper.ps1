@@ -12,7 +12,7 @@ function drpbx-compare {
   }
 
   $releases = 'https://www.dropboxforum.com/t5/Desktop-client-builds/bd-p/101003016'
-  $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases | % Links | where { $_ -match $build } | select -First 6 | Out-String
+  $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases | ForEach-Object Links | Where-Object { $_ -match $build } | Select-Object -First 6 | Out-String
   $re_dash = '-'
   $re_dot = '.'
   $re_non = ''
@@ -43,11 +43,11 @@ function drpbx-builds {
           $build += $G + ";"
         }
       }
-      if (($build | measure).Count -ge '6') {
-        $build = ($build | measure -Maximum).Maximum
+      if (($build | Measure-Object).Count -ge '6') {
+        $build = ($build | Measure-Object -Maximum).Maximum
         break
       }
     }
   }
-  return ($build | select -First 1)
+  return ($build | Select-Object -First 1)
 }

@@ -33,9 +33,9 @@ function global:au_GetLatest {
 
   $re    = 'x86\.zip$'
   $re64  = 'x64\.zip$'
-  $url   = $download_page.links | ? href -match $re   | select -First 1 -expand href
-  $url64 = $download_page.links | ? href -match $re64 | select -First 1 -expand href
-  $version = $url -split '/' | Select-Object -Last 1 -Skip 1 | % { $_.Trim('v') }
+  $url   = $download_page.links | Where-Object href -match $re   | Select-Object -First 1 -expand href
+  $url64 = $download_page.links | Where-Object href -match $re64 | Select-Object -First 1 -expand href
+  $version = $url -split '/' | Select-Object -Last 1 -Skip 1 | ForEach-Object { $_.Trim('v') }
   $shortversion = $version.Split('.')[0] + $version.Split('.')[1]
 
   @{

@@ -32,7 +32,7 @@ function GetDropbox {
   $build = @{$true = '-beta'; $false = '' }[( $kind -match '-' )]
   $oldversion = $nu_version -replace ($build, '')
   $beta = drpbx-compare $oldversion -build ($build -replace ('-', ''))
-  $beta = Get-Version $beta | select -expand Version
+  $beta = Get-Version $beta | Select-Object -expand Version
   # URL no longer valid as of 02/23/2018 $url = "https://dl-web.dropbox.com/u/17/Dropbox%20${beta}.exe"
   $url32 = Get-RedirectedUrl "https://www.dropbox.com/download?build=${beta}&plat=win&type=full"
   # Adding URL64 on 10/12/2022 due to it now being available
@@ -47,7 +47,7 @@ function GetDropbox {
   }
 }
 
-$vers = Get-Version (( Get-RedirectedUrl 'https://www.dropbox.com/download?full=1&plat=win') -replace ('%20', '')) | select -expand Version
+$vers = Get-Version (( Get-RedirectedUrl 'https://www.dropbox.com/download?full=1&plat=win') -replace ('%20', '')) | Select-Object -expand Version
 $stable = -join ( $vers.Major, "." , $vers.Minor, "." , $vers.Build )
 
 function global:au_GetLatest {
