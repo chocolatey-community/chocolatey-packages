@@ -70,9 +70,9 @@ function global:au_GetLatest {
 
 function global:au_BeforeUpdate {
   $stream_readme = if ($Latest.Title -like '*Beta*') { 'README-beta.md' } else { 'README-release.md' }
-  cp $stream_readme $PSScriptRoot\README.md -Force
+  Copy-Item $stream_readme $PSScriptRoot\README.md -Force
   Get-RemoteFiles -Purge -NoSuffix
-  rm "$PSScriptRoot\tools\$($Latest.FileName32)"
+  Remove-Item "$PSScriptRoot\tools\$($Latest.FileName32)"
 }
 
 function global:au_SearchReplace {

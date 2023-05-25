@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases = 'https://www.spotify.com/en/download/windows/'
@@ -21,12 +21,12 @@ function global:au_AfterUpdate {
 function GetResultInformation([string]$url32) {
   $dest = "$env:TEMP\spotify.exe"
   Get-WebFile $url32 $dest | Out-Null
-  $version = Get-Item $dest | % { $_.VersionInfo.ProductVersion -replace '^([\d]+(\.[\d]+){1,3}).*', '$1' }
+  $version = Get-Item $dest | ForEach-Object { $_.VersionInfo.ProductVersion -replace '^([\d]+(\.[\d]+){1,3}).*', '$1' }
 
   $result = @{
     URL32          = $url32
     Version        = Get-FixVersion -Version $version -OnlyFixBelowVersion $padUnderVersion
-    Checksum32     = Get-FileHash $dest -Algorithm SHA512 | % Hash
+    Checksum32     = Get-FileHash $dest -Algorithm SHA512 | ForEach-Object Hash
     ChecksumType32 = 'sha512'
   }
   Remove-Item -Force $dest
@@ -36,12 +36,12 @@ function GetResultInformation([string]$url32) {
 function GetETagIfChanged() {
   param([string]$uri)
   if (($global:au_Force -ne $true) -and (Test-Path $PSScriptRoot\info)) {
-    $existingETag = $etag = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -First 1 | % { $_ -split '\|' } | select -first 1
+    $existingETag = $etag = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | Select-Object -First 1 | ForEach-Object { $_ -split '\|' } | Select-Object -first 1
   }
   else { $existingETag = $null }
 
   $etag = Invoke-WebRequest -Method Head -Uri $uri -UseBasicParsing
-  $etag = $etag | % { $_.Headers.ETag }
+  $etag = $etag | ForEach-Object { $_.Headers.ETag }
   if ($etag -eq $existingETag) { return $null }
 
   return $etag
@@ -58,7 +58,7 @@ function global:au_GetLatest {
   else {
     $result = @{
       URL32   = $downloadUrl
-      Version = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -First 1 | % { $_ -split '\|' } | select -Last 1
+      Version = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | Select-Object -First 1 | ForEach-Object { $_ -split '\|' } | Select-Object -Last 1
     }
   }
 
