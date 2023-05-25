@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://get.geo.opera.com/pub/opera/desktop/'
 
@@ -26,7 +26,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $versionSort   = { [version]$_.href.TrimEnd('/') }
-  $download_page = $download_page.links | ? href -match '^[\d]+[\d\.]+\/$' | sort $versionSort -Descending | % {
+  $download_page = $download_page.links | Where-Object href -match '^[\d]+[\d\.]+\/$' | Sort-Object $versionSort -Descending | ForEach-Object {
     [version] $version = $_.href -replace '/', ''
     $url               = "https://get.geo.opera.com/pub/opera/desktop/$version/win/"
     try {
@@ -34,10 +34,10 @@ function global:au_GetLatest {
       return $result
     }
     catch { }
-  } | select -First 1
+  } | Select-Object -First 1
 
-  $url32 = $download_page.Links | ? href -NotMatch 'x64' | ? href -Match 'Setup\.exe$' | select -First 1 -expand href | % { $url + $_ }
-  $url64 = $download_page.Links | ? href -Match "(x64.*Setup|Setup_x64)\.exe$" | select -First 1 -expand href | % { $url + $_ }
+  $url32 = $download_page.Links | Where-Object href -NotMatch 'x64' | Where-Object href -Match 'Setup\.exe$' | Select-Object -First 1 -expand href | ForEach-Object { $url + $_ }
+  $url64 = $download_page.Links | Where-Object href -Match "(x64.*Setup|Setup_x64)\.exe$" | Select-Object -First 1 -expand href | ForEach-Object { $url + $_ }
 
   if (!$url32 -or !$url64) {
     throw "32bit or 64bit url was not found, investigate or ignore."
