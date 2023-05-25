@@ -17,7 +17,7 @@ $arguments['file'] = Get-ChocolateyWebFile @arguments
 
 # It doesn't matter what time we choose, we need to start it manually
 schtasks.exe /Create /SC Once /st (Get-Date -Format 'HH:mm') /TN $arguments['packageName'] /TR "'$($arguments['file'])' $($arguments['silentArgs'])" /F 2>$null
-schtasks.exe /Run /TN $arguments['packageName']
+schtasks.exe /Run /TN $arguments['packageName'] /I
 Start-Sleep -s 1
 schtasks.exe /Delete /TN $arguments['packageName'] /F
 
