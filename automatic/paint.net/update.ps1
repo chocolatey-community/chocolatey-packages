@@ -14,7 +14,7 @@ function global:au_BeforeUpdate {
 
   Set-Alias 7z $Env:chocolateyInstall\tools\7z.exe
   7z e tools\*.zip -otools *.exe -r -y
-  rm tools\*.zip -ea 0
+  Remove-Item tools\*.zip -ea 0
 }
 
 function global:au_GetLatest {
