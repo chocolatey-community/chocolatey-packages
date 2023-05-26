@@ -24,7 +24,7 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate() {
   $release_page = Invoke-WebRequest -Uri ($ghReleasesFmt -f $($Latest.RemoteVersion)) -UseBasicParsing
 
-  $release_notes = $release_page.Links | ? href -match "release-notes|roadmap-releases" | select -First 1 -expand href
+  $release_notes = $release_page.Links | Where-Object href -match "release-notes|roadmap-releases" | Select-Object -First 1 -expand href
 
   Update-Metadata -key "releaseNotes" -value $release_notes
 }
@@ -33,11 +33,11 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re = '\.exe$'
-  $urls = $download_page.links | ? href -match $re | select -expand href
+  $urls = $download_page.links | Where-Object href -match $re | Select-Object -expand href
 
   $streams = @{}
 
-  $urls | % {
+  $urls | ForEach-Object {
     $versionArr = $_ -split 'setup[-]|[-]signed|.exe'
     if ($versionArr[1]) {
       $version = Get-Version $versionArr[1]
