@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.voidtools.com/Changes.txt'
 
@@ -23,8 +23,8 @@ function global:au_BeforeUpdate {
 }
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version       = $download_page.Content -split "`n" | sls ': Version .+' | select -First 1
-    $version       = ($version -split ' ' | select -Last 1).Trim()
+    $version       = $download_page.Content -split "`n" | Select-String ': Version .+' | Select-Object -First 1
+    $version       = ($version -split ' ' | Select-Object -Last 1).Trim()
     $choco_version = $version.Replace('b', '') -replace '\.([^.]+)$', '$1'
     @{
         Version      = $choco_version
