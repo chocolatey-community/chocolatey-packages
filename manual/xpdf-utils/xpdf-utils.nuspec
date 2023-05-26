@@ -17,6 +17,8 @@
     <summary>Xpdf utilities</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>Dummy</description>
+    <docsUrl>https://www.xpdfreader.com/support.html</docsUrl>
+    <mailingListUrl>https://forum.xpdfreader.com/</mailingListUrl>
     <dependencies />
   </metadata>
   <files>
