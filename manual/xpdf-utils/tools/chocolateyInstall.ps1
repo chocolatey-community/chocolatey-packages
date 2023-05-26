@@ -18,7 +18,8 @@ Get-ChocolateyUnzip @packageArgs
 if ((Get-ProcessorBits 32) -or ($env:ChocolateyForceX86 -eq $true)) {
   $dir = Get-Item "$toolsPath\*\bin64"
   Remove-Item -Force -Recurse -ea 0 $dir
-} else {
+}
+else {
   $dir = Get-Item "$toolsPath\*\bin32"
   Remove-Item -Force -Recurse -ea 0 $dir
 }
