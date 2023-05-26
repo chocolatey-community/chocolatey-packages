@@ -2,7 +2,7 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-Get-ChildItem "$toolsPath" -Filter "xpdfbin-win*" | `
+Get-ChildItem "$toolsPath" -Filter "xpdf*-win*" | `
   Where-Object { Test-Path $_.FullName -PathType Container } | `
   ForEach-Object { Remove-Item $_.FullName -Recurse }
 
