@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.tixati.com/download/portable.html'
 
@@ -13,7 +13,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $url32 = $download_page.links | ? href -match '\.zip$' | % href
+    $url32 = $download_page.links | Where-Object href -match '\.zip$' | ForEach-Object href
     $url32 -match '(?<=tixati-).+?(?=\.portable)'
     $version = $Matches[0] -replace '-.+'
 

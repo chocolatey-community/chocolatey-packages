@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://www.tixati.com/download/'
 
@@ -16,10 +16,10 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri "${releases}windows.html" -UseBasicParsing
-    $url32 = $download_page.links | ? href -match '\.exe$' | select -First 1 | % href
+    $url32 = $download_page.links | Where-Object href -match '\.exe$' | Select-Object -First 1 | ForEach-Object href
 
     $download_page = Invoke-WebRequest -Uri "${releases}windows64.html" -UseBasicParsing
-    $url64 = $download_page.links | ? href -match '\.exe$' | select -First 1 | % href
+    $url64 = $download_page.links | Where-Object href -match '\.exe$' | Select-Object -First 1 | ForEach-Object href
 
     $url64 -match '(?<=tixati-).+?(?=\.win64)'
     $version = $Matches[0] -replace '-.+$'
