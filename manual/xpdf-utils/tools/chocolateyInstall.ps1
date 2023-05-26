@@ -9,7 +9,7 @@ Get-ChildItem "$toolsPath" -Filter "xpdf*-win*" | `
 $packageArgs = @{
   packageName = 'xpdf-utils'
   fileType    = 'zip'
-  file        = "$toolsPath\xpdfbin-win-3.04.zip"
+  file        = "$toolsPath\xpdf-tools-win-4.04.zip"
   destination = $toolsPath
 }
 

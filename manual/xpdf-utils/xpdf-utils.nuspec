@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xpdf-utils</id>
-    <version>3.4.0.20170430</version>
+    <version>4.04</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/manual/xpdf-utils</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>Xpdf utils</title>
     <authors>Glyph &amp; Cog, LLC</authors>
     <projectUrl>https://www.xpdfreader.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9de2a5aefc0c7d6facb695f0ac0017328ece49e8/icons/xpdf-utils.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey-community/chocolatey-packages/a66dc8904b32ac586c02e598aa7fd6c3c2a0d34e/icons/xpdf-utils.png</iconUrl>
     <copyright>Glyph &amp; Cog, LLC</copyright>
     <licenseUrl>https://www.xpdfreader.com/opensource.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
