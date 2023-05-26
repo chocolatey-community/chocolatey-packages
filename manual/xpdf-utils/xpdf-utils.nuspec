@@ -17,7 +17,6 @@
     <summary>Xpdf utilities</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>Dummy</description>
-    <releaseNotes>http://www.foolabs.com/xpdf/CHANGES</releaseNotes>
     <dependencies />
   </metadata>
   <files>
