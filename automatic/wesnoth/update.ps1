@@ -28,21 +28,21 @@ function global:au_GetLatest {
     "beta" = @{ re = "\/files\/wesnoth\/.*\.exe\/download$"; suffix = "-beta" }
   }
 
-  $reStreams.Keys | % {
+  $reStreams.Keys | ForEach-Object {
     $value = $reStreams[$_]
-    $url32 = $download_page.Links | ? href -match $value.re | select -first 1 -expand href
+    $url32 = $download_page.Links | Where-Object href -match $value.re | Select-Object -first 1 -expand href
 
     if (!$url32 -and $_ -eq 'beta') { return; } # We'll ignore missing beta versions on the page
 
     $verRe = '[-]'
-    $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+    $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
     if ($value.suffix) { $version32 += $value.suffix }
 
-    $fileName32 = $url32 -split '\/' | select -last 1 -skip 1
+    $fileName32 = $url32 -split '\/' | Select-Object -last 1 -skip 1
 
     $checksum_page = Invoke-WebRequest -Uri "https://files.wesnoth.org/releases/${fileName32}.sha256" -UseBasicParsing
 
-    $checksum32 = $checksum_page -split ' ' | select -first 1
+    $checksum32 = $checksum_page -split ' ' | Select-Object -first 1
 
     $streams.Add($_,  @{
       URL32 = $url32
