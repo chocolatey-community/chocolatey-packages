@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'http://www.qbittorrent.org/download.php'
 
@@ -30,10 +30,10 @@ function global:au_GetLatest {
   }
 
   $re    = 'setup\.exe\/download$'
-  $urls  = $download_page.links | ? href -match $re | select -First 1 -expand href
-  $url64 = $urls | ? { $_ -match "x64" } | select -first 1
+  $urls  = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
+  $url64 = $urls | Where-Object { $_ -match "x64" } | Select-Object -first 1
 
-  $version64 = $url64 -split '[_]' | select -Last 1 -Skip 2
+  $version64 = $url64 -split '[_]' | Select-Object -Last 1 -Skip 2
 
   return @{
     URL64    = $url64
