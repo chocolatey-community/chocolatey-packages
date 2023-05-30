@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 [uri]$releases = 'https://curl.se/windows/'
 
@@ -34,14 +34,14 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.zip'
-  $url = $download_page.links | ? href -match $re | % { [uri]::new($releases, $_.href) }
-  $version = ($url[0] -split '/'  | select -Last 1) -split '(_\d+)?-' | select -Index 1
-  $releaseNotes = $download_page.links | ? href -match "changes\.html" | select -first 1 -expand href
+  $url = $download_page.links | Where-Object href -match $re | ForEach-Object { [uri]::new($releases, $_.href) }
+  $version = ($url[0] -split '/'  | Select-Object -Last 1) -split '(_\d+)?-' | Select-Object -Index 1
+  $releaseNotes = $download_page.links | Where-Object href -match "changes\.html" | Select-Object -first 1 -expand href
 
   @{
     Version      = $version
-    URL32        = $url -match 'win32' | select -first 1
-    URL64        = $url | ? { $_ -notmatch 'win32' -and $_ -match $version } | select -first 1
+    URL32        = $url -match 'win32' | Select-Object -first 1
+    URL64        = $url | Where-Object { $_ -notmatch 'win32' -and $_ -match $version } | Select-Object -first 1
     ReleaseNotes = $releaseNotes
   }
 }
