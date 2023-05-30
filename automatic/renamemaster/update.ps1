@@ -22,8 +22,8 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.zip$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
-  $fileName = $url32 -split '\/|\%2f' | select -Last 1
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
+  $fileName = $url32 -split '\/|\%2f' | Select-Object -Last 1
   $url32 = "http://files.snapfiles.com/directdl/$fileName"
 
   $Matches = $null

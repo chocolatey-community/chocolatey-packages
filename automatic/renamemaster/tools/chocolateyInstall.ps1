@@ -4,8 +4,8 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName   = 'renamemaster'
   fileType      = 'zip'
-  url           = 'http://files.snapfiles.com/directdl/rmv316.zip'
-  checksum      = '4f1d6c698dbe83dc90c998dde63f8039230be8c9c4093e13ee649a907cba5841'
+  url           = 'http://files.snapfiles.com/directdl/rmv317.zip'
+  checksum      = 'cc2745aea8296f617399c3f990dfec150d3a903661fa81c13c9bc3c5386f116e'
   checksumType  = 'sha256'
   unzipLocation = $toolsDir
 }
