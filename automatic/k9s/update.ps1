@@ -30,7 +30,7 @@ function global:au_GetLatest {
 
   return @{
     Version        = $LatestRelease.tag_name.TrimStart("v")
-    URL64          = $LatestRelease.assets | Where-Object { $_.name -eq 'k9s_Windows_amd64.tar.gz' } | Select-Object -ExpandProperty browser_download_url
+    URL64          = $LatestRelease.assets | Where-Object { $_.name -eq 'k9s_Windows_amd64.zip' } | Select-Object -ExpandProperty browser_download_url
     ReleaseNotes   = "https://github.com/derailed/k9s/blob/$($LatestRelease.tag_name)/change_logs/release_$($LatestRelease.tag_name).md"
     ReleaseURL     = $LatestRelease.html_url
     Checksum64     = $checksum64
