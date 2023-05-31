@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>OpenSSL.Light</id>
-    <version>3.1.0</version>
+    <version>3.1.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/openssl.light</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>OpenSSL – The Open Source SSL and TLS toolkit</title>
