@@ -24,10 +24,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $version = $download_page.Content -split '\n' | sls 'Current version:' -Context 0,5 | out-string
+  $version = $download_page.Content -split '\n' | Select-String 'Current version:' -Context 0,5 | out-string
 
   @{
-      Version = $version -split '<|>' | ? { [version]::TryParse($_, [ref]($__)) } | select -First 1
+      Version = $version -split '<|>' | Where-Object { [version]::TryParse($_, [ref]($__)) } | Select-Object -First 1
       URL32   = 'http://downloads.videosoftdev.com/video_tools/video_editor_x32.exe'
       URL64   = 'http://downloads.videosoftdev.com/video_tools/video_editor_x64.exe'
   }
