@@ -1,11 +1,11 @@
-
+﻿
 import-module au
 
 function global:au_BeforeUpdate {
   if ($Latest.Title -like '*essential*') {
-    cp "$PSScriptRoot\README_tse.md" "$PSScriptRoot\README.md" -Force
+    Copy-Item "$PSScriptRoot\README_tse.md" "$PSScriptRoot\README.md" -Force
   } else {
-    cp "$PSScriptRoot\README_ts.md" "$PSScriptRoot\README.md" -Force
+    Copy-Item "$PSScriptRoot\README_ts.md" "$PSScriptRoot\README.md" -Force
   }
 }
 
@@ -33,7 +33,7 @@ function Get360Version {
 
   $regex = '(\d+\.\d+\.\d+\.\d+)|( Beta)'
   $HTML = Invoke-WebRequest -UseBasicParsing -Uri $releases
-  ( $HTML | ForEach-Object { ($_ -match $regex )} ) | select -First 2 | Out-Null
+  ( $HTML | ForEach-Object { ($_ -match $regex )} ) | Select-Object -First 2 | Out-Null
   $version = $Matches[0];
   if ( $Matches[2] -ne $null ) {
     $version = $version + $Matches[2]
