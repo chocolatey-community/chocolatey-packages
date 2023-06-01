@@ -4,14 +4,14 @@ $softwareName = 'Waterfox*'
 
 function global:au_BeforeUpdate {
   if ($Latest.Title -like '*Classic*') {
-    cp "$PSScriptRoot\readme.classic.md" "$PSScriptRoot\readme.md" -Force
+    Copy-Item "$PSScriptRoot\readme.classic.md" "$PSScriptRoot\readme.md" -Force
   }
   else {
-    cp "$PSScriptRoot\readme.current.md" "$PSScriptRoot\readme.md" -Force
+    Copy-Item "$PSScriptRoot\readme.current.md" "$PSScriptRoot\readme.md" -Force
   }
 
   $Latest.ChecksumType64 = 'sha256'
-  $fileName = $Latest.URL64 -split '/' | select -last 1
+  $fileName = $Latest.URL64 -split '/' | Select-Object -last 1
   $fileName = ($fileName -replace '%20', ' ').TrimEnd('.exe')
   Get-RemoteFiles -Purge -FileNameBase $fileName
   $Latest.FileName64 = $fileName + "_x64.exe"
