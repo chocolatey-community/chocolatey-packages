@@ -1,7 +1,7 @@
-. $PSScriptRoot\..\git.install\update.ps1
+﻿. $PSScriptRoot\..\git.install\update.ps1
 
 function global:au_BeforeUpdate { 
-    cp $PSScriptRoot\..\git.install\README.md $PSScriptRoot\README.md
+    Copy-Item $PSScriptRoot\..\git.install\README.md $PSScriptRoot\README.md
 }
 function global:au_SearchReplace {
    @{
