@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://atomisystems.com/download/'
 
@@ -26,8 +26,8 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'
-  $url = $download_page.links | ? href -match $re | select -First 1 | % { [uri]::new([uri]$releases, $_.href) }
-  $version = $url -split '_' | select -Last 1 -Skip 1
+  $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 | ForEach-Object { [uri]::new([uri]$releases, $_.href) }
+  $version = $url -split '_' | Select-Object -Last 1 -Skip 1
   $version = $version.Replace('v', '')
 
   @{ URL32 = $url; Version = $version }
