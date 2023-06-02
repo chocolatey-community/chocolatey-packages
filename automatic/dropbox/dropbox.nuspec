@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>dropbox</id>
-    <version>175.4.5569</version>
+    <version>176.3.5042-beta</version>
     <title>Dropbox</title>
     <authors>Dropbox</authors>
     <owners>chocolatey-community,ferventcoder,the-running-dev</owners>
