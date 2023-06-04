@@ -8,7 +8,7 @@ Package can be verified like this:
 1. Go to <https://www.mixxx.org/download>
 
    x32: No longer being provided
-   x64: https://downloads.mixxx.org/snapshots/main/mixxx-2.5-alpha-43-g4a3a8dc39e-win64.msi
+   x64: https://downloads.mixxx.org/snapshots/2.4/mixxx-2.4-beta-6-g7cedf60853-win64.msi
 
    to download the installer.
 
@@ -16,7 +16,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 94E60DCED7115C89EF68BBFB46D691AFA2F2F1328EF54806CB7DEB2DE4B034F3
+   checksum64: AEEE5DD78D21B7072C0E85A0F27449EE46BFA2E24DB97F31410D9B2FFBAABFE3
 
 File 'license.txt' is obtained from:
    https://www.gnu.org/licenses/gpl-2.0.html
