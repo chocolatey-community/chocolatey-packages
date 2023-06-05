@@ -7,9 +7,9 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
     @{
         ".\legal\VERIFICATION.txt" = @{
-            "(?i)(64-Bit.+)\<.*\>"   = "`${1}$($Latest.Version)/jenkins.msi>"
-            "(?i)(checksum type:).*" = "`${1} $($Latest.ChecksumType64)"
-            "(?i)(checksum64:).*"    = "`${1} $($Latest.Checksum64)"
+            "(?i)(64-Bit.+\<.+/)[\d\.]+/jenkins.msi\>" = "`${1}$($Latest.Version)/jenkins.msi>"
+            "(?i)(checksum type:).*"                   = "`${1} $($Latest.ChecksumType64)"
+            "(?i)(checksum64:).*"                      = "`${1} $($Latest.Checksum64)"
         }
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*file\s*=\s*`"[$]ToolsDir\\).+`"" = "`${1}$($Latest.FileName64)`""
