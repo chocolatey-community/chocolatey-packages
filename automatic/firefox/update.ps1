@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 import-module au
 . "$PSScriptRoot\update_helper.ps1"
@@ -8,7 +8,7 @@ $releasesESR = 'https://www.mozilla.org/en-US/firefox/organizations/all/'
 $product = 'firefox'
 
 function global:au_BeforeUpdate {
-  cp "$PSScriptRoot\Readme.$($Latest.PackageName).md" "$PSScriptRoot\README.md" -Force
+  Copy-Item "$PSScriptRoot\Readme.$($Latest.PackageName).md" "$PSScriptRoot\README.md" -Force
 }
 
 function global:au_AfterUpdate {

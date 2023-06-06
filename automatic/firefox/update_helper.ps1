@@ -11,10 +11,10 @@ function GetVersionAndUrlFormats() {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $UpdateUrl
 
   $re = "download.mozilla.*product=$Product.*(&amp;|&)os=win(&amp;|&)lang=en-US"
-  $url = $download_page.links | ? href -match $re | ? href -NotMatch 'stub|next' | select -first 1 -expand href
+  $url = $download_page.links | Where-Object href -match $re | Where-Object href -NotMatch 'stub|next' | Select-Object -first 1 -expand href
   $redirectedUrl = Get-RedirectedUrl $url
   $url = $url -replace 'en-US', '${locale}' -replace '&amp;', '&'
-  $version = $redirectedUrl -split '\/' | select -Last 1 -Skip 3
+  $version = $redirectedUrl -split '\/' | Select-Object -Last 1 -Skip 3
   if ($version.EndsWith('esr')) {
     $version = $version.TrimEnd('esr')
     $url = $url -replace 'esr-latest', "${version}esr"
@@ -50,7 +50,7 @@ function CreateChecksumsFile() {
 
   $reOpts = [System.Text.RegularExpressions.RegexOptions]::Multiline `
     -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
-  $checksumRows = [regex]::Matches("$allChecksums", "^(?:b')?([a-f\d]+)'?\s*win(32|64)\/([a-z\-]+)\/$ExecutableName\s*$", $reOpts) | % {
+  $checksumRows = [regex]::Matches("$allChecksums", "^(?:b')?([a-f\d]+)'?\s*win(32|64)\/([a-z\-]+)\/$ExecutableName\s*$", $reOpts) | ForEach-Object {
     return "$($_.Groups[3].Value)|$($_.Groups[2].Value)|$($_.Groups[1].Value)"
   }
 
