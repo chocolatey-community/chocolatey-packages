@@ -5,5 +5,5 @@ Python is a programming language that lets you work more quickly and integrate y
 ## Notes
 
 - This package depends on the the latest major version of python package.
-- This package do not support package parameters, please install the package [python312](https://chocolatey.org/packages/python312) directly when using package parameters.
+- This package do not support package parameters, please install the package [python311](https://chocolatey.org/packages/python311) directly when using package parameters.
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
