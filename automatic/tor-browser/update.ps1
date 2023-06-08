@@ -22,10 +22,10 @@ function global:au_BeforeUpdate() {
 function global:au_GetLatest {
   $download_page    = Invoke-WebRequest -Uri $releases -UseBasicParsing
     
-  $allExes          = $download_page.Links | ? href -match "\.exe$" | select -expand href
-  $url32            = $allExes | ? { $_ -match "torbrowser-install-\d.*_All.exe$" } | select -First 1
-  $url64            = $allExes | ? { $_ -match "torbrowser-install-win64.*_All.exe$" } | select -First 1
-  $version          = $url64 -split '\/' | select -last 1 -skip 1
+  $allExes          = $download_page.Links | Where-Object href -match "\.exe$" | Select-Object -expand href
+  $url32            = $allExes | Where-Object { $_ -match "torbrowser-install-\d.*_All.exe$" } | Select-Object -First 1
+  $url64            = $allExes | Where-Object { $_ -match "torbrowser-install-win64.*_All.exe$" } | Select-Object -First 1
+  $version          = $url64 -split '\/' | Select-Object -last 1 -skip 1
   
   @{
     Version         = "$version"

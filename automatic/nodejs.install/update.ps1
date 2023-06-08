@@ -40,24 +40,24 @@ function global:au_GetLatest {
 
   $lts_page = Invoke-WebRequest -Uri "https://github.com/nodejs/Release/blob/master/README.md" -UseBasicParsing
 
-  $urlsToGrabMsis += $lts_page.links | ? href -match "\/latest\-v.*\/$" | select -expand href
+  $urlsToGrabMsis += $lts_page.links | Where-Object href -match "\/latest\-v.*\/$" | Select-Object -expand href
 
   $streams = @{ }
 
-  $urlsToGrabMsis | % {
+  $urlsToGrabMsis | ForEach-Object {
     $uri = $_
     $download_page = Invoke-WebRequest -Uri $uri -UseBasicParsing
 
-    $msis = $download_page.links | ? href -match '\.msi$' | select -expand href | % {
+    $msis = $download_page.links | Where-Object href -match '\.msi$' | Select-Object -expand href | ForEach-Object {
       if (!$_.StartsWith('http')) { return $uri + $_ } else { $_ }
     }
 
-    $url32 = $msis | ? { $_ -match 'x86' } | select -first 1
-    $version = $url32 -split '\-v?' | select -last 1 -skip 1
+    $url32 = $msis | Where-Object { $_ -match 'x86' } | Select-Object -first 1
+    $version = $url32 -split '\-v?' | Select-Object -last 1 -skip 1
     $versionMajor = $version -replace '(^\d+)\..*', "`$1"
     if ($streams.ContainsKey($versionMajor)) { return ; }
 
-    $url64 = $msis | ? { $_ -match "\-x64" } | select -first 1
+    $url64 = $msis | Where-Object { $_ -match "\-x64" } | Select-Object -first 1
 
     if ($url32 -eq $url64) { throw "The 64bit executable is the same as the 32bit" }
 
