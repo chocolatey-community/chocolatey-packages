@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://julialang.org/downloads/'
 
@@ -28,8 +28,8 @@ function global:au_GetLatest {
 
 
     $download_page = Invoke-WebRequest -Uri "$releases" -UseBasicParsing
-    $url32 = $download_page.links | ? href -match '/julia-(.+)-win32\.exe$' | % href | select -First 1
-    $url64 = $download_page.links | ? href -match '/julia-(.+)-win64\.exe$' | % href | select -First 1
+    $url32 = $download_page.links | Where-Object href -match '/julia-(.+)-win32\.exe$' | ForEach-Object href | Select-Object -First 1
+    $url64 = $download_page.links | Where-Object href -match '/julia-(.+)-win64\.exe$' | ForEach-Object href | Select-Object -First 1
 
     $version = $Matches[1]
 
