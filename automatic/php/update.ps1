@@ -1,26 +1,26 @@
-import-module au
+﻿import-module au
 
 $releases = 'http://windows.php.net/download'
 
 function global:au_BeforeUpdate {
-  rm -Recurse -Force "$PSScriptRoot\tools\*.zip"
+  Remove-Item -Recurse -Force "$PSScriptRoot\tools\*.zip"
   # threadsafe
-  $Latest.FileNameTS32 = $Latest.URLTS32 -split '/' | select -Last 1
-  iwr $Latest.URLTS32 -OutFile tools\$($Latest.FileNameTS32)
-  $Latest.ChecksumTS32 = Get-FileHash tools\$($Latest.FileNameTS32) | % Hash
+  $Latest.FileNameTS32 = $Latest.URLTS32 -split '/' | Select-Object -Last 1
+  Invoke-WebRequest $Latest.URLTS32 -OutFile tools\$($Latest.FileNameTS32)
+  $Latest.ChecksumTS32 = Get-FileHash tools\$($Latest.FileNameTS32) | ForEach-Object Hash
 
-  $Latest.FileNameTS64 = $Latest.URLTS64 -split '/' | select -Last 1
-  iwr $Latest.URLTS64 -OutFile tools\$($Latest.FileNameTS64)
-  $Latest.ChecksumTS64 = Get-FileHash tools\$($Latest.FileNameTS64) | % Hash
+  $Latest.FileNameTS64 = $Latest.URLTS64 -split '/' | Select-Object -Last 1
+  Invoke-WebRequest $Latest.URLTS64 -OutFile tools\$($Latest.FileNameTS64)
+  $Latest.ChecksumTS64 = Get-FileHash tools\$($Latest.FileNameTS64) | ForEach-Object Hash
 
   # non-threadsafe
-  $Latest.FileNameNTS32 = $Latest.URLNTS32 -split '/' | select -Last 1
-  iwr $Latest.URLNTS32 -OutFile tools\$($Latest.FileNameNTS32)
-  $Latest.ChecksumNTS32 = Get-FileHash tools\$($Latest.FileNameNTS32) | % Hash
+  $Latest.FileNameNTS32 = $Latest.URLNTS32 -split '/' | Select-Object -Last 1
+  Invoke-WebRequest $Latest.URLNTS32 -OutFile tools\$($Latest.FileNameNTS32)
+  $Latest.ChecksumNTS32 = Get-FileHash tools\$($Latest.FileNameNTS32) | ForEach-Object Hash
 
-  $Latest.FileNameNTS64 = $Latest.URLNTS64 -split '/' | select -Last 1
-  iwr $Latest.URLNTS64 -OutFile tools\$($Latest.FileNameNTS64)
-  $Latest.ChecksumNTS64 = Get-FileHash tools\$($Latest.FileNameNTS64) | % Hash
+  $Latest.FileNameNTS64 = $Latest.URLNTS64 -split '/' | Select-Object -Last 1
+  Invoke-WebRequest $Latest.URLNTS64 -OutFile tools\$($Latest.FileNameNTS64)
+  $Latest.ChecksumNTS64 = Get-FileHash tools\$($Latest.FileNameNTS64) | ForEach-Object Hash
 }
 
 function global:au_SearchReplace {
@@ -53,14 +53,14 @@ function global:au_SearchReplace {
 function Get-Dependency() {
   param($url)
 
-  $dep = $url -split '\-' | select -last 1 -skip 1
+  $dep = $url -split '\-' | Select-Object -last 1 -skip 1
 
   $result = @{
     'vs16' = @{ Id = 'vcredist140'; Version = '14.28.29325.2' }
     'vc15' = @{ Id = 'vcredist140'; Version = '14.16.27012.6' }
     'vc14' = @{ Id = 'vcredist140'; Version = '14.0.24215.1' }
     'vc11' = @{ Id = 'vcredist2012'; Version = '11.0.61031' }
-  }.GetEnumerator() | ? Key -eq $dep | select -first 1 -expand Value
+  }.GetEnumerator() | Where-Object Key -eq $dep | Select-Object -first 1 -expand Value
 
   if (!$result) {
     throw "VC Redistributable version was not found. Please check the script."
@@ -75,8 +75,8 @@ function CreateStream {
     Version      = $version
     URLNTS32     = 'http://windows.php.net' + $url32bit
     URLNTS64     = 'http://windows.php.net' + $url64bit
-    URLTS32      = 'http://windows.php.net' + ($url32bit | % { $_ -replace '\-nts', '' })
-    URLTS64      = 'http://windows.php.net' + ($url64bit | % { $_ -replace '\-nts', '' })
+    URLTS32      = 'http://windows.php.net' + ($url32bit | ForEach-Object { $_ -replace '\-nts', '' })
+    URLTS64      = 'http://windows.php.net' + ($url64bit | ForEach-Object { $_ -replace '\-nts', '' })
     ReleaseNotes = "https://www.php.net/ChangeLog-$($version.Major).php#${version}"
     Dependency   = Get-Dependency $url32Bit
   }
@@ -95,14 +95,14 @@ function CreateStream {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $url32Bits = $download_page.links | ? href -match 'nts.*x86\.zip$' | ? href -notmatch 'debug|devel' | select -expand href
-  $url64Bits = $download_page.links | ? href -match 'nts.*x64\.zip$' | ? href -notmatch 'debug|devel' | select -expand href
+  $url32Bits = $download_page.links | Where-Object href -match 'nts.*x86\.zip$' | Where-Object href -notmatch 'debug|devel' | Select-Object -expand href
+  $url64Bits = $download_page.links | Where-Object href -match 'nts.*x64\.zip$' | Where-Object href -notmatch 'debug|devel' | Select-Object -expand href
 
   $streams = @{ }
 
-  $url32Bits | sort | % {
-    $version = $_ -split '-' | select -first 1 -Skip 1
-    $url64Bit = $url64Bits | ? { $_ -split '-' | select -first 1 -skip 1 | ? { $_ -eq $version } }
+  $url32Bits | Sort-Object | ForEach-Object {
+    $version = $_ -split '-' | Select-Object -first 1 -Skip 1
+    $url64Bit = $url64Bits | Where-Object { $_ -split '-' | Select-Object -first 1 -skip 1 | Where-Object { $_ -eq $version } }
 
     $streams.Add((Get-Version $version).ToString(2), (CreateStream $_ $url64Bit $version))
 
