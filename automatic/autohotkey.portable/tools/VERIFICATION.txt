@@ -24,4 +24,4 @@ Using AU:
    Get-RemoteChecksum https://autohotkey.com/download/2.0//AutoHotkey_2.0.2.zip
 
 File 'license.txt' is obtained from:
-   https://github.com/AutoHotkey/AutoHotkey/blob/26daaddf714135a6fcc730fe250bd1d41a9d3c53/license.txt
+   https://github.com/AutoHotkey/AutoHotkey/blob/df84a3e902b522db0756a7366bd9884c80fa17b6/license.txt
