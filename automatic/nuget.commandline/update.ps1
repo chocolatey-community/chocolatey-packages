@@ -23,7 +23,7 @@ function global:au_GetLatest {
 
   $streams = @{}
 
-  $versions | Sort-Object uploaded -Descending | % {
+  $versions | Sort-Object uploaded -Descending | ForEach-Object {
     $versionTwoPart = $_.version -replace '^(\d+\.\d+).*$', '$1'
 
     if (!$streams.ContainsKey("$versionTwoPart")) {
@@ -34,8 +34,8 @@ function global:au_GetLatest {
     }
   }
 
-  $preKey = $streams.Keys | ? { $_ -match '-' } | sort -Descending | select -First 1
-  $stableKey = $streams.Keys | ? { $_ -notmatch '-' } | sort -Descending | select -First 1
+  $preKey = $streams.Keys | Where-Object { $_ -match '-' } | Sort-Object -Descending | Select-Object -First 1
+  $stableKey = $streams.Keys | Where-Object { $_ -notmatch '-' } | Sort-Object -Descending | Select-Object -First 1
   if ($preKey) {
     $streams.Add('pre', $streams[$preKey])
     $streams.Remove($preKey)
