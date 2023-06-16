@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://releases.hashicorp.com/vagrant'
 
@@ -18,16 +18,16 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $version_url   = $download_page.Links | ? href -match 'vagrant' | % href | select -first 1
+    $version_url   = $download_page.Links | Where-Object href -match 'vagrant' | ForEach-Object href | Select-Object -first 1
     $version_url   = 'https://releases.hashicorp.com' + $version_url
 
     $download_page = Invoke-WebRequest -Uri $version_url -UseBasicParsing
-    $link = $download_page.links | ? href -match '\.msi$'
+    $link = $download_page.links | Where-Object href -match '\.msi$'
 
     @{
-        Version  = $link.'data-version' | select -first 1
-        URL32    = $link.href -notmatch '_amd64' | select -First 1
-        URL64    = $link.href -match '_amd64'    | select -First 1
+        Version  = $link.'data-version' | Select-Object -first 1
+        URL32    = $link.href -notmatch '_amd64' | Select-Object -First 1
+        URL64    = $link.href -match '_amd64'    | Select-Object -First 1
     }
 }
 
