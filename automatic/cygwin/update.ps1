@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://cygwin.com/'
@@ -32,11 +32,11 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases
 
   $re = '\.exe$'
-  $url = $download_page.links | ? href -match $re | select -First 2 -expand href | % { $releases + $_ }
-  $rn = $download_page.links | ? href -match 'announce'
+  $url = $download_page.links | Where-Object href -match $re | Select-Object -First 2 -expand href | ForEach-Object { $releases + $_ }
+  $rn = $download_page.links | Where-Object href -match 'announce'
 
   $result = @{
-    URL64        = $url | ? {$_ -match 'x86_64' } | select -First 1
+    URL64        = $url | Where-Object {$_ -match 'x86_64' } | Select-Object -First 1
     ReleaseNotes = $rn.href
     Version      = $rn.innerText
     PackageName  = 'Cygwin'
