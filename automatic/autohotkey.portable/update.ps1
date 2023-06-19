@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://autohotkey.com/download'
 
@@ -19,34 +19,34 @@ function global:au_SearchReplace {
   }
 }
 function global:au_BeforeUpdate {
-  rm "$PSScriptRoot\tools\*.zip"
+  Remove-Item "$PSScriptRoot\tools\*.zip"
   $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
   Invoke-WebRequest $Latest.URL -OutFile $filePath -UseBasicParsing
   $Latest.ChecksumType = 'sha256'
-  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
+  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | ForEach-Object Hash
 }
 
 function global:au_GetLatest {
   $version_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $urls = $version_page.Links | ? href -match "^[\d\.]+\/$" | ? href -NotMatch "1\.0" | % href
+  $urls = $version_page.Links | Where-Object href -match "^[\d\.]+\/$" | Where-Object href -NotMatch "1\.0" | ForEach-Object href
 
   $streams = @{}
-  $urls | % {
+  $urls | ForEach-Object {
     $releasesUrl = "$releases/$_"
-    $versionWithHash = Invoke-WebRequest -Uri "$releasesUrl/version.txt" -UseBasicParsing | % Content
+    $versionWithHash = Invoke-WebRequest -Uri "$releasesUrl/version.txt" -UseBasicParsing | ForEach-Object Content
     $version = $versionWithHash -replace '(\d+.\d+-\w+)-\w+', '$1'
     $version = $version -replace '(-\w+)\.', '$1'
     if (!$version) { $version = $versionWithHash }
 
     $url = "$releasesUrl/AutoHotkey_${versionWithHash}.zip"
 
-    $key = $releasesUrl -split '\/' | select -last 1 -Skip 1
+    $key = $releasesUrl -split '\/' | Select-Object -last 1 -Skip 1
     if (!$streams.ContainsKey($key)) {
       $streams.Add($key, @{
           Version  = $version
           URL      = $url
-          FileName = $url -split '/' | select -Last 1
+          FileName = $url -split '/' | Select-Object -Last 1
         })
     }
   }
