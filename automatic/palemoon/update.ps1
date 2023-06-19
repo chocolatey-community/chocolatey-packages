@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releasesx86 = 'https://www.palemoon.org/download.php?mirror=eu&bits=32&type=installer'
 $releasesx64 = 'https://www.palemoon.org/download.php?mirror=eu&bits=64&type=installer'
@@ -7,7 +7,7 @@ function getReleaseInfo() {
   param([string]$releasesUrl)
   $url = Get-RedirectedUrl $releasesUrl
 
-  $version = $url -split '[-]|\.win[32|64]' | select -last 1 -skip 1;
+  $version = $url -split '[-]|\.win[32|64]' | Select-Object -last 1 -skip 1;
 
   return @{
     url = $url
