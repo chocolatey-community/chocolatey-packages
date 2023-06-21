@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $domain = 'http://www.7-zip.org/'
 $releases = "${domain}download.html"
@@ -16,7 +16,7 @@ function global:au_GetLatest {
 
   $streams = @{}
 
-  $download_page.AllElements | ? innerText -match "^Download 7\-Zip ([\d\.]+) ?(alpha|beta|rc)? \([\d]{4}[\-\d]+\)" | % {
+  $download_page.AllElements | Where-Object innerText -match "^Download 7\-Zip ([\d\.]+) ?(alpha|beta|rc)? \([\d]{4}[\-\d]+\)" | ForEach-Object {
     if ($Matches[1] -and $Matches[2]) {
       $streamName = "pre"
       $version = "$($Matches[1])"
@@ -32,12 +32,12 @@ function global:au_GetLatest {
     }
     if ($streams.ContainsKey($streamName)) { return }
 
-    $URLS = $download_page.links | ? href -match "7z$($version -replace '\.','')" | select -expand href
+    $URLS = $download_page.links | Where-Object href -match "7z$($version -replace '\.','')" | Select-Object -expand href
 
     $streams["$streamName"] = @{
-      URL32     = $domain + ($URLS | ? { $_ -notmatch "x64" } | select -first 1)
-      URL64     = $domain + ($URLS | ? { $_ -match "x64" } | select -first 1)
-      URL_EXTRA = $domain + ($URLS | ? { $_ -match "extra" } | select -first 1)
+      URL32     = $domain + ($URLS | Where-Object { $_ -notmatch "x64" } | Select-Object -first 1)
+      URL64     = $domain + ($URLS | Where-Object { $_ -match "x64" } | Select-Object -first 1)
+      URL_EXTRA = $domain + ($URLS | Where-Object { $_ -match "extra" } | Select-Object -first 1)
       Version   = (Get-Version $versionFull).ToString()
     }
   }

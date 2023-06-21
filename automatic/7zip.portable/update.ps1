@@ -1,4 +1,4 @@
-. "$PSScriptRoot\..\7zip\update.ps1"
+﻿. "$PSScriptRoot\..\7zip\update.ps1"
 
 $softwareNamePrefix = '7-zip'
 
@@ -12,7 +12,7 @@ function global:au_BeforeUpdate {
     Remove-Item $filePath -Force -ea 0
     Write-Host "Downloading to 7zip_extra.7z"
     $client.DownloadFile($Latest.URL_EXTRA, $filePath)
-    $Latest.ChecksumExtra = Get-FileHash $filePath | % Hash
+    $Latest.ChecksumExtra = Get-FileHash $filePath | ForEach-Object Hash
 
   }
   catch { throw $_ }
