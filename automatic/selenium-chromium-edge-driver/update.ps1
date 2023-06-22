@@ -1,7 +1,5 @@
 ﻿Import-Module AU
 
-$releases = "https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/"
-
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
   $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 -Algorithm $Latest.ChecksumType64
@@ -38,12 +36,9 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   # We use the available package on CCR as the source of truth
   $packageVersion = Get-EdgePackageVersion -PackageName 'microsoft-edge'
-  $escapedVersion = [regex]::Escape($packageVersion)
 
-  $downloadPage = Invoke-WebRequest $releases -UseBasicParsing
-
-  $url32 = $downloadPage.Links | Where-Object { $_.href -match "$escapedVersion.*win32" } | Select-Object -First 1 -ExpandProperty href
-  $url64 = $downloadPage.Links | Where-Object { $_.href -match "$escapedVersion.*win64" } | Select-Object -First 1 -ExpandProperty href
+  $url32 = "https://msedgedriver.azureedge.net/$packageVersion/edgedriver_win32.zip"
+  $url64 = "https://msedgedriver.azureedge.net/$packageVersion/edgedriver_win64.zip"
 
   if (!$url32 -or !$url64) {
     throw "The 32bit or 64bit URL is missing"
