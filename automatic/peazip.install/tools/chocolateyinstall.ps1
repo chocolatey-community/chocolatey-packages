@@ -3,8 +3,8 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  file           = "$toolsDir\peazip-9.2.0.WINDOWS.exe"
-  file64         = "$toolsDir\peazip-9.2.0.WIN64.exe"
+  file           = "$toolsDir\peazip-9.3.0.WINDOWS.exe"
+  file64         = "$toolsDir\peazip-9.3.0.WIN64.exe"
   fileType       = 'exe'
   packageName    = 'peazip.install'
   softwareName   = 'PeaZip'
