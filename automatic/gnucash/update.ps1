@@ -36,17 +36,17 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   # We only grab the 5 latest updated folders, no need to take any more
-  $releasesUrls = $download_page.Links | ? href -match "\/[\d\.]+\/$" | select -First 5 -expand href | % { $domain + $_ }
+  $releasesUrls = $download_page.Links | Where-Object href -match "\/[\d\.]+\/$" | Select-Object -First 5 -expand href | ForEach-Object { $domain + $_ }
 
   $streams = @{}
-  $releasesUrls | % {
+  $releasesUrls | ForEach-Object {
     $download_page = Invoke-WebRequest -Uri $_ -UseBasicParsing
     $re = '\.exe\/download$'
-    $url32 = $download_page.Links | ? href -match $re | select -expand href -First 1
+    $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -expand href -First 1
     if (!$url32) { return }
 
     $verRe = 'h\-|(?:\-\d)?[\.\-]setup'
-    $version = $url32 -split "$verRe" | select -last 1 -skip 1
+    $version = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
     $version = Get-Version $version
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
