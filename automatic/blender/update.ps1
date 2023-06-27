@@ -23,7 +23,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'windows-x64\.msi\/$'
-  $url64 = $download_page.links | ? href -match $re | Select-Object -First 1 -Expand href
+  $url64 = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -Expand href
 
   $verRe = '-'
   $version64 = $url64 -split "$verRe" | Select-Object -First 1 -Skip 1
