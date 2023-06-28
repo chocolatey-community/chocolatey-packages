@@ -27,7 +27,7 @@ function global:au_GetLatest {
   )
 
   $streams = @{}
-  $urls | % {
+  $urls | ForEach-Object {
     try {
       $url = Get-RedirectedUrl $_ 3>$null
     }
@@ -35,9 +35,9 @@ function global:au_GetLatest {
       return;
     }
     $verRe = '-|\.exe$'
-    $version = $url -split "$verRe" | select -last 1 -skip 1
+    $version = $url -split "$verRe" | Select-Object -last 1 -skip 1
     if (!$version) { return }
-    elseif ($version -match 'beta') { $version = ($url -split "$verRe" | select -last 1 -skip 2) + "-$version" }
+    elseif ($version -match 'beta') { $version = ($url -split "$verRe" | Select-Object -last 1 -skip 2) + "-$version" }
     $version = Get-Version $version
 
     if (($_ -match 'beta=1') -and !$version.PreRelease) {
