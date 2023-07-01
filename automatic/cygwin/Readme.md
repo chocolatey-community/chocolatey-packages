@@ -9,6 +9,7 @@ Cygwin is a collection of tools which provide a Linux look and feel environment 
 - `/Proxy`       - Set to "proxy:port". Otherwise system proxy or explicit chocolatey proxy will be used
 - `/Pubkey`      - URL of extra public key file (gpg format)
 - `/Site`        - Download site
+- `/Packages`    - Packages to install
 - `/NoStartMenu` - Set to true to prevent installation of start menu items
 - `/NoAdmin`     - Do not check for and enforce running as administrator
 

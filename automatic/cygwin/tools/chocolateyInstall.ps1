@@ -28,10 +28,12 @@ if (!$pp.Proxy) {
 if (!$pp.Site) { $pp.Site = 'http://mirrors.kernel.org/sourceware/cygwin/' }
 Write-Host "Download site: $($pp.Site)"
 
+if (!$pp.Packages) { $pp.Packages = 'default' }
+
 $silentArgs = @(
   '--quiet-mode'
   "--site `"$($pp.Site)`""
-  '--packages default'
+  "--packages `"$($pp.Packages)`""
   "--root `"$cygwin_root`""
   "--local-package-dir `"$cygwin_root`""
 
