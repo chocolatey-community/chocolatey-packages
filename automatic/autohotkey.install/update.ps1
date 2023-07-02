@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://autohotkey.com/download/1.1'
 
@@ -20,7 +20,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate {
-    rm "$PSScriptRoot\tools\*.exe"
+    Remove-Item "$PSScriptRoot\tools\*.exe"
 
     $client = New-Object System.Net.WebClient
         $filePath = "$PSScriptRoot\tools\$($Latest.FileName)"
@@ -28,16 +28,16 @@ function global:au_BeforeUpdate {
     $client.Dispose()
 
     $Latest.ChecksumType = 'sha256'
-    $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
+    $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | ForEach-Object Hash
 }
 
 function global:au_GetLatest {
-    $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | % Content
+    $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | ForEach-Object Content
     $url     = "https://github.com/Lexikos/AutoHotkey_L/releases/download/v${version}/AutoHotkey_${version}_setup.exe"
     @{
         Version  = $version
         URL      = $url
-        FileName = $url -split '/' | select -Last 1
+        FileName = $url -split '/' | Select-Object -Last 1
     }
 }
 
