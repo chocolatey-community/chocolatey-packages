@@ -19,12 +19,12 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re    = 'Freeciv.*gtk3.*\.exe$'
-  $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+  $url   = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
 
-  $version  = ($url -split '[-]') -match "^[\d\.]+$" | select -First 1
+  $version  = ($url -split '[-]') -match "^[\d\.]+$" | Select-Object -First 1
 
   $releaseRe = "NEWS\-$version$"
-  $releaseNotes = $download_page.links | ? href -match $releaseRe | select -first 1 -expand href
+  $releaseNotes = $download_page.links | Where-Object href -match $releaseRe | Select-Object -first 1 -expand href
 
   @{
     URL32 = $url
