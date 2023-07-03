@@ -53,9 +53,6 @@ You can pass parameters as follows:
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@f459e946d7b1926ee89c2b415ec8507dffe99218/icons/nexus-repository.png</iconUrl>
     <releaseNotes>https://help.sonatype.com/repomanager3/release-notes</releaseNotes>
-    <dependencies>
-      <dependency id="temurinjre" version="11.0.12.7" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
