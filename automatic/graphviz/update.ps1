@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = "https://graphviz.org/download"
 
@@ -21,12 +21,12 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re  = "windows_10_cmake_Release.+-win64\.exe"
-  $link = $download_page.links | ? outerHtml -match $re | select -first 1
+  $link = $download_page.links | Where-Object outerHtml -match $re | Select-Object -first 1
   $link.outerHtml -match '>(.+)</a>' | Out-Null
   $fileName = $Matches[1]
 
   @{
-    Version = $filename -split '-| ' | select -First 1 -Skip 1
+    Version = $filename -split '-| ' | Select-Object -First 1 -Skip 1
     URL64 = $link.href
     FileName = $fileName
     FileType = 'exe'
