@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/LibreCAD/LibreCAD/releases/tag/2.2.0>
+location on <https://github.com/LibreCAD/LibreCAD/releases/tag/2.2.0.1>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/LibreCAD/LibreCAD/releases/download/2.2.0/LibreCAD-Installer-2.2.0.exe>
+1. Download the following <https://github.com/LibreCAD/LibreCAD/releases/download/2.2.0.1/LibreCAD-Installer-2.2.0.1.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 233809D3C7EBF2B9C32601354B29F16F1EB269FE529415828174B3068BCE3FA4
+  checksum: F1520DB7A6EF13928780D42CB2DC6DD74C88F7F6C39A7774EFC83B79D52ABD5D
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/LibreCAD/LibreCAD/blob/master/LICENSE>

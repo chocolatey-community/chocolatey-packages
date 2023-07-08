@@ -32,7 +32,7 @@ function global:au_GetLatest {
   $releases = Get-AllGitHubReleases -Owner 'LibreCAD' -Name 'LibreCAD'
 
   $streams = @{}
-  $releases | % {
+  $releases | ForEach-Object {
     if ($_.tag_name -eq 'latest') {
       # This is the continuous build, ie nightly builds so we skip this one
       return
@@ -40,7 +40,7 @@ function global:au_GetLatest {
 
     $version = Get-Version $_.tag_name
 
-    $url = $_.assets | ? browser_download_url -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
+    $url = $_.assets | Where-Object browser_download_url -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
     $streamName = $version.ToString(2)
 
     if (!($streams.ContainsKey($streamName)) -and $url) {
