@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://filezilla-project.org/download.php?show_all=1'
 
@@ -21,9 +21,9 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase "FileZill
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Chocolatey"
-    $url32 = $download_page.Links | ? href -match "win32\-setup\.exe" | select -first 1 -expand href
-    $url64 = $download_page.Links | ? href -match "win64\-setup\.exe" | select -first 1 -expand href
-    $version = $url32 -split '_' | ? { $_ -match '^\d+\.[\d\.]+$' } | select -first 1
+    $url32 = $download_page.Links | Where-Object href -match "win32\-setup\.exe" | Select-Object -first 1 -expand href
+    $url64 = $download_page.Links | Where-Object href -match "win64\-setup\.exe" | Select-Object -first 1 -expand href
+    $version = $url32 -split '_' | Where-Object { $_ -match '^\d+\.[\d\.]+$' } | Select-Object -first 1
 
     @{
         Version  = $version
