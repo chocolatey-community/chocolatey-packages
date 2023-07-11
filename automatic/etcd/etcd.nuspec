@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.4.26</version>
+    <version>3.4.27</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
@@ -52,7 +52,7 @@ For installation guides, please check out [play.etcd.io](http://play.etcd.io) an
 ###### Linux
 
 ```bash
-ETCD_VER=v3.4.26
+ETCD_VER=v3.4.27
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -82,7 +82,7 @@ rm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz
 ###### macOS (Darwin)
 
 ```bash
-ETCD_VER=v3.4.26
+ETCD_VER=v3.4.27
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -106,13 +106,13 @@ etcd uses [`gcr.io/etcd-development/etcd`](https://gcr.io/etcd-development/etcd)
 
 ```bash
 rm -rf /tmp/etcd-data.tmp &amp;&amp; mkdir -p /tmp/etcd-data.tmp &amp;&amp; \
-  docker rmi gcr.io/etcd-development/etcd:v3.4.26 || true &amp;&amp; \
+  docker rmi gcr.io/etcd-development/etcd:v3.4.27 || true &amp;&amp; \
   docker run \
   -p 2379:2379 \
   -p 2380:2380 \
   --mount type=bind,source=/tmp/etcd-data.tmp,destination=/etcd-data \
-  --name etcd-gcr-v3.4.26 \
-  gcr.io/etcd-development/etcd:v3.4.26 \
+  --name etcd-gcr-v3.4.27 \
+  gcr.io/etcd-development/etcd:v3.4.27 \
   /usr/local/bin/etcd \
   --name s1 \
   --data-dir /etcd-data \
@@ -127,11 +127,11 @@ rm -rf /tmp/etcd-data.tmp &amp;&amp; mkdir -p /tmp/etcd-data.tmp &amp;&amp; \
   --logger zap \
   --log-outputs stderr
 
-docker exec etcd-gcr-v3.4.26  /usr/local/bin/etcd --version
-docker exec etcd-gcr-v3.4.26  /usr/local/bin/etcdctl version
-docker exec etcd-gcr-v3.4.26  /usr/local/bin/etcdctl endpoint health
-docker exec etcd-gcr-v3.4.26  /usr/local/bin/etcdctl put foo bar
-docker exec etcd-gcr-v3.4.26  /usr/local/bin/etcdctl get foo
+docker exec etcd-gcr-v3.4.27  /usr/local/bin/etcd --version
+docker exec etcd-gcr-v3.4.27  /usr/local/bin/etcdctl version
+docker exec etcd-gcr-v3.4.27  /usr/local/bin/etcdctl endpoint health
+docker exec etcd-gcr-v3.4.27  /usr/local/bin/etcdctl put foo bar
+docker exec etcd-gcr-v3.4.27  /usr/local/bin/etcdctl get foo
 ```</releaseNotes>
     <dependencies>
       <dependency id="nssm" version="2.24.101" />
