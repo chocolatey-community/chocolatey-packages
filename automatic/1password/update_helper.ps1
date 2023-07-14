@@ -14,11 +14,11 @@ function SaveXml([string]$Path, [xml]$nu) {
 }
 
 function GetDependenciesElement([xml]$nu) {
-  return $nu.package.metadata.GetElementsByTagName('dependencies') | select -first 1
+  return $nu.package.metadata.GetElementsByTagName('dependencies') | Select-Object -first 1
 }
 
 function HasDependency([System.Xml.XmlElement] $dependenciesElement, $id) {
-  $childElements = $dependenciesElement.GetElementsByTagName('dependency') | ? { $_.id -eq $id }
+  $childElements = $dependenciesElement.GetElementsByTagName('dependency') | Where-Object { $_.id -eq $id }
   return $childElements -ne $null
 }
 
