@@ -5,10 +5,10 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = 'https://inkscape.org/gallery/item/37365/inkscape-1.2.2_2022-12-09_732a01da63-x86.msi'
-  checksum       = '5CD4A9C448246BA56DD7EB846FB9484D5188D13A8DB913D07DC1844A8C2C1436'
+  url            = 'https://inkscape.org/gallery/item/42337/inkscape-1.3_2023-07-21_0e150ed6c4-x86_K2QrAzI.msi'
+  checksum       = '89567DD3C370DA7A8E89405C80F6454E0541875FD21CCE7E99F8C36FDF5A7DE8'
   checksumType   = 'sha256'
-  file64         = "$toolsPath\inkscape-1.2.2_2022-12-09_732a01da63-x64.msi"
+  file64         = "$toolsPath\inkscape-1.3_2023-07-21_0e150ed6c4-x64_31XBEKV.msi"
   softwareName   = 'InkScape*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0)
@@ -16,7 +16,7 @@ $packageArgs = @{
 
 [array]$key = Get-UninstallRegistrykey $packageArgs['softwareName']
 if ($key.Count -eq 1) {
-  if ($key[0].DisplayVersion -eq '1.2.2') {
+  if ($key[0].DisplayVersion -eq '1.3') {
     Write-Host "Software already installed"
     return
   }

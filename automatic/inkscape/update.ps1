@@ -6,7 +6,7 @@ $domain = 'https://inkscape.org'
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 
-  rm "tools/$($Latest.FileName32)" # Embedding 32bit will make the package too large
+  Remove-Item "tools/$($Latest.FileName32)" # Embedding 32bit will make the package too large
 }
 
 function global:au_SearchReplace {
@@ -33,14 +33,14 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $redirUrl = Get-RedirectedUrl "$domain/en/release/"
 
-  $version = $redirUrl -split '\/(inkscape-)?' | select -last 1 -skip 1
+  $version = $redirUrl -split '\/(inkscape-)?' | Select-Object -last 1 -skip 1
 
   $32bit_page = Invoke-WebRequest "$redirUrl/windows/32-bit/msi/dl/" -UseBasicParsing
   $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing
 
   $re = '\.msi$'
-  $url32 = $32bit_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
-  $url64 = $64bit_page.links | ? href -match $re | select -first 1 -expand href | % { $domain + $_ }
+  $url32 = $32bit_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { $domain + $_ }
+  $url64 = $64bit_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { $domain + $_ }
 
   @{
     Version       = $version
