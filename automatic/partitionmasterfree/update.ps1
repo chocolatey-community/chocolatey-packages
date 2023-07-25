@@ -24,8 +24,8 @@ function global:au_GetLatest {
     & $PSScriptRoot\installer_download.ahk $downloaderPath
     for ($i=0; $i -lt 60; $i++) {
       Start-Sleep 1
-      $installer = ls -Exclude downloader.exe tools\*.exe | select -First 1
-      if ($installer) { Get-Process EDownloader -ea 0 | kill; break }
+      $installer = Get-ChildItem -Exclude downloader.exe tools\*.exe | Select-Object -First 1
+      if ($installer) { Get-Process EDownloader -ea 0 | Stop-Process; break }
     }
     if (!$installer) { throw "Can't download installer via AHK"}
     Remove-Item $downloaderPath
@@ -36,7 +36,7 @@ function global:au_GetLatest {
     @{
         URL32          = $downloadUrl
         Version        = Get-Version $version
-        Checksum32     = Get-FileHash $installer -Algorithm $checksumType | % { $_.Hash.ToLowerInvariant() }
+        Checksum32     = Get-FileHash $installer -Algorithm $checksumType | ForEach-Object { $_.Hash.ToLowerInvariant() }
         ChecksumType32 = $checksumType
         PackageName    = 'PartitionMasterFree'
         FileName32     = $installer.Name
