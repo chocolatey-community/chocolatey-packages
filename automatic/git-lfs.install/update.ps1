@@ -1,4 +1,4 @@
-. $PSScriptRoot\..\git-lfs\update.ps1
+﻿. $PSScriptRoot\..\git-lfs\update.ps1
 
 function global:au_BeforeUpdate {
   Remove-Item "$PSScriptRoot\tools\*.exe"
@@ -16,7 +16,7 @@ function global:au_BeforeUpdate {
   }
 
   $Latest.ChecksumType = "sha256"
-  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | % Hash
+  $Latest.Checksum = Get-FileHash -Algorithm $Latest.ChecksumType -Path $filePath | ForEach-Object Hash
 }
 
 function global:au_SearchReplace {
