@@ -1,8 +1,8 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1"
 
-$releases32 = 'https://update.code.visualstudio.com/api/update/win32/insider/VERSION'
-$releases64 = 'https://update.code.visualstudio.com/api/update/win32-x64/insider/VERSION'
+$releases32 = 'https://update.code.visualstudio.com/api/update/win32/insider/0000000000000000000000000000000000000000'
+$releases64 = 'https://update.code.visualstudio.com/api/update/win32-x64/insider/0000000000000000000000000000000000000000'
 
 if ($MyInvocation.InvocationName -ne '.') {
   function global:au_BeforeUpdate {
