@@ -1,7 +1,7 @@
 ﻿import-module au
 
-$releaseStableUrl = 'https://brave-browser-downloads.s3.brave.com/latest/release.version'
-$releaseBetaUrl = 'https://brave-browser-downloads.s3.brave.com/latest/beta.version'
+$releaseStableUrl = 'https://brave-browser-downloads.s3.brave.com/latest/release-windows-x64.version'
+$releaseBetaUrl = 'https://brave-browser-downloads.s3.brave.com/latest/beta-windows-x64.version'
 
 function global:au_GetLatest {
   # Beta releases
