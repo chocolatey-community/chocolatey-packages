@@ -6,6 +6,9 @@ function global:au_SearchReplace {
         "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
         "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
       }
+      ".\tools\chocolateyInstall.ps1" = @{
+        "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+      }
   }
 }
 
@@ -23,7 +26,8 @@ function global:au_GetLatest {
     @{
         Version = $LatestRelease.tag_name.TrimStart("v")
         Url64   = $LatestRelease.assets | Where-Object {$_.name -match 'paint.net.+.winmsi.x64.zip'} | Select-Object -ExpandProperty browser_download_url
-    }
+        FileNameMsi64  = $LatestRelease.assets | Where-Object {$_.name -match 'paint.net.+.winmsi.x64.zip'} | Select-Object -Property Name | ForEach-Object {$_ -replace "zip","msi"}
+      }
 }
 
 update -ChecksumFor none
