@@ -1,6 +1,6 @@
 ﻿Import-Module AU
 
-$releases = "https://sites.google.com/chromium.org/driver/downloads"
+$releases_by_channel = "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions-with-downloads.json"
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
@@ -25,32 +25,24 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-  $release_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $releases_object = Invoke-RestMethod -Uri $releases_by_channel
 
-  $urls = $release_page.Links | Where-Object href -match "path=(\d+\.){3}\d+\/$" | Select-Object -expand href
+  $stable_version = Get-Version $releases_object.channels.Stable.version
+
+  $win32index = $releases_object.channels.Stable.downloads.chromedriver.platform.IndexOf('win32')
+  $win64index = $releases_object.channels.Stable.downloads.chromedriver.platform.IndexOf('win64')
+
+  $win32url = $releases_object.channels.Stable.downloads.chromedriver.url.Get($win32index)
+  $win64url = $releases_object.channels.Stable.downloads.chromedriver.url.Get($win64index)
 
   $streams = @{}
 
-  $urls | Select-Object -first 3 | ForEach-Object {
-    $version = $_ -split '=|/' | Select-Object -last 1 -skip 1
-    $version = Get-Version $version
-    [string]$streamName = $version.Version.Major
-
-    if ($streams.ContainsKey($streamName)) {
-      return
-    }
-
-    # We can not actually parse the download page easily, so make educated guesses
-    $url = "https://chromedriver.storage.googleapis.com/$version/chromedriver_win32.zip"
-    $release_notes = "https://chromedriver.storage.googleapis.com/$version/notes.txt"
-
-    $streams["$streamName"] = @{
-      URL32           = $url
-      Version         = $version
-      UrlReleaseNotes = $release_notes
-      ReleasesUrl     = $_
-      FileType        = 'zip'
-    }
+  $streams[[string]"$stable_version.Version.Major"] = @{
+    URL32       = $win32url
+    URL64       = $win64url
+    Version     = $stable_version
+    ReleasesUrl = 'https://googlechromelabs.github.io/chrome-for-testing/'
+    FileType    = 'zip'
   }
 
   return @{ Streams = $streams }
