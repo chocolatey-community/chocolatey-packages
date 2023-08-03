@@ -35,14 +35,17 @@ function global:au_GetLatest {
   $win32url = $releases_object.channels.Stable.downloads.chromedriver.url.Get($win32index)
   $win64url = $releases_object.channels.Stable.downloads.chromedriver.url.Get($win64index)
 
+  $chrome_for_testing_dashboard = 'https://googlechromelabs.github.io/chrome-for-testing/'
+
   $streams = @{}
 
   $streams[[string]"$stable_version.Version.Major"] = @{
-    URL32       = $win32url
-    URL64       = $win64url
-    Version     = $stable_version
-    ReleasesUrl = 'https://googlechromelabs.github.io/chrome-for-testing/'
-    FileType    = 'zip'
+    URL32           = $win32url
+    URL64           = $win64url
+    Version         = $stable_version
+    UrlReleaseNotes = $chrome_for_testing_dashboard
+    ReleasesUrl     = $chrome_for_testing_dashboard
+    FileType        = 'zip'
   }
 
   return @{ Streams = $streams }
