@@ -12,10 +12,12 @@ $packageArgs = @{
   checksum        = '53c2e1f1b9f2a7571483284ea156958674501e8571cfe34be01282b4152e0770138d9aaef12876f109db9d77c1216362d0576aa40b4f19f039d4b97a15054c98'
   checksumType    = 'sha512'
   destination     = $seleniumDir
-  specificFolder  = 'chromedriver-win32/chromedriver.exe'
 }
 
 Get-ChocolateyUnzip @packageArgs
+Move-Item -Path $seleniumDir\chromedriver-win32\chromedriver.exe -Destination $driverPath
+Move-Item -Path $seleniumDir\chromedriver-win32\license.chromedriver -Destination $seleniumDir\license.chromedriver
+Remove-Item $seleniumDir\chromedriver-win32
 Get-ChildItem $toolsDir\*.zip | ForEach-Object { Remove-Item $_ -ea 0 }
 
 Uninstall-BinFile -Name 'chromedriver'
