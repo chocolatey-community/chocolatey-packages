@@ -15,8 +15,8 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 
-  Set-Alias 7z $Env:chocolateyInstall\tools\7z.exe
-  7z e tools\*.zip -otools *.exe -r -y
+  Set-Alias -Name 7z -Value $Env:chocolateyInstall\tools\7z.exe
+  7z e tools\*.zip -otools *.msi -r -y
   Remove-Item tools\*.zip -ea 0
 }
 
