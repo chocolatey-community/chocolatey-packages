@@ -20,10 +20,6 @@ function global:au_SearchReplace {
   }
 }
 
-function global:au_AfterUpdate {
-  Update-Metadata -key 'releaseNotes' -value (Invoke-WebRequest -Uri $Latest.UrlReleaseNotes -UseBasicParsing -ContentType "text/plain" | ForEach-Object Content)
-}
-
 function global:au_GetLatest {
   $releases_object = Invoke-RestMethod -Uri $releases_by_channel
 
@@ -35,7 +31,7 @@ function global:au_GetLatest {
   $win32url = $releases_object.channels.Stable.downloads.chromedriver.url.Get($win32index)
   $win64url = $releases_object.channels.Stable.downloads.chromedriver.url.Get($win64index)
 
-  $chrome_for_testing_dashboard = 'https://googlechromelabs.github.io/chrome-for-testing/'
+  $chrome_for_testing_dashboard = "https://googlechromelabs.github.io/chrome-for-testing/"
 
   $streams = @{}
 
@@ -43,7 +39,6 @@ function global:au_GetLatest {
     URL32           = $win32url
     URL64           = $win64url
     Version         = $stable_version
-    UrlReleaseNotes = $chrome_for_testing_dashboard
     ReleasesUrl     = $chrome_for_testing_dashboard
     FileType        = 'zip'
   }
