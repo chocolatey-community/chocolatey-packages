@@ -35,14 +35,14 @@ __Tixati__ is one of the most advanced and flexible BitTorrent clients available
 * **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
         <projectUrl>http://www.tixati.com/</projectUrl>
-        <tags>internet network download torrent p2p share admin freeware</tags>
+        <tags>tixati bittorrent network download torrent p2p share freeware notsilent</tags>
         <copyright></copyright>
         <licenseUrl>http://www.tixati.com/tixati_eula.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@bee4bc391df114723011dbd5b8a8af2a17c6bf2e/icons/tixati.png</iconUrl>
         <dependencies>
             <dependency id="chocolatey-core.extension" version="1.3.3" />
-            <dependency id="autohotkey.portable" version="1.1.26.01" />
+            <dependency id="autohotkey.portable" version="2.0" />
         </dependencies>
         <releaseNotes></releaseNotes>
         <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/tixati</packageSourceUrl>
