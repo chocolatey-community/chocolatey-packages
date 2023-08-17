@@ -15,6 +15,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <projectSourceUrl>https://github.com/jenkinsci/jenkins</projectSourceUrl>
         <docsUrl>https://www.jenkins.io/doc</docsUrl>
+        <mailingListUrl>https://jenkins.io/mailing-lists/</mailingListUrl>
         <bugTrackerUrl>https://issues.jenkins.io/</bugTrackerUrl>
         <tags>jenkins server foss cross-platform ci</tags>
         <summary>Jenkins is an open source automation server which enables developers around the world to reliably build, test, and deploy their software.</summary>
