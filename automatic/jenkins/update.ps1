@@ -20,7 +20,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $ReleasePage = "https://www.jenkins.io/download/"
     $ReleaseRegex = "Download Jenkins`n(?<Version>[\d\.]+)`nLTS"
-    $DownloadURL = "https://mirrors.jenkins-ci.org/windows-stable/"
+    $DownloadURL = "https://get.jenkins.io/windows-stable/"
 
     if ((Invoke-WebRequest -Uri $ReleasePage -UseBasicParsing).RawContent -match $ReleaseRegex) {
         $LatestVersion = $Matches.Version
