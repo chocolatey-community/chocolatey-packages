@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$pp = Get-PackageParameters
+
 if (Test-Path "$env:TEMP\npp.running") {
   $programRunning = Get-Content -Path "$env:TEMP\npp.running"
   Remove-Item "$env:TEMP\npp.running"
@@ -8,7 +10,7 @@ if (Test-Path "$env:TEMP\npp.running") {
 # Temporary code until we have at least one version with the before modify script
 $process = Get-Process "Notepad++*" -ea 0
 
-if ($process) {
+if ($process -and !$pp.NoStop) {
   $processPath = $process | Where-Object { $_.Path } | Select-Object -First 1 -ExpandProperty Path
   Write-Host "Found Running instance of Notepad++. Stopping processes..."
   $process | Stop-Process
@@ -38,7 +40,7 @@ if (!$installLocation)  {  Write-Warning "Can't find $PackageName install locati
 Write-Host "$packageName installed to '$installLocation'"
 Install-BinFile -Path "$installLocation\notepad++.exe" -Name 'notepad++'
 
-if ($programRunning -and (Test-Path $programRunning)) {
+if ($programRunning -and (Test-Path $programRunning) -and !$pp.NoStop) {
   Write-Host "Running stopped program"
   Start-Process $programRunning
 }

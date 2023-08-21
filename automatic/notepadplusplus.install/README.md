@@ -4,6 +4,10 @@ Notepad++ is a free (as in "free speech" and also as in "free beer") source code
 
 Based on the powerful editing component Scintilla, Notepad++ is written in C++ and uses pure Win32 API and STL which ensures a higher execution speed and smaller program size. By optimizing as many routines as possible without losing user friendliness, Notepad++ is trying to reduce the world carbon dioxide emissions. When using less CPU power, the PC can throttle down and reduce power consumption, resulting in a greener environment.
 
+## Package Parameters
+
+- `/NoStop` - Do not stop Notepad++ before running the install if it is running or attempt to restart it after install.
+
 ## Features
 
 * Syntax Highlighting and Syntax Folding
@@ -21,6 +25,11 @@ Based on the powerful editing component Scintilla, Notepad++ is written in C++ a
 * Macro recording and playback
 * Launch with different [arguments](https://notepad-plus-plus.org/assets/images/scsh/scsh_cmdlineArguments.png)
 
+### Examples
+
+`choco install notepadplusplus.install --params "/NoStop"`
+
+## Notes
 ## Notes
 
 * To force the installation of x32 version, use the `--x86` argument with `choco install`.
