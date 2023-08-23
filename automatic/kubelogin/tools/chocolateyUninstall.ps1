@@ -1,0 +1,1 @@
+﻿Uninstall-BinFile 'kubectl-oidc_login'
