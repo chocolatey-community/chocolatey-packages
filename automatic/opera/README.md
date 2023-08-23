@@ -4,11 +4,12 @@ The Opera web browser makes the Web fast and fun, giving you a better web browse
 
 ## Parameters
 
+- `/NoAutostart` - Do not add Opera autostart entry
 - `/NoDesktopShortcut` - Do not create desktop shortcut for Opera
 - `/NoTaskbarShortcut` - Do not pin Opera to taskbar
 
 These parameters can be passed to the installer with the use of `--params`.
-For example: `--params '"/NoDesktopShortcut /NoTaskbarShortcut"'`
+For example: `--params '"/NoAutostart /NoDesktopShortcut /NoTaskbarShortcut"'`
 
 ## Notes
 
