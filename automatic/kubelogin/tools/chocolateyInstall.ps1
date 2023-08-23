@@ -11,4 +11,6 @@ $packageArgs = @{
 }
 Get-ChocolateyUnzip @packageArgs
 
+Install-BinFile -Name 'kubectl-oidc_login' -Path "$toolsPath\$packageName.exe"
+
 Remove-Item "$toolsPath\kubelogin_windows_amd64.zip"
