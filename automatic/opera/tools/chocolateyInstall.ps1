@@ -4,6 +4,7 @@ $toolsPath = (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 $pp = Get-PackageParameters
 
+$parameters += if ($pp.NoAutostart) { " /run-at-startup=0"; Write-Host "Autorun entry won't be added" }
 $parameters += if ($pp.NoDesktopShortcut) { " /desktopshortcut=0"; Write-Host "Desktop shortcut won't be created" }
 $parameters += if ($pp.NoTaskbarShortcut) { " /pintotaskbar=0"; Write-Host "Opera won't be pinned to taskbar" }
 
