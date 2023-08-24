@@ -24,7 +24,7 @@
     $destinationFolder = $oldDestinationFolder
 
     Write-Warning @(
-      'Deprecated installation fodler detected: Desktop/Tor-Browser. ' +
+      'Deprecated installation folder detected: Desktop/Tor-Browser. ' +
       'This package will continue to install tor-browser there unless you ' +
       'remove the deprecated installation folder. After your did that, reinstall ' +
       'this package again with the "--force" parameter. Then it will be installed ' +

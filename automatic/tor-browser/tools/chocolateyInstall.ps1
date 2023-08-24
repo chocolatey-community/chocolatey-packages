@@ -18,7 +18,7 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
-# Create .ignore files for exeâ€™s
+# Create .ignore files for exes
 Get-ChildItem -Path $destinationFolder -Recurse | Where-Object {
   $_.Extension -eq '.exe' } | ForEach-Object {
   New-Item $($_.FullName + '.ignore') -Force -ItemType file
@@ -29,12 +29,12 @@ $desktop = [System.Environment]::GetFolderPath('Desktop')
 
 Install-ChocolateyShortcut `
   -ShortcutFilePath "$desktop\Tor Browser.lnk" `
-  -TargetPath "$toolsDir\tor-browser\Browser\firefox.exe" `
-  -WorkingDirectory "$toolsDir\tor-browser\Browser"
+  -TargetPath "$destinationFolder\Browser\firefox.exe" `
+  -WorkingDirectory "$destinationFolder\Browser"
 
-# set NTFS modify file permissions to $toolsDir\tor-browser\ for user account that installed the package
+# set NTFS modify file permissions to $destinationFolder for user account that installed the package
 $WhoAmI = whoami
-$Acl = Get-Acl "$toolsDir\tor-browser"
+$Acl = Get-Acl $destinationFolder
 $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI, "Modify", 'ContainerInherit,ObjectInherit', 'None', "Allow")
 $Acl.SetAccessRule($Ar)
-Set-Acl "$toolsDir\tor-browser" $Acl
+Set-Acl $destinationFolder $Acl
