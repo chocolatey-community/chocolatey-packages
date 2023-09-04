@@ -30,7 +30,7 @@ environment:
   mail_pass:
     secure: w2Cf0E/uiMSr5o1r6zvr6VFsscTlqee+AdWHRF5+Tn4=
   mail_server: smtp.gmail.com
-  mail_port: 465
+  mail_port: 587
   mail_enablessl: true
 
   #ID of the gist used to save run results
