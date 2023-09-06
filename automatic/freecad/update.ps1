@@ -3,9 +3,6 @@
 if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -Parent }
 . "$PSScriptRoot\update_helper.ps1"
 
-$PreUrl = 'https://github.com'
-$releases = "$PreUrl/FreeCAD/FreeCAD/releases"
-$dev_releases = "$PreUrl/FreeCAD/FreeCAD-Bundle/releases/tag/weekly-builds"
 $softwareName = 'FreeCAD'
 
 function global:au_SearchReplace {
@@ -44,9 +41,9 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
   $streams = [ordered] @{
-    dev      = Get-FreeCad -Title "${softwareName}" -uri $dev_releases -kind "dev"
-    stable   = Get-FreeCad -Title "${softwareName}"
-    portable = Get-FreeCad -Title "${softwareName}" -kind "portable"
+    dev      = Get-FreeCad -Kind "dev"
+    stable   = Get-FreeCad -Kind "stable"
+    portable = Get-FreeCad -Kind "portable"
   }
   return @{ Streams = $streams }
 }

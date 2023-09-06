@@ -1,85 +1,84 @@
-﻿function Get-FreeCad {
-param(
-  [string]$Title,
-  [string]$kind = 'stable',
-  [int]$filler = "0",
-  [string]$uri = $releases,
-  [string]$ScriptLocation = $PSScriptRoot
-)
-  
-#  $download_page = Invoke-WebRequest -Uri $uri -UseBasicParsing
+function Get-FreeCad {
+  [CmdletBinding()]
+  param(
+    # Release-type of FreeCAD to return
+    [ValidateSet("stable", "dev", "portable")]
+    [string]$Kind = 'stable'
+  )
 
-  switch ($kind) {
+  $LatestRelease = if ($Kind -eq "dev") {
+    Get-GitHubRelease -Owner "Freecad" -Name "Freecad-Bundle" -TagName "weekly-builds"
+  } else {
+    Get-GitHubRelease -Owner FreeCAD -Name FreeCAD
+  }
+
+  $Title = "FreeCAD"
+  $PackageName = $Title.ToLower()
+
+  switch ($Kind) {
     'dev' {
-      $download_page = (Get-GitHubRelease -Owner "Freecad" -Name "Freecad-Bundle" -TagName "weekly-builds" -Verbose).assets
-      $mobile = "Windows"
       $ext = "7z"
-      $re64 = "(FreeCAD_weekly-builds)?((\-\d{2,6})+)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2,5})?(\.$ext)$"
-#      $url64 = ( $download_page.Links | ? href -match $re64 | Select-Object -First 1 -ExpandProperty 'href' )
-      $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
-      "url64 -$url64-" | Write-Warning
-      $PackageName  = "$Title"
-      $Title        = "$Title"
+      $re64 = "(FreeCAD_weekly-builds)?((\-\d{2,6})+)?(\-conda)?\-Windows(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2,5})?(\.$ext)$"
+      $url64 = $LatestRelease.assets.Where{$_.name -match $re64}[0].browser_download_url
+
       # Now to get the newest Revision from url64
       $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2,5})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
-      "veri -$veri-" | Write-Warning
+
       $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
-      "Standard Development Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
+
       [version]$version = ( ( ($DevRevision),($year),($month),($day) ) -join "." )
-      $vert = "${version}-${kind}"
+      $FinalVersion = "${version}-dev"
     }
     'portable' {
-      $download_page = (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
-      $mobile = "portable"
       $ext = "zip"
-      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-(${mobile})(\-|.)?(\d+)?(\.${ext})$"
-#      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
-      $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
-      $vert = "$version"
-      $PackageName  = "$Title.$kind"
+      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-portable(\-|.)?(\d+)?(\.${ext})$"
+      $url64 = $LatestRelease.assets.Where{$_.name -match $re64}.browser_download_url
+
+      if ($null -eq $url64) {
+        Write-Warning "FreeCAD portable $($ext) was not found in GitHub release at '$($LatestRelease.html_url)'. Skipping portable package stream."
+        return 'ignore'
+      }
+
+      $PackageName  = "$PackageName.portable"
       $Title        = "$Title (Portable)"
-      [version]$version = ( Get-Version (($url64.Split('\/'))[-1]) ).Version
+      [version]$version = $LatestRelease.tag_name.TrimStart("v")
     }
     'stable' {
-      $download_page =  (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
-      $mobile = "installer"
       $ext = "exe"
-      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-(${mobile})(\-|.)?(\d+)?(\.${ext})$"
-#      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
-      $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
-      $vert = "$version"
-      $PackageName  = "$Title"
-      $Title        = "$Title"
-      [version]$version = ( Get-Version (($url64.Split('\/'))[-1]) ).Version
+      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-installer(\-|.)?(\d+)?(\.${ext})$"
+      $url64 = $LatestRelease.assets.Where{$_.name -match $re64}.browser_download_url
+
+      [version]$version = $LatestRelease.tag_name.TrimStart("v")
     }
   }
-  
-  # check in place to prevent cross call talk from sequentional 
-  if ($kind -notmatch 'dev') {
+
+  # check in place to prevent cross call talk from sequentional
+  if ($kind -ne 'dev') {
     # Check if version is using a revision and build correctly
     if (($version.Build) -match "\d{1,5}") {
-      $vert = ( ( ($version.Major),($version.Minor),($filler),($version.Build) ) -join "." )
+      $FinalVersion = ( ( ($version.Major),($version.Minor),(0),($version.Build) ) -join "." )
     }
     # This is to update the version when the fileName/url64 changes in the future
     if (($version.Revision) -ne 0) {
       # Due to the Get-Version rendering the revision as a negative
       $revision = [math]::Abs( $version.Revision )
-      "Versioning update $revision for -$url64-" | Write-Warning
-      $vert = ( ( ($version.Major),($version.Minor),($version.Build),($revision) ) -join "." )
+
+      $FinalVersion = ( ( ($version.Major),($version.Minor),($version.Build),($revision) ) -join "." )
     }
   }
-  
+
  	$package = @{
-    PackageName  = ($PackageName).ToLower()
+    PackageName  = $PackageName
     Title        = $Title
     URL64        = $url64
-    Version      = $vert
-    fileType     = ($url64.Split("/")[-1]).Split(".")[-1]
-    }
-    # Due to the dev package being pre-release software we are removing ReleaseNotes
-    if ($kind -ne "dev") {
-      $package.Add( "ReleaseNotes", "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)" )
-    }
-	
-return $package
+    Version      = $FinalVersion
+    fileType     = $ext
+  }
+
+  # Due to the dev package being pre-release software we are removing ReleaseNotes
+  if ($kind -ne "dev") {
+    $package.Add( "ReleaseNotes", "https://www.freecadweb.org/wiki/Release_notes_$($version.Major).$($version.Minor)" )
+  }
+
+  return $package
 }
