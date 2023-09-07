@@ -15,7 +15,7 @@ if (Test-Path $Chromium) {
 
 $packageArgs = @{
   packageName   = 'chromium'
-  file          = "$toolsdir\chromium_x32.exe"
+  url           = 'https://chromium_x32.exe'
   file64        = "$toolsdir\chromium_x64.exe"
   fileType      = 'exe'
   silentArgs    = $silentArgs
