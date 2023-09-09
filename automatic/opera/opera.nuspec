@@ -30,6 +30,10 @@ For example: `--params '"/NoAutostart /NoDesktopShortcut /NoTaskbarShortcut"'`
     <releaseNotes>https://blogs.opera.com/desktop/changelog-for-102/#b4880.40</releaseNotes>
     <tags>browser opera cross-platform internet admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/opera</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.4" />
+      <dependency id="autohotkey.portable" version="2.0.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
