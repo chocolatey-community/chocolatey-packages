@@ -1,4 +1,4 @@
-import-module au
+﻿import-module au
 
 $releases = 'https://sqlite.org/download.html'
 
@@ -17,14 +17,14 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate {
     Get-RemoteFiles -Purge -NoSuffix
-    $tools_name = $Latest.URLTools32 -split '/' | select -Last 1
-    iwr $Latest.URLTools32 -OutFile tools\$tools_name
-    $Latest.ChecksumTools32 = Get-FileHash tools\$tools_name | % Hash
+    $tools_name = $Latest.URLTools32 -split '/' | Select-Object -Last 1
+    Invoke-WebRequest $Latest.URLTools32 -OutFile tools\$tools_name
+    $Latest.ChecksumTools32 = Get-FileHash tools\$tools_name | ForEach-Object Hash
 }
 
 function global:au_GetLatest {
     function get_version( [int]$Bit=32 ) {
-        $version = $download_page.AllElements | ? tagName -eq 'td' | ? InnerHtml -match "$Bit-bit DLL .+ for SQLite version" | % InnerHtml
+        $version = $download_page.AllElements | Where-Object tagName -eq 'td' | Where-Object InnerHtml -match "$Bit-bit DLL .+ for SQLite version" | ForEach-Object InnerHtml
         $version -match '((?:\d+\.)+)' | out-null
         $Matches[0] -replace '\.$'
     }
@@ -38,10 +38,10 @@ function global:au_GetLatest {
     $version64 = get_version 64
 
     $re  = '\-win\d\d\-.+\.zip'
-    $url = $download_page.links | ? href -match $re | % { 'https://sqlite.org/' + $_.href }
-    $url32      = $url -like '*dll*win32*' | select -First 1
-    $url64      = $url -like '*dll*win64*' | select -First 1
-    $urlTools32 = $url -like '*tools*win32*'| select -First 1
+    $url = $download_page.links | Where-Object href -match $re | ForEach-Object { 'https://sqlite.org/' + $_.href }
+    $url32      = $url -like '*dll*win32*' | Select-Object -First 1
+    $url64      = $url -like '*dll*win64*' | Select-Object -First 1
+    $urlTools32 = $url -like '*tools*win32*'| Select-Object -First 1
 
     # https://github.com/chocolatey/chocolatey-coreteampackages/issues/733
     if ($version32 -eq $version64) { $Version = $version32 }
