@@ -3,21 +3,22 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xpdf-utils</id>
-    <version>3.4.0.20170430</version>
-    <packageSourceUrl>https://github.com/Chocolatey/chocolatey-coreteampackages/tree/master/automatic/xpdf-utils</packageSourceUrl>
+    <version>4.4.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/manual/xpdf-utils</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>Xpdf utils</title>
     <authors>Glyph &amp; Cog, LLC</authors>
-    <projectUrl>http://www.foolabs.com/xpdf/home.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/9de2a5aefc0c7d6facb695f0ac0017328ece49e8/icons/xpdf-utils.png</iconUrl>
+    <projectUrl>https://www.xpdfreader.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey-community/chocolatey-packages/a66dc8904b32ac586c02e598aa7fd6c3c2a0d34e/icons/xpdf-utils.png</iconUrl>
     <copyright>Glyph &amp; Cog, LLC</copyright>
-    <licenseUrl>http://www.foolabs.com/xpdf/about.html</licenseUrl>
+    <licenseUrl>https://www.xpdfreader.com/opensource.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>xpdf-utils pdf xpdf pdf-utilities foss cross-platform</tags>
     <summary>Xpdf utilities</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description>Dummy</description>
-    <releaseNotes>http://www.foolabs.com/xpdf/CHANGES</releaseNotes>
+    <docsUrl>https://www.xpdfreader.com/support.html</docsUrl>
+    <mailingListUrl>https://forum.xpdfreader.com/</mailingListUrl>
     <dependencies />
   </metadata>
   <files>
