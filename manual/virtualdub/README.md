@@ -42,5 +42,5 @@ The author of VirtualDub is very impatient. That means his program is designed f
 - Open video file (Ctrl-O).
 - Save AVI (F7).
 
-How fast is this operation? On a C450, 40 frames per second (1.3x real-time speed).Â  With a little tweaking, the speed rises to 55 fps (1.8x), with the CPU hardly breaking a sweat at 40%.
+How fast is this operation? On a C450, 40 frames per second (1.3x real-time speed). With a little tweaking, the speed rises to 55 fps (1.8x), with the CPU hardly breaking a sweat at 40%.
 

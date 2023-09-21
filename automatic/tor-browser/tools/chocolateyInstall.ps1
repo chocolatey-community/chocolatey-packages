@@ -18,7 +18,7 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
-# Create .ignore files for exeâ€™s
+# Create .ignore files for exe’s
 Get-ChildItem -Path $destinationFolder -Recurse | Where-Object {
   $_.Extension -eq '.exe' } | ForEach-Object {
   New-Item $($_.FullName + '.ignore') -Force -ItemType file
