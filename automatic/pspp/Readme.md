@@ -18,7 +18,7 @@ PSPP can perform descriptive statistics, T-tests, anova, linear and logistic reg
 - Fast statistical procedures, even on very large data sets.
 - No license fees.
 - No expiration period.
-- No unethical â€œend user license agreementsâ€.
+- No unethical “end user license agreements”.
 - A fully indexed user manual.
 - Freedom ensured; It is licensed under the GPLv3 or later.
 - Portability; Runs on many different computers and many different operating systems (GNU or GNU/Linux are the prefered platforms, but we have had many reports that it runs well on other systems too).
