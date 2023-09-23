@@ -1,8 +1,6 @@
 import-module au
 import-module "$PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1"
-
-$releases32 = 'https://update.code.visualstudio.com/api/update/win32/stable/VERSION'
-$releases64 = 'https://update.code.visualstudio.com/api/update/win32-x64/stable/VERSION'
+Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 if ($MyInvocation.InvocationName -ne '.') {
   function global:au_BeforeUpdate {
@@ -25,18 +23,17 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $json32 = Invoke-WebRequest -UseBasicParsing -Uri $releases32 | ConvertFrom-Json
-  $json64 = Invoke-WebRequest -UseBasicParsing -Uri $releases64 | ConvertFrom-Json
-
-  if ($json32.productVersion -ne $json64.productVersion) {
-    throw "Different versions for 32-Bit and 64-Bit detected."
-  }
+  $latestRelease = Get-GitHubRelease microsoft vscode
+  $version = $latestRelease.tag_name
+  # URLs are documented here: https://code.visualstudio.com/docs/supporting/faq#_previous-release-versions
+  $url32 = "https://update.code.visualstudio.com/$version/win32/stable"
+  $url64 = "https://update.code.visualstudio.com/$version/win32-x64/stable"
 
   @{
-    Version       = $json32.productVersion
-    RemoteVersion = $json32.productVersion
-    URL32         = $json32.Url
-    URL64         = $json64.Url
+    Version       = $version
+    RemoteVersion = $version
+    URL32         = $url32
+    URL64         = $url64
   }
 }
 

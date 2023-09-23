@@ -31,7 +31,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $url = Get-RedirectedUrl -url $releases
 
-    $version  = $url -split '/' | select -Last 1 -Skip 1
+    $version  = $url -split '/' | Select-Object -Last 1 -Skip 1
 
     @{
         Version      = $version

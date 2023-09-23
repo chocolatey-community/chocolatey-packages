@@ -6,7 +6,7 @@ $softwareNamePattern = 'WinPcap*'
 if ($key.Count -eq 1) {
     $key | ForEach-Object {
         Write-Output "Running Autohotkey uninstaller"
-        $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+        $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
         $ahkScript = "$toolsPath\winpcapInstall.ahk"
         AutoHotkey $ahkScript uninstall $_.UninstallString
     }

@@ -26,7 +26,14 @@ function global:au_AfterUpdate() {
 
   $release_notes = $release_page.Links | Where-Object href -match "release-notes|roadmap-releases" | Select-Object -First 1 -expand href
 
-  Update-Metadata -key "releaseNotes" -value $release_notes
+  if ($release_page -and -not $release_notes) {
+    Write-Warning "Release notes not found within body of the GitHub release. Linking directly to release."
+    $release_notes = $ghReleasesFmt -f $($Latest.RemoteVersion)
+  }
+
+  if ($release_notes) {
+    Update-Metadata -key "releaseNotes" -value $release_notes
+  }
 }
 
 function global:au_GetLatest {
