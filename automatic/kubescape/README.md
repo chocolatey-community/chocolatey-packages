@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@master/icons/kubescape.png" width="48" height="48"> [Kubescape](https://chocolatey.org/packages/kubescape)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@05d22dc83549358191c27bfcd5a6bc5b6a514612/icons/kubescape.png" width="48" height="48"> [Kubescape](https://chocolatey.org/packages/kubescape)
 
 An open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters.
 
