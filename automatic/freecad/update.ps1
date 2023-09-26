@@ -22,6 +22,7 @@ function global:au_SearchReplace {
       "(?i)(^\s*\<id\>).*(\<\/id\>)"                     = "`${1}$($Latest.PackageName)`${2}"
       "(?i)(^\s*\<title\>).*(\<\/title\>)"               = "`${1}$($Latest.Title)`${2}"
       "(?i)(^\s*\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
+      '(?i)(^\s*\<dependency id="chocolatey" version=").*(" \/\>)' = "`${1}$(if ($Latest.FileType -eq '7z') {'2.2.2'} else {'1.0.0'})`${2}"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)(^\s*packageName\s*=\s*)'.*'"  = "`$1'$($Latest.PackageName)'"

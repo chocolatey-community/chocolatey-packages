@@ -51,6 +51,7 @@ Example: `choco install freecad --params "/InstallDir:'C:\FreeCAD' /NoShortcut"`
     <tags>freecad 3d cad modeling engineering admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/freecad</packageSourceUrl>
     <dependencies>
+      <dependency id="chocolatey" version="1.0.0" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
   </metadata>
