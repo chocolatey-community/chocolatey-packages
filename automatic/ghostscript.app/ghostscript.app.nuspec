@@ -36,6 +36,7 @@ Ghostscript has been under active development for over 20 years, and offers an e
     <releaseNotes>https://ghostscript.readthedocs.io/en/latest/News.html</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="autohotkey.portable" version="2.0" />
     </dependencies>
   </metadata>
   <files>
