@@ -16,6 +16,10 @@ function global:au_SearchReplace {
       "(?i)(^\s*checksum\:).*"            = "`${1} $($Latest.Checksum32)"
     }
 
+    ".\tools\chocolateyInstall.ps1" = @{
+      '(^[$]version\s*=\s*)(".*")'               = "`${1}""$($Latest.Version)"""
+    }
+
     "$($Latest.PackageName).nuspec" = @{
       "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseURL)`${2}"
     }
