@@ -24,18 +24,18 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $domain = $releases -split '(?<=//.+)/' | select -First 1
+  $domain = $releases -split '(?<=//.+)/' | Select-Object -First 1
 
   $re = '\.exe$'
-  $url = $download_page.links | ? href -match $re | % { $domain + $_.href }
+  $url = $download_page.links | Where-Object href -match $re | ForEach-Object { $domain + $_.href }
 
-  $version = $url -split '/' | select -last 1 -Skip 1
+  $version = $url -split '/' | Select-Object -last 1 -Skip 1
   $version = $version.Substring(1) -replace '\.\w+$'
 
   @{
     Version     = $version
     Url32       = $url
-    ReleaseURL  = $download_page.links.href | ? { $_ -like "*github*/release/*"} | select -first 1
+    ReleaseURL  = $download_page.links.href | Where-Object { $_ -like "*github*/release/*"} | Select-Object -first 1
   }
 }
 
