@@ -16,10 +16,7 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
 
-  checksum32 type: sha256
-  checksum32: 7788A1EBC5195BDA109BB7B29630C740D887FD24D4F153C54D6F7E25BFF6795F
-
-  checksum64 type: sha256
-  checksum64: 0762EE37817F748C43F5E913B2778712B2BA33241253718876620658DF98BCD9
+  checksum type: sha256
+  checksum: 7788A1EBC5195BDA109BB7B29630C740D887FD24D4F153C54D6F7E25BFF6795F
 
 The file 'LICENSE.md' has been obtained from <https://github.com/evolus/pencil/blob/634622963ba4098f97c1cc7e7eabdd482bb1dcc9/LICENSE.md>
