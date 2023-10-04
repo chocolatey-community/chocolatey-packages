@@ -1,30 +1,14 @@
 ﻿Import-Module au
 
-$releases = 'https://www.apachehaus.com/cgi-bin/download.plx'
+$releases = 'https://www.apachelounge.com/download/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix }
 
 function global:au_GetLatest {
-  $versionRegEx = 'httpd\-([\d\.]+).*\-x86\-(vs17).*\.zip'
-
-  $downloadPage = Invoke-WebRequest $releases -UseBasicParsing
-  $matches = [regex]::match($downloadPage.Content, $versionRegEx)
-  $version32 = $matches.Groups[1].Value
-  $url32 = "https://www.apachehaus.com/downloads/$($matches.Groups[0].Value)"
-
-  $versionRegEx = $versionRegEx -replace 'x86', 'x64'
-  $matches = [regex]::match($downloadPage.Content, $versionRegEx)
-  $version64 = [version]$matches.Groups[1].Value
-  $url64 = "https://www.apachehaus.com/downloads/$($matches.Groups[0].Value)"
-
-  if ($version32 -ne $version64) {
-    throw "32bit and 64bit version do not match. Please check the update script."
-  }
-
   return @{
-    Url32   = $url32
-    Url64   = $url64
-    Version = $version32
+    Url32   = "https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.57-win32-VS17.rar"
+    Url64   = "https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.57-win64-VS17.zip"
+    Version = "2.4.57"
   }
 }
 
