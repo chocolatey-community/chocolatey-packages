@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿﻿Import-Module AU
 
 $releases = 'https://musescore.org/en/download/musescore.msi'
 
