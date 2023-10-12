@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $softwareName = 'Microsoft Visual Studio Code'
-$version = '1.83.0'
+$version = '1.83.1'
 if ($version -eq (Get-UninstallRegistryKey "$softwareName").DisplayVersion) {
   Write-Host "VS Code $version is already installed."
   return
@@ -16,14 +16,14 @@ Close-VSCode
 $packageArgs = @{
   packageName    = 'vscode.install'
   fileType       = 'exe'
-  url            = 'https://update.code.visualstudio.com/1.83.0/win32/stable'
-  url64bit       = 'https://update.code.visualstudio.com/1.83.0/win32-x64/stable'
+  url            = 'https://update.code.visualstudio.com/1.83.1/win32/stable'
+  url64bit       = 'https://update.code.visualstudio.com/1.83.1/win32-x64/stable'
 
   softwareName   = "$softwareName"
 
-  checksum       = '052b4d25d9ed1e237e4dc58ec3280f16619930227f7f5ec51a898ef0dbcf3e75'
+  checksum       = '6b5830991395299b59d1d8f4ecb3a9d752ef64b9b39c5dd4be848851c87f3126'
   checksumType   = 'sha256'
-  checksum64     = '507269bb0e9806243088815af19a6aff9a9f18907d88c1a6368f9cba758b0da2'
+  checksum64     = '4ce748cdd111d88e1b7990641912a0e55904709a2cc85a72895ee6d7aa1801fd'
   checksumType64 = 'sha256'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
