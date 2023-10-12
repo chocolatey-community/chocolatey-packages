@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/paintdotnet/release/releases/download/v5.0.10/paint.net.5.0.10.winmsi.x64.zip
+   x64: https://github.com/paintdotnet/release/releases/download/v5.0.11/paint.net.5.0.11.winmsi.x64.zip
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 429BD892083DE7084906986A703C4D4DABC56A04CF6BBCB12EFEC0C2EC8125A5
+   checksum64: B359F01C0A758A93772DE2908BCE855F7D410550954AE81BFFDA63827166CCA7
 
 File 'license.txt' is obtained from:
    https://www.getpaint.net/license.html
