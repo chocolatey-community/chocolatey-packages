@@ -10,7 +10,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
   file64         = "$toolsPath\inkscape-1.3_2023-07-21_0e150ed6c4-x64_31XBEKV.msi"
   softwareName   = 'InkScape*'
-  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
   validExitCodes = @(0)
 }
 
