@@ -1,31 +1,26 @@
-# Contributing
+# Contributing Guidelines
 
-    [Packages](#1-packages)                                                                                 [Source Files](#2-source-files)    [Teamwork](#3-teamwork)
-    [Basics](#11-basics) - [Metadata](#12-metadata) - [AU Script](#13-au-script) - [UI Automation](#14-ui-automation)
-
----
+Thank you for being so interested in contributing to the Chocolatey Community Packages repository.
+This document details the expectations of what is needed when contributing to this repository and what rules all contributors need to follow.
 
 This repository presents **the latest and highest package standards**. The purpose of this repository is to provide packages that are:
 
-* **Stable** - Current and earlier versions should generally work, so you could depend on them. The most stable packages are those that are embedded (see [1.1.4](#114-embed-a-package-if-allowed)).
-* **High quality** - Packages should be resilient and should provide parameters where adequate.
-* **Free** - Packages should be generally usable by anybody without any special prerequisites.
+- **Stable** - Current and earlier versions should generally work so that you can depend on them. The most stable packages are those that are embedded.
+- **High quality** - Packages should be resilient and provide adequate parameters.
+- **Free** - Packages should generally be usable by anybody without any prerequisites.
 
-To achieve those goals we are using the following priorities when adding new or maintaining existing packages:
+To achieve these goals, we are using the following priorities when adding new or maintaining existing packages:
 
 1. Cross-platform FOSS packages.
-1. Windows only FOSS packages.
-1. Freeware packages.
-1. Commercial packages with unrestricted trials.
+2. Windows-only FOSS packages.
+3. Freeware packages.
+4. Commercial packages with unrestricted trials.
 
 The following rules also apply:
-1. When packages have the same priorities, software with higher number of users will generally be considered more important.
-1. Applications without english localization are not accepted in this repository.
-1. The core team may decide to stop supporting a package after a discussion. This may happen if the package requires too much dedication during maintenance.
 
-For existing packages that no longer fit above principles chocolatey-community user will be removed from the list of the maintainers.
-
-The following sections present complete set of guidelines, please read them carefully, especially since some rules are enforced and if broken will result in the failed PR build.
+1. We will first consider software with more users when packages have the same priorities.
+2. Applications must have English localization before we accept these in this repository.
+3. The core maintainers may stop supporting a package after a discussion when the package requires too much maintenance or if there is not enough interest in the Community to work on the package.
 
 <!-- markdownlint-disable -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -33,265 +28,382 @@ The following sections present complete set of guidelines, please read them care
 <details>
 <summary>Table of Contents</summary>
 
-- [1. Packages](#1-packages)
-  - [1.1 Basics](#11-basics)
-    - [1.1.1 Conform to guidelines](#111-conform-to-guidelines)
-    - [1.1.2 Manual or automatic](#112-manual-or-automatic)
-    - [1.1.3 Naming](#113-naming)
-    - [1.1.4 Embed a package if allowed](#114-embed-a-package-if-allowed)
-    - [1.1.5 Support multiple versions](#115-support-multiple-versions)
-    - [1.1.6 Support multiple architectures](#116-support-multiple-architectures)
-    - [1.1.7 Clean code](#117-clean-code)
-    - [1.1.8 Set `softwareName`](#118-set-softwarename)
-    - [1.1.9 Test locally](#119-test-locally)
-    - [1.1.10 Dependency versions](#1110-dependency-versions)
-    - [1.1.11 Provide uninstaller only if needed](#1111-provide-uninstaller-only-if-needed)
-    - [1.1.12 Ensure compatibility with PowerShell v2+](#1112-ensure-compatibility-with-powershell-v2)
-    - [1.1.13 Chocolatey compatibility](#1113-chocolatey-compatibility)
-  - [1.2 Metadata](#12-metadata)
-    - [1.2.1 Obligatory metadata](#121-obligatory-metadata)
-    - [1.2.2 Obligatory tags](#122-obligatory-tags)
-    - [1.2.3 Informative description](#123-informative-description)
-    - [1.2.4 Add chocolatey-community among owners](#124-add-chocolatey-community-among-owners)
-    - [1.2.5 Provide icon](#125-provide-icon)
-  - [1.3 AU Script](#13-au-script)
-    - [1.3.1 Use `UseBasicParsing` [Optional]](#131-use-usebasicparsing-optional)
-    - [1.3.2 Do not download large files](#132-do-not-download-large-files)
-    - [1.3.3 Specify correct `NuspecVersion`](#133-specify-correct-nuspecversion)
-  - [1.4 UI Automation](#14-ui-automation)
-    - [1.4.1 Work on all locales](#141-work-on-all-locales)
-    - [1.4.2 Avoid brittle scripts](#142-avoid-brittle-scripts)
-- [2. Source Files](#2-source-files)
-    - [2.1 Encoding](#21-encoding)
-    - [2.2 Code style](#22-code-style)
-- [3. Teamwork](#3-teamwork)
-    - [3.1 Update CODEOWNERS](#31-update-codeowners)
-    - [3.2 Single package per pull request](#32-single-package-per-pull-request)
-    - [3.3 Open issues and pull request expiration](#33-open-issues-and-pull-request-expiration)
-    - [3.4 Understanding labels](#34-understanding-labels)
+- [Etiquette](#etiquete)
+- [Opening issues and discussions](#opening-issues-and-discussions)
+  - [Reporting a bug](#reporting-a-bug)
+  - [Reporting an outdated package](#reporting-an-outdated-package)
+  - [Requesting enhancements or new functionality](#requesting-enhancements-or-new-functionality)
+  - [Issue closing](#issue-closing)
+- [Opening pull requests](#opening-pull-requests)
+  - [Pull request title](#pull-request-title)
+  - [Pull request body](#pull-request-body)
+- [Conventions / Guidelines](#conventions--guidelines)
+  - [Manual or automatic](#manual-or-automatic)
+  - [Package types](#package-types)
+  - [Embedded packages](#embedded-packages)
+  - [Semi-Embedded packages](#semi-embedded-packages)
+  - [Remote packages](#remote-packages)
+  - [Metadata](#metadata)
+    - [Naming](#naming)
+    - [Dependency versions](#dependency-versions)
+    - [Conform to guidelines](#conform-to-guidelines)
+    - [Obligatory metadata](#obligatory-metadata)
+    - [Obligatory tags and categories](#obligatory-tags-and-categories)
+    - [Description](#description)
+    - [Maintainers](#maintainers)
+    - [Icons](#icons)
+    - [Chocolatey compatibility](#chocolatey-compatibility)
+  - [Chocolatey Scripts](#chocolatey-scripts)
+    - [UI Automation](#ui-automation)
+      - [Work on all locales](#work-on-all-locales)
+      - [Avoid brittle scripts](#avoid-brittle-scripts)
+    - [Source Files](#source-files)
+      - [Encoding](#encoding)
+      - [Code style](#code-style)
+  - [Update Script](#update-script)
+    - [Use `UseBasicParsing`](#use-usebasicparsing)
+    - [Do not download large files](#do-not-download-large-files)
+- [FAQ](#faq)
+  - [Why do we automatically close issues?](#why-do-we-automatically-close-issues)
+  - [Why don't the repository maintainers fix the issues?](#why-do-not-the-repository-maintainers-fix-the-issues)
+  - [How can I create a fix version of a package?](#how-can-i-create-a-fix-version-of-a-package)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <!-- markdownlint-enable -->
 
-# 1. Packages
+## Etiquette
 
-## 1.1 Basics
+Ensure that all communications you make on this repository follow our [CODE OF CONDUCT][]. Please adhere to this document to avoid being banned from the repository.
+In addition to the code of conduct document, ensure you do not unnecessarily [mention][@mention] other users when opening issues, discussions, or pull requests. Mentioning other users unneeded may lead to the current and future issues or pull requests not being addressed.
 
-### 1.1.1 Conform to guidelines
+## Opening Issues And Discussions
 
-Conform with the [official package creation guidelines](https://docs.chocolatey.org/en-us/create/create-packages) and take a look at [quick start guide](https://docs.chocolatey.org/en-us/create/create-packages-quick-start) on how to create packages.
+When opening issues about packages located in this repository, there are a few things you need to find out before opening said issue or discussion.
 
-You should also know how to [deprecate a package](https://docs.chocolatey.org/en-us/community-repository/maintainers/deprecate-a-chocolatey-package).
+1. Ensure the package you submit an issue or discussion about is available in this repository.
+   Packages in this repository will have the user `chocolatey-community` user listed under `Package Maintainer(s)` on the sidebar of the package page on community.chocolatey.org.
+2. Determine if the issue will be about a bug, a new feature, an enhancement, an outdated package or a migration of a new package.
+   If you are still determining the issue type, open a general discussion about the package, or contact us through the community support channel for Chocolatey here: <https://ch0.co/community>.
+3. Use the templates associated by navigating to <https://github.com/chocolatey-community/chocolatey-packages/issues/new/choose>
 
-### 1.1.2 Manual or automatic
+### Reporting A Bug
 
-Decide if package is **manual or automatic**. Generally, packages without vendor updates for **minimum 3 years** should be considered manual. Automatic packages must use [AU](https://github.com/majkinetor/au) module.
+When reporting a bug, fill out the template for bug requests completely. The more information you can provide, including a list of steps to reproduce the bug found, the higher the likelihood that someone will fix the bug described.
+Please include enough details about the bug to avoid the issue becoming ignored or closed if a maintainer can not reproduce the bug.
+Ensure the issue title is prefixed `(packageName)` where `packageName` is the identifier of the package, and it should also contain a summary of the bug.
 
-### 1.1.3 Naming
+If you intend to fix this bug, you do not have to open an issue before submitting a pull request. Instead, see the section for [opening pull requests](#opening-pull-requests).
 
-Both *package root directory* and  *nuspec file* should be named **the same as the package Id** with all lower letters. *This is only relevant for new packages, as changing casing on existing packages may have negative side effects*
+### Reporting An Outdated Package
 
-### 1.1.4 Embed a package if allowed
+Before submitting a new issue for outdated packages, ensure there is no submitted (unapproved) version available on <https://community.chocolatey.org> and that the new version has a valid stable new release.
+Only open outdated package issues if there is a new stable release available. Issues for outdated pre-releases may be closed with no response given.
+When reporting outdated packages, make sure you fill out the requested template completely.
+Ensure the issue title is prefixed `(packageName)` where `packageName` is the identifier of the package, and it should also contain a summary of the bug.
 
-_Embedded_ packages include the packaged software directly in the nupkg archive instead of downloading it. Only tools that allow redistribution in their license can be embedded and such packages must include two additional files in the directory `legal` - `VERIFICATION.txt` and `License.txt`.
+Unlike a bug report, you do not need a summary of the issue, but it should include the word `Outdated` instead.
+For example, if you report the gimp package being outdated, the issue's title should be, at a minimum: `(gimp) Outdated`.
 
-It's **recommended to create embedded packages** because they don't depend on vendor site working and substantially reduce the network related problems - 404 (file not found) problem and potential vendor bandwidth leaching issues are completely solved by embedding.
+### Requesting Enhancements Or New Functionality
 
-Binary files can not be generally checked in into this repository because that will bloat it too much. The repository is ignoring binary files via `.gitignore`. Automatic packages use AU functions to produce correct package that includes binaries during automatic update procedure. See the following packages as an example: [qbittorent](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/qbittorrent), [less](https://github.com/majkinetor/au-packages/tree/master/less), [smplayer](https://github.com/majkinetor/au-packages/tree/master/smplayer).
+Requesting new functionality for any package is not accepted as a direct pull request or a normal issue.
+Any enhancement or functionality requests must be opened as a discussion.
+Suppose the repository maintainers agree that the work should proceed. In that case, the maintainer will create an issue referencing the discussion.
+A feature or enhancement will only be approved when it is known who will work on the implementation. If you wish to work on it, make sure to mention this in the initial discussion body.
 
-For software that explicitly doesn't allow redistribution via adequate license then one may **contact the vendor**, ask for the redistribution rights and provide proof in the package in the form of:
+Issues created as a bug or an outdated report may be closed if it is determined to be a new functionality request or an enhancement to an existing package. You may then have to open a discussion about the package instead (though a maintainer may choose to convert the issue to a discussion, there is no guarantee).
+
+### Issue Closing
+
+We have an automated bot that goes through the issues created on the repository, marking issues as stale and closing any issues marked as stale.
+
+All issues are a candidate for becoming stale unless they have one of the following labels:
+
+- `Security / CVE` - We always want security-related issues completed. If these issues become stale, a new maintainer will be requested.
+- `0 - Backlog` - A repository maintainer will work on these issues, but it is not scheduled when to do so.
+- `1. - Ready for work` - A repository maintainer will work on these issues and has been scheduled when to work on it.
+- `2. - Working` - A repository maintainer has started working on these issues.
+- `3. - Review` - A repository maintainer has created a pull request for these issues.
+- `5. - Push required` - A package that a maintainer must push to Chocolatey Community Repository to complete these issues has not yet been pushed.
+
+Additionally, if a user is assigned to an issue, it will not be automatically marked as stale or closed. Such issues should have an associated PR within 30 days, or the user needs to be unassigned, and it may become stale again.
+
+## Opening Pull Requests
+
+Pull requests fixing a bug or an outdated package do not need to have an associated issue.
+
+**Do not open a pull request when there is already an open pull request for the same issue or bug, as this will lead to your pull request being closed.**
+
+When opening a new pull request, you are required to input all the information requested by the pull request template used.
+An existing issue marked by a maintainer with `up for grabs` or `0 - Backlog` must exist before opening a pull request for new features, enhancements, or migrating a package.
+If an issue is available, but a maintainer has yet to mark it with one of the mentioned labels, or if a different user is assigned. Please comment on the issue, asking if you can work on it. Once a maintainer assigns you to the issue, you can work on it.
+However, suppose you open a pull request without an associated issue. In that case, a maintainer may close the pull request immediately without a response.
+
+Your changes should only affect a single package unless the package(s) in question consists of a meta, `.install` and `.portable` package. In this case, you can submit all three packages in the same pull request.
+There may also be other exceptions, but these will be on a case-by-case basis only when approved by a repository maintainer.
+
+Read the [Code Conventions](#code-conventions) before opening the pull request.
+
+### Pull Request Title
+
+Ensure the pull request title is prefixed `(packageName)` where `packageName` is the identifier of the package, and it should also contain a summary of the code changes.
+
+### Pull Request Body
+
+The existing template used for pull requests contains several sections you must fill out. If you have not filled out the template, a maintainer will not review the pull request, and a label with `0 - Waiting on user` will be added to the pull request.
+
+- `Description` - Explain the changes you have made as best as you can.
+- `Motivation and Context` - Explain why you made the changes, and link any issues the pull request fixes in this section.
+- `Screenshot` - This section is optional. However, it's always appreciated if you can show how the code added changes/fixes the behavior of the package.
+- `Types of changes` - What changes have you made in the pull request - have you fixed a bug, implemented a new feature/enhancement, or has the code added broken existing functionality (i.e. is it incompatible with previous package versions)?
+- `Checklist` - This section contains a list of tasks you have done before submitting the pull request and if additional work is needed. You are required to have done everything on the checklist when appropriate. You may skip the test environment check if you only modify `update.ps1` and only need to verify the description if you have made changes there.
+- `Original Location` - This section is only relevant when migrating an existing package to the repository. Remove this section if you are not migrating a package to this repository.
+
+Before opening a pull request **make sure the package installs and uninstalls correctly** using the [Chocolatey Test Environment][] if you have made changes to files other than `update.ps1`. This environment is a reference machine to prevent the _it works on my box_ syndrome. The AU function `Test-Package -Vagrant` can speed this up.
+
+When a reviewer requires changes to the pull request, our automated bot will mark it with the label [`0 - Waiting on User`][Waiting Label]. If you fail to update the pull request within 14 days, it will be automatically closed.
+If there is no need to update, but instead, a response is needed, then adding a comment on the threads created by the reviewer/code owner is enough.
+Suppose you can't update the pull request within 14 days. In that case, temporarily closing the pull request may be better to allow other users to contribute a pull request if they have time.
+
+**NOTE: Do not add a comment to circumvent the automatic closure. Doing this may lead to the pull request being closed immediately instead.**
+
+## Conventions / Guidelines
+
+All packages in this repository are expected to pass all Requirement, Guideline and Suggestions checks on the Chocolatey Community Repository when possible.
+All packages are also expected to follow the additional Conventions / Guidelines outlined in this section.
+
+Keep an eye on this section occasionally, as it will evolve and change without notifications.
+
+### Manual Or Automatic
+
+When working on packages in this repository, you must decide whether the package should be automatic or manual.
+In most cases, a package should be automatic, as these can then update themselves without manual intervention when there is a new software release.
+
+The only time an automatic package should be a manual package is if the underlying software has not received any updates for three or more years or if it is impossible to automate.
+New packages contributed/migrated to this repository should always be created as automatic packages.
+
+All automatic packages must use the [AU][AU Source] module and work in Windows PowerShell 5.x. PowerShell Core is not supported.
+
+The following metadata and script conventions are for automatic packages. However, manual packages need to follow the same rules where possible.
+
+### Package Types
+
+### Embedded Packages
+
+_Embedded_ packages include the packaged software directly in the nupkg archive instead of downloading it. Only tools that allow redistribution in their license can be embedded. Such packages must consist of two additional files in the `legal` directory within the source folder and shipped package - `VERIFICATION.txt` and `LICENSE.txt`.
+
+It is **recommended to create embedded packages** because they don't depend on an external site working, and substantially reduce the potential for network-related problems - 404 (file not found) problems and potential vendor bandwidth leaching issues are completely solved by embedding the binaries within the package.
+
+Refrain from committing binary files to this repository except for images, as it will cause the repository to become unnecessarily large when pulling down any changes.
+The repository has a `.gitignore`, which excludes many popular binaries. Automatic packages use AU functions to produce packages that include binaries during the automated update procedure.
+See the following packages as an example: [qbittorent][qbittorrent-source], [7zip.install][7zip Source], [transifex-cli][Transifex CLI Source].
+
+For software that explicitly doesn't allow redistribution via adequate license, then one may **contact the vendor**, ask for the redistribution rights and provide proof in the package in the form of:
 
 - PDF of a signed license
 - signed letter
 - PDF of an email chain granting that permission
 
-As an example take a look at the [activepresenter](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/activepresenter/legal) package. Embedding non-allowed binaries may have [legal repercussions](https://docs.chocolatey.org/en-us/information/legal).
+For example, look at the [activepresenter][Active Presenter Legals] package. Embedding non-allowed binaries may have [legal repercussions][Chocolatey Software Legal].
 
-**NOTE**: 200MB is the maximum size of the package. Larger tools must be downloaded from a vendor site or mirror.
+**NOTE**: 200MB is the maximum size of a package on the Chocolatey Community Repository. The package must download larger tools from a vendor site or mirror or, if possible, create semi-embedded packages.
 
-### 1.1.5 Support multiple versions
+### Semi-Embedded Packages
 
-Packages should **support multiple versions** if possible - do not use URLs that are not version specific with non-embedded packages as they will install wrong versions when users provide the `--version` parameter to `choco install`. If this is not possible, add a note that package doesn't support multiple versions.
+_Semi-Embedded_ packages are packages that only partially embed the software inside the nupkg archive.
+A semi-embedded package is a common approach if including 32-bit and 64-bit binaries makes the package too big.
+In these cases, the best approach, when possible, is to keep the 64-bit software still embedded while downloading any 32-bit software during installation if needed (as Windows is increasingly popular in a 64-bit arch).
 
-### 1.1.6 Support multiple architectures
+### Remote Packages
 
-* If the package doesn't support x64 bit version, do not use `url64bit` and related x64 parameters of `Install-ChocolateyPackage`.
-* If package is only x64, do not use `url` and related x32 parameters for future Windows Nano server compatibility.
-* If the same url is provided for both x64 bit and x32 bit versions, only use the `url` and the related parameters. Do not use `url64bit` and its related x64 bit parameters.
+_Remote_ packages do not include any packaged software directly in the nupkg archive. Instead, it downloads what is necessary when a user installs the package.
+A remote package is the most common type seen on Chocolatey Community Repository. It is the only valid approach if the packaged software does not allow redistribution and the software authors are unwilling to grant redistribution rights.
+Additionally, when a package becomes too large to be uploaded to Chocolatey Community Repository, changing an embedded package to a remote one is valid if it is not possible to use a semi-embedded package.
 
-### 1.1.7 Clean code
+### Metadata
 
-Remember, code is written for humans, not for computers. Otherwise, we'd all write assembly. So it's better to be able to reason about code than it is to take shortcuts that make code harder to decipher.
+This section details the conventions and guidelines for changing or updating each package's metadata.
+Metadata information is in files with the `.nuspec` file extension or a `Readme.md` file.
 
-If you created custom helper functions put them all in the `helpers.ps1` to keep installer clean and understandable ([example](https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/virtualbox/tools)).
+#### Naming
 
-Chocolatey extension [chocolatey-core.extension](https://github.com/chocolatey-community/chocolatey-packages/tree/master/extensions/chocolatey-core.extension) provides functions that can make the code even more understandable.
+The package's name is taken from its root directory name for automatic packages. Suppose the original identifier of the existing package is not entirely lowercase. In that case, this needs to be overridden in an `update.ps1` script.
+For manual packages, this is defined directly in the package metadata file. In general, this should always be in lowercase. However, existing packages should use the same casing as the original identifier.
+This root directory name should always be in lowercase and follow the official [Chocolatey naming conventions](https://docs.chocolatey.org/en-us/create/create-packages#naming-your-package).
 
-### 1.1.8 Set `softwareName`
+#### Dependency Versions
 
-If the package uses [Install-ChocolateyPackage](https://github.com/chocolatey/choco/wiki/HelpersInstallChocolateyPackage)
-`softwareName` should be set to represent software _Display Name_ correctly. You can use [myuninstaller](https://chocolatey.org/packages/myuninst) package to quickly determine it (it's called _Entry Name_ here).
+1. A minimum dependency version must be specified when adding a dependency. Without this, any version satisfies the dependency. That means it will only automatically upgrade to the latest version if someone upgrades the extension outside their process or incidentally installs some package that uses an explicitly set newer version. Changes to a package that does not specify a minimum or exact version will not be accepted.
+2. When creating a dependency for virtual packages, specify an exact version range for the dependent package (_.install_ or _.portable). This version should be the same as that of the virtual package. An exact version in the metadata file will look like `[1.0.0]`.
 
-This information is used for the licensed edition of chocolatey to detect if the software is installed (Business edition) and when the software have been uninstalled (Pro edition).
+#### Conform To Guidelines
 
-### 1.1.9 Test locally
+Conform with the [official package creation guidelines][Chocolatey Create Packages] and take a look at the [quick start guide][Chocolatey Quickstart Guide] on how to create packages.
 
-Before pull request **make sure package can install and uninstall correctly** using the [chocolatey test environment](https://github.com/chocolatey-community/chocolatey-test-environment). It is used as a reference machine to prevent _it works on my computer syndrome_. AU function `Test-Package -Vagrant` can speed this up.
+You should also know how to [deprecate a package][Chocolatey Package Deprecation]
 
-_Although all PRs are tested on appveyor, all packages are expected to have been locally tested before the PR was submitted_
+#### Obligatory Metadata
 
-### 1.1.10 Dependency versions
+You must fill in all possible elements in the metadata file when appropriate, including elements like `packageSourceUrl`, `projectSourceUrl`, `docsUrl`, `bugTrackerUrl`, `releaseNotes`, `licenseUrl` and `iconUrl` - even when one or more of these are made optional on Chocolatey Community Repository itself. If the software itself does not have any sufficient URLs to be used for these, then it can be omitted.
 
-1. When taking a dependency **on an extension, specify the minimum version**.
-Without this, any version satisfies the dependency. That means unless someone upgrades the extension outside their process or incidentally install some package that uses newer version explicitly set, it will not automatically upgrade to the latest version.
-1. When creating a dependency **for virtual package, use exact version** of the dependent package (.install or .portable) which should be the same as that of virtual package.
-1. When taking a dependency on **anything else, specify minimum or exact version**.
+You can ignore the description in the nuspec metadata file. Only the Readme.md must contain the description and is required.
 
-### 1.1.11 Provide uninstaller only if needed
+#### Obligatory Tags And Categories
 
-Packages should have uninstaller if auto uninstall doesn't work.
+All tags and categories should be in lowercase and in the following order.
+The tags specified should always be space delimited.
 
-### 1.1.12 Ensure compatibility with PowerShell v2+
+- The first specified tag should always be a delimited dash name of the identifier of the package (excluding the suffixes `.install`, `.portable`, `.commandline` and `.app`).
+- The second specified tag should be the category under which the packaged software falls. Only the following list of tags is allowed as the category tag (_NOTE: Existing packages may be missing a category tag, if you change a package that does not make use of one, a maintainer may ask you to include a category tag_)
+  - `addon` (for packaged software that is a plugin or addon for another application as well as PowerShell Modules)
+  - `browser` (For browser implementations like Google Chrome, Firefox, Microsoft Edge, Brave, and Opera.)
+  - `client`
+  - `driver`
+  - `editor`
+  - `extension` (only for Chocolatey Extensions)
+  - `games`
+  - `productivity`
+  - `programming`
+  - `server`
+  - `utility`
+  - `web`
+- The third tag denotes the license type of the packaged software:
+  - `foss` (The packaged application is a free application with its source freely viewable by anyone)
+  - `freeware` (The packaged application is a free application, but its source is not available to be viewed)
+  - `oss` (The packaged application has its source freely viewable by anyone but requires payment for compiled binaries)
+  - `trial` (The packaged application is a commercial or paid application but includes a limited free trial)
+- The fourth tag should be `cross-platform` if the application is available on multiple platforms.
+- You may add additional tags after the fourth tag, which is recommended when possible. These tags should not be any previously mentioned tags used for categorization or licensing.
 
-Chocolatey supports PowerShell v2+ because it supports Windows 7+/Windows Server 2008+ (Windows Server 2003 is supported currently, but is deprecated and expected to be removed in a future version). Due to that, PowerShell v2 is expected to work when you run anything here.
+#### Description
 
-For a reference of which cmdlets are available in PowerShell v2, please see the following link: http://adamringenberg.com/powershell2/
+You can acquire the package description from the software author's website. It should include enough information about the application for those who know nothing about it.
 
-### 1.1.13 Chocolatey compatibility
+Additionally, there are a few descriptive headers that are required to be specified in the description as well.
 
-Packages are expected to be compatible with the Chocolatey version available 12 months ago.
-If a later version of Chocolatey is required, then a dependency on the earliest version compatible with the package must be added.
+| Header Name          | Meaning |
+|----------------------|---------|
+| `Features`           | Bullet list that summarizes the available functionality of the packaged application |
+| `Package Parameters` | Bullet list of the available package parameters that can be used when installing the package. This section can be omitted if there are no package parameters |
+| `Notes`              | Bullet list with any particular information about the software or package that the user should know about, e.g. recent breaking changes to the installation, uninstall or unusual edge cases |
 
-## 1.2 Metadata
+#### Maintainers
 
-### 1.2.1 Obligatory metadata
+Maintainers of the package, in our case, are folk that have edited a package - either by being the original maintainer of the package or by contributing one or more changes to the package after it was added to the repository.
+The metadata file should always include the package's current and historical maintainers. If you are editing a package, add yourself using a comma-delimited list format.
+If the user `chocolatey-community` is not already specified as the package's maintainer, this user must be added as the first maintainer in the `owners` element.
+One or more of the maintainers listed in the `owners` element should be similar to a name listed in our `CODE_OWNERS` file and will be considered the primary maintainer of the package.
 
- Make sure the following metadata is present and correct (unless it doesn't apply): `packageSourceUrl`, `projectSourceUrl`, `docsUrl`, `bugTrackerUrl`, `releaseNotes`, `licenseUrl`, `iconUrl`.
+#### Icons
 
-`packageSourceUrl` **must not point to the repository root** but to the package root directory.
+A package must have an icon available if the packaged software has an icon. This icon must be named the same as the package and is placed in the [icons][] directory.
+If the package name ends with either `.install` or `.portable`, the suffix may be ignored in the icon name.
+When an icon is added to this folder with the correct name, it will **automatically** be set in the metadata file and the README file when our build server updates the package, if the metadata file contains an `<IconUrl>` element.
 
-### 1.2.2 Obligatory tags
+**IMPORTANT: If no icon is available, the comment `<!-- IconUrl: Skip check -->` should be added to the metadata file**
 
-Keep tags **lowercase** and separate them with spaces. For multi-word tags, use `-` between words (e.g. `cross-platform`).
+#### Chocolatey Compatibility
 
-The following tags are mandatory to use if they apply:
+All packages are expected to be compatible with the oldest version of Chocolatey CLI we list as supported on our [Wiki Page][].
+If that is not possible, and the package needs a version of Chocolatey CLI released later, it will need to include a dependency for that Chocolatey CLI version.
 
-|tag|meaning|
-|---|---|
-| `foss` | for all free and open source packages|
-| `cross-platform` | for all packages available on other platforms then Windows|
-| `freeware` | for all freeware but not open source packages|
-| `trial` | for all proprietary commercial tools that require license|
-| `cli` | for all command line tools|
-| `games` | for all games |
+### Chocolatey Scripts
 
-**Note**: If the software provides both free and paid variant within the same executable so that free version doesn't have a time limit, mark them as both `freeware` and `trial`.
+All PowerShell scripts are expected to be compatible with Windows PowerShell v2 through v5.1. If this is not possible, a dependency on the package `PowerShell` is required, with its minimum version set to the earliest version that the scripts in the package are expected to work with.
 
-### 1.2.3 Informative description
+#### UI Automation
 
-Description is maintained in the `README.md` file in the root of the package and automatically set in the nuspec by AU during an update. It should include the following **2nd level headers (##) in the given order**:
+Some installers do not provide silent arguments, and can be challenging to automate.
 
-|header                |meaning                                        |
-|---                   |---                                            |
-| `Features`           | Bullet list with basic software functionality |
-| `Package parameters` | Bullet list with of all package parameters    |
-| `Notes`              | Bullet list with any special information to the user if any |
+Suppose the package needs to perform tasks that cannot be done with command line switches, e.g. clicking away a prompt during installation that cannot be suppressed as in the [dropbox][Dropbox Package] package. In that case, you can use [AutoHotkey][Autohotkey Package].
 
-### 1.2.4 Add chocolatey-community among owners
+Make [autohotkey.portable][Autohotekey Package] a dependency of the package. Community maintainers generally prefer AutoHotkey over [AutoIt][AutoIt Package] because AutoHotkey is more lightweight, FOSS, and more actively developed than AutoIt.
 
-Keep any existing owners and add `chocolatey-community` user before all others.
+##### Work On All Locales
 
-### 1.2.5 Provide icon
+Scripts must work on every locale available for Windows. Be careful when using text strings for windows in the script that could differ in another language.
 
-Packages **must have an icon** if one is available. The icon must be named the same as the package and is placed in the [icons](https://github.com/chocolatey-community/chocolatey-packages/tree/master/icons) directory.
+##### Avoid Brittle Scripts
 
-If the package name ends with either `.install` or `.portable` those suffixes may be ignored in the icon name.
+Do not create brittle scripts that work only when the user doesn't interfere. All script elements should be as precise as possible - for instance, instead of using the [Send][AHK Send Docs] function, which will work correctly only if the desired window is active, use [ControlSend][AHK ControlSend Docs] which doesn't require window activation or use [BlockInput][AHK BlockInput Docs] for short periods.
 
-When icon is added to this folder **it will automatically be set** in the _nuspec file_ and README.md that contains `<img>` tag.
+#### Source Files
 
-**NOTE**: If the packaged software do not provide an icon, add the following to the package metadata file: `<!-- IconUrl: Skip check -->`.
+##### Encoding
 
-## 1.3 AU Script
+Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for the `*.ps1` files. See [character encodings][].
 
-### 1.3.1 Use `UseBasicParsing` [Optional]
+##### Code Style
 
-If you use `Invoke-WebRequest` to download a web page, try to use `UseBasicParsing` if possible. Otherwise, the script will require IE engine installed on Windows Server used to run the updater and may also break due to the _accept cookie_ popup (see [#382](https://github.com/chocolatey-community/chocolatey-packages/issues/382)).
+Refrain from committing code with obvious styling problems such as irregular indentation levels, very long lines, too many comments, too many empty lines, and other styling issues. Please follow the [PoshCode PowerShell Practice and Style Guide][].
 
-### 1.3.2 Do not download large files
+The project contains a [`.editorconfig`][Editorconfig Source]
+ file that you can use with many editors via [EditorConfig][] plugins. Ensure you use an editor with this support and have the support enabled.
 
-Unless the package installer/executable/archive needs some special handling (like the need to read version from file, or something else not available to be handled by AU), anything bigger than few MB should never be downloaded within `au_GetLatest` function. Normally, the files are downloaded during the embedding process by the `au_BeforeUpdate`.
+Keep the package source files clean and remove outdated code and unnecessary comments. Comment on non-obvious code so that others can easily understand what it does.
 
-### 1.3.3 Specify correct `NuspecVersion`
+### Update Script
 
-Since commit message is used to push packages to the community repository (CR), prior to commit of the AU package specify correct `NuspecVersion` in the nuspec file as follows:
+Update scripts are the PowerShell scripts responsible for getting information about the software's most current version, where it can be acquired from, and how to modify the source code to produce the package. It is typically called `update.ps1`.
+These scripts should be located in the root of the package directory, right next to the metadata (`.nuspec`) file.
+The update script should be compatible with Windows PowerShell v5 and may not need to be compatible with PowerShell Core.
 
-1. If you want to fix the existing CR package version for which no update is available at vendor specify the `NuspecVersion` the same as `RemoteVersion`.
-1. If you want to push new package version to CR and `RemoteVersion` doesn't exist on CR, set `NuspecVersion` to `0.0`. AU updater will then bring the version to correct one during the next AU run and commit it to the git repository.
-1. If you want to fix package that is pushed but not yet approved (for example it fails verifier) do the same as in first case but request in PR comment that you want version explicitly set.
+#### Use `UseBasicParsing` When Possible
 
-__NOTE__: Automatic fix version doesn't work if package is using the _revision_ part of the version (4th number). In that case _explicit version_ must be used: `[AU package:version]`.
-## 1.4 UI Automation
+If you use the PowerShell cmdlet `Invoke-WebRequest` in the update script, always make sure to also pass in `-UseBasicParsing` to this cmdlet. There may be cases where using this parameter is not possible. Add a comment before the call about why `-UseBasicParsing` can not be used in these cases.
+Any script that does not use this argument requires the Internet Explorer engine to be available and the web browser to have launched at least once before.
 
-Some installers do not provide silent arguments and can be difficult to automate.
+#### Do Not Download Large Files
 
-If the package needs to perform tasks that cannot be done with command line switches, e.g. clicking away a prompt during installation that cannot be suppressed like for example in the [dropbox](https://chocolatey.org/packages/dropbox) package, you can use [AutoHotkey](https://chocolatey.org/packages/autohotkey.portable). Make [autohotkey.portable](https://chocolatey.org/packages/autohotkey.portable) a dependency of the package. Prefer AutoHotkey over [AutoIt](https://chocolatey.org/packages/autoit.commandline), because AutoHotkey is more lightweight, FOS and more actively developed than AutoIt.
+Unless a package installer/executable/archive needs some special handling (like reading the version from the file or something else not automatically handled by AU), do not download anything bigger than a few MB within `au_GetLatest` function. Usually, the files are downloaded during the updating process automatically or in the `au_BeforeUpdate` function.
+Try finding alternatives to reading the version from the file when needed to prevent the need to download the file if no version elsewhere is available, like checking the headers of the response before doing a download.
 
-### 1.4.1 Work on all locales
+## FAQ
 
-Script must work on every locale available for Windows, so be careful when using strings of text of window in the script that could be different in another language.
+### Why Do We Automatically Close Issues?
 
-### 1.4.2 Avoid brittle scripts
+The Chocolatey Packages repository is a shared repository that is worked on by the entire Chocolatey Community. When an issue lives for a long enough time to become stale, it needs more interest in the Community for the issue to become fixed. As there needs to be more interest in the Community, it is unlikely the issue will be fixed anytime soon, and it will instead be automatically closed.
 
-Do not create brittle scripts that work only when user doesn't interfere. All script elements should be as precise as possible - for instance, instead of using [Send](https://autohotkey.com/docs/commands/Send.htm) function which will work correctly only if the desired window is active, use [ControlSend](https://autohotkey.com/docs/commands/ControlSend.htm) which doesn't require window activation or use [BlockInput](https://autohotkey.com/docs/commands/BlockInput.htm) for short period of time.
+### Why Do Not The Repository Maintainers Fix The Issues?
 
-# 2. Source Files
+While there may be times that a repository maintainer will take steps to fix problems with a package, it is not the main reason for the repository maintainers here.
+The repository maintainers' main tasks are to keep order in the repository, triage issues, ensure that the appropriate people review pull requests and that package changes are up to the quality expected for packages in the repository.
 
-### 2.1 Encoding
+Repository maintainers are not responsible for fixing issues with the automated updater, automated checks on Chocolatey Community Repository that are failing, or implementing features or enhancements.
+That does not mean it will not happen, but it is not one of their responsibilities.
 
-Always __use UTF-8 without BOM__ for the `*.nuspec` and __UTF-8 with BOM__ for the `*.ps1` files. See [character encodings](https://docs.chocolatey.org/en-us/create/create-packages#character-encoding).
+### How Can I Create A Fix Version Of A Package?
 
-### 2.2 Code style
+A maintainer with repository write access must create a fixed package version.
+If you do not have write access, please open an issue in our repository by filling out all the information being asked of you when using the [outdated template][Outdated Template]
+Make sure the title of the issue says: `(packageName) Outdated` (_replace packageName with the name of the package_)
+If you have write access to the repository and can push directly, see the appropriate section in the [COMMITTERS](COMMITTERS.md#providing-fix-versions) documentation file.
 
-Do not commit code with obvious styling problems such as irregular indentation levels, very long lines, too many comments, too many empty lines, etc.
-
-The project contains [.editorconfig](https://github.com/chocolatey-community/chocolatey-packages/blob/master/.editorconfig)
- file that can be used with many editors via [EditorConfig](http://editorconfig.org/) plugins.
-
-Keep the package source files clean and remove obsolete or outdated code and unnecessary comments. Comment non-obvious code so that others can easily understand what it does.
-
-# 3. Teamwork
-
-Good communication is essential so please take a look at [Code of Conduct](https://github.com/chocolatey/.github/blob/main/CODE_OF_CONDUCT.md) regarding it.
-
-### 3.1 Update CODEOWNERS
-
-If you are submitting or making changes to a package and want to ensure that you can review any further changes, add your name to the [CODEOWNERS](https://github.com/chocolatey-community/chocolatey-packages/blob/master/.github/CODEOWNERS) file.
-
-### 3.2 Single package per pull request
-
-All contributors should issue pull request containing single package. In special cases multiple packages per PR can be allowed.
-
-### 3.3 Open issues and pull request expiration
-
-Issues that remain open for 2 months without any activity will be marked as pending closure, if addition 14 days goes by without any activity the issue will be closed with the label [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/issues?utf8=%E2%9C%93&q=label%3AUnresolved%20).
-
-Pull Requests that have changes requested, and/or is marked with the label [0 - Waiting on User](https://github.com/chocolatey-community/chocolatey-packages/issues?q=is%3Aopen+label%3A%220+-+Waiting+on+User%22+sort%3Aupdated-desc) will be closed after 30 days of inactivity.
-
-### 3.4 Understanding labels
-
-Most of the labels are self describing, here are few that require explanation:
-
-- [5 - Push required](https://github.com/chocolatey-community/chocolatey-packages/labels/5%20-%20Push%20required)
-Package is done when it's pushed to community repository - If you fix the package source code and commit PR, the job is generally not over if it's not pushed. Using AU package can be pushed with commit commands but sometimes its overseen.
-- [Wontfix](https://github.com/chocolatey-community/chocolatey-packages/labels/Wontfix)
-Team doesn't think there is anything to fix here or that time required to fix it doesn't justify the benefit.
-- [Unresolved](https://github.com/chocolatey-community/chocolatey-packages/labels/Unresolved)
-The issue is unresolved - no feedback, no interest, and it probably expired.
-- [0 - _Triaging](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20_Triaging)
-Team is checking, confirming and measuring out the request.
-- [Pending closure](https://github.com/chocolatey-community/chocolatey-packages/labels/Pending%20closure)
-The issue is approaching end of issue lifetime. This is an announcement that the issue will soon get closed in a few weeks, unless there is some new activity.
-- [0 - Waiting on user](https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20Waiting%20on%20User)
-The team is waiting for somebody to respond. Until that happens, there will be no activity.
+[@mention]: https://github.blog/2011-03-23-mention-somebody-they-re-notified/
+[7zip Source]: https://github.com/chocolatey-community/chocolatey-packages/tree/33ff3de69acedcac88f44b670fcb44b6422728db/automatic/7zip.install
+[Active Presenter Legals]: https://github.com/chocolatey-community/chocolatey-packages/tree/33ff3de69acedcac88f44b670fcb44b6422728db/automatic/activepresenter/legal
+[AHK BlockInput Docs]: https://www.autohotkey.com/docs/v2/lib/BlockInput.htm
+[AHK ControlSend Docs]: https://www.autohotkey.com/docs/v2/lib/ControlSend.htm
+[AHK Send Docs]: https://www.autohotkey.com/docs/v2/lib/Send.htm
+[AU Source]: https://github.com/chocolatey-community/chocolatey-au
+[Autohotkey Package]: https://community.chocolatey.org/packages/autohotkey.portable
+[AutoIt Package]: https://community.chocolatey.org/packages/autoit.commandline
+[character encodings]: https://docs.chocolatey.org/en-us/create/create-packages#character-encoding
+[Chocolatey Create Packages]: https://docs.chocolatey.org/en-us/create/create-packages
+[Chocolatey Package Deprecation]: https://docs.chocolatey.org/en-us/community-repository/maintainers/deprecate-a-chocolatey-package
+[Chocolatey Quickstart Guide]: https://docs.chocolatey.org/en-us/create/create-packages-quick-start
+[Chocolatey Software Legal]: https://docs.chocolatey.org/en-us/information/legal
+[Chocolatey Test Environment]: https://github.com/chocolatey-community/chocolatey-test-environment
+[Code of Conduct]: https://github.com/chocolatey-community/.github/blob/main/CODE_OF_CONDUCT.md
+[Dropbox Package]: https://community.chocolatey.org/packages/dropbox
+[EditorConfig Source]: https://github.com/chocolatey-community/chocolatey-packages/blob/master/.editorconfig
+[EditorConfig]: https://editorconfig.org/
+[icons]: https://github.com/chocolatey-community/chocolatey-packages/tree/master/icons
+[Outdated Template]: https://github.com/chocolatey-community/chocolatey-packages/issues/new?assignees=&labels=Outdated&template=outdated-report.yml&title=%28packageName%29+
+[PoshCode PowerShell Practice and Style Guide]: https://github.com/PoshCode/PowerShellPracticeAndStyle
+[qbittorrent-source]: https://github.com/chocolatey-community/chocolatey-packages/tree/fa0d822f437b91fcd9be0730bfc8639098e3f3a9/automatic/qbittorrent
+[Transifex CLI Source]: https://github.com/chocolatey-community/chocolatey-packages/tree/33ff3de69acedcac88f44b670fcb44b6422728db/automatic/transifex-cli
+[Waiting Label]: https://github.com/chocolatey-community/chocolatey-packages/labels/0%20-%20Waiting%20on%20User
+[Wiki Page]: https://github.com/chocolatey-community/chocolatey-packages/wiki/Supported-Chocolatey-CLI-versions

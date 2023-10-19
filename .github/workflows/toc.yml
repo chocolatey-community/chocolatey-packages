@@ -15,7 +15,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CREATE_PR: true
-          TARGET_PATHS: "README*.md,CONTRIBUTING*.md"
+          TARGET_PATHS: "README*.md,CONTRIBUTING*.md,COMMITTERS*.md"
           FOLDING: true
           COMMIT_MESSAGE: '(docs) Update TOC'
           PR_TITLE: '(docs) Update TOC (${PR_MERGE_REF})'
