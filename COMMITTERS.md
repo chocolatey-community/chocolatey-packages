@@ -8,11 +8,11 @@ This file details what is needed for different operations in the repository that
 <details>
 <summary>Table of Contents</summary>
 
-- [Providing fixed version](#providing-fix-version)
-  - [Request a standard fix version creation](#request-a-normal-fix-version-creation)
-  - [Request a standard fix version creation for a stream](#request-a-normal-fix-version-creation-for-a-stream)
-    - [Request a fixed version update](#request-a-fixed-version-update)
-    - [Requesting a fix for a package using 4-part version number](#requesting-a-fix-for-a-package-using-4-part-version-number)
+- [Providing A Fixed Version](#providing-a-fixed-version)
+  - [Request A Standard Fix Version Creation](#request-a-standard-fix-version-creation)
+  - [Request A Standard Fix Version Creation For A Stream](#request-a-standard-fix-version-creation-for-a-stream)
+    - [Request A Fixed Version Update](#request-a-fixed-version-update)
+    - [Requesting A Fix For A Package Using 4 Part Version Number](#requesting-a-fix-for-a-package-using-4-part-version-number)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
