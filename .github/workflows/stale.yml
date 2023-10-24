@@ -27,10 +27,13 @@ jobs:
           close-pr-label: 'Unresolved'
           exempt-issue-labels: 'Security / CVE,0 - Backlog,1 - Ready for work,2 - Working, 3 - Review, 5 - Push required'
           exempt-pr-labels: 'Security / CVE'
-          labels-to-remove-when-unstale: '0 - Wating on User,Pending closure'
+          labels-to-remove-when-unstale: '0 - Waiting on User,Pending closure'
           stale-issue-message: |
             Is this still relevant? If so, what is blocking it? Is there anything you can do to help move it forward?
             This issue will be closed in 14 days if it continues to be inactive.
+
+            Please do not add a comment to circumvent automatic closure unless **you** plan to help move it forward.
+            Doing this may lead to the issue being closed immediately instead.
           close-issue-message: |
             Dear contributor,
 
