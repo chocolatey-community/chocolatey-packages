@@ -46,7 +46,7 @@ You can pass parameters as follows:
 ]]></description>
     <projectUrl>http://www.sonatype.com/nexus-repository-oss</projectUrl>
     <projectSourceUrl>https://github.com/sonatype/nexus-public</projectSourceUrl>
-    <docsUrl>http://books.sonatype.com/nexus-book/3.0/reference/index.html</docsUrl>
+    <docsUrl>https://help.sonatype.com/repomanager3</docsUrl>
     <tags>nexus-repository server freeware cross-platform maven nuget npm java rubygems docker eclipse p2 osgi obr apt yum rpm artifact bower ssl respository sonatype nexus admin</tags>
     <copyright>Sonatype</copyright>
     <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
