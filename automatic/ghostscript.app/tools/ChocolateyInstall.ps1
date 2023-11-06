@@ -18,6 +18,12 @@ $packageArgs = @{
   validExitCodes = @(0)
 }
 
+# silent install requires AutoHotKey after installer removed silent flag
+$ahkFile = Join-Path $toolsPath "ghostscript.ahk"
+$ahkProc = Start-Process -FilePath AutoHotkey.exe -ArgumentList "$ahkFile" -PassThru
+Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "AutoHotKey Process ID:`t$($ahkProc.Id)"
+
 Install-ChocolateyInstallPackage @packageArgs
 
 Remove-Item -Force -ea 0 "$toolsPath\*.$($packageArgs.fileType)*"
