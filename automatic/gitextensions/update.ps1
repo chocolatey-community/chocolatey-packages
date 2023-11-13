@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module AU
 
 $softwareName = 'Git Extensions*'
 
@@ -22,10 +22,10 @@ function global:au_GetLatest {
   $LatestRelease = Get-GitHubRelease -Owner "gitextensions" -Name "gitextensions"
 
   $re = 'GitExtensions-(.+)\.msi$'
-  $downloadUrl = $LatestRelease.assets.browser_download_url | Where-Object { $_ -match $re } | select -First 1
+  $downloadUrl = $LatestRelease.assets.browser_download_url | Where-Object { $_ -match $re } | Select-Object -First 1
   $releaseUrl = $LatestRelease.html_url
   
-  $version = ($downloadUrl -split '\/' | select -last 1 -skip 1).Substring(1)
+  $version = ($downloadUrl -split '\/' | Select-Object -last 1 -skip 1).Substring(1)
 
   $version = $version -replace ".RC", "-RC"
 
