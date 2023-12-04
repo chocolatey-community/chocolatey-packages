@@ -9,7 +9,7 @@
     <owners>chocolatey-community</owners>
     <projectUrl>https://github.com/Azure/azure-storage-azcopy</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/azcopy10</packageSourceUrl>
-    <iconUrl>https://rawcdn.githack.com/jbpaux/chocolatey-packages/264e0172dcd810bc7ea08a2225876cff9710aa6f/azcopy10/azcopy-logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@de115ff0e16d124c2099b8f95bd08bb92b6e4918/icons/azcopy10.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://raw.githubusercontent.com/Azure/azure-storage-azcopy/master/LICENSE</licenseUrl>
     <docsUrl>https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10</docsUrl>
