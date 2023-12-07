@@ -26,8 +26,8 @@ function global:au_GetLatest {
   $version = $release_info | ForEach-Object Content | ConvertFrom-Csv | ForEach-Object current_version
 
   @{
-    URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
-    URL64 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'
+    URL32 = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi'
+    URL64 = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi'
     Version = Get-FixVersion $version -OnlyFixBelowVersion $paddedUnderVersion
     RemoteVersion = $version
     PackageName = 'GoogleChrome'
