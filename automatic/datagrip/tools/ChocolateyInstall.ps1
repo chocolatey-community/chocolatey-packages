@@ -6,7 +6,9 @@ $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $programFiles = (${env:ProgramFiles(x86)}, ${env:ProgramFiles} -ne $null)[0]
 $pp = Get-PackageParameters
 
-$installDir = "$programFiles\JetBrains\DataGrip $env:ChocolateyPackageVersion"
+# If the release version ends in '.0', remove this since JetBrains don't
+# use this part of the version number when creating the installation directory.
+$installDir = "$programFiles\JetBrains\DataGrip $($env:ChocolateyPackageVersion -replace '.0$', '')"
 if ($pp.InstallDir) {
     $installDir = $pp.InstallDir
 }
