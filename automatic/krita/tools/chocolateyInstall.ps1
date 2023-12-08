@@ -12,7 +12,7 @@ $packageArgs = @{
   softwareName = 'Krita'
 
   checksumType = 'sha256'
-  file64       = "$toolsDir\krita-x64-5.2.1-setup.exe"
+  file64       = "$toolsDir\krita-x64-5.2.2-setup.exe"
 }
 
 Install-ChocolateyInstallPackage @packageArgs
