@@ -22,7 +22,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $releasesData = Invoke-RestMethod -UseBasicParsing -Method Get -Uri $releases
-  $version = $data.channels.Stable.version
+  $version = $releasesData.channels.Stable.version
   
   @{
     URL32 = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi'
