@@ -2,6 +2,7 @@
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json"
+$paddedUnderVersion = '57.0.2988'
 
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
