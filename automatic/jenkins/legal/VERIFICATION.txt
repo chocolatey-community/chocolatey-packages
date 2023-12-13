@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer has been downloaded from their official download link from <https://www.jenkins.io/download/>
 
 1. Download the file via:
-  64-Bit: <http://mirrors.jenkins-ci.org/windows-stable/2.426.1/jenkins.msi>
+  64-Bit: <http://mirrors.jenkins-ci.org/windows-stable/2.426.2/jenkins.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum64: 77E0B34285FDE612B7F712184BC89782D4070AB146530C52627754621A080ABF
+  checksum64: 8D9BC5B546AE748ED602B51D41EC8CE6A575C48284E098009D31673BC26BE87D
 
 File 'LICENSE.txt' is obtained from <https://github.com/jenkinsci/jenkins/blob/master/LICENSE.txt>
