@@ -1,7 +1,7 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://omahaproxy.appspot.com/all?os=win&amp;channel=stable'
+$releases = 'https://chromiumdash.appspot.com/fetch_releases?channel=Stable&platform=Windows&num=1&offset=0'
 $paddedUnderVersion = '57.0.2988'
 
 function global:au_BeforeUpdate {
@@ -23,7 +23,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $release_info = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $version = $release_info | ForEach-Object Content | ConvertFrom-Csv | ForEach-Object current_version
+  $version = ($release_info | % Content | ConvertFrom-Json)[0].version
 
   @{
     URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
