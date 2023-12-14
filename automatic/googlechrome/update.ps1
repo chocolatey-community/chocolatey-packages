@@ -23,7 +23,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $release_info = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $version = ($release_info | % Content | ConvertFrom-Json)[0].version
+  $version = ($release_info | ConvertFrom-Json)[0].version
 
   @{
     URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
