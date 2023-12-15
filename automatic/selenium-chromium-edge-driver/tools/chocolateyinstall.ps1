@@ -7,10 +7,10 @@ $parameters = Get-PackageParameters
 
 $packageArgs = @{
   packageName    = 'selenium-chromium-edge-driver'
-  url            = 'https://msedgedriver.azureedge.net/119.0.2151.97/edgedriver_win32.zip'
-  url64          = 'https://msedgedriver.azureedge.net/119.0.2151.97/edgedriver_win64.zip'
-  checksum       = '6d4a19ec2db71167cd1df9fa4e58ca4ccaed43411a90151233e093a09e683b3b'
-  checksum64     = '774b376c5698c36d1d0c0e03f0d2e9f756ae4cbd86409d68ee9a7b02a998b4f4'
+  url            = 'https://msedgedriver.azureedge.net/120.0.2210.77/edgedriver_win32.zip'
+  url64          = 'https://msedgedriver.azureedge.net/120.0.2210.77/edgedriver_win64.zip'
+  checksum       = 'fc8d0de5be6e6ad0ae8794aecac8e417df1cf6dc8579bf5ce02277437b9bd8c7'
+  checksum64     = '6e0fd88ce9c5e528614f0c97867f8376fd43eb7ba4e5270ecf053919bca4b253'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   unzipLocation  = $seleniumDir
