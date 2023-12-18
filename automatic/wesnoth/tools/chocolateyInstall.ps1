@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = 'wesnoth'
   fileType       = 'exe'
-  url            = 'https://sourceforge.net/projects/wesnoth/files/wesnoth/wesnoth-1.17.23/wesnoth-1.17.23-win64.exe/download'
+  url            = 'https://sourceforge.net/projects/wesnoth/files/wesnoth/wesnoth-1.17.24/wesnoth-1.17.24-win64.exe/download'
   softwareName   = 'Battle for Wesnoth*'
-  checksum       = '99ecbfbf2a35f45fc6606ae5c349b30c60ea46799d9695808490fb1536f7f02f'
+  checksum       = '0ea5b39a57493d543e721f425bc8f4d7846af601a4501c6750a8727cc863e352'
   checksumType   = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
