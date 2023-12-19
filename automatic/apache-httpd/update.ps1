@@ -1,21 +1,21 @@
 ﻿Import-Module au
 
-$releases = 'https://www.apachehaus.com/cgi-bin/download.plx'
+$releases = 'https://www.apachelounge.com/download/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix }
 
 function global:au_GetLatest {
-  $versionRegEx = 'httpd\-([\d\.]+).*\-x86\-(vs17).*\.zip'
+  $versionRegEx = 'httpd\-([\d\.]+).*?\-win32\-([vV][sS]17).*?\.zip'
 
-  $downloadPage = Invoke-WebRequest $releases -UseBasicParsing
+  $downloadPage = Invoke-WebRequest $releases -UseBasicParsing -UserAgent Chocolatey
   $matches = [regex]::match($downloadPage.Content, $versionRegEx)
   $version32 = $matches.Groups[1].Value
-  $url32 = "https://www.apachehaus.com/downloads/$($matches.Groups[0].Value)"
+  $url32 = "https://www.apachelounge.com/download/VS17/binaries/$($matches.Groups[0].Value)"
 
-  $versionRegEx = $versionRegEx -replace 'x86', 'x64'
+  $versionRegEx = $versionRegEx -replace 'win32', 'win64'
   $matches = [regex]::match($downloadPage.Content, $versionRegEx)
   $version64 = [version]$matches.Groups[1].Value
-  $url64 = "https://www.apachehaus.com/downloads/$($matches.Groups[0].Value)"
+  $url64 = "https://www.apachelounge.com/download/VS17/binaries/$($matches.Groups[0].Value)"
 
   if ($version32 -ne $version64) {
     throw "32bit and 64bit version do not match. Please check the update script."

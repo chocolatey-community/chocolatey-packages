@@ -2,18 +2,18 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The installer has been downloaded from their official download link listed on <https://www.apachehaus.com/cgi-bin/download.plx>
+The installer has been downloaded from their official download link listed on <https://www.apachelounge.com/download/>
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://www.apachehaus.com/downloads/httpd-2.4.55-o111s-x86-vs17.zip>
-  64-Bit: <https://www.apachehaus.com/downloads/httpd-2.4.55-o111s-x64-vs17.zip>
+  32-Bit: <https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.58-win32-vs17.zip>
+  64-Bit: <https://www.apachelounge.com/download/VS17/binaries/httpd-2.4.58-win64-VS17.zip>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 34E94E6CFB23B0AB6658A0EE06DB53460CC907B80851F7EA325EF482224D12B8
-  checksum64: 33E5D2C657583F2AB5D9D52D9C626E4BF369B18965491EF75BEF121388EE34E3
+  checksum32: 5C79B779475777534F0C8E93CE6E662B4226700511B92571F75BA0441DAF9C0B
+  checksum64: E9A179AD4767C595BE55024EE0415A96AE522F492DECA4B0D54CF136FF2B092C
 
 File 'LICENSE.txt' is obtained from <https://www.apache.org/licenses/LICENSE-2.0.txt>
