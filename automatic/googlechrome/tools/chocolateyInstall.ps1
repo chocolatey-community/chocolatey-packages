@@ -1,9 +1,10 @@
 ﻿$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
-$version = '119.0.6045.200'
-if ($version -eq (Get-ChromeVersion)) {
-  Write-Host "Google Chrome $version is already installed."
+$version = '119.0.6045.106'
+$currentVersion = Get-ChromeVersion
+if ($version -le $currentVersion) {
+  Write-Host "Google Chrome $currentVersion is already installed."
   return
 }
 
