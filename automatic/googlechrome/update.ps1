@@ -1,7 +1,7 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://omahaproxy.appspot.com/all?os=win&amp;channel=stable'
+$releases = "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json"
 $paddedUnderVersion = '57.0.2988'
 
 function global:au_BeforeUpdate {
@@ -22,12 +22,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $release_info = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $version = $release_info | ForEach-Object Content | ConvertFrom-Csv | ForEach-Object current_version
-
+  $releasesData = Invoke-RestMethod -UseBasicParsing -Method Get -Uri $releases
+  $version = $releasesData.channels.Stable.version
+  
   @{
-    URL32 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise.msi'
-    URL64 = 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'
+    URL32 = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi'
+    URL64 = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi'
     Version = Get-FixVersion $version -OnlyFixBelowVersion $paddedUnderVersion
     RemoteVersion = $version
     PackageName = 'GoogleChrome'
