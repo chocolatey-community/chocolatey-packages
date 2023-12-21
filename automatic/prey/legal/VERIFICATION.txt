@@ -3,19 +3,19 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/prey/prey-node-client/releases>
+location on <>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/prey/prey-node-client/releases/download/v.1.10.10/prey-windows-1.10.10-x86.msi>
-  64-Bit software: <https://github.com/prey/prey-node-client/releases/download/v.1.10.10/prey-windows-1.10.10-x64.msi>
+  32-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.11.10/prey-windows-1.11.10-x86.msi>
+  64-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.11.10/prey-windows-1.11.10-x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: E831BC68BE3DDC2F3703AD34A41CAAA6373F513E2B7B4A5F093DD980FC22D034
-  checksum64: 9A9F7B5B096A38E9C079465FB49407AFFAF366C3F2189960402E197B297A81F1
+  checksum32: 46C2A7690597615C78C727079BF318B60F47773C9F6100F87540F5E0AC24B0A2
+  checksum64: DB0EB242AF64F9A1FC0CF1A0532F246EA82AB77153802F7FBE77F0663587FA74
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/prey/prey-node-client/blob/master/license.txt>
