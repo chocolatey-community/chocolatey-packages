@@ -24,7 +24,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $LatestRelease = Get-GitHubRelease derailed k9s
 
-  $checksumAsset = $LatestRelease.assets | Where-Object { $_.name -eq 'checksums.txt' } | Select-Object -ExpandProperty browser_download_url
+  $checksumAsset = $LatestRelease.assets | Where-Object { $_.name -eq 'checksums.sha256' } | Select-Object -ExpandProperty browser_download_url
   $checksum_page = Invoke-WebRequest -Uri $checksumAsset -UseBasicParsing
   $checksum64 = [regex]::Match($checksum_page, "([a-f\d]+)\s*$([regex]::Escape($filename64))").Groups[1].Value
 
