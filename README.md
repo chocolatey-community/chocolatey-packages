@@ -8,6 +8,9 @@
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [community.chocolatey.org profile](https://community.chocolatey.org/profiles/chocolatey-community)
 
+# NOTE: Currently we are unlikely to accept any new or migrated packages into this repository. Please raise a [Discussion](discussions) if you have a strong case for new or migrated packages.
+# NOTE: The repository is currently being maintained by community members of the Chocolatey Team in their spare time. If you are interested in helping out [troubleshoot issues](issues), review [pull requests](pulls) or contribute code for the maintenance of packages, we would be happy to have you! If you have any questions, please raise a [discussion](discussions) or reach out on our [Community Chat](https://ch0.co/community).
+
 <!-- markdownlint-disable -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -27,16 +30,14 @@
 
 This repository contains Chocolatey packages, most of which are [automatically](https://docs.chocolatey.org/en-us/create/automatic-packages) updated.
 
-These packages are managed and maintained by the Chocolatey Community. To get a package added here, the official [Chocolatey Community Account](http://community.chocolatey.org/profiles/chocolatey-community) has to have push access to the package on [community.chocolatey.org](http://community.chocolatey.org).
-
 **All packages in this repository should conform with the [contributing guidelines](CONTRIBUTING.md).** Contributions that follow the guideliness are welcome.
-All packages in this repository are expected to be installable with any version of Chocolatey being made available in the past 12 months, unless a dependency on Chocolatey has been added.
+All packages in this repository are expected to be installable with any version of Chocolatey CLI being made available in the past 12 months, unless a dependency on Chocolatey CLI has been added.
 
 ### Etiquette Regarding Communication
 
 Please see our [Code Of Conduct](https://github.com/chocolatey-community/.github/blob/main/CODE_OF_CONDUCT.md).
 
-When requesting support, try to remember that we are all volunteers that have lives outside of open source and none of us are paid to ensure things work for you, so please be considerate of others' time when you are asking for things. Many of us have families that also need time as well and only have so much time to give on a daily basis. A little consideration and patience can go a long way. Thanks for understanding.
+When requesting assistance, try to remember that we are all volunteers that have lives outside of open source and none of us are paid to ensure things work for you. Please be considerate of others' time and effort when you are asking for things. Many of us have families that also need time as well and only have so much time to give on a daily basis. A little consideration and patience can go a long way. Thanks for understanding.
 
 ### Where This Fits into Chocolatey
 
