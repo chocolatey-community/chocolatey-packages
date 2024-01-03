@@ -25,14 +25,14 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest $releases -UseBasicParsing
     $re = "\.exe$"
-    $url = $download_page.Links | ? href -match $re | select -Expand href -First 1
-    $domain  = $releases -split '(?<=//.+)/' | select -First 1
-    $version = $url -split '/' | select -Last 1 -Skip 1
+    $url = $download_page.Links | Where-Object href -match $re | Select-Object -Expand href -First 1
+    $domain  = $releases -split '(?<=//.+)/' | Select-Object -First 1
+    $version = $url -split '/' | Select-Object -Last 1 -Skip 1
     @{
         URL32       = "https://download.pdfforge.org/download/pdfcreator/PDFCreator-stable?download"
         Version     = $version
         PackageName = $softwareName
-        FileName32  = $url -split 'file=' | select -Last 1
+        FileName32  = $url -split 'file=' | Select-Object -Last 1
         FileType    = 'exe'
     }
 }
