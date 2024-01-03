@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$shortversion = '90'
+$shortversion = '91'
 $pp = Get-PackageParameters
 
 . $toolsDir\helpers.ps1
@@ -9,8 +9,8 @@ $installDir = Get-InstallDir
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $installDir
-  file          = "$toolsDir\gvim_9.0.2189_x86.zip"
-  file64        = "$toolsDir\gvim_9.0.2189_x64.zip"
+  file          = "$toolsDir\gvim_9.1.0_x86.zip"
+  file64        = "$toolsDir\gvim_9.1.0_x64.zip"
 }
 
 $installArgs = @{
