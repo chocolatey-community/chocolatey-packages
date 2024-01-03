@@ -36,7 +36,6 @@
 */es*                 @TheCakeIsNaOH
 */selenium-chrome-driver* @chocolatey-community/chocolatey-team-maintainers
 */intunewinapputil*   @chocolatey-community/chocolatey-team-maintainers
-*/freecad*            @redbaron2
 */selenium-chromium-edge-driver* @chocolatey-community/chocolatey-team-maintainers @AdmiringWorm
 */jenkins*            @chocolatey-community/chocolatey-team-maintainers
 */brave*              @AdmiringWorm
