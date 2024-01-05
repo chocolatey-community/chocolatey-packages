@@ -16,7 +16,7 @@ $packageArgs = @{
   fileType       = 'exe'
   file           = "$toolsPath\rubyinstaller-3.3.0-1-x86.exe"
   file64         = "$toolsPath\rubyinstaller-3.3.0-1-x64.exe"
-  silentArgs     = '/verysilent /dir="{0}" /tasks="{1}"' -f $installDir, ($tasks -join ',')
+  silentArgs     = '/verysilent /allusers /dir="{0}" /tasks="{1}"' -f $installDir, ($tasks -join ',')
   validExitCodes = @(0)
   softwareName   = 'ruby *'
 }
