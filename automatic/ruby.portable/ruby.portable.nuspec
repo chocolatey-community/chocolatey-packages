@@ -18,7 +18,7 @@ Ruby is a dynamic, open source programming language focusing on simplicity and p
     <tags>ruby language programming development dynamic cross-platform foss portable</tags>
     <licenseUrl>https://www.ruby-lang.org/en/about/license.txt</licenseUrl>
     <projectUrl>https://www.ruby-lang.org</projectUrl>
-    <projectSourceUrl>https://git.ruby-lang.org/ruby.git/tree</projectSourceUrl>
+    <projectSourceUrl>https://github.com/ruby/ruby</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/ruby.portable</packageSourceUrl>
     <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-master/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
