@@ -7,13 +7,13 @@ location on <https://download.calibre-ebook.com/7.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-Bit software: <https://download.calibre-ebook.com/7.2.0/calibre-64bit-7.2.0.msi>
+  64-Bit software: <https://download.calibre-ebook.com/7.3.0/calibre-64bit-7.3.0.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: 3FD00AA23D94EC9483BFDD623C6E672E773880981E5C5BFC26E63BF494BF243D
+  checksum64: DFD6521A422F560E14EEA879C7A163DF3E68317BCCA0A2689F4065DBEF3522D1
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kovidgoyal/calibre/blob/89c271759db5c71202251895f6793e4c1ec65ee6/LICENSE>
