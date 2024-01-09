@@ -31,8 +31,8 @@ param(
     'portable' {
       $download_page = (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
       $mobile = "portable"
-      $ext = "zip"
-      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-(${mobile})(\-|.)?(\d+)?(\.${ext})$"
+      $ext = "7z"
+      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(Windows)(\-)?(x\d{2})(\-|.)?(\d+)?(\.${ext})$"
 #      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
       $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
       $vert = "$version"
