@@ -1,7 +1,7 @@
 ﻿import-module au
 
 $releases = "https://www.torproject.org/download/languages/"
-$baseUrl  = "https://www.torproject.org"
+$baseUrl  = "https://archive.torproject.org/tor-package-archive/torbrowser/"
 
 function global:au_SearchReplace {
   @{ 
@@ -23,8 +23,8 @@ function global:au_GetLatest {
   $download_page    = Invoke-WebRequest -Uri $releases -UseBasicParsing
     
   $allExes          = $download_page.Links | Where-Object href -match "\.exe$" | Select-Object -expand href
-  $url32            = $allExes | Where-Object { $_ -match "torbrowser-install-\d.*_All.exe$" } | Select-Object -First 1
-  $url64            = $allExes | Where-Object { $_ -match "torbrowser-install-win64.*_All.exe$" } | Select-Object -First 1
+  $url32            = (($allExes | Where-Object { $_ -match "tor-browser-windows-i686-portable-\d.*.exe$" } | Select-Object -First 1) -split("\/",5) | Select -Index 4)
+  $url64            = (($allExes | Where-Object { $_ -match "tor-browser-windows-x86_64-portable-\d.*.exe$" } | Select-Object -First 1) -split("\/",5) | Select -Index 4)
   $version          = $url64 -split '\/' | Select-Object -last 1 -skip 1
   
   @{
