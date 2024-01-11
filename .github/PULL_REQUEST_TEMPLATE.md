@@ -30,7 +30,7 @@
 - [ ] I have updated the documentation accordingly (this usually means the notes in the description of a package).
 - [ ] I have updated the package description and it is less than 4000 characters.
 - [ ] All files are up to date with the latest [Contributing Guidelines](https://github.com/chocolatey-community/chocolatey-packages/blob/master/CONTRIBUTING.md)
-- [ ] The added/modified package passed install/uninstall in the chocolatey test environment.
+- [ ] The added/modified package passed install/uninstall in the Chocolatey Test Environment(https://github.com/chocolatey-community/chocolatey-test-environment/). _Note that we don't support the use of any other environment_.
 - [ ] The changes only affect a single package (not including meta package).
 
 <!-- The following section can be removed if the package has not been migrated from another location -->
