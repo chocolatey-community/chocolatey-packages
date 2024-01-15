@@ -1,7 +1,7 @@
 ﻿import-module au
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json"
+$releases = "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/extended/versions"
 $paddedUnderVersion = '57.0.2988'
 
 function global:au_BeforeUpdate {
@@ -23,7 +23,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $releasesData = Invoke-RestMethod -UseBasicParsing -Method Get -Uri $releases
-  $version = $releasesData.channels.Stable.version
+  $version = ($releasesData.versions | Select-Object -First 1).version
   
   @{
     URL32 = 'https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi'
