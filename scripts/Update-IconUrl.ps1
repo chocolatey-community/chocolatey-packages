@@ -113,7 +113,7 @@ if (!$GithubRepository) {
   if ($remoteName) { $remoteUrl = . git remote get-url $remoteName }
 
   if ($remoteUrl) {
-    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$','' -join '/'
+    $GithubRepository = ($remoteUrl -split '[\/:]' | select -last 2) -replace '\.git$','' -join '/'
   } else {
     $GithubRepository = "USERNAME/REPOSITORY-NAME"
   }
