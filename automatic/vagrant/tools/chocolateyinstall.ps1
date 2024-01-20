@@ -3,10 +3,10 @@
 $packageArgs = @{
   packageName    = 'vagrant'
   fileType       = 'msi'
-  url            = 'https://releases.hashicorp.com/vagrant/2.4.0/vagrant_2.4.0_windows_i686.msi'
-  url64bit       = 'https://releases.hashicorp.com/vagrant/2.4.0/vagrant_2.4.0_windows_amd64.msi'
-  checksum       = '6c63fab066223e55f52e3eb58dd41876e877926e152f61aafb60bb2651c88c68'
-  checksum64     = 'd8f62fce5de0f4b9fb1a4afece10faa6fafed41929ccfe7bb380f160358043e4'
+  url            = 'https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_i686.msi'
+  url64bit       = 'https://releases.hashicorp.com/vagrant/2.4.1/vagrant_2.4.1_windows_amd64.msi'
+  checksum       = 'cbf809b7d89cf0b7ef0d990b99d502b1d67c9afecedd326fb187f59ebe311d6f'
+  checksum64     = 'fc3806e071b7af2067eec5e8dfbe9f2dfe2c46139c5d682bb7defd7a2f9083e9'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = "/qn /norestart"
