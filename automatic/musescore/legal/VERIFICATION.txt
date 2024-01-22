@@ -15,4 +15,4 @@ and can be verified by doing the following:
   checksum type: sha256
   checksum: 32A7455D7C3D945AEFB5A00FA5D8CBFDEA1698224ADEEC0145C368E21763B083
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/musescore/MuseScore/blob/cb43b90e5af01ab09730ab7b6e1db9722afb1169/LICENSE.GPL>
+The file 'LICENSE.txt' has been obtained from <https://github.com/musescore/MuseScore/blob/d771a5205cd4b360371005d6c4cf91e19e47b8ce/LICENSE.txt>
