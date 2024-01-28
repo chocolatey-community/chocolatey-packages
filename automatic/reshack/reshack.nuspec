@@ -22,7 +22,6 @@
 ]]></description>
         <projectUrl>http://www.angusj.com/resourcehacker/</projectUrl>
         <tags>freeware hacking resource executables admin</tags>
-        <copyright></copyright>
         <licenseUrl>http://www.angusj.com/resourcehacker/</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@da1a06bf2e600442203ca66680b1d1539002b813/icons/reshack.png</iconUrl>

@@ -17,7 +17,6 @@ After Clover is installed, you will be able to open multiple folders within the 
     </description>
     <projectUrl>http://ejie.me/</projectUrl>
     <tags>admin freeware windows-explorer file-system file-manager tab tabs </tags>
-    <copyright></copyright>
     <licenseUrl>http://www.scribd.com/doc/164355290/License</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/cf2b66066fc04a6517bbd7bfef76fe2653b5ff7c/icons/Clover.png</iconUrl>

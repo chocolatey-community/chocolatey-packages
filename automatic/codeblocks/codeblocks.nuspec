@@ -81,7 +81,6 @@ This package downloads the installer with the included GCC compiler.
 ]]></description>
     <summary>Code::Blocks is a free C++ IDE.</summary>
     <releaseNotes>https://www.codeblocks.org/changelogs/20.03</releaseNotes>
-    <copyright />
     <tags>codeblocks C++ IDE admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/codeblocks</packageSourceUrl>
     <dependencies>

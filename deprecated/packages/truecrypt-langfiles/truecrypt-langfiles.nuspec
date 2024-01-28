@@ -21,7 +21,6 @@ This package contains all available language files for TrueCrypt, the free open-
     </description>
     <summary>Language files for TrueCrypt, the free open-source disk encryption software</summary>
     <releaseNotes />
-    <copyright />
     <tags>truecrypt language localization i18n</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>
