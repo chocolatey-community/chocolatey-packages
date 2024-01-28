@@ -20,7 +20,8 @@
 ]]></description>
     <projectUrl>https://www.libreoffice.org/</projectUrl>
     <tags>libreoffice office cross-platform foss admin</tags>
-    <copyright></copyright>
+    <!-- Copyright specified comes from the swriter.exe executable -->
+    <copyright>Copyright © 2000-2023 by LibreOffice contributors. All rights reserved.</copyright>
     <licenseUrl>https://www.libreoffice.org/download/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/libreoffice.svg</iconUrl>
