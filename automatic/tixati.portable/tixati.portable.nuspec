@@ -34,7 +34,6 @@ __Tixati__ is one of the most advanced and flexible BitTorrent clients available
 ]]></description>
         <projectUrl>http://www.tixati.com/</projectUrl>
         <tags>internet network download torrent p2p share admin</tags>
-        <copyright></copyright>
         <licenseUrl>http://www.tixati.com/tixati_eula.txt</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@bee4bc391df114723011dbd5b8a8af2a17c6bf2e/icons/tixati.png</iconUrl>

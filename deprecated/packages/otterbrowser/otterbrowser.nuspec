@@ -16,7 +16,6 @@
 
 Probably beta release (automatic push). Package version less than v1, treat as stable.</description>
     <summary>Project aiming to recreate classic Opera (12.x) UI using Qt5.</summary>
-    <copyright />
     <tags>browser opera qt</tags>
     <dependencies>
       <dependency id="otter-browser" version="0.9.92.20171114" />

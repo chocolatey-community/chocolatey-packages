@@ -20,7 +20,6 @@ Panda Free Antivirus scored an impressive 99.9 percent in real-world protection 
     <projectUrl>http://www.pandasecurity.com/</projectUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <tags>Antivirus Security Protection NotSilent AutoIt</tags>
-    <copyright></copyright>
     <licenseUrl>http://softwareula.wordpress.com/2010/07/20/panda-cloud-antivirus/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://i.imgur.com/McibFJt.jpg</iconUrl>

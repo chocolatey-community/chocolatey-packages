@@ -16,7 +16,6 @@ BeCyIconGrabber is a small utility to view icons and cursors of any sizes that a
     </description>
     <summary>BeCyIconGrabber – extraction of icons/cursors</summary>
     <releaseNotes />
-    <copyright />
     <tags>becyicongrabber extract icons cursors</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
   </metadata>

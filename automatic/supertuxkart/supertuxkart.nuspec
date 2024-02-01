@@ -25,7 +25,6 @@ You can do a single race against other karts, compete in one of several Grand Pr
 ]]></description>
     <summary>Open Source 3D kart racing game</summary>
     <releaseNotes />
-    <copyright />
     <tags>supertuxkart foss cross-platform racing game admin</tags>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24215.20170201" />

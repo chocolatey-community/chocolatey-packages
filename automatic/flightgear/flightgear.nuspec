@@ -36,7 +36,6 @@ FlightGear is an open-source flight simulator.  It supports a variety of popular
 and is developed by skilled volunteers from around the world.
     </summary>
     <releaseNotes>http://wiki.flightgear.org/Changelog_2020.3</releaseNotes>
-    <copyright />
     <tags>flightgear flight simulator game admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/flightgear</packageSourceUrl>
     <dependencies>

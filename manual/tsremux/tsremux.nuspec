@@ -15,7 +15,6 @@ TsRemux is a transport Stream Re-muxer with blu-ray/Sat/OTA and now MPG/VOB/EVOB
     </description>
     <summary>TsRemux is a transport Stream Re-muxer.</summary>
     <releaseNotes />
-    <copyright />
     <tags>tsremux ts transport-stream remux admin</tags>
     <dependencies>
       <dependency id="wget" />

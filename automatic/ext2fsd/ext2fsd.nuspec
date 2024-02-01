@@ -37,7 +37,6 @@ Open source ext3/4 file system driver for Windows
     <summary>Open source ext3/4 file system driver for Windows</summary>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/8a5d2740db65d1750e4312294f4163e348cd5a45/icons/ext2fsd.jpg</iconUrl>
     <releaseNotes>http://www.ext2fsd.com/?cat=3</releaseNotes>
-    <copyright />
     <language>en-US</language>
     <tags>ext3 ext4 file-system foss linux driver admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/ext2fsd</packageSourceUrl>
