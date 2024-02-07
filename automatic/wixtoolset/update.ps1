@@ -33,7 +33,7 @@ function global:au_AfterUpdate {
 function global:au_GetLatest {
   $release = Get-GitHubRelease -Owner 'wixtoolset' -Name 'wix3'
 
-  $url = $release.assets | ? browser_download_url -match "\.exe$" | Select-Object -First 1 -ExpandProperty browser_download_url
+  $url = $release.assets | Where-Object browser_download_url -match "\.exe$" | Select-Object -First 1 -ExpandProperty browser_download_url
   $version = $release.name -split 'v' | Select-Object -Last 1
 
   @{
