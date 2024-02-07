@@ -1,5 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+foreach ($process in (Get-Process "$env:ChocolateyPackageName*" -ErrorAction SilentlyContinue)) {
+   Stop-Process -Name $process.ProcessName -Force
+}
+
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $fileName = 'tixati-3.19-1.install.exe'
 $dlDir = "$Env:TEMP\chocolatey\$($Env:ChocolateyPackageName)\$($Env:ChocolateyPackageVersion)"
