@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-foreach ($process in (Get-Process "$env:ChocolateyPackageName*" -ErrorAction SilentlyContinue)) {
-   Stop-Process -Name $process.ProcessName -Force
+if (Get-Process "Tixati*" -ErrorAction SilentlyContinue) {
+   Throw "Tixati is running!  To prevent data loss, please fully quit Tixati before attempting to upgrade it."
 }
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
