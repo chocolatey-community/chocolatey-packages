@@ -20,7 +20,7 @@ $installArgs = @{
 
 '$installDir', ($installDir | Out-String), '$packageArgs', ($packageArgs | Out-String), '$installArgs', ($installArgs | Out-String) | ForEach-Object { Write-Debug $_ }
 
-Install-ChocolateyZipPackage @packageArgs | Write-Debug
+Get-ChocolateyUnzip @packageArgs | Write-Debug
 Start-ChocolateyProcessAsAdmin @installArgs | Write-Debug
 Set-Content -Path "$toolsDir\installDir" -Value $installDir
 Create-SymbolicLink
