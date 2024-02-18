@@ -9,7 +9,7 @@
     <authors>Blender Foundation</authors>
     <licenseUrl>https://www.blender.org/about/license/</licenseUrl>
     <projectUrl>https://www.blender.org</projectUrl>
-    <projectSourceUrl>https://git.blender.org/gitweb/</projectSourceUrl>
+    <projectSourceUrl>https://projects.blender.org/blender/blender</projectSourceUrl>
     <bugTrackerUrl>https://developer.blender.org/maniphest/</bugTrackerUrl>
     <mailingListUrl>https://wiki.blender.org/wiki/Communication/Contact#Mailing_Lists</mailingListUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/blender.svg</iconUrl>
