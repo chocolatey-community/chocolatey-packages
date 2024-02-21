@@ -25,7 +25,7 @@ if ($pp.InstallPath) {
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
     fileType       = 'exe'
-    file           = "$toolsPath\tcmd1102x32_64.exe"
+    file           = "$toolsPath\tcmd1103x32_64.exe"
     silentArgs     = $installArgs
     validExitCodes = @(0)
     softwareName   = 'Total Commander*'
