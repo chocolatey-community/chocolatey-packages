@@ -11,11 +11,11 @@
     <projectUrl>http://wixtoolset.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
     <copyright>2009 - 2016 Outercurve Foundation</copyright>
-    <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
+    <licenseUrl>https://wixtoolset.org/docs/v3/main/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/wixtoolset/wix3</projectSourceUrl>
-    <docsUrl>http://wixtoolset.org/documentation/</docsUrl>
-    <mailingListUrl>http://wixtoolset.org/documentation/</mailingListUrl>
+    <docsUrl>https://wixtoolset.org/docs/v3/</docsUrl>
+    <mailingListUrl>https://github.com/orgs/wixtoolset/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/wixtoolset/issues/issues</bugTrackerUrl>
     <tags>wixtoolset wix toolset msi xml admin</tags>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
