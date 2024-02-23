@@ -8,7 +8,7 @@ if ($previousDirectories) { Remove-Item $previousDirectories.FullName -Force -ea
 $packageArgs = @{
   packageName  = 'testdisk-photorec'
   fileType     = 'zip'
-  file         = "$toolsPath\testdisk-7.1.win.zip"
+  file         = "$toolsPath\testdisk-7.2.win.zip"
   destination  = "$toolsPath"
 }
 
