@@ -26,7 +26,6 @@ The Win32 OpenSSL Installation Project is dedicated to providing a simple instal
 Example: `choco install openssl.light --params "/InstallDir:C:\your\install\path"`
 ]]></description>
     <dependencies>
-      <dependency id="chocolatey" version="0.10.5" />
       <dependency id="chocolatey-core.extension" version="1.3.3" />
       <dependency id="vcredist140" version="14.12.25810" />
     </dependencies>

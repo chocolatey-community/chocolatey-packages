@@ -31,9 +31,6 @@ Git for Windows focuses on offering a lightweight, native set of tools that brin
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@10a8d98b2f320b565fa5349a4352e79666db71ff/icons/git.svg</iconUrl>
-    <dependencies>
-      <dependency id="chocolatey" version="0.9.10" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

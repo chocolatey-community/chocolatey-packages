@@ -29,7 +29,6 @@ and want to preserve their mobile data for more precious moments in te future.
     <docsUrl>https://www.videoder.com</docsUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
-      <dependency id="chocolatey" version="0.10.5" />
     </dependencies>
   </metadata>
   <files>

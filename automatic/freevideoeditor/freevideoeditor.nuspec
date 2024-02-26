@@ -50,10 +50,6 @@ Hardware acceleration, multi-color Chroma Key, adjustable parameters settings an
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/67298954b9fd1ba4826a4cdedf542266aa64f1fd/automatic/freevideoeditor/screenshot.jpg)
 ]]></description>
     <releaseNotes>http://www.videosoftdev.com/free-video-editor#accordion10</releaseNotes>
-    <dependencies>
-      <!--We could set chocolatey to version 0.10.4, but that version was broken so we use 0.10.5-->
-      <dependency id="chocolatey" version="0.10.5" />
-    </dependencies>
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
