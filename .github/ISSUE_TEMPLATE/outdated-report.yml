@@ -25,6 +25,8 @@ body:
           required: true
         - label: I have verified the new version has a Windows binary (EXE or MSI installer, Zip or other archive, etc).
           required: true
+        - label: I have verified that this is the correct repository, and the package is maintained by the chocolatey-community user.
+          required: true
   - type: input
     id: package-version
     attributes:
