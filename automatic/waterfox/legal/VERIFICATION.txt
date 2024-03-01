@@ -11,6 +11,6 @@ and can be verified like this:
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 28270EB3E52BF4D3BCE0E29B93B9A424F5BB5BBAC72CE45EEA851656A6396B68
+  checksum: 5044632ADFE98A186CAC1A646846AF2AEF48BFAACB668CE7A160DE08CEACF57B
 
 File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE>
