@@ -3,7 +3,7 @@
 $packageName = '7zip.install'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName '7-zip*'
+[array]$key = Get-UninstallRegistryKey -SoftwareName '7-zip*' | Where-Object { $_.DisplayName -notlike '7-zip zs*' }
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
