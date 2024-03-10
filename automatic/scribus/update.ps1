@@ -25,18 +25,18 @@ function global:au_GetLatest {
 
   $re = '\/[\d\.]+\/$'
   $builder = New-Object System.UriBuilder($releases)
-  $builder.Path = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $builder.Path = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
   $releasesUrl = $builder.Uri.ToString()
 
   $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
   $re = '\.exe\/download$'
-  $urls = $download_page.Links | ? href -match $re | select -expand href
+  $urls = $download_page.Links | Where-Object href -match $re | Select-Object -expand href
 
-  $url32 = $urls | ? { $_ -notmatch '\-x64' } | select -first 1
-  $url64 = $urls | ? { $_ -match '\-x64' } | select -first 1
+  $url32 = $urls | Where-Object { $_ -notmatch '\-x64' } | Select-Object -first 1
+  $url64 = $urls | Where-Object { $_ -match '\-x64' } | Select-Object -first 1
 
   $verRe = '\/'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 2
+  $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 2
 
   @{
     URL32 = $url32
