@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 # Temporary to allow pushing version 1.0.5
 $releases = 'https://darbyjohnston.github.io/DJV/download.html'

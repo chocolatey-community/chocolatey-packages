@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $domain   = 'http://www.joejoesoft.com'
 $releases = "$domain/vcms/108/"

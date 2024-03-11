@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
   $LatestRelease = Get-GitHubRelease sonatype nexus-public

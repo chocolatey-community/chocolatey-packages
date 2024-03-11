@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://rubyinstaller.org/downloads/archives/'
 $fixBelowVersion = '3.1.3'

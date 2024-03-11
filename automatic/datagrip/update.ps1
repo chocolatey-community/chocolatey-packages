@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 $releases = 'https://data.services.jetbrains.com/products/releases?code=DG&latest=true&type=release'
 
 function global:au_SearchReplace {

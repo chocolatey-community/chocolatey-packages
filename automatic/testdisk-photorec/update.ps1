@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.cgsecurity.org/wiki/TestDisk_Download'
 

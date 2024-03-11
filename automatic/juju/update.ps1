@@ -1,7 +1,7 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 
-import-module au
+Import-Module Chocolatey-AU
 
 $releases = 'https://launchpad.net/juju/+download'
 $ghReleasesFmt = 'https://github.com/juju/juju/releases/tag/juju-{0}'

@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://winscp.net/eng/downloads.php'
 $re  = 'WinSCP.+\.exe$'

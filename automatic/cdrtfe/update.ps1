@@ -1,6 +1,6 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = 'https://cdrtfe.sourceforge.io/cdrtfe/download_en.html'
 

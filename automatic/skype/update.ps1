@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 Import-Module "$env:ChocolateyInstall/helpers/chocolateyInstaller.psm1"
 
 $release = 'https://go.skype.com/msi-download'

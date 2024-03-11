@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://eternallybored.org/misc/wget/'
 

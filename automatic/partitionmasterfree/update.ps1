@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $downloadUrl = "https://down.easeus.com/product/epm_free"
 

@@ -19,7 +19,7 @@ Package can be verified like this:
    checksum32: DBF3490648EFE876BD9A98D53E4D9110BF5E02A3914C0DD4B2A48DB4A09799B5
    checksum64: DBF3490648EFE876BD9A98D53E4D9110BF5E02A3914C0DD4B2A48DB4A09799B5
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.37.01/AutoHotkey_1.1.37.01_setup.exe
 

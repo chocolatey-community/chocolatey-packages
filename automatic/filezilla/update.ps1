@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://filezilla-project.org/download.php?show_all=1'
 

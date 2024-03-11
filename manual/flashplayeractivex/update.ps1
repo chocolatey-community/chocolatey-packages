@@ -1,5 +1,5 @@
 ﻿
-import-module au
+Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_win_pl.xml'

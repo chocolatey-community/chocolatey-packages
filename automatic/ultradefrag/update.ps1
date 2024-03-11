@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot/../../extensions/chocolatey-core.extension/extensions/chocolatey-core.psm1"
 
 $domain   = 'https://sourceforge.net'

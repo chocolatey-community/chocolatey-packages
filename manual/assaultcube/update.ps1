@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://github.com/assaultcube/AC/releases'
 $softwareName = 'AssaultCube*'

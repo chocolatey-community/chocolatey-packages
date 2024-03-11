@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://technet.microsoft.com/en-us/sysinternals/bb842062.aspx'
 

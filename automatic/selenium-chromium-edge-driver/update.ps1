@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = "https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver/LATEST_STABLE"
 

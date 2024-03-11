@@ -1,7 +1,7 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
 
-import-module au
+Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain = 'https://sourceforge.net'

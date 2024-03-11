@@ -1,7 +1,7 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 
-import-module au
+Import-Module Chocolatey-AU
 
 if ($MyInvocation.InvocationName -ne '.') {
   # run the update only if the script is not sourced

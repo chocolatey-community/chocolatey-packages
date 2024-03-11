@@ -13,10 +13,10 @@ Package can be verified like this:
 
    SHA256: 768d93e616c0dd8918c08d317da3857d37a5328daff5c7115b40700913773965
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum  https://github.com/cyd01/KiTTY/releases/download/v0.76.1.13/kitty-bin-0.76.1.13.zip
 
 File 'LICENSE.TXT' is obtained from:
    https://raw.githubusercontent.com/cyd01/KiTTY/master/LICENCE.TXT
-   
+

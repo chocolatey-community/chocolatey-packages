@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\tools\"
 . $toolsDir\helpers.ps1

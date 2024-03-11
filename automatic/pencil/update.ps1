@@ -1,7 +1,7 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param([switch] $Force)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = "http://pencil.evolus.vn/Downloads.html"
 

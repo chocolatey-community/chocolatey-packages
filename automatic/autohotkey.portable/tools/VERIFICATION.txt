@@ -19,7 +19,7 @@ Package can be verified like this:
    checksum32: 366B5F88F68586745551F34435D6C494226BBB72F756B4DA0366502547E4067D
    checksum64: 366B5F88F68586745551F34435D6C494226BBB72F756B4DA0366502547E4067D
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum https://autohotkey.com/download/2.1//AutoHotkey_2.1-alpha.8.zip
 

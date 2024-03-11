@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://windows.php.net/downloads/releases/'
 # Change the release url above with this one when

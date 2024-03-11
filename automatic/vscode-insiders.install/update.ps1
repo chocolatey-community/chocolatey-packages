@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1"
 
 $releases64 = 'https://update.code.visualstudio.com/api/update/win32-x64/insider/0000000000000000000000000000000000000000'

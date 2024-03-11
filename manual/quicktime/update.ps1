@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 import-module "../../extensions/extensions.psm1"
 
 $releases = 'https://support.apple.com/kb/DL837?locale=en_US'

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases     = 'http://download.pdfforge.org/download/pdfcreator/list'
 $softwareName = 'PDFCreator'

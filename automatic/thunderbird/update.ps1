@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 . "$PSScriptRoot\..\Firefox\update_helper.ps1"
 
 $releases = 'https://www.mozilla.org/en-US/thunderbird/all/'

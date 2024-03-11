@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releasePagePart = 'http://www.xm1math.net/texmaker/'
 $releases = "${releasePagePart}download.html"

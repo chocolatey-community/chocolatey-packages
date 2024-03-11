@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://code.x2go.org/releases/binary-win32/x2goclient/releases/'
 $softwareName = 'X2Go Client*'

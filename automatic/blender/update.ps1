@@ -1,4 +1,4 @@
-﻿Import-Module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://www.blender.org/download/'
 $softwareName = 'Blender'
