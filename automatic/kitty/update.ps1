@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $latestRelease = 'https://api.github.com/repos/cyd01/KiTTY/releases/latest'
 

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://sourceforge.net/projects/maxima/files/Maxima-Windows'
 $softwareName = 'maxima*'

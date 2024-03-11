@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://get.geo.opera.com/pub/opera/desktop/'
 

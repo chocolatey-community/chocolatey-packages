@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module Chocolatey-AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 function global:au_BeforeUpdate {

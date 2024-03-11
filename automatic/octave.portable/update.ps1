@@ -1,7 +1,7 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param([switch] $Force)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = "https://ftp.gnu.org/gnu/octave/windows/?C=M;O=D"
 

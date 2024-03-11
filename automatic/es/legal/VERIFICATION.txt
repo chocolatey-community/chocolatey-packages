@@ -17,7 +17,7 @@ Package can be verified like this:
 
    checksum32: 978BB07DD5EA1868C716EE17B2F36BD4CBB1E2A4C2E1C439163558506492D873
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum https://www.voidtools.com/ES-1.1.0.26.zip
 

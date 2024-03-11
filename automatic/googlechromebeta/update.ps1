@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'https://omahaproxy.appspot.com/all?os=win&channel=beta'

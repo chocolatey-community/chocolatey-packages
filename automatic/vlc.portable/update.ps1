@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 $releases = 'https://www.videolan.org/vlc/download-windows.html'
 
 function global:au_SearchReplace {

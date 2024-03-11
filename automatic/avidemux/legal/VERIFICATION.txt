@@ -17,7 +17,7 @@ Package can be verified like this:
 
    checksum64: DD962BC788D7D955B04E163E7E1A6620B573ADC379BF2EA2A2C25585782B4DCA
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum https://sourceforge.net/projects/avidemux/files/avidemux/2.8.1/Avidemux_2.8.1%20VC%2B%2B%2064bits.exe/download
 

@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://aka.ms/downloadazcopy-v10-windows'
 

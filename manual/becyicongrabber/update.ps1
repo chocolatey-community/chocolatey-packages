@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.becyhome.de/download_eng.htm'
 $versions = 'http://www.becyhome.de/becyicongrabber/description_eng.htm'

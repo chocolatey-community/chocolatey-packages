@@ -1,7 +1,7 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 
-import-module au
+Import-Module Chocolatey-AU
 
 $releases = 'https://sourceforge.net/projects/ext2fsd/files/Ext2fsd'
 

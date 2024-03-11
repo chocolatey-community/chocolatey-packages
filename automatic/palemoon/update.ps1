@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releasesx86 = 'https://www.palemoon.org/download.php?mirror=eu&bits=32&type=installer'
 $releasesx64 = 'https://www.palemoon.org/download.php?mirror=eu&bits=64&type=installer'

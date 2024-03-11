@@ -1,7 +1,7 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param($IncludeStream, [switch] $Force)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $changelogs = 'https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/README.md'
 

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 # We are currently tracking version 3. We only track version 3 as it looks like version 4 will be available as a .NET tool,

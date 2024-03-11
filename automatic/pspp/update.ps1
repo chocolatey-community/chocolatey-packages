@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $domain   = 'https://sourceforge.net'
 $releases = "$domain/projects/pspp4windows/files/"

@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
  . "$PSScriptRoot\update_helper.ps1"
   $url = 'http://www.cutepdf.com/download/CuteWriter.exe'

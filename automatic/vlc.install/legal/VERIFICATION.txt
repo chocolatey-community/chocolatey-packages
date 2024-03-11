@@ -19,7 +19,7 @@ Package can be verified like this:
    checksum32: E197583514FA600F24A3B88CF6B24102C5C09DC39BAD6AC9626BD55F23FF9DEF
    checksum64: D8055B6643651CA5B9AD58C438692A481483657F3F31624CDFA68B92E8394A57
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum http://get.videolan.org/vlc/3.0.20/win64/vlc-3.0.20-win64.exe
 

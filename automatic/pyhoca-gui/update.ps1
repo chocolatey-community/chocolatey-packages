@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases     = 'http://code.x2go.org/releases/binary-win32/pyhoca-gui/releases/'

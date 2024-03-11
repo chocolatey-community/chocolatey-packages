@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = "https://www.torproject.org/download/languages/"
 $baseUrl  = "https://archive.torproject.org/tor-package-archive/torbrowser/"

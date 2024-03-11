@@ -7,12 +7,12 @@ in verifying that this package's contents are trustworthy.
     x32: https://eternallybored.org/misc/wget/releases/wget-1.21.4-win32.zip
     x64: https://eternallybored.org/misc/wget/releases/wget-1.21.4-win64.zip
 
-2.  You can use one of the following methods to obtain the checksum: 
+2.  You can use one of the following methods to obtain the checksum:
     - Use powershell function 'Get-FileHash'
     - Use Chocolatey utility 'checksum.exe'
 
     checksum32: 0B43382593EB164E78DC68234FFB2E6048DF91A548D5C8E9E61C78A0DE13407F
     checksum64: 7B0ADDF04EDD370307AA6005F0C08A171A319CCCD4403663DACA5478860B3056
 
-    Using AU:
+    Using Chocolatey AU:
         Get-RemoteChecksum https://eternallybored.org/misc/wget/releases/wget-1.21.4-win64.zip

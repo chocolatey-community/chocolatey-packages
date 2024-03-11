@@ -1,5 +1,5 @@
-# Export all the extensions that are meant to be used
-# within a au update script here.
+# Export all the cmdlets that are meant to be used
+# within a Chocolatey AU update script here.
 
 # We just specify the functions we want to export
 # but the file containing the functions is expected

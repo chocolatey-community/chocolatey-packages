@@ -19,7 +19,7 @@ Package can be verified like this:
    checksum32: 406597DCA85BF5A9962F887F3B41A7BF7BF0E875C80EFC8CEE48CAB9E988F5FA
    checksum64: CF106D718499125A55DFF82DAEE40E7744ED224694C96036765B84A3AC4F654C
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.3-1/rubyinstaller-3.2.3-1-x64.7z
 

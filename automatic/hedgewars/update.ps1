@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $domain   = 'https://www.hedgewars.org'
 $releases = "$domain/download.html"

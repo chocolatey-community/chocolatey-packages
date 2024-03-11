@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases     = 'https://www.gomlab.com/gomplayer-media-player/'
 $versions     = 'https://www.gomlab.com/ajax/update.gom?page=1&lang=eng&product=GOMPLAYER&update_lang=eng'

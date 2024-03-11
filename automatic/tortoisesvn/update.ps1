@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot/../../extensions/extensions.psm1"
 
 $releases = 'https://tortoisesvn.net/downloads.html'

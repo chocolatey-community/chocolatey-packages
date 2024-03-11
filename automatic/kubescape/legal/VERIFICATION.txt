@@ -13,7 +13,7 @@ and can be verified by doing the following:
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
-  - Using powershell function 'Get-RemoteChecksum' incluse in AU module
+  - Using powershell function 'Get-RemoteChecksum' included in Chocolatey AU module
 
 3. The checksums should match the following:
   checksum type: sha256

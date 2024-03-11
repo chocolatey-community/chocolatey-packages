@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases     = 'https://wiki.wesnoth.org/Download'
 $softwareName = 'Battle for Wesnoth*'

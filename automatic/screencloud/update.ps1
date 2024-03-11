@@ -1,4 +1,4 @@
-Import-Module au
+﻿Import-Module Chocolatey-AU
 
 $releases = "https://sourceforge.net/projects/screencloud/files/"
 $versionPattern = "([\d]+\.[\d\.]+)"

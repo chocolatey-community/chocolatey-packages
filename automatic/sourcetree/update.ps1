@@ -1,4 +1,4 @@
-Import-Module au
+﻿Import-Module Chocolatey-AU
 
 function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'

@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releaseStableUrl = 'https://brave-browser-downloads.s3.brave.com/latest/release-windows-x64.version'
 $releaseBetaUrl = 'https://brave-browser-downloads.s3.brave.com/latest/beta-windows-x64.version'

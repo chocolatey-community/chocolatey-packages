@@ -17,6 +17,6 @@ Package can be verified like this:
 
    checksum32: 6EC56B74E0D64EEEBADEC9C24ED65853E9098EEBD07D40C9253CD7411CE13776
 
-Using AU:
+Using Chocolatey AU:
 
    Get-RemoteChecksum https://cdn.atomisystems.com/apdownloads/ActivePresenter_v9.1.3_setup.exe
