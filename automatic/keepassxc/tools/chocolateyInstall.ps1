@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'KeePassXC'
   fileType       = 'msi'
-  file64         = "$toolsDir\KeePassXC-2.7.5-Win64.msi"
+  file64         = "$toolsDir\KeePassXC-2.7.7-Win64.msi"
   # MSI
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 3010, 1641)
