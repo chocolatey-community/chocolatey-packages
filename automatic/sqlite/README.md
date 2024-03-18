@@ -26,3 +26,13 @@ This package also installs sqlite tools by default - sqldiff, sqlite3, sqlite3_a
 - `/NoTools` - Do not install sqlite tools
 
 Example: `choco install sqlite --params "/NoTools"`
+
+## Notes
+
+- Beginning with v3.44.0 only 64-bit tools are available.  If support for 32-bit
+  is required use the legacy version [sqlite 3.43.2](https://chocolatey.org/packages/sqlite/3.43.2).
+
+  ```powershell
+  choco install sqlite --version='3.43.2'
+  choco pin add --name='sqlite' --version='3.43.2'
+  ```
