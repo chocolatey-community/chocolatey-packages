@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake</id>
-    <version>3.29.0-rc4</version>
+    <version>3.29.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/cmake</packageSourceUrl>
     <owners>chocolatey-community, dtgm</owners>
     <title>CMake</title>
@@ -25,6 +25,7 @@
 [Development](https://www.cmake.org/developer-resources/)
 
 #### MSI Properties
+
 `ADD_CMAKE_TO_PATH`
 - `None` - Do not add CMake to PATH (default)
 - `System` - Add CMake to system PATH for __all users__
@@ -38,13 +39,18 @@
 - `0` = Install for the current user only
 - `1` = Install for all users (default)
 
-For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'`
+For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' --apply-install-arguments-to-dependencies`
+
+## Notes
+
+- This package installs `cmake.install` which [follows the installer default behavior](https://gitlab.kitware.com/cmake/cmake/-/issues/21465) of not adding the `cmake.exe` to the PATH. If you need `cmake.exe` on the path, please see the **MSI Properties** example, above, or install the [`cmake.portable` package](https://community.chocolatey.org/packages/cmake.portable).
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <releaseNotes>#### Program
 * [News](https://blog.kitware.com/tag/CMake/)
 * [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
     <dependencies>
-      <dependency id="cmake.install" version="[3.29.0-rc4]" />
+      <dependency id="cmake.install" version="[3.29.0]" />
     </dependencies>
   </metadata>
   <files />
