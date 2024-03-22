@@ -8,10 +8,10 @@ $destinationFolder = GetInstallDirectory -toolsPath $toolsDir
 $packageArgs = @{
   PackageName  = 'tor-browser'
   FileType     = 'exe'
-  Url          = 'https://archive.torproject.org/tor-package-archive/torbrowser/13.0.12/tor-browser-windows-i686-portable-13.0.12.exe'
-  Url64        = 'https://archive.torproject.org/tor-package-archive/torbrowser/13.0.12/tor-browser-windows-x86_64-portable-13.0.12.exe'
-  Checksum     = '63aca8004848f0abd32f436032a01faf86226cc138bce114c9d65e2f77aa2a2c'
-  Checksum64   = '6586e985380d261b08d7cf47fc37319cf06cf3c36e3d6c1350c1380552d25759'
+  Url          = 'https://archive.torproject.org/tor-package-archive/torbrowser/13.0.13/tor-browser-windows-i686-portable-13.0.13.exe'
+  Url64        = 'https://archive.torproject.org/tor-package-archive/torbrowser/13.0.13/tor-browser-windows-x86_64-portable-13.0.13.exe'
+  Checksum     = '939a5eadf09621c02186b08aef9c866507342ec6c94f910730c19760f47e1139'
+  Checksum64   = 'd485685e2c57dcc67d578ae658e49b9161a0163e9b4b05f887eb009f7493ba11'
   ChecksumType = 'sha256'
   SilentArgs   = "/S","/D=$destinationFolder"
 }
