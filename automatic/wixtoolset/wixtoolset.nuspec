@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wixtoolset</id>
-    <version>3.14.0</version>
+    <version>3.14.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/wixtoolset</packageSourceUrl>
     <owners>chocolatey-community, Gary Ewan Park</owners>
     <title>WiX Toolset</title>
@@ -32,9 +32,9 @@ With Burn, the WiX bootstrapper, you can create setup bundles that install prere
 The WiX SDK includes managed and native libraries that make it easier to write code that works with Windows Installer, including custom actions in both C# and C++.
 
 ]]></description>
-    <releaseNotes>WiX v3.14 is the latest recommended maintenance release of WiX v3; it contains mitigations in all versions of WiX v3 for a vulnerability affecting all bundles. We recommend upgrading to WiX v3.14--or WiX v4.0--as soon as possible.
+    <releaseNotes>WiX v3.14.1 is the latest recommended maintenance release of WiX v3; it contains mitigations in all versions of WiX v3 for a vulnerability affecting all bundles and a WiX custom action. We recommend upgrading to WiX v3.14.1--or the latest WiX v4.0--as soon as possible.
 
-For more information about the vulnerability, see [WiX Security Releases Available](https://www.firegiant.com/blog/2024/2/6/wix-security-releases-available/).
+For more information about the vulnerability, see the [FireGiant blog](https://www.firegiant.com/blog/2024/3/22/wix-security-releases-available-redux/).
 
 ### Files
 
