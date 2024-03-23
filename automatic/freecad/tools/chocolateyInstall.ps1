@@ -6,11 +6,8 @@ if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -P
 $packageArgs = @{
   packageName    = 'freecad'
   fileType       = '7z'
-  url            = ''
   url64          = 'https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-33658-2023-07-30-conda-Windows-x86_64-py310.7z'
   softwareName   = 'FreeCAD'
-  checksum       = ''
-  checksumType   = ''
   checksum64     = '4E61B5E4176CB93EDC23EB71A53D2ACAA840C88AEE9BFAA63AB2CA48F8300726'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
@@ -20,7 +17,6 @@ $packageArgs = @{
 if (( $packageArgs.filetype -eq '7z' ) -or ( $packageArgs.filetype -eq 'zip' )) {
   # Checking for Package Parameters
   $pp = ( Get-UserPackageParams -scrawl )
-  if ($packageArgs.url64 -match "Conda") { $packageArgs.Remove("url"); $packageArgs.Remove("checksum"); $packageArgs.Remove("checksumType"); }
   if ($pp.InstallDir) { $packageArgs.Add( "UnzipLocation", $pp.InstallDir ) }
   Install-ChocolateyZipPackage @packageArgs
   if ($pp.Shortcut) { $pp.Remove("Shortcut"); Install-ChocolateyShortcut @pp }
