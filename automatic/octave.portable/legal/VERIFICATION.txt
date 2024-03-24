@@ -8,7 +8,6 @@ location on <https://www.gnu.org/software/octave/download.html>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-bit software: <https://ftp.gnu.org/gnu/octave/windows/octave-8.2.0-w32.7z>
   64-bit software: <https://ftp.gnu.org/gnu/octave/windows/octave-8.2.0-w64.7z>
 
 2. Get the checksum using one of the following methods:
@@ -18,7 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 9d6a81d86d7128775f8e821d89704582da81cee51400071c6d099118c983f37a
   checksum64: 6c07a7e5cf748e2efc2ae719dd8ad9b07e41cf7abb645b84cf753b6e0cc2bfd4
 
 File 'gpl-3.0.txt' is obtained from <https://www.gnu.org/software/octave/license.html>
