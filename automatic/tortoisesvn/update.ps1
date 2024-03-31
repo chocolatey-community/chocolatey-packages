@@ -24,9 +24,9 @@ function global:au_SearchReplace {
 function Get-ActualUrl([uri]$url) {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $url
 
-  $path = $download_page.links | ? href -match 'redir.*\.msi$' | select -first 1 -expand href
+  $result = $download_page.links | Where-Object "data-release-url" -ilike "*downloads.sourceforge.net/*TortoiseSVN-*.msi*" | Select-Object -First 1 -ExpandProperty "data-release-url"
 
-  return $url.Scheme + "://" + $url.Host + $path
+  return $result
 }
 
 function global:au_GetLatest {
