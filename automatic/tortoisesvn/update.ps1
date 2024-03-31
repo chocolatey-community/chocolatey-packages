@@ -25,6 +25,9 @@ function Get-ActualUrl([uri]$url) {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $url
 
   $result = $download_page.links | Where-Object "data-release-url" -ilike "*downloads.sourceforge.net/*TortoiseSVN-*.msi*" | Select-Object -First 1 -ExpandProperty "data-release-url"
+  if ($result.Contains("?")) {
+    $result = $result.Split("?")[0]
+  }
 
   return $result
 }
