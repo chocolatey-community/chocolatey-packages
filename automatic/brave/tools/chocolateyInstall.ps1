@@ -3,13 +3,13 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  url         = 'https://github.com/brave/brave-browser/releases/download/v1.64.116/BraveBrowserStandaloneSilentSetup32.exe'
-  checksum    = 'A8F42D52EE4C1D637103597E3494994A0CFA5C743C2D8507593FB9882A166D0E'
+  url         = 'https://github.com/brave/brave-browser/releases/download/v1.65.103/BraveBrowserStandaloneSilentBetaSetup32.exe'
+  checksum    = '1237F543F7A278FAE0A40B669266A268E15192D2759AC59A5C591BBA2E26CB79'
   checksumType= 'sha256'
-  file64      = "$toolsPath\BraveBrowserStandaloneSilentSetup.exe"
+  file64      = "$toolsPath\BraveBrowserStandaloneSilentBetaSetup.exe"
 }
 
-[version]$softwareVersion = '1.64.116'
+[version]$softwareVersion = '1.65.103'
 
 Write-Host "Checking already installed version..."
 $installedVersion = Get-InstalledVersion
