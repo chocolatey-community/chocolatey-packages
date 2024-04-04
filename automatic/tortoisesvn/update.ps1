@@ -21,15 +21,11 @@ function global:au_SearchReplace {
      }
 }
 
-function Get-ActualUrl([uri]$url) {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $url
-
-  $result = $download_page.links | Where-Object "data-release-url" -ilike "*downloads.sourceforge.net/*TortoiseSVN-*.msi*" | Select-Object -First 1 -ExpandProperty "data-release-url"
-  if ($result.Contains("?")) {
-    $result = $result.Split("?")[0]
+function Get-ActualUrl([string]$url) {
+  if (!$url.EndsWith("/")) {
+    $url += "/"
   }
-
-  return $result
+  return $url + "download"
 }
 
 function global:au_GetLatest {
@@ -54,6 +50,7 @@ function global:au_GetLatest {
         URL32 = Get-ActualUrl $url32
         URL64 = Get-ActualUrl $url64
         Version = $version32
+        FileType = "msi"
     }
     return $result
 }
