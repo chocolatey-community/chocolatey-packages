@@ -33,35 +33,37 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $urlsToGrabMsis = @(
-    "https://nodejs.org/en/download"
-    "https://nodejs.org/en/download/current"
-  )
+  [string] $scheduleUri = 'https://raw.githubusercontent.com/nodejs/Release/main/schedule.json'
+  [PSCustomObject] $schedules = Invoke-RestMethod -Uri $scheduleUri -UseBasicParsing
 
-  $lts_page = Invoke-WebRequest -Uri "https://github.com/nodejs/Release/blob/master/README.md" -UseBasicParsing
+  [datetime] $curDate = (Get-Date).Date
+  [string[]] $supportedChannels = @()
+  $schedules.PSObject.Properties.Name | ForEach-Object {
+    [string] $name = $_
+    [PSCustomObject] $schedule = $schedules.$name
+    [datetime] $scheduleStart = [datetime]::parseexact($schedule.start, 'yyyy-MM-dd', $null)
+    [datetime] $scheduleEnd = [datetime]::parseexact($schedule.end, 'yyyy-MM-dd', $null)
+    if (($scheduleStart -le $curDate) -and ($scheduleEnd -ge $curDate)) {
+      $supportedChannels += $name
+    }
+  }
 
-  $urlsToGrabMsis += $lts_page.links | Where-Object href -match "\/latest\-v.*\/$" | Select-Object -expand href
+  [string] $versionsUri = 'https://nodejs.org/dist/index.json'
+  [PSCustomObject] $versions = Invoke-RestMethod -Uri $versionsUri -UseBasicParsing
 
   $streams = @{ }
 
-  $urlsToGrabMsis | ForEach-Object {
-    $uri = $_
-    $download_page = Invoke-WebRequest -Uri $uri -UseBasicParsing
+  $supportedChannels | ForEach-Object {
+    [string] $channel = $_
+    [PSCustomObject] $latestVersion = $versions | Where-Object -FilterScript { $_.version.StartsWith($channel) } | Select-Object -First 1
+    Write-Host "$($latestVersion.version) / $($latestVersion.date)"
+    [string] $version = $latestVersion.version
+    [version] $versionStrict = [version]::Parse($latestVersion.version.Substring(1))
 
-    $msis = $download_page.links | Where-Object href -match '\.msi$' | Select-Object -expand href | ForEach-Object {
-      if (!$_.StartsWith('http')) { return $uri + $_ } else { $_ }
-    }
+    [string] $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
+    [string] $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
 
-    $url32 = $msis | Where-Object { $_ -match 'x86' } | Select-Object -first 1
-    $version = $url32 -split '\-v?' | Select-Object -last 1 -skip 1
-    $versionMajor = $version -replace '(^\d+)\..*', "`$1"
-    if ($streams.ContainsKey($versionMajor)) { return ; }
-
-    $url64 = $msis | Where-Object { $_ -match "\-x64" } | Select-Object -first 1
-
-    if ($url32 -eq $url64) { throw "The 64bit executable is the same as the 32bit" }
-
-    $streams.Add($versionMajor, @{ Version = $version ; URL32 = $url32; URL64 = $url64 } )
+    $streams.Add($versionStrict.Major, @{ Version = $versionStrict.ToString() ; URL32 = $url32; URL64 = $url64 } )
   }
 
   return @{ Streams = $streams }
