@@ -33,35 +33,34 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  [string] $scheduleUri = 'https://raw.githubusercontent.com/nodejs/Release/main/schedule.json'
-  [PSCustomObject] $schedules = Invoke-RestMethod -Uri $scheduleUri -UseBasicParsing
+  $scheduleUri = 'https://raw.githubusercontent.com/nodejs/Release/main/schedule.json'
+  $schedules = Invoke-RestMethod -Uri $scheduleUri -UseBasicParsing
 
-  [datetime] $curDate = (Get-Date).Date
-  [string[]] $supportedChannels = @()
+  $curDate = (Get-Date).Date
+  $supportedChannels = @()
   $schedules.PSObject.Properties.Name | ForEach-Object {
-    [string] $name = $_
-    [PSCustomObject] $schedule = $schedules.$name
-    [datetime] $scheduleStart = [datetime]::parseexact($schedule.start, 'yyyy-MM-dd', $null)
-    [datetime] $scheduleEnd = [datetime]::parseexact($schedule.end, 'yyyy-MM-dd', $null)
+    $name = $_
+    $schedule = $schedules.$name
+    $scheduleStart = [datetime]::parseexact($schedule.start, 'yyyy-MM-dd', $null)
+    $scheduleEnd = [datetime]::parseexact($schedule.end, 'yyyy-MM-dd', $null)
     if (($scheduleStart -le $curDate) -and ($scheduleEnd -ge $curDate)) {
       $supportedChannels += $name
     }
   }
 
-  [string] $versionsUri = 'https://nodejs.org/dist/index.json'
-  [PSCustomObject] $versions = Invoke-RestMethod -Uri $versionsUri -UseBasicParsing
+  $versionsUri = 'https://nodejs.org/dist/index.json'
+  $versions = Invoke-RestMethod -Uri $versionsUri -UseBasicParsing
 
   $streams = @{ }
 
   $supportedChannels | ForEach-Object {
-    [string] $channel = $_
-    [PSCustomObject] $latestVersion = $versions | Where-Object -FilterScript { $_.version.StartsWith($channel) } | Select-Object -First 1
-    Write-Host "$($latestVersion.version) / $($latestVersion.date)"
-    [string] $version = $latestVersion.version
-    [version] $versionStrict = [version]::Parse($latestVersion.version.Substring(1))
+    $channel = $_
+    $latestVersion = $versions | Where-Object -FilterScript { $_.version.StartsWith($channel) } | Select-Object -First 1
+    $version = $latestVersion.version
+    $versionStrict = [version]::Parse($latestVersion.version.Substring(1))
 
-    [string] $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
-    [string] $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
+    $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
+    $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
 
     $streams.Add($versionStrict.Major, @{ Version = $versionStrict.ToString() ; URL32 = $url32; URL64 = $url64 } )
   }
