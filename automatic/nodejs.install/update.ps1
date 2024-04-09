@@ -41,8 +41,8 @@ function global:au_GetLatest {
   $schedules.PSObject.Properties.Name | ForEach-Object {
     $name = $_
     $schedule = $schedules.$name
-    $scheduleStart = [datetime]::parseexact($schedule.start, 'yyyy-MM-dd', $null)
-    $scheduleEnd = [datetime]::parseexact($schedule.end, 'yyyy-MM-dd', $null)
+    $scheduleStart = [datetime]$schedule.start
+    $scheduleEnd = [datetime]$schedule.end
     if (($scheduleStart -le $curDate) -and ($scheduleEnd -ge $curDate)) {
       $supportedChannels += $name
     }
@@ -62,7 +62,11 @@ function global:au_GetLatest {
     $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
     $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
 
-    $streams.Add($versionStrict.Major, @{ Version = $versionStrict.ToString() ; URL32 = $url32; URL64 = $url64 } )
+    $streams.Add($versionStrict.Major.ToString(), @{
+        Version = $versionStrict.ToString()
+        URL32   = $url32
+        URL64   = $url64
+      })
   }
 
   return @{ Streams = $streams }
