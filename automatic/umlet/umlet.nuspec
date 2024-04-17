@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>umlet</id>
-    <version>15.0.0.20220711</version>
+    <version>15.1</version>
     <title>UMLet</title>
     <authors>umlet</authors>
     <owners>chocolatey-community,rgl</owners>
@@ -24,7 +24,7 @@
 ![Screenshot](https://cdn.jsdelivr.net/gh/chocolatey/chocolatey-coreteampackages/automatic/umlet/screenshot.png)
 ]]></description>
     <summary>Free UML Tool for Fast UML Diagrams.</summary>
-    <releaseNotes>https://www.umlet.com/changes.htm</releaseNotes>
+    <releaseNotes>https://umlet.com/changes</releaseNotes>
     <tags>foss cross-platform uml gui admin</tags>
     <projectSourceUrl>https://github.com/umlet/umlet</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/umlet</packageSourceUrl>
