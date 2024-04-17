@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer has been downloaded from their official download link listed on <>
 and can be verified like this:
 
-1. Download <https://cdn1.waterfox.net/waterfox/releases/G6.0.11/WINNT_x86_64/Waterfox%20Setup%20G6.0.11.exe>
+1. Download <https://cdn1.waterfox.net/waterfox/releases/G6.0.12/WINNT_x86_64/Waterfox%20Setup%20G6.0.12.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: D89D25A833A811A2DE525CD1E7BBD60F39CAF8B6A5DB4ACFC84976348888B2C7
+  checksum: D887224ED276434388342010F37929E405D4D56A2C4E8BD6C9CC4A8CE13C3FAD
 
 File 'LICENSE.md' is obtained from <https://github.com/MrAlex94/Waterfox/blob/1bc2fb60abf0fa173b69ca94f660115d76f09f4f/LICENSE>
