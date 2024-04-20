@@ -4,7 +4,7 @@
   <metadata>
     <id>mkdocs</id>
     <title>MkDocs</title>
-    <version>1.5.3</version>
+    <version>1.6.0</version>
     <authors>Tom Christie</authors>
     <owners>chocolatey-community</owners>
     <projectUrl>http://www.mkdocs.org</projectUrl>
