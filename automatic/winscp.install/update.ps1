@@ -1,7 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 
 $releases = 'https://winscp.net/eng/downloads.php'
-$re  = 'WinSCP.+\.exe$'
+$re  = 'WinSCP.+\.exe/download$'
 
 function global:au_SearchReplace {
    @{
