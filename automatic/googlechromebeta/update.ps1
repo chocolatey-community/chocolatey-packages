@@ -1,7 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://omahaproxy.appspot.com/all?os=win&channel=beta'
+$releases = "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/beta/versions"
 $paddedUnderVersion = '57.0.2988'
 
 function global:au_BeforeUpdate {
@@ -22,8 +22,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $release_info = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $version = $release_info | ForEach-Object Content | ConvertFrom-Csv | ForEach-Object current_version
+  $releasesData = Invoke-RestMethod -UseBasicParsing -Method Get -Uri $releases
+  $version = ($releasesData.versions | Select-Object -First 1).version
   $version = "$version-beta"
 
   @{
