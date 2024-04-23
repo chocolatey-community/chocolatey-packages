@@ -3,7 +3,7 @@
 <package>
   <metadata>
     <id>nmap</id>
-    <version>7.94</version>
+    <version>7.95</version>
     <title>Nmap</title>
     <authors>Fyodor</authors>
     <owners>chocolatey-community zippy1981 ferventcoder</owners>
@@ -23,7 +23,7 @@
 - Scriptable interaction with the target - using Nmap Scripting Engine (NSE) and Lua programming language.
 
 ]]></description>
-    <releaseNotes>https://nmap.org/changelog.html#7.94</releaseNotes>
+    <releaseNotes>https://nmap.org/changelog.html#7.95</releaseNotes>
     <copyright>Copyright 1996-2016</copyright>
     <tags>nmap foss cross-platform  port scanner network infosec</tags>
     <docsUrl>https://nmap.org/docs.html</docsUrl>
