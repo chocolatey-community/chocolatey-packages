@@ -5,7 +5,7 @@
     <id>audacity</id>
     <title>Audacity</title>
     <owners>chocolatey-community</owners>
-    <version>3.4.2</version>
+    <version>3.5.1</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>
 <description><![CDATA[Audacity is free, open source, cross-platform software for recording and editing sounds.

@@ -5,7 +5,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  file          = "$toolsPath\nmap-7.94-setup.exe"
+  file          = "$toolsPath\nmap-7.95-setup.exe"
 
   softwareName  = 'NMap*'
 
