@@ -5,7 +5,7 @@
     <id>googlechromebeta</id>
     <version>120.0.6099.56-beta</version>
     <title>Google Chrome Beta</title>
-    <owners>chocolatey-community,nsleigh</owners>
+    <owners>chocolatey-community,nsleigh,tunisiano</owners>
     <authors>Google LLC.</authors>
     <projectUrl>https://www.google.com/chrome/browser/</projectUrl>
     <licenseUrl>https://www.google.it/intl/en/chrome/browser/privacy/eula_text.html</licenseUrl>
