@@ -4,7 +4,7 @@
     <id>krita</id>
     <title>Krita</title>
     <version>5.2.2</version>
-    <owners>chocolatey-community,dtgm,KDE</owners>
+    <owners>chocolatey-community,dtgm,KDE,tunisiano</owners>
     <summary>Krita is a sketching and painting program designed for digital artists.</summary>
     <description><![CDATA[Krita is a FREE and open source painting tool designed for concept artists, illustrators, matte and texture artists, and the VFX industry. Krita has been in development for over 10 years and has had an explosion in growth recently. It offers many common and innovative features to help the amateur and professional alike. See below for some of the highlighted features.
 

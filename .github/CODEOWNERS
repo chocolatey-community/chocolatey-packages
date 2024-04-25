@@ -43,7 +43,8 @@
 */totalcommander*     @pauby
 */kubescape*          @HollowMan6
 */azcopy10*           @chocolatey-community/chocolatey-team-maintainers
-*/googlechromebeta    @tunisiano187
+*/googlechromebeta*   @tunisiano187
+*/krita*              @tunisiano187
 
 # Other
 # This can be any file other that won't be matched as a package
