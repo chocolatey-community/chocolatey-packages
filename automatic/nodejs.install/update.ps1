@@ -58,6 +58,7 @@ function global:au_GetLatest {
     $latestVersion = $versions | Where-Object -FilterScript { $_.version.StartsWith($channel) } | Select-Object -First 1
     $version = $latestVersion.version
     $versionStrict = [version]::Parse($latestVersion.version.Substring(1))
+    if ($streams.ContainsKey($versionStrict.Major.ToString())) { return ; }
 
     $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
     $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
