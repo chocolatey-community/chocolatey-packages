@@ -2,13 +2,13 @@
 
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-$ModuleName = "Selenium"
-$ModuleVersion = $env:ChocolateyPackageVersion
+$moduleName = "Selenium"
+$moduleVersion = $env:ChocolateyPackageVersion
 
-$SourcePath = Join-Path $toolsDir "$($ModuleName).zip"
-$SavedPaths = Join-Path $ToolsDir 'installedpaths'
+$sourcePath = Join-Path $toolsDir "$($moduleName).zip"
+$savedPaths = Join-Path $ToolsDir 'installedpaths'
 
-$DestinationPath = switch ((Get-PackageParameters).Keys) {
+$destinationPath = switch ((Get-PackageParameters).Keys) {
   "Core" {
     Join-Path $env:ProgramFiles "PowerShell\Modules"
   }
@@ -18,34 +18,34 @@ $DestinationPath = switch ((Get-PackageParameters).Keys) {
 }
 
 # By default, install for Windows PowerShell
-if (-not $DestinationPath) {
-  $DestinationPath = Join-Path $env:ProgramFiles "WindowsPowerShell\Modules"
+if (-not $destinationPath) {
+  $destinationPath = Join-Path $env:ProgramFiles "WindowsPowerShell\Modules"
 }
 
-$UnzipArgs = @{
-  FileFullPath = $SourcePath
+$unzipArgs = @{
+  FileFullPath = $sourcePath
   PackageName  = $env:ChocolateyPackageName
 }
 
-$InstalledPaths = foreach ($Path in $DestinationPath) {
-  Write-Verbose "Installing '$ModuleName' to '$Path'"
+$installedPaths = $destinationPath | ForEach-Object {
+  Write-Verbose "Installing '$moduleName' to '$_'"
 
   # PS > 5 needs to extract to a versioned folder
-  $Path = if ($PSVersionTable.PSVersion.Major -ge 5) {
-    Join-Path $Path "$($ModuleName)\$($ModuleVersion)"
+  $path = if ($PSVersionTable.PSVersion.Major -ge 5 -or $_ -notmatch 'Windows') {
+    Join-Path $_ "$($moduleName)\$($moduleVersion)"
   } else {
-    Join-Path $Path "$($ModuleName)"
+    Join-Path $_ "$($moduleName)"
   }
 
-  if (-not (Test-Path $Path)) {
-    $null = New-Item $Path -ItemType Directory -Force
+  if (-not (Test-Path $path)) {
+    $null = New-Item $path -ItemType Directory -Force
   }
 
-  Get-ChocolateyUnzip @UnzipArgs -Destination $Path
+  Get-ChocolateyUnzip @unzipArgs -Destination $path
 }
 
 # Cleanup the module from the Chocolatey $toolsDir folder
-Remove-Item $SourcePath -Force -Recurse
+Remove-Item $sourcePath -Force -Recurse
 
 # Store the installed locations, so we can remove them during uninstall
-Set-Content $SavedPaths -Value $InstalledPaths
+Set-Content $savedPaths -Value $installedPaths

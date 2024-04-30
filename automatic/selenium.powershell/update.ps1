@@ -7,27 +7,8 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
       # Replace the module version on the Save-Module line
-      "(?i)(^\s*\-\s*Save\-Module.*\-Version\s+).*" = "`${1}$($Latest.ModuleVersion)"
-
-      # Attempt to remove all existing checksums
-      "(?i)(^\s*file\s*name\:).*"         = ""
-      "(?i)(^\s*checksum\s*type\:).*"     = ""
-      "(?i)(^\s*checksum(32)?\:).*"       = ""
-
-      # We will clean up the blank lines in the afterupdate step
-      # This is because this method doesn't support multiline matching
-
-      # Finally, inject the fresh checksums
-      "(?i)(^\s*3. The checksums should match the following:)" = "`${1}`n`n$(
-        @($Latest.ModuleChecksums.ForEach{
-          @(
-            "  file name: $($_.Path -replace "^(?<BasePath>.+)\\Selenium\\$($Latest.ModuleVersion)\\")"
-            "  checksum type: $($_.Algorithm)"
-            "  checksum: $($_.Hash)"
-            "`n"
-          ) -join "`n"
-        }) -join ''
-      )"
+      "(?i)(-RequiredVersion\s+).*" = "`${1}$($Latest.ModuleVersion)"
+      "(?i)(Selenium\\).*``" = "`${1}$($Latest.ModuleVersion)``"
     }
   }
 }
@@ -35,39 +16,47 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate() {
   # Get an unused directory
   do {
-    $TempPath = Join-Path $env:TEMP "$([GUID]::NewGuid())"
+    $tempPath = Join-Path $env:TEMP "$([GUID]::NewGuid())"
   }
-  while (Test-Path $TempPath)
-  $null = New-Item -Path $TempPath -ItemType Directory
+  while (Test-Path $tempPath)
+  $null = New-Item -Path $tempPath -ItemType Directory
 
   # Save the module to the directory, and then compress the content into the package tools directory
-  Save-Module -Name $ModuleName -RequiredVersion $Latest.ModuleVersion -Path $TempPath
+  Save-Module -Name $ModuleName -RequiredVersion $Latest.ModuleVersion -Path $tempPath
 
-  $ArchiveArgs = @{
-    Path             = Join-Path $TempPath "\$ModuleName\$($Latest.ModuleVersion)\*"
+  $archiveArgs = @{
+    Path             = Join-Path $tempPath "\$ModuleName\$($Latest.ModuleVersion)\*"
     DestinationPath  = Join-Path $PSScriptRoot "\tools\$ModuleName.zip"
     CompressionLevel = "Optimal"
     Force            = $true
   }
-  Compress-Archive @ArchiveArgs
+  Compress-Archive @archiveArgs
 
-  $Latest.ModuleChecksums = Get-ChildItem $ArchiveArgs.Path -Recurse -File | Get-FileHash
+  $Latest.ModuleChecksums = Get-ChildItem $archiveArgs.Path -Recurse -File | Get-FileHash
 
   # Clean up the downloaded module
-  Remove-Item $TempPath -Recurse -Force -ErrorAction SilentlyContinue
+  Remove-Item $tempPath -Recurse -Force -ErrorAction SilentlyContinue
 }
 
 function global:au_AfterUpdate {
-  # We need to clean up the large blocks of blank space left by the earlier replacements
-  (Get-Content $PSScriptRoot\legal\VERIFICATION.txt -Raw) -replace "(\r?\n){5,999}", "`n`n" | Set-Content -Path $PSScriptRoot\legal\VERIFICATION.txt -NoNewline
+  $verificationFile = "$PSScriptRoot\legal\VERIFICATION.txt"
+  (Get-Content $verificationFile | Select-Object -First 16) | Set-Content -Path $verificationFile
+  @($Latest.ModuleChecksums.ForEach{
+    @(
+      "  file name: $($_.Path -replace "^(?<BasePath>.+)\\Selenium\\$($Latest.ModuleVersion)\\")"
+      "  checksum type: $($_.Algorithm)"
+      "  checksum: $($_.Hash)"
+      "`n"
+    ) -join "`n"
+  }) -join '' | Add-Content -Path $verificationFile -NoNewline
 }
 
 function global:au_GetLatest {
-  $Version = (Find-Module -Name $ModuleName).Version.ToString()
+  $version = (Find-Module -Name $ModuleName).Version.ToString()
 
   @{
-    Version       = $Version
-    ModuleVersion = $Version
+    Version       = $version
+    ModuleVersion = $version
   }
 }
 
