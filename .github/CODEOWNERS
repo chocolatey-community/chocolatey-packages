@@ -42,9 +42,9 @@
 */nexus-repository*   @chocolatey-community/chocolatey-team-maintainers
 */totalcommander*     @pauby
 */kubescape*          @HollowMan6
-*/azcopy10*           @chocolatey-community/chocolatey-team-maintainers
 */googlechromebeta*   @tunisiano187
 */krita*              @tunisiano187
+*/selenium.powershell* @chocolatey-community/chocolatey-team-maintainers
 
 # Other
 # This can be any file other that won't be matched as a package
