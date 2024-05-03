@@ -8,8 +8,8 @@ The module has been downloaded from <https://www.powershellgallery.com/packages/
 and zipped into 'selenium.zip'. It can be verified by following these steps:
 
 1. Save the module from the PowerShell Gallery:
-  - Save-Module -Name Selenium -Path . -RequiredVersion 0.0.0
-2. Get the checksum for each file saved to `Selenium\0.0.0` using one of the following methods:
+  - Save-Module -Name Selenium -Path . -RequiredVersion 3.0.1
+2. Get the checksum for each file saved to `Selenium\3.0.1` using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
@@ -117,3 +117,4 @@ and zipped into 'selenium.zip'. It can be verified by following these steps:
   file name: assemblies\macos\geckodriver.sha256
   checksum type: SHA256
   checksum: B2F96FFF2033943087EF6066587D770C78604FF3EC7A29A735E6A30E8C66B418
+

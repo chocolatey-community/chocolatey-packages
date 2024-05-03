@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>selenium.powershell</id>
-    <version>0.0.0</version>
+    <version>3.0.1</version>
     <title>Selenium PowerShell Module</title>
     <authors>Adam Driscoll</authors>
     <owners>chocolatey-community</owners>
     <licenseUrl>https://github.com/adamdriscoll/selenium-powershell/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/adamdriscoll/selenium-powershell</projectUrl>
     <projectSourceUrl>https://github.com/adamdriscoll/selenium-powershell</projectSourceUrl>
-    <iconUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/icons/selenium.powershell.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@6df1e60d987753faa6bd0ddcfc2376ac4c34bc1c/icons/selenium.powershell.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description><![CDATA[The Selenium PowerShell module allows you to automate browser interaction using the [Selenium API](https://selenium.dev/). You can navigate to pages, find elements, click buttons, enter text and even take screenshots.
 
