@@ -3,7 +3,7 @@
   <metadata>
     <id>skype</id>
     <title>Skype</title>
-    <version>8.118.0.205</version>
+    <version>8.119.0.201</version>
     <authors>Microsoft</authors>
     <owners>chocolatey-community,Rob Reynolds</owners>
     <summary>Skype - VOIP</summary>
