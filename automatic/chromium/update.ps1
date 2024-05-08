@@ -1,8 +1,7 @@
-Import-Module au
-
 Import-Module Chocolatey-AU
-    $releases = 'https://chromium.woolyss.com/api/v5/?os=win<bit>&type=<type>&out=json'
-    $ChecksumType = 'sha256'
+
+$releases = 'https://chromium.woolyss.com/api/v5/?os=win<bit>&type=<type>&out=json'
+$ChecksumType = 'sha256'
 
 function global:au_SearchReplace {
   @{
