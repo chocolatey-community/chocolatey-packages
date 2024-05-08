@@ -45,12 +45,12 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
     $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | % Content
-    $url     = "https://github.com/Lexikos/AutoHotkey_L/releases/download/v$($version)/AutoHotkey_$($version)_setup.exe"
+    $url     = "https://github.com/AutoHotkey/AutoHotkey/releases/download/v$($version)/AutoHotkey_$($version)_setup.exe"
     @{
         Version  = $version
         URL      = $url
         FileName = "AutoHotkey_$($version)_setup.exe"
-        v1Url    = "https://github.com/Lexikos/AutoHotkey_L/releases/download/v$($v1Version)/$v1Filename"
+        v1Url    = "https://github.com/AutoHotkey/AutoHotkey/releases/download/v$($v1Version)/$v1Filename"
         v1FileName = $v1Filename
     }
 }
