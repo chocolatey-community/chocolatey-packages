@@ -2,7 +2,7 @@
 
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-Install-ChocolateyZipPackage `
+Get-ChocolateyUnzip `
     -PackageName $env:ChocolateyPackageName `
     -File "$toolsDir\umlet-standalone-15.1.zip" `
     -UnzipLocation $toolsDir
