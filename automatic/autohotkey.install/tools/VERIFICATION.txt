@@ -1,4 +1,4 @@
-VERIFICATION
+﻿VERIFICATION
 
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.37.02/AutoHotkey_1.1.37.02_setup.exe
-   x64: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.37.02/AutoHotkey_1.1.37.02_setup.exe
+   v1 x32: https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.36.02/AutoHotkey_1.1.36.02_setup.exe
+   v2 x32: https://github.com/Lexikos/AutoHotkey_L/releases/download/v2.0.11/AutoHotkey_2.0.11_setup.exe
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 49A48E879F7480238D2FE17520AC19AFE83685AAC0B886719F9E1EAC818B75CC
-   checksum64: 49A48E879F7480238D2FE17520AC19AFE83685AAC0B886719F9E1EAC818B75CC
+   v1 checksum32: AF7B8E60B4B54F5F85E6B207AC51926CB076AA4319B8E4C72E59B98C85818CAE
+   v2 checksum32: 510A833BDD0F896CC398EAAE4FF475F5B7CFE37649EFBF647B50D21E442394B9
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum https://github.com/Lexikos/AutoHotkey_L/releases/download/v1.1.37.02/AutoHotkey_1.1.37.02_setup.exe
+   Get-RemoteChecksum https://github.com/Lexikos/AutoHotkey_L/releases/download/v2.0.11/AutoHotkey_2.0.11_setup.exe
 
 File 'license.txt' is obtained from:
    https://github.com/AutoHotkey/AutoHotkey/blob/df84a3e902b522db0756a7366bd9884c80fa17b6/license.txt
