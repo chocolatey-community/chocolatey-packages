@@ -44,7 +44,7 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-    $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | % Content
+    $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | ForEach-Object Content
     $url     = "https://github.com/AutoHotkey/AutoHotkey/releases/download/v$($version)/AutoHotkey_$($version)_setup.exe"
     @{
         Version  = $version
