@@ -27,9 +27,11 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
 ## Package Parameters
 
 - `/installLocation` - Install to a different destination folder. Default: `$Env:AppData\Apache*`
-- `/serviceName` - The name of the windows service which will be create. Default: `Apache`
+- `/serviceName` - The name of the windows service which will be create. Default: `Apache2.4`
 - `/port` - The port Apache will listen to. Default: `8080`
 - `/noService` - Don't install the apache httpd windows service
+- `/skipConfiguration` - Don't change the apache configuration during the installation
+- `/noStartService` - Don't start the apache windows service
 
 Example: `choco install apachelounge-httpd --params '"/installLocation:C:\HTTPD /port:433"'`
 
@@ -37,7 +39,7 @@ Example: `choco install apachelounge-httpd --params '"/installLocation:C:\HTTPD 
 
 - This package will install the latest Apache binaries provided at Apache Lounge (https://www.apachelounge.com/) with OpenSSL, brotli, nghttp, Zlib, PCRE2.
 - The complete path of the package will be `$Env:AppData\Apache*`
-- Apache will be installed as a service under the default name 'Apache' (can be disabled with the `/noService` install parameter)
+- Apache will be installed as a service under the default name 'Apache2.4' (can be disabled with the `/noService` install parameter)
 ]]></description>
     <tags>apache httpd webserver admin</tags>
     <dependencies>
