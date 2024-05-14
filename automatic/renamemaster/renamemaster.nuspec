@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>renamemaster</id>
-    <version>3.17</version>
+    <version>3.18</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/renamemaster</packageSourceUrl>
     <owners>chocolatey-community, Redsandro</owners>
     <title>Rename Master</title>
