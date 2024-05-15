@@ -1,4 +1,4 @@
-import-module au
+import-module Chocolatey-AU
 
 $releases    = 'https://app-updates.agilebits.com/product_history/OPW8'
 $release_notes_base = 'https://releases.1password.com/windows/'
@@ -17,7 +17,9 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate { }
+function global:au_BeforeUpdate { 
+  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+}
 function global:au_AfterUpdate  { }
 
 function global:au_GetLatest {
@@ -63,4 +65,4 @@ function global:au_GetLatest {
     }
 }
 
-update -ChecksumFor 64 -NoReadme
+Update-Package -ChecksumFor none -NoReadme
