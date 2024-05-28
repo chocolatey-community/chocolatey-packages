@@ -23,7 +23,7 @@ function global:au_AfterUpdate {
 }
 
 function global:au_GetLatest {
-  $LatestRelease = Get-GitHubRelease -OwnerName mumble-voip -RepositoryName mumble -Latest
+  $LatestRelease = Get-GitHubRelease mumble-voip mumble
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $url32 = $LatestRelease.assets | Where-Object {$_.name.StartsWith("mumble_client")} | Where-Object {$_.name.EndsWith(".msi")} | Select-Object -ExpandProperty browser_download_url
   $releaseNotes = $download_page.Links | ? href -match "www.mumble.info\/blog" | Select-Object -first 1 -expand href
