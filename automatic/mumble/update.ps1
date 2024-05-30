@@ -33,7 +33,7 @@ function global:au_GetLatest {
 
   @{
     URL32        = $url32
-    Version      = $LatestRelease.tag_name.TrimStart("v.")  # Tags have a "v." prefix, not a typo
+    Version      = $LatestRelease.tag_name.TrimStart("v")  # Tags have a "v." prefix, not a typo
     ReleasesUrl  = "$releases/tag/$version32"
     ReleaseNotes = $releaseNotes
   }
