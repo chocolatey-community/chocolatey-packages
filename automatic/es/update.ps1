@@ -23,7 +23,7 @@ function global:au_BeforeUpdate {
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $re            = "ES-[\d\.]+\.zip"
+    $re            = "ES-[\d\.]+\.x64.zip"
     $urlPath       = $download_page.links | ? href -match $re | Select-Object -First 1 -Expand href
     $version       = ($urlPath -split '-' | Select-Object -Last 1).trim(".zip")
     @{
