@@ -25,7 +25,7 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $re            = "ES-[\d\.]+\.x64.zip"
     $urlPath       = $download_page.links | ? href -match $re | Select-Object -First 1 -Expand href
-    $version       = ($urlPath -split '-' | Select-Object -Last 1).trim(".zip")
+    $version       = ($urlPath -split '-' | Select-Object -Last 1).trim("x64.zip")
     @{
         Version      = $version
         URL32        = 'https://www.voidtools.com' + $urlPath
