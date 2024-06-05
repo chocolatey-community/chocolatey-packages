@@ -30,7 +30,7 @@ function global:au_GetLatest {
     $urlPath        = $download_page.links | ? href -match $re | Select-Object -First 1 -Expand href
     $re64           = "ES-[\d\.]+\.x64.zip"
     $urlPath64      = $download_page.links | ? href -match $re | Select-Object -First 1 -Expand href
-    $version        = ($urlPath -split '-' | Select-Object -Last 1).trim(".zip")
+    $version        = ($urlPath -split '-' | Select-Object -Last 1).trim(".x86.zip")
     @{
         Version      = $version
         URL32        = 'https://www.voidtools.com' + $urlPath
