@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: http://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.7z
+   x32: http://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.7z
 
    to download the archive.
 
@@ -15,11 +15,11 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 42020EBD14CA126532220DD7367660DF976BEC6E8A3A2CBA04A0F1C37FD14F8F
+   checksum32: 77B2A79C4BAF0DCC7C453F74F29FBDB55D42C790D277B5F9E0DBED0F3ABC0131
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum http://get.videolan.org/vlc/3.0.20/win32/vlc-3.0.20-win32.7z
+   Get-RemoteChecksum http://get.videolan.org/vlc/3.0.21/win32/vlc-3.0.21-win32.7z
 
 File 'LICENSE.txt' obtained from:
    http://svn.videolan.org/filedetails.php?repname=VideoLAN+Server&path=%2Ftrunk%2FCOPYING
