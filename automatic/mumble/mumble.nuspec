@@ -51,6 +51,7 @@ Example `choco install mumble --package-parameters="/IncludeAll"`
     <bugTrackerUrl>https://github.com/mumble-voip/mumble/issues</bugTrackerUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="vcredist140" />
     </dependencies>
   </metadata>
   <files>
