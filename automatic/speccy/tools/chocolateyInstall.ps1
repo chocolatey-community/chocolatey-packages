@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'speccy'
-$url32       = 'https://download.ccleaner.com/spsetup132.exe'
+$url32       = 'https://download.ccleaner.com/spsetup133.exe'
 $url64       = $url32
-$checksum32  = '0a9e739910578192e2ad3f8f805a863d5cbcacbc38cde6488d7bbef5395dba87'
+$checksum32  = 'e0edaee0d47ae9ddbb9ac78c9bcede8e25e082b87eb14654242b97c48ba847f5'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
