@@ -9,7 +9,7 @@ Package can be verified like this:
 
    x32: https://sqlite.org/2023/sqlite-dll-win32-x86-3430200.zip
    x64: https://sqlite.org/2023/sqlite-dll-win64-x64-3430200.zip
-   Toolsx32: https://sqlite.org/2023/sqlite-tools-win32-x86-3430200.zip
+   Toolsx64: https://sqlite.org/2023/sqlite-tools-win32-x86-3430200.zip
 
    to download the files.
 
@@ -19,7 +19,7 @@ Package can be verified like this:
 
    checksum32: 0B64B189CB41D065F9355DE93CE2F41C40865429801BEC3A555B30ACA839058C
    checksum64: FA8981F39524F25FCC546C45A87FF4C1EEFD81FDC22F55A9BBE249155CDAF62E
-   checksumTools32: FAE9EFCCF4469CA69BE5D418FC088593CDB86E07A1B211BDB85463591A923B02
+   checksumTools64: FAE9EFCCF4469CA69BE5D418FC088593CDB86E07A1B211BDB85463591A923B02
 
 File 'license.txt' is obtained from the following URL (and converted to markdown):
    http://www.sqlite.org/copyright.html
