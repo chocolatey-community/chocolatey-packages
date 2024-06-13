@@ -1,5 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+if (Get-Process "Tixati*" -ErrorAction SilentlyContinue) {
+   Throw "Tixati is running!  To prevent data loss, please fully quit Tixati before attempting to uninstall it."
+}
+
 $packageName     = 'tixati'
 $installLocation = Get-AppInstallLocation $packageName
 $uninstaller     = "$installLocation\uninstall.exe"

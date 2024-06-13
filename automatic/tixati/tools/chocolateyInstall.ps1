@@ -1,5 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+if (Get-Process "Tixati*" -ErrorAction SilentlyContinue) {
+   Throw "Tixati is running!  To prevent data loss, please fully quit Tixati before attempting to upgrade it."
+}
+
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $fileName = 'tixati-3.25-1.install.exe'
 $dlDir = "$Env:TEMP\chocolatey\$($Env:ChocolateyPackageName)\$($Env:ChocolateyPackageVersion)"
