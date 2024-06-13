@@ -5,8 +5,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'winscp'
   fileType       = 'exe'
-  file           = Get-Item $toolsPath\*.exe
-  file64         = Get-Item $toolsPath\*.exe
+  file           = "$toolsPath\WinSCP-$($env:ChocolateyPackageVersion)-Setup.exe"
+  file64         = "$toolsPath\WinSCP-$($env:ChocolateyPackageVersion)-Setup.exe"
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 }
 Install-ChocolateyInstallPackage @packageArgs
