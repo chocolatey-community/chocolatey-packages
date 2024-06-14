@@ -16,16 +16,18 @@ param(
       $ext = "7z"
       $re64 = "(FreeCAD_weekly-builds)?((\-\d{2,6})+)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2,5})?(\.$ext)$"
 #      $url64 = ( $download_page.Links | ? href -match $re64 | Select-Object -First 1 -ExpandProperty 'href' )
-      $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
+      $asset64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 )
+      $url64 = $asset64.browser_download_url
       "url64 -$url64-" | Write-Warning
       $PackageName  = "$Title"
       $Title        = "$Title"
-      # Now to get the newest Revision from url64
+      # Now to get the newest Revision with date from asset64
+      $dateCreated = Get-Date -Date $asset64.created_at -UFormat "%Y.%m.%d"
       $veri = ((($url64 -split('\/'))[-1]) -replace( "(x\d{2})|(_\d{2}\-py\d{2,5})|(\-)?([A-z])+?(\-)|(\.$ext)", ''))
       "veri -$veri-" | Write-Warning
-      $DevRevision,$year,$month,$day = (($veri -replace('\-','.') ) -split('\.'))
-      "Standard Development Versioning for $DevRevision dated ${month}-${day}-${year}" | Write-Warning
-      [version]$version = ( ( ($DevRevision),($year),($month),($day) ) -join "." )
+      $DevRevision = (($veri -replace('\-','.') ) -split('\.')) | Select-Object -First 1
+      "Standard Development Versioning for $DevRevision dated ${dateCreated}" | Write-Warning
+      [version]$version = ( ( ($DevRevision),($dateCreated) ) -join "." )
       $vert = "${version}-${kind}"
     }
     'portable' {
