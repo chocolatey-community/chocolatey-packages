@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>scribus</id>
-    <version>1.6.1</version>
+    <version>1.6.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/scribus</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <title>Scribus</title>
