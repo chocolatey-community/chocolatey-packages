@@ -3,7 +3,7 @@
 $packageName = 'speccy'
 $url32       = 'https://download.ccleaner.com/spsetup133.exe'
 $url64       = $url32
-$checksum32  = 'e0edaee0d47ae9ddbb9ac78c9bcede8e25e082b87eb14654242b97c48ba847f5'
+$checksum32  = '03C35FCB1D10CF478C0B9896699937E6E262DAA4F4A4353A7CC56B238FE86892'
 $checksum64  = $checksum32
 
 if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
