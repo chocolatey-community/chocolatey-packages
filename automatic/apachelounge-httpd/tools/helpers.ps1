@@ -80,7 +80,12 @@ function Install-Apache {
         -file64 $arguments.file64 `
         -destination $arguments.destination
 
-    Set-ApacheConfig $arguments
+    Move-Item "$($arguments.destination)\ReadMe.txt" "$($arguments.destination)\Apache24\ApacheLounge.ReadMe.txt"
+    Move-Item "$($arguments.destination)\-- Win*" "$($arguments.destination)\Apache24\"
+
+    if ($arguments.setConfiguration) {
+        Set-ApacheConfig $arguments
+    }
 
     if ($arguments.serviceName) {
       Install-ApacheService $arguments
@@ -97,9 +102,12 @@ function Install-ApacheService {
 
     $apachePaths = Get-ApachePaths $arguments.destination
 
+    Write-Warning "This command is expected to write debugging output. Chocolately treats that as an error. Please read the error text to confirm whether service installation succeed."
     & $apachePaths.BinPath -k install -n "$($arguments.serviceName)"
 
-    Start-Service $arguments.serviceName
+    if ($arguements.StartService) {
+        Start-Service $arguments.serviceName
+    }
 }
 
 function Set-ApacheConfig {
@@ -164,5 +172,6 @@ function Uninstall-ApacheService {
 
     $apachePaths = Get-ApachePaths $arguments.destination
 
+    Write-Warning "This command is expected to write debugging output. Chocolately treats that as an error. Please read the error text to confirm whether service installation succeed."
     & $apachePaths.BinPath -k uninstall -n "$($arguments.serviceName)"
 }
