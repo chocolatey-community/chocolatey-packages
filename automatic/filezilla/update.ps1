@@ -20,7 +20,9 @@ function global:au_SearchReplace {
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameBase "FileZilla_$($Latest.Version)"}
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Chocolatey"
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing -UserAgent "Chocolatey" -Headers @{
+        "Accept" = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8"
+    }
     $url32 = $download_page.Links | Where-Object href -match "win32\-setup\.exe" | Select-Object -first 1 -expand href
     $url64 = $download_page.Links | Where-Object href -match "win64\-setup\.exe" | Select-Object -first 1 -expand href
     $version = $url32 -split '_' | Where-Object { $_ -match '^\d+\.[\d\.]+$' } | Select-Object -first 1
