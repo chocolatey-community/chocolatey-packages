@@ -9,6 +9,7 @@ $funcs = @(
   'Clear-DependenciesList'
   'Get-AllGitHubReleases'
   'Get-GitHubRelease'
+  'Get-GitHubRepositoryFileContent'
   'Set-DescriptionFromReadme'
   'Update-ChangelogVersion'
   'Update-OnETagChanged'
