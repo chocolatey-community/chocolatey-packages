@@ -42,7 +42,7 @@ function global:au_GetLatest {
 
     foreach ($minor_version in $minor_version_changelogs) {
         if ($streams.ContainsKey($minor_version)) {
-          return
+          continue
         }
 
         $minor_changelog_page = Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/CHANGELOG-$($minor_version).md"
@@ -52,7 +52,7 @@ function global:au_GetLatest {
           | Select-Object -First 1
 
         if (!$url64) {
-          return
+          continue
         }
 
         if ($url64 -match "/v(?<version>\d+(\.\d+)+)/kubernetes-client-windows-amd64.tar.gz") {
