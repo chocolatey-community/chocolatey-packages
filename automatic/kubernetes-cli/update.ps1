@@ -3,7 +3,10 @@ param($IncludeStream, [switch] $Force)
 
 Import-Module Chocolatey-AU
 
-$changelogs = 'https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/README.md'
+$changelogRepository = @{
+  Owner      = 'kubernetes'
+  Repository = 'kubernetes'
+}
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -27,7 +30,7 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     # Only report the supported Kubernetes streams.
 
-    $changelogs = (Invoke-WebRequest -Uri $changelogs -UseBasicParsing).content
+    $changelogs = Get-GitHubRepositoryFileContent @changelogRepository CHANGELOG/README.md
 
     # There is quite a few versions that do not exist on chocolatey.org
     # and since the limit of pushed packages is 10, we need to limit the amount
@@ -45,8 +48,8 @@ function global:au_GetLatest {
           continue
         }
 
-        $minor_changelog_page = Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/kubernetes/kubernetes/master/CHANGELOG/CHANGELOG-$($minor_version).md"
-        $url64 = $minor_changelog_page.content `
+        $minor_changelog_page = Get-GitHubRepositoryFileContent @changelogRepository "CHANGELOG/CHANGELOG-$($minor_version).md"
+        $url64 = $minor_changelog_page `
           | Select-String -Pattern "(?<=\[.+\]\()(?<href>.+/v(?<version>\d+(\.\d+)+)/kubernetes-client-windows-amd64\.tar\.gz)\)" `
           | ForEach-Object {$_.Matches.Groups.Where{$_.Name -eq 'href'}.value} `
           | Select-Object -First 1
@@ -59,7 +62,7 @@ function global:au_GetLatest {
           $patch_version = $matches.version
         }
 
-        $url32 = $minor_changelog_page.content `
+        $url32 = $minor_changelog_page `
           | Select-String -Pattern "(?<=\[.+\]\()(?<href>.+/v(?<version>\d+(\.\d+)+)/kubernetes-client-windows-386\.tar\.gz)\)" `
           | ForEach-Object {$_.Matches.Groups.Where{$_.Name -eq 'href'}.value} `
           | Select-Object -First 1
