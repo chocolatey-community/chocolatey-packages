@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>autohotkey</id>
-    <version>2.0.17</version>
+    <version>2.0.18</version>
     <title>AutoHotkey</title>
     <owners>chocolatey-community</owners>
     <authors>Lexikos</authors>
@@ -37,7 +37,7 @@
     <releaseNotes>https://www.autohotkey.com/docs/v2/AHKL_ChangeLog.htm</releaseNotes>
     <tags>automation hotkeys scripting windows foss admin</tags>
     <dependencies>
-      <dependency id="autohotkey.install" version="2.0.17" />
+      <dependency id="autohotkey.install" version="2.0.18" />
     </dependencies>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/autohotkey</packageSourceUrl>
     <projectSourceUrl>https://github.com/AutoHotkey/AutoHotkey</projectSourceUrl>

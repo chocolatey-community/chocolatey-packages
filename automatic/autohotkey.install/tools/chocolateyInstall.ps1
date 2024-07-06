@@ -2,7 +2,7 @@
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $installerv1File = 'AutoHotkey_1.1.36.02_setup.exe'
-$installerv2File = 'AutoHotkey_2.0.17_setup.exe'
+$installerv2File = 'AutoHotkey_2.0.18_setup.exe'
 
 $pp = Get-PackageParameters
 if (!$pp.DefaultVer){
