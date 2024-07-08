@@ -13,8 +13,8 @@ $packageArgs = @{
   fileFullPath   = Join-path $dlDir $fileName
   url            = 'https://download1.tixati.com/download/tixati-3.25-1.win32-install.exe'
   url64bit       = 'https://download1.tixati.com/download/tixati-3.25-1.win64-install.exe'
-  checksum       = 'a07614b9080f0efccebc4d2d288295d4745d6d1fa15b0b7e7220847823e071e9'
-  checksum64     = '8fa816eb08b07f308ebf51592ae6863c818ddd72ef538336cb2a1ee0cb8f1c2c'
+  checksum       = '72af03d35bb0bbfa680b2086894b5ef9864d9b8cd776c8e7e22919da5c18552a'
+  checksum64     = 'fcc54edb5d6f5d85f5ff002f5de2d3fff034c4e1dfa6a2e21179e134d9b4bccb'
   checksumType   = 'sha256'
 }
 
