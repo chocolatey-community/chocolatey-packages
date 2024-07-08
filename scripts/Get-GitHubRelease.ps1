@@ -16,7 +16,7 @@
     [Parameter(Mandatory, Position = 1)]
     [string]$Name,
 
-    # The Name of the tag to get the relase for. Will default to the latest release.
+    # The Name of the tag to get the release for. Will default to the latest release.
     [string]$TagName,
 
     # GitHub token, used to reduce rate-limiting or access private repositories (needs repo scope)
