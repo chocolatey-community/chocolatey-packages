@@ -23,8 +23,8 @@ function global:au_GetLatest {
   $LatestRelease = Get-GitHubRelease Tribler tribler
 
   @{
-    URL32        = $LatestRelease.assets | Where-Object {$_.name.EndsWith("x86.exe")} | Select-Object -ExpandProperty browser_download_url
-    URL64        = $LatestRelease.assets | Where-Object {$_.name.EndsWith("x64.exe")} | Select-Object -ExpandProperty browser_download_url
+    URL32        = $LatestRelease.assets | Where-Object {$_.name.EndsWith("x86.exe") -and $_.name -notmatch '-debug_'} | Select-Object -ExpandProperty browser_download_url
+    URL64        = $LatestRelease.assets | Where-Object {$_.name.EndsWith("x64.exe") -and $_.name -notmatch '-debug_'} | Select-Object -ExpandProperty browser_download_url
     Version      = $LatestRelease.tag_name.TrimStart("v")
     ReleaseNotes = $LatestRelease.html_url
   }
