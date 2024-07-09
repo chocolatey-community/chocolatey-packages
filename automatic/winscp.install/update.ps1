@@ -4,21 +4,13 @@ $releases = 'https://winscp.net/eng/downloads.php'
 $re  = 'WinSCP.+\.exe/download$'
 
 function global:au_SearchReplace {
-    $FileVersion = if ($Latest.FileVersion -ne $Latest.Version) {
-        $Latest.FileVersion
-    } else {
-        '$($env:ChocolateyPackageVersion)'
-    }
-
-   @{
+    @{
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
         }
         "tools\chocolateyInstall.ps1"   = @{
-            # We use ChocolateyPackageVersion to minimise changes to the package code -
-            # If using a patchfix version, use the fileversion instead of the packageversion.
-            '(?i)(\s*file\s*=\s*["'']\$toolsPath\\WinSCP-)(\$\(\$env:ChocolateyPackageVersion\)|.+)(-Setup\.exe["''])' = "`${1}$($FileVersion)`${3}"
-            '(?i)(\s*file64\s*=\s*["'']\$toolsPath\\WinSCP-)(\$\(\$env:ChocolateyPackageVersion\)|.+)(-Setup\.exe["''])' = "`${1}$($FileVersion)`${3}"
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
         }
         ".\legal\VERIFICATION.txt" = @{
           "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
@@ -38,7 +30,6 @@ function global:au_GetLatest {
     $file_name = $url -split '/' | Select-Object -last 1 -Skip 1
     @{
         Version      = $version
-        FileVersion  = $version
         URL32        = "https://sourceforge.net/projects/winscp/files/WinSCP/$version/$file_name/download"
         FileName32   = $file_name
         ReleaseNotes = "https://winscp.net/download/WinSCP-${version}-ReadMe.txt"
