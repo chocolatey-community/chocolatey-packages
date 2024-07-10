@@ -4,11 +4,14 @@ $releases = 'https://winscp.net/eng/downloads.php'
 $re  = 'WinSCP.+\.exe/download$'
 
 function global:au_SearchReplace {
-   @{
+    @{
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
         }
-
+        "tools\chocolateyInstall.ps1"   = @{
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+        }
         ".\legal\VERIFICATION.txt" = @{
           "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
           "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
