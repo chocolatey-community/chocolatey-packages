@@ -8,7 +8,7 @@ location on <https://github.com/kubescape/kubescape/releases>
 and can be verified by doing the following:
 
 1. Download the following:
-  64-bit software: <https://github.com/kubescape/kubescape/releases/download/v3.0.13/kubescape.exe>
+  64-bit software: <https://github.com/kubescape/kubescape/releases/download/v3.0.14/kubescape.exe>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 
 3. The checksums should match the following:
   checksum type: sha256
-  checksum64: BCF4BE2663943C98A467B0A69D405C1622BFD788AE0FE69A05DE1E3B5745A4B0
+  checksum64: 46422254B2B77585B2832E26E4883EE8B8FB6404521604CCBF96775932CF9C4E
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/kubescape/kubescape/blob/92449bf564ca256263db0b185746553e7d0b3c96/LICENSE>
