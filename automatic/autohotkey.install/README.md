@@ -27,3 +27,9 @@ AutoHotkey is a free, open source macro-creation and automation software utility
 - `/DefaultVer` - Can be `U64` (UNICODE 64-bit),`U32` (UNICODE 32-bit) or `A32` (ANSI 32-bit). By default UNICODE version will be installed of adequate architecture depending on your machine and/or OS.
 
 Example: `choco install autohotkey.install --params='/DefaultVer:A32'`
+
+## Notes
+
+- Please see the [Autohotkey FAQ](https://www.autohotkey.com/docs/v2/FAQ.htm#Virus) for information on false positive anti-virus detections.
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
