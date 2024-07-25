@@ -5,12 +5,12 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   packageName            = 'libreoffice-still'
-  version                = '24.2.4'
+  version                = '24.2.5'
   fileType               = 'msi'
-  url                    = 'https://download.documentfoundation.org/libreoffice/stable/24.2.4/win/x86/LibreOffice_24.2.4_Win_x86.msi'
-  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/24.2.4/win/x86_64/LibreOffice_24.2.4_Win_x86-64.msi'
-  checksum               = 'fbcb2b4b4cd12a357a9d47f7ae9f52ba2e738405c727d5bcfdc5fe6dbe515c55'
-  checksum64             = '23dde11f10fc4ec4fac592d50a2448331fa9bedc68ae4ee39ed63201032d0d6d'
+  url                    = 'https://download.documentfoundation.org/libreoffice/stable/24.2.5/win/x86/LibreOffice_24.2.5_Win_x86.msi'
+  url64bit               = 'https://download.documentfoundation.org/libreoffice/stable/24.2.5/win/x86_64/LibreOffice_24.2.5_Win_x86-64.msi'
+  checksum               = 'd09952f2841f424e1722a53837ca64393d30f2c86fcb2a015d97a14de5311c3f'
+  checksum64             = 'cad625d119db4720df5270fa2d860e0ed56d6e374b878e19a3cab4af68f1f54f'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/qn /passive /norestart /l*v "{0}"' -f "$($env:TEMP)\$($env:ChocolateyPackageName).$($env:ChocolateyPackageVersion).MsiInstall.log"
