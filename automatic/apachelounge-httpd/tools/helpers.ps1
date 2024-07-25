@@ -102,8 +102,8 @@ function Install-ApacheService {
 
     $apachePaths = Get-ApachePaths $arguments.destination
 
-    Write-Warning "This command is expected to write debugging output. Chocolately treats that as an error. Please read the error text to confirm whether service installation succeed."
-    & $apachePaths.BinPath -k install -n "$($arguments.serviceName)"
+    # This command outputs to the error stream. 2>&1 redirects that to output.
+    & $apachePaths.BinPath -k install -n "$($arguments.serviceName)" 2>&1
 
     if ($arguements.StartService) {
         Start-Service $arguments.serviceName
