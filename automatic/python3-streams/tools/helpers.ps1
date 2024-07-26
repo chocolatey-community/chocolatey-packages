@@ -93,7 +93,7 @@ function Protect-InstallFolder {
   $ErrorActionPreference = 'Stop'
   try {
     # get current acl
-    $acl = (Get-Item $folder).GetAccessControl('Access,Owner')
+    $acl = Get-Acl -Path $folder
 
     Write-Debug "Removing existing permissions."
     $acl.Access | ForEach-Object { $acl.RemoveAccessRuleAll($_) }
@@ -139,7 +139,7 @@ function Protect-InstallFolder {
     $acl.SetAccessRuleProtection($true, $false)
 
     # enact the changes against the actual
-    (Get-Item $folder).SetAccessControl($acl)
+    Set-Acl -Path $folder -AclObject $acl
   }
   catch {
     Write-Warning "Not able to set permissions for $folder."
