@@ -14,7 +14,7 @@ if ($key.Count -eq 1) {
             file                   = "$($_.UninstallString.Replace(' /x86=0', ''))"   #"C:\Program Files\OpenSSH\uninstall.exe" /x86=0
         }
 
-        $installLocation = $_.UninstallString.DirectoryName
+        $installLocation = $(Split-Path $_.UninstallString.trim('"') )
         Write-Debug "$packageName installed in: $installLocation"
         
         if (!$installLocation) { 
