@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@2bdf6f7e33ec1a8126829fbbc87b83e4473b3634/icons/apache-httpd.png" width="48" height="48"/> [apache-httpd](https://chocolatey.org/packages/apache-httpd)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@2bdf6f7e33ec1a8126829fbbc87b83e4473b3634/icons/apache-httpd.png" width="48" height="48"/> [apachelounge-httpd](https://chocolatey.org/packages/apachelounge-httpd)
 
 Apache HTTP Web Server for Windows.
 
@@ -11,14 +11,16 @@ The Apache HTTP Server is a project of The Apache Software Foundation.
 ## Package Parameters
 
 - `/installLocation` - Install to a different destination folder. Default: `$Env:AppData\Apache*`
-- `/serviceName` - The name of the windows service which will be create. Default: `Apache`
+- `/serviceName` - The name of the windows service which will be create. Default: `Apache2.4`
 - `/port` - The port Apache will listen to. Default: `8080`
 - `/noService` - Don't install the apache httpd windows service
+- `/skipConfiguration` - Don't change the apache configuration during the installation
+- `/noStartService` - Don't start the apache windows service
 
-Example: `choco install apache-httpd --params '"/installLocation:C:\HTTPD /port:433"'`
+Example: `choco install apachelounge-httpd --params '"/installLocation:C:\HTTPD /port:433"'`
 
 ## Notes
 
-- This package will install the latest Apache binaries provided at Apache Haus (http://www.apachehaus.com/) with OpenSSL 1.1.1p, brotli 1.0.9, nghttp 1.47.0, Zlib 1.2.12, PCRE2 10.40.
+- This package will install the latest Apache binaries provided at Apache Lounge (https://www.apachelounge.com/) with OpenSSL, brotli, nghttp, Zlib, PCRE2.
 - The complete path of the package will be `$Env:AppData\Apache*`
-- Apache will be installed as a service under the default name 'Apache' (can be disabled with the `/noService` install parameter)
+- Apache will be installed as a service under the default name 'Apache2.4' (can be disabled with the `/noService` install parameter)
