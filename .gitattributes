@@ -3,6 +3,9 @@
 # Possibly have crlf for this as well (believe AU uses Windows Line Endings and utf-8-bom)
 *.nuspec text eol=lf
 
+*.ps1    text eol=crlf
+*.psm1   text eol=crlf
+
 *.png binary
 *.jpg binary
 *.exe binary
