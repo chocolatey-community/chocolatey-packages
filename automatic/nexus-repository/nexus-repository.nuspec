@@ -40,6 +40,12 @@ You can pass parameters as follows:
 
 ## Notes
 
+- **ATTENTION BREAKING CHANGE FOR UPGRADES FROM VERSIONS BEFORE 3.71.0.6**  
+    Nexus has upgraded the bundled version of Java, and sunset the OrientDb database type.
+    This means that you will need to migrate your database from OrientDb, if you are using it.
+    The version after 3.71.0.6 will attempt to migrate the database during the package upgrade.
+    See [here](https://help.sonatype.com/en/orient-3-70-java-8-or-11.html) for further details.
+
 - **ATTENTION BREAKING CHANGE FOR UPGRADES FROM VERSIONS BEFORE 3.3.2.02**  
     Nexus no longer provided a setup.exe for installing Nexus Repository 3.x on Windows.
     If you previously installed this with a package that used a setup.exe, you must manually uninstall it first (use choco uninstall nexus-repository if you used Chocolatey to install it).    Once you are on 3.3.2.02 or later, upgrades will work smoothly.
