@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsDir\helpers.ps1
 
@@ -25,7 +25,7 @@ $Hostname = if ($pp.ContainsKey("Fqdn")) {
 
 $NexusPort = if ($pp.ContainsKey("Port")) {
   $pp["Port"]
-  Write-Host "/Port was used, Nexus will listen on port $($NexusPort)."
+  Write-Host "/Port was used, Nexus will listen on port $($PP['Port'])."
 } else {
   "8081"
 }
@@ -35,7 +35,8 @@ if (Test-Path "$env:ProgramFiles\nexus\bin") {
 }
 
 if ((Get-Service $ServiceName -ErrorAction SilentlyContinue)) {
-  Write-Warning "Nexus web app is already present, shutting it down so that we can upgrade it."
+  $CurrentlyInstalledVersion = Get-NexusVersion
+  Write-Warning "Nexus web app $($CurrentlyInstalledVersion) is already present, shutting it down so that we can upgrade it."
   Get-Service $ServiceName | Stop-Service -Force
 }
 
@@ -44,6 +45,63 @@ if ($pp.ContainsKey("BackupSslConfig")) {
     Backup-NexusSSL -BackupLocation $pp["BackupLocation"]
   } else {
     Backup-NexusSSL
+  }
+}
+
+if (Test-NexusMigratorRequired -DataDir $TargetDataFolder -ProgramDir $TargetFolder) {
+  Write-Host "Preparing for database migration..."
+  $MigrationFiles = Join-Path $ExtractFolder "dbmigration"
+
+  if (Test-NexusMigratorFreeSpaceProblem -Drive $MigrationFiles.Split(':')[0] -DatabaseFolder $TargetDataFolder\nexus3\db) {
+    throw "Cannot migrate database with available disk space"
+  }
+
+  if (Test-NexusMigratorMemoryProblem) {
+    throw "Cannot migrate database with available memory"
+  }
+
+  New-NexusOrientDbBackup -DataDir $TargetDataFolder -ServiceName $ServiceName -DestinationPath $MigrationFiles
+
+  # See: https://help.sonatype.com/en/orientdb-downloads.html
+  $MigratorDownload = @{
+    PackageName = $env:ChocolateyPackageName
+    Url = 'https://download.sonatype.com/nexus/nxrm3-migrator/nexus-db-migrator-3.70.1-03.jar'
+    FileFullPath = Join-Path $toolsDir "nexus-db-migrator.jar"
+    Checksum = "02ea88e88e7d5d7f9d8a1738c9c0363fde636fc22e295efddf9d0f5e7bed982a"
+    ChecksumType = "SHA256"
+  }
+  Get-ChocolateyWebFile @MigratorDownload
+
+  try {
+    Push-Location $MigrationFiles
+    Write-Host "Migrating database from 'OrientDb' to 'H2'"
+    $JavaPath = Join-Path $TargetFolder "jre/bin/java.exe"
+    $JavaArgs = @(
+      "-Xmx16G"
+      "-Xms16G"
+      "-XX:+UseG1GC"
+      "-XX:MaxDirectMemorySize=28672M"
+      "-jar"
+      $MigratorDownload.FileFullPath
+      "--migration_type=h2"
+      "--yes"
+    )
+    & $JavaPath @JavaArgs
+
+    if ($LASTEXITCODE -ne 0) {
+      throw "Migration of the database failed."
+    }
+
+    Copy-Item -Path $MigrationFiles\nexus.mv.db -Destination $TargetDataFolder\nexus3\db\
+    if ((Get-NexusConfiguration).'nexus.datastore.enabled' -ne 'true') {
+      (Get-Content $NexusConfigFile) | Where-Object {$_ -notmatch '^\W*nexus\.datastore\.enabled='} | Set-Content $NexusConfigFile
+      Add-Content -Path $NexusConfigFile -Value "nexus.datastore.enabled=true"
+    }
+
+    Remove-Item "$TargetFolder" -Recurse  # This particular upgrade has more overlap than previous ones
+  } finally {
+    Pop-Location
+    Remove-Item $MigrationFiles -Recurse
   }
 }
 
