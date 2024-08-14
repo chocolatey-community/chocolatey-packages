@@ -49,24 +49,10 @@ function Wait-NexusAvailability {
     [Parameter(Mandatory = $true)]
     [string]$Hostname,
 
-    [Parameter(Mandatory = $true)]
-    [uint16]$Port,
-
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory)]
     [Alias("Config")]
-    [string]$NexusConfigFile,
-
-    [switch]$SSL
+    [string]$NexusConfigFile = (Join-Path $env:ProgramData "\sonatype-work\nexus3\etc\nexus.properties")
   )
-  # Even though windows reports service is ready - web url will not respond until Nexus is actually ready to serve content
-  # We need to use this method to collect the port number so we can properly test the website has returned OK.
-  $nexusScheme, $portConfigLine = if ($SSL) {
-    # This is to combat Package Internalizer's over-enthusiastic URL matching
-        ('http' + 's'), 'application-port-ssl'
-  } else {
-    'http', 'application-port'
-  }
-
   # As the service is started, this should be present momentarily
   $Timer = [System.Diagnostics.Stopwatch]::StartNew()
   while (-not ($ConfigPresent = Test-Path $NexusConfigFile) -and $Timer.Elapsed.TotalSeconds -le 60) {
@@ -74,20 +60,26 @@ function Wait-NexusAvailability {
     Start-Sleep -Seconds 5
   }
 
-  if ($ConfigPresent) {
-    $nexusPort = (Get-Content $NexusConfigFile | Where-Object {
-        $_ -match $portConfigLine
-      }).Split('=')[-1]
+  $nexusScheme, $nexusPort, $nexusPath = if ($ConfigPresent) {
+    $Config = Get-NexusConfiguration -Path $NexusConfigFile
 
-    $nexusPath = (Get-Content $NexusConfigFile | Where-Object {
-        $_ -match "nexus-context-path"
-      }).Split("=")[-1]
-  } else {
-    Write-Warning "Expected Nexus Config file '$($NexusConfigFile)' is not present."
-    $nexusPath, $nexusPort = '/', $Port
+    if ($Config.'application-port-ssl' -gt 0) {
+      # This is to combat Package Internalizer's over-enthusiastic URL matching
+      ('http' + 's')
+      $Config.'application-port-ssl'
+    } elseif ($Config.'application-port' -gt 0) {
+      'http'
+      $Config.'application-port'
+    }
+
+    $Config.'nexus-context-path'
   }
 
-  $NexusUri = "$($nexusScheme)://$($hostname):$($nexusPort)$($nexusPath)"
+  # Set defaults if not present
+  if (-not $nexusScheme) {$nexusScheme = 'http'}
+  if (-not $nexusPort) {$nexusPort = '8081'}
+
+  $NexusUri = "$($nexusScheme)://$($Hostname):$($nexusPort)$($nexusPath)"
 
   Write-Host "Waiting on Nexus Web UI to be available at '$($NexusUri)'"
   while ($Response.StatusCode -ne '200' -and $Timer.Elapsed.TotalMinutes -lt 3) {
