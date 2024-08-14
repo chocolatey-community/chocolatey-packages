@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsDir\helpers.ps1
 
@@ -16,6 +16,7 @@ $ServiceName = 'nexus'
 
 # Handle Package Parameters
 $pp = Get-PackageParameters
+$CurrentConfig = Get-NexusConfiguration -Path $NexusConfigFile -ErrorAction SilentlyContinue
 
 $Hostname = if ($pp.ContainsKey("Fqdn")) {
   $pp["Fqdn"]
@@ -26,6 +27,12 @@ $Hostname = if ($pp.ContainsKey("Fqdn")) {
 $NexusPort = if ($pp.ContainsKey("Port")) {
   $pp["Port"]
   Write-Host "/Port was used, Nexus will listen on port $($PP['Port'])."
+} elseif ($CurrentConfig.'application-port-ssl' -gt 0) {
+  $CurrentConfig.'application-port-ssl'
+  Write-Host "Nexus is configured to use application-port-ssl, Nexus will listen on port $($CurrentConfig.'application-port-ssl')"
+} elseif ($CurrentConfig.'application-port' -gt 0) {
+  $CurrentConfig.'application-port'
+  Write-Host "Nexus is configured to use application-port, Nexus will listen on port $($CurrentConfig.'application-port')"
 } else {
   "8081"
 }
@@ -40,7 +47,7 @@ if ((Get-Service $ServiceName -ErrorAction SilentlyContinue)) {
   Get-Service $ServiceName | Stop-Service -Force
 }
 
-if ($pp.ContainsKey("BackupSslConfig")) {
+if ($pp.ContainsKey("BackupSslConfig") -or $CurrentConfig.'application-port-ssl' -gt 0) {
   if ($pp.ContainsKey("BackupLocation")) {
     Backup-NexusSSL -BackupLocation $pp["BackupLocation"]
   } else {
@@ -145,7 +152,7 @@ $processArgs = @{
 
 $null = Start-ChocolateyProcessAsAdmin @processArgs
 
-if ($pp.ContainsKey("BackupSslConfig")) {
+if ($pp.ContainsKey("BackupSslConfig") -or $CurrentConfig.'application-port-ssl' -gt 0) {
   if ($pp.ContainsKey("BackupLocation")) {
     Restore-NexusSSL -BackupLocation $pp['BackupLocation']
   } else {
@@ -166,7 +173,7 @@ if ($NexusPort -ne '8081') {
 
 # Start the service, and wait for the site to become available
 if ((Start-Service $ServiceName -PassThru).Status -eq 'Running') {
-  Wait-NexusAvailability -Hostname $Hostname -Port $NexusPort -Config $NexusConfigFile -SSL:$pp.ContainsKey("BackupSslConfig")
+  Wait-NexusAvailability -Hostname $Hostname -Config $NexusConfigFile
 } else {
   Write-Warning "The Nexus Repository service ($ServiceName) did not start."
 }
