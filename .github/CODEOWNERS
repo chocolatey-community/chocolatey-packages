@@ -37,9 +37,9 @@
 */selenium-chrome-driver* @chocolatey-community/chocolatey-team-maintainers
 */intunewinapputil*   @chocolatey-community/chocolatey-team-maintainers
 */selenium-chromium-edge-driver* @chocolatey-community/chocolatey-team-maintainers @AdmiringWorm
-*/jenkins*            @chocolatey-community/chocolatey-team-maintainers
+*/jenkins*            @chocolatey-community/chocolatey-team-maintainers @chocolatey-community/chocolatey-community-solutions
 */brave*              @AdmiringWorm
-*/nexus-repository*   @chocolatey-community/chocolatey-team-maintainers
+*/nexus-repository*   @chocolatey-community/chocolatey-team-maintainers @chocolatey-community/chocolatey-community-solutions
 */totalcommander*     @pauby
 */kubescape*          @HollowMan6
 */googlechromebeta*   @tunisiano187
