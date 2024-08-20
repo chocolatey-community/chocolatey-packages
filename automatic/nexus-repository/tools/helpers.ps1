@@ -6,7 +6,6 @@ function Backup-NexusSSL {
   )
   begin {
     if (-not (Test-Path $BackupLocation)) {
-      Write-Host "Creating SSL Backup location"
       $null = New-Item $BackupLocation -ItemType Directory
     }
   }
@@ -39,14 +38,100 @@ function Restore-NexusSSL {
     if (Test-Path "$BackupLocation\jetty-https.xml") {
       Copy-Item "$BackupLocation\jetty-https.xml" "$env:ProgramData\nexus\etc\jetty"
     }
-
-    Write-Host "Nexus is now available with the restored SSL configuration"
   }
+}
+
+function Get-NexusCertificateDomain {
+  param(
+    [string]$DataDir = (Join-Path $env:ProgramData "sonatype-work"),
+
+    [string]$ProgramDir = (Join-Path $env:ProgramData "nexus")
+  )
+  $Config = Get-NexusConfiguration -Path $DataDir\nexus3\etc\nexus.properties
+  if ($Config.'nexus-args'.Split(',') -contains '${jetty.etc}/jetty-https.xml') {
+    [xml]$HttpsConfig = Get-Content $ProgramDir\etc\jetty\jetty-https.xml
+    $KeyToolPath = Join-Path $ProgramDir "jre/bin/keytool.exe"
+    $KeyStorePath = Join-Path (Join-Path $ProgramDir "etc/ssl") $HttpsConfig.SelectSingleNode("//Set[@name='KeyStorePath']").'#text'
+    $KeyStorePassword = $HttpsConfig.SelectSingleNode("//Set[@name='KeyStorePassword']").'#text'
+
+    if ((Test-Path $KeyToolPath) -and (Test-Path $KeyStorePath)) {
+      # Running in a job, as otherwise KeyTool fails when run without input
+      Start-Job {
+        $KeyToolOutput = $using:KeyStorePassword | & "$using:KeyToolPath" -list -v -keystore "$using:KeyStorePath" -J"-Duser.language=en" 2>$null
+        if ($KeyToolOutput -join "`n" -match "(?smi)Certificate\[1\]:\nOwner: CN=(?<Domain>.+?)\n") {
+          $Matches.Domain
+        }
+      } | Receive-Job -Wait
+    }
+  }
+}
+
+function Get-NexusUri {
+  param(
+    [Parameter()]
+    [string]$DataDir = (Join-Path $env:ProgramData "sonatype-work"),
+
+    [Parameter()]
+    [string]$ProgramDir = (Join-Path $env:ProgramData "nexus"),
+
+    [Parameter()]
+    [string]$ConfigPath = $(
+      if (Test-Path $DataDir/nexus3/etc/nexus.properties) {
+        "$DataDir/nexus3/etc/nexus.properties"
+      } elseif (Test-Path $ProgramDir/etc/nexus-default.properties) {
+        "$ProgramDir/etc/nexus-default.properties"
+      }
+    ),
+
+    [string]$HostnameOverride
+  )
+  $Scheme, $Hostname, $Port, $Path = if (Test-Path $ConfigPath) {
+    $Config = Get-NexusConfiguration -Path $ConfigPath -ErrorAction SilentlyContinue
+
+    if ($Config.'application-port-ssl' -gt 0) {
+      # This is to combat Package Internalizer's over-enthusiastic URL matching
+      ('http' + 's')
+      if ($CertDomain = Get-NexusCertificateDomain -ConfigPath $ConfigPath) {
+      if (-not $script:OverriddenDomains) {$script:OverriddenDomains = @{}}
+        if ($CertDomain -notmatch '^\*') {
+          $CertDomain
+        } elseif ($CertDomain -match '^\*' -and $HostnameOverride -like $CertDomain) {
+          ($script:OverriddenDomains[$CertDomain] = $HostnameOverride)
+        } elseif ($CertDomain -match '^\*') {
+          while ($script:OverriddenDomains[$CertDomain] -notlike $CertDomain) {
+            $script:OverriddenDomains[$CertDomain] = Read-Host "Please provide the FQDN for Nexus matching the '$($CertDomain)' certificate"
+          }
+          $script:OverriddenDomains[$CertDomain]
+        }
+      } else {
+        Write-Warning "Could not figure out SSL configuration for $($env:ComputerName)"
+        $env:ComputerName
+      }
+      $Config.'application-port-ssl'
+    } elseif ($Config.'application-port' -gt 0) {
+      'http'
+      if ($HostnameOverride) {
+        $HostnameOverride
+      } else {
+        "localhost"
+      }
+      $Config.'application-port'
+    }
+
+    $Config.'nexus-context-path'
+  }
+
+  # Set defaults if still not present
+  if (-not $Hostname) {$Hostname = "localhost"}
+  if (-not $Scheme) {$Scheme = 'http'}
+  if (-not $Port) {$Port = '8081'}
+
+  "$($Scheme)://$($Hostname):$($Port)$($Path)"
 }
 
 function Wait-NexusAvailability {
   param(
-    [Parameter(Mandatory = $true)]
+    [Parameter()]
     [string]$Hostname,
 
     [Parameter(Mandatory)]
@@ -60,26 +145,7 @@ function Wait-NexusAvailability {
     Start-Sleep -Seconds 5
   }
 
-  $nexusScheme, $nexusPort, $nexusPath = if ($ConfigPresent) {
-    $Config = Get-NexusConfiguration -Path $NexusConfigFile
-
-    if ($Config.'application-port-ssl' -gt 0) {
-      # This is to combat Package Internalizer's over-enthusiastic URL matching
-      ('http' + 's')
-      $Config.'application-port-ssl'
-    } elseif ($Config.'application-port' -gt 0) {
-      'http'
-      $Config.'application-port'
-    }
-
-    $Config.'nexus-context-path'
-  }
-
-  # Set defaults if not present
-  if (-not $nexusScheme) {$nexusScheme = 'http'}
-  if (-not $nexusPort) {$nexusPort = '8081'}
-
-  $NexusUri = "$($nexusScheme)://$($Hostname):$($nexusPort)$($nexusPath)"
+  $NexusUri = Get-NexusUri -Hostname $Hostname
 
   Write-Host "Waiting on Nexus Web UI to be available at '$($NexusUri)'"
   while ($Response.StatusCode -ne '200' -and $Timer.Elapsed.TotalMinutes -lt 3) {
@@ -318,12 +384,15 @@ function Test-NexusMigratorRequired {
       Write-Error (@(
         "Please upgrade nexus-repository to version 3.70.1-02 before upgrading further."
         "You can do this by running 'choco upgrade nexus-repository --version 3.70.1.2 --confirm'"
+        "You will then need to migrate your database from OrientDb to H2 or PostgreSQL."
         "For more details, please see: https://help.sonatype.com/en/orient-pre-3-70-java-8-or-11.html"
       ) -join "`n")
-      throw "Package cannot upgrade from '$($CurrentVersion)' to '$($env:ChocolateyPackageVersion)'"
+      throw "Package cannot upgrade from '$($CurrentVersion)'"
     } elseif ($CurrentDeNexusVersion -eq $RequiredVersion) {
       # We will upgrade if we are on OrientDb, otherwise leave it alone.
       Test-NexusDatabaseType -Type "OrientDb" -DataDir $DataDir -ProgramDir $ProgramDir
+    } elseif ($CurrentDeNexusVersion -gt $RequiredVersion) {
+      Write-Verbose "Detected Nexus version '$($CurrentVersion)'. Will not attempt to upgrade."
     }
   }
 }
@@ -395,7 +464,7 @@ function Test-NexusMigratorMemoryProblem {
   [CmdletBinding()]
   param(
     # The current amount of memory, in bytes.
-    $Memory = (Get-CimInstance Win32_PhysicalMemory).Capacity,
+    $Memory = (Get-CimInstance Win32_PhysicalMemory | Measure-Object Capacity -Sum).Sum,
 
     # The migrator requires 16GB of memory.
     $Requirement = 16GB
@@ -411,4 +480,39 @@ function Test-NexusMigratorMemoryProblem {
   }
 
   return $Result
+}
+
+function Get-NexusRepositoryServiceInstall {
+  <#
+    .Synopsis
+      If found, returns the name of the Nexus service and the install and data directories it uses.
+
+    .Example
+      Get-NexusRepositoryInstallValues
+  #>
+  [CmdletBinding()]
+  param(
+    # By default, we assume there is only one service. This searches for all installed services.
+    [switch]$AllResults
+  )
+  # If you have a lot of services, searching them all may take longer -
+  # so we can stop searching when we find the first service matching nexus.exe.
+  $ResultCount = @{}
+  if (-not $AllResults) {$ResultCount.First = 1}
+
+  $NexusService = Get-ChildItem HKLM:\System\CurrentControlSet\Services\ | Where-Object {
+    ($ImagePath = Get-ItemProperty -Path $_.PSPath -Name ImagePath -ErrorAction SilentlyContinue) -and
+    $ImagePath.ImagePath.Trim('"''').EndsWith('\nexus.exe')
+  } | Select-Object @ResultCount
+
+  foreach ($Service in $NexusService) {
+    $ServiceName = $Service.PSChildName
+    $TargetFolder = (Get-ItemProperty -Path $Service.PSPath).ImagePath.Trim('"''') | Split-Path | Split-Path
+    $DataFolder = Convert-Path (Join-Path $TargetFolder "$((Get-Content $TargetFolder\bin\nexus.vmoptions) -match '^-Dkaraf.data=(?<RelativePath>.+)$' -replace '^-Dkaraf.data=')")
+    [PSCustomObject]@{
+      ServiceName = $ServiceName
+      ProgramFolder = $TargetFolder
+      DataFolder = $DataFolder
+    }
+  }
 }
