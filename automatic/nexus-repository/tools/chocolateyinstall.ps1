@@ -29,6 +29,7 @@ $NexusPort = if ($pp.ContainsKey("Port")) {
   Write-Host "/Port was used, Nexus will listen on port $($PP['Port'])."
 } elseif ($CurrentConfig.'application-port-ssl' -gt 0) {
   $CurrentConfig.'application-port-ssl'
+  $SslConfigured = $true
   Write-Host "Nexus is configured to use application-port-ssl, Nexus will listen on port $($CurrentConfig.'application-port-ssl')"
 } elseif ($CurrentConfig.'application-port' -gt 0) {
   $CurrentConfig.'application-port'
@@ -55,7 +56,7 @@ if ((Get-Service $ServiceName -ErrorAction SilentlyContinue)) {
   Get-Service $ServiceName | Stop-Service -Force
 }
 
-if ($pp.ContainsKey("BackupSslConfig") -or $CurrentConfig.'application-port-ssl' -gt 0) {
+if ($pp.ContainsKey("BackupSslConfig") -or $SslConfigured) {
   if ($pp.ContainsKey("BackupLocation")) {
     Backup-NexusSSL -BackupLocation $pp["BackupLocation"]
   } else {
@@ -80,10 +81,9 @@ Install-ChocolateyZipPackage @PackageArgs
 
 Write-Host "Copying files to '$TargetFolder' with overwrite"
 if (Test-Path "$TargetFolder") {
-  Copy-Item "$ExtractFolder\$nexusversionedfolder\*" "$TargetFolder" -Force -Recurse
-} else {
-  Copy-Item "$ExtractFolder\$nexusversionedfolder" "$TargetFolder" -Force -Recurse
+  Remove-Item "$TargetFolder" -Force -Recurse
 }
+Copy-Item "$ExtractFolder\$nexusversionedfolder" "$TargetFolder" -Force -Recurse
 
 # Create the Nexus data directory, if it doesn't exist
 if (!(Test-Path "$TargetDataFolder")) {
@@ -103,7 +103,7 @@ $processArgs = @{
 
 $null = Start-ChocolateyProcessAsAdmin @processArgs
 
-if ($pp.ContainsKey("BackupSslConfig") -or $CurrentConfig.'application-port-ssl' -gt 0) {
+if ($pp.ContainsKey("BackupSslConfig") -or $SslConfigured) {
   if ($pp.ContainsKey("BackupLocation")) {
     Restore-NexusSSL -BackupLocation $pp['BackupLocation']
   } else {
@@ -112,7 +112,7 @@ if ($pp.ContainsKey("BackupSslConfig") -or $CurrentConfig.'application-port-ssl'
 }
 
 # Update Port in Configuration before starting the service
-if ($NexusPort -ne '8081') {
+if ($NexusPort -ne '8081' -and -not $SslConfigured) {
   if (Test-Path "$NexusConfigFile") {
     Write-Host "Configuring Nexus to listen on port $NexusPort."
         (Get-Content "$NexusConfigFile") -replace "^#\s*application-port=.*$", "application-port=$NexusPort" |
