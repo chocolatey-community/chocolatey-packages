@@ -22,10 +22,10 @@ Nexus product does not have a built-in web gallery for components.
 
 This package supports the following parameters:
 
-* `/Fqdn` - The fqdn that matches the subject you are using for your Nexus instance SSL certificate.
-* `/Port` - Specify what port Nexus should listen on. Defaults to `8081`.
-* `/BackupSslConfig` - Ensures that the ssl configuration survives an upgrade.
-* `/BackupLocation` - Species the path to backup ssl configuration to during upgrade. Defaults to `~/NexusSSLBackup`.
+* `/Fqdn` - The fully-qualified domain name that matches the subject you are using for your Nexus instance SSL certificate.
+* `/Port` - Specify what port Nexus should listen on. Defaults to `8081`, or whatever was previously configured.
+* `/BackupSslConfig` - Ensures that the SSL configuration survives an upgrade, if it's otherwise undetected.
+* `/BackupLocation` - Specifies the path to backup the SSL configuration to during upgrade. Defaults to `~/NexusSSLBackup`.
 
 You can pass parameters as follows:
 
@@ -38,6 +38,8 @@ You can pass parameters as follows:
     This means that you will need to migrate your database from OrientDb, if you are using it.
     See [here](https://help.sonatype.com/en/orient-3-70-java-8-or-11.html) for further details,
     or check out the nexus-repository-migrator package.
+    Versions after this will also overwrite rather than merge the program directory, i.e. `$env:ProgramFiles/nexus`,
+    and back-up HTTPS configuration and the keystore from there if it is configured.
 
 - **ATTENTION BREAKING CHANGE FOR UPGRADES FROM VERSIONS BEFORE 3.3.2.02**  
     Nexus no longer provided a setup.exe for installing Nexus Repository 3.x on Windows.
