@@ -11,17 +11,17 @@ $parameters += if ($pp.NoTaskbarShortcut) { " /pintotaskbar=0"; Write-Host "Oper
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://get.geo.opera.com/pub/opera/desktop/113.0.5230.32/win/Opera_113.0.5230.32_Setup.exe'
-  url64          = 'https://get.geo.opera.com/pub/opera/desktop/113.0.5230.32/win/Opera_113.0.5230.32_Setup_x64.exe'
-  checksum       = 'd9b5edbe0e9b14a6385bda1ec05049bc58fb405ea0cd66469d73dc0c4e6e0278'
-  checksum64     = '661a7527eeef431236b7be525fa7f9d30bcd3dfb5fef3b01f03fa9b20912037e'
+  url            = 'https://get.geo.opera.com/pub/opera/desktop/113.0.5230.47/win/Opera_113.0.5230.47_Setup.exe'
+  url64          = 'https://get.geo.opera.com/pub/opera/desktop/113.0.5230.47/win/Opera_113.0.5230.47_Setup_x64.exe'
+  checksum       = '0c1a913d27e0dd4d10880c2a8f2b3b3f409c0e0894c6df821039d0683984c4cf'
+  checksum64     = 'cc87ee73b620e848ca6ded745f318c369dc71cce148f0c6f4cdb87a513c9cb5f'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/install /silent /launchopera=0 /setdefaultbrowser=0 /allusers=1' + $parameters
   validExitCodes = @(0)
 }
 
-$version = '113.0.5230.32'
+$version = '113.0.5230.47'
 if (!$Env:ChocolateyForce -and (IsVersionAlreadyInstalled $version)) {
   Write-Output "Opera $version is already installed. Skipping download and installation."
 }
