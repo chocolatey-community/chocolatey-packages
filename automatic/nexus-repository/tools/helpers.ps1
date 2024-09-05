@@ -131,12 +131,17 @@ function Get-NexusUri {
 
 function Wait-NexusAvailability {
   param(
+    # The hostname in use
     [Parameter()]
     [string]$Hostname,
 
+    # The path to the config file
     [Parameter(Mandatory)]
     [Alias("Config")]
-    [string]$NexusConfigFile = (Join-Path $env:ProgramData "\sonatype-work\nexus3\etc\nexus.properties")
+    [string]$NexusConfigFile = (Join-Path $env:ProgramData "\sonatype-work\nexus3\etc\nexus.properties"),
+
+    # Configurable timeout in minutes
+    [uint16]$Timeout = 3
   )
   # As the service is started, this should be present momentarily
   $Timer = [System.Diagnostics.Stopwatch]::StartNew()
@@ -148,7 +153,7 @@ function Wait-NexusAvailability {
   $NexusUri = Get-NexusUri -Hostname $Hostname
 
   Write-Host "Waiting on Nexus Web UI to be available at '$($NexusUri)'"
-  while ($Response.StatusCode -ne '200' -and $Timer.Elapsed.TotalMinutes -lt 3) {
+  while ($Response.StatusCode -ne '200' -and $Timer.Elapsed.TotalMinutes -lt $Timeout) {
     try {
       $Response = Invoke-WebRequest -Uri $NexusUri -UseBasicParsing
     } catch {
@@ -160,7 +165,7 @@ function Wait-NexusAvailability {
   if ($Response.StatusCode -eq '200') {
     Write-Host "Nexus is ready!"
   } else {
-    Write-Error "Nexus did not respond to requests at '$($NexusUri)' within 3 minutes of the service being started."
+    Write-Error "Nexus did not respond to requests at '$($NexusUri)' within $($Timeout) minutes of the service being started."
   }
 }
 
