@@ -124,7 +124,7 @@ if ($NexusPort -ne '8081' -and -not $SslConfigured) {
 
 # Start the service, and wait for the site to become available
 if ((Start-Service $ServiceName -PassThru).Status -eq 'Running') {
-  Wait-NexusAvailability -Hostname $Hostname -Config $NexusConfigFile
+  Wait-NexusAvailability -Hostname $Hostname -Config $NexusConfigFile -Timeout 15
 } else {
   Write-Warning "The Nexus Repository service ($ServiceName) did not start."
 }

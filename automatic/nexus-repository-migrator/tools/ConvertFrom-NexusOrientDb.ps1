@@ -94,7 +94,8 @@ foreach ($Service in Get-NexusRepositoryServiceInstall) {
         try {
           Write-Host "Restarting '$($Service.ServiceName)'"
           Restart-Service $Service.ServiceName
-          Wait-NexusAvailability -Hostname $Hostname -Config $NexusConfigFile -ErrorAction Stop
+          # The post-migration launch can take significantly longer than normal
+          Wait-NexusAvailability -Hostname $Hostname -Config $NexusConfigFile -Timeout 15 -ErrorAction Stop
         } catch {
           Write-Error -Message (@(
             "The Nexus service '$($Service.ServiceName)' was restarted, but did not recover."
