@@ -5,4 +5,4 @@
 3. Copy the matches into a new file `url-list.txt`.
 4. Download all translation files with `wget -i url-list.txt`
 5. Extract all ZIP files to get the `*.lngx` files.
-6. Put all `*.lngx` files into `tools\keepass_2.x_langfiles.zip`
+6. Put all `*.lngx` files into `tools\keepass_2.x_langfiles.7z`
