@@ -3,8 +3,8 @@ param($IncludeStream, [switch] $Force)
 Import-Module Chocolatey-AU
 . "$PSScriptRoot\update_helper.ps1"
 
-$releases = 'https://www.mozilla.org/en-US/firefox/all/'
-$releasesESR = 'https://www.mozilla.org/en-US/firefox/organizations/all/'
+$releases = 'https://www.mozilla.org/en-US/firefox/all/desktop-release/win/en-US/'
+$releasesESR = 'https://www.mozilla.org/en-US/firefox/all/desktop-esr/win/en-US/'
 $product = 'firefox'
 
 function global:au_BeforeUpdate {
