@@ -44,9 +44,11 @@ if (Test-Path "$env:ProgramFiles\nexus\bin") {
 
 if (Test-NexusMigratorRequired -DataDir $TargetDataFolder -ProgramDir $TargetFolder) {
   Write-Error (@(
-    "This upgrade will fail if you do not migrate your database from OrientDb before proceeding."
-    "You can do this with the nexus-repository-migrator package, or following the upgrade instructions."
-    "For more details, please see: https://help.sonatype.com/en/orient-3-70-java-8-or-11.html"
+    "This upgrade will fail if you do not migrate your database from OrientDb."
+    "You can do this with the nexus-repository-migrator package, or by following"
+    "Sonatype's instructions. For details on using the migrator package, see:"
+    " https://community.chocolatey.org/packages/nexus-repository-migrator#description"
+    "For details, see: https://help.sonatype.com/en/orient-3-70-java-8-or-11.html"
   ) -join "`n")
 }
 
