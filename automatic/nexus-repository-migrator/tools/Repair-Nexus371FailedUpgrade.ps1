@@ -1,7 +1,7 @@
 ﻿<#
   .Synopsis
     Repairs a broken upgrade of Sonatype Nexus Repository OSS
-  
+
   .Example
     .\Repair-Nexus371FailedUpgrade.ps1
     # Repairs the Nexus install, ending with a migrated database and version 3.71.0.6
@@ -38,7 +38,7 @@ $JavaPath = @(
 
 # Download Java if it's missing, via the old version of Nexus Repository
 if (-not $JavaPath -and -not ($JavaPath = Convert-Path "$ExtractPath\nexus-3.70.1-02\jre\bin\java.exe" -ErrorAction SilentlyContinue)) {
-  Invoke-WebRequest -Uri https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.70.1-02-win64.zip -OutFile "$env:Temp\nexus-3.70.1-02.zip"
+  Invoke-WebRequest -Uri https://download.sonatype.com/nexus/3/nexus-3.70.1-02-win64.zip -OutFile "$env:Temp\nexus-3.70.1-02.zip"
   Expand-Archive -Path "$env:Temp\nexus-3.70.1-02.zip" -DestinationPath $ExtractPath
   $JavaPath = Convert-Path "$ExtractPath\nexus-3.70.1-02\jre\bin\java.exe"
   Remove-Item "$env:Temp\nexus-3.70.1-02.zip"
@@ -69,10 +69,10 @@ if ((Get-Service nexus).Status -ne 'running') {
     }
     "Upgrade" {
       # Download the matching version of Nexus
-        Invoke-WebRequest -Uri https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-$($NexusVersion)-win64.zip -OutFile "$env:Temp\nexus-$($NexusVersion)-win64.zip"
-        Expand-Archive -Path "$env:Temp\nexus-$($NexusVersion)-win64.zip" -DestinationPath $ExtractPath -Force
-        Copy-Item -Path "$ExtractPath\nexus-$NexusVersion\" -Destination "$env:ProgramData\nexus" -Recurse
-        Remove-Item "$env:Temp\nexus-$($NexusVersion)-win64.zip"
+      Invoke-WebRequest -Uri https://download.sonatype.com/nexus/3/nexus-$($NexusVersion)-win64.zip -OutFile "$env:Temp\nexus-$($NexusVersion)-win64.zip"
+      Expand-Archive -Path "$env:Temp\nexus-$($NexusVersion)-win64.zip" -DestinationPath $ExtractPath -Force
+      Copy-Item -Path "$ExtractPath\nexus-$NexusVersion\" -Destination "$env:ProgramData\nexus" -Recurse
+      Remove-Item "$env:Temp\nexus-$($NexusVersion)-win64.zip"
 
       # Ensure the package is in a good state, from CCR as we know the local repository isn't running.
       choco upgrade nexus-repository --version $LatestPackageVersion --confirm --no-progress --source https://community.chocolatey.org/api/v2/ --skip-powershell
