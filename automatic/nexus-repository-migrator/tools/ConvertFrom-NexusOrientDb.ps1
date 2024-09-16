@@ -26,6 +26,7 @@ foreach ($Service in Get-NexusRepositoryServiceInstall) {
   if ($Force -or (Test-NexusMigratorRequired -DataDir (Split-Path $Service.DataFolder) -ProgramDir $Service.ProgramFolder)) {
     Write-Host "Preparing for database migration..."
     $MigrationFiles = Join-Path $env:Temp "dbmigration-$($Service.ServiceName)"
+    $MigratorDownload = @{FileFullPath = Join-Path $PSScriptRoot "nexus-db-migrator.jar"}
     $PreMigrationIssues = @()
 
     if (Test-NexusMigratorFreeSpaceProblem -Drive $MigrationFiles.Split(':')[0] -DatabaseFolder (Join-Path $Service.DataFolder "db")) {

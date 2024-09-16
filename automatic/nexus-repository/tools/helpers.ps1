@@ -58,7 +58,7 @@ function Get-NexusCertificateDomain {
       # Running in a job, as otherwise KeyTool fails when run without input
       Start-Job {
         $KeyToolOutput = $using:KeyStorePassword | & "$using:KeyToolPath" -list -v -keystore "$using:KeyStorePath" -J"-Duser.language=en" 2>$null
-        if ($KeyToolOutput -join "`n" -match "(?smi)Certificate\[1\]:\nOwner: CN=(?<Domain>.+?)\n") {
+        if ($KeyToolOutput -join "`n" -match "(?smi)Certificate\[1\]:\nOwner: CN=(?<Domain>.+?)(\n|,)") {
           $Matches.Domain
         }
       } | Receive-Job -Wait
@@ -92,11 +92,14 @@ function Get-NexusUri {
       # This is to combat Package Internalizer's over-enthusiastic URL matching
       ('http' + 's')
       if ($CertDomain = Get-NexusCertificateDomain -ConfigPath $ConfigPath) {
-      if (-not $script:OverriddenDomains) {$script:OverriddenDomains = @{}}
-        if ($CertDomain -notmatch '^\*') {
-          $CertDomain
-        } elseif ($CertDomain -match '^\*' -and $HostnameOverride -like $CertDomain) {
+        if (-not $script:OverriddenDomains) {$script:OverriddenDomains = @{}}
+        if ($HostnameOverride) {
+          if (-not ($HostnameOverride -like $CertDomain)) {
+            Write-Warning "Provided HostnameOverride '$($HostnameOverride)' does not match the current certificate '$($CertDomain)'"
+          }
           ($script:OverriddenDomains[$CertDomain] = $HostnameOverride)
+        } elseif ($CertDomain -notmatch '^\*') {
+          $CertDomain
         } elseif ($CertDomain -match '^\*') {
           while ($script:OverriddenDomains[$CertDomain] -notlike $CertDomain) {
             $script:OverriddenDomains[$CertDomain] = Read-Host "Please provide the FQDN for Nexus matching the '$($CertDomain)' certificate"
@@ -104,8 +107,8 @@ function Get-NexusUri {
           $script:OverriddenDomains[$CertDomain]
         }
       } else {
-        Write-Warning "Could not figure out SSL configuration for $($env:ComputerName)"
-        $env:ComputerName
+        Write-Warning "Could not figure out SSL configuration for $($env:ComputerName) - using 'localhost', specify -HostnameOverride if required."
+        "localhost"
       }
       $Config.'application-port-ssl'
     } elseif ($Config.'application-port' -gt 0) {
@@ -116,6 +119,10 @@ function Get-NexusUri {
         "localhost"
       }
       $Config.'application-port'
+    } else {
+      "http"
+      "localhost"
+      "8081"
     }
 
     $Config.'nexus-context-path'

@@ -17,7 +17,7 @@ $PowerShellScript = @{
 }
 Install-ChocolateyPowershellCommand @PowerShellScript
 
-if ($PackageParameters.AttemptMigration) {
+if ($PackageParameters.Migrate) {
   $ConvertArguments = @{}
   if ($PackageParameters.FQDN) {
     $ConvertArguments.Hostname = $PackageParameters.FQDN
