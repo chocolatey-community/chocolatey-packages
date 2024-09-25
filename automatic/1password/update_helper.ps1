@@ -1,8 +1,7 @@
 ﻿function Get-LatestOPW {
   param (
     [Parameter(Mandatory)]
-    [string]$url,
-    [string]$PackageName = $null
+    [string]$url
 
   )
 
@@ -18,10 +17,6 @@
     Version       = $version
     VersionMajor  = $major
     RemoteVersion = $version
-  }
-
-  if ($PackageName) {
-    $result['PackageName'] = $PackageName
   }
 
   $result

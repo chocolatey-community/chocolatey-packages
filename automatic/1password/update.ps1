@@ -1,70 +1,65 @@
-﻿Import-Module Chocolatey-AU
-import-module $PSScriptRoot\..\..\extensions\chocolatey-core.extension\extensions\chocolatey-core.psm1
+﻿param($IncludeStream = $global:au_IncludeStream, $Force)
+
+Import-Module Chocolatey-AU
+
+if (($IncludeStream -match "^OPW(?<major>\d+)") -and (Test-Path "$PSScriptRoot\..\..\manual\1password$($Matches['major'])")) {
+  # Since this is a manual package, we will assume that the package itself needs to be updated.
+  Push-Location "$PSScriptRoot\..\..\manual\1password$($Matches['major'])"
+  try {
+    $oldVersion = $global:au_Version
+    . "./update.ps1" -NoUpdateCheck
+
+    if ($oldVersion) {
+      $global:au_Version = $oldVersion
+    } else {
+      $global:au_Version = $global:Latest.Version.ToString()
+    }
+    $global:au_Latest = $null
+    $global:Latest = $null
+  }
+  finally {
+    Pop-Location
+  }
+}
+else {
+  Get-ChildItem "$PSScriptRoot\..\1password*" | Where-Object { $_.Name -ne '1password' } | ForEach-Object {
+    . "$_\update.ps1"
+  }
+}
+
+function global:au_BeforeUpdate($Package) {
+  # This is done in the before update, otherwise the dependency is not updated.
+  $readmePath = $Latest.Readme
+
+  if ($readmePath -and (Test-Path $readmePath)) {
+    Set-DescriptionFromReadme $Package -SkipFirst 2 -ReadmePath $readmePath
+  }
+}
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)^(\s*url\s*=\s*)'.*'"                = "`${1}'$($Latest.URL32)'"
-      "(?i)^(\s*checksum\s*=\s*)'.*'"           = "`${1}'$($Latest.Checksum32)'"
-      "(?i)^(\s*checksumType\s*=\s*)'.*'"       = "`${1}'$($Latest.ChecksumType32)'"
-      "(?i)^(\s*silentArgs\s*=\s*)['`"].*['`"]" = "`${1}`"$($Latest.SilentArgs)`""
+    "$($Latest.PackageName).nuspec" = @{
+      "(?i)(\<dependency .+?)`"1password\d*(`" version=)`"([^`"]+)`"" = "`$1`"$($Latest.DependencyName)`$2`"[$($Latest.Version)]`""
     }
   }
 }
 
 function global:au_AfterUpdate {
-  . "$PSScriptRoot/update_helper.ps1"
-  if ($Latest.PackageName -eq '1password4') {
-    removeDependencies ".\*.nuspec"
-    addDependency ".\*.nuspec" "chocolatey-core.extension" "1.3.3"
-  }
-  else {
-    addDependency ".\*.nuspec" 'dotnet4.7.2' '4.7.2.20180712'
-  }
+  . "$PSScriptRoot\..\..\scripts\Update-IconUrl.ps1" -Name '1password' -IconName $Latest.DependencyName -ThrowErrorOnIconNotFound
 }
 
-function global:au_BeforeUpdate {
-  if ($Latest.PackageName -eq '1password4') {
-    $Latest.SilentArgs = '/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`"'
-  }
-  else {
-    $Latest.SilentArgs = '--silent'
-  }
-}
-
-function Get-LatestOPW {
-  param (
-    [string]$url,
-    [string]$kind
-
-  )
-
-  $url32 = Get-RedirectedUrl $url
-  $verRe = 'Setup-|word-|\.exe$'
-  $version = $url32 -split $verRe | Select-Object -last 1 -skip 1
-  $version = $version -replace ('\.BETA', ' beta')
-  $version = Get-Version $version
-  $major = $version.ToString(1)
-
-  @{
-    URL32       = $url32
-    Version     = $version.ToString()
-    PackageName = $kind
-  }
-}
-
-$releases_opw4 = 'https://app-updates.agilebits.com/download/OPW4'
-$kind_opw4 = '1password4'
-$releases_opw = 'https://app-updates.agilebits.com/download/OPW7/Y'
-$kind_opw = '1password'
 
 function global:au_GetLatest {
-  $streams = [ordered] @{
-    OPW4 = Get-LatestOPW -url $releases_opw4 -kind $kind_opw4
-    OPW  = Get-LatestOPW -url $releases_opw -kind $kind_opw
+  $commands = Get-Command "Find-1Password*"
+
+  $streams = @{}
+
+  $null = $commands | ForEach-Object {
+    $result = & $_
+    $streams.Add('OPW' + $result.VersionMajor, $result)
   }
 
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor 32 -IncludeStream $IncludeStream -Force:$Force
+update -ChecksumFor None -IncludeStream $IncludeStream -Force:$Force
