@@ -2,7 +2,7 @@
 
 $packageName = $env:ChocolateyPackageName
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName '1Password*' | ? DisplayVersion -match "^7\."
+[array]$key = Get-UninstallRegistryKey -SoftwareName '1Password*' | Where-Object DisplayVersion -match "^7\."
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
