@@ -8,6 +8,15 @@ if (($IncludeStream -match "^OPW(?<major>\d+)") -and (Test-Path "$PSScriptRoot\.
   try {
     $oldVersion = $global:au_Version
     . "./update.ps1" -NoUpdateCheck
+    $packages = Get-ChildItem "*.nupkg"
+
+    if ($packages) {
+      Copy-Item $packages -Destination $PSScriptRoot
+      # We also need to commit any changes, but only do this when running in a CI environment
+      if ($env:APPVEYOR -eq $true) {
+        git add . --update
+      }
+    }
 
     if ($oldVersion) {
       $global:au_Version = $oldVersion
