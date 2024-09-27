@@ -1,4 +1,4 @@
-# [<img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@09451a71b28e4ee0b3ea3841ab130b1bbf46f9b0/icons/1password.png" height="48" width="48" /> 1Password](https://chocolatey.org/packages/1password8)
+# [<img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@c1a3d39ea26e859ef0f4c1f1f9eacd95b340c332/icons/1password8.png" height="48" width="48" /> 1Password](https://chocolatey.org/packages/1password8)
 
 1Password can create strong, unique passwords for you, remember them, and restore them, all directly in your web browser.
 
