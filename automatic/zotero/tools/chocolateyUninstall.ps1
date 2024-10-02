@@ -2,7 +2,7 @@
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'Zotero'
+  softwareName  = "$env:ChocolateyPackageName*"
   fileType      = 'exe'
   silentArgs    = '/S'
   validExitCodes= @(@(0))
