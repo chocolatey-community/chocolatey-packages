@@ -58,10 +58,10 @@ if ($help -or $packageNames -join '|' -eq '/?') {
     }
 
     $cygwinsetup = "$cygRoot\cygwinsetup.exe"
-    $cygLocalPackagesDir = join-path $cygRoot packages
+    $cygLocalPackagesDir = join-path "$cygRoot" packages
     $cygInstallPackageList = $packageNames -join ','
 
-    $cygArgs = "--root $cygRoot --local-package-dir $cygLocalPackagesDir"
+    $cygArgs = "--root `"$cygRoot`" --local-package-dir `"$cygLocalPackagesDir`""
 
     $windowStyle = 'Minimized'
     if (!$notSilent) {
