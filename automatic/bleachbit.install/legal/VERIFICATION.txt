@@ -7,14 +7,14 @@ and can be verified like this:
 
 1. Download the following installer(s):
 
-x86: https://download.bleachbit.org/BleachBit-4.6.0-setup.exe
+x86: https://download.bleachbit.org/BleachBit-4.6.2-setup.exe
 
 2. You can use one of the following methods to obtain the checksum:
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 4BE77C019328203BC16FCD6AB62B41E26E14EDFDC4572448D0DDB101BA796EC9
+  checksum32: 43BC44163015E62C32A344F354D5D16CE3E3D45D402E9D52B79079CC7D9B4D05
 
 The included 'LICENSE.txt' file have been obtained from:
 https://github.com/bleachbit/bleachbit/blob/master/COPYING
