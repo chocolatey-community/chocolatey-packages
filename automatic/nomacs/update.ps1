@@ -1,6 +1,4 @@
-import-module au
-
-$releases = 'https://github.com/nomacs/nomacs/releases'
+﻿Import-Module Chocolatey-AU
 
 function global:au_SearchReplace {
    @{
@@ -15,16 +13,16 @@ function global:au_SearchReplace {
     }
 }
 
-function global:au_BeforeUpdate  { Get-RemoteFiles -NoSuffix -Purge }
+function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix -Purge }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    $url     = $download_page.links | ? href -like '*/nomacs-*x64.msi' | % href | select -First 1
-    $version = $url -split '\/' | select -Last 1 -Skip 1
+    $latestRelease = Get-GitHubRelease -Owner nomacs -Name nomacs
+    $url     = $latestRelease.assets.Where{$_.name -like 'nomacs-*x64.msi'}[0].browser_download_url
+    $version = $latestRelease.tag_name.TrimStart('v')
     @{
         Version      = $version
-        URL64        = "https://github.com/${url}"
-        ReleaseNotes = "https://github.com/nomacs/nomacs/releases/tag/${version}"
+        URL64        = $url
+        ReleaseNotes = $latestRelease.html_url
     }
 }
 

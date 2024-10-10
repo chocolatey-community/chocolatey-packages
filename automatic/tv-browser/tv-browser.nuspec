@@ -42,7 +42,6 @@
 ]]></description>
     <summary>TV-Browser is a digital TV guide.</summary>
     <releaseNotes />
-    <copyright />
     <tags>foss cross-platform tv-browser tv television guide admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/tv-browser</packageSourceUrl>
     <dependencies>

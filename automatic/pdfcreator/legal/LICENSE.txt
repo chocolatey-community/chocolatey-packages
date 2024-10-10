@@ -1,5 +1,0 @@
-License is removed from source repository as such this file is empty.
-According to their license page at <https://www.pdfforge.org/pdfcreator/license>
-distribution is still allowed, and source code is still covered under the AGPL license.
-
-See License.png for a copy/screenshot of the above webpage taken 2021-01-12.

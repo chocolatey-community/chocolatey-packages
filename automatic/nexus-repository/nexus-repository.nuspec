@@ -3,7 +3,7 @@
   <metadata>
     <id>nexus-repository</id>
     <title>Nexus Repository OSS</title>
-    <version>3.58.1.02</version>
+    <version>3.71.0.06</version>
     <authors>Sonatype</authors>
     <owners>chocolatey-community,DarwinJS</owners>
     <summary>Free open source version of popular Nexus Repository for binary artifacts including first class Nuget support.</summary>
@@ -46,7 +46,7 @@ You can pass parameters as follows:
 ]]></description>
     <projectUrl>http://www.sonatype.com/nexus-repository-oss</projectUrl>
     <projectSourceUrl>https://github.com/sonatype/nexus-public</projectSourceUrl>
-    <docsUrl>http://books.sonatype.com/nexus-book/3.0/reference/index.html</docsUrl>
+    <docsUrl>https://help.sonatype.com/repomanager3</docsUrl>
     <tags>nexus-repository server freeware cross-platform maven nuget npm java rubygems docker eclipse p2 osgi obr apt yum rpm artifact bower ssl respository sonatype nexus admin</tags>
     <copyright>Sonatype</copyright>
     <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>

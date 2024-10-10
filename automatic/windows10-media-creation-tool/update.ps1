@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 function global:au_BeforeUpdate {
   Copy-Item "$PSScriptRoot\..\win10mct\Readme.md" "$PSScriptRoot" -Force -Recurse

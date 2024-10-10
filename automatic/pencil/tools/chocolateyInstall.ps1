@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
+$version = "3.1.1"
 
 $packageArgs = @{
   packageName    = $Env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = Get-Item $toolsPath\*-i386.exe
-  file64         = Get-Item $toolsPath\*_64.exe
+  file           = "$toolsPath\Pencil-$version.ga.exe"
   silentArgs     = '/S'
   validExitCodes = @(0)
   softwareName   = 'Pencil*'

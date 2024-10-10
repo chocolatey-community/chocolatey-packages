@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.cgsecurity.org/wiki/TestDisk_Download'
 
@@ -21,10 +21,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'testdisk\-[\d\.]+\.win\.zip$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   $verRe = '[-]|\.win'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
 
   @{
     URL32 = $url32 -replace '\/Download_and_donate\.php'

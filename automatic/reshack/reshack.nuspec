@@ -4,12 +4,11 @@
     <metadata>
         <id>reshack</id>
         <title>Resource Hacker</title>
-        <version>5.1.8</version>
+        <version>5.2.7</version>
         <authors>Angus Johnson</authors>
         <owners>chocolatey-community,Redsandro</owners>
         <summary>Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files.</summary>
-        <description><![CDATA[
-Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files (*.res). It incorporates an internal resource script compiler and decompiler and works on all (Win95 - Win7) Windows operating systems.
+        <description><![CDATA[Resource Hacker is a freeware utility to view, modify, rename, add, delete and extract resources in 32bit and 64bit Windows executables and resource files (*.res). It incorporates an internal resource script compiler and decompiler and works on all (Win95 - Win7) Windows operating systems.
 
 ## Features
 
@@ -23,15 +22,14 @@ Resource Hacker is a freeware utility to view, modify, rename, add, delete and e
 ]]></description>
         <projectUrl>http://www.angusj.com/resourcehacker/</projectUrl>
         <tags>freeware hacking resource executables admin</tags>
-        <copyright></copyright>
         <licenseUrl>http://www.angusj.com/resourcehacker/</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@da1a06bf2e600442203ca66680b1d1539002b813/icons/reshack.png</iconUrl>
+        <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@da1a06bf2e600442203ca66680b1d1539002b813/icons/reshack.png</iconUrl>
         <dependencies>
              <dependency id="chocolatey-core.extension" version="1.3.1" /> 
         </dependencies>
         <releaseNotes></releaseNotes>
-        <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/reshack</packageSourceUrl>
+        <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/reshack</packageSourceUrl>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />

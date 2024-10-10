@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://rubyinstaller.org/downloads/archives/'
 
@@ -27,17 +27,17 @@ function GetStreams() {
   $streams = @{ }
 
   $re64 = 'x64\.exe$'
-  $x64releaseUrls = $releaseUrls | ? href -match $re64
+  $x64releaseUrls = $releaseUrls | Where-Object href -match $re64
 
-  $x64releaseUrls | % {
-    $version = $_ -replace '\-([\d]+)', '.$1' -replace 'rubyinstaller.' -replace 'ruby.' -split '/' | select -Last 1 -Skip 1
+  $x64releaseUrls | ForEach-Object {
+    $version = $_ -replace '\-([\d]+)', '.$1' -replace 'rubyinstaller.' -replace 'ruby.' -split '/' | Select-Object -Last 1 -Skip 1
     if ($version -match '[a-z]') { Write-Host "Skipping prerelease: '$version'"; return }
     $versionTwoPart = $version -replace '([\d]+\.[\d]+).*', "`$1"
 
     if ($streams.$versionTwoPart) { return }
 
     $url64 = $_ | Select-Object -ExpandProperty href
-    $url32 = $releaseUrls | ? href -notmatch $re64 | ? href -match $version | Select-Object -ExpandProperty href
+    $url32 = $releaseUrls | Where-Object href -notmatch $re64 | Where-Object href -match $version | Select-Object -ExpandProperty href
 
     if (!$url32 -or !$url64) {
       Write-Host "Skipping due to missing installer: '$version'"; return
@@ -54,7 +54,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'
-  $releaseUrls = $download_page.links | ? href -match $re | ? { $_ -notmatch 'devkit' }
+  $releaseUrls = $download_page.links | Where-Object href -match $re | Where-Object { $_ -notmatch 'devkit' }
 
   @{ Streams = GetStreams $releaseUrls }
 }

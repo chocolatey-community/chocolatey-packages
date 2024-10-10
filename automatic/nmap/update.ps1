@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://nmap.org/download.html'
 
@@ -25,9 +25,9 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'
-  $urls = $download_page.links | ? href -match $re | % href
+  $urls = $download_page.links | Where-Object href -match $re | ForEach-Object href
   foreach ($url in $urls ) {
-    $file_name = $url -split '/' | select -Last 1
+    $file_name = $url -split '/' | Select-Object -Last 1
     if ($file_name -match '(?<=-)[\.0-9]+(?=-)') { $version = $Matches[0]; $url32 = $url; break }
   }
   if (!$version) { throw "Can not find latest version" }

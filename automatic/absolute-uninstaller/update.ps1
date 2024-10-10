@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.glarysoft.com/absolute-uninstaller/'
 
@@ -17,11 +17,11 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
     $re    = '\.exe$'
-    $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url   = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
 
     #$version  = $download_page.ParsedHtml.body.getElementsByClassName('au_index_ver') | select -first 1 -expand "innerText";
-    $version = ($download_page.Content -split "`n" | sls au_index_ver) -split '<|>'
-    $version =  $version | ? { [version]::TryParse($_, [ref]($__)) }
+    $version = ($download_page.Content -split "`n" | Select-String au_index_ver) -split '<|>'
+    $version =  $version | Where-Object { [version]::TryParse($_, [ref]($__)) }
 
     @{ URL32 = $url; Version = $version }
 }

@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 . "$PSScriptRoot\..\vlc\update.ps1"
 
 function global:au_SearchReplace {

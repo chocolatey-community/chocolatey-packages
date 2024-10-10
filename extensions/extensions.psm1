@@ -1,4 +1,4 @@
-﻿# This file is just to simplify importing of extensions for use in AU update scripts
+﻿# This file is just to simplify importing of extensions for use in Chocolatey AU update scripts
 
 $modules = ls "$PSSCriptRoot/*.psm1" -Recurse -Exclude "extensions.psm1"
 

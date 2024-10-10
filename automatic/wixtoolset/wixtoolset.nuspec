@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wixtoolset</id>
-    <version>3.11.2</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/wixtoolset</packageSourceUrl>
+    <version>3.14.1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/wixtoolset</packageSourceUrl>
     <owners>chocolatey-community, Gary Ewan Park</owners>
     <title>WiX Toolset</title>
     <authors>Rob Mensching, Bob Arnson</authors>
     <projectUrl>http://wixtoolset.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@bfbac575d697b67c7930af094980146278045677/icons/wixtoolset.png</iconUrl>
     <copyright>2009 - 2016 Outercurve Foundation</copyright>
-    <licenseUrl>http://wixtoolset.org/about/license/</licenseUrl>
+    <licenseUrl>https://wixtoolset.org/docs/v3/main/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/wixtoolset/wix3</projectSourceUrl>
-    <docsUrl>http://wixtoolset.org/documentation/</docsUrl>
-    <mailingListUrl>http://wixtoolset.org/documentation/</mailingListUrl>
+    <docsUrl>https://wixtoolset.org/docs/v3/</docsUrl>
+    <mailingListUrl>https://github.com/orgs/wixtoolset/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/wixtoolset/issues/issues</bugTrackerUrl>
     <tags>wixtoolset wix toolset msi xml admin</tags>
     <summary>The most powerful set of tools available to create your Windows installation experience. Free and Open Source since 2004!</summary>
@@ -32,7 +32,16 @@ With Burn, the WiX bootstrapper, you can create setup bundles that install prere
 The WiX SDK includes managed and native libraries that make it easier to write code that works with Windows Installer, including custom actions in both C# and C++.
 
 ]]></description>
-    <releaseNotes>Will be replaced by updater</releaseNotes>
+    <releaseNotes>WiX v3.14.1 is the latest recommended maintenance release of WiX v3; it contains mitigations in all versions of WiX v3 for a vulnerability affecting all bundles and a WiX custom action. We recommend upgrading to WiX v3.14.1--or the latest WiX v4.0--as soon as possible.
+
+For more information about the vulnerability, see the [FireGiant blog](https://www.firegiant.com/blog/2024/3/22/wix-security-releases-available-redux/).
+
+### Files
+
+* wix314.exe is the installer for the WiX Toolset build tools.
+* wix314exe.zip contains the wix311.exe installer inside a .zip file, useful if your IT department prevents direct downloading of .exe files.
+* wix314-binaries.zip contains the files that make up the WiX Toolset and is useful if you don't want to install the toolset -- for example, if you're just checking WiX into source control.
+* wix314-debug.zip contains a reference copy of the WiX source code and symbol (.pdb) files, both of which are useful when debugging problems with WiX.</releaseNotes>
     <dependencies>
       <dependency id="dotnet3.5" version="3.5.20160716" />
     </dependencies>

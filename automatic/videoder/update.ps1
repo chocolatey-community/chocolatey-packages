@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $domain = 'https://www.videoder.com/download/videoder-for-windows'
 

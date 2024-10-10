@@ -1,4 +1,4 @@
-Import-Module AU
+﻿Import-Module Chocolatey-AU
 Import-Module Wormies-AU-Helpers
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 Import-Module "$PSScriptRoot\..\..\scripts/au_extensions.psm1"
@@ -40,8 +40,8 @@ function GetResultInformation([string]$url32, [string]$url64) {
 
   Get-WebFile $url32 $dest | Out-Null
   $checksumType = 'sha256'
-  $version = Get-Version (Get-Item $dest | % { $_.VersionInfo.ProductVersion })
-  $checksum32 = Get-FileHash $dest -Algorithm $checksumType | % { $_.Hash.ToLowerInvariant() }
+  $version = Get-Version (Get-Item $dest | ForEach-Object { $_.VersionInfo.ProductVersion })
+  $checksum32 = Get-FileHash $dest -Algorithm $checksumType | ForEach-Object { $_.Hash.ToLowerInvariant() }
 
   return @{
     URL32            = $url32

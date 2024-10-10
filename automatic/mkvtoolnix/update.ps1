@@ -1,4 +1,4 @@
-﻿Import-Module au
+﻿Import-Module Chocolatey-AU
 
 $domain = 'https://mkvtoolnix.download'
 $releases = "$domain/windows/releases"

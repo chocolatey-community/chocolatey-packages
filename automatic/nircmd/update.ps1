@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.nirsoft.net/utils/nircmd.html'
 

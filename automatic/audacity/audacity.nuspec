@@ -5,7 +5,7 @@
     <id>audacity</id>
     <title>Audacity</title>
     <owners>chocolatey-community</owners>
-    <version>3.3.3</version>
+    <version>3.6.4</version>
     <authors>Audacity Developers</authors>
     <summary>Audacity is free, open source, cross-platform software for recording and editing sounds.</summary>
 <description><![CDATA[Audacity is free, open source, cross-platform software for recording and editing sounds.
@@ -26,7 +26,6 @@
 ]]></description>
     <projectUrl>https://audacityteam.org/</projectUrl>
     <tags>audacity admin audio dsp foss cross-platform</tags>
-    <copyright></copyright>
     <licenseUrl>https://audacityteam.org/about/license#license</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/audacity.svg</iconUrl>

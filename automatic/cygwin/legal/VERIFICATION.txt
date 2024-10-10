@@ -16,6 +16,6 @@ and can be verified by doing the following:
 
   checksum type: sha256
   checksum32: NO LONGER SUPPORTED
-  checksum64: 6BAD4555154B3B348D1BFB633A2E9D6086AA46E36952F456A434ECEF5B0010E0
+  checksum64: E7815D360AB098FDD1F03F10F43F363C73A632E8866E304C72573CF1E6A0DEC8
 
 The file 'LICENSE.txt' has been obtained from <https://cygwin.com/COPYING>

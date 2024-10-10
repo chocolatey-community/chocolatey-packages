@@ -6,15 +6,15 @@ in verifying that this package's contents are trustworthy.
 The embedded software can be verified by doing the following:
 
 1. Download the following:
-  64-bit software: <https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Windows_amd64.zip>
+  64-bit software: <https://github.com/derailed/k9s/releases/download/v0.32.5/k9s_Windows_amd64.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
-  - Using powershell function 'Get-RemoteChecksum' incluse in AU module
+  - Using powershell function 'Get-RemoteChecksum' included in Chocolatey AU module
 
 3. The checksums should match the following:
   checksum type: sha256
-  checksum64: 7E10583C66AD5FA1DE9F98F3DE5E94F3348CBE52F7F8D3D89CC295DD3D6C2D77
+  checksum64: 4A0BB4BD8406A73587148300EC578C20215A324227F3C22AF12E3CD24B8C7AE1
 
 The file 'LICENSE.txt' has been obtained from <https://raw.githubusercontent.com/derailed/k9s/2e05367256a7b2777b011da7213cf636c9ae4d17/LICENSE>

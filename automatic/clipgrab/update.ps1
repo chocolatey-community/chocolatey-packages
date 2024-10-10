@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://clipgrab.org/'
 
@@ -22,10 +22,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'portable\.exe$'
-  $url = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   $verRe = '[-]|\.exe$'
-  $version = $url -split "$verRe" | select -last 1 -skip 2
+  $version = $url -split "$verRe" | Select-Object -last 1 -skip 2
   @{
     URL32 = $url
     Version = Get-Version $version

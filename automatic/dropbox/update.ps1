@@ -1,4 +1,4 @@
-﻿Import-Module au
+﻿Import-Module Chocolatey-AU
 import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 . "$PSScriptRoot\update_helper.ps1"
 

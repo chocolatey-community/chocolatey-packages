@@ -37,9 +37,9 @@ function Install-Python {
   }
 
   $packageArgs = @{
-    packageName    = 'python312'
+    packageName    = 'python313'
     fileType       = 'exe'
-    file           = "$toolsPath\python-3.12.0b3.exe"
+    file           = "$toolsPath\python-3.13.0rc2.exe"
     silentArgs     = '/quiet InstallAllUsers=1 PrependPath={0} TargetDir="{1}"' -f $prependPath, $installDir
     validExitCodes = @(0)
   }
@@ -48,7 +48,7 @@ function Install-Python {
   $packageArgs['softwareName'] = "Python 3.$minor_version.*"
 
   if (!$only32Bit) {
-    $packageArgs['file64'] = "$toolsPath\python-3.12.0b3-amd64.exe"
+    $packageArgs['file64'] = "$toolsPath\python-3.13.0rc2-amd64.exe"
   }
   else {
     $packageArgs['packageName'] = "32-bit $($packageArgs['packageName'])"
@@ -93,7 +93,7 @@ function Protect-InstallFolder {
   $ErrorActionPreference = 'Stop'
   try {
     # get current acl
-    $acl = (Get-Item $folder).GetAccessControl('Access,Owner')
+    $acl = Get-Acl -Path $folder
 
     Write-Debug "Removing existing permissions."
     $acl.Access | ForEach-Object { $acl.RemoveAccessRuleAll($_) }
@@ -139,7 +139,7 @@ function Protect-InstallFolder {
     $acl.SetAccessRuleProtection($true, $false)
 
     # enact the changes against the actual
-    (Get-Item $folder).SetAccessControl($acl)
+    Set-Acl -Path $folder -AclObject $acl
   }
   catch {
     Write-Warning "Not able to set permissions for $folder."

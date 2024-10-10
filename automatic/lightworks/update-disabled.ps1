@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $domain = 'https://www.lwks.com'
 $releases = "$domain/index.php?option=com_lwks&view=download&Itemid=206&tab=0"

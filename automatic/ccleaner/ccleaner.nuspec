@@ -4,7 +4,7 @@
   <metadata>
     <id>ccleaner</id>
     <title>CCleaner</title>
-    <version>6.14.10584</version>
+    <version>6.28.11297</version>
     <authors>Piriform</authors>
     <owners>chocolatey-community,maartenba, tonigellida</owners>
     <summary>
@@ -22,7 +22,6 @@ It protects your privacy online and makes your computer faster and more secure.
 ]]></description>
     <projectUrl>https://www.piriform.com/ccleaner</projectUrl>
     <tags>ccleaner system cleanup freeware trial registry admin</tags>
-    <copyright></copyright>
     <licenseUrl>https://www.piriform.com/legal/software-license/ccleaner</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@182294b9b95166915fdc2265a90ef37c6b24efd9/icons/ccleaner.png</iconUrl>

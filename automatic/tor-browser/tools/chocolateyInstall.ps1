@@ -8,17 +8,17 @@ $destinationFolder = GetInstallDirectory -toolsPath $toolsDir
 $packageArgs = @{
   PackageName  = 'tor-browser'
   FileType     = 'exe'
-  Url          = 'https://www.torproject.org/dist/torbrowser/12.5.1/torbrowser-install-12.5.1_ALL.exe'
-  Url64        = 'https://www.torproject.org/dist/torbrowser/12.5.1/torbrowser-install-win64-12.5.1_ALL.exe'
-  Checksum     = 'b2592cc9b27f5ce81f5744662a6119d4db627f475316ac7a1cf02b52cd326395'
-  Checksum64   = '82edb937dc64dc647aca0c93ecbfc5ee0a657eb917d29f9b3ef2a9f08558ca5b'
+  Url          = 'https://archive.torproject.org/tor-package-archive/torbrowser/13.5.5/tor-browser-windows-i686-portable-13.5.5.exe'
+  Url64        = 'https://archive.torproject.org/tor-package-archive/torbrowser/13.5.5/tor-browser-windows-x86_64-portable-13.5.5.exe'
+  Checksum     = '8de20a8e37bc092b0a11413a56fa4caa85be8a4dedd7c38b07424f1e4613f3d8'
+  Checksum64   = '90b6356f6a01735efd303d36083cfeaac276f1528177328e71a941255b2c133b'
   ChecksumType = 'sha256'
   SilentArgs   = "/S","/D=$destinationFolder"
 }
 
 Install-ChocolateyPackage @packageArgs
 
-# Create .ignore files for exeâ€™s
+# Create .ignore files for exe’s
 Get-ChildItem -Path $destinationFolder -Recurse | Where-Object {
   $_.Extension -eq '.exe' } | ForEach-Object {
   New-Item $($_.FullName + '.ignore') -Force -ItemType file

@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 import-module .\..\..\extensions\extensions.psm1
 
 $releases = 'https://www.virtualbox.org/wiki/Download_Old_Builds'

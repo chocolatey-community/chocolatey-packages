@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
     $LatestRelease = Get-GitHubRelease henrypp simplewall
@@ -6,7 +6,7 @@ function global:au_GetLatest {
     @{
         Version = $LatestRelease.tag_name.TrimStart("v.")  # Tags have a "v." prefix, not a typo
         URL32_i = $LatestRelease.assets | Where-Object {$_.name.EndsWith(".exe")} | Select-Object -ExpandProperty browser_download_url
-        URL32_p = $LatestRelease.assets | Where-Object {$_.name.EndsWith(".zip")} | Select-Object -ExpandProperty browser_download_url
+        URL32_p = $LatestRelease.assets | Where-Object {$_.name.EndsWith("bin.zip")} | Select-Object -ExpandProperty browser_download_url
     }
 }
 

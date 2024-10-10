@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $domain = 'http://www.7-zip.org/'
 $releases = "${domain}download.html"

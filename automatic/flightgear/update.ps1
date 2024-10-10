@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 # We can't use https for the url, otherwise powershell throws an error and closes the window.
 # Oddly it works when choco auto redirects http to https

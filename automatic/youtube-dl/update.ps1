@@ -1,8 +1,5 @@
-import-module au
-import-module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
-
-$domain   = 'https://youtube-dl.org'
-$releases = "$domain/"
+﻿Import-Module Chocolatey-AU
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 function global:au_BeforeUpdate {
   if (Test-Path "$PSScriptRoot\tools") {
@@ -18,7 +15,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt" = @{
-      "(?i)(listed on\s*)\<.*\>" = "`${1}<$releases>"
+      "(?i)(listed on\s*)\<.*\>" = "`${1}<$($Latest.ReleaseUrl)>"
       "(?i)(1\..+)\<.*\>"          = "`${1}<$($Latest.URL32)>"
       "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType32)"
       "(?i)(checksum:).*"       = "`${1} $($Latest.Checksum32)"
@@ -27,22 +24,48 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $streams = [ordered]@{}
+  foreach ($repository in 'youtube-dl','ytdl-nightly') {
+    $latestRelease = Get-GitHubRelease -Owner ytdl-org -Name $repository
+    $url = $latestRelease.assets.Where{$_.name -eq 'youtube-dl.exe'}.browser_download_url
 
-  $re    = '\.exe$'
-  $url   = $domain + "/" + ($download_page.Links | ? href -match $re | select -First 1 -expand href)
-  $filename = $url.Substring($url.LastIndexOf('/') + 1)
-  ($download_page.Content -match "\(v(2[0-9]{3}[.].*)\)")
-  $version  = $Matches[1]
-  
-  #Update checksum automatically from self-contained executable
-  $checksum = Get-RemoteChecksum -Algorithm "sha512" $url
-  
-  return @{
-    Version = $version
-    URL32 = $url
-    Checksum32 = $checksum
-    ChecksumType32 = "sha512"
+    $version = $latestRelease.tag_name.TrimStart('v')
+    if ($repository.EndsWith('nightly')) {
+      $version += '-nightly'
+    }
+
+    # Look for a checksum asset for SHA512
+    $checksumFile = $latestRelease.assets.Where{$_.name -eq 'SHA2-512SUMS'}
+
+    # If it exists
+    $checksum = if ($checksumFile) {
+      # Get the content of the file
+      $checksumFileContent = (-join [char[]](Invoke-WebRequest -Uri $ChecksumFile.browser_download_url -UseBasicParsing).content).Split("`n")
+
+      # Find the line for youtube-dl.exe
+      $youtubeDlExeChecksumLine = $checksumFileContent -match "^(?<checksum>.+)(?=\s+youtube-dl\.exe)"
+
+      # And output the checksum portion, which is the first part of the line
+      $youtubeDlExeChecksumLine.Split(' ')[0]
+    } else {
+      # Otherwise, use Get-RemoteChecksum to output a SHA512 checksum for the asset URL
+      Get-RemoteChecksum -Url $Url -Algorithm "sha512"
+    }
+
+    $streams.Add(
+      $repository,
+      @{
+        Version        = $version
+        URL32          = $url
+        Checksum32     = $checksum
+        ChecksumType32 = "sha512"
+        ReleaseUrl     = $latestRelease.html_url
+      }
+    )
+  }
+
+  @{
+    streams = $streams
   }
 }
 

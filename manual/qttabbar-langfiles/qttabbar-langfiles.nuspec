@@ -17,7 +17,6 @@ QTTabBar is extension for Windows Explorer that brings tabbed browsing to Micros
     </description>
     <summary>Language files for QTTabBar</summary>
     <releaseNotes />
-    <copyright />
     <tags>productivity windows explorer i18n</tags>
     <dependencies>
       <dependency id="QTTabBar" />

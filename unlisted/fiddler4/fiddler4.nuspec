@@ -29,7 +29,6 @@ Fiddler is freeware and can debug traffic from virtually any application, includ
     </description>
     <projectUrl>http://www.telerik.com/fiddler</projectUrl>
     <tags>fiddler freeware fiddler4 web debugging cross-platform proxy admin</tags>
-    <copyright></copyright>
     <licenseUrl>http://www.telerik.com/purchase/license-agreement/fiddler</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg</iconUrl>

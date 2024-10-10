@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 Add-Type -Assembly System.IO.Compression
 

@@ -37,9 +37,6 @@
 Example: `choco install rapidee --params "/NoShortcut"`
 ]]></description>
     <releaseNotes>http://www.rapidee.com/en/history</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey" version="0.10.8" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

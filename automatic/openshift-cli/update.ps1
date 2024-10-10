@@ -1,7 +1,7 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param([switch] $Force)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix -FileNameBase "openshift-origin-client-tools"

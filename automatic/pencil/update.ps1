@@ -1,7 +1,7 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param([switch] $Force)
 
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = "http://pencil.evolus.vn/Downloads.html"
 
@@ -12,10 +12,12 @@ function global:au_SearchReplace {
     ".\legal\VERIFICATION.txt" = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$($Latest.ReleaseURL)>"
       "(?i)(^\s*software.*)\<.*\>"        = "`${1}<$($Latest.URL32)>"
-      "(?i)(^\s*checksum32\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum64\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
-      "(?i)(^\s*checksum32\:).*"            = "`${1} $($Latest.Checksum32)"
-      "(?i)(^\s*checksum64\:).*"            = "`${1} $($Latest.Checksum64)"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType32)"
+      "(?i)(^\s*checksum\:).*"            = "`${1} $($Latest.Checksum32)"
+    }
+
+    ".\tools\chocolateyInstall.ps1" = @{
+      '(^[$]version\s*=\s*)(".*")'               = "`${1}""$($Latest.Version)"""
     }
 
     "$($Latest.PackageName).nuspec" = @{
@@ -26,19 +28,18 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  $domain = $releases -split '(?<=//.+)/' | select -First 1
+  $domain = $releases -split '(?<=//.+)/' | Select-Object -First 1
 
   $re = '\.exe$'
-  $url = $download_page.links | ? href -match $re | % { $domain + $_.href }
+  $url = $download_page.links | Where-Object href -match $re | ForEach-Object { $domain + $_.href }
 
-  $version = $url[0] -split '/' | select -last 1 -Skip 1
+  $version = $url -split '/' | Select-Object -last 1 -Skip 1
   $version = $version.Substring(1) -replace '\.\w+$'
 
   @{
     Version     = $version
-    URL32       = $url -match 'i386' | select -first 1
-    URL64       = $url -notmatch 'i386' | select -first 1
-    ReleaseURL  = $download_page.links.href | ? { $_ -like "*github*/release/*"} | select -first 1
+    Url32       = $url
+    ReleaseURL  = $download_page.links.href | Where-Object { $_ -like "*github*/release/*"} | Select-Object -first 1
   }
 }
 

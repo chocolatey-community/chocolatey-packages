@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.auslogics.com/en/software/disk-defrag-touch'
 

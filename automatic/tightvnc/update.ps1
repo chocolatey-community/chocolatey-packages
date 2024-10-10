@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.tightvnc.com/download.php'
 
@@ -25,14 +25,14 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '32bit\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   $re = '64bit\.msi$'
-  $url64 = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $url64 = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   $verRe = '\/'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-  $version64 = $url64 -split "$verRe" | select -last 1 -skip 1
+  $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
+  $version64 = $url64 -split "$verRe" | Select-Object -last 1 -skip 1
   if ($version32 -ne $version64) {
     throw "32bit version do not match the 64bit version"
   }

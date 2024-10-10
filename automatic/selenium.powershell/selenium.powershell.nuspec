@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>selenium.powershell</id>
+    <version>3.0.1</version>
+    <title>Selenium PowerShell Module</title>
+    <authors>Adam Driscoll</authors>
+    <owners>chocolatey-community</owners>
+    <licenseUrl>https://github.com/adamdriscoll/selenium-powershell/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/adamdriscoll/selenium-powershell</projectUrl>
+    <projectSourceUrl>https://github.com/adamdriscoll/selenium-powershell</projectSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@6df1e60d987753faa6bd0ddcfc2376ac4c34bc1c/icons/selenium.powershell.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description><![CDATA[The Selenium PowerShell module allows you to automate browser interaction using the [Selenium API](https://selenium.dev/). You can navigate to pages, find elements, click buttons, enter text and even take screenshots.
+
+## Features
+
+- Wraps the C# WebDriver for Selenium
+- Easily execute web-based tests
+- Works well with Pester
+
+## Package Parameters
+
+The following package parameters can be set:
+
+- `/core` - Installs the module in the AllUsers scope for PowerShell Core
+- `/desktop` - Installs the module in the AllUsers scope for Windows PowerShell (ie. Desktop Edition)
+
+To pass parameters, use `--params "''"` (e.g. `choco install selenium.powershell [other options] --params="'/Core'"`).
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+]]></description>
+    <summary>Web automation using the Selenium Web Driver, via PowerShell.</summary>
+    <releaseNotes>https://github.com/adamdriscoll/selenium-powershell/releases</releaseNotes>
+    <copyright>Chromium and WebDriver teams. All Rights Reserved.</copyright>
+    <tags>selenium powershell addon foss cross-platform automation web module testing</tags>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/selenium.powershell</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/adamdriscoll/selenium-powershell/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

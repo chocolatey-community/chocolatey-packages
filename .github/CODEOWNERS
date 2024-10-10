@@ -26,6 +26,7 @@
 */transifex*          @chocolatey-community/chocolatey-team-maintainers
 */waterfox*           @AdmiringWorm
 */composer*           @johnstevenson
+*/k9s*                @danielkoek
 */krew*               @jetersen
 */kubelogin*          @jetersen
 */ffmpeg-full*        @VuiMuich
@@ -35,12 +36,15 @@
 */es*                 @TheCakeIsNaOH
 */selenium-chrome-driver* @chocolatey-community/chocolatey-team-maintainers
 */intunewinapputil*   @chocolatey-community/chocolatey-team-maintainers
-*/freecad*            @redbaron2
 */selenium-chromium-edge-driver* @chocolatey-community/chocolatey-team-maintainers @AdmiringWorm
-*/jenkins*            @chocolatey-community/chocolatey-team-maintainers
+*/jenkins*            @chocolatey-community/chocolatey-team-maintainers @chocolatey-community/chocolatey-community-solutions
 */brave*              @AdmiringWorm
-*/nexus-repository*   @chocolatey-community/chocolatey-team-maintainers
+*/nexus-repository*   @chocolatey-community/chocolatey-team-maintainers @chocolatey-community/chocolatey-community-solutions
 */totalcommander*     @pauby
+*/kubescape*          @HollowMan6
+*/googlechromebeta*   @tunisiano187
+*/krita*              @tunisiano187
+*/selenium.powershell* @chocolatey-community/chocolatey-team-maintainers
 
 # Other
 # This can be any file other that won't be matched as a package

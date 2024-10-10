@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>azcopy10</id>
+    <version>10.26.0</version>
+    <title>azcopy10</title>
+    <authors>Microsoft</authors>
+    <owners>chocolatey-community</owners>
+    <projectUrl>https://github.com/Azure/azure-storage-azcopy</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/azcopy10</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@de115ff0e16d124c2099b8f95bd08bb92b6e4918/icons/azcopy10.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/Azure/azure-storage-azcopy/master/LICENSE</licenseUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10</docsUrl>
+    <tags>azcopy azure admin cli</tags>
+    <summary>AzCopy is the command-line utility for copying data to or from Microsoft Azure Blob and File storage.</summary>
+    <description><![CDATA[AzCopy **(v10)** is the **new** command-line utility designed for high-performance uploading, downloading, and copying data to and from Microsoft Azure Blob and File.
+
+It has a whole new syntax incompatible with the old v8 versions. You can use them side-by-side.
+Now packaged as a single exe file with simple commands designed for optimal performance. You can copy data between a file system and a storage account, or between storage accounts.
+]]></description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

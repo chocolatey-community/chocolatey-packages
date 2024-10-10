@@ -1,6 +1,6 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
-$releases = "https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/"
+$releases = "https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver/LATEST_STABLE"
 
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
@@ -8,14 +8,6 @@ function global:au_BeforeUpdate {
 
   $Latest.FileName32 = Split-Path -Leaf $Latest.URL32
   $Latest.FileName64 = Split-Path -Leaf $Latest.URL64
-}
-
-function Get-EdgePackageVersion {
-  param($PackageName = 'microsoft-edge')
-
-  $scrape_content = Invoke-RestMethod -Uri "https://community.chocolatey.org/api/v2/package-versions/$PackageName" -UseBasicParsing
-
-  $scrape_content | Select-Object -Last 1
 }
 
 function global:au_SearchReplace {
@@ -36,18 +28,13 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  # We use the available package on CCR as the source of truth
-  $packageVersion = Get-EdgePackageVersion -PackageName 'microsoft-edge'
-  $escapedVersion = [regex]::Escape($packageVersion)
+  $stableVersionFile = "$env:TEMP\EdgeDriverLatestStable.txt"
 
-  $downloadPage = Invoke-WebRequest $releases -UseBasicParsing
+  Invoke-WebRequest -URI $releases -OutFile $stableVersionFile -UseBasicParsing
+  $packageVersion = Get-Content $stableVersionFile
 
-  $url32 = $downloadPage.Links | Where-Object { $_.href -match "$escapedVersion.*win32" } | Select-Object -First 1 -ExpandProperty href
-  $url64 = $downloadPage.Links | Where-Object { $_.href -match "$escapedVersion.*win64" } | Select-Object -First 1 -ExpandProperty href
-
-  if (!$url32 -or !$url64) {
-    throw "The 32bit or 64bit URL is missing"
-  }
+  $url32 = "https://msedgedriver.azureedge.net/$packageVersion/edgedriver_win32.zip"
+  $url64 = "https://msedgedriver.azureedge.net/$packageVersion/edgedriver_win64.zip"
 
   @{
     Version        = $packageVersion

@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: technote-space/toc-generator@v4.0.0
+      - uses: technote-space/toc-generator@v4.3.1
 
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CREATE_PR: true
-          TARGET_PATHS: "README*.md,CONTRIBUTING*.md"
+          TARGET_PATHS: "README*.md,CONTRIBUTING*.md,COMMITTERS*.md"
           FOLDING: true
           COMMIT_MESSAGE: '(docs) Update TOC'
           PR_TITLE: '(docs) Update TOC (${PR_MERGE_REF})'

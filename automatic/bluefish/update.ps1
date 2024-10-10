@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://www.bennewitz.com/bluefish/stable/binaries/win32/'
 $softwareName = 'Bluefish*'

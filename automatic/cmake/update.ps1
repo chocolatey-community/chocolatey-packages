@@ -1,6 +1,6 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
-Import-Module AU
+Import-Module Chocolatey-AU
 
 $releases = 'https://cmake.org/download/'
 
@@ -31,13 +31,27 @@ function global:au_GetLatest {
     $url32_portable = $allZips | Where-Object { $_ -match "$version-$re32" }
     $url64_portable = $allZips | Where-Object { $_ -match "$version-$re64" }
 
-    $streams.Add($versionTwopart, @{
-        Version = $version
-        URL32_i = [uri]$_
-        URL64_i = [uri]$url64
-        URL32_p = [uri]$url32_portable
-        URL64_p = [uri]$url64_portable
-      })
+    if ($streams.ContainsKey($versionTwoPart)) {
+        $previousKeyVersion = Get-Version $streams[$versionTwoPart].Version
+        $currentKeyVersion = Get-Version $version
+        if ($currentKeyVersion -gt $previousKeyVersion) {
+            $streams[$versionTwopart] = @{
+                Version = $version
+                URL32_i = [uri]$_
+                URL64_i = [uri]$url64
+                URL32_p = [uri]$url32_portable
+                URL64_p = [uri]$url64_portable
+            }
+        }
+    } else {
+        $streams.Add($versionTwopart, @{
+            Version = $version
+            URL32_i = [uri]$_
+            URL64_i = [uri]$url64
+            URL32_p = [uri]$url32_portable
+            URL64_p = [uri]$url64_portable
+          })
+    }
   }
 
   return @{ Streams = $streams }

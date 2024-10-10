@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 Import-Module "$env:ChocolateyInstall\helpers\chocolateyInstaller.psm1"
 
 $releases           = 'http://keepass.info/download.html'
@@ -12,7 +12,7 @@ function global:au_BeforeUpdate {
   $Latest.ChecksumType32 = 'sha256'
   $filePath = "$PSScriptRoot\tools\$($Latest.FileName32)"
   Get-WebFile -Url $Latest.URL32 -FileName $filePath
-  $Latest.Checksum32 = Get-FileHash $filePath -Algorithm $Latest.ChecksumType32 | % Hash
+  $Latest.Checksum32 = Get-FileHash $filePath -Algorithm $Latest.ChecksumType32 | ForEach-Object Hash
 }
 
 function global:au_SearchReplace {
@@ -38,21 +38,21 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'KeePass.*1\.x\/.*\.exe\/download$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
-  $fileName = $url32 -split '/' | select -last 1 -skip 1
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
+  $fileName = $url32 -split '/' | Select-Object -last 1 -skip 1
   $index = $url32.IndexOf($fileName)
   $sourceUrl = $url32.Substring(0, $index)
 
   $verRe = '[-]'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
 
   $changelog_page = Invoke-WebRequest -uri $changelogs -UseBasicParsing
 
   $re = "KeePass ${version32} released"
-  $URLChangelog = $changelog_page.Links | ? outerHtml -match $re | select -first 1 -expand href
+  $URLChangelog = $changelog_page.Links | Where-Object outerHtml -match $re | Select-Object -first 1 -expand href
   if ($URLChangelog) { $URLChangelog = "$changelog_domain/$URLChangelog" }
 
-  $majorVersion = $version32 -split '\.' | select -first 1
+  $majorVersion = $version32 -split '\.' | Select-Object -first 1
 
   @{
     URL32 = $url32

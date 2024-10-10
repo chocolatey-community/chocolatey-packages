@@ -1,7 +1,7 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://winscp.net/eng/downloads.php'
-$re  = 'WinSCP.+Portable\.zip$'
+$re  = 'WinSCP.+Portable\.zip/download$'
 
 function global:au_SearchReplace {
    @{
@@ -33,7 +33,7 @@ function global:au_GetLatest {
     $url = @($download_page.links | Where-Object href -match $re) -notmatch 'beta|rc' | ForEach-Object href
     $url = 'https://winscp.net/eng' + $url
     $version   = $url -split '-' | Select-Object -Last 1 -Skip 1
-    $file_name = $url -split '/' | Select-Object -last 1
+    $file_name = $url -split '/' | Select-Object -last 1 -Skip 1
     @{
         Version      = $version
         URL32        = "https://sourceforge.net/projects/winscp/files/WinSCP/$version/$file_name/download"

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 . "$PSScriptRoot\..\Ghostscript\update.ps1"
 
 $softwareName = 'GPL Ghostscript'

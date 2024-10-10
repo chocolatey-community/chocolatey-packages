@@ -1,22 +1,23 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
-$embedded_path = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true') {
-         Write-Host "Installing 64 bit version"; Get-Item "$toolsDir\*dll*win64*.zip"
-} else { Write-Host "Installing 32 bit version"; Get-Item "$toolsDir\*dll*win32*.zip" }
 
 $packageArgs = @{
-    PackageName  = 'sqlite'
-    FileFullPath = $embedded_path
-    Destination  = $toolsDir
+    PackageName    = 'sqlite'
+    FileFullPath   = "$toolsDir\sqlite-dll-win-x86-3460100.zip"
+    FileFullPath64 = "$toolsDir\sqlite-dll-win-x64-3460100.zip"
+    Destination    = $toolsDir
 }
 Get-ChildItem $toolsDir\* | Where-Object { $_.PSISContainer } | Remove-Item -Recurse -Force #remove older package dirs
 Get-ChocolateyUnzip @packageArgs
 
 $pp = Get-PackageParameters
 if (!$pp.NoTools) {
+    if ((Get-OSArchitectureWidth -Compare 32) -or ($env:chocolateyForceX86 -eq 'true')) {
+        Write-Error -Message "The 32-bit version of sqlite tools is not available after version 3.43.2" -Category ResourceUnavailable
+    }
     Write-Host "Installing tools"
-    $packageArgs.FileFullPath = Get-Item "$toolsDir\*tools*win32*.zip"
+    $packageArgs.FileFullPath64 = "$toolsDir\sqlite-tools-win-x64-3460100.zip"
     Get-ChocolateyUnzip @packageArgs
 }
 

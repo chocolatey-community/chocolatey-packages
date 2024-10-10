@@ -5,11 +5,11 @@
     <id>speccy</id>
     <title>Speccy</title>
     <owners>chocolatey-community</owners>
-    <version>1.32.803</version>
+    <version>1.33.75</version>
     <authors>Piriform LTD</authors>
     <summary>Speccy will give you detailed statistics on every piece of hardware in your computer.</summary>
     <description><![CDATA[
-Speccy will give you detailed statistics on every piece of hardware in your computer. Including CPU, Motherboard, RAM, Graphics Cards, Hard Disks, Optical Drives, Audio support. Additionally Speccy adds the temperatures of your different components, so you can easily see if thereâ€™s a problem!
+Speccy will give you detailed statistics on every piece of hardware in your computer. Including CPU, Motherboard, RAM, Graphics Cards, Hard Disks, Optical Drives, Audio support. Additionally Speccy adds the temperatures of your different components, so you can easily see if there’s a problem!
 
 ![Speccy](https://i.imgur.com/1itlSny.png)
 

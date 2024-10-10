@@ -1,14 +1,14 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\tools\"
 . $toolsDir\helpers.ps1
 
 function global:au_BeforeUpdate {
   if ($Latest.Title -like '*Fresh*') {
-    cp "$PSScriptRoot\README.fresh.md" "$PSScriptRoot\README.md" -Force
+    Copy-Item "$PSScriptRoot\README.fresh.md" "$PSScriptRoot\README.md" -Force
   }
   else {
-    cp "$PSScriptRoot\README.still.md" "$PSScriptRoot\README.md" -Force
+    Copy-Item "$PSScriptRoot\README.still.md" "$PSScriptRoot\README.md" -Force
   }
 }
 

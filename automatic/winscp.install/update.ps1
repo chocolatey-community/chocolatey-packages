@@ -1,14 +1,17 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://winscp.net/eng/downloads.php'
-$re  = 'WinSCP.+\.exe$'
+$re  = 'WinSCP.+\.exe/download$'
 
 function global:au_SearchReplace {
-   @{
+    @{
         "$($Latest.PackageName).nuspec" = @{
             "(\<releaseNotes\>).*?(\</releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
         }
-
+        "tools\chocolateyInstall.ps1"   = @{
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+        }
         ".\legal\VERIFICATION.txt" = @{
           "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
           "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
@@ -24,7 +27,7 @@ function global:au_GetLatest {
     $url = @($download_page.links | Where-Object href -match $re) -notmatch 'beta|rc' | ForEach-Object href
     $url = 'https://winscp.net/eng' + $url
     $version   = $url -split '-' | Select-Object -Last 1 -Skip 1
-    $file_name = $url -split '/' | Select-Object -last 1
+    $file_name = $url -split '/' | Select-Object -last 1 -Skip 1
     @{
         Version      = $version
         URL32        = "https://sourceforge.net/projects/winscp/files/WinSCP/$version/$file_name/download"

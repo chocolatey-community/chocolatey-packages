@@ -3,19 +3,17 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://www.videosoftdev.com/free-video-editor/download>
+location on <https://www.videosoftdev.com/free-video-editor/download>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <http://downloads.videosoftdev.com/video_tools/video_editor_x32.exe>
-  64-Bit software: <http://downloads.videosoftdev.com/video_tools/video_editor_x64.exe>
+  64-Bit software: <https://downloads.videosoftdev.com/video_tools/video_editor_x64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 774E36C0EEDA6B69AFFA2B907229D857C7E8B3F423354F070D085DAF984BCD04
-  checksum64: 9266DFADA2DC1C2E11A2E391D9DC105641909AB58F8D199559FEA19F9B456CFB
+  checksum64: 4F7BF5EEC173898D67E693AE48351E6CA813A1478CEA7BBF3359D96B90C37BB7
 
 The file 'LICENSE.txt' has been obtained from <http://www.videosoftdev.com/terms-and-conditions>

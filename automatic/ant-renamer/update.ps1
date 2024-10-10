@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.antp.be/software/renamer/download'
 
@@ -22,7 +22,10 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
     $re    = 'install\.exe'
-    $url   = $download_page.links | ? href -match $re | select -First 1 -expand href
+    $url   = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -ExpandProperty href
+    if (-not ([uri]$url).Scheme) {
+      $url = "$(([uri]$releases).Scheme)://$($url.TrimStart('https://'))"
+    }
 
     $version  = [regex]::Match($download_page.Content, "Version\s+([0-9\.]+)").Groups[1].Value;
 

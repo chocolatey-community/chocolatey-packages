@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 [uri]$releases = 'https://curl.se/windows/'
 

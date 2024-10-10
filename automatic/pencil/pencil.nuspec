@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pencil</id>
-    <version>3.1.0</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-coreteampackages/tree/master/automatic/pencil</packageSourceUrl>
+    <version>3.1.1</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/pencil</packageSourceUrl>
     <owners>chocolatey-community,Andrei Bejenaru</owners>
     <title>Pencil</title>
     <authors>Evolus</authors>
     <projectUrl>http://pencil.evolus.vn</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@84de0b5c5cabccb49ac162656ad38a42e5007428/icons/pencil.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@84de0b5c5cabccb49ac162656ad38a42e5007428/icons/pencil.png</iconUrl>
     <copyright>Copyright (c) Evolus Co., Ltd. All rights reserved.</copyright>
     <licenseUrl>https://github.com/evolus/pencil/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -29,7 +29,7 @@ Pencil is built for the purpose of providing a free and open-source GUI prototyp
 * Easily Find Cliparts from the Internet: Pencil has a clipart browser tool that integrates with OpenClipart.org.
 * Inter-page linking: Elements in a drawing can be linked to a specific page in the same document. This helps user define the UI flow when creating application or website mockups.
 ]]></description>
-    <releaseNotes>https://github.com/evolus/pencil/blob/master/RELEASE/RELEASE-NOTE-310.md</releaseNotes>
+    <releaseNotes>https://github.com/evolus/pencil/blob/master/RELEASE/RELEASE-NOTE-311.md</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

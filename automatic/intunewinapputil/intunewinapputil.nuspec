@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intunewinapputil</id>
-    <version>1.8.4.20220726</version>
+    <version>1.8.6</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/intunewinapputil</packageSourceUrl>
     <owners>chocolatey-community,corbob</owners>
     <title>intunewinapputil</title>

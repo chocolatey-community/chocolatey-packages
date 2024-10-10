@@ -1,8 +1,6 @@
 ﻿[CmdletBinding()]
 param($IncludeStream, [switch]$Force)
-Import-Module AU
-
-$releases = 'https://github.com/prey/prey-node-client/releases'
+Import-Module Chocolatey-AU
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -26,20 +24,18 @@ function global:au_SearchReplace {
 function global:au_AfterUpdate { Update-Metadata -key 'releaseNotes' -value $Latest.ReleaseNotes }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $latestRelease = Get-GitHubRelease -Owner "Prey" -Name "Prey-Node-Client"
 
   $re = 'x86\.msi$'
-  $urls32 = $download_page.Links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
+  $urls32 = $latestRelease.assets.Where{$_.name -match $re}.browser_download_url
 
   $re = 'x64\.msi$'
-  $urls64 = $download_page.links | ? href -match $re | select -expand href | % { 'https://github.com' + $_ }
+  $urls64 = $latestRelease.assets.Where{$_.name -match $re}.browser_download_url
 
   $streams = @{}
-  $urls32 | % {
-    $verRe = '\/[v\.]{0,2}'
-    $version = $_ -split "$verRe" | select -last 1 -skip 1
-    $version = Get-Version $version
-    $url64 = $urls64 | ? { $_ -match "${verRe}$version" } | select -First 1
+  $urls32 | ForEach-Object {
+    $version = Get-Version $latestRelease.tag_name.TrimStart('v')
+    $url64 = $urls64 | Where-Object { $_ -match "\/[v\.]{0,2}$version" } | Select-Object -First 1
     if (!($url64)) { throw "URL64 was not found for version $version" }
 
     if (!($streams.ContainsKey($version.ToString(2)))) {
@@ -47,7 +43,7 @@ function global:au_GetLatest {
         Version = $version.ToString()
         URL32   = $_
         URL64   = $url64
-        ReleaseNotes = "${releases}/tag/v${version}"
+        ReleaseNotes = $latestRelease.html_url
       })
     }
   }

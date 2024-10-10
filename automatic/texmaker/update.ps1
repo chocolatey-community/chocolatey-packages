@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releasePagePart = 'http://www.xm1math.net/texmaker/'
 $releases = "${releasePagePart}download.html"
@@ -24,9 +24,9 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
-  $version32 = $url32 -split '_' | select -last 1 -skip 2
+  $version32 = $url32 -split '_' | Select-Object -last 1 -skip 2
 
   @{
     URL32 = $releasePagePart + $url32

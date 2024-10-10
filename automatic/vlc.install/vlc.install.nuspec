@@ -4,7 +4,7 @@
   <metadata>
     <id>vlc.install</id>
     <title>VLC media player (Install)</title>
-    <version>3.0.18</version>
+    <version>3.0.21</version>
     <authors>VideoLAN Organization</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>VLC Media Player</summary>

@@ -1,0 +1,120 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The file 'LICENSE.txt' is obtained from <https://github.com/adamdriscoll/selenium-powershell/blob/478369b92437f7bfba14ddc64109ee07ee2ecca2/LICENSE>
+
+The module has been downloaded from <https://www.powershellgallery.com/packages/Selenium>
+and zipped into 'selenium.zip'. It can be verified by following these steps:
+
+1. Save the module from the PowerShell Gallery:
+  - Save-Module -Name Selenium -Path . -RequiredVersion 3.0.1
+2. Get the checksum for each file saved to `Selenium\3.0.1` using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  file name: LICENSE
+  checksum type: SHA256
+  checksum: BAEB4A5B8A2F782E21C9F508EEBC728ADBA739F7B7FB8BA3FF07747A4C9FE296
+
+  file name: README.md
+  checksum type: SHA256
+  checksum: D7DAE9FDD317D06EC5E33AE032963095DD6D4A0850DCF5939F65784237294A47
+
+  file name: Selenium-Binary-Updater.ps1
+  checksum type: SHA256
+  checksum: 5EB49321251411333B4FB00E4F3695B5E5F2B8B5B5179E8041AEE32E05F0C12D
+
+  file name: Selenium.psd1
+  checksum type: SHA256
+  checksum: BDFBD97AD53905E6921AD44C3BFE1790A8DDDF8FA30411877E0CC2C18DB30B2E
+
+  file name: Selenium.psm1
+  checksum type: SHA256
+  checksum: CA60DD2DAEF1204540C2A35D5849E9F25BADD76328DFD71A33DD4CA16E9F88CF
+
+  file name: SeleniumClasses.ps1
+  checksum type: SHA256
+  checksum: 884A78F44A0A36FD0F5EA4279E75F976D3A3CBB3C95F2C1203816F3ACD93A66B
+
+  file name: assemblies\chromedriver.exe
+  checksum type: SHA256
+  checksum: 55C5203DB4D44D96F4124C60E69AE0823F4372EFA4B5416675D9564A83D6AD2C
+
+  file name: assemblies\chromedriver.exe.sha256
+  checksum type: SHA256
+  checksum: B9ECBDF7B19AD0E4099141514D4DEF7C16334570524D750D12DE57F006317116
+
+  file name: assemblies\geckodriver.exe
+  checksum type: SHA256
+  checksum: 255C9D3571C86841213F49B26D176A6AD440BE8C720E3C2D9226076ADF4F603D
+
+  file name: assemblies\geckodriver.exe.sha256
+  checksum type: SHA256
+  checksum: B5A4EF0226B2D98DF9EAC1AD5D2DAAB97B04C2D5D65D7A002CE7ADE56A6DB061
+
+  file name: assemblies\IEDriverServer.exe
+  checksum type: SHA256
+  checksum: A1E26B0E8CB5F8DB1CD784BAC71BBF540485D81E697293B0B4586E25A31A8187
+
+  file name: assemblies\IEDriverServer.exe.sha256
+  checksum type: SHA256
+  checksum: E487929ABADCCDC39B295212F6FA49632463C2707FC51A4FD406394E8E5970A3
+
+  file name: assemblies\msedgedriver.exe
+  checksum type: SHA256
+  checksum: 509FFD6D321EF78C8319E68B89807D2437D8DB1718000FE2BB7ECACB1529730D
+
+  file name: assemblies\msedgedriver.exe.sha256
+  checksum type: SHA256
+  checksum: EFC53256B6BB3D081BDEC13F8BA8398BA999EC69701CD33EADE3C7D5437FE2A8
+
+  file name: assemblies\WebDriver.dll
+  checksum type: SHA256
+  checksum: 0EE619B1786CF5971C0F9C6EE1859497AECBA93A4953CF92FEA998E8EEFADF3C
+
+  file name: assemblies\WebDriver.dll.sha256
+  checksum type: SHA256
+  checksum: 7DAA46C412793A6590E03ED079CED7397C6F63005B3EF9D48F897F1E520FEA70
+
+  file name: assemblies\WebDriver.Support.dll
+  checksum type: SHA256
+  checksum: B59BA7D0CFFE43E722B13AD737CF596F030788B86B5B557CB479F0B6957CCE8A
+
+  file name: assemblies\WebDriver.Support.dll.sha256
+  checksum type: SHA256
+  checksum: FE5FAAE2D9AE96394020A7617929DAF3E355D8C656A6CB65F9912CA222D25CD8
+
+  file name: assemblies\linux\chromedriver
+  checksum type: SHA256
+  checksum: B561EFE1551F9CB45DDE6BBF804CA2BC06359415CDAC1B6B16556B095A55011F
+
+  file name: assemblies\linux\chromedriver.sha256
+  checksum type: SHA256
+  checksum: EF2B40C71F202B4FC5A81B19FF261FC99A54FB89A7AA3BC9B0FE2D4111CFEFEE
+
+  file name: assemblies\linux\geckodriver
+  checksum type: SHA256
+  checksum: 6590E3B9D9BF292C8DF50B6DF5BCF8A5191D999F9E48F68AA2055EB5746B2C05
+
+  file name: assemblies\linux\geckodriver.sha256
+  checksum type: SHA256
+  checksum: F1C6C148105997A73960BEC7498B2BBD3875AB6D1B18004880F99B4BCDC22939
+
+  file name: assemblies\macos\chromedriver
+  checksum type: SHA256
+  checksum: AD35D47CA5CD075939F7F6638188A56B648663D38A0719AF28B3F004BF95E0DD
+
+  file name: assemblies\macos\chromedriver.sha256
+  checksum type: SHA256
+  checksum: 6FD1760A76C04219E4B5A9382EBF9CB8200A03A555B5EDCAB5950D78D3807504
+
+  file name: assemblies\macos\geckodriver
+  checksum type: SHA256
+  checksum: D62C2178377ADDEB1BB860426B2C9B10B68D2EEABF0C521529A4A6A7B1E208C4
+
+  file name: assemblies\macos\geckodriver.sha256
+  checksum type: SHA256
+  checksum: B2F96FFF2033943087EF6066587D770C78604FF3EC7A29A735E6A30E8C66B418
+

@@ -1,4 +1,4 @@
-
+﻿
 function Compare-Hashes {
 param (
   [string]$my_path = "$PSScriptRoot",
@@ -6,8 +6,8 @@ param (
   [string]$checksumType = '\bchecksumType\b'
 )
 $global:au_force=$gud = $false;
-$current_checksumType = (gi "$my_path\tools\chocolateyInstall.ps1" | sls $checksumType) -split "=|'" | Select -Last 1 -Skip 1
-$current_checksum = (gi "$my_path\tools\chocolateyInstall.ps1" | sls $reg_chksum) -split "=|'" | Select -Last 1 -Skip 1
+$current_checksumType = (Get-Item "$my_path\tools\chocolateyInstall.ps1" | Select-String $checksumType) -split "=|'" | Select-Object -Last 1 -Skip 1
+$current_checksum = (Get-Item "$my_path\tools\chocolateyInstall.ps1" | Select-String $reg_chksum) -split "=|'" | Select-Object -Last 1 -Skip 1
 if ($current_checksumType -eq "SHA512"){ $characters = "128" }; if ($current_checksumType -eq "SHA256"){ $characters = "64"}
 if ($current_checksum.Length -ne $characters) { throw "Can't find current checksum" }
 $remote_checksum  = Get-RemoteChecksum $url -Algorithm $current_checksumType
@@ -29,12 +29,12 @@ param(
    New-Item "$PSScriptRoot$packageName" -ItemType file
  }  
  if (($global:au_Force -ne $true) -and (Test-Path "$packageName")) {
-  $existingETag = Get-Content "$packageName" -Encoding "UTF8" | Select -First 1 | Foreach { $_ -split '\|' } | Select -First 1
+  $existingETag = Get-Content "$packageName" -Encoding "UTF8" | Select-Object -First 1 | ForEach-Object { $_ -split '\|' } | Select-Object -First 1
  } else {
   $existingETag = $null
  }
  $etag = Invoke-WebRequest -Method Head -Uri $url -UseBasicParsing
- $etag = $etag | Foreach { $_.Headers.$tag }
+ $etag = $etag | ForEach-Object { $_.Headers.$tag }
  if ($etag -eq $existingETag) { return $null }
 return $etag
 }
@@ -49,13 +49,13 @@ param(
 )
 $dest = "$env:TEMP\$file"
 Invoke-WebRequest -UseBasicParsing -Uri $url32 -OutFile $dest
-$version = Get-Item $dest | Foreach { $_.VersionInfo.$version -replace '^(\d+(\.[\d]+){1,3}).*', '$1' }
+$version = Get-Item $dest | ForEach-Object { $_.VersionInfo.$version -replace '^(\d+(\.[\d]+){1,3}).*', '$1' }
 $version = ( Get-FixVersion $version )
 
  $result = @{
   URL32          = $url32
   Version        = $version
-  Checksum32     = Get-FileHash $dest -Algorithm $algorithm | Foreach Hash
+  Checksum32     = Get-FileHash $dest -Algorithm $algorithm | ForEach-Object Hash
   ChecksumType32 = $algorithm
  }
 Remove-Item -Force $dest

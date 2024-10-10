@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.sweethome3d.com/download.jsp'
 
@@ -21,10 +21,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe\/download$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   $verRe = '[-]'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
   @{
     URL32    = $url32
     Version  = $version32

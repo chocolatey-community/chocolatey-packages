@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = "https://github.com/vim/vim-win32-installer/releases/latest"
 

@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://www.gimp.org/downloads/'
 
@@ -17,7 +17,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re        = '\.exe$'
-  $url32     = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https:' + $_ }
+  $url32     = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { 'https:' + $_ }
   
   $fallbackUrl32 = $url32 -replace "download.gimp.org/mirror", "download.gimp.org"
 

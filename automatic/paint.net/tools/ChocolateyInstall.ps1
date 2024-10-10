@@ -4,15 +4,15 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   PackageName    = $env:ChocolateyPackageName
-  fileType       = 'exe'
-  file64         = Get-Item $toolsPath\*.exe
-  silentArgs     = '/auto'
+  fileType       = "msi"
+  file64         = "$toolsPath\paint.net.5.0.13.winmsi.x64.msi"
+  silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 1641, 3010)
   softwareName   = 'Paint.NET*'
 }
 
 Install-ChocolateyInstallPackage @packageArgs
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' }}
+Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' }}
 
 $packageName = $packageArgs.packageName
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName

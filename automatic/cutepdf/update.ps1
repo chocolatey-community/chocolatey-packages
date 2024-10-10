@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
  . "$PSScriptRoot\update_helper.ps1"
   $url = 'http://www.cutepdf.com/download/CuteWriter.exe'
@@ -28,7 +28,7 @@ function global:au_GetLatest {
   else {
     $result = @{
       URL32   = $url32
-      Version = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | select -First 1 | % { $_ -split '\|' } | select -Last 1
+      Version = Get-Content "$PSScriptRoot\info" -Encoding UTF8 | Select-Object -First 1 | ForEach-Object { $_ -split '\|' } | Select-Object -Last 1
     }
   }
   return $result

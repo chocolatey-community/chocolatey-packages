@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>mixxx</id>
-    <version>2.5-alpha-64</version>
+    <version>2.5-beta-59</version>
     <title>Mixxx</title>
     <owners>chocolatey-community</owners>
     <authors>Mixxx Development Team</authors>
@@ -44,7 +44,6 @@
 ]]></description>
     <summary>Cross platform and open Source DJ software</summary>
     <releaseNotes>http://mixxxblog.blogspot.it/</releaseNotes>
-    <copyright />
     <tags>DJ audio mixing party mp3 media cross-platform foss admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/mixxx</packageSourceUrl>
     <projectSourceUrl>https://github.com/mixxxdj/mixxx</projectSourceUrl>

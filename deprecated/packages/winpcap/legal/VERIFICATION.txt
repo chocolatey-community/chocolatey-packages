@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+location on <https://www.winpcap.org/install/>
+and can be verified by doing the following:
+
+1. Download the following:
+  32-Bit software: <https://www.winpcap.org/install/bin/WinPcap_4_1_3.exe>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum32: FC4623B113A1F603C0D9AD5F83130BD6DE1C62B973BE9892305132389C8588DE
+
+The file 'LICENSE.txt' has been obtained from <https://www.winpcap.org/misc/copyright.htm>

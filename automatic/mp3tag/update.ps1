@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://community.mp3tag.de/t/mp3tag-development-build-status/455'
 

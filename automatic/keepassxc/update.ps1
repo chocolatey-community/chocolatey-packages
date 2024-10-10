@@ -1,4 +1,4 @@
-﻿import-module au
+﻿Import-Module Chocolatey-AU
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
@@ -50,7 +50,7 @@ function global:au_GetLatest {
     -Headers $headers `
     -UseBasicParsing
   $version = $jsonAnswer.tag_name -Replace '[^0-9.]'
-  $jsonAnswer.assets | Where { $_.name -Match "Win64.msi$" } | ForEach-Object {
+  $jsonAnswer.assets | Where-Object { $_.name -Match "Win64.msi$" } | ForEach-Object {
     $url64 = $_.browser_download_url
   }
 

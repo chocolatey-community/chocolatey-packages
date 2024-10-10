@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $releases = 'http://www.jubler.org/download.html'
@@ -35,13 +35,13 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re    = 'jubler.*\.exe'
-  $urls   = $download_page.links | ? href -match $re | select -First 2 -expand href
+  $urls   = $download_page.links | Where-Object href -match $re | Select-Object -First 2 -expand href
 
-  $version  = $urls[0] -split '\/v?' | select -Last 1 -Skip 1
+  $version  = $urls[0] -split '\/v?' | Select-Object -Last 1 -Skip 1
 
   @{
-    URL32 = $urls -notmatch "64\.exe" | select -first 1
-    URL64 = $urls -match "64\.exe" | select -first 1
+    URL32 = $urls -notmatch "64\.exe" | Select-Object -first 1
+    URL64 = $urls -match "64\.exe" | Select-Object -first 1
     Version = $version
     FileType = 'exe'
   }

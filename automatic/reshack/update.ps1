@@ -1,4 +1,4 @@
-import-module au
+﻿Import-Module Chocolatey-AU
 
 $releases = 'http://www.angusj.com/resourcehacker'
 
@@ -18,7 +18,7 @@ function global:au_GetLatest {
     $re = '<h3>Download version (.+?):</h3>'
     $download_page.Content -match $re | Out-Null
     $version = $Matches[1].Trim()
-    $url =  $download_page.Links | ? href -match 'exe' | % href | Select -First 1
+    $url =  $download_page.Links | Where-Object href -match 'exe' | ForEach-Object href | Select-Object -First 1
     $url = "$releases/$url"
 
     @{ URL32 = $url; Version = $version }

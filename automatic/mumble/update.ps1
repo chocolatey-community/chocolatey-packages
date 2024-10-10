@@ -1,4 +1,4 @@
-﻿Import-Module AU
+﻿Import-Module Chocolatey-AU
 
 $releases = 'https://github.com/mumble-voip/mumble/releases'
 
@@ -19,28 +19,21 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate {
-  Update-metadata -key "releaseNotes" -value $Latest.ReleaseNotes
+  Update-Metadata -key "releaseNotes" -value $Latest.ReleaseNotes
 }
 
 function global:au_GetLatest {
+  $LatestRelease = Get-GitHubRelease mumble-voip mumble
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
-
-  $verRe = '\/'
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
-
-  $releaseNotes = $download_page.Links | ? href -match "mumble.info\/blog" | select -first 1 -expand href
-
+  $url32 = $LatestRelease.assets | Where-Object {$_.name.StartsWith("mumble_client")} | Where-Object {$_.name.EndsWith(".msi")} | Select-Object -ExpandProperty browser_download_url
+  $releaseNotes = $download_page.Links | Where-Object href -match "www.mumble.info\/blog" | Select-Object -first 1 -expand href
   if (!$releaseNotes) {
-    $releaseNotes = "$releases/tag/$version32"
+    $releaseNotes = "$LatestRelease.body"
   }
-
   @{
     URL32        = $url32
-    Version      = Get-Version $version32
-    ReleasesUrl  = "$releases/tag/$version32"
+    Version      = $LatestRelease.tag_name.TrimStart("v")  # Tags have a "v" prefix
+    ReleasesUrl  = $LatestRelease.html_url
     ReleaseNotes = $releaseNotes
   }
 }

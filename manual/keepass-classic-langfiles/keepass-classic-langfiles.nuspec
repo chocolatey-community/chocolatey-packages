@@ -18,7 +18,6 @@ This package extracts a ZIP with all language files into the KeePass program fol
     </description>
     <summary>Language files for KeePass Classic (1.x.)</summary>
     <releaseNotes />
-    <copyright />
     <tags>keepass password safe encryption language-file admin</tags>
     <dependencies>
       <dependency id="keepass-classic" />

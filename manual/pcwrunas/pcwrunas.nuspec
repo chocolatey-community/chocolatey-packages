@@ -46,7 +46,6 @@ PcwRunAs4 /u hugo /p secret /app notepad.exe /arg &quot;C:\NewFile.txt&quot;
     </description>
     <summary>Run files as other freeware user</summary>
     <releaseNotes />
-    <copyright />
     <language>de-DE</language>
     <tags>pcwrunas runas cli admin</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/manual/pcwrunas</packageSourceUrl>

@@ -113,7 +113,7 @@ if (!$GithubRepository) {
   if ($remoteName) { $remoteUrl = . git remote get-url $remoteName }
 
   if ($remoteUrl) {
-    $GithubRepository = ($remoteUrl -split '\/' | select -last 2) -replace '\.git$','' -join '/'
+    $GithubRepository = ($remoteUrl -split '[\/:]' | select -last 2) -replace '\.git$','' -join '/'
   } else {
     $GithubRepository = "USERNAME/REPOSITORY-NAME"
   }
@@ -294,11 +294,15 @@ function Update-IconUrl{
     [bool]$Optimize
   )
 
-  $possibleNames = @($Name);
+  if (!$IconName) {
+    $IconName = $Name
+  }
 
-  $dotIndex = $Name.IndexOf('.')
+  $possibleNames = @($IconName);
+
+  $dotIndex = $IconName.IndexOf('.')
   if ($dotIndex -gt 0) {
-    $possibleNames += $Name.Remove($dotIndex)
+    $possibleNames += $IconName.Remove($dotIndex)
   }
 
   # Let check if the package already contains a url, and get the filename from that
