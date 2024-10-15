@@ -21,12 +21,11 @@ function global:au_SearchReplace {
      }
 }
 
-function Get-ActualUrl([uri]$url) {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $url
-
-  $path = $download_page.links | ? href -match 'redir.*\.msi$' | select -first 1 -expand href
-
-  return $url.Scheme + "://" + $url.Host + $path
+function Get-ActualUrl([string]$url) {
+  if (!$url.EndsWith("/")) {
+    $url += "/"
+  }
+  return $url + "download"
 }
 
 function global:au_GetLatest {
@@ -51,6 +50,7 @@ function global:au_GetLatest {
         URL32 = Get-ActualUrl $url32
         URL64 = Get-ActualUrl $url64
         Version = $version32
+        FileType = "msi"
     }
     return $result
 }
