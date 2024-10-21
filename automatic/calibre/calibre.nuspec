@@ -41,7 +41,6 @@
     <bugTrackerUrl>https://bugs.launchpad.net/calibre</bugTrackerUrl>
   </metadata>
   <files>
-    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
