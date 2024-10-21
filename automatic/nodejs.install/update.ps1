@@ -63,11 +63,18 @@ function global:au_GetLatest {
     $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
     $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
 
-    $streams.Add($versionStrict.Major.ToString(), @{
+    if ($versionStrict.Major -lt 23) {
+      $streams.Add($versionStrict.Major.ToString(), @{
         Version = $versionStrict.ToString()
-        URL32   = $url32
-        URL64   = $url64
+        URL32 = $url32
+        URL64 = $url64
       })
+    } else {
+      $streams.Add($versionStrict.Major.ToString(), @{
+        Version = $versionStrict.ToString()
+        URL64 = $url64
+      })
+    }
   }
 
   return @{ Streams = $streams }
