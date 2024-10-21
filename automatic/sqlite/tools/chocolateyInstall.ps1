@@ -4,8 +4,8 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     PackageName    = 'sqlite'
-    FileFullPath   = "$toolsDir\sqlite-dll-win-x86-3460100.zip"
-    FileFullPath64 = "$toolsDir\sqlite-dll-win-x64-3460100.zip"
+    FileFullPath   = "$toolsDir\sqlite-dll-win-x86-3470000.zip"
+    FileFullPath64 = "$toolsDir\sqlite-dll-win-x64-3470000.zip"
     Destination    = $toolsDir
 }
 Get-ChildItem $toolsDir\* | Where-Object { $_.PSISContainer } | Remove-Item -Recurse -Force #remove older package dirs
@@ -17,7 +17,7 @@ if (!$pp.NoTools) {
         Write-Error -Message "The 32-bit version of sqlite tools is not available after version 3.43.2" -Category ResourceUnavailable
     }
     Write-Host "Installing tools"
-    $packageArgs.FileFullPath64 = "$toolsDir\sqlite-tools-win-x64-3460100.zip"
+    $packageArgs.FileFullPath64 = "$toolsDir\sqlite-tools-win-x64-3470000.zip"
     Get-ChocolateyUnzip @packageArgs
 }
 
