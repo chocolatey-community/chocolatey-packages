@@ -39,7 +39,7 @@ function global:au_GetLatest {
     $tagUrl = $download_page.Links | Where-Object href -match 'releases/tag/.*windows' | Select-Object -First 1 -ExpandProperty href
     $tagName = $tagUrl -split '\/' | Select-Object -Last 1
 
-    $version = $tagName -split '^v|\.windows' | Select-Object -Last 1 -Skip 1
+    $version = $tagName.TrimStart('v') -replace '\.windows',''
 
     @{
         Version = $version
