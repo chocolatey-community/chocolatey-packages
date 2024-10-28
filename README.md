@@ -8,8 +8,8 @@
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [community.chocolatey.org profile](https://community.chocolatey.org/profiles/chocolatey-community)
 
-# NOTE: Currently we are unlikely to accept any new or migrated packages into this repository. Please raise a [Discussion](discussions) if you have a strong case for new or migrated packages.
-# NOTE: The repository is currently being maintained by community members of the Chocolatey Team in their spare time. If you are interested in helping out [troubleshoot issues](issues), review [pull requests](pulls) or contribute code for the maintenance of packages, we would be happy to have you! If you have any questions, please raise a [discussion](discussions) or reach out on our [Community Chat](https://ch0.co/community).
+# NOTE: Currently we are unlikely to accept any new or migrated packages into this repository. Please raise a [Discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions) if you have a strong case for new or migrated packages.
+# NOTE: The repository is currently being maintained by community members of the Chocolatey Team in their spare time. If you are interested in helping out [troubleshoot issues](https://github.com/chocolatey-community/chocolatey-packages/issues), review [pull requests](https://github.com/chocolatey-community/chocolatey-packages/pulls) or contribute code for the maintenance of packages, we would be happy to have you! If you have any questions, please raise a [discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions) or reach out on our [Community Chat](https://ch0.co/community).
 
 <!-- markdownlint-disable -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -30,7 +30,7 @@
 
 This repository contains Chocolatey packages, most of which are [automatically](https://docs.chocolatey.org/en-us/create/automatic-packages) updated.
 
-**All packages in this repository should conform with the [contributing guidelines](CONTRIBUTING.md).** Contributions that follow the guideliness are welcome.
+**All packages in this repository should conform with the [contributing guidelines](CONTRIBUTING.md).** Contributions that follow the guidelines are welcome.
 All packages in this repository are expected to be installable with any version of Chocolatey CLI being made available in the past 12 months, unless a dependency on Chocolatey CLI has been added.
 
 ### Etiquette Regarding Communication
