@@ -43,7 +43,8 @@ function global:au_GetLatest {
     $schedule = $schedules.$name
     $scheduleStart = [datetime]$schedule.start
     $scheduleEnd = [datetime]$schedule.end
-    if (($scheduleStart -le $curDate) -and ($scheduleEnd -ge $curDate)) {
+    # Temporarily disable v23+ updates until the package supports 64-bit only packages per https://github.com/chocolatey-community/chocolatey-packages/issues/2556
+    if (($scheduleStart -le $curDate) -and ($scheduleEnd -ge $curDate) -and ($name -lt 'v23')) {
       $supportedChannels += $name
     }
   }
