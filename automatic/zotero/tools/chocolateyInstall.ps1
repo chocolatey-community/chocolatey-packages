@@ -1,20 +1,23 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
-$Installers = Get-ChildItem -Path $toolsPath -Filter '*.exe' |
-                  Sort-Object lastwritetime | 
-                  Select-Object -Last 2 -ExpandProperty FullName
+$File32Name = 'Zotero-7.0.8_win32_setup.exe'
+$File64Name = 'Zotero-7.0.8_x64_setup.exe'
+
+$File32Path = Join-Path $toolsPath $File32Name
+$File64Path = Join-Path $toolsPath $File64Name
 
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
-   softwareName   = "$env:ChocolateyPackageName*"
+   softwareName   = "Zotero*"
    fileType       = 'exe'
-   file           = $Installers | Where-Object {$_ -match "win32"}
-   file64         = $Installers | Where-Object {$_ -match "x64"}
+   file           = "$File32Path"
+   file64         = "$File64Path"
    silentArgs     = '/S'
    validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item $Installers -Force -ea 0
+Remove-Item "$File32Path","$File64Path" -Force -ea 0

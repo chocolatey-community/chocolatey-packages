@@ -4,21 +4,20 @@ in verifying that this package's contents are trustworthy.
 
 Package can be verified like this:
 
-1. The installers can be obtained directly from:
+1. Go to
 
-   32-bit download: https://download.zotero.org/client/release/7.0.7/Zotero-7.0.7_win32_setup.exe
-   64-bit download: https://download.zotero.org/client/release/7.0.7/Zotero-7.0.7_x64_setup.exe
+   x32: https://download.zotero.org/client/release/7.0.5/Zotero-7.0.5_win32_setup.exe
+   x64: https://download.zotero.org/client/release/7.0.5/Zotero-7.0.5_x64_setup.exe
 
    to download the installer.
 
-2. The following methods can calculate the SHA256 checksum of what you download
-   to allow you to compare against the checksums below:
-   - Use powershell function 'Get-FileHash'
-   - Use Chocolatey utility 'checksum.exe'
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
 
-   32-bit checksum: 0189D2CB2114F77FEA18190B725E0C2F38FB6E17991809663956EE84A10136A3
-   64-bit checksum: EBA6DE61A660BAAC5865756DEC6D2D954919737F5F0C2F103AD4C92F7294B5B6
+  checksum32: DA8E5516D57DDE80812E76E122B7A2E86EDB57B61C25D8AD107C50C8FA4E52F3
+  checksum64: 43017a16c5d6c9748c6615d51464b0cbd7e1e42fe49ebdd556b46e47932e4737
 
-
-The content of the file 'LICENSE.txt' is copied from:
+The file 'LICENSE.txt' has been obtained from 
    https://raw.githubusercontent.com/zotero/zotero/refs/heads/main/COPYING
