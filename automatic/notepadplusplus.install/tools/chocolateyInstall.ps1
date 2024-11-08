@@ -39,6 +39,5 @@ Write-Host "$packageName installed to '$installLocation'"
 Install-BinFile -Path "$installLocation\notepad++.exe" -Name 'notepad++'
 
 if ($programRunning -and (Test-Path $programRunning)) {
-  Write-Host "Running stopped program"
-  Start-Process $programRunning
+  Write-Host "Please reopen Notepad++ to continue using."
 }

@@ -18,6 +18,5 @@ Get-ChocolateyUnzip @packageArgs
 Remove-Item $toolsPath\*.zip -ea 0
 
 if ($programRunning -and (Test-Path $programRunning)) {
-  Write-Host "Running stopped program"
-  Start-Process $programRunning
+  Write-Host "Please reopen Notepad++ to continue using."
 }
