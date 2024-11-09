@@ -14,8 +14,8 @@ Write-Host "Ruby is going to be installed in '$installDir'"
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\rubyinstaller-3.3.6-1-x86.exe"
-  file64         = "$toolsPath\rubyinstaller-3.3.6-1-x64.exe"
+  file           = "$toolsPath\rubyinstaller-3.3.6-2-x86.exe"
+  file64         = "$toolsPath\rubyinstaller-3.3.6-2-x64.exe"
   silentArgs     = '/verysilent /allusers /dir="{0}" /tasks="{1}"' -f $installDir, ($tasks -join ',')
   validExitCodes = @(0)
   softwareName   = 'ruby *'
