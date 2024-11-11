@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
@@ -6,8 +6,8 @@ $packageArgs = @{
   PackageName    = 'nodejs.install'
   FileType       = 'msi'
   SoftwareName   = 'Node.js'
-  File           = "$toolsPath\"
-  File64         = "$toolsPath\"
+  File           = ''
+  File64         = "$toolsPath\node-v23.1.0-x64.msi"
   SilentArgs     = '/quiet ADDLOCAL=ALL'
   ValidExitCodes = @(0)
 }
