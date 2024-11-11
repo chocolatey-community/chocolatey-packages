@@ -1,0 +1,18 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's content are trustworthy.
+
+The installer/archive has been downloaded from the authors official download link listed on <https://nodejs.org/en/download/prebuilt-installer>
+and can be verified using the following:
+
+1. Download the following installers/archives
+   - 32-Bit: <DIRECT_32BIT_DOWNLOAD_URL>
+   - 64-Bit: <DIRECT_64BIT_DOWNLOAD_URL>
+2. Use one of the following methods to obtain the checksum
+   - Use powershell function 'Get-FileHash'
+   - Use chocolatey utility 'checksum.exe'
+3. Verify the downloaded installers/archives matches the following CHECKSUM_TYPE checksum:
+   - 32-Bit Checksum: <32BIT_CHECKSUM>
+   - 64-Bit Checksum: <64BIT_CHECKSUM>
+
+Additionally, the included 'LICENSE.txt' have been obtained from <https://github.com/nodejs/node/blob/03023fa7ae060c082a014f792d5d1f481a599460/LICENSE>.

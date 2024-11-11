@@ -8,6 +8,7 @@ This package runs the official Node JS installer, resulting in Node.exe and NPM 
 ## Notes
 
 - While this package now provides both **Current** and **LTS** releases of Node.js, it is still recommended to use the [nodejs-lts][] package if only targeting the latest LTS release is required.
-- - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+- Starting with version 23.x, installations for 32bit platforms are no longer supported. If this is required, an older version is required to be used.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 
 [nodejs-lts]: https://chocolatey.org/packages/nodejs-lts "Node.js LTS Package"

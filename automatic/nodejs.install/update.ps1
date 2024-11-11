@@ -5,7 +5,16 @@ Import-Module Chocolatey-AU
 
 if ($MyInvocation.InvocationName -ne '.') {
   # run the update only if the script is not sourced
-  function global:au_BeforeUpdate { Get-RemoteFiles -NoSuffix -Purge }
+  function global:au_BeforeUpdate {
+    Get-RemoteFiles -NoSuffix -Purge
+
+    if ($Latest.URL32) {
+      Copy-Item "$PSScriptRoot\legal\VERIFICATION.full.txt" "$PSScriptRoot\legal\VERIFICATION.txt" -Force
+    }
+    else {
+      Copy-Item "$PSScriptRoot\legal\VERIFICATION.x64.txt" "$PSScriptRoot\legal\VERIFICATION.txt" -Force
+    }
+  }
 }
 
 function global:au_SearchReplace {
@@ -15,20 +24,24 @@ function global:au_SearchReplace {
   }
   $silentArgs = "/quiet ADDLOCAL=ALL${silentArgs}"
 
+  $verificationReplacements = @{
+    "(?i)(64-Bit:).*"                  = "`$1 <$($Latest.URL64)>"
+    "(?i)(the following).*(checksum:)" = "`${1} $($Latest.ChecksumType64.ToUpper()) `$2"
+    "(?i)(64-Bit Checksum:).*"         = "`$1 <$($Latest.Checksum64)>"
+  }
+
+  if ($Latest.URL32) {
+    $verificationReplacements['(?i)(32-Bit:).*'] = "`${1} <$($Latest.URL32)>"
+    $verificationReplacements['(?i)(32-Bit Checksum:).*'] = "`${1} <$($Latest.Checksum32)>"
+  }
 
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(^[$]filePath32\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName32)`""
-      "(^[$]filePath64\s*=\s*`"[$]toolsPath\\)(.*)`"" = "`$1$($Latest.FileName64)`""
-      "(?i)(^\s*SilentArgs\s*=\s*)'.*'"               = "`${1}'$silentArgs'"
+      "(?i)(\s*file\s*=\s*)[`"']([$]toolsPath\\)?.*"= if ($Latest.FileName32) { "`${1}`"`$toolsPath\$($Latest.FileName32)`"" } else { "`${1}''" }
+      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName64)`""
+      "(?i)(^\s*SilentArgs\s*=\s*)'.*'"             = "`${1}'$silentArgs'"
     }
-    ".\legal\verification.txt"      = @{
-      "(?i)(32-Bit.+)\<.*\>"      = "`${1}<$($Latest.URL32)>"
-      "(?i)(64-Bit.+)\<.*\>"      = "`${1}<$($Latest.URL64)>"
-      "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType32)"
-      "(?i)(checksum32:\s+).*"    = "`${1}$($Latest.Checksum32)"
-      "(?i)(checksum64:\s+).*"    = "`${1}$($Latest.Checksum64)"
-    }
+    ".\legal\verification.txt"      = $verificationReplacements
   }
 }
 
@@ -63,11 +76,16 @@ function global:au_GetLatest {
     $url32 = "https://nodejs.org/dist/$version/node-$version-x86.msi"
     $url64 = "https://nodejs.org/dist/$version/node-$version-x64.msi"
 
-    $streams.Add($versionStrict.Major.ToString(), @{
-        Version = $versionStrict.ToString()
-        URL32   = $url32
-        URL64   = $url64
-      })
+    $streamData = @{
+      Version = $versionStrict.ToString()
+      URL64   = $url64
+    }
+
+    if ($versionStrict.Major -lt 23) {
+      $streamData['URL32'] = $url32
+    }
+
+    $streams.Add($versionStrict.Major.ToString(), $streamData)
   }
 
   return @{ Streams = $streams }
