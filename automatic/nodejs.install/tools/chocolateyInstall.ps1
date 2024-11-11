@@ -1,21 +1,16 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-
-$filePath32 = "$toolsPath\node-v20.18.0-x86.msi"
-$filePath64 = "$toolsPath\node-v20.18.0-x64.msi"
-$installFile = if ((Get-OSArchitectureWidth 64) -and $env:chocolateyForceX86 -ne 'true') {
-                      Write-Host "Installing 64 bit version"; $filePath64 }
-               else { Write-Host "Installing 32 bit version"; $filePath32 }
 
 $packageArgs = @{
   PackageName    = 'nodejs.install'
   FileType       = 'msi'
   SoftwareName   = 'Node.js'
-  File           = $installFile
+  File           = "$toolsPath\"
+  File64         = "$toolsPath\"
   SilentArgs     = '/quiet ADDLOCAL=ALL'
   ValidExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item -Force $filePath32, $filePath64 -ea 0
+Remove-Item -Force "$toolsPath\*.exe","$toolsPath\*.msi" -ea 0
