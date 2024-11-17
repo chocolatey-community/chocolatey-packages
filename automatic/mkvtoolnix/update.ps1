@@ -1,7 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 
 $domain = 'https://mkvtoolnix.download'
-$releases = "$domain/windows/releases"
+$releases = "$domain/windows/releases/"
 
 
 function global:au_SearchReplace {
