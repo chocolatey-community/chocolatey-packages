@@ -42,14 +42,14 @@ function SetCopyright {
   $zip = [IO.Compression.ZipArchive]::new($response_stream)
 
   # license text for legal/LICENSE.txt
-  $license_entry = $zip.GetEntry("$($Latest.ZipName)/license.txt")
+  $license_entry = $zip.Entries | Where-Object Name -eq "license.txt"
   $Latest.License = [System.IO.StreamReader]::new($license_entry.Open()).ReadToEnd()
   if (!$Latest.License.Contains($license_statement)) {
     throw "Python's license may have changed."
   }
 
   # copyright information for nuspec
-  $copyright_entry = $zip.GetEntry("$($Latest.ZipName)/copyright.txt")
+  $copyright_entry = $zip.Entries | Where-Object Name -eq "copyright.txt"
   $reader = [System.IO.StreamReader]::new($copyright_entry.Open())
   (1..5) | ForEach-Object {$reader.ReadLine()}  # skip header
   $copyright = ''
