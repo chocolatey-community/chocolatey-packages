@@ -41,4 +41,5 @@ VLC is a free and open source cross-platform multimedia player and framework tha
       <dependency id="vlc.install" version="[3.0.21]" />
     </dependencies>
   </metadata>
+  <files />
 </package>
