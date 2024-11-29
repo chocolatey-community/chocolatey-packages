@@ -1,7 +1,7 @@
 name: 'Add Comment To New PR'
 on:
   pull_request:
-    types: created
+    types: opened
 permissions:
   contents: read
   pull-requests: write

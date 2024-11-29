@@ -1,7 +1,7 @@
 name: 'Add Comment To New Issue'
 on:
   issues:
-    types: created
+    types: opened
 permissions:
   contents: read
   issues: write
