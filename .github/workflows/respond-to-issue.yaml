@@ -1,0 +1,34 @@
+name: 'Add Comment To New Issue'
+on:
+  issues:
+    types: created
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  new_issue_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GrantBirki/comment@v2.1.0
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Thanks for raising this issue!
+
+            The packages within this repository are maintained by a small team of volunteer Community Maintainers, in their own time. Their time, like yours is important. Please help them by not wasting it.
+
+            This is a community repository where the expectation is that everybody will get involved by raising [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to fix problems they find. This will also allow that problem to be fixed more quickly as you don't have to wait for a member of the Community Maintainer Team to pick it up.
+
+            If you are unable to fix the issue yourself, the Community Maintainers Team will look at it when time allows. There are no service level agreements, nor should there be any expectation on when people can resolve issues in their own time.
+
+            A few dos and don'ts:
+
+              * Do provide as much information as you can in any issue that you raise.
+              * Don't complain that an issue has not yet been picked up or resolved. You are expected to help out in this community maintained repository. If you are unable to do so, don't complain when others don't adhere to your timelines. There is no SLA nor should you have any expectation of one.
+              * Do read the [CONTRIBUTING](CONTRIBUTING.md) and [COMMITTERS](COMMITTERS.md) documentation before raising a pull request as it contains valuable information on what automation is used in this repository.
+              * Do read the [Code of Conduct](https://github.com/chocolatey-community/.github/blob/main/CODE_OF_CONDUCT.md).
+              * Don't post your frustration in comments. The Community Maintainers Team are not a punching bag for your frustration. You will only end up banned from the repository.
+
+            Thank you.
+            _(Automatically posted message)_
