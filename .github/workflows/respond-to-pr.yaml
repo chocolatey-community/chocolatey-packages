@@ -1,0 +1,40 @@
+name: 'Add Comment To New PR'
+on:
+  pull_request:
+    types: created
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  new_pr_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: GrantBirki/comment@v2.1.0
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Thanks for raising this pull request!
+
+            The packages within this repository are maintained by a small team of volunteer Community Maintainers, in their own time. Their time, like yours is important. Please help them by not wasting it.
+
+            This is a community repository where the expectation is that everybody will get involved. Thank you for being one of those people who want to help out by raising a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request). There are a couple of steps beyond this:
+
+              1. Please ensure that any automated tests pass. If they do not, the Community Maintainers Team will be unlikely to pick up the pull request until it does. Occasionally the automated tests fail and can be ignored. If you _really_ believe that is the case here, please leave a comment indicating this, and _why_.
+              1. If the automated tests pass, a member of the Community Maintainers Team will pick up the pull request and work through it to ensure it follows the [CONTRIBUTING](CONTRIBUTING.md) and [COMMITTERS](COMMITTERS.md) documentation. Please be patient. The team are volunteers.
+              1. Once the pull request has been picked up, the team may merge it, or ask for changes. They may also simply make the changes themselves if they have the time to do so. The goal is to get your pull request merged as quickly as possible. But time is limited, and they do the best they can.
+
+            A few dos and don'ts:
+
+              * Do provide as much information as you can in your pull request to help the volunteer Community Maintainers Team evaluate it.
+              * Don't raise a pull request with no information as it **will** be rejected. Please don't waste your time, or the time of the Community Maintainers Teams, by doing this.
+              * Do read the [CONTRIBUTING](CONTRIBUTING.md) and [COMMITTERS](COMMITTERS.md) documentation before raising a pull request as it contains valuable information on what automation is used in this repository.
+              * Don't raise a pull request to update any version numbers, URL's or checksums for packages in the `automatic` directory. There is automation in place to do this and update those values automatically. Please see the [CONTRIBUTING](CONTRIBUTING.md) and [COMMITTERS](COMMITTERS.md) documentation as it contains valuable information on what automation is used in this repository.
+              * Do be patient. The Community Maintainers Team are volunteers and work on this repository as time allows.
+              * Don't complain that a pull requests has not yet been picked up or merged. There is no SLA in this repository, nor should you have any expectation of one. Don't complain when others don't adhere to your timelines.
+              * Do read the [Code of Conduct](https://github.com/chocolatey-community/.github/blob/main/CODE_OF_CONDUCT.md).
+              * Don't post your frustration in comments. The Community Maintainers Team are not a punching bag for your frustration. You will only end up banned from the repository.
+              * Do make sure you test any changes to packages, in the [Chocolatey Test Environment](https://github.com/chocolatey-community/chocolatey-test-environment/). No other environment is acceptable. If you don't do this, **your pull request will not be picked up**. Please don't waste your time, or the time of the Community Maintainers Teams, by not doing this.
+
+            Thank you.
+            _(Automatically posted message)_
