@@ -13,6 +13,17 @@ This file details what is needed for different operations in the repository that
   - [Request A Standard Fix Version Creation For A Stream](#request-a-standard-fix-version-creation-for-a-stream)
     - [Request A Fixed Version Update](#request-a-fixed-version-update)
     - [Requesting A Fix For A Package Using 4 Part Version Number](#requesting-a-fix-for-a-package-using-4-part-version-number)
+- [Conventions](#conventions)
+  - [Installer Arguments](#installer-arguments)
+  - [Installer Technologies](#installer-technologies)
+    - [MSI Installer](#msi-installer)
+    - [Inno Setup Installer](#inno-setup-installer)
+    - [NSIS Installer](#nsis-installer)
+    - [InstallShield Installer](#installshield-installer)
+    - [Wise InstallMaster Installer](#wise-installmaster-installer)
+    - [Ghost Installer](#ghost-installer)
+    - [Squirrel Installer](#squirrel-installer)
+    - [Install4j Installer](#install4j-installer)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
