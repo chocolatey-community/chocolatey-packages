@@ -56,6 +56,7 @@ function Get-Dependency() {
   $dep = $url -split '\-' | Select-Object -last 1 -skip 1
 
   $result = @{
+    'vs17' = @{ Id = 'vcredist140'; Version = '14.42.34433' }
     'vs16' = @{ Id = 'vcredist140'; Version = '14.28.29325.2' }
     'vc15' = @{ Id = 'vcredist140'; Version = '14.16.27012.6' }
     'vc14' = @{ Id = 'vcredist140'; Version = '14.0.24215.1' }
