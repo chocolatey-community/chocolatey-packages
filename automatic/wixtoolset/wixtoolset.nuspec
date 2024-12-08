@@ -39,12 +39,10 @@ For more information about the vulnerability, see the [FireGiant blog](https://w
 ### Files
 
 * wix314.exe is the installer for the WiX Toolset build tools.
-* wix314exe.zip contains the wix311.exe installer inside a .zip file, useful if your IT department prevents direct downloading of .exe files.
+* wix314exe.zip contains the wix314.exe installer inside a .zip file, useful if your IT department prevents direct downloading of .exe files.
 * wix314-binaries.zip contains the files that make up the WiX Toolset and is useful if you don't want to install the toolset -- for example, if you're just checking WiX into source control.
 * wix314-debug.zip contains a reference copy of the WiX source code and symbol (.pdb) files, both of which are useful when debugging problems with WiX.</releaseNotes>
-    <dependencies>
-      <dependency id="dotnet3.5" version="3.5.20160716" />
-    </dependencies>
+
   </metadata>
   <files>
     <file src="legal\**" target="legal" />
