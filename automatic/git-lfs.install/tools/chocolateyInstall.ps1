@@ -1,5 +1,5 @@
 ﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$filePath = "$toolsDir\git-lfs-windows-v3.5.1.exe"
+$filePath = "$toolsDir\git-lfs-windows-v3.6.0.exe"
 
 $packageArgs = @{
   PackageName    = 'git-lfs'

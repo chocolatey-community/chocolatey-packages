@@ -7,9 +7,10 @@ $product  = 'thunderbird'
 function global:au_AfterUpdate {
   $version = $Latest.RemoteVersion
   CreateChecksumsFile -ToolsDirectory "$PSScriptRoot\tools" `
-    -ExecutableName "Thunderbird Setup $version.exe" `
+    -ExecutableName "Thunderbird Setup $($version)esr.exe" `
     -Version $version `
-    -Product $product
+    -Product $product `
+    -ExtendedRelease
 }
 
 function global:au_SearchReplace {

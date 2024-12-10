@@ -1,4 +1,4 @@
-﻿Import-Module Chocolatey-AU
+Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain = 'https://inkscape.org'
@@ -31,12 +31,22 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $redirUrl = Get-RedirectedUrl "$domain/en/release/"
+  # We know the 32bit executable is currently missing, as such
+  # we will prevent package update for this package until it has
+  # been decided whether 32bit support will be dropped or not.
+  throw "Updating of inkscape is disabled until it has been decided whether 32bit support will be dropped or not."
+
+  $redirUrl = Get-RedirectedUrl "$domain/release/"
 
   $version = $redirUrl -split '\/(inkscape-)?' | Select-Object -last 1 -skip 1
 
-  $32bit_page = Invoke-WebRequest "$redirUrl/windows/32-bit/msi/dl/" -UseBasicParsing
-  $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing
+  try {
+    $32bit_page = Invoke-WebRequest "$redirUrl/windows/32-bit/msi/dl/" -UseBasicParsing
+    $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing
+  }
+  catch {
+    throw "Failed to download 32bit or 64bit executeble. Throwing minimized error to allow gist to be updated."
+  }
 
   $re = '\.msi$'
   $url32 = $32bit_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { $domain + $_ }

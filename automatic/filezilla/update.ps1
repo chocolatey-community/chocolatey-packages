@@ -32,6 +32,12 @@ function global:au_GetLatest {
         URL64    = $url64
         URL32    = $url32
         FileType = "exe"
+        Options = @{
+            Headers = @{
+                "Accept" = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                "User-Agent" = "Chocolatey"
+            }
+        }
     }
 }
 
