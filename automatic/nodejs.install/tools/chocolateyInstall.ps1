@@ -6,8 +6,8 @@ $packageArgs = @{
   PackageName    = 'nodejs.install'
   FileType       = 'msi'
   SoftwareName   = 'Node.js'
-  File           = "$toolsPath\node-v22.12.0-x86.msi"
-  File64         = "$toolsPath\node-v22.12.0-x64.msi"
+  File           = ''
+  File64         = "$toolsPath\node-v23.4.0-x64.msi"
   SilentArgs     = '/quiet ADDLOCAL=ALL'
   ValidExitCodes = @(0)
 }
