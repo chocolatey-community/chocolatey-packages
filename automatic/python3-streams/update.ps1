@@ -37,6 +37,7 @@ function global:au_SearchReplace {
 
 function SetCopyright {
   # download Python documentation archive
+  Add-Content -Path ".\log.txt" -Value "Downloading $($Latest.ZipUrl)"
   $webrequest = [System.Net.HttpWebRequest]::Create($Latest.ZipUrl)
   $response_stream = $webrequest.GetResponse().GetResponseStream()
   $zip = [IO.Compression.ZipArchive]::new($response_stream)
@@ -140,7 +141,11 @@ function GetStreams() {
     $version = Get-Version $latest_version
 
     $urls = $all_versions[$latest_version]
-    $zip_name = "python-$versionTwoPart-docs-text"
+    if ($minor_version -le '12') {
+      $zip_name = "python-$latest_version-docs-text"
+    } else {
+      $zip_name = "python-$versionTwoPart-docs-text"
+    }
     $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
     $license_url = "https://docs.python.org/$versionTwoPart/license.html"
     $streams[$versionTwoPart] = @{
