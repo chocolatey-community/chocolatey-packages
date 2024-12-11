@@ -37,6 +37,7 @@ function global:au_SearchReplace {
 
 function SetCopyright {
   # download Python documentation archive
+  Add-Content -Path ".\log.txt" -Value "Downloading $($Latest.ZipUrl)"
   $webrequest = [System.Net.HttpWebRequest]::Create($Latest.ZipUrl)
   $response_stream = $webrequest.GetResponse().GetResponseStream()
   $zip = [IO.Compression.ZipArchive]::new($response_stream)
@@ -54,7 +55,7 @@ function SetCopyright {
   (1..5) | ForEach-Object {$reader.ReadLine()}  # skip header
   $copyright = ''
   $reading_copyright = $false
-  while (($line = $reader.ReadLine()) -ne $null) {
+  while ($null -ne ($line = $reader.ReadLine())) {
     if (!$line) {
       $copyright += "`n"
       $reading_copyright = $false
@@ -140,12 +141,12 @@ function GetStreams() {
     $version = Get-Version $latest_version
 
     $urls = $all_versions[$latest_version]
-    $zip_name = "python-$latest_version-docs-text"
-    if ($version.Prerelease -eq "" -or $version.Prerelease.StartsWith("rc")) {
-      $zip_url = "https://www.python.org/ftp/python/doc/$latest_version/$zip_name.zip"
+    if ($minor_version -le '12') {
+      $zip_name = "python-$latest_version-docs-text"
     } else {
-      $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
+      $zip_name = "python-$versionTwoPart-docs-text"
     }
+    $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
     $license_url = "https://docs.python.org/$versionTwoPart/license.html"
     $streams[$versionTwoPart] = @{
       URL32          = $urls['86']
