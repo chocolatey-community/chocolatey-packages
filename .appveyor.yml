@@ -61,7 +61,7 @@ install:
       'chocolatey' = $chocoVersion
       'wormies-au-helpers' = '0.4.1'
       'chocolatey-core.extension' = '1.4.0'
-      'chocolatey-community-validation.extension' = '0.1.0'
+      'chocolatey-community-validation.extension' = '0.2.0'
     }.GetEnumerator() | % {
       if (!(Test-Path "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg")) { rm "${env:nupkg_cache_path}\$($_.Key).*.nupkg" ; Invoke-WebRequest "https://chocolatey.org/api/v2/package/$($_.Key)/$($_.Value)" -OutFile "${env:nupkg_cache_path}\$($_.Key).$($_.Value).nupkg" }
       if ($_.Key -eq 'chocolatey') { choco upgrade $_.Key --version $_.Value --source ${env:nupkg_cache_path} --allow-downgrade --pre }
