@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>musescore</id>
-    <version>4.4.3.242971445</version>
+    <version>4.4.4.243461245</version>
     <title>MuseScore</title>
     <owners>chocolatey-community</owners>
     <authors>MuseScore developers</authors>
