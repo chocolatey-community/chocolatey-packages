@@ -11,7 +11,7 @@ $packageArgs = @{
   checksum64             = 'CDF4F3C5F9D4F95707B20C425DDCD4067CD05DCF21AFFA171D94325E666BDF08'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
-  silentArgs             = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+  silentArgs             = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
   validExitCodes         = @(0, 3010, 1641)
   softwareName           = 'Mattermost*'
 }
