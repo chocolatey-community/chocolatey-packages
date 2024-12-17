@@ -1,6 +1,6 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://www.codeblocks.org/downloads/binaries'
+$releases = 'https://www.codeblocks.org/downloads/binaries/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
 
