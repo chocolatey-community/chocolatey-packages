@@ -19,7 +19,7 @@ function global:au_GetLatest {
 
   $re = 'alldup.*\.exe$'
   $url     = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
-  $version = $download_page.links | Where-Object href -match "alldup_version\.php$" | Select-Object -first 1 -expand innerText
+  $version = ($download_page.links | Where-Object href -match "alldup_version\.php$" | Select-Object -first 1).outerHTML -replace '<[^>]*>'
 
   @{ URL32 = $url; Version = $version }
 }
