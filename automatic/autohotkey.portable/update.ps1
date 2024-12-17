@@ -1,7 +1,5 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://autohotkey.com/download'
-
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -27,22 +25,16 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-  $version_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $urls = $version_page.Links | Where-Object href -match "^[\d\.]+\/$" | Where-Object href -NotMatch "1\.0" | ForEach-Object href
-
+  $version_page = Invoke-RestMethod -Uri 'https://api.github.com/repos/AutoHotkey/AutoHotKey/releases'
+  Write-Output "Got $($version_page.Count) versions"
   $streams = @{}
-  $urls | ForEach-Object {
-    $releasesUrl = "$releases/$_"
-    $versionWithHash = Invoke-WebRequest -Uri "$releasesUrl/version.txt" -UseBasicParsing | ForEach-Object Content
-    $version = $versionWithHash -replace '(\d+.\d+-\w+)-\w+', '$1'
-    $version = $version -replace '(-\w+)\.', '$1'
-    if (!$version) { $version = $versionWithHash }
-
-    $url = "$releasesUrl/AutoHotkey_${versionWithHash}.zip"
-
-    $key = $releasesUrl -split '\/' | Select-Object -last 1 -Skip 1
-    if (!$streams.ContainsKey($key)) {
+  $version_page | Where-Object -Property tag_name -Like 'v2.*' | ForEach-Object {
+    $key     = $_.tag_name
+    $version = $key -replace 'v'
+    Write-Output "Processing version $($version)"
+    if ($version -like '1.*') { continue }
+    $url     = ($_.assets | Where-Object -Property name -Like '*.zip').browser_download_url
+    if ($null -ne $url -and !$streams.ContainsKey($key)) {
       $streams.Add($key, @{
           Version  = $version
           URL      = $url
