@@ -48,7 +48,7 @@ function Get-Waterfox {
   )
   switch ($Build) {
     "Classic" {
-      $LatestRelease = Get-GitHubRelease WaterfoxCo Waterfox-Classic
+      $LatestRelease = Get-GitHubRelease -OwnerName WaterfoxCo -RepositoryName Waterfox-Classic
 
       @{
         PackageName = "waterfox-classic"
@@ -61,7 +61,7 @@ function Get-Waterfox {
     }
 
     "Current" {
-      $LatestRelease = Get-GitHubRelease WaterfoxCo Waterfox
+      $LatestRelease = Get-GitHubRelease -OwnerName WaterfoxCo -RepositoryName Waterfox
       $TagVersion = $LatestRelease.tag_name
 
       @{
