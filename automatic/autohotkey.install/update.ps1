@@ -1,6 +1,5 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://autohotkey.com/download/2.0'
 $v1Version = '1.1.36.02'
 $v1Filename = "AutoHotkey_$($v1Version)_setup.exe"
 
