@@ -27,8 +27,8 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re64 = 'windows_64$'
-  $url64 = $download_page.links | ? href -match $re64 | select -First 1 -Expand href { % Get-RedirectedUrl $_  3>$null }
-  $version = $download_page.content -match "CodeLite ([\d\.]+) - Stable" | select -first 1 | % { $Matches[1] }
+  $url64 = $download_page.links | Where-Object href -match $re64 | Select-Object -First 1 -Expand href { ForEach-Object Get-RedirectedUrl $_  3>$null }
+  $version = $download_page.content -match "CodeLite ([\d\.]+) - Stable" | Select-Object -first 1 | ForEach-Object { $Matches[1] }
 
   @{
     URL64        = $url64
