@@ -38,7 +38,7 @@ function global:au_GetLatest {
   $result = @{
     URL64        = $url | Where-Object {$_ -match 'x86_64' } | Select-Object -First 1
     ReleaseNotes = $rn.href
-    Version      = $rn.innerText
+    Version      = $rn.outerHTML -replace '<[^>]+>'
     PackageName  = 'Cygwin'
   }
 
