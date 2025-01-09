@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>azcopy10</id>
-    <version>10.27.1</version>
+    <version>10.27.1.20250109</version>
     <title>azcopy10</title>
     <authors>Microsoft</authors>
     <owners>chocolatey-community</owners>
