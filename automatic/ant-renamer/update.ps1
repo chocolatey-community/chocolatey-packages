@@ -29,7 +29,14 @@ function global:au_GetLatest {
 
     $version  = [regex]::Match($download_page.Content, "Version\s+([0-9\.]+)").Groups[1].Value;
 
-    return @{ URL32 = $url; Version = $version }
+    $FileName = $url -split '/' | Select-Object -Last 1
+
+    return @{
+      URL32    = $url
+      FileName = $FileName
+      FileType = 'exe'
+      Version  = $version
+    }
 }
 
 update -ChecksumFor none
