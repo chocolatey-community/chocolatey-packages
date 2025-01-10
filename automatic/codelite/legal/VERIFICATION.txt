@@ -10,6 +10,6 @@ in verifying that this package's contents are trustworthy.
 3. The checksum should match the following:
 
   checksum type: sha256
-  checksum64: A7F82387AD2923835F3A84E830F21EEF2F8DB6EED8C20C6A729853391041BCF0
+  checksum64: 4388A330E588B826A0A661357D6610C5669AD4DF0AC385C818904CD31389CC71
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/eranif/codelite/blob/5c29b6cb2a48dbf2d9b243a173c540cf85d70f4f/LICENSE>
