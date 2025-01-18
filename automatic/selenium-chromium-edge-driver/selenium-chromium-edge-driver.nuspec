@@ -3,7 +3,7 @@
   <metadata>
     <id>selenium-chromium-edge-driver</id>
     <!-- Do not touch the version, it will be updated automatically during the update check -->
-    <version>131.0.2903.146</version>
+    <version>132.0.2957.115</version>
     <title>Selenium Chromium Edge Driver</title>
     <authors>Chromium and Microsoft teams</authors>
     <owners>chocolatey-community,agabrys,laurin1,AdmiringWorm</owners>
