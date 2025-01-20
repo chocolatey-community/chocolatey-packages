@@ -2,17 +2,22 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The embedded software have been downloaded from the listed download
-location on <https://www.zotero.org/download/> (The listed url gets redirected to another one)
-and can be verified by doing the following:
+Package can be verified like this:
 
-1. Download the following <https://download.zotero.org/client/release/7.0.11/Zotero-7.0.11_win32_setup.exe>
+1. Go to
+
+   x32: https://download.zotero.org/client/release/7.0.11/Zotero-7.0.11_win32_setup.exe
+   x64: https://download.zotero.org/client/release/7.0.11/Zotero-7.0.11_x64_setup.exe
+
+   to download the installer.
+
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: sha256
-  checksum: 35F8EEAEB33C5BE35E79707A9F9DC9F0441907C9153F19B00B847700402E59E9
+  checksum32: 35F8EEAEB33C5BE35E79707A9F9DC9F0441907C9153F19B00B847700402E59E9
+  checksum64: FDCA78418774B370C33E47934D1606CB0FE298809C07AF537D051F3DD3CFC809
 
-The file 'LICENSE.txt' has been obtained from <https://github.com/zotero/zotero/blob/929288f9811a5026053ae154ca08cc4a9da13c52/COPYING>
+The file 'LICENSE.txt' has been obtained from 
+   https://raw.githubusercontent.com/zotero/zotero/refs/heads/main/COPYING
