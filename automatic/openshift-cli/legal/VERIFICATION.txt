@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.17.11>
+location on <https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.17.12>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.17.11/openshift-client-windows-4.17.11.zip>
+  software: <https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.17.12/openshift-client-windows-4.17.12.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: 
-  checksum: F14A5FD1E2DEF0B558ACA533DD649D1E125C503F9CDE450F24A0E5C9F0078490
+  checksum: 3E906F53BA7EFC209B8E1046D77B807E9BF3A6154F4DC19BF23D25A35CBA3D8A
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/openshift/origin/blob/6366485d06c43fd526899510f02582484da25519/LICENSE>
