@@ -8,30 +8,6 @@ $silentArgs = '/quiet /norestart'
 $validExitCodes = @(0, 1638, 3010)
 $force = $Env:chocolateyPackageParameters -like '*Force*'
 
-Write-Verbose 'Checking Service Pack requirements'
-$os = Get-WmiObject -Class Win32_OperatingSystem
-$version = [Version]$os.Version
-if ($version -ge [Version]'6.1' -and $version -lt [Version]'6.2' -and $os.ServicePackMajorVersion -lt 1)
-{
-  # On Windows 7 / Server 2008 R2, Service Pack 1 is required.
-  throw 'This package requires Service Pack 1 to be installed first. The "KB976932" package may be used to install it.'
-}
-elseif ($version -ge [Version]'6.0' -and $version -lt [Version]'6.1' -and $os.ServicePackMajorVersion -lt 2)
-{
-  # On Windows Vista / Server 2008, Service Pack 2 is required.
-  throw 'This package requires Service Pack 2 to be installed first.'
-}
-elseif ($version -ge [Version]'5.2' -and $version -lt [Version]'6.0' -and $os.ServicePackMajorVersion -lt 2)
-{
-  # On Windows Server 2003 / XP x64, Service Pack 2 is required.
-  throw 'This package requires Service Pack 2 to be installed first.'
-}
-elseif ($version -ge [Version]'5.1' -and $version -lt [Version]'5.2' -and $os.ServicePackMajorVersion -lt 3)
-{
-  # On Windows XP, Service Pack 3 is required.
-  throw 'This package requires Service Pack 3 to be installed first.'
-}
-
 $runtimes = @{
   'x64' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData64; Applicable = ((Get-OSArchitectureWidth) -eq 64) -and ($env:chocolateyForceX86 -ne 'true') }
   'x86' = @{ RegistryPresent = $false; RegistryVersion = $null; DllVersion = $null; InstallData = $installData32; Applicable = $true }
