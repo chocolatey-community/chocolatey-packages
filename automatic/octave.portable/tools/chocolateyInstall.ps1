@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$version = '9.3.0'
+$version = '9.4.0'
 
 $toolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $progDir  = "$toolsDir\octave"
@@ -9,8 +9,8 @@ $progDir  = "$toolsDir\octave"
 $packageArgs = @{
   PackageName    = 'octave.portable'
   UnzipLocation  = $toolsDir
-  Url64          = 'https://ftp.gnu.org/gnu/octave/windows/octave-9.3.0-w64.7z'
-  Checksum64     = 'd71ce5c4980955e9fb94db2586735df3239865942e2263a0e8ab8c1940146944'
+  Url64          = 'https://ftp.gnu.org/gnu/octave/windows/octave-9.4.0-w64.7z'
+  Checksum64     = 'b15f12bbcc48c9c5b2e211a73044d162f78e51e5bcc44b88ef821e671d24966f'
   ChecksumType64 = 'sha256'
 }
 
