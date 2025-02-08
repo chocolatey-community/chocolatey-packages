@@ -5,9 +5,6 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = 'https://inkscape.org/gallery/item/44620/inkscape-1.3.2_2023-11-25_091e20ef0f-x86.msi'
-  checksum       = 'ADA39E3C380AF0E316630D33D31804A320E06D3EC5D8C093CBBC19A1276F81EE'
-  checksumType   = 'sha256'
   file64         = "$toolsPath\inkscape-1.3.2_2023-11-25_091e20e-x64.msi"
   softwareName   = 'InkScape*'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
@@ -37,12 +34,7 @@ elseif ($key.Count -gt 1) {
   Write-Warning "Please uninstall InkScape before installing this package."
 }
 
-if ((Get-OSArchitectureWidth 32) -or ($env:chocolateyForceX86 -eq $true)) {
-  Install-ChocolateyPackage @packageArgs
-}
-else {
-  Install-ChocolateyInstallPackage @packageArgs
-}
+Install-ChocolateyInstallPackage @packageArgs
 
 Get-ChildItem $toolsPath\*.msi | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" } }
 

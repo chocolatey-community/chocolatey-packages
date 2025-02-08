@@ -25,3 +25,4 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
 
 * This software cannot be reinstalled even with the package `--force` option. The installer will not run when the same version is already installed. If you need to reinstall this software, please uninstall the package and then install it again.
 * **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+* Starting with version 1.4.x, installers for 32bit platforms are no longer available. If this is required, use an older version of the package.
