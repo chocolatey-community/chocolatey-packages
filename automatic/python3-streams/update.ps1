@@ -3,6 +3,7 @@
 Add-Type -Assembly System.IO.Compression
 
 $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
+$old_license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
 $license_statement = "PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2"
 
 if ($MyInvocation.MyCommand -ne '.') {
@@ -44,7 +45,7 @@ function SetCopyright {
   # license text for legal/LICENSE.txt
   $license_entry = $zip.GetEntry("$($Latest.ZipName)/license.txt")
   $Latest.License = [System.IO.StreamReader]::new($license_entry.Open()).ReadToEnd()
-  if (!$Latest.License.Contains($license_statement)) {
+  if (!$Latest.License.Contains($license_statement) -and !$Latest.License.Contains($old_license_statement)) {
     throw "Python's license may have changed."
   }
 
