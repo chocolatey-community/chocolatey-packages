@@ -132,9 +132,9 @@ function GetStreams() {
     }
   }
 
-  $streams = @{ }
+  $streams = [ordered]@{}
 
-  $latest_versions.GetEnumerator() | ForEach-Object {
+  $latest_versions.GetEnumerator() | Sort-Object { [int]$_.Name } -Descending | ForEach-Object {
     $minor_version = $_.Name
     $latest_version = $_.Value
     $versionTwoPart = "3.$minor_version"
