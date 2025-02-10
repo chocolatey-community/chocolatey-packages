@@ -3,7 +3,7 @@
 Add-Type -Assembly System.IO.Compression
 
 $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
-$license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
+$license_statement = "PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2"
 
 if ($MyInvocation.MyCommand -ne '.') {
 function global:au_SearchReplace {
