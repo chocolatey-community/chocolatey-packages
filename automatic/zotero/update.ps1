@@ -33,4 +33,4 @@ function global:au_GetLatest {
    }
 }
 
-update -ChecksumFor none -force
+update -ChecksumFor none
