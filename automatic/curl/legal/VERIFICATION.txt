@@ -6,8 +6,8 @@ Package can be verified like this:
 
 1. Go to https://curl.se/windows/, and look for the official binaries provided.
 
-   x32: https://curl.se/windows/dl-8.12.0_1/curl-8.12.0_1-win32-mingw.zip
-   x64: https://curl.se/windows/dl-8.12.0_1/curl-8.12.0_1-win64-mingw.zip
+   x32: https://curl.se/windows/dl-8.12.1_1/curl-8.12.1_1-win32-mingw.zip
+   x64: https://curl.se/windows/dl-8.12.1_1/curl-8.12.1_1-win64-mingw.zip
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -15,8 +15,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: B37E3407C05A8EA30632C14AF71DB1269BC964162167EB8025DC5AE416559CAC
-   checksum64: 030F8BD879E800FFD0C3C88506766DA24EB2DF64C574AA386EF92F7E1874C458
+   checksum32: 711346995A2B2D9359EB21C2098EEB103701BA18340B2B4E6AB58AFE4CC1DC86
+   checksum64: 0E14467513C5194BBDB708338E926F2E6EC80B2970F2F90461AF0DFA3C96E020
 
 File 'LICENSE.txt' obtained from:
    https://github.com/curl/curl/blob/835c2634212257d41c1a30c6cc0ad3ed60bb9aca/COPYING
