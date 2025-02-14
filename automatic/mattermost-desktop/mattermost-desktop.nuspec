@@ -6,7 +6,7 @@
     <metadata>
         <id>mattermost-desktop</id>
         <title>Mattermost Desktop</title>
-        <version>5.10.2</version>
+        <version>5.11.0</version>
         <authors>https://github.com/mattermost/desktop/graphs/contributors</authors>
         <owners>chocolatey-community,wget, hans0</owners>
         <summary>Native desktop application for Mattermost running on Windows</summary>
