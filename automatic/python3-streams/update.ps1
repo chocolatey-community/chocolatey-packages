@@ -3,7 +3,8 @@
 Add-Type -Assembly System.IO.Compression
 
 $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
-$license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
+$old_license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
+$license_statement = "PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2"
 
 if ($MyInvocation.MyCommand -ne '.') {
 function global:au_SearchReplace {
@@ -44,7 +45,9 @@ function SetCopyright {
   # license text for legal/LICENSE.txt
   $license_entry = $zip.GetEntry("$($Latest.ZipName)/license.txt")
   $Latest.License = [System.IO.StreamReader]::new($license_entry.Open()).ReadToEnd()
-  if (!$Latest.License.Contains($license_statement)) {
+  Remove-Item "$PSScriptRoot\legal\LICENSE.txt" -Force
+  [System.IO.File]::WriteAllText("$PSScriptRoot\legal\LICENSE.txt", $Latest.License)
+  if (!$Latest.License.Contains($license_statement) -and !$Latest.License.Contains($old_license_statement)) {
     throw "Python's license may have changed."
   }
 
@@ -131,9 +134,9 @@ function GetStreams() {
     }
   }
 
-  $streams = @{ }
+  $streams = [ordered]@{}
 
-  $latest_versions.GetEnumerator() | ForEach-Object {
+  $latest_versions.GetEnumerator() | Sort-Object { [int]$_.Name } -Descending | ForEach-Object {
     $minor_version = $_.Name
     $latest_version = $_.Value
     $versionTwoPart = "3.$minor_version"
