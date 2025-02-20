@@ -45,6 +45,8 @@ function SetCopyright {
   # license text for legal/LICENSE.txt
   $license_entry = $zip.GetEntry("$($Latest.ZipName)/license.txt")
   $Latest.License = [System.IO.StreamReader]::new($license_entry.Open()).ReadToEnd()
+  Remove-Item "$PSScriptRoot\legal\LICENSE.txt" -Force
+  [System.IO.File]::WriteAllText("$PSScriptRoot\legal\LICENSE.txt", $Latest.License)
   if (!$Latest.License.Contains($license_statement) -and !$Latest.License.Contains($old_license_statement)) {
     throw "Python's license may have changed."
   }
