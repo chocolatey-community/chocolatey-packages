@@ -5,7 +5,8 @@ $releases = 'https://files.gpg4win.org/'
 function global:au_SearchReplace {
    @{
         ".\tools\chocolateyInstall.ps1" = @{
-            "(?i)(^\s*packageName\s*=\s*)('.*')"  = "`$1'$($Latest.PackageName)'"
+            "(?i)(^\s*packageName\s*=\s*)('.*')"        = "`$1'$($Latest.PackageName)'"
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
         }
 
         ".\legal\VERIFICATION.txt" = @{
