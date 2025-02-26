@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.6.0-rc0</version>
+    <version>3.6.0-rc1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
@@ -45,14 +45,14 @@ Example: `choco install etcd -y --params="-discovery https://discovery.etcd.io/t
 * Windows support is limited to 64-bit systems
 * Originally packaged by Robert Labrie (https://github.com/robertlabrie)
 ]]></description>
-    <releaseNotes>Please check out [CHANGELOG](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.6.md) for a full list of changes. The documentation for v3.6 is a work in progress, the [upgrade guide](https://etcd.io/docs/v3.6/upgrades) will be available soon.
+    <releaseNotes>Please check out [CHANGELOG](https://github.com/etcd-io/etcd/blob/main/CHANGELOG/CHANGELOG-3.6.md) for a full list of changes. The documentation for v3.6 is a work in progress. The [upgrade guide](https://etcd.io/docs/v3.6/upgrades) will be available soon.
 
 For installation guides, please check out [play.etcd.io](http://play.etcd.io) and [operating etcd](https://etcd.io/docs/v3.6/op-guide/). Latest support status for common architectures and operating systems can be found at [supported platforms](https://etcd.io/docs/v3.6/op-guide/supported-platform/).
 
 ###### Linux
 
 ```sh
-ETCD_VER=v3.6.0-rc.0
+ETCD_VER=v3.6.0-rc.1
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -81,7 +81,7 @@ rm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz
 ###### macOS (Darwin)
 
 ```sh
-ETCD_VER=v3.6.0-rc.0
+ETCD_VER=v3.6.0-rc.1
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -105,7 +105,7 @@ mv /tmp/etcd-${ETCD_VER}-darwin-amd64/* /tmp/etcd-download-test &amp;&amp; rm -r
 etcd uses [`gcr.io/etcd-development/etcd`](https://gcr.io/etcd-development/etcd) as a primary container registry, and [`quay.io/coreos/etcd`](https://quay.io/coreos/etcd) as secondary.
 
 ```sh
-ETCD_VER=v3.6.0-rc.0
+ETCD_VER=v3.6.0-rc.1
 
 rm -rf /tmp/etcd-data.tmp &amp;&amp; mkdir -p /tmp/etcd-data.tmp &amp;&amp; \
   docker rmi gcr.io/etcd-development/etcd:${ETCD_VER} || true &amp;&amp; \
