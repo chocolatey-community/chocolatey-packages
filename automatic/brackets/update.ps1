@@ -1,6 +1,6 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://github.com/adobe/brackets/releases'
+$releases = 'https://api.github.com/repos/adobe/brackets/releases'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -18,14 +18,18 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '[\d\.]+\.msi$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { 'https://github.com' + $_ }
+  $download_page = Invoke-RestMethod -Uri $releases
+  $urls = @()
+  $download_page | ForEach-Object {
+    $_.assets | ForEach-Object {
+      if ($_.browser_download_url -match '[\d\.]+\.msi$' -and $_.browser_download_url -notmatch 'prerelease' -and $_.prerelease -ne $True) {
+        $urls += $_.browser_download_url
+      }
+    }
+  }
+  $url32 = $urls[0]
   if (!$url32) { Write-Host 'No Windows release is avaialble'; return 'ignore' }
-
-  $verRe = "\/(release-)?"
-  $version32 = $url32 -split "$verRe" | select -last 1 -skip 1
+  $version32 = ($url32 -split '/' | select -last 1) -replace '\.msi$' -replace '^Brackets.Release.'
   @{
     URL32 = $url32
     Version = $version32
