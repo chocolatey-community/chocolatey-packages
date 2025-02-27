@@ -26,7 +26,7 @@ function global:au_GetLatest {
     $versionHyperlink = $download_page.links | Select-Object -First 1
     if ($versionHyperlink.Title -notmatch 'Release (7[\d\.]+)' ) { throw "Calibre version 7.x not found on $releases" }
 
-    $version = $versionHyperlink.InnerText
+    $version = ($versionHyperlink.outerHTML) -replace '<[^>]+>'
     $url64   = 'https://download.calibre-ebook.com/<version>/calibre-64bit-<version>.msi'
     $url64   = $url64 -replace '<version>', $version
 
