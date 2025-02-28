@@ -44,7 +44,7 @@ environment:
     secure: zPuYvdxGda6DUGRCwTJL5FQCWF3U+1bSLE2mEr+VfpfV08NXlXX2uFLizkhQuJYW
 
   #Chocolatey version we want to use when checking for updates (usually latest).
-  choco_version: '2.4.2'
+  choco_version: '2.4.3'
   choco_version_pr: '2.2.2' # Should be kept at the minimum version supported that is listed on <https://github.com/chocolatey-community/chocolatey-packages/wiki/Supported-Chocolatey-CLI-versions>
   nupkg_cache_path: C:\packages
 
