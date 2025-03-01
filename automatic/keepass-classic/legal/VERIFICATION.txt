@@ -6,14 +6,14 @@ The embedded software have been downloaded from the listed download
 location on <http://keepass.info/download.html>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.42/KeePass-1.42-Setup.exe/download>
+1. Download the following <https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.43/KeePass-1.43-Setup.exe/download>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 49CC3AD7DA8DE1FCA9F81744B703B528F398E75002B75F84E1BD8CC29D749E99
+  checksum: 70B17E420014A851A1D38968BACCCE93FE85E4D8746590B06D7BE0812A6B3323
 
 The file 'LICENSE.txt' has been obtained from <https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
-The keepass 1.x license is listed on <https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.42/KeePass-1.42-Setup.exe/download>
+The keepass 1.x license is listed on <https://sourceforge.net/projects/keepass/files/KeePass%201.x/1.43/KeePass-1.43-Setup.exe/download>
