@@ -2,16 +2,16 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The installer has been downloaded from the Github release page <https://github.com/keepassxreboot/keepassxc/releases/tag/2.7.9>
+The installer has been downloaded from the Github release page <https://github.com/keepassxreboot/keepassxc/releases/tag/2.7.10>
 and can be verified like this:
 
 1. Download the following installers:
-  64-Bit: <https://github.com/keepassxreboot/keepassxc/releases/download/2.7.9/KeePassXC-2.7.9-Win64.msi>
+  64-Bit: <https://github.com/keepassxreboot/keepassxc/releases/download/2.7.10/KeePassXC-2.7.10-Win64.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum64: 3B544343CE369377E54A3A6AC7A023B3C202AC034EEA6E6886BB8185E95B6A49
+  checksum64: 5F00C58A5878994663E217FAB74E912B5F4544357759F2C2AE4D7E9FA0C5E549
 
 File 'LICENSE.txt' is obtained from <https://github.com/keepassxreboot/keepassxc/blob/dcca5aa0f0ee2f2b8685787c01f934cb2b506ef7/COPYING>
