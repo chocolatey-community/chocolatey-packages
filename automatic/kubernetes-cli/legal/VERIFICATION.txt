@@ -8,8 +8,8 @@ location on <https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHAN
 and can be verified by doing the following:
 
 1. Download the following:
-  32-bit software: <https://dl.k8s.io/v1.32.2/kubernetes-client-windows-386.tar.gz>
-  64-bit software: <https://dl.k8s.io/v1.32.2/kubernetes-client-windows-amd64.tar.gz>
+  32-bit software: <https://dl.k8s.io/v1.32.3/kubernetes-client-windows-386.tar.gz>
+  64-bit software: <https://dl.k8s.io/v1.32.3/kubernetes-client-windows-amd64.tar.gz>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -18,7 +18,7 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 209AF716002A463FC38826ECC816C3472754D06CAD4FD4A933FFFA15CE4AC442
-  checksum64: A609AFCDD58F28DA7B36460F4EFB91DFEDDDE46F96757E77C3E93E2BBD2C872B
+  checksum32: A4FFF1712CB26278432EA2EE870882B1008B51B76829459B8750EA4E068357B3
+  checksum64: B78883391FE37850BA53DC7B482F784E30F5BEA539D4E8F5BB07C74A63A95C53
 
 File 'LICENSE.txt' is obtained from <https://github.com/kubernetes/kubernetes/blob/d30db1f9a915aa95402e1190461469a1889d92be/LICENSE>
