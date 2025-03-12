@@ -5,10 +5,10 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName            = 'mattermost-desktop'
   fileType               = 'msi'
-  file                   = "$toolsDir\mattermost-desktop-5.11.1-win-arm64.msi"
-  file64                 = "$toolsDir\mattermost-desktop-5.11.1-win-x64.msi"
-  checksum               = '5203BB4D31AEE380AC76A741605A5664B09E5230E99927616AB01400F319D452'
-  checksum64             = 'F85853E977F8AC3170AD9A47ACC6F1C50AAF01B8CCAD177E382ECD254F50F18A'
+  file                   = "$toolsDir\mattermost-desktop-5.11.2-win-arm64.msi"
+  file64                 = "$toolsDir\mattermost-desktop-5.11.2-win-x64.msi"
+  checksum               = '2C3E7E7EA44ECB75AD8411E1D7B840AE5A0189E30981C19907F43F5874BDBF65'
+  checksum64             = '1B31E7086A55F1B3458AA5E90A97C1BC83B6AD69B49FAD36CD568F052C125A63'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
