@@ -2,30 +2,32 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>zotero</id>
-    <title>Zotero</title>
-    <owners>chocolatey-community</owners>
     <version>7.0.13</version>
-    <authors>Center for History and New Media, et. al.</authors>
-    <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/zotero</packageSourceUrl>
+    <owners>chocolatey-community</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Zotero</title>
+    <authors>Corporation for Digital Scholarship</authors>
+    <projectUrl>https://www.zotero.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@53607633ce049d5d75ac668f4408faaeced36bc3/icons/zotero.png</iconUrl>
+    <copyright>Copyright © 2018 Corporation for Digital Scholarship, Vienna, Virginia, USA. Copyright © 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017 Roy Rosenzweig Center for History and New Media, George Mason University,Fairfax, Virginia, USA</copyright>
+    <licenseUrl>https://github.com/zotero/zotero/blob/e746da4faba46533f35db7cbe04c91c757134a44/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.zotero.org/support/dev/source_code</projectSourceUrl>
+    <docsUrl>https://www.zotero.org/support</docsUrl>
+    <mailingListUrl>https://forums.zotero.org/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/zotero/zotero/issues</bugTrackerUrl>
+    <tags>zotero productivity foss cross-platform references manager bibliography citations research embedded</tags>
+    <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice.
 
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/d1d9f0154e370315e49f245a26a7d23e89a705cc/automatic/zotero/screenshot.png)
 ]]></description>
-    <projectUrl>https://www.zotero.org/</projectUrl>
-    <tags>zotero references manager bibliography foss cross-platform admin</tags>
-    <copyright>2006-2011, Center for History and New Media, George Mason University, Fairfax, Virginia, USA</copyright>
-    <licenseUrl>https://github.com/zotero/zotero/blob/master/COPYING</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>https://www.zotero.org/support/._changelog</releaseNotes>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/zotero</packageSourceUrl>
-    <projectSourceUrl>https://www.zotero.org/support/dev/source_code</projectSourceUrl>
-    <docsUrl>https://www.zotero.org/support</docsUrl>
-    <mailingListUrl>https://forums.zotero.org/discussions</mailingListUrl>
-    <bugTrackerUrl>https://github.com/zotero/zotero/issues</bugTrackerUrl>
+    <releaseNotes>https://www.zotero.org/support/changelog</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>
