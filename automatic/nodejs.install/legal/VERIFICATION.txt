@@ -6,11 +6,13 @@ The installer/archive has been downloaded from the authors official download lin
 and can be verified using the following:
 
 1. Download the following installers/archives
-   - 64-Bit: <https://nodejs.org/dist/v23.9.0/node-v23.9.0-x64.msi>
+   - 32-Bit: <https://nodejs.org/dist/v20.19.0/node-v20.19.0-x86.msi>
+   - 64-Bit: <https://nodejs.org/dist/v20.19.0/node-v20.19.0-x64.msi>
 2. Use one of the following methods to obtain the checksum
    - Use powershell function 'Get-FileHash'
    - Use chocolatey utility 'checksum.exe'
 3. Verify the downloaded installers/archives matches the following SHA256 checksum:
-   - 64-Bit Checksum: <51B5421A5570297FB603FA1869B4D40FD041EEF3A7DADB47238AE9BD47F28153>
+   - 32-Bit Checksum: <68D09BC053428BEC1E1C76DB1D3B73DB8976AF1387A0458A53C95B4F972F7427>
+   - 64-Bit Checksum: <E9032ADB422BF332001A5D8C799621307B8F2F2F8BCF3071B8B6998923DDC20E>
 
 Additionally, the included 'LICENSE.txt' have been obtained from <https://github.com/nodejs/node/blob/03023fa7ae060c082a014f792d5d1f481a599460/LICENSE>.
