@@ -4,7 +4,7 @@
   <metadata>
     <id>tribler</id>
     <title>Tribler</title>
-    <version>8.0.7</version>
+    <version>8.1.2</version>
     <authors>The Tribler Team</authors>
     <owners>chocolatey-community, Redsandro</owners>
     <summary>Tribler is an open source anonymous decentralized BitTorrent client.</summary>
