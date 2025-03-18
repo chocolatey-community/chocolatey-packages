@@ -40,7 +40,7 @@ function GetStreams() {
     if ($streams.$versionTwoPart) { return }
 
     $url64 = $_ | Select-Object -ExpandProperty href
-    $url32 = $releaseUrls | Where-Object href -notmatch $re64 | Where-Object href -match $version | Select-Object -ExpandProperty href
+    $url32 = $releaseUrls | Where-Object href -notmatch "$re64|arm" | Where-Object href -match $version | Select-Object -ExpandProperty href
 
     if (!$url32 -or !$url64) {
       Write-Host "Skipping due to missing installer: '$version'"; return
