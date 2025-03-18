@@ -11,16 +11,37 @@ function global:au_SearchReplace {
     }
 
     ".\legal\VERIFICATION.txt"      = @{
-      "(?i)(\s+x32:).*"            = "`${1} $($Latest.URL32)"
-      "(?i)(\s+x64:).*"            = "`${1} $($Latest.URL64)"
-      "(?i)(checksum32:).*"        = "`${1} $($Latest.Checksum32)"
-      "(?i)(checksum64:).*"        = "`${1} $($Latest.Checksum64)"
-      "(?i)(Get-RemoteChecksum).*" = "`${1} $($Latest.URL64)"
+      "(?i)(\s+x32:).*"              = "`${1} $($Latest.URL32)"
+      "(?i)(\s+x64:).*"              = "`${1} $($Latest.URL64)"
+      "(?i)(checksum32:).*"          = "`${1} $($Latest.Checksum32)"
+      "(?i)(checksum64:).*"          = "`${1} $($Latest.Checksum64)"
+      "(?i)(Get-RemoteChecksum).*"   = "`${1} $($Latest.URL64)"
+      "(?i)(is obtained from:\s*).*" = "`${1} $($Latest.LicenseUrl)"
     }
   }
 }
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate($Package) {
+  if ($MyInvocation.InvocationName -ne '.') {
+    $Latest.LicenseURl = $Package.nuspecXml.package.metadata.licenseUrl
+    $outputFile = "$PSScriptRoot\legal\LICENSE.txt"
+
+    if (Test-Path $outputFile) {
+      Remove-Item $outputFile
+    }
+
+    Invoke-WebRequest -Uri $Latest.LicenseUrl -OutFile $outputFile
+    $content = Get-Content $outputFile
+
+    $hasMatch = $content | Where-Object { $_ -match "You may distribute the software" }
+
+    if (!$hasMatch) {
+      throw "The License has changed, please verify redistribution rights and update the license check."
+    }
+  }
+
+  Get-RemoteFiles -Purge -NoSuffix
+}
 
 function GetStreams() {
   param($releaseUrls)

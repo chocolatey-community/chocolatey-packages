@@ -23,5 +23,4 @@ Using Chocolatey AU:
 
    Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.1-1/rubyinstaller-3.4.1-1-x64.exe
 
-File 'license.txt' is obtained from:
-   https://raw.githubusercontent.com/oneclick/rubyinstaller2/master/LICENSE.txt
+File 'LICENSE.txt' is obtained from: https://raw.githubusercontent.com/oneclick/rubyinstaller2/master/LICENSE.txt
