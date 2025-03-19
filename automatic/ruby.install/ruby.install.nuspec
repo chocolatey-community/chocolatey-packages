@@ -29,7 +29,7 @@ Example: `choco install ruby --package-parameters="'/NoPath  ""/InstallDir:C:\yo
     <projectSourceUrl>https://github.com/ruby/ruby</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/ruby.install</packageSourceUrl>
     <bugTrackerUrl>https://bugs.ruby-lang.org/projects/ruby-master/issues</bugTrackerUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <releaseNotes>https://www.ruby-lang.org/en/downloads/releases/</releaseNotes>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@aad7c15bfbec43c3716f8a82bc3af22e1a55579d/icons/ruby.svg</iconUrl>
   </metadata>
