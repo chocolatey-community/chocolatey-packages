@@ -2,15 +2,15 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-The installer has been downloaded from their official download link listed on <https://github.com/ytdl-org/ytdl-nightly/releases/tag/2025.03.27>
+The installer has been downloaded from their official download link listed on <https://github.com/ytdl-org/ytdl-nightly/releases/tag/2025.04.01>
 and can be verified like this:
 
-1. Download <https://github.com/ytdl-org/ytdl-nightly/releases/download/2025.03.27/youtube-dl.exe>
+1. Download <https://github.com/ytdl-org/ytdl-nightly/releases/download/2025.04.01/youtube-dl.exe>
 2. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha512
-  checksum: 02828218c99acaf68e2a9f27e05a8776c39af291b123ca4696dc072bd9682eedb17a6aaecf54c155852214a92cdbaedb9e94e3131861dc02ed032bd4e354d4c4
+  checksum: 4a39e576f394be1f247f29ec647b3f03f6b97cb2052a25cf1bfddd1bead07c05d6f5c5c739f6f7101b0b3011e4623f0dbbb7086d72e5ec681e0eb729d3c4876c
 
 File 'LICENSE.txt' is obtained from <https://github.com/rg3/youtube-dl/blob/b7769a05eca3611e492f7a75f1c40cddd2019ef1/LICENSE>
