@@ -22,11 +22,11 @@ function Get-MergeTasks {
 $packageArgs = @{
   packageName    = "$env:ChocolateyPackageName"
   fileType       = 'exe'
-  url64bit       = 'https://vscode.download.prss.microsoft.com/dbazure/download/insider/04b99c90f4832235b2d15e193cb14fff8a76dba6/VSCodeSetup-x64-1.99.0-insider.exe'
+  url64bit       = 'https://vscode.download.prss.microsoft.com/dbazure/download/insider/cb9445f01be3bdd0a86e1634344ac3acd179a135/VSCodeSetup-x64-1.99.0-insider.exe'
 
   softwareName   = 'Microsoft Visual Studio Code Insiders'
 
-  checksum64     = 'a27fb22f42b322cf1981c39a770cd6c7f6192dfd9cbccca87a2c6ac6f72fa7371f8234bdf9947c229e01de82fd5925b828935ac8f2d26f6ee4737ebec0e3e3b3'
+  checksum64     = 'b4823691fd7297dbfb2f9ba5ee0d459b5dfe5d5d6bc8ee65f915c3b00f008cde908d4cf6a1a13101d25f9ef29318653d8d7a3747a708da93a09359751c3900dd'
   checksumType64 = 'sha512'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
