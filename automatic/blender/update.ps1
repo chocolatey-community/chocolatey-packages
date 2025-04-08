@@ -19,6 +19,7 @@ function global:au_SearchReplace {
     }
   }
 }
+
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
@@ -49,18 +50,101 @@ function global:au_GetLatest {
 function Get-ActualUrl() {
   param([string]$version, [string]$majorVersion)
 
-  return "https://download.blender.org/release/Blender$majorVersion/blender-$version-windows-x64.msi"
+  # Primary URL
+  $primaryUrl = "https://download.blender.org/release/Blender$majorVersion/blender-$version-windows-x64.msi"
+
+  # Try the primary URL first
+  try {
+    $testRequest = Invoke-WebRequest -Uri $primaryUrl -Method Head -UseBasicParsing -ErrorAction SilentlyContinue
+    if ($testRequest.StatusCode -eq 200) {
+      return $primaryUrl
+    }
+  }
+  catch {
+    Write-Host "Primary download URL not available. Trying mirrors..."
+  }
+
+  # List of mirrors from the website (https://www.blender.org/about/website/#:~:text=blender.org.-,External%20Mirrors,-With%20over%2018)
+  $mirrors = @(
+    # USA mirrors
+    "https://mirrors.ocf.berkeley.edu/blender/release/Blender$majorVersion/blender-$version-windows-x64.msi",
+    # Germany mirror
+    "https://ftp.halifax.rwth-aachen.de/blender/release/Blender$majorVersion/blender-$version-windows-x64.msi",
+    # Denmark mirror
+    "https://mirrors.dotsrc.org/blender/release/Blender$majorVersion/blender-$version-windows-x64.msi",
+    # Netherlands
+    "https://ftp.nluug.nl/pub/graphics/blender/release/Blender$majorVersion/blender-$version-windows-x64.msi",
+    # Asian mirror
+    "https://mirror.freedif.org/blender/release/Blender$majorVersion/blender-$version-windows-x64.msi"
+  )
+
+  # Try each mirror until one works
+  foreach ($mirror in $mirrors) {
+    try {
+      $testRequest = Invoke-WebRequest -Uri $mirror -Method Head -UseBasicParsing -ErrorAction SilentlyContinue
+      if ($testRequest.StatusCode -eq 200) {
+        return $mirror
+      }
+    }
+    catch {
+      Write-Host "Mirror $mirror not available. Trying next..."
+    }
+  }
+
+  # If all mirrors fail, return the primary URL as a fallback
+  Write-Warning "All download mirrors failed. Returning primary URL as fallback."
+  return $primaryUrl
 }
 
 function Get-Checksum() {
   param([string]$version, [string]$majorVersion, [string]$checksumType)
 
-  $checksum_file = Invoke-WebRequest -Uri "https://download.blender.org/release/Blender$majorVersion/blender-$version.$checksumType"
+  try {
+    $checksum_file = Invoke-WebRequest -Uri "https://download.blender.org/release/Blender$majorVersion/blender-$version.$checksumType" -UseBasicParsing -ErrorAction SilentlyContinue
 
-  $re = 'windows-x64\.msi$'
-  $checksum = $checksum_file.RawContent -split "\n" -match $re -split " " | Select-Object -First 1
+    $re = 'windows-x64\.msi$'
+    $checksum = $checksum_file.Content -split "\n" -match $re -split " " | Select-Object -First 1
 
-  return $checksum
+    if ($checksum) {
+      return $checksum
+    }
+  }
+  catch {
+    Write-Warning "Failed to get checksum from primary source. Trying mirrors..."
+  }
+
+  # Try mirrors for checksum
+  $checksumMirrors = @(
+    # USA mirrors
+    "https://mirrors.ocf.berkeley.edu/blender/release/Blender$majorVersion/blender-$version.$checksumType",
+    # Germany mirror
+    "https://ftp.halifax.rwth-aachen.de/blender/release/Blender$majorVersion/blender-$version.$checksumType",
+    # Denmark mirror
+    "https://mirrors.dotsrc.org/blender/release/Blender$majorVersion/blender-$version.$checksumType",
+    # Netherlands
+    "https://ftp.nluug.nl/pub/graphics/blender/release/Blender$majorVersion/blender-$version.$checksumType",
+    # Asian mirror
+    "https://mirror.freedif.org/blender/release/Blender$majorVersion/blender-$version.$checksumType"
+  )
+
+  foreach ($mirror in $checksumMirrors) {
+    try {
+      $checksum_file = Invoke-WebRequest -Uri $mirror -UseBasicParsing -ErrorAction SilentlyContinue
+
+      $re = 'windows-x64\.msi$'
+      $checksum = $checksum_file.Content -split "\n" -match $re -split " " | Select-Object -First 1
+
+      if ($checksum) {
+        return $checksum
+      }
+    }
+    catch {
+      Write-Host "Failed to get checksum from mirror $mirror. Trying next..."
+    }
+  }
+
+  Write-Error "Failed to retrieve checksum from any source. Package update may fail."
+  return $null
 }
 
 update -ChecksumFor none
