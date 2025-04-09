@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>InkScape</id>
-    <version>1.3.2</version>
+    <version>1.4</version>
     <title>Inkscape</title>
     <owners>chocolatey-community</owners>
     <authors>Inkscape developers</authors>
@@ -37,12 +37,13 @@ All Inkscape projects may be exported in formats friendly to web browsers or com
 
 * This software cannot be reinstalled even with the package `--force` option. The installer will not run when the same version is already installed. If you need to reinstall this software, please uninstall the package and then install it again.
 * **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+* Starting with version 1.4.x, installers for 32bit platforms are no longer available. If this is required, use an older version of the package.
 ]]></description>
     <docsUrl>https://inkscape.org/en/learn/</docsUrl>
     <mailingListUrl>https://inkscape.org/en/community/mailing-lists/</mailingListUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/inkscape</bugTrackerUrl>
     <summary>An Open Source vector graphics editor, with capabilities similar to Illustrator, CorelDraw, or Xara X, using the W3C standard Scalable Vector Graphics (SVG) file format.</summary>
-    <releaseNotes>https://inkscape.org/release/inkscape-1.3.2/#left-column</releaseNotes>
+    <releaseNotes>https://inkscape.org/release/inkscape-1.4/#left-column</releaseNotes>
     <copyright>inkscape.org</copyright>
     <tags>inkscape editor foss cross-platform svg vector-graphics icons graphics export drawing art admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/inkscape</packageSourceUrl>

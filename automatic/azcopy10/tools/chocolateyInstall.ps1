@@ -1,15 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop';
- 
+
 $packageName = 'azcopy10'
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     packageName    = $packageName
-    url64          = 'https://azcopyvnext.azureedge.net/releases/release-10.27.0-20241030/azcopy_windows_amd64_10.27.0.zip'
-    checksum64     = 'bddfeea5198434abe191e35d0d78f42a5c9d8863d33b0d87554bf7b48d4190e6'
+    url64          = 'https://azcopyvnext-awgzd8g7aagqhzhe.b02.azurefd.net/releases/release-10.28.1-20250326/azcopy_windows_amd64_10.28.1.zip'
+    checksum64     = 'afbb11b1c86f3b32b3c62a44267e45dce8420d2c8204e175b64041516d2c072f'
     checksumType64 = 'sha256'
-    url            = 'https://azcopyvnext.azureedge.net/releases/release-10.27.0-20241030/azcopy_windows_386_10.27.0.zip'
-    checksum       = '36ac53ab65c520e489207cc7a62094f26854ca74ce7309d36b9b8a759d5fe05d'
+    url            = 'https://azcopyvnext-awgzd8g7aagqhzhe.b02.azurefd.net/releases/release-10.28.1-20250326/azcopy_windows_386_10.28.1.zip'
+    checksum       = '20227e1f80611eb3891e4ef4b34e6a113f51bb0469d71fdcf6904f387a0fb9c2'
     checksumType   = 'sha256'
     destination    = $toolsDir
 }

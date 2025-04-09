@@ -3,7 +3,8 @@
 Add-Type -Assembly System.IO.Compression
 
 $release_files_url = 'https://www.python.org/api/v2/downloads/release_file/'
-$license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
+$old_license_statement = "`nPSF LICENSE AGREEMENT FOR PYTHON"
+$license_statement = "PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2"
 
 if ($MyInvocation.MyCommand -ne '.') {
 function global:au_SearchReplace {
@@ -44,7 +45,9 @@ function SetCopyright {
   # license text for legal/LICENSE.txt
   $license_entry = $zip.GetEntry("$($Latest.ZipName)/license.txt")
   $Latest.License = [System.IO.StreamReader]::new($license_entry.Open()).ReadToEnd()
-  if (!$Latest.License.Contains($license_statement)) {
+  Remove-Item "$PSScriptRoot\legal\LICENSE.txt" -Force
+  [System.IO.File]::WriteAllText("$PSScriptRoot\legal\LICENSE.txt", $Latest.License)
+  if (!$Latest.License.Contains($license_statement) -and !$Latest.License.Contains($old_license_statement)) {
     throw "Python's license may have changed."
   }
 
@@ -54,7 +57,7 @@ function SetCopyright {
   (1..5) | ForEach-Object {$reader.ReadLine()}  # skip header
   $copyright = ''
   $reading_copyright = $false
-  while (($line = $reader.ReadLine()) -ne $null) {
+  while ($null -ne ($line = $reader.ReadLine())) {
     if (!$line) {
       $copyright += "`n"
       $reading_copyright = $false
@@ -131,21 +134,21 @@ function GetStreams() {
     }
   }
 
-  $streams = @{ }
+  $streams = [ordered]@{}
 
-  $latest_versions.GetEnumerator() | ForEach-Object {
+  $latest_versions.GetEnumerator() | Sort-Object { [int]$_.Name } -Descending | ForEach-Object {
     $minor_version = $_.Name
     $latest_version = $_.Value
     $versionTwoPart = "3.$minor_version"
     $version = Get-Version $latest_version
 
     $urls = $all_versions[$latest_version]
-    $zip_name = "python-$latest_version-docs-text"
-    if ($version.Prerelease -eq "" -or $version.Prerelease.StartsWith("rc")) {
-      $zip_url = "https://www.python.org/ftp/python/doc/$latest_version/$zip_name.zip"
+    if ($minor_version -le '11') {
+      $zip_name = "python-$latest_version-docs-text"
     } else {
-      $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
+      $zip_name = "python-$versionTwoPart-docs-text"
     }
+    $zip_url = "https://docs.python.org/$versionTwoPart/archives/$zip_name.zip"
     $license_url = "https://docs.python.org/$versionTwoPart/license.html"
     $streams[$versionTwoPart] = @{
       URL32          = $urls['86']
