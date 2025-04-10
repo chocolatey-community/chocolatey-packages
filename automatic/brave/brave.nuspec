@@ -2,8 +2,8 @@
 <package>
   <metadata>
     <id>brave</id>
-    <version>1.77.97</version>
-    <title>Brave Browser</title>
+    <version>1.78.79-beta</version>
+    <title>Brave Browser (Beta)</title>
     <description><![CDATA[Brave is a free and open-source web browser developed by Brave Software Inc. based on the Chromium web browser. Brave supports Windows, macOS, Linux and Android.
 
 ## Features
@@ -14,11 +14,11 @@
 
 ## Notes
 
-- This is an **official release version** of Brave. It is in continuous development with new releases landing approximately every three weeks.
+- Beta is an early preview for new versions of Brave. This build showcases the newest advances and it's ready for daily use. Brave Beta automatically sends crash reports, but you can turn this off if you'd like.
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <!-- IconUrl: Skip check -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@a23ca306537e2537a574ddc55e9c28dc1151ab30/icons/brave-beta.svg</iconUrl>
     <summary>A browser that lets you browse safer and faster by blocking ads and trackers.</summary>
     <owners>chocolatey-community, Sanshiro</owners>
     <authors>Brave Software Inc.</authors>

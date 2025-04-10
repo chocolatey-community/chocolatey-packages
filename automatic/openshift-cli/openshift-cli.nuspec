@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openshift-cli</id>
-    <version>4.18.6</version>
+    <version>4.18.7</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/openshift-cli</packageSourceUrl>
     <owners>chocolatey-community,Andrei Bejenaru</owners>
     <title>OpenShift Command Line Interface (CLI)</title>
@@ -45,7 +45,7 @@ Origin is the upstream community project that powers OpenShift. Built around a c
 * Windows support is limited to 64bit systems.
 * **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
-    <releaseNotes>https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.18.6</releaseNotes>
+    <releaseNotes>https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.18.7</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
