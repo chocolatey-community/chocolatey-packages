@@ -7,9 +7,8 @@ CMake is an open-source, cross-platform family of tools designed to build, test 
 #### MSI Properties
 
 `ADD_CMAKE_TO_PATH`
-- `None` - Do not add CMake to PATH (default)
-- `System` - Add CMake to system PATH for __all users__
-- `User` - Add CMake to PATH for __the current user__
+- `0` = Do not add CMake to PATH
+- `1` = Add CMake to system PATH for __all users__ (default)
 
 `DESKTOP_SHORTCUT_REQUESTED`
 - `0` = Do not create desktop icon (default)
@@ -23,5 +22,4 @@ For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System'`
 
 ## Notes
 
-- This package [follows the installer default behavior](https://gitlab.kitware.com/cmake/cmake/-/issues/21465) of not adding the `cmake.exe` to the PATH. If you need `cmake.exe` on the path, please see the **MSI Properties** example, above, or install the [`cmake.portable` package](https://community.chocolatey.org/packages/cmake.portable).
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
