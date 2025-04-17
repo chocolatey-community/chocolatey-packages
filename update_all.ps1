@@ -1,6 +1,41 @@
 # AU Packages Template: https://github.com/majkinetor/au-packages-template
+[CmdletBinding()]
+param(
+    # Specific packages to update
+    [ArgumentCompleter({
+        param($CommandName, $ParameterName, $WordToComplete, $CommandAst, $FakeBoundParameters)
+        $Directory = if ($FakeBoundParameters['Root']) {
+            $FakeBoundParameters['Root']
+        } else {
+            "$PSScriptRoot\automatic"
+        }
+        (Get-ChildItem $Directory -Directory).Name.Where{
+            $_ -like "*$WordToComplete*" -and
+            $_ -notin $FakeBoundParameters['Name']
+        }
+    })]
+    [string[]]$Name,
 
-param([string[]] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
+    # Packages to update regardless of the state of the upstream repository
+    [ArgumentCompleter({
+        param($CommandName, $ParameterName, $WordToComplete, $CommandAst, $FakeBoundParameters)
+        $Directory = if ($FakeBoundParameters['Root']) {
+            $FakeBoundParameters['Root']
+        } else {
+            "$PSScriptRoot\automatic"
+        }
+
+        (Get-ChildItem $Directory -Directory).Name.Where{
+            $_ -like "*$WordToComplete*"
+        } | Group-Object {
+            $_ -in $FakeBoundParameters['Name']
+        } | Sort-Object | Select-Object -ExpandProperty Group
+    })]
+    [string]$ForcedPackages,
+
+    # The directory to update packages in
+    [string]$Root = "$PSScriptRoot\automatic"
+)
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) {
     . $PSScriptRoot/update_vars.ps1
