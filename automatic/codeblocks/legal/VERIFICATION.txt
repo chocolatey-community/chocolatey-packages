@@ -5,13 +5,13 @@ in verifying that this package's contents are trustworthy.
 The installer has been downloaded from the sourceforge mirror listed on <https://www.codeblocks.org/downloads/binaries>
 and can be verified like this:
 
-1. Go to <https://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/codeblocks-20.03mingw-setup.exe>
+1. Go to <https://sourceforge.net/projects/codeblocks/files/Binaries/25.03/Windows/codeblocks-25.03mingw-setup.exe>
    to download the installer
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 862479A6D45B8A36FFC09FC4C63CD0850155088E33BD8CAD9075FB6FCB1F43C2
+  checksum: 528364CB5E3F969BF70A789399632323D2E9E65691817DBABF457F27E6A2CD7A
 
 File 'LICENSE.txt' is obtained from <http://svn.code.sf.net/p/codeblocks/code/trunk/>
