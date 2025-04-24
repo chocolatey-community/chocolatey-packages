@@ -20,7 +20,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
     $githubLatestRelease = "https://github.com/kovidgoyal/calibre/releases/latest"
-    $download_page = Invoke-WebRequest -Uri $githubLatestRelease
+    $download_page = Invoke-WebRequest -Uri $githubLatestRelease -UseBasicParsing
 
     $versionHyperlink = $download_page.BaseResponse.ResponseUri
 
