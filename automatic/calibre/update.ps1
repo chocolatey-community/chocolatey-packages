@@ -1,8 +1,6 @@
 ﻿Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://download.calibre-ebook.com/7.html'
-
 function global:au_BeforeUpdate {
   $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
 }
@@ -21,12 +19,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $githubLatestRelease = "https://github.com/kovidgoyal/calibre/releases/latest"
+    $download_page = Invoke-WebRequest -Uri $githubLatestRelease -UseBasicParsing
 
-    $versionHyperlink = $download_page.links | Select-Object -First 1
-    if ($versionHyperlink.Title -notmatch 'Release (7[\d\.]+)' ) { throw "Calibre version 7.x not found on $releases" }
+    $versionHyperlink = $download_page.BaseResponse.ResponseUri
 
-    $version = $versionHyperlink.InnerText
+    $version =  ($versionHyperlink.Segments | Select-Object -Last 1).trim("v")
     $url64   = 'https://download.calibre-ebook.com/<version>/calibre-64bit-<version>.msi'
     $url64   = $url64 -replace '<version>', $version
 
