@@ -22,7 +22,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
    $url64 = Get-RedirectedUrl -url $releases
-   $url32 = $url64 -replace 'x64','win32'
+   $url32 = Get-RedirectedUrl -url $releases.replace('-x64','32')
 
    $version  = $url64 -split '/' | Where-Object {$_ -match '^\d+\.\d[0-9.]*$'} | Select-Object -Last 1
 

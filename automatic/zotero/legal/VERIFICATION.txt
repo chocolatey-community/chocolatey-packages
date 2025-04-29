@@ -16,6 +16,7 @@ Package can be verified like this:
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
+  checksum type: SHA256
   checksum32: 4429D3E4CCFCF9AA3BF44381223E469AD3DE9E635158C39E94A2E80BA93A7C66
   checksum64: 1525119D643DC6766531DCE53BC315967596E309E1D57DC531774C0CE3B06F5B
 
