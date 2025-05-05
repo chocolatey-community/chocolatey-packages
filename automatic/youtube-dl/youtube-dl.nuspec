@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>youtube-dl</id>
-    <version>2025.05.04-nightly</version>
+    <version>2025.05.05-nightly</version>
     <title>youtube-dl</title>
     <owners>chocolatey-community</owners>
     <authors>Ricardo Garcia and others</authors>
