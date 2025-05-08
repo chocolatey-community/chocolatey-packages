@@ -5,16 +5,16 @@ if (Get-Process "Tixati*" -ErrorAction SilentlyContinue) {
 }
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileName = 'tixati-3.34-1.install.exe'
+$fileName = 'tixati-3.35-1.install.exe'
 $dlDir = "$Env:TEMP\chocolatey\$($Env:ChocolateyPackageName)\$($Env:ChocolateyPackageVersion)"
 
 $packageArgs = @{
   packageName    = $Env:ChocolateyPackageName
   fileFullPath   = Join-path $dlDir $fileName
-  url            = 'https://download.tixati.com/tixati-3.34-1.win32-install.exe'
-  url64bit       = 'https://download.tixati.com/tixati-3.34-1.win64-install.exe'
-  checksum       = '59ece2f99a7f53934fdd5784eccecb0edcb3fae8e34591eb2d01c4906fa352b8'
-  checksum64     = '7a1155ad5e9fae7b62f70957d746045a13edfe7bd52548e68e6739d11b7ee33c'
+  url            = 'https://download.tixati.com/tixati-3.35-1.win32-install.exe'
+  url64bit       = 'https://download.tixati.com/tixati-3.35-1.win64-install.exe'
+  checksum       = 'ec63ce139a797749085af1c2b11e3d5143980bfd4cc8ea4af64ef70584dffb12'
+  checksum64     = 'e6eaacd5bea33044c8f72a1be927f5ca6704f445b8d370da824d8e68c15a755f'
   checksumType   = 'sha256'
 }
 
