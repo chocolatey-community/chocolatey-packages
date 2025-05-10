@@ -90,11 +90,21 @@ function SearchAndReplace() {
     }
   }
 
-  if ($Latest.ReleaseNotes) {
+  if ($Data.ReleaseNotes) {
+    $nuspecReplacements = @{
+      "(?i)(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Data.ReleaseNotes)`${2}"
+    }
+  }
+
+  if ($Data.PackageTitle) {
+    $nuspecReplacements += @{
+      "(?i)(\<title\>).*(\<\/title\>)" = "`${1}$($Data.PackageTitle)`${2}"
+    }
+  }
+  
+  if (($Data.ReleaseNotes) -or ($Data.PackageTitle)) {
     $result += @{
-      "$PackageDirectory\*.nuspec" = @{
-        "(?i)(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`${2}"
-      }
+      "$PackageDirectory\*.nuspec" = $nuspecReplacements
     }
   }
 
