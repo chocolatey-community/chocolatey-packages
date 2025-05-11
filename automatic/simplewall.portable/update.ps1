@@ -2,7 +2,7 @@
 
 function global:au_BeforeUpdate {
     $Latest.URL32 = $Latest.URL32_p
-    $Latest.FileType = 'zip'
+    $Latest.FileType = '7z'
     Copy-Item $PSScriptRoot\..\simplewall\README.md $PSScriptRoot\README.md
     Get-RemoteFiles -Purge -NoSuffix
 }
