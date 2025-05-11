@@ -1,63 +1,79 @@
-#SingleInstance, force
-SetTitleMatchMode, RegEx
+﻿#Requires AutoHotkey >=2.0
+#SingleInstance force
+SetTitleMatchMode("RegEx")
 
-WinWait, Nmap Setup
-Sleep, 100
-ControlSend,, {Enter}
-Sleep, 100
-ControlSend,, {Enter}
-Sleep, 100
-ControlSend,, !i
+WinWait("Nmap Setup")
+Sleep(100)
+ControlSend("{Enter}")
 
-loop {
-    IfWinExist, Npcap [0-9.]+ Setup, already installed
+Loop{
+    if WinExist("Npcap [0-9.]+ Setup", "already installed")
     {
-        Sleep, 100
-        ControlSend,, {Enter}
+        Sleep(100)
+        ControlSend("{Enter}")
     }
 
-    IfWinExist, Npcap [0-9.]+ Setup, License Agreement
+    if WinExist("Npcap [0-9.]+ Setup", "License Agreement")
     {
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
-        ControlSend,, {Enter}
+        Sleep(100)
+        ControlSend("{Enter}")
+        Sleep(200)
+        ControlSend("{Enter}")
+        Sleep(200)
+        ControlSend("{Enter}")
     }
 
-    IfWinExist, Npcap [0-9.]+ Setup, Installation Complete
+    if WinExist("Npcap [0-9.]+ Setup", "Installation Complete")
     {
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
-        ControlSend,, {Enter}
+        Sleep(100)
+        ControlSend("{Enter}")
+        Sleep(100)
+        ControlSend("{Enter}")
+    }
+    
+    if WinExist("Nmap Setup", "License Agreement")
+    {
+        ControlSend("{Enter}")
+    }
+    
+    if WinExist("Nmap Setup", "Choose Install Location")
+    {
+        ControlSend("{Enter}")
     }
 
-    IfWinExist, Nmap Setup, Installation Complete
+    if WinExist("Nmap Setup", "Choose Components")
     {
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
-        ControlSend,, {Enter}
+        ControlSend("{Enter}")
+    }
 
-        IfWinNotExist, Nmap Setup
+    if WinExist("Nmap Setup", "Installation Complete")
+    {
+        Sleep(100)
+        ControlSend("{Enter}")
+        Sleep(100)
+        ControlSend("{Enter}")
+        Sleep(100)
+        ControlSend("{Enter}")
+        Sleep(100)
+        if !WinExist("Nmap Setup")
+        {
+          break
+        }
+        ControlSend("{Enter}")
+
+        if !WinExist("Nmap Setup")
         {
           break
         }
     }
 
-    IfWinExist, Nmap Setup, Finished
+    if WinExist("Nmap Setup", "Finished")
     {
-        Sleep, 100
-        ControlSend,, {Enter}
-        Sleep, 100
+        Sleep(100)
+        ControlSend("{Enter}")
+        Sleep(100)
 
-        IfWinNotExist, Nmap Setup
+        if !WinExist("Nmap Setup")
         {
           break
         }
@@ -69,5 +85,5 @@ loop {
     ;     ControlSend,, {Enter}
     ; }
 
-    Sleep 1000
+    Sleep(1000)
 }
