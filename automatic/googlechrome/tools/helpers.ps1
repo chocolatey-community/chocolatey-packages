@@ -1,4 +1,7 @@
 ﻿function Get-Chrome32bitInstalled {
+  param(
+    [string]$softwareName
+  )
   $registryPath = 'HKLM:\SOFTWARE\WOW6432Node\Google\Update\ClientState\*'
   # We also return nothing if the user forces 32bit installation
   # as we don't need to make any checks in that case.
@@ -11,19 +14,22 @@
     return $32bitInstalled
   }
 
-  $installLocation = Get-UninstallRegistryKey 'Google Chrome' | ForEach-Object { $_.InstallSource }
+  $installLocation = Get-UninstallRegistryKey $softwareName | ForEach-Object { $_.InstallSource }
   if ($installLocation) {
     return Test-Path "$installLocation\nacl_irt_x86_32.nexe"
   } else {
-    Write-Warning "Unable to find the architecture of the installed Google Chrome application"
+    Write-Warning "Unable to find the architecture of the installed $softwareName application"
   }
 }
 
 function Get-ChromeVersion() {
+  param(
+    [string]$softwareName
+  )
   $root   = 'HKLM:\SOFTWARE\Google\Update\Clients'
   $root64 = 'HKLM:\SOFTWARE\Wow6432Node\Google\Update\Clients'
   foreach ($r in $root,$root64) {
-    $gcb = Get-ChildItem $r -ea 0 | Where-Object { (Get-ItemProperty $_.PSPath).name -eq 'Google Chrome' }
+    $gcb = Get-ChildItem $r -ea 0 | Where-Object { (Get-ItemProperty $_.PSPath).name -eq $softwareName }
     if ($gcb) { return $gcb.GetValue('pv') }
   }
 }
