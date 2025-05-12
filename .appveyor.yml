@@ -1,10 +1,6 @@
-# AU template: https://github.com/majkinetor/au-packages-template
-
 version: '{build}'
-pull_requests:
-  do_not_increment_build_number: true
 max_jobs: 1
-image: Visual Studio 2017
+image: Visual Studio 2022
 # History plugin requires complete log
 #clone_depth: 5
 branches:
@@ -15,15 +11,16 @@ branches:
 
 environment:
   # Set au version to use or omit to use the latest. Specify branch name to use development version from Github
-  au_version: master
+  au_version: 1.0.0
   au_push: true
-  # Use 1 to test all, or N to split testing into N groups
+  # Force test: use 1 to test all, or N to split testing into N groups
   au_test_groups: 4
 
   # Github token to commit pushed packages to repository
   github_user_repo: chocolatey-community/chocolatey-packages
   github_api_key:
     secure: kp3pFdeqA90uVX4Yy2F5obA/O+P1428LrtCiuYZQYUMkSYi6yWTdmv35tOoce1k8
+
 
   # Mail credentials - for error notifications
   mail_user: gep13choco@gmail.com
@@ -33,24 +30,25 @@ environment:
   mail_port: 587
   mail_enablessl: true
 
-  #ID of the gist used to save run results
+  # ID of the gist used to save run results - create a gist under the github_user (secret or not) and grab the id - https://gist.github.com/name/id
+  # Optional, leave empty to create anonymous gist
   gist_id: a14b1e5bfaf70839b338eb1ab7f8226f
 
-  #ID of the gist used to save test run results
+  # Force test: gist id for test results
   gist_id_test: ee51b7006326809d2188cfb47a0ddf87
 
-  #Chocolatey API key - to push updated packages
+  # Chocolatey API key - to push updated packages
   api_key:
     secure: zPuYvdxGda6DUGRCwTJL5FQCWF3U+1bSLE2mEr+VfpfV08NXlXX2uFLizkhQuJYW
 
   #Chocolatey version we want to use when checking for updates (usually latest).
   choco_version: '2.4.3'
-  choco_version_pr: '2.2.2' # Should be kept at the minimum version supported that is listed on <https://github.com/chocolatey-community/chocolatey-packages/wiki/Supported-Chocolatey-CLI-versions>
+  choco_version_pr: '2.2.2'
   nupkg_cache_path: C:\packages
 
 init:
 - git config --global user.email "chocolatey@realdimensions.net"
-- git config --global user.name "Chocolatey Community"
+- git config --global user.name "Chocolatey-AU"
 - git config --global core.safecrlf false
 
 install:
@@ -59,6 +57,7 @@ install:
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
     @{
       'chocolatey' = $chocoVersion
+# Uncomment and input the version if you are using any of these in AU scripts
       'wormies-au-helpers' = '0.4.1'
       'chocolatey-core.extension' = '1.4.0'
       'chocolatey-community-validation.extension' = '0.2.0'
@@ -73,13 +72,14 @@ install:
 - git --version
 - choco --version
 - ps: |
-    git clone -q https://github.com/chocolatey-community/chocolatey-au.git $Env:TEMP/au
-    . "$Env:TEMP/au/scripts/Install-AU.ps1" $Env:au_version
+    choco install chocolatey-au --version $Env:au_version -y
+
 - ps: |
     "Build info"
     '  {0,-20} {1}' -f 'SCHEDULED BUILD:', ($Env:APPVEYOR_SCHEDULED_BUILD -eq 'true')
     '  {0,-20} {1}' -f 'FORCED BUILD:'   , ($Env:APPVEYOR_FORCED_BUILD    -eq 'true')
     '  {0,-20} {1}' -f 'RE BUILD:'       , ($Env:APPVEYOR_RE_BUILD        -eq 'true')
+
 build_script:
 - ps: |
     $ErrorActionPreference = 'Continue'
@@ -96,22 +96,27 @@ build_script:
       # Clean the choco logs as it's quite large
       rm "$env:ChocolateyInstall\logs\*.log"
     }
+
     if ( ($Env:APPVEYOR_SCHEDULED_BUILD -ne 'true') -and ($Env:APPVEYOR_FORCED_BUILD -ne 'true') ) {
         switch -regex ($Env:APPVEYOR_REPO_COMMIT_MESSAGE)
         {
             '\[AU (.+?)\]'   { $forced = $Matches[1] }
+
             '\[PUSH (.+?)\]' {
                 $packages = $Matches[1] -split ' '
                 Write-Host "PUSHING PACKAGES: $packages"
                 foreach ($package in $packages) {
                     Write-Host ("{0}`n{1}`n" -f ('-'*60), "PACKAGE: $package")
                     $package_dir = ls -recurse | ? { $_.Name -eq "$package.nuspec"} | select -First 1 | % Directory
-
                     if (!$package_dir) { Write-Warning "Can't find package '$package'"; continue }
-                    pushd $package_dir
+                    try {
+                      pushd $package_dir
                       if (Test-Path update.ps1 -ea 0) { ./update.ps1 }
-                      choco pack; Push-Package -All;
-                    popd
+                      choco pack
+                      Push-Package -All
+                    } finally {
+                      popd
+                    }
                 }
                 return
             }
@@ -141,8 +146,6 @@ notifications:
   on_build_success: false
   on_build_failure: true
   on_build_status_changed: true
-- provider: GitHubPullRequest
-  template: "{{#passed}}:white_check_mark: Package verification completed without issues. PR is now pending human review{{/passed}}{{#failed}}:x: Package verification failed, please review the [Appveyor Logs]({{buildUrl}}) and the provided [Artifacts]({{buildUrl}}/artifacts) before requesting a human reviewer to take a look.{{/failed}}"
 
 cache:
   - '%nupkg_cache_path% -> .appveyor.yml'
