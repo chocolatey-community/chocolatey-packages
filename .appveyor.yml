@@ -57,7 +57,7 @@ install:
     if (!(Test-Path "$env:nupkg_cache_path")) { mkdir -Force "$env:nupkg_cache_path" }
     @{
       'chocolatey' = $chocoVersion
-# Uncomment and input the version if you are using any of these in AU scripts
+      # Uncomment and input the version if you are using any of these in AU scripts
       'wormies-au-helpers' = '0.4.1'
       'chocolatey-core.extension' = '1.4.0'
       'chocolatey-community-validation.extension' = '0.2.0'
