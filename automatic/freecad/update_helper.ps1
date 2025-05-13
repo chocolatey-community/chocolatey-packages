@@ -46,7 +46,7 @@ param(
       $download_page =  (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
       $mobile = "Windows"
       $ext = "exe"
-      $re64 = $re64 = "(FreeCAD_)?((\d+)?(\.))+?(\d)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(installer)?(\-|.)?(\d+)?(\.${ext})$"
+      $re64 = "(FreeCAD_)?((\d+)?(\.))+?(\d)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(installer)?(\-|.)?(\d+)?(\.${ext})$"
 #      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
       $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
       $vert = "$version"
