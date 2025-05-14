@@ -32,9 +32,9 @@ param(
     }
     'portable' {
       $download_page = (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
-      $mobile = "portable"
+      $mobile = "Windows"
       $ext = "7z"
-      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(Windows)(\-)?(x\d{2})(\-|.)?(\d+)?(\.${ext})$"
+      $re64 = "(FreeCAD_)?((\d+)?(\.))+?(\d)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2,5})?(\.${ext})$"
 #      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
       $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
       $vert = "$version"
@@ -44,9 +44,9 @@ param(
     }
     'stable' {
       $download_page =  (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
-      $mobile = "installer"
+      $mobile = "Windows"
       $ext = "exe"
-      $re64 = "(FreeCAD\-)((\d+)?(\.))+?(\d)?(\-)(WIN)(\-)?(x\d{2})\-(${mobile})(\-|.)?(\d+)?(\.${ext})$"
+      $re64 = "(FreeCAD_)?((\d+)?(\.))+?(\d)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(installer)?(\-|.)?(\d+)?(\.${ext})$"
 #      $url64 = ( $download_page.Links | ? href -match $re64 | Sort-Object -Property 'href' -Descending | Select-Object -First 1 -ExpandProperty 'href' )
       $url64 = ( $download_page | Where-Object Name -match $re64 | Select-Object -First 1 -ExpandProperty 'browser_download_url' )
       $vert = "$version"
