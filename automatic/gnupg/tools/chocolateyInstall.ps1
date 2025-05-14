@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName    = $Env:ChocolateyPackageName
   fileType       = 'EXE'
   softwareName   = 'GNU Privacy Guard*'
-  file           = "$toolsDir\gnupg-w32-2.4.7_20241125.exe"
+  file           = "$toolsDir\gnupg-w32-2.4.8_20250514.exe"
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
