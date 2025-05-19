@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$fallbackUrl32 = 'https://download.gimp.org/gimp/v3.0/windows/gimp-3.0.2-setup-1.exe'
+$fallbackUrl32 = 'https://download.gimp.org/gimp/v3.0/windows/gimp-3.0.4-setup.exe'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  url            = 'https://download.gimp.org/gimp/v3.0/windows/gimp-3.0.2-setup-1.exe'
+  url            = 'https://download.gimp.org/gimp/v3.0/windows/gimp-3.0.4-setup.exe'
   softwareName   = 'GIMP'
-  checksum       = '0bbddfce63ff99ef3bcc4d8af9f4c6793af9902470722c018476f04c713e440b'
+  checksum       = '385e36fe577cbdbfc71ba79d6c046d6f4eaabc01effd7f067bf15fd98410b2a1'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /RESTARTEXITCODE=3010 /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
