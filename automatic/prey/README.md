@@ -5,5 +5,5 @@ Prey lets you keep track of your laptop, phone and tablet whenever stolen or mis
 
 ## Notes
 
-- To pass your `API_KEY` you can use `choco install prey -y -ia "'/API_KEY=foobarr123'`
+- To pass your `API_KEY` you can use `choco install prey -y -ia "'API_KEY=foobar123'"`
 - You may need to run `C:\Windows\Prey\current\bin\prey config gui -f` after installation to configure Prey.
