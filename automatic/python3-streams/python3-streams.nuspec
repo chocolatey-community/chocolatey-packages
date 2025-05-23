@@ -36,7 +36,7 @@ Example: `choco install python314 --params "/InstallDir:C:\your\install\path"`
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3-streams</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
-      <dependency id="vcredist140" version="14.0.24215.20170201" />
+      <dependency id="vcredist2015" version="14.0.24215.20170201" />
     </dependencies>
   </metadata>
   <files>
