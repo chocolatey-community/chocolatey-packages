@@ -135,6 +135,7 @@ Additionally, if a user is assigned to an issue, it will not be automatically ma
 Pull requests fixing a bug or an outdated package do not need to have an associated issue.
 
 **Do not open a pull request when there is already an open pull request for the same issue or bug, as this will lead to your pull request being closed.**
+**Do create a branch for your pull request and not open it from the master branch, as we cannot accept pull requests from the master branch.**
 
 When opening a new pull request, you are required to input all the information requested by the pull request template used.
 An existing issue marked by a maintainer with `up for grabs` or `0 - Backlog` must exist before opening a pull request for new features, enhancements, or migrating a package.
@@ -144,7 +145,7 @@ However, suppose you open a pull request without an associated issue. In that ca
 Your changes should only affect a single package unless the package(s) in question consists of a meta, `.install` and `.portable` package. In this case, you can submit all three packages in the same pull request.
 There may also be other exceptions, but these will be on a case-by-case basis only when approved by a repository maintainer.
 
-Read the [Code Conventions](#code-conventions) before opening the pull request.
+Read the [Code Conventions](#conventions--guidelines) before opening the pull request.
 
 ### Pull Request Title
 

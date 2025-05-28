@@ -1,4 +1,28 @@
-﻿function LoadXml([string]$Path) {
+﻿function Get-LatestOPW {
+  param (
+    [Parameter(Mandatory)]
+    [string]$url
+
+  )
+
+  $url32 = Get-RedirectedUrl $url
+  $verRe = 'Setup-|word-|\.exe$'
+  $version = $url32 -split $verRe | Select-Object -last 1 -skip 1
+  $version = $version -replace ('\.BETA', ' beta')
+  $version = Get-Version $version
+  $major = $version.ToString(1)
+
+  $result = @{
+    URL32         = $url32
+    Version       = $version
+    VersionMajor  = $major
+    RemoteVersion = $version
+  }
+
+  $result
+}
+
+function LoadXml([string]$Path) {
   $Path = Resolve-Path $Path
   $nu = New-Object xml
   $nu.PSBase.PreserveWhitespace = $true

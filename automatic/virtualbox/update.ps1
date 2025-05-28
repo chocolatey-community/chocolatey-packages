@@ -11,9 +11,20 @@ function GetLatest {
   $url      = $download_page.links | Where-Object href -match '\.exe$' | Select-Object -first 1 -expand href
   $version  = $url -split '/' | Select-Object -Last 1 -Skip 1
   $base_url = $url -replace '[^/]+$'
+  
+  $majorVersion = $version.split("\.") | Select-Object -First 1
+  $minorVersion = $version.split("\.") | Select-Object -First 1 -Skip 1
+  if ([int]$majorVersion -gt 7) {
+      $URLep = "${base_url}Oracle_VirtualBox_Extension_Pack-${version}.vbox-extpack"
+  } elseif (([int]$majorVersion -eq 7) -and ([int]$minorVersion -ge 1)) {
+      $URLep = "${base_url}Oracle_VirtualBox_Extension_Pack-${version}.vbox-extpack"
+  } else {
+      $URLep = "${base_url}Oracle_VM_VirtualBox_Extension_Pack-${version}.vbox-extpack"
+  }
+  
   @{
     URL32         = $url
-    URLep         = "${base_url}Oracle_VM_VirtualBox_Extension_Pack-${version}.vbox-extpack"
+    URLep         = $URLep
     Version       = $version
   }
 }

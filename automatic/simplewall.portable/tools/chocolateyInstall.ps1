@@ -2,10 +2,10 @@
 
 $packageArgs = @{
   packageName = $env:ChocolateyPackageName
-  file        = "$toolsDir\simplewall-3.8.4-bin.zip"
+  file        = "$toolsDir\simplewall-3.8.6.1-bin.7z"
   destination = $toolsDir
 }
 
 Get-ChocolateyUnzip @packageArgs
 
-Remove-Item $toolsDir\*.zip -ea 0
+Remove-Item $toolsDir\*.7z -ea 0

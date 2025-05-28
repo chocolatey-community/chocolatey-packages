@@ -21,8 +21,8 @@ $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\npp.8.7.Installer.exe"
-  file64         = "$toolsPath\npp.8.7.Installer.x64.exe"
+  file           = "$toolsPath\npp.8.8.1.Installer.exe"
+  file64         = "$toolsPath\npp.8.8.1.Installer.x64.exe"
   softwareName   = 'Notepad\+\+*'
   silentArgs     = '/S'
   validExitCodes = @(0)
@@ -39,6 +39,5 @@ Write-Host "$packageName installed to '$installLocation'"
 Install-BinFile -Path "$installLocation\notepad++.exe" -Name 'notepad++'
 
 if ($programRunning -and (Test-Path $programRunning)) {
-  Write-Host "Running stopped program"
-  Start-Process $programRunning
+  Write-Host "Please reopen Notepad++ to continue using."
 }

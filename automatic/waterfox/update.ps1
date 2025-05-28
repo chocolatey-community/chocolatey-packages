@@ -90,7 +90,7 @@ function Get-Waterfox {
             throw "Couldn't find or divine the URL for Waterfox $TagVersion from the GitHub release ('$($LatestRelease.html_url)')"
           }
         }
-        Version = $TagVersion.Replace('G', (Get-Date).ToString('yyMM'))
+        Version = (Get-Date).ToString('yyMM') + $TagVersion
         SourceUrl = "https://github.com/WaterfoxCo/Waterfox"
         ProjectUrl = "https://www.waterfox.net/"
       }

@@ -1,12 +1,10 @@
-﻿Import-Module Chocolatey-AU
+Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
 $domain = 'https://inkscape.org'
 
 function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
-
-  Remove-Item "tools/$($Latest.FileName32)" # Embedding 32bit will make the package too large
 }
 
 function global:au_SearchReplace {
@@ -18,9 +16,6 @@ function global:au_SearchReplace {
       "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*url\s*=\s*)'.*'"                  = "`${1}'$($Latest.URL32)'"
-      "(?i)(^\s*checksum\s*=\s*)('.*')"           = "`$1'$($Latest.Checksum32)'"
-      "(?i)(^\s*checksumType\s*=\s*)'.*'"         = "`${1}'$($Latest.ChecksumType32)'"
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
       "(?i)(DisplayVersion\s*-eq\s*)'.*'"         = "`${1}'$($Latest.RemoteVersion)'"
     }
@@ -31,21 +26,23 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $redirUrl = Get-RedirectedUrl "$domain/en/release/"
+  $redirUrl = Get-RedirectedUrl "$domain/release/"
 
   $version = $redirUrl -split '\/(inkscape-)?' | Select-Object -last 1 -skip 1
 
-  $32bit_page = Invoke-WebRequest "$redirUrl/windows/32-bit/msi/dl/" -UseBasicParsing
-  $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing
+  try {
+    $64bit_page = Invoke-WebRequest "$redirUrl/windows/64-bit/msi/dl/" -UseBasicParsing
+  }
+  catch {
+    throw "Failed to download 32bit or 64bit executeble. Throwing minimized error to allow gist to be updated."
+  }
 
   $re = '\.msi$'
-  $url32 = $32bit_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { $domain + $_ }
   $url64 = $64bit_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { $domain + $_ }
 
   @{
     Version       = $version
     RemoteVersion = $version
-    URL32         = $url32
     URL64         = $url64
     ReleaseNotes  = $redirUrl + "#left-column"
     UpdateUrl     = $redirUrl + "windows"

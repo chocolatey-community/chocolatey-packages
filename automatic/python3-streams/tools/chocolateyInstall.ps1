@@ -37,7 +37,7 @@ if ($installLocation -ne $installDir) {
 }
 else { Write-Host "Python installed to: '$installDir'" }
 
-if (($Env:PYTHONHOME -ne $null) -and ($Env:PYTHONHOME -ne $InstallDir)) {
+if (($null -ne $Env:PYTHONHOME) -and ($Env:PYTHONHOME -ne $InstallDir)) {
   Write-Warning "Environment variable PYTHONHOME points to different version: $Env:PYTHONHOME"
 }
 
@@ -48,6 +48,5 @@ if ($pp.NoLockdown) {
   Protect-InstallFolder `
     -packageName $env:ChocolateyPackageName `
     -defaultInstallPath $defaultFolder `
-    -folder $installLocation  
+    -folder $installLocation
 }
-

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>OptiPNG</id>
-    <version>0.7.8</version>
+    <version>7.9.1</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/optipng</packageSourceUrl>
     <title>OptiPNG: Advanced PNG Optimizer</title>
     <authors>Cosmin Truta</authors>

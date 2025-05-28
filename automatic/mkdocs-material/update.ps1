@@ -1,6 +1,6 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://pypi.python.org/pypi/mkdocs-material'
+$releases = 'https://pypi.org/rss/project/mkdocs-material/releases.xml'
 
 function global:au_SearchReplace {
   @{
@@ -14,11 +14,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+    $download_page = Invoke-RestMethod -UseBasicParsing -Uri $releases -Method Get
 
-    $re = 'mkdocs\-material\/[\d\.]+\/$'
-    $url = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
-    $version = $url -split '\/' | Select-Object -last 1 -skip 1
+    $version = $download_page | Select-Object -First 1 -ExpandProperty title
 
     $download_page = Invoke-WebRequest -UseBasicParsing -Uri "https://github.com/squidfunk/mkdocs-material/raw/${version}/requirements.txt"
     if ($download_page.content -match "mkdocs>=(\d+\.[\d\.]+)") {

@@ -4,7 +4,7 @@
   <metadata>
     <id>calibre</id>
     <title>Calibre</title>
-    <version>7.17.0</version>
+    <version>8.4.0</version>
     <authors>Kovid Goyal</authors>
     <owners>chocolatey-community, gep13</owners>
     <summary>calibre is the one stop solution to all your e-book needs.</summary>
@@ -41,7 +41,6 @@
     <bugTrackerUrl>https://bugs.launchpad.net/calibre</bugTrackerUrl>
   </metadata>
   <files>
-    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>
