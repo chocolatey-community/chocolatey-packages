@@ -6,14 +6,14 @@ The zip file have been downloaded from the github release page on <https://githu
 and can be verified like this:
 
 1. Download the following:
-  32-bit zip file: <https://github.com/protocolbuffers/protobuf/releases/download/v31.0/protoc-31.0-win32.zip>
-  64-bit zip file: <https://github.com/protocolbuffers/protobuf/releases/download/v31.0/protoc-31.0-win64.zip>
+  32-bit zip file: <https://github.com/protocolbuffers/protobuf/releases/download/v31.1/protoc-31.1-win32.zip>
+  64-bit zip file: <https://github.com/protocolbuffers/protobuf/releases/download/v31.1/protoc-31.1-win64.zip>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: EC49AE24DB4DAA94C40E5AFCC047D309A61EE15F95451AD8E5C7A13FD3FDB9B7
-  checksum64: D7EDEE5D0D5D6786C92E77A4F511E4698A5AA922C6390B6D08C3A79935A651B0
+  checksum32: 74C4E34A41C654934A1F4C7D5E3F831A7B216D867717CDF730F82E1E10C1D0E2
+  checksum64: 70381B116AB0D71CB6A5177D9B17C7C13415866603A0FD40D513DAFE32D56C35
 
 File 'LICENSE' is obtained from <https://github.com/protocolbuffers/protobuf/blob/master/LICENSE>
