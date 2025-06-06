@@ -14,6 +14,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum64: 24FA8A59269115FED29201DA2F0660C6C796B70F47198B62878070DFBE6BA834
+  checksum64: B74D710B4A6F08D0913F1925B56AFBB2AF204C59575DD383EE3389450EDEE650
 
 The file 'LICENSE.txt' has been obtained from <http://www.videosoftdev.com/terms-and-conditions>
