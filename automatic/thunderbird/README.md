@@ -26,9 +26,10 @@ Command-line options for installer configuration. See the [official page](https:
 `choco install thunderbird --params "/NoStop"`
 
 ## Notes
-
+- Looking for Thunderbird Extended Support Release? Install the [thunderbirdesr](/packages/thunderbirdesr) package.
 - If locale package parameter is not present, this package installs Thunderbird in the first language which matches this list:
   1. If Thunderbird is already installed: the same language as the already installed Thunderbird.
   1. The Windows system language where the Thunderbird package gets installed.
   1. Language Culture code specified on Mozilla website (only when `/UseMozillaFallback` is specified).
   1. If Thunderbird does not support the system language, it will fallback to `en-US`.
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
