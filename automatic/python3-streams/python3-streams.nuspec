@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python313</id>
-    <version>3.13.4</version>
+    <version>3.13.5</version>
     <title>Python 3.13</title>
     <owners>chocolatey-community,jack1142</owners>
     <authors>Python Software Foundation</authors>

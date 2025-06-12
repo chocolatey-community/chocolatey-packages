@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>python3</id>
-    <version>3.13.4</version>
+    <version>3.13.5</version>
     <title>Python 3.x</title>
     <owners>chocolatey-community</owners>
     <authors>Python Software Foundation</authors>
@@ -29,7 +29,7 @@ Copyright © 1991-1995 Stichting Mathematisch Centrum. All rights reserved.</cop
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/python3</packageSourceUrl>
     <projectSourceUrl>https://www.python.org/downloads/source</projectSourceUrl>
     <dependencies>
-      <dependency id="python313" version="[3.13.4]" />
+      <dependency id="python313" version="[3.13.5]" />
     </dependencies>
   </metadata>
   <files></files>
