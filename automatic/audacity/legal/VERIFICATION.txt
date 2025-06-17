@@ -8,8 +8,8 @@ Package can be verified like this:
 1. Go to <https://www.audacityteam.org/download/windows/>
 
   And download the following:
-   x32: https://github.com/audacity/audacity/releases/download/Audacity-3.7.3/audacity-win-3.7.3-32bit.exe
-   x64: https://github.com/audacity/audacity/releases/download/Audacity-3.7.3/audacity-win-3.7.3-64bit.exe
+   x32: https://github.com/audacity/audacity/releases/download/Audacity-3.7.4/audacity-win-3.7.4-32bit.exe
+   x64: https://github.com/audacity/audacity/releases/download/Audacity-3.7.4/audacity-win-3.7.4-64bit.exe
 
    to acquire the installers.
 
@@ -17,8 +17,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: D0BC10FB9689E6954F5BB9D6006C7F1AF37627ED215AAB8ED294820A36E00A01
-   checksum64: 82ABDA13CA234B9C11361501A4CB2191A2C10CB28C181E42952B3FF0D8F6D41A
+   checksum32: 9A7D9246FBCD99B17C32DB0F7F12A6687518C9904EE809CFFF1B4499CB0BE0CD
+   checksum64: B3F16F4BA9C25ABFB08D7A93CFCDC7086CF784B20E014BA4EBE68C38F1394F5C
 
 File 'LICENSE.txt' obtained from:
    https://www.audacityteam.org/about/license/#license
