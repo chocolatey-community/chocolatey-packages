@@ -38,14 +38,14 @@ Before providing a fixed package version, you need to determine the existing ver
 
 A standard fix version creation is intended for packages that do not use streams and does not use a 4-part version number - usually determined by whether there is no JSON file available in the package directory and the package metadata file uses a 2 or 3-part version number.
 
-To request a fixed version, create an empty commit with the message `[AU packageName]`. This can be done by using the following command line call: `git commit --allow-empty-commit -m "[AU packageName]"` (replace packageName with the actual name of the package). Ensure you don't make any changes, as this can prevent your ability to push the commit.
+To request a fixed version, create an empty commit with the message `[AU packageName]`. This can be done by using the following command line call: `git commit --allow-empty -m "[AU packageName]"` (replace packageName with the actual name of the package). Ensure you don't make any changes, as this can prevent your ability to push the commit.
 
 ### Request A Standard Fix Version Creation For A Stream
 
 To request a standard fixed version for a stream, you need to figure out the name of the stream you want to force the fixed version of. All packages that support streams are expected to have a JSON file next to their metadata file that contains a list of the different streams and the last version found for that stream. Find the stream in this file, and make sure that the stream uses a 2 or 3-part version number.
 Commonly, the highest version is located in the stream name `latest` (however, not always). It is also not guaranteed that all streams listed in the file are available.
 
-To request a fixed version, in this case, you create an empty commit with the message `[AU packageName\streamName]`. This can be done by using the following command line call: `git commit --allow-empty-commit -m "[AU packageName\streamName]` (replace packageName with the actual name of the package, and streamName with the name of the stream). Ensure you don't make any changes, as this can prevent your ability to push the commit.
+To request a fixed version, in this case, you create an empty commit with the message `[AU packageName\streamName]`. This can be done by using the following command line call: `git commit --allow-empty -m "[AU packageName\streamName]` (replace packageName with the actual name of the package, and streamName with the name of the stream). Ensure you don't make any changes, as this can prevent your ability to push the commit.
 
 #### Request A Fixed Version Update
 
