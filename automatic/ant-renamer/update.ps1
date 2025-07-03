@@ -27,6 +27,11 @@ function global:au_GetLatest {
       $url = "$(([uri]$releases).Scheme)://$($url.TrimStart('https://'))"
     }
 
+    # SourceForge handles the linked /download page differently, so strip it.
+    if ($url.EndsWith("/download")) {
+      $url = $url -replace "/download$"
+    }
+
     $version  = [regex]::Match($download_page.Content, "Version\s+([0-9\.]+)").Groups[1].Value;
 
     return @{ URL32 = $url; Version = $version }
