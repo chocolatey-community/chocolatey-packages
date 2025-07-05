@@ -4,7 +4,7 @@
   <metadata>
     <id>7zip</id>
     <title>7-Zip</title>
-    <version>24.9</version>
+    <version>25.0</version>
     <authors>Igor Pavlov</authors>
     <owners>chocolatey-community,Rob Reynolds</owners>
     <summary>7-Zip is a file archiver with a high compression ratio.</summary>
@@ -39,7 +39,7 @@
     <bugTrackerUrl>https://sourceforge.net/p/sevenzip/_list/tickets?source=navbar</bugTrackerUrl>
     <releaseNotes>http://www.7-zip.org/history.txt</releaseNotes>
     <dependencies>
-      <dependency id="7zip.install" version="[24.9]" />
+      <dependency id="7zip.install" version="[25.0]" />
     </dependencies>
   </metadata>
   <files>
