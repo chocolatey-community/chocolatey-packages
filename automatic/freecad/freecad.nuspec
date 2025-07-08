@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>freecad</id>
-    <version>42474.2025.7.4-dev</version>
+    <version>42523.2025.7.7-dev</version>
     <title>FreeCAD</title>
     <owners>chocolatey-community,purity</owners>
     <authors>Jürgen Riegel</authors>
