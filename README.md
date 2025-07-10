@@ -20,6 +20,7 @@
 - [Description](#description)
 - [Etiquette Regarding Communication](#etiquette-regarding-communication)
 - [Where This Fits into Chocolatey](#where-this-fits-into-chocolatey)
+- [Help or Questions?](#help-or-questions)
 
 </details>
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -44,3 +45,12 @@ When requesting assistance, try to remember that we are all volunteers that have
 This repository is maintained by a group of volunteers. There may be some overlap with members of the Chocolatey Team.
 
 **Disclaimer**: This repository may contain packages that may not be officially sanctioned by Chocolatey, and that is okay. Typically if there is a legal issue, then a member of the Chocolatey Team will step in. If you want to speak directly to the Chocolatey Team and don't feel comfortable reaching out here, please use the [contact form at https://chocolatey.org/contact](https://chocolatey.org/contact) and select "Website".
+
+### Help or Questions?
+
+If you need help on how to get started in helping out in the repository, or have questions on packages maintained in the repository, there are several ways you can help yourself.
+
+- Have a question? Ask it in the [#community-maintainers channel on our Community Hub](https://ch0.co/community), or [raise a discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions).
+- Have problems with a package, or the package is outdated? [Raise an issue](https://github.com/chocolatey-community/chocolatey-packages/issues).
+
+Note that Disqus comments on package pages will generally not be responded to by the Community Team.
