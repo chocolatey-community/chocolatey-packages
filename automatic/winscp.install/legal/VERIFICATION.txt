@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to https://winscp.net/eng/download.php
 
-   x32: https://sourceforge.net/projects/winscp/files/WinSCP/6.5.2/WinSCP-6.5.2-Setup.exe/download
+   x32: https://sourceforge.net/projects/winscp/files/WinSCP/6.5.3/WinSCP-6.5.3-Setup.exe/download
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 9BBA02378A0E71FC5DBB20C50B1528987D8B67BD243F097E954206ED514A955A
+   checksum32: 66DE37A79900C3EEBC8225058CAE5E2DB3DF939308BA6B2D518B39C98E4F41DA
 
 File 'license.txt' is obtained from:
    https://www.gnu.org/licenses/gpl-3.0.txt
