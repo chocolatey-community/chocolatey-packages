@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kubescape</id>
-    <version>3.0.35</version>
+    <version>3.0.36</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/kubescape</packageSourceUrl>
     <owners>chocolatey-community,hollowman</owners>
     <title>kubescape: Kubernetes Security Platform</title>
