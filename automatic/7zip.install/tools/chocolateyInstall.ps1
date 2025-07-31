@@ -21,3 +21,4 @@ if (!$installLocation)  { Write-Warning "Can't find 7zip install location"; retu
 Write-Host "7zip installed to '$installLocation'"
 
 Install-BinFile '7z' $installLocation\7z.exe
+Install-BinFile '7zG' $installLocation\7zG.exe
