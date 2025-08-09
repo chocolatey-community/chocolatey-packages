@@ -5,7 +5,7 @@ if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -P
 $packageArgs = @{
   packageName    = 'freecad'
   softwareName   = 'FreeCAD'
-  fileType       = 'exe'
+  fileType       = '7z'
   silentArgs     = '/S'
   validExitCodes = @(@(0))
 }
