@@ -10,9 +10,9 @@ foreach ($folder in $foldersToRemove) {
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
-  url           = 'https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/archive/refs/tags/v1.8.6.zip'
+  url           = 'https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/archive/refs/tags/v1.8.7.zip'
   softwareName  = 'intunewinapputil*'
-  checksum      = '3bfd2c93a3500bc2b99c007a5d2352af021df9a043851b77f01ea788fd878851'
+  checksum      = 'f6b811fb02efd98287f090caabc32d32b2400ece2a5aa2238cb616e86edd2ff8'
   checksumType  = 'sha256'
 }
 
