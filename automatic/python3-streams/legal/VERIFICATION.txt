@@ -9,8 +9,8 @@ and can be verified by doing the following:
 
 1. Go to
 
-   x32: https://www.python.org/ftp/python/3.14.0/python-3.14.0rc2.exe
-   x64: https://www.python.org/ftp/python/3.14.0/python-3.14.0rc2-amd64.exe
+   x32: https://www.python.org/ftp/python/3.13.7/python-3.13.7.exe
+   x64: https://www.python.org/ftp/python/3.13.7/python-3.13.7-amd64.exe
 
    to download the installer.
 
@@ -18,8 +18,8 @@ and can be verified by doing the following:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 3E7011AD80362A9C280FF0D0D2AEAB11D02FA816D0CC88386A25E43D9A557858
-   checksum64: CF4732BABA457A6D444F4C084E0BCF9EAB4302730B5CAB6031E5767BAB3A2A7F
+   checksum32: E31949F61D00AB398C93B21739209477B750B1F5716318E996062816AC2CFCD9
+   checksum64: B12E2E82461AC8E51FC43289050BC8EB937A32D84CE4D242E2C88258C37CF2BB
 
-The file 'LICENSE.txt' has been obtained from Python 3.14 Documentation archive <https://docs.python.org/3.14/archives/python-3.14-docs-text.zip>
-and can also be found at <https://docs.python.org/3.14/license.html>.
+The file 'LICENSE.txt' has been obtained from Python 3.13 Documentation archive <https://docs.python.org/3.13/archives/python-3.13-docs-text.zip>
+and can also be found at <https://docs.python.org/3.13/license.html>.
