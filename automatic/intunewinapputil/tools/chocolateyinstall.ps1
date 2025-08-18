@@ -12,7 +12,7 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   url           = 'https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/archive/refs/tags/v1.8.7.zip'
   softwareName  = 'intunewinapputil*'
-  checksum      = 'f6b811fb02efd98287f090caabc32d32b2400ece2a5aa2238cb616e86edd2ff8'
+  checksum      = '33db05a672682efc5d59ca11a17c65a484b89e30dd67f1a90e4182f191fcfb7b'
   checksumType  = 'sha256'
 }
 
