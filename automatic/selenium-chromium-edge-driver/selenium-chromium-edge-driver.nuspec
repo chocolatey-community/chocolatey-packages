@@ -10,7 +10,7 @@
     <projectUrl>https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/</projectUrl>
     <!-- Do not touch the icon URL, it will be updated automatically during the update check -->
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@61b9a911f150dda68e67c519f839f149231650b2/icons/selenium-chromium-edge-driver.png</iconUrl>
-    <licenseUrl>https://msedgedriver.azureedge.net/EULA</licenseUrl>
+    <licenseUrl>https://msedgedriver.microsoft.com/EULA</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!-- Do not touch the description, it is automatically updated from the Readme.md file. -->
     <description><![CDATA[WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more. MSEdgeDriver is a standalone server which implements WebDriver's wire protocol (https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol) for Chromium.
