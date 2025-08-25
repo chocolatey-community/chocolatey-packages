@@ -32,7 +32,7 @@ Example for passing in package parameters:
     <projectUrl>https://git-for-windows.github.io/</projectUrl>
     <projectSourceUrl>https://github.com/git-for-windows/git</projectSourceUrl>
     <docsUrl>http://git-scm.com/doc</docsUrl>
-    <mailingListUrl>http://groups.google.com/group/git-for-windows</mailingListUrl>
+    <mailingListUrl>https://groups.google.com/g/git-packagers</mailingListUrl>
     <bugTrackerUrl>https://github.com/git-for-windows/git/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/git.install</packageSourceUrl>
     <tags>git vcs dvcs version-control msysgit admin foss cross-platform cli</tags>
