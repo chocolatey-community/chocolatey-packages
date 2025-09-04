@@ -33,8 +33,8 @@ function global:au_GetLatest {
   Invoke-WebRequest -URI $releases -OutFile $stableVersionFile -UseBasicParsing
   $packageVersion = Get-Content $stableVersionFile
 
-  $url32 = "https://msedgedriver.azureedge.net/$packageVersion/edgedriver_win32.zip"
-  $url64 = "https://msedgedriver.azureedge.net/$packageVersion/edgedriver_win64.zip"
+  $url32 = "https://msedgedriver.microsoft.com/$packageVersion/edgedriver_win32.zip"
+  $url64 = "https://msedgedriver.microsoft.com/$packageVersion/edgedriver_win64.zip"
 
   @{
     Version        = $packageVersion
