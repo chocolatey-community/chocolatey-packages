@@ -9,6 +9,7 @@ This file details what is needed for different operations in the repository that
 <summary>Table of Contents</summary>
 
 - [Providing A Fixed Version](#providing-a-fixed-version)
+  - [Updating a Manual Package](#updating-a-manual-package)
   - [Request A Standard Fix Version Creation](#request-a-standard-fix-version-creation)
   - [Request A Standard Fix Version Creation For A Stream](#request-a-standard-fix-version-creation-for-a-stream)
     - [Request A Fixed Version Update](#request-a-fixed-version-update)
@@ -33,6 +34,10 @@ This file details what is needed for different operations in the repository that
 ## Providing A Fixed Version
 
 Before providing a fixed package version, you need to determine the existing version specified in the repository, what type of version it uses, and whether the package contains additional handling for creating fixed versions.
+
+### Updating a Manual Package
+
+A manual package is one that is not using the `Chocolatey-AU` automation. The specific package files should be updated normally (i.e. the `.nuspec` file and the Chocolatey package scripts). Once those are updated, and the pull request merged, the package is pushed to the Chocolatey Community Repository by making an empty commit, with the message in the format `[PUSH <PACKAGENAME>]` where `<PACKAGENAME>` is the name of the package you want to push.
 
 ### Request A Standard Fix Version Creation
 
