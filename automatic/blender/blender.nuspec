@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>blender</id>
-    <version>4.5.2</version>
+    <version>4.5.3</version>
     <title>Blender</title>
     <owners>chocolatey-community, Redsandro</owners>
     <authors>Blender Foundation</authors>
