@@ -5,17 +5,17 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe'
-  url           = 'https://julialang-s3.julialang.org/bin/winnt/x86/1.11/julia-1.11.6-win32.exe'
-  checksum      = 'B2AADBFE5BCF1C16758EBA42E8CE8A6353FC4A74610BD528730CE99C90732464'
+  url           = 'https://julialang-s3.julialang.org/bin/winnt/x86/1.11/julia-1.11.7-win32.exe'
+  checksum      = 'E046ED03D408080D81E7A775D43E4D4EF743E3E32993B5CE0D957E270A6A0209'
   checksumType  = 'sha256'
-  file64        = "$toolsDir\julia-1.11.6-win64.exe"
+  file64        = "$toolsDir\julia-1.11.7-win64.exe"
 
   softwareName  = 'Julia*'
 
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)
 }
-$packageVersion = "1.11.6"
+$packageVersion = "1.11.7"
 
 if ((Get-OSArchitectureWidth -compare 32) -or ($env:chocolateyForceX86 -eq $true)) {
     Install-ChocolateyPackage @packageArgs
