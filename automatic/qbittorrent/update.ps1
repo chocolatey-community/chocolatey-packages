@@ -1,6 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'http://www.qbittorrent.org/download.php'
+$domain   = 'https://sourceforge.net'
+$releases = "$domain/projects/qbittorrent/files/qbittorrent-win32/"
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -FileNameSkip 1 -NoSuffix }
 
@@ -18,26 +19,19 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  try {
-    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-  } catch {
-    if ($_ -match "Unable to connect to the remote server") {
-      Write-Host "qbittorrent.org is down, skipping package update..."
-      return "ignore"
-    } else {
-      throw $_
-    }
-  }
+  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-  $re    = 'setup\.exe\/download$'
-  $urls  = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
-  $url64 = $urls | Where-Object { $_ -match "x64" } | Select-Object -first 1
+  $re    = 'qbittorrent-(?<version>[\d\.]+)\/'
+  $releasesUrl  = $download_page.links | Where-Object href -Match $re | Select-Object -First 1 -ExpandProperty href | ForEach-Object { $domain + $_ }
+  $version = $Matches['version']
 
-  $version64 = $url64 -split '[_]' | Select-Object -Last 1 -Skip 2
+  $download_page = Invoke-WebRequest -Uri $releasesUrl -UseBasicParsing
+  $re = 'x64_setup.*\.exe\/download$'
+  $url64 = $download_page.links | Where-Object href -Match $re | Select-Object -First 1 -ExpandProperty href
 
   return @{
     URL64    = $url64
-    Version  = $version64
+    Version  = $version
     FileType = 'exe'
   }
 }
