@@ -1,6 +1,60 @@
-param([string[]] $Name, [string] $ForcedPackages, [string] $Root = "$PSScriptRoot\automatic")
+<#
+    .Synopsis
+        Updates all automatic packages in the repository.
+    .Description
+        Uses Chocolatey AU to update packages in the specified folder (defaults to $PSScriptRoot\automatic)
+        It then pushes and reports on updated packages, based on the present configuration.
+    .Example
+        .\update_all.ps1
+        # Attempts to update all packages in the default folder, \automatic.
+    .Example
+        .\update_all.ps1 -Name exampleid
+        # Attempts to update the 'exampleid' package, if present.
+    .Example
+        .\update_all.ps1 -ForcedPackage exampleid
+        # Attempts to update all packages and forces an update of 'exampleid'.
+#>
+[CmdletBinding()]
+param(
+    # Specific packages to update
+    [ArgumentCompleter({
+        param($CommandName, $ParameterName, $WordToComplete, $CommandAst, $FakeBoundParameters)
+        $Directory = if ($FakeBoundParameters['Root']) {
+            $FakeBoundParameters['Root']
+        } else {
+            "$PSScriptRoot\automatic"
+        }
+        (Get-ChildItem $Directory -Directory).Name.Where{
+            $_ -like "*$WordToComplete*" -and
+            $_ -notin $FakeBoundParameters['Name']
+        }
+    })]
+    [string[]]$Name,
 
-if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
+    # Packages to update regardless of the current version
+    [ArgumentCompleter({
+        param($CommandName, $ParameterName, $WordToComplete, $CommandAst, $FakeBoundParameters)
+        $Directory = if ($FakeBoundParameters['Root']) {
+            $FakeBoundParameters['Root']
+        } else {
+            "$PSScriptRoot\automatic"
+        }
+
+        (Get-ChildItem $Directory -Directory).Name.Where{
+            $_ -like "*$WordToComplete*"
+        } | Group-Object {
+            $_ -in $FakeBoundParameters['Name']
+        } | Sort-Object | Select-Object -ExpandProperty Group
+    })]
+    [string]$ForcedPackages,
+
+    # The directory to update packages in
+    [string]$Root = "$PSScriptRoot\automatic"
+)
+
+if (Test-Path $PSScriptRoot/update_vars.ps1) {
+    . $PSScriptRoot/update_vars.ps1
+}
 
 $Options = [ordered]@{
   WhatIf                    = $au_WhatIf                              #Whatif all packages
@@ -39,7 +93,6 @@ $Options = [ordered]@{
   #RepeatCount   = 2                                      #How many times to repeat on errors, by default 1
 
   #NoCheckChocoVersion = $true                            #Turn on this switch for all packages
-
 
   Report                    = @{
     Type   = 'markdown'                                   #Report type: markdown or text
@@ -119,4 +172,4 @@ $global:au_GalleryUrl = ''             #URL to package gallery, leave empty for 
 $global:info = updateall -Name $Name -Options $Options
 
 #Uncomment to fail the build on AppVeyor on any package error
-#if ($global:info.error_count.total) { throw 'Errors during update' }
+#if ($global:info.Error) { throw 'Errors during update' }

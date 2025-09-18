@@ -1,19 +1,55 @@
-#Name can be 'random N' to randomly force the Nth group of packages.
+<#
+    .Synopsis
+        Force updates all automatic packages in the repository.
+    .Description
+        Uses Chocolatey AU to update packages in the specified folder (defaults to $PSScriptRoot\automatic),
+        outputting an error if any are found. Does not push any of the package updates.
+    .Example
+        .\test_all.ps1
+        # Force updates all packages in the default folder, \automatic.
+    .Example
+        .\test_all.ps1 -Name exampleid
+        # Attempts to force-update the 'exampleid' package, if present.
+    .Example
+        .\test_all.ps1 -Name 'random 5'
+        # Attempts to force-update 5 random packages that are present in the root folder.
+    .Notes
+        This will leave your repository in an un-clean state.
+#>
+[CmdletBinding()]
+param(
+    # Specific packages to test
+    # If set to 'random N' (where N is an int), randomly forces the Nth group of packages.
+    [ArgumentCompleter({
+        param($CommandName, $ParameterName, $WordToComplete, $CommandAst, $FakeBoundParameters)
+        $Directory = if ($FakeBoundParameters['Root']) {
+            $FakeBoundParameters['Root']
+        } else {
+            "$PSScriptRoot\automatic"
+        }
+        (Get-ChildItem $Directory -Directory).Name.Where{
+            $_ -like "*$WordToComplete*" -and
+            $_ -notin $FakeBoundParameters['Name']
+        }
+    })]
+    [string[]]$Name,
 
-param( [string[]] $Name, [string] $Root = "$PSScriptRoot\automatic", [switch]$ThrowOnErrors )
+    # The directory to find packages in
+    [string]$Root = "$PSScriptRoot\automatic"
+)
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
 $global:au_root = Resolve-Path $Root
 
-if (($Name.Length -gt 0) -and ($Name[0] -match '^random (.+)')) {
-  [array] $lsau = lsau
+if ($Name.Count -eq 1 -and $Name[0] -match '^random (\d+)$') {
+  [array]$FoundPackages = Get-AUPackages
 
   $group = [int]$Matches[1]
   $n = (Get-Random -Maximum $group)
   Write-Host "TESTING GROUP $($n+1) of $group"
 
-  $group_size = [int]($lsau.Count / $group) + 1
-  $Name = $lsau | select -First $group_size -Skip ($group_size * $n) | % { $_.Name }
+  $group_size = [int]($FoundPackages.Count / $group) + 1
+  $Name = $FoundPackages | Select-Object -First $group_size -Skip ($group_size*$n) | Select-Object -ExpandProperty Name
 
   Write-Host ($Name -join ' ')
   Write-Host ('-' * 80)
@@ -86,8 +122,6 @@ else {
 
 $global:info = updateall -Name $Name -Options $Options
 
-$au_errors = $global:info | ? { $_.Error } | select -ExpandProperty Error
-
-if ($ThrowOnErrors -and $au_errors.Count -gt 0) {
-  throw 'Errors during update'
+if ($global:info.Where{$_.Error}) {
+    Write-Error 'Errors during update. Access $global:info for more information.'
 }
