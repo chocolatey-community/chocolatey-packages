@@ -1,7 +1,5 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://pypi.python.org/pypi/mkdocs'
-
 function global:au_SearchReplace {
     @{
         'tools\ChocolateyInstall.ps1' = @{
@@ -11,13 +9,9 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+    $LatestRelease = Get-GitHubRelease mkdocs mkdocs
 
-    $re = 'mkdocs\/[\d\.]+\/$'
-    $url = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
-    $version = $url -split '\/' | Select-Object -last 1 -skip 1
-
-    return @{ Version = $version }
+    return @{ Version = Get-Version $LatestRelease.tag_name }
 }
 
 update -ChecksumFor none
