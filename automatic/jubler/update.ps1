@@ -1,7 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://www.jubler.org/download.html'
+$releases = 'https://jubler.org/download.html'
 $softwareName = 'Jubler subtitle editor'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
