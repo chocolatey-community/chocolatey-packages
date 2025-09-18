@@ -6,9 +6,7 @@ function global:au_SearchReplace {
   @{
     ".\legal\VERIFICATION.txt"      = @{
       "(?i)(Go to)\s*[^,]*" = "`${1} $releases"
-      "(?i)(\s+x32:).*"     = "`${1} $($Latest.URL32)"
       "(?i)(\s+x64:).*"     = "`${1} $($Latest.URL64)"
-      "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
       "(?i)(checksum64:).*" = "`${1} $($Latest.Checksum64)"
     }
 
@@ -17,7 +15,6 @@ function global:au_SearchReplace {
     }
 
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^\s*FileFullPath\s*=\s*`"`[$]toolsPath\\).*`""   = "`${1}$($Latest.FileName32)`""
       "(?i)(^\s*FileFullPath64\s*=\s*`"`[$]toolsPath\\).*`"" = "`${1}$($Latest.FileName64)`""
     }
   }
@@ -40,7 +37,6 @@ function global:au_GetLatest {
 
   @{
     Version      = $version
-    URL32        = $url -match 'win32' | Select-Object -first 1
     URL64        = $url | Where-Object { $_ -notmatch 'win32' -and $_ -match $version } | Select-Object -first 1
     ReleaseNotes = $releaseNotes
   }
