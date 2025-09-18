@@ -21,4 +21,4 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 
-update -ChecksumFor none
+update -ChecksumFor none -NoCheckUrl
