@@ -11,6 +11,6 @@ The installer has been downloaded from GitHub and can be verified like this:
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: 942D85853686035F224B1D5B0DF6EECC61C5A91F8B9CD4217AC338E0C8096B0F
+  checksum: E02912D20DF02B718E152E4AFDE05B64C7600523B3D63D9760F5F3C056A27D6D
 
 File 'LICENSE.txt' is obtained from <https://www.autoitscript.com/autoit3/docs/license.htm>

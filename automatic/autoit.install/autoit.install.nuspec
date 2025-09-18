@@ -4,7 +4,7 @@
   <metadata>
     <id>autoit.install</id>
     <title>AutoIt (Install)</title>
-    <version>3.3.16.1</version>
+    <version>3.3.18.0</version>
     <authors>Jonathan Bennett, AutoIt Team</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
     <summary>AutoIT - Automation and scripting language</summary>
