@@ -6,16 +6,17 @@ $packageArgs = @{
   packageName    = 'codeblocks'
   fileType       = 'exe'
   softwareName   = 'CodeBlocks'
-  file           = "$toolsDir\Windows.exe"
-
+  url            = ''
+  url64          = ''
+  checksum       = ''
+  checksumType   = 'SHA256'
+  checksum64     = ''
+  checksumType64 = 'SHA256'
   silentArgs     = '/S'
   validExitCodes = @(0)
 }
 
-Install-ChocolateyInstallPackage @packageArgs
-
-# Lets remove the installer as there is no more need for it
-Remove-Item -Force $packageArgs.file
+Install-ChocolateyPackage @packageArgs
 
 $installLocation = Get-AppInstallLocation $packageArgs.softwareName
 if ($installLocation) {

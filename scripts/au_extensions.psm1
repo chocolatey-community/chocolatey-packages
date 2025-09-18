@@ -8,6 +8,7 @@ $funcs = @(
   'Add-Dependency'
   'Clear-DependenciesList'
   'Get-AllGitHubReleases'
+  'Get-ChocolateyNormalizedVersion'
   'Get-GitHubRelease'
   'Get-GitHubRepositoryFileContent'
   'Set-DescriptionFromReadme'
