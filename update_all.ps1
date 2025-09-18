@@ -47,7 +47,7 @@ $Options = [ordered]@{
     Params = @{                                          #Report parameters:
       Github_UserRepo = $Env:github_user_repo         #  Markdown: shows user info in upper right corner
       NoAppVeyor      = $false                            #  Markdown: do not show AppVeyor build shield
-      UserMessage     = "[Ignored](#ignored) | [History](#update-history) | [Force Test](https://gist.github.com/$Env:gist_id_test) | [Releases](https://github.com/$Env:github_user_repo/tags)"       #  Markdown, Text: Custom user message to show
+      UserMessage     = "[Ignored](#ignored) | [History](#update-history) | [Force Test](https://gist.github.com/$Env:gist_id_test)"       #  Markdown, Text: Custom user message to show
       NoIcons         = $false                            #  Markdown: don't show icon
       IconSize        = 32                                #  Markdown: icon size
       Title           = ''                                #  Markdown, Text: TItle of the report, by default 'Update-AUPackages'
@@ -69,11 +69,6 @@ $Options = [ordered]@{
   Git                       = @{
     User     = ''                                       #Git username, leave empty if github api key is used
     Password = $Env:github_api_key                      #Password if username is not empty, otherwise api key
-  }
-
-  GitReleases               = @{
-    ApiToken    = $Env:github_api_key                   #Your github api key
-    ReleaseType = 'package'                             #Either 1 release per date, or 1 release per package
   }
 
   RunInfo                   = @{
