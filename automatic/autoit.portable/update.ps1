@@ -26,14 +26,12 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-    # BasicParsing is no option since we need to parse the version tag.
     $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-    $download_page.RawContent -match '\<td\>v([\d]+\.[\d\.]+)\<\/td\>' | Out-Null
-    $version = $Matches[1]
+    $download_page.RawContent -match '>Latest Version:.+\W?v(?<Version>[\d]+\.[\d\.]+)<' | Out-Null
+    $version = $Matches.Version
 
-    $re = ".*zip$"
-    $url = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
+    $url = $download_page.links.href.Where{"$_".EndsWith('.zip') -and $_ -notmatch '-setup'}
 
     $filename = $url -split '/' | Select-Object -Last 1
 
