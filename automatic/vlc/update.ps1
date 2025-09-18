@@ -17,8 +17,8 @@ function global:au_GetLatest {
     $version  = $url[0] -split '-' | Select-Object -Last 1 -Skip 1
     @{
         Version      = $version
-        URL32        = 'http:' + ( $url -match 'win32' | Select-Object -first 1 )
-        URL64        = 'http:' + ( $url -match 'win64' | Select-Object -first 1 )
+        URL32        = 'https:' + ( $url -match 'win32' | Select-Object -first 1 )
+        URL64        = 'https:' + ( $url -match 'win64' | Select-Object -first 1 )
     }
 }
 

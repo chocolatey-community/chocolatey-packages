@@ -25,7 +25,7 @@ function global:au_GetLatest {
     $version  = $url -split '-' | Select-Object -Last 1 -Skip 1
     @{
         Version      = $version
-        URL32        = 'http:' + $url
+        URL32        = 'https:' + $url
     }
 }
 
