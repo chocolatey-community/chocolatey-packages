@@ -1,5 +1,4 @@
 ﻿Import-Module Chocolatey-AU
-. "$PSScriptRoot\..\1password\update_helper.ps1"
 
 function global:au_SearchReplace {
   @{
@@ -18,8 +17,11 @@ function Find-1Password8Stream {
 
   if ($releasesPage -match 'Updated to (?<version>8\.[\d\.]+) on') {
     $version = Get-Version $Matches['version']
-    $url = $releasesPage.Links | Where-Object href -match 'Setup.*\.exe$' | Where-Object href -NotMatch 'BETA' | Select-Object -First 1 -ExpandProperty href
-    $url = $url -replace 'LATEST', $version -replace '\.exe$','.msi' # The MSI is documented on: https://support.1password.com/deploy-1password/
+
+    # We are using a semi-hardcoded link here, as we are not ready to move to the MSIX installer.
+    # The direct MSI downloads, though not advertised on the download page, are still valid -
+    # See: https://support.1password.com/deploy-1password/
+    $url = "https://downloads.1password.com/win/1PasswordSetup-$($version).msi"
 
     @{
       URL32          = $url
