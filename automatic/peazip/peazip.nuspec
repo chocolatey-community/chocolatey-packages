@@ -20,7 +20,7 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <projectUrl>https://peazip.github.io/</projectUrl>
-    <projectSourceUrl>https://osdn.net/projects/peazip/releases/</projectSourceUrl>
+    <projectSourceUrl>https://github.com/peazip/PeaZip/</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/peazip</packageSourceUrl>
     <docsUrl>https://peazip.github.io/peazip-help-faq.html</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/peazip/tickets/</bugTrackerUrl>
@@ -34,4 +34,5 @@ Features of PeaZip includes extract, create and convert multiple archives at onc
       <dependency id="peazip.install" version="[10.6.1]" />
     </dependencies>
   </metadata>
+  <files />
 </package>
