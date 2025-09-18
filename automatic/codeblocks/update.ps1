@@ -19,10 +19,10 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
   $re = 'sourceforge.*mingw-32bit-setup\.exe$'
-  $url = $download_page.links | ? href -match $re | select -first 1 -expand href
+  $url = $download_page.links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   $re64 = 'sourceforge.*mingw-setup\.exe$'
-  $url64 = $download_page.links | ? href -match $re64 | select -first 1 -expand href
+  $url64 = $download_page.links | Where-Object href -match $re64 | Select-Object -first 1 -expand href
 
   if (!$url.StartsWith("https")) {
     $url = $url -replace "^http", "https"
@@ -32,9 +32,9 @@ function global:au_GetLatest {
     $url64 = $url64 -replace "^http", "https"
   }
 
-  $version = Get-ChocolateyNormalizedVersion ($url64 -split '[-]|mingw' | select -Last 1 -Skip 2)
+  $version = Get-ChocolateyNormalizedVersion ($url64 -split '[-]|mingw' | Select-Object -Last 1 -Skip 2)
 
-  $changelog = $download_page.links | ? href -match "\/changelogs\/$version" | select -first 1 | % { [uri]::new([uri]$releases, $_.href) }
+  $changelog = $download_page.links | Where-Object href -match "\/changelogs\/$version" | Select-Object -first 1 | ForEach-Object { [uri]::new([uri]$releases, $_.href) }
 
   return @{
     URL32        = $url
