@@ -1,6 +1,5 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://autohotkey.com/download/2.0'
 $v1Version = '1.1.36.02'
 $v1Filename = "AutoHotkey_$($v1Version)_setup.exe"
 
@@ -44,12 +43,12 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-    $version = Invoke-WebRequest -Uri "$releases\version.txt" -UseBasicParsing | ForEach-Object Content
-    $url     = "https://github.com/AutoHotkey/AutoHotkey/releases/download/v$($version)/AutoHotkey_$($version)_setup.exe"
+    $LatestRelease = Get-GitHubRelease AutoHotkey AutoHotkey
+
     @{
-        Version  = $version
-        URL      = $url
-        FileName = "AutoHotkey_$($version)_setup.exe"
+        Version  = $LatestRelease.tag_name.TrimStart("v")
+        URL      = $LatestRelease.assets.Where{$_.name.EndsWith('_setup.exe')}.browser_download_url
+        FileName = "AutoHotkey_$($LatestRelease.tag_name.TrimStart("v"))_setup.exe"
         v1Url    = "https://github.com/AutoHotkey/AutoHotkey/releases/download/v$($v1Version)/$v1Filename"
         v1FileName = $v1Filename
     }
