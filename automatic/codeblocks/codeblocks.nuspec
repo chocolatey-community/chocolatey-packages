@@ -7,11 +7,11 @@
     <title>Code::Blocks</title>
     <authors>The Code::Blocks Team</authors>
     <owners>chocolatey-community purity</owners>
-    <licenseUrl>http://www.codeblocks.org/license</licenseUrl>
-    <projectUrl>http://www.codeblocks.org/</projectUrl>
-    <projectSourceUrl>http://svn.code.sf.net/p/codeblocks/code/</projectSourceUrl>
-    <docsUrl>http://wiki.codeblocks.org/index.php/Main_Page</docsUrl>
-    <mailingListUrl>http://forums.codeblocks.org/</mailingListUrl>
+    <licenseUrl>https://www.codeblocks.org/license/</licenseUrl>
+    <projectUrl>https://www.codeblocks.org/</projectUrl>
+    <projectSourceUrl>https://svn.code.sf.net/p/codeblocks/code/</projectSourceUrl>
+    <docsUrl>https://wiki.codeblocks.org/index.php/Main_Page</docsUrl>
+    <mailingListUrl>https://forums.codeblocks.org/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/codeblocks/tickets/</bugTrackerUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/codeblocks.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -88,7 +88,6 @@ This package downloads the installer with the included GCC compiler.
     </dependencies>
   </metadata>
   <files>
-    <file src="legal\**" target="legal" />
     <file src="tools\**" target="tools" />
   </files>
 </package>

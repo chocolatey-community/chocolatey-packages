@@ -1,22 +1,16 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://www.codeblocks.org/downloads/binaries'
-
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
-
+$releases = 'https://www.codeblocks.org/downloads/binaries/'
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(`"`[$]toolsDir\\).*`"" = "`${1}$($Latest.FileName32)`""
+        "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
+        "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+        "(?i)(^\s*url64\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
+        "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
     }
     ".\codeblocks.nuspec"           = @{
       "(\<releaseNotes\>).*(\<\/releaseNotes\>)" = "`${1}$($Latest.ReleaseNotes)`$2"
-    }
-    ".\legal\verification.txt"      = @{
-      "(?i)(mirror listed on\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(1\..+)\<.*\>"               = "`${1}<$($Latest.URL32)>"
-      "(?i)(checksum type:\s+).*"       = "`${1}$($Latest.ChecksumType32)"
-      "(?i)(checksum:\s+).*"            = "`${1}$($Latest.Checksum32)"
     }
   }
 }
@@ -24,24 +18,31 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
 
-  $re = 'sourceforge.*mingw-setup\.exe$'
+  $re = 'sourceforge.*mingw-32bit-setup\.exe$'
   $url = $download_page.links | ? href -match $re | select -first 1 -expand href
+
+  $re64 = 'sourceforge.*mingw-setup\.exe$'
+  $url64 = $download_page.links | ? href -match $re64 | select -first 1 -expand href
 
   if (!$url.StartsWith("https")) {
     $url = $url -replace "^http", "https"
   }
 
-  $version = $url -split '[-]|mingw' | select -Last 1 -Skip 2
+  if (!$url64.StartsWith("https")) {
+    $url64 = $url64 -replace "^http", "https"
+  }
+
+  $version = Get-ChocolateyNormalizedVersion ($url64 -split '[-]|mingw' | select -Last 1 -Skip 2)
 
   $changelog = $download_page.links | ? href -match "\/changelogs\/$version" | select -first 1 | % { [uri]::new([uri]$releases, $_.href) }
-  $fileName = $url -split '/' | select -last 1
 
   return @{
-    URL32        = $url;
+    URL32        = $url
+    URL64        = $url64
     Version      = $version
     ReleaseNotes = $changelog
     FileType     = 'exe'
   }
 }
 
-update -NoCheckUrl -ChecksumFor none
+update -NoCheckUrl
