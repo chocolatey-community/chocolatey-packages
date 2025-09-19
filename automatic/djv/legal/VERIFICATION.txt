@@ -3,16 +3,16 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://darbyjohnston.github.io/DJV/download.html>
+location on <>
 and can be verified by doing the following:
 
-1. Download the following <https://sourceforge.net/projects/djv/files/djv-beta/2.0.8/DJV-2.0.8-win64.exe/download>
+1. Download the following <https://github.com/darbyjohnston/DJV/releases/download/3.1.1/DJV-3.1.1-Windows-AMD64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: C136D8E61561A06C27EB9C8BF29DEA5F709D77CE19B18993A9B379162C2E4AE2
+  checksum: BC64D47BF61CC1059C86BF2823D1B41C72CEA9AEA0607B9F1600F21C6C0B44B6
 
 The file 'LICENSE.md' has been obtained from <https://darbyjohnston.github.io/DJV/legal.html>

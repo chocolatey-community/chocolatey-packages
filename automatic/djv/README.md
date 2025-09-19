@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@efc9e0914779661ad7aa88e9dbde0333cfb81f12/icons/djv.png" width="48" height="48"/> [djv](https://chocolatey.org/packages/djv)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@efc9e0914779661ad7aa88e9dbde0333cfb81f12/icons/djv.png" width="48" height="48"/> [djv](https://chocolatey.org/packages/djv)
 
 DJV provides professional review software for VFX, animation, and film production. Playback high resolution, high bit-depth, image sequences and videos, with frame accurate control and color management. Available for Linux, Apple macOS, and Microsoft Windows. Source code is provided under a BSD style open source license.
 
