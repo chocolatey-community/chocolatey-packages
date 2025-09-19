@@ -40,7 +40,7 @@ function global:au_GetLatest {
 
     $version = Get-Version $_.tag_name
 
-    $url = $_.assets | Where-Object browser_download_url -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
+    $url = $_.assets.browser_download_url.Where{$_.EndsWith('.exe') -and $_ -notmatch "-win64\.exe$"}[0]
     $streamName = $version.ToString(2)
 
     if (!($streams.ContainsKey($streamName)) -and $url) {
