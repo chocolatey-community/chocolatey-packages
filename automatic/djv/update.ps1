@@ -1,10 +1,8 @@
 ﻿Import-Module Chocolatey-AU
 
-# Temporary to allow pushing version 1.0.5
-$releases = 'https://darbyjohnston.github.io/DJV/download.html'
 $softwareName = 'djv-*'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
+function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix}
 
 function global:au_SearchReplace {
   @{
@@ -23,19 +21,13 @@ function global:au_SearchReplace {
     }
   }
 }
+
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-
-  $re = '64\.exe\/download$'
-  $url64 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $_ -replace "^(ht|f)tp\:", '$1tps:' }
-
-  $verRe = '\/'
-  $version = $url64 -split "$verRe" | select -last 1 -skip 2
-
+  $LatestRelease = Get-GitHubRelease darbyjohnston DJV
 
   @{
-    URL64    = $url64
-    Version  = $version
+    URL64    = $LatestRelease.assets.Where{$_.name.EndsWith('.exe')}.browser_download_url
+    Version  = Get-Version $LatestRelease.tag_name
     FileType = 'exe'
   }
 }
