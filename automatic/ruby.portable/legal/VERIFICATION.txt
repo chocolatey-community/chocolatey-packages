@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.5-1/rubyinstaller-3.4.5-1-x86.7z
-   x64: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.5-1/rubyinstaller-3.4.5-1-x64.7z
+   x32: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.6-1/rubyinstaller-3.4.6-1-x86.7z
+   x64: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.6-1/rubyinstaller-3.4.6-1-x64.7z
 
    to download the archives.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: E505EE7E346AB62AE322768A384563B482DBCA9034F746D381050DCB2F4F73FF
-   checksum64: 61634B204F808DEEC191A6819E4C25C7B3005D84537B24C4FBE7C604AEECE89F
+   checksum32: 1196E94F6D0D9D2D7FCE4D41A683464C7B9D0302A475F3523057CF665820321F
+   checksum64: 27561F08B897E631D624F6E20ED0F96AAF8094256A233435D691FC26B9BF8F0E
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.5-1/rubyinstaller-3.4.5-1-x64.7z
+   Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.6-1/rubyinstaller-3.4.6-1-x64.7z
 
-File 'license.txt' is obtained from:         https://www.ruby-lang.org/en/about/license.txt
+File 'license.txt' is obtained from:          https://www.ruby-lang.org/en/about/license.txt
    https://raw.githubusercontent.com/oneclick/rubyinstaller2/master/LICENSE.txt

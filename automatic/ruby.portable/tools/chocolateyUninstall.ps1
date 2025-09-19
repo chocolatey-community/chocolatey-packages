@@ -5,6 +5,6 @@ $toolsPath = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $rubyDir = Join-Path -Path $toolsPath -ChildPath 'ruby\ruby*\bin\'
 '*.bat', '*.cmd' | ForEach-Object {
   Get-ChildItem -Path (Join-Path -Path $rubyDir -ChildPath $_) | ForEach-Object {
-    Remove-BinFile -Name $_.BaseName -Path $_.FullName
+    Uninstall-BinFile -Name $_.BaseName -Path $_.FullName
   }
 }
