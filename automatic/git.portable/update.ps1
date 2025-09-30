@@ -17,6 +17,10 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
     @{
+      ".\tools\chocolateyInstall.ps1" = @{
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+        }
+
         ".\legal\verification.txt" = @{
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
