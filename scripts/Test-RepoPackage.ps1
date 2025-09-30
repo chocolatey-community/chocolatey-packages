@@ -497,6 +497,7 @@ function TestAuUpdatePackages() {
   param(
     $packages
   )
+
   [array]$packageNames = $packages | ? IsAutomatic | select -expand Name
   $packageNames += $packages | ? { $_.DependentPackage -ne $null -and $_.DependentPackage -ne '' } | select -expand DependentPackage
   if (!$packageNames) {
@@ -506,6 +507,7 @@ function TestAuUpdatePackages() {
 
   try {
     pushd "$PSScriptRoot\.."
+    Write-Host "Testing $packageNames"
     .\test_all.ps1 -Name $packageNames -ThrowOnErrors
   } catch {
     SetAppveyorExitCode $LastExitCode
