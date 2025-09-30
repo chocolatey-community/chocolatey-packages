@@ -17,6 +17,10 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
     @{
+      ".\tools\chocolateyInstall.ps1" = @{
+            "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+        }
+
         ".\legal\verification.txt" = @{
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
@@ -31,7 +35,15 @@ function global:au_GetLatest {
   $tagUrl = $download_page.Links | Where-Object href -match 'releases/tag/.*windows' | Select-Object -First 1 -ExpandProperty href
   $tagName = $tagUrl -split '\/' | Select-Object -Last 1
 
-  $version = $tagName -split '^v|\.windows' | Select-Object -Last 1 -Skip 1
+  $re = 'v(?<version>[\d\.]+)\.windows\.(?<revision>[2-9])?'
+
+  if ($tagName -match $re) {
+    if ($Matches['revision']) {
+      $version = "$($Matches['version']).$($Matches['revision'])"
+    } else {
+      $version = "$($Matches['version'])"
+    }
+  }
 
   @{
       Version = $version

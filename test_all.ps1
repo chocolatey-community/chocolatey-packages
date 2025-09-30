@@ -35,7 +35,10 @@ param(
     [string[]]$Name,
 
     # The directory to find packages in
-    [string]$Root = "$PSScriptRoot\automatic"
+    [string]$Root = "$PSScriptRoot\automatic",
+
+    # Whether failures for testing should throw or not.
+    [switch]$ThrowOnErrors
 )
 
 if (Test-Path $PSScriptRoot/update_vars.ps1) { . $PSScriptRoot/update_vars.ps1 }
@@ -123,5 +126,9 @@ else {
 $global:info = updateall -Name $Name -Options $Options
 
 if ($global:info.Where{$_.Error}) {
+  if ($ThrowOnErrors) {
+    throw 'Errors during update. Access $global:info for more information.'
+  } else {
     Write-Error 'Errors during update. Access $global:info for more information.'
+  }
 }
