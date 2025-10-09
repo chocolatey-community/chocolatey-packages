@@ -55,7 +55,7 @@ if (Test-Path "$ExtractFolder") {
 $PackageArgs = @{
   packageName    = $env:ChocolateyPackageName
   unzipLocation  = $ExtractFolder
-  url64          = 'https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-3.71.0-06-win64.zip'
+  url64          = 'https://download.sonatype.com/nexus/3/nexus-3.71.0-06-win64.zip'
   checksum64     = '39836efac22c82819b48951c7a489853c6dc21ce86b62660a84c14ef944117f5'
   checksumType64 = 'SHA256'
 }
