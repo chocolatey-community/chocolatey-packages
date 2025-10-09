@@ -6,8 +6,8 @@ function global:au_GetLatest {
 
   @{
     NexusVersion = $ReleaseVersion
-    Version      = $ReleaseVersion -replace '-', '.'
-    URL64        = "https://sonatype-download.global.ssl.fastly.net/repository/downloads-prod-group/3/nexus-$($ReleaseVersion)-win64.zip"
+    Version      = Get-FixVersion ($ReleaseVersion -replace '-', '.') -OnlyFixBelowVersion 3.71.1
+    URL64        = "https://download.sonatype.com/nexus/3/nexus-$($ReleaseVersion)-win64.zip"
   }
 }
 
