@@ -30,7 +30,7 @@
 
 function Get-InstallComponents( [HashTable]$pp )
 {
-    $res = "icons", "assoc", "assoc_sh"
+    $res = "icons", "assoc", "assoc_sh", "scalar"
 
     $res += Get-ShellIntegrationComponents $pp
 
