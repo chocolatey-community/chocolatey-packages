@@ -6,14 +6,14 @@ The installer has been downloaded from the Github release page <https://github.c
 and can be verified like this:
 
 1.  Download the following installers:
-    32-Bit: <https://releases.mattermost.com/desktop/5.13.1/mattermost-desktop-5.13.1-win-arm64.msi>
-    64-Bit: <https://releases.mattermost.com/desktop/5.13.1/mattermost-desktop-5.13.1-win-x64.msi>
+    32-Bit: <https://releases.mattermost.com/desktop/5.13.2/mattermost-desktop-5.13.2-win-arm64.msi>
+    64-Bit: <https://releases.mattermost.com/desktop/5.13.2/mattermost-desktop-5.13.2-win-x64.msi>
 2.  You can use one of the following methods to obtain the checksum
     - Use powershell function 'Get-Filehash'
     - Use chocolatey utility 'checksum.exe'
 
     checksum type: sha256
-    checksum32: 8A345FF386CCB166815EE40CEA3823B4839E688EE672963398CC90F3A63F8DA3
-    checksum64: F31303B3AEDDC229D315E47356B5B5171B2203FC14CF9FC672383E356996A210
+    checksum32: 4FCE4BF8AEAAC928BC8EA3C6D610E80A3FE58F9A197DAAC988F9318C9E269255
+    checksum64: D3C7F8A92BC5D7651FE2352A1644CDF4937E521170089FDD39FB8BD513BC56BC
 
 File 'LICENSE.txt' is obtained from <https://github.com/mattermost/desktop/blob/06ddc6099e9b6296e7031c04e3e4bd29743bedb4/LICENSE.txt>
