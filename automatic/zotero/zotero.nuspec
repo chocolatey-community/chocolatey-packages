@@ -21,7 +21,6 @@
     <bugTrackerUrl>https://github.com/zotero/zotero/issues</bugTrackerUrl>
     <tags>zotero productivity foss cross-platform references manager bibliography citations research embedded</tags>
     <summary>Zotero [zoh-TAIR-oh] is a free, easy-to-use tool to help you collect, organize, cite, and share your research sources. </summary>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@53607633ce049d5d75ac668f4408faaeced36bc3/icons/zotero.png</iconUrl>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
     <description><![CDATA[Zotero is free and open-source reference management software to manage bibliographic data and related research materials (such as PDF files). Notable features include web browser integration, online syncing, generation of in-text citations, footnotes and bibliographies, as well as integration with the word processors Microsoft Word, LibreOffice, OpenOffice.org Writer and NeoOffice.
 
