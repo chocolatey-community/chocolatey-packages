@@ -9,7 +9,7 @@ Stop-GitSSHAgent
 # Workaround for chocolateyBeforeModify.ps1 being bypassed if upgrading via metapackage (chocolatey/choco#1092)
 Stop-GitGPGAgent
 
-$fileName64 = 'Git-2.51.1-64-bit.exe'
+$fileName64 = 'Git-2.51.2-64-bit.exe'
 $silentArgs = "/VERYSILENT", "/SUPPRESSMSGBOXES", "/NORESTART", "/NOCANCEL", "/SP-", "/LOG", (Get-InstallComponents $pp)
 $silentArgs += Get-InstallOptions $pp
 
