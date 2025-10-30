@@ -1,4 +1,5 @@
 ﻿Import-Module Chocolatey-AU
+Import-Module (Join-Path -Path $PSScriptRoot -ChildPath "../../scripts/au_extensions.psm1")
 
 $domain = 'https://github.com'
 $releases = "$domain/git-for-windows/git/releases/latest"
@@ -21,7 +22,7 @@ function global:au_SearchReplace {
             "(^[$]fileName64\s*=\s*)('.*')" = "`$1'$($Latest.FileName64)'"
         }
 
-        ".\legal\verification.txt" = @{
+        ".\legal\VERIFICATION.txt" = @{
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
             "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
