@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>papercut</id>
+    <version>6.0.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages</packageSourceUrl>
+    <owners>chocolatey-community,Jaba,AdmiringWorm</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Papercut SMTP</title>
+    <authors>Jaban,ChangeMakerStudios</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://www.papercut-smtp.com/</projectUrl>
+    <iconUrl>/papercut.png</iconUrl>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ChangemakerStudios/Papercut-SMTP</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/ChangemakerStudios/Papercut-SMTP/issues</bugTrackerUrl>
+    <tags>papercut utility foss smtp development</tags>
+    <summary>The Simple Desktop Email Helper</summary>
+    <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
+    <description>WILL BE AUTO-REPLACED</description>
+    <releaseNotes>https://github.com/ChangemakerStudios/Papercut-SMTP/releases</releaseNotes>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="dotnet-8.0-desktopruntime" version="8.0.0" />
+      <dependency id="webview2-runtime" version="140.0.3485.94" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
