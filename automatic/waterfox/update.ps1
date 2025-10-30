@@ -1,13 +1,14 @@
 ﻿Import-Module Chocolatey-AU
+Import-Module (Join-Path -Path $PSScriptRoot -ChildPath "../../scripts/au_extensions.psm1")
 
 $softwareName = 'Waterfox*'
 
 function global:au_BeforeUpdate {
   if ($Latest.Title -like '*Classic*') {
-    Copy-Item "$PSScriptRoot\readme.classic.md" "$PSScriptRoot\readme.md" -Force
+    Copy-Item "$PSScriptRoot\Readme.classic.md" "$PSScriptRoot\readme.md" -Force
   }
   else {
-    Copy-Item "$PSScriptRoot\readme.current.md" "$PSScriptRoot\readme.md" -Force
+    Copy-Item "$PSScriptRoot\Readme.current.md" "$PSScriptRoot\readme.md" -Force
   }
 
   $Latest.ChecksumType64 = 'sha256'
