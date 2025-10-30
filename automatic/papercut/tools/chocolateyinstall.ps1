@@ -13,8 +13,8 @@ $directory = if ($pp.InstallDir) {
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   fileType      = 'exe' #only one of these: exe, msi, msu
-  file          = "$toolsDir\*"
-  file64        = "$toolsDir\*"
+  file          = "$toolsDir\PapercutSMTP-win-x86-stable-Setup.exe"
+  file64        = "$toolsDir\PapercutSMTP-win-x64-stable-Setup.exe"
 
   softwareName  = 'Papercut SMTP*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
   # MSI

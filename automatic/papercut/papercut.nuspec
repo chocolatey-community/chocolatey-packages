@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>papercut</id>
-    <version>6.0.0</version>
-    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages</packageSourceUrl>
+    <version>7.5.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/papercut</packageSourceUrl>
     <owners>chocolatey-community,Jaba,AdmiringWorm</owners>
     <!-- ============================== -->
 
@@ -14,7 +14,7 @@
     <authors>Jaban,ChangeMakerStudios</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.papercut-smtp.com/</projectUrl>
-    <iconUrl>/papercut.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@054bdd30ebae535997ce6680ae31f8ebb9fc7979/icons/papercut.png</iconUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ChangemakerStudios/Papercut-SMTP</projectSourceUrl>
@@ -22,8 +22,27 @@
     <tags>papercut utility foss smtp development</tags>
     <summary>The Simple Desktop Email Helper</summary>
     <!-- Do not touch the description here in the nuspec file. Description is imported during update from the Readme.md file -->
-    <description>WILL BE AUTO-REPLACED</description>
-    <releaseNotes>https://github.com/ChangemakerStudios/Papercut-SMTP/releases</releaseNotes>
+    <description><![CDATA[Papercut SMTP is a 2-in-1 quick email viewer AND built-in SMTP server (designed to receive messages only). Papercut SMTP doesn't enforce any restrictions on how you prepare your email, but it allows you to view the whole email-chilada: body, HTML, headers, and attachment right down to the naughty raw encoded bits. Papercut can be configured to run on startup and sit quietly (minimized in the tray) only providing a notification when a new message has arrived.
+
+## Features
+
+- Instant Feedback When New Email Arrives
+- Rich and Detailed View of Received Email
+- View and Download the Mime Sections of your Email
+
+## Package Parameters
+
+- `/InstallDir:PATH` - Override the path where Papercut should be installed.
+
+### Examples
+
+`choco install papercut --package-parameters="/InstallDir:C:\tools\Papercut"`
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+]]></description>
+    <releaseNotes>https://github.com/ChangemakerStudios/Papercut-SMTP/releases/tag/7.5.0</releaseNotes>
     <!-- =============================== -->
 
     <dependencies>

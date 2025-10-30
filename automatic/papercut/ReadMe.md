@@ -1,4 +1,4 @@
-# <img src="/chocolatey-community/chocolatey-packages/icons/papercut.png" width="48" height="48"/> [Papercut-Smtp](https://chocolatey.org/packages/papercut)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@054bdd30ebae535997ce6680ae31f8ebb9fc7979/icons/papercut.png" width="48" height="48"/> [Papercut-Smtp](https://chocolatey.org/packages/papercut)
 
 Papercut SMTP is a 2-in-1 quick email viewer AND built-in SMTP server (designed to receive messages only). Papercut SMTP doesn't enforce any restrictions on how you prepare your email, but it allows you to view the whole email-chilada: body, HTML, headers, and attachment right down to the naughty raw encoded bits. Papercut can be configured to run on startup and sit quietly (minimized in the tray) only providing a notification when a new message has arrived.
 
