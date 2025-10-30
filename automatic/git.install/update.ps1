@@ -22,7 +22,7 @@ function global:au_SearchReplace {
             "(^[$]fileName64\s*=\s*)('.*')" = "`$1'$($Latest.FileName64)'"
         }
 
-        ".\legal\verification.txt" = @{
+        ".\legal\VERIFICATION.txt" = @{
             "(?i)(64-Bit.+)\<.*\>" = "`${1}<$($Latest.URL64)>"
             "(?i)(checksum type:\s+).*" = "`${1}$($Latest.ChecksumType)"
             "(?i)(checksum64:\s+).*" = "`${1}$($Latest.Checksum64)"
