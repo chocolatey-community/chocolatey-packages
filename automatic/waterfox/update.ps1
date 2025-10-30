@@ -1,4 +1,5 @@
 ﻿Import-Module Chocolatey-AU
+Import-Module (Join-Path -Path $PSScriptRoot -ChildPath "../../scripts/au_extensions.psm1")
 
 $softwareName = 'Waterfox*'
 
