@@ -5,18 +5,18 @@ in verifying that this package's contents are trustworthy.
 
 Package can be verified like this:
 
-1. Go to <https://github.com/ChangemakerStudios/Papercut-SMTP/releases/tag/7.5.1>
+1. Go to <https://github.com/ChangemakerStudios/Papercut-SMTP/releases/tag/7.6.1>
 
   And download the following installers:
-   32bit Installer: https://github.com/ChangemakerStudios/Papercut-SMTP/releases/download/7.5.1/PapercutSMTP-win-x86-stable-Setup.exe
-   64bit installer: https://github.com/ChangemakerStudios/Papercut-SMTP/releases/download/7.5.1/PapercutSMTP-win-x64-stable-Setup.exe
+   32bit Installer: https://github.com/ChangemakerStudios/Papercut-SMTP/releases/download/7.6.1/PapercutSMTP-win-x86-stable-Setup.exe
+   64bit installer: https://github.com/ChangemakerStudios/Papercut-SMTP/releases/download/7.6.1/PapercutSMTP-win-x64-stable-Setup.exe
 
 2. You can use one of the following methods to obtain the SHA256 checksum:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   32bit Installer checksum: 587C0FFF5C1DD7CAD7D9C32652B71F0624A05121F08B23A4000ECBD389EA6DD5
-   64bit Installer checksum: 794723D389129B54C97D036CB036E1838DC874A3DDB5E12AA09629F2DDB4F7F9
+   32bit Installer checksum: 0524F3DAFAB359C1A3EFD92432C7CEB9C57626DFDEF5181BC09EB8289C5DD71A
+   64bit Installer checksum: 07809AF2563CEC93047F82523BFAFD41A8766585401D6FEE3D27BE852841EDA6
 
 File 'LICENSE.txt' obtained from: https://www.apache.org/licenses/LICENSE-2.0.txt
 This license was mentioned to be covering Papercut in their Readme.md file: https://github.com/ChangemakerStudios/Papercut-SMTP/blob/7.0.1/README.md#license
