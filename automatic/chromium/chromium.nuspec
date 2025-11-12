@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromium</id>
-    <version>144.0.7525.0-snapshots</version>
-    <title>Chromium Snapshots</title>
+    <version>142.0.7444.163</version>
+    <title>Chromium</title>
     <owners>chocolatey-community</owners>
     <authors>The Chromium Authors</authors>
     <projectUrl>http://www.chromium.org/Home</projectUrl>
