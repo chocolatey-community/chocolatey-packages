@@ -2,9 +2,9 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>thunderbirdesr</id>
-    <version>140.5.0</version>
-    <title>Thunderbird (ESR)</title>
+    <id>thunderbird</id>
+    <version>145.0</version>
+    <title>Thunderbird (Release)</title>
     <owners>chocolatey-community</owners>
     <authors>Mozilla</authors>
     <licenseUrl>https://www.mozilla.org/en-US/about/legal/terms/thunderbird/</licenseUrl>
@@ -34,13 +34,13 @@ Command-line options for installer configuration. See the [official page](https:
 
 ### Examples
 
-`choco install thunderbirdesr --params "/l=en-GB"`
-`choco install thunderbirdesr --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`    
-`choco install thunderbirdesr --params "/UseMozillaFallback"`
-`choco install thunderbirdesr --params "/NoStop"`
+`choco install thunderbird --params "/l=en-GB"`
+`choco install thunderbird --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`    
+`choco install thunderbird --params "/UseMozillaFallback"`
+`choco install thunderbird --params "/NoStop"`
 
 ## Notes
-- Looking for Thunderbird monthly release? Install the [thunderbird](/packages/thunderbird) package.
+- Looking for Thunderbird Extended Support Release? Install the [thunderbirdesr](/packages/thunderbirdesr) package.
 - If locale package parameter is not present, this package installs Thunderbird in the first language which matches this list:
   1. If Thunderbird is already installed: the same language as the already installed Thunderbird.
   1. The Windows system language where the Thunderbird package gets installed.
@@ -49,7 +49,7 @@ Command-line options for installer configuration. See the [official page](https:
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>A free email client from Mozilla</summary>
-    <releaseNotes>https://www.thunderbird.net/en-US/thunderbird/140.5.0esr/releaseNotes/</releaseNotes>
+    <releaseNotes>https://www.thunderbird.net/en-US/thunderbird/145.0/releasenotes/</releaseNotes>
     <copyright>Mozilla. All rights reserved.</copyright>
     <tags>mozilla thunderbird email admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/thunderbird</packageSourceUrl>
