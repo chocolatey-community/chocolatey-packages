@@ -7,15 +7,15 @@ location on <>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.13.20/prey-windows-1.13.20-x86.msi>
-  64-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.13.20/prey-windows-1.13.20-x64.msi>
+  32-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.13.21/prey-windows-1.13.21-x86.msi>
+  64-Bit software: <https://github.com/prey/prey-node-client/releases/download/v1.13.21/prey-windows-1.13.21-x64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 931EC16C0E1B260C885AC9A485468779220FDA93031CB20ED50FE17362A8FB8E
-  checksum64: 6E46CE97024C0E2898BFC57584C2AF1A95C5CF187C967BC59D9EEB34B259B6F5
+  checksum32: BABA5D6F8AA7DA11A78309D0C6B4F09E5211BF832191C1227A0DABDCA8D98C00
+  checksum64: 5E2A770ED329665BB77B45C44E36369EBB6522E0A197B0E095F15DBFDACC5D0A
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/prey/prey-node-client/blob/master/license.txt>
