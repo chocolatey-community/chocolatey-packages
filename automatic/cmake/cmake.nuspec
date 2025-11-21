@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cmake</id>
-    <version>4.1.3</version>
+    <version>4.2.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/cmake</packageSourceUrl>
     <owners>chocolatey-community, dtgm</owners>
     <title>CMake</title>
@@ -48,7 +48,7 @@ For example: `choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' --app
 * [News](https://blog.kitware.com/tag/CMake/)
 * [Changelog](https://www.cmake.org/download/#latest)</releaseNotes>
     <dependencies>
-      <dependency id="cmake.install" version="[4.1.3]" />
+      <dependency id="cmake.install" version="[4.2.0]" />
     </dependencies>
   </metadata>
   <files />
