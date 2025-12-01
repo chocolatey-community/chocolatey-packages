@@ -26,13 +26,13 @@ body:
         Do mind that versions older than the latest version that was available 1 year ago will not be supported.
       multiple: true
       options:
+        - 2.6.0
         - 2.5.1
         - 2.5.0
         - 2.4.3
         - 2.4.2
         - 2.4.1
         - 2.4.0
-        - 2.3.0
         - Other (note in the comments)
     validations:
       required: true
