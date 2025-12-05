@@ -5,11 +5,11 @@ in verifying that this package's contents are trustworthy.
 
 Package can be verified like this:
 
-1. Go to <https://github.com/audacity/audacity/releases/tag/Audacity-3.7.5>
+1. Go to <https://github.com/audacity/audacity/releases/tag/Audacity-3.7.6>
 
   And download the following:
-   x32: https://github.com/audacity/audacity/releases/download/Audacity-3.7.5/audacity-win-3.7.5-32bit.exe
-   x64: https://github.com/audacity/audacity/releases/download/Audacity-3.7.5/audacity-win-3.7.5-64bit.exe
+   x32: https://github.com/audacity/audacity/releases/download/Audacity-3.7.6/audacity-win-3.7.6-32bit.exe
+   x64: https://github.com/audacity/audacity/releases/download/Audacity-3.7.6/audacity-win-3.7.6-64bit.exe
 
    to acquire the installers.
 
@@ -17,8 +17,8 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 0776FB98623577AF04FAA382FF59D30BDFACB36449352CF3F42578837ABE9B57
-   checksum64: DC93003F1F84F327026E31A49829A3E2CA3BEB0B24DBE0EC19ADF2074FD6BE5D
+   checksum32: 6F2CE96FB2AD7531155B9873DEC53A909F189D55AD913A1E8800863FFF628F88
+   checksum64: 8F88E52FE75E67E4CF74446E5DBB3B0DB00F2E6894DF819A180AFE56E8F57B04
 
 File 'LICENSE.txt' obtained from:
    https://www.audacityteam.org/about/license/#license

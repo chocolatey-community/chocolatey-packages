@@ -5,12 +5,12 @@ in verifying that this package's contents are trustworthy.
 The installer has been downloaded from GitHub and can be verified like this:
 
 1. Download the following installers:
-  url: <https://github.com/gitextensions/gitextensions/releases/download/v6.0.2/GitExtensions-x64-6.0.2.18262-f02a06bf5.msi>
+  url: <https://github.com/gitextensions/gitextensions/releases/download/v6.0.5/GitExtensions-x64-6.0.5.18375-069d8b778.msi>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum: D6BC75BB00E10453BD93F05127611F4447F23C70E2748B9E3018767AB8248311
+  checksum: D925A0A1C96B49687CB099BAF0449930F0BCBAA9F13647C44ADED770D9F5D3C2
 
 The included license file have been downloaded from <https://github.com/gitextensions/gitextensions/blob/0a4730ccdf7e36c0078813101a3ee70e825e93ec/LICENSE.md>
