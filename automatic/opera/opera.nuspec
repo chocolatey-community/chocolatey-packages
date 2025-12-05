@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Opera</id>
-    <version>125.0.5729.12</version>
+    <version>125.0.5729.15</version>
     <title>Opera</title>
     <owners>chocolatey-community</owners>
     <authors>Opera</authors>
@@ -28,7 +28,7 @@ For example: `--params '"/NoAutostart /NoDesktopShortcut /NoTaskbarShortcut"'`
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>The Opera web browser makes the Web fast and fun, giving you a better web browser experience on any computer.</summary>
-    <releaseNotes>https://blogs.opera.com/desktop/changelog-for-125/#b5729.12</releaseNotes>
+    <releaseNotes>https://blogs.opera.com/desktop/changelog-for-125/#b5729.15</releaseNotes>
     <tags>browser opera cross-platform internet admin</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/opera</packageSourceUrl>
     <dependencies>
