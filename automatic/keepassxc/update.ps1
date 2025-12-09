@@ -4,7 +4,7 @@ function global:au_BeforeUpdate {
   Get-RemoteFiles -Purge -NoSuffix
 
   $url64Hash = Get-Hash -url $Latest.URL64 -filename $Latest.FileName64
-  if ($url64Hash.ToUpper() -ne $Latest.Checksum64.ToUpper()) {
+  if ($url64Hash -ne $Latest.Checksum64) {
     throw "File checksum of downloaded 64bit executable do not match expected upstream checksum"
   }
 }
