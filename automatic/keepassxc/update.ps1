@@ -33,7 +33,7 @@ function Get-Hash($url, $filename) {
   $downloadedPage = $downloadedPage.Split([Environment]::NewLine)
   foreach ($line in $downloadedPage) {
     $parsed = $line -split ' |\n' -replace '\*', ''
-    if ($parsed[1] -Match $filename) {
+    if ($parsed[-1] -Match $filename) {
       return $parsed[0]
     }
   }
