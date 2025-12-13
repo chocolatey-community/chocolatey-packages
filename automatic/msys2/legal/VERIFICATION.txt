@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/msys2/msys2-installer/releases/download/2025-08-30/msys2-base-x86_64-20250830.tar.xz
+   x64: https://github.com/msys2/msys2-installer/releases/download/2025-12-13/msys2-base-x86_64-20251213.tar.xz
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 780D7546AA86B781E0DED37C7B8F71F1B8572219494FE88259D8D4B78752B2E2
+   checksum64: 999F63C2FC7525AF5CD41B55E9EA704471A4F9D0278A257FFF3B0D1183C441B9
 
 File 'LICENSE.txt' is obtained from:
    https://raw.githubusercontent.com/Alexpux/MSYS2-packages/master/LICENSE
