@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://musescore.org/en/download>
 and can be verified by doing the following:
 
-1. Download the following <https://cdn.jsdelivr.net/musescore/v4.6.4/MuseScore-Studio-4.6.4.253351238-x86_64.msi>
+1. Download the following <https://cdn.jsdelivr.net/musescore/v4.6.5/MuseScore-Studio-4.6.5.253511702-x86_64.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 95F87F6372C2B5761C809CAD37A445C43510CDDD27BE596205C3CC61B1FA2D1E
+  checksum: B47E4C4A4473B3230A952AE9E873CD2CD95E19AFF59B0CE759D0E75ACC922E7F
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/musescore/MuseScore/blob/d771a5205cd4b360371005d6c4cf91e19e47b8ce/LICENSE.txt>
