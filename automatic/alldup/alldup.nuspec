@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>alldup</id>
-    <version>4.5.70</version>
+    <version>4.5.72</version>
     <title>AllDup</title>
     <owners>chocolatey-community</owners>
     <authors>Michael Thummerer Software Design</authors>
@@ -37,6 +37,10 @@
 - Fast search algorithm
 
 ![screenshot](https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/master/automatic/alldup/screenshot.png)
+
+## Notes
+
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>Tool for searching and removing file duplicates</summary>
     <releaseNotes>https://www.alldup.info/alldup_help/alldup_version.php</releaseNotes>
