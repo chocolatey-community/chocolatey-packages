@@ -8,7 +8,7 @@ if ((Get-OSArchitectureWidth 32) -or $env:chocolateyForceX86 -eq $true)
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\djv-3.2.1-Windows-AMD64.exe"
+  file           = "$toolsPath\djv-3.3.1-windows-amd64.exe"
   softwareName   = 'djv-*'
   silentArgs     = '/S'
   validExitCodes = @(0)
