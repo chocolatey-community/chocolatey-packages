@@ -5,8 +5,8 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $softwareName = 'Microsoft Visual Studio Code'
 $version = '1.107.1'
-if ($version -eq (Get-UninstallRegistryKey "$softwareName").DisplayVersion) {
-  Write-Host "VS Code $version is already installed."
+if ($version -le (Get-UninstallRegistryKey "$softwareName").DisplayVersion) {
+  Write-Host "VS Code $version (or newer) is already installed."
   return
 }
 
