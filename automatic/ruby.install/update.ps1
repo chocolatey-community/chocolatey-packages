@@ -30,7 +30,9 @@ function global:au_BeforeUpdate($Package) {
     Invoke-WebRequest -Uri $Latest.LicenseUrl -OutFile $outputFile
     $content = Get-Content $outputFile
 
-    $hasMatch = $content | Where-Object { $_ -match "You may distribute the software" }
+    $hasMatch = $content | Where-Object {
+      $_ -match "You may distribute the software"
+    }
 
     if (!$hasMatch) {
       throw "The License has changed, please verify redistribution rights and update the license check."
@@ -55,7 +57,9 @@ function GetStreams() {
     }
     $versionTwoPart = $version -replace '([\d]+\.[\d]+).*', "`$1"
 
-    if ($streams.$versionTwoPart) { return }
+    if ($streams.$versionTwoPart) {
+      return
+    }
 
     $url64 = $_ | Select-Object -ExpandProperty href
 
@@ -78,12 +82,16 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = '\.exe$'
-  $releaseUrls = $download_page.links | Where-Object href -match $re | Where-Object { $_ -notmatch 'devkit' }
+  $releaseUrls = $download_page.links | Where-Object href -match $re | Where-Object {
+    $_ -notmatch 'devkit'
+  }
 
-  @{ Streams = GetStreams $releaseUrls }
+  @{
+    Streams = GetStreams $releaseUrls
+  }
 }
 
 if ($MyInvocation.InvocationName -ne '.') {
-  # run the update only if script is not sourced by the virtual package ruby
+  # Run the update only if script is not sourced by the virtual package ruby.
   update -ChecksumFor none
 }
