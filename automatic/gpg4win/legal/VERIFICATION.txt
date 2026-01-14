@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://files.gpg4win.org/gpg4win-4.4.1.exe
+   x32: https://files.gpg4win.org/gpg4win-5.0.0.exe
 
    to download the installer.
 
@@ -15,7 +15,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: DE25E1D2B08C12506AC5DCC62DCD849F6CE973237837A1CC367E51F25EF517D8
+   checksum32: 73B026D4EAE86FE54EE538B73F0311A3CD77AA885343FBDA0BFFDCAC2DFD704F
 
 File 'license.txt' is obtained from:
    https://www.gpg4win.org/license.html
