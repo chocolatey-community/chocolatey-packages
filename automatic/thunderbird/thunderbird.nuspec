@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>thunderbird</id>
-    <version>146.0.1</version>
+    <version>147.0</version>
     <title>Thunderbird (Release)</title>
     <owners>chocolatey-community</owners>
     <authors>Mozilla</authors>
@@ -49,7 +49,7 @@ Command-line options for installer configuration. See the [official page](https:
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
 ]]></description>
     <summary>A free email client from Mozilla</summary>
-    <releaseNotes>https://www.thunderbird.net/en-US/thunderbird/146.0.1/releasenotes/</releaseNotes>
+    <releaseNotes>https://www.thunderbird.net/en-US/thunderbird/147.0/releasenotes/</releaseNotes>
     <copyright>Mozilla. All rights reserved.</copyright>
     <tags>mozilla thunderbird email admin foss cross-platform</tags>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/thunderbird</packageSourceUrl>
