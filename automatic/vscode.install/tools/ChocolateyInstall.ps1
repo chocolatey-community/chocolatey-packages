@@ -20,7 +20,7 @@ $packageArgs = @{
 
   softwareName   = "$softwareName"
 
-  checksum64     = 'A5FC0EE29DF37DA61D5A5244581A91E318EDD5ADC64D487289CE34459C390D4D'
+  checksum64     = '6D136E42384EA76B585C0197597FBFF66CB02FC9F2AB24DB832E6FF2601F2E4C'
   checksumType64 = 'sha256'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
