@@ -2,8 +2,8 @@
 
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
-$File32Name = 'Zotero-7.0.32_win32_setup.exe'
-$File64Name = 'Zotero-7.0.32_x64_setup.exe'
+$File32Name = 'Zotero-8.0_win32_setup.exe'
+$File64Name = 'Zotero-8.0_x64_setup.exe'
 
 $File32Path = Join-Path $toolsPath $File32Name
 $File64Path = Join-Path $toolsPath $File64Name
