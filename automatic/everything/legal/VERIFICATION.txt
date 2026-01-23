@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://www.voidtools.com/Everything-1.4.1.1031.x86-Setup.exe
-   x64: https://www.voidtools.com/Everything-1.4.1.1031.x64-Setup.exe
+   x32: https://www.voidtools.com/Everything-1.4.1.1032.x86-Setup.exe
+   x64: https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 
    to download the installer.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: D88E1FE1B221662CAA15CA8261039F68FA54A2BD7533194228E5C2443B50D26F
-   checksum64: 9189ECA994F78C32B4EA39A4B78E016056C3939761B18800446068B6A06C5162
+   checksum32: 781A31B440045219752A1BB40FBD204B1D96964D4BF56AF01B18E3D549B037AA
+   checksum64: C42EFAD041D4C0BB4D4AC97AE7CBE89F153EC1FE078772392E749C7F5D5282D3
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum https://www.voidtools.com/Everything-1.4.1.1031.x64-Setup.exe
+   Get-RemoteChecksum https://www.voidtools.com/Everything-1.4.1.1032.x64-Setup.exe
 
 File 'License.txt' is obtained from:
     https://www.voidtools.com/License.txt
