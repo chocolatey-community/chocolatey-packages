@@ -1,6 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'http://windows.php.net/download'
+# Define the releases URL to get the latest PHP versions. It was updated to use the new path.
+$releases = 'https://downloads.php.net/~windows/releases/'
 
 function global:au_BeforeUpdate {
   Remove-Item -Recurse -Force "$PSScriptRoot\tools\*.zip"
@@ -69,15 +70,16 @@ function Get-Dependency() {
   return $result
 }
 
+# Base download URL uses the $releases variable since all downloads are now under that path.
 function CreateStream {
   param([uri]$url32Bit, [uri]$url64bit, [version]$version)
 
   $Result = @{
     Version      = $version
-    URLNTS32     = 'http://windows.php.net' + $url32bit
-    URLNTS64     = 'http://windows.php.net' + $url64bit
-    URLTS32      = 'http://windows.php.net' + ($url32bit | ForEach-Object { $_ -replace '\-nts', '' })
-    URLTS64      = 'http://windows.php.net' + ($url64bit | ForEach-Object { $_ -replace '\-nts', '' })
+    URLNTS32     = $releases + $url32bit
+    URLNTS64     = $releases + $url64bit
+    URLTS32      = $releases + ($url32bit | ForEach-Object { $_ -replace '\-nts', '' })
+    URLTS64      = $releases + ($url64bit | ForEach-Object { $_ -replace '\-nts', '' })
     ReleaseNotes = "https://www.php.net/ChangeLog-$($version.Major).php#${version}"
     Dependency   = Get-Dependency $url32Bit
   }
