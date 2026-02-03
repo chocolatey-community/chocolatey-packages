@@ -3,23 +3,23 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <http://windows.php.net/download>
+location on <https://downloads.php.net/~windows/releases/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-8.5.1-Win32-vs17-x86.zip>
-  64-Bit software (threadsafe): <http://windows.php.net/downloads/releases/php-8.5.1-Win32-vs17-x64.zip>
-  32-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-8.5.1-nts-Win32-vs17-x86.zip>
-  64-Bit software (non-threadsafe): <http://windows.php.net/downloads/releases/php-8.5.1-nts-Win32-vs17-x64.zip>
+  32-Bit software (threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.2-Win32-vs17-x86.zip>
+  64-Bit software (threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.2-Win32-vs17-x64.zip>
+  32-Bit software (non-threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.2-nts-Win32-vs17-x86.zip>
+  64-Bit software (non-threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.2-nts-Win32-vs17-x64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: 
-  checksum32 (threadsafe): CFD66A27D32E0CE2F462527F8F29FD2D797C714083C07A32B6147D06A7553D6F
-  checksum64 (threadsafe): 77FBEE57C8159279BC065942D361103B0A3F53C8DFABC182A07433BE9EEC8DBA
-  checksum32 (non-threadsafe): DE3747B785AF34F8978AFBADF0DFE81004BFC3C0E4850416DD618C327C5C3A6C
-  checksum64 (non-threadsafe): B80175DC14753E0645B0A2637782C02583AA5D25D487721129501A25796526DB
+  checksum32 (threadsafe): 7FD2816819165B3504275140E040E13E7F55E1F146641188257715D063EEEECF
+  checksum64 (threadsafe): A44BDA6AE67FE20CB5DA8D38D228601D48459F857D95B54251D12365BD428DFE
+  checksum32 (non-threadsafe): 6D52684520EF79421F678C8D70792BFE746DF31E0B76224AC39D3107F5F89DAA
+  checksum64 (non-threadsafe): ACB844830AEE008A7DDE4092F6AAB62B09541B3F16260806BEFF4E4DCC7D9617
 
 The file 'LICENSE.txt' has been obtained from <http://www.php.net/license/3_01.txt>
