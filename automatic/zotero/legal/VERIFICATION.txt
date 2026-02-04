@@ -6,8 +6,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://download.zotero.org/client/release/8.0.1/Zotero-8.0.1_win32_setup.exe
-   x64: https://download.zotero.org/client/release/8.0.1/Zotero-8.0.1_x64_setup.exe
+   x32: https://download.zotero.org/client/release/8.0.2/Zotero-8.0.2_win32_setup.exe
+   x64: https://download.zotero.org/client/release/8.0.2/Zotero-8.0.2_x64_setup.exe
 
    to download the installer.
 
@@ -17,8 +17,8 @@ Package can be verified like this:
 3. The checksums should match the following:
 
   checksum type: SHA256
-  checksum32: B99D2D96DEA62B5D4F3440763A39C2AA674D1075902CB078C594962C1C7E8ECE
-  checksum64: C013D9FF634461544DB87BF70A96083797588B49BF57C236C7B20DF3CEC1B638
+  checksum32: 7FBB414B70CA4557DFC7105F74A470F71A935FCD0BA6130769BA6C96D3BAF679
+  checksum64: 190A746B691F409EBCA4C53C4AA2034A425A89A8C461DBAA17E0AA40538CB11B
 
 The file 'LICENSE.txt' has been obtained from 
    https://raw.githubusercontent.com/zotero/zotero/refs/heads/main/COPYING
