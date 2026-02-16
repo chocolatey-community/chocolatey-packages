@@ -7,15 +7,15 @@ location on <>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.1/npp.8.9.1.portable.7z>
-  64-Bit software: <https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.1/npp.8.9.1.portable.x64.7z>
+  32-Bit software: <https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.2/npp.8.9.2.portable.7z>
+  64-Bit software: <https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v8.9.2/npp.8.9.2.portable.x64.7z>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: E3EAD074B4052966F98F6D95291DD86DD877BD1B5A94AACDD384B499A89E3127
-  checksum64: F52767B8082B0CE6600EEC1A36E9157C346FCF60C16CEE059D18F30BF56DC17E
+  checksum32: 6F744F54273F18969136DEEE8E3AD559C8AD2F3B9C5CE2953BAF29C5AF571AC3
+  checksum64: 5270F198DA07B3F00DDCF9037F4206DCDEA3C1FB78FECE695F3DBF37EF7E60AB
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/notepad-plus-plus/notepad-plus-plus/blob/f7ade4739ba8d53e87b5cc50bbed1bb472f5e68c/LICENSE>
