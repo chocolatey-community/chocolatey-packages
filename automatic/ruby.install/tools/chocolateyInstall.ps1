@@ -20,7 +20,7 @@ Write-Information "Ruby is going to be installed in '$installDir'"
 $packageArgs = @{
   packageName    = $Env:ChocolateyPackageName
   fileType       = 'exe'
-  file64         = "$toolsPath\rubyinstaller-4.0.0-1-x64.exe"
+  file64         = "$toolsPath\rubyinstaller-4.0.1-1-x64.exe"
   silentArgs     = '/verysilent /allusers /dir="{0}" /tasks="{1}"' -f $installDir, ($tasks -join ',')
   validExitCodes = @(0)
   softwareName   = 'ruby *'

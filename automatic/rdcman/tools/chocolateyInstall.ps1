@@ -3,7 +3,7 @@
 $packageArgs = @{
   packageName    = 'rdcman'
   url            = 'https://download.sysinternals.com/files/RDCMan.zip'
-  checksum       = 'eb6cbbf57e164df50027d5589c415be2a5a6df965d1c3861e04dd6a146f80dc1'
+  checksum       = '32d3e4f4e6db103dbb8a6014f3a0aafda3bbe119d8523090c54833173918e8f4'
   checksumType   = 'sha256'
   unzipLocation  = $installDir
 }

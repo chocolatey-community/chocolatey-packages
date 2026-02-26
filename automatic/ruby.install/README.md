@@ -12,7 +12,7 @@ language, an execution environment, important documentation, and more.
 
 - `/InstallDir` - Ruby installation directory, by default
   `${Env:ChocolateyToolsLocation}\RubyXY` where XY are the major and minor
-  version parts.
+  version components.
 - `/NoPath` - Do not add ruby `\bin` folder to machine PATH.
 
 ### Example

@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'msi'
-  url            = 'https://downloads.1password.com/win/1PasswordSetup-8.11.23.msi'
+  url            = 'https://downloads.1password.com/win/1PasswordSetup-8.12.4.msi'
   softwareName   = '1Password*'
-  checksum       = '44f7007047ccf0e029d6bd4e4cb1463e0741254c419e77f39c117ce6b20b2abc'
+  checksum       = '0e846f4af6347bca3acc96673d5ebcedb14c34cb44d305dc5c2289da03c72ea2'
   checksumType   = 'sha256'
   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   validExitCodes = @(0, 1641, 3010)

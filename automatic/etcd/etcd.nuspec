@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>etcd</id>
-    <version>3.6.7</version>
+    <version>3.6.8</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/etcd</packageSourceUrl>
     <owners>chocolatey-community,dgalbraith,Andrei Bejenaru,Robert Labrie</owners>
     <title>etcd (Install)</title>
     <authors>etcd Authors</authors>
     <projectUrl>https://etcd.io</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@c681fe2d8274d648911c90a5cfa63b43e4663013/icons/etcd.png</iconUrl>
-    <copyright>(c) 2013-2025 etcd Authors</copyright>
+    <copyright>(c) 2013-2026 etcd Authors</copyright>
     <licenseUrl>https://github.com/etcd-io/etcd/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/etcd-io/etcd</projectSourceUrl>
@@ -52,7 +52,7 @@ For installation guides, please check out [play.etcd.io](http://play.etcd.io) an
 ###### Linux
 
 ```sh
-ETCD_VER=v3.6.7
+ETCD_VER=v3.6.8
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -81,7 +81,7 @@ rm -f /tmp/etcd-${ETCD_VER}-linux-amd64.tar.gz
 ###### macOS (Darwin)
 
 ```sh
-ETCD_VER=v3.6.7
+ETCD_VER=v3.6.8
 
 # choose either URL
 GOOGLE_URL=https://storage.googleapis.com/etcd
@@ -105,7 +105,7 @@ mv /tmp/etcd-${ETCD_VER}-darwin-amd64/* /tmp/etcd-download-test &amp;&amp; rm -r
 etcd uses [`gcr.io/etcd-development/etcd`](https://gcr.io/etcd-development/etcd) as a primary container registry, and [`quay.io/coreos/etcd`](https://quay.io/coreos/etcd) as secondary.
 
 ```sh
-ETCD_VER=v3.6.7
+ETCD_VER=v3.6.8
 
 rm -rf /tmp/etcd-data.tmp &amp;&amp; mkdir -p /tmp/etcd-data.tmp &amp;&amp; \
   docker rmi gcr.io/etcd-development/etcd:${ETCD_VER} || true &amp;&amp; \
@@ -135,8 +135,7 @@ docker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdutl version
 docker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl endpoint health
 docker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl put foo bar
 docker exec etcd-gcr-${ETCD_VER} /usr/local/bin/etcdctl get foo
-```
-</releaseNotes>
+```</releaseNotes>
     <dependencies>
       <dependency id="nssm" version="2.24.101" />
     </dependencies>

@@ -290,8 +290,8 @@ Mersenne Twister
 ----------------
 
 The "_random" C extension underlying the "random" module includes code
-based on a download from http://www.math.sci.hiroshima-u.ac.jp/~m-mat/
-MT/MT2002/emt19937ar.html. The following are the verbatim comments
+based on a download from http://www.math.sci.hiroshima-u.ac.jp/~m-mat
+/MT/MT2002/emt19937ar.html. The following are the verbatim comments
 from the original code:
 
    A C-program for MT19937, with initialization improved 2002/1/26.
@@ -615,8 +615,8 @@ strtod and dtoa
 
 The file "Python/dtoa.c", which supplies C functions dtoa and strtod
 for conversion of C doubles to and from strings, is derived from the
-file of the same name by David M. Gay, currently available from https:
-//web.archive.org/web/20220517033456/http://www.netlib.org/fp/dtoa.c.
+file of the same name by David M. Gay, currently available from https
+://web.archive.org/web/20220517033456/http://www.netlib.org/fp/dtoa.c.
 The original file, as retrieved on March 16, 2009, contains the
 following copyright and licensing notice:
 

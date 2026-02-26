@@ -1,6 +1,6 @@
 ﻿$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installDir = Get-Content "$toolsDir\installDir"
-$shortversion = '91'
+$shortversion = '92'
 $statement = '-nsis'
 $exeToRun  = "$installDir\vim\vim$shortversion\uninstall.exe"
 

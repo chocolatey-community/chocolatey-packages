@@ -10,8 +10,8 @@ function global:au_SearchReplace {
     }
 
     ".\legal\VERIFICATION.txt"      = @{
-      "(?i)(\s+x64:).*"              = "`${1} $($Latest.URL64)"
-      "(?i)(checksum64:).*"          = "`${1} $($Latest.Checksum64)"
+      "(?i)(\s*)\<.*x64.7z\>"        = "`${1}<$($Latest.URL64)>"
+      "(?i)(checksum:).*"            = "`${1} $($Latest.Checksum64)"
       "(?i)(Get-RemoteChecksum).*"   = "`${1} $($Latest.URL64)"
       "(?i)(is obtained from:\s*).*" = "`${1} $($Latest.LicenseUrl)"
     }
