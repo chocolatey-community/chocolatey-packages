@@ -16,6 +16,7 @@ $ServiceName = 'nexus'
 
 # Handle Package Parameters
 $pp = Get-PackageParameters
+$CurrentConfig = Get-NexusConfiguration -Path $NexusConfigFile -ErrorAction SilentlyContinue
 
 $Hostname = if ($pp.ContainsKey("Fqdn")) {
   $pp["Fqdn"]
@@ -25,7 +26,14 @@ $Hostname = if ($pp.ContainsKey("Fqdn")) {
 
 $NexusPort = if ($pp.ContainsKey("Port")) {
   $pp["Port"]
-  Write-Host "/Port was used, Nexus will listen on port $($NexusPort)."
+  Write-Host "/Port was used, Nexus will listen on port $($PP['Port'])."
+} elseif ($CurrentConfig.'application-port-ssl' -gt 0) {
+  $CurrentConfig.'application-port-ssl'
+  $SslConfigured = $true
+  Write-Host "Nexus is configured to use application-port-ssl, Nexus will listen on port $($CurrentConfig.'application-port-ssl')"
+} elseif ($CurrentConfig.'application-port' -gt 0) {
+  $CurrentConfig.'application-port'
+  Write-Host "Nexus is configured to use application-port, Nexus will listen on port $($CurrentConfig.'application-port')"
 } else {
   "8081"
 }
@@ -34,12 +42,23 @@ if (Test-Path "$env:ProgramFiles\nexus\bin") {
   throw "Previous version of Nexus 3 installed by setup.exe is present, please uninstall before running this package."
 }
 
+if (Test-NexusMigratorRequired -DataDir $TargetDataFolder -ProgramDir $TargetFolder) {
+  Write-Error (@(
+    "This upgrade will fail if you do not migrate your database from OrientDb."
+    "You can do this with the nexus-repository-migrator package, or by following"
+    "Sonatype's instructions. For details on using the migrator package, see:"
+    " https://community.chocolatey.org/packages/nexus-repository-migrator#description"
+    "For details, see: https://help.sonatype.com/en/orient-3-70-java-8-or-11.html"
+  ) -join "`n")
+}
+
 if ((Get-Service $ServiceName -ErrorAction SilentlyContinue)) {
-  Write-Warning "Nexus web app is already present, shutting it down so that we can upgrade it."
+  $CurrentlyInstalledVersion = Get-NexusVersion
+  Write-Warning "Nexus web app $($CurrentlyInstalledVersion) is already present, shutting it down so that we can upgrade it."
   Get-Service $ServiceName | Stop-Service -Force
 }
 
-if ($pp.ContainsKey("BackupSslConfig")) {
+if ($pp.ContainsKey("BackupSslConfig") -or $SslConfigured) {
   if ($pp.ContainsKey("BackupLocation")) {
     Backup-NexusSSL -BackupLocation $pp["BackupLocation"]
   } else {
@@ -64,10 +83,9 @@ Install-ChocolateyZipPackage @PackageArgs
 
 Write-Host "Copying files to '$TargetFolder' with overwrite"
 if (Test-Path "$TargetFolder") {
-  Copy-Item "$ExtractFolder\$nexusversionedfolder\*" "$TargetFolder" -Force -Recurse
-} else {
-  Copy-Item "$ExtractFolder\$nexusversionedfolder" "$TargetFolder" -Force -Recurse
+  Remove-Item "$TargetFolder" -Force -Recurse
 }
+Copy-Item "$ExtractFolder\$nexusversionedfolder" "$TargetFolder" -Force -Recurse
 
 # Create the Nexus data directory, if it doesn't exist
 if (!(Test-Path "$TargetDataFolder")) {
@@ -87,7 +105,7 @@ $processArgs = @{
 
 $null = Start-ChocolateyProcessAsAdmin @processArgs
 
-if ($pp.ContainsKey("BackupSslConfig")) {
+if ($pp.ContainsKey("BackupSslConfig") -or $SslConfigured) {
   if ($pp.ContainsKey("BackupLocation")) {
     Restore-NexusSSL -BackupLocation $pp['BackupLocation']
   } else {
@@ -96,7 +114,7 @@ if ($pp.ContainsKey("BackupSslConfig")) {
 }
 
 # Update Port in Configuration before starting the service
-if ($NexusPort -ne '8081') {
+if ($NexusPort -ne '8081' -and -not $SslConfigured) {
   if (Test-Path "$NexusConfigFile") {
     Write-Host "Configuring Nexus to listen on port $NexusPort."
         (Get-Content "$NexusConfigFile") -replace "^#\s*application-port=.*$", "application-port=$NexusPort" |
@@ -108,7 +126,7 @@ if ($NexusPort -ne '8081') {
 
 # Start the service, and wait for the site to become available
 if ((Start-Service $ServiceName -PassThru).Status -eq 'Running') {
-  Wait-NexusAvailability -Hostname $Hostname -Port $NexusPort -Config $NexusConfigFile -SSL:$pp.ContainsKey("BackupSslConfig")
+  Wait-NexusAvailability -Hostname $Hostname -Config $NexusConfigFile -Timeout 15
 } else {
   Write-Warning "The Nexus Repository service ($ServiceName) did not start."
 }
