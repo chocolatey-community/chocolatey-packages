@@ -20,13 +20,13 @@ Command-line options for installer configuration. See the [official page](https:
 
 ### Examples
 
-`choco install thunderbird --params "/l=en-GB"`
-`choco install thunderbird --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`    
-`choco install thunderbird --params "/UseMozillaFallback"`
-`choco install thunderbird --params "/NoStop"`
+`choco install thunderbirdesr --params "/l=en-GB"`
+`choco install thunderbirdesr --params "/NoTaskbarShortcut /NoDesktopShortcut /NoAutoUpdate"`    
+`choco install thunderbirdesr --params "/UseMozillaFallback"`
+`choco install thunderbirdesr --params "/NoStop"`
 
 ## Notes
-- Looking for Thunderbird Extended Support Release? Install the [thunderbirdesr](/packages/thunderbirdesr) package.
+- Looking for Thunderbird monthly release? Install the [thunderbird](/packages/thunderbird) package.
 - If locale package parameter is not present, this package installs Thunderbird in the first language which matches this list:
   1. If Thunderbird is already installed: the same language as the already installed Thunderbird.
   1. The Windows system language where the Thunderbird package gets installed.
