@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>maintainertoolkit</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit/</packageSourceUrl>
+    <owners>chocolatey-community</owners>
+    <title>Chocolatey Package Maintenance Toolkit</title>
+    <authors>Chocolatey</authors>
+    <projectUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit</projectUrl>
+    <projectSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit</projectSourceUrl>
+    <iconUrl>https://img.chocolatey.org/nupkg/chocolateyicon.png</iconUrl>
+    <copyright>2026</copyright>
+    <licenseUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit/LICENSE.md</licenseUrl>
+    <mailingListUrl>https://ch0.co/community</mailingListUrl>
+    <bugTrackerUrl>https://github.com/chocolatey-community/chocolatey-packages/issues</bugTrackerUrl>
+    <tags>maintainertoolkit packaging developer</tags>
+    <summary>A metapackage to install the recommended tools for maintaining Chocolatey packages</summary>
+    <description>## Chocolatey Package Maintenance Toolkit
+
+This metapackage installs the complete, recommended toolset for creating, testing, and maintaining [Chocolatey](https://chocolatey.org) community packages.
+
+### What Gets Installed
+
+| Package | Purpose |
+|---|---|
+| **Visual Studio Code** | Primary editor for authoring `.nuspec`, `chocolateyInstall.ps1`, and other package files |
+| **Git** | Version control for managing package source code |
+| **GitHub CLI** | Create and manage pull requests and issues from the terminal |
+| **PowerShell Extension for VS Code** | Syntax highlighting, IntelliSense, and debugging for PowerShell scripts |
+| **Chocolatey Extension for VS Code** | Snippets, linting, and tooling specific to Chocolatey package authoring |
+| **Expresso** | Desktop regex builder and tester — useful for writing AU update patterns |
+
+### Who Is This For?
+
+This package targets **Chocolatey Community Repository maintainers** who want a consistent, reproducible development environment. Whether you are onboarding a new machine or helping a new contributor get started, one command is all it takes:
+
+```powershell
+choco install maintainertoolkit
+```
+
+### Notes
+
+- All dependency versions are pinned to known-good releases. You can upgrade individual tools independently after installation.
+- This is a **metapackage** — it contains no binaries of its own; it exists solely to pull in its dependencies.
+    </description>
+    <dependencies>
+      <dependency id="vscode.install" version="1.111.0" />
+      <dependency id="git.install" version="2.53.0" />
+      <dependency id="vscode-powershell" version="2025.4.0" />
+      <dependency id="chocolatey-vscode" version="0.7.2" />
+      <dependency id="gh" version="2.87.2" />
+      <dependency id="expresso" version="3.0.4750" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
