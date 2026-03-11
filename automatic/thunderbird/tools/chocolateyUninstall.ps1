@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = 'thunderbirdesr'
+$packageName = 'thunderbird'
 
 $uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'Mozilla Thunderbird*'
