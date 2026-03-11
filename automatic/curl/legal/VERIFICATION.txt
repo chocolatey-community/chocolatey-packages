@@ -6,7 +6,7 @@ Package can be verified like this:
 
 1. Go to https://curl.se/windows/, and look for the official binaries provided.
 
-   x64: https://curl.se/windows/dl-8.18.0_1/curl-8.18.0_1-win64-mingw.zip
+   x64: https://curl.se/windows/dl-8.19.0_1/curl-8.19.0_1-win64-mingw.zip
 
    to download the zip files. You may wish to rename one of the files.
 
@@ -14,7 +14,7 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: FF5A58DECB63D7AC9D76E63BE216E1328FE04477975D9A001F538DDFD4DDF0B8
+   checksum64: 36451CC7A226CDDDFADC507B422336A31FDE265E7C7EAFD1870E69F4022BAC91
 
 File 'LICENSE.txt' obtained from:
    https://github.com/curl/curl/blob/835c2634212257d41c1a30c6cc0ad3ed60bb9aca/COPYING

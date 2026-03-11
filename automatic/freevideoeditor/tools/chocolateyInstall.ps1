@@ -10,7 +10,7 @@ $packageArgs = @{
   softwareName   = 'VSDC Free Video Editor*'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
   validExitCodes = @(0)
-  checksum       = 'B1A1D0A9B1C7516CC0C54C1511FAB4E3BE2DB135E040AEFE3A7FAA20047566BE'
+  checksum       = 'F5D6E69298EB71713024496C20206D516E03E76BC075679450AC6816E0F491EC'
   checksumType   = 'sha256'
 }
 
