@@ -15,7 +15,7 @@ $resources = @(
         Description = 'Framework for keeping packages automatically up to date. Most community packages use this.'
     }
     [PSCustomObject]@{
-        Name        = 'JSONPath/Fiddler / Browser DevTools'
+        Name        = 'Fiddler'
         URL         = 'https://www.telerik.com/fiddler'
         Description = 'Inspect HTTP responses from vendor download pages to find stable download URLs and version info.'
     }

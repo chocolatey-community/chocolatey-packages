@@ -5,9 +5,9 @@
     <id>maintainertoolkit</id>
     <version>1.0.0</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit/</packageSourceUrl>
-    <owners>chocolatey-community</owners>
+    <owners>chocolatey-community,steviecoaster</owners>
     <title>Chocolatey Package Maintenance Toolkit</title>
-    <authors>Chocolatey</authors>
+    <authors>Chocolatey Software</authors>
     <projectUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit</projectUrl>
     <projectSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit</projectSourceUrl>
     <iconUrl>https://img.chocolatey.org/nupkg/chocolateyicon.png</iconUrl>
@@ -15,7 +15,7 @@
     <licenseUrl>https://github.com/chocolatey-community/chocolatey-packages/blob/master/manual/maintainertoolkit/LICENSE.md</licenseUrl>
     <mailingListUrl>https://ch0.co/community</mailingListUrl>
     <bugTrackerUrl>https://github.com/chocolatey-community/chocolatey-packages/issues</bugTrackerUrl>
-    <tags>maintainertoolkit packaging developer</tags>
+    <tags>maintainer-toolkit programming foss packaging developer</tags>
     <summary>A metapackage to install the recommended tools for maintaining Chocolatey packages</summary>
     <description>## Chocolatey Package Maintenance Toolkit
 
@@ -47,7 +47,7 @@ choco install maintainertoolkit
     </description>
     <dependencies>
       <dependency id="vscode.install" version="1.111.0" />
-      <dependency id="git.install" version="2.53.0" />
+      <dependency id="git.install" version="2.53.0.2" />
       <dependency id="vscode-powershell" version="2025.4.0" />
       <dependency id="chocolatey-vscode" version="0.7.2" />
       <dependency id="gh" version="2.87.2" />
