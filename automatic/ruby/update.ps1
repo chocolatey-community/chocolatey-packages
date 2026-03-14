@@ -1,4 +1,4 @@
-. $PSScriptRoot\..\ruby.install\update.ps1
+﻿. $PSScriptRoot\..\ruby.install\update.ps1
 
 function global:au_BeforeUpdate { }
 
