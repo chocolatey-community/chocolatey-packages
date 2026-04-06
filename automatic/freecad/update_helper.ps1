@@ -11,7 +11,9 @@ param(
 
   switch ($kind) {
     'dev' {
-      $download_page = (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -TagName "weekly-builds" -Verbose).assets
+      # this currently doesn't work because we can't get the latest prerelease.
+      # the rolling weeklies tag only includes Linux builds for some reason
+      $download_page = (Get-GitHubRelease -Owner "Freecad" -Name "Freecad" -Verbose).assets
       $mobile = "Windows"
       $ext = "7z"
       $re64 = "(FreeCAD_weekly(-builds)?)?(((\-|.)\d{2,6})+)?(\-conda)?(\-${mobile})(\-|.)?(x\d{2}_\d{2}\-)?(py\d{2,5})?(\.$ext)$"
