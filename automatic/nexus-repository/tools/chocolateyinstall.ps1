@@ -96,14 +96,7 @@ if (!(Test-Path "$TargetDataFolder")) {
 
 Remove-Item "$ExtractFolder" -Force -Recurse
 
-# Install the Nexus service
-$processArgs = @{
-  ExeToRun       = "$TargetFolder\bin\nexus.exe"
-  Statements     = "/install $servicename"
-  ValidExitCodes = @(0)
-}
-
-$null = Start-ChocolateyProcessAsAdmin @processArgs
+Install-NexusRepositoryService -NexusVersion $Version -NexusAppRoot $TargetFolder -CustomDataDir $TargetDataFolder -ServiceName $ServiceName
 
 if ($pp.ContainsKey("BackupSslConfig") -or $SslConfigured) {
   if ($pp.ContainsKey("BackupLocation")) {

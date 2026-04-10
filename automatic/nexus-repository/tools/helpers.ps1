@@ -528,3 +528,114 @@ function Get-NexusRepositoryServiceInstall {
     }
   }
 }
+
+function Install-NexusRepositoryService {
+  <#
+    .SYNOPSIS
+      Replicates the bin\install-nexus-service.bat file in the Nexus install.
+
+    .DESCRIPTION
+      This script replicates the actions of the Nexus bat installer, but without a non-skippable user prompt.
+      It was decided to do this rather than automate removal of the prompt from the batch file.
+      With luck, there are not frequent changes to the logic contained within.
+
+    .EXAMPLE
+      Install-NexusRepositoryService -NexusVersion $Version -NexusAppRoot $TargetFolder
+  #>
+  [CmdletBinding()]
+  param(
+    [Parameter(Mandatory)]
+    [string]$NexusVersion,
+
+    [Parameter(Mandatory)]
+    [ValidateScript({
+      if (-not (Test-Path (Join-Path $_ "\bin\nexus.exe"))) {
+        throw "NexusAppRoot must be a folder containing the Nexus bin folder and application..."
+      }
+      $true
+    })]
+    [string]$NexusAppRoot,
+
+    [Alias('data-dir', 'd')]
+    [string]$CustomDataDir = (Convert-Path "$($NexusAppRoot)\..\sonatype-work\nexus3"),
+
+    [string]$NexusJavaHome = (Convert-Path "$NexusAppRoot\jdk\temurin_*_windows_x86_64\jdk-*"),
+
+    [string]$ServiceName = "SonatypeNexusRepository"
+  )
+
+  $LogPath = Join-Path $CustomDataDir "log"
+  $LauncherJar = Convert-Path $NexusAppRoot/bin/windows-launcher-*.jar
+
+  # Read JVM memory options from vmoptions file
+  $VMOptionsFile = Join-Path $NexusAppRoot "\bin\nexus.vmoptions"
+  $VMOptions = Get-Content $VMOptionsFile
+
+  $JvmMs = if ($ExistingOption = $VMOptions.Where{$_.StartsWith('-Xms')}[0]) {
+    "$(-join$ExistingOption[4..$ExistingOption.Length])".TrimEnd('m')
+  } else {
+    2703
+  }
+
+  $JvmMx = if ($ExistingOption = $VMOptions.Where{$_.StartsWith('-Xmx')}[0]) {
+    "$(-join$ExistingOption[4..$ExistingOption.Length])".TrimEnd('m')
+  } else {
+    2703
+  }
+
+  # Build JVM options string from vmoptions file
+  # Add installer type flag for analytics
+  $JvmOptions = "++JvmOptions -Dnexus.installer.type=win-x86-64"
+  if (Test-Path $VMOptionsFile) {
+    $VMOptions | Where-Object {
+      -not $_.StartsWith('#') -and -not $_.StartsWith('-Xm')
+    } | ForEach-Object {
+      $JvmOptions += " ++JvmOptions9 $_" -replace '\$\{karaf\.home\}', $NexusAppRoot -replace '\$\{karaf\.data\}', $CustomDataDir
+    }
+  }
+
+  # Check if service already exists
+  if (Get-Service $ServiceName -ErrorAction SilentlyContinue) {
+    Write-Verbose "Service $ServiceName is already installed. Stopping, then removing it first..."
+    Start-ChocolateyProcessAsAdmin -exeToRun $NexusAppRoot\bin\nexus.exe -statements "delete $ServiceName"
+    if ($LastExitCode -eq 1) {
+      throw "Failed to delete existing service. Please check permissions or stop the service first."
+    }
+    Write-Verbose "Existing service removed successfully."
+  }
+
+  # Check if LogPath exists and create it if not present
+  if (-not (Test-Path $LogPath -PathType Container)) {
+    Write-Verbose "Creating log directory: $LogPath"
+    $null = New-Item -Path $LogPath -ItemType Directory -Force
+  }
+
+  Write-Verbose "Installing Nexus Repository $NexusVersion as a Windows service named '$ServiceName'"
+  Write-Verbose "...Using JAVA_HOME: $NexusJavaHome"
+  Write-Verbose "...Using Java Heap Settings: -Xms$JvmMs -Xmx$JvmMx"
+  Write-Verbose "...Using Nexus data directory: $CustomDataDir"
+
+  # Install the service (update command will insert if not present)
+  Start-ChocolateyProcessAsAdmin -exeToRun $NexusAppRoot\bin\nexus.exe -statements @(
+    "install $ServiceName"
+    "--JavaHome ""$NexusJavaHome"""
+    "--DisplayName ""Sonatype Nexus Repository"""
+    "--Description ""Sonatype Nexus Repository"""
+    "--Startup auto"
+    "--Classpath ""$LauncherJar"";""$JarFiles"""
+    "--StartPath ""$NexusAppRoot"""
+    "--StartMode jvm"
+    "--StartClass com.sonatype.nexus.installers.windows.WindowsJarLauncher"
+    "--StopMode jvm"
+    "--StopClass com.sonatype.nexus.installers.windows.WindowsJarLauncher"
+    "--StopParams stop"
+    "--StopTimeout 60"
+    "--LogPath ""$LogPath"""
+    "--LogLevel Debug"
+    "--ServiceUser LocalSystem"
+    "--PidFile nexus.pid"
+    "--JvmMs $JvmMs"
+    "--JvmMx $JvmMx"
+    $JvmOptions
+  )
+}
