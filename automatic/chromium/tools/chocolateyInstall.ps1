@@ -2,7 +2,7 @@
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 . (Join-Path $toolsDir 'helper.ps1')
 
-$version = '150.0.7839.0-snapshots'
+$version = '150.0.7840.0-snapshots'
 $hive = "hkcu"
 $chromium_string = "\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Chromium"
 $Chromium = $hive + ":" + $chromium_string
@@ -15,8 +15,8 @@ if (Test-Path $Chromium) {
 
 $packageArgs = @{
   packageName   = 'chromium'
-  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/1629871/mini_installer.exe'
-  checksum      = '871123FC0B3D9726FCBD7735DB67B5C50388BE3894FB2154E40C72A0BDDA1C7E'
+  url           = 'https://storage.googleapis.com/chromium-browser-snapshots/Win/1630023/mini_installer.exe'
+  checksum      = '7D8613F81C1184DC042D4228B7F43F53310BC2FF542D28470A65132C002035A7'
   checksumType  = 'sha256'
   file64        = "$toolsdir\chromium_x64.exe"
   fileType      = 'exe'
