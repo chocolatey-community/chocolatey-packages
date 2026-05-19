@@ -19,4 +19,5 @@ GIMP is expandable and extensible. It is designed to be augmented with plug-ins 
 
 ## Notes
 
+- Starting with GIMP 3.0.0, the default behavior has changed, and the package is installed for the current user only. To change this and install it for all users, add the parameter `--installargs "/ALLUSERS"`.
 - **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
