@@ -6,8 +6,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://download.zotero.org/client/release/9.0.3/Zotero-9.0.3_win32_setup.exe
-   x64: https://download.zotero.org/client/release/9.0.3/Zotero-9.0.3_x64_setup.exe
+   x32: https://download.zotero.org/client/release/9.0.4/Zotero-9.0.4_win32_setup.exe
+   x64: https://download.zotero.org/client/release/9.0.4/Zotero-9.0.4_x64_setup.exe
 
    to download the installer.
 
@@ -17,8 +17,8 @@ Package can be verified like this:
 3. The checksums should match the following:
 
   checksum type: SHA256
-  checksum32: 2327B1014C32EADA07EC83620586F419A2A4CAD23B9B98DA042189340590BCF1
-  checksum64: 3D3668869FD6F9D5B2F4DE8C7F3955DE77097924B7C5A8816DB0425089C05FB8
+  checksum32: 23C5A2A5DC8E3E881722F59304111BBD50274E8D3327641A4E9B706AAFBDB2A8
+  checksum64: 73BABEB15196017BAFAAB7C0EFF2E719A8CCBB651417D5E797250E554C7E43EA
 
 The file 'LICENSE.txt' has been obtained from 
    https://raw.githubusercontent.com/zotero/zotero/refs/heads/main/COPYING
