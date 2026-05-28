@@ -35,9 +35,9 @@ function global:au_GetLatest {
     $URLS = $download_page.links | Where-Object href -match "7z$($version -replace '\.','')" | Select-Object -expand href
 
     $streams["$streamName"] = @{
-      URL32     = $domain + ($URLS | Where-Object { $_ -notmatch "x64" } | Select-Object -first 1)
-      URL64     = $domain + ($URLS | Where-Object { $_ -match "x64" } | Select-Object -first 1)
-      URL_EXTRA = $domain + ($URLS | Where-Object { $_ -match "extra" } | Select-Object -first 1)
+      URL32     = ($URLS | Where-Object { $_ -notmatch "x64" } | Select-Object -first 1)
+      URL64     = ($URLS | Where-Object { $_ -match "x64" } | Select-Object -first 1)
+      URL_EXTRA = ($URLS | Where-Object { $_ -match "extra" } | Select-Object -first 1)
       Version   = (Get-Version $versionFull).ToString()
     }
   }
