@@ -19,7 +19,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $re = 'Setup\.exe$'
-  $url32 = $download_page.Links | ? href -match $re | select -first 1 -expand href | % { $releases + $_ }
+  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href | ForEach-Object { $releases + $_ }
 
   $re = 'Version\:\s*\<\/span\>\s*([\d\.]+)'
   if ($download_page.Content -match $re) {
@@ -27,7 +27,7 @@ function global:au_GetLatest {
   }
 
   $re = 'free-virtual-keyboard.*\.html$'
-  $releaseNotes = $download_Page.Links | ? href -match $re | select -first 1 -expand href
+  $releaseNotes = $download_Page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
 
   @{
     URL32 = $url32
