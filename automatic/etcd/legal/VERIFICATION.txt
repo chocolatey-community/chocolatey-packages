@@ -4,11 +4,11 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/etcd-io/etcd/releases/tag/v3.7.0-beta.0>
+location on <https://github.com/etcd-io/etcd/releases/tag/v3.7.0-rc.0>
 and can be verified by doing the following:
 
 1. Download the following:
-  software: <https://github.com/etcd-io/etcd/releases/download/v3.7.0-beta.0/etcd-v3.7.0-beta.0-windows-amd64.zip>
+  software: <https://github.com/etcd-io/etcd/releases/download/v3.7.0-rc.0/etcd-v3.7.0-rc.0-windows-amd64.zip>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -17,6 +17,6 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 32C6DBB7C45D6682A9CCA3956A794B6E0A81EA58D152DBE58D2E23A6D527D250
+  checksum: 4A9DB9A8F91ADA88DF7B539BCE7481BD7935C1FEDBEBDDF5A93CE3A6F05D295F
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/etcd-io/etcd/commit/3381177341c11aa9d89b6172699d64ddc2146a11/LICENSE>
