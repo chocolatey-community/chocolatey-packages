@@ -31,12 +31,13 @@ function global:au_GetLatest {
   $streams = @{}
 
   $streams.Add("latest", @{
-      LocaleURL     = "$releases"
-      Version       = $version
-      RemoteVersion = $version
-      Win32Format   = $data.Win32Format
-      Win64Format   = $data.Win64Format
-      SoftwareName  = 'Mozilla Firefox'
+      LocaleURL        = "$releases"
+      Version          = $version
+      RemoteVersion    = $version
+      Win32Format      = $data.Win32Format
+      Win64Format      = $data.Win64Format
+      Win64Arm64Format = $data.Win64Arm64Format
+      SoftwareName     = 'Mozilla Firefox'
       ReleaseNotes  = "https://www.mozilla.org/en-US/firefox/${version}/releasenotes/"
       PackageName   = 'Firefox'
       ExeName       = "Firefox Setup ${version}.exe"
@@ -46,12 +47,13 @@ function global:au_GetLatest {
   $version = $data.Version
 
   $streams.Add('esr', @{
-      LocaleURL     = "$releasesESR"
-      Version       = $version
-      RemoteVersion = $version
-      Win32Format   = $data.Win32Format
-      Win64Format   = $data.Win64Format
-      SoftwareName  = 'Mozilla Firefox*ESR'
+      LocaleURL        = "$releasesESR"
+      Version          = $version
+      RemoteVersion    = $version
+      Win32Format      = $data.Win32Format
+      Win64Format      = $data.Win64Format
+      Win64Arm64Format = $data.Win64Arm64Format
+      SoftwareName     = 'Mozilla Firefox*ESR'
       ReleaseNotes  = "https://www.mozilla.org/en-US/firefox/${version}/releaseNotes/"
       ExeName       = "Firefox Setup ${version}esr.exe"
       PackageName   = 'FirefoxESR'

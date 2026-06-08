@@ -1,6 +1,32 @@
 ﻿import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $localeChecksumFile = 'LanguageChecksums.csv'
 
+function GetMozillaUrlFormats() {
+  # Builds the per-architecture download URL formats from a base 'os=win' URL
+  # (with the version baked in and ${locale} left as a placeholder). Shared by
+  # the Firefox and Thunderbird update scripts.
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Url,
+    [Parameter(Mandatory = $true)]
+    [string]$Version,
+    [bool]$Supports64Bit = $true
+  )
+
+  $result = @{
+    Version     = $Version
+    Win32Format = $Url -replace 'latest', $Version
+  }
+
+  if ($Supports64Bit) {
+    $result += @{
+      Win64Format      = $Url -replace 'os=win', 'os=win64' -replace 'latest', $Version
+      Win64Arm64Format = $Url -replace 'os=win', 'os=win64-aarch64' -replace 'latest', $Version
+    }
+  }
+  return $result
+}
+
 function GetVersionAndUrlFormats() {
   param(
     [string]$UpdateUrl,
@@ -20,17 +46,7 @@ function GetVersionAndUrlFormats() {
     $url = $url -replace 'esr-latest', "${version}esr"
   }
 
-  $result = @{
-    Version     = $version
-    Win32Format = $url -replace 'latest', $version
-  }
-
-  if ($Supports64Bit) {
-    $result += @{
-      Win64Format = $url -replace 'os=win', 'os=win64' -replace 'win32', 'win64' -replace 'latest', $version
-    }
-  }
-  return $result
+  return GetMozillaUrlFormats -Url $url -Version $version -Supports64Bit $Supports64Bit
 }
 
 function CreateChecksumsFile() {
@@ -50,7 +66,8 @@ function CreateChecksumsFile() {
 
   $reOpts = [System.Text.RegularExpressions.RegexOptions]::Multiline `
     -bor [System.Text.RegularExpressions.RegexOptions]::IgnoreCase
-  $checksumRows = [regex]::Matches("$allChecksums", "^(?:b')?([a-f\d]+)'?\s*win(32|64)\/([a-z\-]+)\/$ExecutableName\s*$", $reOpts) | ForEach-Object {
+  # 'win64-aarch64' is listed first so the alternation prefers it over 'win64'.
+  $checksumRows = [regex]::Matches("$allChecksums", "^(?:b')?([a-f\d]+)'?\s*win(64-aarch64|64|32)\/([a-z\-]+)\/$ExecutableName\s*$", $reOpts) | ForEach-Object {
     return "$($_.Groups[3].Value)|$($_.Groups[2].Value)|$($_.Groups[1].Value)"
   }
 
@@ -68,17 +85,22 @@ function SearchAndReplace() {
     [bool]$Supports64Bit = $true
   )
 
+  # The download URLs are matched on their "os" token so each architecture's
+  # literal in the $builds map is updated independently. The token boundaries
+  # ('os=win&' vs 'os=win64&' vs 'os=win64-aarch64&') keep the patterns from
+  # overlapping.
   $installReplacements = @{
     "(?i)(^[$]packageName\s*=\s*)('.*')"      = "`$1'$($Data.PackageName)'"
     "(?i)(^[$]softwareName\s*=\s*)('.*')"     = "`$1'$($Data.SoftwareName)'"
     "(?i)(-version\s*)('.*')"                 = "`$1'$($Data.RemoteVersion)'"
-    '(?i)(\s*Url\s*=\s*)(".*")'               = "`$1`"$($Data.Win32Format)`""
+    '(?i)"[^"]*[?&]os=win&[^"]*"'             = "`"$($Data.Win32Format)`""
     '(?i)(\s*\-(checksum|locale)File\s*)".*"' = "`$1`"`$toolsPath\$localeChecksumFile`""
   }
 
   if ($Supports64Bit) {
     $installReplacements += @{
-      '(?i)(\.Url64\s*=\s*)(".*")' = "`$1`"$($Data.Win64Format)`""
+      '(?i)"[^"]*[?&]os=win64&[^"]*"'         = "`"$($Data.Win64Format)`""
+      '(?i)"[^"]*[?&]os=win64-aarch64&[^"]*"' = "`"$($Data.Win64Arm64Format)`""
     }
   }
 
