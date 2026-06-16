@@ -21,10 +21,10 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $LatestRelease = Get-GitHubRelease -Owner "gitextensions" -Name "gitextensions"
 
-  $re = 'GitExtensions-(.+)\.msi$'
+  $re = 'GitExtensions-x64-(.+)\.msi$'
   $downloadUrl = $LatestRelease.assets.browser_download_url | Where-Object { $_ -match $re } | Select-Object -First 1
   $releaseUrl = $LatestRelease.html_url
-  
+
   $version = ($downloadUrl -split '\/' | Select-Object -last 1 -skip 1).Substring(1)
 
   $version = $version -replace ".RC", "-RC"
@@ -42,12 +42,12 @@ function global:au_GetLatest {
   }
 
   $version = $version + $pre
-  
+
   $version = Get-Version $version
 
   return @{
     Version        = $version
-    URL32          = $downloadUrl 
+    URL32          = $downloadUrl
     ReleaseURL     = $releaseUrl
   }
 }
