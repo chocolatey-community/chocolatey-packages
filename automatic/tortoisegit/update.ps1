@@ -30,7 +30,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36'
+  $download_page = Invoke-WebRequest -UseBasicParsing -Headers @{ 'User-Agent' = $userAgent } -Uri $releases
 
   #https://download.tortoisegit.org/tgit/2.3.0.0/TortoiseGit-2.3.0.0-32bit.msi
   $re32 = "TortoiseGit-(.*)-32bit.msi"
@@ -52,6 +53,7 @@ function global:au_GetLatest {
     URL64         = "https:" + $url64
     Version       = $version32
     RemoteVersion = $version32
+    Options       = @{ Headers = @{ 'User-Agent' = $userAgent } }
   }
 }
 
