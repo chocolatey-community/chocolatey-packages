@@ -60,7 +60,7 @@ function Get-AppInstallLocation {
     $dirs = $Env:ProgramFiles, "$Env:ProgramFiles\*\*"
     if (Get-ProcessorBits 64) { $dirs += ${ENV:ProgramFiles(x86)}, "${ENV:ProgramFiles(x86)}\*\*" }
     Write-Verbose "Trying Program Files with 2 levels depth: $dirs"
-    $location = (ls $dirs | ? {$_.PsIsContainer}) -match $AppNamePattern | select -First 1 | % {$_.FullName}
+    $location = (Get-ChildItem $dirs | ? {$_.PsIsContainer}) -match $AppNamePattern | select -First 1 | % {$_.FullName}
     if (is_dir $location) { return strip $location }
 
     Write-Verbose "Trying native commands on PATH"
@@ -69,7 +69,7 @@ function Get-AppInstallLocation {
 
     $appPaths =  "\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths"
     Write-Verbose "Trying Registry: $appPaths"
-    $location = (ls "HKCU:\$appPaths", "HKLM:\$appPaths") -match $AppNamePattern | select -First 1
+    $location = (Get-ChildItem "HKCU:\$appPaths", "HKLM:\$appPaths") -match $AppNamePattern | select -First 1
     if ($location) { $location = Split-Path $location }
     if (is_dir $location) { return strip $location }
 
