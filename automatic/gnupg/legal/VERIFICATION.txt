@@ -6,13 +6,13 @@ The installer has been downloaded from the official source listed on <https://ww
 and can be verified like this:
 
 1. Download the following installer:
-  32-bit: <https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.5.20_20260513.exe>
+  32-bit: <https://www.gnupg.org/ftp/gcrypt/binary/gnupg-w32-2.5.21_20260702.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: CA26CD20602581B2CE05E95B16F6249F6FB6C4DCF32304165FC90519328D7981
+  checksum32: 6246C925A73167253444AFC24A0DEB83A3F43B7D636AF84D6AAF48A98A62F024
 
 License files are obtained from:
 - LICENSE.txt: <https://git.gnupg.org/cgi-bin/gitweb.cgi?p=gnupg.git;a=blob;f=COPYING;h=ccbbaf61b794c7aaea10dffb486095fdc8f3a44a;hb=refs/heads/master>
