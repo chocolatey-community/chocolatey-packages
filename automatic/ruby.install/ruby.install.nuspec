@@ -1,27 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as the uppercase
+  Greek letter omega enclosed in smart (curly) quotation marks, you should
+  reopen this file in an editor that supports UTF-8 before making changes. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ruby.install</id>
-    <version>3.2.11.1</version>
+    <version>4.0.2.1</version>
     <title>Ruby (Install)</title>
     <authors>Yukihiro Matsumoto</authors>
     <owners>chocolatey-community, Rob Reynolds</owners>
-    <summary>Ruby - A dynamic, open source programming language with focusing on  simplicity and productivity.</summary>
-    <description><![CDATA[Ruby is a dynamic, open source programming language focusing on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
+    <summary>Ruby is a dynamic, open source programming language focused on simplicity and productivity.</summary>
+    <description><![CDATA[Ruby is a dynamic, open source programming language focused on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.
 
-This package provides a self-contained [Windows-based installer](https://rubyinstaller.org) that includes the Ruby language, an execution environment, important documentation, and more.
+This package provides a self-contained [Windows-based installer](https://rubyinstaller.org/) that includes the Ruby language, an execution environment, important documentation and more.
 
 ## Package Parameters
 
-- `/InstallDir` - Ruby installation directory, by default `c:\tools\RubyXY` where XY are major and minor version parts.
-- `/NoPath`     - Do not add ruby bin folder to machine PATH.
+- `/InstallDir:<customPath>`: The top-level installation directory, `"${Env:ChocolateyToolsLocation}\rubyXY"` by default (where `X` and `Y` are the major and minor semantic version integers)
+- `/NoPath`: Do not add the folder containing the Ruby interpreter binary to the System PATH environment variable
+- `/NoFileAssoc`: Do not associate the  `*.rb`/`*.rbw` file extensions with the newly-installed Ruby interpreter
+- `/DefaultUTF8`: Set the interpreter to parse all input as UTF-8 by setting the System RUBYOPT environment variable to the value `-Eutf-8`
 
-Example: `choco install ruby --package-parameters="'/NoPath  ""/InstallDir:C:\your\install\path""'"`
+### Example
+
+```pwsh
+choco install ruby --package-parameters="'/NoPath /InstallDir:C:\your\install\path'"
+```
 
 ## Notes
 
-- To install ruby development kit ruby installer provides `ridk` command. It provides an easy way to install msys2 via `ridk install 1`, however, the installation is interactive. To accomplish unattended install, use [msys2](https://chocolatey.org/packages/msys2) package.
+To install the Ruby Development Kit, the installer provides the `ridk` command. It provides an easy way to install MSYS2 by invoking `ridk install 1`, however, the installation is interactive. For an unattended MSYS2 installation, use the [msys2](https://chocolatey.org/packages/msys2) Chocolatey package.
+
 ]]></description>
     <tags>ruby language programming development dynamic cross-platform foss</tags>
     <licenseUrl>https://www.ruby-lang.org/en/about/license.txt</licenseUrl>

@@ -1,24 +1,55 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
-$rubyDir = 'ruby' + ($Env:ChocolateyPackageVersion -replace '\.').Substring(0, 2)
+$toolsPath = "$(Split-Path -Path ${MyInvocation}.MyCommand.Definition -Parent)"
+$verDigits = (${Env:ChocolateyPackageVersion} -replace '\D').Substring(0,2)
+if (${verDigits}.Length -ne 2) {
+  throw "Invalid Chocolatey package version: '${Env:ChocolateyPackageVersion}'"
+}
+$rubyDir = 'ruby' + ${verDigits}
 
 $pp = Get-PackageParameters
-$installDir = if ($pp['InstallDir']) { $pp['InstallDir'] } else { Join-Path (Get-ToolsLocation) $rubyDir }
+$installDir = if (-not [string]::IsNullOrWhiteSpace($pp['InstallDir'])) {
+  $pp['InstallDir']
+} else {
+  Join-Path -Path (Get-ToolsLocation) -ChildPath ${rubyDir}
+}
 
-$tasks = 'assocfiles', 'noridkinstall'
-if ( !$pp['NoPath'] ) { $tasks += 'modpath' }
+$tasks = @('noridkinstall')
+if (-not $pp['DefaultUTF8']) {
+  $tasks += 'nodefaultutf8'
+} else {
+  $tasks += 'defaultutf8'
+}
+if (-not $pp['NoFileAssoc']) {
+  $tasks += 'assocfiles'
+} else {
+  $tasks += 'noassocfiles'
+}
+if (-not $pp['NoPath']) {
+  $tasks += 'modpath'
+} else {
+  $tasks += 'nomodpath'
+}
 
-Write-Host "Ruby is going to be installed in '$installDir'"
+Write-Information "Ruby target installation directory: '${installDir}'."
+
+$exeName = 'rubyinstaller-4.0.2-1-x64.exe'
+$exePath = Join-Path -Path ${toolsPath} -ChildPath ${exeName}
 
 $packageArgs = @{
-  packageName    = $env:ChocolateyPackageName
+  packageName    = ${Env:ChocolateyPackageName}
   fileType       = 'exe'
-  file           = "$toolsPath\rubyinstaller-3.2.11-1-x86.exe"
-  file64         = "$toolsPath\rubyinstaller-3.2.11-1-x64.exe"
-  silentArgs     = '/verysilent /allusers /dir="{0}" /tasks="{1}"' -f $installDir, ($tasks -join ',')
+  file64         = ${exePath}
+  silentArgs     = '/VERYSILENT /NORESTART /SP- /ALLUSERS /DIR="{0}" /TASKS="{1}"' -f ${installDir}, (${tasks} -join ',')
   validExitCodes = @(0)
   softwareName   = 'ruby *'
 }
+
 Install-ChocolateyInstallPackage @packageArgs
-Get-ChildItem $toolsPath\*.exe | ForEach-Object { Remove-Item $_ -ea 0; if (Test-Path $_) { Set-Content "$_.ignore" '' } }
+
+Get-ChildItem -Path ${toolsPath} -File -Filter '*.exe' | ForEach-Object {
+  Remove-Item -LiteralPath $_.FullName -Force -ErrorAction SilentlyContinue
+  if (-not (Test-Path -LiteralPath $_.FullName)) {
+    Set-Content -LiteralPath ($_.FullName + '.ignore') -Value '' -ErrorAction SilentlyContinue
+  }
+}
