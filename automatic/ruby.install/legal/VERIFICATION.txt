@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.11-1/rubyinstaller-3.2.11-1-x86.exe
-   x64: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.11-1/rubyinstaller-3.2.11-1-x64.exe
+   x32: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.10-1/rubyinstaller-3.4.10-1-x86.exe
+   x64: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.10-1/rubyinstaller-3.4.10-1-x64.exe
 
    to download the installer.
 
@@ -16,11 +16,11 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: E0713F410B875A113D45C979EB8CB9A4A8851091421F821E64C3FC65E03F025F
-   checksum64: 4FA87EC631885FF70AAC503BFF7BBCDD8BD08483A357EA4B0CEE14644FE1A902
+   checksum32: 13A9DF387C0E08A188E025E31CD0D2C3BD3265D6D4DFA3B875995BD1C2B4FCB1
+   checksum64: 0E1210B0189E679563FE3F301F35B5640DC4C640BD21C96810D552611F5A6113
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.2.11-1/rubyinstaller-3.2.11-1-x64.exe
+   Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.10-1/rubyinstaller-3.4.10-1-x64.exe
 
-File 'LICENSE.txt' is obtained from:                     https://www.ruby-lang.org/en/about/license.txt
+File 'LICENSE.txt' is obtained from:                      https://www.ruby-lang.org/en/about/license.txt
