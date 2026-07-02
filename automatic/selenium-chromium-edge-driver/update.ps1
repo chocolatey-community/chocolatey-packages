@@ -1,6 +1,6 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = "https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver/LATEST_STABLE"
+$releases = "https://msedgedriver.microsoft.com/LATEST_STABLE"
 
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32 -Algorithm $Latest.ChecksumType32
