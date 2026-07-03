@@ -5,10 +5,10 @@ if (!$PSScriptRoot) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Path -P
 
 $packageArgs = @{
   packageName    = 'freecad'
-  fileType       = '7z'
-  url64          = 'https://github.com/FreeCAD/FreeCAD-Bundle/releases/download/weekly-builds/FreeCAD_weekly-builds-43071-conda-Windows-x86_64-py311.7z'
+  fileType       = 'exe'
+  url64          = 'https://github.com/FreeCAD/FreeCAD/releases/download/1.1.1/FreeCAD_1.1.1-Windows-x86_64-py311-installer.exe'
   softwareName   = 'FreeCAD'
-  checksum64     = '69794A1A89AC95678377B55AEF6B8EC9B8517CA4FC06C017095B687704FFF653'
+  checksum64     = '3E4CAF58CC1D82E4E8D726572F741AE664B6E91A77C4D3CB59102D9B8BD51FEB'
   checksumType64 = 'sha256'
   silentArgs     = '/S'
   validExitCodes = @(0)
