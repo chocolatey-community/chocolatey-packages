@@ -56,21 +56,28 @@ else {
   $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
   $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
+  # Map each architecture that Chocolatey can report to its matching Mozilla
+  # build (download "os" token + checksum). Adding a new architecture later
+  # (e.g. a future win64-riscv64 build) only needs another entry here plus a
+  # matching checksum column produced by the package's update script. The URLs
+  # are kept as literals so the automatic updater can bump their version.
+  $builds = @{
+    'x86'   = @{ Url = "https://download.mozilla.org/?product=firefox-152.0.4-ssl&os=win&lang=${locale}"; Checksum = $checksums.Win32 }
+    'x64'   = @{ Url = "https://download.mozilla.org/?product=firefox-152.0.4-ssl&os=win64&lang=${locale}"; Checksum = $checksums.Win64 }
+    'arm64' = @{ Url = "https://download.mozilla.org/?product=firefox-152.0.4-ssl&os=win64-aarch64&lang=${locale}"; Checksum = $checksums.Win64Arm64 }
+  }
+
+  $build = Get-MozillaBuild -builds $builds -product $softwareName
+
   $packageArgs = @{
     packageName    = $packageName
     fileType       = 'exe'
     softwareName   = "$softwareName*"
-    Checksum       = $checksums.Win32
+    Checksum       = $build.Checksum
     ChecksumType   = 'sha512'
-    Url            = "https://download.mozilla.org/?product=firefox-152.0.4-ssl&os=win&lang=${locale}"
+    Url            = $build.Url
     silentArgs     = "$sa /S"
     validExitCodes = @(0)
-  }
-
-  if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
-    $packageArgs.Checksum64 = $checksums.Win64
-    $packageArgs.ChecksumType64 = 'sha512'
-    $packageArgs.Url64 = "https://download.mozilla.org/?product=firefox-152.0.4-ssl&os=win64&lang=${locale}"
   }
 
   Install-ChocolateyPackage @packageArgs

@@ -1,4 +1,4 @@
-function GetUninstallPath() {
+﻿function GetUninstallPath() {
   param(
     [Parameter(Mandatory = $true)]
     [string]$product
@@ -142,11 +142,43 @@ function GetChecksums() {
   )
   Write-Debug "Loading checksums from: $checksumFile"
   $checksumContent = Get-Content $checksumFile
-  $checksum32 = ($checksumContent -match "$language\|32") -split '\|' | Select-Object -Last 1
-  $checksum64 = ($checksumContent -match "$language\|64") -split '\|' | Select-Object -Last 1
+  # The trailing '\|' is required so the '64' pattern does not also match the
+  # '64-aarch64' rows (and vice versa).
+  $checksum32 = ($checksumContent -match "$language\|32\|") -split '\|' | Select-Object -Last 1
+  $checksum64 = ($checksumContent -match "$language\|64\|") -split '\|' | Select-Object -Last 1
+  $checksum64Arm = ($checksumContent -match "$language\|64-aarch64\|") -split '\|' | Select-Object -Last 1
 
   return @{
-    'Win32' = $checksum32
-    'Win64' = $checksum64
+    'Win32'      = $checksum32
+    'Win64'      = $checksum64
+    'Win64Arm64' = $checksum64Arm
   }
+}
+
+function Get-MozillaBuild() {
+  # Selects the architecture-specific build to install from a map of
+  # architecture -> @{ Url; Checksum }. Honors the -x86 / --forcex86 flag first,
+  # then falls back to the native OS architecture reported by Chocolatey's
+  # Get-OSArchitecture (which is correct even when Chocolatey runs under x64
+  # emulation on Windows on ARM). On older Chocolatey that function is absent, so
+  # we stay on x86/x64. A non-x64 build is only chosen when a checksum for it is
+  # available; otherwise we fall back to x64 (which also runs emulated on ARM64).
+  param(
+    [Parameter(Mandatory = $true)]
+    [hashtable]$builds,
+    [Parameter(Mandatory = $true)]
+    [string]$product
+  )
+
+  $architecture = 'x86'
+  if (!(Get-32bitOnlyInstalled $product) -and (Get-OSArchitectureWidth 64) -and ($env:chocolateyForceX86 -ne $true)) {
+    $architecture = 'x64'
+    $nativeArchitecture = if (Get-Command Get-OSArchitecture -ErrorAction SilentlyContinue) { Get-OSArchitecture }
+    if ($nativeArchitecture -and $builds.ContainsKey($nativeArchitecture) -and $builds[$nativeArchitecture].Checksum) {
+      $architecture = $nativeArchitecture
+    }
+  }
+
+  Write-Verbose "Installing the $architecture build of $product"
+  return $builds[$architecture]
 }
