@@ -6,12 +6,12 @@ The installer has been downloaded from the alternative sourceforge mirror listed
 and can be verified like this:
 
 1. Download the following installers:
-  64-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe/download>
+  64-Bit: <https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe/download>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum64: 219DE2B0133BF8408F40450A389C227F8D1C2BB520D6D10D1833BC528CA2CD10
+  checksum64: FF508E2F912D59C9EABAF03633EBACFD45C2049F38DCAC027B8A7D7AD867AB2F
 
 File 'LICENSE.txt' is obtained from <https://github.com/qbittorrent/qBittorrent/blob/0070dcf5509e43c2c3457c4e3f1ed0b1ae087e36/COPYING>
