@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   PackageName  = 'git.portable'
-  file64       = "$toolsPath\PortableGit-2.55.0.2-64-bit.7z.exe"
+  file64       = "$toolsPath\PortableGit-2.55.0.3-64-bit.7z.exe"
   Destination  = "$(Get-ToolsLocation)\git"
 }
 Get-ChocolateyUnzip @packageArgs
