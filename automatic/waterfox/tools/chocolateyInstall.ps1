@@ -10,7 +10,7 @@ $packageArgs = @{
   packageName   = 'Waterfox'
   fileType      = 'exe'
   softwareName  = 'Waterfox*'
-  file          = "$toolsDir\Waterfox Setup 6.6.16.1_x64.exe"
+  file          = "$toolsDir\Waterfox Setup 6.6.17_x64.exe"
   silentArgs    = "/S"
   validExitCodes= @(0)
 }
