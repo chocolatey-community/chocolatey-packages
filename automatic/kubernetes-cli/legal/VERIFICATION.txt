@@ -4,12 +4,12 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 The embedded software have been downloaded from the listed download
-location on <https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.36.md>
+location on <https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.35.md>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-bit software: <https://dl.k8s.io/v1.36.2/kubernetes-client-windows-386.tar.gz>
-  64-bit software: <https://dl.k8s.io/v1.36.2/kubernetes-client-windows-amd64.tar.gz>
+  32-bit software: <https://dl.k8s.io/v1.35.7/kubernetes-client-windows-386.tar.gz>
+  64-bit software: <https://dl.k8s.io/v1.35.7/kubernetes-client-windows-amd64.tar.gz>
 
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
@@ -18,7 +18,7 @@ and can be verified by doing the following:
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: E38915CA767754665D058D68280326E68F07096BC43A4DF862151177D654C098
-  checksum64: 4F026A36CA22452364B5893C495053629F9532C6A2D796946D31079766D3DEBD
+  checksum32: 530AE4F0047DF0596A81FBEEC6863245FC38980EBF763898E4162D957E2D1361
+  checksum64: EE5BFF003FE990F4B0CF6C881D1D8F45284681756F571A13F0D2A6C1AB3F8C6A
 
 File 'LICENSE.txt' is obtained from <https://github.com/kubernetes/kubernetes/blob/d30db1f9a915aa95402e1190461469a1889d92be/LICENSE>
