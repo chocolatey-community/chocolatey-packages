@@ -29,7 +29,7 @@ Jubler is a tool to edit text-based subtitles. It can be used as an authoring so
 * Translating mode (parent & child editors) is supported
 * Graphical preview of subtitles using VLC. Current frame, waveform preview and waveform listening is supported.
 * Graphical display of subtitles, which can be moved and resized.
-* Test and play the subtitles file using an integrated video player (VLC). While in playing mode the user is able to freely edit the subtitles (and inform the player of this change), add a new subtitle in real time or synchonize subtitles with the movie.
+* Test and play the subtitles file using an integrated video player (VLC). While in playing mode the user is able to freely edit the subtitles (and inform the player of this change), add a new subtitle in real time or synchronize subtitles with the movie.
 * Mark subtitles with different colors, either when editing or real time when playing the video.
 * Spell checking, with support for dictionary selection.
 * Easy installation for Mac, Linux & Windows platforms and a generic installer for all other platforms.
