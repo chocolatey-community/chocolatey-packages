@@ -1,8 +1,6 @@
 Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'https://github.com/teras/Jubler/releases/latest'
-
 function global:au_AfterUpdate {
   Update-ChangelogVersion -version $Latest.Version
 }
@@ -23,17 +21,14 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $release = Get-GitHubRelease -Owner 'teras' -Name 'Jubler'
 
-  $re  = 'Jubler-.*-x64\.exe$'
-  $url = $download_page.links | Where-Object href -match $re | Select-Object -First 1 -expand href
-  if ($url -notmatch '^https?://') { $url = 'https://github.com' + $url }
-
-  if ($url -match 'Jubler-([\d.]+)-x64\.exe') { $version = $Matches[1] }
+  $asset = $release.assets | Where-Object name -match 'Jubler-.*-x64\.exe$' | Select-Object -First 1
+  if (-not $asset) { throw "No x64 installer asset found in the latest Jubler release." }
 
   @{
-    URL64    = $url
-    Version  = $version
+    URL64    = $asset.browser_download_url
+    Version  = $release.tag_name -replace '^v', ''
     FileType = 'exe'
   }
 }
