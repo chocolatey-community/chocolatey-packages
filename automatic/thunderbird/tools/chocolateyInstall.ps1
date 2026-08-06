@@ -62,23 +62,30 @@ $locale = 'en-US' #https://github.com/chocolatey/chocolatey-coreteampackages/iss
 $locale = GetLocale -localeFile "$toolsPath\LanguageChecksums.csv" -product $softwareName
 $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageChecksums.csv"
 
-$packageArgs = @{
-  packageName = $packageName
-  fileType = 'exe'
-  softwareName = "$softwareName*"
-
-  Checksum = $checksums.Win32
-  ChecksumType = 'sha512'
-  Url = "https://download.mozilla.org/?product=thunderbird-152.0.1&os=win&lang=${locale}"
-
-  silentArgs     = "$sa /S"
-  validExitCodes = @(0)
+# Map each architecture that Chocolatey can report to its matching Mozilla
+# build (download "os" token + checksum). Adding a new architecture later only
+# needs another entry here plus a matching checksum column produced by the
+# package's update script. The URLs are kept as literals so the automatic
+# updater can bump their version.
+$builds = @{
+  'x86' = @{ Url = "https://download.mozilla.org/?product=thunderbird-152.0.1&os=win&lang=${locale}"; Checksum = $checksums.Win32 }
+  'x64' = @{ Url = "https://download.mozilla.org/?product=thunderbird-152.0.1&os=win64&lang=${locale}"; Checksum = $checksums.Win64 }
+  # No upstream arm64 Thunderbird build yet, so this entry stays inert (empty
+  # checksum -> x64 fallback) and activates automatically once Mozilla ships one.
+  'arm64' = @{ Url = "https://download.mozilla.org/?product=thunderbird-152.0.1&os=win64-aarch64&lang=${locale}"; Checksum = $checksums.Win64Arm64 }
 }
 
-if (!(Get-32bitOnlyInstalled($softwareName)) -and (Get-OSArchitectureWidth 64)) {
-  $packageArgs.Checksum64 = $checksums.Win64
-  $packageArgs.ChecksumType64 = 'sha512'
-  $packageArgs.Url64 = "https://download.mozilla.org/?product=thunderbird-152.0.1&os=win64&lang=${locale}"
+$build = Get-MozillaBuild -builds $builds -product $softwareName
+
+$packageArgs = @{
+  packageName    = $packageName
+  fileType       = 'exe'
+  softwareName   = "$softwareName*"
+  Checksum       = $build.Checksum
+  ChecksumType   = 'sha512'
+  Url            = $build.Url
+  silentArgs     = "$sa /S"
+  validExitCodes = @(0)
 }
 
 Install-ChocolateyPackage @packageArgs
