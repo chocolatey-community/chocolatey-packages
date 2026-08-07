@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>nexus-repository-migrator</id>
+    <title>Nexus Repository Migrator</title>
+    <version>3.70.2.1</version>
+    <authors>Sonatype</authors>
+    <owners>chocolatey-community, jpruskin</owners>
+    <summary>Migrator for the Sonatype Nexus Repository database.</summary>
+    <description><![CDATA[]]></description>
+    <projectUrl>https://help.sonatype.com/en/orientdb-downloads.html</projectUrl>
+    <projectSourceUrl>https://github.com/sonatype/nexus-public</projectSourceUrl>
+    <docsUrl>https://help.sonatype.com/en/migrating-to-a-new-database.html</docsUrl>
+    <tags>nexus-repository-migrator utility freeware cross-platform sonatype nexus-repository</tags>
+    <copyright>Sonatype</copyright>
+    <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@f459e946d7b1926ee89c2b415ec8507dffe99218/icons/nexus-repository.png</iconUrl>
+    <releaseNotes>https://help.sonatype.com/repomanager3/release-notes</releaseNotes>
+    <dependencies>
+      <!--dependency id="nexus-repository" version="3.70.1.2" /-->
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="..\nexus-repository\tools\helpers.ps1" target="tools\nexus-helpers.ps1" />
+  </files>
+</package>
