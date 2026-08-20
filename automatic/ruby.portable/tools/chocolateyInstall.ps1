@@ -1,11 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsPath = "$(Split-Path -Path ${MyInvocation}.MyCommand.Definition -Parent)"
-$rubyDir = "$(Join-Path -Path ${toolsPath} -ChildPath (
-  Join-Path -Path 'ruby' -ChildPath 'ruby*' -ChildPath 'bin'
-) -Resolve)"
-
-Write-Information "Ruby portable interpreter directory: '${rubyDir}'."
 
 $exeName = 'rubyinstaller-4.0.2-1-x64.7z'
 $exePath = "$(Join-Path -Path ${toolsPath} -ChildPath ${exeName})"
@@ -17,6 +12,12 @@ $packageArgs = @{
 }
 
 Get-ChocolateyUnzip @packageArgs
+
+$rubyDir = "$(Join-Path -Path ${toolsPath} -ChildPath (
+  Join-Path -Path 'ruby' -ChildPath (Join-Path -Path 'ruby*' -ChildPath 'bin')
+) -Resolve)"
+
+Write-Information "Ruby portable interpreter directory: '${rubyDir}'."
 
 # Add shims for .bat and .cmd files, in the bin folder, that Chocolatey CLI will
 # not shim.
