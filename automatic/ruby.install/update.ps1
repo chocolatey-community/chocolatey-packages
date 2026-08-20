@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 
   $replacements = [ordered]@{}
   $replacements[${installScript}] = @{
-    "(?i)(^`$exeName\s*=\s*)(?:'.*')"   = "`$1'$($Latest.FileName64)'"
+    "(?i)(^\`$exeName\s*=\s*)(?:'.*')"   = "`$1'$($Latest.FileName64)'"
     "(?i)(^\s*fileType\s*=\s*)(?:'.*')" = "`$1'$($Latest.FileType)'"
   }
   $replacements[${verificationFile}] = @{
@@ -56,7 +56,7 @@ function GetStreams() {
   [CmdletBinding()]
   param(
     [Parameter(Mandatory)]
-    [Uri[]] $releaseUrls
+    $releaseUrls
   )
 
   $streams = [ordered]@{}
@@ -86,7 +86,7 @@ function GetStreams() {
     }
 
     $twoPart = "$(${ver}.Major).$(${ver}.Minor)"
-    if (${streams}.ContainsKey(${twoPart})) {
+    if (${streams}.Contains(${twoPart})) {
       continue
     }
 
@@ -96,13 +96,13 @@ function GetStreams() {
     }
   }
 
-  Write-Verbose (${streams}.Count) 'streams collected.'
+  Write-Verbose "$(${streams}.Count) streams collected."
   return ${streams}
 }
 
 function global:au_GetLatest {
   [CmdletBinding()]
-  param($releases)
+  param()
 
   $webParams = @{
     Uri = ${releases}

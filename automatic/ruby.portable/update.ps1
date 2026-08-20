@@ -12,7 +12,7 @@ function global:au_SearchReplace {
 
   $replacements = [ordered]@{}
   $replacements[$installScript] = @{
-    "(?i)(^`$exeName\s*=\s*)(?:'.*')" = "`$1'$($Latest.FileName64)'"
+    "(?i)(^\`$exeName\s*=\s*)(?:'.*')" = "`$1'$($Latest.FileName64)'"
   }
   $replacements[${verificationFile}] = @{
     "(?i)(^\s+)(?:<http.*\.7z>\.$)"         = "`$1<$($Latest.URL64)>."
