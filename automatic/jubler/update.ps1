@@ -1,7 +1,7 @@
 ﻿Import-Module Chocolatey-AU
 Import-Module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 
-$releases = 'http://www.jubler.org/download.html'
+$releases = 'https://jubler.org/download.html'
 $softwareName = 'Jubler subtitle editor'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
@@ -12,17 +12,14 @@ function global:au_AfterUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
+    ".\legal\VERIFICATION.txt"        = @{
       "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*32\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL32)>"
       "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType32)"
-      "(?i)(^\s*checksum(32)?\:).*" = "`${1} $($Latest.Checksum32)"
-      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
+      "(?i)(^\s*checksum\s*type\:).*"     = "`${1} $($Latest.ChecksumType64)"
+      "(?i)(^\s*checksum64\:).*"          = "`${1} $($Latest.Checksum64)"
     }
-    ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-      "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+    ".\tools\chocolateyInstall.ps1"   = @{
+      "(?i)^(\s*softwareName\s*=\s*)'.*'"         = "`${1}'$softwareName'"
       "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
     }
     ".\tools\chocolateyUninstall.ps1" = @{
@@ -32,26 +29,18 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $LatestRelease = Get-GitHubRelease teras Jubler
+  $asset = $LatestRelease.assets | Where-Object { $_.name.EndsWith(".exe") }
+  $version = $LatestRelease.tag_name.TrimStart('v')
 
-  $re    = 'jubler.*\.exe'
-  $urls   = $download_page.links | Where-Object href -match $re | Select-Object -First 2 -expand href
-
-  $version  = $urls[0] -split '\/v?' | Select-Object -Last 1 -Skip 1
+  $digest = $asset.digest -split ':'
 
   @{
-    URL32 = $urls -notmatch "64\.exe" | Select-Object -first 1
-    URL64 = $urls -match "64\.exe" | Select-Object -first 1
-    Version = $version
-    FileType = 'exe'
+    URL64          = $asset.browser_download_url
+    ChecksumType64 = $digest[0]
+    Checksum64     = $digest[1]
+    Version        = $version
   }
 }
 
-
-try {
-    update -ChecksumFor none
-} catch {
-    $ignore = "Unable to connect to the remote server"
-    if ($_ -match $ignore) { Write-Host $ignore; 'ignore' } else { throw $_ }
-}
-
+update -ChecksumFor none
