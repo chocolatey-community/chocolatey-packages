@@ -20,7 +20,7 @@ FreeCAD is based on OpenCasCade, a powerful geometry kernel, features an Open In
 ### Used only for Portable or Pre Releases Currently
 
 - `/InstallDir` - This is the location inside the Chocolatey lib folder specific to this package.
-- `/Arguments` - This will allow you to specify any of the FreeCAD command line arguements.
+- `/Arguments` - This will allow you to specify any of the FreeCAD command line arguments.
 - `/NoShortcut` - This will not set a Shortcut on the Desktop.
 - `/WindowStyle` - The normal window setting for most Applications is as a Window. Maximised Window would be 3.
 
