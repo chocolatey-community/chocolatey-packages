@@ -7,7 +7,7 @@ Package can be verified like this:
 
 1. Go to
 
-   x64: https://github.com/nomacs/nomacs/releases/download/3.22.1/nomacs-3.22.1-8f3dff6-neon-24.04-x86_64-quazip-gcc-2404.AppImage.zip
+   x64: https://github.com/nomacs/nomacs/releases/download/3.22.2/nomacs-3.22.2-win7.zip
 
    to download the zip.
 
@@ -15,4 +15,4 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum64: 5B7A6D1881E7641A9A03A3A8C0874CDCEAFD5DADA242D42247BA28BCE078C352
+   checksum64: CC2102A0409CF58F0156237BC1286774C287E140642F77958C419FE8D44D7BF6
