@@ -9,8 +9,8 @@ and can be verified by doing the following:
 
 1. Go to
 
-   x32: https://www.python.org/ftp/python/3.14.7/python-3.14.7.exe
-   x64: https://www.python.org/ftp/python/3.14.7/python-3.14.7-amd64.exe
+   x32: https://www.python.org/ftp/python/3.15.0/python-3.15.0rc2.exe
+   x64: https://www.python.org/ftp/python/3.15.0/python-3.15.0rc2-amd64.exe
 
    to download the installer.
 
@@ -18,8 +18,8 @@ and can be verified by doing the following:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 097FC03D4AC2DE66EE1D73A0C5D2D323B5C0F14923F7207686CE93149A80F0A6
-   checksum64: 9D9EB2709EF81BF5CD30DB3C2096BDBC4EA10087C22E62F27D356B36F6AE9649
+   checksum32: 844AF9BA60837897222A836A59AB4C3EE50B151376031257F3E0DF3C2B3E0F4D
+   checksum64: A74BF15B3184EA885D39B4EB9B6FC4AC0A696D7BB605D879C024AF4433FA72DA
 
-The file 'LICENSE.txt' has been obtained from Python 3.14 Documentation archive <https://docs.python.org/3.14/archives/python-3.14-docs-text.zip>
-and can also be found at <https://docs.python.org/3.14/license.html>.
+The file 'LICENSE.txt' has been obtained from Python 3.15 Documentation archive <https://docs.python.org/3.15/archives/python-3.15-docs-text.zip>
+and can also be found at <https://docs.python.org/3.15/license.html>.
