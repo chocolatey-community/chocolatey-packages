@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/grizzlypeak3d/DJV/releases/download/3.5.0/djv-3.5.0-windows-amd64.exe>
+1. Download the following <https://github.com/grizzlypeak3d/DJV/releases/download/3.6.0/djv-3.6.0-windows-amd64.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: AED5F648FB021BC0BF2DF0E61962327B74C8BD037CE01C2C3B6F325ABAC08509
+  checksum: FDFC340A71EE99A393A86A4A254328171C7127C7836E1E4498BA4CE1904DAE9C
 
 The file 'LICENSE.md' has been obtained from <https://darbyjohnston.github.io/DJV/legal.html>
