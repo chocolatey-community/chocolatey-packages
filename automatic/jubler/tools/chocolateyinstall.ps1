@@ -1,17 +1,14 @@
-﻿$ErrorActionPreference = 'Stop';
-
-$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = "$toolsPath\Jubler-7.0.3.x32.exe"
-  file64         = "$toolsPath\Jubler-8.0.0.x64.exe"
-  softwareName   = 'Jubler subtitle editor'
-  silentArgs     = '/S'
+  url64bit       = 'https://github.com/teras/Jubler/releases/download/v10.0.0/Jubler-10.0.0-x64.exe'
+  checksum64     = 'CF8729148E2CE4A184CF5E0D953A43E20CA514CB7E3E2BDE17A8A0A6BCBAA1B2'
+  checksumType64 = 'sha256'
+  softwareName   = 'Jubler*'
+  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   validExitCodes = @(0)
 }
 
-Install-ChocolateyInstallPackage @packageArgs
-
-Remove-Item -Force -ea 0 "$toolsPath\*.exe","$toolsPath\*.ignore"
+Install-ChocolateyPackage @packageArgs
