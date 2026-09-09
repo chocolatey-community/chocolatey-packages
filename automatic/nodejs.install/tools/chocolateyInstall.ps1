@@ -7,7 +7,7 @@ $packageArgs = @{
   FileType       = 'msi'
   SoftwareName   = 'Node.js'
   File           = ''
-  File64         = "$toolsPath\node-v24.21.0-x64.msi"
+  File64         = "$toolsPath\node-v26.8.2-x64.msi"
   SilentArgs     = '/quiet ADDLOCAL=ALL'
   ValidExitCodes = @(0)
 }
