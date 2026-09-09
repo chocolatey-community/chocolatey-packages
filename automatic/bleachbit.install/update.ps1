@@ -6,7 +6,7 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
   $filename = ($download_page.links | Where-Object href -Match '.exe$' |
     Where-Object href -NotMatch 'fosshub' |
-    Select-Object -First 1 -expand href) -Replace '.*file=', ''
+    Select-Object -First 1 -expand href) -Replace '^.*/', ''
 
   if (!$filename) {
     # Most likely we only got a fosshub url in this case,
