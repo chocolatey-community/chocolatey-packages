@@ -1,27 +1,30 @@
 VERIFICATION
 
-Verification is intended to assist the Chocolatey moderators and community
-in verifying that this package's contents are trustworthy.
+Verification is intended to assist the Chocolatey moderators and community in
+verifying that this package's contents are trustworthy.
 
-Package can be verified like this:
+The package can be verified using this process:
 
-1. Go to
+1. Download the package archive available at the URL:
 
-   x32: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.9-1/rubyinstaller-3.4.9-1-x86.7z
-   x64: https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.9-1/rubyinstaller-3.4.9-1-x64.7z
+   <https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-4.0.2-1/rubyinstaller-4.0.2-1-x64.7z>.
 
-   to download the archives.
+2. Use one of the following methods to obtain the file's SHA256 checksum:
 
-2. You can use one of the following methods to obtain the SHA256 checksum:
-   - Use powershell function 'Get-FileHash'
-   - Use Chocolatey utility 'checksum.exe'
+   1. The PowerShell function 'Get-FileHash -Algorithm SHA256 -Path …'
 
-   checksum32: 8D72D35B61A3664861B2E727DF6D6BC957C2E53FF323376B6CF00948D634060E
-   checksum64: 4375268618B61DADF53BF8E54BEACA74EA30580C90D3C47EA9F2A134BD3E494E
+   2. The Chocolatey utility 'checksum.exe', located in the
+      "${Env:ChocolateyInstall}\tools" directory.
 
-Using Chocolatey AU:
+   …to verify that the copy downloaded to your system matches this value:
 
-   Get-RemoteChecksum https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-3.4.9-1/rubyinstaller-3.4.9-1-x64.7z
+   f6c562d507b272b892055f35ece3cbc65de5f3f2f63d18b7345a602af8c1e655
 
-File 'license.txt' is obtained from:              https://www.ruby-lang.org/en/about/license.txt
-   https://raw.githubusercontent.com/oneclick/rubyinstaller2/master/LICENSE.txt
+The Chocolatey-AU PowerShell module contains a Get-RemoteChecksum cmdlet that
+performs the same calculation on the remote file. Its use follows the rubric:
+
+   Import-Module Chocolatey-AU
+   Get-RemoteChecksum -Algorithm SHA256 -Url https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-4.0.2-1/rubyinstaller-4.0.2-1-x64.7z
+
+The 'LICENSE.txt' file is obtained from:
+<https://www.ruby-lang.org/en/about/license.txt>.

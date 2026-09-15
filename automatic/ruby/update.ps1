@@ -1,6 +1,9 @@
-. $PSScriptRoot\..\ruby.install\update.ps1
+﻿$installPkgUpdateScript = Join-Path -Path (
+  Split-Path -Path $PSScriptRoot -Parent
+) -ChildPath (Join-Path -Path 'ruby.install' -ChildPath 'update.ps1')
+. ${installPkgUpdateScript}
 
-function global:au_BeforeUpdate { }
+function global:au_BeforeUpdate {}
 
 function global:au_SearchReplace {
   @{
