@@ -5,7 +5,7 @@ $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
 $packageArgs = @{
   packageName    = 'activepresenter'
   fileType       = 'exe'
-  file           = "$toolsDir\ActivePresenter_v10.5.1_setup.exe"
+  file           = "$toolsDir\ActivePresenter_v10.6.0_setup.exe"
   silentArgs     = '/VERYSILENT'
   validExitCodes = @(0)
 }
