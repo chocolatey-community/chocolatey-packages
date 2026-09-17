@@ -3,14 +3,14 @@
 $packageArgs = @{
   packageName   = 'palemoon'
   fileType      = 'exe'
-  url           = 'https://rm-eu.palemoon.org/release/palemoon-34.3.2.win32.installer.exe'
-  url64         = 'https://rm-eu.palemoon.org/release/palemoon-34.3.2.win64.installer.exe'
+  url           = 'https://rm-eu.palemoon.org/release/palemoon-35.0.0.win32.installer.exe'
+  url64         = 'https://rm-eu.palemoon.org/release/palemoon-35.0.0.win64.installer.exe'
 
   softwareName  = 'Pale Moon*'
 
-  checksum      = 'bb6265a257796459a704679042fb508fd3a222eb6225d6dbdb6169d45de74a64'
+  checksum      = '84d285bff7733643f40fd686042a4c2d0f5aa88a90f8745a2346bbad02e06ffc'
   checksumType  = 'sha256'
-  checksum64    = '5141b4716abcab4789c4f425395b1f2b5a3d99c094ea75e4382daed6ec67ab25'
+  checksum64    = 'c2b6b2d013d28ef05d4a4fe6aeed9940a0ea52444e040c30a06ca526bbc04f0a'
   checksumType64= 'sha256'
 
   silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
