@@ -7,19 +7,19 @@ location on <https://downloads.php.net/~windows/releases/>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software (threadsafe): <https://downloads.php.net/~windows/releases/php-8.3.35-Win32-vs16-x86.zip>
-  64-Bit software (threadsafe): <https://downloads.php.net/~windows/releases/php-8.3.35-Win32-vs16-x64.zip>
-  32-Bit software (non-threadsafe): <https://downloads.php.net/~windows/releases/php-8.3.35-nts-Win32-vs16-x86.zip>
-  64-Bit software (non-threadsafe): <https://downloads.php.net/~windows/releases/php-8.3.35-nts-Win32-vs16-x64.zip>
+  32-Bit software (threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.11-Win32-vs17-x86.zip>
+  64-Bit software (threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.11-Win32-vs17-x64.zip>
+  32-Bit software (non-threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.11-nts-Win32-vs17-x86.zip>
+  64-Bit software (non-threadsafe): <https://downloads.php.net/~windows/releases/php-8.5.11-nts-Win32-vs17-x64.zip>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: 
-  checksum32 (threadsafe): B8F849CA02D271C6CC76BB814E6D3B1B4F3EE8ECCE7B083BD6C963D500D7AF13
-  checksum64 (threadsafe): B454BED828A74536125D8A96119EAE8FFBB186B305759DD6CF8D9BB4B55968B1
-  checksum32 (non-threadsafe): 3021DCDD0432DF641537CA193B0766DAC18DEBC27D81F4DD9DC49240D04E6F75
-  checksum64 (non-threadsafe): 25A8E2AC9FF30F1D768D1447C09A600617FA6E6082729F6E95F008B59C91FE45
+  checksum32 (threadsafe): F137DA9DC16DE3B6C096CEB1071A54630655AF4DE2E64F1FBF578CC91BA5BF4D
+  checksum64 (threadsafe): C83D5A1E0D760FB026CE695D8A70A73A4C81AC224B3E5C425406B23A7D53E1DE
+  checksum32 (non-threadsafe): C51955BA7E3B4CF61DB3D32091A721B1CDD0230ECEBDAD164098DF215A4DA6C5
+  checksum64 (non-threadsafe): 0EA96E0D2B9B737A6036F05CF4E95C49313FAA6D0F27BD97EDB2742503F0C043
 
 The file 'LICENSE.txt' has been obtained from <http://www.php.net/license/3_01.txt>
