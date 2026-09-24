@@ -24,17 +24,7 @@ function GetThunderBirdVersionAndUrlFormats() {
     $url = $url -replace 'esr-latest', "${version}esr"
   }
 
-  $result = @{
-    Version     = $version
-    Win32Format = $url -replace 'latest', $version
-  }
-
-  if ($Supports64Bit) {
-    $result += @{
-      Win64Format = $url -replace 'os=win', 'os=win64' -replace 'win32', 'win64' -replace 'latest', $version
-    }
-  }
-  return $result
+  return GetMozillaUrlFormats -Url $url -Version $version -Supports64Bit $Supports64Bit
 }
 
 function global:au_BeforeUpdate {
@@ -69,6 +59,7 @@ function global:au_GetLatest {
     RemoteVersion = $data.Version
     Win32Format = $data.Win32Format
     Win64Format = $data.Win64Format
+    Win64Arm64Format = $data.Win64Arm64Format
     SoftwareName = 'Mozilla Thunderbird'
     ReleaseNotes  = "https://www.thunderbird.net/en-US/thunderbird/${version}/releasenotes/"
     PackageName   = 'thunderbird'
@@ -85,6 +76,7 @@ function global:au_GetLatest {
     RemoteVersion = $data.Version
     Win32Format = $data.Win32Format
     Win64Format = $data.Win64Format
+    Win64Arm64Format = $data.Win64Arm64Format
     SoftwareName = 'Mozilla Thunderbird'
     ReleaseNotes  = "https://www.thunderbird.net/en-US/thunderbird/${version}esr/releaseNotes/"
     ExeName       = "Thunderbird Setup $($version)esr.exe"
@@ -95,4 +87,4 @@ function global:au_GetLatest {
   return @{ Streams = $streams }
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -IncludeStream $IncludeStream -Force:$Force
