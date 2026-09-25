@@ -1,10 +1,10 @@
-﻿$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'Stop';
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'Jubler subtitle editor'
+  softwareName  = 'Jubler*'
   fileType      = 'exe'
-  silentArgs    = '/S'
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
   validExitCodes= @(0)
 }
 
