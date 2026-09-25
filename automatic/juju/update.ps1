@@ -44,19 +44,42 @@ function global:au_AfterUpdate() {
   }
 }
 
+# Launchpad intermittently fails requests with 5xx gateway errors or by hanging until
+# its proxy gives up, so retry those instead of failing the whole update.
+function Invoke-LaunchpadApi([string] $Uri, [int] $Attempts = 4) {
+  for ($attempt = 1; ; $attempt++) {
+    try {
+      return Invoke-RestMethod -Uri $Uri -TimeoutSec 30
+    }
+    catch {
+      $status = 0
+      if ($_.Exception.Response) {
+        $status = [int] $_.Exception.Response.StatusCode
+      }
+
+      if ($attempt -ge $Attempts -or ($status -gt 0 -and $status -lt 500)) {
+        throw
+      }
+
+      Write-Warning "Launchpad request to $Uri failed (attempt $attempt of $Attempts): $($_.Exception.Message)"
+      Start-Sleep -Seconds (10 * $attempt)
+    }
+  }
+}
+
 function global:au_GetLatest {
-  $series = (Invoke-RestMethod -Uri $seriesUri).entries |
+  $series = (Invoke-LaunchpadApi $seriesUri).entries |
     Where-Object { $_.active -and $_.name -match '^\d+\.\d+$' } |
     Sort-Object { [version] $_.name } -Descending
 
   $streams = [ordered] @{}
 
   $series | ForEach-Object {
-    $release = (Invoke-RestMethod -Uri $_.releases_collection_link).entries |
+    $release = (Invoke-LaunchpadApi $_.releases_collection_link).entries |
       Sort-Object { Get-Version $_.version } -Descending | Select-Object -First 1
     if (!$release) { return }
 
-    $installer = (Invoke-RestMethod -Uri $release.files_collection_link).entries |
+    $installer = (Invoke-LaunchpadApi $release.files_collection_link).entries |
       Where-Object { $_.self_link -match '\.exe$' } | Select-Object -First 1
     if (!$installer) { return }
 
