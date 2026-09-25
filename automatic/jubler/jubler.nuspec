@@ -8,7 +8,7 @@
     <owners>chocolatey-community, AdmiringWorm</owners>
     <title>Jubler Subtitle Editor</title>
     <authors>Panayotis Katsaloulis</authors>
-    <projectUrl>http://www.jubler.org/index.html</projectUrl>
+    <projectUrl>https://www.jubler.org/index.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@a8fa14d8c3ca49fd8bd8f856d9091b1a9103ada1/icons/jubler.png</iconUrl>
     <copyright>(C) 2005-2018 Panayotis Katsaloulis</copyright>
     <licenseUrl>https://github.com/teras/Jubler/blob/master/LICENCE</licenseUrl>
@@ -48,7 +48,7 @@ Jubler is a tool to edit text-based subtitles. It can be used as an authoring so
 
 ]]></description>
     <releaseNotes>
-[Software Changelog](http://www.jubler.org/changelog.html)
+[Software Changelog](https://www.jubler.org/changelog.html)
 [Package Changelog](https://github.com/chocolatey/chocolatey-coreteampackages/blob/master/automatic/jubler/Changelog.md)
     </releaseNotes>
     <dependencies>
