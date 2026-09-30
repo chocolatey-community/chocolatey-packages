@@ -1,4 +1,4 @@
-﻿Import-Module Chocolatey-AU
+Import-Module Chocolatey-AU
 
 $releases = 'https://community.mp3tag.de/t/mp3tag-development-build-status/455'
 
@@ -15,7 +15,7 @@ function global:au_SearchReplace {
             "(?i)(^\s*checksum(64)?\:).*"       = "`${1} $($Latest.Checksum64)"
         }
         ".\tools\ChocolateyInstall.ps1" = @{
-            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName32)`""
+            "(?i)(^\s*file\s*=\s*`"[$]toolsPath\\).*"   = "`${1}$($Latest.FileName32)`""
             "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
         }
     }
@@ -29,30 +29,17 @@ function global:au_GetLatest {
     $download_page = Invoke-WebRequest "https://community.mp3tag.de/posts/$id.json" -UseBasicParsing | ConvertFrom-Json
     $content = $download_page.raw
 
-    if ($content -notmatch "Version:[\* \|]*(\d+\.[\d\.]+)([a-z])?") {
+    if ($content -notmatch "Version:[*\s\|]+([\S]+)[\s\|]") {
         throw "mp3tag version not found on $releases"
     }
-
     $version = $Matches[1]
-    $versionSuffix = $Matches[2]
 
-    if ($content -notmatch "Status:[\* \|]*([a-z]+)") {
+    if ($content -notmatch "Status:[*\s\|]+([\S]+?)[*\s\|]") {
         Write-Host "mp3tag status not found on $releases"
         return 'ignore'
     }
-
     $status = $Matches[1]
-    $url32 = 'http://download.mp3tag.de/mp3tagv<version>setup.exe'
-    $url64 = 'http://download.mp3tag.de/mp3tagv<version>-x64-setup.exe'
-    $flatVersion = $version -replace '\.', ''
-    $url32 = $url32 -replace '<version>', "$flatVersion$versionSuffix"
-    $url64 = $url64 -replace '<version>', "$flatVersion$versionSuffix"
 
-    if ($versionSuffix) {
-        [char]$letter = $versionSuffix
-        [int]$num = $letter - ([char]'a' - 1)
-        $version += ".$num"
-    }
     if ($status -eq 'Beta') {
         $version += "-beta"
     }
@@ -61,7 +48,23 @@ function global:au_GetLatest {
         return 'ignore'
     }
 
-    return @{ URL32 = $url32; URL64 = $url64; Version = $version }
+    # Grab the actual download URLs from the markdown links in the post
+    $urls = [regex]::Matches($content, 'https://download\.mp3tag\.de/[^\s\)\]]+\.exe') |
+        ForEach-Object { $_.Value } |
+        Select-Object -Unique
+
+    $url64 = $urls | Where-Object { $_ -match 'x64' } | Select-Object -First 1
+    $url32 = $urls | Where-Object { $_ -notmatch 'x64' } | Select-Object -First 1
+
+    if (-not $url32) { throw "mp3tag 32-bit download URL not found on $releases" }
+    if (-not $url64) { throw "mp3tag 64-bit download URL not found on $releases" }
+
+    return @{
+        URL32   = $url32
+        URL64   = $url64
+        Version = $version
+    }
+
 }
 
 update -ChecksumFor none
