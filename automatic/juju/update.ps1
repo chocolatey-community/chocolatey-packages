@@ -3,8 +3,8 @@ param($IncludeStream, [switch] $Force)
 
 Import-Module Chocolatey-AU
 
-$releases = 'https://launchpad.net/juju/+download'
-$ghReleasesFmt = 'https://github.com/juju/juju/releases/tag/juju-{0}'
+$seriesUri = 'https://api.launchpad.net/devel/juju/series'
+$ghReleasesFmt = 'https://github.com/juju/juju/releases/tag/v{0}'
 
 function global:au_BeforeUpdate() { Get-RemoteFiles -Purge -NoSuffix }
 
@@ -22,13 +22,21 @@ function global:au_SearchReplace {
 }
 
 function global:au_AfterUpdate() {
-  $release_page = Invoke-WebRequest -Uri ($ghReleasesFmt -f $($Latest.RemoteVersion)) -UseBasicParsing
+  $release_url = $ghReleasesFmt -f $($Latest.RemoteVersion)
+
+  $release_page = $null
+  try {
+    $release_page = Invoke-WebRequest -Uri $release_url -UseBasicParsing
+  }
+  catch {
+    Write-Warning "No GitHub release found for $($Latest.RemoteVersion). Leaving the release notes unchanged."
+  }
 
   $release_notes = $release_page.Links | Where-Object href -match "release-notes|roadmap-releases" | Select-Object -First 1 -expand href
 
   if ($release_page -and -not $release_notes) {
     Write-Warning "Release notes not found within body of the GitHub release. Linking directly to release."
-    $release_notes = $ghReleasesFmt -f $($Latest.RemoteVersion)
+    $release_notes = $release_url
   }
 
   if ($release_notes) {
@@ -36,26 +44,52 @@ function global:au_AfterUpdate() {
   }
 }
 
+# Launchpad intermittently fails requests with 5xx gateway errors or by hanging until
+# its proxy gives up, so retry those instead of failing the whole update.
+function Invoke-LaunchpadApi([string] $Uri, [int] $Attempts = 4) {
+  for ($attempt = 1; ; $attempt++) {
+    try {
+      return Invoke-RestMethod -Uri $Uri -TimeoutSec 30
+    }
+    catch {
+      $status = 0
+      if ($_.Exception.Response) {
+        $status = [int] $_.Exception.Response.StatusCode
+      }
+
+      if ($attempt -ge $Attempts -or ($status -gt 0 -and $status -lt 500)) {
+        throw
+      }
+
+      Write-Warning "Launchpad request to $Uri failed (attempt $attempt of $Attempts): $($_.Exception.Message)"
+      Start-Sleep -Seconds (10 * $attempt)
+    }
+  }
+}
+
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -UseBasicParsing -Uri $releases
+  $series = (Invoke-LaunchpadApi $seriesUri).entries |
+    Where-Object { $_.active -and $_.name -match '^\d+\.\d+$' } |
+    Sort-Object { [version] $_.name } -Descending
 
-  $re = '\.exe$'
-  $urls = $download_page.links | Where-Object href -match $re | Select-Object -expand href
+  $streams = [ordered] @{}
 
-  $streams = @{}
+  $series | ForEach-Object {
+    $release = (Invoke-LaunchpadApi $_.releases_collection_link).entries |
+      Sort-Object { Get-Version $_.version } -Descending | Select-Object -First 1
+    if (!$release) { return }
 
-  $urls | ForEach-Object {
-    $versionArr = $_ -split 'setup[-]|[-]signed|.exe'
-    if ($versionArr[1]) {
-      $version = Get-Version $versionArr[1]
-    }
-    else {
-      $version = Get-Version $versionArr[0]
-    }
+    $installer = (Invoke-LaunchpadApi $release.files_collection_link).entries |
+      Where-Object { $_.self_link -match '\.exe$' } | Select-Object -First 1
+    if (!$installer) { return }
 
-    if (!$streams.ContainsKey($version.ToString(2))) {
-      $streams.Add($version.ToString(2), @{ URL32 = $_ ; Version = $version.ToString(); RemoteVersion = $version.ToString() })
-    }
+    $version = Get-Version $release.version
+
+    $streams.Add($_.name, @{
+      URL32         = ('{0}/+download/{1}' -f $release.web_link, ($installer.self_link -split '/\+file/')[-1])
+      Version       = $version.ToString()
+      RemoteVersion = $version.ToString()
+    })
   }
 
   return @{ Streams = $streams }
