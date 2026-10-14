@@ -22,9 +22,9 @@ function global:au_GetLatest {
   $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
   $regex = '.zip$'
-  $url = $download_page.links | ? href -match $regex | select -First 2 -expand href
+  $url = $download_page.links | Where-Object href -match $regex | Select-Object -First 2 -expand href
 
-  $version = $url[0] -split '-\d-|-' | select -Last 1 -Skip 1
+  $version = $url[0] -split '-\d-|-' | Select-Object -Last 1 -Skip 1
 
   $url32 = 'https://eternallybored.org/misc/wget/' + $url[0]
   $url64 = 'https://eternallybored.org/misc/wget/' + $url[1]
