@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 . $toolsPath\helpers.ps1
 
 $softwareName = 'Microsoft Visual Studio Code'
-$version = '1.141.1'
+$version = '1.141.2'
 if ($version -eq (Get-UninstallRegistryKey "$softwareName").DisplayVersion) {
   Write-Host "VS Code $version is already installed."
   return
@@ -16,11 +16,11 @@ Close-VSCode
 $packageArgs = @{
   packageName    = 'vscode.install'
   fileType       = 'exe'
-  url64bit       = 'https://update.code.visualstudio.com/1.141.1/win32-x64/stable'
+  url64bit       = 'https://update.code.visualstudio.com/1.141.2/win32-x64/stable'
 
   softwareName   = "$softwareName"
 
-  checksum64     = 'f33252885b430d64d5af3a0bde8d23b7856238966f733cd2c481fda34860063a'
+  checksum64     = '43e9e2df672ba5ceb500e5ca6304297183ad195a323b8d73c70c7df2d60e333f'
   checksumType64 = 'sha256'
 
   silentArgs     = '/verysilent /suppressmsgboxes /mergetasks="{0}" /log="{1}\install.log"' -f (Get-MergeTasks), (Get-PackageCacheLocation)
