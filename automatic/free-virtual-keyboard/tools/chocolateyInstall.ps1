@@ -6,7 +6,7 @@ $packageArgs = @{
   packageName    = $packageName
   fileType       = 'exe'
   url            = 'http://freevirtualkeyboard.com/FreeVKSetup.exe'
-  checksum       = 'aa235ca04acca23acfac40d6bfdb1c4e020e5ca3733019c1b69d67713e22e099'
+  checksum       = 'b104fa3dd11ea02e89f7b9ba8afbba7c83237748e109ae4a9d158efaca337238'
   softwareName   = 'Free Virtual Keyboard'
   checksumType   = 'sha256'
   silentArgs     = "/VERYSILENT /NORESTART /SUPPRESSMSGBOXES /SP- /LOG=`"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).InnoInstall.log`""
