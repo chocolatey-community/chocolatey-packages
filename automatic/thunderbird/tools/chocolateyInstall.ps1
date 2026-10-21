@@ -39,7 +39,7 @@ $sa += if ($pp.RemoveDistributionDir) { " /RemoveDistributionDir=true" }
 
 $sa += if ($pp.NoAutoUpdate) { " /MaintenanceService=false" }
 
-$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '158.0')
+$alreadyInstalled = (AlreadyInstalled -product $softwareName -version '158.0.1')
 if ($alreadyInstalled -and ($env:ChocolateyForce -ne $true)) {
   Write-Host "Thunderbird is already installed. No need to download and re-install."
   return
@@ -68,11 +68,11 @@ $checksums = GetChecksums -language $locale -checksumFile "$toolsPath\LanguageCh
 # package's update script. The URLs are kept as literals so the automatic
 # updater can bump their version.
 $builds = @{
-  'x86' = @{ Url = "https://download.mozilla.org/?product=thunderbird-158.0&os=win&lang=${locale}"; Checksum = $checksums.Win32 }
-  'x64' = @{ Url = "https://download.mozilla.org/?product=thunderbird-158.0&os=win64&lang=${locale}"; Checksum = $checksums.Win64 }
+  'x86' = @{ Url = "https://download.mozilla.org/?product=thunderbird-158.0.1&os=win&lang=${locale}"; Checksum = $checksums.Win32 }
+  'x64' = @{ Url = "https://download.mozilla.org/?product=thunderbird-158.0.1&os=win64&lang=${locale}"; Checksum = $checksums.Win64 }
   # No upstream arm64 Thunderbird build yet, so this entry stays inert (empty
   # checksum -> x64 fallback) and activates automatically once Mozilla ships one.
-  'arm64' = @{ Url = "https://download.mozilla.org/?product=thunderbird-158.0&os=win64-aarch64&lang=${locale}"; Checksum = $checksums.Win64Arm64 }
+  'arm64' = @{ Url = "https://download.mozilla.org/?product=thunderbird-158.0.1&os=win64-aarch64&lang=${locale}"; Checksum = $checksums.Win64Arm64 }
 }
 
 $build = Get-MozillaBuild -builds $builds -product $softwareName

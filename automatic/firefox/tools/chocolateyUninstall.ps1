@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 
-$packageName = 'Firefox'
+$packageName = 'FirefoxESR'
 
 $uninstalled = $false
-[array]$key = Get-UninstallRegistryKey -SoftwareName 'Mozilla Firefox*' | Where-Object { $_.DisplayName -notmatch "ESR" }
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'Mozilla Firefox*ESR*' | Where-Object { $_.DisplayName -notmatch "ESR" }
 
 if ($key.Count -eq 1) {
   $key | ForEach-Object {
