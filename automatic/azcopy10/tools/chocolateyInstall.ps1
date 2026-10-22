@@ -5,11 +5,11 @@ $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
     packageName    = $packageName
-    url64          = 'https://github.com/Azure/azure-storage-azcopy/releases/download/v10.32.8/azcopy_windows_amd64_10.32.8.zip'
-    checksum64     = '99fa0387e91250b0aa4f3e6186e3ea07ec21b62e95e42a58da10144ad5bbf38d'
+    url64          = 'https://github.com/Azure/azure-storage-azcopy/releases/download/v10.34.1/azcopy_windows_amd64_10.34.1.zip'
+    checksum64     = '6d299fdf2dbf466167e9806576d15cb0de3c4ce8769caf5d1c1110877e5f66ff'
     checksumType64 = 'sha256'
-    url            = 'https://github.com/Azure/azure-storage-azcopy/releases/download/v10.32.8/azcopy_windows_386_10.32.8.zip'
-    checksum       = '5dd442d71a4ba646f6d6073727140d5997e51933676c8d5c641d9326945c0e94'
+    url            = 'https://github.com/Azure/azure-storage-azcopy/releases/download/v10.34.1/azcopy_windows_386_10.34.1.zip'
+    checksum       = '3b074f386135d085c1cae500757b874a390d41f1644fea4c630370860b9d0178'
     checksumType   = 'sha256'
     destination    = $toolsDir
 }
