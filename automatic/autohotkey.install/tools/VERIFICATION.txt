@@ -8,7 +8,7 @@ Package can be verified like this:
 1. Go to
 
    v1 x32: https://github.com/AutoHotkey/AutoHotkey/releases/download/v1.1.36.02/AutoHotkey_1.1.36.02_setup.exe
-   v2 x32: https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.30/AutoHotkey_2.0.30_setup.exe
+   v2 x32: https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.31/AutoHotkey_2.0.31_setup.exe
 
    to download the installer.
 
@@ -17,11 +17,11 @@ Package can be verified like this:
    - Use Chocolatey utility 'checksum.exe'
 
    v1 checksum32: AF7B8E60B4B54F5F85E6B207AC51926CB076AA4319B8E4C72E59B98C85818CAE
-   v2 checksum32: ECFB26B4CC90CD1E5440ED491CDE486E728541D63F3A4C24159E8DDAE77AB772
+   v2 checksum32: 9224A3BD1757088320BF04C51EFA43511160766BFEE8D6555168293CD54B4C16
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.30/AutoHotkey_2.0.30_setup.exe
+   Get-RemoteChecksum https://github.com/AutoHotkey/AutoHotkey/releases/download/v2.0.31/AutoHotkey_2.0.31_setup.exe
 
 File 'license.txt' is obtained from:
    https://github.com/AutoHotkey/AutoHotkey/blob/df84a3e902b522db0756a7366bd9884c80fa17b6/license.txt
