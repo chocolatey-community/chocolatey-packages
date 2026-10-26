@@ -2,7 +2,7 @@
 
 $toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$filePath = "$toolsPath\ClementineSetup-1.3.1.exe"
+$filePath = "$toolsPath\ClementineSetup-1.4.3.exe"
 $packageName = 'clementine'
 
 $packageArgs = @{

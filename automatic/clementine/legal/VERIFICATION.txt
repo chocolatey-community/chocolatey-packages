@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.clementine-player.org/downloads>
 and can be verified by doing the following:
 
-1. Download the following <https://github.com/clementine-player/Clementine/releases/download/1.3.1/ClementineSetup-1.3.1.exe>
+1. Download the following <https://github.com/clementine-player/Clementine/releases/download/1.4.3/ClementineSetup-1.4.3.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: 8EBF4808DE874C0FE6A71A5953A3D302CB6348E6CA45DCC268FB4E5C641EDDF0
+  checksum: 066C67E362D6ECAF0ED0756CB986B7E8DD17C54F403AEDB702FF9070CC76C372
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/clementine-player/Clementine/blob/94a9ed024d3859793618152ea559a168bbcbb5e2/COPYING>
