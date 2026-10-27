@@ -15,6 +15,6 @@ release page:
 3. The checksum should match the following:
 
   checksum type: sha256
-  checksum: CF8729148E2CE4A184CF5E0D953A43E20CA514CB7E3E2BDE17A8A0A6BCBAA1B2
+  checksum: cf8729148e2ce4a184cf5e0d953a43e20ca514cb7e3e2bde17a8a0a6bcbaa1b2
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/teras/Jubler/blob/master/LICENSE>
