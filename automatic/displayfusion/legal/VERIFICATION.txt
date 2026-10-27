@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.displayfusion.com/Download/>
 and can be verified by doing the following:
 
-1. Download the following <https://binaryfortressdownloads.com/Download/BFSFiles/101/DisplayFusionSetup-12.2-Beta4.exe>
+1. Download the following <https://binaryfortressdownloads.com/Download/BFSFiles/101/DisplayFusionSetup-12.2-Beta5.exe>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: C5AC6DCA7D46FC8567F2F064AE5307AB5EB36287FD3B42A2B19DAE2A79A36323
+  checksum: 9FABE50E90304E558F7E5C1D3155F7460C8EDD5962F32856AA9271D604C56286
 
 The file 'LICENSE.txt' has been obtained from <https://www.displayfusion.com/License/>
