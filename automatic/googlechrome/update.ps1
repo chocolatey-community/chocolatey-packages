@@ -4,9 +4,106 @@ import-module "$PSScriptRoot\..\..\scripts\au_extensions.psm1"
 $releases = "https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions"
 $paddedUnderVersion = '57.0.2988'
 
+function Get-MsiProductVersion {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$MsiPath
+  )
+
+  $installer = $null
+  $database = $null
+  $view = $null
+  $record = $null
+
+  try {
+    $installer = New-Object -ComObject WindowsInstaller.Installer
+    $database = $installer.GetType().InvokeMember(
+      'OpenDatabase',
+      [System.Reflection.BindingFlags]::InvokeMethod,
+      $null,
+      $installer,
+      @($MsiPath, 0)
+    )
+    $view = $database.GetType().InvokeMember(
+      'OpenView',
+      [System.Reflection.BindingFlags]::InvokeMethod,
+      $null,
+      $database,
+      @("SELECT `Value` FROM `Property` WHERE `Property`='ProductVersion'")
+    )
+    $null = $view.GetType().InvokeMember(
+      'Execute',
+      [System.Reflection.BindingFlags]::InvokeMethod,
+      $null,
+      $view,
+      $null
+    )
+    $record = $view.GetType().InvokeMember(
+      'Fetch',
+      [System.Reflection.BindingFlags]::InvokeMethod,
+      $null,
+      $view,
+      $null
+    )
+
+    if ($null -eq $record) {
+      throw "Could not read ProductVersion from '$MsiPath'."
+    }
+
+    $productVersion = $record.GetType().InvokeMember(
+      'StringData',
+      [System.Reflection.BindingFlags]::GetProperty,
+      $null,
+      $record,
+      @(1)
+    )
+
+    if ([string]::IsNullOrWhiteSpace($productVersion)) {
+      throw "MSI ProductVersion is empty for '$MsiPath'."
+    }
+
+    return $productVersion
+  }
+  finally {
+    foreach ($comObject in @($record, $view, $database, $installer)) {
+      if ($null -ne $comObject -and [System.Runtime.InteropServices.Marshal]::IsComObject($comObject)) {
+        [void][System.Runtime.InteropServices.Marshal]::ReleaseComObject($comObject)
+      }
+    }
+  }
+}
+
+function Get-FileSha256 {
+  param(
+    [Parameter(Mandatory = $true)]
+    [string]$Path
+  )
+
+  (Get-FileHash -Path $Path -Algorithm SHA256).Hash
+}
+
 function global:au_BeforeUpdate {
-  $Latest.Checksum32 = Get-RemoteChecksum $Latest.URL32
-  $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64
+  $downloadPath32 = Join-Path $env:TEMP "googlechrome32-$PID.msi"
+  $downloadPath64 = Join-Path $env:TEMP "googlechrome64-$PID.msi"
+
+  try {
+    Invoke-WebRequest -UseBasicParsing -Method Get -Uri $Latest.URL64 -OutFile $downloadPath64
+    $msiVersion = Get-MsiProductVersion -MsiPath $downloadPath64
+
+    if ($Latest.RemoteVersion -ne $msiVersion) {
+      throw "Version mismatch: API returned '$($Latest.RemoteVersion)' but MSI contains '$msiVersion'."
+    }
+
+    $Latest.RemoteVersion = $msiVersion
+    $Latest.Checksum64 = Get-FileSha256 -Path $downloadPath64
+
+    Invoke-WebRequest -UseBasicParsing -Method Get -Uri $Latest.URL32 -OutFile $downloadPath32
+    $Latest.Checksum32 = Get-FileSha256 -Path $downloadPath32
+  }
+  finally {
+    Remove-Item -Path $downloadPath32 -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path $downloadPath64 -Force -ErrorAction SilentlyContinue
+  }
 }
 
 function global:au_SearchReplace {
