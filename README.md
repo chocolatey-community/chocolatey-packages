@@ -8,8 +8,8 @@
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [community.chocolatey.org profile](https://community.chocolatey.org/profiles/chocolatey-community)
 
-# NOTE: Currently we are unlikely to accept any new or migrated packages into this repository. Please raise a [Discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions) if you have a strong case for new or migrated packages.
-# NOTE: The repository is currently being maintained by community members of the Chocolatey Team in their spare time. If you are interested in helping out [troubleshoot issues](https://github.com/chocolatey-community/chocolatey-packages/issues), review [pull requests](https://github.com/chocolatey-community/chocolatey-packages/pulls) or contribute code for the maintenance of packages, we would be happy to have you! If you have any questions, please raise a [discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions) or reach out on our [Community Chat](https://ch0.co/community).
+# NOTE: Currently we are unlikely to accept any new or migrated packages into this repository. Please raise a [discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions) if you have a strong case for new or migrated packages.
+# NOTE: This repository is maintained by volunteers of the Chocolatey community. If you are interested in helping out by [troubleshooting issues](https://github.com/chocolatey-community/chocolatey-packages/issues), reviewing [pull requests](https://github.com/chocolatey-community/chocolatey-packages/pulls) or contributing code for the maintenance of packages, we would be happy to have you! If you have any questions, please raise a [discussion](https://github.com/chocolatey-community/chocolatey-packages/discussions) or reach out on our [Community Chat](https://ch0.co/community).
 
 <!-- markdownlint-disable -->
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
