@@ -1,15 +1,36 @@
-﻿$ErrorActionPreference = 'Stop';
-$toolsPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-full-shared.7z'
+﻿$ErrorActionPreference = 'Stop'
+
+$toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsPath
-  url           = $url
-  checksum      = '19f7ddacc3795d1168f14843d3233161dc474df4b981cc6158da614d0e00e339'
-  checksumType  = 'sha256'
+  PackageName    = $env:ChocolateyPackageName
+  FileFullPath64 = "$toolsPath\ffmpeg-9.0.2-full_build-shared.7z"
+  Destination    = $toolsPath
 }
 
-Install-ChocolateyZipPackage @packageArgs
+Get-ChildItem $toolsPath\* | Where-Object { $_.PSISContainer } | Remove-Item -Recurse -Force #remove older package dirs
+Get-ChocolateyUnzip @packageArgs
 
-Write-Host "$packageName installed to $toolsPath"
+Write-Host "Removing extracted archive."
+Remove-Item $packageArgs['FileFullPath64'] -ea 0
+
+$maxTries = 3
+
+for ($tries = 0; $tries -lt $maxTries; $tries++) {
+  Write-Host "Sleeping for 2 seconds to allow anti-viruses to finish scanning..."
+  Start-Sleep -Seconds 2
+  try {
+    Write-Host "Renaming ffmpeg directory to common name (Try $($tries + 1) / $maxTries)"
+    Move-Item $toolsPath\ffmpeg-* $toolsPath\ffmpeg
+    Write-Host "Successfully renamed directory."
+    break
+  }
+  catch {
+    if (($tries + 1) -eq $maxTries) {
+      throw "Unable to rename directory, and max tries achieved. Aborting installation..."
+    }
+    else {
+      Write-Warning "Unable to rename directory. Retrying..."
+    }
+  }
+}
