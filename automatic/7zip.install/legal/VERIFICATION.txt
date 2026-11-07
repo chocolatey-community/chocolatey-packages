@@ -6,14 +6,14 @@ The installer has been downloaded from their official download link listed on <h
 and can be verified like this:
 
 1. Download the following installers:
-  32-Bit: <https://github.com/ip7z/7zip/releases/download/26.05/7z2605.exe>
-  64-Bit: <https://github.com/ip7z/7zip/releases/download/26.05/7z2605-x64.exe>
+  32-Bit: <https://github.com/ip7z/7zip/releases/download/26.06/7z2606.exe>
+  64-Bit: <https://github.com/ip7z/7zip/releases/download/26.06/7z2606-x64.exe>
 2. You can use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash'
   - Use chocolatey utility 'checksum.exe'
 
   checksum type: sha256
-  checksum32: 6435A470FE7C4769962DBED8A60C641EE21401C833CED06077C80E33E7845A5E
-  checksum64: FD99E86F57D8F429EF5ED045BF98315AF962E2309B0F1BA87A147A44C71647D0
+  checksum32: 5E38F80C3752DE43887E7A99AD10668C14BF64DCC929A636510B54616EA7DEC7
+  checksum64: 9B697F65ECC2D9B0152F5EE96D72DDE522A7827690349D9307935DACF40F42EC
 
 File 'LICENSE.txt' is obtained from <http://www.7-zip.org/license.txt>
