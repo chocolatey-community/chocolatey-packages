@@ -1,7 +1,5 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'https://www.gyan.dev/ffmpeg/builds'
-
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
@@ -21,25 +19,31 @@ function global:au_BeforeUpdate {
 }
 
 function global:au_GetLatest {
-  $content = (Invoke-WebRequest -Uri "$releases/release-version" -UseBasicParsing).Content
-  if ($content -is [byte[]]) { $content = [System.Text.Encoding]::UTF8.GetString($content) }
-  $version = $content.Trim()
-  if ($version -notmatch '^\d+\.\d+(\.\d+)?$') { throw "Unrecognized version from gyan.dev release-version: '$version'" }
-
-  # Gyan Doshi's GitHub mirror keeps a versioned archive for every release, while gyan.dev only serves
-  # the newest one and answers 503 under load. gyan.dev announces a version a little before its mirror.
-  $url64 = "https://github.com/GyanD/codexffmpeg/releases/download/$version/ffmpeg-$version-full_build-shared.7z"
-  try {
-    Invoke-WebRequest -Uri $url64 -Method Head -UseBasicParsing | Out-Null
+  # Gyan Doshi's GitHub mirror keeps a versioned archive for every release, but it also publishes dated
+  # git builds (for example 2026-11-09-git-16a345b022). Only a plain version tag counts as a release.
+  # That is normally the latest release; if a git build is marked as latest, use the newest version tag instead.
+  $versionTag = '^\d+\.\d+(\.\d+)?$'
+  $release = Get-GitHubRelease GyanD codexffmpeg
+  if ($release.tag_name -notmatch $versionTag) {
+    $release = Get-AllGitHubReleases GyanD codexffmpeg |
+      Where-Object { $_.tag_name -match $versionTag } |
+      Sort-Object { [version]$_.tag_name } -Descending |
+      Select-Object -First 1
   }
-  catch {
-    Write-Warning "Release $version of the shared build is not on GyanD/codexffmpeg yet: $($_.Exception.Message)"
+  if (-not $release) {
+    Write-Warning 'No versioned release was found on GyanD/codexffmpeg.'
+    return 'ignore'
+  }
+
+  $asset = $release.assets | Where-Object { $_.name -eq "ffmpeg-$($release.tag_name)-full_build-shared.7z" }
+  if (-not $asset) {
+    Write-Warning "Release $($release.tag_name) of GyanD/codexffmpeg has no shared build archive yet."
     return 'ignore'
   }
 
   @{
-    URL64   = $url64
-    Version = $version
+    URL64   = $asset.browser_download_url
+    Version = $release.tag_name
   }
 }
 
