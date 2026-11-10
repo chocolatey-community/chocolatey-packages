@@ -11,7 +11,6 @@ Security is a high priority and code review is always done with security in mind
 
 * The `ffmpeg`, `ffprobe` and `ffplay` command line tools, put on your PATH by Chocolatey shims.
 * The shared libraries behind them as DLLs (libavcodec, libavdevice, libavfilter, libavformat, libavutil, libswresample and libswscale), together with their import libraries, so other programs can link against them.
-* The "full" build, which includes everything in the "essentials" build plus additional libraries.
 
 ## Notes
 

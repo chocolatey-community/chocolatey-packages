@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>ffmpeg-shared</id>
-    <version>9.0.2</version>
+    <version>0.0.0</version>
     <title>FFmpeg (Shared)</title>
     <owners>chocolatey-community, virtualex</owners>
     <authors>FFmpeg Contributors</authors>
@@ -22,7 +22,6 @@ Security is a high priority and code review is always done with security in mind
 
 * The `ffmpeg`, `ffprobe` and `ffplay` command line tools, put on your PATH by Chocolatey shims.
 * The shared libraries behind them as DLLs (libavcodec, libavdevice, libavfilter, libavformat, libavutil, libswresample and libswscale), together with their import libraries, so other programs can link against them.
-* The "full" build, which includes everything in the "essentials" build plus additional libraries.
 
 ## Notes
 
