@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>zotero</id>
-    <version>9.0.6</version>
+    <version>10.0.8</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/zotero</packageSourceUrl>
     <owners>chocolatey-community</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
