@@ -47,6 +47,7 @@
 */selenium.powershell* @chocolatey-community/chocolatey-team-maintainers
 */thunderbird*        @TheCakeIsNaOH
 */papercut*           @AdmiringWorm
+*/ffmpeg-shared*      @virtualex-itv
 
 # Other
 # This can be any file other that won't be matched as a package
