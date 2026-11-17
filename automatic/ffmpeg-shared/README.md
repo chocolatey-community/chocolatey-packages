@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@edba4a5849ff756e767cba86641bea97ff5721fe/icons/ffmpeg.svg" width="48" height="48"/> [ffmpeg-shared](https://chocolatey.org/packages/ffmpeg-shared)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@2481d2668f330643887ae25ed25fabdca17fb69e/icons/ffmpeg-shared.svg" width="48" height="48"/> [ffmpeg-shared](https://chocolatey.org/packages/ffmpeg-shared)
 
 
 FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
