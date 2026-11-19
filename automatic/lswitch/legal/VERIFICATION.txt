@@ -1,0 +1,12 @@
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The installer has been downloaded from the official Haali website:
+https://haali.net/winutils/lswitch.exe
+
+SHA256 checksum: 30B02967F7A284AC065DD89F885335FE869B0D1D720FED0EA4C5948AA4F83B28
+
+This can be verified by:
+1. Downloading the file from https://haali.net/winutils/lswitch.exe
+2. Running `Get-FileHash -Algorithm SHA256 lswitch.exe`
+3. Comparing the output to the checksum above
