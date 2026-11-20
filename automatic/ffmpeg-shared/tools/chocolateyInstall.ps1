@@ -4,7 +4,7 @@ $toolsPath = Split-Path $MyInvocation.MyCommand.Definition
 
 $packageArgs = @{
   PackageName    = $env:ChocolateyPackageName
-  FileFullPath64 = "$toolsPath\ffmpeg-9.0.2-full_build-shared.7z"
+  FileFullPath64 = "$toolsPath\ffmpeg-9.1-full_build-shared.7z"
   Destination    = $toolsPath
 }
 
