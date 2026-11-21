@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if "Ω" doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>internetarchive</id>
+    <version>5.13.0</version>
+    <title>Internet Archive (ia)</title>
+    <authors>Jacob M. Johnson</authors>
+    <owners>chocolatey-community</owners>
+    <projectUrl>https://github.com/jjjake/internetarchive</projectUrl>
+    <projectSourceUrl>https://github.com/jjjake/internetarchive</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/internetarchive</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@67c7262d5c8e065dcd8fffb320e7431333181ca6/icons/internetarchive.png</iconUrl>
+    <licenseUrl>https://github.com/jjjake/internetarchive/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://archive.org/developers/internetarchive/</docsUrl>
+    <bugTrackerUrl>https://github.com/jjjake/internetarchive/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>A Python and command-line interface to Archive.org.</summary>
+    <description><![CDATA[
+`internetarchive` is a Python and command-line interface to [Archive.org](https://archive.org).
+
+This package installs the `ia` command-line tool and the `internetarchive` Python
+module in an isolated environment inside the Chocolatey package directory, using a
+uv-managed Python interpreter. No system-wide Python installation is required.
+
+## Features
+
+* Search Archive.org and retrieve item metadata.
+* Download and upload files, and modify item metadata.
+* Access the `internetarchive` Python module programmatically.
+* Fully isolated from any Python installation on the system.
+
+## Notes
+
+* This package requires 64-bit Windows.
+* An internet connection is required during installation to download the
+  managed Python interpreter and the `internetarchive` package.
+* A uv-managed Python 3.12 interpreter is downloaded during installation.
+* The `ia` command is added to the system `PATH`.
+* The `uv` package is installed as a dependency and remains installed after
+  this package is uninstalled.
+* Uninstalling the package removes the managed Python interpreter and the
+  virtual environment along with the rest of the package directory.
+]]></description>
+    <tags>internetarchive utility foss cross-platform cli archive download upload</tags>
+    <releaseNotes>https://github.com/jjjake/internetarchive/blob/master/HISTORY.rst</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="uv" version="0.13.9" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
