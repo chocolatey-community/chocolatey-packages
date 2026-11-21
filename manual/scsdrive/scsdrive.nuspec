@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- IconUrl: Skip check -->
+    <id>scsdrive</id>
+    <version>1.1.2</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/manual/scsdrive</packageSourceUrl>
+    <title>ScsDrive</title>
+    <authors>SCSOI</authors>
+    <owners>chocolatey-community</owners>
+    <projectUrl>https://drive.scsoi.com</projectUrl>
+    <projectSourceUrl>https://github.com/shuyingegit/scsdriver</projectSourceUrl>
+    <docsUrl>https://drive.scsoi.com/faq</docsUrl>
+    <bugTrackerUrl>https://github.com/shuyingegit/scsdriver/issues</bugTrackerUrl>
+    <releaseNotes>https://github.com/shuyingegit/scsdriver/releases/tag/v1.1.2</releaseNotes>
+    <licenseUrl>https://drive.scsoi.com/terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Mount a NAS, WebDAV share or cloud storage as a real local Windows drive letter</summary>
+    <description>ScsDrive mounts a NAS, WebDAV share or cloud storage as a real local disk, so it shows up under "This PC" with its own drive letter and programs that only accept local paths can open it directly. Mounting needs no administrator rights, the client has no ads and no forced subscription, and a 7-day full-feature trial is included. The mount belongs to the Windows session that created it, so services and scheduled tasks running in Session 0 do not see the drive letter. On first launch the client installs the open-source user-mode driver Dokany (LGPL).</description>
+    <copyright>Copyright (C) 2026 SCSOI</copyright>
+    <tags>scsdrive utility trial drive mount nas webdav cloud storage</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
