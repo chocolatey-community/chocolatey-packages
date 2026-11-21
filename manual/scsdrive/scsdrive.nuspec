@@ -2,6 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <!-- IconUrl: Skip check -->
+    <iconUrl>https://cdn.jsdelivr.net/gh/shuyingegit/chocolatey-packages@add/scsdrive/icons/scsdrive.png</iconUrl>
     <id>scsdrive</id>
     <version>1.1.2</version>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/manual/scsdrive</packageSourceUrl>
