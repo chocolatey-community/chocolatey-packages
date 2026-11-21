@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if "Ω" doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lswitch</id>
+    <version>1.0.0</version>
+    <title>lswitch</title>
+    <authors>Haali</authors>
+    <owners>chocolatey-community</owners>
+    <projectUrl>https://haali.su/winutils/</projectUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/lswitch</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@master/icons/lswitch.png</iconUrl>
+    <licenseUrl>https://haali.su/winutils/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>lswitch keyboard language switch input locale freeware portable</tags>
+    <summary>Use any key to switch input languages</summary>
+    <description><![CDATA[
+lswitch allows you to use any key to switch input languages.
+
+Usage: lswitch [keycode]
+Keycode is optional and defaults to the context menu key (VK_APPS).
+Another good candidate is the CapsLock key with a keycode of 20.
+
+This is a small, lightweight utility from Haali's Windows utilities collection.
+]]></description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

@@ -1,0 +1,6 @@
+lswitch is freeware.
+
+Original source code: https://haali.su/winutils/lswitch.c
+Project page: https://haali.su/winutils/
+
+Copyright (c) Haali
