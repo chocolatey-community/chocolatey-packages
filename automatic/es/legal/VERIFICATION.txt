@@ -7,8 +7,8 @@ Package can be verified like this:
 
 1. Go to
 
-   x32: https://www.voidtools.com/ES-1.1.0.37.x86.zip
-   x64: https://www.voidtools.com/ES-1.1.0.37.x64.zip
+   x32: https://www.voidtools.com/ES-1.1.1.40.x86.zip
+   x64: https://www.voidtools.com/ES-1.1.1.40.x64.zip
 
    to download the archive.
 
@@ -16,12 +16,12 @@ Package can be verified like this:
    - Use powershell function 'Get-FileHash'
    - Use Chocolatey utility 'checksum.exe'
 
-   checksum32: 35F8FE8C92B44D834CF51239EE345927E44D33C6C86D64B756990B066FA0DA47
-   checksum64: 7A57670D9152068D05876C58858C82FE6D3915A9DF2C819F4DE8801E2929D3A7
+   checksum32: 2679625BE012480B521BB64BF1F0A09CDBDC4A1EC676688E1699C5864D85C46A
+   checksum64: A4E0F429C03F7B768CF777AD25A55C10C1B82FF06D5CAE4AC52925B7B19B16EC
 
 Using Chocolatey AU:
 
-   Get-RemoteChecksum https://www.voidtools.com/ES-1.1.0.37.x86.zip
+   Get-RemoteChecksum https://www.voidtools.com/ES-1.1.1.40.x86.zip
 
 File 'License.txt' is obtained from:
     https://www.voidtools.com/License.txt
