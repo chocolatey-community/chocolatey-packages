@@ -16,8 +16,8 @@ if ($pp.InstallDir) {
 $arguments              = @{
     packageName         = $env:ChocolateyPackageName
     softwareName        = 'JetBrains DataGrip*'
-    url                 = 'https://download.jetbrains.com/datagrip/datagrip-2026.3.exe'
-    checksum            = '98557e953a47db74f5d4acf4c93a40bed4ede49bb362c2b1b36684b6ad9911d9'
+    url                 = 'https://download.jetbrains.com/datagrip/datagrip-2026.3.0.1.exe'
+    checksum            = '9c56b4eb22c0d4ec158ce2dedc00986060509ec59b4f8a824193e09bfd25c89b'
     fileType            = 'exe'
     checksumType        = 'sha256'
     silentArgs          = $silentArgs
