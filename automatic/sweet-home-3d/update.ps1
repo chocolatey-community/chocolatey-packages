@@ -1,6 +1,6 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = 'http://www.sweethome3d.com/download.jsp'
+$releases = 'https://sourceforge.net/projects/sweethome3d/files/SweetHome3D/'
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix -FileNameSkip 1 }
 
@@ -18,16 +18,34 @@ function global:au_SearchReplace {
   }
 }
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $releases_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
+  $available_releases = foreach ($link in $releases_page.Links) {
+    if ($link.href -match '/SweetHome3D-(?<version>\d+(?:\.\d+)+)/$') {
+      [pscustomobject]@{
+        Version = [version]$Matches.version
+        Href    = $link.href
+      }
+    }
+  }
+  $latest_release = $available_releases | Sort-Object Version -Descending | Select-Object -First 1
 
-  $re = '\.exe\/download$'
-  $url32 = $download_page.Links | Where-Object href -match $re | Select-Object -first 1 -expand href
+  if (-not $latest_release) {
+    throw "No Sweet Home 3D releases were found at $releases"
+  }
 
-  $verRe = '[-]'
-  $version32 = $url32 -split "$verRe" | Select-Object -last 1 -skip 1
+  $release_url = "https://sourceforge.net$($latest_release.Href)"
+  $release_page = Invoke-WebRequest -Uri $release_url -UseBasicParsing
+  $url32 = $release_page.Links |
+    Where-Object href -match "/SweetHome3D-$($latest_release.Version)-windows\.exe/download$" |
+    Select-Object -First 1 -ExpandProperty href
+
+  if (-not $url32) {
+    throw "No Windows installer was found for Sweet Home 3D $($latest_release.Version) at $release_url"
+  }
+
   @{
     URL32    = $url32
-    Version  = $version32
+    Version  = $latest_release.Version.ToString()
     FileType = 'exe'
   }
 }
