@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if "Ω" doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>night-light</id>
+    <version>0.1.0</version>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/night-light</packageSourceUrl>
+    <owners>chocolatey-community</owners>
+    <title>Night Light CLI</title>
+    <authors>Enyium</authors>
+    <projectUrl>https://github.com/Enyium/sem-reg-rs</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@master/icons/night-light.png</iconUrl>
+    <licenseUrl>https://github.com/Enyium/sem-reg-rs/blob/master/LICENSE-APACHE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Enyium/sem-reg-rs</projectSourceUrl>
+    <docsUrl>https://github.com/Enyium/sem-reg-rs#night-light-command-line-program</docsUrl>
+    <bugTrackerUrl>https://github.com/Enyium/sem-reg-rs/issues</bugTrackerUrl>
+    <tags>night-light night light cli windows display color-temperature foss cross-platform</tags>
+    <summary>Command line tool to control Windows Night Light feature</summary>
+    <description><![CDATA[Night Light is a command line program to control the Windows Night Light feature.
+
+## Features
+- Allows you to adjust Night Light's active-state, color temperature, preview state and schedule
+- Corrects Windows bugs like warm color temperature being reset to cold after turning the screen back on
+- Allows for gamma correction for a more uniform color temperature transition
+- Includes extra subcommands like exporting the registry values
+- The most sophisticated Night Light tool available
+
+## Notes
+- **If the package is out of date please check [Version History](#versionhistory) for the latest submitted version. If you have a question, please ask it in [Chocolatey Community Package Discussions](https://github.com/chocolatey-community/chocolatey-packages/discussions) or raise an issue on the [Chocolatey Community Packages Repository](https://github.com/chocolatey-community/chocolatey-packages/issues) if you have problems with the package. Disqus comments will generally not be responded to.**
+]]></description>
+    <releaseNotes>https://github.com/Enyium/sem-reg-rs/releases/tag/v0.1.0</releaseNotes>
+  </metadata>
+  <files>
+    <file src="legal\**" target="legal" />
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

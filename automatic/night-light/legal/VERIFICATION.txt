@@ -1,0 +1,14 @@
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Package: night-light
+Version: 0.1.0
+Source: https://github.com/Enyium/sem-reg-rs/releases/tag/v0.1.0
+
+Checksums:
+64-Bit Software: https://github.com/Enyium/sem-reg-rs/releases/download/v0.1.0/night-light.exe
+checksum64: 294D7146ECC981EC3DD49DE64B643F5F91F293524DC9277AF80E64A8C3F9BE3E
+checksum type: sha256
+
+Virus scan result:
+https://www.virustotal.com/gui/file/294d7146ecc981ec3dd49de64b643f5f91f293524dc9277af80e64a8c3f9be3e/detection
