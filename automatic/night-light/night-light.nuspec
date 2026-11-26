@@ -9,13 +9,13 @@
     <title>Night Light CLI</title>
     <authors>Enyium</authors>
     <projectUrl>https://github.com/Enyium/sem-reg-rs</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@master/icons/night-light.png</iconUrl>
+    <!-- IconUrl: Skip check -->
     <licenseUrl>https://github.com/Enyium/sem-reg-rs/blob/master/LICENSE-APACHE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Enyium/sem-reg-rs</projectSourceUrl>
     <docsUrl>https://github.com/Enyium/sem-reg-rs#night-light-command-line-program</docsUrl>
     <bugTrackerUrl>https://github.com/Enyium/sem-reg-rs/issues</bugTrackerUrl>
-    <tags>night-light night light cli windows display color-temperature foss cross-platform</tags>
+    <tags>night-light utility foss cross-platform night light cli windows display color-temperature</tags>
     <summary>Command line tool to control Windows Night Light feature</summary>
     <description><![CDATA[Night Light is a command line program to control the Windows Night Light feature.
 
