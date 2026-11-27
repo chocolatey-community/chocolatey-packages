@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/ots-downloader/onthespot</projectUrl>
     <projectSourceUrl>https://github.com/ots-downloader/onthespot</projectSourceUrl>
     <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/onthespot</packageSourceUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ICONCOMMIT/icons/onthespot.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@22708b171074cdcdeb8443c11e1103153fedba24/icons/onthespot.png</iconUrl>
     <licenseUrl>https://github.com/ots-downloader/onthespot/blob/master/LICENSE</licenseUrl>
     <docsUrl>https://github.com/ots-downloader/onthespot/blob/master/docs/INSTALLATION.md</docsUrl>
     <bugTrackerUrl>https://github.com/ots-downloader/onthespot/issues</bugTrackerUrl>

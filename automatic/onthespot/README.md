@@ -1,4 +1,4 @@
-# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ICONCOMMIT/icons/onthespot.png" width="48" height="48"/> [onthespot](https://chocolatey.org/packages/onthespot)
+# <img src="https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@22708b171074cdcdeb8443c11e1103153fedba24/icons/onthespot.png" width="48" height="48"/> [onthespot](https://chocolatey.org/packages/onthespot)
 
 `OnTheSpot` is an easy-to-use music downloader written in Python. It supports a number of music services and, unlike similar projects, the downloaded files and their metadata are sourced directly from the service of your choosing. The application ships with a GUI, a CLI and a web UI.
 
