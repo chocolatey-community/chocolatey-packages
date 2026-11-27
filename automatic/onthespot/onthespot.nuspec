@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if "Ω" doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>onthespot</id>
+    <version>1.8.1</version>
+    <title>OnTheSpot</title>
+    <authors>Justin Donofrio</authors>
+    <owners>chocolatey-community, soredake</owners>
+    <projectUrl>https://github.com/ots-downloader/onthespot</projectUrl>
+    <projectSourceUrl>https://github.com/ots-downloader/onthespot</projectSourceUrl>
+    <packageSourceUrl>https://github.com/chocolatey-community/chocolatey-packages/tree/master/automatic/onthespot</packageSourceUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-packages@ICONCOMMIT/icons/onthespot.png</iconUrl>
+    <licenseUrl>https://github.com/ots-downloader/onthespot/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://github.com/ots-downloader/onthespot/blob/master/docs/INSTALLATION.md</docsUrl>
+    <bugTrackerUrl>https://github.com/ots-downloader/onthespot/issues</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>An easy-to-use music downloader with a GUI, a CLI and a web UI.</summary>
+    <description><![CDATA[
+`OnTheSpot` is an easy-to-use music downloader written in Python. It supports a number of music services and, unlike similar projects, the downloaded files and their metadata are sourced directly from the service of your choosing. The application ships with a GUI, a CLI and a web UI.
+
+This package installs OnTheSpot in an isolated virtual environment inside the Chocolatey package directory, using a uv-managed Python interpreter. No system-wide Python installation is required.
+
+## Features
+
+* Download tracks, albums, playlists and podcasts from Spotify, YouTube Music, Apple Music, Tidal, Deezer, Qobuz, SoundCloud, Bandcamp and Crunchyroll.
+* Download the audio and its metadata directly from the service of your choosing.
+* Three frontends: a Qt desktop application (`onthespot-gui`), a command-line interface (`onthespot-cli`) and a web UI (`onthespot-web`).
+* Fully isolated from any Python installation on the system.
+
+## Usage
+
+```powershell
+onthespot-gui
+onthespot-cli --download https://open.spotify.com/track/4cOdK2wGLETKBW3PvgPWqT
+onthespot-web --port 5000
+```
+
+## Notes
+
+* This package requires 64-bit Windows.
+* An internet connection is required during installation to download the managed Python interpreter and the OnTheSpot sources.
+* A uv-managed Python 3.12 interpreter is downloaded during installation.
+* The `ffmpeg` package is installed as a dependency because OnTheSpot uses it to convert the downloaded audio.
+* The `uv` package is installed as a dependency and remains installed after this package is uninstalled.
+* Start menu shortcuts are created for the desktop application and for the web UI.
+* The 2.x releases are a web application that is distributed as Docker images and provides neither a Windows build nor the desktop and command-line frontends, so this package tracks the 1.x releases.
+* Uninstalling the package removes the virtual environment and the managed Python interpreter along with the rest of the package directory.
+]]></description>
+    <tags>onthespot utility foss cross-platform music downloader spotify youtube-music tidal deezer qobuz soundcloud bandcamp cli gui qt web</tags>
+    <releaseNotes>https://github.com/ots-downloader/onthespot/releases</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="ffmpeg" version="7.0.0" />
+      <dependency id="uv" version="0.13.9" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
