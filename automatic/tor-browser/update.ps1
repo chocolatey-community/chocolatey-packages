@@ -1,37 +1,51 @@
 ﻿Import-Module Chocolatey-AU
 
-$releases = "https://www.torproject.org/download/languages/"
-$baseUrl  = "https://archive.torproject.org/tor-package-archive/torbrowser/"
+$baseUrl = "https://dist.torproject.org/torbrowser"
 
 function global:au_SearchReplace {
-  @{ 
+  @{
     "tools\chocolateyinstall.ps1" = @{
       "(?i)(^\s*url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
       "(?i)(^\s*url64\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
       "(?i)(^\s*checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
       "(?i)(^\s*checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-    }	
+    }
   }
-}
-
-function global:au_BeforeUpdate() {
-  $Latest.Checksum32 = Get-RemoteChecksum $Latest.Url32
-  $Latest.Checksum64 = Get-RemoteChecksum $Latest.Url64
 }
 
 function global:au_GetLatest {
-  $download_page    = Invoke-WebRequest -Uri $releases -UseBasicParsing
-    
-  $allExes          = $download_page.Links | Where-Object href -match "\.exe$" | Select-Object -expand href
-  $url32            = (($allExes | Where-Object { $_ -match "tor-browser-windows-i686-portable-\d.*.exe$" } | Select-Object -First 1) -split("\/",5) | Select-Object -Index 4)
-  $url64            = (($allExes | Where-Object { $_ -match "tor-browser-windows-x86_64-portable-\d.*.exe$" } | Select-Object -First 1) -split("\/",5) | Select-Object -Index 4)
-  $version          = $url64 -split '\/' | Select-Object -last 1 -skip 1
-  
-  @{
-    Version         = "$version"
-    URL32           = $baseUrl + $url32
-    URL64           = $baseUrl + $url64
+  $downloadPage = Invoke-WebRequest -Uri "$baseUrl/" -UseBasicParsing
+  $versions = [regex]::Matches($downloadPage.Content, 'href="(?<version>\d+(?:\.\d+)*)/"') |
+    ForEach-Object { $_.Groups['version'].Value } |
+    Sort-Object { [version]$_ } -Descending
+
+  foreach ($version in $versions) {
+    $checksumUrl = "$baseUrl/$version/sha256sums-signed-build.txt"
+    try {
+      $checksumContent = (Invoke-WebRequest -Uri $checksumUrl -UseBasicParsing).Content
+    }
+    catch {
+      continue
+    }
+
+    $file32 = "tor-browser-windows-i686-portable-$version.exe"
+    $file64 = "tor-browser-windows-x86_64-portable-$version.exe"
+    $checksum32 = [regex]::Match($checksumContent, "(?m)^([a-fA-F0-9]{64})\s+$([regex]::Escape($file32))\s*$")
+    $checksum64 = [regex]::Match($checksumContent, "(?m)^([a-fA-F0-9]{64})\s+$([regex]::Escape($file64))\s*$")
+
+    # Some releases are Android-only; use the newest version with both Windows installers.
+    if ($checksum32.Success -and $checksum64.Success) {
+      return @{
+        Version   = $version
+        URL32     = "$baseUrl/$version/$file32"
+        URL64     = "$baseUrl/$version/$file64"
+        Checksum32 = $checksum32.Groups[1].Value
+        Checksum64 = $checksum64.Groups[1].Value
+      }
+    }
   }
+
+  throw "Could not find a stable Tor Browser release with both Windows installers at $baseUrl"
 }
 
 update -ChecksumFor none
