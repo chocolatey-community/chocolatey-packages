@@ -7,16 +7,16 @@ location on <http://www.tightvnc.com/download.php>
 and can be verified by doing the following:
 
 1. Download the following:
-  32-Bit software: <https://www.tightvnc.com/download/2.8.90/tightvnc-2.8.90-gpl-setup-32bit.msi>
-  64-Bit software: <https://www.tightvnc.com/download/2.8.90/tightvnc-2.8.90-gpl-setup-64bit.msi>
+  32-Bit software: <https://www.tightvnc.com/download/2.8.91/tightvnc-2.8.91-gpl-setup-32bit.msi>
+  64-Bit software: <https://www.tightvnc.com/download/2.8.91/tightvnc-2.8.91-gpl-setup-64bit.msi>
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum32: 669BCF5796C2655FB1A8B556CAD8DECF25D3008A650EF495B1ED3882AA918211
-  checksum64: 9693CB4CDC2E7E482E8E3F5890415B57EF87DE3369FA5C337DB516218A1170CE
+  checksum32: C01DDB25C8551FAD3181B82E87079D3864914B5854BF4EAAD3BC40D7186F4CA0
+  checksum64: 1E62D0C6A61EA0CBE8427C1ED4A926E84C53B0DA85BF97056BD2261A88AC8BF8
 
 The file 'LICENSE.txt' has been obtained from <http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt>
 Which is linked to from the developers license page.
