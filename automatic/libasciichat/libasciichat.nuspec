@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata><id>libasciichat</id><version>0.16.113</version><title>libasciichat</title><authors>Zachary Fogg</authors><owners>Zachary Fogg</owners><license type="expression">MIT</license><projectUrl>https://ascii-chat.com</projectUrl><requireLicenseAcceptance>false</requireLicenseAcceptance><description>Development headers, libraries, and CMake integration files for libasciichat.</description><tags>c library ascii chat development</tags></metadata>
+</package>
